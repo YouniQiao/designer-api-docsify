@@ -58,7 +58,7 @@ Badge的大小。string类型支持number类型取值的字符串形式，可以
 2. 从API version 20开始，支持ResourceStr类型。
 3. 当设置了fontSize且badgeSize小于fontSize时，badgeSize将按照fontSize生效。
 
-**类型：** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** number &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **默认值：** 16vp
 
@@ -191,7 +191,7 @@ fontSize?: number | ResourceStr
 1. 不支持设置百分比，当设置为百分比时，按照默认值处理。
 2. 从API version 20开始，支持ResourceStr类型。
 
-**类型：** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** number &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **默认值：** 10vp
 
@@ -217,7 +217,7 @@ fontWeight?: number | FontWeight | ResourceStr
 
 不支持设置百分比，当设置为百分比时，按照默认值处理。从API version 20开始，支持ResourceStr类型。
 
-**类型：** number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
 

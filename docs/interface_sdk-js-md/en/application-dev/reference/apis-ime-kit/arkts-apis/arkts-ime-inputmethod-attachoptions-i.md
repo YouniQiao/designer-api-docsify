@@ -36,9 +36,7 @@ Reason for requesting the keyboard.
 showKeyboard?: boolean
 ```
 
-Whether to start the input method keyboard after the self-drawing component is attached to the input method.   
-- **true** means to start the input method keyboard.   
-- **false** means not to start the input method keyboard.
+Whether to start the input method keyboard after the self-drawing component is attached to the input method. <br> <br>- **true** means to start the input method keyboard. <br>- **false** means not to start the input method keyboard.
 
 **Type:** boolean
 

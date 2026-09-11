@@ -124,7 +124,7 @@ constructor(uiContext: UIContext, options?: RenderOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考[UIContext获取方法](../../../reference/apis-arkui/js-apis-arkui-node.md#uicontext获取方法)。uiContext需要为一个有效的值，即UI上下文正确，如果传入非法值或者未设置，会导致创建失败。 |
-| options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | 否 | ReactiveBuilderNode的构造可选参数，参数用于构造节点的理想大小和节点的渲染类型。默认值：undefined |
+| options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | 否 | ReactiveBuilderNode的构造可选参数，参数用于构造节点的理想大小和节点的渲染类型。<br>默认值：undefined |
 
 ## dispose
 
@@ -378,7 +378,7 @@ getFrameNode(): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | ReactiveBuilderNode持有的FrameNode对象，用于将该ReactiveBuilderNode作为子节点挂载到其他FrameNode上。若该ReactiveBuilderNode不包含FrameNode，则返回空对象null。 |
+| [FrameNode](arkts-arkui-framenode-c.md) &#124; null | ReactiveBuilderNode持有的FrameNode对象，用于将该ReactiveBuilderNode作为子节点挂载到其他FrameNode上。若该ReactiveBuilderNode不包含FrameNode，则返回空对象null。 |
 
 **示例**
 
@@ -1025,7 +1025,7 @@ offsetA为builderNode相对于父组件的偏移量，可以通过FrameNode中�
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 派发事件是否成功。true：已命中响应事件的组件；false：未命中任何可响应事件的组件。 |
+| boolean | 派发事件是否成功。true：已命中响应事件的组件；false：未命中任何可响应事件的组件。<br>**说明：** <br>如果未按照预期命中组件，需要确认：<br>1. 坐标系是否转换正确。<br>2. 组件是否处于可交互状态。<br>3. 是否绑定事件。 |
 
 **示例**
 

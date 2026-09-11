@@ -35,7 +35,7 @@ If the input parameter is **undefined**, the event callback is reset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnScrollCallback](arkts-arkui-onscrollcallback-t.md) \| undefined | Yes | Callback for the **onDidScroll** event. |
+| callback | [OnScrollCallback](arkts-arkui-onscrollcallback-t.md) &#124; undefined | Yes | Callback for the **onDidScroll** event. |
 
 ## setOnScrollIndex
 
@@ -59,7 +59,7 @@ If the input parameter is **undefined**, the event callback is reset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnWaterFlowScrollIndexCallback](arkts-arkui-onwaterflowscrollindexcallback-t.md) \| undefined | Yes | Callback for the **onScrollIndex** event. |
+| callback | [OnWaterFlowScrollIndexCallback](arkts-arkui-onwaterflowscrollindexcallback-t.md) &#124; undefined | Yes | Callback for the **onScrollIndex** event. |
 
 ## setOnWillScroll
 
@@ -83,4 +83,4 @@ If the input parameter is **undefined**, the event callback is reset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnWillScrollCallback](arkts-arkui-onwillscrollcallback-t.md) \| undefined | Yes | Callback for the **onWillScroll** event. |
+| callback | [OnWillScrollCallback](arkts-arkui-onwillscrollcallback-t.md) &#124; undefined | Yes | Callback for the **onWillScroll** event. |

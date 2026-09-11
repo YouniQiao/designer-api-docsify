@@ -38,7 +38,7 @@ Constructor for the smart gesture scroll action handling.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node that responds to the scroll action. |
-| distance | number | Yes | Scroll distance.Value range: [0, +∞). Values less than 0 are treated as 0.Unit: vp. |
+| distance | number | Yes | Scroll distance.<br>Value range: [0, +∞). Values less than 0 are treated as 0.<br>Unit: vp. |
 
 ## distance
 

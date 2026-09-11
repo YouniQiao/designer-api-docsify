@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> - 本Interface的起始版本为API version 12。接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素
+> - 本Interface的起始版本为API version 12。接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素@since版本号大于内层元素的情况，不影响接口使用。
 
 **起始版本：** 12
 
@@ -34,7 +34,7 @@ Checks whether the focus assist is supported.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Check result for the support of the focus assist. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| boolean | Check result for the support of the focus assist. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **错误码：**
 
@@ -85,7 +85,7 @@ Checks whether a focus drive type is supported.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Check result for the support of the focus drive type. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| boolean | Check result for the support of the focus drive type. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **错误码：**
 
@@ -137,7 +137,7 @@ Checks whether a focus range type is supported.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Check result for the support of the focus range type. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| boolean | Check result for the support of the focus range type. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **错误码：**
 

@@ -35,14 +35,12 @@ columnsGap(value: LengthMetrics): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | 是 | 列与列的间距。取值范围：[0, +∞)。 |
+| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | 是 | 列与列的间距。<br>取值范围：[0, +∞)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## footer
 
 ```TypeScript
@@ -63,14 +61,12 @@ footer(builder: CustomBuilder | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 | 尾部组件构建函数。传入undefined时移除尾部组件。 |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) &#124; undefined | 是 | 尾部组件构建函数。<br>传入undefined时移除尾部组件。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## header
 
 ```TypeScript
@@ -97,14 +93,12 @@ header(builder: CustomBuilder | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 | 头部组件构造函数。方法入参为undefined时，当前LazyVGridLayout不设置头部组件，如果已有头部组件，也会被移除。 |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) &#124; undefined | 是 | 头部组件构造函数。<br>方法入参为undefined时，当前LazyVGridLayout不设置头部组件，如果已有头部组件，也会被移除。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## onVisibleIndexesChange
 
 ```TypeScript
@@ -133,14 +127,12 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnVisibleIndexesChangeCallback](arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | 是 | onVisibleIndexesChange事件的回调函数。传入undefined时取消监听。 |
+| callback | [OnVisibleIndexesChangeCallback](arkts-arkui-onvisibleindexeschangecallback-t.md) &#124; undefined | 是 | onVisibleIndexesChange事件的回调函数。传入undefined时取消监听。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## rowsGap
 
 ```TypeScript
@@ -161,14 +153,12 @@ rowsGap(value: LengthMetrics): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | 是 | 行与行的间距。取值范围：[0, +∞)。 |
+| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | 是 | <br>行与行的间距。<br>取值范围：[0, +∞)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## sticky
 
 ```TypeScript
@@ -189,10 +179,9 @@ sticky(sticky: StickyStyle | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sticky | [StickyStyle](arkts-arkui-stickystyle-e.md) \| undefined | 是 | 头部和尾部组件的吸顶吸底样式。 |
+| sticky | [StickyStyle](arkts-arkui-stickystyle-e.md) &#124; undefined | 是 | 头部和尾部组件的吸顶吸底样式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |

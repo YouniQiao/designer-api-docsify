@@ -14,7 +14,7 @@ function finishLogCollected(admin: Want): void
 
 Deletes the device logs collected by the current MDM app under the current user.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > After the app calls [startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md) to initiate log collection and
 > receives the

@@ -61,7 +61,7 @@ Whether the button is pressed.
 
 Default value: **false**
 
-**NOTE：**
+**NOTE:**
 
 This setting applies to the original button size, not to any new component constructed using the builder.
 

@@ -23,7 +23,7 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 | 名称 | 说明 |
 | --- | --- |
 | [domain](arkts-performanceanalysis-hiappevent-domain-n.md) | 提供域名常量。 |
-| [event](arkts-performanceanalysis-hiappevent-event-n.md) | 提供事件名称常量，包括系统事件名称常量和应用事件名称常量。应用事件名称常量是为开发者在调用Write接口进行应用事件打点时预留的可选自定义事件名称。 |
+| [event](arkts-performanceanalysis-hiappevent-event-n.md) | 提供事件名称常量，包括系统事件名称常量和应用事件名称常量。<br>应用事件名称常量是为开发者在调用Write接口进行应用事件打点时预留的可选自定义事件名称。 |
 | [param](arkts-performanceanalysis-hiappevent-param-n.md) | 提供参数名常量。 |
 
 ### 函数
@@ -74,14 +74,14 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 | [AddressSanitizerPolicy](arkts-performanceanalysis-hiappevent-addresssanitizerpolicy-i.md) | 提供地址越界事件配置策略的定义。 |
 | [EventPolicy](arkts-performanceanalysis-hiappevent-eventpolicy-i.md) | 提供系统事件配置策略的定义，用于使用[configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md)设置事件配置策略。 |
 
-### 枚举
-
-| 名称 | 说明 |
-| --- | --- |
-| [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md) | 事件类型枚举。 |
-
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
 | [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md) | 事件自定义参数值的类型。 |
+
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md) | 事件类型枚举。 |

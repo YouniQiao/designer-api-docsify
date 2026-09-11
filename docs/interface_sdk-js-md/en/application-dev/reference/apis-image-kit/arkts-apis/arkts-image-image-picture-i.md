@@ -36,7 +36,7 @@ Obtains an auxiliary picture by type.
 
 | Type | Description |
 | --- | --- |
-| [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) \| null | AuxiliaryPicture object. If there is no AuxiliaryPicture object, null is returned. |
+| [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) &#124; null | AuxiliaryPicture object. If there is no AuxiliaryPicture object, null is returned. |
 
 **Error codes:**
 
@@ -60,7 +60,7 @@ Obtains the PixelMap object of the gain map.
 
 | Type | Description |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) \| null | PixelMap object obtained. If there is no PixelMap object, null is returned. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) &#124; null | PixelMap object obtained. If there is no PixelMap object, null is returned. |
 
 ## getHdrComposedPixelmap
 
@@ -113,7 +113,7 @@ The Picture object that calls this API must contain the main picture, gain map, 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md) \| undefined&gt; | Promise, which returns the PixelMap object or **undefined**. |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md) &#124; undefined&gt; | Promise, which returns the PixelMap object or **undefined**. |
 
 **Error codes:**
 

@@ -24,7 +24,7 @@ Re-encodes the given FastBuffer or Uint8Array instance from one character encodi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | The buffer to re-encode |
+| source | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; Uint8Array | Yes | The buffer to re-encode |
 | fromEnc | string | Yes | The source character encoding |
 | toEnc | string | Yes | The target character encoding |
 

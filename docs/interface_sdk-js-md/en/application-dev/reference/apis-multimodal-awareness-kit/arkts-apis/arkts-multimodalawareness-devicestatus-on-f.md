@@ -29,7 +29,7 @@ Subscribes to steady standing state events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function can not work correctly due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function can not work correctly due to limited<br> device capabilities. |
 | [32500001](../errorcode-deviceStatus.md#32500001-abnormal-service) | Service exception. |
 | [32500002](../errorcode-deviceStatus.md#32500002-subscription-failed) | Subscription failed. |
 

@@ -28,8 +28,8 @@ Queries state data of all bundles within a specified period identified by the st
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| begin | number | 是 | Indicates the start time of the query period, in milliseconds. |
-| end | number | 是 | Indicates the end time of the query period, in milliseconds. |
+| begin | number | 是 | Indicates the start time of the query period, in milliseconds.<br> Unit:ms |
+| end | number | 是 | Indicates the end time of the query period, in milliseconds.<br> Unit:ms |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleActiveState](arkts-backgroundtasks-bundlestate-bundleactivestate-i.md)&gt;&gt; | 是 | the state data of all bundles. |
 
 **示例**
@@ -74,8 +74,8 @@ Queries state data of all bundles within a specified period identified by the st
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| begin | number | 是 | Indicates the start time of the query period, in milliseconds. |
-| end | number | 是 | Indicates the end time of the query period, in milliseconds. |
+| begin | number | 是 | Indicates the start time of the query period, in milliseconds.<br> Unit:ms |
+| end | number | 是 | Indicates the end time of the query period, in milliseconds.<br> Unit:ms |
 
 **返回值：**
 

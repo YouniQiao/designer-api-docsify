@@ -83,7 +83,7 @@ radius?: LengthMetrics
 
 Radius of the background circle.
 
-Default value: 1.833 times (that is, 11/6) of the value of [circleRadius](arkts-arkui-patternlock-attribute.md#circleradius)
+Default value: 1.833 times (that is, 11/6) of the value of [circleRadius](arkts-arkui-patternlock-comp-attribute.md#circleradius)
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 

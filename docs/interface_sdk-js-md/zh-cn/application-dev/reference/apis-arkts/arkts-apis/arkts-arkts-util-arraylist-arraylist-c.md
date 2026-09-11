@@ -785,7 +785,7 @@ sort(comparator?: ArrayListComparatorFn<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| comparator | [ArrayListComparatorFn](arkts-arkts-arraylistcomparatorfn-t.md)&lt;T&gt; | 否 | 用于定义排序顺序的比较函数，默认为升序排序。当需要降序或自定义比较逻辑时传入此参数。API version 23开始发生兼容性变更，在API version 22及之前的版本其类型为：`(firstValue: T, secondValue: T) =&gt; number`。<br>**适用版本：** 23 |
+| comparator | [ArrayListComparatorFn](arkts-arkts-arraylistcomparatorfn-t.md)&lt;T&gt; | 否 | 用于定义排序顺序的比较函数，默认为升序排序。当需要降序或自定义比较逻辑时传入此参数。<br>API version 23开始发生兼容性变更，在API version 22及之前的版本其类型为：`(firstValue: T, secondValue: T) =&gt; number`。<br>**适用版本：** 23 |
 
 **错误码：**
 
@@ -902,6 +902,12 @@ console.info('result = ', arrayList.length); // result = 4
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
 
 **示例**
 

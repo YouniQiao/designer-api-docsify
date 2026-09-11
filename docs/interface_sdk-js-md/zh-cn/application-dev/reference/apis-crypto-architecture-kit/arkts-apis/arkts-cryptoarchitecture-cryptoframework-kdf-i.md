@@ -41,10 +41,10 @@ generateSecret(params: KdfSpec, callback: AsyncCallback<DataBlob>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:  1. Invalid key length in the params;  2. Invalid info length in the params;  3. Invalid keySize in the params.<br>**适用版本：** 22+ |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:<br>1. Invalid key length in the params; <br>2. Invalid info length in the params; <br>3. Invalid keySize in the params.<br>**适用版本：** 22+ |
 
 **示例**
 
@@ -124,10 +124,10 @@ generateSecret(params: KdfSpec): Promise<DataBlob>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:  1. Invalid key length in the params;  2. Invalid info length in the params;  3. Invalid keySize in the params.<br>**适用版本：** 22+ |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:<br>1. Invalid key length in the params; <br>2. Invalid info length in the params; <br>3. Invalid keySize in the params.<br>**适用版本：** 22+ |
 
 **示例**
 
@@ -183,7 +183,7 @@ generateSecretSync(params: KdfSpec): DataBlob
 
 基于传入的密钥派生参数进行密钥派生，通过同步方式返回派生得到的密钥。
 
-**说明：** 建议优先使用异步API，generateSecret。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：** <br>建议优先使用异步API，generateSecret。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
@@ -207,11 +207,11 @@ generateSecretSync(params: KdfSpec): DataBlob
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:  1. Invalid key length in the params;  2. Invalid info length in the params;  3. Invalid keySize in the params.<br>**适用版本：** 22+ |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:<br>1. Invalid key length in the params; <br>2. Invalid info length in the params; <br>3. Invalid keySize in the params.<br>**适用版本：** 22+ |
 
 **示例**
 

@@ -64,7 +64,7 @@ The string value must be convertible to a number (for example, **'10'**) or incl
 
 Invalid values are handled as default values.
 
-**Type:** number \| string \| [Resource](arkts-arkui-resource-t.md)
+**Type:** number &#124; string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 11
 

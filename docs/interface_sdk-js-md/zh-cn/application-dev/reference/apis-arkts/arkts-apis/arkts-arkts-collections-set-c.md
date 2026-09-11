@@ -120,7 +120,7 @@ constructor(values?: readonly T[] | null)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| values | readonly T[] \| null | 否 | 数组或其它可迭代对象。默认值为**null**，表示创建一个空Set对象。 |
+| values | readonly T[] &#124; null | 否 | 数组或其它可迭代对象。默认值为**null**，表示创建一个空Set对象。 |
 
 **错误码：**
 

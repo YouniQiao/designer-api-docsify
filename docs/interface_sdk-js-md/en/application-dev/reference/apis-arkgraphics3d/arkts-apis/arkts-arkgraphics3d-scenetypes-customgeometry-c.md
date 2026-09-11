@@ -92,8 +92,6 @@ get vertices(): Vec3[]
 
 Array of vertices that make up the model.
 
-@return { Vec3[] }
-
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[]
 
 **Since:** 18

@@ -1,18 +1,6 @@
 # Panel
 
-Panel是输入法面板对象，提供面板页面加载、显示/隐藏、尺寸调整、位置移动、模式切换等功能。Panel实例通过InputMethodAbility的[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)接口获取，使用完毕后需调用[destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel)销毁以释放资源。createPanel与destroyPanel必须配对调用。核心功能概述：  
-- 页面加载：通过[setUiContent](#setuicontent)为面板加载键盘页面内容，支持加载普通页面和与LocalStorage关联的页面。  
-- 显示与隐藏：通过[show](#show)显示面板，通过[hide](#hide)隐藏面板。面板的显示/隐藏也可通过订阅on('show')/on('hide')事件监听状态变化。  
-- 尺寸与位置调整：通过[resize](#resize)调整面板尺寸，通过[moveTo](#moveto)移动面板位置，通过[startMoving](#startmoving)拖拽移动面板，通过[adjustPanelRect](#adjustpanelrect)/ [updatePanelRect](#updatepanelrect)/ [updateRegion](#updateregion)调整面板区域。  
-- 模式设置：通过[changeFlag](#changeflag)切换面板固定态/浮动态，通过[setPrivacyMode](#setprivacymode)设置隐私模式，通过[setImmersiveMode](#setimmersivemode)/ [getImmersiveMode](#getimmersivemode)设置/获取沉浸模式。  
-- 事件监听：通过on('show')/on('hide')/on('sizeChange')监听面板状态变化事件。  
- 面板生命周期：
-1. 在InputMethodAbility的[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)中创建Panel实例并指定面板类型和标志位。
-2. 调用[setUiContent](#setuicontent)加载键盘页面内容。
-3. 调用[show](#show)显示面板，用户可交互。
-4. 根据需要调用resize、moveTo、changeFlag等接口动态调整面板。
-5. 使用完毕后调用[destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel)销毁面板，释放资源。
- 下列API均需使用[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)获取到Panel实例后，通过实例调用。
+Panel是输入法面板对象，提供面板页面加载、显示/隐藏、尺寸调整、位置移动、模式切换等功能。Panel实例通过InputMethodAbility的[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)接口获取，使用完毕后需调用[destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel)销毁以释放资源。createPanel与destroyPanel必须配对调用。<br> <br>核心功能概述：<br> <br>- 页面加载：通过[setUiContent](#setuicontent)为面板加载键盘页面内容，支持加载普通页面和与LocalStorage关联的页面。<br>- 显示与隐藏：通过[show](#show)显示面板，通过[hide](#hide)隐藏面板。面板的显示/隐藏也可通过订阅on('show')/on('hide')事件监听状态变化。<br>- 尺寸与位置调整：通过[resize](#resize)调整面板尺寸，通过[moveTo](#moveto)移动面板位置，通过[startMoving](#startmoving)拖拽移动面板，通过[adjustPanelRect](#adjustpanelrect)/ [updatePanelRect](#updatepanelrect)/ [updateRegion](#updateregion)调整面板区域。<br>- 模式设置：通过[changeFlag](#changeflag)切换面板固定态/浮动态，通过[setPrivacyMode](#setprivacymode)设置隐私模式，通过[setImmersiveMode](#setimmersivemode)/ [getImmersiveMode](#getimmersivemode)设置/获取沉浸模式。<br>- 事件监听：通过on('show')/on('hide')/on('sizeChange')监听面板状态变化事件。<br> <br>面板生命周期：<br> <br>1. 在InputMethodAbility的[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)中创建Panel实例并指定面板类型和标志位。<br>2. 调用[setUiContent](#setuicontent)加载键盘页面内容。<br>3. 调用[show](#show)显示面板，用户可交互。<br>4. 根据需要调用resize、moveTo、changeFlag等接口动态调整面板。<br>5. 使用完毕后调用[destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel)销毁面板，释放资源。<br> <br>下列API均需使用[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)获取到Panel实例后，通过实例调用。
 
 **起始版本：** 10
 
@@ -30,23 +18,15 @@ import { inputMethodEngine } from '@kit.IMEKit';
 adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 ```
 
-预设置输入法应用横竖屏大小。接口调用完毕表示adjust请求已提交到输入法框架，不表示执行完毕。  
-> **说明:**
-   
-> 
-   
-> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。
-   
-> 
-   
-> 此接口为同步接口，接口返回成功仅代表系统侧收到设置的请求，不代表设置完成。如果需要感知执行过程中的异常，建议使用
-   
-> [updatePanelRect](#updatepanelrect)或
-   
-> [updatePanelRectSync](#updatepanelrectsync)。
-   
-> 
-   
+预设置输入法应用横竖屏大小。接口调用完毕表示adjust请求已提交到输入法框架，不表示执行完毕。<br> <br>   
+> **说明：**<br>
+> <br>
+> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。<br>
+> <br>
+> 此接口为同步接口，接口返回成功仅代表系统侧收到设置的请求，不代表设置完成。如果需要感知执行过程中的异常，建议使用<br>
+> [updatePanelRect](#updatepanelrect)或<br>
+> [updatePanelRectSync](#updatepanelrectsync)。<br>
+> <br>
 > 手机的PanelFlag是FLG_FLOATING且面板宽度在0~288vp之间时，面板底部功能键将随面板宽度动态调整大小，为了保证最佳用户体验，建议面板宽度不小于90vp。
 
 **起始版本：** 12
@@ -105,35 +85,21 @@ panel.adjustPanelRect(panelFlag, panelRect);
 adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。  
-> **说明:**
-   
-> 
-   
-> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。此接口兼容
-   
-> [adjustPanelRect](#adjustpanelrect)的调用方法，若入参rect
-   
-> 仅填写属性landscapeRect和portraitRect，则默认调用
-   
-> [adjustPanelRect](#adjustpanelrect)。
-   
-> 
-   
-> 此接口为同步接口，接口返回成功仅代表系统侧收到设置的请求，不代表设置完成。如果需要感知执行过程中的异常，建议使用
-   
-> [updatePanelRect](#updatepanelrect-1)或
-   
-> [updatePanelRectSync](#updatepanelrectsync-1)
-   
-> 。
-   
-> 
-   
-> 手机的PanelFlag是FLG_FLOATING且面板宽度在0~288vp之间时，面板底部功能键将随面板宽度动态调整大小，为了保证最佳用户体验，建议面板宽度不小于90vp。
-   
-> 
-   
+预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。<br> <br>   
+> **说明：**<br>
+> <br>
+> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。此接口兼容<br>
+> [adjustPanelRect](#adjustpanelrect)的调用方法，若入参rect <br>
+> 仅填写属性landscapeRect和portraitRect，则默认调用<br>
+> [adjustPanelRect](#adjustpanelrect)。<br>
+> <br>
+> 此接口为同步接口，接口返回成功仅代表系统侧收到设置的请求，不代表设置完成。如果需要感知执行过程中的异常，建议使用<br>
+> [updatePanelRect](#updatepanelrect-1)或<br>
+> [updatePanelRectSync](#updatepanelrectsync-1) <br>
+> 。<br>
+> <br>
+> 手机的PanelFlag是FLG_FLOATING且面板宽度在0~288vp之间时，面板底部功能键将随面板宽度动态调整大小，为了保证最佳用户体验，建议面板宽度不小于90vp。<br>
+> <br>
 > 当com.ohos.sceneboard进程不存在时，输入法热区生效范围保持和软键盘区域一致。
 
 **起始版本：** 15
@@ -555,25 +521,16 @@ panel.off('hide');
 off(type: 'sizeChange', callback?: SizeChangeCallback): void
 ```
 
-取消监听当前面板大小变化，使用callback异步回调。  
-> **说明:**
-   
-> 
-   
-> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。输入法通过adjustPanelRect等接口对面板大小进行调节时，系统会根据一定规则校验计算出最终的数值（例如超出屏幕等场景
-   
-> ），输入法应用可通过该回调获取的真实面板大小，完成最终的面板布局刷新。
-   
-> 
-   
-> - 从API version 12-14开始支持，此接口回调函数中仅包含[window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)类型的必选参数。
-   
-> 
-   
-> - 从API version 15起，调用
-   
-> [adjustPanelRect](#adjustpanelrect-1)接口后，此
-   
+取消监听当前面板大小变化，使用callback异步回调。<br> <br>   
+> **说明：**<br>
+> <br>
+> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。输入法通过adjustPanelRect等接口对面板大小进行调节时，系统会根据一定规则校验计算出最终的数值（例如超出屏幕等场景<br>
+> ），输入法应用可通过该回调获取的真实面板大小，完成最终的面板布局刷新。<br>
+> <br>
+> - 从API version 12-14开始支持，此接口回调函数中仅包含[window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)类型的必选参数。<br>
+> <br>
+> - 从API version 15起，调用<br>
+> [adjustPanelRect](#adjustpanelrect-1)接口后，此<br>
 > 接口回调函数增加[KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md)类型的可选参数。
 
 **起始版本：** 12
@@ -657,25 +614,16 @@ panel.on('hide', () => {
 on(type: 'sizeChange', callback: SizeChangeCallback): void
 ```
 
-监听当前面板大小变化，使用callback异步回调。  
-> **说明:**
-   
-> 
-   
-> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。输入法通过adjustPanelRect等接口对面板大小进行调节时，系统会根据一定规则校验计算出最终的数值（例如超出屏幕等场景
-   
-> ），输入法应用可通过该回调获取的真实面板大小，完成最终的面板布局刷新。
-   
-> 
-   
-> - 从API version 12-14开始支持，此接口回调函数中仅包含[window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)类型的必选参数。
-   
-> 
-   
-> - 从API version 15起，调用
-   
-> [adjustPanelRect](#adjustpanelrect-1)接口后，此
-   
+监听当前面板大小变化，使用callback异步回调。<br> <br>   
+> **说明：**<br>
+> <br>
+> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。输入法通过adjustPanelRect等接口对面板大小进行调节时，系统会根据一定规则校验计算出最终的数值（例如超出屏幕等场景<br>
+> ），输入法应用可通过该回调获取的真实面板大小，完成最终的面板布局刷新。<br>
+> <br>
+> - 从API version 12-14开始支持，此接口回调函数中仅包含[window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)类型的必选参数。<br>
+> <br>
+> - 从API version 15起，调用<br>
+> [adjustPanelRect](#adjustpanelrect-1)接口后，此<br>
 > 接口回调函数增加[KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md)类型的可选参数。
 
 **起始版本：** 12
@@ -712,15 +660,11 @@ panel.on('sizeChange', (windowSize: window.Size, keyboardArea: inputMethodEngine
 resize(width: number, height: number, callback: AsyncCallback<void>): void
 ```
 
-改变当前输入法面板的大小，使用callback异步回调。  
-> **说明：**
-   
-> 
-   
-> 面板宽度不超出屏幕宽度，面板高度不高于屏幕高度的0.7倍。
-   
-> 
-   
+改变当前输入法面板的大小，使用callback异步回调。<br> <br>   
+> **说明：**<br>
+> <br>
+> 面板宽度不超出屏幕宽度，面板高度不高于屏幕高度的0.7倍。<br>
+> <br>
 > 手机的PanelFlag是FLG_FLOATING且面板宽度在0~288vp之间时，面板底部功能键将随面板宽度动态调整大小，为了保证最佳用户体验，建议面板宽度不小于90vp。
 
 **起始版本：** 10
@@ -762,15 +706,11 @@ panel.resize(500, 1000, (err: BusinessError) => {
 resize(width: number, height: number): Promise<void>
 ```
 
-改变当前输入法面板的大小，使用Promise异步回调。  
-> **说明：**
-   
-> 
-   
-> 面板宽度不超出屏幕宽度，面板高度不高于屏幕高度的0.7倍。
-   
-> 
-   
+改变当前输入法面板的大小，使用Promise异步回调。<br> <br>   
+> **说明：**<br>
+> <br>
+> 面板宽度不超出屏幕宽度，面板高度不高于屏幕高度的0.7倍。<br>
+> <br>
 > 手机的PanelFlag是FLG_FLOATING且面板宽度在0~288vp之间时，面板底部功能键将随面板宽度动态调整大小，为了保证最佳用户体验，建议面板宽度不小于90vp。
 
 **起始版本：** 10
@@ -815,15 +755,7 @@ panel.resize(500, 1000).then(() => {
 setImmersiveEffect(effect: ImmersiveEffect): void
 ```
 
-设置输入法应用的沉浸效果。  
-- 只有在[启用沉浸式模式](#setimmersivemode)时，才能使用渐变模式和流光模式。  
-- 只有在启用渐变模式时，才能使用流光模式。  
-- 未启用渐变模式时，渐变高度必须为0px。  
-- 只有系统应用才能设置流光模式。  
-- 必须先调用以下任一接口，才能调用当前接口：  
- - [adjustPanelRect](#adjustpanelrect)(支持API version 12)   
- - [adjustPanelRect](#adjustpanelrect-1)(支持API version 15)   
- - [resize](#resize)(支持API version 10)
+设置输入法应用的沉浸效果。<br> <br>- 只有在[启用沉浸式模式](#setimmersivemode)时，才能使用渐变模式和流光模式。<br>- 只有在启用渐变模式时，才能使用流光模式。<br>- 未启用渐变模式时，渐变高度必须为0px。<br>- 只有系统应用才能设置流光模式。<br>- 必须先调用以下任一接口，才能调用当前接口：<br> - [adjustPanelRect](#adjustpanelrect)(支持API version 12) <br> - [adjustPanelRect](#adjustpanelrect-1)(支持API version 15) <br> - [resize](#resize)(支持API version 10)
 
 **起始版本：** 20
 
@@ -893,15 +825,11 @@ panel.setImmersiveMode(inputMethodEngine.ImmersiveMode.LIGHT_IMMERSIVE);
 setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 ```
 
-设置屏幕常亮。使用Promise异步回调。  
-> **说明:**
-   
-> 
-   
-> - 当键盘拉起时设置常亮生效，键盘关闭则自动失效。
-   
-> 
-   
+设置屏幕常亮。使用Promise异步回调。<br> <br>   
+> **说明：**<br>
+> <br>
+> - 当键盘拉起时设置常亮生效，键盘关闭则自动失效。<br>
+> <br>
 > - 规范使用该接口：必要场景（例如：语音输入）下，设置该属性为true；退出必要场景后，重置该属性为false；其他场景下，不使用该接口。
 
 **起始版本：** 20
@@ -956,7 +884,7 @@ setPrivacyMode(isPrivacyMode: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isPrivacyMode | boolean | 是 | 是否设置隐私模式。   - 值为true，表示将设置为隐私模式。   - 值为false，表示将设置为非隐私模式。 |
+| isPrivacyMode | boolean | 是 | 是否设置隐私模式。<br>- 值为true，表示将设置为隐私模式。<br>- 值为false，表示将设置为非隐私模式。 |
 
 **错误码：**
 
@@ -988,8 +916,8 @@ setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fillColor | string \| undefined | 是 | 功能键的颜色，取值范围为[#01000000, #FFFFFFFF] 或 [#000000, #FFFFFF]，不支持具有完全透明Alpha通道（#00xxxxxx）的值。 |
-| backgroundColor | string \| undefined | 是 | 功能键的背景颜色，取值范围为[#01000000, #FFFFFFFF] 或 [#000000, #FFFFFF]，不支持具有完全透明Alpha通道（#00xxxxxx）的值。 |
+| fillColor | string &#124; undefined | 是 | 功能键的颜色，取值范围为[#01000000, #FFFFFFFF] 或 [#000000, #FFFFFF]，不支持具有完全透明Alpha通道（#00xxxxxx）的值。 |
+| backgroundColor | string &#124; undefined | 是 | 功能键的背景颜色，取值范围为[#01000000, #FFFFFFFF] 或 [#000000, #FFFFFF]，不支持具有完全透明Alpha通道（#00xxxxxx）的值。 |
 
 **返回值：**
 
@@ -1284,19 +1212,13 @@ panel.startMoving();
 updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 ```
 
-预设置输入法应用横竖屏大小。使用Promise异步回调。  
-> **说明:**
-   
-> 
-   
-> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。
-   
-> 
-   
-> 此接口为异步接口，接口返回仅代表系统侧收到设置的请求，不代表已完成设置。
-   
-> 
-   
+预设置输入法应用横竖屏大小。使用Promise异步回调。<br> <br>   
+> **说明：**<br>
+> <br>
+> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。<br>
+> <br>
+> 此接口为异步接口，接口返回仅代表系统侧收到设置的请求，不代表已完成设置。<br>
+> <br>
 > 手机的PanelFlag是FLG_FLOATING且面板宽度在0~288vp之间时，面板底部功能键将随面板宽度动态调整大小，为了保证最佳用户体验，建议面板宽度不小于90vp。
 
 **起始版本：** 26.0.0
@@ -1359,29 +1281,18 @@ panel.updatePanelRect(panelFlag, panelRect);
 updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 ```
 
-预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。使用Promise异步回调。  
-> **说明:**
-   
-> 
-   
-> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。此接口兼容
-   
-> [adjustPanelRect](#adjustpanelrect)的调用方法，若入参rect
-   
-> 仅填写属性landscapeRect和portraitRect，则默认调用
-   
-> [adjustPanelRect](#adjustpanelrect)。
-   
-> 
-   
-> 此接口为异步接口，接口返回仅代表系统侧收到设置的请求，不代表已完成设置。
-   
-> 
-   
-> 手机的PanelFlag是FLG_FLOATING且面板宽度在0~288vp之间时，面板底部功能键将随面板宽度动态调整大小，为了保证最佳用户体验，建议面板宽度不小于90vp。
-   
-> 
-   
+预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。使用Promise异步回调。<br> <br>   
+> **说明：**<br>
+> <br>
+> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。此接口兼容<br>
+> [adjustPanelRect](#adjustpanelrect)的调用方法，若入参rect <br>
+> 仅填写属性landscapeRect和portraitRect，则默认调用<br>
+> [adjustPanelRect](#adjustpanelrect)。<br>
+> <br>
+> 此接口为异步接口，接口返回仅代表系统侧收到设置的请求，不代表已完成设置。<br>
+> <br>
+> 手机的PanelFlag是FLG_FLOATING且面板宽度在0~288vp之间时，面板底部功能键将随面板宽度动态调整大小，为了保证最佳用户体验，建议面板宽度不小于90vp。<br>
+> <br>
 > 当com.ohos.sceneboard进程不存在时，输入法热区生效范围保持和软键盘区域一致。
 
 **起始版本：** 26.0.0
@@ -1449,25 +1360,16 @@ panel.updatePanelRect(panelFlag, panelRect);
 updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 ```
 
-预设置输入法应用横竖屏大小。  
-> **说明：**
-   
-> 
-   
-> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口
-   
-> [updatePanelRect](#updatepanelrect)。
-   
-> 
-   
-> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。
-   
-> 
-   
-> 此接口为同步接口，接口返回代表系统侧收到设置的请求，并已完成设置。
-   
-> 
-   
+预设置输入法应用横竖屏大小。<br> <br>   
+> **说明：** <br>
+> <br>
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口<br>
+> [updatePanelRect](#updatepanelrect)。<br>
+> <br>
+> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。<br>
+> <br>
+> 此接口为同步接口，接口返回代表系统侧收到设置的请求，并已完成设置。<br>
+> <br>
 > 手机的PanelFlag是FLG_FLOATING且面板宽度在0~288vp之间时，面板底部功能键将随面板宽度动态调整大小，为了保证最佳用户体验，建议面板宽度不小于90vp。
 
 **起始版本：** 26.0.0
@@ -1524,35 +1426,21 @@ panel.updatePanelRectSync(panelFlag, panelRect);
 updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。  
-> **说明：**
-   
-> 
-   
-> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口
-   
-> [updatePanelRect](#updatepanelrect)。
-   
-> 
-   
-> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。此接口兼容
-   
-> [adjustPanelRect](#adjustpanelrect)的调用方法，若入参rect
-   
-> 仅填写属性landscapeRect和portraitRect，则默认调用
-   
-> [adjustPanelRect](#adjustpanelrect)。
-   
-> 
-   
-> 此接口为同步接口，接口返回代表系统侧收到设置的请求，并已完成设置。
-   
-> 
-   
-> 手机的PanelFlag是FLG_FLOATING且面板宽度在0~288vp之间时，面板底部功能键将随面板宽度动态调整大小，为了保证最佳用户体验，建议面板宽度不小于90vp。
-   
-> 
-   
+预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。<br> <br>   
+> **说明：** <br>
+> <br>
+> 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口<br>
+> [updatePanelRect](#updatepanelrect)。<br>
+> <br>
+> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。此接口兼容<br>
+> [adjustPanelRect](#adjustpanelrect)的调用方法，若入参rect <br>
+> 仅填写属性landscapeRect和portraitRect，则默认调用<br>
+> [adjustPanelRect](#adjustpanelrect)。<br>
+> <br>
+> 此接口为同步接口，接口返回代表系统侧收到设置的请求，并已完成设置。<br>
+> <br>
+> 手机的PanelFlag是FLG_FLOATING且面板宽度在0~288vp之间时，面板底部功能键将随面板宽度动态调整大小，为了保证最佳用户体验，建议面板宽度不小于90vp。<br>
+> <br>
 > 当com.ohos.sceneboard进程不存在时，输入法热区生效范围保持和软键盘区域一致。
 
 **起始版本：** 26.0.0
@@ -1614,19 +1502,13 @@ panel.updatePanelRectSync(panelFlag, panelRect);
 updateRegion(inputRegion: Array<window.Rect>): void
 ```
 
-更新当前状态下输入法面板内的热区。  
-> **说明:**
-   
-> 
-   
-> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。
-   
-> 
-   
-> 此接口为同步接口，接口返回仅代表系统侧收到更新热区的请求，不代表已完成热区更新。
-   
-> 
-   
+更新当前状态下输入法面板内的热区。<br> <br>   
+> **说明：**<br>
+> <br>
+> 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。<br>
+> <br>
+> 此接口为同步接口，接口返回仅代表系统侧收到更新热区的请求，不代表已完成热区更新。<br>
+> <br>
 > 当com.ohos.sceneboard进程不存在时，输入法热区生效范围保持和软键盘区域一致。
 
 **起始版本：** 15
@@ -1637,7 +1519,7 @@ updateRegion(inputRegion: Array<window.Rect>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inputRegion | Array&lt;[window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)&gt; | 是 | 面板内接收输入事件的区域。   - 数组大小限制为[1, 4]。   - 传入的热区位置是相对于输入法面板窗口左顶点的位置。 |
+| inputRegion | Array&lt;[window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)&gt; | 是 | 面板内接收输入事件的区域。<br>- 数组大小限制为[1, 4]。<br>- 传入的热区位置是相对于输入法面板窗口左顶点的位置。 |
 
 **错误码：**
 

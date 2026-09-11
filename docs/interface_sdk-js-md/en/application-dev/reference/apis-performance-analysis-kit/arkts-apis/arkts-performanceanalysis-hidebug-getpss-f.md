@@ -14,7 +14,7 @@ function getPss() : bigint
 
 Obtains the size of the physical memory actually used by the application process. This API is implemented by summing up the values of **Pss** and **SwapPss** in the **\/proc/{pid}/smaps_rollup** node.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Reading the **\/proc/{pid}/smaps_rollup** node is time-consuming. Therefore, you are advised not to use this API
 > in the main thread. You can use this API in the asynchronous thread started by calling

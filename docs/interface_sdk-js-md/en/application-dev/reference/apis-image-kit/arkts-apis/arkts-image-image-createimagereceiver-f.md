@@ -18,7 +18,7 @@ Creates an ImageReceiver instance by specifying the image width, height, format,
 
 **Deprecated since:** 11
 
-**Substitutes:** [createImageReceiver](#createimagereceiver-1)(size: Size, format: ImageFormat, capacity: int)
+**Substitutes:** [createImageReceiver](arkts-image-image-createimagereceiver-f.md)(size: Size, format: ImageFormat, capacity: number)
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -111,7 +111,7 @@ Creates an ImageReceiver instance.
 
 | Type | Description |
 | --- | --- |
-| [ImageReceiver](arkts-image-image-imagereceiver-i.md) \| undefined | ImageReceiver instance created. If the operation fails, undefined is returned. |
+| [ImageReceiver](arkts-image-image-imagereceiver-i.md) &#124; undefined | ImageReceiver instance created. If the operation fails, undefined is returned. |
 
 **Error codes:**
 

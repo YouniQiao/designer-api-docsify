@@ -32,14 +32,12 @@ Sets whether to enable auto-scaling for the **ArcListItem** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable auto-scaling.   **true**: Enable auto-scaling.    **false**: Disable auto-scaling.Default value: **true**. |
+| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable auto-scaling.<br>**true**: Enable auto-scaling.<br> **false**: Disable auto-scaling.<br>Default value: **true**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |  |
-
 ## swipeAction
 
 ```TypeScript
@@ -64,4 +62,3 @@ Sets the swipe action item displayed when the **ArcListItem** component is swipe
 
 | Type | Description |
 | --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |  |

@@ -34,4 +34,4 @@ function convertToECSubMaterial(material: uiMaterial.ImmersiveMaterial) : uiMate
 
 | 类型 | 说明 |
 | --- | --- |
-| [uiMaterial.ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | 经过转换后适用于[EffectComponent]{ |
+| [uiMaterial.ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | 经过转换后适用于EffectComponent子组件的沉浸式材质。 |

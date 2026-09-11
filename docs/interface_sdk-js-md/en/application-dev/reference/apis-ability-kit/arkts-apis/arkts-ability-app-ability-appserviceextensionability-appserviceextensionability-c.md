@@ -75,7 +75,7 @@ onCreate(want: Want): void
 
 Called when an AppServiceExtensionAbility instance is created. Applications can perform initialization operations, such as registering common event listeners, in this callback.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If an AppServiceExtensionAbility instance has already been created, the **onCreate()** callback is not invoked
 > again when the instance is started or connected.

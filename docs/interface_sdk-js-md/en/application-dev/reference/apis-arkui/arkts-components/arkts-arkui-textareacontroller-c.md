@@ -38,7 +38,7 @@ Sets the position of the caret.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Length from the start of the string to the position where the caret is located.Values less than 0 are treated as **0**. Values greater than the string length are treated as the string length. |
+| value | number | Yes | Length from the start of the string to the position where the caret is located.<br>Values less than 0 are treated as **0**. Values greater than the string length are treated as the string length. |
 
 ## constructor
 
@@ -74,9 +74,9 @@ Sets the text selection range and highlights the selected text when the componen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionStart | number | Yes | Start position of the text selection range. The start position of text in the text box is 0.Values less than 0 are treated as **0**. Values greater than the maximum text length are treated as the maximum text length. |
-| selectionEnd | number | Yes | End position of the text selection range.Values less than 0 are treated as **0**. Values greater than the maximum text length are treated as the maximum text length. |
-| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No | Configuration options for text selection.Default value: **MenuPolicy.DEFAULT<br>**Since:** 12 |
+| selectionStart | number | Yes | Start position of the text selection range. The start position of text in the text box is 0.<br>Values less than 0 are treated as **0**. Values greater than the maximum text length are treated as the maximum text length.<br> |
+| selectionEnd | number | Yes | End position of the text selection range.<br>Values less than 0 are treated as **0**. Values greater than the maximum text length are treated as the maximum text length.<br> |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No | Configuration options for text selection.<br>Default value: **MenuPolicy.DEFAULT**<br><br>**Since:** 12 |
 
 ## stopEditing
 

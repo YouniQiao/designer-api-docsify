@@ -20,7 +20,7 @@ assetChangeDatas: PhotoAssetChangeData[] | null
 
 变更的媒体资产（图片/视频）数组。如果需要重新查询所有媒体资产，assetChangeDatas为null。
 
-**类型：** [PhotoAssetChangeData](arkts-medialibrary-photoaccesshelper-photoassetchangedata-i.md)[] \| null
+**类型：** [PhotoAssetChangeData](arkts-medialibrary-photoaccesshelper-photoassetchangedata-i.md)[] &#124; null
 
 **起始版本：** 20
 

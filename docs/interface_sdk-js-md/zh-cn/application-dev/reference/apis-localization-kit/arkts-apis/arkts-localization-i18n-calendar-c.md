@@ -30,7 +30,7 @@ add(field: string, amount: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| field | string | 是 | 指定的日历属性，目前支持的属性值有 year, month, week_of_year, week_of_month, date, day_of_year,  day_of_week, day_of_week_in_month, hour, hour_of_day, minute, second, millisecond。各取值代表的含义请参考[get](#get)。 |
+| field | string | 是 | 指定的日历属性，目前支持的属性值有 year, month, week_of_year, week_of_month, date, day_of_year,  day_of_week, day_of_week_in_month, hour, hour_of_day, minute, second, millisecond。<br>各取值代表的含义请参考[get](#get)。 |
 | amount | number | 是 | 进行加减操作的具体数值。 |
 
 **错误码：**
@@ -75,13 +75,13 @@ compareDays(date: Date): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | Date | 是 | 时间日期。   **说明：** 月份从0开始计数，0表示一月。 |
+| date | Date | 是 | 时间日期。<br>**说明：** <br>月份从0开始计数，0表示一月。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 相差的天数，正数表示日历时间更早，负数表示指定时间更早。 |
+| number | 相差的天数，正数表示日历时间更早，负数表示指定时间更早。<br>按毫秒级的精度，不足一天按一天计。 |
 
 **错误码：**
 
@@ -124,7 +124,7 @@ get(field: string): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| field | string | 是 | 指定的日历属性，取值包括："era"：纪元，例如公历中的公元前或者公元后。"year"：年。"month"：月，从0开始计数，0表示一月。"date"：日。"hour"：挂钟小时数。"hour_of_day"：一天中的第几小时。"minute"：分。"second"：秒。"millisecond"：毫秒。"week_of_year"：一年中的第几周，按照星期计算周，第一周的归属各地有区别。"year_woy"：一年中的第几周，按照数值计算周，例如一年中前1~7日属于第一周。"week_of_month"：一个月中的第几周，按照星期计算周。"day_of_week_in_month"：一月中的第几周，按照数值计算周，例如1-7日属于第一周。"day_of_year"：一年中的第几天。"day_of_week"：一周中的第几天(星期)。"milliseconds_in_day"：一天中的第几毫秒。"zone_offset"：以毫秒计时的时区固定偏移量（不含夏令时）。"dst_offset"：以毫秒计时的夏令时偏移量。"dow_local"：本地星期。"extended_year"：扩展的年份数值，支持负数。"julian_day"：儒略日，与当前时区相关。"is_leap_month"：返回1表示是闰月，返回0表示不是闰月。 |
+| field | string | 是 | 指定的日历属性，取值包括：<br>"era"：纪元，例如公历中的公元前或者公元后。<br>"year"：年。<br>"month"：月，从0开始计数，0表示一月。<br>"date"：日。<br>"hour"：挂钟小时数。<br>"hour_of_day"：一天中的第几小时。<br>"minute"：分。<br>"second"：秒。<br>"millisecond"：毫秒。<br>"week_of_year"：一年中的第几周，按照星期计算周，第一周的归属各地有区别。<br>"year_woy"：一年中的第几周，按照数值计算周，例如一年中前1~7日属于第一周。<br>"week_of_month"：一个月中的第几周，按照星期计算周。<br>"day_of_week_in_month"：一月中的第几周，按照数值计算周，例如1-7日属于第一周。<br>"day_of_year"：一年中的第几天。<br>"day_of_week"：一周中的第几天(星期)。<br>"milliseconds_in_day"：一天中的第几毫秒。<br>"zone_offset"：以毫秒计时的时区固定偏移量（不含夏令时）。<br>"dst_offset"：以毫秒计时的夏令时偏移量。<br>"dow_local"：本地星期。<br>"extended_year"：扩展的年份数值，支持负数。<br>"julian_day"：儒略日，与当前时区相关。<br>"is_leap_month"：返回1表示是闰月，返回0表示不是闰月。<br> |
 
 **返回值：**
 
@@ -313,7 +313,7 @@ isWeekend(date?: Date): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | Date | 否 | 时间日期。   **说明：** 月份从0开始计数，0表示一月。默认值：日历对象的当前日期。 |
+| date | Date | 否 | 时间日期。<br>**说明：** <br>月份从0开始计数，0表示一月。<br>默认值：日历对象的当前日期。 |
 
 **返回值：**
 
@@ -352,7 +352,7 @@ set(year: number, month: number, date:number, hour?: number, minute?: number, se
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | year | number | 是 | 设置的年。 |
-| month | number | 是 | 设置的月。   **说明：** 月份从0开始计数，0表示一月。 |
+| month | number | 是 | 设置的月。<br>**说明：** <br>月份从0开始计数，0表示一月。 |
 | date | number | 是 | 设置的日。 |
 | hour | number | 否 | 设置的小时。默认值：系统时间。 |
 | minute | number | 否 | 设置的分钟。默认值：系统时间。 |
@@ -445,7 +445,7 @@ setTime(date: Date): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | Date | 是 | 时间日期。   **说明：** 月份从0开始计数，0表示一月。 |
+| date | Date | 是 | 时间日期。<br>**说明：** <br>月份从0开始计数，0表示一月。 |
 
 **示例**
 

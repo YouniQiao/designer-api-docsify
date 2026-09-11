@@ -23,7 +23,7 @@ Default value: **0**.
 
 Unit: vp
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
 **Since:** 12
 
@@ -45,7 +45,7 @@ Default value: **0**.
 
 Unit: vp
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [Margin](arkts-arkui-margin-t.md)
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [Margin](arkts-arkui-margin-t.md)
 
 **Since:** 12
 
@@ -67,7 +67,7 @@ Default value: **0**.
 
 Unit: vp
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Padding
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; Padding
 
 **Since:** 12
 

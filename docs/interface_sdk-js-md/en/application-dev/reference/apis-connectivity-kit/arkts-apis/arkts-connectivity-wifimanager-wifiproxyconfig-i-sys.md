@@ -1,6 +1,6 @@
 # WifiProxyConfig (System API)
 
-Wi-Fi Proxy config.
+Wi-Fi Proxy config. @typedef WifiProxyConfig
 
 **Since:** 10
 

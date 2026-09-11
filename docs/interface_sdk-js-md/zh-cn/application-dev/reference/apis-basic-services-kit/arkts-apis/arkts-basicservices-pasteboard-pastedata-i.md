@@ -517,7 +517,7 @@ getRecordAt(index: number): PasteDataRecord
 
 **废弃版本：** 9
 
-**替代接口：** [getRecord](#getrecord)(index: int)
+**替代接口：** [getRecord](#getrecord)(index: number)
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -792,7 +792,7 @@ removeRecordAt(index: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [removeRecord](#removerecord)(index: int)
+**替代接口：** [removeRecord](#removerecord)(index: number)
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -869,7 +869,7 @@ replaceRecordAt(index: number, record: PasteDataRecord): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [replaceRecord](#replacerecord)(index: int, record: PasteDataRecord)
+**替代接口：** [replaceRecord](#replacerecord)(index: number, record: PasteDataRecord)
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 

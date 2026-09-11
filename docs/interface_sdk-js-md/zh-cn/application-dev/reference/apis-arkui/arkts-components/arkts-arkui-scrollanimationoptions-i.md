@@ -19,7 +19,7 @@ canOverScroll?: boolean
 
 是否启用过滚动。
 
-<p>&lt;strong&gt;说明&lt;/strong&gt; 设置为&lt;em&gt;true&lt;/em&gt;时可以滚动超出边界并触发回弹动画，同时组件的&lt;em&gt;edgeEffect&lt;/em&gt;属性需设置为EdgeEffect.Spring。</p>
+<p>&lt;strong&gt;说明&lt;/strong&gt; <br> 设置为&lt;em&gt;true&lt;/em&gt;时可以滚动超出边界并触发回弹动画，同时组件的&lt;em&gt;edgeEffect&lt;/em&gt;属性需设置为EdgeEffect.Spring。</p>
 
 **类型：** boolean
 
@@ -41,7 +41,7 @@ curve?: Curve | ICurve
 
 滚动曲线。
 
-**类型：** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| [ICurve](arkts-arkui-icurve-i.md)
+**类型：** [Curve](../arkts-apis/arkts-arkui-curve-e.md) &#124; [ICurve](arkts-arkui-icurve-i.md)
 
 **默认值：** Curve.Ease
 
@@ -61,7 +61,7 @@ duration?: number
 
 滚动时长。
 
-<p>&lt;strong&gt;说明&lt;/strong&gt; 设置为小于0的值时，按默认值处理。</p>
+<p>&lt;strong&gt;说明&lt;/strong&gt; <br>设置为小于0的值时，按默认值处理。</p>
 
 **类型：** number
 

@@ -87,7 +87,7 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 底部弹窗时，底部边框颜色设置无效。设置systemMaterial属性时，该属性效果可能被覆盖，不建议与systemMaterial一起使用。
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md)
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; EdgeColors &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md)
 
 **起始版本：** 12
 
@@ -113,7 +113,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 底部弹窗时，底部边框样式设置无效。
 
-**类型：** [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) \| EdgeStyles
+**类型：** [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) &#124; EdgeStyles
 
 **起始版本：** 12
 
@@ -143,7 +143,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 底部弹窗时，底部边框宽度设置无效。设置systemMaterial属性时，该属性效果可能被覆盖，不建议与systemMaterial一起使用。取值范围为非负数，传入负值时设置无效。
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **起始版本：** 12
 
@@ -171,7 +171,7 @@ detents?: [(SheetSize | Length), (SheetSize | Length)?, (SheetSize | Length)?]
 
 面板可跟手滑动切换挡位，松手后是否滑动至目标挡位有两个判断条件：速度和距离。速度超过阈值，则执行滑动至与手速方向一致的目标挡位；速度小于阈值，则引入距离判断条件，当位移距离&gt;当前位置与目标位置的1/2，滑动至与手速方向一致的目标挡位；位移距离&lt;当前位置与目标位置的1/2，返回至当前挡位。速度阈值：1000px/s，距离阈值：50%。
 
-**类型：** [(SheetSize \| Length), (SheetSize \| Length)?, (SheetSize \| Length)?]
+**类型：** [(SheetSize &#124; Length), (SheetSize &#124; Length)?, (SheetSize &#124; Length)?]
 
 **起始版本：** 11
 
@@ -197,7 +197,7 @@ detentSelection?: SheetSize | Length
 2. 当设置SheetSize.FIT_CONTENT时，该接口无效。
 3. 不建议手势切换挡位与该接口切换挡位同时生效使用，同时生效时挡位切换行为可能不可预期。
 
-**类型：** [SheetSize](arkts-arkui-sheetsize-e.md) \| [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** [SheetSize](arkts-arkui-sheetsize-e.md) &#124; [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** detents[0]
 
@@ -374,7 +374,7 @@ height?: SheetSize | Length
 8. 侧边弹窗样式下，高度只支持全屏高度。
 9. 全屏模态样式下，高度只支持全屏高度。
 
-**类型：** [SheetSize](arkts-arkui-sheetsize-e.md) \| [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** [SheetSize](arkts-arkui-sheetsize-e.md) &#124; [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** SheetSize.LARGE
 
@@ -768,7 +768,7 @@ radius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 4. 当圆角的半径大于半模态页面宽度一半时，圆角的半径取值为半模态页面宽度的一半。
 5. 当半模态页面高度过小且圆角半径设置过大时，可能导致显示异常。
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **起始版本：** 15
 
@@ -838,7 +838,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 设置systemMaterial属性时，该属性效果可能被覆盖，不建议与systemMaterial一起使用。全屏模态样式（CONTENT_COVER）下不支持阴影，该属性设置无效。
 
-**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
+**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 12
 
@@ -869,7 +869,7 @@ false：不显示关闭图标。
 1. Resource需要为boolean类型。
 2. 全屏模态样式（CONTENT_COVER）下不支持显示关闭按钮，该属性设置无效。
 
-**类型：** boolean \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**类型：** boolean &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **默认值：** true
 
@@ -921,7 +921,7 @@ systemMaterial?: SystemUiMaterial
 
 默认值：undefined，会清除由该接口设置的材质效果。
 
-**说明：**: 不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影[shadow](arkts-arkui-commonmethod-c.md#shadow)，不建议与上述接口一起使用。使用示例请参考[示例10（半模态设置系统材质）](arkts-arkui-commonmethod-c.md)。
+**说明：** 不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影[shadow](arkts-arkui-commonmethod-c.md#shadow)，不建议与上述接口一起使用。使用示例请参考[示例10（半模态设置系统材质）](arkts-arkui-commonmethod-c.md)。
 
 **类型：** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 
@@ -947,7 +947,7 @@ title?: SheetTitleOptions | CustomBuilder
 
 全屏模态样式（CONTENT_COVER）下不支持显示标题栏，该属性设置无效。不设置时默认无标题。
 
-**类型：** [SheetTitleOptions](arkts-arkui-sheettitleoptions-i.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**类型：** [SheetTitleOptions](arkts-arkui-sheettitleoptions-i.md) &#124; [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 11
 

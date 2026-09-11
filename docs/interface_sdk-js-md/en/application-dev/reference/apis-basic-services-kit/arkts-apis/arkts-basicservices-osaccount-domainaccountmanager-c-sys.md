@@ -42,7 +42,7 @@ Authenticates a domain account.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid domainAccountInfo or credential. |
@@ -309,7 +309,7 @@ Obtains the business access token of a domain account. This API uses an asynchro
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid business parameters. |
@@ -375,7 +375,7 @@ Obtains the business access token of a domain account. This API uses a promise t
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid business parameters. |
@@ -437,7 +437,7 @@ Obtains information about a specified domain account. This API uses an asynchron
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -505,7 +505,7 @@ Obtains information about a specified domain account. This API uses a promise to
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -566,7 +566,7 @@ Checks whether a domain account exists. This API uses an asynchronous callback t
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid domainAccountInfo. |
@@ -633,7 +633,7 @@ Checks whether a domain account exists. This API uses a promise to return the re
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid domainAccountInfo. |
@@ -698,7 +698,7 @@ Checks whether the authentication of a domain account has expired. This API uses
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Domain account not found. |
@@ -857,7 +857,7 @@ Updates the token of a domain account. An empty token means an invalid token. Th
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid token. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -922,7 +922,7 @@ Updates the token of a domain account. An empty token means an invalid token. Th
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid token. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |

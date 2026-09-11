@@ -21,6 +21,8 @@ fillType?: ResponsiveFillType
 
 Specify the number of columns for different responsive breakpoints.
 
+@typedef { ?ResponsiveFillType }
+
 **Type:** [ResponsiveFillType](arkts-arkui-responsivefilltype-t.md)
 
 **Default:** ResponsiveFillType.BREAKPOINT_DEFAULT

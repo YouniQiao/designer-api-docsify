@@ -27,7 +27,7 @@ function onLocationChange(request: LocationRequest | ContinuousLocationRequest,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | [LocationRequest](arkts-location-geolocationmanager-locationrequest-i.md) \| [ContinuousLocationRequest](arkts-location-geolocationmanager-continuouslocationrequest-i.md) | 是 | 设置位置请求参数。<br>**适用版本：** 23 |
+| request | [LocationRequest](arkts-location-geolocationmanager-locationrequest-i.md) &#124; [ContinuousLocationRequest](arkts-location-geolocationmanager-continuouslocationrequest-i.md) | 是 | 设置位置请求参数。<br>**适用版本：** 23 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Location](arkts-location-geolocationmanager-location-i.md)&gt; | 是 | 回调函数，返回位置信息。<br>**适用版本：** 23 |
 
 **错误码：**
@@ -36,7 +36,7 @@ function onLocationChange(request: LocationRequest | ContinuousLocationRequest,
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 23+ |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.<br>**适用版本：** 23+ |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \\${geoLocationManager.onLocationChange} due to limited device capabilities.<br>**适用版本：** 23+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \&#36;{geoLocationManager.onLocationChange} due to limited device capabilities.<br>**适用版本：** 23+ |
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) | The location service is unavailable.<br>**适用版本：** 23+ |
 | [3301100](../errorcode-geoLocationManager.md#3301100-位置功能的开关未开启导致功能失败) | The location switch is off.<br>**适用版本：** 23+ |
 

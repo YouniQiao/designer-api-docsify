@@ -131,7 +131,7 @@ on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: numbe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'bufferingUpdate' | 是 | 视频缓存事件回调类型，支持的事件：'bufferingUpdate'。 |
-| callback | (infoType: BufferingInfoType, value: number) =&gt; void | 是 | 视频缓存事件回调方法。    [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md)value值固定为0。 |
+| callback | (infoType: BufferingInfoType, value: number) =&gt; void | 是 | 视频缓存事件回调方法。<br> [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md)value值固定为0。 |
 
 ## on('startRenderFrame')
 
@@ -144,7 +144,7 @@ on(type: 'startRenderFrame', callback: Callback<void>): void
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> AVPlayer.on('startRenderFrame')
+> [AVPlayer.on('startRenderFrame')](arkts-media-media-avplayer-i.md#onstartrenderframe)
 > 替代。
 
 **起始版本：** 8
@@ -202,7 +202,7 @@ on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
 > **说明：**
 > 
 > 从API version 9开始支持，从API version 9开始废弃，建议使用
-> AVPlayer.on('audioInterrupt')
+> [AVPlayer.on('audioInterrupt')](arkts-media-media-avplayer-i.md#onaudiointerrupt)
 > 替代。
 
 **起始版本：** 9
@@ -246,7 +246,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'error' | 是 | 播放错误事件回调类型，支持的事件包括：'error'。   - 'error'：视频播放中发生错误，触发该事件。 |
+| type | 'error' | 是 | 播放错误事件回调类型，支持的事件包括：'error'。<br>- 'error'：视频播放中发生错误，触发该事件。 |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 播放错误事件回调方法。 |
 
 ## pause
@@ -731,7 +731,7 @@ setSpeed(speed: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回设置的播放速度，具体见[PlaybackSpeed]{ |
+| Promise&lt;number&gt; | Promise对象，返回设置的播放速度，具体见[PlaybackSpeed](arkts-media-media-playbackspeed-e.md)。 |
 
 ## setVolume
 

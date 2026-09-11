@@ -38,7 +38,7 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 | --- | --- | --- | --- |
 | photoType | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
 | extension | string | Yes | File name extension, for example, **'jpg'**. The string length ranges from 1 to 255. |
-| options | [photoAccessHelper.CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | No | Options for creating the media asset, for example, **{title: 'testPhoto'}**. The file name must not contain any invalid characters. Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; \| For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
+| options | [photoAccessHelper.CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | No | Options for creating the media asset, for example, **{title: 'testPhoto'}**. <br>The file name must not contain any invalid characters. <br>Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; &#124; <br>For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; &#124; { } [ ] |
 
 **Return value:**
 
@@ -51,7 +51,7 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **Examples**
@@ -111,7 +111,7 @@ Before the operation, ensure that the albums to obtain exist.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **Examples**
@@ -185,7 +185,7 @@ Before the operation, ensure that the albums to obtain exist.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **Examples**
@@ -251,7 +251,7 @@ Obtains image and video assets. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **Examples**
@@ -316,7 +316,7 @@ Obtains resources of burst photos. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **Examples**

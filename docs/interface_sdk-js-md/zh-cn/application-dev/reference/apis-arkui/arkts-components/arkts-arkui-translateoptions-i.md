@@ -25,7 +25,7 @@ x轴的平移距离。
 
 类型为string时，形式参考[Length](../arkts-apis/arkts-arkui-length-t.md)的string类型。
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **起始版本：** 7
 
@@ -49,7 +49,7 @@ y轴的平移距离。
 
 类型为string时，形式参考[Length](../arkts-apis/arkts-arkui-length-t.md)的string类型。
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **起始版本：** 7
 
@@ -73,7 +73,7 @@ z轴的平移距离。z轴方向移动时由于观察点位置不变，z的值�
 
 类型为string时，形式参考[Length](../arkts-apis/arkts-arkui-length-t.md)的string类型。
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **起始版本：** 7
 

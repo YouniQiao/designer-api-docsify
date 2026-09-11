@@ -6,6 +6,8 @@ declare type SizeT<T> = import('../api/arkui/Graphics').SizeT<T>
 
 Defines the SizeT type.
 
+@typedef { import('../api/arkui/Graphics').SizeT&lt;T&gt; }
+
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.

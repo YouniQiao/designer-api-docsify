@@ -2,6 +2,8 @@
 
 Set configuration of a watermark. The position starts at top left corner.
 
+@typedef WatermarkConfiguration
+
 **Since:** 26.0.0
 
 **System capability:** SystemCapability.Multimedia.Media.Core

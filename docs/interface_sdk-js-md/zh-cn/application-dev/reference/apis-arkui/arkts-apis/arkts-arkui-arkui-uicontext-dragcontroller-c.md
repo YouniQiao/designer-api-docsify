@@ -72,7 +72,7 @@ createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dra
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| customArray | Array&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md)&gt; | 是 | 拖拽发起后跟手效果所拖拽的对象。 |
+| customArray | Array&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md)&gt; | 是 | 拖拽发起后跟手效果所拖拽的对象。 |
 | dragInfo | [dragController.DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | 是 | 拖拽信息。 |
 
 **返回值：**
@@ -85,7 +85,7 @@ createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dra
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |
 
 ## enableDropDisallowedBadge
@@ -131,7 +131,7 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | 是 | 拖拽发起后跟手效果所拖拽的对象。    **说明：** 不支持全局builder。如果builder中使用了[Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)组件，应尽量开启同步加载，即配置Image的syncLoad为true。该builder只用于生成当次拖拽中显示的图片。builder的根组件宽高为0时，无法生成拖拽显示的图片导致拖拽失败。builder的修改不会同步到当前正在拖拽的图片，对builder的修改需要在下一次拖拽时生效。 |
+| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | 是 | 拖拽发起后跟手效果所拖拽的对象。 <br> **说明：** <br>不支持全局builder。如果builder中使用了[Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)组件，应尽量开启同步加载，即配置Image的syncLoad为true。该builder只用于生成当次拖拽中显示的图片。builder的根组件宽高为0时，无法生成拖拽显示的图片导致拖拽失败。builder的修改不会同步到当前正在拖拽的图片，对builder的修改需要在下一次拖拽时生效。 |
 | dragInfo | [dragController.DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | 是 | 拖拽信息对象，用于指定发起拖拽的触摸点、拖拽过程中携带的数据、额外信息等拖拽配置信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[dragController.DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | 是 | 拖拽结束返回结果的回调，回调参数包括err和data：err表示错误信息，data表示拖拽事件结果；data.event为拖拽事件信息，仅包括拖拽结果，data.extraParams为拖拽事件额外信息。<br>**适用版本：** 12 |
 
@@ -139,7 +139,7 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |
 
 ## executeDrag
@@ -163,21 +163,21 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | 是 | 拖拽发起后跟手效果所拖拽的对象。当仅需通过builder生成当次拖拽中显示的图片时，使用CustomBuilder；当需要同时提供pixelMap、builder或extraInfo等拖拽项信息时，使用DragItemInfo。   **说明：** CustomBuilder不支持全局builder。如果builder中使用了Image组件，应尽量开启同步加载，即配置Image的syncLoad为true。该builder只用于生成当次拖拽中显示的图片。builder的根组件宽高为0时，无法生成拖拽显示的图片导致拖拽失败。builder的修改不会同步到当前正在拖拽的图片，对builder的修改需要在下一次拖拽时生效。 |
+| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | 是 | 拖拽发起后跟手效果所拖拽的对象。当仅需通过builder生成当次拖拽中显示的图片时，使用CustomBuilder；当需要同时提供pixelMap、builder或extraInfo等拖拽项信息时，使用DragItemInfo。<br> **说明：** <br>CustomBuilder不支持全局builder。如果builder中使用了Image组件，应尽量开启同步加载，即配置Image的syncLoad为true。该builder只用于生成当次拖拽中显示的图片。builder的根组件宽高为0时，无法生成拖拽显示的图片导致拖拽失败。builder的修改不会同步到当前正在拖拽的图片，对builder的修改需要在下一次拖拽时生效。 |
 | dragInfo | [dragController.DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | 是 | 拖拽信息对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;{ event: DragEvent, extraParams: string | > } Callback used to return the result. |
-| Promise&lt;[dragController.DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | Promise对象。resolve返回拖拽结束结果： |
+| Promise&lt;{ event: DragEvent, extraParams: string }&gt; | Callback used to return the result.<br>- **event**: drag event information that includes only the drag result. <br>- **extraParams**: extra information about the drag event.<br>**适用版本：** 11 |
+| Promise&lt;[dragController.DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | Promise对象。resolve返回拖拽结束结果：<br>- event：拖拽事件信息，仅包括拖拽结果。<br>- extraParams：拖拽事件额外信息。reject返回错误信息。<br>**适用版本：** 12 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |
 
 ## getDragPreview

@@ -22,7 +22,7 @@ addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void
 
 Adds a member to a multicast group. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The IP addresses used for multicast belong to a specific range, for example, 224.0.0.0 to 239.255.255.255.
 > 
@@ -79,7 +79,7 @@ addMembership(multicastAddress: NetAddress): Promise<void>
 
 Adds a member to a multicast group. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The IP addresses used for multicast belong to a specific range, for example, 224.0.0.0 to 239.255.255.255.
 > 
@@ -138,7 +138,7 @@ dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): voi
 
 Drops a member from a multicast group. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The IP addresses used for multicast belong to a specific range, for example, 224.0.0.0 to 239.255.255.255.
 > 
@@ -194,7 +194,7 @@ dropMembership(multicastAddress: NetAddress): Promise<void>
 
 Drops a member from a multicast group. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The IP addresses used for multicast belong to a specific range, for example, 224.0.0.0 to 239.255.255.255.
 > 
@@ -253,7 +253,7 @@ getLoopbackMode(callback: AsyncCallback<boolean>): void
 
 Obtains the loopback mode flag for multicast communication. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Use this API to check whether the loopback mode is enabled.
 > 
@@ -304,7 +304,7 @@ getLoopbackMode(): Promise<boolean>
 
 Obtains the loopback mode flag for multicast communication. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Use this API to check whether the loopback mode is enabled.
 > 
@@ -353,7 +353,7 @@ getMulticastTTL(callback: AsyncCallback<number>): void
 
 Obtains the TTL for multicast packets. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > TTL is used to limit the maximum number of router hops for packet transmission on a network.
 > 
@@ -406,7 +406,7 @@ getMulticastTTL(): Promise<number>
 
 Obtains the TTL for multicast packets. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > TTL is used to limit the maximum number of router hops for packet transmission on a network.
 > 
@@ -457,7 +457,7 @@ getSocketFd(): Promise<number>
 
 Obtains the file descriptor of the MulticastSocket. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API can be called only after
 > [bind](arkts-network-socket-udpsocket-i.md#bind) is successfully called.
@@ -521,7 +521,7 @@ setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void
 
 Sets the loopback mode flag for multicast communication. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Use this API to enable or disable the loopback mode. By default, the loopback mode is enabled.
 > 
@@ -573,7 +573,7 @@ setLoopbackMode(flag: boolean): Promise<void>
 
 Sets the loopback mode flag for multicast communication. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Use this API to enable or disable the loopback mode. By default, the loopback mode is enabled.
 > 
@@ -628,7 +628,7 @@ setMulticastTTL(ttl: number, callback: AsyncCallback<void>): void
 
 Sets the time to live (TTL) for multicast packets. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > TTL is used to limit the maximum number of router hops for packet transmission on a network.
 > 
@@ -684,7 +684,7 @@ setMulticastTTL(ttl: number): Promise<void>
 
 Sets the TTL for multicast packets. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > TTL is used to limit the maximum number of router hops for packet transmission on a network.
 > 
@@ -742,7 +742,7 @@ setReuseAddress(reuse: boolean): void
 
 Sets whether the multicast socket supports address reuse. This API is called in synchronous mode.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is used to control whether to enable address reuse when a multicast socket is bound to a port.
 > 

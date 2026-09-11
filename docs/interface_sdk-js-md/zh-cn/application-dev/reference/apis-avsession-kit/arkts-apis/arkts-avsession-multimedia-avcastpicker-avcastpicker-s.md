@@ -51,7 +51,7 @@ activeColor?: Color | number | string
 
 未设置时，系统将优先根据normalColor的颜色匹配；如果normalColor也未设置，将采用colorMode下的颜色设置。
 
-**类型：** Color \| number \| string
+**类型：** Color &#124; number &#124; string
 
 **起始版本：** 11
 
@@ -110,7 +110,7 @@ normalColor?: Color | number | string
 
 未设置时，将采用colorMode下的颜色设置。
 
-**类型：** Color \| number \| string
+**类型：** Color &#124; number &#124; string
 
 **起始版本：** 11
 

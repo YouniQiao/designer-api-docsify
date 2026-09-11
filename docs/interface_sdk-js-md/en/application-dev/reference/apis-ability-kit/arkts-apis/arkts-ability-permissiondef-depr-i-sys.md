@@ -2,7 +2,7 @@
 
 The module provides permission details defined in the configuration file.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The APIs of this module have been deprecated since API version 9. You are advised to use
 > [bundleManager-PermissionDef](arkts-ability-permissiondef-i-sys.md) instead.

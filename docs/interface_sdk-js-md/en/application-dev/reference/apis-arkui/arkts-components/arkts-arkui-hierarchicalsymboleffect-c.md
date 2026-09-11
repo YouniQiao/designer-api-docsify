@@ -35,7 +35,7 @@ A constructor used to create a **HierarchicalSymbolEffect** instance, which come
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillStyle | [EffectFillStyle](arkts-arkui-effectfillstyle-e.md) | No | Effect fill style.Default value: **EffectFillStyle.CUMULATIVE |
+| fillStyle | [EffectFillStyle](arkts-arkui-effectfillstyle-e.md) | No | Effect fill style.<br>Default value: **EffectFillStyle.CUMULATIVE |
 
 ## fillStyle
 

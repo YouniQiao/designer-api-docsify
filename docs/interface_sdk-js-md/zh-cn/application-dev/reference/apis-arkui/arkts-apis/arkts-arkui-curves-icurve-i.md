@@ -30,7 +30,7 @@ interpolate(fraction : number) : number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fraction | number | 是 | 当前的归一化时间参数。取值范围：[0,1]    **说明：** 设置的值小于0时，按0处理；设置的值大于1时，按1处理。对于springMotion、responsiveSpringMotion、interpolatingSpring创建的弹性动画曲线，时间不能归一，此参数无意义，不能通过interpolate函数获得有效插值。 |
+| fraction | number | 是 | 当前的归一化时间参数。<br>取值范围：[0,1] <br>**说明：** <br>设置的值小于0时，按0处理；设置的值大于1时，按1处理。<br>对于springMotion、responsiveSpringMotion、interpolatingSpring创建的弹性动画曲线，时间不能归一，此参数无意义，不能通过interpolate函数获得有效插值。 |
 
 **返回值：**
 

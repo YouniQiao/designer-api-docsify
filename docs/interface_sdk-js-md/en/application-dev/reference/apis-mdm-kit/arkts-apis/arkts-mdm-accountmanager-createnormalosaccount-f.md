@@ -14,7 +14,7 @@ function createNormalOsAccount(admin: Want, name: string): Promise<osAccount.OsA
 
 Creates a normal system account. A maximum of two normal system accounts ([osAccount.OsAccountType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-osaccounttype-e.md)) can be created.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The account creation process is time-consuming. Subsequent calls to other synchronous APIs in the application
 > main thread must wait for the asynchronous return of this API.

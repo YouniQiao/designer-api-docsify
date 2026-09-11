@@ -28,7 +28,7 @@ Obtains the Bluetooth status of a device.
 
 | Type | Description |
 | --- | --- |
-| [BluetoothState](arkts-connectivity-bluetooth-bluetoothstate-e.md) | Returns the Bluetooth status, which can be { |
+| [BluetoothState](arkts-connectivity-bluetooth-bluetoothstate-e.md) | Returns the Bluetooth status, which can be [STATE_OFF](arkts-connectivity-bluetooth-bluetoothstate-e.md#state_off), [STATE_TURNING_ON](arkts-connectivity-bluetooth-bluetoothstate-e.md#state_turning_on), [STATE_ON](arkts-connectivity-bluetooth-bluetoothstate-e.md#state_on), [STATE_TURNING_OFF](arkts-connectivity-bluetooth-bluetoothstate-e.md#state_turning_off), [STATE_BLE_TURNING_ON](arkts-connectivity-bluetooth-bluetoothstate-e.md#state_ble_turning_on), [STATE_BLE_ON](arkts-connectivity-bluetooth-bluetoothstate-e.md#state_ble_on), or [STATE_BLE_TURNING_OFF](arkts-connectivity-bluetooth-bluetoothstate-e.md#state_ble_turning_off). |
 
 **Examples**
 

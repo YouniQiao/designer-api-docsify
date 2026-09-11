@@ -163,7 +163,7 @@ theme?: Theme | CustomTheme
 
 主题信息，可以是CustomTheme或从onWillApplyTheme中获取的Theme实例。
 
-**类型：** [Theme](arkts-arkui-arkui-theme-theme-i.md) \| [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
+**类型：** [Theme](arkts-arkui-arkui-theme-theme-i.md) &#124; [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
 
 **起始版本：** 12
 

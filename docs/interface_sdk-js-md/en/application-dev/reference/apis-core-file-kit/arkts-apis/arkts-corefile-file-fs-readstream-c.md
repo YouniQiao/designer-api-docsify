@@ -117,6 +117,12 @@ Number of bytes read by the readable stream.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900042 | Unknown error |
+
 ## path
 
 ```TypeScript
@@ -130,3 +136,9 @@ Path of the file corresponding to the readable stream.
 **Since:** 12
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900042 | Unknown error |

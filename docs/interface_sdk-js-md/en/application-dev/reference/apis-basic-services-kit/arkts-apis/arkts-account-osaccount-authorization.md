@@ -2,7 +2,7 @@
 
 Provides OS local account authorization management capabilities. You can use the APIs in this namespace to request authorization for specified [Privileges](arkts-basicservices-authorization-privilege-e.md), which are granted based on authorization policies and user consent.
 
-> **NOTE：**
+> **NOTE:**
 > Failures are reported through two channels. A thrown [BusinessError](arkts-basicservices-base-businesserror-i.md) means the request is
 > not accepted at all (for example, 201 means the caller lacks the API-level permission
 > ohos.permission.REQUEST_LOCAL_ACCOUNT_AUTHORIZATION; 12300302 means user interaction is required but not allowed).

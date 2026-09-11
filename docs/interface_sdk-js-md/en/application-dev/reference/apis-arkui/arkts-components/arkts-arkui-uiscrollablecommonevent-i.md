@@ -33,7 +33,7 @@ Set or reset the callback which is triggered when the scrolling reaches the end 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling reaches the end position. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; &#124; undefined | Yes | callback function, triggered when the scrolling reaches the end position. |
 
 ## setOnReachStart
 
@@ -55,7 +55,7 @@ Set or reset the callback which is triggered when the scrolling reaches the star
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling reaches the start position. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; &#124; undefined | Yes | callback function, triggered when the scrolling reaches the start position. |
 
 ## setOnScrollFrameBegin
 
@@ -77,7 +77,7 @@ Set or reset the callback which is triggered when scrolling begin each frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) \| undefined | Yes | callback function, triggered when the scrolling begin each frame. |
+| callback | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) &#124; undefined | Yes | callback function, triggered when the scrolling begin each frame. |
 
 ## setOnScrollStart
 
@@ -99,7 +99,7 @@ Set or reset the callback which is triggered when the scrolling started.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling started. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; &#124; undefined | Yes | callback function, triggered when the scrolling started. |
 
 ## setOnScrollStop
 
@@ -121,4 +121,4 @@ Set or reset the callback which is triggered when the scrolling stoped.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling stoped. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; &#124; undefined | Yes | callback function, triggered when the scrolling stoped. |

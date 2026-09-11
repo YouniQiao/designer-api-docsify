@@ -6,7 +6,7 @@ export declare const InsightIntentEntry: ((intentInfo: EntryIntentDecoratorInfo)
 
 Decorates a class that inherits from [InsightIntentEntryExecutor](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md) to implement intent operations and configure the ability on which the intent depends. This helps the AI entry point to easily invoke the associated ability and perform the intended action. For details on the parameters supported by this decorator, see [EntryIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-entryintentdecoratorinfo-i.md).
 
-> **NOTE: **
+> **NOTE:**
 > 
 > If this decorator is used to access a standard intent, all mandatory parameters defined in the standard intent
 > JSON schema must be implemented and their parameter types must match.

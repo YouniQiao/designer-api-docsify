@@ -17,7 +17,7 @@ function connectToCandidateConfigWithUserAction(networkId: number): Promise<void
 - 调用此接口时，系统将提示用户确认是否信任并连接到指定的候选网络。  
 - 用户确认是连接过程中的必要步骤，未获得用户信任确认前，连接操作不会执行。  
 - 建议在发起连接前先通过startScan接口触发一次Wi-Fi扫描，通过  
-wifiManager.on('wifiScanStateChange')方法监听到扫描结果刷新后再连接，以提高连接成功率。
+[wifiManager.on('wifiScanStateChange')](arkts-connectivity-wifimanager-on-f.md#onwifiscanstatechange)方法监听到扫描结果刷新后再连接，以提高连接成功率。
 
 > **说明：**
 > 

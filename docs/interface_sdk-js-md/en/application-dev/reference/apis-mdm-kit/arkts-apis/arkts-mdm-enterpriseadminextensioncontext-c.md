@@ -4,7 +4,7 @@
 
 When an **EnterpriseAdminExtensionAbility** component is instantiated, the system automatically creates the corresponding **EnterpriseAdminExtensionContext**. You can use this **EnterpriseAdminExtensionContext** to obtain the sandbox path of the app and start other components. This context can only be used within the current **EnterpriseAdminExtensionAbility** and cannot be transferred to other components.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The APIs of this module can be used only in the stage model.
 > 
@@ -25,7 +25,7 @@ startAbilityByAdmin(admin: Want, want: Want): Promise<void>
 
 Directly starts another component within the [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md) component (without pop-up prompts on the page). Currently, [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md) and [AppServiceExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) are supported. After the API is called successfully, the target component is started and enters the running state. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Only third-party app components are supported; system app components are not supported.
 > 

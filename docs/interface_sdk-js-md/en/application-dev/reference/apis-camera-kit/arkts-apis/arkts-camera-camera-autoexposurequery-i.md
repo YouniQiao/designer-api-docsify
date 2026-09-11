@@ -33,7 +33,7 @@ Obtains the exposure compensation values of the camera device.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Array of compensation values. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| Array&lt;number&gt; | Array of compensation values. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -99,7 +99,7 @@ Checks whether an exposure mode is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the exposure mode. **true** if supported, **false** otherwise. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
+| boolean | Check result for the support of the exposure mode. **true** if supported, **false** otherwise. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is thrown. |
 
 **Error codes:**
 

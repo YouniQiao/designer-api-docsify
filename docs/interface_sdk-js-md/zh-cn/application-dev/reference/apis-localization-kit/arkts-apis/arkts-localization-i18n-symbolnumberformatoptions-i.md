@@ -22,7 +22,7 @@ groupingSeparator?: string | undefined
 
 分组符号。默认值：区域默认的符号。例如：","。
 
-**类型：** string \| undefined
+**类型：** string &#124; undefined
 
 **起始版本：** 26.0.0
 
@@ -40,7 +40,7 @@ infinity?: string | undefined
 
 无穷符号。默认值：区域默认的符号。例如："∞"。
 
-**类型：** string \| undefined
+**类型：** string &#124; undefined
 
 **起始版本：** 26.0.0
 
@@ -58,7 +58,7 @@ minusSign?: string | undefined
 
 减符号。默认值：区域默认的符号。例如："-"。
 
-**类型：** string \| undefined
+**类型：** string &#124; undefined
 
 **起始版本：** 26.0.0
 
@@ -76,7 +76,7 @@ nan?: string | undefined
 
 NaN符号。默认值：区域默认的符号。例如："null"。
 
-**类型：** string \| undefined
+**类型：** string &#124; undefined
 
 **起始版本：** 26.0.0
 
@@ -94,7 +94,7 @@ plusSign?: string | undefined
 
 加符号。默认值：区域默认的符号。例如："+"。
 
-**类型：** string \| undefined
+**类型：** string &#124; undefined
 
 **起始版本：** 26.0.0
 
@@ -112,7 +112,7 @@ zero?: string | undefined
 
 零符号。默认值：区域默认的符号。例如："0"。
 
-**类型：** string \| undefined
+**类型：** string &#124; undefined
 
 **起始版本：** 26.0.0
 

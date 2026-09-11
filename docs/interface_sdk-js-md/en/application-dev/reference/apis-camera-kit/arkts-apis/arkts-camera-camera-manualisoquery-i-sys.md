@@ -30,7 +30,7 @@ Obtains the supported ISO range.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | ISO range. The value range is [50, 100, ..., 6400]. The actual value depends on the bottom-layer capability. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| Array&lt;number&gt; | ISO range. The value range is [50, 100, ..., 6400]. The actual value depends on the bottom-layer capability. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -75,7 +75,7 @@ Checks whether manual ISO setting is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of manual ISO setting. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| boolean | Check result for the support of manual ISO setting. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 

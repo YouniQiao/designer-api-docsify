@@ -39,7 +39,7 @@ tag?: string
 
 Gesture tag.
 
-**NOTE：**
+**NOTE:**
 
 Returns **undefined** if the gesture's **tag** attribute was not set.
 
@@ -61,7 +61,7 @@ type: GestureControl.GestureType
 
 Gesture type.
 
-**NOTE：**
+**NOTE:**
 
 Returns **-1** for built-in gestures of unexposed types.
 

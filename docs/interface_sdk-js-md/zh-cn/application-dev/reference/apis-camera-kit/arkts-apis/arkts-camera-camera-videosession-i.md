@@ -45,7 +45,7 @@ canPreconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): boo
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | true: 支持指定预配置类型。 |
+| boolean | true: 支持指定预配置类型。<br>false: 不支持指定预配置类型。 |
 
 **错误码：**
 
@@ -248,7 +248,7 @@ offIsoInfoChange(callback?: Callback<IsoInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i.md)&gt; | 否 | 回调函数，可选。如果指定callback参数则注销该callback监听，callback不可是匿名函数。如果未指定callback，则注销所有已存在的callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i.md)&gt; | 否 | 回调函数，可选。<br>如果指定callback参数则注销该callback监听，callback不可是匿名函数。<br>如果未指定callback，则注销所有已存在的callback监听。 |
 
 ## on('error')
 

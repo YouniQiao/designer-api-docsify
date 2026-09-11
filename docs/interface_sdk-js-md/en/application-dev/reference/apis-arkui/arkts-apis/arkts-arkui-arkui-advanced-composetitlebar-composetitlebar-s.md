@@ -2,7 +2,7 @@
 
 **ComposeTitleBar** represents a common title bar that contains a title, subtitle (optional), and profile picture (optional). It can come with a Back button for switching between pages of different levels.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This component can be used only in the stage model.
 > 

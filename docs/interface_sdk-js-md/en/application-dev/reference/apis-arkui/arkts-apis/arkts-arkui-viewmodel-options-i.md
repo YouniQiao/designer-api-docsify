@@ -120,7 +120,7 @@ Called when the user data need to be saved
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the data is successfully saved; returns `false` otherwise. |
 
 ## onShow
 

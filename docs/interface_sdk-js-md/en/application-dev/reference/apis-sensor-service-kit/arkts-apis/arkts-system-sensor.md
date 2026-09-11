@@ -2,10 +2,12 @@
 
 The **Sensor** module provides APIs for querying the sensor list, subscribing to or unsubscribing from sensor data,
  and executing control commands.
- The sensors are classified into the following categories based on their functions: motion, environment, orientation,
+
+The sensors are classified into the following categories based on their functions: motion, environment, orientation,
  light, body, and other categories (such as Hall effect sensors). Each category includes different sensor types. A
  sensor type may be a single hardware sensor or a composite of multiple hardware sensors.
- > **NOTE**
+
+> **NOTE**
  >
  > - Module maintenance policy:
  > >     - For lite wearables, this module is constantly maintained and available.
@@ -14,6 +16,7 @@ The **Sensor** module provides APIs for querying the sensor list, subscribing to
  > - The initial APIs of this module are supported since API version 3.
  > Newly added APIs will be marked with a superscript to indicate their earliest API version.
  > - This module requires hardware support and can only be debugged on real devices.
+
 
 
 ## Modules to Import

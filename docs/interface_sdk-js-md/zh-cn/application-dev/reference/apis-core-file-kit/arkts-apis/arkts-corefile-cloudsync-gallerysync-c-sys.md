@@ -63,7 +63,7 @@ off(evt: 'progress', callback: (pg: SyncProgress) => void): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 **示例**
@@ -108,7 +108,7 @@ off(evt: 'progress'): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 **示例**
@@ -152,7 +152,7 @@ on(evt: 'progress', callback: (pg: SyncProgress) => void): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 **示例**
@@ -244,7 +244,7 @@ start(callback: AsyncCallback<void>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 22400001 | Cloud status not ready. |
 | 22400002 | Network unavailable. |
 | 22400003 | Low battery level. |
@@ -345,7 +345,7 @@ stop(callback: AsyncCallback<void>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 **示例**
 

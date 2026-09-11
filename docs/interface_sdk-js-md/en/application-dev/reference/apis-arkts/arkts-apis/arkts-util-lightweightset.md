@@ -8,11 +8,14 @@ LightWeightSet stores a set of values, each of which must be unique.
  **Recommended use case**: Use LightWeightSet when you need a set that has only unique elements or need to deduplicate
  a set.
  This topic uses the following to identify the use of generics:
- - T: Type
- > **NOTE**
+
+- T: Type
+
+> **NOTE**
  >
  > - Container classes, implemented in static languages, have restrictions on storage locations and properties, and do
  > not support custom properties or methods.
+
 
 
 ## Modules to Import

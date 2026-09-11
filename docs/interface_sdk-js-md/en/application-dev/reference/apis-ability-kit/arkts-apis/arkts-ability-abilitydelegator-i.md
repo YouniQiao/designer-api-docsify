@@ -2,7 +2,7 @@
 
 The **AbilityDelegator** module can listen for and manage the lifecycle changes of [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) through [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instances. For example, you can obtain the current state of a UIAbility (for example, whether the UIAbility has been created or is in the foreground), obtain the UIAbility that currently has the focus, wait for the UIAbility to enter a lifecycle node (for example, the **onForeground** state), start a specified UIAbility, and set the timeout mechanism. You can obtain **AbilityDelegator** by calling [getAbilityDelegator](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The APIs of this module can be used only in [JsUnit](../../../application-test/unittest-guidelines.md).
 
@@ -674,7 +674,7 @@ Executes a shell command with the timeout period specified. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Promise used to return a [ShellCmdResult]{ |
+| Promise&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Promise used to return a [ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md) object. |
 
 **Examples**
 
@@ -815,7 +815,7 @@ Obtains the lifecycle state of an ability.
 
 | Type | Description |
 | --- | --- |
-| number | Lifecycle state of the ability, For details about the state values, see [AbilityLifecycleState]{ |
+| number | Lifecycle state of the ability, For details about the state values, see [AbilityLifecycleState](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md). |
 
 **Error codes:**
 
@@ -864,7 +864,7 @@ Obtains the application context.
 
 | Type | Description |
 | --- | --- |
-| [Context](arkts-ability-context-c.md) | [Context]{ |
+| [Context](arkts-ability-context-c.md) | Context. |
 
 **Examples**
 
@@ -1898,7 +1898,7 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Promise used to return the [AbilityStage]{ |
+| Promise&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Promise used to return the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md) instance. |
 
 **Error codes:**
 

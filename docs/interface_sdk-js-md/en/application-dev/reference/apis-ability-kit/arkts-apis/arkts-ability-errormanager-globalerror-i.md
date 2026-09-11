@@ -22,7 +22,7 @@ instanceName: string
 
 Name of a VM instance.
 
-**NOTE：**
+**NOTE:**
 
 Rules for the **instanceName** field in exceptions in the TaskPool thread:
 

@@ -15,7 +15,7 @@ function onSeniorModeStateChange(callback: Callback<boolean>): void
 
 Subscribes to the state changes of the senior mode. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.

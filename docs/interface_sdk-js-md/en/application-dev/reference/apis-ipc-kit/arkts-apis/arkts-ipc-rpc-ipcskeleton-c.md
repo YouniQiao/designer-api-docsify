@@ -75,7 +75,7 @@ Flushes all suspended commands from the specified **RemoteProxy** to the corresp
 
 **Deprecated since:** 9
 
-**Substitutes:** static
+**Substitutes:** [flushCmdBuffer](#flushcmdbuffer)(object: IRemoteObject)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -473,7 +473,7 @@ Sets the UID and PID of the remote user. This API is a static method. It is usua
 
 **Deprecated since:** 9
 
-**Substitutes:** static
+**Substitutes:** [restoreCallingIdentity](#restorecallingidentity)(identity: string)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 

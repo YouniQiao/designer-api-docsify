@@ -31,4 +31,3 @@ Send key event.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean |  |

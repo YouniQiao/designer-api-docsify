@@ -2,6 +2,8 @@
 
 互动卡片动效信息。
 
+@typedef { OverflowInfo }
+
 **起始版本：** 20
 
 **系统能力：** SystemCapability.Ability.Form

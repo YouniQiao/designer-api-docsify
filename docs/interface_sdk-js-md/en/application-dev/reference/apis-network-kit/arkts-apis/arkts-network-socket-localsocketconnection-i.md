@@ -2,7 +2,7 @@
 
 Defines a local socket connection, that is, the session between the local socket client and the server. Before calling LocalSocketConnection APIs, you need to obtain a **LocalSocketConnection** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The LocalSocketConnection client can call related APIs through the **LocalSocketConnection** object only after a
 > connection is successfully established between the local socket client and the server.
@@ -126,7 +126,7 @@ getSocketFd(): Promise<number>
 
 Obtains the file descriptor of a LocalSocketConnection connection. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This method can be called only after a connection is set up.
 > 
@@ -193,7 +193,7 @@ Unsubscribes from **message** events of the **LocalSocketConnection** object. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'message' | Yes | Event type.    **message**: message receiving event. |
+| type | 'message' | Yes | Event type.<br> **message**: message receiving event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Error codes:**
@@ -241,7 +241,7 @@ Unsubscribes from **close** events of the **LocalSocketConnection** object. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'close' | Yes | Event type.    **close**: close event. |
+| type | 'close' | Yes | Event type.<br> **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Error codes:**
@@ -283,7 +283,7 @@ Unsubscribes from **error** events of the **LocalSocketConnection** object. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type.    **error**: error event. |
+| type | 'error' | Yes | Event type.<br> **error**: error event. |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Error codes:**
@@ -325,7 +325,7 @@ Subscribes to **message** events of the **LocalSocketConnection** object. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'message' | Yes | Event type.    **message**: message receiving event. |
+| type | 'message' | Yes | Event type.<br> **message**: message receiving event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -384,7 +384,7 @@ Unsubscribes from **close** events of the **LocalSocketConnection** object. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'close' | Yes | Event type.    **close**: close event. |
+| type | 'close' | Yes | Event type.<br> **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -422,7 +422,7 @@ Subscribes to **error** events of the **LocalSocketConnection** object. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type.    **error**: error event. |
+| type | 'error' | Yes | Event type.<br> **error**: error event. |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -452,7 +452,7 @@ send(options: LocalSendOptions): Promise<void>
 
 Sends data through a local socket connection. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be used only after the server obtains a **LocalSocketConnection** object through the **callback**
 > of the **connect** event.

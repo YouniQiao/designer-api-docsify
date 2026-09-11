@@ -24,7 +24,7 @@ Converts an ArkTS value to a JavaScript Object Notation (JSON) string. Extra sup
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object \| null \| undefined | Yes | The value to stringify.<br>**Since:** 18 |
+| value | Object &#124; null &#124; undefined | Yes | The value to stringify.<br>**Since:** 18 |
 
 **Return value:**
 

@@ -57,7 +57,7 @@ connectAppServiceExtensionAbility(want: Want, callback: ConnectOptions): number
 
 Connects this UIAbility to an [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md). It enables communication with the AppServiceExtensionAbility via a proxy, allowing access to the capabilities exposed by the AppServiceExtensionAbility. It can be called only on the main thread. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the
 > [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md)
@@ -84,7 +84,7 @@ Connects this UIAbility to an [AppServiceExtensionAbility](../../../reference/ap
 
 | Type | Description |
 | --- | --- |
-| number | Connection ID. A caller can call [disconnectAppServiceExtensionAbility]{ |
+| number | Connection ID. A caller can call [disconnectAppServiceExtensionAbility](#disconnectappserviceextensionability) with this ID for disconnection. |
 
 **Error codes:**
 
@@ -151,7 +151,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 Connects this UIAbility to a [ServiceExtensionAbility](../../../application-models/extensionability-overview.md). It enables communication with the ServiceExtensionAbility via a proxy, allowing access to the capabilities exposed by the ServiceExtensionAbility. It can be called only on the main thread.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -173,7 +173,7 @@ Connects this UIAbility to a [ServiceExtensionAbility](../../../application-mode
 
 | Type | Description |
 | --- | --- |
-| number | Connection ID. A caller can call [disconnectServiceExtensionAbility]{ |
+| number | Connection ID. A caller can call [disconnectServiceExtensionAbility](#disconnectserviceextensionability) with this ID for disconnection. |
 
 **Error codes:**
 
@@ -244,7 +244,7 @@ connectUIServiceExtensionAbility(want: Want, callback: UIServiceExtensionConnect
 
 Connects to a UIServiceExtensionAbility. This API uses a promise to return the result. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -268,7 +268,7 @@ Connects to a UIServiceExtensionAbility. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[UIServiceProxy](arkts-ability-uiserviceproxy-i.md)&gt; | Promise used to return the result, which is a [UIServiceProxy]{ |
+| Promise&lt;[UIServiceProxy](arkts-ability-uiserviceproxy-i.md)&gt; | Promise used to return the result, which is a [UIServiceProxy](arkts-ability-uiserviceproxy-i.md) object. |
 
 **Error codes:**
 
@@ -562,7 +562,7 @@ disconnectUIServiceExtensionAbility(proxy: UIServiceProxy): Promise<void>
 
 Disconnects from a UIServiceExtensionAbility. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -803,7 +803,7 @@ export default class EntryAbility extends UIAbility {
 moveAbilityToBackground(): Promise<void>
 ```
 
-Moves this UIAbility from the foreground to the background. This API uses a promise to return the result. It can be called only on the main thread.<!--RP1--><!--RP1End--> Starting from API version 12, this API can be properly called on phones, wearables, and TVs. If it is called on other device types, error code 16000061 is returned. Starting from API version 13, this API can be properly called on phones, tablets, wearables, and TVs. If it is called on other device types, error code 16000061 is returned. **Atomic service API**: This API can be used in atomic services since API version 12.
+Moves this UIAbility from the foreground to the background. This API uses a promise to return the result. It can be called only on the main thread.<br><!--RP1--><!--RP1End--> Starting from API version 12, this API can be properly called on phones, wearables, and TVs. If it is called on other device types, error code 16000061 is returned. Starting from API version 13, this API can be properly called on phones, tablets, wearables, and TVs. If it is called on other device types, error code 16000061 is returned. **Atomic service API**: This API can be used in atomic services since API version 12.
 
 **Since:** 12
 
@@ -879,7 +879,7 @@ is **-1**, is returned to the caller.
 - If the atomic service is started multiple times by different applications calling this API, when the atomic  
 service calls [terminateSelfWithResult](#terminateselfwithresult) to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -967,7 +967,7 @@ Starts a UIAbility by using <!--RP2-->[App Linking](../../../application-models/
 - The **uris** field must contain elements whose **scheme** is **https** and **domainVerify** is **true**.  
 If you want to obtain the result after the started UIAbility is terminated, set the **callback** parameter. For details about how to use this parameter, see [startAbilityForResult](#startabilityforresult). If an input parameter is invalid, for example, a mandatory parameter is not set or the URL set in **link** is not in the standard format, an exception is thrown. If the parameter verification is successful but an error occurs when starting the target UIAbility, the error information is returned through promise.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -1140,7 +1140,7 @@ requestDialogService(want: Want, result: AsyncCallback<dialogRequest.RequestResu
 
 Starts a ServiceExtensionAbility that supports modal dialog boxes. After the ServiceExtensionAbility is started, the application displays a modal dialog box. You can call [setRequestResult](arkts-ability-dialogrequest-requestcallback-i.md#setrequestresult) to obtain the result. This API uses an asynchronous callback to return the result. It can be called only on the main thread.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -1222,7 +1222,7 @@ requestDialogService(want: Want): Promise<dialogRequest.RequestResult>
 
 Starts a ServiceExtensionAbility that supports modal dialog boxes. After the ServiceExtensionAbility is started, the application displays a modal dialog box. You can call [setRequestResult](arkts-ability-dialogrequest-requestcallback-i.md#setrequestresult) to obtain the result. This API uses a promise to return the result. It can be called only on the main thread.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -1308,7 +1308,7 @@ restartApp(want: Want): Promise<void>
 
 Called by a focused UIAbility to restart its own process and launch a specified UIAbility within the same application. This API can be called only on the main thread. This API uses a promise to return the result. If the target UIAbility is the current one, this action resets the window to its initial state. If it is a different UIAbility, the system navigates to and open a new window for that UIAbility. This API can be properly called only on phones. If it is called on other device types, error code 801 is returned.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When this API is called to restart the process, the **onDestroy** lifecycle callback of the UIAbility in the
 > process is not triggered.
@@ -1445,7 +1445,7 @@ revokeDelegator(): Promise<void>
 
 When the first UIAbility launched under a module needs to redirect to another UIAbility, the target UIAbility is known as the DelegatorAbility. For details about how to set up the DelegatorAbility, see step 1 in the example provided for this API. Once the DelegatorAbility has completed its specific operations, you can use this API to revert to the first UIAbility. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > After the API is successfully called, the [Window](../../apis-arkui/arkts-apis/arkts-arkui-window-n.md) API within the DelegatorAbility becomes
 > invalid.
@@ -1592,6 +1592,49 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+## setAbilityInstanceInfo
+
+```TypeScript
+setAbilityInstanceInfo(label: string, icon: image.PixelMap, groupId: string): Promise<void>
+```
+
+Sets the icon and label for this UIAbility. The icon and label can be displayed in the task center and the shortcut bar. This API uses a promise to return the result. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned. **Required permissions**: ohos.permission.SET_ABILITY_INSTANCE_INFO
+
+**Since:** 26.1.0
+
+**Required permissions:** ohos.permission.SET_ABILITY_INSTANCE_INFO
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| label | string | Yes | New icon label. The label cannot be an empty string, and can contain a maximum of 1024 bytes. |
+| icon | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Icon. The recommended icon size is 512 px * 512 px. |
+| groupId | string | Yes | The icon aggregation label for UIAbility within the application on the shortcut bar. The length must not exceed 64 characters. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Window operations encountered failures. |
+
+**Examples**
+
+See [setAbilityInstanceInfo](#setabilityinstanceinfo)
+
 ## setColorMode
 
 ```TypeScript
@@ -1600,7 +1643,7 @@ setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 
 Sets the dark/light color mode for this UIAbility. Before calling this API, ensure that the page corresponding to the UIAbility has been loaded. This API can be called only on the main thread.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility
 > has been loaded (using the
@@ -1629,7 +1672,7 @@ Sets the dark/light color mode for this UIAbility. Before calling this API, ensu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorMode | [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-e.md) | Yes | Color mode. The options are as follows:    - **COLOR_MODE_DARK**: dark mode.    - **COLOR_MODE_LIGHT**: light mode.    - **COLOR_MODE_NOT_SET**: not set (following the system or application). |
+| colorMode | [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-e.md) | Yes | Color mode. The options are as follows:<br> - **COLOR_MODE_DARK**: dark mode.<br> - **COLOR_MODE_LIGHT**: light mode.<br> - **COLOR_MODE_NOT_SET**: not set (following the system or application). |
 
 **Error codes:**
 
@@ -1881,12 +1924,12 @@ setMissionWindowIcon(windowIcon: image.PixelMap): Promise<void>
 
 Sets the icon for this UIAbility, which is displayed in the application window, application card in the mission center, and window snapshot in the shortcut bar. This API uses a promise to return the result. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > There is no priority relationship among the **setMissionWindowIcon**<!--Del-->,
 > [setMissionIcon](arkts-ability-uiabilitycontext-c-sys.md#setmissionicon)
 > ,&lt;!--DelEnd--
-&gt; and
+> and
 > [setAbilityInstanceInfo](#setabilityinstanceinfo). The icon
 > set by the last called API takes effect. If these APIs are called sequentially, the icon set by the last call
 > takes precedence and overwrites any previous settings.
@@ -1961,7 +2004,7 @@ setOnNewWantSkipScenarios(scenarios: number): Promise<void>
 
 Sets whether to trigger the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant) lifecycle callback when a UIAbility is started in a specific scenario. It can be called only on the main thread. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is usually used within the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate) lifecycle
 > callback. You are advised to include all the enumerated values of
@@ -2184,7 +2227,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 Starts a UIAbility. This API uses an asynchronous callback to return the result. It can be called only on the main thread.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -2278,7 +2321,7 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 
 Starts a UIAbility. This API uses an asynchronous callback to return the result. It can be called only on the main thread.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -2381,7 +2424,7 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 Starts a UIAbility. This API uses a promise to return the result. It can be called only on the main thread.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -2488,7 +2531,7 @@ startAbilityByCall(want: Want): Promise<Caller>
 
 Obtains a [Caller](arkts-ability-app-ability-uiability-caller-i.md) object for communicating with a [Callee](arkts-ability-app-ability-uiability-callee-i.md) object. If the specified UIAbility is not started, the UIAbility will be started in the foreground or background. This API uses a promise to return the result. It can be called only on the main thread. This API cannot be used to start the UIAbility with the launch type set to [specified](../../../application-models/uiability-launch-type.md#specified).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - In cross-device scenarios, the caller and the callee must belong to the same application.
 > 
@@ -2500,7 +2543,7 @@ Obtains a [Caller](arkts-ability-app-ability-uiability-caller-i.md) object for c
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 > 
-> **NOTE：**
+> **NOTE:**
 > 
 > - For API version 10 and earlier, the permission ohos.permission.ABILITY_BACKGROUND_COMMUNICATION is required.
 > This permission is available only to system applications.
@@ -2840,7 +2883,7 @@ Starts a UIAbility and returns the exit result of the launched UIAbility via a c
 - If the UIAbility is in [singleton mode](../../../application-models/uiability-launch-type.md#singleton) and this  
 UIAbility is started multiple times by different applications calling this API, when the UIAbility calls [terminateSelfWithResult](#terminateselfwithresult) to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -2942,7 +2985,7 @@ Starts a UIAbility and returns the exit result of the launched UIAbility via a c
 - If the UIAbility is in [singleton mode](../../../application-models/uiability-launch-type.md#singleton) and this  
 UIAbility is started multiple times by different applications calling this API, when the UIAbility calls [terminateSelfWithResult](#terminateselfwithresult) to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -3048,7 +3091,7 @@ Starts a UIAbility and returns the exit result of the launched UIAbility via a c
 - If the UIAbility is in [singleton mode](../../../application-models/uiability-launch-type.md#singleton) and this  
 UIAbility is started multiple times by different applications calling this API, when the UIAbility calls [terminateSelfWithResult](#terminateselfwithresult) to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -3151,7 +3194,7 @@ startAppServiceExtensionAbility(want: Want): Promise<void>
 
 Starts an [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md) instance. This API uses a promise to return the result. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The caller of this API must be the application to which the
 > [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md)
@@ -3370,7 +3413,7 @@ startSelfUIAbilityInCurrentProcess(want: Want, specifiedFlag: string, options?: 
 
 Starts the application's own UIAbility within the current process. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The target UIAbility can only be cold-started. If an instance of the target UIAbility has already been
 > launched, the startup fails.
@@ -3390,7 +3433,7 @@ Starts the application's own UIAbility within the current process. This API can 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Mandatory information for starting the UIAbility. Only explicit startup is supported. [Implicit startup](../../../application-models/explicit-implicit-want-mappings.md# matching-rules-of-implicit-want) is not supported. |
-| specifiedFlag | string | Yes | ID of the UIAbility. This ID must not duplicate that of any already running UIAbility instance; otherwise, an error is returned.   **NOTE：**When this API is used to start a UIAbility instance in [specified](../../../application-models/uiability-launch-type.md#specified) mode, the [onAcceptWant](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onacceptwant) callback is not triggered. |
+| specifiedFlag | string | Yes | ID of the UIAbility. This ID must not duplicate that of any already running UIAbility instance; otherwise, an error is returned.<br>**NOTE:**<br>When this API is used to start a UIAbility instance in [specified](../../../application-models/uiability-launch-type.md#specified) mode, the [onAcceptWant](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onacceptwant) callback is not triggered. |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used for starting the UIAbility. |
 
 **Return value:**
@@ -3457,7 +3500,7 @@ startUIServiceExtensionAbility(want: Want): Promise<void>
 
 Starts a UIServiceExtensionAbility. This API uses a promise to return the result. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -3547,7 +3590,7 @@ stopAppServiceExtensionAbility(want: Want): Promise<void>
 
 Stops an [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md) instance. This API uses a promise to return the result. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The caller of this API must be the application to which the
 > [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md)
@@ -3630,7 +3673,7 @@ terminateSelf(callback: AsyncCallback<void>): void
 
 Terminates this UIAbility. This API uses an asynchronous callback to return the result. It can be called only on the main thread.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > After this API is called, missions in the task center are not cleared by default. To clear missions, set
 > [removeMissionAfterTerminate](../../../quick-start/module-configuration-file.md#abilities) to **true**.
@@ -3716,7 +3759,7 @@ terminateSelf(): Promise<void>
 
 Terminates this UIAbility. This API uses a promise to return the result. It can be called only on the main thread.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > After this API is called, missions in the task center are not cleared by default. To clear missions, set
 > [removeMissionAfterTerminate](../../../quick-start/module-configuration-file.md#abilities) to **true**.
@@ -3801,7 +3844,7 @@ terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>)
 
 Terminates this UIAbility. This API uses an asynchronous callback to return the result. It can be called only on the main thread. The result is returned to the caller when **terminateSelfWithResult** is called to terminate the UIAbility that is started by calling [startAbilityForResult](#startabilityforresult).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > After this API is called, missions in the task center are not cleared by default. To clear missions, set
 > [removeMissionAfterTerminate](../../../quick-start/module-configuration-file.md#abilities) to **true**.
@@ -3881,7 +3924,7 @@ terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 
 Terminates this UIAbility. This API uses a promise to return the result. It can be called only on the main thread. The result is returned to the caller when **terminateSelfWithResult** is called to terminate the UIAbility that is started by calling [startAbilityForResult](#startabilityforresult).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > After this API is called, missions in the task center are not cleared by default. To clear missions, set
 > [removeMissionAfterTerminate](../../../quick-start/module-configuration-file.md#abilities) to **true**.

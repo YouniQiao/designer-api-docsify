@@ -119,7 +119,7 @@ Unsubscribes from AVTranscoder errors. After the unsubscription, your applicatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type, which is **'error'** in this case.This event is triggered when an error occurs during transcoding. |
+| type | 'error' | Yes | Event type, which is **'error'** in this case.<br>This event is triggered when an error occurs during transcoding. |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback that has been registered to listen for AVTranscoder errors. |
 
 ## off('progressUpdate')
@@ -186,7 +186,7 @@ An application can subscribe to only one AVTranscoder error event. When the appl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type, which is **'error'** in this case.This event is triggered when an error occurs during recording. |
+| type | 'error' | Yes | Event type, which is **'error'** in this case.<br>This event is triggered when an error occurs during recording. |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback invoked when the event is triggered. |
 
 **Error codes:**
@@ -386,7 +386,7 @@ fdDst: number
 
 Destination media file descriptor, which specifies the data source. After creating an AVTranscoder instance, you must set both **fdSrc** and **fdDst**.
 
-**NOTE：**
+**NOTE:**
 
 - After the resource handle (FD) is transferred to an AVTranscoder instance, do not use the resource handle to  
 perform other read and write operations, including but not limited to transferring this handle to other AVPlayer, AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance.  
@@ -411,7 +411,7 @@ Source media file descriptor, which specifies the data source.
 
 There is a media file that stores continuous assets, the address offset is 0, and the byte length is 100. Its file descriptor is **AVFileDescriptor { fd = resourceHandle; offset = 0; length = 100; }**.
 
-**NOTE：**
+**NOTE:**
 
 - After the resource handle (FD) is transferred to an AVTranscoder instance, do not use the resource handle to  
 perform other read and write operations, including but not limited to transferring this handle to other AVPlayer, AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance.  

@@ -1,6 +1,6 @@
 # FocusTrackingInfo（系统接口）
 
-Describes the focus tracking information, which is obtained by calling VideoSessionForSys. on('focusTrackingInfoAvailable').
+Describes the focus tracking information, which is obtained by calling VideoSessionForSys. [on('focusTrackingInfoAvailable')](arkts-camera-camera-videosession-i-sys.md#onfocustrackinginfoavailable).
 
 **起始版本：** 15
 

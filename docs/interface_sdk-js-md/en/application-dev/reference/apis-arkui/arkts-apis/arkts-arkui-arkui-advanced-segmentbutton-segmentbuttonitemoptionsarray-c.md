@@ -2,7 +2,7 @@
 
 Represents an array for storing button information.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The SegmentButtonItemOptionsArray can save only two to five button information elements.
 
@@ -90,7 +90,7 @@ Removes the last element from this array and returns that element.
 
 | Type | Description |
 | --- | --- |
-| [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined | Element removed from the array. |
+| [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) &#124; undefined | Element removed from the array. |
 
 ## push
 
@@ -112,7 +112,7 @@ Adds the specified elements to the end of this array and returns the new length 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md) | Yes | Elements to add to the end of the array. Default value: array with 0 new button information items |
+| items | [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md) | Yes | Elements to add to the end of the array.<br>Default value: array with 0 new button information items |
 
 **Return value:**
 
@@ -140,7 +140,7 @@ Removes the first element from this array and returns that element.
 
 | Type | Description |
 | --- | --- |
-| [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) \| undefined | Element removed from the array. |
+| [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) &#124; undefined | Element removed from the array. |
 
 ## splice
 
@@ -164,7 +164,7 @@ Changes the contents of this array by removing the specified number of elements 
 | --- | --- | --- | --- |
 | start | number | Yes | Index of the position starting from which elements are to be removed. |
 | deleteCount | number | Yes | Number of elements to remove. |
-| items | [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | Yes | Element to be added to the array from start. Default value: If no element is specified, the element is deleted from the array. |
+| items | [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | Yes | Element to be added to the array from start.<br>Default value: If no element is specified, the element is deleted from the array. |
 
 **Return value:**
 
@@ -192,7 +192,7 @@ Adds an element to the beginning of this array and returns the new length of the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md) | Yes | Elements to add to the beginning of the array. Default value: array with 0 new button information items |
+| items | [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md) | Yes | Elements to add to the beginning of the array.<br>Default value: array with 0 new button information items |
 
 **Return value:**
 

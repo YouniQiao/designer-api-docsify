@@ -2,7 +2,7 @@
 
 This module provides system management capabilities, including NTP time server settings, OTA update policy management, system update management, key event handling policies, log collection, and device activation lock management. It is suitable for enterprise device management scenarios, helping enterprise administrators uniformly manage device system configurations, update policies, and security policies, thereby improving enterprise device management efficiency and security.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The APIs of this module can be called only by a device administrator application that is enabled. For details, see
 > [MDM Kit Development](../../../mdm/mdm-kit-guide.md).

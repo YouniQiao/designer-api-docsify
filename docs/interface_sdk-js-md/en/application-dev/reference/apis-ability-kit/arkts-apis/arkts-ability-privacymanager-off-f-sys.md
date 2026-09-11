@@ -19,7 +19,7 @@ Unsubscribes from permission usage status change events for a specified permissi
 
 When unsubscribing, if no callback function is passed in, all callback functions under the permissionList are deleted in batch.
 
-> **NOTE：**
+> **NOTE:**
 > This API is typically used in conjunction with [on](arkts-ability-privacymanager-on-f-sys.md) to cancel the listening relationship created by on.
 
 **Since:** 9
@@ -35,8 +35,8 @@ When unsubscribing, if no callback function is passed in, all callback functions
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'activeStateChange' | Yes | Event type. The value is **'activeStateChange'**, which indicates the permission usage change. |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If empty, unsubscribes from all permission status changes. Must be consistent with the input of on. Value constraint: The array length cannot exceed 1024. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md)&gt; | No | Callback used to return the object for unsubscribing from the status change event of the specified tokenId and permission names. Must be consistent with the callback passed to on. If this parameter is not provided, all callback functions under permissionList will be deleted in batch. Value constraint: The array length cannot exceed 1024. |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If empty, unsubscribes from all permission status changes. Must be consistent with the input of on.<br>Value constraint: The array length cannot exceed 1024. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md)&gt; | No | Callback used to return the object for unsubscribing from the status change event of the specified tokenId and permission names. Must be consistent with the callback passed to on. If this parameter is not provided, all callback functions under permissionList will be deleted in batch.<br>Value constraint: The array length cannot exceed 1024. |
 
 **Error codes:**
 

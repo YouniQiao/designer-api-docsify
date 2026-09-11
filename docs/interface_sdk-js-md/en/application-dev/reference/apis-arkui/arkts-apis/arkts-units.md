@@ -52,7 +52,7 @@
 | --- | --- |
 | [ColorMetrics](arkts-arkui-colormetrics-t.md) | Defines ColorMetrics. |
 | [Degree](arkts-arkui-degree-t.md) | Defines the angle property with number in units of deg. |
-| [Dimension](arkts-arkui-dimension-t.md) | Defines the dimension property with number with units(vp\|px\|fp\|lpx\|%), and resource. |
+| [Dimension](arkts-arkui-dimension-t.md) | Defines the dimension property with number with units(vp&#124;px&#124;fp&#124;lpx&#124;%), and resource. |
 | [EdgeWidth](arkts-arkui-edgewidth-t.md) | Defines the border width property. |
 | [FP](arkts-arkui-fp-t.md) | Defines the length property with number in units of fp. |
 | [Length](arkts-arkui-length-t.md) | Defines the length property with string, number and resource unit. |

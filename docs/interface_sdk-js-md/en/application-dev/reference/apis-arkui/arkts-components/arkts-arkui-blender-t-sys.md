@@ -6,6 +6,8 @@ declare type Blender = import('../api/@ohos.graphics.uiEffect').default.Blender
 
 Blender
 
+@typedef { import('../api/@ohos.graphics.uiEffect').default.Blender } Blender
+
 **Since:** 13
 
 **Model restriction:** This API can be used only in the stage model.

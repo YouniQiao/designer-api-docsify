@@ -16,7 +16,7 @@ The sidebar is embedded in the component and displayed side by side with the con
 
 With the overall container size unchanged, displaying the sidebar reduces the content area, and hiding the sidebar expands the content area.
 
-If the component size is less than the sum of [minContentWidth](arkts-arkui-sidebarcontainer-attribute.md#mincontentwidth) and [minSideBarWidth](arkts-arkui-sidebarcontainer-attribute.md#minsidebarwidth), and **showSideBar** is not set, the sidebar is automatically hidden.
+If the component size is less than the sum of [minContentWidth](arkts-arkui-sidebarcontainer-comp-attribute.md#mincontentwidth) and [minSideBarWidth](arkts-arkui-sidebarcontainer-comp-attribute.md#minsidebarwidth), and **showSideBar** is not set, the sidebar is automatically hidden.
 
 If **minSideBarWidth** or **minContentWidth** is not set, the default value will be used for calculation.
 

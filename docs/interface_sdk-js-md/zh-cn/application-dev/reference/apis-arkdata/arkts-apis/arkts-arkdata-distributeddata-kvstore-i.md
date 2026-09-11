@@ -8,7 +8,7 @@ KVStore数据库实例，提供增加数据、删除数据和订阅数据变更�
 
 **替代接口：** SingleKVStore
 
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core @version 1
 
 ## 导入模块
 
@@ -564,7 +564,7 @@ put(key: string, value: Uint8Array | string | number | boolean, callback: AsyncC
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要添加数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md)。 |
-| value | Uint8Array \| string \| number \| boolean | 是 | 要添加数据的value，支持Uint8Array、number 、 string 、boolean，Uint8Array、string 的长度不大于[MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md)。 |
+| value | Uint8Array &#124; string &#124; number &#124; boolean | 是 | 要添加数据的value，支持Uint8Array、number 、 string 、boolean，Uint8Array、string 的长度不大于[MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md)。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
@@ -607,7 +607,7 @@ put(key: string, value: Uint8Array | string | number | boolean): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要添加数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md)。 |
-| value | Uint8Array \| string \| number \| boolean | 是 | 要添加数据的value，支持Uint8Array、number 、 string 、boolean，Uint8Array、string 的长度不大于[MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md)。 |
+| value | Uint8Array &#124; string &#124; number &#124; boolean | 是 | 要添加数据的value，支持Uint8Array、number 、 string 、boolean，Uint8Array、string 的长度不大于[MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md)。 |
 
 **返回值：**
 

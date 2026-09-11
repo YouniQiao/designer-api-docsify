@@ -2,6 +2,8 @@
 
 Describes the partner device address.
 
+@typedef PartnerDeviceAddress
+
 **Since:** 23
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core

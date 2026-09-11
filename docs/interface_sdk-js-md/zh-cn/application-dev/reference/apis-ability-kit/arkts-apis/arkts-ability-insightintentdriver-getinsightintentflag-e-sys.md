@@ -27,10 +27,8 @@
 > | subIntentInfo | 是 | 是 |
 > | parameters | 是 | 是 |
 > | entities | 否 | 否 |
-> | developType&lt;sup&gt;23+&lt;/sup
-&gt; | 是 | 是 |
-> | subIntentInfoForConfiguration&lt;sup&gt;23+&lt;/sup
-&gt; | 否 | 否 |
+> | developType&lt;sup&gt;23+&lt;/sup&gt; | 是 | 是 |
+> | subIntentInfoForConfiguration&lt;sup&gt;23+&lt;/sup&gt; | 否 | 否 |
 
 **起始版本：** 20
 

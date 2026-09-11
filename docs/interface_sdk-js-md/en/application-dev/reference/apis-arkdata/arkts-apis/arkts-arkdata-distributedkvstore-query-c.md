@@ -114,7 +114,7 @@ deviceId(deviceId: string): Query
 
 Creates a **Query** object with the device ID as the key prefix.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -144,7 +144,7 @@ Creates a **Query** object with the device ID as the key prefix.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
 **Examples**
 
@@ -211,7 +211,7 @@ equalTo(field: string, value: number | number | string | boolean): Query
 
 Creates a **Query** object to match the specified field whose value is equal to the given value.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -230,7 +230,7 @@ Creates a **Query** object to match the specified field whose value is equal to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | number \| number \| string \| boolean | Yes | Value specified. |
+| value | number &#124; number &#124; string &#124; boolean | Yes | Value specified. |
 
 **Return value:**
 
@@ -242,7 +242,7 @@ Creates a **Query** object to match the specified field whose value is equal to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
 **Examples**
 
@@ -307,7 +307,7 @@ greaterThan(field: string, value: number | number | string | boolean): Query
 
 Creates a **Query** object to match the specified field whose value is greater than the specified value.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -326,7 +326,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Indicates the field, which cannot contain ^. |
-| value | number \| number \| string \| boolean | Yes | Indicates the value to be compared. |
+| value | number &#124; number &#124; string &#124; boolean | Yes | Indicates the value to be compared. |
 
 **Return value:**
 
@@ -338,7 +338,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
 **Examples**
 
@@ -366,7 +366,7 @@ greaterThanOrEqualTo(field: string, value: number | number | string): Query
 
 Creates a **Query** object to match the specified field whose value is greater than or equal to the specified value.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -385,7 +385,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | number \| number \| string | Yes | Value specified. |
+| value | number &#124; number &#124; string | Yes | Value specified. |
 
 **Return value:**
 
@@ -397,7 +397,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
 **Examples**
 
@@ -425,7 +425,7 @@ inNumber(field: string, valueList: number[] | number[]): Query
 
 Creates a **Query** object to match the specified field whose value is within the specified list of numbers.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -444,7 +444,7 @@ Creates a **Query** object to match the specified field whose value is within th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| valueList | number[] \| number[] | Yes | List of numbers. |
+| valueList | number[] &#124; number[] | Yes | List of numbers. |
 
 **Return value:**
 
@@ -456,7 +456,7 @@ Creates a **Query** object to match the specified field whose value is within th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
 **Examples**
 
@@ -484,7 +484,7 @@ inString(field: string, valueList: string[]): Query
 
 Creates a **Query** object to match the specified field whose value is within the specified list of strings.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -515,7 +515,7 @@ Creates a **Query** object to match the specified field whose value is within th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
 **Examples**
 
@@ -543,7 +543,7 @@ isNotNull(field: string): Query
 
 Creates a **Query** object to match the specified field whose value is not **null**.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -573,7 +573,7 @@ Creates a **Query** object to match the specified field whose value is not **nul
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 
 **Examples**
 
@@ -601,7 +601,7 @@ isNull(field: string): Query
 
 Creates a **Query** object to match the specified field whose value is **null**.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -631,7 +631,7 @@ Creates a **Query** object to match the specified field whose value is **null**.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
 **Examples**
 
@@ -659,7 +659,7 @@ lessThan(field: string, value: number | number | string): Query
 
 Creates a **Query** object to match the specified field whose value is less than the specified value.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -678,7 +678,7 @@ Creates a **Query** object to match the specified field whose value is less than
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | number \| number \| string | Yes | Value specified. |
+| value | number &#124; number &#124; string | Yes | Value specified. |
 
 **Return value:**
 
@@ -690,7 +690,7 @@ Creates a **Query** object to match the specified field whose value is less than
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
 **Examples**
 
@@ -718,7 +718,7 @@ lessThanOrEqualTo(field: string, value: number | number | string): Query
 
 Creates a **Query** object to match the specified field whose value is less than or equal to the specified value.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -737,7 +737,7 @@ Creates a **Query** object to match the specified field whose value is less than
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | number \| number \| string | Yes | Value specified. |
+| value | number &#124; number &#124; string | Yes | Value specified. |
 
 **Return value:**
 
@@ -749,7 +749,7 @@ Creates a **Query** object to match the specified field whose value is less than
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
 **Examples**
 
@@ -777,7 +777,7 @@ like(field: string, value: string): Query
 
 Creates a **Query** object to match the specified field whose value is similar to the specified string.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -808,7 +808,7 @@ Creates a **Query** object to match the specified field whose value is similar t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
 **Examples**
 
@@ -846,8 +846,8 @@ Creates a **Query** object to specify the number of records of the query result 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| total | number | Yes | Maximum number of results to query. The value must be a non-negative integer.If the value is a negative number, the entire result set is queried. |
-| offset | number | Yes | Start position of the query result. The value must be a non-negative integer.If the value is a negative number, the entire result set is queried.If **offset** exceeds the end of the result set, the query result is empty. |
+| total | number | Yes | Maximum number of results to query. The value must be a non-negative integer.<br>If the value is a negative number, the entire result set is queried. |
+| offset | number | Yes | Start position of the query result. The value must be a non-negative integer.<br>If the value is a negative number, the entire result set is queried.<br>If **offset** exceeds the end of the result set, the query result is empty. |
 
 **Return value:**
 
@@ -859,7 +859,7 @@ Creates a **Query** object to specify the number of records of the query result 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 
 **Examples**
 
@@ -890,7 +890,7 @@ notEqualTo(field: string, value: number | number | string | boolean): Query
 
 Creates a **Query** object to match the specified field whose value is not equal to the specified value.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -909,7 +909,7 @@ Creates a **Query** object to match the specified field whose value is not equal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | number \| number \| string \| boolean | Yes | Value specified. |
+| value | number &#124; number &#124; string &#124; boolean | Yes | Value specified. |
 
 **Return value:**
 
@@ -921,7 +921,7 @@ Creates a **Query** object to match the specified field whose value is not equal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
 **Examples**
 
@@ -949,7 +949,7 @@ notInNumber(field: string, valueList: number[] | number[]): Query
 
 Creates a **Query** object to match the specified field whose value is not within the specified list of numbers.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -968,7 +968,7 @@ Creates a **Query** object to match the specified field whose value is not withi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| valueList | number[] \| number[] | Yes | List of numbers. |
+| valueList | number[] &#124; number[] | Yes | List of numbers. |
 
 **Return value:**
 
@@ -980,7 +980,7 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
 **Examples**
 
@@ -1008,7 +1008,7 @@ notInString(field: string, valueList: string[]): Query
 
 Creates a **Query** object to match the specified field whose value is not within the specified list of strings.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -1039,7 +1039,7 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
 **Examples**
 
@@ -1107,7 +1107,7 @@ orderByAsc(field: string): Query
 
 Creates a **Query** object to sort the query results in ascending order.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -1137,7 +1137,7 @@ Creates a **Query** object to sort the query results in ascending order.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
 **Examples**
 
@@ -1166,7 +1166,7 @@ orderByDesc(field: string): Query
 
 Creates a **Query** object to sort the query results in descending order.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -1196,7 +1196,7 @@ Creates a **Query** object to sort the query results in descending order.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
 **Examples**
 
@@ -1247,7 +1247,7 @@ Creates a **Query** object with a specified key prefix.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 
 **Examples**
 
@@ -1338,7 +1338,7 @@ Creates a **Query** object with an index preferentially used for query.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 
 **Examples**
 
@@ -1367,7 +1367,7 @@ unlike(field: string, value: string): Query
 
 Creates a **Query** object to match the specified field whose value is not similar to the specified string.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -1398,7 +1398,7 @@ Creates a **Query** object to match the specified field whose value is not simil
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
 **Examples**
 

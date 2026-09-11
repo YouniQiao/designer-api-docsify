@@ -2,7 +2,7 @@
 
 Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md). It is used as a parameter for PBKDF2 key derivation.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > **password** is the original password. If **password** of the string type is used, pass in the actual data for
 > key derivation, rather than a HexString or Base64-encoded value. In addition, the string must be encoded in
@@ -66,7 +66,7 @@ password: string | Uint8Array
 
 Original password entered by the user.
 
-**Type:** string \| Uint8Array
+**Type:** string &#124; Uint8Array
 
 **Since:** 11
 

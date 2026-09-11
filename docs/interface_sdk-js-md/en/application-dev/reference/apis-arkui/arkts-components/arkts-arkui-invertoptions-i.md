@@ -81,7 +81,7 @@ Threshold value range.
 
 Value range: [0, 1].
 
-**NOTE：**
+**NOTE:**
 
 This range defines the upper and lower bounds of the grayscale threshold. The grayscale value changes linearly from high to low within the range.
 

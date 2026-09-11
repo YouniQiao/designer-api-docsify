@@ -22,7 +22,7 @@ static addAdsBlockAllowedList(domainSuffixes: Array<string>): void
 
 Adds an array of domain names to the AllowedList of this AdsBlockManager object. This API is typically used to re -enable ad filtering for certain websites in the DisallowedList.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The domain names set by this API are not persistent; they need to be set again after the app is restarted.
 > 
@@ -49,7 +49,7 @@ Adds an array of domain names to the AllowedList of this AdsBlockManager object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## addAdsBlockDisallowedList
@@ -60,7 +60,7 @@ static addAdsBlockDisallowedList(domainSuffixes: Array<string>): void
 
 Adds an array of domain names to the disallowed list of this **AdsBlockManager** object. When the ad blocking feature is enabled, ad blocking for these websites will be disabled.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The domain names set by this API are not persistent; they need to be set again after the app is restarted.
 > 
@@ -88,7 +88,7 @@ Adds an array of domain names to the disallowed list of this **AdsBlockManager**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## clearAdsBlockAllowedList
@@ -99,7 +99,7 @@ static clearAdsBlockAllowedList(): void
 
 Clears the allowed list of this **AdsBlockManager** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The AllowedList of AdsBlockManager is not persistent; it needs to be set again after the app is restarted.
 > 
@@ -126,7 +126,7 @@ static clearAdsBlockDisallowedList(): void
 
 Clears the disallowed list of this **AdsBlockManager** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The DisallowedList of AdsBlockManager is not persistent; it needs to be set again after the app is restarted.
 > 
@@ -153,7 +153,7 @@ static removeAdsBlockAllowedList(domainSuffixes: Array<string>): void
 
 Removes an array of domain names from the allowed list of this **AdsBlockManager** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The AllowedList of AdsBlockManager is not persistent; it needs to be set again after the app is restarted.
 > Removing an entry that does not exist does not trigger an exception.
@@ -177,7 +177,7 @@ Removes an array of domain names from the allowed list of this **AdsBlockManager
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## removeAdsBlockDisallowedList
@@ -188,7 +188,7 @@ static removeAdsBlockDisallowedList(domainSuffixes: Array<string>): void
 
 Removes an array of domain names from the disallowed list of this **AdsBlockManager** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The DisallowedList of AdsBlockManager is not persistent; it needs to be set again after the app is restarted.
 > Removing an entry that does not exist does not trigger an exception.
@@ -212,7 +212,7 @@ Removes an array of domain names from the disallowed list of this **AdsBlockMana
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## setAdsBlockRules
@@ -223,7 +223,7 @@ static setAdsBlockRules(rulesFile: string, replace: boolean): void
 
 Sets a custom ad filtering configuration file that conforms to the universal EasyList syntax in the Web components.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The ad filtering rules set by this API will be persistently stored after successful internal parsing; you do
 > not need to set them again after the app is restarted.
@@ -248,5 +248,5 @@ Sets a custom ad filtering configuration file that conforms to the universal Eas
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |

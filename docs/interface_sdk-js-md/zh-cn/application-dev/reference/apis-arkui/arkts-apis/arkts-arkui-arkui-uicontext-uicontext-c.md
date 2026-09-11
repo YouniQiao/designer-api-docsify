@@ -65,7 +65,7 @@ addLocalInputEventMonitor(eventMask: number, listener: InputEventListener): Inpu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventMask | number | 是 | 事件类型掩码，指定要监视的事件类型位运算。取值限定为整数。 |
+| eventMask | number | 是 | 事件类型掩码，指定要监视的事件类型位运算。<br>取值限定为整数。 |
 | listener | [InputEventListener](../arkts-components/arkts-arkui-inputeventlistener-t.md) | 是 | 事件监听器回调函数。 |
 
 **返回值：**
@@ -226,7 +226,7 @@ closeBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>): Promise
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [120001](../errorcode-bindSheet.md#120001-内容节点对应半模态页面错误) | The bindSheetContent is incorrect. |
 | [120003](../errorcode-bindSheet.md#120003-无法找到内容节点对应的半模态页面) | The bindSheetContent cannot be found. |
 
@@ -282,7 +282,7 @@ createAnimator(options: AnimatorOptions): AnimatorResult
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## createAnimator
 
@@ -304,7 +304,7 @@ createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | 是 | 定义动画选项。 |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) &#124; [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | 是 | 定义动画选项。 |
 
 **返回值：**
 
@@ -316,7 +316,7 @@ createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## createUIContextWithoutWindow
 
@@ -342,19 +342,19 @@ static createUIContextWithoutWindow(context: common.UIAbilityContext | common.Ex
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [common.UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) \| [common.ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-extensioncontext-t.md) | 是 | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)或[ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md)所对应的上下文环境。 |
+| context | [common.UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) &#124; [common.ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-extensioncontext-t.md) | 是 | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)或[ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md)所对应的上下文环境。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined | Context of the created UI instance, or **undefined** if creation fails. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) &#124; undefined | Context of the created UI instance, or **undefined** if creation fails. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. The number of parameters is incorrect.   2. Invalid parameter type of context. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. The number of parameters is incorrect. <br> 2. Invalid parameter type of context. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## destroyUIContextWithoutWindow
@@ -393,7 +393,7 @@ Dispach keyboard event to the frameNode with inspector key.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | number \| string | 是 | The uniqueId or inspector key of the target FrameNode. |
+| node | number &#124; string | 是 | The uniqueId or inspector key of the target FrameNode. |
 | event | [KeyEvent](../arkts-components/arkts-arkui-keyevent-i.md) | 是 | The keyboard event. |
 
 **返回值：**
@@ -481,7 +481,7 @@ fp2px(value: number): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 转换后的数值。 |
+| number | 转换后的数值。<br>取值范围：(-∞, +∞) |
 
 ## getAllUIContexts
 
@@ -553,7 +553,7 @@ getAttachedFrameNodeById(id: string): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | The instance of FrameNode. |
+| [FrameNode](arkts-arkui-framenode-c.md) &#124; null | The instance of FrameNode. |
 
 ## getCallingScopeUIContext
 
@@ -579,7 +579,7 @@ static getCallingScopeUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined | 当前[调用作用域](../../../ui/arkts-global-interface.md#基本概念)的UIContext，调用作用域不明确时返回undefined。 |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) &#124; undefined | 当前[调用作用域](../../../ui/arkts-global-interface.md#基本概念)的UIContext，调用作用域不明确时返回undefined。 |
 
 ## getComponentSnapshot
 
@@ -733,19 +733,19 @@ get the filtered attributes of the component tree.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filters | Array&lt;string&gt; | 否 | List of component attributes used for filtering. Currently, only the following filter fields are supported:    **"id"**: unique ID of the component.    **"src"**: source of the resource.    **"content"**: information or data contained in the element, component, or object.    **"editable"**: whether the component is editable.    **"scrollable"**: whether the component is scrollable.    **"selectable"**: whether the component is selectable.    **"focusable"**: whether the component is focusable.    **"focused"**: whether the component is currently focused. If **filters** includes one or more fields, unspecified fields will be filtered out from the results. If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. The following filter field is supported since API version 20:    **"isLayoutInspector"**: whether the component tree contains custom components. If **filters** is omitted or does not contain **"isLayoutInspector"**, the returned component tree will not include custom component details. Other filter fields are used only in testing scenarios. |
+| filters | Array&lt;string&gt; | 否 | List of component attributes used for filtering. Currently, only the following filter fields are supported:<br>**"id"**: unique ID of the component. <br>**"src"**: source of the resource. <br>**"content"**: information or data contained in the element, component, or object. <br>**"editable"**: whether the component is editable. <br>**"scrollable"**: whether the component is scrollable. <br>**"selectable"**: whether the component is selectable. <br>**"focusable"**: whether the component is focusable. <br>**"focused"**: whether the component is currently focused. <br>If **filters** includes one or more fields, unspecified fields will be filtered out from the results. <br>If **filters** is not provided or is an empty array, none of the aforementioned fields <br>will be filtered out. <br>The following filter field is supported since API version 20: <br>**"isLayoutInspector"**: whether the component tree contains custom components. <br>If **filters** is omitted or <br>does not contain **"isLayoutInspector"**, the returned component tree <br>will not include custom component details. <br>Other filter fields are used only in testing scenarios. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | JSON string of the component tree and component attributes. For details about each field in the component, see the return value description of [getInspectorInfo]{ |
+| string | JSON string of the component tree and component attributes. For details about each field in the component, see the return value description of [getInspectorInfo](arkts-arkui-framenode-c.md#getinspectorinfo). |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## getFilteredInspectorTreeById
 
@@ -768,20 +768,20 @@ get the filtered attributes of the component tree with the specified id and dept
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | string | 是 | ID of the target component. |
-| depth | number | 是 | Number of layers of child components. If the value is **0**, the attributes of the specified component and all its child components are obtained. If the value is **1**, only the attributes of the specified component are obtained. If the value is **2**, the attributes of the specified component and its level-1 child components are obtained. The rest can be deduced by analogy. |
-| filters | Array&lt;string&gt; | 否 | List of component attributes used for filtering. Currently, only the following filter fields are supported:    **"id"**: unique ID of the component.    **"src"**: source of the resource.    **"content"**: information or data contained in the element, component, or object.    **"editable"**: whether the component is editable.    **"scrollable"**: whether the component is scrollable.    **"selectable"**: whether the component is selectable.    **"focusable"**: whether the component is focusable.    **"focused"**: whether the component is currently focused. If **filters** includes one or more fields, unspecified fields will be filtered out from the results. If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. Other filter fields are used only in testing scenarios. |
+| depth | number | 是 | Number of layers of child components. If the value is **0**, the attributes of the specified component and all its child components are obtained. If the value is **1**, only the attributes of<br>the specified component are obtained. If the value is **2**, the attributes of <br>the specified component and its <br>level-1 child components are obtained. The rest can be deduced by analogy. |
+| filters | Array&lt;string&gt; | 否 | List of component attributes used for filtering. Currently, only the following filter fields are supported:<br>**"id"**: unique ID of the component. <br>**"src"**: source of the resource. <br>**"content"**: information or data contained in the element, component, or object. <br>**"editable"**: whether the component is editable. <br>**"scrollable"**: whether the component is scrollable. <br>**"selectable"**: whether the component is selectable. <br>**"focusable"**: whether the component is focusable. <br>**"focused"**: whether the component is currently focused. <br>If **filters** includes one or more fields, unspecified fields will be filtered out from the results. <br>If **filters** is not provided or is an empty array, none of the aforementioned fields <br>will be filtered out. <br>Other filter fields are used only in testing scenarios. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | JSON string of the attributes of the specified component and its child components. For details about each field in the component, see the return value |
+| string | JSON string of the attributes of the specified component and its child components. For details about each field in the component, see the return value <br>description of [getInspectorInfo](arkts-arkui-framenode-c.md#getinspectorinfo). |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## getFocusController
 
@@ -853,7 +853,7 @@ getFrameNodeById(id: string): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | The instance of FrameNode. |
+| [FrameNode](arkts-arkui-framenode-c.md) &#124; null | The instance of FrameNode. |
 
 ## getFrameNodeByUniqueId
 
@@ -887,7 +887,7 @@ getFrameNodeByUniqueId(id: number): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
+| [FrameNode](arkts-arkui-framenode-c.md) &#124; null | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
 
 ## getHostContext
 
@@ -909,7 +909,7 @@ getHostContext(): Context | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [Context](arkts-arkui-context-t.md) \| undefined | Context of the ability. The context type depends on the ability type. For example, if this API is called in a page within a UIAbility window, the returned context type is [UIAbilityContext]{ |
+| [Context](arkts-arkui-context-t.md) &#124; undefined | Context of the ability. The context type depends on the ability type. For example, if this API is called in a page within a UIAbility window, the returned context type is [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md). If this API is called in a page within an ExtensionAbility window, the returned context type is [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). If the ability context does not exist, **undefined** is returned. |
 
 ## getId
 
@@ -975,7 +975,7 @@ static getLastFocusedUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined | UIContext of the UI instance that most recently switched to the focused state. Returns **undefined** if the most recently focused instance has been destroyed or if no instance has ever been focused. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) &#124; undefined | UIContext of the UI instance that most recently switched to the focused state. Returns **undefined** if the most recently focused instance has been destroyed or if no instance has ever been focused. |
 
 ## getLastForegroundUIContext
 
@@ -997,7 +997,7 @@ static getLastForegroundUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined | UIContext of the UI instance that most recently switched to the foreground state. Returns **undefined** if the most recently foreground UI instance has been destroyed or if no UI instance has ever been in the foreground. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) &#124; undefined | UIContext of the UI instance that most recently switched to the foreground state. Returns **undefined** if the most recently foreground UI instance has been destroyed or if no UI instance has ever been in the foreground. |
 
 ## getMagnifier
 
@@ -1113,7 +1113,7 @@ Get navigation information of the frameNode with uniqueId.
 
 | 类型 | 说明 |
 | --- | --- |
-| observer.NavigationInfo \| undefined | The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
+| [observer.NavigationInfo](../../apis-arkui/arkts-apis/arkts-arkui-observer.md) &#124; undefined | The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
 
 ## getOverlayManager
 
@@ -1205,7 +1205,7 @@ getPageRootNode(): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | FrameNode of the root node of the page or **null**. |
+| [FrameNode](arkts-arkui-framenode-c.md) &#124; null | FrameNode of the root node of the page or **null**.<br>If no valid FrameNode is available, **null** is returned. <br>If no page is loaded in the window, **null** is returned. |
 
 **错误码：**
 
@@ -1233,7 +1233,7 @@ getPixelRoundMode(): PixelRoundMode
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | 当前页面的像素取整模式，取值包括： |
+| [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | 当前页面的像素取整模式，取值包括：<br>- PIXEL_ROUND_ON_LAYOUT_FINISH（对应数值：0）：在布局完成后进行像素取整。<br>- PIXEL_ROUND_AFTER_MEASURE（对应数值：1）：在组件测量大小结束后进行像素取整。 |
 
 ## getPromptAction
 
@@ -1299,7 +1299,7 @@ getSharedLocalStorage(): LocalStorage | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [LocalStorage](arkts-arkui-localstorage-c.md) \| undefined | LocalStorage** instance if it exists; **undefined** if it does not exist. |
+| [LocalStorage](arkts-arkui-localstorage-c.md) &#124; undefined | LocalStorage** instance if it exists; **undefined** if it does not exist. |
 
 ## getSmartGestureController
 
@@ -1436,7 +1436,7 @@ getWindowId(): number | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| number \| undefined | ID of the window to which the current application instance belongs. If the window does not exist, **undefined** is returned. |
+| number &#124; undefined | ID of the window to which the current application instance belongs. If the window does not exist, **undefined** is returned. |
 
 ## getWindowName
 
@@ -1458,7 +1458,7 @@ getWindowName(): string | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| string \| undefined | Name of the window where the current instance is located. If the window does not exist, **undefined** is returned. |
+| string &#124; undefined | Name of the window where the current instance is located. If the window does not exist, **undefined** is returned. |
 
 ## getWindowWidthBreakpoint
 
@@ -1603,7 +1603,7 @@ lpx2px(value: number): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 转换后的数值。 |
+| number | 转换后的数值。<br>取值范围：(-∞, +∞) |
 
 ## openBindSheet
 
@@ -1635,7 +1635,7 @@ openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOpti
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bindSheetContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | 是 | 半模态页面中显示的组件内容。 |
-| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | 否 | 半模态页面样式。   **说明：** 1. 不支持设置SheetOptions.uiContext，该属性的值固定为当前实例的UIContext。 2. 若不传递targetId，则不支持设置SheetOptions.preferType为POPUP样式，若设置了POPUP样式则使用CENTER样式替代。 3. 若不传递targetId，则不支持设置SheetOptions.mode为EMBEDDED模式，默认为OVERLAY模式。 4. 其余属性的默认值参考[SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md)文档。 |
+| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | 否 | 半模态页面样式。<br>**说明：** <br>1. 不支持设置SheetOptions.uiContext，该属性的值固定为当前实例的UIContext。<br>2. 若不传递targetId，则不支持设置SheetOptions.preferType为POPUP样式，若设置了POPUP样式则使用CENTER样式替代。<br>3. 若不传递targetId，则不支持设置SheetOptions.mode为EMBEDDED模式，默认为OVERLAY模式。<br>4. 其余属性的默认值参考[SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md)文档。 |
 | targetId | number | 否 | 需要绑定组件的ID，若不指定则不绑定任何组件。id不存在时返回错误码120004。在传入undefined时返回错误码401。 |
 
 **返回值：**
@@ -1648,7 +1648,7 @@ openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOpti
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [120001](../errorcode-bindSheet.md#120001-内容节点对应半模态页面错误) | The bindSheetContent is incorrect. |
 | [120002](../errorcode-bindSheet.md#120002-内容节点对应半模态页面已存在) | The bindSheetContent already exists. |
 | [120004](../errorcode-bindSheet.md#120004-指定的targetid不存在) | The targetId does not exist. |
@@ -1736,7 +1736,7 @@ px2fp(value: number): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 转换后的数值。 |
+| number | 转换后的数值。<br>取值范围：(-∞, +∞) |
 
 ## px2lpx
 
@@ -1770,7 +1770,7 @@ px2lpx(value: number): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 转换后的数值。 |
+| number | 转换后的数值。<br>取值范围：(-∞, +∞) |
 
 ## px2vp
 
@@ -1809,7 +1809,7 @@ px2vp(value: number): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 转换后的数值。 |
+| number | 转换后的数值。<br>取值范围：(-∞, +∞) |
 
 ## removeLocalInputEventMonitor
 
@@ -2019,7 +2019,7 @@ setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | 是 | 配置虚拟键盘抬起时页面的避让模式。默认值：KeyboardAvoidMode.OFFSET，键盘抬起时默认避让模式为上抬。setKeyboardAvoidMode传入异常值时，该属性设置不生效。 |
+| value | [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | 是 | 配置虚拟键盘抬起时页面的避让模式。<br>默认值：KeyboardAvoidMode.OFFSET，键盘抬起时默认避让模式为上抬。<br>setKeyboardAvoidMode传入异常值时，该属性设置不生效。 |
 
 ## setOverlayManagerOptions
 
@@ -2069,7 +2069,7 @@ setPixelRoundMode(mode: PixelRoundMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | 是 | 像素取整模式，可选值：   - PIXEL_ROUND_ON_LAYOUT_FINISH：在布局完成后进行像素取整，适合大多数场景。   - PIXEL_ROUND_AFTER_MEASURE：在组件测量大小结束后进行像素取整，适用于使用组件级像素取整无法解决的像素取整问题场景，但最终大小相比PIXEL_ROUND_ON_LAYOUT_FINISH模式可能扩大1px。   设置异常值时，按PixelRoundMode.PIXEL_ROUND_ON_LAYOUT_FINISH模式处理。 |
+| mode | [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | 是 | 像素取整模式，可选值：<br>- PIXEL_ROUND_ON_LAYOUT_FINISH：在布局完成后进行像素取整，适合大多数场景。<br>- PIXEL_ROUND_AFTER_MEASURE：在组件测量大小结束后进行像素取整，适用于使用组件级像素取整无法解决的像素取整问题场景，但最终大小相比PIXEL_ROUND_ON_LAYOUT_FINISH模式可能扩大1px。<br>设置异常值时，按PixelRoundMode.PIXEL_ROUND_ON_LAYOUT_FINISH模式处理。 |
 
 ## setResourceManagerCacheMaxCountForHSP
 
@@ -2167,7 +2167,7 @@ alertDialog display.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) \| [AlertDialogParamWithButtons](arkts-arkui-alertdialogparamwithbuttons-i.md) \| [AlertDialogParamWithOptions](arkts-arkui-alertdialogparamwithoptions-i.md) | 是 | Shows an AlertDialog component in the given settings. |
+| options | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) &#124; [AlertDialogParamWithButtons](arkts-arkui-alertdialogparamwithbuttons-i.md) &#124; [AlertDialogParamWithOptions](arkts-arkui-alertdialogparamwithoptions-i.md) | 是 | Shows an AlertDialog component in the given settings. |
 
 ## showDatePickerDialog
 
@@ -2233,7 +2233,7 @@ textPickerDialog display.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [TextPickerDialogOptions](../arkts-components/arkts-arkui-textpickerdialogoptions-i.md) \| [TextPickerDialogOptionsExt](../arkts-components/arkts-arkui-textpickerdialogoptionsext-i.md) | 是 | Dialog style. |
+| style | [TextPickerDialogOptions](../arkts-components/arkts-arkui-textpickerdialogoptions-i.md) &#124; [TextPickerDialogOptionsExt](../arkts-components/arkts-arkui-textpickerdialogoptionsext-i.md) | 是 | Dialog style. |
 
 ## showTimePickerDialog
 
@@ -2329,8 +2329,8 @@ updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOp
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bindSheetContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | 是 | 半模态页面中显示的组件内容。 |
-| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | 是 | 半模态页面样式。   **说明：** 不支持更新SheetOptions.uiContext、SheetOptions.mode、回调函数。 |
-| partialUpdate | boolean | 否 | 半模态页面更新方式, 默认值为false。   **说明：** 1. true为增量更新，保留当前值，更新SheetOptions中的指定属性。 2. false为全量更新，除SheetOptions中的指定属性，其他属性恢复默认值。 |
+| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | 是 | 半模态页面样式。<br>**说明：** <br>不支持更新SheetOptions.uiContext、SheetOptions.mode、回调函数。 |
+| partialUpdate | boolean | 否 | 半模态页面更新方式, 默认值为false。<br>**说明：** <br>1. true为增量更新，保留当前值，更新SheetOptions中的指定属性。<br>2. false为全量更新，除SheetOptions中的指定属性，其他属性恢复默认值。 |
 
 **返回值：**
 
@@ -2342,7 +2342,7 @@ updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOp
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [120001](../errorcode-bindSheet.md#120001-内容节点对应半模态页面错误) | The bindSheetContent is incorrect. |
 | [120003](../errorcode-bindSheet.md#120003-无法找到内容节点对应的半模态页面) | The bindSheetContent cannot be found. |
 
@@ -2383,4 +2383,4 @@ vp2px(value: number): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 转换后的数值。 |
+| number | 转换后的数值。<br>取值范围：(-∞, +∞) |

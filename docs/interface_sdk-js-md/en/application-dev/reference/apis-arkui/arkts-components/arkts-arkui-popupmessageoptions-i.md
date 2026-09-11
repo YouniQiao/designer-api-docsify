@@ -19,7 +19,7 @@ font?: Font
 
 Font settings of the popup message.
 
-**NOTE：**
+**NOTE:**
 
 1. Setting **family** is not supported.
 2. The **weight** attribute in **Font** does not support the number type.

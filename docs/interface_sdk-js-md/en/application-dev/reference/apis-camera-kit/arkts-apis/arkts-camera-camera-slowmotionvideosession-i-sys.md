@@ -34,7 +34,7 @@ Checks whether the device supports slow-motion detection.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of slow-motion detection. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| boolean | Check result for the support of slow-motion detection. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 

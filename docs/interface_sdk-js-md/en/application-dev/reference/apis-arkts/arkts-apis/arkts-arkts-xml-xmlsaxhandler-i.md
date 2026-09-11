@@ -71,8 +71,8 @@ CallBack function triggered at the end of the element
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | elementName | string | Yes | Name of the element |
-| namespaceURI | string \| undefined | Yes | URI of the namespace |
-| qName | string \| undefined | Yes | Fully qualified name with namespace |
+| namespaceURI | string &#124; undefined | Yes | URI of the namespace |
+| qName | string &#124; undefined | Yes | Fully qualified name with namespace |
 
 ## startDocument
 
@@ -111,6 +111,6 @@ CallBack function triggered at the beginning of the element
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | elementName | string | Yes | Name of the element |
-| namespaceURI | string \| undefined | Yes | URI of the namespace |
-| qName | string \| undefined | Yes | Fully qualified name with namespace |
+| namespaceURI | string &#124; undefined | Yes | URI of the namespace |
+| qName | string &#124; undefined | Yes | Fully qualified name with namespace |
 | attributes | Map&lt;string, string&gt; | Yes | attributes mapping |

@@ -54,7 +54,7 @@ Playback capture source type.
 
 **Deprecated since:** 12
 
-**Substitutes:** OH_AVScreenCapture
+**Substitutes:** OH_AVScreenCapture in native interface.
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 

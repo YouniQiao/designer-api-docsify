@@ -14,7 +14,7 @@ function pushNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<voi
 
 Navigates to a page using the named route. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
@@ -44,7 +44,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
@@ -93,7 +93,7 @@ function pushNamedRoute(options: NamedRouterOptions): Promise<void>
 
 Navigates to a page using the named route. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
@@ -128,7 +128,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
@@ -179,7 +179,7 @@ function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode, callback:
 
 Navigates to a page using the named route. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
@@ -210,7 +210,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
@@ -259,7 +259,7 @@ function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promise<
 
 Navigates to a page using the named route. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
@@ -295,7 +295,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |

@@ -1,6 +1,6 @@
 # WakeupIntelligentVoiceEngine (System API)
 
-Implements wakeup intelligent voice engine.
+Implements wakeup intelligent voice engine. @typedef WakeupIntelligentVoiceEngine
 
 **Since:** 10
 

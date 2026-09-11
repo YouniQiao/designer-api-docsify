@@ -14,11 +14,13 @@ declare function moveFileSync(src: string, dest: string, mode?: number): void
 
 Moves a file. This API returns the result synchronously.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is not supported in a distributed directory.
 
 **Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -28,7 +30,7 @@ Moves a file. This API returns the result synchronously.
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the file to move. |
 | dest | string | Yes | Application sandbox path of the destination file. |
-| mode | number | No | Move mode.The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
+| mode | number | No | Move mode.<br> The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
 
 **Error codes:**
 

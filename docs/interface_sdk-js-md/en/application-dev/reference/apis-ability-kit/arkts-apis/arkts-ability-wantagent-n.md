@@ -53,21 +53,6 @@ import { wantAgent, WantAgent } from '@kit.AbilityKit';
 | --- | --- |
 | [CompleteData](arkts-ability-wantagent-completedata-i.md) | Describes the data returned by the operation of proactive triggering a WantAgent object. |
 
-### Enums
-
-| Name | Description |
-| --- | --- |
-| [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md) | Enumerates the flags used by the WantAgent objects. |
-| [OperationType](arkts-ability-wantagent-operationtype-e.md) | Enumerates the operation types of the WantAgent objects. |
-
-<!--Del-->
-### Enums(System API)
-
-| Name | Description |
-| --- | --- |
-| [OperationType](arkts-ability-wantagent-operationtype-e-sys.md) | Enumerates the operation types of the WantAgent objects. |
-<!--DelEnd-->
-
 ### Types
 
 | Name | Description |
@@ -81,4 +66,19 @@ import { wantAgent, WantAgent } from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [LocalWantAgentInfo](arkts-ability-wantagent-localwantagentinfo-t-sys.md) | Provides the information required to create a local WantAgent. |
+<!--DelEnd-->
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md) | Enumerates the flags used by the WantAgent objects. |
+| [OperationType](arkts-ability-wantagent-operationtype-e.md) | Enumerates the operation types of the WantAgent objects. |
+
+<!--Del-->
+### Enums(System API)
+
+| Name | Description |
+| --- | --- |
+| [OperationType](arkts-ability-wantagent-operationtype-e-sys.md) | Enumerates the operation types of the WantAgent objects. |
 <!--DelEnd-->

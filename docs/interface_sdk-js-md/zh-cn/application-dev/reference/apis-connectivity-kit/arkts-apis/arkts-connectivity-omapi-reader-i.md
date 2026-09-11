@@ -79,7 +79,7 @@ getName(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | [Reader]{ |
+| string | [Reader](arkts-connectivity-omapi-reader-i.md)名称。 |
 
 **错误码：**
 

@@ -26,7 +26,7 @@ function setDefaultSmsSlotId(slotId: number, callback: AsyncCallback<void>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | SIM卡槽ID。   - 0：卡槽1   - 1：卡槽2   - -1：清除默认配置 |
+| slotId | number | 是 | SIM卡槽ID。<br>- 0：卡槽1<br>- 1：卡槽2<br>- -1：清除默认配置 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置发送短信的默认SIM卡槽ID的回调函数。 |
 
 **错误码：**
@@ -74,7 +74,7 @@ function setDefaultSmsSlotId(slotId: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | SIM卡槽ID。   - 0：卡槽1   - 1：卡槽2   - -1：清除默认配置 |
+| slotId | number | 是 | SIM卡槽ID。<br>- 0：卡槽1<br>- 1：卡槽2<br>- -1：清除默认配置 |
 
 **返回值：**
 

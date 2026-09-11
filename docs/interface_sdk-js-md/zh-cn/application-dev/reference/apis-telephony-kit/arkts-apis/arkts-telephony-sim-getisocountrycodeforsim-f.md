@@ -22,7 +22,7 @@ function getISOCountryCodeForSim(slotId: number, callback: AsyncCallback<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。返回国家码，例如：CN(中国)。 |
 
 **错误码：**
@@ -68,7 +68,7 @@ function getISOCountryCodeForSim(slotId: number): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 
 **返回值：**
 

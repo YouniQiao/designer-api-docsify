@@ -38,7 +38,7 @@ createAsset(photoType: PhotoType, extension: string, options?: photoAccessHelper
 | --- | --- | --- | --- |
 | photoType | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | 是 | 创建的文件类型，IMAGE或者VIDEO类型。 |
 | extension | string | 是 | 文件名后缀参数，例如：'jpg'。字符串长度的取值范围为[1, 255]。. |
-| options | [photoAccessHelper.CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | 否 | 创建选项，例如{title: 'testPhoto'}。文件名中不允许出现非法英文字符。API18开始，非法字符包括： \ / : * ? " &lt; &gt; \| API10-17，非法字符包括： . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
+| options | [photoAccessHelper.CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | 否 | 创建选项，例如{title: 'testPhoto'}。<br>文件名中不允许出现非法英文字符。<br>API18开始，非法字符包括： \ / : * ? " &lt; &gt; &#124; <br>API10-17，非法字符包括： . .. \ / : * ? " ' ` &lt; &gt; &#124; { } [ ] |
 
 **返回值：**
 
@@ -51,7 +51,7 @@ createAsset(photoType: PhotoType, extension: string, options?: photoAccessHelper
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **示例**
@@ -111,7 +111,7 @@ getAlbums(options: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **示例**
@@ -185,7 +185,7 @@ getAlbums(
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **示例**
@@ -251,7 +251,7 @@ getAssets(options: photoAccessHelper.FetchOptions): Promise<FetchResult<PhotoAss
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **示例**
@@ -316,7 +316,7 @@ getBurstAssets(burstKey: string, options: photoAccessHelper.FetchOptions): Promi
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **示例**

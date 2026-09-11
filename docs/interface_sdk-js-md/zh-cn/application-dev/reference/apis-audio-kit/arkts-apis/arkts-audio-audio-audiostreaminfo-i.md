@@ -81,7 +81,7 @@ samplingRate: AudioSamplingRate | number
 - 参数samplingRate支持number类型。  
 - 音频渲染扩展支持8000Hz到384000Hz范围内以10Hz为步长的采样率值。具体设备支持的采样率规格会存在差异。
 
-**类型：** [AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md) \| number
+**类型：** [AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md) &#124; number
 
 **起始版本：** 8
 

@@ -14,7 +14,7 @@ function getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 
 Obtains information about the running processes of the current application. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - In versions earlier than API version 11, this API requires the ohos.permission.GET_RUNNING_INFO permission,
 > which is available only for system applications.
@@ -66,7 +66,7 @@ function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInfor
 
 Obtains information about the running processes of the current application. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - In versions earlier than API version 11, this API requires the ohos.permission.GET_RUNNING_INFO permission,
 > which is available only for system applications.

@@ -14,7 +14,7 @@ function dumpJsRawHeapData(needGC?: boolean): Promise<string>
 
 Dumps the original heap snapshot of the VM for the current thread and generates a .rawheap file. This API uses a promise to return the result. The file can be converted into a heapsnapshot file using rawheap-translator for parsing.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is resource-consuming. Therefore, the calling frequency and times are strictly limited. You need to
 > delete the files immediately after processing them.
@@ -74,7 +74,7 @@ function dumpJsRawHeapData(needGC: boolean, needClean: boolean): Promise<string>
 
 Dumps the original heap snapshot of the VM for the current thread and clears the **nodeId** cache. The generated file is in the rawheap format. This API uses a promise to return the result. The file can be converted into a heapsnapshot file using rawheap-translator for parsing.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is resource-consuming. Therefore, the calling frequency and times are strictly limited. You need to
 > delete the files immediately after processing them.
@@ -138,7 +138,7 @@ function dumpJsRawHeapData(needGC: boolean, needClean: boolean, processDump: boo
 
 Dumps the original heap snapshot of the VM for the current thread or the process to which the current thread belongs, clears the nodeId cache, and generates a .rawheap file. This API uses a promise to return the result. The file can be converted into a heapsnapshot file using rawheap-translator for parsing.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is resource-consuming. Therefore, the calling frequency and times are strictly limited. You need to
 > delete the files immediately after processing them.

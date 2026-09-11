@@ -2,6 +2,8 @@
 
 提供SecurityEvent类型，包括事件ID、版本信息和上报内容。
 
+@typedef SecurityEvent
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.Security.SecurityGuard

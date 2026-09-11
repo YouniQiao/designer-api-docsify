@@ -20,7 +20,7 @@ albumChangeDatas: AlbumChangeData[] | null
 
 变更的相册数组。如果需要重新查询所有相册，albumChangeDatas为null。
 
-**类型：** [AlbumChangeData](arkts-medialibrary-photoaccesshelper-albumchangedata-i.md)[] \| null
+**类型：** [AlbumChangeData](arkts-medialibrary-photoaccesshelper-albumchangedata-i.md)[] &#124; null
 
 **起始版本：** 20
 

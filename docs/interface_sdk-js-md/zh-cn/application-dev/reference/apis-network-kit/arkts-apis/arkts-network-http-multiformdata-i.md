@@ -34,7 +34,7 @@ data?: string | Object | ArrayBuffer
 
 表单数据内容。
 
-**类型：** string \| Object \| ArrayBuffer
+**类型：** string &#124; Object &#124; ArrayBuffer
 
 **起始版本：** 11
 

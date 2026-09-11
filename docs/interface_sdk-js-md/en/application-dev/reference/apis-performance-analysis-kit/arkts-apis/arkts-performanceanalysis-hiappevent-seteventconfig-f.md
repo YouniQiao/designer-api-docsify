@@ -23,7 +23,7 @@ Configuration items vary depending on events. Currently, only the following even
 - **RESOURCE_OVERLIMIT** (For details about the parameter configuration, see  
 [Resource Leak Event Overview](../../../dfx/hiappevent-watcher-resourceleak-events.md#customizing-specifications).)
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Since API version 26.0.0, all settings of this API are supported by
 > [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md). You are advised to use
@@ -40,7 +40,7 @@ Configuration items vary depending on events. Currently, only the following even
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Event name. |
-| config | Record&lt;string, [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md)&gt; | Yes | Custom parameter object. The parameter name and value are defined as follows:   - The parameter name contains a maximum of 1024 characters, which is of the string type and cannot be empty.   - The parameter value is of the ParamType and contains a maximum of 1024 characters. |
+| config | Record&lt;string, [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md)&gt; | Yes | Custom parameter object. The parameter name and value are defined as follows:<br>- The parameter name contains a maximum of 1024 characters, which is of the string type and cannot be empty.<br>- The parameter value is of the ParamType and contains a maximum of 1024 characters. |
 
 **Return value:**
 
@@ -52,7 +52,7 @@ Configuration items vary depending on events. Currently, only the following even
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3.Parameter verification failed. |
 
 **Examples**
 

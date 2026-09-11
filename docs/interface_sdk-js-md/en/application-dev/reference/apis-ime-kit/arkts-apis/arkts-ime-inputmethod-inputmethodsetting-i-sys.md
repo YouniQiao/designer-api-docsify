@@ -18,30 +18,7 @@ import { inputMethod } from '@kit.IMEKit';
 enableInputMethod(bundleName: string, extensionName: string, enabledState: EnabledState): Promise<void>
 ```
 
-Enables or disables an input method. This API uses a promise to return the result.   
-**Example**   
-```ts 
-import { BusinessError } from '@kit.BasicServicesKit'; 
- 
-function enableInputMethodSafely() {
- const currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod(); 
- if (!currentIme) {
- console.error("Failed to get current input method"); 
- return; 
- } 
- 
- inputMethod.getSetting() 
- .enableInputMethod(currentIme.name, currentIme.id, inputMethod.EnabledState.BASIC_MODE) 
- .then(() =&gt; {
- console.info('Succeeded in enable inputmethod.'); 
- }) 
- .catch((err: BusinessError) =&gt; {
- console.error(`Failed to enableInputMethod. Code: \${err.code}, message: \${err.message}`); 
- }); 
-} 
- 
-enableInputMethodSafely(); 
-```
+Enables or disables an input method. This API uses a promise to return the result. <br> <br>**Example** <br> <br>```ts <br>import { BusinessError } from '@kit.BasicServicesKit'; <br> <br>function enableInputMethodSafely() {<br> const currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod(); <br> if (!currentIme) {<br> console.error("Failed to get current input method"); <br> return; <br> } <br> <br> inputMethod.getSetting() <br> .enableInputMethod(currentIme.name, currentIme.id, inputMethod.EnabledState.BASIC_MODE) <br> .then(() =&gt; {<br> console.info('Succeeded in enable inputmethod.'); <br> }) <br> .catch((err: BusinessError) =&gt; {<br> console.error(`Failed to enableInputMethod. Code: \${err.code}, message: \${err.message}`); <br> }); <br>} <br> <br>enableInputMethodSafely(); <br>```
 
 **Since:** 20
 
@@ -202,19 +179,7 @@ let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting
 getCursorInfo(userId?: number): CursorInfo
 ```
 
-Obtains the cursor information of a specified user. If the edit box does not notify the input method service of the cursor information, all attribute values returned are **0**.   
-**Example**   
-```ts 
-import { BusinessError } from '@kit.BasicServicesKit'; 
- 
-try {
- let cursorInfo: inputMethod.CursorInfo = inputMethod.getSetting().getCursorInfo(); 
- console.info(`get cursorInfo success, left: \${cursorInfo.left}, top: \${cursorInfo.top}, width: \${cursorInfo.width}, height: \${cursorInfo.height}, displayId: \${cursorInfo.displayId}`); 
-} catch (err) {
- let error = err as BusinessError; 
- console.error(`Failed to get cursorInfo. Code: \${error.code}, message: \${error.message}`); 
-} 
-```
+Obtains the cursor information of a specified user. If the edit box does not notify the input method service of the cursor information, all attribute values returned are **0**. <br> <br>**Example** <br> <br>```ts <br>import { BusinessError } from '@kit.BasicServicesKit'; <br> <br>try {<br> let cursorInfo: inputMethod.CursorInfo = inputMethod.getSetting().getCursorInfo(); <br> console.info(`get cursorInfo success, left: \${cursorInfo.left}, top: \${cursorInfo.top}, width: \${cursorInfo.width}, height: \${cursorInfo.height}, displayId: \${cursorInfo.displayId}`); <br>} catch (err) {<br> let error = err as BusinessError; <br> console.error(`Failed to get cursorInfo. Code: \${error.code}, message: \${error.message}`); <br>} <br>```
 
 **Since:** 26.0.0
 
@@ -228,7 +193,7 @@ try {
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | No | User ID. If the caller is not an application of user 0, the value of this parameter is the user ID of the caller by default. If the caller is an application of user 0, the value of this parameter is the foreground user ID of the main screen. |
+| userId | number | No | User ID.<br>If the caller is not an application of user 0, the value of this parameter is the user ID of the caller by default. <br> If the caller is an application of user 0, the value of this parameter is the foreground user ID of the main screen. |
 
 **Return value:**
 
@@ -267,16 +232,7 @@ try {
 getDefaultInputMethodAbility(): InputMethodProperty
 ```
 
-Obtains the default input method capabilities. To optimize performance, the returned **InputMethodProperty** object ensures that only the `name` and `id` attributes that uniquely identify the input method capability are correct. Other attributes may be empty.   
-**Example**   
-```ts 
-try {
- const defaultAbility: inputMethod.InputMethodProperty = inputMethod.getSetting().getDefaultInputMethodAbility(); 
- console.info('Succeeded in getting default input method ability, name: ' + defaultAbility.name + ', id: ' + defaultAbility.id); 
-} catch (err) {
- console.error(`Failed to getDefaultInputMethodAbility. Code: \${err.code}, message: \${err.message}`); 
-} 
-```
+Obtains the default input method capabilities. To optimize performance, the returned **InputMethodProperty** object ensures that only the `name` and `id` attributes that uniquely identify the input method capability are correct. Other attributes may be empty. <br> <br>**Example** <br> <br>```ts <br>try {<br> const defaultAbility: inputMethod.InputMethodProperty = inputMethod.getSetting().getDefaultInputMethodAbility(); <br> console.info('Succeeded in getting default input method ability, name: ' + defaultAbility.name + ', id: ' + defaultAbility.id); <br>} catch (err) {<br> console.error(`Failed to getDefaultInputMethodAbility. Code: \${err.code}, message: \${err.message}`); <br>} <br>```
 
 **Since:** 26.0.0
 
@@ -420,7 +376,7 @@ Checks whether the input method panel of a specified type is shown.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the input method panel is shown. |
+| boolean | Whether the input method panel is shown.<br>- The value **true** means that the input method panel is shown. <br>- The value **false** means that the input method panel is hidden. |
 
 **Error codes:**
 
@@ -471,7 +427,7 @@ Checks whether the input method panel of a specified type is shown on a specifie
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the input method panel is shown. |
+| boolean | Whether the input method panel is shown.<br>- The value **true** means that the input method panel is shown. <br>- The value **false** means that the input method panel is hidden. |
 
 **Error codes:**
 
@@ -514,7 +470,7 @@ Unsubscribes from the soft keyboard show event of the [input method panel](arkts
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'imeShow' | Yes | Event type, which is **'imeShow'**. |
-| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified event type. |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | No | Callback to unregister.<br>If this parameter is not specified, this API unregisters all callbacks for the specified event type. |
 
 **Examples**
 
@@ -541,7 +497,7 @@ Unsubscribes from the soft keyboard hide event of the [input method panel](arkts
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'imeHide' | Yes | Event type, which is **'imeHide'**. |
-| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified event type. |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | No | Callback to unregister.<br>If this parameter is not specified, this API unregisters all callbacks for the specified event type. |
 
 **Examples**
 

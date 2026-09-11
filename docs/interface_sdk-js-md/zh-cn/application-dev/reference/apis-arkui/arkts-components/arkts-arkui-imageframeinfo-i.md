@@ -45,7 +45,7 @@ height?: number | string
 
 **卡片能力：** 从API version 10开始，该接口支持在ArkTS卡片中使用
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **起始版本：** 7
 
@@ -69,7 +69,7 @@ left?: number | string
 
 **卡片能力：** 从API version 10开始，该接口支持在ArkTS卡片中使用
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **起始版本：** 7
 
@@ -96,7 +96,7 @@ rawfile）来引用，引用方式请参考[加载图片资源](../../../ui/arkt
 [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md)方法将路径转换为应用沙箱URI，然后传入显示。同时需要保证目录包路径下的文件有可读权限。  
 - 支持`Base64`字符串。
 
-**类型：** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md)
+**类型：** string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; [PixelMap](arkts-arkui-pixelmap-t.md)
 
 **起始版本：** 7
 
@@ -120,7 +120,7 @@ top?: number | string
 
 **卡片能力：** 从API version 10开始，该接口支持在ArkTS卡片中使用
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **起始版本：** 7
 
@@ -144,7 +144,7 @@ width?: number | string
 
 **卡片能力：** 从API version 10开始，该接口支持在ArkTS卡片中使用
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **起始版本：** 7
 

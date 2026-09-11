@@ -21,7 +21,7 @@ acceleration?: AccelerationOptions<ACC_SPEED_UPDATER, ACC_ANGLE_UPDATER>
 
 Particle acceleration.
 
-**NOTE：**
+**NOTE:**
 
 **speed** indicates the acceleration speed, and **angle** indicates the acceleration direction (in angles).
 
@@ -47,7 +47,7 @@ color?: ParticleColorPropertyOptions<COLOR_UPDATER>
 
 Particle color.
 
-**NOTE：**
+**NOTE:**
 
 Default value: **{ range:[Color.White,Color.White] }.** Colors cannot be set for image particles.
 
@@ -157,7 +157,7 @@ velocity?: VelocityOptions
 
 Particle velocity.
 
-**NOTE：**
+**NOTE:**
 
 **speed** indicates the time rate at which the particle moves. **angle** indicates the direction (in angles) in which the particle moves, with the geometric center of the element as the coordinate origin and the horizontal direction as the x-axis. A positive number indicates clockwise rotation.
 

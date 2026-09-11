@@ -26,7 +26,7 @@ function setCallRestrictionPassword(slotId: number, oldPassword: string, newPass
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 | oldPassword | string | 是 | 呼叫限制旧密码。 |
 | newPassword | string | 是 | 呼叫限制新密码。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调函数的方式返回修改呼叫限制密码的结果。 |
@@ -78,7 +78,7 @@ function setCallRestrictionPassword(slotId: number, oldPassword: string, newPass
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 | oldPassword | string | 是 | 呼叫限制旧密码。 |
 | newPassword | string | 是 | 呼叫限制新密码。 |
 

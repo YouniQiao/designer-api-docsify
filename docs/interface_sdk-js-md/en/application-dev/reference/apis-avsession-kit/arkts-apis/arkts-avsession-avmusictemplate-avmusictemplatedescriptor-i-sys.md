@@ -2,6 +2,8 @@
 
 Description of the AVMusicTemplate.
 
+@typedef {AVMusicTemplateDescriptor}
+
 **Since:** 23
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate

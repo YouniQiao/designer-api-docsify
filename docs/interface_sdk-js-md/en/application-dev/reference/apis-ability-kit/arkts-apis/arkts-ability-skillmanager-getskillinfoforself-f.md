@@ -28,7 +28,7 @@ Obtains SkillInfo of the calling application based on moduleName and skillName.
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Indicates the module name of the skill. |
 | skillName | string | Yes | Indicates the name of the skill. |
-| flags | number | Yes | { |
+| flags | number | Yes | [SkillInfoFlag](arkts-ability-skillmanager-skillinfoflag-e.md) - Indicates the flag used to specify information contained in the SkillInfo object that will be returned. |
 
 **Return value:**
 

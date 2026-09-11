@@ -18,7 +18,7 @@ import { dataSharePredicates } from '@kit.ArkData';
 beginsWith(field: string, value: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值以指定字符串起始的字段。目前仅关系型数据库支持该谓词。
+该接口用于配置谓词以匹配值以指定字符串起始的字段。<br> <br>目前仅关系型数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -54,7 +54,7 @@ predicates.beginsWith("NAME", "os");
 contains(field: string, value: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配字段包含指定值的字段。目前仅关系型数据库支持该谓词。
+该接口用于配置谓词以匹配字段包含指定值的字段。<br> <br>目前仅关系型数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -90,7 +90,7 @@ predicates.contains("NAME", "os");
 distinct(): DataSharePredicates
 ```
 
-该接口用于配置谓词以过滤重复记录并仅保留其中一个。目前仅关系型数据库支持该谓词。
+该接口用于配置谓词以过滤重复记录并仅保留其中一个。<br> <br>目前仅关系型数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -119,7 +119,7 @@ predicates.equalTo("NAME", "Rose").distinct();
 endsWith(field: string, value: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值以指定字符串结尾的字段。目前仅关系型数据库支持该谓词。
+该接口用于配置谓词以匹配值以指定字符串结尾的字段。<br> <br>目前仅关系型数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -155,7 +155,7 @@ predicates.endsWith("NAME", "os");
 glob(field: string, value: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配指定通配符表达式的字段。目前仅关系型数据库支持该谓词。
+该接口用于配置谓词以匹配指定通配符表达式的字段。<br> <br>目前仅关系型数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -170,7 +170,7 @@ glob(field: string, value: string): DataSharePredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名。 |
-| value | string | 是 | 指示要与谓词匹配的通配符表达式。表达式中'*'代表零个、一个或多个数字或字符，'?'代表一个单一的数字或字符，区分大小写。 |
+| value | string | 是 | 指示要与谓词匹配的通配符表达式。<br>表达式中'*'代表零个、一个或多个数字或字符，'?'代表一个单一的数字或字符，区分大小写。 |
 
 **返回值：**
 
@@ -191,7 +191,7 @@ predicates.glob("NAME", "?h*g");
 groupBy(fields: Array<string>): DataSharePredicates
 ```
 
-该接口用于配置谓词按指定列分组查询结果。目前仅关系型数据库支持该谓词。
+该接口用于配置谓词按指定列分组查询结果。<br> <br>目前仅关系型数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -226,7 +226,7 @@ predicates.groupBy(["AGE", "NAME"]);
 indexedBy(field: string): DataSharePredicates
 ```
 
-该接口用于配置谓词按指定索引列查询结果。使用该方法前，需要设置索引列。目前仅关系型数据库支持该谓词。
+该接口用于配置谓词按指定索引列查询结果。使用该方法前，需要设置索引列。<br> <br>目前仅关系型数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -261,7 +261,7 @@ predicates.indexedBy("SALARY_INDEX");
 inKeys(keys: Array<string>): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配键在指定范围内的字段。目前仅分布式键值数据库支持该谓词。
+该接口用于配置谓词以匹配键在指定范围内的字段。<br> <br>目前仅分布式键值数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -296,7 +296,7 @@ predicates.inKeys(["Lisa", "Rose"]);
 isNotNull(field: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值不为null的字段。目前仅关系型数据库及分布式键值数据库支持该谓词。
+该接口用于配置谓词以匹配值不为null的字段。<br> <br>目前仅关系型数据库及分布式键值数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -331,7 +331,7 @@ predicates.isNotNull("NAME");
 isNull(field: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值为null的字段。目前仅关系型数据库及分布式键值数据库支持该谓词。
+该接口用于配置谓词以匹配值为null的字段。<br> <br>目前仅关系型数据库及分布式键值数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -366,7 +366,7 @@ predicates.isNull("NAME");
 prefixKey(prefix: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配键前缀的指定字段。目前仅分布式键值数据库支持该谓词。
+该接口用于配置谓词以匹配键前缀的指定字段。<br> <br>目前仅分布式键值数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -401,7 +401,7 @@ predicates.prefixKey("NAME");
 unlike(field: string, value: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配不类似指定通配符表达式的字段。目前仅关系型数据库及分布式键值数据库支持该谓词。
+该接口用于配置谓词以匹配不类似指定通配符表达式的字段。<br> <br>目前仅关系型数据库及分布式键值数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -416,7 +416,7 @@ unlike(field: string, value: string): DataSharePredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名。 |
-| value | string | 是 | 指示要与谓词匹配的通配符表达式。表达式中'%'代表零个、一个或多个数字或字符，'_'代表一个单一的数字或字符，不区分大小写。 |
+| value | string | 是 | 指示要与谓词匹配的通配符表达式。<br>表达式中'%'代表零个、一个或多个数字或字符，'_'代表一个单一的数字或字符，不区分大小写。 |
 
 **返回值：**
 

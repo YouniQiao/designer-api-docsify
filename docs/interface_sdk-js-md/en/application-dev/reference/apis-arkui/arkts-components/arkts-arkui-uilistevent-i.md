@@ -35,7 +35,7 @@ If the input parameter is **undefined**, the event callback is reset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnScrollCallback](arkts-arkui-onscrollcallback-t.md) \| undefined | Yes | Callback for the **onDidScroll** event. |
+| callback | [OnScrollCallback](arkts-arkui-onscrollcallback-t.md) &#124; undefined | Yes | Callback for the **onDidScroll** event. |
 
 ## setOnScrollIndex
 
@@ -59,7 +59,7 @@ If the input parameter is **undefined**, the event callback is reset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnListScrollIndexCallback](arkts-arkui-onlistscrollindexcallback-t.md) \| undefined | Yes | Callback for the **onScrollIndex** event. |
+| callback | [OnListScrollIndexCallback](arkts-arkui-onlistscrollindexcallback-t.md) &#124; undefined | Yes | Callback for the **onScrollIndex** event. |
 
 ## setOnScrollVisibleContentChange
 
@@ -67,7 +67,7 @@ If the input parameter is **undefined**, the event callback is reset.
 setOnScrollVisibleContentChange(callback: OnScrollVisibleContentChangeCallback | undefined): void
 ```
 
-Sets the callback of the [onScrollVisibleContentChange](arkts-arkui-list-attribute.md#onscrollvisiblecontentchange) event.
+Sets the callback of the [onScrollVisibleContentChange](arkts-arkui-list-comp-attribute.md#onscrollvisiblecontentchange) event.
 
 If the input parameter is **undefined**, the event callback is reset.
 
@@ -83,7 +83,7 @@ If the input parameter is **undefined**, the event callback is reset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnScrollVisibleContentChangeCallback](arkts-arkui-onscrollvisiblecontentchangecallback-t.md) \| undefined | Yes | Callback for the **onScrollVisibleContentChange** event. |
+| callback | [OnScrollVisibleContentChangeCallback](arkts-arkui-onscrollvisiblecontentchangecallback-t.md) &#124; undefined | Yes | Callback for the **onScrollVisibleContentChange** event. |
 
 ## setOnWillScroll
 
@@ -107,4 +107,4 @@ If the input parameter is **undefined**, the event callback is reset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnWillScrollCallback](arkts-arkui-onwillscrollcallback-t.md) \| undefined | Yes | Callback for the **onWillScroll** event. |
+| callback | [OnWillScrollCallback](arkts-arkui-onwillscrollcallback-t.md) &#124; undefined | Yes | Callback for the **onWillScroll** event. |

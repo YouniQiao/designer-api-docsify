@@ -25,7 +25,7 @@ Checks whether an application or an application clone is enabled. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| appIndex | number | Yes | Index of the application clone.The value **0** means to obtain the enabled status of the main application. A value greater than 0 means to obtain the enabled status of the application clone. |
+| appIndex | number | Yes | Index of the application clone.<br> The value **0** means to obtain the enabled status of the main application. A value greater than 0 means to obtain the enabled status of the application clone. |
 
 **Return value:**
 

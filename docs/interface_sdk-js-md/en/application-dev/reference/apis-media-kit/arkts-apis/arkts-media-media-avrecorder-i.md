@@ -4,7 +4,7 @@ AVRecorder is a class for audio and video recording management. It provides APIs
 
 For details about the audio and video recording demo, see [Audio Recording](../../../media/media/using-avrecorder-for-recording.md) and [Video Recording](../../../media/media/video-recording.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 
 > To use the camera to record videos, the camera module is required. For details about how to use the APIs
@@ -359,7 +359,7 @@ Unsubscribes from AVRecorder state changes. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type, which is **'stateChange'** in this case. This event can be triggered by both user operations and the system. |
-| callback | [OnAVRecorderStateChangeHandler](arkts-media-media-onavrecorderstatechangehandler-t.md) | No | Callback used to return the state change event. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled.This parameter is supported since API version 12.<br>**Since:** 12 |
+| callback | [OnAVRecorderStateChangeHandler](arkts-media-media-onavrecorderstatechangehandler-t.md) | No | Callback used to return the state change event. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled.<br>This parameter is supported since API version 12.<br>**Since:** 12 |
 
 ## off('error')
 
@@ -379,8 +379,8 @@ Unsubscribes from AVRecorder errors. After the unsubscription, your application 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type, which is **'error'** in this case.This event is triggered when an error occurs during recording. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the recording error event. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled.This parameter is supported since API version 12.<br>**Since:** 12 |
+| type | 'error' | Yes | Event type, which is **'error'** in this case.<br>This event is triggered when an error occurs during recording. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the recording error event. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled.<br>This parameter is supported since API version 12.<br>**Since:** 12 |
 
 ## off('audioCapturerChange')
 
@@ -399,7 +399,7 @@ Subscribes to audio capturer configuration changes. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | Yes | Event type, which is **'audioCapturerChange'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[audio.AudioCapturerChangeInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | No | Callback used to return the changed audio capturer configuration. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled.This parameter is supported since API version 12.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[audio.AudioCapturerChangeInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | No | Callback used to return the changed audio capturer configuration. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled.<br>This parameter is supported since API version 12.<br>**Since:** 12 |
 
 ## off('photoAssetAvailable')
 
@@ -523,7 +523,7 @@ An application can subscribe to only one AVRecorder error event. When the applic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type, which is **'error'** in this case.This event is triggered when an error occurs during recording. |
+| type | 'error' | Yes | Event type, which is **'error'** in this case.<br>This event is triggered when an error occurs during recording. |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the recording error event. |
 
 **Error codes:**
@@ -531,7 +531,7 @@ An application can subscribe to only one AVRecorder error event. When the applic
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
@@ -625,7 +625,7 @@ Sets audio and video recording parameters. This API uses an asynchronous callbac
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Return by callback. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operate not permit. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
@@ -662,7 +662,7 @@ Sets audio and video recording parameters. This API uses a promise to return the
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Return by promise. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operate not permit. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
@@ -850,7 +850,7 @@ This API can be called only after the prepare() event is successfully triggered 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| metadata | Record&lt;string, string&gt; | Yes | Tag and value of the metadata in key-value pairs.    - The first string is the key.   - The second string is the value.     The key string should start with "com.openharmony.", the length of value can't be more than 256 bytes. |
+| metadata | Record&lt;string, string&gt; | Yes | Tag and value of the metadata in key-value pairs.<br>- The first string is the key.<br>- The second string is the value. <br> The key string should start with "com.openharmony.", the length of value can't be more than 256 bytes. |
 
 **Error codes:**
 

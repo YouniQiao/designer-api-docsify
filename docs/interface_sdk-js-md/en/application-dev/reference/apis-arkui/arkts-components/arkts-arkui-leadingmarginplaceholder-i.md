@@ -35,7 +35,9 @@ Image content.
 size: [Dimension, Dimension]
 ```
 
-Image size. This parameter cannot be set in percentage.
+Image size, in vp by default. Percentage is not supported.
+
+**Atomic service API:** Since API version 12, this API is supported in atomic services.
 
 **Type:** [Dimension, Dimension]
 

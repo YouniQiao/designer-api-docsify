@@ -24,7 +24,7 @@ icon: image.PixelMap | string | Resource
 
 The style icon information which will display in style list.
 
-**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| string \| [Resource](arkts-arkui-resource-t.md)
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) &#124; string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 23
 

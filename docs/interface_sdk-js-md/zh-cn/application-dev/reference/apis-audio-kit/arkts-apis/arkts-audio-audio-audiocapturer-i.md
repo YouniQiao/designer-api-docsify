@@ -100,7 +100,7 @@ getAudioTime(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回时间戳（从1970年1月1日开始）。 |
+| Promise&lt;number&gt; | Promise对象，返回时间戳（从1970年1月1日开始）。  单位为纳秒。 |
 
 ## getAudioTimestampInfo
 
@@ -184,7 +184,7 @@ getBufferSize(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取采集器合理的最小缓冲区大小成功，err为undefined，data为获取到的采集器合理的最小缓冲区大小；否则为错误对象。单位为字节。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取采集器合理的最小缓冲区大小成功，err为undefined，data为获取到的采集器合理的最小缓冲区大小；否则为错误对象。<br>单位为字节。 |
 
 ## getBufferSize
 
@@ -202,7 +202,7 @@ getBufferSize(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回缓冲区大小。 |
+| Promise&lt;number&gt; | Promise对象，返回缓冲区大小。  单位为字节。 |
 
 ## getBufferSizeSync
 
@@ -447,7 +447,7 @@ getSupportedNoiseReductionModes(): Array<NoiseReductionMode>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md)&gt; | 支持的录音降噪模式数组，默认支持[NoiseReductionMode.FIDELITY]{ |
+| Array&lt;[NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md)&gt; | 支持的录音降噪模式数组，默认支持[NoiseReductionMode.FIDELITY](arkts-audio-audio-noisereductionmode-e.md)。 |
 
 **错误码：**
 
@@ -925,7 +925,7 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: num
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | strategy | [AudioSessionStrategy](arkts-audio-audio-audiosessionstrategy-i.md) | 是 | 音频会话策略。 |
-| behavior | number | 是 | 用于设置音频会话行为。该参数可以是单个标志，也可以是多个标志的按位OR组合。当前支持的音频会话行为详见[AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md)中定义的标志。 |
+| behavior | number | 是 | 用于设置音频会话行为。<br>该参数可以是单个标志，也可以是多个标志的按位OR组合。<br>当前支持的音频会话行为详见[AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md)中定义的标志。 |
 
 **错误码：**
 
@@ -1060,7 +1060,7 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动音频采集器成功，err为undefined，否则为错误对象。异常将返回error对象：错误码6800301：表示包含状态检查异常、焦点抢占失败、系统处理异常（具体错误查看系统日志）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动音频采集器成功，err为undefined，否则为错误对象。异常将返回error对象：<br>错误码6800301：表示包含状态检查异常、焦点抢占失败、系统处理异常（具体错误查看系统日志）。 |
 
 ## start
 
@@ -1078,7 +1078,7 @@ start(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，成功表示启动音频采集器成功。异常将返回error对象： |
+| Promise&lt;void&gt; | Promise对象，成功表示启动音频采集器成功。异常将返回error对象：  错误码6800301：表示包含状态检查异常、焦点抢占失败、系统处理异常（具体错误查看系统日志）。 |
 
 ## stop
 

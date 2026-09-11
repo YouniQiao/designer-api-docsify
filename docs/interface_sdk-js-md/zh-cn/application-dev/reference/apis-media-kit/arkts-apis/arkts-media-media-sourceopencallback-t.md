@@ -26,4 +26,4 @@ type SourceOpenCallback = (request: MediaSourceLoadingRequest) => number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 当前资源打开请求的句柄。大于0表示请求成功，小于或等于0表示请求失败。 |
+| number | 当前资源打开请求的句柄。大于0表示请求成功，小于或等于0表示请求失败。<br> - request对象对应句柄唯一。 |

@@ -76,7 +76,7 @@ For details about the properties, see [HeifsPropertyKey](arkts-image-image-heifs
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the values of all properties. |
+| Promise&lt;Record&lt;string, string &#124; null&gt;&gt; | Promise used to return the values of all properties. |
 
 ## getBlob
 
@@ -122,7 +122,7 @@ Obtains the property values of image metadata. This API returns the result async
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the property values. If the operation fails, an error code is returned. |
+| Promise&lt;Record&lt;string, string &#124; null&gt;&gt; | Promise used to return the property values. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -182,7 +182,7 @@ For details about the properties, see [HeifsPropertyKey](arkts-image-image-heifs
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | Yes | Set of key-value pairs representing the **HeifsMetadata** properties and corresponding values. |
+| records | Record&lt;string, string &#124; null&gt; | Yes | Set of key-value pairs representing the **HeifsMetadata** properties and corresponding values. |
 
 **Return value:**
 

@@ -20,7 +20,7 @@ context: UIAbilityContext | UIContext
 
 Context of the router page that invokes the lifecycle callback.
 
-**Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext
+**Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) &#124; UIContext
 
 **Since:** 11
 

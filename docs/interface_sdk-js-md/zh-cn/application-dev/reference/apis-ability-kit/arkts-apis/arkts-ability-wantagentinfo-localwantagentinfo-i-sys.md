@@ -16,7 +16,7 @@ operationType?: abilityWantAgent.OperationType
 
 将被执行的动作类型，用于指定WantAgent的触发方式（如启动Ability、发送事件等）。具体取值参见OperationType枚举说明。
 
-**类型：** abilityWantAgent.OperationType
+**类型：** [abilityWantAgent.OperationType](../../apis-ability-kit/arkts-apis/arkts-app-ability-wantagent.md)
 
 **起始版本：** 20
 

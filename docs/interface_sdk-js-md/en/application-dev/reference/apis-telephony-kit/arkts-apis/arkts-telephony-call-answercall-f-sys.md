@@ -76,7 +76,7 @@ Answers a call. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | number | No | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. This field is optional from API version 9. If this field is not set, the latest ringing call will be connected. |
+| callId | number | No | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. This field is optional from API version 9.<br>If this field is not set, the latest ringing call will be connected. |
 
 **Return value:**
 

@@ -2,7 +2,7 @@
 
 Implements an image filter.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The initial APIs of this class are supported since API version 12.
 > 
@@ -73,7 +73,7 @@ Creates an image filter with a given blur effect.
 | sigmaX | number | Yes | Standard deviation of the Gaussian blur along the X axis. The value must be a floating point number greater than 0. |
 | sigmaY | number | Yes | Standard deviation of the Gaussian blur along the Y axis. The value must be a floating point number greater than 0. |
 | tileMode | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | Yes | Tile mode to apply to the edges. |
-| imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | No | Filter to which the image filter will be applied. The default value is null, indicating that the image filter is directly applied to the original image. |
+| imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) &#124; null | No | Filter to which the image filter will be applied. The default value is null, indicating that the image filter is directly applied to the original image. |
 
 **Return value:**
 
@@ -85,7 +85,7 @@ Creates an image filter with a given blur effect.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createComposeImageFilter
 
@@ -129,7 +129,7 @@ Creates an image filter object with a given color filter effect.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | colorFilter | [ColorFilter](arkts-arkgraphics2d-drawing-colorfilter-c.md) | Yes | Color filter. |
-| imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | No | Filter to which the image filter will be applied. The default value is null, indicating that the image filter is directly applied to the original image.<br>**Since:** 20 |
+| imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) &#124; null | No | Filter to which the image filter will be applied. The default value is null, indicating that the image filter is directly applied to the original image.<br>**Since:** 20 |
 
 **Return value:**
 
@@ -141,7 +141,7 @@ Creates an image filter object with a given color filter effect.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## createFromImage
 
@@ -160,8 +160,8 @@ Creates an image filter from a given image. You are advised not to use the funct
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Image object. |
-| srcRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) \| null | No | (Optional) Pixel area of the image to be applied to the filter. This parameter is left empty by default, which means that the entire **PixelMap** area is applied. |
-| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) \| null | No | (Optional) Area to be rendered. This parameter is left empty by default, which means that the value is the same as that of **srcRect**. |
+| srcRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) &#124; null | No | (Optional) Pixel area of the image to be applied to the filter. This parameter is left empty by default, which means that the entire **PixelMap** area is applied. |
+| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) &#124; null | No | (Optional) Area to be rendered. This parameter is left empty by default, which means that the value is the same as that of **srcRect**. |
 
 **Return value:**
 
@@ -211,7 +211,7 @@ Creates an offset filter to translate the input filter based on the specified ve
 | --- | --- | --- | --- |
 | dx | number | Yes | Horizontal translation distance. The value is a floating point number. |
 | dy | number | Yes | Vertical translation distance. The value is a floating point number. |
-| input | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | No | Filter to be translated. This parameter is left empty by default, which means that the drawing result without the filtering effect is translated. |
+| input | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) &#124; null | No | Filter to be translated. This parameter is left empty by default, which means that the drawing result without the filtering effect is translated. |
 
 **Return value:**
 

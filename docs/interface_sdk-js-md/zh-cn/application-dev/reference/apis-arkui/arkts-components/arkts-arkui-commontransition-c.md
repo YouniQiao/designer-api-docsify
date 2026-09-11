@@ -1,6 +1,6 @@
 # CommonTransition
 
-页面转场通用动效，通过PageTransitionEnter和[PageTransitionExit](arkts-arkui-pagetransitionenter-con.md#pagetransitionexit)继承使用，需在pageTransition()函数中配置，slide与translate均涉及位置移动：slide适用于需要沿预置方向（左/右/上/下/START/END）滑入滑出的场景，使用简单；translate适用于需要自定义平移距离的场景，灵活性更高。当slide和translate同时设置时，默认生效slide。scale、opacity分别设置缩放和透明度效果，可与上述效果组合使用。
+页面转场通用动效，通过PageTransitionEnter和[PageTransitionExit](arkts-arkui-pagetransitionenter-comp-con.md#pagetransitionexit)继承使用，需在pageTransition()函数中配置，slide与translate均涉及位置移动：slide适用于需要沿预置方向（左/右/上/下/START/END）滑入滑出的场景，使用简单；translate适用于需要自定义平移距离的场景，灵活性更高。当slide和translate同时设置时，默认生效slide。scale、opacity分别设置缩放和透明度效果，可与上述效果组合使用。
 
 **起始版本：** 7
 
@@ -43,7 +43,7 @@ opacity(value: number): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 设置入场的起点透明度值或者退场的终点透明度值。取值范围：[0, 1] |
+| value | number | 是 | 设置入场的起点透明度值或者退场的终点透明度值。<br>取值范围：[0, 1] |
 
 **返回值：**
 
@@ -69,7 +69,7 @@ scale(value: ScaleOptions): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ScaleOptions](arkts-arkui-scaleoptions-i.md) | 是 | 设置页面转场时的缩放效果，为入场时起点和退场时终点的值。   - x：横向放大倍数（或缩小比例）。   - y：纵向放大倍数（或缩小比例）。   - z：竖向放大倍数（或缩小比例）。   - centerX、centerY缩放中心点。centerX和centerY默认值是"50%"，即默认以页面的中心点为缩放中心点。   - 中心点为(0, 0)代表页面的左上角。<br>**适用版本：** 18 |
+| value | [ScaleOptions](arkts-arkui-scaleoptions-i.md) | 是 | 设置页面转场时的缩放效果，为入场时起点和退场时终点的值。<br>- x：横向放大倍数（或缩小比例）。<br>- y：纵向放大倍数（或缩小比例）。<br>- z：竖向放大倍数（或缩小比例）。<br>- centerX、centerY缩放中心点。centerX和centerY默认值是"50%"，即默认以页面的中心点为缩放中心点。<br>- 中心点为(0, 0)代表页面的左上角。<br>**适用版本：** 18 |
 
 **返回值：**
 
@@ -121,7 +121,7 @@ translate(value: TranslateOptions): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TranslateOptions](arkts-arkui-translateoptions-i.md) | 是 | 设置页面转场时的平移效果，为入场时起点和退场时终点的值，和slide同时设置时默认生效slide。   - x：横向的平移距离。   - y：纵向的平移距离。   - z：竖向的平移距离。<br>**适用版本：** 18 |
+| value | [TranslateOptions](arkts-arkui-translateoptions-i.md) | 是 | 设置页面转场时的平移效果，为入场时起点和退场时终点的值，和slide同时设置时默认生效slide。<br>- x：横向的平移距离。<br>- y：纵向的平移距离。<br>- z：竖向的平移距离。<br>**适用版本：** 18 |
 
 **返回值：**
 

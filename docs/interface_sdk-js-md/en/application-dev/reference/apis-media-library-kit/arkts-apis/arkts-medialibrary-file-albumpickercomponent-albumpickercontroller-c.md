@@ -32,4 +32,4 @@ Sets the font size of the album list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontSize | number \| string | Yes | Font size. For details about the value range, see fontSize. |
+| fontSize | number &#124; string | Yes | Font size. For details about the value range, see fontSize. |

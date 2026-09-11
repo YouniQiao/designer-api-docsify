@@ -26,7 +26,7 @@ Get scan always allowed flag.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if scan running state is true, returns `false` otherwise. |
 
 **Error codes:**
 

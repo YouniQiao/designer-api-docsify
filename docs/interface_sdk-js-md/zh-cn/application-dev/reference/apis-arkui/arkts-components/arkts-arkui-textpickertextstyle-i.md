@@ -24,7 +24,7 @@ maxFontSize?: number | string | Resource
 > **说明：**当设置minFontSize和maxFontSize时，font中的size将不生效。详细规则请参考Text组件的
 > maxFontSize属性。
 
-**类型：** number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**类型：** number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 15
 
@@ -45,7 +45,7 @@ minFontSize?: number | string | Resource
 > **说明：**当设置minFontSize和maxFontSize时，font中的size将不生效。默认最大行数为1，自适应高度方式为MIN_FONT_SIZE_FIRST。详细
 > 规则请参考Text组件的minFontSize属性。
 
-**类型：** number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**类型：** number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 15
 

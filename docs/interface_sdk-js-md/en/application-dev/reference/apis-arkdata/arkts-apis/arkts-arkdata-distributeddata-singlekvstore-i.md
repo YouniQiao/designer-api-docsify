@@ -12,7 +12,7 @@ Data is not distinguished by device in a single KV store. The data written to di
 
 **Substitutes:** SingleKVStore
 
-**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+**System capability:** SystemCapability.DistributedDataManager.KVStore.Core @version 1
 
 ## Modules to Import
 
@@ -125,7 +125,7 @@ Obtains the value of the specified key. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the value to obtain. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array \| string \| boolean \| number&gt; | Yes | Callback used to return the value obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array &#124; string &#124; boolean &#124; number&gt; | Yes | Callback used to return the value obtained. |
 
 **Examples**
 
@@ -175,7 +175,7 @@ Obtains the value of the specified key. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array \| string \| boolean \| number&gt; | Promise used to return the value obtained. |
+| Promise&lt;Uint8Array &#124; string &#124; boolean &#124; number&gt; | Promise used to return the value obtained. |
 
 **Examples**
 

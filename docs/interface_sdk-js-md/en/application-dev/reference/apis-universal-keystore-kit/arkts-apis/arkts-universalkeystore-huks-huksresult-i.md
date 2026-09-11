@@ -2,7 +2,7 @@
 
 Represents the result returned.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - For details about the error codes, see
 > [HUKS Error Codes](../errorcode-huks.md).

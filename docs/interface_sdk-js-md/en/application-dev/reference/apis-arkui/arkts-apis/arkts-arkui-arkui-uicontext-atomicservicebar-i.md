@@ -79,7 +79,7 @@ Set the background color of the bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Nullable](arkts-arkui-nullable-t.md)&lt;[Color](arkts-arkui-color-e.md) \| number \| string&gt; | Yes | the color to set, undefined indicates using default. |
+| color | [Nullable](arkts-arkui-nullable-t.md)&lt;[Color](arkts-arkui-color-e.md) &#124; number &#124; string&gt; | Yes | the color to set, undefined indicates using default. |
 
 ## setIconColor
 
@@ -101,7 +101,7 @@ Set the color of the icon on the bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Nullable](arkts-arkui-nullable-t.md)&lt;[Color](arkts-arkui-color-e.md) \| number \| string&gt; | Yes | the color to set to icon, undefined indicates using default. |
+| color | [Nullable](arkts-arkui-nullable-t.md)&lt;[Color](arkts-arkui-color-e.md) &#124; number &#124; string&gt; | Yes | the color to set to icon, undefined indicates using default. |
 
 ## setTitleContent
 

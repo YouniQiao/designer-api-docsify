@@ -19,7 +19,7 @@ index: number | number[]
 
 The subscript of the current selection.
 
-**Type:** number \| number[]
+**Type:** number &#124; number[]
 
 **Since:** 8
 
@@ -35,7 +35,7 @@ value: string | string[]
 
 The currently selected value. Only valid when only text is displayed.When picture or picture plus text is displayed, the value of value is "".
 
-**Type:** string \| string[]
+**Type:** string &#124; string[]
 
 **Since:** 8
 

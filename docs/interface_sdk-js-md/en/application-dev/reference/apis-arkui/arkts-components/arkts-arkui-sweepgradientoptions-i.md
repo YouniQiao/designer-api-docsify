@@ -2,7 +2,7 @@
 
 Defines the sweep gradient parameters.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer element
@@ -67,9 +67,10 @@ Default value: **0**.
 
 When specified as a string, valid values are pure numbers or numbers followed by units: "deg" (degrees), "rad" (radians), "grad" (gradians), or "turn" (turns). Examples: "90", "90deg", "1.57rad". The value is limited to 0 to 36 0 degrees after unit conversion. Values less than 0 degrees are treated as 0 degrees; values greater than 360 degrees are treated as 360 degrees.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
-**Default:** 0 [since 18]
+**Default:**
+- API version 18+: 0
 
 **Since:** 7
 
@@ -113,7 +114,8 @@ Default value: **false**.
 
 **Type:** boolean
 
-**Default:** false [since 18]
+**Default:**
+- API version 18+: false
 
 **Since:** 7
 
@@ -133,9 +135,10 @@ Rotation angle of the sweep gradient. Default value: **0**.
 
 When specified as a string, valid values are pure numbers or numbers followed by units: "deg" (degrees), "rad" (radians), "grad" (gradians), or "turn" (turns). Examples: "90", "90deg", "1.57rad". The value is limited to 0 to 36 0 degrees after unit conversion. Values less than 0 degrees are treated as 0 degrees; values greater than 360 degrees are treated as 360 degrees.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
-**Default:** 0 [since 18]
+**Default:**
+- API version 18+: 0
 
 **Since:** 7
 
@@ -157,9 +160,10 @@ Default value: **0**.
 
 When specified as a string, valid values are pure numbers or numbers followed by units: "deg" (degrees), "rad" (radians), "grad" (gradians), or "turn" (turns). Examples: "90", "90deg", "1.57rad". The value is limited to 0 to 36 0 degrees after unit conversion. Values less than 0 degrees are treated as 0 degrees; values greater than 360 degrees are treated as 360 degrees.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
-**Default:** 0 [since 18]
+**Default:**
+- API version 18+: 0
 
 **Since:** 7
 

@@ -42,8 +42,6 @@ Sets playback strategy.
 
 | Type | Description |
 | --- | --- |
-| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |

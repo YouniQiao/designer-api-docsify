@@ -19,7 +19,7 @@ Spatial effect params.
 occlusionWeight?: number
 ```
 
-Occlusion weight for spatial effect. Value range:[0, 1].Default value:0
+Occlusion weight for spatial effect. <br>Value range:[0, 1].Default value:0
 
 **Type:** number
 
@@ -41,7 +41,7 @@ position: SpatialPosition | number
 
 Spatial position defined by corner points or depth value.
 
-**Type:** [SpatialPosition](arkts-arkui-spatialposition-i-sys.md) \| number
+**Type:** [SpatialPosition](arkts-arkui-spatialposition-i-sys.md) &#124; number
 
 **Since:** 26.0.0
 

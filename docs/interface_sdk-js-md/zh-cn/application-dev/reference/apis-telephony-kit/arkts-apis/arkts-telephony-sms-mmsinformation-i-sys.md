@@ -54,7 +54,7 @@ mmsType: MmsSendReq | MmsSendConf | MmsNotificationInd | MmsRespInd | MmsRetriev
 
 PDU头类型
 
-**类型：** [MmsSendReq](arkts-telephony-sms-mmssendreq-i-sys.md) \| [MmsSendConf](arkts-telephony-sms-mmssendconf-i-sys.md) \| [MmsNotificationInd](arkts-telephony-sms-mmsnotificationind-i-sys.md) \| [MmsRespInd](arkts-telephony-sms-mmsrespind-i-sys.md) \| [MmsRetrieveConf](arkts-telephony-sms-mmsretrieveconf-i-sys.md) \| [MmsAcknowledgeInd](arkts-telephony-sms-mmsacknowledgeind-i-sys.md) \| [MmsDeliveryInd](arkts-telephony-sms-mmsdeliveryind-i-sys.md) \| [MmsReadOrigInd](arkts-telephony-sms-mmsreadorigind-i-sys.md) \| [MmsReadRecInd](arkts-telephony-sms-mmsreadrecind-i-sys.md)
+**类型：** [MmsSendReq](arkts-telephony-sms-mmssendreq-i-sys.md) &#124; [MmsSendConf](arkts-telephony-sms-mmssendconf-i-sys.md) &#124; [MmsNotificationInd](arkts-telephony-sms-mmsnotificationind-i-sys.md) &#124; [MmsRespInd](arkts-telephony-sms-mmsrespind-i-sys.md) &#124; [MmsRetrieveConf](arkts-telephony-sms-mmsretrieveconf-i-sys.md) &#124; [MmsAcknowledgeInd](arkts-telephony-sms-mmsacknowledgeind-i-sys.md) &#124; [MmsDeliveryInd](arkts-telephony-sms-mmsdeliveryind-i-sys.md) &#124; [MmsReadOrigInd](arkts-telephony-sms-mmsreadorigind-i-sys.md) &#124; [MmsReadRecInd](arkts-telephony-sms-mmsreadrecind-i-sys.md)
 
 **起始版本：** 8
 

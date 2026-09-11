@@ -35,7 +35,7 @@ aboutToReuse Method
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | Record&lt;string, Object \| undefined \| null&gt; | Yes | Custom component init params.<br>**Since:** 20 |
+| params | Record&lt;string, Object &#124; undefined &#124; null&gt; | Yes | Custom component init params.<br>**Since:** 20 |
 
 ## onLayout
 

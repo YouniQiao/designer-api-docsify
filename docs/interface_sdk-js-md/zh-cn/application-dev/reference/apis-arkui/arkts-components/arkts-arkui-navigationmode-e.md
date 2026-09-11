@@ -12,16 +12,16 @@
 | --- | --- | --- |  
 | navBarWidth &lt; minNavBarWidth | NA | minNavBarWidth |
 | navBarWidth   
-&gt; maxNavBarWidth | calcNavBarWidth
+> maxNavBarWidth | calcNavBarWidth
 > maxNavBarWidth | maxNavBarWidth |
 | navBarWidth   
 > maxNavBarWidth | calcNavBarWidth &lt; minNavBarWidth | minNavBarWidth |
 | navBarWidth   
-&gt; maxNavBarWidth | minNavBarWidth ≤ calcNavBarWidth ≤ maxNavBarWidth | calcNavBarWidth |
+> maxNavBarWidth | minNavBarWidth ≤ calcNavBarWidth ≤ maxNavBarWidth | calcNavBarWidth |
 | minNavBarWidth ≤ navBarWidth ≤ maxNavBarWidth | calcNavBarWidth ≤ minNavBarWidth | minNavBarWidth |  
 | minNavBarWidth ≤ navBarWidth ≤ maxNavBarWidth | minNavBarWidth &lt; calcNavBarWidth &lt;= navBarWidth | calcNavBarWidth |  
 | minNavBarWidth ≤ navBarWidth ≤ maxNavBarWidth | calcNavBarWidth   
-&gt; navBarWidth | navBarWidth |
+> navBarWidth | navBarWidth |
 
 **起始版本：** 9
 

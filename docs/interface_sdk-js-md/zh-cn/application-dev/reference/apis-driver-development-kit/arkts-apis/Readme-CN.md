@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-driverdevelopmentkit-->
 
-- [@ohos.app.ability.DriverExtensionAbility](arkts-app-ability-driverextensionability.md)
+- [@ohos.app.ability.DriverExtensionAbility(驱动扩展能力)](arkts-app-ability-driverextensionability.md)
   - [DriverExtensionAbility](arkts-driverdevelopment-app-ability-driverextensionability-driverextensionability-c.md)
   - [DriverExtensionContext](arkts-driverdevelopment-driverextensioncontext-t.md)
 - [@ohos.driver.deviceManager(外设管理)](arkts-driver-devicemanager.md)
@@ -29,5 +29,5 @@
   - [USBInterfaceDesc(系统接口)](arkts-driverdevelopment-devicemanager-usbinterfacedesc-i-sys.md)<!--DelEnd-->
   - [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md)
 - application<!--arkts-driverdevelopmentkit-application-->
-  - [DriverExtensionContext(Defines the context of driver extension)](arkts-driverextensioncontext.md)
+  - [DriverExtensionContext(定义驱动扩展的上下文)](arkts-driverextensioncontext.md)
     - [DriverExtensionContext](arkts-driverdevelopment-driverextensioncontext-c.md)

@@ -2,7 +2,7 @@
 
 A compound geometric path consisting of line segments, arcs, quadratic Bezier curves, and cubic Bezier curves.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This module uses the physical pixel unit, px.
 > 
@@ -47,7 +47,7 @@ In other cases, this API adds an arc by applying the result of **sweepAngle** mo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## addCircle
 
@@ -74,7 +74,7 @@ Adds a circle to this path in the specified direction. The start point of the ci
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## addOval
 
@@ -100,7 +100,7 @@ Adds the inscribed ellipse of a rectangle to this path in the specified directio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## addPath
 
@@ -119,13 +119,13 @@ Transforms the points in a path by a matrix and stores the resulting path in the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Source **Path** object. |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | Matrix** object. The default value is an identity matrix. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) &#124; null | No | Matrix** object. The default value is an identity matrix. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## addPolygon
 
@@ -150,7 +150,7 @@ Adds a polygon to this path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## addRect
 
@@ -175,7 +175,7 @@ Adds a rectangle to a path in the specified direction. The start point is the up
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## addRoundRect
 
@@ -200,7 +200,7 @@ Adds a rounded rectangle to a path in the specified direction. When the path dir
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## approximate
 
@@ -210,7 +210,7 @@ approximate(acceptableError: number): Array<number>
 
 Converts the existing path into an approximate path consisting of consecutive line segments.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Avoid setting **acceptableError** to **0** as it heavily divides the curve path, significantly impacting
 > performance and memory usage.
@@ -235,7 +235,7 @@ Converts the existing path into an approximate path consisting of consecutive li
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | An array of points in the approximate path, which contains at least two points. Each point consists of three values: |
+| Array&lt;number&gt; | An array of points in the approximate path, which contains at least two points. Each point consists of three values:<br>1. Length ratio of the point to the start point of the path. The value range is [0.0, 1.0]. <br>2. X coordinate of a point. <br>3. Y coordinate of a point. |
 
 **Error codes:**
 
@@ -272,7 +272,7 @@ Draws an arc to this path using angle arc mode. This mode first defines a rectan
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## buildFromSvgString
 
@@ -344,7 +344,7 @@ Draws a conic curve from the last point of this path to the target point. If the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## constructor
 
@@ -409,7 +409,7 @@ Checks whether a coordinate point is included in this path. For details, see [Pa
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## convertToSvgString
 
@@ -460,7 +460,7 @@ Draws a cubic Bezier curve from the last point of this path to the target point.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## getBounds
 
@@ -664,7 +664,7 @@ Obtains the coordinates and tangent at a distance from the start point of this p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## getSegment
 
@@ -866,7 +866,7 @@ Checks whether a path forms a rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) \| null | Yes | Rectangle object, which is used as an output parameter. If the path forms a rectangle, the rectangle object is overwritten with the rectangle represented by the path. Otherwise, the rectangle object remains unchanged. The value can be **null**, indicating that the rectangle represented by the path does not need to be obtained. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) &#124; null | Yes | Rectangle object, which is used as an output parameter. If the path forms a rectangle, the rectangle object is overwritten with the rectangle represented by the path. Otherwise, the rectangle object remains unchanged. The value can be **null**, indicating that the rectangle represented by the path does not need to be obtained. |
 
 **Return value:**
 
@@ -899,7 +899,7 @@ Draws a line segment from the last point of this path to the target point. If th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## moveTo
 
@@ -926,7 +926,7 @@ Sets the start point of this path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## offset
 
@@ -957,7 +957,7 @@ Offsets this path by specified distances along the X axis and Y axis and stores 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## op
 
@@ -988,7 +988,7 @@ Combines this path with the passed-in path based on the specified operation mode
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## quadTo
 
@@ -1017,7 +1017,7 @@ Draws a quadratic Bezier curve from the last point of this path to the target po
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## rConicTo
 
@@ -1047,7 +1047,7 @@ Draws a conic curve from the last point of this path to a point relative to the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## rCubicTo
 
@@ -1078,7 +1078,7 @@ Draws a cubic Bezier curve from the last point of this path to a point relative 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## reset
 
@@ -1129,7 +1129,7 @@ Draws a line segment from the last point of this path to a point relative to the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## rMoveTo
 
@@ -1156,7 +1156,7 @@ Sets the start position relative to the last point of this path. If the path is 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## rQuadTo
 
@@ -1185,7 +1185,7 @@ Draws a quadratic Bezier curve from the last point of this path to a point relat
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## set
 
@@ -1229,7 +1229,7 @@ Sets the fill type of this path. The fill type determines how "inside" of the pa
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setLastPoint
 
@@ -1284,4 +1284,4 @@ Transforms the points in a path by matrix.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |

@@ -6,6 +6,8 @@ declare type ResponsiveFillType = PresetFillType
 
 Define a responsive item filling pattern that can be used in WaterFlow,Grid,List, and Swiper components.
 
+@typedef { PresetFillType } ResponsiveFillType
+
 **Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.

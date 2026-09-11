@@ -24,7 +24,7 @@ function getAltitude(seaPressure: number, currentPressure: number, callback: Asy
 
 **废弃版本：** 9
 
-**替代接口：** [getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md)(seaPressure: double, currentPressure: double, callback: AsyncCallback&lt;double&gt;)
+**替代接口：** [getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md)(seaPressure: number, currentPressure: number, callback: AsyncCallback&lt;number&gt;)
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -69,7 +69,7 @@ function getAltitude(seaPressure: number, currentPressure: number): Promise<numb
 
 **废弃版本：** 9
 
-**替代接口：** [getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md)(seaPressure: double, currentPressure: double)
+**替代接口：** [getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md)(seaPressure: number, currentPressure: number)
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

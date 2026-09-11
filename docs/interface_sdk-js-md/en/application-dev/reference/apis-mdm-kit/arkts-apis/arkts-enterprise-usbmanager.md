@@ -2,7 +2,7 @@
 
 The **usbManager** module provides APIs for USB management.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The APIs of this module can be called only by a device administrator application that is enabled. For details, see
 > [MDM Kit Development](../../../mdm/mdm-kit-guide.md).

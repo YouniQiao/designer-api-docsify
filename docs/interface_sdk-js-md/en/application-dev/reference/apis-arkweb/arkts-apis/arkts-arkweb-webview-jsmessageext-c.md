@@ -32,7 +32,7 @@ Obtains array-type data of the data object. For details about the sample code, s
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string \| number \| boolean&gt; | Array data obtained after the script of the runJavaScriptExt API is executed. |
+| Array&lt;string &#124; number &#124; boolean&gt; | Array data obtained after the script of the runJavaScriptExt API is executed. |
 
 **Error codes:**
 
@@ -108,7 +108,7 @@ Obtains the error information about the JavaScript execution. For details about 
 
 | Type | Description |
 | --- | --- |
-| string \| null | If an exception occurs during JavaScript script execution, or the return value is of the object type, the system formats the exception information or object into the string "Not support type: &lt;{exception \| object}&gt;". The string length does not exceed 2048 characters, and the excess part will be truncated. If the object contains members of the callback type, they will be automatically ignored during serialization. In all other cases, the interface returns null. |
+| string &#124; null | If an exception occurs during JavaScript script execution, or the return value is of the object type, the system formats the exception information or object into the string "Not support type: &lt;{exception &#124; object}&gt;". The string length does not exceed 2048 characters, and the excess part will be truncated. If the object contains members of the callback type, they will be automatically ignored during serialization. In all other cases, the interface returns null. |
 
 ## getNumber
 
@@ -180,4 +180,4 @@ Obtains the type of the data object. For details about the sample code, see [run
 
 | Type | Description |
 | --- | --- |
-| [JsMessageType](arkts-arkweb-webview-jsmessagetype-e.md) | Data type of the result returned after the [runJavaScriptExt]{ |
+| [JsMessageType](arkts-arkweb-webview-jsmessagetype-e.md) | Data type of the result returned after the [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runjavascriptext) API is executed. |

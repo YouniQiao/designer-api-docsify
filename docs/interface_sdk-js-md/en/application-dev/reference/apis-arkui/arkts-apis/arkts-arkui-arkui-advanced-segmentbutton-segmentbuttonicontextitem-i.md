@@ -2,7 +2,7 @@
 
 Icon and text button information.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Both the **icon** and **selectedIcon** attributes must be set. Setting only one of them is invalid.
 

@@ -65,7 +65,7 @@ type?: Type
 
 默认值：ProgressType.Linear
 
-**说明：** 不同的type需分别对应相应的[style](arkts-arkui-progress-attribute.md#style)属性设置，详细映射关系参考[ProgressStyleMap](arkts-arkui-progressstylemap-i.md)。
+**说明：** 不同的type需分别对应相应的[style](arkts-arkui-progress-comp-attribute.md#style)属性设置，详细映射关系参考[ProgressStyleMap](arkts-arkui-progressstylemap-i.md)。
 
 **类型：** [Type](../arkts-apis/arkts-arkui-arkui-statemanagement-type-d.md)
 

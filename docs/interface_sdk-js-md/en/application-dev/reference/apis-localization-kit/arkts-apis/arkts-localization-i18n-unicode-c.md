@@ -32,7 +32,7 @@ Detects the encoding information of the input byte stream.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bytes | Uint8Array | Yes | Input byte stream. To detect the encoding of a text string, convert the text to a byte stream first while preserving its original format. Byte stream to be identified and encoded |
+| bytes | Uint8Array | Yes | Input byte stream. To detect the encoding of a text string, convert the text to a byte stream first while preserving its original format.<br>Byte stream to be identified and encoded |
 
 **Return value:**
 
@@ -73,7 +73,7 @@ Obtains the type of the input character.
 
 | Type | Description |
 | --- | --- |
-| string | Type of the input character.U_UNASSIGNED： Non-category for unassigned and non-character code points. The value can be |
+| string | Type of the input character.U_UNASSIGNED： Non-category for unassigned and non-character code points. The value can be  U_GENERAL_OTHER_TYPES： Same as **U_UNASSIGNED**.  U_UPPERCASE_LETTER： Uppercase letter.  U_LOWERCASE_LETTER： Lowercase letter.  U_TITLECASE_LETTER： Title case letter.  U_MODIFIER_LETTER： Modifier letter.  U_OTHER_LETTER： Letters other than the uppercase letter, lowercase letter, title case letter, and modifier letter.  U_NON_SPACING_MARK： Non-spacing mark, such as the accent symbol **'** and the variable symbol **#**.  U_ENCLOSING_MARK： Enclosing mark, for example, a circle or a box.  U_COMBINING_SPACING_MARK： Spacing mark, for example, the vowel symbol **[]**.  U_DECIMAL_DIGIT_NUMBER： Decimal number.  U_LETTER_NUMBER： Letter and number (including Roman numeral).  U_OTHER_NUMBER： Other numbers, which are used as encryption symbols, marker symbols, or non-Arabic numerals, such as **@**, **#**, **(1)**, and **①**.  U_SPACE_SEPARATOR： Space separator, for example, a space character, uninterrupted space character, or space character with a fixed width.  U_LINE_SEPARATOR： Line separator.  U_PARAGRAPH_SEPARATOR： Paragraph separator.  U_CONTROL_CHAR： Control character.  U_FORMAT_CHAR： Format character.  U_PRIVATE_USE_CHAR： Privately used character, for example, a company logo.  U_SURROGATE： Surrogate, which is used to represent supplementary characters in UTF-16.  U_DASH_PUNCTUATION： Dash punctuation.  U_START_PUNCTUATION： Start punctuation, for example, the left parenthesis.  U_END_PUNCTUATION： End punctuation, for example, the right parenthesis.  U_INITIAL_PUNCTUATION ： Initial punctuation, for example, the left double quotation mark or left single quotation mark.  U_FINAL_PUNCTUATION： Final punctuation, for example, the right double quotation mark or right single quotation mark.  U_CONNECTOR_PUNCTUATION： Connector punctuation.  U_OTHER_PUNCTUATION： Other punctuations.  U_MATH_SYMBOL： Mathematical symbol.  U_CURRENCY_SYMBOL： Currency symbol.  U_MODIFIER_SYMBOL： Modifier symbol.  U_OTHER_SYMBOL： Other symbols.  For details, see Unicode standard. |
 
 **Examples**
 

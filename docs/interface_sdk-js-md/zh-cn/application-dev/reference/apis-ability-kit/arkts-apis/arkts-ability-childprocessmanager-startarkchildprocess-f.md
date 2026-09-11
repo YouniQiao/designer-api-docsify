@@ -33,7 +33,7 @@ function startArkChildProcess(srcEntry: string, args: ChildProcessArgs, options?
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| srcEntry | string | 是 | 子进程源文件路径，不支持源文件放在HAR类型的模块中。由“模块名” + “/” + “文件路径”组成，文件路径以src/main为根目录。例如子进程文件在module1模块下src/ main/ets/process/DemoProcess.ets，则srcEntry为"module1/ets/process/DemoProcess.ets"。另外，需要确保子进程源文件被其它文件引用到，防止被构建工具优化掉。（详见下方示例代码） |
+| srcEntry | string | 是 | 子进程源文件路径，不支持源文件放在HAR类型的模块中。由“模块名” + “/” + “文件路径”组成，文件路径以src/main为根目录。例如子进程文件在module1模块下src/ main/ets/process/DemoProcess.ets，则srcEntry为"module1/ets/process/DemoProcess.ets"。<br>另外，需要确保子进程源文件被其它文件引用到，防止被构建工具优化掉。（详见下方示例代码） |
 | args | [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | 是 | 传递到子进程的参数。 |
 | options | [ChildProcessOptions](arkts-ability-app-ability-childprocessoptions-childprocessoptions-i.md) | 否 | 子进程的启动配置选项。 |
 

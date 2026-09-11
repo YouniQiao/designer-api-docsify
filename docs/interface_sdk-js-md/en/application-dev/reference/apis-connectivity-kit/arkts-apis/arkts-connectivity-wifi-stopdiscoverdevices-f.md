@@ -28,7 +28,7 @@ Stops discovering Wi-Fi P2P devices.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the operation is successful, returns `false` otherwise. |
 
 **Examples**
 

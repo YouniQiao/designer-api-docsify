@@ -27,8 +27,8 @@ function claimInterfaceExclusive(pipe: USBDevicePipe, iface: USBInterface, force
 | --- | --- | --- | --- |
 | pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | 是 | 总线地址和设备地址，通过调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md)获取。 |
 | iface | [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md) | 是 | 目标USB接口的索引。可以使用[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md)获取设备信息，并根据ID识别USB接口。 |
-| force | boolean | 否 | 是否强制声明USB接口。默认值为**false**，表示不强制声明USB接口。可以根据需要设置该值。默认值：false。 |
-| onConflict | [Callback](arkts-basicservices-base-callback-i.md)&lt;[InterfaceConflictInfo](arkts-basicservices-usbmanager-interfaceconflictinfo-i.md)&gt; | 否 | 回调函数，返回独占声明成功后其他进程通过非互斥的[usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)接口声明同一USB接口时的冲突信息。如果不指定此参数，则发生此类冲突时不发送通知。默认值：不触发回调。 |
+| force | boolean | 否 | 是否强制声明USB接口。默认值为**false**，表示不强制声明USB接口。可以根据需要设置该值。<br>默认值：false。 |
+| onConflict | [Callback](arkts-basicservices-base-callback-i.md)&lt;[InterfaceConflictInfo](arkts-basicservices-usbmanager-interfaceconflictinfo-i.md)&gt; | 否 | 回调函数，返回独占声明成功后其他进程通过非互斥的[usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)接口声明同一USB接口时的冲突信息。如果不指定此参数，则发生此类冲突时不发送通知。<br>默认值：不触发回调。 |
 
 **错误码：**
 
@@ -37,4 +37,4 @@ function claimInterfaceExclusive(pipe: USBDevicePipe, iface: USBInterface, force
 | [14400001](../errorcode-usb.md#14400001-usb设备访问权限被拒绝) | Permission denied. |
 | [14400004](../errorcode-usb.md#14400004-服务异常) | Service exception. |
 | [14400007](../errorcode-usb.md#14400007-资源繁忙) | Resource busy. Possible cause: The interface is claimed by another program or driver. |
-| [14400010](../errorcode-usb.md#14400010-无法识别的错误) | USB driver error. Possible causes:  1. The device is not connected using [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md).  2. The USB device state is abnormal. |
+| [14400010](../errorcode-usb.md#14400010-无法识别的错误) | USB driver error. Possible causes: <br>1. The device is not connected using [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md). <br>2. The USB device state is abnormal. |

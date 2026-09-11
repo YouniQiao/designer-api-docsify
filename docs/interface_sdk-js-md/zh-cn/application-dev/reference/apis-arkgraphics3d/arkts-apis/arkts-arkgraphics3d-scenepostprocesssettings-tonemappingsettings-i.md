@@ -2,6 +2,8 @@
 
 色调映射设置。
 
+@typedef ToneMappingSettings
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

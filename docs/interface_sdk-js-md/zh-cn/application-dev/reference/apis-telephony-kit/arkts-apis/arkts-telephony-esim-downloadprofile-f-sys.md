@@ -27,7 +27,7 @@ function downloadProfile(slotId: number, portIndex: number, profile: Downloadabl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 | portIndex | number | 是 | 插槽的端口索引。 |
 | profile | [DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md) | 是 | 可下载的配置文件信息。 |
 | configuration | [DownloadConfiguration](arkts-telephony-esim-downloadconfiguration-i-sys.md) | 是 | 下载的配置信息。 |

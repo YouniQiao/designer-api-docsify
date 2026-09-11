@@ -6,6 +6,8 @@ declare type Length = string | number | Resource
 
 Defines the length property with string, number and resource unit.
 
+@typedef { string | number | Resource } Length
+
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.

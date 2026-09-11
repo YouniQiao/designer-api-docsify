@@ -12,6 +12,8 @@ declare type OnVisibleIndexesChangeCallback = (start: number, end: number) => vo
 > 
 > - 当懒加载布局容器在可视区域内无子组件时，start和end都返回-1。
 
+@typedef {function} OnVisibleIndexesChangeCallback
+
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -24,5 +26,5 @@ declare type OnVisibleIndexesChangeCallback = (start: number, end: number) => vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | number | 是 | 可视区域起始位置的索引值。取值范围：[0, 子节点总数-1]，当没有子节点或所有子节点都在可视区域外时，返回-1。 |
-| end | number | 是 | 可视区域终止位置的索引值。取值范围：[0, 子节点总数-1]，当没有子节点或所有子节点都在可视区域外时，返回-1。 |
+| start | number | 是 | 可视区域起始位置的索引值。<br>取值范围：[0, 子节点总数-1]，当没有子节点或所有子节点都在可视区域外时，返回-1。 |
+| end | number | 是 | 可视区域终止位置的索引值。<br>取值范围：[0, 子节点总数-1]，当没有子节点或所有子节点都在可视区域外时，返回-1。 |

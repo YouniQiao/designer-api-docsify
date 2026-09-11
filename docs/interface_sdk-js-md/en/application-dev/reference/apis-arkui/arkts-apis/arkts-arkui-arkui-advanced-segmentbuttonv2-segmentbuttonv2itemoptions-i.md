@@ -151,7 +151,7 @@ Default value: **undefined**
 
 Decorator type: @Trace
 
-**Type:** ImageModifier
+**Type:** [ImageModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **Since:** 18
 
@@ -195,7 +195,7 @@ Default value: **undefined**
 
 Decorator type: @Trace
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **Since:** 18
 
@@ -239,7 +239,7 @@ Default value: **undefined**
 
 Decorator type: @Trace
 
-**Type:** TextModifier
+**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **Since:** 18
 

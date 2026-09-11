@@ -2,6 +2,8 @@
 
 提供Skill的相关信息。Skill是一个可安装的能力单位，可以被发现并由Agent框架调用。
 
+@typedef SkillInfo
+
 **起始版本：** 26.0.0
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core

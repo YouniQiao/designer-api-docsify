@@ -21,7 +21,7 @@ footer?: ResourceStr | CustomBuilder
 
 未设置时，不显示菜单页脚。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 9
 
@@ -39,7 +39,7 @@ header?: ResourceStr | CustomBuilder
 
 未设置时，不显示标题。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 9
 

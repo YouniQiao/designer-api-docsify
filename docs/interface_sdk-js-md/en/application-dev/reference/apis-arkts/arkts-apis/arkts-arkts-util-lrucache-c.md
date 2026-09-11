@@ -55,7 +55,7 @@ afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 
 Performs subsequent operations after a value is removed. The subsequent operations must be implemented by developers. This API is called during deletion operations, such as [get&lt;sup&gt;9+&lt;/sup&gt;](#get), [put&lt;sup&gt;9+&lt;/sup&gt;](#put), [remove&lt;sup&gt;9+&lt;/sup&gt;](#remove), [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear), and [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updatecapacity).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the callback method is executed after [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) and
 > [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updatecapacity) are called and the input **key** and
@@ -260,7 +260,7 @@ Obtains the value of a key. If the key is not in the cache, [createDefault&lt;su
 
 | Type | Description |
 | --- | --- |
-| V \| undefined | Value of the key. If no match is found, the value specified in **createDefault** is returned. |
+| V &#124; undefined | Value of the key. If no match is found, the value specified in **createDefault** is returned. |
 
 **Examples**
 
@@ -597,7 +597,7 @@ Removes a key and its associated value from this cache and returns the value ass
 
 | Type | Description |
 | --- | --- |
-| V \| undefined | Returns an **Optional** object containing the removed key-value pair if the key exists in the cache; returns **undefined** if the key does not exist; throws an error if **null** is passed in for **key**. |
+| V &#124; undefined | Returns an **Optional** object containing the removed key-value pair if the key exists in the cache; returns **undefined** if the key does not exist; throws an error if **null** is passed in for **key**. |
 
 **Examples**
 

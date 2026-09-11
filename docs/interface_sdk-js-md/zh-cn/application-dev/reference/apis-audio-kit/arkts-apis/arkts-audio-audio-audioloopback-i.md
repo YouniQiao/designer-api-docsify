@@ -6,6 +6,8 @@
 
 > - 本Interface首批接口从API version 20开始支持。
 
+@typedef AudioLoopback
+
 **起始版本：** 20
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
@@ -65,7 +67,7 @@ getEqualizerPreset(): AudioLoopbackEqualizerPreset
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | 返回当前音频返听器的均衡器类型。 |
+| [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | 返回当前音频返听器的均衡器类型。  在没有被修改的情况下，默认的均衡器类型是FULL。 |
 
 ## getPreferredDevicePair
 
@@ -85,7 +87,7 @@ getPreferredDevicePair(): AudioDevicePair | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md) \| null | 返回系统推荐的音频输入输出设备组合。 |
+| [AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md) &#124; null | 返回系统推荐的音频输入输出设备组合。  如果没有可用的输入输出设备组合，则返回null。 |
 
 ## getReverbPreset
 
@@ -103,7 +105,7 @@ getReverbPreset(): AudioLoopbackReverbPreset
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | 返回当前音频返听器的混响模式。 |
+| [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | 返回当前音频返听器的混响模式。  在没有被修改的情况下，默认的混响模式是THEATER。 |
 
 ## getStatus
 
@@ -141,7 +143,7 @@ getSupportedDevicePairs(): Array<AudioDevicePair>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md)&gt; | 返回支持返听的音频输入输出设备数组。 |
+| Array&lt;[AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md)&gt; | 返回支持返听的音频输入输出设备数组。  如果没有可用的输入输出设备组合，则返回空数组。 |
 
 ## getVolume
 

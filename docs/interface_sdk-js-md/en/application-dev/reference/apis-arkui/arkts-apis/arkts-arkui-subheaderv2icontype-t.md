@@ -6,6 +6,8 @@ declare type SubHeaderV2IconType = ResourceStr | SymbolGlyphModifier
 
 SubHeaderV2IconType
 
+@typedef { ResourceStr | SymbolGlyphModifier } SubHeaderV2IconType
+
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.

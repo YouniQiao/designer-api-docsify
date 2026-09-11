@@ -14,7 +14,7 @@ function acquireDataAbilityHelper(uri: string): DataAbilityHelper
 
 Obtains a dataAbilityHelper object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the FA model, see
 > [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).

@@ -28,7 +28,7 @@ function getSimAccountInfo(slotId: number, callback: AsyncCallback<IccAccountInf
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt; | 是 | 回调函数。返回指定卡槽SIM卡的账户信息。 |
 
 **错误码：**
@@ -82,7 +82,7 @@ function getSimAccountInfo(slotId: number): Promise<IccAccountInfo>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 
 **返回值：**
 

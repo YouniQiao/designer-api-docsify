@@ -2,6 +2,8 @@
 
 The class of a running form information.
 
+@typedef RunningFormInfo
+
 **Since:** 20
 
 **System capability:** SystemCapability.Ability.Form

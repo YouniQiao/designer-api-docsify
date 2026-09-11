@@ -36,14 +36,12 @@ Sets the horizontal alignment of the row content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [HorizontalAlign](arkts-arkui-horizontalalign-e.md) \| undefined | Yes | the horizontal alignment of the row content. Default value HorizontalAlign.Center. |
+| value | [HorizontalAlign](arkts-arkui-horizontalalign-e.md) &#124; undefined | Yes | the horizontal alignment of the row content.<br>Default value HorizontalAlign.Center. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
-
 ## footer
 
 ```TypeScript
@@ -64,14 +62,12 @@ Sets the footer of the lazy column layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | The footer builder function Passing undefined will remove the footer. |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; undefined | Yes | The footer builder function<br>Passing undefined will remove the footer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
-
 ## header
 
 ```TypeScript
@@ -92,14 +88,12 @@ Sets the header of the lazy column layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | The header builder function Passing undefined will remove the header. |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; undefined | Yes | The header builder function<br>Passing undefined will remove the header. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
-
 ## onVisibleIndexesChange
 
 ```TypeScript
@@ -120,14 +114,12 @@ Triggered when the index of child components in the visible area changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | Yes | callback function, triggered when the index of child components in the visible area changes. Passing undefined will unregister the callback. |
+| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) &#124; undefined | Yes | callback function, triggered when the index of child components in the visible area changes.<br>Passing undefined will unregister the callback. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
-
 ## space
 
 ```TypeScript
@@ -148,14 +140,12 @@ The spacing between rows.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | LengthMetrics \| undefined | Yes | the spacing between rows. Default value: 0. Range: [0, +∞). |
+| space | LengthMetrics &#124; undefined | Yes | the spacing between rows.<br>Default value: 0. <br>Range: [0, +∞). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
-
 ## sticky
 
 ```TypeScript
@@ -176,10 +166,9 @@ Sets sticky style for header and footer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sticky | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) \| undefined | Yes | The sticky style for header and footer. |
+| sticky | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) &#124; undefined | Yes | The sticky style for header and footer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |

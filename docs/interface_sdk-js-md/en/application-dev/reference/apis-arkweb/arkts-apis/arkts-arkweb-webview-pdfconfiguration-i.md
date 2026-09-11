@@ -2,7 +2,7 @@
 
 Input parameter of the [createPdf](arkts-arkweb-webview-webviewcontroller-c.md#createpdf) function.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The number of pixels is calculated as follows: Number of pixels = 96 x Number of inches.
 
@@ -126,7 +126,7 @@ scale?: number
 
 Scale multiple.
 
-The value range is [0.0, 2.0]. If the value is less than 0.0, set it to **0.0**. If the value is greater than 2. 0, set it to **2.0**.
+The value range is [0.0, 2.0]. If the value is less than 0.0, set it to **0.0**. If the value is greater than 2.0, set it to **2.0**.
 
 Default value: **1.0**
 

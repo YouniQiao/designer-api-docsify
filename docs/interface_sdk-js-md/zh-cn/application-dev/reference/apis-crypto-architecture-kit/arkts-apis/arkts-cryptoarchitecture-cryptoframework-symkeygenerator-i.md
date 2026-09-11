@@ -48,7 +48,7 @@ convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
 
@@ -107,7 +107,7 @@ convertKey(key: DataBlob): Promise<SymKey>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
 
@@ -151,7 +151,7 @@ convertKeySync(key: DataBlob): SymKey
 > 对于HMAC算法的对称密钥，如果在创建对称密钥生成器时指定了具体哈希算法（如"HMAC|SHA256"），则需要传入与哈希长度一致的二进制密钥数据 &gt;（如传入SHA256对应的256位密钥数据）。如果在创建对称密钥生成器时未指定具体哈希算法，如仅指定"HMAC"，则支持传入长度在1到4096字节范围
 > 内的任意二进制密钥数据。
 
-**说明：** 建议优先使用异步API，convertKey。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：** <br>建议优先使用异步API，convertKey。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
@@ -175,7 +175,7 @@ convertKeySync(key: DataBlob): SymKey
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
 
@@ -206,7 +206,7 @@ generateSymKey(callback: AsyncCallback<SymKey>): void
 
 获取对称密钥生成器随机生成的密钥。使用callback异步回调。
 
-目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。
+<br>目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。
 
 > **说明：**
 > 
@@ -255,7 +255,7 @@ generateSymKey(): Promise<SymKey>
 
 获取该对称密钥生成器随机生成的密钥。使用Promise异步回调。
 
-目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。
+<br>目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。
 
 **起始版本：** 9
 
@@ -301,7 +301,7 @@ generateSymKeySync(): SymKey
 
 同步获取对称密钥生成器随机生成的密钥。
 
-目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。
+<br>目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。
 
 > **说明：**
 > 
@@ -310,7 +310,7 @@ generateSymKeySync(): SymKey
 
 如果在创建对称密钥生成器时没有指定具体哈希算法，如仅指定"HMAC"，则不支持随机生成对称密钥数据，可通过[convertKeySync](#convertkeysync)方式生成对称密钥数据。
 
-**说明：** 建议优先使用异步API，[generateSymKey](#generatesymkey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：** <br>建议优先使用异步API，[generateSymKey](#generatesymkey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 

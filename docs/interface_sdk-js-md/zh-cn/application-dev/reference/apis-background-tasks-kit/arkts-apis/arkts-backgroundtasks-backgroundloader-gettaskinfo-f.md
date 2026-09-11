@@ -26,7 +26,7 @@ function getTaskInfo(taskId: number): Promise<TaskInfo>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| taskId | number | 是 | 后台加载任务id。取值范围为全体整数。 |
+| taskId | number | 是 | 后台加载任务id。<br>取值范围为全体整数。 |
 
 **返回值：**
 

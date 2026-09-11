@@ -1,6 +1,6 @@
 # @ohos.data.dataShare(数据共享)
 
-**DataShare**用于应用管理其自身数据，同时支持同一个设备上不同应用间的数据共享。  
+**DataShare**用于应用管理其自身数据，同时支持同一个设备上不同应用间的数据共享。<br>   
 > **说明：**
 > 
 > - 本模块首批接口从<!--RP1-->API version 9<!--RP1End-->开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
@@ -30,11 +30,11 @@ import { dataShare } from '@kit.ArkData';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) | 创建DataShareHelper实例。使用callback异步回调。 |
-| [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) | 创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用callback异步回调。 |
-| [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) | 创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用Promise异步回调。 |
-| [disableSilentProxy](arkts-arkdata-datashare-disablesilentproxy-f-sys.md) | 关闭静默访问。使用Promise异步回调。使用规则： |
-| [enableSilentProxy](arkts-arkdata-datashare-enablesilentproxy-f-sys.md) | 开启静默访问。使用Promise异步回调。使用规则： |
+| [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) | 创建DataShareHelper实例。使用callback异步回调。<br> |
+| [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) | 创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用callback异步回调。<br> |
+| [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) | 创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用Promise异步回调。<br> |
+| [disableSilentProxy](arkts-arkdata-datashare-disablesilentproxy-f-sys.md) | 关闭静默访问。使用Promise异步回调。<br> <br>使用规则： |
+| [enableSilentProxy](arkts-arkdata-datashare-enablesilentproxy-f-sys.md) | 开启静默访问。使用Promise异步回调。<br> <br>使用规则： |
 <!--DelEnd-->
 
 ### 接口

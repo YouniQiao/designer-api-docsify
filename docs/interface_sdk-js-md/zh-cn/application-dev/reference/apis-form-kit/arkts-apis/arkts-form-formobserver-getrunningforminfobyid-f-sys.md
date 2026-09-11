@@ -89,7 +89,7 @@ function getRunningFormInfoById(formId: string, isUnusedIncluded: boolean): Prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formId | string | 是 | 卡片标识。 |
-| isUnusedIncluded | boolean | 是 | 表示是否包含未使用的卡片。true: 表示包含未使用的卡片。false: 表示不包含未使用的卡片。 |
+| isUnusedIncluded | boolean | 是 | 表示是否包含未使用的卡片。<br>true: 表示包含未使用的卡片。<br>false: 表示不包含未使用的卡片。 |
 
 **返回值：**
 
@@ -211,7 +211,7 @@ function getRunningFormInfoById(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formId | string | 是 | 卡片标识。 |
-| isUnusedIncluded | boolean | 是 | 表示是否包含未使用的卡片。true: 表示包含未使用的卡片。false: 表示不包含未使用的卡片。 |
+| isUnusedIncluded | boolean | 是 | 表示是否包含未使用的卡片。<br>true: 表示包含未使用的卡片。<br>false: 表示不包含未使用的卡片。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt; | 是 | 回调函数。返回已添加的卡片信息。error为undefined，data为查询到的卡片信息；否则为错误对象。 |
 
 **错误码：**

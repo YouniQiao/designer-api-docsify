@@ -63,13 +63,13 @@ at(index: number): number | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 要返回的Array元素的索引（从零开始），取值为整数。如果`index &lt; 0`，则会访问`index + Uint16Array.length`位置的元素。 |
+| index | number | 是 | 要返回的Array元素的索引（从零开始），取值为整数。<br>如果`index &lt; 0`，则会访问`index + Uint16Array.length`位置的元素。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| number \| undefined | 指定下标的元素；如果不存在，则返回**undefined**。 |
+| number &#124; undefined | 指定下标的元素；如果不存在，则返回**undefined**。 |
 
 **错误码：**
 
@@ -168,7 +168,7 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Uint16Array的对象。当参数类型是ArrayBuffer时buffer所占的字节数需是2的整数倍。 |
+| array | ArrayLike&lt;number&gt; &#124; ArrayBuffer | 是 | 用于构造ArkTS Uint16Array的对象。当参数类型是ArrayBuffer时buffer所占的字节数需是2的整数倍。 |
 
 **错误码：**
 
@@ -391,7 +391,7 @@ find(predicate: TypedArrayPredicateFn<number, Uint16Array>): number | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| number \| undefined | 第一个满足条件的元素的值；如果所有元素都不满足条件，则返回**undefined**。 |
+| number &#124; undefined | 第一个满足条件的元素的值；如果所有元素都不满足条件，则返回**undefined**。 |
 
 **错误码：**
 
@@ -759,7 +759,7 @@ static of(...items: number[]): Uint16Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint16Array | 新的ArkTS Uint16Array实例。可能的异常原因：1.必填参数未指定； |
+| Uint16Array | 新的ArkTS Uint16Array实例。可能的异常原因：1.必填参数未指定；<br>2.参数类型不正确；3.参数校验失败。 |
 
 ## reduce
 
@@ -881,7 +881,7 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint16Ar
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Uint16Array&gt; | 是 | 对Uint16Array中每个元素调用的函数。 |
-| initialValue | U | 是 | 作为首次调用callbackFn函数第一个参数的值。若未提供初始值，则会使用Uint16Array的最后一个元素作为初始值，并从倒数第二个元素开始调用callback。 |
+| initialValue | U | 是 | 作为首次调用callbackFn函数第一个参数的值。<br>若未提供初始值，则会使用Uint16Array的最后一个元素作为初始值，<br>并从倒数第二个元素开始调用callback。 |
 
 **返回值：**
 

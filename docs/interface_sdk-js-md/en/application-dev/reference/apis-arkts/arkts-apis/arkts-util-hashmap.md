@@ -9,12 +9,15 @@ HashMap is implemented using an array, linked lists, and red-black trees as its 
  **key** and **value**. In HashSet, only the **value** object is processed.
  **Recommended use case**: Use HashMap when you need to quickly access, remove, and insert key-value pairs.
  This topic uses the following to identify the use of generics:<br>
- - K: Key<br>
+
+- K: Key<br>
  - V: Value
- > **NOTE**
+
+> **NOTE**
  >
  > Container classes, implemented in static languages, have restrictions on storage locations and properties, and do
  > not support custom properties or methods.
+
 
 
 ## Modules to Import

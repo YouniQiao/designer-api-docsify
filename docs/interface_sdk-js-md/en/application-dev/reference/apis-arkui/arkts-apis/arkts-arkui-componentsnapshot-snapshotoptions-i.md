@@ -82,7 +82,7 @@ Value range: [0, +∞). If the value is less than or equal to 0, the default val
 
 Default value: **1**
 
-**NOTE：**
+**NOTE:**
 
 Avoid capturing images that are excessively large, ideally not larger than the screen size. If the size of the image to capture exceeds device-specific underlying limits, the capture will fail.
 

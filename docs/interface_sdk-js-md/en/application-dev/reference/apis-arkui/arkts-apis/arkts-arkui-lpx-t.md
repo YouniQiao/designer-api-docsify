@@ -6,6 +6,8 @@ declare type LPX = `${number}lpx`
 
 Defines the length property with number in units of lpx.
 
+@typedef { `\${number}lpx` } LPX
+
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.

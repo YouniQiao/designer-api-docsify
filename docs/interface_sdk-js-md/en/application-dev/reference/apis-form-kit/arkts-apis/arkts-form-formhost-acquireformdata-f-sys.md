@@ -72,7 +72,7 @@ Requests data from the widget provider. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;{ [key: string]: Object | > } The promise returned by the function.<br>**Since:** 10 |
+| Promise&lt;{ [key: string]: Object }&gt; | The promise returned by the function.<br>**Since:** 10 |
 | Promise&lt;Record&lt;string, Object&gt;&gt; | Promise used to return the API call result and the shared data.<br>**Since:** 11 |
 
 **Error codes:**

@@ -2,7 +2,7 @@
 
 The **TabTitleBar** component is a tab title bar used to switch between tabs pages. It is applicable only to level-1 pages.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - If the **TabTitleBar** component has universal attributes and
 > universal events configured, the compiler toolchain automatically

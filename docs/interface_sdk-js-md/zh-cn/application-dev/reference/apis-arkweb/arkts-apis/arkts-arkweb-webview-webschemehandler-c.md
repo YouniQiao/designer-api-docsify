@@ -43,7 +43,7 @@ onRequestStart(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
 ## onRequestStop
 
@@ -51,7 +51,7 @@ onRequestStart(
 onRequestStop(callback: Callback<WebSchemeHandlerRequest>): void
 ```
 
-当请求完成时的回调，仅当onRequestStart回调决定拦截此请求时触发。触发的时机有以下两点：
+当请求完成时的回调，仅当[onRequestStart](#onrequeststart)回调决定拦截此请求时触发。触发的时机有以下两点：
 
 1. WebResourceHandler调用didFail或者didFinish。
 2. 此请求因为其他原因中断（如网络错误、系统异常等）。

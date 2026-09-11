@@ -31,8 +31,8 @@ A constructor used to create a styled string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| [ImageAttachment](arkts-arkui-imageattachment-c.md) \| [CustomSpan](arkts-arkui-customspan-c.md) | Yes | Text of the styled string.   **NOTE：**If this parameter is of the ImageAttachment or CustomSpan type, the **styles** parameter has no effect.To set **styles**, use methods such as [setStyle](arkts-arkui-mutablestyledstring-c.md#setstyle). |
-| styles | Array&lt;[StyleOptions](arkts-arkui-styleoptions-i.md)&gt; | No | Initialization options of the styled string.   **NOTE：**If **start** is set to an invalid value, it uses the default value **0**.If the **length** value is invalid, **length** will default to the actual length of the styled string starting from the start position.If **StyledStringKey** does not match **StyledStringValue**, **styles** has no effect. |
+| value | string &#124; [ImageAttachment](arkts-arkui-imageattachment-c.md) &#124; [CustomSpan](arkts-arkui-customspan-c.md) | Yes | Text of the styled string.<br>**NOTE:**<br>If this parameter is of the ImageAttachment or CustomSpan type, the **styles** parameter has no effect.<br>To set **styles**, use methods such as [setStyle](arkts-arkui-mutablestyledstring-c.md#setstyle). |
+| styles | Array&lt;[StyleOptions](arkts-arkui-styleoptions-i.md)&gt; | No | Initialization options of the styled string.<br>**NOTE:**<br>If **start** is set to an invalid value, it uses the default value **0**.<br>If the **length** value is invalid, **length** will default to the actual length of the styled string starting from the start position.<br>If **StyledStringKey** does not match **StyledStringValue**, **styles** has no effect. |
 
 ## equals
 
@@ -60,7 +60,7 @@ Checks whether this styled string the same as another styled string.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether two styled strings are equal. |
+| boolean | Whether two styled strings are equal. <br>**true** if the two styled strings are equal; **false** otherwise. <br>**NOTE:**<br>The two styled strings are the same if they have the same text and style. <br>[GestureStyle](arkts-arkui-gesturestyle-c.md) in styled strings is not compared. This means that, if two styled strings are the same except for the event configured, they are treated as the same. <br>In comparing [CustomSpan](arkts-arkui-customspan-c.md) or [LeadingMarginSpan](arkts-arkui-leadingmarginspan-c.md) objects, addresses are compared. The objects that have the same address are the same. |
 
 ## fromHtml
 
@@ -115,7 +115,7 @@ For details about how to use this API, see [Example 12: Implementing Conversion 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [170001](../errorcode-styled-string.md#170001-conversion-error) | Convert Error. |
 
 ## getString
@@ -138,7 +138,7 @@ Obtains the text of this styled string.
 
 | Type | Description |
 | --- | --- |
-| string | Text of the styled string. |
+| string | Text of the styled string. <br>**NOTE:**<br>If the styled string contains an image or [CustomSpan](arkts-arkui-customspan-c.md) elements, they are represented as space characters in the returned result. |
 
 ## getStyles
 
@@ -170,13 +170,13 @@ This API returns only styles explicitly set by the developer.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[SpanStyle](arkts-arkui-spanstyle-i.md)&gt; | Array of styles. |
+| Array&lt;[SpanStyle](arkts-arkui-spanstyle-i.md)&gt; | Array of styles.<br>**NOTE:**<br>If no style is set for the specified range in the styled string, an empty array is returned. <br>If the values of **start** and **length** are out of the acceptable range or if any mandatory parameter is passed as **undefined**, an exception is thrown. <br>If **styledKey** is set to an invalid value or **undefined**, an exception is thrown. <br>If **styledKey** is a **CustomSpan** object, the style returned is the one passed to create the object. That is, modifying the style object also affects the actual display effect. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## subStyledString
 
@@ -205,13 +205,13 @@ Obtains a substring of this styled string. The specified range must not exceed t
 
 | Type | Description |
 | --- | --- |
-| [StyledString](arkts-arkui-styledstring-c.md) | Styled substring. |
+| [StyledString](arkts-arkui-styledstring-c.md) | Styled substring.<br>**NOTE:**<br>If the value of **start** is valid, the difference between the length of the styled string and the value of **start** is used as the default value of **length**. <br>If the values of **start** and **length** are out of the acceptable range or if any mandatory parameter is passed as **undefined**, an exception is thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## toHtml
 
@@ -247,7 +247,7 @@ For details about how to use this API, see [Example 12: Implementing Conversion 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## length
 
@@ -257,7 +257,7 @@ readonly length: number
 
 Length of the styled string.
 
-**NOTE：**
+**NOTE:**
 
 Both **ImageAttachment** and **CustomSpan** in the styled string are counted as length 1.
 

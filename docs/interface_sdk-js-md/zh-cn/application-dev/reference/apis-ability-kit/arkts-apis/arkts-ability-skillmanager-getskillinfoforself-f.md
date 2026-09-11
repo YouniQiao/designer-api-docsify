@@ -28,7 +28,7 @@ function getSkillInfoForSelf(moduleName: string, skillName: string, flags: numbe
 | --- | --- | --- | --- |
 | moduleName | string | 是 | 指定查询技能所属模块的名称。 |
 | skillName | string | 是 | 指定查询技能的名称。 |
-| flags | number | 是 | { |
+| flags | number | 是 | [SkillInfoFlag](arkts-ability-skillmanager-skillinfoflag-e.md) - 指定返回的SkillInfo所包含的信息。详情请参考SkillInfoFlag。contained in the SkillInfo object that will be returned. |
 
 **返回值：**
 

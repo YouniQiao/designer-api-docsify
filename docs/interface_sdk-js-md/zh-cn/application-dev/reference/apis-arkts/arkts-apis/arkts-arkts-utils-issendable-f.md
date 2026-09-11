@@ -26,7 +26,7 @@ function isSendable(value: Object | null | undefined): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Object \| null \| undefined | 是 | 要检查的值。 |
+| value | Object &#124; null &#124; undefined | 是 | 要检查的值。 |
 
 **返回值：**
 

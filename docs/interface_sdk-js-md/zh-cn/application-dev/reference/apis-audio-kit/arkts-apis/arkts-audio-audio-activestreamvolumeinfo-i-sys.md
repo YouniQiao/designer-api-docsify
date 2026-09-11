@@ -2,6 +2,8 @@
 
 活动音频流的音量信息。
 
+@typedef ActiveStreamVolumeInfo
+
 **起始版本：** 24
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume

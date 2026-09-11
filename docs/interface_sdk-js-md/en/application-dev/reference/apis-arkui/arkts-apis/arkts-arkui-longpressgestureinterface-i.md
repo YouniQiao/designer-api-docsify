@@ -2,7 +2,7 @@
 
 **LongPressGesture** is used to trigger a long press gesture. This gesture requires one or more fingers to be held down for a specified duration, which is 500 ms by default and can be adjusted using the **duration** parameter.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Since API version 18, on some devices, the system's two-finger long press gesture may take precedence, causing
 > the application's two-finger long press gesture to be ineffective.
@@ -42,14 +42,12 @@ If the long press duration reaches or exceeds 500 milliseconds, the system prior
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { fingers?: number; repeat?: boolean; duration?: number } | No | Parameters for the long press gesture.     - **fingers**: minimum number of fingers to trigger a long press gesture. The value ranges from 1 to 10.    Default value: **1**.     - **repeat**: whether to continuously trigger the event callback. The value **true** means to continuously trigger the event callback, and **false** means the opposite.   Default value: **false**.     - **duration**: minimum hold-down time, in ms.   Default value: **500**. |
+| value | { fingers?: number; repeat?: boolean; duration?: number } | No | Parameters for the long press gesture.<br> - **fingers**: minimum number of fingers to trigger a long press gesture. The value ranges from 1 to 10. <br>Default value: **1**. <br> - **repeat**: whether to continuously trigger the event callback. The value **true** means to continuously trigger the event callback, and **false** means the opposite.<br>Default value: **false**. <br> - **duration**: minimum hold-down time, in ms.<br>Default value: **500**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
-
 ## [[Call]]
 
 ```TypeScript
@@ -82,8 +80,6 @@ If the long press duration reaches or exceeds 500 milliseconds, the system prior
 
 | Type | Description |
 | --- | --- |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
-
 ## onAction
 
 ```TypeScript
@@ -108,8 +104,6 @@ Registers the callback for successful long press gesture recognition.
 
 | Type | Description |
 | --- | --- |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
-
 ## onActionCancel
 
 ```TypeScript
@@ -134,8 +128,6 @@ Registers the callback for long press gesture cancellation. This callback is tri
 
 | Type | Description |
 | --- | --- |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
-
 ## onActionCancel
 
 ```TypeScript
@@ -162,8 +154,6 @@ Registers the callback for long press gesture cancellation. This callback is tri
 
 | Type | Description |
 | --- | --- |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
-
 ## onActionEnd
 
 ```TypeScript
@@ -188,4 +178,3 @@ Registers the callback for long press gesture completion. This callback is trigg
 
 | Type | Description |
 | --- | --- |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |

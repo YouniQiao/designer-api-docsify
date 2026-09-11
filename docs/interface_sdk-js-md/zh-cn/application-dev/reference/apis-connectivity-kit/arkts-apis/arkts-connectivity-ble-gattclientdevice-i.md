@@ -62,7 +62,7 @@ connect(): void
 
 client端主动发起和server蓝牙设备的GATT协议连接。
 
-远端设备地址已通过[createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md)方法中的deviceId参数指定。client可通过订阅on('BLEConnectionStateChange')事件来感知连接是否成功。
+远端设备地址已通过[createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md)方法中的deviceId参数指定。client可通过订阅[on('BLEConnectionStateChange')](#onbleconnectionstatechange)事件来感知连接是否成功。
 
 **起始版本：** 10
 
@@ -104,7 +104,7 @@ disconnect(): void
 
 client断开与远端蓝牙低功耗设备的连接。
 
-client可通过订阅on('BLEConnectionStateChange')事件来感知断连是否成功。
+client可通过订阅[on('BLEConnectionStateChange')](#onbleconnectionstatechange)事件来感知断连是否成功。
 
 **起始版本：** 10
 
@@ -571,7 +571,7 @@ client端取消订阅server端特征值变化事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | 是 | 事件回调类型，支持的事件为'BLECharacteristicChange'，表示server端特征值变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与on('BLECharacteristicChange')中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与[on('BLECharacteristicChange')](#onblecharacteristicchange)中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
 
 **错误码：**
 
@@ -616,7 +616,7 @@ client端取消订阅GATT profile协议的连接状态变化事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | 是 | 事件回调类型，支持的事件为'BLEConnectionStateChange'，表示连接状态变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectionChangeState](arkts-connectivity-ble-bleconnectionchangestate-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与on('BLEConnectionStateChange')中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectionChangeState](arkts-connectivity-ble-bleconnectionchangestate-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与[on('BLEConnectionStateChange')](#onbleconnectionstatechange)中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
 
 **错误码：**
 
@@ -706,7 +706,7 @@ client端设备取消订阅server端设备服务变化的通知事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'serviceChange' | 是 | 事件回调类型，支持的事件为'serviceChange'，表示服务变化通知事件。当server端添加或删除服务时，会触发该事件通知client端。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 指定取消订阅服务变化的回调函数通知。若传参，则需与on('serviceChange')中传入的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 指定取消订阅服务变化的回调函数通知。若传参，则需与[on('serviceChange')](#onservicechange)中传入的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
 
 **错误码：**
 
@@ -1473,7 +1473,7 @@ setCharacteristicChangeIndication(
 
 client端启用或者禁用接收server端特征值内容变更指示的能力。使用Callback异步回调。
 
-需要先调用[getServices](#getservices)，获取到server端所有支持的能力，且需包含指定的入参特征值UUID。server端对应的特征值需包含标准协议定义的Client Characteristic Configuration描述符UUID（00002902-0000-1000-8000-00805f9b34fb），server端才能支持发送变更指示。若启用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，启用server端的指示能力。若禁用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，禁用server端的指示能力。通过on('BLECharacteristicChange')接收server端特征值内容变更指示。若client端收到server端特征值内容变更指示后，系统蓝牙服务会主动回复确认，应用无需关注。异步回调结果返回后，才能调用下一次读取或者写入操作，如readCharacteristicValue、[readDescriptorValue](#readdescriptorvalue)、writeCharacteristicValue、[writeDescriptorValue](#writedescriptorvalue)、setCharacteristicChangeNotification和setCharacteristicChangeIndication。
+需要先调用[getServices](#getservices)，获取到server端所有支持的能力，且需包含指定的入参特征值UUID。server端对应的特征值需包含标准协议定义的Client Characteristic Configuration描述符UUID（00002902-0000-1000-8000-00805f9b34fb），server端才能支持发送变更指示。若启用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，启用server端的指示能力。若禁用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，禁用server端的指示能力。通过[on('BLECharacteristicChange')](#onblecharacteristicchange)接收server端特征值内容变更指示。若client端收到server端特征值内容变更指示后，系统蓝牙服务会主动回复确认，应用无需关注。异步回调结果返回后，才能调用下一次读取或者写入操作，如readCharacteristicValue、[readDescriptorValue](#readdescriptorvalue)、writeCharacteristicValue、[writeDescriptorValue](#writedescriptorvalue)、setCharacteristicChangeNotification和setCharacteristicChangeIndication。
 
 **起始版本：** 10
 
@@ -1543,7 +1543,7 @@ setCharacteristicChangeIndication(characteristic: BLECharacteristic, enable: boo
 
 client端启用或者禁用接收server端特征值内容变更指示的能力。使用Promise异步回调。
 
-需要先调用[getServices](#getservices)，获取到server端所有支持的能力，且需包含指定的入参特征值UUID。server端对应的特征值需包含标准协议定义的Client Characteristic Configuration描述符UUID（00002902-0000-1000-8000-00805f9b34fb），server端才能支持发送变更指示。若启用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，启用server端的指示能力。若禁用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，禁用server端的指示能力。通过on('BLECharacteristicChange')接收server端特征值内容变更指示。若client端收到server端特征值内容变更指示后，系统蓝牙服务会主动回复确认，应用无需关注。异步回调结果返回后，才能调用下一次读取或者写入操作，如readCharacteristicValue、[readDescriptorValue](#readdescriptorvalue)、writeCharacteristicValue、[writeDescriptorValue](#writedescriptorvalue)、setCharacteristicChangeNotification和setCharacteristicChangeIndication。
+需要先调用[getServices](#getservices)，获取到server端所有支持的能力，且需包含指定的入参特征值UUID。server端对应的特征值需包含标准协议定义的Client Characteristic Configuration描述符UUID（00002902-0000-1000-8000-00805f9b34fb），server端才能支持发送变更指示。若启用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，启用server端的指示能力。若禁用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，禁用server端的指示能力。通过[on('BLECharacteristicChange')](#onblecharacteristicchange)接收server端特征值内容变更指示。若client端收到server端特征值内容变更指示后，系统蓝牙服务会主动回复确认，应用无需关注。异步回调结果返回后，才能调用下一次读取或者写入操作，如readCharacteristicValue、[readDescriptorValue](#readdescriptorvalue)、writeCharacteristicValue、[writeDescriptorValue](#writedescriptorvalue)、setCharacteristicChangeNotification和setCharacteristicChangeIndication。
 
 **起始版本：** 10
 
@@ -1616,7 +1616,7 @@ setCharacteristicChangeNotification(
 
 client端启用或者禁用接收server端特征值内容变更通知的能力。使用Callback异步回调。
 
-需要先调用[getServices](#getservices)，获取到server端所有支持的能力，且需包含指定的入参特征值UUID。server端对应的特征值需包含标准协议定义的Client Characteristic Configuration描述符UUID（00002902-0000-1000-8000-00805f9b34fb），server端才能支持发送变更通知。若启用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，启用server端的通知能力。若禁用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，禁用server端的通知能力。通过on('BLECharacteristicChange')接收server端特征值内容变更通知。若client端收到server端特征值内容变更通知后，无需回复确认。异步回调结果返回后，才能调用下一次读取或者写入操作，如readCharacteristicValue、[readDescriptorValue](#readdescriptorvalue)、writeCharacteristicValue、[writeDescriptorValue](#writedescriptorvalue)、setCharacteristicChangeNotification和setCharacteristicChangeIndication。
+需要先调用[getServices](#getservices)，获取到server端所有支持的能力，且需包含指定的入参特征值UUID。server端对应的特征值需包含标准协议定义的Client Characteristic Configuration描述符UUID（00002902-0000-1000-8000-00805f9b34fb），server端才能支持发送变更通知。若启用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，启用server端的通知能力。若禁用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，禁用server端的通知能力。通过[on('BLECharacteristicChange')](#onblecharacteristicchange)接收server端特征值内容变更通知。若client端收到server端特征值内容变更通知后，无需回复确认。异步回调结果返回后，才能调用下一次读取或者写入操作，如readCharacteristicValue、[readDescriptorValue](#readdescriptorvalue)、writeCharacteristicValue、[writeDescriptorValue](#writedescriptorvalue)、setCharacteristicChangeNotification和setCharacteristicChangeIndication。
 
 **起始版本：** 10
 
@@ -1686,7 +1686,7 @@ setCharacteristicChangeNotification(characteristic: BLECharacteristic, enable: b
 
 client端启用或者禁用接收server端特征值内容变更通知的能力。使用Promise异步回调。
 
-需要先调用[getServices](#getservices)，获取到server端所有支持的能力，且需包含指定的入参特征值UUID。server端对应的特征值需包含标准协议定义的Client Characteristic Configuration描述符UUID（00002902-0000-1000-8000-00805f9b34fb），server端才能支持发送变更通知。若启用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，启用server端的通知能力。若禁用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，禁用server端的通知能力。通过on('BLECharacteristicChange')接收server端特征值内容变更通知。若client端收到server端特征值内容变更通知后，无需回复确认。异步回调结果返回后，才能调用下一次读取或者写入操作，如readCharacteristicValue、[readDescriptorValue](#readdescriptorvalue)、writeCharacteristicValue、[writeDescriptorValue](#writedescriptorvalue)、setCharacteristicChangeNotification和setCharacteristicChangeIndication。
+需要先调用[getServices](#getservices)，获取到server端所有支持的能力，且需包含指定的入参特征值UUID。server端对应的特征值需包含标准协议定义的Client Characteristic Configuration描述符UUID（00002902-0000-1000-8000-00805f9b34fb），server端才能支持发送变更通知。若启用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，启用server端的通知能力。若禁用该能力，系统蓝牙服务会自动往server端写Client Characteristic Configuration描述符，禁用server端的通知能力。通过[on('BLECharacteristicChange')](#onblecharacteristicchange)接收server端特征值内容变更通知。若client端收到server端特征值内容变更通知后，无需回复确认。异步回调结果返回后，才能调用下一次读取或者写入操作，如readCharacteristicValue、[readDescriptorValue](#readdescriptorvalue)、writeCharacteristicValue、[writeDescriptorValue](#writedescriptorvalue)、setCharacteristicChangeNotification和setCharacteristicChangeIndication。
 
 **起始版本：** 10
 

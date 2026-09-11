@@ -82,8 +82,7 @@ contentMargin?: LocalizedMargin
 
 **类型：** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
 
-**默认值：** {start: LengthMetrics.resource($r('sys.float.margin_left')), 
- end: LengthMetrics.resource($r('sys.float.margin_right'))}
+**默认值：** {start: LengthMetrics.resource($r('sys.float.margin_left')), <br> end: LengthMetrics.resource($r('sys.float.margin_right'))}
 
 **起始版本：** 12
 

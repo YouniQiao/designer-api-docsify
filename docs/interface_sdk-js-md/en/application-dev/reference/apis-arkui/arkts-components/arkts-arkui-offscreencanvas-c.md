@@ -4,7 +4,7 @@ The **OffscreenCanvas** component is used to draw custom graphics.
 
 When the Canvas component or **CanvasRenderingContext2D** object is used, rendering, animation, and user interaction usually occur on the main thread of the application. Calculations related to canvas animation and rendering may affect application performance. **OffscreenCanvas** allows for rendering off the screen. This means that some tasks can be run in a separate thread to reduce the load on the main thread.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > **OffscreenCanvas** cannot be used in ServiceExtensionAbility. It is recommended
 > that you use the
@@ -42,8 +42,8 @@ Constructs an OffscreenCanvas for creating an offscreen canvas object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | Width of the offscreen canvas.    **NaN** and **Infinity** are treated as invalid values.Default unit: vp |
-| height | number | Yes | Height of the offscreen canvas.    **NaN** and **Infinity** are treated as invalid values.Default unit: vp |
+| width | number | Yes | Width of the offscreen canvas.<br> **NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
+| height | number | Yes | Height of the offscreen canvas.<br> **NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
 
 ## constructor
 
@@ -67,9 +67,9 @@ Constructs an **OffscreenCanvas** object for creating an offscreen canvas object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | Width of the offscreen canvas.    **NaN** and **Infinity** are treated as invalid values.Default unit: vp |
-| height | number | Yes | Height of the offscreen canvas.    **NaN** and **Infinity** are treated as invalid values.Default unit: vp |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes | Unit mode of the OffscreenCanvas object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).Invalid values **NaN** and **Infinity** are treated as the default value.Default value: **DEFAULT**. |
+| width | number | Yes | Width of the offscreen canvas.<br> **NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
+| height | number | Yes | Height of the offscreen canvas.<br> **NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes | Unit mode of the OffscreenCanvas object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br> Invalid values **NaN** and **Infinity** are treated as the default value.<br> Default value: **DEFAULT**. |
 
 ## getContext
 
@@ -91,8 +91,8 @@ Obtains the drawing context of the offscreen canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contextType | "2d" | Yes | Type of the drawing context of the offscreen canvas. The value can only be **"2d"**.    **"2d"**: creates an **OffscreenCanvasRenderingContext2D** object that represents a two-dimensional rendering context.The values **undefined** and **null** are considered as invalid values, and **undefined** is returned. |
-| options | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Parameters of the **OffscreenCanvasRenderingContext2D** object. For details, see [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md).    **undefined** and **null** values are processed based on the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md).Default value: **null**. |
+| contextType | "2d" | Yes | Type of the drawing context of the offscreen canvas. The value can only be **"2d"**.<br> **"2d"**: creates an **OffscreenCanvasRenderingContext2D** object that represents a two-dimensional rendering context.<br> The values **undefined** and **null** are considered as invalid values, and **undefined** is returned. |
+| options | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Parameters of the **OffscreenCanvasRenderingContext2D** object. For details, see [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md).<br> **undefined** and **null** values are processed based on the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md).<br> Default value: **null**. |
 
 **Return value:**
 

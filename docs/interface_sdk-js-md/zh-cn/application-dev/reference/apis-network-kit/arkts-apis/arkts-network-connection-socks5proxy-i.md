@@ -20,7 +20,7 @@ dnsStrategy?: Socks5DnsStrategy
 
 指定DNS解析由系统执行还是由代理服务器执行。
 
-**说明:** 当此项未指定时，如果host有`socks5h://`协议前缀，则DNS解析由代理服务器执行，否则DNS解析由系统执行。
+**说明：**当此项未指定时，如果host有`socks5h://`协议前缀，则DNS解析由代理服务器执行，否则DNS解析由系统执行。
 
 **类型：** [Socks5DnsStrategy](arkts-network-connection-socks5dnsstrategy-e.md)
 
@@ -72,7 +72,7 @@ host: string
 
 代理服务器主机名。
 
-**说明:** 当该项为空字符串时，视为未配置SOCKS5代理。
+**说明：**当该项为空字符串时，视为未配置SOCKS5代理。
 
 **类型：** string
 
@@ -90,7 +90,7 @@ password?: string
 
 使用代理的用户密码。
 
-**说明:** 需同时设置username参数才会生效。
+**说明：**需同时设置username参数才会生效。
 
 **类型：** string
 
@@ -108,7 +108,7 @@ port: number
 
 主机端口。取值范围[0, 65535]。
 
-**说明:** 当参数不在上述取值范围时，视为未配置SOCKS5代理。
+**说明：**当参数不在上述取值范围时，视为未配置SOCKS5代理。
 
 **类型：** number
 
@@ -126,7 +126,7 @@ username?: string
 
 使用代理的用户名。
 
-**说明:** 需同时设置password参数才会生效。
+**说明：**需同时设置password参数才会生效。
 
 **类型：** string
 

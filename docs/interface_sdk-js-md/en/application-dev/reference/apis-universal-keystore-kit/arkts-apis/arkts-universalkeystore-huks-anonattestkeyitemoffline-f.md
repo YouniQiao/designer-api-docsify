@@ -14,7 +14,7 @@ function anonAttestKeyItemOffline(keyAlias: string, params: HuksParam[]): Promis
 
 Obtains an anonymous key certificate in offline mode. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 
 > - Offline key attestation depends on the network. You need to periodically connect to the network to use this API

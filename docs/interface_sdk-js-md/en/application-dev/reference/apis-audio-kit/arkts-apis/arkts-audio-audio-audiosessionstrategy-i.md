@@ -2,6 +2,8 @@
 
 Describes an audio session strategy.
 
+@typedef AudioSessionStrategy [since 12 - 24]
+
 **Since:** 12
 
 **System capability:** SystemCapability.Multimedia.Audio.Core

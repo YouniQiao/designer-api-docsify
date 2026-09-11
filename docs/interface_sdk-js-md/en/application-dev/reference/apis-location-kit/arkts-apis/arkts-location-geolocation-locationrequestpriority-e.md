@@ -8,7 +8,7 @@ Enum for location priority
 
 **Substitutes:** [LocationRequestPriority](arkts-location-geolocationmanager-locationrequestpriority-e.md)
 
-**Required permissions:** ohos.permission.LOCATION
+**Required permissions:** ohos.permission.LOCATION @enum { number }
 
 **System capability:** SystemCapability.Location.Location.Core
 

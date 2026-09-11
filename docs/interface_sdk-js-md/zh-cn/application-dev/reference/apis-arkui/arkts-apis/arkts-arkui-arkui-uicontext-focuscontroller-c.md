@@ -45,8 +45,8 @@ activate(isActive: boolean, autoInactive?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isActive | boolean | 是 | 设置是否进入/退出焦点激活态。true表示设置进入焦点激活态，false表示设置退出焦点激活态。 |
-| autoInactive | boolean | 否 | 设置焦点激活态退出逻辑。为true时，会自动在触摸事件、鼠标事件触发时退出，为false时，仅受开发者API控制。默认值：true |
+| isActive | boolean | 是 | 设置是否进入/退出焦点激活态。<br>true表示设置进入焦点激活态，false表示设置退出焦点激活态。 |
+| autoInactive | boolean | 否 | 设置焦点激活态退出逻辑。<br>为true时，会自动在触摸事件、鼠标事件触发时退出，为false时，仅受开发者API控制。<br>默认值：true |
 
 ## clearFocus
 

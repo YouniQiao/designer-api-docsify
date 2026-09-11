@@ -41,7 +41,7 @@ paste?: boolean
 
 Whether to copy and paste text. The value **true** means to copy and paste text, and **false** means to type text. Default value: **false**
 
-**Note：**: If the input text contains Chinese characters, special characters, or the text length exceeds 200 characters, the text is copied and pasted regardless of the value of this parameter.
+**Note:** If the input text contains Chinese characters, special characters, or the text length exceeds 200 characters, the text is copied and pasted regardless of the value of this parameter.
 
 **Type:** boolean
 

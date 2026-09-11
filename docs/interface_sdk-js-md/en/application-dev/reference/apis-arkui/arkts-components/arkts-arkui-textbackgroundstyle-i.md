@@ -37,7 +37,7 @@ radius?: Dimension | BorderRadiuses
 
 Rounded corner radius of the text background.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)
 
 **Since:** 11
 

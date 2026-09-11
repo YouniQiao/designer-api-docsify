@@ -27,16 +27,16 @@ import { ArkTSUtils } from '@kit.ArkTS';
 | --- | --- |
 | [ParseOptions](arkts-arkts-ason-parseoptions-i.md) | 解析的选项，可定义处理BigInt的模式和解析结果的返回类型。 |
 
-### 枚举
-
-| 名称 | 说明 |
-| --- | --- |
-| [BigIntMode](arkts-arkts-ason-bigintmode-e.md) | 定义处理BigInt的模式。 |
-| [ParseReturnType](arkts-arkts-ason-parsereturntype-e.md) | 定义解析结果的返回类型。 |
-
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
 | [ISendable](arkts-arkts-ason-isendable-t.md) | ISendable是所有Sendable类型（除null和undefined）的父类型。自身没有任何必要的方法和属性。 |
 | [Transformer](arkts-arkts-ason-transformer-t.md) | 用于转换结果函数的类型。 |
+
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [BigIntMode](arkts-arkts-ason-bigintmode-e.md) | 定义处理BigInt的模式。 |
+| [ParseReturnType](arkts-arkts-ason-parsereturntype-e.md) | 定义解析结果的返回类型。 |

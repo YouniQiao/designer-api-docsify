@@ -2,7 +2,7 @@
 
 Defines the configuration policy for the high CPU usage event.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > After this API is called, the setting is persisted. If this API is called again and the corresponding parameter
 > is not set, the value used by the system last time is used.
@@ -25,7 +25,7 @@ backgroundLoadThreshold?: number
 
 High CPU usage threshold of the application background, in percentage. The value range is **[1, 100]**. The default value is **10**. If the value is not within the threshold range, the default value **10** is used.
 
-**Note：**: It is recommended that the value be less than **10**.
+**Note:** It is recommended that the value be less than **10**.
 
 **Type:** number
 
@@ -43,7 +43,7 @@ foregroundLoadThreshold?: number
 
 High CPU usage threshold of the application foreground, in percentage. The value range is **[1, 100]**. The default value is **30**. If the value is not within the threshold range, the default value **30** is used.
 
-**Note：**: It is recommended that the value be less than **30**.
+**Note:** It is recommended that the value be less than **30**.
 
 **Type:** number
 
@@ -69,7 +69,7 @@ Unit: times. Default value: **1**.
 
 If the value is not within the threshold range, the default value **1** is used.
 
-**NOTE：**
+**NOTE:**
 
 1. The value **-1** indicates that log collection times are not limited.
 2. The value **0** indicates that logs are not collected.

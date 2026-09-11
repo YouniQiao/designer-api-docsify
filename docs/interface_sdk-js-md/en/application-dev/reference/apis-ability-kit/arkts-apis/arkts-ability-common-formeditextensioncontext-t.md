@@ -6,6 +6,8 @@ export type FormEditExtensionContext = _FormEditExtensionContext.default
 
 The context of form edit extension. It allows access to formEditExtension-specific resources.
 
+@typedef { _FormEditExtensionContext.default }
+
 **Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.

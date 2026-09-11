@@ -16,7 +16,7 @@ Encrypts a plaintext file to generate a DLP file for an enterprise account. This
 
 This API encrypts a plaintext file to generate a DLP file that can be accessed only by enterprise accounts, implementing enterprise-level file permission management.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only by enterprise accounts. Enterprises need to set up their own enterprise account
 > servers. This API generates a DLP file, which is an encrypted file that can be accessed only by accounts

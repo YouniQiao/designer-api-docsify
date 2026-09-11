@@ -14,7 +14,7 @@ function queryTraceRoute(destination: string, option?: TraceRouteOptions): Promi
 
 Queries the network route tracing information. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > To call this API, the application needs to apply for the precise location permission. <!--RP1-->According to
 > [Applying for Location Permissions (ArkTS)](../../../device/location/location-permission-guidelines.md)<!--RP1

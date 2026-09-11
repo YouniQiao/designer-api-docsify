@@ -8,7 +8,7 @@ The URLSearchParams interface defines some practical methods to process URL quer
 
 **Substitutes:** [URLParams](arkts-arkts-url-urlparams-c.md)
 
-**System capability:** SystemCapability.Utils.Lang
+**System capability:** SystemCapability.Utils.Lang @name URLSearchParams
 
 ## Modules to Import
 
@@ -101,7 +101,7 @@ A parameterized constructor used to create an URLSearchParams instance. As the i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| init | string[][] \| Record&lt;string, string&gt; \| string \| URLSearchParams | No | init init |
+| init | string[][] &#124; Record&lt;string, string&gt; &#124; string &#124; URLSearchParams | No | init init |
 
 **Examples**
 
@@ -235,7 +235,7 @@ Returns the first value associated to the given search parameter.
 
 | Type | Description |
 | --- | --- |
-| string \| null | Returns the first value found by name. If no value is found, null is returned. |
+| string &#124; null | Returns the first value found by name. If no value is found, null is returned. |
 
 **Examples**
 

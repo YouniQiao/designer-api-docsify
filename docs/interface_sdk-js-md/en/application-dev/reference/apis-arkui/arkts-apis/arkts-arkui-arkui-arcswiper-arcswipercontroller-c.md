@@ -44,7 +44,7 @@ Stops an animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) | No | Callback invoked when the animation stops.If no value is provided, no callback is performed. |
+| handler | [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) | No | Callback invoked when the animation stops.<br>If no value is provided, no callback is performed. |
 
 ## showNext
 

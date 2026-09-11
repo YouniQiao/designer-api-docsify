@@ -20,7 +20,7 @@ generateThumbnailIfAbsent?: boolean
 
 Flag to specify whether the thumbnail should be generated, if the image does not have a thumbnail.
 
-Default value: true.
+<br>Default value: true.
 
 **Type:** boolean
 
@@ -36,7 +36,7 @@ Default value: true.
 maxGeneratedPixelDimension?: number
 ```
 
-This parameter is valid only when generateThumbnailIfAbsent is set to true. The width and height of the image cannot exceed the value of this parameter. The value should be an integer. Unit:px. Default value:512.
+This parameter is valid only when generateThumbnailIfAbsent is set to true. The width and height of the image cannot exceed the value of this parameter. The value should be an integer. <br>Unit:px. <br>Default value:512.
 
 **Type:** number
 

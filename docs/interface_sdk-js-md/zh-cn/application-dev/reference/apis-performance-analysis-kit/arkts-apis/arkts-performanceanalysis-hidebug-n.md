@@ -86,15 +86,15 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 | [GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md) | GWP-ASan配置项。可用于配置是否使能、采样频率，以及最大分配的插槽数。 |
 | [RssInfo](arkts-performanceanalysis-hidebug-rssinfo-i.md) | 描述应用进程的物理内存信息。 |
 
+### 类型
+
+| 名称 | 说明 |
+| --- | --- |
+| [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md) | 描述用于存储GC统计信息的键值对。该类型不支持多线程操作，如果应用中存在多线程同时访问，需加锁保护。 |
+
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
 | [TraceFlag](arkts-performanceanalysis-hidebug-traceflag-e.md) | 描述采集trace线程的类型，包括主线程和所有线程。 |
 | [JsRawHeapTrimLevel](arkts-performanceanalysis-hidebug-jsrawheaptrimlevel-e.md) | 转储堆快照的裁剪级别的枚举。 |
-
-### 类型
-
-| 名称 | 说明 |
-| --- | --- |
-| [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md) | 描述用于存储GC统计信息的键值对。该类型不支持多线程操作，如果应用中存在多线程同时访问，需加锁保护。 |

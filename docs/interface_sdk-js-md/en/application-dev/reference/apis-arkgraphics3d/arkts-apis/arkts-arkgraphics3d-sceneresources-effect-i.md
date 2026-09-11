@@ -34,7 +34,7 @@ Obtains the value of the specified effect property.
 
 | Type | Description |
 | --- | --- |
-| Object \| null \| undefined | Effect property value. If the value fails to be obtained, null is returned. |
+| Object &#124; null &#124; undefined | Effect property value. If the value fails to be obtained, null is returned. |
 
 **Examples**
 
@@ -75,7 +75,7 @@ Sets the value of a specified effect property.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | propertyName | string | Yes | Name of a specified effect property. Currently, the following strings are supported: -'exposure': exposure level of an image. -'vibrance': natural saturation of an image. |
-| value | Object \| undefined | Yes | Value of the effect property to set. -'exposure': The value is of the number type. The recommended value range is [-5, 5]. A larger value indicates a brighter image. -'vibrance': The value is of the number type. The recommended value range is [-1, 1]. A larger value indicates more vivid image colors. |
+| value | Object &#124; undefined | Yes | Value of the effect property to set. -'exposure': The value is of the number type. The recommended value range is [-5, 5]. A larger value indicates a brighter image. -'vibrance': The value is of the number type. The recommended value range is [-1, 1]. A larger value indicates more vivid image colors. |
 
 **Return value:**
 

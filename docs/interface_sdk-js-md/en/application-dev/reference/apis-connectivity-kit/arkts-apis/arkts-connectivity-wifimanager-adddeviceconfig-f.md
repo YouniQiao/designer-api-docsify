@@ -30,7 +30,7 @@ Add Wi-Fi connection configuration to the device. The configuration will be upda
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns { |
+| Promise&lt;number&gt; | Returns `networkId` if the configuration is added; returns `-1` otherwise. |
 
 **Error codes:**
 

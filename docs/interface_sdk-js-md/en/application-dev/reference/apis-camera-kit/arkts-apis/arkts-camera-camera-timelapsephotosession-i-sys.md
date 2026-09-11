@@ -34,7 +34,7 @@ Obtains the supported time-lapse shooting interval range.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Interval range, in ms. The value depends on the underlying capability. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| Array&lt;number&gt; | Interval range, in ms. The value depends on the underlying capability. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -124,7 +124,7 @@ Obtains the time-lapse preview type.
 
 | Type | Description |
 | --- | --- |
-| [TimeLapsePreviewType](arkts-camera-camera-timelapsepreviewtype-e-sys.md) | Preview type. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [TimeLapsePreviewType](arkts-camera-camera-timelapsepreviewtype-e-sys.md) | Preview type. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -169,7 +169,7 @@ Obtains the time-lapse shooting state.
 
 | Type | Description |
 | --- | --- |
-| [TimeLapseRecordState](arkts-camera-camera-timelapserecordstate-e-sys.md) | Shooting state. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [TimeLapseRecordState](arkts-camera-camera-timelapserecordstate-e-sys.md) | Shooting state. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -214,7 +214,7 @@ Checks whether Try AE is required.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether Try AE is required. **true** if required, **false** otherwise. The error code type is defined in [CameraErrorCode]{ |
+| boolean | Check result for whether Try AE is required. **true** if required, **false** otherwise. The error code type is defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 

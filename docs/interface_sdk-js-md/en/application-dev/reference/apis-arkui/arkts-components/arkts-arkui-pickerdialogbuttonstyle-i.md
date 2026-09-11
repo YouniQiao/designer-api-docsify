@@ -37,7 +37,7 @@ borderRadius?: Length | BorderRadiuses
 
 Describes the button border radius.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)
 
 **Since:** 12
 
@@ -73,7 +73,7 @@ fontFamily?: Resource | string
 
 Describes the button font family.
 
-**Type:** [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| string
+**Type:** [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; string
 
 **Since:** 12
 
@@ -127,7 +127,7 @@ fontWeight?: FontWeight | number | string
 
 Describes the button font weight.
 
-**Type:** [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| number \| string
+**Type:** [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; number &#124; string
 
 **Since:** 12
 

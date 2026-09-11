@@ -1,6 +1,6 @@
 # @ohos.data.cloudData(端云服务)
 
-端云服务提供端云策略能力。端云策略提供端云同步策略配置的能力。
+端云服务提供端云策略能力。<br> <br>端云策略提供端云同步策略配置的能力。
 
 ## 导入模块
 
@@ -14,4 +14,4 @@ import { cloudData } from '@kit.ArkData';
 
 | 名称 | 说明 |
 | --- | --- |
-| [cloudData](arkts-arkdata-clouddata-n.md) | 端云服务提供端云策略能力。端云策略提供端云同步策略配置的能力。 |
+| [cloudData](arkts-arkdata-clouddata-n.md) | 端云服务提供端云策略能力。<br> <br>端云策略提供端云同步策略配置的能力。 |

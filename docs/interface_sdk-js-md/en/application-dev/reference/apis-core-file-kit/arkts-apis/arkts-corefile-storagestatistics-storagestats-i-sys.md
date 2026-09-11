@@ -20,7 +20,7 @@ import { storageStatistics } from '@kit.CoreFileKit';
 app: number
 ```
 
-The size of application. Unit: Byte.
+The size of application. <br>Unit: Byte.
 
 **Type:** number
 
@@ -36,7 +36,7 @@ The size of application. Unit: Byte.
 audio: number
 ```
 
-The size of audio file. Unit: Byte.
+The size of audio file. <br>Unit: Byte.
 
 **Type:** number
 
@@ -52,7 +52,7 @@ The size of audio file. Unit: Byte.
 file: number
 ```
 
-The size of other file. Unit: Byte.
+The size of other file. <br>Unit: Byte.
 
 **Type:** number
 
@@ -68,7 +68,7 @@ The size of other file. Unit: Byte.
 image: number
 ```
 
-The size of image file. Unit: Byte.
+The size of image file. <br>Unit: Byte.
 
 **Type:** number
 
@@ -84,7 +84,7 @@ The size of image file. Unit: Byte.
 total: number
 ```
 
-The total size of device. Unit: Byte.
+The total size of device. <br>Unit: Byte.
 
 **Type:** number
 
@@ -100,7 +100,7 @@ The total size of device. Unit: Byte.
 video: number
 ```
 
-The size of video file. Unit: Byte.
+The size of video file. <br>Unit: Byte.
 
 **Type:** number
 

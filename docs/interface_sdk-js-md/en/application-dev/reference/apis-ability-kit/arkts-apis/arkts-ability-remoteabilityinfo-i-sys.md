@@ -2,7 +2,7 @@
 
 The module provides information about a remote ability, which can be obtained through [distributedBundle.getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The APIs provided by this module are system APIs.
 

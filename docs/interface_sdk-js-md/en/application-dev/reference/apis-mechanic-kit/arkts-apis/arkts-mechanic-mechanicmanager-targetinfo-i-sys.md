@@ -2,6 +2,8 @@
 
 Target information.
 
+@typedef TargetInfo
+
 **Since:** 21
 
 **System capability:** SystemCapability.Mechanic.Core

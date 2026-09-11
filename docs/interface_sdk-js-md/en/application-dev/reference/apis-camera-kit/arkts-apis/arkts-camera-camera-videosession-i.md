@@ -45,7 +45,7 @@ Checks whether this session supports a preconfigured resolution.
 
 | Type | Description |
 | --- | --- |
-| boolean | true**: The preconfigured resolution is supported. |
+| boolean | true**: The preconfigured resolution is supported.<br>**false**: The preconfigured resolution is not supported. |
 
 **Error codes:**
 
@@ -248,7 +248,7 @@ Unsubscribes from ISO state change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i.md)&gt; | No | Callback used for unsubscription. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i.md)&gt; | No | Callback used for unsubscription.<br>If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) <br>Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## on('error')
 
@@ -258,7 +258,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to **VideoSession** error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -283,7 +283,7 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 
 Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -308,7 +308,7 @@ on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): vo
 
 Subscribes to smooth zoom state change events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -333,7 +333,7 @@ on(type: 'controlCenterEffectStatusChange', callback: AsyncCallback<ControlCente
 
 Subscribes to events indicating that the camera controller effect status changes. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -385,7 +385,7 @@ on(type: 'autoDeviceSwitchStatusChange', callback: AsyncCallback<AutoDeviceSwitc
 
 Subscribes to automatic camera switch status change events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -410,7 +410,7 @@ on(type: 'systemPressureLevelChange', callback: AsyncCallback<SystemPressureLeve
 
 Subscribes to system pressure level change events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -506,7 +506,7 @@ setQualityPrioritization(quality: QualityPrioritization): void
 
 Sets the priority level for video recording quality.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The default value is **HIGH_QUALITY**. Switching to **POWER_BALANCE** will compromise video recording quality
 > to achieve lower power usage. The extent of power conservation achieved varies depending on the platform.

@@ -1,4 +1,4 @@
-# @ohos.app.ability.DriverExtensionAbility
+# @ohos.app.ability.DriverExtensionAbility(驱动扩展能力)
 
 ## 导入模块
 

@@ -6,6 +6,8 @@ type OnFontSizeScaleUpdatedFn = (fontSizeScale: number) => void
 
 Defines an OnFontSizeScaleUpdatedFn function.
 
+@typedef { function }
+
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.

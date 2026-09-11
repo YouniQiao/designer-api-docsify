@@ -35,7 +35,7 @@ function off(type: 'readerMode', elementName: ElementName, callback?: AsyncCallb
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [3100203](../errorcode-nfc.md#3100203-接口调用顺序错误) | The off() API can be called only when the on() has been called. |
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service.<br>**适用版本：** 12+ |
@@ -47,7 +47,7 @@ function off(type: 'readerMode', elementName: ElementName, callback?: AsyncCallb
 function off(type: 'readerModeWithInterval', elementName: ElementName, callback?: Callback<TagInfo>): void
 ```
 
-取消订阅NFC Tag读卡事件。设备退出读卡模式，并恢复卡模拟。如果已通过tag.on设置NFC的读卡器模式，需要在页面退出前台或页面销毁时调用tag.off进行取消。使用callback异步回调。
+取消订阅NFC Tag读卡事件。设备退出读卡模式，并恢复卡模拟。如果已通过tag.on设置NFC的读卡器模式，需要在页面退出前台或页面销毁时调用[tag.off](#offreadermodewithinterval)进行取消。使用callback异步回调。
 
 **起始版本：** 23
 

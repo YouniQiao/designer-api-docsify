@@ -41,7 +41,7 @@ Called during the ServiceExtensionAbility lifecycle when the ServiceExtensionAbi
 
 | Type | Description |
 | --- | --- |
-| [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) \| Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) &#124; Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **Examples**
 
@@ -151,7 +151,7 @@ intent execution: onExecuteInUIAbilityBackgroundMode.
 
 | Type | Description |
 | --- | --- |
-| [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) \| Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) &#124; Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **Examples**
 
@@ -248,7 +248,7 @@ following sequence during intent execution: onExecuteInUIAbilityForegroundMode.
 
 | Type | Description |
 | --- | --- |
-| [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) \| Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) &#124; Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **Examples**
 
@@ -367,7 +367,7 @@ Called during the UIExtensionAbility lifecycle when the [UIExtensionAbility](ark
 
 | Type | Description |
 | --- | --- |
-| [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) \| Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) &#124; Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **Examples**
 

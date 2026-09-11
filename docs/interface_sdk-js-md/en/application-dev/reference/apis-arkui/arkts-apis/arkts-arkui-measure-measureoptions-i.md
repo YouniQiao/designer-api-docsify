@@ -22,7 +22,7 @@ Baseline offset of the measured text.
 
 Default value: **0**
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 10
 
@@ -40,11 +40,11 @@ constraintWidth?: number | string | Resource
 
 Layout width of the measured text.
 
-**NOTE：**
+**NOTE:**
 
 The default unit is vp. The value cannot be a percentage. If this parameter is not set, the value of **SizeOptions** is the maximum width allowed for the single-line text.
 
-**Type:** number \| string \| [Resource](arkts-arkui-resource-t.md)
+**Type:** number &#124; string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 10
 
@@ -64,7 +64,7 @@ Font family of the measured text. Default value: **'HarmonyOS Sans'**
 
 Only the default font is supported.
 
-**Type:** string \| [Resource](arkts-arkui-resource-t.md)
+**Type:** string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 9
 
@@ -82,13 +82,13 @@ Font size of the text to be measured. When **fontSize** is of the number type, t
 
 Default value: **16**
 
-**NOTE：**
+**NOTE:**
 
 The value cannot be a percentage.
 
 Since API version 12, the fp unit is used when **fontSize** is of the number type.
 
-**Type:** number \| string \| [Resource](arkts-arkui-resource-t.md)
+**Type:** number &#124; string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 9
 
@@ -108,7 +108,7 @@ Default value: **FontStyle.Normal**
 
 Value range for the number type: [0, 1], with intervals of 1, corresponding to the values in the **FontStyle** enum
 
-**Type:** number \| [FontStyle](arkts-arkui-fontstyle-e.md)
+**Type:** number &#124; [FontStyle](arkts-arkui-fontstyle-e.md)
 
 **Since:** 9
 
@@ -126,7 +126,7 @@ Font width of the measured text. For the number type, the value ranges from 100 
 
 Default value: **FontWeight.Normal**
 
-**Type:** number \| string \| [FontWeight](arkts-arkui-fontweight-e.md)
+**Type:** number &#124; string &#124; [FontWeight](arkts-arkui-fontweight-e.md)
 
 **Since:** 9
 
@@ -144,7 +144,7 @@ Letter spacing of the measured text.
 
 Default value: **0**
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 9
 
@@ -160,7 +160,7 @@ lineHeight?: number | string | Resource
 
 Line height of the measured text.
 
-**Type:** number \| string \| [Resource](arkts-arkui-resource-t.md)
+**Type:** number &#124; string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 10
 
@@ -202,7 +202,7 @@ Default value: **1**
 
 Value range for the number type: [0, 3], with intervals of 1, corresponding to the values in the **TextOverflow** enum
 
-**Type:** number \| [TextOverflow](arkts-arkui-textoverflow-e.md)
+**Type:** number &#124; [TextOverflow](arkts-arkui-textoverflow-e.md)
 
 **Since:** 10
 
@@ -224,7 +224,7 @@ Default value: **TextAlign.Start**
 
 Value range for the number type: [0, 3], with intervals of 1, corresponding to the values in the **TextAlign** enum
 
-**Type:** number \| [TextAlign](arkts-arkui-textalign-e.md)
+**Type:** number &#124; [TextAlign](arkts-arkui-textalign-e.md)
 
 **Since:** 10
 
@@ -246,7 +246,7 @@ Default value: **TextCase.Normal**
 
 Value range for the number type: [0, 2], with intervals of 1, corresponding to the values in the **TextCase** enum
 
-**Type:** number \| [TextCase](arkts-arkui-textcase-e.md)
+**Type:** number &#124; [TextCase](arkts-arkui-textcase-e.md)
 
 **Since:** 10
 
@@ -264,7 +264,7 @@ textContent: string | Resource
 
 Content of the measured text.
 
-**Type:** string \| [Resource](arkts-arkui-resource-t.md)
+**Type:** string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 9
 
@@ -280,7 +280,7 @@ textIndent?: number | string
 
 Indentation of the first line. Default value: **0**.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 11
 
@@ -300,7 +300,7 @@ Line break rule.
 
 Default value: **WordBreak.BREAK_WORD**
 
-**NOTE：**
+**NOTE:**
 
 When used with **{overflow: TextOverflow.Ellipsis}** and **maxLines**, **WordBreak.BREAK_ALL** can insert line breaks between letters when overflow occurs and display excess content with an ellipsis (...).
 

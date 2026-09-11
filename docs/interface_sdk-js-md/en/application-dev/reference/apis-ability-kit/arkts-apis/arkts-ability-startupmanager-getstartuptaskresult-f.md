@@ -30,7 +30,7 @@ Obtains the execution result of a startup task or .so file preloading task.
 
 | Type | Description |
 | --- | --- |
-| Object | Execution result of [init]{ |
+| Object | Execution result of [init](arkts-ability-app-appstartup-startuptask-startuptask-c.md#init) of the startup task if a startup task name is passed. <br>undefined if a .so file name is passed. |
 
 **Error codes:**
 

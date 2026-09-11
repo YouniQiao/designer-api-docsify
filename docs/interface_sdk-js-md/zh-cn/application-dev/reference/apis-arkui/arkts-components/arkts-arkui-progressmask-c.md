@@ -31,8 +31,8 @@ constructor(value: number, total: number, color: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 进度遮罩的当前值，与total配合使用确定进度比例，当value等于total时表示进度满。取值范围：[0.0, +∞)。传入负数时自动修正为0。 |
-| total | number | 是 | 进度遮罩的最大值。取值范围：[0.0, +∞)。传入负数时自动修正为100。 |
+| value | number | 是 | 进度遮罩的当前值，与total配合使用确定进度比例，当value等于total时表示进度满。<br>取值范围：[0.0, +∞)。传入负数时自动修正为0。 |
+| total | number | 是 | 进度遮罩的最大值。<br> 取值范围：[0.0, +∞)。传入负数时自动修正为100。 |
 | color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 进度遮罩的颜色。 |
 
 ## enableBreathingAnimation
@@ -55,7 +55,7 @@ enableBreathingAnimation(value: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否开启进度满时的呼吸光晕动画。true：开启呼吸光晕动画。false：关闭呼吸光晕动画。 |
+| value | boolean | 是 | 是否开启进度满时的呼吸光晕动画。<br>true：开启呼吸光晕动画。<br>false：关闭呼吸光晕动画。 |
 
 ## updateColor
 
@@ -99,4 +99,4 @@ updateProgress(value: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 进度遮罩的当前值。取值范围：[0.0, +∞)。传入负数时自动修正为0。 |
+| value | number | 是 | 进度遮罩的当前值。<br>取值范围：[0.0, +∞)。传入负数时自动修正为0。 |

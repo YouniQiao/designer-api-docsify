@@ -2,6 +2,8 @@
 
 音振播放器，提供音振协同播放功能。在调用AudioHapticPlayer的接口前，需要先通过[createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createplayer)创建实例。
 
+@typedef AudioHapticPlayer
+
 **起始版本：** 11
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
@@ -30,7 +32,7 @@ Enable haptics when the ringer mode is silent mode.这个方法只能在播放�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | use { |
+| enable | boolean | 是 | use `true` if application want to enable this feature. |
 
 **错误码：**
 
@@ -57,7 +59,7 @@ Check whether the device supports haptics intensity adjustment.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | { |
+| boolean | `true` means supported. |
 
 **错误码：**
 
@@ -83,7 +85,7 @@ Check whether the device supports haptics intensity ramp effect.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | { |
+| boolean | `true` means supported. |
 
 **错误码：**
 

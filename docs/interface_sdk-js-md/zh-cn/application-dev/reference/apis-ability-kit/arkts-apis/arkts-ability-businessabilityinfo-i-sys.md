@@ -2,6 +2,8 @@
 
 包含基本业务路由信息。
 
+@typedef BusinessAbilityInfo
+
 **起始版本：** 10
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

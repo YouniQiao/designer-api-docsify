@@ -17,11 +17,11 @@ Defines the options of the preview menu.
 hapticFeedbackMode? : HapticFeedbackMode
 ```
 
-Vibration effect when the menu is displayed. This parameter takes effect when ImageSpan or BuilderSpan is bound to the preview menu.
+Vibration effect when the menu pops up. It takes effect when an ImageSpan or BuilderSpan is bound to a preview menu.
 
-Default value: **HapticFeedbackMode.DISABLED** (no vibration when the menu is displayed)
+Default value: HapticFeedbackMode.DISABLED, which means no vibration when the menu pops up.
 
-Note: The settings take effect only when the application has the ohos.permission.VIBRATE permission and the user has enabled haptic feedback.
+**Note:**It takes effect only when the application has the ohos.permission.VIBRATE permission, the user has enabled haptic feedback, and the system hardware supports it.
 
 **Type:** [HapticFeedbackMode](arkts-arkui-hapticfeedbackmode-e.md)
 

@@ -108,7 +108,7 @@ Initializes screen capture and sets screen capture parameters. This API uses a p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3. Parameter verification failed. Return by promise. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3. Parameter verification failed. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
@@ -232,7 +232,7 @@ presentPicker(): Promise<void>
 
 Displays the Picker once more after the screen capture starts, allowing for dynamic updates to the recording source, such as changing the window or screen being recorded. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The ongoing capture process remains uninterrupted while updating the recording source.
 > 
@@ -390,7 +390,7 @@ Sets the display mode of the picker. The setting takes effect the next time the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pickerMode | [PickerMode](arkts-media-media-pickermode-e.md) | Yes | Picker mode.It defines the content type displayed in the picker. The options are as follows:   - **SCREEN_ONLY**: Displays only a list of screens.   - **WINDOW_ONLY**: Displays only a list of windows.   - **SCREEN_AND_WINDOW**: Displays both screens and windows. It is the default value. |
+| pickerMode | [PickerMode](arkts-media-media-pickermode-e.md) | Yes | Picker mode.<br>It defines the content type displayed in the picker. The options are as follows:<br>- **SCREEN_ONLY**: Displays only a list of screens.<br>- **WINDOW_ONLY**: Displays only a list of windows.<br>- **SCREEN_AND_WINDOW**: Displays both screens and windows. It is the default value. |
 
 **Return value:**
 

@@ -29,8 +29,8 @@ Obtains the list of applications that can be set as the default application of t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md) | Yes | Type of the target application. For details, see [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md). Currently, only **BROWSER** is supported. Any other value results in error 17700025. |
-| abilityFlags | number | Yes | [Ability flag](arkts-ability-bundlemanager-abilityflag-e.md), indicating the ability information to be obtained. Multiple flags can be combined using the bitwise OR operator, for example, bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT \| bundleManager.AbilityFlag.GET_ABILITY_INFO_WITH_PERMISSION to obtain the default ability information and permission information at the same time. |
-| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid).The default value is the user ID of the caller. Querying another user requires ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS. |
+| abilityFlags | number | Yes | [Ability flag](arkts-ability-bundlemanager-abilityflag-e.md), indicating the ability information to be obtained. Multiple flags can be combined using the bitwise OR operator, for example, bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT &#124; bundleManager.AbilityFlag.GET_ABILITY_INFO_WITH_PERMISSION to obtain the default ability information and permission information at the same time. |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid).<br>The default value is the user ID of the caller. Querying another user requires ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS. |
 
 **Return value:**
 

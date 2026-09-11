@@ -21,7 +21,7 @@ lattice?: DrawingLattice
 
 Lattice object, which is used to divide the image by lattice.
 
-**NOTE：**
+**NOTE:**
 
 Use the [createImageLattice](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-lattice-c.md#createimagelattice) API of **@ohos.graphics.drawing** to create a **Lattice** type as the input parameter. Lattices located at both even columns and even rows are fixed; those at other positions are stretched according to **slice**.
 
@@ -47,7 +47,7 @@ slice?: EdgeWidths
 
 Edge widths in different directions of a component.
 
-**NOTE：**
+**NOTE:**
 
 This attribute takes effect only when both **bottom** and **right** are greater than 0.
 

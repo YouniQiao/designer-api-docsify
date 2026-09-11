@@ -20,7 +20,7 @@ static measureText(options: MeasureOptions): number
 
 Measures the single-line display width of the specified text. For multi-line text (separated by newline characters **\n**), this API returns the width of the longest line.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Since API version 12, you can use the
 > [getMeasureUtils](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getmeasureutils) API in
@@ -51,7 +51,7 @@ Measures the single-line display width of the specified text. For multi-line tex
 
 | Type | Description |
 | --- | --- |
-| number | Text width. |
+| number | Text width.<br>Unit: px |
 
 **Examples**
 
@@ -87,7 +87,7 @@ static measureTextSize(options: MeasureOptions): SizeOptions
 
 Measures the width and height of the given text.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Since API version 12, you can use the
 > [getMeasureUtils](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getmeasureutils) API in
@@ -116,7 +116,7 @@ Measures the width and height of the given text.
 
 | Type | Description |
 | --- | --- |
-| [SizeOptions](arkts-arkui-sizeoptions-i.md) | Layout width and height occupied by the text. |
+| [SizeOptions](arkts-arkui-sizeoptions-i.md) | Layout width and height occupied by the text.<br>**NOTE:**<br>The return values for text width and height are both in px. |
 
 **Examples**
 

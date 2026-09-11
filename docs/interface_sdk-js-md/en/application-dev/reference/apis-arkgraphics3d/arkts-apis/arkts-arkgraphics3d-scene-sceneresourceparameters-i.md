@@ -2,6 +2,8 @@
 
 Describes the scene resource parameters (name and uri), which are used to provide the name of a scene resource and the path of the resource file required in the 3D scene.
 
+@typedef SceneResourceParameters
+
 **Since:** 12
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

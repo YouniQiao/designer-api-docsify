@@ -51,7 +51,7 @@ getEnvironmentVar(name: string): string
 
 Obtains the value of an environment variable.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Obtains the value of an environment variable. If the environment variable does not exist, **undefined** is
 > returned.

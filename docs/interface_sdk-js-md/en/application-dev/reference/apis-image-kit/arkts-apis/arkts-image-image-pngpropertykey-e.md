@@ -2,7 +2,7 @@
 
 Enumerates the properties available for the metadata of a PNG image.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the return value type, see [PngMetadata](arkts-image-image-pngmetadata-c.md).
 

@@ -34,19 +34,19 @@ import { intelligentVoice } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [EnrollCallbackInfo](arkts-basicservices-intelligentvoice-enrollcallbackinfo-i-sys.md) | Describes enroll callback information. |
-| [EnrollEngineConfig](arkts-basicservices-intelligentvoice-enrollengineconfig-i-sys.md) | Describes enroll engine config. |
-| [EnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-enrollintelligentvoiceengine-i-sys.md) | Implements enroll intelligent voice engine. |
-| [EnrollIntelligentVoiceEngineDescriptor](arkts-basicservices-intelligentvoice-enrollintelligentvoiceenginedescriptor-i-sys.md) | Describes enroll intelligent voice engine. |
-| [EvaluationResult](arkts-basicservices-intelligentvoice-evaluationresult-i-sys.md) | Describes evaluation result. |
-| [IntelligentVoiceManager](arkts-basicservices-intelligentvoice-intelligentvoicemanager-i-sys.md) | Implements intelligent voice management. |
-| [UploadFile](arkts-basicservices-intelligentvoice-uploadfile-i-sys.md) | Describes upload file information. |
-| [WakeupHapInfo](arkts-basicservices-intelligentvoice-wakeuphapinfo-i-sys.md) | Describes wakeup hap information. |
-| [WakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceengine-i-sys.md) | Implements wakeup intelligent voice engine. |
-| [WakeupIntelligentVoiceEngineCallbackInfo](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceenginecallbackinfo-i-sys.md) | Describes wakeup intelligent voice engine callback information. |
-| [WakeupIntelligentVoiceEngineDescriptor](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceenginedescriptor-i-sys.md) | Describes wakeup intelligent voice engine. |
-| [WakeupManager](arkts-basicservices-intelligentvoice-wakeupmanager-i-sys.md) | Implements wakeup management. |
-| [WakeupSourceFile](arkts-basicservices-intelligentvoice-wakeupsourcefile-i-sys.md) | Describes wakeup source file information. |
+| [EnrollCallbackInfo](arkts-basicservices-intelligentvoice-enrollcallbackinfo-i-sys.md) | Describes enroll callback information. @typedef EnrollCallbackInfo |
+| [EnrollEngineConfig](arkts-basicservices-intelligentvoice-enrollengineconfig-i-sys.md) | Describes enroll engine config. @typedef EnrollEngineConfig |
+| [EnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-enrollintelligentvoiceengine-i-sys.md) | Implements enroll intelligent voice engine. @typedef EnrollIntelligentVoiceEngine |
+| [EnrollIntelligentVoiceEngineDescriptor](arkts-basicservices-intelligentvoice-enrollintelligentvoiceenginedescriptor-i-sys.md) | Describes enroll intelligent voice engine. @typedef EnrollIntelligentVoiceEngineDescriptor |
+| [EvaluationResult](arkts-basicservices-intelligentvoice-evaluationresult-i-sys.md) | Describes evaluation result. @typedef EvaluationResult |
+| [IntelligentVoiceManager](arkts-basicservices-intelligentvoice-intelligentvoicemanager-i-sys.md) | Implements intelligent voice management. @typedef IntelligentVoiceManager |
+| [UploadFile](arkts-basicservices-intelligentvoice-uploadfile-i-sys.md) | Describes upload file information. @typedef UploadFile |
+| [WakeupHapInfo](arkts-basicservices-intelligentvoice-wakeuphapinfo-i-sys.md) | Describes wakeup hap information. @typedef WakeupHapInfo |
+| [WakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceengine-i-sys.md) | Implements wakeup intelligent voice engine. @typedef WakeupIntelligentVoiceEngine |
+| [WakeupIntelligentVoiceEngineCallbackInfo](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceenginecallbackinfo-i-sys.md) | Describes wakeup intelligent voice engine callback information. @typedef WakeupIntelligentVoiceEngineCallbackInfo |
+| [WakeupIntelligentVoiceEngineDescriptor](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceenginedescriptor-i-sys.md) | Describes wakeup intelligent voice engine. @typedef WakeupIntelligentVoiceEngineDescriptor |
+| [WakeupManager](arkts-basicservices-intelligentvoice-wakeupmanager-i-sys.md) | Implements wakeup management. @typedef WakeupManager |
+| [WakeupSourceFile](arkts-basicservices-intelligentvoice-wakeupsourcefile-i-sys.md) | Describes wakeup source file information. @typedef WakeupSourceFile |
 <!--DelEnd-->
 
 <!--Del-->

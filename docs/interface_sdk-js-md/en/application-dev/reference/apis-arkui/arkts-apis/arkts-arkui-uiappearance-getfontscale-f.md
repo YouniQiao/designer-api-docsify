@@ -16,7 +16,7 @@ Obtains the current font size scale factor.
 
 <!--Del-->
 
-> **NOTE：**
+> **NOTE:**
 
 > This API is a system API in API version 19 and earlier. Using this API requires the
 > [ohos.permission.UPDATE_CONFIGURATION](../../../security/AccessToken/permissions-for-system-apps.md#ohospermissionupdate_configuration)

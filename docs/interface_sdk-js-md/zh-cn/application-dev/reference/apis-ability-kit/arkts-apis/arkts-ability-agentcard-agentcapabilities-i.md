@@ -2,6 +2,8 @@
 
 定义Agent支持的可选能力。
 
+@typedef AgentCapabilities
+
 **起始版本：** 24
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core

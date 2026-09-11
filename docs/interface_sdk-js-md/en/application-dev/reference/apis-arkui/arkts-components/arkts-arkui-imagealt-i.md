@@ -19,7 +19,7 @@ error?: ResourceStr | PixelMap
 
 Placeholder image displayed when loading fails.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md)
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [PixelMap](arkts-arkui-pixelmap-t.md)
 
 **Since:** 22
 
@@ -39,7 +39,7 @@ placeholder?: ResourceStr | PixelMap
 
 Placeholder image displayed during loading.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md)
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [PixelMap](arkts-arkui-pixelmap-t.md)
 
 **Since:** 22
 

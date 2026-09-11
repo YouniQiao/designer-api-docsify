@@ -22,7 +22,7 @@ Cancels the notification card displayed in the notification center with the agen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | number | Yes | ID of the agent-powered reminder to be canceled. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md) API is called The value range is all integers. |
+| reminderId | number | Yes | ID of the agent-powered reminder to be canceled. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md) API is called <br>The value range is all integers. |
 
 **Return value:**
 

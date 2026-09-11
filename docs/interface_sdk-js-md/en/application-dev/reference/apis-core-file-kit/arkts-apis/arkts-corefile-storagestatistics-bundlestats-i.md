@@ -18,7 +18,7 @@ import { storageStatistics } from '@kit.CoreFileKit';
 appSize: number
 ```
 
-The size of application installation data. Unit: Byte.
+The size of application installation data. <br>Unit: Byte.
 
 **Type:** number
 
@@ -32,7 +32,7 @@ The size of application installation data. Unit: Byte.
 cacheSize: number
 ```
 
-The size of application cache data. Unit: Byte.
+The size of application cache data. <br>Unit: Byte.
 
 **Type:** number
 
@@ -46,7 +46,7 @@ The size of application cache data. Unit: Byte.
 dataSize: number
 ```
 
-The size of application local data, distributed data and database data. Unit: Byte.
+The size of application local data, distributed data and database data. <br>Unit: Byte.
 
 **Type:** number
 

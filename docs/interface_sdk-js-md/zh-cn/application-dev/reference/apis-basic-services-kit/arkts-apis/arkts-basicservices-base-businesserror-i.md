@@ -2,6 +2,8 @@
 
 错误参数，继承自Error类，用于在接口调用失败时传递标准化的错误信息，包含错误码和可选的附加信息。
 
+@typedef BusinessError [since 6 - 11] @typedef BusinessError&lt;T = void&gt; [since 12]
+
 **继承/实现关系：** BusinessError extends [Error](../../apis-arkweb/arkts-components/arkts-arkweb-messagelevel-e.md#error)
 
 **起始版本：** 6

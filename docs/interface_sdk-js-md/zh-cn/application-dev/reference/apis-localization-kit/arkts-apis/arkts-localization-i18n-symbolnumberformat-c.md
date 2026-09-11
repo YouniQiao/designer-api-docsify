@@ -70,7 +70,7 @@ public format(value: number | bigint): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| bigint | 是 | 待格式化的数字。 |
+| value | number &#124; bigint | 是 | 待格式化的数字。 |
 
 **返回值：**
 
@@ -198,7 +198,7 @@ public formatToParts(value?: number | bigint): Intl.NumberFormatPart[]
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| bigint | 否 | 待格式化的数字。默认值：NaN。 |
+| value | number &#124; bigint | 否 | 待格式化的数字。默认值：NaN。 |
 
 **返回值：**
 
@@ -241,7 +241,7 @@ public parse(text: string, lenientMode: boolean): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 待解析的本地化数字字符串。 |
-| lenientMode | boolean | 是 | 是否采用宽松模式，true表示采用宽松模式，false表示不采用宽松模式。宽松模式下，能够识别错误的千分符，如"1,23,456"可以正确解析为"123456"。 |
+| lenientMode | boolean | 是 | 是否采用宽松模式，true表示采用宽松模式，false表示不采用宽松模式。<br>宽松模式下，能够识别错误的千分符，如"1,23,456"可以正确解析为"123456"。 |
 
 **返回值：**
 

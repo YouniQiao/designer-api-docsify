@@ -14,7 +14,7 @@ function getControlledAppLists(): Promise<Array<string>>
 
 Obtains the list of applications controlled by enterprise DLP for the current user. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > This API can only be used to query the list of applications controlled by enterprise DLP, which is set using
 > [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md).
 

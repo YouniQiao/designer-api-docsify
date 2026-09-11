@@ -2,7 +2,7 @@
 
 Describes the API object for text decoration line styles.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When the bottom contour of a character intersects with the decoration, underline avoidance is triggered, commonly
 > affecting characters like "g", "j", "y", "q", and "p."

@@ -14,7 +14,7 @@ function on(type: 'uninstallDLPSandbox', listener: Callback<DLPSandboxState>): v
 
 Registers a listener for the DLP sandbox uninstall event, which is used to detect changes in the sandbox environment. After the registration, the system notifies the application using a callback when the DLP sandbox is uninstalled.
 
-After a listener is registered by calling **on**, you are advised to call **off** to unregister the listener and release resources when the listener is no longer needed.
+After a listener is registered by calling **on**, you are advised to call **[off](arkts-dataprotection-dlppermission-off-f-sys.md#offuninstalldlpsandbox)** to unregister the listener and release resources when the listener is no longer needed.
 
 The DLP management application needs to track the creation and destruction status of the sandbox to maintain the sandbox list or release resources.
 

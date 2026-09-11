@@ -2,12 +2,14 @@
 
 The **nfctech** module provides APIs for reading and writing tags that use different Near-Field Communication (NFC)
  technologies.
- > **NOTE**
+
+> **NOTE**
  >
  > If an error is reported while importing the tag module editor, the capabilities of a specific device model may
  > exceed the capability set defined for the default device. To use these capabilities, configure a custom SysCap by
  > following instructions in
  > [SystemCapability](https://developer.huawei.com/consumer/en/doc/harmonyos-references/syscap).
+
 
 
 ## Summary

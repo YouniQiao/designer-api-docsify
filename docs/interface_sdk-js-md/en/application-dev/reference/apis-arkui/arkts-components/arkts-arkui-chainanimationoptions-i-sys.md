@@ -99,7 +99,7 @@ Intensity of chain animation.
 maxSpace: Length
 ```
 
-Maximum space for chain animation. Unit: same as **Length**.
+Maximum space for chain animation. <br>Unit: same as **Length**.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -117,7 +117,7 @@ Maximum space for chain animation. Unit: same as **Length**.
 minSpace: Length
 ```
 
-Minimum space for chain animation. Unit: same as **Length**.
+Minimum space for chain animation. <br>Unit: same as **Length**.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

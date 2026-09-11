@@ -14,7 +14,7 @@ function setNetFirewallPolicy(userId: number, policy: NetFirewallPolicy): Promis
 
 Sets the firewall policy for a system user ID, including the firewall switch status and default inbound or outbound behavior (allow or deny). Different firewall policies can be configured for different system user IDs. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If this API is called by multiple applications under the same system user, the latest delivered policy prevails.
 > **Required permission**: ohos.permission.MANAGE_NET_FIREWALL

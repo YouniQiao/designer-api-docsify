@@ -80,7 +80,7 @@ decapsulateSync(priKey: PriKey, wrappedKey: Uint8Array): Uint8Array
 
 Key decapsulation operation. Using the receiver's private key, executed by the receiver, to decapsulate the shared key from the ciphertext.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, [decapsulate](#decapsulate). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, [decapsulate](#decapsulate). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 26.0.0
 
@@ -155,7 +155,7 @@ Key encapsulation operation. Using the recipient's public key, executed by the s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pubKey | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | Yes | The public key of the receiver. |
-| ikme | Uint8Array \| null | Yes | Random number seed, used to replace the random number within the algorithm. For the ML-KEM algorithm, the random number seed is 32 bytes. It is recommended to pass null. |
+| ikme | Uint8Array &#124; null | Yes | Random number seed, used to replace the random number within the algorithm. For the ML-KEM algorithm, the random number seed is 32 bytes. It is recommended to pass null. |
 
 **Return value:**
 
@@ -202,7 +202,7 @@ encapsulateSync(pubKey: PubKey, ikme: Uint8Array | null): KemEncapResult
 
 Key encapsulation operation. Using the recipient's public key, executed by the sender, to generate and encapsulate a shared key.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, [encapsulate](#encapsulate). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, [encapsulate](#encapsulate). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 26.0.0
 
@@ -217,7 +217,7 @@ Key encapsulation operation. Using the recipient's public key, executed by the s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pubKey | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | Yes | The public key of the receiver. |
-| ikme | Uint8Array \| null | Yes | Random number seed, used to replace the random number within the algorithm. For the ML-KEM algorithm, the random number seed is 32 bytes. It is recommended to pass null. |
+| ikme | Uint8Array &#124; null | Yes | Random number seed, used to replace the random number within the algorithm. For the ML-KEM algorithm, the random number seed is 32 bytes. It is recommended to pass null. |
 
 **Return value:**
 

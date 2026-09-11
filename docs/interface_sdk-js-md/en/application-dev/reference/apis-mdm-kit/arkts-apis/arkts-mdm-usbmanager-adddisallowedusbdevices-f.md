@@ -22,7 +22,7 @@ Use cases:
 - Work with the [removeDisallowedUsbDevices](arkts-mdm-usbmanager-removedisallowedusbdevices-f.md) API to implement dynamic  
 management of USB device types.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The [addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md) API is recommended.
 > A policy conflict is reported when this API is called in the following scenarios:

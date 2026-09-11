@@ -37,7 +37,7 @@ Obtains the distributed account information. This API uses an asynchronous callb
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 **Examples**
@@ -116,7 +116,7 @@ queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 
 Queries the distributed account information. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
@@ -163,7 +163,7 @@ queryOsAccountDistributedInfo(): Promise<DistributedInfo>
 
 Queries the distributed account information. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
@@ -225,7 +225,7 @@ Sets the distributed account information. This API uses an asynchronous callback
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid accountInfo. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -286,7 +286,7 @@ Sets the distributed account information. This API uses a promise to return the 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid accountInfo. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -322,7 +322,7 @@ updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCall
 
 Updates the distributed account information. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setOsAccountDistributedInfo](#setosaccountdistributedinfo)
@@ -372,7 +372,7 @@ updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 
 Updates the distributed account information. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setOsAccountDistributedInfo](#setosaccountdistributedinfo-1)

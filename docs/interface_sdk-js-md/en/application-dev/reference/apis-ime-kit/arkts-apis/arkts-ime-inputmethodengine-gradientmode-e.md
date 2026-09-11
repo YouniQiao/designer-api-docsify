@@ -1,7 +1,6 @@
 # GradientMode
 
-Enumerates the gradient modes of the input method.
-
+Enumerates the gradient modes of the input method.<br> <br>  
 | Name | Value| Description |  
 | ------------ | -- | ------------------ |  
 | NONE | 0 | The gradient mode is not used.|

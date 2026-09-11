@@ -30,7 +30,7 @@ During file processing, the system checks whether the file is a DLP file and the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Returns `true` if fd is a DLP file; returns `false` otherwise. |
 
 **Error codes:**
 

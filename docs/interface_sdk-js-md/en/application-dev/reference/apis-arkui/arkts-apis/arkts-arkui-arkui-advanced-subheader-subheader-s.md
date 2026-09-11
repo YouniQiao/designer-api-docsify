@@ -2,7 +2,7 @@
 
 The **SubHeader** component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This component can be used only in the stage model.
 > 
@@ -65,8 +65,7 @@ Default value:
 
 **Type:** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
 
-**Default:** {start: LengthMetrics.resource($r('sys.float.margin_left')), 
- end: LengthMetrics.resource($r('sys.float.margin_right'))}
+**Default:** {start: LengthMetrics.resource($r('sys.float.margin_left')), <br> end: LengthMetrics.resource($r('sys.float.margin_right'))}
 
 **Since:** 12
 
@@ -94,9 +93,7 @@ If a secondary title, with or without an icon, is displayed on the left:
 
 **Type:** [LocalizedPadding](arkts-arkui-localizedpadding-i.md)
 
-**Default:** set different default values according to the width of the subHeader: 
- When the left area is secondaryTitle or the group of secondaryTitle and icon, 
- the default value is {start: LengthMetrics.vp(12), end: LengthMetrics.vp(12)};
+**Default:** set different default values according to the width of the subHeader: <br> When the left area is secondaryTitle or the group of secondaryTitle and icon, <br> the default value is {start: LengthMetrics.vp(12), end: LengthMetrics.vp(12)};
 
 **Since:** 12
 
@@ -250,7 +247,7 @@ Text attributes of the primary title, such as the font color, font size, and fon
 
 Default value: **undefined**, indicating that the default style is used.
 
-**Type:** TextModifier
+**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **Since:** 12
 
@@ -292,7 +289,7 @@ Text attributes of the secondary title, such as the font color, font size, and f
 
 Default value: **undefined**, indicating that the default style is used.
 
-**Type:** TextModifier
+**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **Since:** 12
 

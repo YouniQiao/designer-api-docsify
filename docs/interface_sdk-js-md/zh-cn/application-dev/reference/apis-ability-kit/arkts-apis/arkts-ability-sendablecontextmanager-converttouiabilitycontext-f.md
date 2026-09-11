@@ -32,7 +32,7 @@ function convertToUIAbilityContext(sendableContext: SendableContext): common.UIA
 
 | 类型 | 说明 |
 | --- | --- |
-| [common.UIAbilityContext](arkts-ability-common-uiabilitycontext-t.md) | [UIAbilityContext]{ |
+| [common.UIAbilityContext](arkts-ability-common-uiabilitycontext-t.md) | [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) object. |
 
 **错误码：**
 

@@ -30,8 +30,8 @@ This method queries usage information at the BY_OPTIMIZED interval by default.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | number | Yes | Indicates the start time of the query period, in milliseconds. |
-| end | number | Yes | Indicates the end time of the query period, in milliseconds. |
+| begin | number | Yes | Indicates the start time of the query period, in milliseconds.<br> Unit:ms |
+| end | number | Yes | Indicates the end time of the query period, in milliseconds.<br> Unit:ms |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; | Yes | the callback of queryBundleStateInfos. the [BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md) objects containing the usage information about each bundle. |
 
 **Examples**
@@ -76,14 +76,14 @@ This method queries usage information at the BY_OPTIMIZED interval by default.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | number | Yes | Indicates the start time of the query period, in milliseconds. |
-| end | number | Yes | Indicates the end time of the query period, in milliseconds. |
+| begin | number | Yes | Indicates the start time of the query period, in milliseconds.<br> Unit:ms |
+| end | number | Yes | Indicates the end time of the query period, in milliseconds.<br> Unit:ms |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; | the promise returned by queryBundleStatsInfos. the { |
+| Promise&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; | the promise returned by queryBundleStatsInfos. the [BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md) objects containing the usage information about each bundle. |
 
 **Examples**
 

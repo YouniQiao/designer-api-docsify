@@ -141,7 +141,7 @@ on(event: string, callback: Function): void
 
 Subscribes to an event.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When the callback is triggered by **emit**, the invoker is the EventHub object. To change the direction of
 > **this** in **callback**, use an arrow function.

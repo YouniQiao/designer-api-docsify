@@ -19,7 +19,7 @@ footer?: ResourceStr | CustomBuilder
 
 Footer of the menu item group.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 9
 
@@ -35,7 +35,7 @@ header?: ResourceStr | CustomBuilder
 
 Header of the menu item group.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 9
 

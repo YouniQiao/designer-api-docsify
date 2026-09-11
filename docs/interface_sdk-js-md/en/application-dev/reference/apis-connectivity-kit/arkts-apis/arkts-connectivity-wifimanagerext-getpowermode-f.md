@@ -24,8 +24,6 @@ Obtains the current Wi-Fi power mode.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)&gt; |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |

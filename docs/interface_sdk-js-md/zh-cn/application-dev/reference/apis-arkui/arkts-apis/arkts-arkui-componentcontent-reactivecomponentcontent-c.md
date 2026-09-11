@@ -374,7 +374,7 @@ inheritFreezeOptions(enabled: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | ReactiveComponentContent对象是否设置为继承父组件中自定义组件的冻结策略。true：继承父组件中自定义组件的冻结策略；false：不继承父组件中自定义组件的冻结策略。   **说明：** 仅当父组件为自定义组件、BuilderNode、ComponentContent、ReactiveBuilderNode或ReactiveComponentContent时，设置true才会继承父组件的冻结策略。 |
+| enabled | boolean | 是 | ReactiveComponentContent对象是否设置为继承父组件中自定义组件的冻结策略。<br>true：继承父组件中自定义组件的冻结策略；false：不继承父组件中自定义组件的冻结策略。<br>**说明：** 仅当父组件为自定义组件、BuilderNode、ComponentContent、ReactiveBuilderNode或ReactiveComponentContent时，设置true才会继承父组件的冻结策略。 |
 
 **示例**
 
@@ -580,7 +580,7 @@ isDisposed(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 后端实体节点是否解除引用。 |
+| boolean | 后端实体节点是否解除引用。<br>true：节点已与后端实体节点解除引用；false：节点未与后端实体节点解除引用。 |
 
 **示例**
 
@@ -726,7 +726,7 @@ isTransferred(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回ReactiveComponentContent是否通过transfer.transferStatic或transfer.transferDynamic方法创建。 |
+| boolean | 返回ReactiveComponentContent是否通过transfer.transferStatic或transfer.transferDynamic方法创建。<br>true：ReactiveComponentContent通过transfer.transferStatic或transfer.transferDynamic方法创建。<br>false：ReactiveComponentContent不通过transfer.transferStatic或transfer.transferDynamic方法创建。 |
 
 ## recycle
 

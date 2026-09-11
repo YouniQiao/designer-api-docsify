@@ -4,7 +4,7 @@ FaultLogExtensionContext is the context of [FaultLogExtensionAbility](arkts-perf
 
 This module provides APIs for accessing resources of a specific [FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md). An ExtensionAbility can use the context directly provided by ExtensionContext or that extended from ExtensionContext.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The APIs of this module can be used only in the stage model.
 

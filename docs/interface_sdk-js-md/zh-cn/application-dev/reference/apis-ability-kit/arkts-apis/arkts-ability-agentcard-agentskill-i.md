@@ -2,6 +2,8 @@
 
 表示Agent可以执行的不同能力或功能。
 
+@typedef AgentSkill
+
 **起始版本：** 24
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core

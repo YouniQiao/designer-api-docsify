@@ -24,7 +24,7 @@ equalTo: Record<string, number | string | boolean>
 
 指示筛选条件，当前仅支持通过等于筛选。
 
-**类型：** Record&lt;string, number \| string \| boolean&gt;
+**类型：** Record&lt;string, number &#124; string &#124; boolean&gt;
 
 **起始版本：** 11
 

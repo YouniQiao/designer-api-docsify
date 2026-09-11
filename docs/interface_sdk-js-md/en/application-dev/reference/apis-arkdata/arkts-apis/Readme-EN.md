@@ -185,7 +185,7 @@
   - [DataShareResultSet(system api)](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DataType(system api)](arkts-arkdata-data-datashareresultset-datatype-e-sys.md)<!--DelEnd-->
-- [@ohos.data.distributedData](arkts-data-distributeddata.md)
+- [@ohos.data.distributedData(Distributed Data Management)](arkts-data-distributeddata.md)
   - [distributedData](arkts-arkdata-distributeddata-n.md)
     - [Constants](arkts-arkdata-distributeddata-constants-n.md)
       - [Constants](arkts-arkdata-constants-con.md)

@@ -34,7 +34,7 @@ Obtains the supported time-lapse shooting interval range.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;number&gt; | Interval range, in ms. The value depends on the underlying capability. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| Array&lt;number&gt; | Interval range, in ms. The value depends on the underlying capability. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **错误码：**
 
@@ -124,7 +124,7 @@ Obtains the time-lapse preview type.
 
 | 类型 | 说明 |
 | --- | --- |
-| [TimeLapsePreviewType](arkts-camera-camera-timelapsepreviewtype-e-sys.md) | Preview type. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [TimeLapsePreviewType](arkts-camera-camera-timelapsepreviewtype-e-sys.md) | Preview type. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **错误码：**
 
@@ -169,7 +169,7 @@ Obtains the time-lapse shooting state.
 
 | 类型 | 说明 |
 | --- | --- |
-| [TimeLapseRecordState](arkts-camera-camera-timelapserecordstate-e-sys.md) | Shooting state. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [TimeLapseRecordState](arkts-camera-camera-timelapserecordstate-e-sys.md) | Shooting state. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **错误码：**
 
@@ -214,7 +214,7 @@ Checks whether Try AE is required.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Check result for whether Try AE is required. **true** if required, **false** otherwise. The error code type is defined in [CameraErrorCode]{ |
+| boolean | Check result for whether Try AE is required. **true** if required, **false** otherwise. The error code type is defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **错误码：**
 

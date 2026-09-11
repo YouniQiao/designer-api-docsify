@@ -32,7 +32,7 @@ Obtains the global reuse pool of the custom component. If the component does not
 
 | Type | Description |
 | --- | --- |
-| [IReusePool](arkts-arkui-arkui-statemanagement-ireusepool-i.md) \| undefined | If a global reuse pool is configured for the current component, the reuse pool information is returned. Otherwise, **undefined** is returned. |
+| [IReusePool](arkts-arkui-arkui-statemanagement-ireusepool-i.md) &#124; undefined | If a global reuse pool is configured for the current component, the reuse pool information is returned. Otherwise, **undefined** is returned. |
 
 **Examples**
 

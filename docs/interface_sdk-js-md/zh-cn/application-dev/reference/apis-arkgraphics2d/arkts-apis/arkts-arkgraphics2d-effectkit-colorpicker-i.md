@@ -315,7 +315,7 @@ getTopProportionColors(colorCount: number): Array<Color | null>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[Color](arkts-arkgraphics2d-effectkit-color-i.md) \| null&gt; | Color数组，即图像占比前`colorCount`的颜色值数组，按占比排序。 |
+| Array&lt;[Color](arkts-arkgraphics2d-effectkit-color-i.md) &#124; null&gt; | Color数组，即图像占比前`colorCount`的颜色值数组，按占比排序。   - 当实际读取的特征色个数小于`colorCount`时，数组大小为实际特征色个数。   - 取色失败或取色个数小于1返回`[null]`。 |
 
 **示例**
 

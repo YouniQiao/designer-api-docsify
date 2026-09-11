@@ -26,7 +26,7 @@ function setMagnificationState(state: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | boolean | 是 | 表示放大效果的启用状态。   - true：表示启用放大效果。   - false：表示关闭放大效果。 |
+| state | boolean | 是 | 表示放大效果的启用状态。<br>- true：表示启用放大效果。<br>- false：表示关闭放大效果。 |
 
 **错误码：**
 

@@ -42,7 +42,7 @@ aboutToReuse?(params: Record<string, Object | undefined | null>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | Record&lt;string, Object \| undefined \| null&gt; | 是 | 自定义组件的构造参数。其中key为复用时外部传入的组件成员变量名，value为复用时外部传入的对应参数值。<br>**适用版本：** 20 |
+| params | Record&lt;string, Object &#124; undefined &#124; null&gt; | 是 | 自定义组件的构造参数。其中key为复用时外部传入的组件成员变量名，value为复用时外部传入的对应参数值。<br>**适用版本：** 20 |
 
 ## onLayout
 

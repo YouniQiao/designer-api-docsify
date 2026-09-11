@@ -40,7 +40,7 @@ getFloatingBallWindowInfo(): Promise<FloatingBallWindowInfo>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: The process ID calling the API does not match the process ID of the session that created the floating ball. |
 | [1300023](../errorcode-window.md#1300023-闪控球内部错误) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
-| [1300024](../errorcode-window.md#1300024-闪控球窗口状态异常) | The floating ball window state is abnormal. Possible causes:  1. The floating ball controller has been destroyed.  2. The floating ball window is not created or has been destroyed. |
+| [1300024](../errorcode-window.md#1300024-闪控球窗口状态异常) | The floating ball window state is abnormal. Possible causes:<br>1. The floating ball controller has been destroyed. <br>2. The floating ball window is not created or has been destroyed. |
 | [1300025](../errorcode-window.md#1300025-闪控球状态不支持该操作) | The floating ball state does not support this operation. Possible cause: The floating ball is not started. |
 
 **示例**
@@ -79,7 +79,7 @@ off(type: 'stateChange', callback?: Callback<FloatingBallState>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) | Wrong parameters for operating the floating ball. Possible causes:  1.Mandatory parameters are left unspecified.  2.Callback is null or not callable. |
+| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) | Wrong parameters for operating the floating ball. Possible causes:<br>1.Mandatory parameters are left unspecified. <br>2.Callback is null or not callable. |
 | [1300023](../errorcode-window.md#1300023-闪控球内部错误) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
 | [1300024](../errorcode-window.md#1300024-闪控球窗口状态异常) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
@@ -121,7 +121,7 @@ off(type: 'click', callback?: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) | Wrong parameters for operating the floating ball. Possible causes:  1.Mandatory parameters are left unspecified.  2.Callback is null or not callable. |
+| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) | Wrong parameters for operating the floating ball. Possible causes:<br>1.Mandatory parameters are left unspecified. <br>2.Callback is null or not callable. |
 | [1300023](../errorcode-window.md#1300023-闪控球内部错误) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
 | [1300024](../errorcode-window.md#1300024-闪控球窗口状态异常) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
@@ -212,7 +212,7 @@ on(type: 'stateChange', callback: Callback<FloatingBallState>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) | Wrong parameters for operating the floating ball. Possible causes:  1.Mandatory parameters are left unspecified.  2.Callback is null or not callable. |
+| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) | Wrong parameters for operating the floating ball. Possible causes:<br>1.Mandatory parameters are left unspecified. <br>2.Callback is null or not callable. |
 | [1300022](../errorcode-window.md#1300022-重复操作闪控球) | Repeated floating ball operation. |
 | [1300023](../errorcode-window.md#1300023-闪控球内部错误) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
 | [1300024](../errorcode-window.md#1300024-闪控球窗口状态异常) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
@@ -255,7 +255,7 @@ on(type: 'click', callback: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) | Wrong parameters for operating the floating ball. Possible causes:  1.Mandatory parameters are left unspecified.  2.Callback is null or not callable. |
+| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) | Wrong parameters for operating the floating ball. Possible causes:<br>1.Mandatory parameters are left unspecified. <br>2.Callback is null or not callable. |
 | [1300022](../errorcode-window.md#1300022-重复操作闪控球) | Repeated floating ball operation. |
 | [1300023](../errorcode-window.md#1300023-闪控球内部错误) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
 | [1300024](../errorcode-window.md#1300024-闪控球窗口状态异常) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
@@ -293,7 +293,7 @@ onDestroy(callback: Callback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数。返回闪控球停止的原因。停止原因包括：   - "APP_STOP"：应用主动停止。   - "DUMPSTER_STOP"：拖动到垃圾桶触发停止。   - "LONG_PRESS_SINGLE_STOP"：长按单个闪控球触发停止。   - "LONG_PRESS_ALL_STOP"：长按全部闪控球触发停止。   - "MAIN_WINDOW_DESTROY_STOP"：context关联的主窗口被销毁后触发停止。   - "SQUEEZE"：超出设备闪控球数量上限，被其他闪控球挤占停止。   - "FLOAT_VIEW_STOP"：与标准悬浮窗绑定后，绑定状态下跟随标准悬浮窗停止。   - "STOP_IN_SIDEBAR"：在侧边栏中被停止。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数。返回闪控球停止的原因。停止原因包括：<br>- "APP_STOP"：应用主动停止。<br>- "DUMPSTER_STOP"：拖动到垃圾桶触发停止。<br>- "LONG_PRESS_SINGLE_STOP"：长按单个闪控球触发停止。<br>- "LONG_PRESS_ALL_STOP"：长按全部闪控球触发停止。<br>- "MAIN_WINDOW_DESTROY_STOP"：context关联的主窗口被销毁后触发停止。<br>- "SQUEEZE"：超出设备闪控球数量上限，被其他闪控球挤占停止。<br>- "FLOAT_VIEW_STOP"：与标准悬浮窗绑定后，绑定状态下跟随标准悬浮窗停止。<br>- "STOP_IN_SIDEBAR"：在侧边栏中被停止。 |
 
 **错误码：**
 
@@ -355,7 +355,7 @@ restoreMainWindow(want: Want): Promise<void>
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: The process ID calling the API does not match the process ID of the session that created the floating ball. |
 | [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) | Wrong parameters for operating the floating ball. Possible cause: Want parameter is null or invalid. |
 | [1300023](../errorcode-window.md#1300023-闪控球内部错误) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
-| [1300024](../errorcode-window.md#1300024-闪控球窗口状态异常) | The floating ball window state is abnormal. Possible causes:  1.The floating ball controller has been destroyed.  2.The floating ball window is not created or has been destroyed. |
+| [1300024](../errorcode-window.md#1300024-闪控球窗口状态异常) | The floating ball window state is abnormal. Possible causes:<br>1.The floating ball controller has been destroyed. <br>2.The floating ball window is not created or has been destroyed. |
 | [1300025](../errorcode-window.md#1300025-闪控球状态不支持该操作) | The floating ball state does not support this operation. Possible cause: The floating ball is not started. |
 | [1300026](../errorcode-window.md#1300026-闪控球拉起应用窗口失败) | Failed to restore the main window. Possible causes: 1. Invalid parameter. The provided bundleName does not match the caller's application bundleName. 2. The application lacks the ohos.permission.AUTO_RESTORE_MAIN_WINDOW permission, and no user interaction (click) on the floating ball has occurred. |
 
@@ -465,11 +465,11 @@ startFloatingBall(params: FloatingBallParams): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually returned by VerifyAccessToken. |
-| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) | Wrong parameters for operating the floating ball. Possible causes:  1. FloatingBallParams parameter is null.  2. Parameter is invalid, such as invalid icon object, template type, or title (empty or exceeds 64 bytes). |
+| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) | Wrong parameters for operating the floating ball. Possible causes:<br>1. FloatingBallParams parameter is null. <br>2. Parameter is invalid, such as invalid icon object, template type, or title (empty or exceeds 64 bytes). |
 | [1300020](../errorcode-window.md#1300020-创建闪控球窗口失败) | Failed to create the floating ball window. Possible cause: The main window is not shown. |
 | [1300021](../errorcode-window.md#1300021-启动多个闪控球失败) | Failed to start multiple floating ball windows. |
 | [1300022](../errorcode-window.md#1300022-重复操作闪控球) | Repeated floating ball operation. |
-| [1300023](../errorcode-window.md#1300023-闪控球内部错误) | Floating ball internal error. Possible causes:  1.The floating ball controller has been destroyed.  2.Internal error, failed to show the floating ball window. Such as insufficient resources or abnormal window service. |
+| [1300023](../errorcode-window.md#1300023-闪控球内部错误) | Floating ball internal error. Possible causes:<br>1.The floating ball controller has been destroyed. <br>2.Internal error, failed to show the floating ball window. Such as insufficient resources or abnormal window service. |
 | [1300024](../errorcode-window.md#1300024-闪控球窗口状态异常) | The floating ball window state is abnormal. Possible cause: The floating ball window is not created or has been destroyed. |
 | [1300025](../errorcode-window.md#1300025-闪控球状态不支持该操作) | The floating ball state does not support this operation. Possible cause: The floating ball state is stopping. |
 | [1300034](../errorcode-window.md#1300034-闪控窗与其他悬浮窗口操作冲突) | This operation conflicts with other floating windows. Possible cause: App has already started float view.<br>**适用版本：** 26.0.0+ |
@@ -567,7 +567,7 @@ updateFloatingBall(params: FloatingBallParams): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: Internal error, the window type is not a floating ball. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: The process ID calling the API does not match the process ID of the session that created the floating ball. |
-| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) | Wrong parameters for operating the floating ball. Possible causes:  1.FloatingBallParams parameter is null.  2.Parameter is invalid, such as invalid icon object, template type, or title (empty or exceeds 64 bytes). |
+| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) | Wrong parameters for operating the floating ball. Possible causes:<br>1.FloatingBallParams parameter is null. <br>2.Parameter is invalid, such as invalid icon object, template type, or title (empty or exceeds 64 bytes). |
 | [1300023](../errorcode-window.md#1300023-闪控球内部错误) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
 | [1300024](../errorcode-window.md#1300024-闪控球窗口状态异常) | The floating ball window state is abnormal. Possible cause: The floating ball window is not created or has been destroyed. |
 | [1300025](../errorcode-window.md#1300025-闪控球状态不支持该操作) | The floating ball state does not support this operation. Possible cause: The floating ball is not started. |

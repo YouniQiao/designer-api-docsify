@@ -17,7 +17,9 @@ User copy event.
 preventDefault?: Callback<void>
 ```
 
-Prevents the default cut event.
+Whether to prevent the system default copy event.
+
+If omitted, the system default copy behavior is executed.
 
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 

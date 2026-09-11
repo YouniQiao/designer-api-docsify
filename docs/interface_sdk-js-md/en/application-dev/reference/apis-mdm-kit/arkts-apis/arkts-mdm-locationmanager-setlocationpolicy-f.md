@@ -14,7 +14,7 @@ function setLocationPolicy(admin: Want, policy: LocationPolicy): void
 
 Sets a location service policy. This API can be used in enterprise management and control scenarios. For example, you can disable the location service in confidential areas to protect information security, or forcibly enable the location service in logistics and distribution applications to track device locations.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Disabled: Set this option when privacy protection or power saving is required.
 > 
@@ -35,7 +35,7 @@ Sets a location service policy. This API can be used in enterprise management an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| policy | [LocationPolicy](arkts-mdm-locationmanager-locationpolicy-e.md) | Yes | Location service policy to set. The value can be any of the following:    - **0**: The default policy is used.    - **1**: The location service is disabled.    - **2**: The location service is forcibly on. |
+| policy | [LocationPolicy](arkts-mdm-locationmanager-locationpolicy-e.md) | Yes | Location service policy to set. The value can be any of the following:<br>- **0**: The default policy is used. <br>- **1**: The location service is disabled. <br>- **2**: The location service is forcibly on. |
 
 **Error codes:**
 

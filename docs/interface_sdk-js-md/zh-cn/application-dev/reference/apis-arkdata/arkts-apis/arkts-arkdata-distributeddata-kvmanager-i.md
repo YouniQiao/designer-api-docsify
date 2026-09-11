@@ -8,7 +8,7 @@
 
 **替代接口：** KVManager
 
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core @version 1
 
 ## 导入模块
 

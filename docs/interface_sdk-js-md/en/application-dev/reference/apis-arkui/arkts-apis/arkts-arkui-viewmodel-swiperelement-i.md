@@ -26,4 +26,4 @@ Requests or cancels the crown rotation focus for a component. If focus is set to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) | No | { focus: true \| false } |
+| obj | [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) | No | { focus: true &#124; false } |

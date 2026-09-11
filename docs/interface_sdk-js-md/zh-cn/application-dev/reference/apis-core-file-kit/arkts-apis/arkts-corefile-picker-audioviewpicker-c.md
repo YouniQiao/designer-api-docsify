@@ -104,7 +104,7 @@ save(option?: AudioSaveOptions): Promise<Array<string>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象。返回audioPicker保存音频文件后的结果集。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象。返回audioPicker保存音频文件后的结果集。<br>**注意**： 此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的[文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
 **示例**
 
@@ -146,7 +146,7 @@ save(option: AudioSaveOptions, callback: AsyncCallback<Array<string>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | option | [AudioSaveOptions](arkts-corefile-picker-audiosaveoptions-c.md) | 是 | audioPicker保存音频文件选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回audioPicker保存音频文件后的结果集。   **注意**： 此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的[文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回audioPicker保存音频文件后的结果集。<br>**注意**： 此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的[文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
 **示例**
 
@@ -189,7 +189,7 @@ save(callback: AsyncCallback<Array<string>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回audioPicker保存音频文件后的结果集。   **注意**： 此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的[文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回audioPicker保存音频文件后的结果集。<br>**注意**： 此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的[文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
 **示例**
 
@@ -238,7 +238,7 @@ select(option?: AudioSelectOptions): Promise<Array<string>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象。返回audioPicker选择音频后的结果集。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象。返回audioPicker选择音频后的结果集。<br>**注意**： 此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的[媒体类uri的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri介绍)。 |
 
 **示例**
 
@@ -279,7 +279,7 @@ select(option: AudioSelectOptions, callback: AsyncCallback<Array<string>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | option | [AudioSelectOptions](arkts-corefile-picker-audioselectoptions-c.md) | 是 | audioPicker音频选择选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回audioPicker选择音频后的结果集。   **注意**： 此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的[媒体类uri的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri介绍)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回audioPicker选择音频后的结果集。<br>**注意**： 此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的[媒体类uri的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri介绍)。 |
 
 **示例**
 
@@ -321,7 +321,7 @@ select(callback: AsyncCallback<Array<string>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回audioPicker选择音频后的结果集。   **注意**： 此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的[媒体类uri的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri介绍)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回audioPicker选择音频后的结果集。<br>**注意**： 此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的[媒体类uri的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri介绍)。 |
 
 **示例**
 

@@ -243,7 +243,7 @@ Returns the String value result of normalizing the string into the normalization
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| form | "NFC" \| "NFD" \| "NFKC" \| "NFKD" | Yes |  |
+| form | "NFC" &#124; "NFD" &#124; "NFKC" &#124; "NFKD" | Yes |  |
 
 **Return value:**
 

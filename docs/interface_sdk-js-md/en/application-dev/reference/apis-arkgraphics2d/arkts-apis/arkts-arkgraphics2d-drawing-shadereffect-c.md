@@ -2,7 +2,7 @@
 
 Implements the shader effect. After a shader effect is set for a pen or brush, the shader effect instead of the color attribute is used for drawing. In this case, the alpha value set for the pen or brush still takes effect.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The initial APIs of this class are supported since API version 12.
 > 
@@ -49,7 +49,7 @@ Creates a **ShaderEffect** object with a single color.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## createComposeShader
 
@@ -108,8 +108,8 @@ Creates a **ShaderEffect** object that generates a conical gradient between two 
 | endRadius | number | Yes | Radius of the end circle of the gradient. A negative value is invalid. The value is a floating point number. |
 | colors | Array&lt;number&gt; | Yes | Array of colors to distribute between the start circle and end circle. The values in the array are 32-bit (ARGB) unsigned integers. |
 | mode | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | Yes | Tile mode of the shader effect. |
-| pos | Array&lt;number&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the two circles. |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | Matrix** object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
+| pos | Array&lt;number&gt; &#124; null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the two circles. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) &#124; null | No | Matrix** object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
 
 **Return value:**
 
@@ -121,7 +121,7 @@ Creates a **ShaderEffect** object that generates a conical gradient between two 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createImageShader
 
@@ -144,7 +144,7 @@ Creates a shader based on an image. You are advised not to use the function for 
 | tileX | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | Yes | Tile mode in the horizontal direction. |
 | tileY | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | Yes | Tile mode in the vertical direction. |
 | samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | Yes | Image sampling options. |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | (Optional) Matrix transformation applied to an image. If this parameter is left empty, no transformation is applied. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) &#124; null | No | (Optional) Matrix transformation applied to an image. If this parameter is left empty, no transformation is applied. |
 
 **Return value:**
 
@@ -179,8 +179,8 @@ Creates a **ShaderEffect** object that generates a linear gradient between two p
 | endPt | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | Yes | End point. |
 | colors | Array&lt;number&gt; | Yes | Array of colors to distribute between the two points. The values in the array are 32-bit (ARGB) unsigned integers. |
 | mode | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | Yes | Tile mode of the shader effect. |
-| pos | Array&lt;number&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the two points. |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | Matrix** object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
+| pos | Array&lt;number&gt; &#124; null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the two points. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) &#124; null | No | Matrix** object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
 
 **Return value:**
 
@@ -192,7 +192,7 @@ Creates a **ShaderEffect** object that generates a linear gradient between two p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createRadialGradient
 
@@ -215,8 +215,8 @@ Creates a **ShaderEffect** object that generates a radial gradient based on the 
 | radius | number | Yes | Radius of the gradient. A negative number is invalid. The value is a floating point number. |
 | colors | Array&lt;number&gt; | Yes | Array of colors to distribute between the center and ending shape of the circle. The values in the array are 32-bit (ARGB) unsigned integers. |
 | mode | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | Yes | Tile mode of the shader effect. |
-| pos | Array&lt;number&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the center and ending shape of the circle. |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | Matrix** object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
+| pos | Array&lt;number&gt; &#124; null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the center and ending shape of the circle. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) &#124; null | No | Matrix** object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
 
 **Return value:**
 
@@ -228,7 +228,7 @@ Creates a **ShaderEffect** object that generates a radial gradient based on the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createSweepGradient
 
@@ -253,8 +253,8 @@ Creates a **ShaderEffect** object that generates a color sweep gradient around a
 | mode | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | Yes | Tile mode of the shader effect. |
 | startAngle | number | Yes | Start angle of the sweep gradient, in degrees. The value 0 indicates the positive direction of the X axis. A positive number indicates an offset towards the positive direction, and a negative number indicates an offset towards the negative direction. The value is a floating point number. |
 | endAngle | number | Yes | End angle of the sweep gradient, in degrees. The value 0 indicates the positive direction of the X axis. A positive number indicates an offset towards the positive direction, and a negative number indicates an offset towards the negative direction. A value less than the start angle is invalid. The value is a floating point number. |
-| pos | Array&lt;number&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that the colors are evenly distributed between the start angle and end angle. |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | Matrix** object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
+| pos | Array&lt;number&gt; &#124; null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that the colors are evenly distributed between the start angle and end angle. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) &#124; null | No | Matrix** object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
 
 **Return value:**
 
@@ -266,4 +266,4 @@ Creates a **ShaderEffect** object that generates a color sweep gradient around a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |

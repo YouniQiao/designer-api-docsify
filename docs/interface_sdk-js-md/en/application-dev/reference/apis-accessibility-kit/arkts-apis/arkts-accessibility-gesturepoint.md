@@ -1,8 +1,10 @@
 # @ohos.accessibility.GesturePoint(Gesture Point)
 
 GesturePoint represents a gesture touch point and is the basic unit that constitutes a gesture path (GesturePath).
- This module is used to create touch point information for gesture paths, for use by accessibility applications to
+
+This module is used to create touch point information for gesture paths, for use by accessibility applications to
  inject gestures.
+
 
 
 ## Modules to Import

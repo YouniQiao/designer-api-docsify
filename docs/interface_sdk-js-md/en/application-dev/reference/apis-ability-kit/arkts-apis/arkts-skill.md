@@ -8,6 +8,7 @@ The module defines a skill object. Such an object can be obtained through
  [ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md).)
 
 
+
 ## Summary
 
 ### Interfaces

@@ -2,7 +2,7 @@
 
 The module provides basic APIs for manipulating Picture in Picture (PiP). For example, you can use the APIs to check whether the PiP feature is supported and create a PiP controller to start or stop a PiP window. PiP is mainly used in video playback, video calls, or video meetings.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Before <!--RP2-->OpenHarmony 6.0<!--RP2End-->, the PiP feature was supported only on phones and tablets. Starting
 > from <!--RP2-->OpenHarmony 6.0<!--RP2End-->, the PiP feature is supported on phones, PCs/2-in-1 devices, tablets,

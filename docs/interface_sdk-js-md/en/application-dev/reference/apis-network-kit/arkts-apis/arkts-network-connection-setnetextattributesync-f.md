@@ -14,7 +14,7 @@ function setNetExtAttributeSync(netHandle: NetHandle, netExtAttribute: string): 
 
 Sets extended attributes of the network specified by **netHandle** to indicate its security level. This API returns the result synchronously.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, this API is available only for PCs.
 

@@ -88,7 +88,7 @@ convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, valu
 Enables conversion between window orientation, screen orientation, and screen angle.
 
 Window orientation refers to the direction of the screen where the window resides, using the Window module's definitions for portrait and landscape modes. Window orientations are represented by the digits 0, 1, 2, and 3, corresponding to portrait, reverse landscape, reverse portrait, and landscape, respectively. These definitions match those in [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) and the [Orientation](arkts-arkui-window-orientation-e.md) enum. For example, setting **Orientation** to **LANDSCAPE** indicates a landscape window orientation.   
-> **NOTE：**
+> **NOTE:**
 > 
 > The following figure and table show the relationship between the window orientation, screen orientation, and
 > screen angle of a bar-type device.
@@ -1144,7 +1144,7 @@ getWindowStatus(): WindowStatusType
 
 Obtains the mode of this window.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, when the window is
 > maximized (covering the entire screen, with a dock bar and status bar on 2-in-1 devices, and a status bar on
@@ -1228,7 +1228,7 @@ Currently, this API can be used only on the main window of an application.
 
 | Type | Description |
 | --- | --- |
-| [TransitionAnimation](arkts-arkui-window-transitionanimation-i.md) \| undefined | Transition animation configuration in the corresponding scene. If the [setWindowTransitionAnimation]{ |
+| [TransitionAnimation](arkts-arkui-window-transitionanimation-i.md) &#124; undefined | Transition animation configuration in the corresponding scene. If the [setWindowTransitionAnimation](#setwindowtransitionanimation) API is not used, undefined is returned. |
 
 **Error codes:**
 
@@ -1462,7 +1462,7 @@ Obtains whether the current window can receive [drag events](../arkts-components
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the current window can receive drag events. |
+| boolean | Whether the current window can receive drag events.<br>**true** if the current window can receive drag events; **false** otherwise. |
 
 **Error codes:**
 
@@ -1490,7 +1490,7 @@ Obtains whether the current window supports the event separation state.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the current window supports the event separation state. |
+| boolean | Whether the current window supports the event separation state.<br>**true** if support; **false** otherwise. |
 
 **Error codes:**
 
@@ -1606,7 +1606,7 @@ Checks whether a floating window, modal window, or system window (**WindowType**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the window is enabled to access the avoid area. |
+| boolean | Check result for whether the window is enabled to access the avoid area.<br> **true** if enabled, **false** otherwise. |
 
 **Error codes:**
 
@@ -1625,7 +1625,7 @@ isWindowHighlighted(): boolean
 
 Checks whether the window is active. To obtain the active state, call this API when the [WindowEventType](arkts-arkui-window-windoweventtype-e.md) lifecycle is **WINDOW_ACTIVE**.
 
-You can use on('windowHighlightChange') to listen for status changes and then execute the corresponding service.
+You can use [on('windowHighlightChange')](#onwindowhighlightchange) to listen for status changes and then execute the corresponding service.
 
 **Since:** 18
 
@@ -2163,7 +2163,7 @@ This operation is not supported in a window in full-screen mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [moveWindowTo](#movewindowto)(x: int, y: int)
+**Substitutes:** [moveWindowTo](#movewindowto)(x: number, y: number)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2194,7 +2194,7 @@ This operation is not supported in a window in full-screen mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [moveWindowTo](#movewindowto-1)(x: int, y: int, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [moveWindowTo](#movewindowto)(x: number, y: number, callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2214,7 +2214,7 @@ moveWindowTo(x: number, y: number): Promise<void>
 
 Moves this window. This API uses a promise to return the result. A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [moveWindowToAsync()](#movewindowtoasync).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API is best suited for the floating window mode (when the window mode is
 > **window.WindowStatusType.FLOATING**, which you can check using
@@ -2269,7 +2269,7 @@ moveWindowTo(x: number, y: number, callback: AsyncCallback<void>): void
 
 Moves this window. This API uses an asynchronous callback to return the result. A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [moveWindowToAsync()](#movewindowtoasync).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API is best suited for the floating window mode (when the window mode is
 > **window.WindowStatusType.FLOATING**, which can obtained using
@@ -2321,7 +2321,7 @@ Moves this window. This API uses a promise to return the result. A value is retu
 
 This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other window modes, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)). In floating window mode, the movement behavior of different types of windows is as follows.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
 > if the title bar of the main window or a child window is moved out of the screen's visible area,
@@ -2371,7 +2371,7 @@ This API takes effect only when the window is in floating window mode (**window.
 | App subwindow/Modal window| Move relative to the screen.| Move relative to the main window.|
 | System window/Global floating window| Move relative to the screen.| Move relative to the screen.|
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
 > if the title bar of the main window or a child window is moved out of the screen's visible area,
@@ -2416,7 +2416,7 @@ Moves this window based on the coordinates. This API uses a promise to return th
 
 This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other window modes, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - When the main window is in floating window mode, this API does not take effect or return an error if called
 > in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
@@ -2463,7 +2463,7 @@ Moves this window to the specified position based on the coordinates. This API u
 
 This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other window modes, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - When the main window is in floating window mode, this API does not take effect or return an error if called
 > in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
@@ -2511,7 +2511,7 @@ Moves the window based on the [global coordinate system](../../../windowmanager/
 
 This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other window modes, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - When the main window is in floating window mode, this API does not take effect or return an error if called
 > in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
@@ -2570,7 +2570,7 @@ Unsubscribes from the window rotation change event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'rotationChange' | Yes | Event type. The value is fixed at **'rotationChange'**, indicating the window rotation change event. |
-| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md), [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) \| void&gt; | No | Callback used to return the result. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md), [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) &#124; void&gt; | No | Callback used to return the result. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -3440,7 +3440,7 @@ This API can be registered only on the main thread. If a window registers multip
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'rotationChange' | Yes | Event type. The value is fixed at **'rotationChange'**, indicating the window rotation change event. |
-| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md), [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) \| void&gt; | Yes | Callback used to return [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) and [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md). |
+| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md), [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) &#124; void&gt; | Yes | Callback used to return [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) and [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md). |
 
 **Error codes:**
 
@@ -4051,11 +4051,11 @@ Subscribes to the window lifecycle change event.
 on(type: 'windowStatusChange', callback: Callback<WindowStatusType>): void
 ```
 
-Enables the listening for window status changes. When the window status changes, a notification is sent. (In this case, the window attributes may not be updated yet. If you need to obtain the changed window size and position immediately after receiving the window status change notification, you are advised to use on('windowStatusDidChange').)
+Enables the listening for window status changes. When the window status changes, a notification is sent. (In this case, the window attributes may not be updated yet. If you need to obtain the changed window size and position immediately after receiving the window status change notification, you are advised to use [on('windowStatusDidChange')](#onwindowstatusdidchange).)
 
-After the listening is enabled using this API, multiple callbacks will be received when the **maximize** or **recover** method is called. To obtain the deduplicated callback, you can use on('windowStatusDidChange').
+After the listening is enabled using this API, multiple callbacks will be received when the **maximize** or **recover** method is called. To obtain the deduplicated callback, you can use [on('windowStatusDidChange')](#onwindowstatusdidchange).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, when the window is
 > maximized (covering the entire screen, with a dock bar and status bar on 2-in-1 devices, and a status bar on
@@ -4120,9 +4120,9 @@ Subscribes to the event indicating that the child window is closed. This event i
 
 If the event is subscribed to multiple times, only the most recently subscribed-to event takes effect.
 
-The callback function in this API is executed synchronously. For asynchronous close events of child windows, refer to on('windowWillClose').
+The callback function in this API is executed synchronously. For asynchronous close events of child windows, refer to [on('windowWillClose')](#onwindowwillclose).
 
-If there is an existing event subscribed to by calling on('windowWillClose'), only the on('windowWillClose') API will be responded to.
+If there is an existing event subscribed to by calling [on('windowWillClose')](#onwindowwillclose), only the [on('windowWillClose')](#onwindowwillclose) API will be responded to.
 
 **Since:** 12
 
@@ -4154,7 +4154,7 @@ on(type: 'windowWillClose', callback: Callback<void, Promise<boolean>>): void
 
 Subscribes to the event indicating that the main window or child window will be closed. This event is triggered only when the user clicks the close button in the system-provided title bar to close the window. It is not triggered when the window is closed in other ways.
 
-The callback function in this API is executed asynchronously. For synchronous close events of child windows, refer to on('subWindowClose'). For synchronous close events of the main window, refer to on('windowStageClose').
+The callback function in this API is executed asynchronously. For synchronous close events of child windows, refer to [on('subWindowClose')](#onsubwindowclose). For synchronous close events of the main window, refer to on('windowStageClose').
 
 **Since:** 15
 
@@ -4562,7 +4562,7 @@ This operation is not supported in a window in full-screen mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [resize](#resize)(width: int, height: int)
+**Substitutes:** [resize](#resize)(width: number, height: number)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -4605,7 +4605,7 @@ This operation is not supported in a window in full-screen mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [resize](#resize-1)(width: int, height: int, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [resize](#resize)(width: number, height: number, callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -4637,7 +4637,7 @@ If the window width or height is greater than the maximum width or height limit,
 
 This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). If this API is called when the window is in other window modes, error code 1300002 is reported. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - When the main window is in floating window mode, this API does not take effect or return an error if called
 > in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
@@ -4687,7 +4687,7 @@ If the window width or height is less than the minimum width or height limit, th
 
 If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - When the main window is in floating window mode, this API does not take effect or return an error if called
 > in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
@@ -4734,7 +4734,7 @@ If the window width or height is greater than the maximum width or height limit,
 
 This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other scenarios, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - In non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
 > this API does not work for the main window.
@@ -4841,7 +4841,7 @@ setAspectRatio(ratio: number, callback: AsyncCallback<void>): void
 
 Sets the aspect ratio of the window content layout (excluding decorations like borders and title bars). This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - When the window size is set by using other APIs such as
 > [resize](#resize) and
@@ -4884,7 +4884,7 @@ setAspectRatio(ratio: number): Promise<void>
 
 Sets the aspect ratio of the window content layout (excluding decorations like borders and title bars). This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - When the window size is set by using other APIs such as
 > [resize](#resize) and
@@ -4989,7 +4989,7 @@ When the screen brightness setting for the window takes effect, Control Panel ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowBrightness](#setwindowbrightness)(brightness: double)
+**Substitutes:** [setWindowBrightness](#setwindowbrightness)(brightness: number)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -5019,7 +5019,7 @@ When the screen brightness setting for the window takes effect, Control Panel ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowBrightness](#setwindowbrightness-1)(brightness: double, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [setWindowBrightness](#setwindowbrightness)(brightness: number, callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -5089,7 +5089,7 @@ setContentAspectRatio(ratio: number, isPersistent?: boolean, needUpdateRect?: bo
 
 Sets the aspect ratio of the window content layout (excluding decorations like borders and title bars). This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - When you adjust the window width and height using the same **ratio** parameter, the window size adapts to
 > changes in the border decoration size or visibility.
@@ -5114,8 +5114,8 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ratio | number | Yes | Aspect ratio of the window content layout (excluding decorations like borders and title bars). The value is a floating-point number and is restricted by the maximum and minimum sizes of the window. The minimum ratio is the value of minimum width divided by the maximum height, and the maximum ratio is the maximum width divided by the minimum height. The maximum and minimum sizes of the window are determined by the intersection of the setting of [WindowLimits](arkts-arkui-window-windowlimits-i.md) and the system limit. The system limit takes precedence over [WindowLimits](arkts-arkui-window-windowlimits-i.md). The valid range of **ratio** varies with [WindowLimits](arkts-arkui-window-windowlimits-i.md). If [WindowLimits](arkts-arkui-window-windowlimits-i.md) is set prior to **ratio**, any conflict will result in an error code when setting **ratio**. Conversely, if **ratio** is set before and then conflicts arise with the subsequently configured [WindowLimits](arkts-arkui-window-windowlimits-i.md), the window's aspect ratio may not adhere to the initially configured value of **ratio**. |
-| isPersistent | boolean | No | Whether the aspect ratio should be saved persistently.If this parameter is set to **true**, the aspect ratio is saved persistently. This means that the setting is valid in floating window mode even after the window is destroyed, the application is closed, or the device is restarted. You can call [resetAspectRatio](#resetaspectratio) to clear the persistently saved aspect ratio.If this parameter is set to **false**, the aspect ratio applies only to the current window and is cleared once the window is destroyed.The default value is **true**. |
-| needUpdateRect | boolean | No | Whether the window size should be immediately updated based on the current aspect ratio.If this parameter is set to **true**, the window size is updated immediately based on the current aspect ratio.If this parameter is set to **false**, the window size is updated based on the current aspect ratio when the window is dragged and resized. You can manually trigger an update by calling [resize](#resize) or [resizeAsync](#resizeasync).The default value is **true**. |
+| isPersistent | boolean | No | Whether the aspect ratio should be saved persistently.<br>If this parameter is set to **true**, the aspect ratio is saved persistently. This means that the setting is valid in floating window mode even after the window is destroyed, the application is closed, or the device is restarted. You can call [resetAspectRatio](#resetaspectratio) to clear the persistently saved aspect ratio.<br>If this parameter is set to **false**, the aspect ratio applies only to the current window and is cleared once the window is destroyed.<br>The default value is **true**. |
+| needUpdateRect | boolean | No | Whether the window size should be immediately updated based on the current aspect ratio.<br>If this parameter is set to **true**, the window size is updated immediately based on the current aspect ratio.<br>If this parameter is set to **false**, the window size is updated based on the current aspect ratio when the window is dragged and resized. You can manually trigger an update by calling [resize](#resize) or [resizeAsync](#resizeasync).<br>The default value is **true**. |
 
 **Return value:**
 
@@ -5180,7 +5180,7 @@ Sets whether the modal window responds to the back gesture event. An error code 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to respond to the back gesture event.   **true** means to respond to the back gesture event and trigger the **onBackPress** callback, **false** otherwise. |
+| enabled | boolean | Yes | Whether to respond to the back gesture event.<br>**true** means to respond to the back gesture event and trigger the **onBackPress** callback, **false** otherwise.<br> |
 
 **Return value:**
 
@@ -5503,10 +5503,10 @@ Full-screen mode means that the layout does not avoid the status bar or <!--RP15
 
 Non-full-screen mode means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!--RP 15End-->, and components do not overlap with them.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 6 and deprecated since API version 9. You are advised to use
-> [setWindowSystemBarEnable()](#setwindowsystembarenable)
+> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
 > and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)
 > to implement the full-screen mode.
 
@@ -5537,10 +5537,10 @@ Full-screen mode means that the layout does not avoid the status bar or <!--RP15
 
 Non-full-screen mode means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!--RP 15End-->, and components do not overlap with them.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 6 and deprecated since API version 9. You are advised to use
-> [setWindowSystemBarEnable()](#setwindowsystembarenable)
+> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
 > and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)
 > to implement the full-screen mode.
 
@@ -5622,7 +5622,7 @@ Sets whether to enable the immersive layout for the main window. This API does n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable the immersive layout.   **true** to enable, **false** otherwise. |
+| enabled | boolean | Yes | Whether to enable the immersive layout.<br>**true** to enable, **false** otherwise.<br> |
 
 **Error codes:**
 
@@ -6501,7 +6501,7 @@ Sets the supported window modes of the app window.
 setSystemAvoidAreaEnabled(enabled: boolean): Promise<void>
 ```
 
-Enables the capability to obtain the window avoidance area information using [getWindowAvoidArea()](#getwindowavoidarea) or listen for window avoidance area changes using on('avoidAreaChange') after a global floating window, modal window, or system window is created.
+Enables the capability to obtain the window avoidance area information using [getWindowAvoidArea()](#getwindowavoidarea) or listen for window avoidance area changes using [on('avoidAreaChange')](#onavoidareachange) after a global floating window, modal window, or system window is created.
 
 **Since:** 18
 
@@ -6554,7 +6554,7 @@ The return value does not indicate that the status bar and <!--RP15-->three-butt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | Yes | Whether to show the status bar and<!--RP15-->three-button navigation bar<!--RP15End--> in full-screen mode.For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
+| names | Array&lt;'status' &#124; 'navigation'&gt; | Yes | Whether to show the status bar and<!--RP15-->three-button navigation bar<!--RP15End--> in full-screen mode.<br>For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## setSystemBarEnable
@@ -6581,7 +6581,7 @@ The return value does not indicate that the status bar and <!--RP15-->three-butt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | Yes | Whether to show the status bar and<!--RP15-->three-button navigation bar<!--RP15End--> in full-screen mode.For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
+| names | Array&lt;'status' &#124; 'navigation'&gt; | Yes | Whether to show the status bar and<!--RP15-->three-button navigation bar<!--RP15End--> in full-screen mode.<br>For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
 
 **Return value:**
 
@@ -6662,8 +6662,8 @@ Sets whether to show the window title bar and dock bar when the cursor hovers ov
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isTitleHoverShown | boolean | No | Whether to show the window title bar.   **true** to show, **false** otherwise. The default value is **true**. |
-| isDockHoverShown | boolean | No | Whether to show the dock bar.   **true** to show, **false** otherwise. The default value is **true**. |
+| isTitleHoverShown | boolean | No | Whether to show the window title bar.<br>**true** to show, **false** otherwise. The default value is **true**.<br> |
+| isDockHoverShown | boolean | No | Whether to show the dock bar.<br>**true** to show, **false** otherwise. The default value is **true**.<br> |
 
 **Return value:**
 
@@ -6855,7 +6855,7 @@ In the stage model, this API must be used after the call of [loadContent](#loadc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | string \| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Yes | the specified color.<br>**Since:** 18 |
+| color | string &#124; [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Yes | the specified color.<br>**Since:** 18 |
 
 **Error codes:**
 
@@ -7191,7 +7191,7 @@ When this API is called to enable delayed raising, in cross-window drag-and-drop
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEnabled | boolean | Yes | Whether to enable delayed raising.   **true** to enable, **false** otherwise. |
+| isEnabled | boolean | Yes | Whether to enable delayed raising.<br>**true** to enable, **false** otherwise. |
 
 **Error codes:**
 
@@ -7507,13 +7507,13 @@ If **setWindowLimits** has not been called, you can call [getWindowLimits](#getw
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | windowLimits | [WindowLimits](arkts-arkui-window-windowlimits-i.md) | Yes | Target size limits, in px or vp. |
-| isForcible | boolean | Yes | Whether to forcibly set the window size limits.When the unit of the input parameter [windowLimits](arkts-arkui-window-windowlimits-i.md) is vp, the process is performed based on value **false** regardless of whether **isForcible** is set to **true** or **false**. The minimum and maximum values of the window width and height depend on the system limit.When the unit of the input parameter [windowLimits](arkts-arkui-window-windowlimits-i.md) is px: If **isForcible** is set to **true**, the minimum width and height of the window are subject to the smaller value between the system limit and 40 vp, and the maximum width and height of the window are subject to the system limit. If **isForcible** is set to **false**, the minimum and maximum widths and heights of the window are subject to the system limit. |
+| isForcible | boolean | Yes | Whether to forcibly set the window size limits.<br>When the unit of the input parameter [windowLimits](arkts-arkui-window-windowlimits-i.md) is vp, the process is performed based on value **false** regardless of whether **isForcible** is set to **true** or **false**. The minimum and maximum values of the window width and height depend on the system limit.<br>When the unit of the input parameter [windowLimits](arkts-arkui-window-windowlimits-i.md) is px: If **isForcible** is set to **true**, the minimum width and height of the window are subject to the smaller value between the system limit and 40 vp, and the maximum width and height of the window are subject to the system limit. If **isForcible** is set to **false**, the minimum and maximum widths and heights of the window are subject to the system limit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[WindowLimits](arkts-arkui-window-windowlimits-i.md)&gt; | Promise used to return the new window size limits. |
+| Promise&lt;[WindowLimits](arkts-arkui-window-windowlimits-i.md)&gt; | Promise used to return the new window size limits. <br>If the unit of the input parameter [windowLimits](arkts-arkui-window-windowlimits-i.md) is vp, the intersection of the input parameter and the default window size limit of the system is returned. <br>If the unit of the input parameter [windowLimits](arkts-arkui-window-windowlimits-i.md) is px: The intersection of the input parameter and the default window size limit of the system is returned when **isForcible** is set to **false**. The intersection of the input parameter and [the smaller value between the system limit and 40 vp, the maximum value of the system limit] is returned when **isForcible** is set to **true**. |
 
 **Error codes:**
 
@@ -7771,7 +7771,7 @@ The return value does not indicate that the status bar and <!--RP15-->three-butt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | Yes | Whether to show the status bar and<!--RP15-->three-button navigation bar<!--RP15End--> in full-screen mode.For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
+| names | Array&lt;'status' &#124; 'navigation'&gt; | Yes | Whether to show the status bar and<!--RP15-->three-button navigation bar<!--RP15End--> in full-screen mode.<br>For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -7802,7 +7802,7 @@ The return value does not indicate that the status bar and <!--RP15-->three-butt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | Yes | The set of system bar |
+| names | Array&lt;'status' &#124; 'navigation'&gt; | Yes | The set of system bar |
 
 **Return value:**
 
@@ -8180,7 +8180,7 @@ showWindow(callback: AsyncCallback<void>): void
 
 Shows this window. This API uses an asynchronous callback to return the result. This API takes effect only for a system window, application child window, modal window, or global floating window. For the main window of an application, this API moves it at the top when the main window is already displayed.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Before calling this API, you are advised to load the page by using
 > [loadContent](#loadcontent) or
@@ -8215,7 +8215,7 @@ showWindow(): Promise<void>
 
 Shows this window. This API uses a promise to return the result. This API takes effect only for a system window, application child window, modal window, or global floating window. For the main window of an application, this API moves it at the top when the main window is already displayed.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Before calling this API, you are advised to load the page by using
 > [loadContent](#loadcontent) or
@@ -8252,7 +8252,7 @@ Shows this window or moves an already visible application main window to the top
 
 This API can be used only for application child windows, application main windows, global floating windows, and system windows, excluding windows of the TYPE_DIALOG type and modal child windows (windows that have the modal property enabled via **setSubWindowModal**).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Before calling this API, you are advised to load the page by using
 > [loadContent](#loadcontent) or
@@ -8294,7 +8294,7 @@ This API can be used only for application child windows, application main window
 snapshot(callback: AsyncCallback<image.PixelMap>): void
 ```
 
-Captures this window. This API uses an asynchronous callback to return the result. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode)), taking a screenshot will result in a blank screen.
+Captures this window. This API uses an asynchronous callback to return the result. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode-1)), taking a screenshot will result in a blank screen.
 
 **Since:** 9
 
@@ -8320,7 +8320,7 @@ Captures this window. This API uses an asynchronous callback to return the resul
 snapshot(): Promise<image.PixelMap>
 ```
 
-Captures this window. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode)), taking a screenshot will result in a blank screen.
+Captures this window. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode-1)), taking a screenshot will result in a blank screen.
 
 **Since:** 9
 
@@ -8346,7 +8346,7 @@ Captures this window. If privacy mode is enabled for the current window (using [
 snapshotIgnorePrivacy(): Promise<image.PixelMap>
 ```
 
-Captures this window. This API can be called to obtain the screenshot of the current window even if privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode)).
+Captures this window. This API can be called to obtain the screenshot of the current window even if privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode-1)).
 
 **Since:** 18
 
@@ -8373,7 +8373,7 @@ Captures this window. This API can be called to obtain the screenshot of the cur
 snapshotSync(): image.PixelMap
 ```
 
-Captures this window. This API returns the result synchronously. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode)), taking a screenshot will result in a blank screen.
+Captures this window. This API returns the result synchronously. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode-1)), taking a screenshot will result in a blank screen.
 
 In the stage model, this API must be used after the call of [loadContent](#loadcontent) or [setUIContent()](#setuicontent) takes effect.
 

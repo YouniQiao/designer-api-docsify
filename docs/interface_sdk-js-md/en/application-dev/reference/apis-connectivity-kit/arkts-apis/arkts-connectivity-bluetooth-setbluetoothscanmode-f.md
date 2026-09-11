@@ -35,7 +35,7 @@ Sets the Bluetooth scan mode for a device.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the Bluetooth scan mode is set; returns `false` otherwise. |
 
 **Examples**
 

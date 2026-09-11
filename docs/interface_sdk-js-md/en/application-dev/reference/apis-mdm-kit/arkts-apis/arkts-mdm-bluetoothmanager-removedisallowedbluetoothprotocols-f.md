@@ -27,7 +27,7 @@ Removes disallowed Bluetooth protocols. After removing some protocols, the user 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| accountId | number | Yes | User ID, which must be greater than or equal to 0. You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
+| accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
 | protocols | Array&lt;[Protocol](arkts-mdm-bluetoothmanager-protocol-e.md)&gt; | Yes | Bluetooth protocol array. |
 
 **Error codes:**
@@ -72,7 +72,7 @@ function removeDisallowedBluetoothProtocols(admin: Want, accountId: number, prot
 
 Removes Bluetooth protocols from the blocklist. After the setting, specified users are no longer restricted by the transfer policy and can properly use these Bluetooth protocols.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 1. When the SPP protocol is passed, the value of the **policy** parameter can only be
 > **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned.
@@ -97,7 +97,7 @@ Removes Bluetooth protocols from the blocklist. After the setting, specified use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| accountId | number | Yes | User ID, which must be greater than or equal to 0. You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
+| accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
 | protocols | Array&lt;[Protocol](arkts-mdm-bluetoothmanager-protocol-e.md)&gt; | Yes | Array of Bluetooth protocols to be removed from the blocklist. |
 | policy | [TransferPolicy](arkts-mdm-bluetoothmanager-transferpolicy-e.md) | Yes | Transfer policy. |
 

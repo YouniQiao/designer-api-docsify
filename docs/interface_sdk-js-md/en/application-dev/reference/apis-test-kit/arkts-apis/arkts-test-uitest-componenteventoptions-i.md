@@ -21,7 +21,7 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 on?: On
 ```
 
-Attribute requirements of the target component to listen for. By default, all components are listened for. **Note：**: Only components with specified attributes can be listened for. Components with relative positions such as **On.isBefore**, **On.isAfter**, and **On.within** cannot be listened for.
+Attribute requirements of the target component to listen for. By default, all components are listened for. **Note:** Only components with specified attributes can be listened for. Components with relative positions such as **On.isBefore**, **On.isAfter**, and **On.within** cannot be listened for.
 
 **Type:** [On](arkts-test-uitest-on-c.md)
 

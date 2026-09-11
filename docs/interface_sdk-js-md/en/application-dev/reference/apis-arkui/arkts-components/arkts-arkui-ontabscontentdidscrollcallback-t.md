@@ -5,7 +5,7 @@ declare type OnTabsContentDidScrollCallback = (selectedIndex: number, index: num
 ```
 
 Defines the callback triggered when content in the **Tabs** component scrolls.   
-> **NOTE：**
+> **NOTE:**
 > 
 > - For example, when the index of the currently selected tab page is **0**, during a transition animation from page
 > 0 to page 1, the callback is triggered for all pages within the viewport on every frame. When pages 0 and 1 are

@@ -27,7 +27,8 @@ borderRadius?: Length
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
-**默认值：** 8.0vp [since 11]
+**默认值：**
+- API版本11+：8.0vp
 
 **起始版本：** 10
 

@@ -85,7 +85,7 @@ responseCode: ResponseCode | number
 
 回调函数执行成功时，此字段为[ResponseCode](arkts-network-http-responsecode-e.md)。若执行失败，错误码将会从AsyncCallback中的err字段返回。
 
-**类型：** [ResponseCode](arkts-network-http-responsecode-e.md) \| number
+**类型：** [ResponseCode](arkts-network-http-responsecode-e.md) &#124; number
 
 **起始版本：** 6
 
@@ -108,7 +108,7 @@ HTTP请求根据响应头中content-type类型返回对应的响应格式内容�
 
 若HttpRequestOption有expectDataType字段，开发者需传入与服务器返回类型相同的数据类型。
 
-**类型：** string \| Object \| ArrayBuffer
+**类型：** string &#124; Object &#124; ArrayBuffer
 
 **起始版本：** 6
 

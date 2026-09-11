@@ -1,6 +1,6 @@
 # RichEditorDeleteDirection
 
-Deletion direction.
+Defines the deletion direction.
 
 **Since:** 10
 
@@ -12,7 +12,7 @@ Deletion direction.
 BACKWARD
 ```
 
-Backward.
+Deletes backward.
 
 **Since:** 10
 
@@ -28,7 +28,7 @@ Backward.
 FORWARD
 ```
 
-Forward.
+Deletes forward.
 
 **Since:** 10
 

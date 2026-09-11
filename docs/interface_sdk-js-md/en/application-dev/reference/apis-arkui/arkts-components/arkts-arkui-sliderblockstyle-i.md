@@ -39,7 +39,7 @@ shape?: CircleAttribute | EllipseAttribute | PathAttribute | RectAttribute
 
 Custom shape of the slider.
 
-**Type:** [CircleAttribute](arkts-arkui-circle-attribute.md) \| [EllipseAttribute](arkts-arkui-ellipse-attribute.md) \| [PathAttribute](arkts-arkui-path-attribute.md) \| [RectAttribute](arkts-arkui-rect-attribute.md)
+**Type:** [CircleAttribute](arkts-arkui-circle-comp-attribute.md) &#124; [EllipseAttribute](arkts-arkui-ellipse-comp-attribute.md) &#124; [PathAttribute](arkts-arkui-path-comp-attribute.md) &#124; [RectAttribute](arkts-arkui-rect-comp-attribute.md)
 
 **Since:** 10
 
@@ -61,7 +61,8 @@ Default value: **SliderBlockType.DEFAULT**, indicating the round slider.
 
 **Type:** [SliderBlockType](arkts-arkui-sliderblocktype-e.md)
 
-**Default:** SliderBlockType.DEFAULT - indicating the round slider. [since 11]
+**Default:**
+- API version 11+: SliderBlockType.DEFAULT - indicating the round slider.
 
 **Since:** 10
 

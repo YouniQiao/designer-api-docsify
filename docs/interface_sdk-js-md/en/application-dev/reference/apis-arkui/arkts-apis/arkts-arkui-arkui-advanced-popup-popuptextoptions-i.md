@@ -46,7 +46,7 @@ The string value must be convertible to a number (for example, **'10'**) or incl
 
 Value range of number values: (0, +∞)
 
-**Type:** number \| string \| [Resource](arkts-arkui-resource-t.md)
+**Type:** number &#124; string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 11
 
@@ -70,7 +70,7 @@ For the string type, only strings of the number type are supported, for example,
 
 Default value: **FontWeight.Regular**
 
-**Type:** number \| [FontWeight](arkts-arkui-fontweight-e.md) \| string
+**Type:** number &#124; [FontWeight](arkts-arkui-fontweight-e.md) &#124; string
 
 **Since:** 11
 

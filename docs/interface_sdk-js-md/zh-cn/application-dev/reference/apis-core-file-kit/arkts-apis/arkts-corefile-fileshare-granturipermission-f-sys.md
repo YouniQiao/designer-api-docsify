@@ -42,7 +42,7 @@ function grantUriPermission(
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 14300001 | IPC error |
 
 **示例**
@@ -107,7 +107,7 @@ function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 14300001 | IPC error |
 
 **示例**

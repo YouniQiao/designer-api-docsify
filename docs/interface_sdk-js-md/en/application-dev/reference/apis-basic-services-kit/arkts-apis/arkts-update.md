@@ -34,7 +34,7 @@ Use scenarios: This operation is performed to delete user data and restore the d
 
 This module enables users to quickly troubleshoot, free up storage space, and protect the security of privacy data. Three reset modes are provided to meet the requirements for different security levels. Common reset applies to routine maintenance scenarios, forcible reset applies to data destruction scenarios, and deep reset applies to extreme scenarios such as device scrapping. In this way, hierarchical management of data clearing is implemented, reducing O&M costs.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The initial APIs of this module are supported since API version 9. Newly added APIs will be marked with a superscript to indicate their earliest API version.
 > The APIs provided by this module are system APIs. For details about the system application permission request, see the system application development guide. For details about the application extension permission request, see the application extension development guide.

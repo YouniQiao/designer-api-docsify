@@ -14,7 +14,7 @@ function on(type: 'key', keyOptions: KeyOptions, callback: Callback<KeyOptions>)
 
 Enables listening for system hotkey change events. This API uses an asynchronous callback to return the system hotkey data when a system hotkey event that meets the specified condition occurs.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - You can subscribe to only the Down event of a key, or subscribe to both the Down and Up events of a key.
 > 
@@ -39,7 +39,7 @@ Enables listening for system hotkey change events. This API uses an asynchronous
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
 **Examples**

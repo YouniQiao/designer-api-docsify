@@ -78,7 +78,7 @@ menus?: CustomBuilder | Array<NavigationMenuItem>
 
 宽屏场景下用户自定义插入的布局样式。默认值为空，不显示任何样式。屏幕宽度低于600vp为非宽屏场景，大于等于600vp为宽屏场景。
 
-**类型：** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| Array&lt;[NavigationMenuItem](../arkts-components/arkts-arkui-navigationmenuitem-i.md)&gt;
+**类型：** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; Array&lt;[NavigationMenuItem](../arkts-components/arkts-arkui-navigationmenuitem-i.md)&gt;
 
 **起始版本：** 18
 

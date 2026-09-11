@@ -17,7 +17,7 @@ Encodes a text string as a valid component of a Uniform Resource Identifier (URI
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uriComponent | string \| number \| boolean | Yes |  |
+| uriComponent | string &#124; number &#124; boolean | Yes |  |
 
 **Return value:**
 

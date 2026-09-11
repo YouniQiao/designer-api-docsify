@@ -24,7 +24,7 @@ This parameter is optional. A **Preferences** instance will be created in the sa
 
 This attribute can be used only in the stage model.
 
-**Type:** string \| null
+**Type:** string &#124; null
 
 **Since:** 12
 

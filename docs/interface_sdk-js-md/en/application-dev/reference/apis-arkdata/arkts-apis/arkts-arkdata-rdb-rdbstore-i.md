@@ -533,7 +533,7 @@ obtainDistributedTableName(device: string, table: string, callback: AsyncCallbac
 
 Obtains the distributed table name of a remote device based on the local table name of the device. The distributed table name is required when the RDB store of a remote device is queried. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 
 > The value of **device** can be obtained by <!--RP1--
 > 
@@ -593,7 +593,7 @@ obtainDistributedTableName(device: string, table: string): Promise<string>
 
 Obtains the distributed table name of a remote device based on the local table name of the device. The distributed table name is required when the RDB store of a remote device is queried. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 
 > The value of **device** can be obtained by <!--RP1--
 > 
@@ -1041,7 +1041,7 @@ Synchronizes data across devices. This API uses an asynchronous callback to retu
 | --- | --- | --- | --- |
 | mode | [SyncMode](arkts-arkdata-rdb-syncmode-e.md) | Yes | Data sync mode. The value can be **push** or **pull**. |
 | predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Yes | RdbPredicates** object that specifies the data and devices to synchronize. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback invoked to send the sync result to the caller.    **string** indicates the device ID.    **number** indicates the sync status of that device. The value **0** indicates a successful sync. Other values indicate a sync failure. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback invoked to send the sync result to the caller.<br>**string** indicates the device ID. <br>**number** indicates the sync status of that device. The value **0** indicates a successful sync. Other values indicate a sync failure. |
 
 **Examples**
 
@@ -1105,7 +1105,7 @@ Synchronizes data across devices. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[string, number]&gt;&gt; | Promise used to send the sync result. |
+| Promise&lt;Array&lt;[string, number]&gt;&gt; | Promise used to send the sync result.<br>**string** indicates the device ID. <br>**number** indicates the sync status of that device. The value **0** indicates a successful sync. Other values indicate a sync failure. |
 
 **Examples**
 

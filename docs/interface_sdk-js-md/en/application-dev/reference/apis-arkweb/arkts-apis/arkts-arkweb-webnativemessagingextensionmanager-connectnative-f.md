@@ -34,7 +34,7 @@ Connects the current ability to the specified web native message extension abili
 
 | Type | Description |
 | --- | --- |
-| number | ID of the connection, returned by the [connectNative]{ |
+| number | ID of the connection, returned by the [connectNative](arkts-arkweb-webnativemessagingextensionmanager-connectnative-f.md) method, used to uniquely identify a Web native message extension connection. The connection must be released through disconnectNative after being established. |
 
 **Error codes:**
 

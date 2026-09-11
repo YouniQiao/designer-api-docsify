@@ -290,7 +290,7 @@ Default value: **\$r('sys.color.font_primary')**.
 
 If the value is **undefined**, the default value is used.
 
-**NOTE：**
+**NOTE:**
 
 When **fontColor** of **textModifier** is set for **items**, **itemSelectedFontColor** has no effect.
 
@@ -318,7 +318,7 @@ Value range: [0, +∞)
 
 Default value: **14fp**
 
-**NOTE：**
+**NOTE:**
 
 Percentage values are not supported. If an invalid value is set, the default value is used.
 
@@ -348,7 +348,7 @@ Default value: **FontWeight.Medium**
 
 If the value is out of the range, the default value is used.
 
-**NOTE：**
+**NOTE:**
 
 When **fontWeight** of **textModifier** is set for **items**, **itemFontWeight** has no effect.
 
@@ -376,7 +376,7 @@ Default value: **\$r('sys.color.font_secondary')**
 
 If the value is **undefined**, the default value is used.
 
-**NOTE：**
+**NOTE:**
 
 When **fillColor** of **iconModifier** is set for **items**, **itemIconFillColor** has no effect.
 
@@ -406,7 +406,7 @@ Default value: **{ width: LengthMetrics.vp(24), height: LengthMetrics.vp(24) }**
 
 If the value is out of the range, the default value is used.
 
-**NOTE：**
+**NOTE:**
 
 When **width** and **height** of **iconModifier** are set for **items**, **itemIconSize** has no effect.
 
@@ -434,13 +434,13 @@ Value range: [1, 2]
 
 Default value: **1**
 
-**NOTE：**
+**NOTE:**
 
 A value less than 1 is treated as **1**. A value greater than 2 is treated as **2**. Abnormal values are ineffective by default.
 
 This property is read-only.
 
-**Type:** number \| [Resource](arkts-arkui-resource-t.md)
+**Type:** number &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 18
 
@@ -462,13 +462,13 @@ Value range: [0, 1]
 
 Default value: **0**
 
-**NOTE：**
+**NOTE:**
 
 A value less than 0 is treated as **0**. A value greater than 1 is treated as **1**. Abnormal values are ineffective by default.
 
 This property is read-only.
 
-**Type:** number \| [Resource](arkts-arkui-resource-t.md)
+**Type:** number &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 18
 
@@ -590,7 +590,7 @@ Default value: **\$r('sys.color.font_primary')**.
 
 If the value is **undefined**, the default value is used.
 
-**NOTE：**
+**NOTE:**
 
 When **fontColor** of **textModifier** is set for **items**, **itemSelectedFontColor** has no effect.
 
@@ -618,7 +618,7 @@ Value range: [0, +∞)
 
 Default value: **14fp**
 
-**NOTE：**
+**NOTE:**
 
 Percentage values are not supported. If an invalid value is set, the default value is used.
 
@@ -648,7 +648,7 @@ Default value: **FontWeight.Medium**
 
 If the value is out of the range, the default value is used.
 
-**NOTE：**
+**NOTE:**
 
 When **fontWeight** of **textModifier** is set for **items**, **itemSelectedFontWeight** has no effect.
 
@@ -676,7 +676,7 @@ Default value: **\$r('sys.color.font_primary')**
 
 If the value is **undefined**, the default value is used.
 
-**NOTE：**
+**NOTE:**
 
 When **fillColor** of **iconModifier** is set for **items**, **itemSelectedIconFillColor** has no effect.
 
@@ -704,7 +704,7 @@ Default value: **\$r('sys.color.font_primary')**
 
 If the value is **undefined**, the default value is used.
 
-**NOTE：**
+**NOTE:**
 
 When **fontColor** of **symbolModifier** is set for **items**, **itemSelectedSymbolFontColor** has no effect.
 
@@ -734,7 +734,7 @@ If the value is out of the range, the default value is used.
 
 This property is read-only.
 
-**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
+**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **Since:** 18
 
@@ -756,7 +756,7 @@ Value range: [0, +∞)
 
 Default value: **LengthMetrics.vp(0)**
 
-**NOTE：**
+**NOTE:**
 
 Percentage values are not supported. If an invalid value is set, the default value is used.
 
@@ -784,7 +784,7 @@ Default value: **\$r('sys.color.font_secondary')**
 
 If the value is **undefined**, the default value is used.
 
-**NOTE：**
+**NOTE:**
 
 When **fontColor** of **symbolModifier** is set for **items**, **itemSymbolFontColor** has no effect.
 
@@ -812,7 +812,7 @@ Value range: [0, +∞)
 
 Default value: **20fp**
 
-**NOTE：**
+**NOTE:**
 
 Percentage values are not supported. If an invalid value is set, the default value is used.
 

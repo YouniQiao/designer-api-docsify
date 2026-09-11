@@ -26,7 +26,7 @@ Obtains an [WakeupManager](arkts-basicservices-intelligentvoice-wakeupmanager-i-
 
 | Type | Description |
 | --- | --- |
-| [WakeupManager](arkts-basicservices-intelligentvoice-wakeupmanager-i-sys.md) | this { |
+| [WakeupManager](arkts-basicservices-intelligentvoice-wakeupmanager-i-sys.md) | this [WakeupManager](arkts-basicservices-intelligentvoice-wakeupmanager-i-sys.md) object. |
 
 **Error codes:**
 

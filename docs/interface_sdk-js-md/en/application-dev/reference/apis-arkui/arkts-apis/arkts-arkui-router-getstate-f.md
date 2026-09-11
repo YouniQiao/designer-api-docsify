@@ -14,7 +14,7 @@ function getState(): RouterState
 
 Obtains state information about the page at the top of the navigation stack.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in

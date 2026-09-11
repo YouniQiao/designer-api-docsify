@@ -215,7 +215,7 @@ function off(type: 'callStateChange', callback?: Callback<CallStateInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'callStateChange' | 是 | 通话状态变化事件，参数固定为'callStateChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | 否 | 回调函数，返回通话状态信息对象。参考call的[CallState](arkts-telephony-call-callstate-e.md)。number：电话号码。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | 否 | 回调函数，返回通话状态信息对象。参考call的[CallState](arkts-telephony-call-callstate-e.md)。<br>number：电话号码。 |
 
 **错误码：**
 
@@ -261,7 +261,7 @@ function off(type: 'callStateChangeEx', callback?: Callback<TelCallState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'callStateChangeEx' | 是 | 通话状态变化事件，参数固定为'callStateChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TelCallState](arkts-telephony-observer-telcallstate-t.md)&gt; | 否 | 回调函数，返回通话状态对象。参考call的[TelCallState](arkts-telephony-call-telcallstate-e.md)。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TelCallState](arkts-telephony-observer-telcallstate-t.md)&gt; | 否 | 回调函数，返回通话状态对象。参考call的[TelCallState](arkts-telephony-call-telcallstate-e.md)。<br> |
 
 **错误码：**
 

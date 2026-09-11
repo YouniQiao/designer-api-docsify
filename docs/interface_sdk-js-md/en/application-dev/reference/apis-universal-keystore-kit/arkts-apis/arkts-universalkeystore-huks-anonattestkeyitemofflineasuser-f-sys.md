@@ -15,7 +15,7 @@ function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
 
 Obtains an anonymous key certificate in offline mode for a specified user. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Offline key attestation depends on the network. You need to periodically connect to the network to use this API
 > to update the offline certificate.
@@ -37,7 +37,7 @@ Obtains an anonymous key certificate in offline mode for a specified user. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | User ID The value range is all integers. |
+| userId | number | Yes | User ID<br>The value range is all integers. |
 | keyAlias | string | Yes | Alias of the key. The certificate to be obtained stores the key. |
 | params | [HuksParam](arkts-universalkeystore-huks-huksparam-i.md)[] | Yes | Options for attesting the key. |
 

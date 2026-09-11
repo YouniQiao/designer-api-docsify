@@ -223,7 +223,7 @@ Obtains the name of BLE peripheral device. On API 10 and above, the permission r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns a string representation of the name if obtained; returns { |
+| Promise&lt;string&gt; | Returns a string representation of the name if obtained; returns `null` if the name fails to be obtained or the name does not exist. |
 
 **Error codes:**
 
@@ -439,7 +439,7 @@ Starts discovering services. On API 10 and above, the permission required by thi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md)&gt;&gt; | Returns the list of services { |
+| Promise&lt;Array&lt;[GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md)&gt;&gt; | Returns the list of services [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md) of the BLE peripheral device. |
 
 **Error codes:**
 

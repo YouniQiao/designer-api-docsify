@@ -1,6 +1,6 @@
 # KeyboardOptions
 
-Sets whether to support keyboard avoidance.
+Whether to support keyboard avoidance.
 
 **Since:** 12
 

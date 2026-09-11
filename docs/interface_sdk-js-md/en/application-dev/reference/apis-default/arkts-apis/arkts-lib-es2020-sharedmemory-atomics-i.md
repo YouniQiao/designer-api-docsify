@@ -17,7 +17,7 @@ Adds a value to the value at the given position in the array, returning the orig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
+| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) &#124; [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
 | index | number | Yes |  |
 | value | bigint | Yes |  |
 
@@ -37,7 +37,7 @@ Stores the bitwise AND of a value with the value at the given position in the ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
+| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) &#124; [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
 | index | number | Yes |  |
 | value | bigint | Yes |  |
 
@@ -57,7 +57,7 @@ Replaces the value at the given position in the array if the original value equa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
+| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) &#124; [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
 | index | number | Yes |  |
 | expectedValue | bigint | Yes |  |
 | replacementValue | bigint | Yes |  |
@@ -78,7 +78,7 @@ Replaces the value at the given position in the array, returning the original va
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
+| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) &#124; [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
 | index | number | Yes |  |
 | value | bigint | Yes |  |
 
@@ -98,7 +98,7 @@ Returns the value at the given position in the array. Until this atomic operatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
+| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) &#124; [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
 | index | number | Yes |  |
 
 **Return value:**
@@ -137,7 +137,7 @@ Stores the bitwise OR of a value with the value at the given position in the arr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
+| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) &#124; [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
 | index | number | Yes |  |
 | value | bigint | Yes |  |
 
@@ -157,7 +157,7 @@ Stores a value at the given position in the array, returning the new value. Unti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
+| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) &#124; [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
 | index | number | Yes |  |
 | value | bigint | Yes |  |
 
@@ -177,7 +177,7 @@ Subtracts a value from the value at the given position in the array, returning t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
+| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) &#124; [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
 | index | number | Yes |  |
 | value | bigint | Yes |  |
 
@@ -218,7 +218,7 @@ Stores the bitwise XOR of a value with the value at the given position in the ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) \| [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
+| typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) &#124; [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
 | index | number | Yes |  |
 | value | bigint | Yes |  |
 

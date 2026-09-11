@@ -18,7 +18,7 @@ function getDate(callback: AsyncCallback<Date>): void
 
 **废弃版本：** 10
 
-**替代接口：** new
+**替代接口：** new Date()
 
 **系统能力：** SystemCapability.MiscServices.Time
 
@@ -32,7 +32,7 @@ function getDate(callback: AsyncCallback<Date>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. System error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. System error. |
 
 **示例**
 
@@ -66,7 +66,7 @@ function getDate(): Promise<Date>
 
 **废弃版本：** 10
 
-**替代接口：** new
+**替代接口：** new Date()
 
 **系统能力：** SystemCapability.MiscServices.Time
 
@@ -80,7 +80,7 @@ function getDate(): Promise<Date>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. System error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. System error. |
 
 **示例**
 

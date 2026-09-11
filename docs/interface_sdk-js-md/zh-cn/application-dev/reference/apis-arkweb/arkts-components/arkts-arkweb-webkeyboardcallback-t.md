@@ -22,4 +22,4 @@ type WebKeyboardCallback = (keyboardCallbackInfo: WebKeyboardCallbackInfo) => We
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebKeyboardOptions](arkts-arkweb-webkeyboardoptions-i.md) | 回调函数通过返回[WebKeyboardOptions]{ |
+| [WebKeyboardOptions](arkts-arkweb-webkeyboardoptions-i.md) | 回调函数通过返回[WebKeyboardOptions](arkts-arkweb-webkeyboardoptions-i.md)来决定ArkWeb内核拉起不同类型的软键盘。 |

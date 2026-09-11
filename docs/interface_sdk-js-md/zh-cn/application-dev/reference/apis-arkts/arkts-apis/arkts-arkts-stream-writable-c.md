@@ -125,7 +125,7 @@ doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| chunk | string \| Uint8Array | 是 | 要写出的数据。 |
+| chunk | string &#124; Uint8Array | 是 | 要写出的数据。 |
 | encoding | string | 是 | 字符编码类型。当前版本支持'utf8'、'gb18030'、'gbk'以及'gb2312'。 |
 | callback | Function | 是 | 回调函数。 |
 
@@ -165,7 +165,7 @@ doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| chunks | string[] \| Uint8Array[] | 是 | 待批量写出的数据块数组。 |
+| chunks | string[] &#124; Uint8Array[] | 是 | 待批量写出的数据块数组。 |
 | callback | Function | 是 | 回调函数。 |
 
 **示例**
@@ -209,7 +209,7 @@ end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writab
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| chunk | string \| Uint8Array | 否 | 待写入的数据。默认值为**undefined**。 |
+| chunk | string &#124; Uint8Array | 否 | 待写入的数据。默认值为**undefined**。 |
 | encoding | string | 否 | 编码格式。默认值为**'utf8'**。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
 | callback | Function | 否 | 用于返回结果的回调函数。传入时异步调用，不传入时，不调用回调函数。 |
 
@@ -266,7 +266,7 @@ off(event: string, callback?: Callback<emitter.EventData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'drain' \| 'error' \| 'finish'。   - 'close'：完成end()调用，结束写入操作，触发该事件。   - 'drain'：在可写流缓冲区中数据清空时触发该事件。   - 'error'：在可写流发生异常时触发该事件。   - 'finish'：在数据缓冲区全部写入到目标后触发该事件。 |
+| event | string | 是 | 事件回调类型，支持的事件包括：'close' &#124; 'drain' &#124; 'error' &#124; 'finish'。   - 'close'：完成end()调用，结束写入操作，触发该事件。   - 'drain'：在可写流缓冲区中数据清空时触发该事件。   - 'error'：在可写流发生异常时触发该事件。   - 'finish'：在数据缓冲区全部写入到目标后触发该事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[emitter.EventData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-emitter-eventdata-i.md)&gt; | 否 | 指定事件的要注销的回调函数。不传入时注销指定事件的所有回调函数。 |
 
 **示例**
@@ -314,7 +314,7 @@ on(event: string, callback: Callback<emitter.EventData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'drain' \| 'error' \| 'finish'。   - 'close'：完成end()调用，结束写入操作，触发该事件。   - 'drain'：在可写流缓冲区中数据清空时触发该事件。   - 'error'：在可写流发生异常时触发该事件。   - 'finish'：在数据缓冲区全部写入到目标后触发该事件。 |
+| event | string | 是 | 事件回调类型，支持的事件包括：'close' &#124; 'drain' &#124; 'error' &#124; 'finish'。   - 'close'：完成end()调用，结束写入操作，触发该事件。   - 'drain'：在可写流缓冲区中数据清空时触发该事件。   - 'error'：在可写流发生异常时触发该事件。   - 'finish'：在数据缓冲区全部写入到目标后触发该事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[emitter.EventData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 回调函数，返回事件传输的数据。 |
 
 **示例**
@@ -445,7 +445,7 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| chunk | string \| Uint8Array | 否 | 需要写入的数据。默认值为undefined。当前版本不支持传入null、undefined和空字符串，会抛出异常。 |
+| chunk | string &#124; Uint8Array | 否 | 需要写入的数据。默认值为undefined。当前版本不支持传入null、undefined和空字符串，会抛出异常。 |
 | encoding | string | 否 | 字符编码类型。默认值是**'utf8'**，当前版本支持**'utf8'**、**'gb18030'**、**'gbk'**以及**'gb2312'**。 |
 | callback | Function | 否 | 回调函数，用于在数据写入完成后执行特定逻辑。传入callback时，数据写入缓冲区后会调用该回调函数；不传入时，不调用回调函数。 |
 

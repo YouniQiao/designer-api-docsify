@@ -30,15 +30,15 @@ Obtains detailed information about a public credential. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise used to return the detailed information about the user's public credential obtained, that is, **credential** in the [CMResult]{ |
+| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise used to return the detailed information about the user's public credential obtained, that is, **credential** in the [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md) object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;  2. Memory operation error; 3. File operation error. Please try again. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
 | [17500005](../errorcode-certManager.md#17500005-application-not-authorized) | The application is not authorized by the user. |
 

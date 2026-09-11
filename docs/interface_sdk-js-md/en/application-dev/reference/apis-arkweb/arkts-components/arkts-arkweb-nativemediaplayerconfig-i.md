@@ -1,6 +1,6 @@
 # NativeMediaPlayerConfig
 
-Configures the [enableNativeMediaPlayer](arkts-arkweb-web-attribute.md#enablenativemediaplayer) API for the app to take over web page media playback, supporting whether to enable it and whether to override web page content. It is suitable for scenarios where custom media playback behavior is required, improving media playback integration and user experience.
+Configures the [enableNativeMediaPlayer](arkts-arkweb-web-comp-attribute.md#enablenativemediaplayer) API for the app to take over web page media playback, supporting whether to enable it and whether to override web page content. It is suitable for scenarios where custom media playback behavior is required, improving media playback integration and user experience.
 
 **Since:** 12
 

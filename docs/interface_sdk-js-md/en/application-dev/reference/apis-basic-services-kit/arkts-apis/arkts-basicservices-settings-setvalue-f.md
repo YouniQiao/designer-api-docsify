@@ -74,7 +74,7 @@ Set settingsdata value.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Returns `true` if the operation is successful; returns `false` otherwise. |
 
 **Examples**
 
@@ -120,7 +120,7 @@ Set settingsdata value. [DEVICE_SHARED, USER_PROPERTY] domain need ohos.permissi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Returns `true` if the operation is successful; returns `false` otherwise. |
 
 **Error codes:**
 

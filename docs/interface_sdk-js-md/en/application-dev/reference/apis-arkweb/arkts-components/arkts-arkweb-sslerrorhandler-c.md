@@ -1,6 +1,6 @@
 # SslErrorHandler
 
-SslErrorHandler is a class in the Web component for handling SSL certificate verification errors. When an SSL certificate error (such as certificate expiration, hostname mismatch, or untrusted CA) is encountered while loading a secure page, the app can obtain an SslErrorHandler instance through the onSslErrorEvent callback and decide whether to continue loading or cancel navigation. For sample code, see the [onSslErrorEvent](arkts-arkweb-web-attribute.md#onsslerrorevent) event.
+SslErrorHandler is a class in the Web component for handling SSL certificate verification errors. When an SSL certificate error (such as certificate expiration, hostname mismatch, or untrusted CA) is encountered while loading a secure page, the app can obtain an SslErrorHandler instance through the onSslErrorEvent callback and decide whether to continue loading or cancel navigation. For sample code, see the [onSslErrorEvent](arkts-arkweb-web-comp-attribute.md#onsslerrorevent) event.
 
 **Since:** 9
 
@@ -55,7 +55,7 @@ Cancels this request and determines whether to stop loading based on the **abort
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abortLoading | boolean | Yes | Whether to stop loading the page after canceling the request. The value **true** indicates that the page stops loading, and **false** indicates that the page continues loading. |
+| abortLoading | boolean | Yes | Whether to stop loading the page after canceling the request.<br>The value **true** indicates that the page stops loading, and **false** indicates that the page continues loading. |
 
 ## handleConfirm
 

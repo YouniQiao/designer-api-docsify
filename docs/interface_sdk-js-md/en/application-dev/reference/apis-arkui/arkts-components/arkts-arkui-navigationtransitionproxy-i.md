@@ -51,7 +51,7 @@ updateTransition?(progress: number): void
 
 Updates the progress of this interactive transition animation. (Non-interactive animations do not support setting the animation progress).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You are not advised to use stack operations in aboutToAppear, as the
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation

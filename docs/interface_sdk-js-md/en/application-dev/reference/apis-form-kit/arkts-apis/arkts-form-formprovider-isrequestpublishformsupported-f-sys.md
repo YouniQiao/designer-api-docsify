@@ -24,7 +24,7 @@ Checks whether a widget can be added to the widget host. This API uses an asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback function that returns the query result.   **true**: The widget can be added to the widget host.   **false**: The widget cannot be added to the widget host. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback function that returns the query result.<br>**true**: The widget can be added to the widget host.<br>**false**: The widget cannot be added to the widget host. |
 
 **Error codes:**
 
@@ -54,7 +54,7 @@ Checks whether a widget can be added to the widget host. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise that returns whether a widget can be added to the widget host. |
+| Promise&lt;boolean&gt; | Promise that returns whether a widget can be added to the widget host.  **true**: The widget can be added to the widget host.  **false**: The widget cannot be added to the widget host. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # IntelligentVoiceManager (System API)
 
-Implements intelligent voice management.
+Implements intelligent voice management. @typedef IntelligentVoiceManager
 
 **Since:** 10
 

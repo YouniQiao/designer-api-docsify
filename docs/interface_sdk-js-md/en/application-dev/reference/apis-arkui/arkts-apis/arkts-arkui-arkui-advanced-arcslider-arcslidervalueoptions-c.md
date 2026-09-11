@@ -44,7 +44,7 @@ Maximum value.
 
 Default value: **100**
 
-**NOTE：**
+**NOTE:**
 
 If the value of **min** is greater than or equal to that of **max**, **min** is set to **0** and **max** **100**.
 

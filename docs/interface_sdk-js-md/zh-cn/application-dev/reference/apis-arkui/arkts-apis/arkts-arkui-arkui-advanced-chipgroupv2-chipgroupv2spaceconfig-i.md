@@ -58,7 +58,7 @@ ChipV2与ChipV2之间的间距（不支持百分比）。
 
 值为undefined时，按默认值处理。
 
-**类型：** string \| number
+**类型：** string &#124; number
 
 **起始版本：** 26.0.0
 

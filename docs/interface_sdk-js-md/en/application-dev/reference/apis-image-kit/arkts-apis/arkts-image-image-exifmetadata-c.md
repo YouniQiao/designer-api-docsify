@@ -74,7 +74,7 @@ Obtains all properties and their values from the image metadata. This API return
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the values of all properties. |
+| Promise&lt;Record&lt;string, string &#124; null&gt;&gt; | Promise used to return the values of all properties. |
 
 ## getBlob
 
@@ -122,7 +122,7 @@ For details about the properties, see [PropertyKey](arkts-image-image-propertyke
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the obtained image metadata property values. |
+| Promise&lt;Record&lt;string, string &#124; null&gt;&gt; | Promise used to return the obtained image metadata property values. |
 
 **Error codes:**
 
@@ -182,7 +182,7 @@ For details about the properties, see [PropertyKey](arkts-image-image-propertyke
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | Yes | Set of key-value pairs representing properties and corresponding values of the **ExifMetadata** object. |
+| records | Record&lt;string, string &#124; null&gt; | Yes | Set of key-value pairs representing properties and corresponding values of the **ExifMetadata** object. |
 
 **Return value:**
 

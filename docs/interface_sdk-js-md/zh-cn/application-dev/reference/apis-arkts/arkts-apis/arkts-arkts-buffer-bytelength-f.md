@@ -27,7 +27,7 @@ function byteLength(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| string | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | 是 | 要计算字节长度的字符串或其他数据对象。 |
+| string | string &#124; Buffer &#124; TypedArray &#124; DataView &#124; ArrayBuffer &#124; SharedArrayBuffer | 是 | 要计算字节长度的字符串或其他数据对象。 |
 | encoding | BufferEncoding | 否 | 编码格式（string参数为string类型时才有意义）。默认值：'utf8'。 |
 
 **返回值：**

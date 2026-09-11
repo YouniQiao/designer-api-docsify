@@ -100,10 +100,10 @@ import { geoLocationManager } from '@kit.LocationKit';
 | [isFusionFenceSupported](arkts-location-geolocationmanager-isfusionfencesupported-f-sys.md) | 判断系统是否支持融合围栏能力。 |
 | [isLocationEnabledByUserId](arkts-location-geolocationmanager-islocationenabledbyuserid-f-sys.md) | 判断指定系统账号的位置开关是否开启。 |
 | [isLocationPrivacyConfirmed](arkts-location-geolocationmanager-islocationprivacyconfirmed-f-sys.md) | 查询用户是否同意定位服务隐私申明，是否同意启用定位服务。只有系统应用才能调用。 |
-| off | 取消订阅定位业务所需数据的变化，并停止WiFi和蓝牙扫描。 |
-| off | 订阅定位图标状态变化。使用callback异步回调。 |
-| on | 订阅定位业务所需数据的变化，主要包含WiFi和蓝牙扫描信息；根据入参决定是否启动WiFi和蓝牙扫描。使用callback异步回调。 |
-| on | 订阅定位图标状态变化。使用callback异步回调。 |
+| [off](arkts-location-geolocationmanager-off-f-sys.md#offlocatingrequireddatachange) | 取消订阅定位业务所需数据的变化，并停止WiFi和蓝牙扫描。 |
+| [off](arkts-location-geolocationmanager-off-f-sys.md#offlocationiconstatuschange) | 订阅定位图标状态变化。使用callback异步回调。 |
+| [on](arkts-location-geolocationmanager-on-f-sys.md#onlocatingrequireddatachange) | 订阅定位业务所需数据的变化，主要包含WiFi和蓝牙扫描信息；根据入参决定是否启动WiFi和蓝牙扫描。使用callback异步回调。 |
+| [on](arkts-location-geolocationmanager-on-f-sys.md#onlocationiconstatuschange) | 订阅定位图标状态变化。使用callback异步回调。 |
 | [removeFusionFence](arkts-location-geolocationmanager-removefusionfence-f-sys.md) | 删除一个融合围栏，并取消订阅该围栏事件。使用Promise异步回调。 |
 | [setLocationPrivacyConfirmStatus](arkts-location-geolocationmanager-setlocationprivacyconfirmstatus-f-sys.md) | 设置用户勾选定位服务隐私申明的状态，记录用户是否同意启用定位服务。只有系统应用才能调用。 |
 | [setLocationSwitchIgnored](arkts-location-geolocationmanager-setlocationswitchignored-f-sys.md) | 设置应用获取位置信息是否受位置开关控制。设置为true后，允许应用在位置开关关闭的场景获取到位置信息，有效时间为从调用接口成功开始的两分钟。 |

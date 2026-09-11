@@ -76,7 +76,7 @@ Sets the image displayed in the multitasking view. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imgResourceId | number | Yes | Resource ID of the custom image. The image must be stored in the **resources/base/media** directory and its resource ID can be obtained using the **\\$r** resource access mode. For example, to obtain the resource ID of the startIcon image, use the following: \\$r("app.media.startIcon").id. |
+| imgResourceId | number | Yes | Resource ID of the custom image. The image must be stored in the **resources/base/media** directory and its resource ID can be obtained using the **\&#36;r** resource access mode. For example, to obtain the resource ID of the startIcon image, use the following: \&#36;r("app.media.startIcon").id. |
 | value | ImageFit | Yes | Fill mode of the custom image. |
 
 **Return value:**

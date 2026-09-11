@@ -7,6 +7,8 @@ type QueryMediaEntityByKeywordEvent = (keyword: string, searchType: EntityType,
 
 The query media entity by keyword event.
 
+@typedef { function } QueryMediaEntityByKeywordEvent
+
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.

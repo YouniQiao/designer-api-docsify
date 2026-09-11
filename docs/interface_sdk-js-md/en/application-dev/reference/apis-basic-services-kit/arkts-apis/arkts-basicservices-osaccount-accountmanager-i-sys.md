@@ -570,7 +570,7 @@ Deactivates an OS account. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
@@ -623,7 +623,7 @@ Obtains the bundle ID based on the specified UID. This API uses an asynchronous 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
 
@@ -680,7 +680,7 @@ Obtains the bundle ID based on the specified UID. This API uses a promise to ret
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
 
@@ -734,7 +734,7 @@ Obtains the bundle ID based on the specified UID. The API returns the result syn
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
 
 **Examples**
@@ -787,7 +787,7 @@ Obtains all the enabled constraints of an OS account. This API uses a promise to
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
@@ -954,7 +954,7 @@ Obtains the constraint source information of an OS account. This API uses an asy
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or constraint. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -1015,7 +1015,7 @@ Obtains the constraint source information of an OS account. This API uses a prom
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or constraint. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -1068,7 +1068,7 @@ Obtains the profile photo of an OS account. This API uses an asynchronous callba
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -1130,7 +1130,7 @@ Obtains the profile photo of an OS account. This API uses a promise to return th
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -1190,7 +1190,7 @@ Obtains the type of a specified OS account. This API uses a promise to return th
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
@@ -1241,7 +1241,7 @@ Checks whether the current process belongs to the main OS account. This API uses
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 **Examples**
@@ -1346,7 +1346,7 @@ Checks whether an OS account is activated. This API uses a promise to return the
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
@@ -1406,7 +1406,7 @@ Checks whether a constraint is enabled for an OS account. This API uses a promis
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
@@ -1466,7 +1466,7 @@ Checks whether an OS account has been unlocked. This API uses a promise to retur
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
@@ -1509,7 +1509,7 @@ Unsubscribes from the OS account activation states, including the states of the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | Yes | Type of the event to unsubscribe from. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
+| type | 'activate' &#124; 'activating' | Yes | Type of the event to unsubscribe from. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
 | name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes, and must be the same as the value passed by **on()**. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the OS account activation states. |
 
@@ -1519,7 +1519,7 @@ Unsubscribes from the OS account activation states, including the states of the 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
 
@@ -1562,7 +1562,7 @@ Unsubscribes from the OS account activation states, including the states of the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | Yes | Type of the event to unsubscribe from. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
+| type | 'activate' &#124; 'activating' | Yes | Type of the event to unsubscribe from. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
 | name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes, and must be the same as the value passed by **on()**. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the OS account activation states. |
 
@@ -1572,7 +1572,7 @@ Unsubscribes from the OS account activation states, including the states of the 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
 
@@ -1694,7 +1694,7 @@ Unsubscribes from constraint change events associated with the specified callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | No | Callback used to listen for the constraint change events. The default value is **undefined**, indicating that all subscription records are unregistered. If this parameter is not **undefined**, the subscription records associated with the callback are unsubscribed. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | No | Callback used to listen for the constraint change events.<br>The default value is **undefined**, indicating that all subscription records are unregistered. <br>If this parameter is not **undefined**, the subscription records associated with the callback are unsubscribed. |
 
 **Error codes:**
 
@@ -1749,7 +1749,7 @@ Subscribes to the OS account activation states, including the states of the acco
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | Yes | Type of the event to subscribe to. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
+| type | 'activate' &#124; 'activating' | Yes | Type of the event to subscribe to. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
 | name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback used to return the ID of the OS account being activated or activated. |
 
@@ -1759,7 +1759,7 @@ Subscribes to the OS account activation states, including the states of the acco
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
 
@@ -1802,7 +1802,7 @@ Subscribes to the OS account activation states, including the states of the acco
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | Yes | Type of the event to subscribe to. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
+| type | 'activate' &#124; 'activating' | Yes | Type of the event to subscribe to. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
 | name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback used to return the ID of the OS account being activated or activated. |
 
@@ -1812,7 +1812,7 @@ Subscribes to the OS account activation states, including the states of the acco
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
 
@@ -1843,7 +1843,7 @@ Subscribes to the switchover between a foreground OS account and a background OS
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'switching' | Yes | Event type. The value **switching** indicates that the switchover between a foreground OS account and a background account is being performed. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Callback to be invoked when an OS account is switching between the foreground and background. The source and target OS account IDs are subscribed to. Note: Since API version 23, the optional field **displayId** is available, indicating the ID of the logical display where the switch event occurs. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Callback to be invoked when an OS account is switching between the foreground and background. The source and target OS account IDs are subscribed to.<br>Note: Since API version 23, the optional field **displayId** is available, indicating the ID of the logical display where the switch event occurs. |
 
 **Error codes:**
 
@@ -1896,7 +1896,7 @@ Subscribes to the end of a switchover between a foreground OS account and a back
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'switched' | Yes | Event type. The value **switched** indicates that the switchover between a foreground OS account and a background OS account is complete. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Callback to be invoked when an OS account is switched between the foreground and background. The source and target OS account IDs are subscribed to. Note: Since API version 23, the optional field **displayId** is available, indicating the ID of the logical display where the switch event occurs. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Callback to be invoked when an OS account is switched between the foreground and background. The source and target OS account IDs are subscribed to.<br>Note: Since API version 23, the optional field **displayId** is available, indicating the ID of the logical display where the switch event occurs. |
 
 **Error codes:**
 
@@ -2002,7 +2002,7 @@ Queries information about all the OS accounts created. This API uses an asynchro
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 **Examples**
@@ -2143,7 +2143,7 @@ Queries the maximum number of OS accounts that can be created. This API uses an 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 **Examples**
@@ -2288,7 +2288,7 @@ Queries information about the OS account of the given ID. This API uses an async
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -2350,7 +2350,7 @@ Queries information about the OS account of the given ID. This API uses a promis
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -2519,7 +2519,7 @@ Removes a specified OS account based on the options. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | number | Yes | ID of the target OS account. The value should be an integer. |
+| localId | number | Yes | ID of the target OS account.<br>The value should be an integer. |
 | options | [RemoveOsAccountOptions](arkts-basicservices-osaccount-removeosaccountoptions-i-sys.md) | Yes | Options for removing an OS account. |
 
 **Return value:**
@@ -2598,7 +2598,7 @@ Sets or removes constraints for an OS account. This API uses an asynchronous cal
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or constraints. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -2664,7 +2664,7 @@ Sets or removes constraints for an OS account. This API uses a promise to return
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or constraints. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -2721,7 +2721,7 @@ Sets the name of an OS account. This API uses an asynchronous callback to return
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or localName. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -2786,7 +2786,7 @@ Sets the name of an OS account. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or localName. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -2844,7 +2844,7 @@ Sets a profile photo for an OS account. This API uses an asynchronous callback t
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or photo. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -2912,7 +2912,7 @@ Sets a profile photo for an OS account. This API uses a promise to return the re
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or photo. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -2963,7 +2963,7 @@ Sets the type of a specified OS account. This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | number | Yes | ID of the target OS account. The value should be an integer. |
+| localId | number | Yes | ID of the target OS account.<br>The value should be an integer. |
 | type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | Yes | Type of the OS account. |
 | options | [SetOsAccountTypeOptions](arkts-basicservices-osaccount-setosaccounttypeoptions-i-sys.md) | No | Options for setting the OS account type. This parameter is left empty by default. |
 

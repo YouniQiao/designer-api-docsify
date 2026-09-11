@@ -221,7 +221,7 @@ public getChain(): HttpInterceptor[]
 
 | 类型 | 说明 |
 | --- | --- |
-| [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] | 返回通过[addChain]{ |
+| [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] | 返回通过[addChain](#addchain)方法添加的所有拦截器实例。 |
 
 **示例**
 

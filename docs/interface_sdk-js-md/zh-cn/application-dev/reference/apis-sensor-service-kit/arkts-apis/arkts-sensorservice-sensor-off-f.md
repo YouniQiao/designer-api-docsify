@@ -34,7 +34,7 @@ function off(type: SensorId.ACCELEROMETER, callback?: Callback<AccelerometerResp
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -94,7 +94,7 @@ function off(type: SensorId.ACCELEROMETER, sensorInfoParam?: SensorInfoParam, ca
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -183,7 +183,7 @@ function off(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback?: Callback<Acce
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -241,7 +241,7 @@ function off(type: SensorId.ACCELEROMETER_UNCALIBRATED, sensorInfoParam?: Sensor
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -327,7 +327,7 @@ function off(type: SensorId.AMBIENT_LIGHT, callback?: Callback<LightResponse>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -382,7 +382,7 @@ function off(type: SensorId.AMBIENT_LIGHT, sensorInfoParam?: SensorInfoParam, ca
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -468,7 +468,7 @@ function off(type: SensorId.AMBIENT_TEMPERATURE, callback?: Callback<AmbientTemp
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -523,7 +523,7 @@ function off(type: SensorId.AMBIENT_TEMPERATURE, sensorInfoParam?: SensorInfoPar
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -609,7 +609,7 @@ function off(type: SensorId.BAROMETER, callback?: Callback<BarometerResponse>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -664,7 +664,7 @@ function off(type: SensorId.BAROMETER, sensorInfoParam?: SensorInfoParam, callba
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -750,7 +750,7 @@ function off(type: SensorId.GRAVITY, callback?: Callback<GravityResponse>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -805,7 +805,7 @@ function off(type: SensorId.GRAVITY, sensorInfoParam?: SensorInfoParam, callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -896,7 +896,7 @@ function off(type: SensorId.GYROSCOPE, callback?: Callback<GyroscopeResponse>): 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -956,7 +956,7 @@ function off(type: SensorId.GYROSCOPE, sensorInfoParam?: SensorInfoParam, callba
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -1045,7 +1045,7 @@ function off(type: SensorId.GYROSCOPE_UNCALIBRATED, callback?: Callback<Gyroscop
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -1103,7 +1103,7 @@ function off(type: SensorId.GYROSCOPE_UNCALIBRATED, sensorInfoParam?: SensorInfo
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -1189,7 +1189,7 @@ function off(type: SensorId.HALL, callback?: Callback<HallResponse>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -1244,7 +1244,7 @@ function off(type: SensorId.HALL, sensorInfoParam?: SensorInfoParam, callback?: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -1333,7 +1333,7 @@ function off(type: SensorId.HEART_RATE, callback?: Callback<HeartRateResponse>):
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -1391,7 +1391,7 @@ function off(type: SensorId.HEART_RATE, sensorInfoParam?: SensorInfoParam, callb
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -1477,7 +1477,7 @@ function off(type: SensorId.HUMIDITY, callback?: Callback<HumidityResponse>): vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -1532,7 +1532,7 @@ function off(type: SensorId.HUMIDITY, sensorInfoParam?: SensorInfoParam, callbac
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -1621,7 +1621,7 @@ function off(type: SensorId.LINEAR_ACCELEROMETER, callback?: Callback<LinearAcce
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -1679,7 +1679,7 @@ function off(type: SensorId.LINEAR_ACCELEROMETER, sensorInfoParam?: SensorInfoPa
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -1765,7 +1765,7 @@ function off(type: SensorId.MAGNETIC_FIELD, callback?: Callback<MagneticFieldRes
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -1820,7 +1820,7 @@ function off(type: SensorId.MAGNETIC_FIELD, sensorInfoParam?: SensorInfoParam, c
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -1906,7 +1906,7 @@ function off(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback<Mag
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -1961,7 +1961,7 @@ function off(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, sensorInfoParam?: Senso
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -2049,7 +2049,7 @@ function off(type: SensorId.ORIENTATION, callback?: Callback<OrientationResponse
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -2106,7 +2106,7 @@ function off(type: SensorId.ORIENTATION, sensorInfoParam?: SensorInfoParam, call
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -2195,7 +2195,7 @@ function off(type: SensorId.PEDOMETER, callback?: Callback<PedometerResponse>): 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -2253,7 +2253,7 @@ function off(type: SensorId.PEDOMETER, sensorInfoParam?: SensorInfoParam, callba
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -2342,7 +2342,7 @@ function off(type: SensorId.PEDOMETER_DETECTION, callback?: Callback<PedometerDe
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -2400,7 +2400,7 @@ function off(type: SensorId.PEDOMETER_DETECTION, sensorInfoParam?: SensorInfoPar
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -2486,7 +2486,7 @@ function off(type: SensorId.PROXIMITY, callback?: Callback<ProximityResponse>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -2541,7 +2541,7 @@ function off(type: SensorId.PROXIMITY, sensorInfoParam?: SensorInfoParam, callba
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -2627,7 +2627,7 @@ function off(type: SensorId.ROTATION_VECTOR, callback?: Callback<RotationVectorR
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -2682,7 +2682,7 @@ function off(type: SensorId.ROTATION_VECTOR, sensorInfoParam?: SensorInfoParam, 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -2768,7 +2768,7 @@ function off(type: SensorId.SIGNIFICANT_MOTION, callback?: Callback<SignificantM
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -2823,7 +2823,7 @@ function off(type: SensorId.SIGNIFICANT_MOTION, sensorInfoParam?: SensorInfoPara
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -2909,7 +2909,7 @@ function off(type: SensorId.WEAR_DETECTION, callback?: Callback<WearDetectionRes
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -2964,8 +2964,8 @@ function off(type: SensorId.FUSION_PRESSURE, sensorInfoParam?: SensorInfoParam, 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -3052,7 +3052,7 @@ function off(type: SensorId.WEAR_DETECTION, sensorInfoParam?: SensorInfoParam, c
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -3126,7 +3126,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback?: Callback<
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ACCELEROMETER]
-> off
+> [off_SensorId.ACCELEROMETER](#off-4)
 > 替代。
 
 **起始版本：** 8
@@ -3173,7 +3173,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED,
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ACCELEROMETER_UNCALIBRATED]
-> off
+> [off_SensorId.ACCELEROMETER_UNCALIBRATED](#off-6)
 > 替代。
 
 **起始版本：** 8
@@ -3222,7 +3222,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback<
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.AMBIENT_LIGHT]
-> off
+> [off_SensorId.AMBIENT_LIGHT](#off-8)
 > 替代。
 
 **起始版本：** 8
@@ -3264,7 +3264,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback?: Cal
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.AMBIENT_TEMPERATURE]
-> off
+> [off_SensorId.AMBIENT_TEMPERATURE](#off-10)
 > 替代。
 
 **起始版本：** 8
@@ -3306,7 +3306,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback<Baro
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.BAROMETER]
-> off
+> [off_SensorId.BAROMETER](#off-12)
 > 替代。
 
 **起始版本：** 8
@@ -3348,7 +3348,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback?: Callback<Gravit
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GRAVITY]
-> off
+> [off_SensorId.GRAVITY](#off-14)
 > 替代。
 
 **起始版本：** 8
@@ -3392,7 +3392,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback?: Callback<Gyro
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GYROSCOPE]
-> off
+> [off_SensorId.GYROSCOPE](#off-16)
 > 替代。
 
 **起始版本：** 8
@@ -3438,7 +3438,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback?: 
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GYROSCOPE_UNCALIBRATED]
-> off
+> [off_SensorId.GYROSCOPE_UNCALIBRATED](#off-18)
 > 替代。
 
 **起始版本：** 8
@@ -3484,7 +3484,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_HALL, callback?: Callback<HallRespo
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HALL]
-> off
+> [off_SensorId.HALL](#off-20)
 > 替代。
 
 **起始版本：** 8
@@ -3526,7 +3526,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback?: Callback<Hea
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HEART_RATE]
-> off
+> [off_SensorId.HEART_RATE](#off-22)
 > 替代。
 
 **起始版本：** 8
@@ -3570,7 +3570,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback?: Callback<Humid
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HUMIDITY]
-> off
+> [off_SensorId.HUMIDITY](#off-24)
 > 替代。
 
 **起始版本：** 8
@@ -3612,7 +3612,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback?: Cal
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.LINEAR_ACCELEROMETER]
-> off
+> [off_SensorId.LINEAR_ACCELEROMETER](#off-26)
 > 替代。
 
 **起始版本：** 8
@@ -3658,7 +3658,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback?: Callback
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.MAGNETIC_FIELD]
-> off
+> [off_SensorId.MAGNETIC_FIELD](#off-28)
 > 替代。
 
 **起始版本：** 8
@@ -3702,7 +3702,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callba
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.MAGNETIC_FIELD_UNCALIBRATED]
-> off
+> [off_SensorId.MAGNETIC_FIELD_UNCALIBRATED](#off-30)
 > 替代。
 
 **起始版本：** 8
@@ -3749,7 +3749,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback<Or
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ORIENTATION]
-> off
+> [off_SensorId.ORIENTATION](#off-32)
 > 替代。
 
 **起始版本：** 8
@@ -3793,7 +3793,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback?: Callback<Pedo
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PEDOMETER]
-> off
+> [off_SensorId.PEDOMETER](#off-34)
 > 替代。
 
 **起始版本：** 8
@@ -3837,7 +3837,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback?: Cal
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PEDOMETER_DETECTION]
-> off
+> [off_SensorId.PEDOMETER_DETECTION](#off-36)
 > 替代。
 
 **起始版本：** 8
@@ -3881,7 +3881,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback?: Callback<Prox
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PROXIMITY]
-> off
+> [off_SensorId.PROXIMITY](#off-38)
 > 替代。
 
 **起始版本：** 8
@@ -3923,7 +3923,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback?: Callbac
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ROTATION_VECTOR]
-> off
+> [off_SensorId.ROTATION_VECTOR](#off-40)
 > 替代。
 
 **起始版本：** 8
@@ -3968,7 +3968,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback?: Call
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.SIGNIFICANT_MOTION]
-> off
+> [off_SensorId.SIGNIFICANT_MOTION](#off-42)
 > 替代。
 
 **起始版本：** 8
@@ -4010,7 +4010,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.WEAR_DETECTION]
-> off
+> [off_SensorId.WEAR_DETECTION](#off-44)
 > 替代。
 
 **起始版本：** 8
@@ -4064,7 +4064,7 @@ function off(type: 'sensorStatusChange', callback?: Callback<SensorStatusEvent>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;   2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 

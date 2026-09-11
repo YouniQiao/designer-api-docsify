@@ -876,7 +876,7 @@ off(type: 'applicationStateChange', callback?: ApplicationStateChangeCallback): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | 是 | 此类型表示当前应用进程状态变化，固定为'applicationStateChange'。 |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | 否 | 回调函数。取值可以为使用[ApplicationContext.on('applicationStateChange')](#onapplicationstatechange)方法定义的callback回调，也可以为空。   -?如果传入已定义的回调，则取消该监听。    -?如果未传入参数，则取消所有已注册的该类型事件的监听。 |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | 否 | 回调函数。取值可以为使用[ApplicationContext.on('applicationStateChange')](#onapplicationstatechange)方法定义的callback回调，也可以为空。<br>-?如果传入已定义的回调，则取消该监听。 <br>-?如果未传入参数，则取消所有已注册的该类型事件的监听。 |
 
 **错误码：**
 
@@ -924,7 +924,7 @@ offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): v
 
 取消监听系统环境[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)的变化。仅支持主线程调用。
 
-<p>**NOTE：**: It can be called only by the main thread. </p>
+<p>**NOTE:** <br>It can be called only by the main thread. </p>
 
 **起始版本：** 24
 
@@ -938,7 +938,7 @@ offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [systemConfiguration.UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) | 否 | 回调函数。取值可以为使用[ApplicationContext.onSystemConfigurationUpdated](../../../reference/apis-ability-kit/js-apis-inner-application-applicationContext.md#applicationcontextonsystemconfigurationupdated24)方法注册的callback回调，也可以为空。   -&nbsp;如果传入已定义的回调，则取消该监听。    -&nbsp;如果未传入参数，则取消所有已注册的监听。 |
+| callback | [systemConfiguration.UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) | 否 | 回调函数。取值可以为使用[ApplicationContext.onSystemConfigurationUpdated](../../../reference/apis-ability-kit/js-apis-inner-application-applicationContext.md#applicationcontextonsystemconfigurationupdated24)方法注册的callback回调，也可以为空。<br>-&nbsp;如果传入已定义的回调，则取消该监听。 <br>-&nbsp;如果未传入参数，则取消所有已注册的监听。 |
 
 **示例**
 
@@ -1018,7 +1018,7 @@ on(type: 'abilityLifecycle', callback: AbilityLifecycleCallback): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回此次注册的callbackID，该ID用于在[ApplicationContext.off('abilityLifecycle')]{ |
+| number | 返回此次注册的callbackID，该ID用于在[ApplicationContext.off('abilityLifecycle')](#offabilitylifecycle)方法中取消注册对应的callback。 |
 
 **错误码：**
 
@@ -1142,7 +1142,7 @@ on(type: 'environment', callback: EnvironmentCallback): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回此次注册的callbackID，该ID用于在[ApplicationContext.off('environment')]{ |
+| number | 返回此次注册的callbackID，该ID用于在[ApplicationContext.off('environment')](#offenvironment)方法中取消注册对应的callback。 |
 
 **错误码：**
 

@@ -64,7 +64,7 @@ The value must be greater than or equal to 0.
 
 Default value: **56vp**.
 
-**Type:** number \| [Resource](arkts-arkui-resource-t.md)
+**Type:** number &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 11
 

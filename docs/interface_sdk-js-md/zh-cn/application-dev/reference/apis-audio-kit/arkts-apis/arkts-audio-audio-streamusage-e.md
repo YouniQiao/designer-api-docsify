@@ -36,7 +36,7 @@ STREAM_USAGE_MEDIA = 1
 
 **废弃版本：** 10
 
-**替代接口：** [STREAM_USAGE_MUSIC](#stream_usage_music)
+**替代接口：** [STREAM_USAGE_AUDIOBOOK](#stream_usage_audiobook)
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 

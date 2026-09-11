@@ -37,7 +37,7 @@ counterTextOverflowColor?: ColorMetrics
 
 Text color of the character counter when the maximum limit is exceeded. When the user input exceeds the maximum character count, both the counter text and border switch to this color to indicate overflow. If **counterTextOverflowColor** is not set, the default red color is used.
 
-**NOTE：**
+**NOTE:**
 
 The border color is changed only when the **highlightBorder** attribute of [InputCounterOptions](arkts-arkui-inputcounteroptions-i.md) is set.
 

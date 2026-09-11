@@ -23,7 +23,7 @@ Default value: **0**.
 
 Value range: (-∞, +∞).
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Default:** 0
 
@@ -49,7 +49,7 @@ Default value: **0**.
 
 Value range: (-∞, +∞).
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Default:** 0
 
@@ -75,7 +75,7 @@ Default value: **0**.
 
 Value range: (-∞, +∞).
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Default:** 0
 
@@ -103,7 +103,7 @@ Default value: **'50%'**.
 
 Value range: (-∞, +∞).
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Default:** '50%'
 
@@ -131,7 +131,7 @@ Default value: **'50%'**.
 
 Value range: (-∞, +∞).
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Default:** '50%'
 

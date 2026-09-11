@@ -6,6 +6,8 @@ declare type LocalizedMargin = LocalizedPadding
 
 Defines the localized margin property.
 
+@typedef { LocalizedPadding } LocalizedMargin
+
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。

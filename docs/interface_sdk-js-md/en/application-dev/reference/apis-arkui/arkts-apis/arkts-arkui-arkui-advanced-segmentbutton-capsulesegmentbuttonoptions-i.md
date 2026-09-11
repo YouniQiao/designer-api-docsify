@@ -22,7 +22,7 @@ type: "capsule"
 
 Type of the **SegmentButton** component.
 
-**NOTE：**
+**NOTE:**
 
 **"tab"**: tab-style segmented buttons, designed for page or content section switching.
 

@@ -42,7 +42,7 @@ Stores key-value pair data on the application disk. If the given key already exi
 
 | Type | Description |
 | --- | --- |
-| T \| undefined | Returns the data if creation or acquisition is successful; otherwise, returns **undefined**. |
+| T &#124; undefined | Returns the data if creation or acquisition is successful; otherwise, returns **undefined**. |
 
 **Examples**
 
@@ -106,13 +106,13 @@ Stores key-value pair data on the application disk. Supports the persistence of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [ConnectOptionsCollections](arkts-arkui-arkui-statemanagement-connectoptionscollections-c.md)&lt;T, S&gt; \| [ConnectOptions](arkts-arkui-arkui-statemanagement-connectoptions-c.md)&lt;T&gt; | Yes | Passed **globalConnect** parameters. For details, see the description of **ConnectOptions** and **ConnectOptionsCollections**. If **defaultSubCreator** is provided in **ConnectOptionsCollections**, **defaultCreator** must be provided. Otherwise, the persistence fails. The collection item type S must be the same as the return type of **defaultSubCreator**. If the return types are inconsistent, an error will be reported during compilation. |
+| type | [ConnectOptionsCollections](arkts-arkui-arkui-statemanagement-connectoptionscollections-c.md)&lt;T, S&gt; &#124; [ConnectOptions](arkts-arkui-arkui-statemanagement-connectoptions-c.md)&lt;T&gt; | Yes | Passed **globalConnect** parameters. For details, see the description of **ConnectOptions** and **ConnectOptionsCollections**.<br>If **defaultSubCreator** is provided in **ConnectOptionsCollections**, **defaultCreator** must be provided. Otherwise, the persistence fails. The collection item type S must be the same as the return type of **defaultSubCreator**. If the return types are inconsistent, an error will be reported during compilation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T \| undefined | Returns the data if creation or acquisition is successful; otherwise, returns **undefined**. |
+| T &#124; undefined | Returns the data if creation or acquisition is successful; otherwise, returns **undefined**. |
 
 **Examples**
 
@@ -138,7 +138,7 @@ Called when persistence fails.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [PersistenceErrorCallback](arkts-arkui-persistenceerrorcallback-t.md) \| undefined | Yes | Callback called when persistence fails. |
+| callback | [PersistenceErrorCallback](arkts-arkui-persistenceerrorcallback-t.md) &#124; undefined | Yes | Callback called when persistence fails. |
 
 **Examples**
 
@@ -169,7 +169,7 @@ Persists the specified key-value pair data once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyOrType | string \| [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | Yes | Key to be persisted. If a type is specified, the key for persistence is the name of the type. |
+| keyOrType | string &#124; [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | Yes | Key to be persisted. If a type is specified, the key for persistence is the name of the type. |
 
 **Examples**
 

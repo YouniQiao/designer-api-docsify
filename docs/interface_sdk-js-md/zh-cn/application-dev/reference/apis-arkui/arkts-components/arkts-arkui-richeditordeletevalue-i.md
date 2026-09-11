@@ -35,7 +35,7 @@ direction: RichEditorDeleteDirection
 length: number
 ```
 
-删除内容长度。
+删除内容长度，删除范围为[offset, offset + length)，结束位置对应的内容不包含在内。
 
 **类型：** number
 
@@ -73,7 +73,7 @@ richEditorDeleteSpans: Array<RichEditorTextSpanResult | RichEditorImageSpanResul
 
 删除的文本或图片Span的信息。
 
-**类型：** Array&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md) \| [RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md)&gt;
+**类型：** Array&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md) &#124; [RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md)&gt;
 
 **起始版本：** 10
 

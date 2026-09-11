@@ -43,7 +43,7 @@ Default value: **0**
 
 Unit: vp
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 7
 
@@ -65,7 +65,7 @@ Default value: **0**
 
 Unit: vp
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 7
 
@@ -83,7 +83,7 @@ src: string | Resource | PixelMap
 
 Image path. The image format can be .jpg,jpeg,svg,png,bmp,webp,ico, or .heif. The Resource type is supported since API version 9, and the [PixelMap](../../../reference/apis-arkui/arkui-ts/ts-image-common.md#pixelmap) type is supported since API version 12.
 
-**Type:** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md)
+**Type:** string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; [PixelMap](arkts-arkui-pixelmap-t.md)
 
 **Since:** 7
 
@@ -105,7 +105,7 @@ Default value: **0**
 
 Unit: vp
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 7
 
@@ -127,7 +127,7 @@ Default value: **0**
 
 Unit: vp
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 7
 

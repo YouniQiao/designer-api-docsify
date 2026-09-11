@@ -20,7 +20,7 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 
 **Deprecated since:** 9
 
-**Substitutes:** [updateSession](arkts-universalkeystore-huks-updatesession-f.md)( handle: long, options: HuksOptions, token: Uint8Array,
+**Substitutes:** [updateSession](arkts-universalkeystore-huks-updatesession-f.md)( handle: number, options: HuksOptions, token: Uint8Array,
    *     callback: AsyncCallback&lt;HuksReturnResult&gt; )
 
 **System capability:** SystemCapability.Security.Huks.Extension
@@ -49,7 +49,7 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 
 **Deprecated since:** 9
 
-**Substitutes:** [updateSession](arkts-universalkeystore-huks-updatesession-f.md)(handle: long, options: HuksOptions, token?: Uint8Array)
+**Substitutes:** [updateSession](arkts-universalkeystore-huks-updatesession-f.md)(handle: number, options: HuksOptions, token?: Uint8Array)
 
 **System capability:** SystemCapability.Security.Huks.Extension
 

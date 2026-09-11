@@ -2,7 +2,7 @@
 
 Enumerates the tile modes of the shader effect.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Under CPU rendering, the shader tile mode supports only DECAL.
 > Under GPU rendering, DECAL, CLAMP, REPEAT, and MIRROR modes are all supported.

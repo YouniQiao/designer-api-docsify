@@ -2,7 +2,7 @@
 
 An array-like object that can be concatenated. This API extends **ISendable**.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > This section uses the following to identify the use of generics:
@@ -88,6 +88,12 @@ Returns the element at a given index in this ConcatArray.
 **Since:** 12
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## length
 

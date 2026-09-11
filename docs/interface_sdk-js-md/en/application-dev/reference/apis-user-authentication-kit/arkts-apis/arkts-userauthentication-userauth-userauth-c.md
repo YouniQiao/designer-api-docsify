@@ -52,7 +52,7 @@ Starts user authentication. This API uses a callback to return the result.
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Context ID, which is used as the input parameter of [cancelAuth]{ |
+| Uint8Array | Context ID, which is used as the input parameter of [cancelAuth](#cancelauth). |
 
 **Examples**
 
@@ -105,7 +105,7 @@ Cancels the authentication based on the context ID.
 
 | Type | Description |
 | --- | --- |
-| number | Returns **SUCCESS** if the cancellation is successful. Returns a [ResultCode]{ |
+| number | Returns **SUCCESS** if the cancellation is successful. Returns a [ResultCode](arkts-userauthentication-userauth-resultcode-e.md) otherwise. |
 
 **Examples**
 
@@ -176,7 +176,7 @@ Checks whether the specified authentication capability is supported.
 
 | Type | Description |
 | --- | --- |
-| number | Query result. If the authentication capability is supported, **SUCCESS** is returned. Otherwise, a [ResultCode]{ |
+| number | Query result. If the authentication capability is supported, **SUCCESS** is returned. Otherwise, a [ResultCode](arkts-userauthentication-userauth-resultcode-e.md) is returned. |
 
 **Examples**
 

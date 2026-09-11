@@ -17,11 +17,11 @@ Describes the button style.
 buttonStyle?: ButtonStyleMode
 ```
 
-Style and importance of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the backgroundColor, [fontColor](arkts-arkui-button-attribute.md#fontcolor), and [role](arkts-arkui-button-attribute.md#role) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
+Style and importance of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the backgroundColor, [fontColor](arkts-arkui-button-comp-attribute.md#fontcolor), and [role](arkts-arkui-button-comp-attribute.md#role) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
 
 Default value: **ButtonStyleMode.EMPHASIZED**
 
-**NOTE：**
+**NOTE:**
 
 The button primacy is as follows, from high to low: emphasized button, normal button, text button.
 
@@ -69,7 +69,7 @@ Default value: **ControlSize.NORMAL**
 role?: ButtonRole
 ```
 
-Role of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the backgroundColor, [fontColor](arkts-arkui-button-attribute.md#fontcolor), and [buttonStyle](arkts-arkui-button-attribute.md#buttonstyle) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
+Role of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the backgroundColor, [fontColor](arkts-arkui-button-comp-attribute.md#fontcolor), and [buttonStyle](arkts-arkui-button-comp-attribute.md#buttonstyle) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
 
 Default value: **ButtonRole.NORMAL**
 
@@ -99,7 +99,7 @@ Whether to enable the pressed state effect when the button is clicked.
 
 Default value: **true**
 
-**NOTE：**
+**NOTE:**
 
 When the pressed state effect is enabled and a custom pressed state style is configured, the resulting color displayed after pressing is a composite blend of the original background color and the newly defined pressed state color.
 

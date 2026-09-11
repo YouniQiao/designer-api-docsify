@@ -2,7 +2,7 @@
 
 TypedArray inherits the features and methods of Int8Array
 
-@extends Int8Array
+@extends Int8Array @typedef TypedArray
 
 **Inheritance/Implementation:** TypedArray extends Int8Array
 

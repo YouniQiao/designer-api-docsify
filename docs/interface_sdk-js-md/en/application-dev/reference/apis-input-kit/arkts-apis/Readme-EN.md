@@ -180,8 +180,7 @@
   - [getTouchpadPointerSpeed(system api)](arkts-input-pointer-gettouchpadpointerspeed-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getTouchpadRightClickType(system api)](arkts-input-pointer-gettouchpadrightclicktype-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getTouchpadScrollDirection(system api)](arkts-input-pointer-gettouchpadscrolldirection-f-sys.md)<!--DelEnd-->
+  - [getTouchpadScrollDirection](arkts-input-pointer-gettouchpadscrolldirection-f.md)
   <!--Del-->
   - [getTouchpadScrollSwitch(system api)](arkts-input-pointer-gettouchpadscrollswitch-f-sys.md)<!--DelEnd-->
   <!--Del-->

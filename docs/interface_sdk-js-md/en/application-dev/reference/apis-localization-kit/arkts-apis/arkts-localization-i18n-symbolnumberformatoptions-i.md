@@ -22,7 +22,7 @@ groupingSeparator?: string | undefined
 
 Grouping Separator symbol of localized number part, such as "," of "10,000".
 
-**Type:** string \| undefined
+**Type:** string &#124; undefined
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ infinity?: string | undefined
 
 Infinity symbol of localized number part, such as "∞".
 
-**Type:** string \| undefined
+**Type:** string &#124; undefined
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ minusSign?: string | undefined
 
 Minus sign of localized number part, such as "-".
 
-**Type:** string \| undefined
+**Type:** string &#124; undefined
 
 **Since:** 26.0.0
 
@@ -76,7 +76,7 @@ nan?: string | undefined
 
 NaN symbol of localized number part, such as "null".
 
-**Type:** string \| undefined
+**Type:** string &#124; undefined
 
 **Since:** 26.0.0
 
@@ -94,7 +94,7 @@ plusSign?: string | undefined
 
 Plus sign of localized number part, such as "+".
 
-**Type:** string \| undefined
+**Type:** string &#124; undefined
 
 **Since:** 26.0.0
 
@@ -112,7 +112,7 @@ zero?: string | undefined
 
 Zero symbol of localized number part, such as "0".
 
-**Type:** string \| undefined
+**Type:** string &#124; undefined
 
 **Since:** 26.0.0
 

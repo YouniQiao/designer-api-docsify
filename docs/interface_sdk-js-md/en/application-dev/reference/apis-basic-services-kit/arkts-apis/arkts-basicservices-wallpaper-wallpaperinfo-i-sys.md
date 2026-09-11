@@ -2,6 +2,8 @@
 
 WallpaperInfo definition including folding status, rotation status, and resource path.
 
+@typedef WallpaperInfo
+
 **Since:** 14
 
 **System capability:** SystemCapability.MiscServices.Wallpaper

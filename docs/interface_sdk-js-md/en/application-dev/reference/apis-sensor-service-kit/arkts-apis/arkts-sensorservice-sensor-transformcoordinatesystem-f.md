@@ -19,7 +19,7 @@ Rotates a rotation vector so that it can represent the coordinate system in diff
 
 **Deprecated since:** 9
 
-**Substitutes:** [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md)(inRotationVector: Array&lt;double&gt;, coordinates: CoordinatesOptions, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
+**Substitutes:** [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md)(inRotationVector: Array&lt;number&gt;, coordinates: CoordinatesOptions, callback: AsyncCallback&lt;Array&lt;number&gt;&gt;)
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -63,7 +63,7 @@ Rotates a rotation vector so that it can represent the coordinate system in diff
 
 **Deprecated since:** 9
 
-**Substitutes:** [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md)(inRotationVector: Array&lt;double&gt;, coordinates: CoordinatesOptions)
+**Substitutes:** [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md)(inRotationVector: Array&lt;number&gt;, coordinates: CoordinatesOptions)
 
 **System capability:** SystemCapability.Sensors.Sensor
 

@@ -4,7 +4,7 @@ The ServiceExtensionContext module provides the context environment for the Serv
 
 You can use the APIs of this module to start, terminate, connect, and disconnect an ability.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The APIs of this module must be used on the main thread, but not in child threads such as Worker and TaskPool.
 
@@ -24,7 +24,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 Connects this ability to a ServiceExtensionAbility. This API can be called only on the main thread.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -118,7 +118,7 @@ Connects this ability to a ServiceExtensionAbility of a given account. This API 
 
 This API can be properly called on phones and tablets. If it is called on other devices, error code 16000006 is returned.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -353,7 +353,7 @@ openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<void>
 
 Starts an atomic service based on an application ID. This API uses a promise to return the result asynchronously.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -437,7 +437,7 @@ A URL in the standard format is passed in to the **link** field to start the tar
 
 If an input parameter is invalid, for example, a mandatory parameter is not set or the URL set in **link** is not in the standard format, an exception is thrown. If the parameter verification is successful but an error occurs when starting the target UIAbility, the error information is returned through promise.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -626,7 +626,7 @@ Requests the specified focused application to start the UIExtensionAbility of th
 
 Before starting the UIExtensionAbility, ensure that the focused application has finished page initialization. Otherwise, the UIExtensionAbility fails to start. The application can determine the time to start the UIExtensionAbility by listening for the page loading status.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -708,7 +708,7 @@ Requests the specified focused application to start the UIExtensionAbility of th
 
 Before starting the UIExtensionAbility, ensure that the focused application has finished page initialization. Otherwise, the UIExtensionAbility fails to start. The application can determine the time to start the UIExtensionAbility by listening for the page loading status.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -795,7 +795,7 @@ Requests the specified focused application to start the UIExtensionAbility of th
 
 Before starting the UIExtensionAbility, ensure that the focused application has finished page initialization. Otherwise, the UIExtensionAbility fails to start. The application can determine the time to start the UIExtensionAbility by listening for the page loading status.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -1151,7 +1151,7 @@ startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 
 Starts an ability with the caller information specified. The caller information is carried in **Want** and identified at the system service layer. The ability can obtain the caller information from the **Want** parameter in the **onCreate** lifecycle callback. When this API is used to start an ability, the caller information carried in **Want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API can be called only on the main thread. It uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -1235,7 +1235,7 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 
 Starts an ability with the caller information and start options specified. The caller information is carried in **Want** and identified at the system service layer. The ability can obtain the caller information from the **Want** parameter in the **onCreate** lifecycle callback. When this API is used to start an ability, the caller information carried in **Want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API can be called only on the main thread. It uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -1322,7 +1322,7 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 
 Starts an ability with the start options specified. The caller information is carried in **Want** and identified at the system service layer. The ability can obtain the caller information from the **Want** parameter in the **onCreate** lifecycle callback. When this API is used to start an ability, the caller information carried in **Want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API can be called only on the main thread. It uses a promise to return the result asynchronously.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -1653,7 +1653,7 @@ startAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<v
 
 Starts an ability with the account ID specified. This API can be called only on the main thread. It uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -1749,7 +1749,7 @@ startAbilityWithAccount(want: Want, accountId: number, options: StartOptions, ca
 
 Starts an ability with the account ID and start options specified. This API can be called only on the main thread. It uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -1850,7 +1850,7 @@ startAbilityWithAccount(want: Want, accountId: number, options?: StartOptions): 
 
 Starts an ability with the account ID specified. This API can be called only on the main thread. It uses a promise to return the result asynchronously.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -1956,7 +1956,7 @@ startRecentAbility(want: Want, callback: AsyncCallback<void>): void
 
 Starts an ability. If the ability has multiple instances, the latest instance is started. This API can be called only on the main thread. It uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -2048,7 +2048,7 @@ Starts an ability. If the ability has multiple instances, the latest instance is
 
 You can use this API to carry start options.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -2143,7 +2143,7 @@ startRecentAbility(want: Want, options?: StartOptions): Promise<void>
 
 Starts an ability. If the ability has multiple instances, the latest instance is started. This API uses a promise to return the result asynchronously. It can be called only on the main thread.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -2397,7 +2397,7 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: number, callback:
 
 Starts a ServiceExtensionAbility with the account ID specified. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -2484,7 +2484,7 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<
 
 Starts a ServiceExtensionAbility with the account ID specified. This API uses a promise to return the result asynchronously.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -2580,7 +2580,7 @@ You can pass the Want information of multiple UIAbility instances, which can poi
 
 This API can be properly called on phones and tablets. If it is called on other devices, error code 801 is returned.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -2671,7 +2671,7 @@ startUIServiceExtensionAbility(want: Want): Promise<void>
 
 Starts a new [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md). This API uses a promise to return the result asynchronously.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -2893,7 +2893,7 @@ stopServiceExtensionAbilityWithAccount(want: Want, accountId: number, callback: 
 
 Stops a ServiceExtensionAbility with the specified account. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Permission verification is not required when **accountId** specifies the current user.
 
@@ -2973,7 +2973,7 @@ stopServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<v
 
 Stops a ServiceExtensionAbility with the specified account. This API uses a promise to return the result asynchronously.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Permission verification is not required when **accountId** specifies the current user.
 

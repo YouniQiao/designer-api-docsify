@@ -20,7 +20,7 @@ delete(callback: AsyncCallback<boolean>): void
 
 Deletes the upload task. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
@@ -63,7 +63,7 @@ delete(): Promise<boolean>
 
 Deletes the upload task. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
@@ -112,14 +112,14 @@ Unsubscribes from upload progress events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'progress' | Yes | Event type.   - **'progress'**: upload progress. |
+| type | 'progress' | Yes | Event type.<br>- **'progress'**: upload progress. |
 | callback | (uploadedSize: number, totalSize: number) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -154,14 +154,14 @@ Unsubscribes from HTTP response events for the upload task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'headerReceive' | Yes | Event type.   - **'headerReceive'**: The HTTP request receives a response. |
+| type | 'headerReceive' | Yes | Event type.<br>- **'headerReceive'**: The HTTP request receives a response. |
 | callback | (header: object) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -196,14 +196,14 @@ Unsubscribes from upload completion or failure events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'fail' | Yes | Event type.   - **'complete'**: upload task completion.   - **'fail'**: upload task failure. |
+| type | 'complete' &#124; 'fail' | Yes | Event type.<br>- **'complete'**: upload task completion.<br>- **'fail'**: upload task failure. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -263,14 +263,14 @@ Unsubscribes from upload completion or failure events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'fail' | Yes | Event type.   - **'complete'**: upload task completion.   - **'fail'**: upload task failure. |
+| type | 'complete' &#124; 'fail' | Yes | Event type.<br>- **'complete'**: upload task completion.<br>- **'fail'**: upload task failure. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -284,7 +284,7 @@ on(type: 'progress', callback: (uploadedSize: number, totalSize: number) => void
 
 Subscribes to upload progress events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > To maintain a balance between power consumption and performance, this API cannot be called when the application
 > is running in the background.
@@ -304,7 +304,7 @@ Subscribes to upload progress events. This API uses an asynchronous callback to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -331,14 +331,14 @@ Subscribes to HTTP response events for the upload task.This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'headerReceive' | Yes | Event type.   - **'headerReceive'**: The HTTP request receives a response. |
+| type | 'headerReceive' | Yes | Event type.<br>- **'headerReceive'**: The HTTP request receives a response. |
 | callback | (header: object) =&gt; void | Yes | Callback used to return the response content. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -365,14 +365,14 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'fail' | Yes | Type of the event to subscribe to. |
+| type | 'complete' &#124; 'fail' | Yes | Type of the event to subscribe to. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes | Callback used to return the state of the upload task. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -408,14 +408,14 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'fail' | Yes | Type of the event to subscribe to. |
+| type | 'complete' &#124; 'fail' | Yes | Type of the event to subscribe to. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes | Callback used to return the state of the upload task. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 

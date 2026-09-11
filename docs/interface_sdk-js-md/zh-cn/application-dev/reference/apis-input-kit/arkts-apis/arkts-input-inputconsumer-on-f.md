@@ -30,7 +30,7 @@ function on(type: 'hotkeyChange', hotkeyOptions: HotkeyOptions, callback: Callba
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [4200002](../errorcode-inputconsumer.md#4200002-快捷键被系统注册) | The hotkey has been used by the system. |
 | [4200003](../errorcode-inputconsumer.md#4200003-快捷键已经被其他应用注册) | The hotkey has been subscribed to by another. |
@@ -79,7 +79,7 @@ function on(type: 'keyPressed', options: KeyPressedConfig, callback: Callback<Ke
 
 订阅按键按下事件。若当前应用窗口为前台焦点窗口，用户按下指定按键，会触发回调。使用callback异步回调。
 
-订阅成功后，该按键事件的系统默认行为将被屏蔽，即不会再触发系统级的响应，如音量调节。要恢复系统响应，请使用off方法取消订阅。
+订阅成功后，该按键事件的系统默认行为将被屏蔽，即不会再触发系统级的响应，如音量调节。要恢复系统响应，请使用[off](arkts-input-inputconsumer-off-f.md#offkeypressed)方法取消订阅。
 
 **起始版本：** 16
 
@@ -97,7 +97,7 @@ function on(type: 'keyPressed', options: KeyPressedConfig, callback: Callback<Ke
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 **示例**

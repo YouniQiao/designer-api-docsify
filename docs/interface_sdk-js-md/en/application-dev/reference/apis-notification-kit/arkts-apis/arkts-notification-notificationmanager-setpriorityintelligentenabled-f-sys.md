@@ -28,7 +28,7 @@ Sets the enabling status of the intelligent priority notification service. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Enabling status of the intelligent priority notification service.    - **true**: The intelligent priority notification service is enabled.    - **false**: The intelligent priority notification service is disabled. |
+| enable | boolean | Yes | Enabling status of the intelligent priority notification service.<br> - **true**: The intelligent priority notification service is enabled.<br> - **false**: The intelligent priority notification service is disabled. |
 
 **Return value:**
 

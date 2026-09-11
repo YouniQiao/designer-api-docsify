@@ -38,7 +38,7 @@ Adds a data record to this **UnifiedRecord** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
 **Examples**
 
@@ -88,7 +88,7 @@ Defines a constructor used to create a **UnifiedData** object with a data record
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
 **Examples**
 
@@ -202,7 +202,7 @@ Obtains the types of all data records in this **UnifiedData** object.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Array of the [UniformDataType]{ |
+| Array&lt;string&gt; | Array of the [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md) types obtained. |
 
 **Examples**
 
@@ -262,7 +262,7 @@ For file types, if the type set of **UnifiedData** includes **general.jpeg**, ca
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
 **Examples**
 

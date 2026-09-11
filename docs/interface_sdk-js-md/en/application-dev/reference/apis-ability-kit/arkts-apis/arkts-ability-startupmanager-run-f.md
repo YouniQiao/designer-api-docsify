@@ -14,10 +14,10 @@ function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 
 Runs startup tasks or loads .so files.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API cannot be used to run startup tasks defined in a feature-type HAP. To run those tasks, use
-> [startupManager.run](arkts-ability-startupmanager-run-f.md)
+> [startupManager.run](#run-1)
 > .
 
 **Since:** 12

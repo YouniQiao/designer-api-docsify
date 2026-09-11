@@ -108,7 +108,7 @@ abstract makeNode(uiContext: UIContext): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | 一个FrameNode对象，返回的节点将被挂载至[NodeContainer]{ |
+| [FrameNode](arkts-arkui-framenode-c.md) &#124; null | 一个FrameNode对象，返回的节点将被挂载至NodeContainer的占位节点上。若返回null对象，将清空对应NodeContainer的子节点。 |
 
 ## onAttach
 

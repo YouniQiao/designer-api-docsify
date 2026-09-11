@@ -38,7 +38,7 @@ fontFamily?: string | Resource
 
 Font family.
 
-**Type:** string \| [Resource](arkts-arkui-resource-t.md)
+**Type:** string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 12
 
@@ -86,7 +86,7 @@ fontWeight?: number | FontWeight | string
 
 Font weight.
 
-**Type:** number \| [FontWeight](arkts-arkui-fontweight-e.md) \| string
+**Type:** number &#124; [FontWeight](arkts-arkui-fontweight-e.md) &#124; string
 
 **Since:** 12
 

@@ -7,8 +7,10 @@ Program access control provides permission verification and management capabilit
  manual_settings (manual setting authorization). Apps must declare the required permissions in the configuration file.
  For details about the permission management mechanism, see
  [Application Permission Management Overview](../../../security/AccessToken/app-permission-mgmt-overview.md).
- This module is mainly used in the following scenarios:
- - Before executing a service, verify whether the current app has the permissions required to access protected
+
+This module is mainly used in the following scenarios:
+
+- Before executing a service, verify whether the current app has the permissions required to access protected
  resources.
  - When a permission is not granted, bring up the runtime permission dialog box or the permission settings page to
  request user authorization.
@@ -41,6 +43,8 @@ Program access control provides permission verification and management capabilit
 
 - **[AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md):** Program access control management class, providing  
  capabilities such as permission verification, permission dialog box request, settings page authorization guidance,and permission status monitoring.
+
+
 
 ## Modules to Import
 

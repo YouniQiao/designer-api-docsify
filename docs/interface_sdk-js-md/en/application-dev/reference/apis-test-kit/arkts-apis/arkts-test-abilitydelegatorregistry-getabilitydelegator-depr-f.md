@@ -27,7 +27,7 @@ Obtains the **AbilityDelegator** object of the application.
 
 | Type | Description |
 | --- | --- |
-| [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md) | [AbilityDelegator]{ |
+| [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md) | [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md) object, which can be used to schedule functions related to the test framework. |
 
 **Examples**
 

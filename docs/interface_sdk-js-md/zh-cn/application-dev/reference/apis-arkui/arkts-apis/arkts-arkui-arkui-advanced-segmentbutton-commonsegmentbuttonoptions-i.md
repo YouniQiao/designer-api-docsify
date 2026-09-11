@@ -154,7 +154,7 @@ buttonPadding?: Padding | Dimension
 
 值为undefined时，按默认值处理。
 
-**类型：** Padding \| [Dimension](arkts-arkui-dimension-t.md)
+**类型：** Padding &#124; [Dimension](arkts-arkui-dimension-t.md)
 
 **默认值：** For text only / icon only buttons Padding { top: 4, right: 8, bottom: 4, left: 8 }. For text & icon buttons Padding { top: 6, right: 8, bottom: 6, left: 8 }.
 
@@ -488,7 +488,7 @@ textPadding?: Padding | Dimension
 
 值为undefined时，按默认值处理。
 
-**类型：** Padding \| [Dimension](arkts-arkui-dimension-t.md)
+**类型：** Padding &#124; [Dimension](arkts-arkui-dimension-t.md)
 
 **默认值：** 0
 

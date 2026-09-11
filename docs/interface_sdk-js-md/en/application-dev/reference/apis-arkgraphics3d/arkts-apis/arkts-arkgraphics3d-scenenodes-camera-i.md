@@ -239,7 +239,7 @@ clearColor: Color | null
 
 Color after the render target is cleared.
 
-**Type:** [Color](arkts-arkgraphics3d-scenetypes-color-i.md) \| null
+**Type:** [Color](arkts-arkgraphics3d-scenetypes-color-i.md) &#124; null
 
 **Since:** 12
 
@@ -339,7 +339,7 @@ postProcess: PostProcessSettings | null
 
 Post-processing settings.
 
-**Type:** [PostProcessSettings](arkts-arkgraphics3d-scenepostprocesssettings-postprocesssettings-i.md) \| null
+**Type:** [PostProcessSettings](arkts-arkgraphics3d-scenepostprocesssettings-postprocesssettings-i.md) &#124; null
 
 **Since:** 12
 

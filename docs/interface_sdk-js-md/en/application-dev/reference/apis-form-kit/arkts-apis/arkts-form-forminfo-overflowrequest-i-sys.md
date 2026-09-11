@@ -2,6 +2,8 @@
 
 Provides OverflowRequest about request/cancel form's overflow
 
+@typedef { OverflowRequest }
+
 **Since:** 20
 
 **System capability:** SystemCapability.Ability.Form

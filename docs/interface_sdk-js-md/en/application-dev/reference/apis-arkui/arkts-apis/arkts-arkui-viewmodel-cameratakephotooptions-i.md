@@ -76,7 +76,7 @@ quality: "high" | "normal" | "low"
 
 Picture quality.
 
-**Type:** "high" \| "normal" \| "low"
+**Type:** "high" &#124; "normal" &#124; "low"
 
 **Since:** 6
 

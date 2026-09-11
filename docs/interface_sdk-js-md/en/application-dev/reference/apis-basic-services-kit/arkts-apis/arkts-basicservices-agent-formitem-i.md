@@ -36,7 +36,7 @@ value: string | FileSpec | Array<FileSpec>
 
 Form parameter value.
 
-**Type:** string \| [FileSpec](arkts-basicservices-agent-filespec-i.md) \| Array&lt;[FileSpec](arkts-basicservices-agent-filespec-i.md)&gt;
+**Type:** string &#124; [FileSpec](arkts-basicservices-agent-filespec-i.md) &#124; Array&lt;[FileSpec](arkts-basicservices-agent-filespec-i.md)&gt;
 
 **Since:** 10
 

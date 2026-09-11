@@ -20,7 +20,7 @@ content: string | Array<number>
 
 如果内容是字符串，则这是一条文本短信。如果内容是字节数组，则这是一条数据短信。
 
-**类型：** string \| Array&lt;number&gt;
+**类型：** string &#124; Array&lt;number&gt;
 
 **起始版本：** 6
 

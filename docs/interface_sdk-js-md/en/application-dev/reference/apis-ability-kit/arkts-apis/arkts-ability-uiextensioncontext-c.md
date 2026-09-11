@@ -16,7 +16,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 Connects this UIExtensionAbility to a ServiceExtensionAbility. It enables communication with the ServiceExtensionAbility via a proxy, allowing access to the capabilities exposed by the ServiceExtensionAbility. ServiceExtensionAbility is a special type of [ExtensionAbility](../../../application-models/extensionability-overview.md) provided by the system. It is designed to offer background services for specific scenarios and is not customizable by developers. It can be connected to by other components and handles requests in the background based on the caller information.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -38,7 +38,7 @@ Connects this UIExtensionAbility to a ServiceExtensionAbility. It enables commun
 
 | Type | Description |
 | --- | --- |
-| number | Connection ID. The client can call [disconnectServiceExtensionAbility]{ |
+| number | Connection ID. The client can call [disconnectServiceExtensionAbility](#disconnectserviceextensionability) with this ID for disconnection. |
 
 **Error codes:**
 
@@ -68,7 +68,7 @@ connectUIServiceExtensionAbility(want: Want, callback: UIServiceExtensionConnect
 
 Connects to a UIServiceExtensionAbility. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -90,7 +90,7 @@ Connects to a UIServiceExtensionAbility. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[UIServiceProxy](arkts-ability-uiserviceproxy-i.md)&gt; | Promise used to return a [UIServiceProxy]{ |
+| Promise&lt;[UIServiceProxy](arkts-ability-uiserviceproxy-i.md)&gt; | Promise used to return a [UIServiceProxy](arkts-ability-uiserviceproxy-i.md) object when the UIServiceExtensionAbility is connected. This object can be used to send data to the UIServiceExtensionAbility. |
 
 **Error codes:**
 
@@ -221,7 +221,7 @@ Opens an atomic service in an independent window and returns the result. This AP
 - If different applications call this API to start an atomic service and then call  
 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the atomic service, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -272,7 +272,7 @@ Starts a UIAbility by using App Linking or Deep Linking. This API uses a promise
 - The **uris** field must contain elements whose **scheme** is **https** and **domainVerify** is **true**.  
 If you want to obtain the result after the started UIAbility is terminated, set the **callback** parameter. For details about how to use this parameter, see [startAbilityForResult](#startabilityforresult). If an input parameter is invalid, for example, a mandatory parameter is not set or the URL set in **link** is not in the standard format, an exception is thrown. If the parameter verification is successful but an error occurs when starting the target UIAbility, the error information is returned through promise.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -355,7 +355,7 @@ setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 
 Sets the dark/light color mode for this UIExtensionAbility. Before calling this API, ensure that the page corresponding to the UIExtensionContext has been loaded. This API can be called only by the main thread.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - After this API is called, a new resource manager object is created. If a resource manager was previously cached
 > , it should be updated accordingly.
@@ -377,7 +377,7 @@ Sets the dark/light color mode for this UIExtensionAbility. Before calling this 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorMode | [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-e.md) | Yes | Color mode. The options are as follows:    - **COLOR_MODE_DARK**: dark mode.    - **COLOR_MODE_LIGHT**: light mode.    - **COLOR_MODE_NOT_SET**: not set (following the system or application). |
+| colorMode | [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-e.md) | Yes | Color mode. The options are as follows:<br> - **COLOR_MODE_DARK**: dark mode.<br> - **COLOR_MODE_LIGHT**: light mode.<br> - **COLOR_MODE_NOT_SET**: not set (following the system or application). |
 
 **Error codes:**
 
@@ -393,7 +393,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 Starts a UIAbility. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -453,7 +453,7 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 
 Starts a UIAbility. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -512,7 +512,7 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 Starts a UIAbility. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -585,7 +585,7 @@ Starts a UIAbility and returns the exit result of the launched UIAbility via a c
 - If different applications call this API to start a UIAbility that uses the singleton mode and then call  
 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the UIAbility, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -652,7 +652,7 @@ Starts a UIAbility and returns the exit result of the launched UIAbility via a c
 - If different applications call this API to start a UIAbility that uses the singleton mode and then call  
 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the UIAbility, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -718,7 +718,7 @@ Starts a UIAbility and returns the exit result of the launched UIAbility via a c
 - If different applications call this API to start a UIAbility that uses the singleton mode and then call  
 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the UIAbility, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -784,7 +784,7 @@ startUIServiceExtensionAbility(want: Want): Promise<void>
 
 Starts a UIServiceExtensionAbility. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).

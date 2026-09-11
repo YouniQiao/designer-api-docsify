@@ -100,7 +100,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to SecureSession error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -125,7 +125,7 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 
 Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 

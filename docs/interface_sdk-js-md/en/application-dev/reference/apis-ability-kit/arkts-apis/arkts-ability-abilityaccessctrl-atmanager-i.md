@@ -32,8 +32,8 @@ Applicable to scenarios where a pre-permission check is performed before an app 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | number | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. The value should be an integer. Value constraint: This parameter must be an integer greater than 0. For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md). |
-| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be verified. Passing an invalid value returns error code 12100001. Value constraint: The permission name length cannot exceed 256 characters. |
+| tokenID | number | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br> For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). <br>If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md). |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be verified. Passing an invalid value returns error code 12100001.<br>Value constraint: The permission name length cannot exceed 256 characters. |
 
 **Return value:**
 
@@ -92,8 +92,8 @@ Applicable to scenarios where a pre-permission check is performed before an app 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | number | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. The value should be an integer. Value constraint: This parameter must be an integer greater than 0. For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md). |
-| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be verified. Passing an invalid value returns error code 12100001. Value constraint: The permission name length cannot exceed 256 characters. |
+| tokenID | number | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br> For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). <br>If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md). |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be verified. Passing an invalid value returns error code 12100001.<br>Value constraint: The permission name length cannot exceed 256 characters. |
 
 **Return value:**
 
@@ -146,7 +146,7 @@ Applicable to scenarios such as before determining whether to request a permissi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission whose status is to be queried. Passing an invalid value returns error code 12100001. Value constraint: The permission name length cannot exceed 256 characters. |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission whose status is to be queried. Passing an invalid value returns error code 12100001.<br>Value constraint: The permission name length cannot exceed 256 characters. |
 
 **Return value:**
 
@@ -208,7 +208,7 @@ This API is usually used in conjunction with [on](arkts-ability-abilityaccessctr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selfPermissionStateChange' | Yes | Type of the unsubscription event, which is fixed as'selfPermissionStateChange', indicating a permission status change event. |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If empty, it indicates unsubscribing from all permission status changes, and must match the permission list used during [on](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#on) subscription (order insensitive). The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If empty, it indicates unsubscribing from all permission status changes, and must match the permission list used during [on](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#on) subscription (order insensitive). <br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | No | Callback function. Callback for unsubscribing from the status change event of the specified permission names. If this parameter is not passed, all callback functions associated with permissionList will be deleted in batch. |
 
 **Error codes:**
@@ -274,7 +274,7 @@ This API is usually used in conjunction with [off](arkts-ability-abilityaccessct
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selfPermissionStateChange' | Yes | Event type. The value is **'selfPermissionStateChange'**, which indicates the changes in the permission states specific to this application alone. |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to subscribe to. Passing an invalid value returns error code 12100001. The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to subscribe to. Passing an invalid value returns error code 12100001.<br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | Yes | Callback used to return the result. Callback for subscribing to status change events of the specified permission name. |
 
 **Error codes:**
@@ -330,7 +330,7 @@ Applicable to scenarios where [manual_settings](../../../security/AccessToken/ap
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](arkts-ability-context-t.md) | Yes | Context of the UIAbility or UIExtensionAbility requesting the permission. If the context of another app, an invalid page, or a non-stage model is passed in, the API may report an error or fail to open the settings page. |
-| permission | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission for which the settings page needs to be opened. If an invalid permission or a permission not declared in module.json is passed in, error code 12100001 is returned. Only permissions of the [manual_settings](../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings-manual-authorization) type are supported. If a permission of another type is passed in, error code 12100014 is returned. Value constraint: The permission name cannot exceed 256 characters. |
+| permission | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission for which the settings page needs to be opened. If an invalid permission or a permission not declared in module.json is passed in, error code 12100001 is returned. Only permissions of the [manual_settings](../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings-manual-authorization) type are supported. If a permission of another type is passed in, error code 12100014 is returned. <br>Value constraint: The permission name cannot exceed 256 characters. |
 
 **Return value:**
 
@@ -465,7 +465,7 @@ Before calling this API, the app needs to call [requestPermissionsFromUser](#req
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](arkts-ability-context-t.md) | Yes | Context of the UIAbility or UIExtensionAbility requesting the permission. If the context of another app, an invalid page, or a non-stage model is passed in, the API may report an error or fail to display the pop-up window. |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names. This array cannot be empty. Only user_grant permissions that have been declared and for which the user has revoked authorization can be passed in, and the permissions passed in must belong to the same [permission group](../../../security/AccessToken/app-permission-group-list.md). Value constraint: The permission name length cannot exceed 256 characters. |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names. This array cannot be empty. Only user_grant permissions that have been declared and for which the user has revoked authorization can be passed in, and the permissions passed in must belong to the same [permission group](../../../security/AccessToken/app-permission-group-list.md). <br>Value constraint: The permission name length cannot exceed 256 characters. |
 
 **Return value:**
 
@@ -534,8 +534,8 @@ If the user denies authorization, the authorization dialog box cannot be brought
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-t.md) | Yes | Context of the<!--RP1-->UIAbility<!--RP1End--> requesting the permission. If the context of another app, an invalid page, or a non-stage model is passed in, the API may report an error or fail to display the dialog box. |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names. It is recommended to pass in only the sensitive permissions necessary for the current business scenario, avoiding requesting too many permissions at once. The minimum length is 1. Value constraint: The permission name can contain a maximum of 256 characters. |
+| context | [Context](arkts-ability-context-t.md) | Yes | Context of the<!--RP1-->UIAbility<!--RP1End--> requesting the permission. <br>If the context of another app, an invalid page, or a non-stage model is passed in, the API may report an error or fail to display the dialog box. |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names. It is recommended to pass in only the sensitive permissions necessary for the current business scenario, avoiding requesting too many permissions at once.<br>The minimum length is 1. Value constraint: The permission name can contain a maximum of 256 characters. |
 | requestCallback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)&gt; | Yes | Callback function. After the call is complete, error information is returned through **err**, and the permission request result object is returned through **data**. The developer can determine whether the user has authorized, whether a dialog box has been displayed, and the reason for failure based on the permission request result. |
 
 **Error codes:**
@@ -598,7 +598,7 @@ If the user denies authorization, the authorization dialog box cannot be brought
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](arkts-ability-context-t.md) | Yes | Context of the<!--RP1-->UIAbility<!--RP1End--> requesting the permission. If the context of another app, an invalid page, or a non-stage model is passed in, the API may report an error or fail to display the dialog box. |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names. This array cannot be empty. It is recommended to pass in only the sensitive permissions necessary for the current business scenario and avoid requesting too many permissions at once. The minimum length is 1. Value constraint: The length of a permission name cannot exceed 256 characters. |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names. This array cannot be empty. It is recommended to pass in only the sensitive permissions necessary for the current business scenario and avoid requesting too many permissions at once.<br>The minimum length is 1. Value constraint: The length of a permission name cannot exceed 256 characters. |
 
 **Return value:**
 
@@ -649,7 +649,7 @@ Verifies whether an app has been granted the specified permission. After the cal
 
 Applicable to scenarios where a pre-permission check is performed before an app accesses protected resources.
 
-> **NOTE：**
+> **NOTE:**
 > You are advised to use [checkAccessToken](#checkaccesstoken).
 
 **Since:** 9
@@ -660,8 +660,8 @@ Applicable to scenarios where a pre-permission check is performed before an app 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | number | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. The value should be an integer. Value constraint: This parameter must be an integer greater than 0. For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md). |
-| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be verified. Passing an invalid value returns error code 12100001. Value constraint: The permission name length cannot exceed 256 characters. |
+| tokenID | number | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br> For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). <br>If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md). |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be verified. Passing an invalid value returns error code 12100001.<br>Value constraint: The permission name length cannot exceed 256 characters. |
 
 **Return value:**
 
@@ -699,7 +699,7 @@ verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>
 
 Verifies whether an app has been granted the specified permission. After the call is successful, the authorization status of the current permission is returned, and the developer can decide on subsequent operations accordingly. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > This API is supported since API version 8 and deprecated since API version 9. It is recommended to use
 > [checkAccessToken](#checkaccesstoken) instead.
 
@@ -715,8 +715,8 @@ Verifies whether an app has been granted the specified permission. After the cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | number | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. The value should be an integer. Value constraint: This parameter must be an integer greater than 0. For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md). |
-| permissionName | string | Yes | Name of the permission to be verified. Passing an invalid value returns error code 12100001. Value constraint: The permission name length cannot exceed 256 characters. |
+| tokenID | number | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br> For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). <br>If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md). |
+| permissionName | string | Yes | Name of the permission to be verified. Passing an invalid value returns error code 12100001.<br>Value constraint: The permission name length cannot exceed 256 characters. |
 
 **Return value:**
 
@@ -766,8 +766,8 @@ It is recommended to use [checkAccessTokenSync](#checkaccesstokensync) instead.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | number | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. The value should be an integer. Value constraint: This parameter must be an integer greater than 0. For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md). |
-| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be verified. Passing an invalid value returns error code 12100001. Value constraint: The permission name length cannot exceed 256 characters. |
+| tokenID | number | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br> For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). <br>If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md). |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be verified. Passing an invalid value returns error code 12100001.<br>Value constraint: The permission name length cannot exceed 256 characters. |
 
 **Return value:**
 

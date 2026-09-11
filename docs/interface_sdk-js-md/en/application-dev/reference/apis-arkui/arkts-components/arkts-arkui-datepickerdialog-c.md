@@ -19,7 +19,7 @@ static show(options?: DatePickerDialogOptions)
 
 Shows a date picker dialog box.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Since API version 10, you can use the
 > [showDatePickerDialog](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#showdatepickerdialog) API

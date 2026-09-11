@@ -25,7 +25,7 @@ next(...args: [] | [TNext]): IteratorResult<T, TReturn>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| args | [] \| [TNext] | Yes |  |
+| args | [] &#124; [TNext] | Yes |  |
 
 **Return value:**
 

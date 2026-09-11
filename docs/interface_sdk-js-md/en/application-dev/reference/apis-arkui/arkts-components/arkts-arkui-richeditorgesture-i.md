@@ -1,6 +1,6 @@
 # RichEditorGesture
 
-User gesture event.
+Defines a user gesture event.
 
 **Since:** 11
 
@@ -17,11 +17,11 @@ User gesture event.
 onClick?: Callback<ClickEvent>
 ```
 
-Triggered when [ClickEvent](arkts-arkui-clickevent-i.md) occurs.
+Triggered when a click event occurs.
 
 It is executed on completion of a single click.
 
-On a double-click, the first click triggers the callback event.
+For a double-click scenario, the first click triggers this callback.
 
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;[ClickEvent](arkts-arkui-clickevent-i.md)&gt;
 
@@ -39,7 +39,7 @@ On a double-click, the first click triggers the callback event.
 onLongPress?: Callback<GestureEvent>
 ```
 
-Triggered when the user performs a long press.
+Triggered when a long press event occurs.
 
 It is executed on completion of a long press.
 

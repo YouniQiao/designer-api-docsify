@@ -52,7 +52,7 @@ parameter?: LoopMode | string | number
 
 命令对应的参数。
 
-**类型：** [LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| number
+**类型：** [LoopMode](arkts-avsession-avsession-loopmode-e.md) &#124; string &#124; number
 
 **起始版本：** 10
 

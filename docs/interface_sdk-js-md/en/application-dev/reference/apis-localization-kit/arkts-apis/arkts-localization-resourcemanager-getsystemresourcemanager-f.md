@@ -14,7 +14,7 @@ export function getSystemResourceManager(): ResourceManager
 
 Obtains a system resource management object for accessing preset system resources.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The **Configuration** parameter in the **ResourceManager** object obtained via this API uses the default value.
 > The default value is

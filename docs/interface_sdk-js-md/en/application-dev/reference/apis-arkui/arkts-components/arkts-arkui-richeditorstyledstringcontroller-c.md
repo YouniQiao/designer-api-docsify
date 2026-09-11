@@ -1,6 +1,12 @@
 # RichEditorStyledStringController
 
-Represents the controller of the **RichEditor** component constructed using the styled string. Inherits from [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md).
+Represents the controller of the **RichEditor** component built with the styled string. Inherits from [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md).
+
+## Objects to Import
+
+```ts
+controller: RichEditorStyledStringController = new RichEditorStyledStringController();
+```
 
 **Inheritance/Implementation:** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md) and implements [StyledStringController](../arkts-apis/arkts-arkui-styledstringcontroller-i.md)
 
@@ -33,7 +39,7 @@ Obtains the current selection range of the **RichEditor** component.
 
 | Type | Description |
 | --- | --- |
-| [RichEditorRange](arkts-arkui-richeditorrange-i.md) | Selection range. |
+| [RichEditorRange](arkts-arkui-richeditorrange-i.md) | Selection range.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getStyledString
 
@@ -55,7 +61,7 @@ Obtains the styled string displayed in the **RichEditor** component.
 
 | Type | Description |
 | --- | --- |
-| [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) | Styled string displayed in the rich text component. |
+| [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) | Styled string displayed in the rich text component.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## onContentChanged
 
@@ -63,7 +69,7 @@ Obtains the styled string displayed in the **RichEditor** component.
 onContentChanged(listener: StyledStringChangedListener): void
 ```
 
-Registers the callback for the text content change. This callback is triggered only when the text content is changed by backend programs, and is not triggered when [setStyledString](#setstyledstring) is called.
+Registers a callback for the text content change. This callback is triggered only when the text content is changed by backend programs, and is not triggered when [setStyledString](#setstyledstring) is called.
 
 **Since:** 12
 
@@ -87,13 +93,13 @@ setStyledString(styledString: StyledString): void
 
 Sets the styled string displayed in the **RichEditor** component.
 
-> **NOTE：**
+> **NOTE:**
 > 
-> - When this interface is called, the StyledString of the rich text component is fully replaced and rendered
-> again.
+> - When this API is called, the **StyledString** of the **RichEditor** component is fully replaced and re-
+> rendered.
 > 
-> - When the content exceeds the component area, the component automatically scrolls up until the content is
-> visible at the end.
+> - When the content exceeds the component area, the component automatically scrolls up until the end of the
+> content is visible.
 
 **Since:** 12
 
@@ -107,4 +113,4 @@ Sets the styled string displayed in the **RichEditor** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | Styled string.   **NOTE：**The child class [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) of **StyledString** can also serve as the argument. |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | Styled string. <br>**NOTE:**<br>The child class [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) of **StyledString** can also serve as the argument. |

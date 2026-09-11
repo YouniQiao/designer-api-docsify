@@ -20,7 +20,7 @@ allowList: string[] | undefined
 
 If the operation is successful, the allowlist is the one set in shared configuration; otherwise, the allowlist is undefined. Only the publisher can obtain the allowlist. Other applications can obtain only the value.
 
-**Type:** string[] \| undefined
+**Type:** string[] &#124; undefined
 
 **Since:** 20
 
@@ -68,7 +68,7 @@ value: ValueType | undefined
 
 If the operation is successful, the value is the one set in shared configuration; otherwise, the value is undefined.
 
-**Type:** [ValueType](arkts-arkdata-valuetype-t.md) \| undefined
+**Type:** [ValueType](arkts-arkdata-valuetype-t.md) &#124; undefined
 
 **Since:** 20
 

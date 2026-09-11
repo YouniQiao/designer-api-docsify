@@ -31,7 +31,7 @@ type: ValueType
 
 **替代接口：** type
 
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core @memberof Value
 
 ## value
 
@@ -41,7 +41,7 @@ value: Uint8Array | string | number | boolean
 
 值。
 
-**类型：** Uint8Array \| string \| number \| boolean
+**类型：** Uint8Array &#124; string &#124; number &#124; boolean
 
 **起始版本：** 7
 

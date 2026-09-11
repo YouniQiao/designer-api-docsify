@@ -93,7 +93,7 @@ function getShortcutInfo(bundleName : string) : Promise<Array<ShortcutInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)&gt;&gt; | Promise对象。返回当前用户下指定应用的[ShortcutInfo]{ |
+| Promise&lt;Array&lt;[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)&gt;&gt; | Promise对象。返回当前用户下指定应用的ShortcutInfo。 |
 
 **错误码：**
 

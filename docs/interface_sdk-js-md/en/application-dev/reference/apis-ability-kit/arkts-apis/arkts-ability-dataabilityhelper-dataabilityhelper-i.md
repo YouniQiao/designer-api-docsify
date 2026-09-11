@@ -1261,7 +1261,7 @@ Queries data in the database. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | Returns the query result { |
+| Promise&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | Returns the query result [ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md#resultset). |
 
 **Examples**
 

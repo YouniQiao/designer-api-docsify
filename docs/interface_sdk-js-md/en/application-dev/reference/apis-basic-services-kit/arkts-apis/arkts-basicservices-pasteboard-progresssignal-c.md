@@ -4,7 +4,7 @@ Defines a function for canceling the paste task. This parameter is valid only wh
 
 **Since:** 15
 
-**System capability:** SystemCapability.MiscServices.Pasteboard
+**System capability:** SystemCapability.MiscServices.Pasteboard @class ProgressSignal
 
 ## Modules to Import
 

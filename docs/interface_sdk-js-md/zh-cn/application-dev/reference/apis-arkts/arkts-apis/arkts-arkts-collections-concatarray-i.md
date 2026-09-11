@@ -88,6 +88,12 @@ readonly [index: number]: T
 
 **系统能力：** SystemCapability.Utils.Lang
 
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
+
 ## length
 
 ```TypeScript

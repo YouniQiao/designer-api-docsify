@@ -86,7 +86,7 @@ settingValue?: string | boolean | SettingContent[] | WantAgent
 
 Value of the setting item. SWITCH: bool, LIST: SettingContent, JUMP: string.
 
-**Type:** string \| boolean \| [SettingContent](arkts-avsession-avmusictemplate-settingcontent-i.md)[] \| [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
+**Type:** string &#124; boolean &#124; [SettingContent](arkts-avsession-avmusictemplate-settingcontent-i.md)[] &#124; [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **Since:** 23
 

@@ -20,7 +20,7 @@ delete(callback: AsyncCallback<boolean>): void
 
 Deletes the download task. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
@@ -78,7 +78,7 @@ delete(): Promise<boolean>
 
 Deletes the download task. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
@@ -133,7 +133,7 @@ getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 
 Obtains the information about this download task. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
@@ -191,7 +191,7 @@ getTaskInfo(): Promise<DownloadInfo>
 
 Obtains the information about this download task. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
@@ -247,7 +247,7 @@ getTaskMimeType(callback: AsyncCallback<string>): void
 
 Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
@@ -305,7 +305,7 @@ getTaskMimeType(): Promise<string>
 
 Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
@@ -369,14 +369,14 @@ Unsubscribes from download progress events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'progress' | Yes | Event type.   - **'progress'**: download progress. |
+| type | 'progress' | Yes | Event type.<br>- **'progress'**: download progress. |
 | callback | (receivedSize: number, totalSize: number) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -426,14 +426,14 @@ Unsubscribes from download events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.   - **'complete'**: download task completion.   - **'pause'**: download task pause.   - **'remove'**: download task removal. |
+| type | 'complete' &#124; 'pause' &#124; 'remove' | Yes | Event type.<br>- **'complete'**: download task completion.<br>- **'pause'**: download task pause.<br>- **'remove'**: download task removal. |
 | callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -509,14 +509,14 @@ Unsubscribes from download events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.   - **'complete'**: download task completion.   - **'pause'**: download task pause.   - **'remove'**: download task removal. |
+| type | 'complete' &#124; 'pause' &#124; 'remove' | Yes | Event type.<br>- **'complete'**: download task completion.<br>- **'pause'**: download task pause.<br>- **'remove'**: download task removal. |
 | callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -538,14 +538,14 @@ Unsubscribes from download events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.   - **'complete'**: download task completion.   - **'pause'**: download task pause.   - **'remove'**: download task removal. |
+| type | 'complete' &#124; 'pause' &#124; 'remove' | Yes | Event type.<br>- **'complete'**: download task completion.<br>- **'pause'**: download task pause.<br>- **'remove'**: download task removal. |
 | callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -567,14 +567,14 @@ Unsubscribes from download failure events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'fail' | Yes | Event type.   - **'fail'**: download task failure. |
+| type | 'fail' | Yes | Event type.<br>- **'fail'**: download task failure. |
 | callback | (err: number) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered.For details about the error codes, see [Download Error Codes](../../../reference/apis-basic-services-kit/js-apis-request.md#constants). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -616,7 +616,7 @@ on(type: 'progress', callback: (receivedSize: number, totalSize: number) => void
 
 Subscribes to download progress events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > To maintain a balance between power consumption and performance, this API cannot be called when the application
 > is running in the background.
@@ -629,14 +629,14 @@ Subscribes to download progress events. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'progress' | Yes | Event type.   - **'progress'**: download progress. |
+| type | 'progress' | Yes | Event type.<br>- **'progress'**: download progress. |
 | callback | (receivedSize: number, totalSize: number) =&gt; void | Yes | Callback used to return the size of the uploaded file and the total size of the file to upload, in bytes. If the server uses the chunk mode for data transmission and the total file size cannot be obtained from the request header, the value of **totalSize** is treated as **-1**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -678,14 +678,14 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.   - **'complete'**: download task completion.   - **'pause'**: download task pause.   - **'remove'**: download task removal. |
+| type | 'complete' &#124; 'pause' &#124; 'remove' | Yes | Event type.<br>- **'complete'**: download task completion.<br>- **'pause'**: download task pause.<br>- **'remove'**: download task removal. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -737,14 +737,14 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.   - **'complete'**: download task completion.   - **'pause'**: download task pause.   - **'remove'**: download task removal. |
+| type | 'complete' &#124; 'pause' &#124; 'remove' | Yes | Event type.<br>- **'complete'**: download task completion.<br>- **'pause'**: download task pause.<br>- **'remove'**: download task removal. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -766,14 +766,14 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.   - **'complete'**: download task completion.   - **'pause'**: download task pause.   - **'remove'**: download task removal. |
+| type | 'complete' &#124; 'pause' &#124; 'remove' | Yes | Event type.<br>- **'complete'**: download task completion.<br>- **'pause'**: download task pause.<br>- **'remove'**: download task removal. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -795,14 +795,14 @@ Subscribes to download failure events. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'fail' | Yes | Event type.   - **'fail'**: download task failure. |
+| type | 'fail' | Yes | Event type.<br>- **'fail'**: download task failure. |
 | callback | (err: number) =&gt; void | Yes | Callback for the download task failure event.For details about the error codes, see [Download Error Codes](../../../reference/apis-basic-services-kit/js-apis-request.md#constants). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -1164,7 +1164,7 @@ restore(callback: AsyncCallback<boolean>): void
 
 Restores the download task. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
@@ -1222,7 +1222,7 @@ restore(): Promise<boolean>
 
 Restores the download task. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
@@ -1360,7 +1360,7 @@ suspend(callback: AsyncCallback<boolean>): void
 
 Suspends this download task. You can use [restore](#restore) to restore the download. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
@@ -1418,7 +1418,7 @@ suspend(): Promise<boolean>
 
 Suspends this download task. You can use [restore](#restore) to restore the download. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.

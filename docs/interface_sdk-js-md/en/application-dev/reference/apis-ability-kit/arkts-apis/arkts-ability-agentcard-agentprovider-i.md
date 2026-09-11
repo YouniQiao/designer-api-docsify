@@ -2,6 +2,8 @@
 
 Represents the service provider of an agent.
 
+@typedef AgentProvider
+
 **Since:** 24
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core

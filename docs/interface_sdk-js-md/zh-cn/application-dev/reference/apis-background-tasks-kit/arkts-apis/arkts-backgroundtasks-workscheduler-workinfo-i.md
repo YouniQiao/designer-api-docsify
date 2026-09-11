@@ -226,7 +226,7 @@ parameters?: Record<string, number | number | string | boolean>
 
 携带参数信息。
 
-**类型：** Record&lt;string, number \| number \| string \| boolean&gt;
+**类型：** Record&lt;string, number &#124; number &#124; string &#124; boolean&gt;
 
 **起始版本：** 9
 

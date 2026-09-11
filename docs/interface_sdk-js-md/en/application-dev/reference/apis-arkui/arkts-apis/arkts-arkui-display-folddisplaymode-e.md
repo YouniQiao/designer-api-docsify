@@ -2,7 +2,7 @@
 
 Enumerates the display modes of a foldable device.
 
-> **NOTE：**
+> **NOTE:**
 
 > For foldable devices where both the inner and outer screens can serve as the primary screen �� like large or wide-
 > folding models �� the inner screen's display mode is **FOLD_DISPLAY_MODE_FULL**, and the outer screen's display

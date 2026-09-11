@@ -26,7 +26,7 @@ Check whether Wi-Fi hotspot is active on a device.
 
 | Type | Description |
 | --- | --- |
-| boolean | { |
+| boolean | `true` if Wi-Fi hotspot is enabled, returns `false` otherwise. |
 
 **Error codes:**
 

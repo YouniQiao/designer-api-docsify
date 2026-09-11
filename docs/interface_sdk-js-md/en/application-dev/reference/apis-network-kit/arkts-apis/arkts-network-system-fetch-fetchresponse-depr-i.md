@@ -39,7 +39,7 @@ data: string | object
 
 The type of the returned data is determined by **responseType**. For details, see the mapping between **responseType** and **data** in **success** callback.
 
-**Type:** string \| object
+**Type:** string &#124; object
 
 **Since:** 3
 

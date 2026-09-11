@@ -14,4 +14,4 @@ Represents a FrameNode of the **SymbolGlyph** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;SymbolGlyphInterface, [SymbolGlyphAttribute](../arkts-components/arkts-arkui-symbolglyph-attribute.md)&gt;
+**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;SymbolGlyphInterface, [SymbolGlyphAttribute](../arkts-components/arkts-arkui-symbolglyph-comp-attribute.md)&gt;

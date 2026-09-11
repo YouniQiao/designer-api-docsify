@@ -112,7 +112,7 @@ title: ResourceStr | EditableTitleV2
 
 Title configuration, supports string or object form.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [EditableTitleV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlev2-c.md)
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) &#124; [EditableTitleV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlev2-c.md)
 
 **Since:** 26.0.0
 

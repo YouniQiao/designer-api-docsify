@@ -1,4 +1,4 @@
-# Constants
+# Constants(分布式数据管理)
 
 KVStore常量。
 

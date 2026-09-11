@@ -24,4 +24,4 @@ type Transformer = (this: Object, key: string, value: Object) => Object | undefi
 
 | 类型 | 说明 |
 | --- | --- |
-| Object \| undefined \| null | 返回转换处理后的属性值；返回undefined时，该属性在结果中被移除；返回null时，该属性值设为null。 |
+| Object &#124; undefined &#124; null | 返回转换处理后的属性值；返回undefined时，该属性在结果中被移除；返回null时，该属性值设为null。 |

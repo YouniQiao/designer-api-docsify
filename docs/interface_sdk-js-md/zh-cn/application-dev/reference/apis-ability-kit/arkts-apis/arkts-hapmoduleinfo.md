@@ -6,6 +6,7 @@ The module defines the HAP module information. An application can obtain its own
  [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md).
 
 
+
 ## 汇总
 
 ### 接口

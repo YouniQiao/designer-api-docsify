@@ -30,7 +30,7 @@ image: Image | null
 
 基于物理渲染（PBR）属性纹理贴图，用于表达材质的纹理信息。
 
-**类型：** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) \| null
+**类型：** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) &#124; null
 
 **起始版本：** 20
 

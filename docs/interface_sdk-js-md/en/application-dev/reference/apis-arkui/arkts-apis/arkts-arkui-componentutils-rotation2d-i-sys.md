@@ -2,6 +2,8 @@
 
 Describes a rotation in 2D, which can be defined by rotation angle and rotation center.
 
+@typedef Rotation2D
+
 **Since:** 23
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

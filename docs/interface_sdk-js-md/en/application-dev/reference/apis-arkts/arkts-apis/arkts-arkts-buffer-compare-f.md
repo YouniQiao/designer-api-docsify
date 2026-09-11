@@ -24,14 +24,14 @@ Compares two **Buffer** objects. This API is used for sorting **Buffer** objects
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf1 | Buffer \| Uint8Array | Yes | Buffer** object to compare. |
-| buf2 | Buffer \| Uint8Array | Yes | Buffer** object to compare. |
+| buf1 | Buffer &#124; Uint8Array | Yes | Buffer** object to compare. |
+| buf2 | Buffer &#124; Uint8Array | Yes | Buffer** object to compare. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| -1 \| 0 \| 1 | Returns **0** if **buf1** is the same as **buf2**. |
+| -1 &#124; 0 &#124; 1 | Returns **0** if **buf1** is the same as **buf2**.<br>Returns **1** if **buf1** comes after **buf2** when sorted. <br>Returns **-1** if **buf1** comes before **buf2** when sorted. |
 
 **Examples**
 

@@ -374,7 +374,7 @@ disappearTextStyle?: PickerTextStyle
 
 默认值：
 
-{color: '#ff182431', font: {size: '14fp', weight: FontWeight.Regular } }
+<br>{<br>color: '#ff182431', <br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular <br>} <br>}
 
 **类型：** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
@@ -565,20 +565,13 @@ selectedTextStyle?: PickerTextStyle
 
 > 默认值：
 > 
-> 
-{   
-> 
-color: '#ff007dff',   
-> 
-font: {   
-> 
-size: '20fp',   
-> 
-weight: FontWeight.Medium   
-> 
-}   
-> 
-}
+> <br>{
+> <br>color: '#ff007dff',
+> <br>font: {
+> <br>size: '20fp',
+> <br>weight: FontWeight.Medium
+> <br>}
+> <br>}
 
 **类型：** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
@@ -604,7 +597,7 @@ shadow?: ShadowOptions | ShadowStyle
 > 
 > 从API版本26.0.0开始，设置systemMaterial后，shadow不生效。
 
-**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
+**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 12
 
@@ -653,20 +646,13 @@ textStyle?: PickerTextStyle
 
 > 默认值：
 > 
-> 
-{   
-> 
-color: '#ff182431',   
-> 
-font: {   
-> 
-size: '16fp',   
-> 
-weight: FontWeight.Regular   
-> 
-}   
-> 
-}
+> <br>{
+> <br>color: '#ff182431',
+> <br>font: {
+> <br>size: '16fp',
+> <br>weight: FontWeight.Regular
+> <br>}
+> <br>}
 
 **类型：** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 

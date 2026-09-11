@@ -62,7 +62,7 @@ string); the default value is null.
 - For the upload task, the value is Array&lt;  
 [FormItem](arkts-basicservices-agent-formitem-i.md)&gt;. Since API version 15, a maximum of 100 files can be uploaded in a single task. This parameter is left empty by default.
 
-**Type:** string \| Array&lt;[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;
+**Type:** string &#124; Array&lt;[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;
 
 **Since:** 10
 

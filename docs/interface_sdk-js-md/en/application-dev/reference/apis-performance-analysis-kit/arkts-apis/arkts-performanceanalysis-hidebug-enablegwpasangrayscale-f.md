@@ -16,7 +16,7 @@ Enables GWP-ASan to detect illegal behaviors in heap memory usage.
 
 This API is used to dynamically configure and enable GWP-ASan to adapt to the custom GWP-ASan detection policy. The configuration takes effect after the application is restarted.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 1. If the number of GWP-ASan applications configured using this API exceeds the quota during device running, this
 > API fails to be called and an error code is thrown. Use **try-catch** to capture exceptions to prevent the

@@ -22,7 +22,7 @@ The policy for RESOURCE_OVERLIMIT event **event**: No heap snapshot is transferr
 
 **event_rawheap**: The system generates and transfers a heap snapshot when an OOM error occurs.
 
-**NOTE：**
+**NOTE:**
 
 - Only the preceding two values are supported. If other values are passed in, the method fails to be called and  
 takes no effect.  

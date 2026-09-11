@@ -14,7 +14,7 @@ function restartSelfAtomicService(context: Context): void
 
 Restarts the current atomic service.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Currently, atomic services can be started only in an independent window.
 > 
@@ -35,7 +35,7 @@ Restarts the current atomic service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | Yes | Context of the ability.Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) is supported. |
+| context | [Context](arkts-ability-context-c.md) | Yes | Context of the ability.<br>Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) is supported.<br> |
 
 **Error codes:**
 

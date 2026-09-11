@@ -20,7 +20,7 @@ itemBorderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses
 
 Rounded corner radius for grid items.
 
-**Type:** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) \| [BorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
+**Type:** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) &#124; [BorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **Since:** 20
 

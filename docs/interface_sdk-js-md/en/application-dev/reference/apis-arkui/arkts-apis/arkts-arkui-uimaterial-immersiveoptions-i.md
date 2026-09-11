@@ -50,7 +50,7 @@ Whether the subtree of the node of the material object automatically adapts the 
 
 **true** indicates that the material is automatically adapted to the complementary color of the background color only when the material layer is thin enough. The materials that can be adapted to the complementary color are defined by the system. Such materials must have at least the **THIN** or **ULTRA_THIN** style, and are related to the strength configuration of the immersive light effect of the application. The thinner the material and the stronger the immersive light effect, the more likely the material meets the requirements for adapting to the complementary color.
 
-The capability of automatically adapting the material to the complementary color takes effect only when special resource values are set for some attribute APIs. The attribute APIs include fontColor of the **Text** component, fontColor of the **Button** component, fontColor of the **SymbolGlyph** component, fillColor of the **Image** component, icon colors in placeholderColor, fontColor, and searchIcon of the **Search** component, icon colors in cancelButton, caret colors in caretStyle, and text and icon colors in [tabBar](../arkts-components/arkts-arkui-tabcontent-attribute.md#tabbar) of the **TabContent** component when the [BottomTabBarStyle](../arkts-components/arkts-arkui-bottomtabbarstyle-c.md) style is used.
+The capability of automatically adapting the material to the complementary color takes effect only when special resource values are set for some attribute APIs. The attribute APIs include fontColor of the **Text** component, fontColor of the **Button** component, fontColor of the **SymbolGlyph** component, fillColor of the **Image** component, icon colors in placeholderColor, fontColor, and searchIcon of the **Search** component, icon colors in cancelButton, caret colors in caretStyle, and text and icon colors in [tabBar](../arkts-components/arkts-arkui-tabcontent-comp-attribute.md#tabbar) of the **TabContent** component when the [BottomTabBarStyle](../arkts-components/arkts-arkui-bottomtabbarstyle-c.md) style is used.
 
 Note: This parameter takes effect only for the display effect of devices with high- and mid-level computing power.
 
@@ -102,7 +102,7 @@ Note: This parameter takes effect for the display effect of devices with all lev
 
 Default value: **undefined**, indicating that the light sensing interaction feedback effect is not set.
 
-**Type:** [LightEffectOptions](arkts-arkui-uimaterial-lighteffectoptions-i.md) \| null
+**Type:** [LightEffectOptions](arkts-arkui-uimaterial-lighteffectoptions-i.md) &#124; null
 
 **Since:** 26.0.0
 

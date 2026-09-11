@@ -4,11 +4,13 @@ The **Base** module defines the public callback types of ArkTS APIs, including t
  callbacks provide a unified asynchronous processing mechanism for processing asynchronous operation results and error
  messages. They can help developers simplify the asynchronous programming model and improve code readability and
  maintainability.
- > **NOTE**
+
+> **NOTE**
  >
  > - The initial APIs of this module are supported since API version 6. Newly added APIs will be marked with a
  >   superscript to indicate their earliest API version.
  > - Since API version 12, the APIs of this module are supported in ArkTS widgets.
+
 
 
 ## Modules to Import

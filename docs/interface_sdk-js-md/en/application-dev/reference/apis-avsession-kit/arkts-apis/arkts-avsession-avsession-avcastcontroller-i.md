@@ -785,7 +785,7 @@ Register playback state changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | Yes |  |
-| filter | Array&lt;keyof AVPlaybackState&gt; \| 'all' | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) that you cared about |
+| filter | Array&lt;keyof AVPlaybackState&gt; &#124; 'all' | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) that you cared about |
 | callback | (state: AVPlaybackState) =&gt; void | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **Error codes:**

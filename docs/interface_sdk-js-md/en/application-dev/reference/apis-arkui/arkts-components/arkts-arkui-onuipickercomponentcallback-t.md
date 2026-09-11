@@ -4,7 +4,7 @@
 declare type OnUIPickerComponentCallback = (selectedIndex: number) => void
 ```
 
-Defines the callback types for the [onChange](arkts-arkui-uipickercomponent-attribute.md#onchange) and [onScrollStop](arkts-arkui-uipickercomponent-attribute.md#onscrollstop) events.
+Defines the callback types for the [onChange](arkts-arkui-uipickercomponent-comp-attribute.md#onchange) and [onScrollStop](arkts-arkui-uipickercomponent-comp-attribute.md#onscrollstop) events.
 
 Value range: an integer in the range of [0, Number of child components – 1].
 

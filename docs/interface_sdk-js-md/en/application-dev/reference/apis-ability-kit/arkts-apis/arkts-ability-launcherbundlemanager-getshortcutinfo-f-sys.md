@@ -93,7 +93,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)&gt;&gt; | Promise used to return the array of [ShortcutInfo]{ |
+| Promise&lt;Array&lt;[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)&gt;&gt; | Promise used to return the array of ShortcutInfo objects obtained. |
 
 **Error codes:**
 

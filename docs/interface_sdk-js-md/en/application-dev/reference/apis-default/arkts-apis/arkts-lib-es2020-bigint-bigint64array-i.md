@@ -419,7 +419,7 @@ Sorts the array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| compareFn | (a: bigint, b: bigint) =&gt; number \| bigint | No |  |
+| compareFn | (a: bigint, b: bigint) =&gt; number &#124; bigint | No |  |
 
 **Return value:**
 

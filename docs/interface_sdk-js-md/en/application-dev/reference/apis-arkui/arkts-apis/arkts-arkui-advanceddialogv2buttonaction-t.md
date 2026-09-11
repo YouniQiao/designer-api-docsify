@@ -6,6 +6,8 @@ export declare type AdvancedDialogV2ButtonAction = () => void
 
 Declare the action when the button of dialog is clicked.
 
+@typedef { function } AdvancedDialogV2ButtonAction
+
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.

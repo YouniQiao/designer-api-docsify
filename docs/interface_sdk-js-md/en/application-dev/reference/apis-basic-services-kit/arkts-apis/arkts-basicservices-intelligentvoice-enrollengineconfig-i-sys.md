@@ -1,6 +1,6 @@
 # EnrollEngineConfig (System API)
 
-Describes enroll engine config.
+Describes enroll engine config. @typedef EnrollEngineConfig
 
 **Since:** 10
 

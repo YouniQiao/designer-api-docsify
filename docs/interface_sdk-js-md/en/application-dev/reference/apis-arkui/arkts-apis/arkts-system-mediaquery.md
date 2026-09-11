@@ -1,10 +1,12 @@
 # @system.mediaquery
 
 The **mediaquery** module provides different styles for different media types.
- > **NOTE**
+
+> **NOTE**
  >
  > - The APIs of this module are no longer maintained since API version 7. You are advised to use
  > [@ohos.mediaquery](arkts-mediaquery.md) instead.
+
 
 
 ## Modules to Import

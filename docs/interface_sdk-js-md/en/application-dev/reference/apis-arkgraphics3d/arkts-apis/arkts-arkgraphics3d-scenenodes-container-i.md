@@ -78,7 +78,7 @@ Obtains a node of a given index. If no node is obtained, null is returned.
 
 | Type | Description |
 | --- | --- |
-| T \| null | Object obtained. If no object is obtained, null is returned. |
+| T &#124; null | Object obtained. If no object is obtained, null is returned. |
 
 ## insertAfter
 
@@ -97,7 +97,7 @@ Inserts the object after the sibling node.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | item | T | Yes | Node to be inserted. |
-| sibling | T \| null | Yes | Sibling node. |
+| sibling | T &#124; null | Yes | Sibling node. |
 
 ## remove
 

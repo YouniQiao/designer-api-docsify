@@ -14,7 +14,7 @@ function reportNetConnected(netHandle: NetHandle, callback: AsyncCallback<void>)
 
 Reports the network availability to the network management module. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is used by the browser to connect to the portal network. After the network authentication is successful,
 > the browser reports the network connection success to the network management module. The network management

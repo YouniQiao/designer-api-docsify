@@ -1589,7 +1589,7 @@ Obtains the index of an image or video in an album. This API uses an asynchronou
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 
 **Examples**
 
@@ -1670,7 +1670,7 @@ Obtains the index of an image or video in an album. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 
 **Examples**
 
@@ -1834,7 +1834,7 @@ off(type: ChangeEvent, callback?: Callback<void>): void
 
 Unsubscribes from changes of the file management library. This API uses a callback to return the result.
 
-This API will be deprecated. Use off instead.
+This API will be deprecated. Use [off](#off-1) instead.
 
 **Since:** 9
 
@@ -1850,7 +1850,7 @@ This API will be deprecated. Use off instead.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [ChangeEvent](arkts-corefile-userfilemanager-changeevent-t-sys.md) | Yes | Type of event to subscribe to.    **'deviceChange'**: device change.    **'albumChange'**: album change.    **'imageChange'**: image change.    **'audioChange'**: audio file change.    **'videoChange'**: video file change.    **'remoteFileChange'**: change of the file on a registered device. |
+| type | [ChangeEvent](arkts-corefile-userfilemanager-changeevent-t-sys.md) | Yes | Type of event to subscribe to.<br>**'deviceChange'**: device change. <br>**'albumChange'**: album change. <br>**'imageChange'**: image change. <br>**'audioChange'**: audio file change. <br>**'videoChange'**: video file change. <br>**'remoteFileChange'**: change of the file on a registered device. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback that returns no value. |
 
 **Examples**
@@ -1910,7 +1910,7 @@ Unregisters the listener for the specified URI. Multiple callbacks can be regist
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file asset or album, or [DefaultChangeUri](arkts-corefile-userfilemanager-defaultchangeuri-e-sys.md). |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeData](arkts-corefile-cloudsync-changedata-i.md)&gt; | No | Callback registered by on. If this parameter is not specified, all listener callbacks registered for the URI will be unregistered. Note that the specified callback will not be invoked. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeData](arkts-corefile-cloudsync-changedata-i.md)&gt; | No | Callback registered by [on](#on-1). If this parameter is not specified, all listener callbacks registered for the URI will be unregistered. <br>Note that the specified callback will not be invoked. |
 
 **Error codes:**
 
@@ -1969,7 +1969,7 @@ on(type: ChangeEvent, callback: Callback<void>): void
 
 Subscribes to changes of the file management library. This API uses a callback to return the result.
 
-This API will be deprecated. Use on instead.
+This API will be deprecated. Use [on](#on-1) instead.
 
 **Since:** 9
 
@@ -1985,7 +1985,7 @@ This API will be deprecated. Use on instead.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [ChangeEvent](arkts-corefile-userfilemanager-changeevent-t-sys.md) | Yes | Type of event to subscribe to.    **'deviceChange'**: device change.    **'albumChange'**: album change.    **'imageChange'**: image change.    **'audioChange'**: audio file change.    **'videoChange'**: video file change.    **'remoteFileChange'**: change of the file on a registered device. |
+| type | [ChangeEvent](arkts-corefile-userfilemanager-changeevent-t-sys.md) | Yes | Type of event to subscribe to.<br>**'deviceChange'**: device change. <br>**'albumChange'**: album change. <br>**'imageChange'**: image change. <br>**'audioChange'**: audio file change. <br>**'videoChange'**: video file change. <br>**'remoteFileChange'**: change of the file on a registered device. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Examples**
@@ -2043,8 +2043,8 @@ Registers a listener for the specified URI. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file asset or album, or [DefaultChangeUri](arkts-corefile-userfilemanager-defaultchangeuri-e-sys.md). |
-| forSubUri | boolean | Yes | Whether to perform fuzzy listening. If **uri** is the URI of the album, the value **true** means to listen for the file change in the album; the value **false** means to listen for the album change only. If **uri** is the URI of the file asset, there is no difference whether **forSubUri** is **true** or **false**. If **uri** is **DefaultChangeUri**, the value must be **true**, otherwise, the URI cannot be found and no message can be received. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeData](arkts-corefile-cloudsync-changedata-i.md)&gt; | Yes | Callback used to return [ChangeData](arkts-corefile-userfilemanager-changedata-i-sys.md). Note that different callbacks can be registered for a URI. You can use off to disable the specified callback or all callbacks for the URI. |
+| forSubUri | boolean | Yes | Whether to perform fuzzy listening.<br>If **uri** is the URI of the album, the value **true** means to listen for the file change in the album; the value **false** means to listen for the album change only. If **uri** is the URI of the file asset, there is no difference whether **forSubUri** is **true** or **false**. If **uri** is **DefaultChangeUri**, the value must be **true**, otherwise, the URI cannot be found and no message can be received. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeData](arkts-corefile-cloudsync-changedata-i.md)&gt; | Yes | Callback used to return [ChangeData](arkts-corefile-userfilemanager-changedata-i-sys.md). <br>Note that different callbacks can be registered for a URI. You can use [off](#off-1) to disable the specified callback or all callbacks for the URI. |
 
 **Error codes:**
 

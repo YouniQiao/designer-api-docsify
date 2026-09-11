@@ -30,7 +30,7 @@ START = 1
 
 The first item in the view is aligned at the start of the list.
 
-**NOTE：**
+**NOTE:**
 
 When the list hits the end, the items at the end must be completely displayed. In this case, the items at the start may not be aligned.
 
@@ -50,7 +50,7 @@ CENTER = 2
 
 The middle items in the view are aligned in the center of the list.
 
-**NOTE：**
+**NOTE:**
 
 The top and end items can be aligned to the center of the list. In this case, which may cause empty space to be visible in the list display.
 
@@ -70,7 +70,7 @@ END = 3
 
 The last item in the view is aligned at the end of the list.
 
-**NOTE：**
+**NOTE:**
 
 When the list hits the start, the items at the start must be completely displayed. In this case, the items at the end may not be aligned.
 

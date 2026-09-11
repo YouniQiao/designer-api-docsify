@@ -20,7 +20,7 @@ context: UIAbilityContext | UIContext
 
 Context information corresponding to **Navigation** component that triggers page switching.
 
-**Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext
+**Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) &#124; UIContext
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ from: NavDestinationInfo | NavBar
 
 Source page for page switching.
 
-**Type:** [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) \| NavBar
+**Type:** [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) &#124; NavBar
 
 **Since:** 12
 
@@ -74,7 +74,7 @@ to: NavDestinationInfo | NavBar
 
 Destination page for page switching.
 
-**Type:** [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) \| NavBar
+**Type:** [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) &#124; NavBar
 
 **Since:** 12
 

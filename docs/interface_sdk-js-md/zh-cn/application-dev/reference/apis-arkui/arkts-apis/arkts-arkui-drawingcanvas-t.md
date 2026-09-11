@@ -6,6 +6,8 @@ declare type DrawingCanvas = import('../api/@ohos.graphics.drawing').default.Can
 
 可用于向DrawingRenderingContext上绘制内容的画布对象。
 
+@typedef { import('../api/@ohos.graphics.drawing').default.Canvas } DrawingCanvas
+
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。

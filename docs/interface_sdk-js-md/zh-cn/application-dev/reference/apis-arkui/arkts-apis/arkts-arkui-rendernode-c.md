@@ -490,7 +490,7 @@ getChild(index: number): RenderNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) \| null | 子节点。若该RenderNode不包含所查询的子节点，则返回空对象null。 |
+| [RenderNode](arkts-arkui-rendernode-c.md) &#124; null | 子节点。若该RenderNode不包含所查询的子节点，则返回空对象null。 |
 
 **示例**
 
@@ -573,7 +573,7 @@ getFirstChild(): RenderNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) \| null | 首个子节点。若该RenderNode不包含子节点，则返回空对象null。 |
+| [RenderNode](arkts-arkui-rendernode-c.md) &#124; null | 首个子节点。若该RenderNode不包含子节点，则返回空对象null。 |
 
 **示例**
 
@@ -661,7 +661,7 @@ getNextSibling(): RenderNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) \| null | 当前RenderNode的下一个同级节点。若该RenderNode不包含下一个同级节点，则返回空对象null。 |
+| [RenderNode](arkts-arkui-rendernode-c.md) &#124; null | 当前RenderNode的下一个同级节点。若该RenderNode不包含下一个同级节点，则返回空对象null。 |
 
 **示例**
 
@@ -754,7 +754,7 @@ getPreviousSibling(): RenderNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) \| null | 当前RenderNode的上一个同级节点。若该RenderNode不包含上一个同级节点，则返回空对象null。 |
+| [RenderNode](arkts-arkui-rendernode-c.md) &#124; null | 当前RenderNode的上一个同级节点。若该RenderNode不包含上一个同级节点，则返回空对象null。 |
 
 **示例**
 
@@ -848,7 +848,7 @@ insertChildAfter(child: RenderNode, sibling: RenderNode | null): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | child | [RenderNode](arkts-arkui-rendernode-c.md) | 是 | 需要添加的子节点。 |
-| sibling | [RenderNode](arkts-arkui-rendernode-c.md) \| null | 是 | 新节点将插入到该节点之后。若该参数设置为空，则新节点将插入到首个子节点之前。 |
+| sibling | [RenderNode](arkts-arkui-rendernode-c.md) &#124; null | 是 | 新节点将插入到该节点之后。若该参数设置为空，则新节点将插入到首个子节点之前。 |
 
 **错误码：**
 
@@ -1369,7 +1369,8 @@ get backgroundColor(): number
 
 **类型：** number
 
-**默认值：** 0X00000000 [since 11 - 11]
+**默认值：**
+- API版本11：0X00000000
 
 **起始版本：** 11
 
@@ -1793,7 +1794,8 @@ get clipToFrame(): boolean
 
 **类型：** boolean
 
-**默认值：** true [since 11 - 11]
+**默认值：**
+- API版本11：true
 
 **起始版本：** 11
 
@@ -2117,7 +2119,8 @@ get frame(): Frame
 
 **类型：** [Frame](arkts-arkui-graphics-frame-i.md)
 
-**默认值：** Frame { x: 0, y: 0, width: 0, height: 0 } [since 11 - 11]
+**默认值：**
+- API版本11：Frame { x: 0, y: 0, width: 0, height: 0 }
 
 **起始版本：** 11
 
@@ -2482,7 +2485,8 @@ get opacity(): number
 
 **类型：** number
 
-**默认值：** 1 [since 11 - 11]
+**默认值：**
+- API版本11：1
 
 **起始版本：** 11
 
@@ -2566,7 +2570,8 @@ get pivot(): Pivot
 
 **类型：** [Pivot](arkts-arkui-pivot-t.md)
 
-**默认值：** Pivot { x: 0.5, y: 0.5 } [since 11 - 11]
+**默认值：**
+- API版本11：Pivot { x: 0.5, y: 0.5 }
 
 **起始版本：** 11
 
@@ -2648,7 +2653,8 @@ get position(): Position
 
 **类型：** [Position](arkts-arkui-position-t.md)
 
-**默认值：** Position { x: 0, y: 0 } [since 11 - 11]
+**默认值：**
+- API版本11：Position { x: 0, y: 0 }
 
 **起始版本：** 11
 
@@ -2730,7 +2736,8 @@ get rotation(): Rotation
 
 **类型：** [Rotation](arkts-arkui-rotation-t.md)
 
-**默认值：** Rotation { x: 0, y: 0, z: 0 } [since 11 - 11]
+**默认值：**
+- API版本11：Rotation { x: 0, y: 0, z: 0 }
 
 **起始版本：** 11
 
@@ -2812,7 +2819,8 @@ get scale(): Scale
 
 **类型：** [Scale](arkts-arkui-scale-t.md)
 
-**默认值：** Scale { x: 1, y: 1 } [since 11 - 11]
+**默认值：**
+- API版本11：Scale { x: 1, y: 1 }
 
 **起始版本：** 11
 
@@ -2897,7 +2905,8 @@ get shadowAlpha(): number
 
 **类型：** number
 
-**默认值：** 0 [since 11 - 11]
+**默认值：**
+- API版本11：0
 
 **起始版本：** 11
 
@@ -2980,7 +2989,8 @@ get shadowColor(): number
 
 **类型：** number
 
-**默认值：** 0X00000000 [since 11 - 11]
+**默认值：**
+- API版本11：0X00000000
 
 **起始版本：** 11
 
@@ -3064,7 +3074,8 @@ get shadowElevation(): number
 
 **类型：** number
 
-**默认值：** 0 [since 11 - 11]
+**默认值：**
+- API版本11：0
 
 **起始版本：** 11
 
@@ -3148,7 +3159,8 @@ get shadowOffset(): Offset
 
 **类型：** [Offset](arkts-arkui-offset-t.md)
 
-**默认值：** Offset { x: 0, y: 0 } [since 11 - 11]
+**默认值：**
+- API版本11：Offset { x: 0, y: 0 }
 
 **起始版本：** 11
 
@@ -3238,7 +3250,8 @@ get shadowRadius(): number
 
 **类型：** number
 
-**默认值：** 0 [since 11 - 11]
+**默认值：**
+- API版本11：0
 
 **起始版本：** 11
 
@@ -3545,7 +3558,8 @@ get size(): Size
 
 **类型：** Size
 
-**默认值：** Size { width: 0, height: 0 } [since 11 - 11]
+**默认值：**
+- API版本11：Size { width: 0, height: 0 }
 
 **起始版本：** 11
 
@@ -3640,7 +3654,8 @@ get transform(): Matrix4
 
 **类型：** [Matrix4](arkts-arkui-matrix4-t.md)
 
-**默认值：** Matrix4 [ 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 ] [since 11 - 11]
+**默认值：**
+- API版本11：Matrix4 [ 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 ]
 
 **起始版本：** 11
 
@@ -3722,7 +3737,8 @@ get translation(): Translation
 
 **类型：** [Translation](arkts-arkui-translation-t.md)
 
-**默认值：** Translation { x: 0, y: 0 } [since 11 - 11]
+**默认值：**
+- API版本11：Translation { x: 0, y: 0 }
 
 **起始版本：** 11
 

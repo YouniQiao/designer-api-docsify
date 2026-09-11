@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
@@ -27,7 +27,8 @@ color?: ResourceColor
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
-**默认值：** 0x08000000 [since 18]
+**默认值：**
+- API版本18+：0x08000000
 
 **起始版本：** 7
 
@@ -57,7 +58,8 @@ endMargin + startMargin 超过列宽度后startMargin和endMargin均会被置0�
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
-**默认值：** 0vp [since 18]
+**默认值：**
+- API版本18+：0vp
 
 **起始版本：** 7
 
@@ -87,7 +89,8 @@ endMargin + startMargin 超过列宽度后startMargin和endMargin均会被置0�
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
-**默认值：** 0vp [since 18]
+**默认值：**
+- API版本18+：0vp
 
 **起始版本：** 7
 

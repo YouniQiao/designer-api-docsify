@@ -2,7 +2,7 @@
 
 A cylinder geometry type that inherits from GeometryDefinition.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You must ensure that all three parameters are set correctly.
 > Invalid values may prevent cylinder creation or cause undefined behavior.
@@ -22,8 +22,6 @@ get height(): number
 ```
 
 Height of the cylinder, in scene units of the world coordinate system (such as cm, m, km, etc.). The value range is greater than 0.
-
-@return { double }
 
 **Type:** number
 
@@ -51,8 +49,6 @@ get radius(): number
 
 Bottom radius of the cylinder, in scene units of the world coordinate system (such as cm, m, km, etc.). The value range is greater than 0.
 
-@return { double }
-
 **Type:** number
 
 **Since:** 23
@@ -78,8 +74,6 @@ get segmentCount(): number
 ```
 
 Use regular polygons to approximate the circular base of the cylinder, where segmentCount is the number of sides of the regular polygon used.
-
-@return { int }
 
 **Type:** number
 

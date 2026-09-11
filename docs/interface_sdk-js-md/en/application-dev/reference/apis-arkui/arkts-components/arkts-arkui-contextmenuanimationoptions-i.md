@@ -19,7 +19,7 @@ hoverScale?: AnimationRange<number>
 
 In the custom preview (**preview** is of the CustomBuilder type) and menu displayed in long-press (**responseType** is set to **LongPress**) scenarios, **hoverScale** is used to set two parameters for the screenshot floating animation of the bound component: the start and end scale ratios relative to the original preview image. After **hoverScale** is set, the floating animation and preview image are switched with a transition effect.
 
-**NOTE：**
+**NOTE:**
 
 If the value is less than or equal to **0**, this parameter does not take effect.
 
@@ -51,7 +51,7 @@ Whether lifting the finger before triggering the drag effect allows preview menu
 
 Default value: **false**
 
-**NOTE：**
+**NOTE:**
 
 If the **hoverScale** API is not set or the **transition** API is set, this parameter does not take effect. If the finger is lifted before the long-press duration is sufficient to trigger the drag effect, the **hoverScale** effect of the preview menu will revert, the preview menu will not pop up, and gesture events such as click bound to the original component can still be triggered. If the finger is lifted after the long-press duration is sufficient to trigger the drag effect, the preview menu will pop up properly, and gesture events such as click bound to the original component will no longer be triggered.
 
@@ -77,13 +77,14 @@ Relative scale ratio at the start and end of the animation compared to the origi
 
 Default value: **[0.95, 1.1]**
 
-**NOTE：**
+**NOTE:**
 
 The scale ratio must be set based on the specific use case. It is recommended that it be less than the width of the preview image or the maximum constraint of the layout.
 
 **Type:** [AnimationRange](arkts-arkui-animationrange-t.md)&lt;number&gt;
 
-**Default:** [0.95, 1.1] [since 11 - 11]
+**Default:**
+- API version 11: [0.95, 1.1]
 
 **Since:** 11
 
@@ -101,7 +102,7 @@ transition?: TransitionEffect
 
 Transition effect for the entrance and exit of the menu.
 
-**NOTE：**
+**NOTE:**
 
 If the screen orientation is switched during the exit animation of a menu, the menu will avoid obstacles. Level-2 menus do not inherit custom animations. The level-2 menu can be clicked during the display process, but not during the execution of the exit animation.
 

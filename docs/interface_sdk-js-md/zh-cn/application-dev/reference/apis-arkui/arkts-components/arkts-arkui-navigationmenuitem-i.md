@@ -33,7 +33,7 @@ icon?: string | Resource
 
 菜单栏单个选项的图标资源路径。
 
-**类型：** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**类型：** string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 8
 
@@ -69,7 +69,7 @@ symbolIcon?: SymbolGlyphModifier
 
 **说明：**
 
-不支持通过SymbolGlyphModifier对象的fontSize属性修改图标大小、effectStrategy属性修改动效、[symbolEffect](arkts-arkui-symbolglyph-attribute.md#symboleffect)属性修改动效类型。
+不支持通过SymbolGlyphModifier对象的fontSize属性修改图标大小、effectStrategy属性修改动效、[symbolEffect](arkts-arkui-symbolglyph-comp-attribute.md#symboleffect)属性修改动效类型。
 
 **类型：** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
 
@@ -91,7 +91,7 @@ API version 9：显示菜单栏单个选项的文本。
 
 从API version 10开始，不显示菜单栏单个选项的文本。
 
-**类型：** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**类型：** string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 8
 

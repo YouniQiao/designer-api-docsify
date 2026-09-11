@@ -36,7 +36,7 @@ createOsAccountSubProfile(osAccountLocalId: number): Promise<OsAccountSubProfile
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| osAccountLocalId | number | 是 | 目标系统账号的本地标识符。取值范围为全体整数。 |
+| osAccountLocalId | number | 是 | 目标系统账号的本地标识符。<br>取值范围为全体整数。 |
 
 **返回值：**
 
@@ -99,8 +99,8 @@ deleteOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| osAccountLocalId | number | 是 | 目标系统账号的本地标识符。取值范围为全体整数。 |
-| subProfileId | number | 是 | 子身份资料的标识符。取值范围为全体整数。 |
+| osAccountLocalId | number | 是 | 目标系统账号的本地标识符。<br>取值范围为全体整数。 |
+| subProfileId | number | 是 | 子身份资料的标识符。<br>取值范围为全体整数。 |
 
 **返回值：**
 
@@ -210,7 +210,7 @@ getOsAccountForegroundSubProfileId(osAccountLocalId: number): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| osAccountLocalId | number | 是 | 系统账号的本地标识符。取值范围为全体整数。 |
+| osAccountLocalId | number | 是 | 系统账号的本地标识符。<br>取值范围为全体整数。 |
 
 **返回值：**
 
@@ -268,7 +268,7 @@ getOsAccountLocalIdForSubProfile(subProfileId: number): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subProfileId | number | 是 | 子身份资料的标识符。取值范围为全体整数。 |
+| subProfileId | number | 是 | 子身份资料的标识符。<br>取值范围为全体整数。 |
 
 **返回值：**
 
@@ -327,7 +327,7 @@ getOsAccountSubProfile(subProfileId: number): Promise<OsAccountSubProfile>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subProfileId | number | 是 | 子身份资料的标识符。取值范围为全体整数。 |
+| subProfileId | number | 是 | 子身份资料的标识符。<br>取值范围为全体整数。 |
 
 **返回值：**
 
@@ -387,8 +387,8 @@ getOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| osAccountLocalId | number | 是 | 系统账号的本地标识符。取值范围为全体整数。 |
-| subProfileId | number | 是 | 子身份资料的标识符。取值范围为全体整数。 |
+| osAccountLocalId | number | 是 | 系统账号的本地标识符。<br>取值范围为全体整数。 |
+| subProfileId | number | 是 | 子身份资料的标识符。<br>取值范围为全体整数。 |
 
 **返回值：**
 
@@ -499,7 +499,7 @@ getOsAccountSubProfileIds(osAccountLocalId: number): Promise<number[]>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| osAccountLocalId | number | 是 | 系统账号的本地标识符。取值范围为全体整数。 |
+| osAccountLocalId | number | 是 | 系统账号的本地标识符。<br>取值范围为全体整数。 |
 
 **返回值：**
 
@@ -654,8 +654,8 @@ switchOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| osAccountLocalId | number | 是 | 系统账号的本地标识符。取值范围为全体整数。 |
-| subProfileId | number | 是 | 子身份资料的标识符。取值范围为全体整数。 |
+| osAccountLocalId | number | 是 | 系统账号的本地标识符。<br>取值范围为全体整数。 |
+| subProfileId | number | 是 | 子身份资料的标识符。<br>取值范围为全体整数。 |
 
 **返回值：**
 

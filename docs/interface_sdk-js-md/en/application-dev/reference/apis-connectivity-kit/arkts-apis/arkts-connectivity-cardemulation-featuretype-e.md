@@ -2,7 +2,7 @@
 
 Enumerates the NFC card emulation types.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 6 and deprecated since API version 9. Use
 > [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md) instead.

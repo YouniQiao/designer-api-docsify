@@ -2,7 +2,7 @@
 
 The **ArcListItem** component is used to display individual child components in an ArcList component and must be used in conjunction with **ArcList**.
 
-> **NOTE：**
+> **NOTE:**
 
 > - This component can be used only as a child of ArcList.
 > 
@@ -45,4 +45,3 @@ Creates an item for the **ArcList** component.
 
 | Type | Description |
 | --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |  |

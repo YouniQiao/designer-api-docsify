@@ -18,15 +18,11 @@ import { inputMethod } from '@kit.IMEKit';
 attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<void>): void
 ```
 
-Attaches a self-drawing component to the input method. This API uses an asynchronous callback to return the result.   
-> **NOTE：**
-   
-> 
-   
-> An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method.
-   
-> 
-   
+Attaches a self-drawing component to the input method. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
+> An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method. <br>
+> <br>
 > If the window where the self-drawing component is located is set to be non-focusable via [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable), the system cannot guarantee proper interaction between the self-drawing input component and the input method. If you want to draw an input box in a non-focusable window, refer to [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).
 
 **Since:** 10
@@ -37,7 +33,7 @@ Attaches a self-drawing component to the input method. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| showKeyboard | boolean | Yes | Whether to start the input method keyboard after the self-drawing component is attached to the input method.    - **true** means to start the input method keyboard.    - **false** means not to start the input method keyboard. |
+| showKeyboard | boolean | Yes | Whether to start the input method keyboard after the self-drawing component is attached to the input method.<br>- **true** means to start the input method keyboard. <br>- **false** means not to start the input method keyboard. |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | Configuration of the edit box. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
@@ -74,15 +70,11 @@ inputMethod.getController().attach(true, textConfig, (err: BusinessError) => {
 attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>
 ```
 
-Attaches a self-drawing component to the input method. This API uses a promise to return the result.   
-> **NOTE：**
-   
-> 
-   
-> An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method.
-   
-> 
-   
+Attaches a self-drawing component to the input method. This API uses a promise to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
+> An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method. <br>
+> <br>
 > If the window where the self-drawing component is located is set to be non-focusable via [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable), the system cannot guarantee proper interaction between the self-drawing input component and the input method. If you want to draw an input box in a non-focusable window, refer to [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).
 
 **Since:** 10
@@ -93,7 +85,7 @@ Attaches a self-drawing component to the input method. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| showKeyboard | boolean | Yes | Whether to start the input method keyboard after the self-drawing component is attached to the input method.    - **true** means to start the input method keyboard.    - **false** means not to start the input method keyboard. |
+| showKeyboard | boolean | Yes | Whether to start the input method keyboard after the self-drawing component is attached to the input method.<br>- **true** means to start the input method keyboard. <br>- **false** means not to start the input method keyboard. |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | Configuration of the edit box. |
 
 **Return value:**
@@ -133,15 +125,11 @@ inputMethod.getController().attach(true, textConfig).then(() => {
 attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: RequestKeyboardReason): Promise<void>
 ```
 
-Attaches a self-drawing component to the input method. This API uses a promise to return the result.   
-> **NOTE：**
-   
-> 
-   
-> An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method.
-   
-> 
-   
+Attaches a self-drawing component to the input method. This API uses a promise to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
+> An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method. <br>
+> <br>
 > If the window where the self-drawing component is located is set to be non-focusable via [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable), the system cannot guarantee proper interaction between the self-drawing input component and the input method. If you want to draw an input box in a non-focusable window, refer to [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).
 
 **Since:** 15
@@ -152,7 +140,7 @@ Attaches a self-drawing component to the input method. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| showKeyboard | boolean | Yes | Whether to start the input method keyboard after the self-drawing component is attached to the input method.    - **true** means to start the input method keyboard.    - **false** means not to start the input method keyboard. |
+| showKeyboard | boolean | Yes | Whether to start the input method keyboard after the self-drawing component is attached to the input method.<br>- **true** means to start the input method keyboard. <br>- **false** means not to start the input method keyboard. |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | Configuration of the edit box. |
 | requestKeyboardReason | [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md) | Yes | Reason for requesting the keyboard. |
 
@@ -195,11 +183,9 @@ inputMethod.getController().attach(true, textConfig, requestKeyboardReason).then
 attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?: AttachOptions): Promise<void>
 ```
 
-Attaches a self-drawing component to the input method. This API uses a promise to return the result.   
-> **NOTE：**
-   
-> 
-   
+Attaches a self-drawing component to the input method. This API uses a promise to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method.
 
 **Since:** 23
@@ -422,11 +408,9 @@ inputMethod.getController().detach().then(() => {
 discardTypingText(): Promise<void>
 ```
 
-Discards the text that is being typed. This API uses a promise to return the result.   
-> **NOTE：**
-   
-> 
-   
+Discards the text that is being typed. This API uses a promise to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > This API can be called after the edit box is attached to an input method.
 
 **Since:** 20
@@ -465,11 +449,9 @@ inputMethod.getController().discardTypingText().then(() => {
 hideSoftKeyboard(callback: AsyncCallback<void>): void
 ```
 
-Hides the soft keyboard. This API uses an asynchronous callback to return the result.   
-> **NOTE：**
-   
-> 
-   
+Hides the soft keyboard. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to hide the soft keyboard only when the edit box is focused.
 
 **Since:** 9
@@ -512,11 +494,9 @@ inputMethod.getController().hideSoftKeyboard((err: BusinessError) => {
 hideSoftKeyboard(): Promise<void>
 ```
 
-Hides the soft keyboard. This API uses a promise to return the result.   
-> **NOTE：**
-   
-> 
-   
+Hides the soft keyboard. This API uses a promise to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to hide the soft keyboard only when the edit box is focused.
 
 **Since:** 9
@@ -557,15 +537,11 @@ inputMethod.getController().hideSoftKeyboard().then(() => {
 hideTextInput(callback: AsyncCallback<void>): void
 ```
 
-Exits the text editing mode. This API uses an asynchronous callback to return the result.   
-> **NOTE：**
-   
-> 
-   
-> If the soft keyboard is displayed when this API is called, it will be hidden.
-   
-> 
-   
+Exits the text editing mode. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
+> If the soft keyboard is displayed when this API is called, it will be hidden. <br>
+> <br>
 > Calling this API does not detach the edit box from the input method. The edit box can call [showTextInput](#showtextinput) again to reenter the text editing mode.
 
 **Since:** 10
@@ -606,15 +582,11 @@ inputMethod.getController().hideTextInput((err: BusinessError) => {
 hideTextInput(): Promise<void>
 ```
 
-Exits the text editing mode. This API uses a promise to return the result.   
-> **NOTE：**
-   
-> 
-   
-> If the soft keyboard is displayed when this API is called, it will be hidden.
-   
-> 
-   
+Exits the text editing mode. This API uses a promise to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
+> If the soft keyboard is displayed when this API is called, it will be hidden. <br>
+> <br>
 > Calling this API does not detach the edit box from the input method. The edit box can call [showTextInput](#showtextinput) again to reenter the text editing mode.
 
 **Since:** 10
@@ -664,7 +636,7 @@ Disables listening for the select-by-range event. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selectByRange' | Yes | Listening type. The value is fixed at **'selectByRange'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Range](arkts-ime-inputmethod-range-i.md)&gt; | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Range](arkts-ime-inputmethod-range-i.md)&gt; | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -697,7 +669,7 @@ Disables listening for the select-by-cursor-movement event. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selectByMovement' | Yes | Listening type. The value is fixed at **'selectByMovement'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Movement](arkts-ime-inputmethod-movement-i.md)&gt; | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Movement](arkts-ime-inputmethod-movement-i.md)&gt; | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -730,7 +702,7 @@ Disables listening for the text insertion event of the input method.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'insertText' | Yes | Listening type. The value is fixed at **'insertText'**. |
-| callback | (text: string) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | (text: string) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -763,7 +735,7 @@ Disables listening for the leftward delete event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deleteLeft' | Yes | Listening type. The value is fixed at **'deleteLeft'**. |
-| callback | (length: number) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | (length: number) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -796,7 +768,7 @@ Disables listening for the rightward delete event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deleteRight' | Yes | Listening type. The value is fixed at `deleteRight`. |
-| callback | (length: number) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | (length: number) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -861,7 +833,7 @@ Disables listening for the function key sending event of the input method.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sendFunctionKey' | Yes | Listening type. The value is fixed at **'sendFunctionKey'**. |
-| callback | (functionKey: FunctionKey) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | (functionKey: FunctionKey) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -894,7 +866,7 @@ Disables listening for the cursor movement event of the input method.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'moveCursor' | Yes | Listening type. The value is fixed at **'moveCursor'**. |
-| callback | (direction: Direction) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | (direction: Direction) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -927,7 +899,7 @@ Disables listening for the extended action handling event of the input method. T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'handleExtendAction' | Yes | Listening type. The value is fixed at **'handleExtendAction'**. |
-| callback | (action: ExtendAction) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | (action: ExtendAction) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -960,7 +932,7 @@ Disables listening for the event of obtaining the length of text deleted leftwar
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'getLeftTextOfCursor' | Yes | Listening type. The value is fixed at **'getLeftTextOfCursor'**. |
-| callback | (length: number) =&gt; string | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | (length: number) =&gt; string | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -993,7 +965,7 @@ Disables listening for the event of obtaining the length of text deleted rightwa
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'getRightTextOfCursor' | Yes | Listening type. The value is fixed at **'getRightTextOfCursor'**. |
-| callback | (length: number) =&gt; string | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | (length: number) =&gt; string | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -1026,7 +998,7 @@ Disables listening for the event of obtaining the index of text at the cursor. T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'getTextIndexAtCursor' | Yes | Listening type. The value is fixed at **'getTextIndexAtCursor'**. |
-| callback | () =&gt; number | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | () =&gt; number | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -1059,7 +1031,7 @@ Unsubscribes from the event for text preview operations in an input method appli
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setPreviewText' | Yes | Event type, which is **'setPreviewText'**. |
-| callback | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -1102,7 +1074,7 @@ Unsubscribes from the event of finishing text preview. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'finishTextPreview' | Yes | Event type, which is **'finishTextPreview'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -1146,7 +1118,7 @@ Enables listening for the select-by-range event. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selectByRange' | Yes | Listening type. The value is fixed at **'selectByRange'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Range](arkts-ime-inputmethod-range-i.md)&gt; | Yes | Callback used to return the range of the text to be selected. The application needs to select the text based on the range returned in the callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Range](arkts-ime-inputmethod-range-i.md)&gt; | Yes | Callback used to return the range of the text to be selected.<br>The application needs to select the text based on the range returned in the callback. |
 
 **Error codes:**
 
@@ -1179,7 +1151,7 @@ Enables listening for the select-by-cursor-movement event. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selectByMovement' | Yes | Listening type. The value is fixed at **'selectByMovement'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Movement](arkts-ime-inputmethod-movement-i.md)&gt; | Yes | Callback used to return the direction in which the cursor moves. The application needs to select the text based on the direction returned in the callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Movement](arkts-ime-inputmethod-movement-i.md)&gt; | Yes | Callback used to return the direction in which the cursor moves.<br>The application needs to select the text based on the direction returned in the callback. |
 
 **Error codes:**
 
@@ -1212,7 +1184,7 @@ Enables listening for the text insertion event of the input method. This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'insertText' | Yes | Listening type. The value is fixed at **'insertText'**. |
-| callback | (text: string) =&gt; void | Yes | Callback used to return the text to be inserted. The application needs to operate the content in the edit box based on the text content returned in the callback. |
+| callback | (text: string) =&gt; void | Yes | Callback used to return the text to be inserted.<br>The application needs to operate the content in the edit box based on the text content returned in the callback. |
 
 **Error codes:**
 
@@ -1259,7 +1231,7 @@ Enables listening for the leftward delete event. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deleteLeft' | Yes | Listening type. The value is fixed at **'deleteLeft'**. |
-| callback | (length: number) =&gt; void | Yes | Callback used to return the length of the text to be deleted leftward. The application needs to operate the content in the edit box based on the length returned in the callback. |
+| callback | (length: number) =&gt; void | Yes | Callback used to return the length of the text to be deleted leftward.<br>The application needs to operate the content in the edit box based on the length returned in the callback. |
 
 **Error codes:**
 
@@ -1293,7 +1265,7 @@ Enables listening for the rightward delete event. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deleteRight' | Yes | Listening type. The value is fixed at **'deleteRight'**. |
-| callback | (length: number) =&gt; void | Yes | Callback used to return the length of the text to be deleted rightward. The application needs to operate the content in the edit box based on the length returned in the callback. |
+| callback | (length: number) =&gt; void | Yes | Callback used to return the length of the text to be deleted rightward.<br>The application needs to operate the content in the edit box based on the length returned in the callback. |
 
 **Error codes:**
 
@@ -1327,7 +1299,7 @@ Enables listening for the soft keyboard status event of the input method. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sendKeyboardStatus' | Yes | Listening type. The value is fixed at **'sendKeyboardStatus'**. |
-| callback | (keyboardStatus: KeyboardStatus) =&gt; void | Yes | Callback used to return the soft keyboard status. The application needs to perform operations based on the soft keyboard state returned in the callback. |
+| callback | (keyboardStatus: KeyboardStatus) =&gt; void | Yes | Callback used to return the soft keyboard status.<br>The application needs to perform operations based on the soft keyboard state returned in the callback. |
 
 **Error codes:**
 
@@ -1361,7 +1333,7 @@ Enables listening for the function key sending event of the input method. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sendFunctionKey' | Yes | Listening type. The value is fixed at **'sendFunctionKey'**. |
-| callback | (functionKey: FunctionKey) =&gt; void | Yes | Callback used to return the function key information sent by the input method. The application needs to perform operations based on the function key information returned in the callback. |
+| callback | (functionKey: FunctionKey) =&gt; void | Yes | Callback used to return the function key information sent by the input method.<br>The application needs to perform operations based on the function key information returned in the callback. |
 
 **Error codes:**
 
@@ -1395,7 +1367,7 @@ Enables listening for the cursor movement event of the input method. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'moveCursor' | Yes | Listening type. The value is fixed at **'moveCursor'**. |
-| callback | (direction: Direction) =&gt; void | Yes | Callback used to return the cursor movement direction. The application needs to change the cursor position based on the cursor movement direction returned in the callback. |
+| callback | (direction: Direction) =&gt; void | Yes | Callback used to return the cursor movement direction.<br>The application needs to change the cursor position based on the cursor movement direction returned in the callback. |
 
 **Error codes:**
 
@@ -1429,7 +1401,7 @@ Enables listening for the extended action handling event of the input method. Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'handleExtendAction' | Yes | Listening type. The value is fixed at **'handleExtendAction'**. |
-| callback | (action: ExtendAction) =&gt; void | Yes | Callback used to return the extended action type. The application needs to perform operations based on the extended action type returned in the callback. |
+| callback | (action: ExtendAction) =&gt; void | Yes | Callback used to return the extended action type.<br>The application needs to perform operations based on the extended action type returned in the callback. |
 
 **Error codes:**
 
@@ -1560,12 +1532,10 @@ inputMethod.getController().on('getTextIndexAtCursor', () => {
 on(type: 'setPreviewText', callback: SetPreviewTextCallback): void
 ```
 
-Subscribes to the event for text preview operations in an input method application. This API uses an asynchronous callback to return the result.   
-> **NOTE：**
-   
-> 
-   
-> To use the text preview function, you need to subscribe to this event before calling [attach](#attach) and subscribe to this event together with on('finishTextPreview').
+Subscribes to the event for text preview operations in an input method application. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
+> To use the text preview function, you need to subscribe to this event before calling [attach](#attach) and subscribe to this event together with [on('finishTextPreview')](#onfinishtextpreview).
 
 **Since:** 17
 
@@ -1614,11 +1584,9 @@ console.info(`All callbacks unsubscribed from setPreviewText`);
 on(type: 'finishTextPreview', callback: Callback<void>): void
 ```
 
-Subscribes to the event of finishing text preview. This API uses an asynchronous callback to return the result.   
-> **NOTE：**
-   
-> 
-   
+Subscribes to the event of finishing text preview. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > To use the text preview function, you need to subscribe to this event before calling [attach](#attach) and subscribe to this event together with [on('setPreviewText')](#onsetpreviewtext).
 
 **Since:** 17
@@ -1669,15 +1637,11 @@ console.info(`All callbacks unsubscribed from finishTextPreview`);
 recvMessage(msgHandler?: MessageHandler): void
 ```
 
-Registers or unregisters MessageHandler.   
-> **NOTE：**
-   
-> 
-   
-> The [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) object is globally unique. After multiple registrations, only the last registered object is valid and retained, and the [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated) callback of the penultimate registered object is triggered.
-   
-> 
-   
+Registers or unregisters MessageHandler. <br> <br>   
+> **NOTE:**<br>
+> <br>
+> The [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) object is globally unique. After multiple registrations, only the last registered object is valid and retained, and the [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated) callback of the penultimate registered object is triggered. <br>
+> <br>
 > If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated) callback will be triggered.
 
 **Since:** 15
@@ -1688,7 +1652,7 @@ Registers or unregisters MessageHandler.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgHandler | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | No | This object receives custom communication data from the input method application through [onMessage](arkts-ime-inputmethod-messagehandler-i.md#onmessage) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated). If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated) callback will be triggered. |
+| msgHandler | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | No | This object receives custom communication data from the input method application through [onMessage](arkts-ime-inputmethod-messagehandler-i.md#onmessage) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated). <br>If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated) callback will be triggered. |
 
 **Error codes:**
 
@@ -1721,15 +1685,11 @@ inputMethodController.recvMessage();
 sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 ```
 
-Sends the custom communication to the input method application. This API uses a promise to return the result.   
-> **NOTE：**
-   
-> 
-   
-> This API can be called only when the edit box is attached to the input method and enter the edit mode, and the input method application is in full experience mode.
-   
-> 
-   
+Sends the custom communication to the input method application. This API uses a promise to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
+> This API can be called only when the edit box is attached to the input method and enter the edit mode, and the input method application is in full experience mode. <br>
+> <br>
 > The maximum length of **msgId** is 256 B, and the maximum length of **msgParam** is 128 KB.
 
 **Since:** 15
@@ -1780,11 +1740,9 @@ inputMethod.getController().sendMessage(msgId, msgParam).then(() => {
 setCallingWindow(windowId: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the window to be avoided by the input method. This API uses an asynchronous callback to return the result.   
-> **NOTE：**
-   
-> 
-   
+Sets the window to be avoided by the input method. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > After the window ID of the application bound to the input method is passed in the API, the input method window will not cover the window holding the application.
 
 **Since:** 10
@@ -1828,11 +1786,9 @@ inputMethod.getController().setCallingWindow(windowId, (err: BusinessError) => {
 setCallingWindow(windowId: number): Promise<void>
 ```
 
-Sets the window to be avoided by the input method. This API uses a promise to return the result.   
-> **NOTE：**
-   
-> 
-   
+Sets the window to be avoided by the input method. This API uses a promise to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > After the window ID of the application bound to the input method is passed in the API, the input method window will not cover the window holding the application.
 
 **Since:** 10
@@ -1879,11 +1835,9 @@ inputMethod.getController().setCallingWindow(windowId).then(() => {
 showSoftKeyboard(callback: AsyncCallback<void>): void
 ```
 
-Shows the soft keyboard. This API uses an asynchronous callback to return the result.   
-> **NOTE：**
-   
-> 
-   
+Shows the soft keyboard. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to show the soft keyboard only when the edit box is focused.
 
 **Since:** 9
@@ -1926,11 +1880,9 @@ inputMethod.getController().showSoftKeyboard((err: BusinessError) => {
 showSoftKeyboard(): Promise<void>
 ```
 
-Shows the soft keyboard. This API uses a promise to return the result.   
-> **NOTE：**
-   
-> 
-   
+Shows the soft keyboard. This API uses a promise to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to show the soft keyboard only when the edit box is focused.
 
 **Since:** 9
@@ -1971,11 +1923,9 @@ inputMethod.getController().showSoftKeyboard().then(() => {
 showTextInput(callback: AsyncCallback<void>): void
 ```
 
-Enters the text editing mode. This API uses an asynchronous callback to return the result.   
-> **NOTE：**
-   
-> 
-   
+Enters the text editing mode. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > After the edit box is attached to an input method, this API can be called to start the soft keyboard and enter the text editing state.
 
 **Since:** 10
@@ -2016,11 +1966,9 @@ inputMethod.getController().showTextInput((err: BusinessError) => {
 showTextInput(): Promise<void>
 ```
 
-Enters the text editing mode. This API uses a promise to return the result.   
-> **NOTE：**
-   
-> 
-   
+Enters the text editing mode. This API uses a promise to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > After the edit box is attached to an input method, this API can be called to start the soft keyboard and enter the text editing state.
 
 **Since:** 10
@@ -2059,11 +2007,9 @@ inputMethod.getController().showTextInput().then(() => {
 showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>
 ```
 
-Enters the text editing mode. This API uses a promise to return the result.   
-> **NOTE：**
-   
-> 
-   
+Enters the text editing mode. This API uses a promise to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > After the edit box is attached to an input method, this API can be called to start the soft keyboard and enter the text editing state.
 
 **Since:** 15
@@ -2110,11 +2056,9 @@ inputMethod.getController().showTextInput(requestKeyboardReason).then(() => {
 stopInput(callback: AsyncCallback<boolean>): void
 ```
 
-Ends this input session. This API uses an asynchronous callback to return the result.   
-> **NOTE：**
-   
-> 
-   
+Ends this input session. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to end the input session only when the edit box is focused.
 
 **Since:** 6
@@ -2155,11 +2099,9 @@ inputMethod.getController().stopInput((err: BusinessError, result: boolean) => {
 stopInput(): Promise<boolean>
 ```
 
-Ends this input session. This API uses a promise to return the result.   
-> **NOTE：**
-   
-> 
-   
+Ends this input session. This API uses a promise to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to end the input session only when the edit box is focused.
 
 **Since:** 6
@@ -2198,11 +2140,9 @@ inputMethod.getController().stopInput().then((result: boolean) => {
 stopInputSession(callback: AsyncCallback<boolean>): void
 ```
 
-Ends this input session. This API uses an asynchronous callback to return the result.   
-> **NOTE：**
-   
-> 
-   
+Ends this input session. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to end the input session only when the edit box is focused.
 
 **Since:** 9
@@ -2246,11 +2186,9 @@ inputMethod.getController().stopInputSession((err: BusinessError, result: boolea
 stopInputSession(): Promise<boolean>
 ```
 
-Ends this input session. This API uses a promise to return the result.   
-> **NOTE：**
-   
-> 
-   
+Ends this input session. This API uses a promise to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to end the input session only when the edit box is focused.
 
 **Since:** 9

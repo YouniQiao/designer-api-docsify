@@ -21,7 +21,7 @@ Starts an ability. This API uses an asynchronous callback to return the result. 
 - If different applications call this API to start an ability that uses the singleton mode and then call  
 [terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the FA model, see
 > [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
@@ -86,7 +86,7 @@ Starts an ability. This API uses a promise to return the result. The following s
 - If different applications call this API to start an ability that uses the singleton mode and then call  
 [terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the FA model, see
 > [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).

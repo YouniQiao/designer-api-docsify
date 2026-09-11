@@ -31,8 +31,6 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -775,7 +773,7 @@ Sorts elements in an ArrayList according to the order defined by the specified c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| comparator | [ArrayListComparatorFn](arkts-arkts-arraylistcomparatorfn-t.md)&lt;T&gt; | No | Callback invoked for sorting. The default value is the callback function for sorting elements in ascending order.There has been a compatibility change since API version 2 3. In API version 22 and earlier versions, the type is `(firstValue: T, secondValue: T) =&gt; number`.<br>**Since:** 23 |
+| comparator | [ArrayListComparatorFn](arkts-arkts-arraylistcomparatorfn-t.md)&lt;T&gt; | No | Callback invoked for sorting. The default value is the callback function for sorting elements in ascending order.<br> There has been a compatibility change since API version 2 3. In API version 22 and earlier versions, the type is `(firstValue: T, secondValue: T) =&gt; number`.<br>**Since:** 23 |
 
 **Error codes:**
 
@@ -889,6 +887,12 @@ Returns the element at the given index.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 **Examples**
 

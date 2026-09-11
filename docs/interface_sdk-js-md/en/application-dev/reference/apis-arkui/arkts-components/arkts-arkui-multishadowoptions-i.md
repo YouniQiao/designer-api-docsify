@@ -19,7 +19,7 @@ offsetX?: number | Resource
 
 X-axis offset. Unit: vp. Default value: 5.
 
-**Type:** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**Type:** number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Default:** 5
 
@@ -41,7 +41,7 @@ offsetY?: number | Resource
 
 Y-axis offset. Unit: vp. Default value: 5.
 
-**Type:** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**Type:** number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Default:** 5
 
@@ -73,9 +73,11 @@ Unit: vp.
 
 A value less than or equal to 0 is handled as the default value.
 
-**Type:** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**Type:** number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
-**Default:** 5 [since 10 - 10] @default 20 [since 11]
+**Default:**
+- API version 10: 5
+- API version 11+: 20
 
 **Since:** 10
 

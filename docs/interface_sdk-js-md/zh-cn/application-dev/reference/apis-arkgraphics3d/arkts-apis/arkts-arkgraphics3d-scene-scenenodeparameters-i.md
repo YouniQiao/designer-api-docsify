@@ -2,6 +2,8 @@
 
 场景节点参数对象，用于提供场景节点层次中的名称和路径。
 
+@typedef SceneNodeParameters
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

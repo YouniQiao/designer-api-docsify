@@ -1,6 +1,6 @@
 # NativeMediaPlayerSurfaceInfo
 
-NativeMediaPlayerSurfaceInfo uses [enableNativeMediaPlayer](../arkts-components/arkts-arkweb-web-attribute.md#enablenativemediaplayer) to configure the surface information for same-layer rendering. This class allows an app to take over the web media playback functionality, configuring the surface ID and position information to integrate web media content with the app UI through same-layer rendering and enhance the media playback experience.
+NativeMediaPlayerSurfaceInfo uses [enableNativeMediaPlayer](../arkts-components/arkts-arkweb-web-comp-attribute.md#enablenativemediaplayer) to configure the surface information for same-layer rendering. This class allows an app to take over the web media playback functionality, configuring the surface ID and position information to integrate web media content with the app UI through same-layer rendering and enhance the media playback experience.
 
 **Since:** 12
 

@@ -8,7 +8,7 @@ Defines the size type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
+**Substitutes:** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,7 +24,7 @@ Select a value based on the device type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
+**Substitutes:** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,7 +40,7 @@ Extra Small width type device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
+**Substitutes:** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,7 +56,7 @@ Small width type device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
+**Substitutes:** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,7 +72,7 @@ Medium width type device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
+**Substitutes:** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,6 +88,6 @@ Large width type device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
+**Substitutes:** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

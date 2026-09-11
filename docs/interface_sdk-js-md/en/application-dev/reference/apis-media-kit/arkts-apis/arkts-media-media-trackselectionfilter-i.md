@@ -18,7 +18,7 @@ import { media } from '@kit.MediaKit';
 maxAudioBitrate?: number
 ```
 
-Maximum allowed audio bitrate. The value should be an integer.Value constraint:The value must be a positive integer (greater than 0). Unit:bit/s.Default value:If this parameter is not set, the maximum audio bitrate is not limited.
+Maximum allowed audio bitrate. The value should be an integer.Value constraint:The value must be a positive integer (greater than 0). <br>Unit:bit/s.Default value:If this parameter is not set, the maximum audio bitrate is not limited.
 
 **Type:** number
 
@@ -34,7 +34,7 @@ Maximum allowed audio bitrate. The value should be an integer.Value constraint:T
 maxAudioChannels?: number
 ```
 
-Maximum allowed audio channel count. The value should be an integer.Value constraint:The value must be a positive integer. Default value:If this parameter is not specified, the number of audio channels is not limited.
+Maximum allowed audio channel count. The value should be an integer.Value constraint:The value must be a positive integer. <br>Default value:If this parameter is not specified, the number of audio channels is not limited.
 
 **Type:** number
 
@@ -50,7 +50,7 @@ Maximum allowed audio channel count. The value should be an integer.Value constr
 maxVideoBitrate?: number
 ```
 
-Maximum allowed video bitrate. The value should be an integer.Value constraint:The value must be a positive integer. Unit:Bits/sec.Default value:If this parameter is not specified, the maximum video bitrate is not limited.
+Maximum allowed video bitrate. The value should be an integer.Value constraint:The value must be a positive integer. <br>Unit:Bits/sec.Default value:If this parameter is not specified, the maximum video bitrate is not limited.
 
 **Type:** number
 
@@ -66,7 +66,7 @@ Maximum allowed video bitrate. The value should be an integer.Value constraint:T
 maxVideoFrameRate?: number
 ```
 
-Maximum allowed video frame rate. The value should be an integer.Value constraint:The value must be a positive integer. Unit:frame/sec.Default value:If not specified, the maximum video frame rate is not limited.
+Maximum allowed video frame rate. The value should be an integer.Value constraint:The value must be a positive integer. <br>Unit:frame/sec.Default value:If not specified, the maximum video frame rate is not limited.
 
 **Type:** number
 
@@ -82,7 +82,7 @@ Maximum allowed video frame rate. The value should be an integer.Value constrain
 maxVideoResolution?: VideoSize
 ```
 
-Maximum allowed video resolution. Default value:If not specified, the maximum video resolution is not limited.
+Maximum allowed video resolution. <br>Default value:If not specified, the maximum video resolution is not limited.
 
 **Type:** [VideoSize](arkts-media-media-videosize-i.md)
 
@@ -98,7 +98,7 @@ Maximum allowed video resolution. Default value:If not specified, the maximum vi
 minAudioBitrate?: number
 ```
 
-Minimum allowed audio bitrate. The value should be an integer.Value constraint:The value must be a positive integer. Unit:Bits/sec.Default value:If this parameter is not set, the minimum audio bitrate is not limited.
+Minimum allowed audio bitrate. The value should be an integer.Value constraint:The value must be a positive integer. <br>Unit:Bits/sec.Default value:If this parameter is not set, the minimum audio bitrate is not limited.
 
 **Type:** number
 
@@ -114,7 +114,7 @@ Minimum allowed audio bitrate. The value should be an integer.Value constraint:T
 minVideoBitrate?: number
 ```
 
-Minimum allowed video bitrate. The value should be an integer.Value constraint:The value must be a positive integer. Unit:Bits/sec.Default value:If no value is assigned, the minimum video bitrate is not limited.
+Minimum allowed video bitrate. The value should be an integer.Value constraint:The value must be a positive integer. <br>Unit:Bits/sec.Default value:If no value is assigned, the minimum video bitrate is not limited.
 
 **Type:** number
 
@@ -130,7 +130,7 @@ Minimum allowed video bitrate. The value should be an integer.Value constraint:T
 minVideoFrameRate?: number
 ```
 
-Minimum allowed video frame rate. The value should be an integer.Value constraint:The value must be a positive integer. Unit:frame/sec.Default value:If not specified, the minimum frame rate is not specified.
+Minimum allowed video frame rate. The value should be an integer.Value constraint:The value must be a positive integer. <br>Unit:frame/sec.Default value:If not specified, the minimum frame rate is not specified.
 
 **Type:** number
 
@@ -146,7 +146,7 @@ Minimum allowed video frame rate. The value should be an integer.Value constrain
 minVideoResolution?: VideoSize
 ```
 
-Minimum allowed video resolution. Default value:If not specified, the minimum video resolution is not limited.
+Minimum allowed video resolution. <br>Default value:If not specified, the minimum video resolution is not limited.
 
 **Type:** [VideoSize](arkts-media-media-videosize-i.md)
 
@@ -162,7 +162,7 @@ Minimum allowed video resolution. Default value:If not specified, the minimum vi
 preferredAudioLanguages?: Array<string>
 ```
 
-The preferred languages for audio tracks. Multiple languages are arranged in the order of the array, with priorities in descending order. Value constraint:Language strings comply with the IETF BCP 47 definition. Default value:If this parameter is not specified or the array is empty, the audio language is not restricted.
+The preferred languages for audio tracks. Multiple languages are arranged in the order of the array, with priorities in descending order. Value constraint:Language strings comply with the IETF BCP 47 definition. <br>Default value:If this parameter is not specified or the array is empty, the audio language is not restricted.
 
 **Type:** Array&lt;string&gt;
 
@@ -178,7 +178,7 @@ The preferred languages for audio tracks. Multiple languages are arranged in the
 preferredAudioMimeTypes?: Array<string>
 ```
 
-Indicates the preferred encoding MIME type of the audio track. Multiple MIMEs are arranged in the order of the array, with priorities in descending order. Value constraint:Format as a MIME string or a codec string in HLS or DASH. Default value:If not specified or an empty array is set, the MIME type of the audio is not restricted.
+Indicates the preferred encoding MIME type of the audio track. Multiple MIMEs are arranged in the order of the array, with priorities in descending order. Value constraint:Format as a MIME string or a codec string in HLS or DASH. <br>Default value:If not specified or an empty array is set, the MIME type of the audio is not restricted.
 
 **Type:** Array&lt;string&gt;
 
@@ -194,7 +194,7 @@ Indicates the preferred encoding MIME type of the audio track. Multiple MIMEs ar
 preferredSubtitleLanguages?: Array<string>
 ```
 
-Preferred language set for subtitles. Multiple languages are arranged in the order of the array, with priorities in descending order. Value constraint:The language string complies with the IETF BCP 47 definition. Default value:If this parameter is not specified or the array is empty, the subtitle language is not restricted.
+Preferred language set for subtitles. Multiple languages are arranged in the order of the array, with priorities in descending order. Value constraint:The language string complies with the IETF BCP 47 definition. <br>Default value:If this parameter is not specified or the array is empty, the subtitle language is not restricted.
 
 **Type:** Array&lt;string&gt;
 
@@ -210,7 +210,7 @@ Preferred language set for subtitles. Multiple languages are arranged in the ord
 preferredVideoMimeTypes?: Array<string>
 ```
 
-The preferred sample MIME types for video tracks in order of preference, Multiple MIMEs are arranged in the order of the array, with priorities in descending order. Value constraint:Format as a MIME string or a codec string in HLS or DASH. Default value:If not specified or an empty array is set, the Mime type is not limited.
+The preferred sample MIME types for video tracks in order of preference, Multiple MIMEs are arranged in the order of the array, with priorities in descending order. Value constraint:Format as a MIME string or a codec string in HLS or DASH. <br>Default value:If not specified or an empty array is set, the Mime type is not limited.
 
 **Type:** Array&lt;string&gt;
 

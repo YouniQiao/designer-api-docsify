@@ -160,7 +160,7 @@ No permission is required when the specified application is the caller itself.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md)&gt;&gt; | Promise used to return the result, which is an array of [OverlayModuleInfo]{ |
+| Promise&lt;Array&lt;[OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md)&gt;&gt; | Promise used to return the result, which is an array of [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) objects. |
 
 **Error codes:**
 

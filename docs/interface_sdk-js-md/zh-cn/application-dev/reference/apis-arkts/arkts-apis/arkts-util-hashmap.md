@@ -5,11 +5,14 @@ HashMap底层采用数组、链表和红黑树实现，支持高效查询、插�
  [HashSet](arkts-arkts-util-hashset-hashset-c.md)基于HashMap实现。HashMap的输入参数由key、value两个值组成。在HashSet中，只对value对象进行存储和管理。
  **推荐使用场景：** 需要快速存取、删除以及插入键值对数据时，推荐使用HashMap。典型应用场景包括数据缓存、键值查找表、配置参数管理等。
  文档中使用了泛型，包含以下泛型参数：<br>
- - K：Key，键<br>
+
+- K：Key，键<br>
  - V：Value，值
- > **说明**
+
+> **说明**
  >
  > - 容器类使用静态语言实现，限制了存储位置和属性，不支持自定义属性和方法。
+
 
 
 ## 导入模块

@@ -23,7 +23,7 @@ borderRadius?: LengthMetrics | BorderRadiuses
 
 单位：[vp](arkts-arkui-length-t.md)
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
 **起始版本：** 12
 
@@ -45,7 +45,7 @@ margin?: LengthMetrics | Margin
 
 单位：[vp](arkts-arkui-length-t.md)
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [Margin](arkts-arkui-margin-t.md)
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [Margin](arkts-arkui-margin-t.md)
 
 **起始版本：** 12
 
@@ -67,7 +67,7 @@ padding?: LengthMetrics | Padding
 
 单位：[vp](arkts-arkui-length-t.md)
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Padding
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; Padding
 
 **起始版本：** 12
 

@@ -32,7 +32,7 @@ Obtains SkillInfo of a specified application based on bundleName, moduleName and
 | bundleName | string | Yes | Indicates the bundle name of the application. |
 | moduleName | string | Yes | Indicates the module name of the skill. |
 | skillName | string | Yes | Indicates the name of the skill. |
-| flags | number | Yes | { |
+| flags | number | Yes | [SkillInfoFlag](arkts-ability-skillmanager-skillinfoflag-e.md) - Indicates the flag used to specify information contained in the SkillInfo object that will be returned. |
 | userId | number | No | Indicates the user ID. If not provided, the user ID of the caller is used. |
 
 **Return value:**

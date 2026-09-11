@@ -8,7 +8,7 @@ When audio loopback is enabled, the system creates a low-latency renderer and ca
 
 The system automatically chooses the input and output devices. If these devices do not support low latency, audio loopback does not work. If another audio stream takes over the audio focus or if the input or output device changes to the one that does not support low latency, the system disables audio loopback automatically.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The initial APIs of this interface are supported since API version 20.
 
@@ -71,7 +71,7 @@ Gets the current equalizer preset. The default equalizer preset of audio loopbac
 
 | Type | Description |
 | --- | --- |
-| [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | Equalizer type. |
+| [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | Equalizer type.<br>If no equalizer type has been set, the default equalizer type is **FULL**. |
 
 ## getPreferredDevicePair
 
@@ -91,7 +91,7 @@ Gets the preferred audio device pair in current device connection situation.
 
 | Type | Description |
 | --- | --- |
-| [AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md) \| null | The preferred audio device pair in audio system, or null if there is no supported device pair. |
+| [AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md) &#124; null | The preferred audio device pair in audio system, or null if there is no supported device pair. |
 
 ## getReverbPreset
 
@@ -109,7 +109,7 @@ Get the current reverberation. The default reverberation preset of audio loopbac
 
 | Type | Description |
 | --- | --- |
-| [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | Reverb mode. |
+| [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | Reverb mode.<br>If no reverb mode has been set, the default reverb mode is **THEATER**. |
 
 ## getStatus
 

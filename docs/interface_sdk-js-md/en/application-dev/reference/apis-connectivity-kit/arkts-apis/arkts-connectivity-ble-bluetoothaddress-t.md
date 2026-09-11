@@ -6,6 +6,8 @@ type BluetoothAddress = common.BluetoothAddress
 
 Bluetooth device address.
 
+@typedef { common.BluetoothAddress } BluetoothAddress
+
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.

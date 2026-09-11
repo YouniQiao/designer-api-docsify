@@ -61,7 +61,7 @@ addAccessibilityVirtualNodes(elementId: number, windowId: number, nodes: Array<A
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) | System abnormality.Possible causes:  1.Internal operation failed.  2.Failed to obtain the required service or client object (null pointer).  3.IPC communication failed.  4.Failed to obtain the accessibility service proxy.  5.Timed out while waiting for the result of an asynchronous operation. |
+| [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) | System abnormality.Possible causes:<br>1.Internal operation failed. <br>2.Failed to obtain the required service or client object (null pointer). <br>3.IPC communication failed. <br>4.Failed to obtain the accessibility service proxy. <br>5.Timed out while waiting for the result of an asynchronous operation. |
 
 **示例**
 
@@ -596,7 +596,7 @@ notifyDisconnect(): void
 
 通知无障碍服务可以关闭该辅助功能扩展服务。
 
-此函数需要与注册预关闭接口on('preDisconnect')配合使用，如果没有调用过注册预关闭函数，直接调用此函数不生效。
+此函数需要与注册预关闭接口[on('preDisconnect')](#onpredisconnect)配合使用，如果没有调用过注册预关闭函数，直接调用此函数不生效。
 
 **起始版本：** 20
 
@@ -676,7 +676,7 @@ off(type: 'preDisconnect', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'preDisconnect' | 是 | 监听事件名，固定为‘preDisconnect’，即辅助功能扩展服务即将关闭的事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定辅助功能扩展服务即将关闭时的回调。需与on('preDisconnect')的callback一致。缺省时，表示注销所有已注册事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定辅助功能扩展服务即将关闭时的回调。需与[on('preDisconnect')](#onpredisconnect)的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **错误码：**
 
@@ -840,7 +840,7 @@ removeAccessibilityVirtualNodes(elementId: number, windowId: number): Promise<Op
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) | System abnormality.Possible causes:  1.Internal operation failed.  2.Failed to obtain the required service or client object (null pointer).  3.IPC communication failed.  4.Failed to obtain the accessibility service proxy.  5.Timed out while waiting for the result of an asynchronous operation. |
+| [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) | System abnormality.Possible causes:<br>1.Internal operation failed. <br>2.Failed to obtain the required service or client object (null pointer). <br>3.IPC communication failed. <br>4.Failed to obtain the accessibility service proxy. <br>5.Timed out while waiting for the result of an asynchronous operation. |
 
 **示例**
 
@@ -1059,7 +1059,7 @@ updateAccessibilityElementProperty(elementId: number, windowId: number, node: Ac
 | --- | --- | --- | --- |
 | elementId | number | 是 | 表示修改无障碍节点的节点ID。 |
 | windowId | number | 是 | 表示修改无障碍节点的窗口ID。 |
-| node | [AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md) | 是 | 修改无障碍节点的属性值，可修改的属性包括：accessibilityText，accessibilityGroup，accessibilityLevel，checkable，checked，selected，clickable，enabled，customComponentType。 |
+| node | [AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md) | 是 | 修改无障碍节点的属性值，可修改的属性包括：<br>accessibilityText，accessibilityGroup，accessibilityLevel，checkable，checked，selected，clickable，enabled，customComponentType。 |
 
 **返回值：**
 
@@ -1073,7 +1073,7 @@ updateAccessibilityElementProperty(elementId: number, windowId: number, node: Ac
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) | System abnormality.Possible causes:  1.Internal operation failed.  2.Failed to obtain the required service or client object (null pointer).  3.IPC communication failed.  4.Failed to obtain the accessibility service proxy.  5.Timed out while waiting for the result of an asynchronous operation. |
+| [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) | System abnormality.Possible causes:<br>1.Internal operation failed. <br>2.Failed to obtain the required service or client object (null pointer). <br>3.IPC communication failed. <br>4.Failed to obtain the accessibility service proxy. <br>5.Timed out while waiting for the result of an asynchronous operation. |
 
 **示例**
 

@@ -44,7 +44,7 @@ init(context: AbilityStageContext): Promise<Object | void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Object \| void&gt; | Promise对象，用于返回启动任务执行结果对象或void。 |
+| Promise&lt;Object &#124; void&gt; | Promise对象，用于返回启动任务执行结果对象或void。 |
 
 **示例**
 

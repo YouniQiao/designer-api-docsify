@@ -22,7 +22,7 @@ Effect strategy of the symbol glyph.
 
 Default value: **SymbolEffectStrategy.NONE**.
 
-**NOTE：**
+**NOTE:**
 
 For the resources referenced in **\$r('sys.symbol.ohos_*')**, only **ohos_wifi** supports the hierarchical effect.
 
@@ -70,7 +70,7 @@ For the string type, numeric string values with optional units, for example, **"
 
 Default value: system default value
 
-**Type:** number \| string \| [Resource](arkts-arkui-resource-t.md)
+**Type:** number &#124; string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 12
 
@@ -94,7 +94,7 @@ For the string type, only strings of the number type are supported, for example,
 
 Default value: **FontWeight.Normal**.
 
-**Type:** number \| [FontWeight](arkts-arkui-fontweight-e.md) \| string
+**Type:** number &#124; [FontWeight](arkts-arkui-fontweight-e.md) &#124; string
 
 **Since:** 12
 
@@ -114,7 +114,7 @@ Rendering strategy of the symbol glyph.
 
 Default value: **SymbolRenderingStrategy.SINGLE**.
 
-**NOTE：**
+**NOTE:**
 
 For the resources referenced in **\$r('sys.symbol.ohos_*')**, only **ohos_trash_circle**, **ohos_folder_badge_plus**, and **ohos_lungs** support the **MULTIPLE_COLOR** modes.
 

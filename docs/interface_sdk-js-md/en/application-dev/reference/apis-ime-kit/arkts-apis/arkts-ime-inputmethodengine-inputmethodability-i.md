@@ -18,13 +18,10 @@ import { inputMethodEngine } from '@kit.IMEKit';
 createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): void
 ```
 
-Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses an asynchronous callback to return the result.   
-> **NOTE：**
-   
-> 
-   
-> Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panel and one [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md) panel can be created for a single input method.
-   
+Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
+> Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panel and one [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md) panel can be created for a single input method. <br> <br>
 > The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such as [window.createWindow](../../../windowmanager/application-window-fa.md#setting-the-child-window-of-an-application), [bindContextMenu](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#bindcontextmenu), and CustomDialog. You are advised to adopt alternative solutions to sub-windows, such as using a dialog box or [bindMenu](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#bindmenu), or set **showInSubwindow** to **false**.
 
 **Since:** 10
@@ -81,15 +78,11 @@ class InputMethodExt extends InputMethodExtensionAbility {
 createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 ```
 
-Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses a promise to return the result.   
-> **NOTE：**
-   
-> 
-   
-> Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panel and one [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md) panel can be created for a single input method.
-   
-> 
-   
+Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses a promise to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
+> Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panel and one [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md) panel can be created for a single input method. <br>
+> <br>
 > The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such as [window.createWindow](../../../windowmanager/application-window-fa.md#setting-the-child-window-of-an-application), [bindContextMenu](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#bindcontextmenu), and CustomDialog. You are advised to adopt alternative solutions to sub-windows, such as using a dialog box or [bindMenu](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#bindmenu), or set **showInSubwindow** to **false**.
 
 **Since:** 10
@@ -390,7 +383,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
+| type | 'keyboardShow' &#124; 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | No | Callback used to return the result. |
 
 **Examples**
@@ -420,7 +413,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
+| type | 'keyboardShow' &#124; 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | No | Callback used to return the result. |
 
 **Examples**
@@ -566,7 +559,7 @@ Unsubscribes from the event of discarding candidate words and sends the event to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**.     - **'discardTypingText'**: indicates unsubscribing from the event of discarding candidate words and sending the event to the input method. |
+| type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**.<br> - **'discardTypingText'**: indicates unsubscribing from the event of discarding candidate words and sending the event to the input method. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
@@ -677,7 +670,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
+| type | 'keyboardShow' &#124; 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
 
 **Examples**
@@ -707,7 +700,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
+| type | 'keyboardShow' &#124; 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
 
 **Examples**
@@ -858,7 +851,7 @@ Subscribes to the event of discarding candidate words and sends the event to the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**.     - **'discardTypingText'**: indicates subscribing to the event of discarding candidate words and sending the event to the input method. |
+| type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**.<br> - **'discardTypingText'**: indicates subscribing to the event of discarding candidate words and sending the event to the input method. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**

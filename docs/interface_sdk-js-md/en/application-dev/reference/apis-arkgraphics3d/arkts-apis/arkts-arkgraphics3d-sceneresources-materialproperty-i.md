@@ -30,7 +30,7 @@ image: Image | null
 
 Texture map based on PBR properties to convey the texture information of the material.
 
-**Type:** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) \| null
+**Type:** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) &#124; null
 
 **Since:** 20
 

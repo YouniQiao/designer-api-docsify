@@ -1,6 +1,6 @@
 # RichEditorSpanType
 
-Provides the span type information.
+Enumerates span types.
 
 **Since:** 10
 
@@ -12,7 +12,7 @@ Provides the span type information.
 TEXT = 0
 ```
 
-The span type is text.
+Text span.
 
 **Since:** 10
 
@@ -28,7 +28,7 @@ The span type is text.
 IMAGE = 1
 ```
 
-The span type is image.
+Image span.
 
 **Since:** 10
 
@@ -44,7 +44,7 @@ The span type is image.
 MIXED = 2
 ```
 
-The span type is image and text.
+Mixed text and image span.
 
 **Since:** 10
 
@@ -60,7 +60,7 @@ The span type is image and text.
 BUILDER = 3
 ```
 
-The span type is BuilderSpan.
+Span of the custom layout type.
 
 **Since:** 12
 
@@ -76,7 +76,7 @@ The span type is BuilderSpan.
 DEFAULT = 4
 ```
 
-When this type is registered but **TEXT**, **IMAGE**, **MIXED**, or **BUILDER** types are not registered, this type will be triggered and displayed for those registered types.
+When a menu of this type is registered but no TEXT, IMAGE, MIXED, or BUILDER menu is registered, the text type, image type, mixed text-image type, and custom layout type all trigger and display the menu corresponding to this type.
 
 **Since:** 15
 

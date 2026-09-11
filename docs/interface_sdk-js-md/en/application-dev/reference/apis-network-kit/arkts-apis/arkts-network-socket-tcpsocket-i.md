@@ -20,7 +20,7 @@ bind(address: NetAddress, callback: AsyncCallback<void>): void
 
 Binds an IP address and a port number. The port number can be customized or randomly allocated by the system. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the bind operation fails due to a port conflict, the system will randomly allocate a port number.
 > 
@@ -79,7 +79,7 @@ bind(address: NetAddress): Promise<void>
 
 Binds an IP address and a port number. The port number can be customized or randomly allocated by the system. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the bind operation fails due to a port conflict, the system will randomly allocate a port number.
 > 
@@ -225,7 +225,7 @@ connect(options: TCPConnectOptions, callback: AsyncCallback<void>): void
 
 Sets up a connection to the specified IP address and port number. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API allows you to connect to the TCP server without first executing **tcp.bind**.
 
@@ -324,7 +324,7 @@ connect(options: TCPConnectOptions): Promise<void>
 
 Sets up a connection to the specified IP address and port number. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API allows you to connect to the TCP server without first executing **tcp.bind**.
 
@@ -424,7 +424,7 @@ getLocalAddress(): Promise<NetAddress>
 
 Obtains the local socket address of a **TCPSocket** connection. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **bind** is successfully called.
 
@@ -477,7 +477,7 @@ getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 
 Obtains the remote address of a socket connection. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **connect** is successfully called.
 
@@ -534,7 +534,7 @@ getRemoteAddress(): Promise<NetAddress>
 
 Obtains the remote address of a socket connection. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **connect** is successfully called.
 
@@ -591,7 +591,7 @@ getSocketFd(callback: AsyncCallback<number>): void
 
 Obtains the file descriptor of the **TCPSocket** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API can be called only after **bind** or **connect** is successfully called.
 > 
@@ -644,7 +644,7 @@ getSocketFd(): Promise<number>
 
 Obtains the file descriptor of the **TCPSocket** object. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API can be called only after **bind** or **connect** is successfully called.
 > 
@@ -696,7 +696,7 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 
 Obtains the status of the TCP socket connection. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **bind** or **connect** is successfully called.
 
@@ -753,7 +753,7 @@ getState(): Promise<SocketStateBase>
 
 Obtains the status of the TCP socket connection. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **bind** or **connect** is successfully called.
 
@@ -818,7 +818,7 @@ Unsubscribes from **message** events of the **TCPSocket** object. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'message' | Yes | Event type.    **message**: message receiving event. |
+| type | 'message' | Yes | Event type.<br> **message**: message receiving event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
 
 **Examples**
@@ -861,7 +861,7 @@ Unsubscribes from **connect** or **close** events of the **TCPSocket** object. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' \| 'close' | Yes | Event type.   - **connect**: connection event.    - **close**: close event. |
+| type | 'connect' &#124; 'close' | Yes | Event type.<br> <br>- **connect**: connection event. <br>- **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
@@ -903,7 +903,7 @@ Unsubscribes from **connect** or **close** events of the **TCPSocket** object. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' \| 'close' | Yes | Event type.   - **connect**: connection event.    - **close**: close event. |
+| type | 'connect' &#124; 'close' | Yes | Event type.<br> <br>- **connect**: connection event. <br>- **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
@@ -926,7 +926,7 @@ Unsubscribes from **error** events of the **TCPSocket** object. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type.    **error**: error event. |
+| type | 'error' | Yes | Event type.<br> **error**: error event. |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
@@ -961,7 +961,7 @@ Subscribes to **message** events of the **TCPSocket** object. This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'message' | Yes | Event type.    **message**: message receiving event. |
+| type | 'message' | Yes | Event type.<br> **message**: message receiving event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
 
 **Examples**
@@ -1000,7 +1000,7 @@ Subscribes to **connect** or **close** events of the **TCPSocket** object. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' \| 'close' | Yes | Event type.   - **connect**: connection event.    - **close**: close event. |
+| type | 'connect' &#124; 'close' | Yes | Event type.<br> <br>- **connect**: connection event. <br>- **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
@@ -1034,7 +1034,7 @@ Subscribes to **connect** or **close** events of the **TCPSocket** object. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' \| 'close' | Yes | Event type.   - **connect**: connection event.    - **close**: close event. |
+| type | 'connect' &#124; 'close' | Yes | Event type.<br> <br>- **connect**: connection event. <br>- **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
@@ -1057,7 +1057,7 @@ Subscribes to **error** events of the **TCPSocket** object. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type.    **error**: error event. |
+| type | 'error' | Yes | Event type.<br> **error**: error event. |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the result. |
 
 **Examples**
@@ -1080,7 +1080,7 @@ send(options: TCPSendOptions, callback: AsyncCallback<void>): void
 
 Sends data over a TCP socket connection. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **connect** is successfully called. Call the API in the worker thread or
 > taskpool thread as this operation is time-consuming.
@@ -1143,7 +1143,7 @@ send(options: TCPSendOptions): Promise<void>
 
 Sends data over a TCP socket connection. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **connect** is successfully called. Call the API in the worker thread or
 > taskpool thread as this operation is time-consuming.
@@ -1209,7 +1209,7 @@ setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 
 Sets other properties of the **TCPSocket** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **bind** or **connect** is successfully called.
 
@@ -1285,7 +1285,7 @@ setExtraOptions(options: TCPExtraOptions): Promise<void>
 
 Sets other properties of the **TCPSocket** object. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **bind** or **connect** is successfully called.
 

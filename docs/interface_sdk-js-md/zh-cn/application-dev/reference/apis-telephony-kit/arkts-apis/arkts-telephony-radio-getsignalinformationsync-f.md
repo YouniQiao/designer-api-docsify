@@ -22,13 +22,13 @@ function getSignalInformationSync(slotId: number): Array<SignalInformation>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[SignalInformation](arkts-telephony-radio-signalinformation-i.md)&gt; | 返回网络信号强度[SignalInformation]{ |
+| Array&lt;[SignalInformation](arkts-telephony-radio-signalinformation-i.md)&gt; | 返回网络信号强度[SignalInformation](arkts-telephony-radio-signalinformation-i.md)子类对象的数组。 |
 
 **示例**
 

@@ -6,7 +6,7 @@ When a web page initiates a file selection request, developers use FileSelectorP
 
 Used in scenarios where the Web component needs to custom-handle file upload requests. Register the `onShowFileSelector` callback to intercept file selection requests; obtain the FileSelectorParam instance from the `fileSelector` property of the callback event; read the parameters and build a corresponding system file selector (such as DocumentViewPicker, PhotoViewPicker, etc.); return the selection result to the Web component through FileSelectorResult.
 
-For sample code, see [onShowFileSelector](arkts-arkweb-web-attribute.md#onshowfileselector).
+For sample code, see [onShowFileSelector](arkts-arkweb-web-comp-attribute.md#onshowfileselector).
 
 **Since:** 9
 
@@ -85,7 +85,7 @@ Obtains the default path of the file selector, which corresponds to **startIn** 
 
 | Type | Description |
 | --- | --- |
-| string | Default starting path. |
+| string | Default starting path. <br>When the frontend startIn is set to the public directories `downloads` or `pictures`, note that they should be converted to `download` and `images` in the OpenHarmony system, respectively. For details, see [Obtaining and Using Public Directories](../../../file-management/request-dir-permission.md). |
 
 ## getDescriptions
 
@@ -197,7 +197,7 @@ Obtains whether the file selector excludes the option (*\/*), that is, all files
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether to exclude the "All file types" option. |
+| boolean | Whether to exclude the "All file types" option.<br>The value **true** means to exclude (the "All file types" option is not included), and **false** means to include (the developer must ensure that the "All file types" option is included in the file selector). |
 
 ## isCapture
 
@@ -217,4 +217,4 @@ Checks whether multimedia capabilities are invoked.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether to invoke multimedia capabilities. |
+| boolean | Whether to invoke multimedia capabilities.<br>The value **true** means that multimedia devices such as the camera or microphone need to be called to obtain files (for example, taking a photo or recording audio), and **false** means that only existing files are selected from the storage device. Corresponds to the **capture** attribute of the HTML input tag. |

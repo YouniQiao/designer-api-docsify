@@ -270,7 +270,7 @@ function queryAbilityInfo(wants: Array<Want>, abilityFlags: number, userId?: num
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md)&gt;&gt; | Promise对象，返回Array&lt;[AbilityInfo]{ |
+| Promise&lt;Array&lt;[AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md)&gt;&gt; | Promise对象，返回Array&lt;AbilityInfo&gt;信息。 |
 
 **错误码：**
 

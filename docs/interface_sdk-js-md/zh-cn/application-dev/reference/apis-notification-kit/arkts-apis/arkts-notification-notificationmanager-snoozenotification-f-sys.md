@@ -29,7 +29,7 @@ function snoozeNotification(hashCode: string, delayTime: number): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hashCode | string | 是 | 需要设置稍后提醒通知的唯一标识。 |
-| delayTime | number | 是 | 稍后提醒的时间间隔。单位：秒。 |
+| delayTime | number | 是 | 稍后提醒的时间间隔。<br>单位：秒。 |
 
 **返回值：**
 

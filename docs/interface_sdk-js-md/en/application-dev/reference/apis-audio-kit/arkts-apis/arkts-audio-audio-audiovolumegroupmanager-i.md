@@ -4,7 +4,7 @@ This interface implements volume management for an audio group.
 
 Before calling any API in AudioVolumeGroupManager, you must use [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager) to obtain an AudioVolumeGroupManager instance.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The initial APIs of this interface are supported since API version 9.
 
@@ -465,7 +465,7 @@ Obtains the volume level of a stream. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the stream volume level. The volume range of a specified stream can be obtained by calling [getMinVolume]{ |
+| Promise&lt;number&gt; | Promise used to return the stream volume level. The volume range of a specified stream can be obtained by calling [getMinVolume](#getminvolume) and [getMaxVolume](#getmaxvolume). |
 
 ## getVolumeSync
 
@@ -493,7 +493,7 @@ Obtains the volume level of a stream. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| number | Volume level of the stream. The volume range of a specified stream can be obtained by calling [getMinVolume]{ |
+| number | Volume level of the stream. The volume range of a specified stream can be obtained by calling [getMinVolume](#getminvolume) and [getMaxVolume](#getmaxvolume). |
 
 **Error codes:**
 

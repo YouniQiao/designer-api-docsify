@@ -32,7 +32,7 @@ Installs a font file from a specified path into the system font library. This AP
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the installation result. |
+| Promise&lt;number&gt; | Promise used to return the installation result.<br>- The value **0** indicates that the installation is successful and the font has been added to the system font library. <br>- Any other value indicates that the installation failed. Troubleshoot based on the error code. |
 
 **Error codes:**
 

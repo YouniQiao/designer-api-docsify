@@ -92,7 +92,7 @@ Indicates that the disk can be removed.The value true indicates that the disk ca
 sizeBytes: number
 ```
 
-Disk total size. Unit: Byte.
+Disk total size. <br>Unit: Byte.
 
 **Type:** number
 

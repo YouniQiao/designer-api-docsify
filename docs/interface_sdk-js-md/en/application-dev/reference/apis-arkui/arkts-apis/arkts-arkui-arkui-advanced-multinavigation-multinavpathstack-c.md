@@ -22,7 +22,7 @@ clear(animated?: boolean): void
 
 Clears the navigation stack.
 
-> **NOTE：**
+> **NOTE:**
 
 > If [keepBottomPage](#keepbottompage) is called with **true**, the bottom page of the
 > navigation stack is retained.
@@ -39,7 +39,7 @@ Clears the navigation stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br> **true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 ## constructor
 
@@ -77,7 +77,7 @@ Disables or enables the transition animation in the **MultiNavigation** componen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| disable | boolean | Yes | Whether to disable the transition animation.Default value: **false**.   **true**: The transition animation is disabled.   **false**: The transition animation is not disabled. |
+| disable | boolean | Yes | Whether to disable the transition animation.<br>Default value: **false**.<br>**true**: The transition animation is disabled.<br>**false**: The transition animation is not disabled. |
 
 ## getAllPathName
 
@@ -127,7 +127,7 @@ Obtains the indexes of all the navigation destination pages that match **name**.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Indexes of all the matching navigation destination pages. |
+| Array&lt;number&gt; | Indexes of all the matching navigation destination pages.<br>Value range of the number type: [0, +∞). |
 
 ## getParamByIndex
 
@@ -149,13 +149,13 @@ Obtains the parameter information of the navigation destination page specified b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the navigation destination page.Value range: [0, +∞). |
+| index | number | Yes | Index of the navigation destination page.<br>Value range: [0, +∞). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| unknown \| undefined | Object**: parameter information of the matching navigation destination page. |
+| unknown &#124; undefined | Object**: parameter information of the matching navigation destination page.<br>**undefined**: returned when an invalid index is provided. |
 
 ## getParamByName
 
@@ -193,7 +193,7 @@ keepBottomPage(keepBottom: boolean): void
 
 Sets whether to retain the bottom page when the **pop** or **clear** APIs is called.
 
-> **NOTE：**
+> **NOTE:**
 
 > **MultiNavigation** treats the home page as a navigation destination page in the stack. By default, calling
 > **pop** or **clear** will also remove the bottom page.
@@ -213,7 +213,7 @@ Sets whether to retain the bottom page when the **pop** or **clear** APIs is cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keepBottom | boolean | Yes | Whether to retain the bottom page.Default value: **false**.   **true**: The bottom page is retained.   **false**: The bottom page is not retained. |
+| keepBottom | boolean | Yes | Whether to retain the bottom page.<br>Default value: **false**.<br>**true**: The bottom page is retained.<br>**false**: The bottom page is not retained. |
 
 ## moveIndexToTop
 
@@ -223,7 +223,7 @@ moveIndexToTop(index: number, animated?: boolean): void
 
 Moves the navigation destination page specified by **index** to the top of the navigation stack.
 
-> **NOTE：**
+> **NOTE:**
 
 > Depending on the type of page found, **MultiNavigation** performs different actions:
 
@@ -239,8 +239,8 @@ Moves the navigation destination page specified by **index** to the top of the n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the navigation destination page.Value range: [0, +∞). |
-| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
+| index | number | Yes | Index of the navigation destination page.<br>Value range: [0, +∞). |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br> **true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 ## moveToTop
 
@@ -250,7 +250,7 @@ moveToTop(name: string, animated?: boolean): number
 
 Moves the first navigation destination page that matches **name** from the bottom of the navigation stack to the top of the stack.
 
-> **NOTE：**
+> **NOTE:**
 
 > Depending on the type of page found, **MultiNavigation** performs different actions:
 
@@ -267,7 +267,7 @@ Moves the first navigation destination page that matches **name** from the botto
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
-| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br> **true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
@@ -283,7 +283,7 @@ pop(animated?: boolean): NavPathInfo | undefined
 
 Pops the top element out of the navigation stack.
 
-> **NOTE：**
+> **NOTE:**
 
 > If [keepBottomPage](#keepbottompage) is called with **true**, the bottom page of the
 > navigation stack is retained.
@@ -300,13 +300,13 @@ Pops the top element out of the navigation stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br> **true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) \| undefined | Information about the navigation destination page at the top of the stack. |
+| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) &#124; undefined | Information about the navigation destination page at the top of the stack. |
 
 ## pop
 
@@ -316,7 +316,7 @@ pop(result?: Object, animated?: boolean): NavPathInfo | undefined
 
 Pops the top element out of the navigation stack and invokes the **onPop** callback to pass the page processing result.
 
-> **NOTE：**
+> **NOTE:**
 
 > If [keepBottomPage](#keepbottompage) is called with **true**, the bottom page of the
 > navigation stack is retained.
@@ -334,13 +334,13 @@ Pops the top element out of the navigation stack and invokes the **onPop** callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | result | Object | No | Custom processing result on the page. |
-| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br> **true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) \| undefined | Information about the navigation destination page at the top of the stack. |
+| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) &#124; undefined | Information about the navigation destination page at the top of the stack. |
 
 ## popToIndex
 
@@ -362,8 +362,8 @@ Returns the navigation stack to the page specified by **index**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the navigation destination page.Value range: [0, +∞). |
-| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
+| index | number | Yes | Index of the navigation destination page.<br>Value range: [0, +∞). |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br> **true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 ## popToIndex
 
@@ -385,9 +385,9 @@ Returns the navigation stack to the page specified by **index** and invokes the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the navigation destination page.Value range: [0, +∞). |
+| index | number | Yes | Index of the navigation destination page.<br>Value range: [0, +∞). |
 | result | Object | Yes | Custom processing result on the page. |
-| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br> **true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 ## popToName
 
@@ -410,13 +410,13 @@ Pops pages until the first navigation destination page that matches **name** fro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
-| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br> **true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Returns the index of the first navigation destination page that matches **name** from the bottom of the navigation stack; returns **-1** if no such a page is found. |
+| number | Returns the index of the first navigation destination page that matches **name** from the bottom of the navigation stack; returns **-1** if no such a page is found.<br>Value range: [-1, +∞). |
 
 ## popToName
 
@@ -440,13 +440,13 @@ Pops pages until the first navigation destination page that matches **name** fro
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
 | result | Object | Yes | Custom processing result on the page. |
-| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br> **true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Returns the index of the first navigation destination page that matches **name** from the bottom of the navigation stack; returns **-1** if no such a page is found. |
+| number | Returns the index of the first navigation destination page that matches **name** from the bottom of the navigation stack; returns **-1** if no such a page is found.<br>Value range: [-1, +∞). |
 
 ## pushPath
 
@@ -469,7 +469,7 @@ Pushes the specified navigation destination page to the navigation stack.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
-| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br> **true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 | policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
 
 ## pushPath
@@ -518,7 +518,7 @@ Pushes the navigation destination page specified by **name** to the navigation s
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
 | param | Object | Yes | Detailed parameters of the navigation destination page. |
-| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br> **true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 | policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
 
 ## pushPathByName
@@ -545,7 +545,7 @@ Pushes the navigation destination page specified by **name** to the navigation s
 | name | string | Yes | Name of the navigation destination page. |
 | param | Object | Yes | Detailed parameters of the navigation destination page. |
 | onPop | [base.Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PopInfo](../arkts-components/arkts-arkui-popinfo-i.md)&gt; | No | Callback used to handle the return result. |
-| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br> **true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 | policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
 
 ## removeByIndexes
@@ -568,7 +568,7 @@ Removes the navigation destination pages specified by **indexes** from the navig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indexes | Array&lt;number&gt; | Yes | Array of indexes of the navigation destination pages to remove.Value range of the number type: [0, +∞). |
+| indexes | Array&lt;number&gt; | Yes | Array of indexes of the navigation destination pages to remove.<br>Value range of the number type: [0, +∞). |
 
 **Return value:**
 
@@ -625,7 +625,7 @@ Replaces the current top page on the stack with the specified navigation destina
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
-| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br> **true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 ## replacePath
 
@@ -672,7 +672,7 @@ Replaces the current top page on the stack with the navigation destination page 
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
 | param | Object | Yes | Detailed parameters of the navigation destination page. |
-| animated | boolean | No | Whether to support the transition animation.Default value: **true**.    **true**: The transition animation is supported.   **false**: The transition animation is not supported. |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br> **true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 ## setHomeWidthRange
 
@@ -694,8 +694,8 @@ Sets the draggable range for the home page width. If not set, the width defaults
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minPercent | number | Yes | Minimum width percentage of the home page.Value range: [0, 100] |
-| maxPercent | number | Yes | Maximum width percentage of the home page.Value range: [0, 100] |
+| minPercent | number | Yes | Minimum width percentage of the home page.<br>Value range: [0, 100] |
+| maxPercent | number | Yes | Maximum width percentage of the home page.<br>Value range: [0, 100] |
 
 ## setPlaceholderPage
 
@@ -705,7 +705,7 @@ setPlaceholderPage(info: NavPathInfo): void
 
 Sets a placeholder page.
 
-> **NOTE：**
+> **NOTE:**
 
 > The placeholder page is a special page type. When set, it forms a default split-screen effect with the home page
 > on some large-screen devices, that is, the left side is the home page, and the right side is the placeholder
@@ -753,7 +753,7 @@ Obtains the stack size.
 
 | Type | Description |
 | --- | --- |
-| number | Stack size. |
+| number | Stack size.<br>Value range: [0, +∞). |
 
 ## switchFullScreenState
 
@@ -781,4 +781,4 @@ Switches the display mode of the current top detail page in the stack.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the switching is successful. |
+| boolean | Whether the switching is successful.<br>**true**: The switching is successful. <br>**false**: The switching failed. |

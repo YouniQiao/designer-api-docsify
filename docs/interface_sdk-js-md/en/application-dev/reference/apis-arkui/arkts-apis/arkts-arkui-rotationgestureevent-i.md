@@ -21,7 +21,7 @@ angle: number
 
 Rotation angle, in deg.
 
-**NOTE：**
+**NOTE:**
 
 Angle calculation: When a rotation gesture is detected, the line connecting the two fingers is identified as the starting line. As the fingers slide, the line between them rotates. Based on the coordinates of the end points of the starting line and the current line, the arctangent function is used to calculate the included angles relative to the horizontal direction.
 

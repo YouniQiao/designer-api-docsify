@@ -723,7 +723,7 @@ setCloneList(cloneList: Object[] | ArrayBuffer[]): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cloneList | Object[] \| ArrayBuffer[] | 是 | 传入数组的类型必须为[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)或ArrayBuffer。   - 所有传入**cloneList**的[Sendable class](../../../arkts-utils/arkts-sendable.md#sendable-class)实例或ArrayBuffer类型对象，在线程间传输的行为都会变成拷贝传递，即修改传输后的对象不会对原有对象产生任何影响。 |
+| cloneList | Object[] &#124; ArrayBuffer[] | 是 | 传入数组的类型必须为[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)或ArrayBuffer。<br>- 所有传入**cloneList**的[Sendable class](../../../arkts-utils/arkts-sendable.md#sendable-class)实例或ArrayBuffer类型对象，在线程间传输的行为都会变成拷贝传递，即修改传输后的对象不会对原有对象产生任何影响。 |
 
 **错误码：**
 
@@ -934,7 +934,7 @@ console.info("testTransfer view3 byteLength: " + view1.byteLength);
 arguments?: Object[]
 ```
 
-创建任务传入函数所需的参数，支持的参数类型请参考[序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。默认值为undefined。从API version 11开始，该接口支持在原子化服务中使用。
+创建任务传入函数所需的参数，支持的参数类型请参考[序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。默认值为undefined。<br>从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** Object[]
 
@@ -950,7 +950,7 @@ arguments?: Object[]
 cpuDuration: number
 ```
 
-执行任务CPU耗时。单位：ms。不建议修改此值。从API version 11开始，该接口支持在原子化服务中使用。
+执行任务CPU耗时。单位：ms。不建议修改此值。<br>从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
@@ -968,7 +968,7 @@ cpuDuration: number
 function: Function
 ```
 
-待执行的函数，必须使用[@Concurrent装饰器](../../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰，支持的函数返回值类型请参考[序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。从API version 11开始，该接口支持在原子化服务中使用。
+待执行的函数，必须使用[@Concurrent装饰器](../../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰，支持的函数返回值类型请参考[序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。<br>从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** Function
 
@@ -984,7 +984,7 @@ function: Function
 ioDuration: number
 ```
 
-执行任务异步IO耗时。单位：ms。不建议修改此值。从API version 11开始，该接口支持在原子化服务中使用。
+执行任务异步IO耗时。单位：ms。不建议修改此值。<br>从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
@@ -1002,7 +1002,7 @@ ioDuration: number
 name: string
 ```
 
-创建任务时指定的任务名称。不建议修改此值。从API version 11开始，该接口支持在原子化服务中使用。
+创建任务时指定的任务名称。不建议修改此值。<br>从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** string
 
@@ -1018,7 +1018,7 @@ name: string
 taskId: number
 ```
 
-任务的ID。系统默认提供全局唯一值，不建议修改此值。从API version 18开始，该接口支持在原子化服务中使用。
+任务的ID。系统默认提供全局唯一值，不建议修改此值。<br>从API version 18开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
@@ -1036,7 +1036,7 @@ taskId: number
 totalDuration: number
 ```
 
-执行任务总耗时。单位：ms。不建议修改此值。从API version 11开始，该接口支持在原子化服务中使用。
+执行任务总耗时。单位：ms。不建议修改此值。<br>从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 

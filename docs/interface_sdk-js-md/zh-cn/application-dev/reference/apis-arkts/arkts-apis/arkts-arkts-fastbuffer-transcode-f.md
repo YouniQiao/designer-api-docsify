@@ -24,9 +24,9 @@ function transcode(source: FastBuffer | Uint8Array, fromEnc: string, toEnc: stri
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | 是 | 需要进行编码转换的源数据对象，将从fromEnc编码转换为toEnc编码。 |
-| fromEnc | string | 是 | 当前编码格式。支持的格式范围为'ascii' \| 'utf8' \| 'utf16le' \| 'ucs2' \| 'latin1' \| 'binary'。传入空字符串时，表示使用编码格式'utf8'。 |
-| toEnc | string | 是 | 目标编码。支持的格式范围为'ascii' \| 'utf8' \| 'utf16le' \| 'ucs2' \| 'latin1' \| 'binary'。 |
+| source | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; Uint8Array | 是 | 需要进行编码转换的源数据对象，将从fromEnc编码转换为toEnc编码。 |
+| fromEnc | string | 是 | 当前编码格式。支持的格式范围为'ascii' &#124; 'utf8' &#124; 'utf16le' &#124; 'ucs2' &#124; 'latin1' &#124; 'binary'。传入空字符串时，表示使用编码格式'utf8'。 |
+| toEnc | string | 是 | 目标编码。支持的格式范围为'ascii' &#124; 'utf8' &#124; 'utf16le' &#124; 'ucs2' &#124; 'latin1' &#124; 'binary'。 |
 
 **返回值：**
 

@@ -2,7 +2,7 @@
 
 Represents recipient information for the CMS message.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > At least one recipient needs to be set.
 

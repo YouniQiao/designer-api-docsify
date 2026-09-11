@@ -65,7 +65,7 @@ Creates a **RelativeTimeFormat** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
+| locale | string &#124; Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
 | options | [RelativeTimeFormatInputOptions](arkts-localization-intl-relativetimeformatinputoptions-i.md) | No | Options for creating a **RelativeTimeFormat** object. |
 
 **Examples**

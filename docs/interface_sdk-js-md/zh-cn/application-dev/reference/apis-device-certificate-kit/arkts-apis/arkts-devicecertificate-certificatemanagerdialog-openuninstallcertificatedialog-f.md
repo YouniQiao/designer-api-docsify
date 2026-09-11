@@ -27,7 +27,7 @@ function openUninstallCertificateDialog(context: common.Context, certType: Certi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [common.Context](../../apis-ability-kit/arkts-apis/arkts-ability-common-context-t.md) | 是 | 表示应用的上下文信息。 |
-| certType | [CertificateType](arkts-devicecertificate-certificatemanagerdialog-certificatetype-e.md) | 是 | 表示待卸载证书类型，目前仅支持CA_CERT。目前仅支持CA_CERT类型。 |
+| certType | [CertificateType](arkts-devicecertificate-certificatemanagerdialog-certificatetype-e.md) | 是 | 表示待卸载证书类型，目前仅支持CA_CERT。<br>目前仅支持CA_CERT类型。 |
 | certUri | string | 是 | 表示待卸载证书的唯一标识符，可通过安装CA证书接口或查询CA证书列表接口获取。 |
 
 **返回值：**
@@ -41,8 +41,8 @@ function openUninstallCertificateDialog(context: common.Context, certType: Certi
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-| [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) | Internal error. Possible causes: 1. IPC communication failed;  2. Memory operation error; 3. File operation error. Please try again. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [29700002](../errorcode-certManagerDialog.md#29700002-操作取消) | The user cancels the uninstallation operation. |
 | [29700003](../errorcode-certManagerDialog.md#29700003-证书安装失败错误) | The user uninstall certificate failed in the certificate manager dialog, such as the certificate uri is not exist. |
 | [29700004](../errorcode-certManagerDialog.md#29700004-设备类型不支持) | For security purposes, the current device does not support this API. You can use the [supportsCACertDialog](arkts-devicecertificate-certificatemanagerdialog-supportscacertdialog-f.md) to determine whether the device can open the dialog box for deleting a CA certificate with certType set to CA. |

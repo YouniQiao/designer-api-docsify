@@ -3,6 +3,7 @@
 **DataShareExtensionAbility**基于ExtensionAbility框架，提供支持数据共享业务的能力。
 
 
+
 ## 导入模块
 
 ```TypeScript

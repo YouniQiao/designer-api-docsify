@@ -48,8 +48,8 @@ decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
-| [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes:  1. The private key is invalid or not supported;  2. The recipient certificate is invalid or not supported. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes:<br>1. The private key is invalid or not supported; <br>2. The recipient certificate is invalid or not supported. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -167,8 +167,8 @@ getCerts(type: CmsCertType): Promise<Array<X509Cert>>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
-| [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes:  1. The value of type is invalid or not supported. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes:<br>1. The value of type is invalid or not supported. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -313,7 +313,7 @@ getContentData(): Promise<Uint8Array>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -456,7 +456,7 @@ getContentType(): CmsContentType
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -597,7 +597,7 @@ setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Uint8Array \| string | 是 | CMS消息内容。 |
+| data | Uint8Array &#124; string | 是 | CMS消息内容。 |
 | cmsFormat | [CmsFormat](arkts-devicecertificate-cert-cmsformat-e.md) | 是 | 指定输入的CMS格式。 |
 
 **返回值：**
@@ -611,8 +611,8 @@ setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
-| [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes:  1. The length of the data is zero or too large;  2. The type of the cmsFormat is invalid or not supported. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes:<br>1. The length of the data is zero or too large; <br>2. The type of the cmsFormat is invalid or not supported. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -760,8 +760,8 @@ verifySignedData(config: CmsVerificationConfig): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
-| [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes:  1. The trustCerts of config is empty;  2. The length of the contentData of config is zero or too large;  3. The contentDataFormat of config is invalid or not supported. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes:<br>1. The trustCerts of config is empty; <br>2. The length of the contentData of config is zero or too large; <br>3. The contentDataFormat of config is invalid or not supported. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 | [19030003](../errorcode-cert.md#19030003-证书尚未生效) | The certificate has not taken effect. |
 | [19030004](../errorcode-cert.md#19030004-证书过期) | The certificate has expired. |

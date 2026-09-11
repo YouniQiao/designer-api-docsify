@@ -25,4 +25,3 @@ export declare function getInspectorTree(): Object
 
 | 类型 | 说明 |
 | --- | --- |
-| Object |  |

@@ -26,7 +26,7 @@ function setDefaultSmdpAddress(slotId: number, address: string): Promise<ResultC
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 | address | string | 是 | 要设置的默认SM-DP+地址。 |
 
 **返回值：**

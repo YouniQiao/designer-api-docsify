@@ -34,7 +34,7 @@ Obtains the flash mode in use.
 
 | Type | Description |
 | --- | --- |
-| [FlashMode](arkts-camera-camera-flashmode-e.md) | Flash mode obtained. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
+| [FlashMode](arkts-camera-camera-flashmode-e.md) | Flash mode obtained. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is thrown. |
 
 **Error codes:**
 

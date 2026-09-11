@@ -16,7 +16,7 @@ Creates an **SEService** instance for connecting to all available SEs in the sys
 
 The returned **SEService** instance is available only when **true** is returned by the specified callback or [isConnected](arkts-connectivity-omapi-seservice-i.md#isconnected).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 10 and deprecated since API version 12. Use
 > [createService](arkts-connectivity-omapi-createservice-f.md) instead.
@@ -46,7 +46,7 @@ The returned **SEService** instance is available only when **true** is returned 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 **Examples**

@@ -6,6 +6,8 @@ declare type ResourceStr = string | Resource
 
 Defines the string which can use resource.
 
+@typedef { string | Resource } ResourceStr
+
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.

@@ -53,7 +53,7 @@ Converts a number to a string by using the current or specified locale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locales | string \| string[] | No |  |
+| locales | string &#124; string[] | No |  |
 | options | [Intl.NumberFormatOptions](arkts-intl-numberformatoptions-i.md) | No |  |
 
 **Return value:**

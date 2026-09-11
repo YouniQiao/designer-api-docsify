@@ -4,6 +4,7 @@ The **touchEvent** module provides touch events reported by a device. It is inhe
  [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md).
 
 
+
 ## Modules to Import
 
 ```TypeScript

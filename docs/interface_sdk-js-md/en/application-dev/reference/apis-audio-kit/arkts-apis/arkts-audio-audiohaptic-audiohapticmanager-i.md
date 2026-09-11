@@ -75,7 +75,7 @@ registerSource(audioUri: string, hapticUri: string): Promise<number>
 
 Registers audio and haptic resources via URIs. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > A maximum of 128 resources can be registered at the same time for an application. Any attempt to register
 > beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number
@@ -90,14 +90,14 @@ Registers audio and haptic resources via URIs. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| audioUri | string | Yes | URI of the audio source.   - For details about the supported audio resource formats and path formats in the normal latency mode, see [AVPlayer](../../apis-media-kit/arkts-apis/arkts-multimedia-media.md).   - For details about the supported audio resource formats in the low-latency mode, see [SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool). The path format must meet the requirements described in [fileIo.open](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen).   - In both modes, you are advised to pass in the absolute path of the file. |
-| hapticUri | string | Yes | URI of the haptic source.For details about the supported haptic resource formats, see [HapticFileDescriptor](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-hapticfiledescriptor-i.md). The path format must meet the requirements described in [fileIo.open](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen).You are advised to pass in the absolute path of the file. |
+| audioUri | string | Yes | URI of the audio source.<br>- For details about the supported audio resource formats and path formats in the normal latency mode, see [AVPlayer](../../apis-media-kit/arkts-apis/arkts-multimedia-media.md).<br>- For details about the supported audio resource formats in the low-latency mode, see [SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool). The path format must meet the requirements described in [fileIo.open](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen).<br>- In both modes, you are advised to pass in the absolute path of the file. |
+| hapticUri | string | Yes | URI of the haptic source.<br>For details about the supported haptic resource formats, see [HapticFileDescriptor](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-hapticfiledescriptor-i.md). The path format must meet the requirements described in [fileIo.open](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen).<br>You are advised to pass in the absolute path of the file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise, which returns the registered resource ID. |
+| Promise&lt;number&gt; | Promise, which returns the registered resource ID.<br>In normal cases, the returned resource ID is a non-negative number. A negative ID indicates a registration failure. In this case, check whether the number of registered resources exceeds the upper limit. |
 
 **Error codes:**
 
@@ -130,7 +130,7 @@ registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFi
 
 Registers audio and haptic resources via file descriptors. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > A maximum of 128 resources can be registered at the same time for an application. Any attempt to register
 > beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number
@@ -152,7 +152,7 @@ Registers audio and haptic resources via file descriptors. This API uses a promi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise, which returns the registered resource ID. |
+| Promise&lt;number&gt; | Promise, which returns the registered resource ID.<br>In normal cases, the returned resource ID is a non-negative number. A negative ID indicates a registration failure. In this case, check whether the number of registered resources exceeds the upper limit. |
 
 **Examples**
 
@@ -271,7 +271,7 @@ unregisterSource(id: number): Promise<void>
 
 Unregisters an audio-haptic source. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For resources that are no longer used, you are advised to unregister them in a timely manner to avoid issues
 > such as resource leaks or the number of resources exceeding the upper limit.

@@ -30,8 +30,6 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -200,8 +198,6 @@ Returns a new Iterator object that contains the [key, value] pairs for each elem
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -626,8 +622,6 @@ Returns a new Iterator object that contains the keys contained in this map
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;K&gt; |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -836,8 +830,6 @@ Returns a new Iterator object that contains the values contained in this map
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;V&gt; |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |

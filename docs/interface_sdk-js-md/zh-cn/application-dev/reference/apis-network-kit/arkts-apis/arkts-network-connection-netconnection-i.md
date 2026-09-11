@@ -40,7 +40,7 @@ on(type: 'netAvailable', callback: Callback<NetHandle>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'netAvailable' | 是 | 订阅事件，固定为'netAvailable'。netAvailable：数据网络可用事件。 |
+| type | 'netAvailable' | 是 | 订阅事件，固定为'netAvailable'。<br>netAvailable：数据网络可用事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetHandle](arkts-network-connection-nethandle-i.md)&gt; | 是 | 回调函数，返回数据网络句柄。 |
 
 **示例**
@@ -84,7 +84,7 @@ on(type: 'netBlockStatusChange', callback: Callback<NetBlockStatusInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'netBlockStatusChange' | 是 | 订阅事件，固定为'netBlockStatusChange'。netBlockStatusChange：网络阻塞状态事件。 |
+| type | 'netBlockStatusChange' | 是 | 订阅事件，固定为'netBlockStatusChange'。<br>netBlockStatusChange：网络阻塞状态事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetBlockStatusInfo](arkts-network-connection-netblockstatusinfo-i.md)&gt; | 是 | 回调函数，获取网络阻塞状态信息。<br>**适用版本：** 11 |
 
 **示例**
@@ -130,7 +130,7 @@ on(type: 'netCapabilitiesChange', callback: Callback<NetCapabilityInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'netCapabilitiesChange' | 是 | 订阅事件，固定为'netCapabilitiesChange'。netCapabilitiesChange：网络能力变化事件。 |
+| type | 'netCapabilitiesChange' | 是 | 订阅事件，固定为'netCapabilitiesChange'。<br>netCapabilitiesChange：网络能力变化事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetCapabilityInfo](arkts-network-connection-netcapabilityinfo-i.md)&gt; | 是 | 回调函数，返回数据网络句柄(netHandle)和网络的能力信息(netCap)。 |
 
 **示例**
@@ -174,7 +174,7 @@ on(type: 'netConnectionPropertiesChange', callback: Callback<NetConnectionProper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'netConnectionPropertiesChange' | 是 | 订阅事件，固定为'netConnectionPropertiesChange'。netConnectionPropertiesChange：网络连接信息变化事件。 |
+| type | 'netConnectionPropertiesChange' | 是 | 订阅事件，固定为'netConnectionPropertiesChange'。<br> netConnectionPropertiesChange：网络连接信息变化事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetConnectionPropertyInfo](arkts-network-connection-netconnectionpropertyinfo-i.md)&gt; | 是 | 回调函数，获取网络连接属性信息。<br>**适用版本：** 11 |
 
 **示例**
@@ -220,7 +220,7 @@ on(type: 'netLost', callback: Callback<NetHandle>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'netLost' | 是 | 订阅事件，固定为'netLost'。netLost：网络严重中断或正常断开事件。 |
+| type | 'netLost' | 是 | 订阅事件，固定为'netLost'。<br>netLost：网络严重中断或正常断开事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetHandle](arkts-network-connection-nethandle-i.md)&gt; | 是 | 回调函数，数据网络句柄(netHandle)。 |
 
 **示例**
@@ -266,7 +266,7 @@ on(type: 'netUnavailable', callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'netUnavailable' | 是 | 订阅事件，固定为'netUnavailable'。netUnavailable：网络不可用事件。 |
+| type | 'netUnavailable' | 是 | 订阅事件，固定为'netUnavailable'。<br>netUnavailable：网络不可用事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，无返回结果。 |
 
 **示例**

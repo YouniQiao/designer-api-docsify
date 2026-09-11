@@ -86,7 +86,7 @@ Get the IMS registration state info of specified IMS service type.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ImsRegInfo](arkts-telephony-radio-imsreginfo-i-sys.md)&gt; | Returns an instance of the { |
+| Promise&lt;[ImsRegInfo](arkts-telephony-radio-imsreginfo-i-sys.md)&gt; | Returns an instance of the [ImsRegInfo](arkts-telephony-radio-imsreginfo-i-sys.md) class. |
 
 **Error codes:**
 

@@ -23,9 +23,7 @@
 |InjectEvent|注入事件。起始版本：26.0.0|
 | [CollectStrategy](arkts-multimodalawareness-onscreen-collectstrategy-e-sys.md) |获取屏幕采集策略。起始版本：26.0.0|
 
-* groupId支持能力列表
-
-按业务场景预设的一组能力集合。可统一订阅业务场景，如下：  
+* groupId支持能力列表<br>按业务场景预设的一组能力集合。可统一订阅业务场景，如下：  
 |groupId支持能力列表|对应子项能力|功能说明|  
 | ---- | ------ | ------|  
 |SmartEdge|Article|获取阅读场景的感知信息。|

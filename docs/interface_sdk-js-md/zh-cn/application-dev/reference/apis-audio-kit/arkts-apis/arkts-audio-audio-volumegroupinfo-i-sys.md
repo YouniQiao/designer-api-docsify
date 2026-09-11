@@ -2,6 +2,8 @@
 
 音量组信息。
 
+@typedef VolumeGroupInfo
+
 **起始版本：** 9
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume

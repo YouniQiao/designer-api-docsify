@@ -1,6 +1,6 @@
 # MechInfo
 
-Mechanical device information.
+Mechanical device information. @typedef MechInfo
 
 **Since:** 20
 

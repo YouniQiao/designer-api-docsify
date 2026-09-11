@@ -95,7 +95,7 @@ Obtains the profile state of device. On API 10 and above, the permission require
 
 | Type | Description |
 | --- | --- |
-| [ProfileConnectionState](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md) | Returns { |
+| [ProfileConnectionState](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md) | Returns [ProfileConnectionState](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md) of device. |
 
 **Error codes:**
 

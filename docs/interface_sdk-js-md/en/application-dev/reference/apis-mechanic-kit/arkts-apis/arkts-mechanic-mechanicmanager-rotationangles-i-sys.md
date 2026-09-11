@@ -1,6 +1,6 @@
 # RotationAngles (System API)
 
-The rotion angles, relative to the current position.
+The rotion angles, relative to the current position. @typedef RotationAngles
 
 **Since:** 20
 

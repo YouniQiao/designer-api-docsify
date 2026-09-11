@@ -31,7 +31,7 @@ Obtains a RDB store. You can set parameters of the RDB store as required. This i
 
 | Type | Description |
 | --- | --- |
-| [RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md) | The RDB store { |
+| [RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md) | The RDB store [RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md). |
 
 **Error codes:**
 

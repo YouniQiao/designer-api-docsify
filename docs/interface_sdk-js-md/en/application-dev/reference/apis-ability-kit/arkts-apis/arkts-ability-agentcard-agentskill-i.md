@@ -2,6 +2,8 @@
 
 Represents a distinct capability or function that an agent can perform.
 
+@typedef AgentSkill
+
 **Since:** 24
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core

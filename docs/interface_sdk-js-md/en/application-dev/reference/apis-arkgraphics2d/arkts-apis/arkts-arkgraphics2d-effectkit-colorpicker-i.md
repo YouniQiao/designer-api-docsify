@@ -315,7 +315,7 @@ Reads the top proportion colors from the image, with the number specified by col
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[Color](arkts-arkgraphics2d-effectkit-color-i.md) \| null&gt; | Array of colors, i.e., the top colorCount color values by proportion in the image, sorted by proportion. |
+| Array&lt;[Color](arkts-arkgraphics2d-effectkit-color-i.md) &#124; null&gt; | Array of colors, i.e., the top colorCount color values by proportion in the image, sorted by proportion.   - If the number of colors obtained is less than the value of colorCount, the array size is the actual   number obtained.   - If the colors fail to be obtained or the number of colors obtained is less than 1, [null] is returned. |
 
 **Examples**
 

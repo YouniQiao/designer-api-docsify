@@ -31,7 +31,7 @@ Type of the value.
 
 **Substitutes:** type
 
-**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+**System capability:** SystemCapability.DistributedDataManager.KVStore.Core @memberof Value
 
 ## value
 
@@ -41,7 +41,7 @@ value: Uint8Array | string | number | boolean
 
 Value of the KV pair stored in the KV store.
 
-**Type:** Uint8Array \| string \| number \| boolean
+**Type:** Uint8Array &#124; string &#124; number &#124; boolean
 
 **Since:** 7
 

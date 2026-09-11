@@ -24,7 +24,7 @@ Obtains detailed attribute information of a file or directory. This API returns 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string \| number | Yes | Application sandbox path, URI, or FD of the file or directory.   **Note：**: URIs can be passed since API version 22. |
+| file | string &#124; number | Yes | Application sandbox path, URI, or FD of the file or directory.<br>**Note:** URIs can be passed since API version 22. |
 
 **Return value:**
 

@@ -63,7 +63,7 @@ function requestEnableNotification(context: UIAbilityContext, callback: AsyncCal
 
 Requests notification to be enabled for this application. You can call this API to display a dialog box prompting the user to enable notification for your application before publishing a notification. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API can be called only after the application UI is loaded (that is,
 > [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent) is
@@ -190,7 +190,7 @@ function requestEnableNotification(context: UIAbilityContext): Promise<void>
 
 Requests notification to be enabled for this application. You can call this API to display a dialog box prompting the user to enable notification for your application before publishing a notification. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API can be called only after the application UI is loaded (that is,
 > [loadContent](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent) is

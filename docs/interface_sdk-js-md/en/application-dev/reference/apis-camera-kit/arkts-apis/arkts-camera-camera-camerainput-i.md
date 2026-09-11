@@ -84,7 +84,7 @@ Obtains the physical camera orientation in the current fold state of the device.
 
 | Type | Description |
 | --- | --- |
-| number | Physical camera orientation. |
+| number | Physical camera orientation.<br>The value ranges from 0 to 360, in degrees. |
 
 ## isPhysicalCameraOrientationVariable
 
@@ -163,7 +163,7 @@ on(type: 'error', camera: CameraDevice, callback: ErrorCallback): void
 
 Subscribes to CameraInput error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -189,7 +189,7 @@ on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDete
 
 Subscribes to **CameraInput** occlusion events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 

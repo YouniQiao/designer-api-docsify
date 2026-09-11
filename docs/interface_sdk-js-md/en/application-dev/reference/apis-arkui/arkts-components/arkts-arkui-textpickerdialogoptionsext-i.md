@@ -253,7 +253,7 @@ defaultPickerItemHeight?: number | string
 
 Called when the default height of the selected element is set.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 20
 
@@ -531,7 +531,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Defines the dialog's shadow.
 
-**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
+**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **Since:** 20
 

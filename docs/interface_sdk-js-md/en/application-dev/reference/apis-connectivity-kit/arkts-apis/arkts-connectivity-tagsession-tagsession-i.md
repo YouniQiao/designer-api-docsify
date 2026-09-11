@@ -2,7 +2,7 @@
 
 The **tagSession** module provides common APIs for establishing connections and transferring data.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If an error is reported while importing the tag module editor, the capabilities of a specific device model may
 > exceed the capability set defined for the default device. To use these capabilities, configure a custom SysCap by
@@ -61,7 +61,7 @@ connectTag(): boolean
 
 Connects to this tag. Call this API to set up a connection before reading data from or writing data to a tag.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. Use
 > [tagSession.connect](#connect) instead.
@@ -102,7 +102,7 @@ getMaxSendLength(): number
 
 Obtains the maximum length of the data that can be sent to this tag.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. Use
 > [tagSession.getMaxTransmitSize](#getmaxtransmitsize) instead.
@@ -189,7 +189,7 @@ getSendDataTimeout(): number
 
 Obtains the timeout period for sending data to this tag, in milliseconds.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. Use
 > [tagSession.getTimeout](#gettimeout) instead.
@@ -230,7 +230,7 @@ getTagInfo(): tag.TagInfo
 
 Obtains the **tagInfo** object provided by the NFC service when the tag is dispatched.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. Use
 > [tag.getTagInfo](arkts-connectivity-tag-gettaginfo-f.md) instead.
@@ -359,7 +359,7 @@ isTagConnected(): boolean
 
 Checks whether the tag is connected.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. Use
 > [tagSession.isConnected](#isconnected) instead.
@@ -398,7 +398,7 @@ reset(): void
 
 Resets the connection to this tag.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. Use
 > [tagSession.resetConnection](#resetconnection) instead.
@@ -472,7 +472,7 @@ sendData(data: number[]): Promise<number[]>
 
 Sends data to the tag. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. Use
 > [tagSession.transmit](#transmit) instead.
@@ -534,7 +534,7 @@ sendData(data: number[], callback: AsyncCallback<number[]>): void
 
 Sends data to the tag. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This parameter is supported since API version 7 and deprecated since API version 9. Use
 > [tagSession.transmit](#transmit) instead.
@@ -592,7 +592,7 @@ setSendDataTimeout(timeout: number): boolean
 
 Sets the maximum time allowed for sending data to this tag, in ms.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. Use
 > [tagSession.setTimeout](#settimeout) instead.
@@ -659,7 +659,7 @@ Sets the maximum time allowed for sending data to this tag, in ms.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 
@@ -713,7 +713,7 @@ Sends data to the tag. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed.<br>**Applicable version:** 12 and later |
@@ -780,7 +780,7 @@ Sends data to the tag. This API uses an asynchronous callback to return the resu
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed.<br>**Applicable version:** 12 and later |

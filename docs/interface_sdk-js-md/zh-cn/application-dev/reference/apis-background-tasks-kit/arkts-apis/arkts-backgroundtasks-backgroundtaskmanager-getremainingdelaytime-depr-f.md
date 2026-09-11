@@ -17,7 +17,7 @@ function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number
 
 **废弃版本：** 9
 
-**替代接口：** [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-f.md)(requestId: int, callback: AsyncCallback&lt;int&gt;)
+**替代接口：** [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-f.md)(requestId: number, callback: AsyncCallback&lt;number&gt;)
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
@@ -57,7 +57,7 @@ function getRemainingDelayTime(requestId: number): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-f.md)(requestId: int)
+**替代接口：** [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-f.md)(requestId: number)
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 

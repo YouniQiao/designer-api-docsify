@@ -26,7 +26,7 @@ error?: Error | Object
 
 错误信息。默认和BusinessError的message字段一致。不建议修改此值。
 
-**类型：** Error \| Object
+**类型：** Error &#124; Object
 
 **起始版本：** 20
 

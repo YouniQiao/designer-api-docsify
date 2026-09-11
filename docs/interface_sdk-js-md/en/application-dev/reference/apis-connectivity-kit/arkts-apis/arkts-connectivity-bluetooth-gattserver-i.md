@@ -44,7 +44,7 @@ Adds a specified service to be hosted. The added service and its characteristics
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the service is added; returns `false` otherwise. |
 
 **Examples**
 
@@ -138,7 +138,7 @@ This method should be called for every BLE peripheral device that has requested 
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the notification is sent successfully; returns `false` otherwise. |
 
 **Examples**
 
@@ -599,7 +599,7 @@ Removes a specified service from the list of GATT services provided by this devi
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the service is removed; returns `false` otherwise. |
 
 **Examples**
 
@@ -636,7 +636,7 @@ Sends a response to a specified read or write request to a given BLE peripheral 
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the response is sent successfully; returns `false` otherwise. |
 
 **Examples**
 

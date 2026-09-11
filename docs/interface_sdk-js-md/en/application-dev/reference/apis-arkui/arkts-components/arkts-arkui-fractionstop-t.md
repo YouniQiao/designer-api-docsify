@@ -6,6 +6,8 @@ declare type FractionStop = [ number, number ]
 
 Defines a gradient blur stop.
 
+@typedef { [ number, number ] } FractionStop
+
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.

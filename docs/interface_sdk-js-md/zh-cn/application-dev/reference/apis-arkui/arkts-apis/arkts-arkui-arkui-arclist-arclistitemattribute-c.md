@@ -32,14 +32,12 @@ autoScale(enable: Optional<boolean>): ArcListItemAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | ArcListItem是否支持自动缩放显示，true表示支持，false表示不支持。默认值：true，支持自动缩放显示。 |
+| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | ArcListItem是否支持自动缩放显示，true表示支持，false表示不支持。<br>默认值：true，支持自动缩放显示。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |  |
-
 ## swipeAction
 
 ```TypeScript
@@ -64,4 +62,3 @@ swipeAction(options: Optional<SwipeActionOptions>): ArcListItemAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |  |

@@ -32,7 +32,7 @@ direction: "normal" | "reverse" | "alternate" | "alternate-reverse"
 
 The animation playback mode. The default value is "normal".
 
-**Type:** "normal" \| "reverse" \| "alternate" \| "alternate-reverse"
+**Type:** "normal" &#124; "reverse" &#124; "alternate" &#124; "alternate-reverse"
 
 **Since:** 6
 
@@ -80,7 +80,7 @@ fill: "none" | "forwards" | "backwards" | "both"
 
 Whether to resume to the initial state after the animation is executed. none: The initial state is restored after the animation is executed. forwards: The state at the end of the animation (defined in the last key frame) is retained after the animation is executed.
 
-**Type:** "none" \| "forwards" \| "backwards" \| "both"
+**Type:** "none" &#124; "forwards" &#124; "backwards" &#124; "both"
 
 **Since:** 4
 
@@ -96,7 +96,7 @@ iterations: number | string
 
 Number of times the animation will be played. number indicates a fixed number of playback operations, and Infinity indicates an unlimited number of playback operations. The default value is 1.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 4
 

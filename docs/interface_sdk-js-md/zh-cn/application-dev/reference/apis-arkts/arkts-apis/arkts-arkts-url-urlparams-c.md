@@ -99,7 +99,7 @@ URLParams的构造函数，用于创建URL参数对象，适用于需要解析�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| init | string[][] \| Record&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | 否 | 入参对象。   - string[][]：字符串二维数组。   - Record&lt;string, string&gt;：对象列表。   - string：URL查询参数字符串。   - URLParams：URLParams实例对象。   - 默认值：null。 |
+| init | string[][] &#124; Record&lt;string, string&gt; &#124; string &#124; [URLParams](arkts-arkts-url-urlparams-c.md) | 否 | 入参对象。<br>- string[][]：字符串二维数组。<br>- Record&lt;string, string&gt;：对象列表。<br>- string：URL查询参数字符串。<br>- URLParams：URLParams实例对象。<br>- 默认值：null。 |
 
 **示例**
 
@@ -240,7 +240,7 @@ get(name: string): string | null
 
 | 类型 | 说明 |
 | --- | --- |
-| string \| null | 返回第一个值，如果没找到，返回 null。 |
+| string &#124; null | 返回第一个值，如果没找到，返回 null。 |
 
 **示例**
 

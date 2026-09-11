@@ -22,7 +22,7 @@ function getDefaultSmsSlotId(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 获取发送短信的默认SIM卡槽ID的回调函数。   - 0：卡槽1。   - 1：卡槽2。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 获取发送短信的默认SIM卡槽ID的回调函数。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 
 **示例**
 
@@ -56,7 +56,7 @@ function getDefaultSmsSlotId(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 以Promise形式返回发送短信的默认SIM卡： |
+| Promise&lt;number&gt; | 以Promise形式返回发送短信的默认SIM卡：<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 
 **示例**
 

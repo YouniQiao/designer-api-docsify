@@ -31,7 +31,7 @@ Obtains the ID of this component.
 
 | Type | Description |
 | --- | --- |
-| string | [ID]{ |
+| string | ID of the current component. |
 
 ## getUniqueId
 

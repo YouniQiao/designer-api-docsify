@@ -272,7 +272,7 @@ natural orientation. For example, the rear camera sensor of a bar-type phone is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDegree | number | No | Device rotation angle, measured in degrees, within the range of [0, 360]. If the input value goes beyond this range, the system uses the remainder of the input value divided by 36 0. Since API version 23, the input parameter **deviceDegree** is optional. If no parameter is passed, the system obtains the **deviceDegree** value to calculate the photo rotation angle.<br>**Since:** 23 |
+| deviceDegree | number | No | Device rotation angle, measured in degrees, within the range of [0, 360].<br>If the input value goes beyond this range, the system uses the remainder of the input value divided by 36 0. <br>Since API version 23, the input parameter **deviceDegree** is optional. If no parameter is passed, the system obtains the **deviceDegree** value to calculate the photo rotation angle.<br>**Since:** 23 |
 
 **Return value:**
 
@@ -463,7 +463,7 @@ off(type: 'captureStart', callback?: AsyncCallback<number>): void
 
 Unsubscribes from capture start events.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -659,7 +659,7 @@ on(type: 'photoAvailable', callback: AsyncCallback<Photo>): void
 
 Subscribes to the events of returning available photos. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -684,7 +684,7 @@ on(type: 'photoAssetAvailable', callback: AsyncCallback<photoAccessHelper.PhotoA
 
 Subscribes to photo asset available events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -709,7 +709,7 @@ on(type: 'captureStart', callback: AsyncCallback<number>): void
 
 Subscribes to capture start events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -736,7 +736,7 @@ on(type: 'captureStartWithInfo', callback: AsyncCallback<CaptureStartInfo>): voi
 
 Subscribes to capture start events. This API uses an asynchronous callback to return the [capture start ID](arkts-camera-camera-capturestartinfo-i.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -782,7 +782,7 @@ on(type: 'frameShutterEnd', callback: AsyncCallback<FrameShutterEndInfo>): void
 
 Subscribes to frame shutter end events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -807,7 +807,7 @@ on(type: 'captureEnd', callback: AsyncCallback<CaptureEndInfo>): void
 
 Subscribes to capture end events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -832,7 +832,7 @@ on(type: 'captureReady', callback: AsyncCallback<void>): void
 
 Subscribes to capture ready events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -857,7 +857,7 @@ on(type: 'estimatedCaptureDuration', callback: AsyncCallback<number>): void
 
 Subscribes to estimated capture duration events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -882,7 +882,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to PhotoOutput error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -907,7 +907,7 @@ onCapturePhotoAvailable(callback: Callback<CapturePhoto>): void
 
 Subscribes to the events of returning full-quality images and uncompressed images. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - You cannot call
 > [offCapturePhotoAvailable](#offcapturephotoavailable)
@@ -947,7 +947,7 @@ Sets a video codec type for moving photos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| codecType | [VideoCodecType](arkts-camera-camera-videocodectype-e.md) | Yes | Video codec type. If the value is not within the enumerated value range, this parameter does not take effect. |
+| codecType | [VideoCodecType](arkts-camera-camera-videocodectype-e.md) | Yes | Video codec type.<br>If the value is not within the enumerated value range, this parameter does not take effect. |
 
 **Error codes:**
 

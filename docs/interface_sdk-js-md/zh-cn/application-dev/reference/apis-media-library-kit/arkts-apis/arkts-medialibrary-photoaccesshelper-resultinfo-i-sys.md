@@ -40,7 +40,7 @@ readonly result: Array<string|null>
 
 复制操作的结果信息。
 
-**类型：** Array&lt;string \| null&gt;
+**类型：** Array&lt;string &#124; null&gt;
 
 **起始版本：** 26.0.0
 

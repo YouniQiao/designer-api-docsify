@@ -46,8 +46,6 @@ Transforms the current 2D matrix back to the identity matrix (i.e., without any 
 
 | Type | Description |
 | --- | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
-
 ## invert
 
 ```TypeScript
@@ -70,8 +68,6 @@ Transform the current 2D matrix into an inverse matrix (that is, the transformat
 
 | Type | Description |
 | --- | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
-
 ## multiply
 
 ```TypeScript
@@ -100,8 +96,6 @@ The matrix is superimposed in right multiplication mode. When the input paramete
 
 | Type | Description |
 | --- | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
-
 ## rotate
 
 ```TypeScript
@@ -131,8 +125,6 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 
 | Type | Description |
 | --- | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
-
 ## scale
 
 ```TypeScript
@@ -162,8 +154,6 @@ Adds the scaling effect of the X and Y axes to the current matrix.
 
 | Type | Description |
 | --- | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
-
 ## translate
 
 ```TypeScript
@@ -193,8 +183,6 @@ Adds the translation effect of the X and Y axes to the current matrix.
 
 | Type | Description |
 | --- | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
-
 ## rotateX
 
 ```TypeScript

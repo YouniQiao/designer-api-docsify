@@ -21,7 +21,7 @@ angle?: number | string
 
 Linear Gradient Angle
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 11
 

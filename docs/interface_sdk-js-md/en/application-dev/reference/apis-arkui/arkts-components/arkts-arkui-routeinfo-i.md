@@ -6,7 +6,7 @@ Route information.
 
 **Deprecated since:** 13
 
-**Substitutes:** [NavPathStack](arkts-arkui-navpathstack-c.md)
+**Substitutes:** NavPathStack and navDestination
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

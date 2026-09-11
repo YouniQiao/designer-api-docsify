@@ -19,7 +19,7 @@ defaultValue: number | string | boolean
 
 查询不到环境变量key，则使用defaultValue作为默认值存入AppStorage中。
 
-**类型：** number \| string \| boolean
+**类型：** number &#124; string &#124; boolean
 
 **起始版本：** 10
 

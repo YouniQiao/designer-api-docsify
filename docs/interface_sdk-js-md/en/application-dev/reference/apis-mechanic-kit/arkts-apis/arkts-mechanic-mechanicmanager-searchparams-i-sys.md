@@ -2,6 +2,8 @@
 
 Parameters for target searching.
 
+@typedef SearchParams
+
 **Since:** 21
 
 **System capability:** SystemCapability.Mechanic.Core

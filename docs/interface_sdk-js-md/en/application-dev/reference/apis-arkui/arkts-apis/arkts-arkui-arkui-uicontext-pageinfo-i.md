@@ -23,7 +23,7 @@ navDestinationInfo?: observer.NavDestinationInfo
 
 the property of navDestination information.
 
-**Type:** observer.NavDestinationInfo
+**Type:** [observer.NavDestinationInfo](../../apis-arkui/arkts-apis/arkts-arkui-observer.md)
 
 **Since:** 12
 
@@ -41,7 +41,7 @@ routerPageInfo?: observer.RouterPageInfo
 
 Router information.
 
-**Type:** observer.RouterPageInfo
+**Type:** [observer.RouterPageInfo](../../apis-arkui/arkts-apis/arkts-arkui-observer.md)
 
 **Since:** 12
 

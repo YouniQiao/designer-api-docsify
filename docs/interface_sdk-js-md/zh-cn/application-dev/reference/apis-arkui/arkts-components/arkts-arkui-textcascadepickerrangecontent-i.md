@@ -39,7 +39,7 @@ text: string | Resource
 
 > **说明：**当文本长度大于列宽时，文本被截断。
 
-**类型：** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**类型：** string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 10
 

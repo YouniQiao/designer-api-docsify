@@ -64,7 +64,7 @@ static globalConnect<T extends object>(
 
 | 类型 | 说明 |
 | --- | --- |
-| T \| undefined | 创建或获取数据成功时，返回数据；否则返回undefined。 |
+| T &#124; undefined | 创建或获取数据成功时，返回数据；否则返回undefined。 |
 
 **示例**
 
@@ -138,13 +138,13 @@ static globalConnect<T extends CollectionType<S>, S extends object>(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [ConnectOptionsCollections](arkts-arkui-arkui-statemanagement-connectoptionscollections-c.md)&lt;T, S&gt; \| [ConnectOptions](arkts-arkui-arkui-statemanagement-connectoptions-c.md)&lt;T&gt; | 是 | globalConnect的配置参数，支持ConnectOptions和ConnectOptionsCollections两种类型，包含类型、key、默认构造器、集合项构造器等配置项，详细说明见ConnectOptions和ConnectOptionsCollections参数说明。当开发者在ConnectOptionsCollections中提供默认defaultSubCreator时，则需要同时提供默认创建器defaultCreator，如果不提供，会导致持久化失败。且集合项类型S必须与defaultSubCreator的返回类型相同。如果返回类型不一致，编译会报错。 |
+| type | [ConnectOptionsCollections](arkts-arkui-arkui-statemanagement-connectoptionscollections-c.md)&lt;T, S&gt; &#124; [ConnectOptions](arkts-arkui-arkui-statemanagement-connectoptions-c.md)&lt;T&gt; | 是 | globalConnect的配置参数，支持ConnectOptions和ConnectOptionsCollections两种类型，包含类型、key、默认构造器、集合项构造器等配置项，详细说明见ConnectOptions和ConnectOptionsCollections参数说明。<br>当开发者在ConnectOptionsCollections中提供默认defaultSubCreator时，则需要同时提供默认创建器defaultCreator，如果不提供，会导致持久化失败。且集合项类型S必须与defaultSubCreator的返回类型相同。如果返回类型不一致，编译会报错。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T \| undefined | 创建或获取数据成功时，返回数据；否则返回undefined。 |
+| T &#124; undefined | 创建或获取数据成功时，返回数据；否则返回undefined。 |
 
 **示例**
 
@@ -170,7 +170,7 @@ static notifyOnError(callback: PersistenceErrorCallback | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [PersistenceErrorCallback](arkts-arkui-persistenceerrorcallback-t.md) \| undefined | 是 | 持久化失败时的回调函数。回调参数包括：key（出错的键值）、reason（出错原因类型，取值为'quota'、'serialization'或'unknown'）、message（出错的详细信息）和oldValue（反序列化失败时返回的旧数据，可选）。 |
+| callback | [PersistenceErrorCallback](arkts-arkui-persistenceerrorcallback-t.md) &#124; undefined | 是 | 持久化失败时的回调函数。回调参数包括：key（出错的键值）、reason（出错原因类型，取值为'quota'、'serialization'或'unknown'）、message（出错的详细信息）和oldValue（反序列化失败时返回的旧数据，可选）。 |
 
 **示例**
 
@@ -209,7 +209,7 @@ static save<T>(keyOrType: string | TypeConstructorWithArgs<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyOrType | string \| [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | 是 | 需要持久化的key；如果指定的是type类型，持久化的key为type的name。 |
+| keyOrType | string &#124; [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | 是 | 需要持久化的key；如果指定的是type类型，持久化的key为type的name。 |
 
 **示例**
 

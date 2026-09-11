@@ -36,7 +36,7 @@ height(height: Length): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| height | [Length](arkts-arkui-length-t.md) | 是 | 形状的高度。单位：vp 取值为异常值时按照0vp处理。 |
+| height | [Length](arkts-arkui-length-t.md) | 是 | 形状的高度。<br>单位：vp <br>取值为异常值时按照0vp处理。 |
 
 **返回值：**
 
@@ -72,7 +72,7 @@ size(size: SizeOptions): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | [SizeOptions](arkts-arkui-sizeoptions-i.md) | 是 | 形状的大小。width和height类型为number时取值范围是[0, +∞)，string类型时参考[Length](arkts-arkui-length-t.md)。单位：vp 取值为异常值时按照0vp处理。 |
+| size | [SizeOptions](arkts-arkui-sizeoptions-i.md) | 是 | 形状的大小。<br>width和height类型为number时取值范围是[0, +∞)，string类型时参考[Length](arkts-arkui-length-t.md)。<br>单位：vp <br>取值为异常值时按照0vp处理。 |
 
 **返回值：**
 
@@ -102,7 +102,7 @@ width(width: Length): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | [Length](arkts-arkui-length-t.md) | 是 | 形状的宽度。单位：vp 取值为异常值时按照0vp处理。 |
+| width | [Length](arkts-arkui-length-t.md) | 是 | 形状的宽度。<br>单位：vp <br>取值为异常值时按照0vp处理。 |
 
 **返回值：**
 

@@ -118,7 +118,7 @@ Get the value associated with a specified key in the SendableLruCache.
 
 | Type | Description |
 | --- | --- |
-| V \| undefined | The value associated with the key if the specified key is present; returns undefined otherwise. |
+| V &#124; undefined | The value associated with the key if the specified key is present; returns undefined otherwise. |
 
 ## getCapacity
 
@@ -331,7 +331,7 @@ Remove a specified key and its associated value from the SendableLruCache.
 
 | Type | Description |
 | --- | --- |
-| V \| undefined | The deleted value or undefined. |
+| V &#124; undefined | The deleted value or undefined. |
 
 ## toString
 

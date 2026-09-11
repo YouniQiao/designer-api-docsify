@@ -61,7 +61,7 @@ Size of the symbol span. The default unit is fp.
 
 The default value follows the theme.
 
-**Type:** number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**Type:** number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 11
 
@@ -85,7 +85,7 @@ For the string type, only strings of the number type are supported, for example,
 
 Default value: **FontWeight.Normal**
 
-**Type:** number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| string
+**Type:** number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; string
 
 **Since:** 11
 

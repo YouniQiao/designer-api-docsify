@@ -33,7 +33,7 @@ bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuil
 
 绑定到选择菜单。
 
-<p>&lt;strong&gt;注意&lt;/strong&gt;：长按手势需要的时间，bindSelectionMenu为600ms,bindContextMenu为800 ms。当bindSelectionMenu和bindContextMenu都设置了，并且都设置为长按触发手势，bindSelectionMenu首先被触发。如果自定义菜单过长，可以嵌入一个Scroll组件，防止键盘被遮挡。</p>
+<p>&lt;strong&gt;注意&lt;/strong&gt;：<br>长按手势需要的时间，bindSelectionMenu为600ms,bindContextMenu为800 ms。<br>当bindSelectionMenu和bindContextMenu都设置了，并且都设置为长按触发手势，bindSelectionMenu首先被触发。<br>如果自定义菜单过长，可以嵌入一个Scroll组件，防止键盘被遮挡。</p>
 
 **起始版本：** 26.0.0
 
@@ -180,7 +180,7 @@ enableHapticFeedback(isEnabled: Optional<boolean>): SelectionContainerAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isEnabled | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否开启触控反馈。true表示开启触控反馈，false表示不开启触控反馈。 |
+| isEnabled | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否开启触控反馈。<br>true表示开启触控反馈，false表示不开启触控反馈。 |
 
 **返回值：**
 

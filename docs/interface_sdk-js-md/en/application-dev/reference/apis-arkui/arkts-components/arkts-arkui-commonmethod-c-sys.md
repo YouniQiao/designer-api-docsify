@@ -33,8 +33,8 @@ Defines how the component's content (including the content of it child component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effect | [BlendMode](arkts-arkui-blendmode-e.md) \| [Blender](arkts-arkui-blender-t-sys.md) | Yes | Blend mode or blender type, depending on the parameter type.When the parameter type is **BlendMode**, it indicates the blend mode.Default value: **BlendMode.NONE**When the parameter type is **Blender**, it indicates the blender type, used to describe the blending effect.A **Blender** instance must be created using methods, for example, [uiEffect.createBrightnessBlender](../../../reference/apis-arkgraphics2d/js-apis-uiEffect-sys.md#uieffectcreatebrightnessblender), from the **uiEffect** module. Using a custom object as a parameter will not take effect. |
-| type | [BlendApplyType](arkts-arkui-blendapplytype-e.md) | No | Whether the blend mode is implemented offscreen.Default value: **BlendApplyType.FAST**   **NOTE：** 1. When this parameter is set to **BlendApplyType.FAST**, the blend mode is not implemented offscreen. 2. When this parameter is set to **BlendApplyType.OFFSCREEN**, an offscreen canvas matching the size of the current component is created. The content of the current component (including its child components) is then drawn onto the offscreen canvas, and blended with the existing content on the underlying canvas using the specified blend mode. 3. For text components, this API does not apply to emoji expressions when not offscreen. 4. Compared with **BlendApplyType.OFFSCREEN**, when this parameter is set to **BlendApplyType.OFFSCREEN_WITH_BACKGROUND**, the system first copies a canvas with a background as the initial background color (the canvas for **BlendApplyType.OFFSCREEN** starts with a transparent background) when creating an offscreen canvas matching the current component's size. The blending operation is then performed on this base. The two modes are identical in all other functional aspects. |
+| effect | [BlendMode](arkts-arkui-blendmode-e.md) &#124; [Blender](arkts-arkui-blender-t-sys.md) | Yes | Blend mode or blender type, depending on the parameter type.<br>When the parameter type is **BlendMode**, it indicates the blend mode.<br>Default value: **BlendMode.NONE**<br>When the parameter type is **Blender**, it indicates the blender type, used to describe the blending effect.<br>A **Blender** instance must be created using methods, for example, [uiEffect.createBrightnessBlender](../../../reference/apis-arkgraphics2d/js-apis-uiEffect-sys.md#uieffectcreatebrightnessblender), from the **uiEffect** module. Using a custom object as a parameter will not take effect. |
+| type | [BlendApplyType](arkts-arkui-blendapplytype-e.md) | No | Whether the blend mode is implemented offscreen.<br>Default value: **BlendApplyType.FAST**<br>**NOTE:**<br>1. When this parameter is set to **BlendApplyType.FAST**, the blend mode is not implemented offscreen.<br>2. When this parameter is set to **BlendApplyType.OFFSCREEN**, an offscreen canvas matching the size of the current component is created. The content of the current component (including its child components) is then drawn onto the offscreen canvas, and blended with the existing content on the underlying canvas using the specified blend mode.<br>3. For text components, this API does not apply to emoji expressions when not offscreen.<br>4. Compared with **BlendApplyType.OFFSCREEN**, when this parameter is set to **BlendApplyType.OFFSCREEN_WITH_BACKGROUND**, the system first copies a canvas with a background as the initial background color (the canvas for **BlendApplyType.OFFSCREEN** starts with a transparent background) when creating an offscreen canvas matching the current component's size. The blending operation is then performed on this base. The two modes are identical in all other functional aspects. |
 
 **Return value:**
 
@@ -66,7 +66,7 @@ edgeLight(params: EdgeLightParams | undefined): T
 
 Sets the edge light effect for the component.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: The edge light effect creates a glowing light effect along the component's edges, starting from the specified position and extending along the edge. This effect can enhance the visual appeal and highlight important components. </p>
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The edge light effect creates a glowing light effect along the component's edges, starting from the specified position and extending along the edge. <br>This effect can enhance the visual appeal and highlight important components. </p>
 
 **Since:** 26.0.0
 
@@ -80,14 +80,12 @@ Sets the edge light effect for the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [EdgeLightParams](arkts-arkui-edgelightparams-i-sys.md) \| undefined | Yes | Edge light effect parameters. Defines the position, length, intensity, color, and thickness of the light effect. If params is undefined, the edge light effect is removed. |
+| params | [EdgeLightParams](arkts-arkui-edgelightparams-i-sys.md) &#124; undefined | Yes | Edge light effect parameters. Defines the position, length, intensity, color, and thickness of the light effect. If params is undefined, the edge light effect is removed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## excludeFromRenderGroup
 
 ```TypeScript
@@ -100,7 +98,7 @@ Removing the current component and its children from the render group does not a
 
 If this attribute is not set, the current component and its children are not removed from the render group of the ancestor component by default.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The drawing content of the component with **excludeFromRenderGroup** set to **true** and its children cannot the
 > component's own boundary range. Otherwise, the displayed content may be clipped. For example, if the child
@@ -124,7 +122,7 @@ If this attribute is not set, the current component and its children are not rem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclude | boolean \| undefined | Yes | Whether to remove the current component and its child components from the render group of the ancestor component.   **true**: yes. **false**: no.If **exclude** is set to **undefined**, the value **false** is used. |
+| exclude | boolean &#124; undefined | Yes | Whether to remove the current component and its child components from the render group of the ancestor component.<br>**true**: yes. **false**: no.<br>If **exclude** is set to **undefined**, the value **false** is used. |
 
 **Return value:**
 
@@ -152,7 +150,7 @@ Marks the node as an independent render layer. Once marked, the component and it
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| undefined | Yes | Whether to mark the node as an independent render layer. The value **true** means to mark the node as an independent render layer, and **false** or **undefined** means to cancel the mark. |
+| value | boolean &#124; undefined | Yes | Whether to mark the node as an independent render layer. The value **true** means to mark the node as an independent render layer, and **false** or **undefined** means to cancel the mark. |
 
 **Return value:**
 
@@ -182,14 +180,12 @@ Applies a spatial effect to component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SpatialEffectParams](arkts-arkui-spatialeffectparams-i-sys.md) \| undefined | Yes | Spatial effect parameters. |
+| params | [SpatialEffectParams](arkts-arkui-spatialeffectparams-i-sys.md) &#124; undefined | Yes | Spatial effect parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## useUnionEffect
 
 ```TypeScript
@@ -210,7 +206,7 @@ Specify whether the current component participates in the fusion effect of the a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| undefined | Yes | Whether the component participates in the fusion effect of the ancestor component **UnionEffectContainer**.The value **true** means that the component participates in the fusion effect of the ancestor component **UnionEffectContainer**, and **false** means the opposite. Default value: **false**. Undefined means to default value. |
+| value | boolean &#124; undefined | Yes | Whether the component participates in the fusion effect of the ancestor component **UnionEffectContainer**.<br>The value **true** means that the component participates in the fusion effect of the ancestor component **UnionEffectContainer**, and **false** means the opposite. <br>Default value: **false**. Undefined means to default value. |
 
 **Return value:**
 
@@ -238,7 +234,7 @@ Specify whether the current component participates in the fusion effect of the a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| undefined | Yes | Whether the component participates in the fusion effect of the ancestor component **UnionEffectContainer**. The value **true** means that the component participates in the fusion effect of the ancestor component **UnionEffectContainer**, and **false** means the opposite. |
+| value | boolean &#124; undefined | Yes | Whether the component participates in the fusion effect of the ancestor component **UnionEffectContainer**. The value **true** means that the component participates in the fusion effect of the ancestor component **UnionEffectContainer**, and **false** means the opposite. |
 | options | [GravityCenterOptions](arkts-arkui-gravitycenteroptions-i-sys.md) | No | Gravitational center parameter. GRAVITY_UNION. |
 
 **Return value:**

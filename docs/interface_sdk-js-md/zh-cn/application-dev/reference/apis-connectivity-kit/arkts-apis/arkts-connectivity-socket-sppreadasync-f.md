@@ -14,7 +14,7 @@ function sppReadAsync(clientSocket: number): Promise<ArrayBuffer>
 
 客户端和服务端均可使用，读取对端发送数据的异步接口。使用Promise异步回调。当连接断开时，该接口会抛出错误码并返回。
 
-若客户端使用，需在调用[socket.sppConnect](arkts-connectivity-socket-sppconnect-f.md)后，且连接成功后使用。若服务端使用，需在调用[socket.sppAccept](arkts-connectivity-socket-sppaccept-f.md)后，且连接成功后使用。不可以和API version 10开始支持的socket.on('sppRead')接口混用，同一路socket只能使用socket.on('sppRead')接口或者socket.sppReadAsync接口。通过Promise异步返回读取的数据，建议在连接成功后循环调用去获取接收到的数据，若不及时调用会丢失接收的数据。该接口为异步接口，需要等异步回调结果返回后才能进行下一次调用。
+若客户端使用，需在调用[socket.sppConnect](arkts-connectivity-socket-sppconnect-f.md)后，且连接成功后使用。若服务端使用，需在调用[socket.sppAccept](arkts-connectivity-socket-sppaccept-f.md)后，且连接成功后使用。不可以和API version 10开始支持的[socket.on('sppRead')](arkts-connectivity-socket-on-f.md#onsppread)接口混用，同一路socket只能使用[socket.on('sppRead')](arkts-connectivity-socket-on-f.md#onsppread)接口或者socket.sppReadAsync接口。通过Promise异步返回读取的数据，建议在连接成功后循环调用去获取接收到的数据，若不及时调用会丢失接收的数据。该接口为异步接口，需要等异步回调结果返回后才能进行下一次调用。
 
 **起始版本：** 18
 

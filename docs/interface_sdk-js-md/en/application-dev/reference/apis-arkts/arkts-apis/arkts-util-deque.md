@@ -12,11 +12,14 @@ Double-Ended Queue (Deque) is a data structure implemented based on a circular q
  **Recommended use case**: Use **Deque** when you need to frequently insert or remove elements at both the ends of a
  container.
  This topic uses the following to identify the use of generics:
- - T: Type
- > **NOTE**
+
+- T: Type
+
+> **NOTE**
  >
  > - Container classes, implemented in static languages, have restrictions on storage locations and properties, and do
  > not support custom properties or methods.
+
 
 
 ## Modules to Import

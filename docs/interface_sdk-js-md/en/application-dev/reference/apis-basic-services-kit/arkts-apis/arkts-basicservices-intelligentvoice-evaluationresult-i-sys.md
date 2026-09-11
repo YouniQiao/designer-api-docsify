@@ -1,6 +1,6 @@
 # EvaluationResult (System API)
 
-Describes evaluation result.
+Describes evaluation result. @typedef EvaluationResult
 
 **Since:** 12
 

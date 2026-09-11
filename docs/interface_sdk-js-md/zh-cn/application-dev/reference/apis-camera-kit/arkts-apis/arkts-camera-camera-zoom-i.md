@@ -34,7 +34,7 @@ getZoomRatio(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 获取当前的变焦比结果。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| number | 获取当前的变焦比结果。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -88,7 +88,7 @@ setZoomRatio(zoomRatio: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| zoomRatio | number | 是 | 可变焦距比，通过[getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange)获取支持的变焦范围，如果设置超过支持范围的值，则只保留精度范围内数值。设置可变焦距比到底层生效需要一定时间，获取正确设置的可变焦距比需要等待1~2帧的时间。 |
+| zoomRatio | number | 是 | 可变焦距比，通过[getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange)获取支持的变焦范围，如果设置超过支持范围的值，则只保留精度范围内数值。<br>设置可变焦距比到底层生效需要一定时间，获取正确设置的可变焦距比需要等待1~2帧的时间。 |
 
 **错误码：**
 

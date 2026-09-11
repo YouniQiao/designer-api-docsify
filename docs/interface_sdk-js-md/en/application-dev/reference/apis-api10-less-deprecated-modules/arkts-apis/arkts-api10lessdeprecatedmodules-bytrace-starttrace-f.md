@@ -13,7 +13,7 @@ function startTrace(name: string, taskId: number, expectedTime?: number): void
 
 Marks the start of a timeslice trace task.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If multiple trace tasks with the same name need to be performed at the same time or a trace task needs to be
 > performed multiple times concurrently, different task IDs must be specified in **startTrace**. If the trace tasks

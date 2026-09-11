@@ -22,14 +22,14 @@ Obtains the mouse pointer style type of a specified window. This API can obtain 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | number | Yes | Window ID. The value is an integer greater than or equal to **-1**. The value **-1** indicates the global window. If the window ID is valid and the corresponding window exists, the mouse pointer style of the window is returned. If the window ID is valid but the window does not exist, the global mouse pointer style is returned by default. If the mouse pointer style is set for a non-existent window through [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md), this API can obtain the mouse pointer style properly. |
+| windowId | number | Yes | Window ID. The value is an integer greater than or equal to **-1**. The value **-1** indicates the global window. <br>If the window ID is valid and the corresponding window exists, the mouse pointer style of the window is returned. <br>If the window ID is valid but the window does not exist, the global mouse pointer style is returned by default. <br>If the mouse pointer style is set for a non-existent window through [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md), this API can obtain the mouse pointer style properly. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PointerStyle](arkts-input-pointer-pointerstyle-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the mouse pointer style type. Otherwise, **err** is an error object. In specific scenarios (obtaining the style on a window with a custom pointer style), **DEVELOPER_DEFINED_ICON** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -92,7 +92,7 @@ Obtains the mouse pointer style type. This API can obtain only the mouse pointer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | number | Yes | Window ID. The value is an integer greater than or equal to **-1**. The value **-1** indicates the global window. If the window ID is valid and the corresponding window exists, the mouse pointer style of the window is returned. If the window ID is valid but the window does not exist, the global mouse pointer style is returned by default. If the mouse pointer style is set for a non-existent window through [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md), this API can obtain the mouse pointer style properly. |
+| windowId | number | Yes | Window ID. The value is an integer greater than or equal to **-1**. The value **-1** indicates the global window. <br>If the window ID is valid and the corresponding window exists, the mouse pointer style of the window is returned. <br>If the window ID is valid but the window does not exist, the global mouse pointer style is returned by default. <br>If the mouse pointer style is set for a non-existent window through [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md), this API can obtain the mouse pointer style properly. |
 
 **Return value:**
 
@@ -104,7 +104,7 @@ Obtains the mouse pointer style type. This API can obtain only the mouse pointer
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 

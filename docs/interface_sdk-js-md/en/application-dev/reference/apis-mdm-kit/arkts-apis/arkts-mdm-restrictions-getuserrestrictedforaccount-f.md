@@ -18,7 +18,7 @@ Obtains the disabled status of a setting item for a specified user.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getUserRestrictedForAccount](#getuserrestrictedforaccount-1)(admin: Want | null, settingsItem: SettingsForAccount, accountId: int)
+**Substitutes:** [getUserRestrictedForAccount](arkts-mdm-restrictions-getuserrestrictedforaccount-f.md)(admin: Want | null, settingsItem: SettingsForAccount, accountId: number)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 
@@ -30,9 +30,9 @@ Obtains the disabled status of a setting item for a specified user.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the. EnterpriseAdminExtensionAbility and the bundle name of the application.If the device has multiple MDM applications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policies that actually take effect on the device are returned. |
-| settingsItem | string | Yes | Setting item.    - **modifyWallpaper**: Modify the wallpaper, including the lock screen wallpaper and home screen wallpaper. |
-| accountId | number | Yes | User ID, which must be greater than or equal to 0. The value should be an integer.    **accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) &#124; null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the. EnterpriseAdminExtensionAbility and the bundle name of the application.<br>If the device has multiple MDM applications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policies that actually take effect on the device are returned. |
+| settingsItem | string | Yes | Setting item.<br>- **modifyWallpaper**: Modify the wallpaper, including the lock screen wallpaper and home screen wallpaper. |
+| accountId | number | Yes | User ID, which must be greater than or equal to 0. <br>The value should be an integer. <br>**accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 
 **Return value:**
 
@@ -93,9 +93,9 @@ Obtains the disabled status of a setting item for a specified user.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the. EnterpriseAdminExtensionAbility and the bundle name of the application.If the device has multiple MDM applications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policies that actually take effect on the device are returned. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) &#124; null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the. EnterpriseAdminExtensionAbility and the bundle name of the application.<br>If the device has multiple MDM applications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policies that actually take effect on the device are returned. |
 | settingsItem | [SettingsForAccount](arkts-mdm-restrictions-settingsforaccount-e.md) | Yes | User setting item to be queried. |
-| accountId | number | Yes | User ID, which must be greater than or equal to 0. The value should be an integer.    **accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
+| accountId | number | Yes | User ID, which must be greater than or equal to 0. <br>The value should be an integer. <br>**accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 
 **Return value:**
 

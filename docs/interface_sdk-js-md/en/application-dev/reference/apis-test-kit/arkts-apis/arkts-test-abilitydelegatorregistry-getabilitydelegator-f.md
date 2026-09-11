@@ -26,7 +26,7 @@ Obtains an [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-ab
 
 | Type | Description |
 | --- | --- |
-| [AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md) | [AbilityDelegator]{ |
+| [AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md) | [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md) object, which can be used to schedule the functionalities of the test framework. |
 
 **Examples**
 

@@ -132,7 +132,7 @@ subtitleColor?: ResourceStr | Color
 
 The color of the subtitle.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [Color](arkts-arkui-color-e.md)
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) &#124; [Color](arkts-arkui-color-e.md)
 
 **Since:** 12
 
@@ -164,7 +164,7 @@ titleColor?: ResourceStr | Color
 
 The color of the title.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [Color](arkts-arkui-color-e.md)
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) &#124; [Color](arkts-arkui-color-e.md)
 
 **Since:** 12
 

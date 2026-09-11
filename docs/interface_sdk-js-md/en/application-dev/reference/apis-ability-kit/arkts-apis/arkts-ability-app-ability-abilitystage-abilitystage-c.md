@@ -93,7 +93,7 @@ Called when a UIAbility with the launch mode set to [specified](../../../applica
 
 If a UIAbility instance with the same ID already exists in the system, that instance is reused. Otherwise, a new instance is created.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Starting from API version 20, this callback is not triggered when
 > [AbilityStage.onAcceptWantAsync](#onacceptwantasync) is implemented.
@@ -185,7 +185,7 @@ onConfigurationUpdate(newConfig: Configuration): void
 
 Called when the system global configuration (such as the system language and dark/light color mode) changes. All the configuration items are defined in the [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) class. This API returns the result synchronously and does not support asynchronous callbacks.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > There are certain restrictions when this callback is actually triggered. For example, if you set the application
 > language by calling [setLanguage](arkts-ability-applicationcontext-c.md#setlanguage), the
@@ -313,7 +313,7 @@ Listens for changes in the system memory level status. Called when the available
 
 This API returns the result synchronously and does not support asynchronous callbacks.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Releasing UI components in the **onMemoryLevel** callback may block the main thread tasks of the current process.
 > Therefore, you are advised not to release UI components in this callback.
@@ -330,7 +330,7 @@ This API returns the result synchronously and does not support asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | [AbilityConstant.MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md) | Yes | Memory level that indicates the memory usage status. When the specified memory level is reached, a callback will be invoked and the system will start adjustment.   **NOTE：**The trigger conditions may differ across various devices. For example, on a standard device with 12 GB of memory: - A callback with value 0 is triggered when available memory drops between 1700 MB and 1800 MB. - A callback with value 1 is triggered when available memory drops between 1600 MB and 1700 MB. - A callback with value 2 is triggered when available memory falls below 1600 MB. |
+| level | [AbilityConstant.MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md) | Yes | Memory level that indicates the memory usage status. When the specified memory level is reached, a callback will be invoked and the system will start adjustment.<br>**NOTE:**<br>The trigger conditions may differ across various devices. For example, on a standard device with 12 GB of memory:<br>- A callback with value 0 is triggered when available memory drops between 1700 MB and 1800 MB.<br>- A callback with value 1 is triggered when available memory drops between 1600 MB and 1700 MB.<br>- A callback with value 2 is triggered when available memory falls below 1600 MB. |
 
 **Examples**
 
@@ -362,11 +362,11 @@ The **isolationProcess** field can be set to **true** in the [module.json5](../.
 
 <!--DelEnd-->
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - In API version 19 and earlier, only a UIAbility can be launched in the specified process. <!--Del-->Starting
 > from API version 20, a UIExtensionAbility can also be launched in the specified process.&lt;!--DelEnd--
-&gt; 
+> 
 > 
 > - Starting from API version 20, this callback is not executed when
 > [AbilityStage.onNewProcessRequestAsync](#onnewprocessrequestasync) is implemented.
@@ -462,7 +462,7 @@ onPrepareTermination(): AbilityConstant.PrepareTermination
 
 Called when the application is closed by the user, allowing the user to choose between immediate termination or cancellation. This API returns the result synchronously and does not support asynchronous callbacks.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The API is called only when the application exits under normal circumstances (for example, when the application
 > is closed through the doc bar or tray, or when the application shuts down along with the device). It will not be
@@ -508,7 +508,7 @@ onPrepareTerminationAsync(): Promise<AbilityConstant.PrepareTermination>
 
 Called when the application is closed by the user, allowing the user to choose between immediate termination or cancellation. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The API is called only when the application exits under normal circumstances (for example, when the application
 > is closed through the doc bar or tray, or when the application shuts down along with the device). It will not be

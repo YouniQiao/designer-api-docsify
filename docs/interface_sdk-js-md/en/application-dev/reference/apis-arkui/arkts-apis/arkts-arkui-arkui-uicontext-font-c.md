@@ -2,7 +2,7 @@
 
 Provides APIs for registering custom fonts.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - In the following API examples, you must first use [getFont()](arkts-arkui-arkui-uicontext-uicontext-c.md#getfont) in **UIContext** to obtain
 > a **Font** instance, and then call the APIs using the obtained instance.
@@ -49,7 +49,7 @@ Obtains information about a system font based on the font name.
 
 | Type | Description |
 | --- | --- |
-| [font.FontInfo](arkts-arkui-font-fontinfo-i.md) | Detailed information of the font. |
+| [font.FontInfo](arkts-arkui-font-fontinfo-i.md) | Detailed information of the font.<br>If no font is found, **undefined** is returned. |
 
 ## getSystemFontList
 
@@ -99,4 +99,4 @@ This API is asynchronous and does not support concurrent calls.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [font.FontOptions](arkts-arkui-font-fontoptions-i.md) | Yes | Information about the custom font to register.   **NOTE：**When setting the path to the font file, you are advised to use a string with the **file://** path prefix for resources within the system sandbox path. Ensure that the file exists in the sandbox directory path and has read permissions. |
+| options | [font.FontOptions](arkts-arkui-font-fontoptions-i.md) | Yes | Information about the custom font to register.<br>**NOTE:**<br>When setting the path to the font file, you are advised to use a string with the **file://** path prefix for resources within the system sandbox path. Ensure that the file exists in the sandbox directory path and has read permissions. |

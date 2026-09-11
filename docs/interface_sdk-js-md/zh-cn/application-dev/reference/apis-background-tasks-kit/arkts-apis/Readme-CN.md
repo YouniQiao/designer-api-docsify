@@ -252,6 +252,6 @@
   - [WorkSchedulerExtensionAbility](arkts-backgroundtasks-workschedulerextensionability-c.md)
   - [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md)
 - application<!--arkts-backgroundtaskskit-application-->
-  - [WorkSchedulerExtensionContext](arkts-workschedulerextensioncontext.md)
+  - [WorkSchedulerExtensionContext(延迟任务调度回调上下文)](arkts-workschedulerextensioncontext.md)
     <!--Del-->
     - [WorkSchedulerExtensionContext(系统接口)](arkts-backgroundtasks-workschedulerextensioncontext-c-sys.md)<!--DelEnd-->

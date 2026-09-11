@@ -6,6 +6,8 @@ export type AgentExtensionContext = _AgentExtensionContext
 
 The context of the agent service ability.
 
+@typedef { _AgentExtensionContext }
+
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.

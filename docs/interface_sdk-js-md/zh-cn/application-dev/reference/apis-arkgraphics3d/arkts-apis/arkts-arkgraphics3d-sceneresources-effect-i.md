@@ -34,7 +34,7 @@ getPropertyValue(propertyName: string): Object | null | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| Object \| null \| undefined | 特效属性值。若当前Effect类型下不存在与传入的propertyName匹配的属性，则获取属性值失败，返回null；若propertyName对应的可选属性未设置，则返回undefined。 |
+| Object &#124; null &#124; undefined | 特效属性值。若当前Effect类型下不存在与传入的propertyName匹配的属性，则获取属性值失败，返回null；若propertyName对应的可选属性未设置，则返回undefined。 |
 
 **示例**
 
@@ -75,7 +75,7 @@ setPropertyValue(propertyName: string, value: Object | undefined): boolean
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | propertyName | string | 是 | 特定特效属性的名称。目前支持的字符串为：-'exposure'：该属性表示图像的曝光度。-'vibrance'：该属性表示图像的自然饱和度。 |
-| value | Object \| undefined | 是 | 要设置的特效属性值。'exposure'：value实际类型为number，推荐取值范围[-5, 5]。取值越大，图像越亮。'vibrance'：value实际类型为number，推荐取值范围 [-1, 1]。取值越大，图像颜色越鲜艳。 |
+| value | Object &#124; undefined | 是 | 要设置的特效属性值。'exposure'：value实际类型为number，推荐取值范围[-5, 5]。取值越大，图像越亮。'vibrance'：value实际类型为number，推荐取值范围 [-1, 1]。取值越大，图像颜色越鲜艳。 |
 
 **返回值：**
 

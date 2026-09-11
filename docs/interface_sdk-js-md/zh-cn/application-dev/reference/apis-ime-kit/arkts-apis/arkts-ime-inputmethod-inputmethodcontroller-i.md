@@ -1,15 +1,8 @@
 # InputMethodController
 
-下列API示例中都需使用[getController](arkts-ime-inputmethod-getcontroller-f.md)获取到InputMethodController实例，再通过实例调用对应方法。InputMethodController是输入法客户端控制器，面向前台应用提供与输入法交互的核心能力。通过`inputMethod.getController()`获取实例后，可进行以下操作：  
-- 绑定管理：通过[attach](#attach)建立与输入法的绑定，通过[detach](#detach)解除绑定。attach和detach必须配对使用。  
-- 键盘控制：通过[showTextInput](#showtextinput)拉起软键盘进入编辑状态，通过[hideTextInput](#hidetextinput)隐藏软键盘退出编辑状态。showTextInput和hideTextInput必须配对使用。  
-- 编辑框状态同步：通过[updateCursor](#updatecursor)、[changeSelection](#changeselection)、[updateAttribute](#updateattribute)等接口向输入法同步光标、选区、属性等编辑框状态信息。  
-- 事件订阅：通过on('insertText')、on('deleteLeft')等接口订阅输入法应用发送的文本操作事件。  
- 典型调用序列：`getController()` → `attach()` → `showTextInput()`/`hideTextInput()` → `detach()`   
-> **说明：**
-   
-> 
-   
+下列API示例中都需使用[getController](arkts-ime-inputmethod-getcontroller-f.md)获取到InputMethodController实例，再通过实例调用对应方法。<br> <br>InputMethodController是输入法客户端控制器，面向前台应用提供与输入法交互的核心能力。通过`inputMethod.getController()`获取实例后，可进行以下操作：<br> <br>- 绑定管理：通过[attach](#attach)建立与输入法的绑定，通过[detach](#detach)解除绑定。attach和detach必须配对使用。<br>- 键盘控制：通过[showTextInput](#showtextinput)拉起软键盘进入编辑状态，通过[hideTextInput](#hidetextinput)隐藏软键盘退出编辑状态。showTextInput和hideTextInput必须配对使用。<br>- 编辑框状态同步：通过[updateCursor](#updatecursor)、[changeSelection](#changeselection)、[updateAttribute](#updateattribute)等接口向输入法同步光标、选区、属性等编辑框状态信息。<br>- 事件订阅：通过on('insertText')、on('deleteLeft')等接口订阅输入法应用发送的文本操作事件。<br> <br>典型调用序列：`getController()` → `attach()` → `showTextInput()`/`hideTextInput()` → `detach()` <br> <br>   
+> **说明：** <br>
+> <br>
 > attach和detach必须配对使用，showTextInput和hideTextInput必须配对使用，否则可能导致资源泄漏或状态不一致。
 
 **起始版本：** 6
@@ -28,25 +21,14 @@ import { inputMethod } from '@kit.IMEKit';
 attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<void>): void
 ```
 
-自绘控件绑定输入法。使用callback异步回调。含义/功能：建立自绘控件与输入法应用之间的绑定关系，是自绘控件使用输入法功能的前提。使用场景：自绘控件（非系统原生编辑框）需要与输入法交互时，必须先调用此接口建立绑定。原生编辑框获焦时系统自动绑定，无需调用此接口。使用后效果：绑定成功后，自绘控件可调用showTextInput/hideTextInput控制键盘显隐、调用updateCursor/changeSelection同步编辑框状态、订阅输入法事件等。前提条件/前置操作：自绘控件所在窗口需处于获焦状态，否则绑定会失败。相关接口间的配合/制约关系：attach必须与detach配对使用。调用attach后才能调用showTextInput、hideTextInput、updateCursor等接口。相似接口差异点及选取原则：  
-- attach：不需要传入UIContext，适用于API version 10+的自绘控件绑定场景。  
-- attachWithUIContext：需要传入UIContext，适用于API version 23+的Stage模型场景，支持更多绑定选项。  
-- 选取原则：API version 23+的Stage模型应用优先使用attachWithUIContext，以获得更完整的绑定选项支持。  
-   
-> **说明：**
-   
-> 
-   
-> 需要先调用此接口，完成自绘控件与输入法的绑定，才能使用以下功能：显示/隐藏键盘、更新光标信息、更改编辑框选中范围、保存配置信息、监听处理由输入法应用发送的信息或命令等。
-   
-> 
-   
-> 当自绘控件所在窗口通过
-   
-> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable)
-   
-> 设置为不可获焦窗口时，系统将无法保证自绘输入控件与输入法正常交互。若开发者希望在不可获焦窗口中绘制输入框，建议参考
-   
+自绘控件绑定输入法。使用callback异步回调。<br> <br>含义/功能：建立自绘控件与输入法应用之间的绑定关系，是自绘控件使用输入法功能的前提。<br> <br>使用场景：自绘控件（非系统原生编辑框）需要与输入法交互时，必须先调用此接口建立绑定。原生编辑框获焦时系统自动绑定，无需调用此接口。<br> <br>使用后效果：绑定成功后，自绘控件可调用showTextInput/hideTextInput控制键盘显隐、调用updateCursor/changeSelection同步编辑框状态、订阅输入法事件等。<br> <br>前提条件/前置操作：自绘控件所在窗口需处于获焦状态，否则绑定会失败。<br> <br>相关接口间的配合/制约关系：attach必须与detach配对使用。调用attach后才能调用showTextInput、hideTextInput、updateCursor等接口。<br> <br>相似接口差异点及选取原则：<br> <br>- attach：不需要传入UIContext，适用于API version 10+的自绘控件绑定场景。<br>- attachWithUIContext：需要传入UIContext，适用于API version 23+的Stage模型场景，支持更多绑定选项。<br>- 选取原则：API version 23+的Stage模型应用优先使用attachWithUIContext，以获得更完整的绑定选项支持。<br> <br>   
+> **说明：** <br>
+> <br>
+> 需要先调用此接口，完成自绘控件与输入法的绑定，才能使用以下功能：显示/隐藏键盘、更新光标信息、更改编辑框选中范围、保存配置信息、监听处理由输入法应用发送的信息或命令等。<br>
+> <br>
+> 当自绘控件所在窗口通过<br>
+> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable) <br>
+> 设置为不可获焦窗口时，系统将无法保证自绘输入控件与输入法正常交互。若开发者希望在不可获焦窗口中绘制输入框，建议参考<br>
 > [不可获焦窗口中输入框与输入法交互指南](../../../inputmethod/use-inputmethod-in-not-focusable-window.md)。
 
 **起始版本：** 10
@@ -57,7 +39,7 @@ attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| showKeyboard | boolean | 是 | 绑定输入法成功后，是否拉起输入法键盘。   - true表示拉起。   - false表示不拉起。 |
+| showKeyboard | boolean | 是 | 绑定输入法成功后，是否拉起输入法键盘。<br>- true表示拉起。<br>- false表示不拉起。 |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | 是 | 编辑框的配置信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当绑定输入法成功后，err为undefined；否则为错误对象。 |
 
@@ -94,21 +76,14 @@ inputMethod.getController().attach(true, textConfig, (err: BusinessError) => {
 attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>
 ```
 
-自绘控件绑定输入法。使用promise异步回调。  
-> **说明：**
-   
-> 
-   
-> 需要先调用此接口，完成自绘控件与输入法的绑定，才能使用以下功能：显示/隐藏键盘、更新光标信息、更改编辑框选中范围、保存配置信息、监听处理由输入法应用发送的信息或命令等。
-   
-> 
-   
-> 当自绘控件所在窗口通过
-   
-> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable)
-   
-> 设置为不可获焦窗口时，系统将无法保证自绘输入控件与输入法正常交互。若开发者希望在不可获焦窗口中绘制输入框，建议参考
-   
+自绘控件绑定输入法。使用promise异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
+> 需要先调用此接口，完成自绘控件与输入法的绑定，才能使用以下功能：显示/隐藏键盘、更新光标信息、更改编辑框选中范围、保存配置信息、监听处理由输入法应用发送的信息或命令等。<br>
+> <br>
+> 当自绘控件所在窗口通过<br>
+> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable) <br>
+> 设置为不可获焦窗口时，系统将无法保证自绘输入控件与输入法正常交互。若开发者希望在不可获焦窗口中绘制输入框，建议参考<br>
 > [不可获焦窗口中输入框与输入法交互指南](../../../inputmethod/use-inputmethod-in-not-focusable-window.md)。
 
 **起始版本：** 10
@@ -119,7 +94,7 @@ attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| showKeyboard | boolean | 是 | 绑定输入法成功后，是否拉起输入法键盘。   - true表示拉起。   - false表示不拉起。 |
+| showKeyboard | boolean | 是 | 绑定输入法成功后，是否拉起输入法键盘。<br>- true表示拉起。<br>- false表示不拉起。 |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | 是 | 编辑框的配置信息。 |
 
 **返回值：**
@@ -159,21 +134,14 @@ inputMethod.getController().attach(true, textConfig).then(() => {
 attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: RequestKeyboardReason): Promise<void>
 ```
 
-自绘控件绑定输入法。使用promise异步回调。  
-> **说明：**
-   
-> 
-   
-> 需要先调用此接口，完成自绘控件与输入法的绑定，才能使用以下功能：显示/隐藏键盘、更新光标信息、更改编辑框选中范围、保存配置信息、监听处理由输入法应用发送的信息或命令等。
-   
-> 
-   
-> 当自绘控件所在窗口通过
-   
-> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable)
-   
-> 设置为不可获焦窗口时，系统将无法保证自绘输入控件与输入法正常交互。若开发者希望在不可获焦窗口中绘制输入框，建议参考
-   
+自绘控件绑定输入法。使用promise异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
+> 需要先调用此接口，完成自绘控件与输入法的绑定，才能使用以下功能：显示/隐藏键盘、更新光标信息、更改编辑框选中范围、保存配置信息、监听处理由输入法应用发送的信息或命令等。<br>
+> <br>
+> 当自绘控件所在窗口通过<br>
+> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable) <br>
+> 设置为不可获焦窗口时，系统将无法保证自绘输入控件与输入法正常交互。若开发者希望在不可获焦窗口中绘制输入框，建议参考<br>
 > [不可获焦窗口中输入框与输入法交互指南](../../../inputmethod/use-inputmethod-in-not-focusable-window.md)。
 
 **起始版本：** 15
@@ -184,7 +152,7 @@ attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: Req
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| showKeyboard | boolean | 是 | 绑定输入法成功后，是否拉起输入法键盘。   - true表示拉起。   - false表示不拉起。 |
+| showKeyboard | boolean | 是 | 绑定输入法成功后，是否拉起输入法键盘。<br>- true表示拉起。<br>- false表示不拉起。 |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | 是 | 编辑框的配置信息。 |
 | requestKeyboardReason | [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md) | 是 | 请求键盘输入的原因。 |
 
@@ -227,11 +195,9 @@ inputMethod.getController().attach(true, textConfig, requestKeyboardReason).then
 attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?: AttachOptions): Promise<void>
 ```
 
-自绘控件绑定输入法。使用promise异步回调。  
-> **说明：**
-   
-> 
-   
+自绘控件绑定输入法。使用promise异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
 > 需要先调用此接口，完成自绘控件与输入法的绑定，才能使用以下功能：显示/隐藏键盘、更新光标信息、更改编辑框选中范围、保存配置信息、监听处理由输入法应用发送的信息或命令等。
 
 **起始版本：** 23
@@ -287,11 +253,9 @@ inputMethod.getController().attachWithUIContext(uiContext, textConfig, attachOpt
 changeSelection(text: string, start: number, end: number, callback: AsyncCallback<void>): void
 ```
 
-当编辑框内被选中的文本信息内容或文本范围发生变化时，可调用该接口更新文本信息，使输入法应用感知到变化。使用callback异步回调。  
-> **说明：**
-   
-> 
-   
+当编辑框内被选中的文本信息内容或文本范围发生变化时，可调用该接口更新文本信息，使输入法应用感知到变化。使用callback异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
 > 编辑框与输入法绑定成功后，才可调用该接口更新文本选区信息。
 
 **起始版本：** 10
@@ -336,11 +300,9 @@ inputMethod.getController().changeSelection('text', 0, 5, (err: BusinessError) =
 changeSelection(text: string, start: number, end: number): Promise<void>
 ```
 
-当编辑框内被选中的文本信息内容或文本范围发生变化时，可调用该接口更新文本信息，使输入法应用感知到变化。使用promise异步回调。  
-> **说明：**
-   
-> 
-   
+当编辑框内被选中的文本信息内容或文本范围发生变化时，可调用该接口更新文本信息，使输入法应用感知到变化。使用promise异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
 > 编辑框与输入法绑定成功后，才可调用该接口更新文本选区信息。
 
 **起始版本：** 10
@@ -388,7 +350,7 @@ inputMethod.getController().changeSelection('test', 0, 5).then(() => {
 detach(callback: AsyncCallback<void>): void
 ```
 
-自绘控件解除与输入法的绑定。使用callback异步回调。含义/功能：解除自绘控件与输入法应用之间的绑定关系，释放相关资源。使用场景：自绘控件不再需要与输入法交互时调用（如页面切换、编辑框被销毁等）。使用后效果：解除绑定后，不能再调用showTextInput、hideTextInput、updateCursor等需要绑定状态的接口。输入法软键盘将被隐藏。相关接口间的配合/制约关系：detach必须与attach配对使用。建议在hideTextInput之后调用detach，完整流程为：attach → showTextInput → hideTextInput → detach。
+自绘控件解除与输入法的绑定。使用callback异步回调。<br> <br>含义/功能：解除自绘控件与输入法应用之间的绑定关系，释放相关资源。<br> <br>使用场景：自绘控件不再需要与输入法交互时调用（如页面切换、编辑框被销毁等）。<br> <br>使用后效果：解除绑定后，不能再调用showTextInput、hideTextInput、updateCursor等需要绑定状态的接口。输入法软键盘将被隐藏。<br> <br>相关接口间的配合/制约关系：detach必须与attach配对使用。建议在hideTextInput之后调用detach，完整流程为：attach → showTextInput → hideTextInput → detach。
 
 **起始版本：** 10
 
@@ -427,7 +389,7 @@ inputMethod.getController().detach((err: BusinessError) => {
 detach(): Promise<void>
 ```
 
-自绘控件解除与输入法的绑定。使用promise异步回调。含义/功能：解除自绘控件与输入法应用之间的绑定关系，释放相关资源。使用场景：自绘控件不再需要与输入法交互时调用。使用后效果：解除绑定后，不能再调用需要绑定状态的接口。输入法软键盘将被隐藏。相关接口间的配合/制约关系：detach必须与attach配对使用。
+自绘控件解除与输入法的绑定。使用promise异步回调。<br> <br>含义/功能：解除自绘控件与输入法应用之间的绑定关系，释放相关资源。<br> <br>使用场景：自绘控件不再需要与输入法交互时调用。<br> <br>使用后效果：解除绑定后，不能再调用需要绑定状态的接口。输入法软键盘将被隐藏。<br> <br>相关接口间的配合/制约关系：detach必须与attach配对使用。
 
 **起始版本：** 10
 
@@ -464,11 +426,9 @@ inputMethod.getController().detach().then(() => {
 discardTypingText(): Promise<void>
 ```
 
-编辑框应用发送“清空正在输入的文字”命令到输入法。使用promise异步回调。  
-> **说明：**
-   
-> 
-
+编辑框应用发送“清空正在输入的文字”命令到输入法。使用promise异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
 > 当编辑框应用与输入法绑定成功后，才可调用该接口实现此功能。
 
 **起始版本：** 20
@@ -507,15 +467,9 @@ inputMethod.getController().discardTypingText().then(() => {
 hideSoftKeyboard(callback: AsyncCallback<void>): void
 ```
 
-隐藏输入法软键盘。使用callback异步回调。含义/功能：强制隐藏当前输入法的软键盘。使用场景：系统应用需要强制隐藏输入法软键盘时使用。使用后效果：输入法软键盘被隐藏。前提条件/前置操作：编辑框与输入法绑定时才能调用。相似接口差异点及选取原则：  
-- hideSoftKeyboard：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY，仅隐藏键盘不退出编辑状态。  
-- hideTextInput：面向自绘控件，隐藏键盘并退出编辑状态，可再次showTextInput重新进入。  
-- 选取原则：自绘控件使用hideTextInput；系统应用且有权限时使用hideSoftKeyboard。  
-   
-> **说明：**
-   
-> 
-   
+隐藏输入法软键盘。使用callback异步回调。<br> <br>含义/功能：强制隐藏当前输入法的软键盘。<br> <br>使用场景：系统应用需要强制隐藏输入法软键盘时使用。<br> <br>使用后效果：输入法软键盘被隐藏。<br> <br>前提条件/前置操作：编辑框与输入法绑定时才能调用。<br> <br>相似接口差异点及选取原则：<br> <br>- hideSoftKeyboard：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY，仅隐藏键盘不退出编辑状态。<br>- hideTextInput：面向自绘控件，隐藏键盘并退出编辑状态，可再次showTextInput重新进入。<br>- 选取原则：自绘控件使用hideTextInput；系统应用且有权限时使用hideSoftKeyboard。<br> <br>   
+> **说明：** <br>
+> <br>
 > 该接口需要编辑框与输入法绑定时才能调用，即点击编辑控件后，才可调用隐藏当前输入法的软键盘。
 
 **起始版本：** 9
@@ -558,11 +512,9 @@ inputMethod.getController().hideSoftKeyboard((err: BusinessError) => {
 hideSoftKeyboard(): Promise<void>
 ```
 
-隐藏输入法软键盘。使用Promise异步回调。  
-> **说明：**
-   
-> 
-   
+隐藏输入法软键盘。使用Promise异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
 > 该接口需要编辑框与输入法绑定时才能调用，即点击编辑控件后，才可调用隐藏当前输入法的软键盘。
 
 **起始版本：** 9
@@ -603,23 +555,13 @@ inputMethod.getController().hideSoftKeyboard().then(() => {
 hideTextInput(callback: AsyncCallback<void>): void
 ```
 
-退出文本编辑状态。使用callback异步回调。含义/功能：隐藏软键盘，使编辑框退出文本编辑状态。使用场景：自绘控件不再需要输入时调用，如用户点击了编辑框外的区域、切换到其他页面等。使用后效果：软键盘被隐藏，编辑框退出编辑状态。调用此接口不会解除与输入法的绑定，再次调用showTextInput可重新进入编辑状态。前提条件/前置操作：需先调用[attach](#attach)完成绑定，且已调用showTextInput进入编辑状态。相关接口间的配合/制约关系：hideTextInput与showTextInput必须配对使用。hideTextInput后如需再次输入，必须先调用showTextInput重新进入编辑状态，不能直接调用其他编辑操作。相似接口差异点及选取原则：  
-- hideTextInput：面向自绘控件，退出编辑状态但不解除绑定，可再次showTextInput重新进入。适用于自绘控件需要暂时隐藏键盘的场景。  
-- hideSoftKeyboard：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY。仅隐藏键盘，不改变编辑状态。  
-- 选取原则：自绘控件优先使用hideTextInput；系统应用且有特殊需求时使用hideSoftKeyboard。  
-   
-> **说明：**
-   
-> 
-   
-> 调用接口时，若软键盘处于显示状态，调用接口后软键盘会被隐藏。
-   
-> 
-   
-> 调用该接口不会解除与输入法的绑定，再次调用
-   
-> [showTextInput](#showtextinput)时，可重新进入文本编
-   
+退出文本编辑状态。使用callback异步回调。<br> <br>含义/功能：隐藏软键盘，使编辑框退出文本编辑状态。<br> <br>使用场景：自绘控件不再需要输入时调用，如用户点击了编辑框外的区域、切换到其他页面等。<br> <br>使用后效果：软键盘被隐藏，编辑框退出编辑状态。调用此接口不会解除与输入法的绑定，再次调用showTextInput可重新进入编辑状态。<br> <br>前提条件/前置操作：需先调用[attach](#attach)完成绑定，且已调用showTextInput进入编辑状态。<br> <br>相关接口间的配合/制约关系：hideTextInput与showTextInput必须配对使用。hideTextInput后如需再次输入，必须先调用showTextInput重新进入编辑状态，不能直接调用其他编辑操作。<br> <br>相似接口差异点及选取原则：<br> <br>- hideTextInput：面向自绘控件，退出编辑状态但不解除绑定，可再次showTextInput重新进入。适用于自绘控件需要暂时隐藏键盘的场景。<br>- hideSoftKeyboard：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY。仅隐藏键盘，不改变编辑状态。<br>- 选取原则：自绘控件优先使用hideTextInput；系统应用且有特殊需求时使用hideSoftKeyboard。<br> <br>   
+> **说明：** <br>
+> <br>
+> 调用接口时，若软键盘处于显示状态，调用接口后软键盘会被隐藏。<br>
+> <br>
+> 调用该接口不会解除与输入法的绑定，再次调用<br>
+> [showTextInput](#showtextinput)时，可重新进入文本编<br>
 > 辑状态。
 
 **起始版本：** 10
@@ -660,19 +602,13 @@ inputMethod.getController().hideTextInput((err: BusinessError) => {
 hideTextInput(): Promise<void>
 ```
 
-退出文本编辑状态。使用promise异步回调。  
-> **说明：**
-   
-> 
-   
-> 调用接口时，若软键盘处于显示状态，调用接口后软键盘会被隐藏。
-   
-> 
-   
-> 调用该接口不会解除与输入法的绑定，再次调用
-   
-> [showTextInput](#showtextinput)时，可重新进入文本编
-   
+退出文本编辑状态。使用promise异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
+> 调用接口时，若软键盘处于显示状态，调用接口后软键盘会被隐藏。<br>
+> <br>
+> 调用该接口不会解除与输入法的绑定，再次调用<br>
+> [showTextInput](#showtextinput)时，可重新进入文本编<br>
 > 辑状态。
 
 **起始版本：** 10
@@ -722,7 +658,7 @@ off(type: 'selectByRange', callback?: Callback<Range>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selectByRange' | 是 | 设置监听类型，固定取值为'selectByRange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Range](arkts-ime-inputmethod-range-i.md)&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Range](arkts-ime-inputmethod-range-i.md)&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -755,7 +691,7 @@ off(type: 'selectByMovement', callback?: Callback<Movement>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selectByMovement' | 是 | 设置监听类型，固定取值为'selectByMovement'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Movement](arkts-ime-inputmethod-movement-i.md)&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Movement](arkts-ime-inputmethod-movement-i.md)&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -788,7 +724,7 @@ off(type: 'insertText', callback?: (text: string) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'insertText' | 是 | 设置监听类型，固定取值为'insertText'。 |
-| callback | (text: string) =&gt; void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (text: string) =&gt; void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -821,7 +757,7 @@ off(type: 'deleteLeft', callback?: (length: number) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deleteLeft' | 是 | 设置监听，固定取值为'deleteLeft'。 |
-| callback | (length: number) =&gt; void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (length: number) =&gt; void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -854,7 +790,7 @@ off(type: 'deleteRight', callback?: (length: number) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deleteRight' | 是 | 设置监听类型，固定取值为`deleteRight`。 |
-| callback | (length: number) =&gt; void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (length: number) =&gt; void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -919,7 +855,7 @@ off(type: 'sendFunctionKey', callback?: (functionKey: FunctionKey) => void): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'sendFunctionKey' | 是 | 设置监听类型，固定取值为'sendFunctionKey'。 |
-| callback | (functionKey: FunctionKey) =&gt; void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (functionKey: FunctionKey) =&gt; void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -952,7 +888,7 @@ off(type: 'moveCursor', callback?: (direction: Direction) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'moveCursor' | 是 | 设置监听类型，固定取值为'moveCursor'。 |
-| callback | (direction: Direction) =&gt; void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (direction: Direction) =&gt; void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -985,7 +921,7 @@ off(type: 'handleExtendAction', callback?: (action: ExtendAction) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'handleExtendAction' | 是 | 设置监听类型，固定取值为'handleExtendAction'。 |
-| callback | (action: ExtendAction) =&gt; void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (action: ExtendAction) =&gt; void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1018,7 +954,7 @@ off(type: 'getLeftTextOfCursor', callback?: (length: number) => string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'getLeftTextOfCursor' | 是 | 设置监听类型，固定取值为'getLeftTextOfCursor'。 |
-| callback | (length: number) =&gt; string | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (length: number) =&gt; string | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1051,7 +987,7 @@ off(type: 'getRightTextOfCursor', callback?: (length: number) => string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'getRightTextOfCursor' | 是 | 设置监听类型，固定取值为'getRightTextOfCursor'。 |
-| callback | (length: number) =&gt; string | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (length: number) =&gt; string | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1084,7 +1020,7 @@ off(type: 'getTextIndexAtCursor', callback?: () => number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'getTextIndexAtCursor' | 是 | 设置监听类型，固定取值为'getTextIndexAtCursor'。 |
-| callback | () =&gt; number | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | () =&gt; number | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1117,7 +1053,7 @@ off(type: 'setPreviewText', callback?: SetPreviewTextCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'setPreviewText' | 是 | 设置监听类型，固定取值为'setPreviewText'。 |
-| callback | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1160,7 +1096,7 @@ off(type: 'finishTextPreview', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'finishTextPreview' | 是 | 设置监听类型，固定取值为'finishTextPreview'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1204,7 +1140,7 @@ on(type: 'selectByRange', callback: Callback<Range>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selectByRange' | 是 | 设置监听类型，固定取值为'selectByRange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Range](arkts-ime-inputmethod-range-i.md)&gt; | 是 | 回调函数，返回需要选中的文本范围。根据传入的文本范围，开发者在回调函数中编辑框中相应文本。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Range](arkts-ime-inputmethod-range-i.md)&gt; | 是 | 回调函数，返回需要选中的文本范围。<br>根据传入的文本范围，开发者在回调函数中编辑框中相应文本。 |
 
 **错误码：**
 
@@ -1237,7 +1173,7 @@ on(type: 'selectByMovement', callback: Callback<Movement>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selectByMovement' | 是 | 设置监听类型，固定取值为'selectByMovement'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Movement](arkts-ime-inputmethod-movement-i.md)&gt; | 是 | 回调函数，返回光标移动的方向。根据传入的光标移动方向，选中编辑框中相应文本。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Movement](arkts-ime-inputmethod-movement-i.md)&gt; | 是 | 回调函数，返回光标移动的方向。<br>根据传入的光标移动方向，选中编辑框中相应文本。 |
 
 **错误码：**
 
@@ -1270,7 +1206,7 @@ on(type: 'insertText', callback: (text: string) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'insertText' | 是 | 设置监听类型，固定取值为'insertText'。 |
-| callback | (text: string) =&gt; void | 是 | 回调函数，返回需要插入的文本内容。根据传入的文本，在回调函数中操作编辑框中的内容。 |
+| callback | (text: string) =&gt; void | 是 | 回调函数，返回需要插入的文本内容。<br>根据传入的文本，在回调函数中操作编辑框中的内容。 |
 
 **错误码：**
 
@@ -1317,7 +1253,7 @@ on(type: 'deleteLeft', callback: (length: number) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deleteLeft' | 是 | 设置监听类型，固定取值为'deleteLeft'。 |
-| callback | (length: number) =&gt; void | 是 | 回调函数，返回需要向左删除的文本长度。根据传入的删除长度，在回调函数中操作编辑框中的文本。 |
+| callback | (length: number) =&gt; void | 是 | 回调函数，返回需要向左删除的文本长度。<br>根据传入的删除长度，在回调函数中操作编辑框中的文本。 |
 
 **错误码：**
 
@@ -1351,7 +1287,7 @@ on(type: 'deleteRight', callback: (length: number) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deleteRight' | 是 | 设置监听类型，固定取值为'deleteRight'。 |
-| callback | (length: number) =&gt; void | 是 | 回调函数，返回需要向右删除的文本长度。根据传入的删除长度，在回调函数中操作编辑框中的文本。 |
+| callback | (length: number) =&gt; void | 是 | 回调函数，返回需要向右删除的文本长度。<br>根据传入的删除长度，在回调函数中操作编辑框中的文本。 |
 
 **错误码：**
 
@@ -1385,7 +1321,7 @@ on(type: 'sendKeyboardStatus', callback: (keyboardStatus: KeyboardStatus) => voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'sendKeyboardStatus' | 是 | 设置监听类型，固定取值为'sendKeyboardStatus'。 |
-| callback | (keyboardStatus: KeyboardStatus) =&gt; void | 是 | 回调函数，返回软键盘状态。根据传入的软键盘状态，在回调函数中做相应操作。 |
+| callback | (keyboardStatus: KeyboardStatus) =&gt; void | 是 | 回调函数，返回软键盘状态。<br>根据传入的软键盘状态，在回调函数中做相应操作。 |
 
 **错误码：**
 
@@ -1419,7 +1355,7 @@ on(type: 'sendFunctionKey', callback: (functionKey: FunctionKey) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'sendFunctionKey' | 是 | 设置监听类型，固定取值为'sendFunctionKey'。 |
-| callback | (functionKey: FunctionKey) =&gt; void | 是 | 回调函数，返回输入法应用发送的功能键信息。根据返回的功能键信息，做相应操作。 |
+| callback | (functionKey: FunctionKey) =&gt; void | 是 | 回调函数，返回输入法应用发送的功能键信息。<br>根据返回的功能键信息，做相应操作。 |
 
 **错误码：**
 
@@ -1453,7 +1389,7 @@ on(type: 'moveCursor', callback: (direction: Direction) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'moveCursor' | 是 | 设置监听类型，固定取值为'moveCursor'。 |
-| callback | (direction: Direction) =&gt; void | 是 | 回调函数，返回光标信息。根据返回的光标移动方向，改变光标位置，如光标向上或向下。 |
+| callback | (direction: Direction) =&gt; void | 是 | 回调函数，返回光标信息。<br>根据返回的光标移动方向，改变光标位置，如光标向上或向下。 |
 
 **错误码：**
 
@@ -1487,7 +1423,7 @@ on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'handleExtendAction' | 是 | 设置监听类型，固定取值为'handleExtendAction'。 |
-| callback | (action: ExtendAction) =&gt; void | 是 | 回调函数，返回扩展编辑操作类型。根据传入的扩展编辑操作类型，做相应的操作，如剪切、复制等。 |
+| callback | (action: ExtendAction) =&gt; void | 是 | 回调函数，返回扩展编辑操作类型。<br>根据传入的扩展编辑操作类型，做相应的操作，如剪切、复制等。 |
 
 **错误码：**
 
@@ -1618,19 +1554,13 @@ inputMethod.getController().on('getTextIndexAtCursor', () => {
 on(type: 'setPreviewText', callback: SetPreviewTextCallback): void
 ```
 
-订阅输入法应用操作文本预览内容的事件。使用callback异步回调。  
-> **说明：**
-   
-> 
-   
-> 使用预览文本功能，需在调用
-   
-> [attach](#attach)
-   
-> 前订阅此事件，并和
-   
-> on('finishTextPreview')
-   
+订阅输入法应用操作文本预览内容的事件。使用callback异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
+> 使用预览文本功能，需在调用<br>
+> [attach](#attach) <br>
+> 前订阅此事件，并和<br>
+> [on('finishTextPreview')](#onfinishtextpreview) <br>
 > 一起订阅。
 
 **起始版本：** 17
@@ -1680,19 +1610,13 @@ console.info(`All callbacks unsubscribed from setPreviewText`);
 on(type: 'finishTextPreview', callback: Callback<void>): void
 ```
 
-订阅结束文本预览事件。使用callback异步回调。  
-> **说明：**
-   
-> 
-   
-> 使用预览文本功能，需在调用
-   
-> [attach](#attach)
-   
-> 前订阅此事件，并和
-   
-> [on('setPreviewText')](#onsetpreviewtext)
-   
+订阅结束文本预览事件。使用callback异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
+> 使用预览文本功能，需在调用<br>
+> [attach](#attach) <br>
+> 前订阅此事件，并和<br>
+> [on('setPreviewText')](#onsetpreviewtext) <br>
 > 一起订阅。
 
 **起始版本：** 17
@@ -1743,19 +1667,13 @@ console.info(`All callbacks unsubscribed from finishTextPreview`);
 recvMessage(msgHandler?: MessageHandler): void
 ```
 
-注册或取消注册MessageHandler。  
-> **说明：**
-   
-> 
-   
-> [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md)对象全局唯一，多次注册仅保留最后一次注册的对象及有效性，并触发上一个已注册对象的
-   
-> [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)回调函数。
-   
-> 
-   
-> 未填写参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethod-messagehandler-i.md)，并触发被取消注册对象中
-   
+注册或取消注册MessageHandler。<br> <br>   
+> **说明：** <br>
+> <br>
+> [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md)对象全局唯一，多次注册仅保留最后一次注册的对象及有效性，并触发上一个已注册对象的<br>
+> [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)回调函数。<br>
+> <br>
+> 未填写参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethod-messagehandler-i.md)，并触发被取消注册对象中<br>
 > [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)回调函数。
 
 **起始版本：** 15
@@ -1766,7 +1684,7 @@ recvMessage(msgHandler?: MessageHandler): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| msgHandler | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | 否 | 该对象通过[onMessage](arkts-ime-inputmethod-messagehandler-i.md#onmessage)接收来自输入法应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)接收终止此对象订阅的消息。若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethod-messagehandler-i.md)对象，同时触发其[onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)回调函数。 |
+| msgHandler | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | 否 | 该对象通过[onMessage](arkts-ime-inputmethod-messagehandler-i.md#onmessage)接收来自输入法应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)接收终止此对象订阅的消息。<br>若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethod-messagehandler-i.md)对象，同时触发其[onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)回调函数。 |
 
 **错误码：**
 
@@ -1799,15 +1717,11 @@ inputMethodController.recvMessage();
 sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 ```
 
-发送自定义通信至输入法应用。使用Promise异步回调。  
-> **说明：**
-   
-> 
-   
-> 该接口需要编辑框与输入法绑定并进入编辑状态，且输入法应用处于完整体验模式时才能调用。
-   
-> 
-   
+发送自定义通信至输入法应用。使用Promise异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
+> 该接口需要编辑框与输入法绑定并进入编辑状态，且输入法应用处于完整体验模式时才能调用。<br>
+> <br>
 > msgId最大限制256B，msgParam最大限制128KB。
 
 **起始版本：** 15
@@ -1858,15 +1772,11 @@ inputMethod.getController().sendMessage(msgId, msgParam).then(() => {
 setCallingWindow(windowId: number, callback: AsyncCallback<void>): void
 ```
 
-设置要避让软键盘的窗口。使用callback异步回调。  
-> **说明：**
-   
-> 
-   
-> 编辑框与输入法绑定成功后，才可调用该接口设置避让软键盘的窗口。
-   
-> 
-   
+设置要避让软键盘的窗口。使用callback异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
+> 编辑框与输入法绑定成功后，才可调用该接口设置避让软键盘的窗口。<br>
+> <br>
 > 将绑定到输入法的应用程序所在的窗口Id传入，此窗口可以避让输入法窗口。
 
 **起始版本：** 10
@@ -1910,11 +1820,9 @@ inputMethod.getController().setCallingWindow(windowId, (err: BusinessError) => {
 setCallingWindow(windowId: number): Promise<void>
 ```
 
-设置要避让软键盘的窗口。使用promise异步回调。  
-> **说明：**
-   
-> 
-   
+设置要避让软键盘的窗口。使用promise异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
 > 将绑定到输入法的应用程序所在的窗口Id传入，此窗口可以避让输入法窗口。
 
 **起始版本：** 10
@@ -1961,15 +1869,9 @@ inputMethod.getController().setCallingWindow(windowId).then(() => {
 showSoftKeyboard(callback: AsyncCallback<void>): void
 ```
 
-显示输入法软键盘。使用callback异步回调。含义/功能：强制显示当前输入法的软键盘。使用场景：系统应用需要强制显示输入法软键盘时使用（如设置应用测试输入法）。使用后效果：输入法软键盘弹出显示。前提条件/前置操作：编辑框与输入法绑定时才能调用。相似接口差异点及选取原则：  
-- showSoftKeyboard：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY，仅显示键盘不改变编辑状态。  
-- showTextInput：面向自绘控件，需先attach绑定，拉起键盘并进入编辑状态。  
-- 选取原则：自绘控件使用showTextInput；系统应用且有权限时使用showSoftKeyboard。  
-   
-> **说明：**
-   
-> 
-   
+显示输入法软键盘。使用callback异步回调。<br> <br>含义/功能：强制显示当前输入法的软键盘。<br> <br>使用场景：系统应用需要强制显示输入法软键盘时使用（如设置应用测试输入法）。<br> <br>使用后效果：输入法软键盘弹出显示。<br> <br>前提条件/前置操作：编辑框与输入法绑定时才能调用。<br> <br>相似接口差异点及选取原则：<br> <br>- showSoftKeyboard：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY，仅显示键盘不改变编辑状态。<br>- showTextInput：面向自绘控件，需先attach绑定，拉起键盘并进入编辑状态。<br>- 选取原则：自绘控件使用showTextInput；系统应用且有权限时使用showSoftKeyboard。<br> <br>   
+> **说明：** <br>
+> <br>
 > 该接口需要编辑框与输入法绑定时才能调用，即点击编辑控件后，才可调用显示当前输入法的软键盘。
 
 **起始版本：** 9
@@ -2012,11 +1914,9 @@ inputMethod.getController().showSoftKeyboard((err: BusinessError) => {
 showSoftKeyboard(): Promise<void>
 ```
 
-显示输入法软键盘。使用Promise异步回调。  
-> **说明：**
-   
-> 
-   
+显示输入法软键盘。使用Promise异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
 > 该接口需要编辑框与输入法绑定时才能调用，即点击编辑控件后，才可调用显示当前输入法的软键盘。
 
 **起始版本：** 9
@@ -2057,15 +1957,9 @@ inputMethod.getController().showSoftKeyboard().then(() => {
 showTextInput(callback: AsyncCallback<void>): void
 ```
 
-进入文本编辑状态。使用callback异步回调。含义/功能：拉起软键盘，使编辑框进入文本编辑状态。使用场景：自绘控件绑定输入法后，需要显示软键盘开始文本输入时调用。使用后效果：软键盘弹出，编辑框进入可输入的文本编辑状态。前提条件/前置操作：需先调用[attach](#attach)完成绑定，否则会报12800009错误。相关接口间的配合/制约关系：showTextInput与hideTextInput必须配对使用。调用hideTextInput退出编辑状态后，需再次调用showTextInput才能重新进入编辑状态。相似接口差异点及选取原则：  
-- showTextInput：面向自绘控件，需先attach绑定后调用。适用于自绘控件场景，是标准的键盘显示方式。  
-- showSoftKeyboard：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY。适用于系统应用需要强制显示键盘的场景。  
-- 选取原则：自绘控件优先使用showTextInput；系统应用且有特殊需求时使用showSoftKeyboard。  
-   
-> **说明：**
-   
-> 
-   
+进入文本编辑状态。使用callback异步回调。<br> <br>含义/功能：拉起软键盘，使编辑框进入文本编辑状态。<br> <br>使用场景：自绘控件绑定输入法后，需要显示软键盘开始文本输入时调用。<br> <br>使用后效果：软键盘弹出，编辑框进入可输入的文本编辑状态。<br> <br>前提条件/前置操作：需先调用[attach](#attach)完成绑定，否则会报12800009错误。<br> <br>相关接口间的配合/制约关系：showTextInput与hideTextInput必须配对使用。调用hideTextInput退出编辑状态后，需再次调用showTextInput才能重新进入编辑状态。<br> <br>相似接口差异点及选取原则：<br> <br>- showTextInput：面向自绘控件，需先attach绑定后调用。适用于自绘控件场景，是标准的键盘显示方式。<br>- showSoftKeyboard：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY。适用于系统应用需要强制显示键盘的场景。<br>- 选取原则：自绘控件优先使用showTextInput；系统应用且有特殊需求时使用showSoftKeyboard。<br> <br>   
+> **说明：** <br>
+> <br>
 > 编辑框与输入法绑定成功后，可调用该接口拉起软键盘，进入文本编辑状态。
 
 **起始版本：** 10
@@ -2106,11 +2000,9 @@ inputMethod.getController().showTextInput((err: BusinessError) => {
 showTextInput(): Promise<void>
 ```
 
-进入文本编辑状态。使用promise异步回调。  
-> **说明：**
-   
-> 
-   
+进入文本编辑状态。使用promise异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
 > 编辑框与输入法绑定成功后，可调用该接口拉起软键盘，进入文本编辑状态。
 
 **起始版本：** 10
@@ -2149,11 +2041,9 @@ inputMethod.getController().showTextInput().then(() => {
 showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>
 ```
 
-进入文本编辑状态。使用promise异步回调。  
-> **说明：**
-   
-> 
-   
+进入文本编辑状态。使用promise异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
 > 编辑框与输入法绑定成功后，可调用该接口拉起软键盘，进入文本编辑状态。
 
 **起始版本：** 15
@@ -2200,11 +2090,9 @@ inputMethod.getController().showTextInput(requestKeyboardReason).then(() => {
 stopInput(callback: AsyncCallback<boolean>): void
 ```
 
-结束输入会话。使用callback异步回调。  
-> **说明：**
-   
-> 
-   
+结束输入会话。使用callback异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
 > 该接口需要编辑框与输入法绑定时才能调用，即点击编辑控件后，才可调用该接口结束输入会话。
 
 **起始版本：** 6
@@ -2245,11 +2133,9 @@ inputMethod.getController().stopInput((err: BusinessError, result: boolean) => {
 stopInput(): Promise<boolean>
 ```
 
-结束输入会话。使用promise异步回调。  
-> **说明：**
-   
-> 
-   
+结束输入会话。使用promise异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
 > 该接口需要编辑框与输入法绑定时才能调用，即点击编辑控件后，才可调用该接口结束输入会话。
 
 **起始版本：** 6
@@ -2288,11 +2174,9 @@ inputMethod.getController().stopInput().then((result: boolean) => {
 stopInputSession(callback: AsyncCallback<boolean>): void
 ```
 
-结束输入会话。使用callback异步回调。含义/功能：结束当前的输入会话，隐藏软键盘。使用场景：应用需要主动结束输入会话时调用（如用户完成了输入操作）。使用后效果：软键盘被隐藏，输入会话结束。前提条件/前置操作：编辑框与输入法绑定时才能调用，即点击编辑控件后。相关接口间的配合/制约关系：stopInputSession会隐藏软键盘并结束输入会话。如果使用自绘控件的attach/showTextInput/hideTextInput/detach流程，建议使用hideTextInput而非stopInputSession。  
-> **说明：**
-   
-> 
-   
+结束输入会话。使用callback异步回调。<br> <br>含义/功能：结束当前的输入会话，隐藏软键盘。<br> <br>使用场景：应用需要主动结束输入会话时调用（如用户完成了输入操作）。<br> <br>使用后效果：软键盘被隐藏，输入会话结束。<br> <br>前提条件/前置操作：编辑框与输入法绑定时才能调用，即点击编辑控件后。<br> <br>相关接口间的配合/制约关系：stopInputSession会隐藏软键盘并结束输入会话。如果使用自绘控件的attach/showTextInput/hideTextInput/detach流程，建议使用hideTextInput而非stopInputSession。<br> <br>   
+> **说明：** <br>
+> <br>
 > 该接口需要编辑框与输入法绑定时才能调用，即点击编辑控件后，才可调用该接口结束输入会话。
 
 **起始版本：** 9
@@ -2336,11 +2220,9 @@ inputMethod.getController().stopInputSession((err: BusinessError, result: boolea
 stopInputSession(): Promise<boolean>
 ```
 
-结束输入会话。使用promise异步回调。  
-> **说明：**
-   
-> 
-   
+结束输入会话。使用promise异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
 > 该接口需要编辑框与输入法绑定时才能调用，即点击编辑控件后，才可调用该接口结束输入会话。
 
 **起始版本：** 9
@@ -2425,11 +2307,9 @@ inputMethod.getController().updateAttribute(inputAttribute, (err: BusinessError)
 updateAttribute(attribute: InputAttribute): Promise<void>
 ```
 
-更新编辑框属性信息。使用promise异步回调。  
-> **说明：**
-   
-> 
-   
+更新编辑框属性信息。使用promise异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
 > 编辑框与输入法绑定成功后，才可调用该接口更新编辑框属性信息。
 
 **起始版本：** 10
@@ -2476,11 +2356,9 @@ inputMethod.getController().updateAttribute(inputAttribute).then(() => {
 updateCursor(cursorInfo: CursorInfo, callback: AsyncCallback<void>): void
 ```
 
-当编辑框内的光标信息发生变化时，调用该接口使输入法感知到光标变化。使用callback异步回调。  
-> **说明：**
-   
-> 
-   
+当编辑框内的光标信息发生变化时，调用该接口使输入法感知到光标变化。使用callback异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
 > 编辑框与输入法绑定成功后，才可调用该接口更新光标信息。
 
 **起始版本：** 10
@@ -2529,11 +2407,9 @@ inputMethod.getController().updateCursor(cursorInfo, (err: BusinessError) => {
 updateCursor(cursorInfo: CursorInfo): Promise<void>
 ```
 
-当编辑框内的光标信息发生变化时，调用该接口使输入法感知到光标变化。使用promise异步回调。  
-> **说明：**
-   
-> 
-   
+当编辑框内的光标信息发生变化时，调用该接口使输入法感知到光标变化。使用promise异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
 > 编辑框与输入法绑定成功后，才可调用该接口更新光标信息。
 
 **起始版本：** 10

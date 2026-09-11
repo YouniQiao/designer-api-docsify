@@ -79,7 +79,7 @@ Constructor used to create a **SubTabBarStyle** instance. You can set custom con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| ComponentContent | Yes | Content on the tab.   **NOTE：** 1. Custom content does not support the **labelStyle** attribute. 2. If the custom content exceeds the content box of the tab page, the excess part is not displayed. 3. If the custom content is within the content box of the tab page, it is aligned in the center. 4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; ComponentContent | Yes | Content on the tab.<br>**NOTE:**<br>1. Custom content does not support the **labelStyle** attribute.<br>2. If the custom content exceeds the content box of the tab page, the excess part is not displayed.<br>3. If the custom content is within the content box of the tab page, it is aligned in the center.<br>4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
 
 ## id
 
@@ -157,7 +157,7 @@ Sets the indicator style of the selected subtab. Compared with [indicator](#indi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) \| [DrawableTabBarIndicator](arkts-arkui-drawabletabbarindicator-i.md) | Yes | Yes |
+| value | [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) &#124; [DrawableTabBarIndicator](arkts-arkui-drawabletabbarindicator-i.md) | Yes | Yes |
 
 **Return value:**
 
@@ -241,7 +241,7 @@ Static constructor used to create a **SubTabBarStyle** instance. You can set cus
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| ComponentContent | Yes | Content on the tab. You can set custom content with **ComponentContent**.   **NOTE：** 1. Custom content does not support the **labelStyle** attribute. 2. If the custom content exceeds the content box of the tab page, the excess part is not displayed. 3. If the custom content is within the content box of the tab page, it is aligned in the center. 4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; ComponentContent | Yes | Content on the tab. You can set custom content with **ComponentContent**.<br>**NOTE:**<br>1. Custom content does not support the **labelStyle** attribute.<br>2. If the custom content exceeds the content box of the tab page, the excess part is not displayed.<br>3. If the custom content is within the content box of the tab page, it is aligned in the center.<br>4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
 
 **Return value:**
 
@@ -269,7 +269,7 @@ Sets the padding of the subtab. It cannot be set in percentage. When the paramet
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Padding \| [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Padding of the subtab.Value range: [0, +∞]Default value: **{left:8.0vp,right:8.0vp,top:17.0vp,bottom:18.0vp} |
+| value | Padding &#124; [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Padding of the subtab.<br>Value range: [0, +∞]<br>Default value: **{left:8.0vp,right:8.0vp,top:17.0vp,bottom:18.0vp} |
 
 **Return value:**
 
@@ -297,7 +297,7 @@ Sets the padding of the subtab. This API supports mirroring but does not support
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| padding | [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes | Padding of the subtab.Value range: [0, +∞]Default value: **{start:LengthMetrics.vp(8),end:LengthMetrics.vp(8)**    **top:LengthMetrics.vp(17),bottom:LengthMetrics.vp(18)} |
+| padding | [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes | Padding of the subtab.<br>Value range: [0, +∞]<br>Default value: **{start:LengthMetrics.vp(8),end:LengthMetrics.vp(8)**<br> **top:LengthMetrics.vp(17),bottom:LengthMetrics.vp(18)} |
 
 **Return value:**
 
@@ -325,7 +325,7 @@ Sets the display mode of the selected subtab. It takes effect only in the horizo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SelectedMode](arkts-arkui-selectedmode-e.md) | Yes | Display mode of the selected subtab.Default value: **SelectedMode.INDICATOR |
+| value | [SelectedMode](arkts-arkui-selectedmode-e.md) | Yes | Display mode of the selected subtab.<br>Default value: **SelectedMode.INDICATOR |
 
 **Return value:**
 

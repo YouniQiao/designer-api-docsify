@@ -1,10 +1,8 @@
 # InputMethodSubtype
 
-The **InputMethodSubtype** module provides APIs for managing the attributes of input method subtypes. The input method subtype allows the input method to switch to a specific mode or language, for example, the Chinese or English keyboard.   
-> **NOTE：**
-   
-> 
-> The initial APIs of this module are supported since API version 9. Newly added APIs will be marked with a superscript to indicate their earliest API version.
+The **InputMethodSubtype** module provides APIs for managing the attributes of input method subtypes. The input method subtype allows the input method to switch to a specific mode or language, for example, the Chinese or English keyboard. <br> <br>   
+> **NOTE:**<br>
+> <br> &gt;The initial APIs of this module are supported since API version 9. Newly added APIs will be marked with a superscript to indicate their earliest API version.
 
 **Since:** 9
 
@@ -22,10 +20,7 @@ import { InputMethodSubtype } from '@kit.IMEKit';
 extra?: object
 ```
 
-Extra information of the input method subtype.   
-**NOTE：**
-- This parameter is optional since API version 10.
-- This parameter is reserved and currently has no specific meaning.
+Extra information of the input method subtype. <br> <br> **NOTE:**<br> <br> - This parameter is optional since API version 10. <br> - This parameter is reserved and currently has no specific meaning.
 
 **Type:** object
 
@@ -139,7 +134,7 @@ readonly mode?: 'upper' | 'lower'
 
 Optional. Mode of the input method subtype, including **upper** (uppercase) and **lower** (lowercase).
 
-**Type:** 'upper' \| 'lower'
+**Type:** 'upper' &#124; 'lower'
 
 **Since:** 9
 

@@ -24,7 +24,7 @@ Opens the widget editing page.
 | --- | --- | --- | --- |
 | abilityName | string | Yes | Ability name on the editing page. |
 | formId | string | Yes | Widget ID. |
-| isMainPage | boolean | No | Whether the page is the main editing page.   - **true**: The page is the main editing page.   - **false**: The page is not the main editing page.   Default value: **true**. |
+| isMainPage | boolean | No | Whether the page is the main editing page.<br>- **true**: The page is the main editing page.<br>- **false**: The page is not the main editing page.<br>Default value: **true**. |
 
 **Error codes:**
 

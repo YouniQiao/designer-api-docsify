@@ -94,10 +94,10 @@ readLatestImage(callback: AsyncCallback<Image>): void
 
 Reads the latest image from the ImageReceiver instance. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called to receive data only after the
-> on callback is triggered.
+> [on](#onimagearrival) callback is triggered.
 > When the [Image](arkts-image-image-image-i.md) object returned by this API is no longer needed, call
 > [release](arkts-image-image-image-i.md#release) to release the
 > object. New data can be received only after the release.
@@ -120,10 +120,10 @@ readLatestImage(): Promise<Image>
 
 Reads the latest image from the ImageReceiver instance. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called to receive data only after the
-> on callback is triggered.
+> [on](#onimagearrival) callback is triggered.
 > When the [Image](arkts-image-image-image-i.md) object returned by this API is no longer needed, call
 > [release](arkts-image-image-image-i.md#release) to release the
 > object. New data can be received only after the release.
@@ -146,10 +146,10 @@ readNextImage(callback: AsyncCallback<Image>): void
 
 Reads the next image from the ImageReceiver instance. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called to receive data only after the
-> on callback is triggered.
+> [on](#onimagearrival) callback is triggered.
 > When the [Image](arkts-image-image-image-i.md) object returned by this API is no longer needed, call
 > [release](arkts-image-image-image-i.md#release) to release the
 > object. New data can be received only after the release.
@@ -172,10 +172,10 @@ readNextImage(): Promise<Image>
 
 Reads the next image from the ImageReceiver instance. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called to receive data only after the
-> on callback is triggered.
+> [on](#onimagearrival) callback is triggered.
 > When the [Image](arkts-image-image-image-i.md) object returned by this API is no longer needed, call
 > [release](arkts-image-image-image-i.md#release) to release the
 > object. New data can be received only after the release.
@@ -254,7 +254,7 @@ Only visible ASCII characters are supported. Spaces, newlines, tabs, and other c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Memory name to set. The maximum length is 256. |
+| name | string | Yes | Memory name to set.<br>The maximum length is 256. |
 
 **Error codes:**
 

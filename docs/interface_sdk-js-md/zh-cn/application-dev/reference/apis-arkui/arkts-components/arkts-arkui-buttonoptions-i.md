@@ -17,7 +17,7 @@
 buttonStyle?: ButtonStyleMode
 ```
 
-按钮的样式和重要程度。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过backgroundColor、[fontColor](arkts-arkui-button-attribute.md#fontcolor)和[role](arkts-arkui-button-attribute.md#role)接口设置，实际显示效果以最后一次设置为准。
+按钮的样式和重要程度。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过backgroundColor、[fontColor](arkts-arkui-button-comp-attribute.md#fontcolor)和[role](arkts-arkui-button-comp-attribute.md#role)接口设置，实际显示效果以最后一次设置为准。
 
 默认值：ButtonStyleMode.EMPHASIZED
 
@@ -69,7 +69,7 @@ controlSize?: ControlSize
 role?: ButtonRole
 ```
 
-按钮的角色。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过backgroundColor、[fontColor](arkts-arkui-button-attribute.md#fontcolor)和[buttonStyle](arkts-arkui-button-attribute.md#buttonstyle)接口设置，实际显示效果以最后一次设置为准。
+按钮的角色。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过backgroundColor、[fontColor](arkts-arkui-button-comp-attribute.md#fontcolor)和[buttonStyle](arkts-arkui-button-comp-attribute.md#buttonstyle)接口设置，实际显示效果以最后一次设置为准。
 
 默认值：ButtonRole.NORMAL
 

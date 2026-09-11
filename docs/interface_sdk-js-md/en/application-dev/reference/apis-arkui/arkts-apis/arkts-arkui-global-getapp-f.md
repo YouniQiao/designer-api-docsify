@@ -18,4 +18,3 @@ Obtain the objects exposed in app.js
 
 | Type | Description |
 | --- | --- |
-| object |  |

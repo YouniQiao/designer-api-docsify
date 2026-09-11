@@ -1,7 +1,8 @@
 # @ohos.measure(Text Measurement)
 
 The **measure** module provides APIs for measuring text metrics, such as text height and width.
- > **NOTE**
+
+> **NOTE**
  >
  > - This module cannot be used in the file declaration of the [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md). In
  > other words, the APIs of this module can be used only after a component instance is created; they cannot be called
@@ -19,6 +20,7 @@ The **measure** module provides APIs for measuring text metrics, such as text he
  > truncating by string length can split these multi-code-point characters, resulting in incorrect text display or
  > measurement errors. As such, you are advised to perform iterative processing based on Unicode code points during
  > truncation.
+
 
 
 ## Modules to Import

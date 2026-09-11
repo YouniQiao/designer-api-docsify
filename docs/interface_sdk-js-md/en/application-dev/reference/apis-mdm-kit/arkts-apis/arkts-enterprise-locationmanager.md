@@ -4,7 +4,7 @@ The **locationManager** module provides location service management capabilities
 
 **Use cases:** This module is applicable to enterprise device management scenarios, where administrators can centrally manage location service policies for devices.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The APIs of this module can be called only by a device administrator application that is enabled. For details, see
 > [MDM Kit Development](../../../mdm/mdm-kit-guide.md).

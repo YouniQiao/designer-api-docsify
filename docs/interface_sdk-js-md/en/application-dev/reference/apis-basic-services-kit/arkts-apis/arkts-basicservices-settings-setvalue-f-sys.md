@@ -106,7 +106,7 @@ Saves a character string name and its value to the database.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Returns `true` if the operation is successful; returns `false` otherwise. |
 
 **Examples**
 

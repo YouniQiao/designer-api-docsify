@@ -1,6 +1,6 @@
 # MechInfo
 
-机械设备信息
+机械设备信息@typedef MechInfo
 
 **起始版本：** 20
 

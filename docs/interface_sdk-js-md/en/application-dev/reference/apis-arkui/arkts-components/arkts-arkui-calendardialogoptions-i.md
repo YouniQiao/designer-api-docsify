@@ -4,7 +4,7 @@ Defines the configuration options of the calendar picker dialog box.
 
 Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When the application window is resized, the width of the dialog box is continuously compressed. If the window width
 > is reduced below a certain threshold, the content of the dialog box may not be fully visible. To ensure that the
@@ -45,7 +45,7 @@ onDidAppear?: VoidCallback
 
 Event callback after the dialog box appears.
 
-**NOTE：**
+**NOTE:**
 
 1. The normal timing sequence is as follows:
 onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear.
@@ -71,7 +71,7 @@ onDidDisappear?: VoidCallback
 
 Event callback after the dialog box disappears.
 
-**NOTE：**
+**NOTE:**
 
 1. The normal timing sequence is as follows:
 onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear.
@@ -92,7 +92,7 @@ onWillAppear?: VoidCallback
 
 Event callback when the dialog box is about to appear.
 
-**NOTE：**
+**NOTE:**
 
 1. The normal timing sequence is as follows:
 onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear.
@@ -115,7 +115,7 @@ onWillDisappear?: VoidCallback
 
 Event callback when the dialog box is about to disappear.
 
-**NOTE：**
+**NOTE:**
 
 1. The normal timing sequence is as follows:
 onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear.
@@ -138,7 +138,7 @@ acceptButtonStyle?: PickerDialogButtonStyle
 
 Style of the accept button.
 
-**NOTE：**
+**NOTE:**
 
 In the **acceptButtonStyle** and **cancelButtonStyle** configurations, only one **primary** field can be set to **true** at most. If both the **primary** fields are set to **true**, neither will take effect.
 
@@ -162,7 +162,7 @@ Background blur style of the dialog box.
 
 Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
-**NOTE：**
+**NOTE:**
 
 Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
@@ -206,7 +206,7 @@ Backplane color of the dialog box.
 
 Default value: **Color.Transparent**
 
-**NOTE：**
+**NOTE:**
 
 When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to **BlurStyle.NONE**; otherwise, the color display may not meet the expected effect.
 
@@ -248,7 +248,7 @@ cancelButtonStyle?: PickerDialogButtonStyle
 
 Style of the cancel button.
 
-**NOTE：**
+**NOTE:**
 
 In the **acceptButtonStyle** and **cancelButtonStyle** configurations, only one **primary** field can be set to **true** at most. If both the **primary** fields are set to **true**, neither will take effect.
 
@@ -384,7 +384,7 @@ Shadow of the dialog box.
 
 Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise
 
-**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
+**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **Since:** 12
 

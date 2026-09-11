@@ -1,6 +1,6 @@
 # ScriptItem
 
-Describes the **ScriptItem** object registered with the **Web** component through the [javaScriptOnDocumentStart](arkts-arkweb-web-attribute.md#javascriptondocumentstart) attribute.
+Describes the **ScriptItem** object registered with the **Web** component through the [javaScriptOnDocumentStart](arkts-arkweb-web-comp-attribute.md#javascriptondocumentstart) attribute.
 
 @interface ScriptItem [since 11 - 11]
 

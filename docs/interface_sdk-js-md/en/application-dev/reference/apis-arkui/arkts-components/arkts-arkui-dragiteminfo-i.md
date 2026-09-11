@@ -19,7 +19,7 @@ builder?: CustomBuilder
 
 Custom component to display during dragging. If **pixelMap** is set, this parameter is ignored.
 
-**NOTE：**
+**NOTE:**
 
 Global builder definition is not supported. If the Image component is used in the builder, enable synchronous loading whenever possible, that is, set the syncLoad attribute of the component to **true**. The builder is used only to generate the image displayed during the current dragging. Changes to the builder, if any, apply to the next dragging, but not to the current dragging.
 

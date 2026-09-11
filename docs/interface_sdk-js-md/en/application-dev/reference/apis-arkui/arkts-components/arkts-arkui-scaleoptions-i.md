@@ -21,7 +21,7 @@ X coordinate of the transformation center point (anchor). The value can be of th
 
 Unit: vp
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 7
 
@@ -41,7 +41,7 @@ Y coordinate of the transformation center point (anchor). The value can be of th
 
 Unit: vp
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 7
 
@@ -93,7 +93,7 @@ Scale ratio along the y-axis. y &gt; 1: The component is scaled up along the y-a
 z?: number
 ```
 
-Scale ratio along the z-axis. z &gt; 1: The component is scaled up along the z-axis. 0 &lt; z &lt; 1: The component is scaled down along the z-axis. z &lt; 0: The component is scaled in the reverse direction of the z-axis.
+Scale ratio along the z-axis. z &gt; 1: The component is scaled up along the z-axis. <br>0 &lt; z &lt; 1: The component is scaled down along the z-axis. <br>z &lt; 0: The component is scaled in the reverse direction of the z-axis.
 
 **Type:** number
 

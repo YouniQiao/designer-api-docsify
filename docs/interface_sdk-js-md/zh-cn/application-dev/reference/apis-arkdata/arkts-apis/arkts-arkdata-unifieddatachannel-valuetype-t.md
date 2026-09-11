@@ -21,8 +21,8 @@ type ValueType = number | number | number | string | boolean | image.PixelMap | 
 | double | 表示Double的类型。 |
 | string | 表示string的类型。 |
 | boolean | 表示boolean的类型。 |
-| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 表示[image.PixelMap]{ |
-| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 表示[Want]{ |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 表示[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)的类型。 |
+| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 表示[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)的类型。 |
 | ArrayBuffer | 表示ArrayBuffer的类型。 |
 | object | 表示object的类型。 |
 | null | 表示null。 |

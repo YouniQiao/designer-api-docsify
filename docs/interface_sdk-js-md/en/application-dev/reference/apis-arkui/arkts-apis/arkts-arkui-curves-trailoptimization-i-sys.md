@@ -20,7 +20,7 @@ import { curves } from '@kit.ArkUI';
 progressThreshold?: number
 ```
 
-Animation progress threshold. Value range: &lt;0, 1&gt;.
+Animation progress threshold. <br>Value range: &lt;0, 1&gt;.
 
 **Type:** number
 

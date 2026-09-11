@@ -35,7 +35,7 @@ Sets the color of the dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the dot-style navigation indicator.Default value: **'#1A182431'** (light gray) |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the dot-style navigation indicator.<br>Default value: **'#1A182431'** (light gray) |
 
 **Return value:**
 
@@ -51,7 +51,7 @@ constructor()
 
 A constructor used to create a **DotIndicator** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - When pressed, the navigation indicator is zoomed in to 1.33 times. To account for this, there is a certain
 > distance between the navigation indicator's visible boundary and its actual boundary in the non-pressed state.
@@ -123,7 +123,7 @@ Sets the height of a dot-style navigation indicator of the **Swiper** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the dot-style indicator. This parameter cannot be set in percentage.Default value: **6**Unit: vp Value range: (0, +∞) |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the dot-style indicator. This parameter cannot be set in percentage.<br>Default value: **6**<br>Unit: vp<br>Value range: (0, +∞) |
 
 **Return value:**
 
@@ -153,7 +153,7 @@ Sets the width of a dot-style navigation indicator of the **Swiper** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the dot-style indicator. This parameter cannot be set in percentage.Default value: **6**Unit: vp Value range: (0, +∞) |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the dot-style indicator. This parameter cannot be set in percentage.<br>Default value: **6**<br>Unit: vp<br>Value range: (0, +∞) |
 
 **Return value:**
 
@@ -183,7 +183,7 @@ Sets whether to enable the mask for the dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable the mask for the dot-style navigation indicator. The value **true** means to enable the mask for the dot-style navigation indicator, and **false** means the opposite.Default value: **false**. |
+| value | boolean | Yes | Whether to enable the mask for the dot-style navigation indicator. The value **true** means to enable the mask for the dot-style navigation indicator, and **false** means the opposite.<br>Default value: **false**. |
 
 **Return value:**
 
@@ -211,7 +211,7 @@ Sets the maximum number of navigation dots in the dot-style navigation indicator
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxDisplayCount | number | Yes | Maximum number of navigation dots in the dot-style navigation point indicator. If the actual number of navigation dots exceeds this limit, the overflow effect is activated, as shown in [Example 5](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#example-5-configuring-overflow-for-the-dot-style-indicator). This parameter has no default value. If an invalid value is set, no overflow effect is applied.Value range: [6, 9].   **NOTE：**In scenarios involving overflow display: 1. Interactive features, such as gestures and mouse operations, are not supported. 2. The position of the selected navigation dot corresponding to the middle page is not strictly fixed; it depends on the sequence of previous page-turning operations. 3. Currently, only scenarios with **displayCount** set to **1** are supported. |
+| maxDisplayCount | number | Yes | Maximum number of navigation dots in the dot-style navigation point indicator. If the actual number of navigation dots exceeds this limit, the overflow effect is activated, as shown in [Example 5](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#example-5-configuring-overflow-for-the-dot-style-indicator). <br>This parameter has no default value. If an invalid value is set, no overflow effect is applied.<br>Value range: [6, 9].<br>**NOTE:**<br>In scenarios involving overflow display:<br>1. Interactive features, such as gestures and mouse operations, are not supported.<br>2. The position of the selected navigation dot corresponding to the middle page is not strictly fixed; it depends on the sequence of previous page-turning operations.<br>3. Currently, only scenarios with **displayCount** set to **1** are supported. |
 
 **Return value:**
 
@@ -241,7 +241,7 @@ Sets the color of the selected dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the selected dot-style navigation indicator.Default value: **'#007DFF'** (blue) |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the selected dot-style navigation indicator.<br>Default value: **'#007DFF'** (blue) |
 
 **Return value:**
 
@@ -271,7 +271,7 @@ Sets the height of the selected dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the selected dot-style indicator. This parameter cannot be set in percentage.Default value: **6**Unit: vp Value range: (0, +∞) |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the selected dot-style indicator. This parameter cannot be set in percentage.<br>Default value: **6**<br>Unit: vp<br>Value range: (0, +∞) |
 
 **Return value:**
 
@@ -301,7 +301,7 @@ Sets the width of the selected dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the selected dot-style navigation indicator. This parameter cannot be set in percentage.Default value: **6**Unit: vp Value range: (0, +∞) |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the selected dot-style navigation indicator. This parameter cannot be set in percentage.<br>Default value: **6**<br>Unit: vp<br>Value range: (0, +∞) |
 
 **Return value:**
 
@@ -331,7 +331,7 @@ Sets the spacing between dot-style navigation indicators of the **Swiper** compo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Spacing between the dots in the dot-style navigation indicator. Percentage values are not supported.Default value: **10** for PCs and 2-in-1 devices and **8** for other devices Unit: vp Value range: [0, +∞) |
+| space | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Spacing between the dots in the dot-style navigation indicator. Percentage values are not supported.<br>Default value: **10** for PCs and 2-in-1 devices and **8** for other devices<br>Unit: vp<br>Value range: [0, +∞) |
 
 **Return value:**
 

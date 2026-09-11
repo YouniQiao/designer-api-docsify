@@ -1496,7 +1496,7 @@ export default class EntryAbility extends UIAbility {
 requestFocus(isFocused: boolean): Promise<void>
 ```
 
-支持当前窗口主动请求获焦/失焦，使用Promise异步回调。调用成功即返回，该接口返回值不代表最终获焦/失焦生效结果。可使用on('windowEvent')监听窗口获焦/失焦状态。
+支持当前窗口主动请求获焦/失焦，使用Promise异步回调。调用成功即返回，该接口返回值不代表最终获焦/失焦生效结果。可使用[on('windowEvent')](arkts-arkui-window-window-i.md#onwindowevent)监听窗口获焦/失焦状态。
 
 获焦请求发送后，窗口获焦结果受到窗口可获焦属性及窗口可见状态的限制。获焦成功的窗口需满足以下约束：1.窗口支持获焦；2.窗口可见（窗口已显示，未销毁且未退至后台）。
 
@@ -2359,7 +2359,7 @@ setSnapshotSkip(isSkip: boolean): void
 
 截屏、录屏或投屏是否忽略当前窗口。此接口一般用于禁止截屏、录屏或投屏的场景。
 
-若要实现窗口始终在前台忽略截屏、录屏或投屏，在窗口从后台回到前台时，需要通过on('windowEvent')监听窗口生命周期变化，在后台状态时设置为false，而在前台状态时设置为true。
+若要实现窗口始终在前台忽略截屏、录屏或投屏，在窗口从后台回到前台时，需要通过[on('windowEvent')](arkts-arkui-window-window-i.md#onwindowevent)监听窗口生命周期变化，在后台状态时设置为false，而在前台状态时设置为true。
 
 **起始版本：** 9
 
@@ -2371,7 +2371,7 @@ setSnapshotSkip(isSkip: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isSkip | boolean | 是 | 截屏、录屏或投屏是否忽略当前窗口，默认为false。true表示忽略当前窗口，false表示不忽略当前窗口。&lt;/br&gt; |
+| isSkip | boolean | 是 | 截屏、录屏或投屏是否忽略当前窗口，默认为false。<br>true表示忽略当前窗口，false表示不忽略当前窗口。&lt;/br&gt; |
 
 **错误码：**
 
@@ -2590,7 +2590,7 @@ setWaterMarkFlag(enable: boolean, callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300008](../errorcode-window.md#1300008-显示设备异常) | The display device is abnormal. |
@@ -2645,7 +2645,7 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300008](../errorcode-window.md#1300008-显示设备异常) | The display device is abnormal. |

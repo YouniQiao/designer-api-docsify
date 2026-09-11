@@ -37,7 +37,7 @@ value<T>(path?: string): IMonitorValue<T> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [IMonitorValue](arkts-arkui-imonitorvalue-i.md)&lt;T&gt; \| undefined |  |
+| [IMonitorValue](arkts-arkui-imonitorvalue-i.md)&lt;T&gt; &#124; undefined | @Monitor监听状态变量的路径以及变化前后值信息。<br>T为监听状态变量的类型。<br>当监听的路径不存在时，返回undefined。<br>API版本26.0.0之前，当未指定路径时，默认返回变化路径数组dirty中第一个路径对应的信息。<br>从API版本26.0.0开始，当未指定路径时，默认返回变化路径数组dirty中第一个非通配符路径对应的信息。<br>当指定路径为通配符路径时，返回undefined。<br>当未指定路径，且变化路径数组dirty中所有路径均为通配符路径时，返回undefined。 |
 
 **示例**
 

@@ -68,7 +68,7 @@ compressHeadPunctuation?: boolean
 
 Sets whether to use punctuation compression at the beginning of a line in text layout. **true** means yes; **false** otherwise. The default value is **false**.
 
-**NOTE：**
+**NOTE:**
 
 1. The font file must support the ss08 feature in [FontFeature](arkts-arkgraphics2d-text-fontfeature-i.md).
 Otherwise, compression cannot be performed.

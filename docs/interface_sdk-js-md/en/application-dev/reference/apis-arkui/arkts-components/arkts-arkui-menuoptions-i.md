@@ -27,13 +27,14 @@ Whether to show the menu in a subwindow.
 
 Default value: **true** for 2-in-1 devices and **false** for other devices
 
-**NOTE：**
+**NOTE:**
 
 This parameter takes effect only for 2-in-1 devices.
 
 **Type:** boolean
 
-**Default:** true for 2-in-1 devices [since 12]
+**Default:**
+- API version 12+: true for 2-in-1 devices
 
 **Since:** 11
 
@@ -51,7 +52,7 @@ title?: ResourceStr
 
 Menu title.
 
-**NOTE：**
+**NOTE:**
 
 This parameter is effective only when **content** is set to Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt;.
 

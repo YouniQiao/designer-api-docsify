@@ -24,7 +24,7 @@ function isSupportAction(mechId: number, actionType: ActionType): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mechId | number | 是 | 具身设备ID。取值限定为整数。 |
+| mechId | number | 是 | 具身设备ID。<br>取值限定为整数。 |
 | actionType | [ActionType](arkts-mechanic-mechanicmanager-actiontype-e-sys.md) | 是 | 动作序列类型。 |
 
 **返回值：**

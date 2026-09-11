@@ -40,7 +40,7 @@ Notification period before a domain account password expires, in seconds. The va
 
 The default value is **0**, indicating that the system does not display a message indicating that the domain account password has expired.
 
-**Note:** **passwordExpirationNotification** must be used together with **passwordValidityPeriod**. When the system time is later than or equal to (the time when the domain account password is last changed on the device + the value of **passwordValidityPeriod** – the value of **passwordExpirationNotification**), a message is displayed, indicating that the password is about to expire.
+**Note:****passwordExpirationNotification** must be used together with **passwordValidityPeriod**. When the system time is later than or equal to (the time when the domain account password is last changed on the device + the value of **passwordValidityPeriod** – the value of **passwordExpirationNotification**), a message is displayed, indicating that the password is about to expire.
 
 **Type:** number
 

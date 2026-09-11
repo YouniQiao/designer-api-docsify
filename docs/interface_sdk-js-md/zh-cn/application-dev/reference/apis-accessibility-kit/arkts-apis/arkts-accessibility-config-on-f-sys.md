@@ -14,7 +14,7 @@ function on(type: 'enabledAccessibilityExtensionListChange', callback: Callback<
 
 添加启用的辅助扩展的列表变化监听。使用callback异步回调。
 
-需与config.off('enabledAccessibilityExtensionListChange')配对使用，在不需要监听时调用off取消注册，避免资源泄漏。
+需与[config.off('enabledAccessibilityExtensionListChange')](arkts-accessibility-config-off-f-sys.md#offenabledaccessibilityextensionlistchange)配对使用，在不需要监听时调用off取消注册，避免资源泄漏。
 
 **起始版本：** 9
 
@@ -58,7 +58,7 @@ function on(type: 'installedAccessibilityListChange', callback: Callback<void>):
 
 添加已安装的辅助扩展的列表变化监听。使用callback异步回调。
 
-需与config.off('installedAccessibilityListChange')配对使用，在不需要监听时调用off取消注册，避免资源泄漏。
+需与[config.off('installedAccessibilityListChange')](arkts-accessibility-config-off-f-sys.md#offinstalledaccessibilitylistchange)配对使用，在不需要监听时调用off取消注册，避免资源泄漏。
 
 **起始版本：** 12
 

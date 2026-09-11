@@ -2,7 +2,7 @@
 
 The **charger** module enumerates charging types.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The APIs provided by this module are system APIs.
 

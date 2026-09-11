@@ -176,7 +176,7 @@ After calling [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys
 
 This API is used when the file owner decides to close a DLP file.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If a DLP file is no longer used, close the **dlpFile** object to release the memory.
 
@@ -248,7 +248,7 @@ After calling **openDLPFile()** to return a **DLPFile** object, the system must 
 
 This API is used when the file owner decides to close a DLP file.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If a DLP file is no longer used, close the **dlpFile** instance to release the memory.
 

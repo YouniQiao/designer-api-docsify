@@ -135,13 +135,13 @@ Obtains a video thumbnail. You can set the maximum timeout interval (**timeoutMs
 | timeUs | number | Yes | Time of the video for which a thumbnail is to be obtained, in μs. |
 | options | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | Relationship between the time passed in and the video frame. |
 | param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
-| timeoutMs | number | Yes | Timeout interval for obtaining the thumbnail. The value range is (0, 20000], in milliseconds.If the thumbnail is not obtained within the specified timeout interval, error code 5400104 is returned. |
+| timeoutMs | number | Yes | Timeout interval for obtaining the thumbnail. The value range is (0, 20000], in milliseconds.<br>If the thumbnail is not obtained within the specified timeout interval, error code 5400104 is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| undefined&gt; | Promise used to return the video thumbnail. |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) &#124; undefined&gt; | Promise used to return the video thumbnail. |
 
 **Error codes:**
 
@@ -162,7 +162,7 @@ fetchFramesByTimes(timesUs: number[], queryOption: AVImageQueryOptions, param: P
 
 Obtains video thumbnails in batches. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The given video resource is decoded first, and then image frames are extracted from each time point in the
 > **timesUs** array based on the provided **options** and **param**.
@@ -181,10 +181,10 @@ Obtains video thumbnails in batches. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timesUs | number[] | Yes | Set of time points of all thumbnails to be obtained in the video.The unit is microsecond (μs), and the value range of the array length is (0, 4096]. |
+| timesUs | number[] | Yes | Set of time points of all thumbnails to be obtained in the video.<br>The unit is microsecond (μs), and the value range of the array length is (0, 4096]. |
 | queryOption | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | Relationship between the time passed in and the video frame. |
 | param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
-| callback | [OnFrameFetched](arkts-media-media-onframefetched-t.md) | Yes | Thumbnail information to be returned and possible exception types.For details about the exception types, see the returned error code information. |
+| callback | [OnFrameFetched](arkts-media-media-onframefetched-t.md) | Yes | Thumbnail information to be returned and possible exception types.<br>For details about the exception types, see the returned error code information. |
 
 **Error codes:**
 
@@ -206,7 +206,7 @@ fetchFramesByTimesWithTimeout(timesUs: number[], queryOption: AVImageQueryOption
 
 Obtains video thumbnails in batches. You can set the maximum timeout interval (**timeoutMs**) for obtaining each thumbnail. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The given video resource is decoded first, and then image frames are extracted from each time point in the
 > **timesUs** array based on the provided **options** and **param**.
@@ -228,11 +228,11 @@ Obtains video thumbnails in batches. You can set the maximum timeout interval (*
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timesUs | number[] | Yes | Set of time points of all thumbnails to be obtained in the video.The unit is microsecond (μs), and the value range of the array length is (0, 4096]. |
+| timesUs | number[] | Yes | Set of time points of all thumbnails to be obtained in the video.<br>The unit is microsecond (μs), and the value range of the array length is (0, 4096]. |
 | queryOption | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | Relationship between the time passed in and the video frame. |
 | param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
-| timeoutMs | number | Yes | Timeout interval for obtaining each thumbnail. The value range is (0, 20000], in milliseconds.If a thumbnail is not obtained within the specified timeout interval, error code 5400104 is returned. |
-| callback | [OnFrameFetched](arkts-media-media-onframefetched-t.md) | Yes | Thumbnail information to be returned and possible exception types.For details about the exception types, see the returned error code information. |
+| timeoutMs | number | Yes | Timeout interval for obtaining each thumbnail. The value range is (0, 20000], in milliseconds.<br>If a thumbnail is not obtained within the specified timeout interval, error code 5400104 is returned. |
+| callback | [OnFrameFetched](arkts-media-media-onframefetched-t.md) | Yes | Thumbnail information to be returned and possible exception types.<br>For details about the exception types, see the returned error code information. |
 
 **Error codes:**
 
@@ -315,13 +315,13 @@ Obtains the media metadata. You can set the maximum timeout interval (**timeoutM
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeoutMs | number | Yes | Timeout interval for obtaining media metadata. The value range is (0, 20000], in milliseconds.If no metadata is returned within the specified timeout interval, error code 5400104 is returned. |
+| timeoutMs | number | Yes | Timeout interval for obtaining media metadata. The value range is (0, 20000], in milliseconds.<br>If no metadata is returned within the specified timeout interval, error code 5400104 is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AVMetadata](arkts-media-media-avmetadata-i.md) \| undefined&gt; | Promise used to return the audio and video metadata object (**AVMetadata**) asynchronously. |
+| Promise&lt;[AVMetadata](arkts-media-media-avmetadata-i.md) &#124; undefined&gt; | Promise used to return the audio and video metadata object (**AVMetadata**) asynchronously. |
 
 **Error codes:**
 
@@ -397,7 +397,7 @@ Sets the data source for a network on-demand resource. Only network metadata ([f
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | URL of the media resource. 1. The video formats MP4, MPEG-TS, and MKV are supported. 2. The audio formats M4A, AAC, MP3, OGG, WAV, FLAC, and AMR are supported.    **Example of supported URLs**: 1. HTTP: http://xx 2. HTTPS: https://xx Note: HLS/DASH and live streaming resources are not supported. |
+| url | string | Yes | URL of the media resource.<br>1. The video formats MP4, MPEG-TS, and MKV are supported.<br>2. The audio formats M4A, AAC, MP3, OGG, WAV, FLAC, and AMR are supported.<br> **Example of supported URLs**:<br>1. HTTP: http://xx<br>2. HTTPS: https://xx<br>Note: HLS/DASH and live streaming resources are not supported. |
 | headers | Record&lt;string, string&gt; | No | Custom HTTP headers for accessing the network resource. The default value is empty. |
 
 ## dataSrc
@@ -426,7 +426,7 @@ Media file descriptor, which specifies the data source. Before obtaining metadat
 
 There is a media file that stores continuous assets, the address offset is 0, and the byte length is 100. Its file descriptor is **AVFileDescriptor { fd = resourceHandle; offset = 0; length = 100; }**.
 
-**NOTE：**
+**NOTE:**
 
 After the resource handle (FD) is transferred to an AVMetadataExtractor instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer, AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. Competition occurs when multiple AVMetadataExtractor use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
 

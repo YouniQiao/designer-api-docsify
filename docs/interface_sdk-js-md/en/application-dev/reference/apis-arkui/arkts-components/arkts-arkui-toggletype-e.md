@@ -14,7 +14,7 @@ Checkbox
 
 Checkbox type.
 
-**NOTE：**
+**NOTE:**
 
 Since API version 11, the default style of the **Checkbox** component is changed from rounded square to circle.
 
@@ -52,7 +52,7 @@ Switch
 
 Switch type.
 
-**NOTE：**
+**NOTE:**
 
 The default value of the universal attribute margin is as follows:
 

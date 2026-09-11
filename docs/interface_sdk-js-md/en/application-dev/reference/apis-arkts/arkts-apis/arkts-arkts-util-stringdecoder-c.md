@@ -56,7 +56,7 @@ Ends the decoding process and returns any remaining input stored in the internal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chunk | string \| Uint8Array | No | String to decode. The default value is **undefined**. |
+| chunk | string &#124; Uint8Array | No | String to decode. The default value is **undefined**. |
 
 **Return value:**
 
@@ -95,7 +95,7 @@ Decodes a string. Any incomplete multi-byte characters at the end of Uint8Array 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chunk | string \| Uint8Array | Yes | String to decode. Decoding is performed based on the input encoding type. If the input is of the Uint8Array type, decoding is performed normally. If the input is of the string type, the parameter is directly returned. |
+| chunk | string &#124; Uint8Array | Yes | String to decode. Decoding is performed based on the input encoding type. If the input is of the Uint8Array type, decoding is performed normally. If the input is of the string type, the parameter is directly returned. |
 
 **Return value:**
 

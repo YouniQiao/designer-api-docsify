@@ -6,6 +6,8 @@ declare type EdgeWidth = EdgeWidths
 
 Defines the border width property.
 
+@typedef { EdgeWidths } EdgeWidth
+
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.

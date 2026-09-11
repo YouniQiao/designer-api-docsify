@@ -1,6 +1,6 @@
 # WakeupIntelligentVoiceEngineDescriptor (System API)
 
-Describes wakeup intelligent voice engine.
+Describes wakeup intelligent voice engine. @typedef WakeupIntelligentVoiceEngineDescriptor
 
 **Since:** 10
 

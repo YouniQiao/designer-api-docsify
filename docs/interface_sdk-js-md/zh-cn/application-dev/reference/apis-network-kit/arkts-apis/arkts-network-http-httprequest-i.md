@@ -1049,7 +1049,7 @@ requestInStream(url: string, options?: HttpRequestOptions): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 以Promise形式返回发起请求的结果，具体含义见[ResponseCode]{ |
+| Promise&lt;number&gt; | 以Promise形式返回发起请求的结果，具体含义见[ResponseCode](arkts-network-http-responsecode-e.md)。 |
 
 **错误码：**
 

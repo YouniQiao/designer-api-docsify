@@ -2,7 +2,7 @@
 
 The **dragInteraction** module provides the APIs to enable and disable listening for dragging status changes.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The APIs provided by this module are system APIs.
 
@@ -26,8 +26,8 @@ import { dragInteraction } from '@kit.ArkUI';
 | Name | Description |
 | --- | --- |
 | [getDataSummary](arkts-arkui-draginteraction-getdatasummary-f-sys.md) | Obtains the data summary of all dragged objects. |
-| [off](../../apis-test-kit/arkts-apis/arkts-test-uitest-driver-c.md#drag) | Disables listening for dragging status changes. |
-| [on](../../apis-test-kit/arkts-apis/arkts-test-uitest-driver-c.md#drag) | Enables listening for dragging status changes. |
+| [off](arkts-arkui-draginteraction-off-f-sys.md#offdrag) | Disables listening for dragging status changes. |
+| [on](arkts-arkui-draginteraction-on-f-sys.md#ondrag) | Enables listening for dragging status changes. |
 <!--DelEnd-->
 
 <!--Del-->

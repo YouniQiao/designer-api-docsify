@@ -15,7 +15,7 @@ new (value: number | string | Date): Date
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Date | Yes |  |
+| value | number &#124; string &#124; Date | Yes |  |
 
 **Return value:**
 

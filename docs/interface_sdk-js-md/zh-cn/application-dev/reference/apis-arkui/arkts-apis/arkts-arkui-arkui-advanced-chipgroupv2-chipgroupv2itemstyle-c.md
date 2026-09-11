@@ -188,7 +188,7 @@ ChipV2尺寸，使用时需要从ChipV2组件引入ChipV2Size类型。
 
 值为undefined时，按默认值处理。
 
-**类型：** [ChipV2Size](arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) \| [SizeT](arkts-arkui-graphics-sizet-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt;
+**类型：** [ChipV2Size](arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) &#124; [SizeT](arkts-arkui-graphics-sizet-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt;
 
 **起始版本：** 26.0.0
 

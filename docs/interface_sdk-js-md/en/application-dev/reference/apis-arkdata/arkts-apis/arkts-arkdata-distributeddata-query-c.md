@@ -203,7 +203,7 @@ Creates a **Query** object to search for the records with the specified field th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to query. It cannot contain '^'. |
-| value | number \| string \| boolean | Yes | Value to match. |
+| value | number &#124; string &#124; boolean | Yes | Value to match. |
 
 **Return value:**
 
@@ -279,7 +279,7 @@ Creates a **Query** object to search for the records with the specified field th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to query. It cannot contain '^'. |
-| value | number \| string \| boolean | Yes | Value to match. |
+| value | number &#124; string &#124; boolean | Yes | Value to match. |
 
 **Return value:**
 
@@ -321,7 +321,7 @@ Creates a **Query** object to search for the records with the specified field th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to query. It cannot contain '^'. |
-| value | number \| string | Yes | Value to match. |
+| value | number &#124; string | Yes | Value to match. |
 
 **Return value:**
 
@@ -529,7 +529,7 @@ Creates a **Query** object to search for the records with the specified field th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to query. It cannot contain '^'. |
-| value | number \| string | Yes | Value to match. |
+| value | number &#124; string | Yes | Value to match. |
 
 **Return value:**
 
@@ -571,7 +571,7 @@ Creates a **Query** object to search for the records with the specified field th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to query. It cannot contain '^'. |
-| value | number \| string | Yes | Value to match. |
+| value | number &#124; string | Yes | Value to match. |
 
 **Return value:**
 
@@ -700,7 +700,7 @@ Creates a **Query** object to search for the records with the specified field th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to query. It cannot contain '^'. |
-| value | number \| string \| boolean | Yes | Value to match. |
+| value | number &#124; string &#124; boolean | Yes | Value to match. |
 
 **Return value:**
 

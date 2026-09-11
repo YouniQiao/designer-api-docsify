@@ -41,9 +41,9 @@ import { emitter } from '@kit.BasicServicesKit';
 | [getListenerCount](arkts-basicservices-emitter-getlistenercount-f.md) | 获取指定事件的订阅数。 |
 | [off](arkts-basicservices-emitter-off-f.md) | 取消事件ID为eventId的所有订阅。 |
 | [off](arkts-basicservices-emitter-off-f.md) | 取消事件ID为eventId的所有订阅。 |
-| [off](arkts-basicservices-emitter-off-f.md) | 取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用on或once接口订阅callback时，该接口才生效。 |
-| [off](arkts-basicservices-emitter-off-f.md) | 取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用on或once接口订阅callback时，该接口才生效。 |
-| [off](arkts-basicservices-emitter-off-f.md) | 取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用on或once接口订阅callback时，该接口才生效。 |
+| [off](arkts-basicservices-emitter-off-f.md) | 取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用[on](arkts-basicservices-emitter-on-f.md)或[once](arkts-basicservices-emitter-once-f.md)接口订阅callback时，该接口才生效。 |
+| [off](arkts-basicservices-emitter-off-f.md) | 取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用[on](arkts-basicservices-emitter-on-f.md)或[once](arkts-basicservices-emitter-once-f.md)接口订阅callback时，该接口才生效。 |
+| [off](arkts-basicservices-emitter-off-f.md) | 取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用[on](arkts-basicservices-emitter-on-f.md)或[once](arkts-basicservices-emitter-once-f.md)接口订阅callback时，该接口才生效。 |
 | [on](arkts-basicservices-emitter-on-f.md) | 持续订阅指定的事件，并在接收到该事件时，执行对应的回调处理函数。 |
 | [on](arkts-basicservices-emitter-on-f.md) | 持续订阅指定的事件，并在接收到该事件时，执行对应的回调处理函数。 |
 | [on](arkts-basicservices-emitter-on-f.md) | 持续订阅指定的事件，并在接收到该事件时，执行对应的回调处理函数。 |

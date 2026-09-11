@@ -14,7 +14,7 @@ This module provides Wi-Fi management capabilities for enterprise devices, inclu
 - Ensure that devices connect only to secure Wi-Fi networks, reducing security risks.  
 - Implement unified management and control of network policies to meet enterprise compliance requirements.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The APIs of this module can be called only by a device administrator application that is enabled. For details, see
 > [MDM Kit Development](../../../mdm/mdm-kit-guide.md).

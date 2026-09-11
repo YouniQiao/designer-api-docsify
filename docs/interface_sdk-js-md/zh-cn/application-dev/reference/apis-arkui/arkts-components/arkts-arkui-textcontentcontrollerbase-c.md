@@ -126,7 +126,7 @@ deleteText(range?: TextRange): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 否 | 删除文本的范围，包括删除文本的起始位置和终止位置。起始位置应小于等于结束位置，否则接口调用无效。起始位置小于0视为0，结束位置大于文本长度视为文本长度。未指定删除范围时，默认将删除全部文本。未指定删除文本的起始位置，则默认从下标0开始删除；未指定删除文本的终止位置，则默认以文本末尾作为删除的结束点。 |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 否 | 删除文本的范围，包括删除文本的起始位置和终止位置。<br>起始位置应小于等于结束位置，否则接口调用无效。起始位置小于0视为0，结束位置大于文本长度视为文本长度。<br>未指定删除范围时，默认将删除全部文本。未指定删除文本的起始位置，则默认从下标0开始删除；未指定删除文本的终止位置，则默认以文本末尾作为删除的结束点。 |
 
 ## getCaretOffset
 
@@ -160,7 +160,7 @@ getCaretOffset() : CaretOffset
 
 | 类型 | 说明 |
 | --- | --- |
-| [CaretOffset](arkts-arkui-caretoffset-i.md) | 光标相对输入框的位置。 |
+| [CaretOffset](arkts-arkui-caretoffset-i.md) | 光标相对输入框的位置。<br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## getSelection
 
@@ -182,7 +182,7 @@ getSelection(): TextRange
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 文本当前的选择范围，未选中返回光标位置。 |
+| [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 文本当前的选择范围，未选中返回光标位置。<br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## getTextContentLineCount
 
@@ -204,7 +204,7 @@ getTextContentLineCount() : number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 已编辑文本内容行数。 |
+| number | 已编辑文本内容行数。<br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## getTextContentRect
 
@@ -233,7 +233,7 @@ getTextContentRect() : RectResult
 
 | 类型 | 说明 |
 | --- | --- |
-| [RectResult](arkts-arkui-rectresult-i.md) | 获取已编辑文本内容区域相对组件的位置和大小。 |
+| [RectResult](arkts-arkui-rectresult-i.md) | 获取已编辑文本内容区域相对组件的位置和大小。<br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## scrollToVisible
 
@@ -259,7 +259,7 @@ scrollToVisible(range?: TextRange): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 否 | 滚动到可视区域的文本范围，包括文本起始位置和终止位置。起始位置应小于等于结束位置，否则接口调用无效。起始位置小于0视为0，结束位置大于全文长度视为全文长度。未指定范围时，默认为全部文本。未指定起始位置，默认起始位置为0；未指定结束位置，默认结束位置为全文长度。 |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 否 | 滚动到可视区域的文本范围，包括文本起始位置和终止位置。<br>起始位置应小于等于结束位置，否则接口调用无效。起始位置小于0视为0，结束位置大于全文长度视为全文长度。<br>未指定范围时，默认为全部文本。未指定起始位置，默认起始位置为0；未指定结束位置，默认结束位置为全文长度。 |
 
 ## setStyledPlaceholder
 
@@ -285,4 +285,4 @@ setStyledPlaceholder(styledString: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 | 设置属性字符串样式的Placeholder，其优先级高于纯文本的placeholder属性。Placeholder不支持属性字符串事件手势，超链接跳转。 |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 | 设置属性字符串样式的Placeholder，其优先级高于纯文本的placeholder属性。<br>Placeholder不支持属性字符串事件手势，超链接跳转。 |

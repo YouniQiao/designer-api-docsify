@@ -25,4 +25,3 @@ Get components tree.
 
 | Type | Description |
 | --- | --- |
-| Object |  |

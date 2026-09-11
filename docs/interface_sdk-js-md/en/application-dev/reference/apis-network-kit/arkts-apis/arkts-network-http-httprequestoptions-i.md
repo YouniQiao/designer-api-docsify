@@ -41,7 +41,7 @@ is serialized before being sent, and an **ArrayBuffer** is sent in binary format
 
 **Since**: 26.0.0
 
-**Type:** string \| Object \| ArrayBuffer
+**Type:** string &#124; Object &#124; ArrayBuffer
 
 **Since:** 26.0.0
 
@@ -93,7 +93,7 @@ certificatePinning?: CertificatePinning | CertificatePinning[]
 
 Dynamic configuration of certificate pinning. One or more certificate PINs can be specified.
 
-**Type:** [CertificatePinning](arkts-network-http-certificatepinning-i.md) \| [CertificatePinning](arkts-network-http-certificatepinning-i.md)[]
+**Type:** [CertificatePinning](arkts-network-http-certificatepinning-i.md) &#124; [CertificatePinning](arkts-network-http-certificatepinning-i.md)[]
 
 **Since:** 12
 
@@ -240,7 +240,7 @@ extraData?: string | Object | ArrayBuffer
 
 Additional data for sending a request. This parameter is not used by default. Since API version 26, you are advised to use the **body** and **queryParams** parameters preferentially.
 
-**Note：**: Do not add this parameter if no extra data is available. If this parameter must be added, set it to **undefined** or **null**. Do not pass the parameter as "".
+**Note:** Do not add this parameter if no extra data is available. If this parameter must be added, set it to **undefined** or **null**. Do not pass the parameter as "".
 
 - If the HTTP request uses a POST, PUT, or DELETE method, this field serves as the content of the HTTP request  
 and is encoded in UTF-8 format.
@@ -262,7 +262,7 @@ The preceding information is for reference only and may vary according to the ac
 - If the HTTP request uses the GET, OPTIONS, TRACE, or CONNECT method, this parameter serves as a supplement to  
 HTTP request parameters. Parameters of the string type need to be encoded before being passed to the HTTP request. Parameters of the object type do not need to be precoded and will be directly concatenated to the URL. Parameters of the ArrayBuffer type will not be concatenated to the URL.
 
-**Type:** string \| Object \| ArrayBuffer
+**Type:** string &#124; Object &#124; ArrayBuffer
 
 **Since:** 6
 
@@ -421,7 +421,7 @@ parameter supplementation logic in **extraData** is ignored.
 
 **Since**: 26.0.0
 
-**Type:** string \| [QueryParamObject](arkts-network-http-queryparamobject-t.md)
+**Type:** string &#124; [QueryParamObject](arkts-network-http-queryparamobject-t.md)
 
 **Since:** 26.0.0
 
@@ -630,7 +630,7 @@ no proxy is used.
 - If **usingProxy** is of the **HttpProxy** type, the specified network proxy is used. The HttpProxy supports the  
 **username** and **password** fields from API version 22.
 
-**Type:** boolean \| [HttpProxy](arkts-network-http-httpproxy-t.md)
+**Type:** boolean &#124; [HttpProxy](arkts-network-http-httpproxy-t.md)
 
 **Since:** 10
 

@@ -14,7 +14,7 @@ function getUidTxBytes(uid: number, callback: AsyncCallback<number>): void
 
 Obtains the total uplink traffic (in bytes) of the specified application from the last startup to the time when this API is called. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the application has not generated any traffic consumption after the restart, error code 2103005 will be
 > thrown.
@@ -70,7 +70,7 @@ function getUidTxBytes(uid: number): Promise<number>
 
 Obtains the total uplink traffic of the specified application from the last startup to the time when this API is called (in bytes). This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the application has not generated any traffic consumption after the restart, error code 2103005 will be
 > thrown.

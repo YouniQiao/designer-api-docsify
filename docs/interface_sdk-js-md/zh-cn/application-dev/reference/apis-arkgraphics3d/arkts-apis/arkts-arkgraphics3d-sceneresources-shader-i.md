@@ -28,7 +28,7 @@ setShaderInputs(inputs: Record<string, number | Vec2 | Vec3 | Vec4 | Image>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inputs | Record&lt;string, number \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| [Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt; | 是 | 一个字符串到值的映射，用于设置着色器输入。 |
+| inputs | Record&lt;string, number &#124; [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) &#124; [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) &#124; [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) &#124; [Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt; | 是 | 一个字符串到值的映射，用于设置着色器输入。 |
 
 **示例**
 
@@ -77,7 +77,7 @@ readonly inputs: Record<string, number | Vec2 | Vec3 | Vec4 | Image>
 
 着色器输入。
 
-**类型：** Record&lt;string, number \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| [Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt;
+**类型：** Record&lt;string, number &#124; [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) &#124; [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) &#124; [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) &#124; [Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt;
 
 **起始版本：** 12
 

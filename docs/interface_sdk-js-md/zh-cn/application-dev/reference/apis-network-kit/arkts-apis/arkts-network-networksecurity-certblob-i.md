@@ -20,7 +20,7 @@ data: string | ArrayBuffer
 
 证书内容。
 
-**类型：** string \| ArrayBuffer
+**类型：** string &#124; ArrayBuffer
 
 **起始版本：** 11
 

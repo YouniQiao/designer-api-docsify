@@ -123,8 +123,6 @@ Called when the subscriber ID is entered.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## notifyHasChanged
 
 ```TypeScript

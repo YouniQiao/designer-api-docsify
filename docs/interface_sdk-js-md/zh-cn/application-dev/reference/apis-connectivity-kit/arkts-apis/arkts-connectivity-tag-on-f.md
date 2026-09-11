@@ -12,7 +12,7 @@ import { tag } from '@kit.ConnectivityKit';
 function on(type: 'readerMode', elementName: ElementName, discTech: number[], callback: AsyncCallback<TagInfo>): void
 ```
 
-订阅NFC Tag读卡事件，实现前台应用优先分发。设备会进入读卡器模式，同时关闭卡模拟。通过discTech设置支持的读卡技术类型，通过callback方式获取到Tag的[TagInfo](arkts-connectivity-tag-taginfo-i.md)信息。需要与取消读卡器模式的tag.off成对使用，如果已通过on进行设置，需要在页面退出前台或页面销毁时调用tag.off。使用callback异步回调。与注册读卡器模式的tag.on互斥使用。
+订阅NFC Tag读卡事件，实现前台应用优先分发。设备会进入读卡器模式，同时关闭卡模拟。通过discTech设置支持的读卡技术类型，通过callback方式获取到Tag的[TagInfo](arkts-connectivity-tag-taginfo-i.md)信息。需要与取消读卡器模式的[tag.off](arkts-connectivity-tag-off-f.md#offreadermode)成对使用，如果已通过on进行设置，需要在页面退出前台或页面销毁时调用[tag.off](arkts-connectivity-tag-off-f.md#offreadermode)。使用callback异步回调。与注册读卡器模式的tag.on互斥使用。
 
 **起始版本：** 11
 
@@ -36,7 +36,7 @@ function on(type: 'readerMode', elementName: ElementName, discTech: number[], ca
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [3100202](../errorcode-nfc.md#3100202-应用状态错误) | The element state is invalid. |
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) | The tag running state is abnormal in the service.<br>**适用版本：** 12+ |
@@ -59,7 +59,7 @@ function on(
 - 设备会进入读卡器模式，同时关闭卡模拟。  
 - 通过discTech设置支持的读卡技术类型，通过callback方式获取到Tag的[TagInfo](arkts-connectivity-tag-taginfo-i.md)信息，通过interval设置卡在位检测间隔。  
 - 需要与取消读卡器模式的  
-tag.off成对使用，如果已通过on进行设置，需要在页面退出前台或页面销毁时调用tag.off。  
+[tag.off](arkts-connectivity-tag-off-f.md#offreadermodewithinterval)成对使用，如果已通过on进行设置，需要在页面退出前台或页面销毁时调用[tag.off](arkts-connectivity-tag-off-f.md#offreadermodewithinterval)。  
 - 与注册读卡器模式的  
 tag.on互斥使用。
 

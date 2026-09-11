@@ -2,7 +2,7 @@
 
 TapGesture is used to trigger a tap gesture with one, two, or more taps.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When both double-tap and single-tap gestures are bound to a component with the double-tap gesture bound first, the
 > single-tap gesture will have a 300 ms delay.
@@ -44,8 +44,6 @@ When triggered by keyboard or gamepad input, the gesture event's [SourceTool](..
 
 | Type | Description |
 | --- | --- |
-| [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) |  |
-
 ## onAction
 
 ```TypeScript
@@ -70,4 +68,3 @@ Triggered when the tap gesture is recognized.
 
 | Type | Description |
 | --- | --- |
-| [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) |  |

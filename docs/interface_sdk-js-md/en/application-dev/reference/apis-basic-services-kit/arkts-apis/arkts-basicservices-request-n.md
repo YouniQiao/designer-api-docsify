@@ -28,13 +28,13 @@ import { request } from '@kit.BasicServicesKit';
 | Name | Description |
 | --- | --- |
 | [download](arkts-basicservices-request-download-f.md) | Downloads a file. This API uses an asynchronous callback to return the result. |
-| [downloadFile](arkts-basicservices-request-downloadfile-f.md) | Downloads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use on('complete'\|'pause'\|'remove') to obtain the download task state, including task completion, pause, and removal. You can also use on('fail') to obtain the task download error information. |
+| [downloadFile](arkts-basicservices-request-downloadfile-f.md) | Downloads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use on('complete'&#124;'pause'&#124;'remove') to obtain the download task state, including task completion, pause, and removal. You can also use on('fail') to obtain the task download error information. |
 | [download](arkts-basicservices-request-download-f.md) | Downloads a file. This API uses a promise to return the result. |
-| [downloadFile](arkts-basicservices-request-downloadfile-f.md) | Downloads a file. This API uses a promise to return the result. HTTP is supported. You can use on('complete'\|'pause'\|'remove') to obtain the download task state, including task completion, pause, and removal. You can also use on('fail') to obtain the task download error information. |
+| [downloadFile](arkts-basicservices-request-downloadfile-f.md) | Downloads a file. This API uses a promise to return the result. HTTP is supported. You can use on('complete'&#124;'pause'&#124;'remove') to obtain the download task state, including task completion, pause, and removal. You can also use on('fail') to obtain the task download error information. |
 | [upload](arkts-basicservices-request-upload-f.md) | Uploads a file. This API uses an asynchronous callback to return the result. |
-| [uploadFile](arkts-basicservices-request-uploadfile-f.md) | Uploads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use on('complete'\|'fail') to obtain the upload success or error information. |
+| [uploadFile](arkts-basicservices-request-uploadfile-f.md) | Uploads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use on('complete'&#124;'fail') to obtain the upload success or error information. |
 | [upload](arkts-basicservices-request-upload-f.md) | Uploads a file. This API uses a promise to return the result. |
-| [uploadFile](arkts-basicservices-request-uploadfile-f.md) | Uploads a file. This API uses a promise to return the result. HTTP is supported. You can use on('complete'\|'fail') to obtain the upload success or error information. |
+| [uploadFile](arkts-basicservices-request-uploadfile-f.md) | Uploads a file. This API uses a promise to return the result. HTTP is supported. You can use on('complete'&#124;'fail') to obtain the upload success or error information. |
 
 ### Interfaces
 
@@ -46,7 +46,7 @@ import { request } from '@kit.BasicServicesKit';
 | [File](arkts-basicservices-request-file-i.md) | Describes the list of files in [UploadConfig](arkts-basicservices-request-uploadconfig-i.md). |
 | [RequestData](arkts-basicservices-request-requestdata-i.md) | Describes the form data in [UploadConfig](arkts-basicservices-request-uploadconfig-i.md). |
 | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md) | Describes the configuration of an upload task. |
-| [TaskState](arkts-basicservices-request-taskstate-i.md) | Upload task information, which is the callback parameter of the on('complete' \| 'fail') and off('complete' \| 'fail') APIs. |
+| [TaskState](arkts-basicservices-request-taskstate-i.md) | Upload task information, which is the callback parameter of the on('complete' &#124; 'fail') and off('complete' &#124; 'fail') APIs. |
 | [UploadTask](arkts-basicservices-request-uploadtask-i.md) | Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a promise through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md) or from a callback through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md). |
 
 ### Constants

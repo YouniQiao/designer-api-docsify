@@ -150,7 +150,7 @@ No permission is required when the caller clears its own cache.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| appIndex | number | Yes | Index of the application clone.The value **0** means to clear the cache of the main application. A value greater than 0 means to clear the cache data of the application clone. |
+| appIndex | number | Yes | Index of the application clone.<br>The value **0** means to clear the cache of the main application. A value greater than 0 means to clear the cache data of the application clone. |
 
 **Return value:**
 

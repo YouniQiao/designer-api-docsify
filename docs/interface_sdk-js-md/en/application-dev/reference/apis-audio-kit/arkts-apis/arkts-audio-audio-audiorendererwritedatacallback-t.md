@@ -20,4 +20,4 @@ Defines the callback function used to write data to the audio renderer. Once the
 
 | Type | Description |
 | --- | --- |
-| [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md) \| void | If **void** or **AudioDataCallbackResult.VALID** is returned, the data is valid and the audio data is played. If **AudioDataCallbackResult.INVALID** is returned, the data is invalid and the audio data is not played. |
+| [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md) &#124; void | If **void** or **AudioDataCallbackResult.VALID** is returned, the data is valid and the audio data is played. If **AudioDataCallbackResult.INVALID** is returned, the data is invalid and the audio data is not played. |

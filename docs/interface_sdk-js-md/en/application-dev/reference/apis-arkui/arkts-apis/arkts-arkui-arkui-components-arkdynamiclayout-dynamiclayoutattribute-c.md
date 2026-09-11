@@ -2,7 +2,7 @@
 
 The [universal attributes](../arkts-components/arkts-arkui-commonmethod-c.md) are supported.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - When the layout algorithm is [RowLayoutAlgorithm](arkts-arkui-layoutalgorithm-rowlayoutalgorithm-c.md) or
 > [ColumnLayoutAlgorithm](arkts-arkui-layoutalgorithm-columnlayoutalgorithm-c.md),

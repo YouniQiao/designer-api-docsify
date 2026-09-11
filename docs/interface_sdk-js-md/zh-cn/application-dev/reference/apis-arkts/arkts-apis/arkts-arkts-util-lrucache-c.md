@@ -55,7 +55,7 @@ afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 
 在移除值后执行后续操作。后续操作必须由开发者实现。该 API 在删除操作期间会被调用，例如[get&lt;sup&gt;9+&lt;/sup&gt;](#get)、[put&lt;sup&gt;9+&lt;/sup&gt;](#put)、[remove&lt;sup&gt;9+&lt;/sup&gt;](#remove)、[clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) 和[updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updatecapacity)。
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 如果在调用 [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) 和
 > [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updatecapacity) 后执行回调方法，并且输入的 **key** 和
@@ -260,7 +260,7 @@ get(key: K): V | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| V \| undefined | key 对应的值。如果未找到匹配项，则返回 **createDefault** 中指定的值。 |
+| V &#124; undefined | key 对应的值。如果未找到匹配项，则返回 **createDefault** 中指定的值。 |
 
 **示例**
 
@@ -597,7 +597,7 @@ remove(key: K): V | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| V \| undefined | 如果 key 存在于缓存中，则返回包含被移除键值对的 **Optional** 对象；如果 key 不存在则返回 **undefined**；如果 **key** 传入 **null**，则抛出错误。 |
+| V &#124; undefined | 如果 key 存在于缓存中，则返回包含被移除键值对的 **Optional** 对象；如果 key 不存在则返回 **undefined**；如果 **key** 传入 **null**，则抛出错误。 |
 
 **示例**
 

@@ -20,7 +20,7 @@ albumChangeInfos?: AlbumChangeInfo[] | null
 
 智慧相册的相册变更信息。
 
-**类型：** [AlbumChangeInfo](arkts-medialibrary-photoaccesshelper-albumchangeinfo-i.md)[] \| null
+**类型：** [AlbumChangeInfo](arkts-medialibrary-photoaccesshelper-albumchangeinfo-i.md)[] &#124; null
 
 **起始版本：** 23
 
@@ -88,7 +88,7 @@ dateModifiedMs?: number
 
 文件修改时的Unix时间戳。
 
-单位为毫秒。
+<br>单位为毫秒。
 
 **类型：** number
 
@@ -172,7 +172,7 @@ hiddenTime?: number
 
 媒体资产（图片/视频）的隐藏时间。
 
-单位为毫秒。
+<br>单位为毫秒。
 
 **类型：** number
 

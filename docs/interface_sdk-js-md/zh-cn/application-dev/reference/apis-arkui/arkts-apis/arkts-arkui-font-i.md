@@ -21,7 +21,7 @@ family?: string | Resource
 
 font family.
 
-**类型：** string \| [Resource](arkts-arkui-resource-t.md)
+**类型：** string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 11
 
@@ -69,7 +69,7 @@ weight?: FontWeight | number | string
 
 font weight.
 
-**类型：** [FontWeight](arkts-arkui-fontweight-e.md) \| number \| string
+**类型：** [FontWeight](arkts-arkui-fontweight-e.md) &#124; number &#124; string
 
 **起始版本：** 11
 

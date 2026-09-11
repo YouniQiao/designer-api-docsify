@@ -32,7 +32,7 @@ environmentImage?: Image | null
 
 Environment image. The default value is undefined.
 
-**Type:** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) \| null
+**Type:** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) &#124; null
 
 **Since:** 12
 
@@ -120,7 +120,7 @@ radianceImage?: Image | null
 
 Radiance image. The default value is undefined.
 
-**Type:** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) \| null
+**Type:** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) &#124; null
 
 **Since:** 12
 

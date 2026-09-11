@@ -7,14 +7,14 @@ Defines the options of the **Refresh** component.
 > - If neither **builder** nor **refreshingContent** is set, the pull-down displacement effect is implemented by
 > adjusting the translate attribute of the child component.
 > During the pull-down process, the
-> onAreaChange event of the child
+> [onAreaChange](arkts-arkui-commonmethod-c.md#onareachange) event of the child
 > component is not triggered, and any changes made to the
 > translate attribute of the child component do not take
 > effect.
 > 
 > - When **builder** or **refreshingContent** is set, the pull-down displacement effect is implemented by adjusting
 > the position of the child component relative to the **Refresh** component. During the pull-down process, the
-> onAreaChange event of the child
+> [onAreaChange](arkts-arkui-commonmethod-c.md#onareachange) event of the child
 > component can be triggered. However, if the position attribute is set for the child
 > component, the position of the child component relative to the **Refresh** component is fixed, preventing the child
 > component from moving down with the pull gesture.
@@ -66,13 +66,13 @@ Coefficient of friction, which indicates the component's sensitivity to the pull
 - 100 indicates that the component is highly sensitive to the pull-down gesture.  
 - A larger value indicates a more sensitive response of the component to the pull-down gesture.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 8
 
 **Deprecated since:** 11
 
-**Substitutes:** [pullDownRatio](arkts-arkui-refresh-attribute.md#pulldownratio)
+**Substitutes:** [pullDownRatio](arkts-arkui-refresh-comp-attribute.md#pulldownratio)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,7 +84,7 @@ offset?: number | string
 
 Distance from the pull-down starting point to the top of the component. Default value: **16**. Unit: vp. If the type is string, the pixel unit must be explicitly specified, for example, **'10px'**; if the unit is not specified, for example, **'10'**, the default unit vp is used. Note: This API is supported since API version 8 and deprecated since API version 11. No substitute is provided. NOTE The value range of **offset** is [0vp, 64vp]. If the value is greater than 64 vp, the value 64 vp will be used. The value cannot be a percentage or a negative number.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 8
 

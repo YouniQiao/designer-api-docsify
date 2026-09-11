@@ -20,7 +20,7 @@ import { dataShare } from '@kit.ArkData';
 addTemplate(uri: string, subscriberId: string, template: Template): void
 ```
 
-添加一个指定订阅者的数据模板。仅支持静默访问。静默场景下，调用此接口时，传入的uri、subscriberId和template参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+添加一个指定订阅者的数据模板。仅支持静默访问。<br> <br>静默场景下，调用此接口时，传入的uri、subscriberId和template参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
 
 **起始版本：** 10
 
@@ -75,7 +75,7 @@ if (dataShareHelper != undefined) {
 batchInsert(uri: string, values: Array<ValuesBucket>, callback: AsyncCallback<number>): void
 ```
 
-将批量数据插入数据库。使用callback异步回调。暂不支持静默访问。非静默场景下，调用此接口时，传入的values参数的大小不能超过128MB，传入的uri参数大小不能超过900KB，超出限制将导致操作失败或抛出异常。
+将批量数据插入数据库。使用callback异步回调。暂不支持静默访问。<br> <br>非静默场景下，调用此接口时，传入的values参数的大小不能超过128MB，传入的uri参数大小不能超过900KB，超出限制将导致操作失败或抛出异常。
 
 **起始版本：** 9
 
@@ -91,7 +91,7 @@ batchInsert(uri: string, values: Array<ValuesBucket>, callback: AsyncCallback<nu
 | --- | --- | --- | --- |
 | uri | string | 是 | 要插入的数据的路径。 |
 | values | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | 是 | 要插入的数据。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当将批量数据插入数据库成功，err为undefined，data为获取到的插入的数据记录数；否则为错误对象。因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此callback也无法返回插入的数据记录数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当将批量数据插入数据库成功，err为undefined，data为获取到的插入的数据记录数；否则为错误对象。<br>因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此callback也无法返回插入的数据记录数。 |
 
 **错误码：**
 
@@ -135,7 +135,7 @@ try {
 batchInsert(uri: string, values: Array<ValuesBucket>): Promise<number>
 ```
 
-将批量数据插入数据库。使用Promise异步回调。暂不支持静默访问。非静默场景下，调用此接口时，传入的values参数的大小不能超过128MB，传入的uri参数大小不能超过900KB，超出限制将导致操作失败或抛出异常。
+将批量数据插入数据库。使用Promise异步回调。暂不支持静默访问。<br> <br>非静默场景下，调用此接口时，传入的values参数的大小不能超过128MB，传入的uri参数大小不能超过900KB，超出限制将导致操作失败或抛出异常。
 
 **起始版本：** 9
 
@@ -156,7 +156,7 @@ batchInsert(uri: string, values: Array<ValuesBucket>): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回插入的数据记录数。 |
+| Promise&lt;number&gt; | Promise对象。返回插入的数据记录数。<br>因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回插入的数据记录数。 |
 
 **错误码：**
 
@@ -198,7 +198,7 @@ try {
 batchUpdate(operations: Record<string, Array<UpdateOperation>>): Promise<Record<string, Array<number>>>
 ```
 
-批量更新数据库中的数据记录，所有操作的总数（即operations对象的键值对）不得超过4000个，超出限制将导致更新失败；该接口的事务性取决于provider（数据提供方）。使用Promise异步回调。暂不支持静默访问。非静默场景下，调用此接口时，传入的operations参数的大小不能超过900KB，超出限制将导致操作失败或抛出异常。
+批量更新数据库中的数据记录，所有操作的总数（即operations对象的键值对）不得超过4000个，超出限制将导致更新失败；该接口的事务性取决于provider（数据提供方）。使用Promise异步回调。暂不支持静默访问。<br> <br>非静默场景下，调用此接口时，传入的operations参数的大小不能超过900KB，超出限制将导致操作失败或抛出异常。
 
 **起始版本：** 12
 
@@ -218,7 +218,7 @@ batchUpdate(operations: Record<string, Array<UpdateOperation>>): Promise<Record<
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;string, Array&lt;number&gt;&gt;&gt; | Promise对象。返回更新的数据记录数集合，更新失败的UpdateOperation的数据记录数为-1。 |
+| Promise&lt;Record&lt;string, Array&lt;number&gt;&gt;&gt; | Promise对象。返回更新的数据记录数集合，更新失败的UpdateOperation的数据记录数为-1。<br>因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回更新的数据记录数。 |
 
 **错误码：**
 
@@ -330,7 +330,7 @@ if (dataShareHelper != undefined) {
 delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<number>): void
 ```
 
-从数据库中删除一条或多条数据记录。使用callback异步回调。非静默场景下，调用此接口时，传入的uri和predicates参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。静默场景下，调用此接口时，传入的uri和predicates参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+从数据库中删除一条或多条数据记录。使用callback异步回调。<br> <br>非静默场景下，调用此接口时，传入的uri和predicates参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。<br> <br>静默场景下，调用此接口时，传入的uri和predicates参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
 
 **起始版本：** 9
 
@@ -345,8 +345,8 @@ delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callbac
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 要删除的数据的路径。 |
-| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 筛选条件。delete接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB的删除目前仅支持inKeys谓词。静默场景下谓词内方法为空时，默认全表删除。非静默场景下规格由数据提供方制定。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当从数据库中删除一条或多条数据记录成功，err为undefined，data为获取到的已删除的数据记录数；否则为错误对象。因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此callback也无法返回删除的数据记录数。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 筛选条件。<br>delete接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB的删除目前仅支持inKeys谓词。静默场景下谓词内方法为空时，默认全表删除。非静默场景下规格由数据提供方制定。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当从数据库中删除一条或多条数据记录成功，err为undefined，data为获取到的已删除的数据记录数；否则为错误对象。<br>因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此callback也无法返回删除的数据记录数。 |
 
 **错误码：**
 
@@ -388,7 +388,7 @@ try {
 delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promise<number>
 ```
 
-从数据库中删除一条或多条数据记录。使用Promise异步回调。非静默场景下，调用此接口时，传入的uri和predicates参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。静默场景下，调用此接口时，传入的uri和predicates参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+从数据库中删除一条或多条数据记录。使用Promise异步回调。<br> <br>非静默场景下，调用此接口时，传入的uri和predicates参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。<br> <br>静默场景下，调用此接口时，传入的uri和predicates参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
 
 **起始版本：** 9
 
@@ -403,13 +403,13 @@ delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 要删除的数据的路径。 |
-| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 筛选条件。delete接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB的删除目前仅支持inKeys谓词。静默场景下谓词内方法为空时，默认全表删除。非静默场景下规格由数据提供方制定。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 筛选条件。<br>delete接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB的删除目前仅支持inKeys谓词。静默场景下谓词内方法为空时，默认全表删除。非静默场景下规格由数据提供方制定。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回已删除的数据记录数。 |
+| Promise&lt;number&gt; | Promise对象。返回已删除的数据记录数。<br>因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回删除的数据记录数。 |
 
 **错误码：**
 
@@ -449,7 +449,7 @@ try {
 delTemplate(uri: string, subscriberId: string): void
 ```
 
-删除一个指定订阅者的数据模板。仅支持静默访问。静默场景下，调用此接口时，传入的uri和subscriberId参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+删除一个指定订阅者的数据模板。仅支持静默访问。<br> <br>静默场景下，调用此接口时，传入的uri和subscriberId参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
 
 **起始版本：** 10
 
@@ -602,7 +602,7 @@ if (dataShareHelper != undefined) {
 getPublishedData(bundleName: string, callback: AsyncCallback<Array<PublishedItem>>): void
 ```
 
-获取给定的APP和模板指定的数据。仅支持静默访问。使用callback异步回调。静默场景下，调用此接口时，传入的bundleName参数的大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+获取给定的APP和模板指定的数据。仅支持静默访问。使用callback异步回调。<br> <br>静默场景下，调用此接口时，传入的bundleName参数的大小不能超过200KB，超出限制将导致操作失败或抛出异常。
 
 **起始版本：** 10
 
@@ -647,7 +647,7 @@ if (dataShareHelper != undefined) {
 getPublishedData(bundleName: string): Promise<Array<PublishedItem>>
 ```
 
-获取给定的APP和模板指定的数据。仅支持静默访问。使用Promise异步回调。静默场景下，调用此接口时，传入的bundleName参数的大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+获取给定的APP和模板指定的数据。仅支持静默访问。使用Promise异步回调。<br> <br>静默场景下，调用此接口时，传入的bundleName参数的大小不能超过200KB，超出限制将导致操作失败或抛出异常。
 
 **起始版本：** 10
 
@@ -692,7 +692,7 @@ if (dataShareHelper != undefined) {
 insert(uri: string, value: ValuesBucket, callback: AsyncCallback<number>): void
 ```
 
-将单条数据插入数据库。使用callback异步回调。非静默场景下，调用此接口时，传入的uri和value参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。静默场景下，调用此接口时，传入的uri和value参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+将单条数据插入数据库。使用callback异步回调。<br> <br>非静默场景下，调用此接口时，传入的uri和value参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。<br> <br>静默场景下，调用此接口时，传入的uri和value参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
 
 **起始版本：** 9
 
@@ -708,7 +708,7 @@ insert(uri: string, value: ValuesBucket, callback: AsyncCallback<number>): void
 | --- | --- | --- | --- |
 | uri | string | 是 | 要插入的数据的路径。 |
 | value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要插入的数据的值。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当将单条数据插入数据库成功，err为undefined，data为获取到的插入数据记录的索引；否则为错误对象。因部分数据库（如KVDB）的相应接口并不支持返回索引，故若服务端使用了不支持索引的数据库，则此callback也无法返回索引值。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当将单条数据插入数据库成功，err为undefined，data为获取到的插入数据记录的索引；否则为错误对象。<br>因部分数据库（如KVDB）的相应接口并不支持返回索引，故若服务端使用了不支持索引的数据库，则此callback也无法返回索引值。 |
 
 **错误码：**
 
@@ -759,7 +759,7 @@ try {
 insert(uri: string, value: ValuesBucket): Promise<number>
 ```
 
-将单条数据插入数据库。使用Promise异步回调。非静默场景下，调用此接口时，传入的uri和value参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。静默场景下，调用此接口时，传入的uri和value参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+将单条数据插入数据库。使用Promise异步回调。<br> <br>非静默场景下，调用此接口时，传入的uri和value参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。<br> <br>静默场景下，调用此接口时，传入的uri和value参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
 
 **起始版本：** 9
 
@@ -780,7 +780,7 @@ insert(uri: string, value: ValuesBucket): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回插入数据记录的索引。 |
+| Promise&lt;number&gt; | Promise对象。返回插入数据记录的索引。<br>因部分数据库（如KVDB）的相应接口并不支持返回索引，故若服务端使用了不支持索引的数据库，则此Promise也无法返回索引值。 |
 
 **错误码：**
 
@@ -928,7 +928,7 @@ if (dataShareHelper != undefined) {
 notifyChange(uri: string, callback: AsyncCallback<void>): void
 ```
 
-通知已注册的观察者指定URI对应的数据资源已发生变更。使用callback异步回调。暂不支持静默访问。非静默场景下，调用此接口时，传入的uri参数大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+通知已注册的观察者指定URI对应的数据资源已发生变更。使用callback异步回调。暂不支持静默访问。<br> <br>非静默场景下，调用此接口时，传入的uri参数大小不能超过200KB，超出限制将导致操作失败或抛出异常。
 
 **起始版本：** 9
 
@@ -970,7 +970,7 @@ if (dataShareHelper != undefined) {
 notifyChange(uri: string): Promise<void>
 ```
 
-通知已注册的观察者指定URI对应的数据资源已发生变更。使用Promise异步回调。暂不支持静默访问。非静默场景下，调用此接口时，传入的uri参数大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+通知已注册的观察者指定URI对应的数据资源已发生变更。使用Promise异步回调。暂不支持静默访问。<br> <br>非静默场景下，调用此接口时，传入的uri参数大小不能超过200KB，超出限制将导致操作失败或抛出异常。
 
 **起始版本：** 9
 
@@ -1015,7 +1015,7 @@ if (dataShareHelper != undefined) {
 notifyChange(data: ChangeInfo): Promise<void>
 ```
 
-通知已注册的观察者指定URI对应的数据资源已发生变更类型及变更内容。使用Promise异步回调。暂不支持静默访问。静默场景下，调用此接口时，传入的data参数大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+通知已注册的观察者指定URI对应的数据资源已发生变更类型及变更内容。使用Promise异步回调。暂不支持静默访问。<br> <br>静默场景下，调用此接口时，传入的data参数大小不能超过200KB，超出限制将导致操作失败或抛出异常。
 
 **起始版本：** 12
 
@@ -1069,7 +1069,7 @@ if (dataShareHelper != undefined) {
 off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 ```
 
-取消订阅指定URI下指定callback对应的数据资源的变更通知。与订阅接口on相对应。
+取消订阅指定URI下指定callback对应的数据资源的变更通知。与订阅接口[on](#ondatachange)相对应。
 
 **起始版本：** 9
 
@@ -1114,7 +1114,7 @@ if (dataShareHelper != undefined) {
 off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCallback<ChangeInfo>): void
 ```
 
-取消订阅指定URI下指定callback对应的数据资源的变更通知。与订阅接口on相对应。
+取消订阅指定URI下指定callback对应的数据资源的变更通知。与订阅接口[on](#on)相对应。
 
 **起始版本：** 12
 
@@ -1167,11 +1167,9 @@ off(
      ): Array<OperationResult>
 ```
 
-取消订阅指定URI和模板对应的数据变更事件。仅支持静默访问。配对调用：
+取消订阅指定URI和模板对应的数据变更事件。仅支持静默访问。<br> <br>配对调用：
 
-- 与on('rdbDataChange')成对使用，必须在已订阅后使用。  
-- 取消订阅时需确保type、uris、templateId参数与订阅时一致。  
-- 如果callback参数为空，将取消该URI的所有已注册回调函数。
+<br>- 与[on('rdbDataChange')](#onrdbdatachange)成对使用，必须在已订阅后使用。<br>- 取消订阅时需确保type、uris、templateId参数与订阅时一致。<br>- 如果callback参数为空，将取消该URI的所有已注册回调函数。
 
 **起始版本：** 10
 
@@ -1279,11 +1277,9 @@ if (dataShareHelper != undefined) {
 on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 ```
 
-订阅指定URI对应数据的数据变更事件。不支持跨用户订阅通知。  
- **触发通知：** 非静默场景下，调用[notifyChange](#notifychange-1)方法，就会触发对指定URI订阅者的通知；或者静默场景下，使用指定URI的静默访问修改了数据，也会自动触发通知。规格限制：
+订阅指定URI对应数据的数据变更事件。不支持跨用户订阅通知。<br> **触发通知：** 非静默场景下，调用[notifyChange](#notifychange-1)方法，就会触发对指定URI订阅者的通知；或者静默场景下，使用指定URI的静默访问修改了数据，也会自动触发通知。<br>规格限制：
 
-* 在OpenHarmony 6.0之前，同一应用内对单个URI的重复订阅上限为50次，单个URI全局最多支持50个订阅。  
-* 从OpenHarmony 6.0开始，同一应用内对单个URI的重复订阅上限为50次，单个URI全局最多支持2500个订阅。
+<br>* 在OpenHarmony 6.0之前，同一应用内对单个URI的重复订阅上限为50次，单个URI全局最多支持50个订阅。<br>* 从OpenHarmony 6.0开始，同一应用内对单个URI的重复订阅上限为50次，单个URI全局最多支持2500个订阅。
 
 **起始版本：** 9
 
@@ -1327,9 +1323,7 @@ if (dataShareHelper !== undefined) {
 on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallback<ChangeInfo>): void
 ```
 
-订阅指定URI对应数据的数据变更事件。不支持跨用户订阅通知。  
- **触发通知：** 非静默场景下，调用[notifyChange](#notifychange-2)方法，就会触发对指定URI订阅者的通知，通知携带[ChangeInfo](arkts-arkdata-datashare-changeinfo-i-sys.md)；或者静默场景下，使用指定URI的静默访问修改了数据，也会自动触发通知，但此时callback通知中的ChangeInfo无效。规格限制：
-
+订阅指定URI对应数据的数据变更事件。不支持跨用户订阅通知。<br> **触发通知：** 非静默场景下，调用[notifyChange](#notifychange-2)方法，就会触发对指定URI订阅者的通知，通知携带[ChangeInfo](arkts-arkdata-datashare-changeinfo-i-sys.md)；或者静默场景下，使用指定URI的静默访问修改了数据，也会自动触发通知，但此时callback通知中的ChangeInfo无效。<br>规格限制：<br>  
 * 在OpenHarmony 6.0之前，同一应用内对单个URI的重复订阅上限为50次，单个URI全局最多支持50个订阅。  
 * 从OpenHarmony 6.0开始，同一应用内对单个URI的重复订阅上限为50次，单个URI全局最多支持2500个订阅。
 
@@ -1383,12 +1377,9 @@ on(
      ): Array<OperationResult>
 ```
 
-订阅指定URI和模板对应的数据变更事件。仅支持静默访问。该功能不支持跨用户订阅通知。配对调用：
-
+订阅指定URI和模板对应的数据变更事件。仅支持静默访问。该功能不支持跨用户订阅通知。<br> <br>配对调用：<br>  
 - 与  
-off('rdbDataChange')成对使用，用于取消订阅数据变更事件。  
-- 取消订阅时需确保type、uris、templateId和callback参数与订阅时一致。  
-- 如未及时取消订阅，可能导致内存泄漏和资源占用。
+[off('rdbDataChange')](#offrdbdatachange)成对使用，用于取消订阅数据变更事件。<br>- 取消订阅时需确保type、uris、templateId和callback参数与订阅时一致。<br>- 如未及时取消订阅，可能导致内存泄漏和资源占用。
 
 **起始版本：** 10
 
@@ -1526,7 +1517,7 @@ publish(
      ): void
 ```
 
-发布数据，将数据更新至数据库。需传入要发布的数据版本，当传入版本号高于当前数据库记录的版本时成功。仅支持静默访问。使用callback异步回调。静默场景下，调用此接口时，传入的data和bundleName参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+发布数据，将数据更新至数据库。需传入要发布的数据版本，当传入版本号高于当前数据库记录的版本时成功。仅支持静默访问。使用callback异步回调。<br> <br>静默场景下，调用此接口时，传入的data和bundleName参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
 
 **起始版本：** 10
 
@@ -1585,7 +1576,7 @@ publish(
      ): void
 ```
 
-发布数据，将数据更新至数据库。仅支持静默访问。使用callback异步回调。静默场景下，调用此接口时，传入的data和bundleName参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+发布数据，将数据更新至数据库。仅支持静默访问。使用callback异步回调。<br> <br>静默场景下，调用此接口时，传入的data和bundleName参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
 
 **起始版本：** 10
 
@@ -1635,7 +1626,7 @@ if (dataShareHelper != undefined) {
 publish(data: Array<PublishedItem>, bundleName: string, version?: number): Promise<Array<OperationResult>>
 ```
 
-发布数据，将数据更新至数据库。可以选择传入要发布的数据版本，当传入版本号高于当前数据库记录的版本时成功。仅支持静默访问。使用Promise异步回调。静默场景下，调用此接口时，传入的data和bundleName参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+发布数据，将数据更新至数据库。可以选择传入要发布的数据版本，当传入版本号高于当前数据库记录的版本时成功。仅支持静默访问。使用Promise异步回调。<br> <br>静默场景下，调用此接口时，传入的data和bundleName参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
 
 **起始版本：** 10
 
@@ -1651,7 +1642,7 @@ publish(data: Array<PublishedItem>, bundleName: string, version?: number): Promi
 | --- | --- | --- | --- |
 | data | Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md)&gt; | 是 | 要发布的数据。 |
 | bundleName | string | 是 | 表示要发布数据所属的APP，对发布的私有数据生效，仅该APP可以读取数据。 |
-| version | number | 否 | 要发布的数据版本，越大表示数据版本越新。如果发布的版本号小于数据库中的记录，则更新失败。如果不检查要发布的数据版本，则不填。 |
+| version | number | 否 | 要发布的数据版本，越大表示数据版本越新。如果发布的版本号小于数据库中的记录，则更新失败。<br> 如果不检查要发布的数据版本，则不填。 |
 
 **返回值：**
 
@@ -1691,7 +1682,7 @@ query(
      ): void
 ```
 
-查询数据库中的数据。使用callback异步回调。非静默场景下，调用此接口时，传入的predicates参数的大小不能超过128MB，传入的uri和columns参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。静默场景下，调用此接口时，传入的uri、predicates和columns参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。使用此接口查询数据库数据时，如查询内容达到资源上限，操作将失败并返回错误，用户可根据场景考虑重试。有关于资源上限的详细说明，请参见[通过数据管理服务实现数据共享静默访问](../../../database/share-data-by-silent-access-sys.md#约束与限制)和[通过DataShareExtensionAbility实现数据共享](../../../database/share-data-by-datashareextensionability-sys.md#约束与限制)。
+查询数据库中的数据。使用callback异步回调。<br> <br>非静默场景下，调用此接口时，传入的predicates参数的大小不能超过128MB，传入的uri和columns参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。<br> <br>静默场景下，调用此接口时，传入的uri、predicates和columns参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。<br> <br>使用此接口查询数据库数据时，如查询内容达到资源上限，操作将失败并返回错误，用户可根据场景考虑重试。有关于资源上限的详细说明，请参见[通过数据管理服务实现数据共享静默访问](../../../database/share-data-by-silent-access-sys.md#约束与限制)和[通过DataShareExtensionAbility实现数据共享](../../../database/share-data-by-datashareextensionability-sys.md#约束与限制)。
 
 **起始版本：** 9
 
@@ -1706,7 +1697,7 @@ query(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 要查询的数据的路径。 |
-| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 筛选条件。query接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB目前仅支持inKeys和prefixKey。静默场景下谓词内方法为空时，默认全表查询。非静默场景下规格由数据提供方制定。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 筛选条件。<br>query接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB目前仅支持inKeys和prefixKey。静默场景下谓词内方法为空时，默认全表查询。非静默场景下规格由数据提供方制定。 |
 | columns | Array&lt;string&gt; | 是 | 要查询的列。如果此参数为空，则查询所有列。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)&gt; | 是 | 回调函数。当查询数据库中的数据成功，err为undefined，data为获取到的查询到的结果集；否则为错误对象。 |
 
@@ -1755,7 +1746,7 @@ query(
      ): Promise<DataShareResultSet>
 ```
 
-查询数据库中的数据。使用Promise异步回调。非静默场景下，调用此接口时，传入的predicates参数的大小不能超过128MB，传入的uri和columns参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。静默场景下，调用此接口时，传入的uri、predicates和columns参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。使用此接口查询数据库数据时，如查询内容达到资源上限，操作将失败并返回错误，用户可根据场景考虑重试。有关于资源上限的详细说明，请参见[通过数据管理服务实现数据共享静默访问](../../../database/share-data-by-silent-access-sys.md#约束与限制)和[通过DataShareExtensionAbility实现数据共享](../../../database/share-data-by-datashareextensionability-sys.md#约束与限制)。
+查询数据库中的数据。使用Promise异步回调。<br> <br>非静默场景下，调用此接口时，传入的predicates参数的大小不能超过128MB，传入的uri和columns参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。<br> <br>静默场景下，调用此接口时，传入的uri、predicates和columns参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。<br> <br>使用此接口查询数据库数据时，如查询内容达到资源上限，操作将失败并返回错误，用户可根据场景考虑重试。有关于资源上限的详细说明，请参见[通过数据管理服务实现数据共享静默访问](../../../database/share-data-by-silent-access-sys.md#约束与限制)和[通过DataShareExtensionAbility实现数据共享](../../../database/share-data-by-datashareextensionability-sys.md#约束与限制)。
 
 **起始版本：** 9
 
@@ -1770,7 +1761,7 @@ query(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 要查询的数据的路径。 |
-| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 筛选条件。query接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB目前仅支持inKeys和prefixKey。静默场景下谓词内方法为空时，默认全表查询。非静默场景下规格由数据提供方制定。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 筛选条件。<br>query接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB目前仅支持inKeys和prefixKey。静默场景下谓词内方法为空时，默认全表查询。非静默场景下规格由数据提供方制定。 |
 | columns | Array&lt;string&gt; | 是 | 要查询的列。如果此参数为空，则查询所有列。 |
 
 **返回值：**
@@ -1823,7 +1814,7 @@ update(
      ): void
 ```
 
-更新数据库中的数据记录。使用callback异步回调。非静默场景下，调用此接口时，传入的uri、predicates和value参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。静默场景下，调用此接口时，传入的uri、predicates和value参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+更新数据库中的数据记录。使用callback异步回调。<br> <br>非静默场景下，调用此接口时，传入的uri、predicates和value参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。<br> <br>静默场景下，调用此接口时，传入的uri、predicates和value参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
 
 **起始版本：** 9
 
@@ -1838,9 +1829,9 @@ update(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 要更新的数据的路径。 |
-| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 筛选条件。update接口所支持的谓词筛选条件取决于服务端所选用的数据库，如KVDB目前并不支持谓词筛选条件，仅RDB支持。静默场景下谓词内方法为空时，默认全表更新。非静默场景下规格由数据提供方制定。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 筛选条件。<br>update接口所支持的谓词筛选条件取决于服务端所选用的数据库，如KVDB目前并不支持谓词筛选条件，仅RDB支持。静默场景下谓词内方法为空时，默认全表更新。非静默场景下规格由数据提供方制定。 |
 | value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要更新的数据的值。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当更新数据库中的数据记录成功，err为undefined，data为获取到的更新的数据记录数；否则为错误对象。因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此callback也无法返回更新的数据记录数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当更新数据库中的数据记录成功，err为undefined，data为获取到的更新的数据记录数；否则为错误对象。<br>因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此callback也无法返回更新的数据记录数。 |
 
 **错误码：**
 
@@ -1893,7 +1884,7 @@ try {
 update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: ValuesBucket): Promise<number>
 ```
 
-更新数据库中的数据记录。使用Promise异步回调。非静默场景下，调用此接口时，传入的uri、predicates和value参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。静默场景下，调用此接口时，传入的uri、predicates和value参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+更新数据库中的数据记录。使用Promise异步回调。<br> <br>非静默场景下，调用此接口时，传入的uri、predicates和value参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。<br> <br>静默场景下，调用此接口时，传入的uri、predicates和value参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
 
 **起始版本：** 9
 
@@ -1908,14 +1899,14 @@ update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 要更新的数据的路径。 |
-| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 筛选条件。update接口所支持的谓词筛选条件取决于服务端所选用的数据库，如KVDB目前并不支持谓词筛选条件，仅RDB支持。静默场景下谓词内方法为空时，默认全表更新。非静默场景下规格由数据提供方制定。 |
+| predicates | [dataSharePredicates.DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 是 | 筛选条件。<br>update接口所支持的谓词筛选条件取决于服务端所选用的数据库，如KVDB目前并不支持谓词筛选条件，仅RDB支持。静默场景下谓词内方法为空时，默认全表更新。非静默场景下规格由数据提供方制定。 |
 | value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要更新的数据的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回更新的数据记录数。 |
+| Promise&lt;number&gt; | Promise对象。返回更新的数据记录数。<br>因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回更新的数据记录数。 |
 
 **错误码：**
 

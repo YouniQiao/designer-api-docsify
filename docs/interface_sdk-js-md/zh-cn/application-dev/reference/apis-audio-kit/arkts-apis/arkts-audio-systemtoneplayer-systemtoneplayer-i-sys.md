@@ -2,6 +2,8 @@
 
 系统提示音播放器提供了短信提示音、通知提示音的播放、配置、获取信息等功能。在调用SystemTonePlayer的接口前，需要先通过[getSystemTonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getsystemtoneplayer)创建实例。
 
+@typedef SystemTonePlayer
+
 **起始版本：** 11
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core

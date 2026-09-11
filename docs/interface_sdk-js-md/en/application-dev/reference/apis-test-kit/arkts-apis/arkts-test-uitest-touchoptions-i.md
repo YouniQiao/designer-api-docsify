@@ -21,7 +21,7 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 duration?: number
 ```
 
-Duration of the operation in milliseconds. Value range: The value should be &gt;= 1500 Unit: ms Default value: 1500
+Duration of the operation in milliseconds. <br>Value range: The value should be &gt;= 1500 <br>Unit: ms <br>Default value: 1500
 
 **Type:** number
 
@@ -57,7 +57,7 @@ Pressure value of the touch. The value range is [0, 1]. The default value is **0
 speed?: number
 ```
 
-Speed of touch action. Value range:[200, 40000] Unit: px/s. If the value is out of range or null/undefined, the default value 600 is used. Default value: 600
+Speed of touch action. <br>Value range:[200, 40000] <br>Unit: px/s. <br>If the value is out of range or null/undefined, the default value 600 is used. <br>Default value: 600
 
 **Type:** number
 

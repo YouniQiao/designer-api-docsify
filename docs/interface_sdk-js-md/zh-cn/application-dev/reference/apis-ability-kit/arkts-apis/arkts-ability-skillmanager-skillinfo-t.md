@@ -6,6 +6,8 @@ export type SkillInfo = _SkillInfo
 
 技能配置信息，用于定义AI代理的技能能力。
 
+@typedef { _SkillInfo }
+
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。

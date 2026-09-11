@@ -57,7 +57,7 @@ function getDispatchInfo(): Promise<DispatchInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[DispatchInfo](arkts-ability-freeinstall-dispatchinfo-t-sys.md)&gt; | Promise对象，返回[DispatchInfo]{ |
+| Promise&lt;[DispatchInfo](arkts-ability-freeinstall-dispatchinfo-t-sys.md)&gt; | Promise对象，返回[DispatchInfo](arkts-ability-dispatchinfo-i-sys.md)信息。 |
 
 **错误码：**
 

@@ -34,9 +34,9 @@ public static checkLeapMonth(gregorianYear: number, cyclicalYear: number, month:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| gregorianYear | number | 是 | 公历的年。取值范围：[1900, 2100]。 |
-| cyclicalYear | number | 是 | 农历的干支年。取值范围：[1, 60]。 |
-| month | number | 是 | 农历的月。   **说明：** 月份从0开始计数，0表示一月。 |
+| gregorianYear | number | 是 | 公历的年。<br>取值范围：[1900, 2100]。 |
+| cyclicalYear | number | 是 | 农历的干支年。<br>取值范围：[1, 60]。 |
+| month | number | 是 | 农历的月。<br>**说明：** <br>月份从0开始计数，0表示一月。 |
 
 **返回值：**
 

@@ -2,7 +2,7 @@
 
 Represents the parameters used to construct an **ArcScrollBar** component.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > **ArcScrollBar** must be bound to a scrollable component through **scroller** to achieve synchronization. Only a
 > one-to-one binding is allowed between **ArcScrollBar** and a scrollable component.
@@ -39,7 +39,7 @@ Scroller, which can be bound to scrollable components for scrolling control.
 state?: BarState
 ```
 
-State of the scrollbar.Default value: **BarState.Auto**
+State of the scrollbar.<br>Default value: **BarState.Auto**
 
 **Type:** [BarState](arkts-arkui-barstate-e.md)
 

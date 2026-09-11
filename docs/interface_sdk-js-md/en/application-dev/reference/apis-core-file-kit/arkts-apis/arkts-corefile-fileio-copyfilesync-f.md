@@ -25,6 +25,6 @@ Copies a file. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string \| number | Yes | Path or file descriptor of the source file to copy. |
-| dest | string \| number | Yes | Path or file descriptor of the destination file. |
-| mode | number | No | Option for overwriting the destination file. The default value is **0**, which is the only value supported.   **0**: Overwrite the file with the same name completely and truncate the part that is not overwritten. |
+| src | string &#124; number | Yes | Path or file descriptor of the source file to copy. |
+| dest | string &#124; number | Yes | Path or file descriptor of the destination file. |
+| mode | number | No | Option for overwriting the destination file. The default value is **0**, which is the only value supported.<br>**0**: Overwrite the file with the same name completely and truncate the part that is not overwritten. |

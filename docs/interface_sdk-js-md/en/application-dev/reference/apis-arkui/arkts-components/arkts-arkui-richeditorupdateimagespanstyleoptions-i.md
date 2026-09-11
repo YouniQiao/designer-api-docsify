@@ -1,6 +1,6 @@
 # RichEditorUpdateImageSpanStyleOptions
 
-Image style options.
+Defines the image span style options.
 
 Inherits [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md).
 

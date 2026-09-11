@@ -517,7 +517,7 @@ Obtains the record with a specific index in PasteData.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRecord](#getrecord)(index: int)
+**Substitutes:** [getRecord](#getrecord)(index: number)
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -784,7 +784,7 @@ Removes the record with a specific index in PasteData.
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeRecord](#removerecord)(index: int)
+**Substitutes:** [removeRecord](#removerecord)(index: number)
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -861,7 +861,7 @@ Replaces the record with a specific index in PasteData.
 
 **Deprecated since:** 9
 
-**Substitutes:** [replaceRecord](#replacerecord)(index: int, record: PasteDataRecord)
+**Substitutes:** [replaceRecord](#replacerecord)(index: number, record: PasteDataRecord)
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 

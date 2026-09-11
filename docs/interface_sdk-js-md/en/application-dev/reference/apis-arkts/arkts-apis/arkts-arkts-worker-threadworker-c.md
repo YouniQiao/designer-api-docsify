@@ -122,8 +122,6 @@ Dispatches the event defined for the Worker thread.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |

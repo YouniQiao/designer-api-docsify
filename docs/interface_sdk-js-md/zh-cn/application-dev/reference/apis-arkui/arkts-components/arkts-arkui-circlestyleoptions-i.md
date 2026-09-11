@@ -83,7 +83,7 @@ radius?: LengthMetrics
 
 背景圆环的半径。
 
-默认值：[circleRadius](arkts-arkui-patternlock-attribute.md#circleradius)的约1.833倍（即11/6）。
+默认值：[circleRadius](arkts-arkui-patternlock-comp-attribute.md#circleradius)的约1.833倍（即11/6）。
 
 取值范围：大于0。
 

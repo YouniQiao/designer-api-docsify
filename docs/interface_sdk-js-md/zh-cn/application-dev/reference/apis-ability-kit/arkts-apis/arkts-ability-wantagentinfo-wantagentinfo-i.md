@@ -14,7 +14,7 @@ actionFlags?: Array<abilityWantAgent.WantAgentFlags>
 
 动作执行属性。不设置时无执行属性。
 
-**类型：** Array&lt;abilityWantAgent.WantAgentFlags&gt;
+**类型：** Array&lt;[abilityWantAgent.WantAgentFlags](../../apis-ability-kit/arkts-apis/arkts-app-ability-wantagent.md)&gt;
 
 **起始版本：** 11
 
@@ -30,7 +30,7 @@ actionType?: abilityWantAgent.OperationType
 
 动作类型。
 
-**类型：** abilityWantAgent.OperationType
+**类型：** [abilityWantAgent.OperationType](../../apis-ability-kit/arkts-apis/arkts-app-ability-wantagent.md)
 
 **起始版本：** 11
 

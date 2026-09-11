@@ -26,7 +26,7 @@ Check if bluetooth is discovering.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the local device is discovering; returns `false` otherwise. |
 
 **Error codes:**
 

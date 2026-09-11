@@ -20,7 +20,7 @@ deleted: Array<string> | Array<number>
 
 记录删除数据的位置，如果该表的主键是string类型，该值是主键的值，否则该值表示删除数据的行号。
 
-**类型：** Array&lt;string&gt; \| Array&lt;number&gt;
+**类型：** Array&lt;string&gt; &#124; Array&lt;number&gt;
 
 **起始版本：** 10
 
@@ -34,7 +34,7 @@ inserted: Array<string> | Array<number>
 
 记录插入数据的位置，如果该表的主键是string类型，该值是主键的值，否则该值表示插入数据的行号。
 
-**类型：** Array&lt;string&gt; \| Array&lt;number&gt;
+**类型：** Array&lt;string&gt; &#124; Array&lt;number&gt;
 
 **起始版本：** 10
 
@@ -76,7 +76,7 @@ updated: Array<string> | Array<number>
 
 记录更新数据的位置，如果该表的主键是string类型，该值是主键的值，否则该值表示更新数据的行号。
 
-**类型：** Array&lt;string&gt; \| Array&lt;number&gt;
+**类型：** Array&lt;string&gt; &#124; Array&lt;number&gt;
 
 **起始版本：** 10
 

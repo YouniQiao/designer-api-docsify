@@ -456,7 +456,7 @@ readonly itemMaxFontScale?: number | Resource
 
 该成员只读，不支持更改。
 
-**类型：** number \| [Resource](arkts-arkui-resource-t.md)
+**类型：** number &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 18
 
@@ -484,7 +484,7 @@ readonly itemMinFontScale?: number | Resource
 
 该成员只读，不支持更改。
 
-**类型：** number \| [Resource](arkts-arkui-resource-t.md)
+**类型：** number &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 18
 
@@ -756,7 +756,7 @@ readonly itemShadow?: ShadowOptions | ShadowStyle
 
 该成员只读，不支持更改。
 
-**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
+**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 18
 

@@ -21,7 +21,7 @@ function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>,
 
 **废弃版本：** 19
 
-**替代接口：** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md)(deviceId: long, onDisconnect: AsyncCallback&lt;long&gt;)
+**替代接口：** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md)(deviceId: number, onDisconnect: AsyncCallback&lt;number&gt;)
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -80,7 +80,7 @@ function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>)
 
 **废弃版本：** 19
 
-**替代接口：** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md)(deviceId: long, onDisconnect: AsyncCallback&lt;long&gt;)
+**替代接口：** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md)(deviceId: number, onDisconnect: AsyncCallback&lt;number&gt;)
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 

@@ -6,7 +6,7 @@ The **LiteResultSet** instance is not refreshed in real time. After using the re
 
 In the following API examples, you need to obtain an **LiteResultSet** instance by using a query method, such as [queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querywithoutrowcount) or [querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount), and then call the corresponding method through this instance.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The initial APIs of this class are supported since API version 23.
 
@@ -279,7 +279,7 @@ Obtains the column type based on the specified column index or column name. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIdentifier | number \| string | Yes | Index or name of the column in the result set. The index starts from 0. |
+| columnIdentifier | number &#124; string | Yes | Index or name of the column in the result set. The index starts from 0. |
 
 **Return value:**
 
@@ -320,7 +320,7 @@ Obtains the column type based on the specified column index or column name.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIdentifier | number \| string | Yes | Index or name of the column in the result set. The index starts from 0. |
+| columnIdentifier | number &#124; string | Yes | Index or name of the column in the result set. The index starts from 0. |
 
 **Return value:**
 
@@ -444,7 +444,7 @@ If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT,
 
 | Type | Description |
 | --- | --- |
-| number | Value obtained. |
+| number | Value obtained. <br>The value range supported by this API is **Number.MIN_SAFE_INTEGER** to **Number.MAX_SAFE_INTEGER**. If the value is out of this range, use [getDouble](#getdouble) for DOUBLE values and [getString](#getstring) for INTEGER values. |
 
 **Error codes:**
 
@@ -473,7 +473,7 @@ Obtains data for the current row.
 
 | Type | Description |
 | --- | --- |
-| [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md) | Value of the specified row. If the result set contains duplicate column names, the return value is not as expected. You are advised to use the [getCurrentRowData]{ |
+| [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md) | Value of the specified row. If the result set contains duplicate column names, the return value is not as expected. You are advised to use the [getCurrentRowData](#getcurrentrowdata) API. |
 
 **Error codes:**
 
@@ -514,7 +514,7 @@ Obtains a specified amount of data from the result set. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md)&gt;&gt; | Promise used to return **maxCount** rows of data obtained. If the number of remaining records is less than **maxCount**, the remaining records are returned. Returning an empty array indicates that the end of the result set is reached. If the result set contains duplicate column names, the return values are not as expected. You are advised to use the [getRowsData]{ |
+| Promise&lt;Array&lt;[ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md)&gt;&gt; | Promise used to return **maxCount** rows of data obtained. If the number of remaining records is less than **maxCount**, the remaining records are returned. Returning an empty array indicates that the end of the result set is reached. If the result set contains duplicate column names, the return values are not as expected. You are advised to use the [getRowsData](#getrowsdata) API. |
 
 **Error codes:**
 

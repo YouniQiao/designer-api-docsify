@@ -6,6 +6,8 @@ declare type LocalizedMargin = LocalizedPadding
 
 Defines the localized margin property.
 
+@typedef { LocalizedPadding } LocalizedMargin
+
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.

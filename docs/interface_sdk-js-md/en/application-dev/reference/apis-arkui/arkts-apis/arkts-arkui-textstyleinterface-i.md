@@ -147,7 +147,7 @@ Font weight.
 
 For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.
 
-**Type:** number \| [FontWeight](arkts-arkui-fontweight-e.md) \| string
+**Type:** number &#124; [FontWeight](arkts-arkui-fontweight-e.md) &#124; string
 
 **Since:** 12
 

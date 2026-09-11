@@ -50,7 +50,7 @@ divider?: Optional<DividerOptions> | null
 
 Sets the divider of select.
 
-**Type:** [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[DividerOptions](../arkts-components/arkts-arkui-divideroptions-i.md)&gt; \| null
+**Type:** [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[DividerOptions](../arkts-components/arkts-arkui-divideroptions-i.md)&gt; &#124; null
 
 **Since:** 18
 
@@ -242,7 +242,7 @@ optionWidth?: Dimension | OptionWidthMode
 
 Set the width of each option and set whether the option width fit the trigger.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| [OptionWidthMode](arkts-arkui-optionwidthmode-e.md)
+**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; [OptionWidthMode](arkts-arkui-optionwidthmode-e.md)
 
 **Since:** 18
 

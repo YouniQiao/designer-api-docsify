@@ -26,10 +26,10 @@ Add a printer to system.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerName | string | Yes | Indicates the printer name. Name of the printer to be added. |
-| uri | string | Yes | Indicates the printer uri. Uri of the printer to be added. |
-| ppdName | string | No | Indicates the ppd name. Ppd name of the printer to be added. |
-| options | string | No | Indicates the options. Optional parameters when adding a printer. |
+| printerName | string | Yes | Indicates the printer name.<br>Name of the printer to be added. |
+| uri | string | Yes | Indicates the printer uri.<br>Uri of the printer to be added. |
+| ppdName | string | No | Indicates the ppd name.<br>Ppd name of the printer to be added. |
+| options | string | No | Indicates the options.<br>Optional parameters when adding a printer. |
 
 **Return value:**
 

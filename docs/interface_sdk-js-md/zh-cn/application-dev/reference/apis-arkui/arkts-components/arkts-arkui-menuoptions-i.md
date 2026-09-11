@@ -31,7 +31,8 @@ true：在子窗口显示菜单；false：不在子窗显示菜单。
 
 **类型：** boolean
 
-**默认值：** true for 2-in-1 devices [since 12]
+**默认值：**
+- API版本12+：true for 2-in-1 devices
 
 **起始版本：** 11
 

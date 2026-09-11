@@ -68,7 +68,7 @@ Database file directory:
 
 /data/storage/\${el1-el5}/database
 
-**Note：**: **\${el1-el5}** refers to the directories [el1, el2, el3, el4, el5](../../../file-management/app-sandbox-directory.md#application-file-directory-and-application-file-path)
+**Note:** **\${el1-el5}** refers to the directories [el1, el2, el3, el4, el5](../../../file-management/app-sandbox-directory.md#application-file-directory-and-application-file-path)
 
 **Type:** number
 

@@ -50,7 +50,7 @@ addResource(type: ResourceType, proxy: PhotoProxy): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 | 14000016 | Operation Not Support |
 
@@ -108,7 +108,7 @@ addResourceForPicker(type: ResourceType, fileUri: string): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## createAssetRequest
@@ -154,7 +154,7 @@ API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000001 | Invalid display name |
 | 14000011 | System inner fail |
 
@@ -222,8 +222,8 @@ static deleteAssetsPermanentlyWithUri(context: Context, assetUris: string[]): Pr
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by nonsystem application |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. The context is empty;  2. Asset uri array size is empty or bigger than 500 . |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out; |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. The context is empty; <br>2. Asset uri array size is empty or bigger than 500 . |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out; |
 
 **示例**
 
@@ -282,8 +282,8 @@ static deleteCloudAssetsWithUri(context: Context, assetUris: string[]): Promise<
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. The context is empty;  2. Asset uri array size is empty or bigger than 500 . |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out; |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. The context is empty; <br>2. Asset uri array size is empty or bigger than 500 . |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out; |
 
 **示例**
 
@@ -337,8 +337,8 @@ static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>)
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
-| 14000011 | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 14000011 | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -402,7 +402,7 @@ static deleteLocalAssetsPermanentlyWithUri(context: Context, assetUris: Array<st
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
 | 13900020 | Invalid argument |
-| 14000011 | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| 14000011 | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -477,8 +477,8 @@ static deleteLocalAssetsWithUri(context: Context, assetUris: string[]): Promise<
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. The context is empty;  2. Asset uri array size is empty or bigger than 500 . |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1.Database corrupted;  2.The file system is abnormal;  3.The IPC request timed out; |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. The context is empty; <br>2. Asset uri array size is empty or bigger than 500 . |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1.Database corrupted; <br>2.The file system is abnormal; <br>3.The IPC request timed out; |
 
 **示例**
 
@@ -678,7 +678,7 @@ setCameraShotKey(cameraShotKey: string): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 **示例**
@@ -731,8 +731,8 @@ setCompositeDisplayMode(compositeDisplayMode: CompositeDisplayMode): Promise<voi
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scene parameter verification failed. Possible causes:  1. The compositeDisplayMode is not within the supported range.  2. The original file does not exist locally in PhotoAsset.  3. The PhotoAsset is not a composite asset.  4. The original file format is not within the supported range.  5. The original file has been edited. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scene parameter verification failed. Possible causes:<br>1. The compositeDisplayMode is not within the supported range. <br>2. The original file does not exist locally in PhotoAsset. <br>3. The PhotoAsset is not a composite asset. <br>4. The original file format is not within the supported range. <br>5. The original file has been edited. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -785,7 +785,7 @@ setEditData(editData: MediaAssetEditData): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 **示例**
@@ -845,7 +845,7 @@ setEffectMode(mode: MovingPhotoEffectMode): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 | 14000016 | Operation Not Support |
 
@@ -951,7 +951,7 @@ setHidden(hiddenState: boolean): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 **示例**
@@ -1008,8 +1008,8 @@ setHiddenAttribute(hiddenState: boolean): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. The asset is not exist; |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error.It is recommended to retry and check the logs. Possible causes:  1. Database corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. The asset is not exist; |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error.It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -1063,7 +1063,7 @@ Set recentShow state of the asset.
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 ## setLivePhoto4dStatus
@@ -1122,7 +1122,7 @@ setLocation(longitude: number, latitude: number): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 **示例**
@@ -1170,7 +1170,7 @@ setMovingPhotoVersion(version: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| version | number | 是 | 动图版本号取值范围为全体整数。 |
+| version | number | 是 | 动图版本号<br>取值范围为全体整数。 |
 
 **错误码：**
 
@@ -1225,14 +1225,14 @@ setSupportedWatermarkType(watermarkType: WatermarkType): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| watermarkType | [WatermarkType](arkts-medialibrary-photoaccesshelper-watermarktype-e-sys.md) | 是 | 水印可编辑标识。   **注意：** 不支持传入WatermarkType.DEFAULT。 |
+| watermarkType | [WatermarkType](arkts-medialibrary-photoaccesshelper-watermarktype-e-sys.md) | 是 | 水印可编辑标识。<br>**注意：** <br>不支持传入WatermarkType.DEFAULT。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **示例**
@@ -1280,15 +1280,15 @@ setTitleByFile(name: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | 资产修改名称。取值范围:1-255 不应包含扩展名。文件名字符串长度为1~255。不允许出现的非法英文字符，包括：. \ / : * ? " ' ` &lt; &gt; \| { } [ ]不允许仅命名.或者..文管目录下不允许重名 |
+| name | string | 是 | 资产修改名称。<br>取值范围:1-255 <br>不应包含扩展名。文件名字符串长度为1~255。不允许出现的非法英文字符，包括：. \ / : * ? " ' ` &lt; &gt; &#124; { } [ ]不允许仅命名.或者..文管目录下不允许重名 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. The asset is not exist; |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error.It is recommended to retry and check the logs. Possible causes:  1. Database corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. The asset is not exist; |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error.It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -1341,7 +1341,7 @@ setUserComment(userComment: string): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 **示例**
@@ -1398,6 +1398,6 @@ setVideoEnhancementAttr(videoEnhancementType: VideoEnhancementType, photoId: str
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 | 14000016 | Operation Not Support |

@@ -6,7 +6,7 @@
 
 **废弃版本：** 13
 
-**替代接口：** [NavPathStack](arkts-arkui-navpathstack-c.md)
+**替代接口：** NavPathStack and navDestination
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

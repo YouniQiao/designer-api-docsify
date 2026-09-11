@@ -21,7 +21,7 @@ Displays the icon when the password is toggled to hidden in the password input m
 
 The string type can be used to load network images and local images.
 
-**Type:** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**Type:** string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 10
 
@@ -41,7 +41,7 @@ Displays the icon when the password is toggled to visible in the password input 
 
 The string type can be used to load network images and local images.
 
-**Type:** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**Type:** string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 10
 

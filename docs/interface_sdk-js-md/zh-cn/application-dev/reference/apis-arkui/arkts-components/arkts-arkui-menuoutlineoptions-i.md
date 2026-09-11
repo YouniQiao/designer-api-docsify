@@ -21,7 +21,7 @@ color?: ResourceColor | EdgeColors
 
 默认值：#19ffffff
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; EdgeColors
 
 **起始版本：** 20
 
@@ -41,7 +41,7 @@ width?: Dimension | EdgeOutlineWidths
 
 默认值：0
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeOutlineWidths
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; EdgeOutlineWidths
 
 **起始版本：** 20
 

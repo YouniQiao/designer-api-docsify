@@ -22,7 +22,7 @@ function getSignalInformation(slotId: number, callback: AsyncCallback<Array<Sign
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[SignalInformation](arkts-telephony-radio-signalinformation-i.md)&gt;&gt; | 是 | 回调函数，返回从[SignalInformation](arkts-telephony-radio-signalinformation-i.md)中派生出的子类对象的数组。 |
 
 **错误码：**
@@ -67,13 +67,13 @@ function getSignalInformation(slotId: number): Promise<Array<SignalInformation>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[SignalInformation](arkts-telephony-radio-signalinformation-i.md)&gt;&gt; | 以Promise形式返回网络信号强度[SignalInformation]{ |
+| Promise&lt;Array&lt;[SignalInformation](arkts-telephony-radio-signalinformation-i.md)&gt;&gt; | 以Promise形式返回网络信号强度[SignalInformation](arkts-telephony-radio-signalinformation-i.md)子类对象的数组。 |
 
 **错误码：**
 

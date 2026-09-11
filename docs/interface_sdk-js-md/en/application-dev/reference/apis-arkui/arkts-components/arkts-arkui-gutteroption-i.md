@@ -19,7 +19,7 @@ x?: Length | GridRowSizeOption
 
 Horizontal spacing between grid child components. Unit: vp.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| [GridRowSizeOption](arkts-arkui-gridrowsizeoption-i.md)
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [GridRowSizeOption](arkts-arkui-gridrowsizeoption-i.md)
 
 **Since:** 9
 
@@ -37,7 +37,7 @@ y?: Length | GridRowSizeOption
 
 Vertical spacing between grid child components. Unit: vp.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| [GridRowSizeOption](arkts-arkui-gridrowsizeoption-i.md)
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [GridRowSizeOption](arkts-arkui-gridrowsizeoption-i.md)
 
 **Since:** 9
 

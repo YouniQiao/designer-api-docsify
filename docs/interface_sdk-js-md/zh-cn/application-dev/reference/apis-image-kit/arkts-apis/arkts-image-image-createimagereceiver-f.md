@@ -24,7 +24,7 @@ function createImageReceiver(width: number, height: number, format: number, capa
 
 **废弃版本：** 11
 
-**替代接口：** [createImageReceiver](#createimagereceiver-1)(size: Size, format: ImageFormat, capacity: int)
+**替代接口：** [createImageReceiver](arkts-image-image-createimagereceiver-f.md)(size: Size, format: ImageFormat, capacity: number)
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -115,13 +115,13 @@ function createImageReceiver(options?: ImageReceiverOptions): ImageReceiver | un
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ImageReceiverOptions](arkts-image-image-imagereceiveroptions-i.md) | 否 | 创建ImageReceiver的属性，包括图片的默认大小和同时访问的最大图片数。未传入options时，默认的size为1920*1080，单位为像素（px），表示期望接收宽为1920px，高为1080px的图片。未传入options时，默认的capacity为3，表示期望同时最多有3张图片等待读取。 |
+| options | [ImageReceiverOptions](arkts-image-image-imagereceiveroptions-i.md) | 否 | 创建ImageReceiver的属性，包括图片的默认大小和同时访问的最大图片数。<br>未传入options时，默认的size为1920*1080，单位为像素（px），表示期望接收宽为1920px，高为1080px的图片。<br>未传入options时，默认的capacity为3，表示期望同时最多有3张图片等待读取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageReceiver](arkts-image-image-imagereceiver-i.md) \| undefined | 操作成功时返回ImageReceiver实例，否则返回undefined。 |
+| [ImageReceiver](arkts-image-image-imagereceiver-i.md) &#124; undefined | 操作成功时返回ImageReceiver实例，否则返回undefined。 |
 
 **错误码：**
 

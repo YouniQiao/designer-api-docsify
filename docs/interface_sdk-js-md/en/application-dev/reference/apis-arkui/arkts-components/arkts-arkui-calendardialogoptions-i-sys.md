@@ -4,7 +4,7 @@ Defines the configuration options of the calendar picker dialog box.
 
 Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When the application window is resized, the width of the dialog box is continuously compressed. If the window width
 > is reduced below a certain threshold, the content of the dialog box may not be fully visible. To ensure that the

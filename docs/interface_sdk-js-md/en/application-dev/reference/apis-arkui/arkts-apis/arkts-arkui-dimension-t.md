@@ -6,6 +6,8 @@ declare type Dimension = PX | VP | FP | LPX | Percentage | Resource
 
 Defines the dimension property with number with units(vp|px|fp|lpx|%), and resource.
 
+@typedef { PX | VP | FP | LPX | Percentage | Resource } Dimension
+
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.

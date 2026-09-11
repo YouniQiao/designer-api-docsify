@@ -2,6 +2,8 @@
 
 Describes compose parameters.
 
+@typedef HdrComposeOptions
+
 **Since:** 23
 
 **System capability:** SystemCapability.Multimedia.Image.Core

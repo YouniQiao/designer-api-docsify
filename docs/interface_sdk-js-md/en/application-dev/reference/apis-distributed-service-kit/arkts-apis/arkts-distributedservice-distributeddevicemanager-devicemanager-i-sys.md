@@ -350,7 +350,7 @@ Query the device operating system type by device network ID.
 
 | Type | Description |
 | --- | --- |
-| number | Returns the device operating system type. Possible return: |
+| number | Returns the device operating system type. Possible return:   1. 10: Operating system based on OpenHarmony 2. 11: Operating system not based on OpenHarmony 3. -1: Unknown |
 
 **Error codes:**
 
@@ -382,7 +382,7 @@ Unsubscribes from the reply to the UI operation result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'replyResult' | Yes | Event type, which has a fixed value of **replyResult**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | No | Callback to unregister. |
 
 **Error codes:**
 
@@ -428,7 +428,7 @@ Subscribes to the reply to the UI operation result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'replyResult' | Yes | Event type, which has a fixed value of **replyResult**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | Yes | Callback invoked to return the UI status change. |
 
 **Error codes:**
 
@@ -543,7 +543,7 @@ Replies to the user's UI operation. This API can be used only by the PIN HAP of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | number | Yes | User operation.    - **0**: Grant the permission.    - **1**. Remove the permission.    -**2**: Time out the user operation in the permission request dialog.    - **3**: Cancel the display of the PIN box.    - **4**: Cancel the display of the PIN input box.    - **5**: Confirm the input in the PIN input box. |
+| action | number | Yes | User operation.<br>- **0**: Grant the permission. <br>- **1**. Remove the permission. <br>-**2**: Time out the user operation in the permission request dialog. <br>- **3**: Cancel the display of the PIN box. <br>- **4**: Cancel the display of the PIN input box. <br>- **5**: Confirm the input in the PIN input box. |
 | actionResult | string | Yes | User operation result. The value is a string of 1 to 255 characters. |
 
 **Error codes:**

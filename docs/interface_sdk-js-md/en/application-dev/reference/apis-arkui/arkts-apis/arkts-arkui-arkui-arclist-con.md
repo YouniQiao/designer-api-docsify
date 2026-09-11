@@ -8,7 +8,7 @@ export declare const ArcList: ArcListInterface
 
 The **ArcList** component is a circular layout container that displays a series of list items in an arc shape. It is suitable for presenting homogeneous data, such as images and text, in a continuous, multi-row format.
 
-> **NOTE：**
+> **NOTE:**
 
 > - This component is supported since API version 18. Updates will be marked with a
 > superscript to indicate their earliest API version.
@@ -50,7 +50,7 @@ export declare const ArcListItem: ArcListItemInterface
 
 The **ArcListItem** component is used to display individual child components in an ArcList component and must be used in conjunction with **ArcList**.
 
-> **NOTE：**
+> **NOTE:**
 
 > - This component can be used only as a child of ArcList.
 > 

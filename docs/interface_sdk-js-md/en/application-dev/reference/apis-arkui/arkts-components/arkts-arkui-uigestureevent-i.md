@@ -32,8 +32,8 @@ Adds a gesture.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)&lt;T&gt; | Yes | Gesture handler object. |
-| priority | [GesturePriority](../arkts-apis/arkts-arkui-gesturepriority-e.md) | No | Priority of the bound gesture.Default value: **GesturePriority.NORMAL**. |
-| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.Default value: **GestureMask.Normal**. |
+| priority | [GesturePriority](../arkts-apis/arkts-arkui-gesturepriority-e.md) | No | Priority of the bound gesture.<br>Default value: **GesturePriority.NORMAL**. |
+| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.<br>Default value: **GestureMask.Normal**. |
 
 ## addParallelGesture
 
@@ -56,7 +56,7 @@ Adds a gesture that can be recognized at once by the component and its child com
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)&lt;T&gt; | Yes | Gesture handler object. |
-| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.Default value: **GestureMask.Normal**. |
+| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.<br>Default value: **GestureMask.Normal**. |
 
 ## clearGestures
 

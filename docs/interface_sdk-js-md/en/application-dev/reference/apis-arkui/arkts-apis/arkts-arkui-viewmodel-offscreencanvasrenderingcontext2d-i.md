@@ -1157,7 +1157,7 @@ fillStyle?: string | CanvasGradient | CanvasPattern
 
 Fill style attribute. Paint color used to fill the area. Canvas gradient object used by the paint. You can call createLinearGradient() to create a CanvasGradient object. Canvas pattern. You can call createPattern() to create a CanvasPattern object.
 
-**Type:** string \| [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) \| [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md)
+**Type:** string &#124; [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) &#124; [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md)
 
 **Since:** 7
 
@@ -1189,7 +1189,7 @@ strokeStyle?: string | CanvasGradient | CanvasPattern
 
 Sets the stroke paint style. Color of the stroke paint. Canvas gradient object used by the paint. You can call createLinearGradient() to create a CanvasGradient object. Canvas pattern. You can call createPattern() to create a CanvasPattern object.
 
-**Type:** string \| [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) \| [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md)
+**Type:** string &#124; [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) &#124; [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md)
 
 **Since:** 7
 

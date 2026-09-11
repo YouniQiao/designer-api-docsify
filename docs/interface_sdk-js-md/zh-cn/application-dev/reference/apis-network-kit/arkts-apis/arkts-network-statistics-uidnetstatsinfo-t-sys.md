@@ -9,7 +9,7 @@ export type UidNetStatsInfo = Record<number, NetStatsInfo>
 **起始版本：** 12
 
 **系统能力：** 
-- SystemCapability.Communication.NetManager.Core {
+- SystemCapability.Communication.NetManager.Core [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md) for every UID. Key is UID.
 - SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。

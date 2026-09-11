@@ -37,8 +37,9 @@
 
 ## Core Class
 
-- **privacyManager:** Provides the core class for privacy management.  
- 
+- **privacyManager:** Provides the core class for privacy management.
+
+
 
 ## 导入模块
 
@@ -61,14 +62,14 @@ import { privacyManager } from '@kit.AbilityKit';
 | [getPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-getpermissionusedrecordtogglestatus-f-sys.md) | 系统应用调用此接口，可以获取当前用户的权限使用记录开关状态，例如在权限管理界面展示当前开关设置状态。使用Promise异步回调。 |
 | [getPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-getpermissionusedrecordtogglestatus-f-sys.md) | 系统应用调用此接口，可以获取指定子身份资料的权限使用记录开关状态，例如在权限管理界面展示当前开关设置状态。使用Promise异步回调。 |
 | [getPermissionUsedTypeInfos](arkts-ability-privacymanager-getpermissionusedtypeinfos-f-sys.md) | 查询设备上指定应用访问敏感权限时的信息（包括敏感权限名称、敏感权限访问方式）。 |
-| off | 取消订阅指定权限列表的权限使用状态变更事件。取消订阅成功后，将不再接收指定权限列表的状态变更通知。 |
-| on | 订阅指定权限列表的权限使用状态变更事件。权限使用状态变更由[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md)和[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md)调用触发。订阅成功后，当权限使用状态变更时，回调函数会被触发，返回[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md)对象，包含权限使用状态变化的详情。使用callback异步回调。 |
+| [off](arkts-ability-privacymanager-off-f-sys.md#offactivestatechange) | 取消订阅指定权限列表的权限使用状态变更事件。取消订阅成功后，将不再接收指定权限列表的状态变更通知。 |
+| [on](arkts-ability-privacymanager-on-f-sys.md#onactivestatechange) | 订阅指定权限列表的权限使用状态变更事件。权限使用状态变更由[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md)和[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md)调用触发。订阅成功后，当权限使用状态变更时，回调函数会被触发，返回[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md)对象，包含权限使用状态变化的详情。使用callback异步回调。 |
 | [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md) | 设置是否记录当前用户的权限使用情况。系统应用调用此接口，可以设置当前用户的权限使用记录开关状态。使用Promise异步回调。 |
 | [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md) | 设置是否记录指定子身份资料的权限使用情况。系统应用调用此接口，可以设置指定子身份资料的权限使用记录开关状态。使用Promise异步回调。 |
 | [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md) | 系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考[on](arkts-ability-privacymanager-on-f-sys.md)）。使用Promise异步回调。 |
-| [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md) | 系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考on）。使用Promise异步回调。 |
-| [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md) | 系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考on）。使用Promise异步回调。 |
-| [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md) | 系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考on）。使用callback异步回调。 |
+| [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md) | 系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考[on](arkts-ability-privacymanager-on-f-sys.md#onactivestatechange)）。使用Promise异步回调。 |
+| [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md) | 系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考[on](arkts-ability-privacymanager-on-f-sys.md#onactivestatechange)）。使用Promise异步回调。 |
+| [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md) | 系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考[on](arkts-ability-privacymanager-on-f-sys.md#onactivestatechange)）。使用callback异步回调。 |
 | [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) | 系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用Promise异步回调。 |
 | [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) | 系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用callback异步回调。 |
 | [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) | 系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用Promise异步回调。 |

@@ -2,7 +2,7 @@
 
 This module provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used
 > where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see

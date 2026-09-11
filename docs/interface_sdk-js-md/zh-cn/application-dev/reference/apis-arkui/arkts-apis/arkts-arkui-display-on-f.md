@@ -24,7 +24,7 @@ function on(type: 'add' | 'remove' | 'change', callback: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'add' \| 'remove' \| 'change' | 是 | 监听事件。   - type为"add"，表示增加显示设备事件。例如：插入显示器。   - type为"remove"，表示移除显示设备事件。例如：移除显示器。   - type为"change"，表示改变显示设备事件。例如：显示器方向改变。 |
+| type | 'add' &#124; 'remove' &#124; 'change' | 是 | 监听事件。<br>- type为"add"，表示增加显示设备事件。例如：插入显示器。<br>- type为"remove"，表示移除显示设备事件。例如：移除显示器。<br>- type为"change"，表示改变显示设备事件。例如：显示器方向改变。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 回调函数。返回监听到的屏幕ID，该参数为整数。 |
 
 **错误码：**
@@ -64,7 +64,7 @@ function on(type: 'add' | 'remove' | 'change', callback: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'add' \| 'remove' \| 'change' | 是 | 监听事件。   - type为"add"，表示增加显示设备事件。例如：插入显示器。   - type为"remove"，表示移除显示设备事件。例如：移除显示器。   - type为"change"，表示改变显示设备事件。例如：显示器方向改变。 |
+| type | 'add' &#124; 'remove' &#124; 'change' | 是 | 监听事件。<br>- type为"add"，表示增加显示设备事件。例如：插入显示器。<br>- type为"remove"，表示移除显示设备事件。例如：移除显示器。<br>- type为"change"，表示改变显示设备事件。例如：显示器方向改变。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 回调函数。返回监听到的屏幕ID，该参数为整数。 |
 
 **错误码：**
@@ -96,7 +96,7 @@ function on(type: 'add' | 'remove' | 'change', callback: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'add' \| 'remove' \| 'change' | 是 | 监听事件。   - type为"add"，表示增加显示设备事件。例如：插入显示器。   - type为"remove"，表示移除显示设备事件。例如：移除显示器。   - type为"change"，表示改变显示设备事件。例如：显示器方向改变。 |
+| type | 'add' &#124; 'remove' &#124; 'change' | 是 | 监听事件。<br>- type为"add"，表示增加显示设备事件。例如：插入显示器。<br>- type为"remove"，表示移除显示设备事件。例如：移除显示器。<br>- type为"change"，表示改变显示设备事件。例如：显示器方向改变。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 回调函数。返回监听到的屏幕ID，该参数为整数。 |
 
 **错误码：**
@@ -118,11 +118,11 @@ function on(type: 'foldStatusChange', callback: Callback<FoldStatus>): void
 
 开启折叠设备折叠状态变化的监听。
 
-本接口监听设备物理折叠状态的变化，如果要监听屏幕显示模式的变化，需要使用display.on('foldDisplayModeChange')接口。
+本接口监听设备物理折叠状态的变化，如果要监听屏幕显示模式的变化，需要使用[display.on('foldDisplayModeChange')](#onfolddisplaymodechange)接口。
 
 两者存在差异，时序上物理折叠状态变化在前，底层会根据物理折叠状态匹配屏幕显示模式状态。
 
-若需监听当前显示内容是显示在折叠设备的内屏还是外屏，请使用display.on('foldDisplayModeChange')。
+若需监听当前显示内容是显示在折叠设备的内屏还是外屏，请使用[display.on('foldDisplayModeChange')](#onfolddisplaymodechange)。
 
 **起始版本：** 10
 
@@ -141,7 +141,7 @@ function on(type: 'foldStatusChange', callback: Callback<FoldStatus>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 **示例**
@@ -229,7 +229,7 @@ function on(type: 'captureStatusChange', callback: Callback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 **示例**
@@ -252,7 +252,7 @@ function on(type: 'foldDisplayModeChange', callback: Callback<FoldDisplayMode>):
 
 开启折叠设备屏幕显示模式变化的监听。
 
-本接口监听设备屏幕显示模式的变化，如果要监听设备物理折叠状态的变化，需要使用display.on('foldStatusChange')接口。
+本接口监听设备屏幕显示模式的变化，如果要监听设备物理折叠状态的变化，需要使用[display.on('foldStatusChange')](#onfoldstatuschange)接口。
 
 两者存在差异，时序上物理折叠状态变化在前，底层会根据物理折叠状态匹配屏幕显示模式状态。
 
@@ -273,7 +273,7 @@ function on(type: 'foldDisplayModeChange', callback: Callback<FoldDisplayMode>):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 **示例**

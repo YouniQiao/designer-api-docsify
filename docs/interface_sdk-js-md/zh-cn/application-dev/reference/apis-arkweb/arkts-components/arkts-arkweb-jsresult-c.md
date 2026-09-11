@@ -1,6 +1,6 @@
 # JsResult
 
-JsResult是Web组件在处理JavaScript弹窗事件时返回的结果处理对象，适用于开发者拦截并自定义处理`window.alert`、`window.confirm`、`window.prompt`等弹窗场景。开发者可在[onAlert](arkts-arkweb-web-attribute.md#onalert)、[onConfirm](arkts-arkweb-web-attribute.md#onconfirm)或[onPrompt](arkts-arkweb-web-attribute.md#onprompt)等事件回调中，通过该对象向Web组件反馈用户的确认、取消或输入内容等操作结果，从而控制弹窗的后续行为。
+JsResult是Web组件在处理JavaScript弹窗事件时返回的结果处理对象，适用于开发者拦截并自定义处理`window.alert`、`window.confirm`、`window.prompt`等弹窗场景。开发者可在[onAlert](arkts-arkweb-web-comp-attribute.md#onalert)、[onConfirm](arkts-arkweb-web-comp-attribute.md#onconfirm)或[onPrompt](arkts-arkweb-web-comp-attribute.md#onprompt)等事件回调中，通过该对象向Web组件反馈用户的确认、取消或输入内容等操作结果，从而控制弹窗的后续行为。
 
 **起始版本：** 8
 

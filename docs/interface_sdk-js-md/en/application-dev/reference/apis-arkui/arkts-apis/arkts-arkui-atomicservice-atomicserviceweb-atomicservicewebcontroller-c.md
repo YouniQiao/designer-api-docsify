@@ -96,7 +96,7 @@ Checks whether this page can navigate forward or backward by the specified numbe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## backward
@@ -209,14 +209,14 @@ Loads a specified URL.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string \| [Resource](arkts-arkui-resource-t.md) | Yes | URL to load. |
+| url | string &#124; [Resource](arkts-arkui-resource-t.md) | Yes | URL to load. |
 | headers | Array&lt;[WebHeader](arkts-arkui-atomicservice-atomicserviceweb-webheader-i.md)&gt; | No | Additional HTTP request header of the URL. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 | [17100002](../../apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) | Invalid url. |
 | [17100003](../../apis-arkweb/errorcode-webview.md#17100003-incorrect-resource-path) | Invalid resource path or file type. |
@@ -251,7 +251,7 @@ Sets a custom user agent, which will override the default user agent.
 
 Set the user agent in the **onControllerAttached** callback to ensure that it takes effect. For details about the setting, see the example. Avoid setting the user agent in **onLoadIntercept**. Otherwise, the setting may fail occasionally.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If a URL is set for the **Web** component **src** and **UserAgent** is not set in the **onControllerAttached**
 > callback, calling **setCustomUserAgent** may cause mismatches between the loaded page and the intended user
@@ -273,5 +273,5 @@ Set the user agent in the **onControllerAttached** callback to ensure that it ta
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |

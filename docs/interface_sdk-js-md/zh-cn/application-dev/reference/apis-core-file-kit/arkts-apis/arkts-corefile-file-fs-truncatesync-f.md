@@ -24,7 +24,7 @@ declare function truncateSync(file: string | number, len?: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| file | string \| number | 是 | 文件的应用沙箱路径或已打开的文件描述符fd。 |
+| file | string &#124; number | 是 | 文件的应用沙箱路径或已打开的文件描述符fd。 |
 | len | number | 否 | 文件截断后的长度，单位为Byte。默认为0。 |
 
 **错误码：**

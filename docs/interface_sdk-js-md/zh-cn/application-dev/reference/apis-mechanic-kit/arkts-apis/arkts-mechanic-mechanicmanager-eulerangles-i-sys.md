@@ -2,6 +2,8 @@
 
 Absolute euler angles relative to the home position.
 
+@typedef EulerAngles
+
 **起始版本：** 20
 
 **系统能力：** SystemCapability.Mechanic.Core

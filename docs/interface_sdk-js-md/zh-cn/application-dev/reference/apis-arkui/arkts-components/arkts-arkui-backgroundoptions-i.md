@@ -23,7 +23,8 @@ align?: Alignment
 
 **类型：** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
 
-**默认值：** Alignment.Center [since 20]
+**默认值：**
+- API版本20+：Alignment.Center
 
 **起始版本：** 10
 

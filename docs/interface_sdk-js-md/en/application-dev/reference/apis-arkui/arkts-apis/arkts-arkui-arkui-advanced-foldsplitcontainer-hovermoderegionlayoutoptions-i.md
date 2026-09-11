@@ -2,7 +2,7 @@
 
 Layout information for the semi-folded state.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 1. In semi-folded state, the device contains an avoidance area, and layout calculations must account for
 > the impact of this avoidance area on the overall layout.

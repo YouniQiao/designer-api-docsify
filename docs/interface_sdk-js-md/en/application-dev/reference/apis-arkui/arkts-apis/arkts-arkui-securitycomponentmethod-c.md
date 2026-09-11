@@ -84,7 +84,7 @@ Provides an accessibility description for the component. You can set detailed te
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| description | string \| [Resource](arkts-arkui-resource-t.md) | Yes | Accessibility description for the component. Provides details about the component's operation, helping users understand what the current action does and its potential consequences. When the component is selected, if it has both text attributes and an accessibility description, the text content is announced first, followed by the accessibility description. The default value is an empty string. |
+| description | string &#124; [Resource](arkts-arkui-resource-t.md) | Yes | Accessibility description for the component. Provides details about the component's operation, helping users understand what the current action does and its potential consequences. When the component is selected, if it has both text attributes and an accessibility description, the text content is announced first, followed by the accessibility description.<br>The default value is an empty string. |
 
 **Return value:**
 
@@ -168,7 +168,7 @@ Sets the alignment of the icon and text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignType | [Alignment](arkts-arkui-alignment-e.md) | Yes | Alignment of the icon and text within the security component. The icon and text are aligned as a unit within the component's background area. The alignment is applied based on the **alignType** value after [padding](#padding) takes effect, which also affects the visual result. Default value: Alignment.Center. |
+| alignType | [Alignment](arkts-arkui-alignment-e.md) | Yes | Alignment of the icon and text within the security component. The icon and text are aligned as a unit within the component's background area. The alignment is applied based on the **alignType** value after [padding](#padding) takes effect, which also affects the visual result. <br>Default value: Alignment.Center. |
 
 **Return value:**
 
@@ -252,7 +252,7 @@ Sets the background color of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Background color of the security component. Default value: \\$r('sys.color.icon_emphasize'). If the alpha value of the upper eight bits of the security component's background color is less than **0x1a** (for example, **0x1800ff00**), the system will forcibly adjust this alpha value to **0xff**. This ensures the security component remains sufficiently visible and prevents users from inadvertently triggering authorization due to an overly transparent component. |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Background color of the security component.<br>Default value: \&#36;r('sys.color.icon_emphasize'). <br>If the alpha value of the upper eight bits of the security component's background color is less than **0x1a** (for example, **0x1800ff00**), the system will forcibly adjust this alpha value to **0xff**. This ensures the security component remains sufficiently visible and prevents users from inadvertently triggering authorization due to an overly transparent component. |
 
 **Return value:**
 
@@ -280,7 +280,7 @@ Sets the border color of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Border color of the security component.No border color is set by default. |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Border color of the security component.<br>No border color is set by default. |
 
 **Return value:**
 
@@ -310,7 +310,7 @@ The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonTyp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | Border radius of the security component. Default value: **0vp**. If no unit is explicitly specified, the unit is vp. Percentage strings are not supported.The border radius is constrained by the component size, with a minimum of **0** and a maximum of half the smaller of the width and height. If an invalid value is set, this attribute does not take effect. |
+| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | Border radius of the security component.<br>Default value: **0vp**. <br>If no unit is explicitly specified, the unit is vp. <br>Percentage strings are not supported.<br>The border radius is constrained by the component size, with a minimum of **0** and a maximum of half the smaller of the width and height. If an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 
@@ -340,7 +340,7 @@ The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonTyp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | [Dimension](arkts-arkui-dimension-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) | Yes | Border radius of the security component. Default value: **0vp**. When the unit is not explicitly specified, the unit is vp.The Dimension type does not support setting percentage strings. The border radius is constrained by the component size, with a minimum value of **0** and a maximum value of half the smaller dimension of width and height. When an invalid value is set, this attribute does not take effect. |
+| radius | [Dimension](arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md) | Yes | Border radius of the security component.<br>Default value: **0vp**. <br>When the unit is not explicitly specified, the unit is vp.<br>The Dimension type does not support setting percentage strings. The border radius is constrained by the component size, with a minimum value of **0** and a maximum value of half the smaller dimension of width and height. When an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 
@@ -368,7 +368,7 @@ Sets the border style of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BorderStyle](arkts-arkui-borderstyle-e.md) | Yes | Border style of the security component. No border style is set by default. |
+| value | [BorderStyle](arkts-arkui-borderstyle-e.md) | Yes | Border style of the security component.<br>No border style is set by default. |
 
 **Return value:**
 
@@ -396,7 +396,7 @@ Sets the border width of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | Border width of the security component. Default value: **0vp**. When the unit is not explicitly specified, the unit is vp.Percentage strings are not supported. This attribute does not take effect when it is set to an invalid value. |
+| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | Border width of the security component.<br>Default value: **0vp**. <br>When the unit is not explicitly specified, the unit is vp.<br>Percentage strings are not supported. This attribute does not take effect when it is set to an invalid value. |
 
 **Return value:**
 
@@ -453,7 +453,7 @@ Sets the constraint size, limiting the size range during component layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ConstraintSizeOptions](arkts-arkui-constraintsizeoptions-i.md) | Yes | Constraint size, limiting the size range during component layout. When the unit is not explicitly specified, the unit is vp.   **constraintSize** takes precedence over **width** and **height**. When used in conjunction with adaptive font size attributes, if the text on the security component is truncated, clicking the component does not perform authorization. The **constraintSize** setting affects whether the text is fully displayed.For the value results, see [impact of constraintSize values on width/height](#constraintsize). Default value:{minWidth: 0,maxWidth: Infinity,minHeight: 0,maxHeight: Infinity}. |
+| value | [ConstraintSizeOptions](arkts-arkui-constraintsizeoptions-i.md) | Yes | Constraint size, limiting the size range during component layout. <br>When the unit is not explicitly specified, the unit is vp.<br>**constraintSize** takes precedence over **width** and **height**. When used in conjunction with adaptive font size attributes, if the text on the security component is truncated, clicking the component does not perform authorization. The **constraintSize** setting affects whether the text is fully displayed.<br>For the value results, see [impact of constraintSize values on width/height](#constraintsize). <br>Default value:<br>{<br>minWidth: 0,<br>maxWidth: Infinity,<br>minHeight: 0,<br>maxHeight: Infinity<br>}. |
 
 **Return value:**
 
@@ -481,7 +481,7 @@ Sets whether the security component is interactive.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| respond | boolean | Yes | Whether the security component is interactive. Default value: **true**    **true**: The component is interactive and responds to operations such as clicks.    **false**: The component is non-interactive and does not respond to operations such as clicks. |
+| respond | boolean | Yes | Whether the security component is interactive.<br>Default value: **true** <br>**true**: The component is interactive and responds to operations such as clicks. <br>**false**: The component is non-interactive and does not respond to operations such as clicks. |
 
 **Return value:**
 
@@ -511,7 +511,7 @@ The **fallbackLineSpacing** attribute is closely coupled with the **lineHeight**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether the line height adapts based on the actual text height.   **true**: The line height adapts based on the actual text height. **false**: The line height does not adapt based on the actual text height. |
+| enabled | boolean | Yes | Whether the line height adapts based on the actual text height.<br>**true**: The line height adapts based on the actual text height. **false**: The line height does not adapt based on the actual text height. |
 
 **Return value:**
 
@@ -567,7 +567,7 @@ Sets the font color of the text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Font color of the text on the security component. Default value: \\$r('sys.color.font_on_primary'). |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Font color of the text on the security component.<br>Default value: \&#36;r('sys.color.font_on_primary'). |
 
 **Return value:**
 
@@ -595,7 +595,7 @@ Sets the font family of the text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| [Resource](arkts-arkui-resource-t.md) | Yes | Font family of the text on the security component. Default font:**'HarmonyOS Sans'**. |
+| value | string &#124; [Resource](arkts-arkui-resource-t.md) | Yes | Font family of the text on the security component.<br>Default font:**'HarmonyOS Sans'**. |
 
 **Return value:**
 
@@ -623,7 +623,7 @@ Sets the font size of the text for the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | Font size of the text on the security component. When the unit is not explicitly specified, the unit is fp. Default value: \\$r('sys.float.ohos_id_text_size_button1')Percentage strings are not supported.This attribute does not take effect when it is set to an invalid value.Note: When the security component text is not fully displayed, clicking it does not perform authorization. The **fontSize** setting determines whether the text can be fully displayed and thereby affects the authorization behavior of the security component. |
+| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | Font size of the text on the security component.<br>When the unit is not explicitly specified, the unit is fp. <br>Default value: \&#36;r('sys.float.ohos_id_text_size_button1')<br>Percentage strings are not supported.<br>This attribute does not take effect when it is set to an invalid value.<br> Note: When the security component text is not fully displayed, clicking it does not perform authorization. The **fontSize** setting determines whether the text can be fully displayed and thereby affects the authorization behavior of the security component. |
 
 **Return value:**
 
@@ -651,7 +651,7 @@ Sets the font style of the text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FontStyle](arkts-arkui-fontstyle-e.md) | Yes | Font style of the text on the security component. Default value: FontStyle.Normal. |
+| value | [FontStyle](arkts-arkui-fontstyle-e.md) | Yes | Font style of the text on the security component.<br>Default value: FontStyle.Normal. |
 
 **Return value:**
 
@@ -679,7 +679,7 @@ Sets the font weight of the text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| [FontWeight](arkts-arkui-fontweight-e.md) \| string \| [Resource](arkts-arkui-resource-t.md) | Yes | Font weight of the text on the security component. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. For the string type, only numeric strings, for example, **'400'**, and the enumerated values of **FontWeight** are supported, including **'bold'**, **'bolder'**, **'lighter'**, **'regular'**, and **'medium'**. The Resource type is supported since API version 20. The Resource type supports only **'integer'** and **'string'** formats. Values follow the number type specifications for the **'integer'** type and the string type specifications for the **'string'** type, both described earlier. If **fontWeight** is not set for the component, the font weight is set to **FontWeight.Medium** by default. If **value** is **undefined** or **null**, a number outside the [100, 900] range, or a string that does not match the string format of **FontWeight** enums, the font weight is set to **FontWeight.Normal**.<br>**Since:** 20 |
+| value | number &#124; [FontWeight](arkts-arkui-fontweight-e.md) &#124; string &#124; [Resource](arkts-arkui-resource-t.md) | Yes | Font weight of the text on the security component.<br>For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. <br>For the string type, only numeric strings, for example, **'400'**, and the enumerated values of **FontWeight** are supported, including **'bold'**, **'bolder'**, **'lighter'**, **'regular'**, and **'medium'**. <br>The Resource type is supported since API version 20. The Resource type supports only **'integer'** and **'string'** formats. Values follow the number type specifications for the **'integer'** type and the string type specifications for the **'string'** type, both described earlier. <br>If **fontWeight** is not set for the component, the font weight is set to **FontWeight.Medium** by default. If **value** is **undefined** or **null**, a number outside the [100, 900] range, or a string that does not match the string format of **FontWeight** enums, the font weight is set to **FontWeight.Normal**.<br>**Since:** 20 |
 
 **Return value:**
 
@@ -707,7 +707,7 @@ Sets the height of the security component. If not set, the height adapts to the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) | Yes | Height of the security component. If not set, the height adapts to the element content. If no unit is explicitly specified, the unit is vp.When used in conjunction with [minFontSize](#minfontsize), [maxFontSize](#maxfontsize), [maxLines](#maxlines), and [heightAdaptivePolicy](#heightadaptivepolicy) for adaptive font sizing, if the text on the security component is truncated, clicking the component does not perform authorization. If an invalid value is set, this attribute does not take effect. |
+| value | [Length](arkts-arkui-length-t.md) | Yes | Height of the security component. If not set, the height adapts to the element content. <br>If no unit is explicitly specified, the unit is vp.<br>When used in conjunction with [minFontSize](#minfontsize), [maxFontSize](#maxfontsize), [maxLines](#maxlines), and [heightAdaptivePolicy](#heightadaptivepolicy) for adaptive font sizing, if the text on the security component is truncated, clicking the component does not perform authorization. If an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 
@@ -723,10 +723,7 @@ heightAdaptivePolicy(policy: TextHeightAdaptivePolicy): T
 
 Sets the method for text height adaptation. This is applicable to scenarios where the text display of a security component needs to be dynamically adjusted to ensure complete text visibility under different sizes or language environments.
 
-The security component text is laid out at [maxFontSize](#maxfontsize). If the text can be completely displayed and no adaptive adjustment is needed, this API does not take effect. Otherwise, adaptation proceeds according to the specified policy, as follows:   
-**TextHeightAdaptivePolicy.MAX_LINES_FIRST**: prioritizes the [maxLines](#maxlines) attribute for adjusting the text height. If the layout size with **maxLines** exceeds the layout constraints, the security component attempts to reduce the font size within the range of [minFontSize](#minfontsize) and [maxFontSize](#maxfontsize) to fit more text. If the text still cannot be fully displayed, the security component adaptively adjusts its height to show all text.   
-**TextHeightAdaptivePolicy.MIN_FONT_SIZE_FIRST**: prioritizes the [minFontSize](#minfontsize) attribute for adjusting the text height. If the text can be laid out in a single line using **minFontSize**, the security component attempts to increase the font size within the range of **minFontSize** and [maxFontSize](#maxfontsize) to use the largest possible font size. If the text cannot be laid out in a single line using **minFontSize**, the security component attempts to use the [maxLines](#maxlines) attribute for layout. If the text still cannot be fully displayed, the security component adaptively adjusts its height to fully display the text.   
-**TextHeightAdaptivePolicy.LAYOUT_CONSTRAINT_FIRST**: prioritizes layout constraints for adjusting the text height. If the layout size exceeds the constraints, the security component attempts to reduce the font size within the range of [minFontSize](#minfontsize) and [maxFontSize](#maxfontsize). If the layout size still exceeds the constraints after the font size is reduced to **minFontSize**, the security component truncates the excess lines. If the [maxLines](#maxlines) attribute is set, the number of lines does not exceed the **maxLines** value (horizontal truncation may occur). If **maxLines** is not set, there is no limit on the number of lines. If the security component text is not fully displayed, clicking does not trigger authorization. Whether the text is fully displayed depends on attributes such as **heightAdaptivePolicy**, **minFontSize**, **maxFontSize**, **maxLines**, **width**, and **height**.
+The security component text is laid out at [maxFontSize](#maxfontsize). If the text can be completely displayed and no adaptive adjustment is needed, this API does not take effect. Otherwise, adaptation proceeds according to the specified policy, as follows: <br>**TextHeightAdaptivePolicy.MAX_LINES_FIRST**: prioritizes the [maxLines](#maxlines) attribute for adjusting the text height. If the layout size with **maxLines** exceeds the layout constraints, the security component attempts to reduce the font size within the range of [minFontSize](#minfontsize) and [maxFontSize](#maxfontsize) to fit more text. If the text still cannot be fully displayed, the security component adaptively adjusts its height to show all text. <br>**TextHeightAdaptivePolicy.MIN_FONT_SIZE_FIRST**: prioritizes the [minFontSize](#minfontsize) attribute for adjusting the text height. If the text can be laid out in a single line using **minFontSize**, the security component attempts to increase the font size within the range of **minFontSize** and [maxFontSize](#maxfontsize) to use the largest possible font size. If the text cannot be laid out in a single line using **minFontSize**, the security component attempts to use the [maxLines](#maxlines) attribute for layout. If the text still cannot be fully displayed, the security component adaptively adjusts its height to fully display the text. <br>**TextHeightAdaptivePolicy.LAYOUT_CONSTRAINT_FIRST**: prioritizes layout constraints for adjusting the text height. <br>If the layout size exceeds the constraints, the security component attempts to reduce the font size within the range of [minFontSize](#minfontsize) and [maxFontSize](#maxfontsize). If the layout size still exceeds the constraints after the font size is reduced to **minFontSize**, the security component truncates the excess lines. If the [maxLines](#maxlines) attribute is set, the number of lines does not exceed the **maxLines** value (horizontal truncation may occur). If **maxLines** is not set, there is no limit on the number of lines. If the security component text is not fully displayed, clicking does not trigger authorization. Whether the text is fully displayed depends on attributes such as **heightAdaptivePolicy**, **minFontSize**, **maxFontSize**, **maxLines**, **width**, and **height**.
 
 **Since:** 18
 
@@ -740,7 +737,7 @@ The security component text is laid out at [maxFontSize](#maxfontsize). If the t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policy | [TextHeightAdaptivePolicy](arkts-arkui-textheightadaptivepolicy-e.md) | Yes | Policy for text height adaptation. Default value: TextHeightAdaptivePolicy.MAX_LINES_FIRST. |
+| policy | [TextHeightAdaptivePolicy](arkts-arkui-textheightadaptivepolicy-e.md) | Yes | Policy for text height adaptation.<br>Default value: TextHeightAdaptivePolicy.MAX_LINES_FIRST. |
 
 **Return value:**
 
@@ -768,7 +765,7 @@ Sets the icon color of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Icon color of the security component. Default value: \\$r('sys.color.icon_on_primary'). |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Icon color of the security component.<br>Default value: \&#36;r('sys.color.icon_on_primary'). |
 
 **Return value:**
 
@@ -796,7 +793,7 @@ Sets the icon size of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | Icon size of the security component, in vp by default when no unit is specified. Default value: **16vp**. Percentage strings are not supported.If an invalid value or unit is passed, the attribute does not take effect, and the component is displayed according to the default value. |
+| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | Icon size of the security component, in vp by default when no unit is specified.<br>Default value: **16vp**. <br>Percentage strings are not supported.<br>If an invalid value or unit is passed, the attribute does not take effect, and the component is displayed according to the default value. |
 
 **Return value:**
 
@@ -824,7 +821,7 @@ Unique ID you assigned for the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Unique ID you assigned for the component. Default value: ''. |
+| id | string | Yes | Unique ID you assigned for the component.<br>Default value: ''. |
 
 **Return value:**
 
@@ -852,7 +849,7 @@ Sets the layout direction of the icon and text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md) | Yes | Indicates the layout direction of the icon and text. Default value:SecurityComponentLayoutDirection.HORIZONTAL. |
+| value | [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md) | Yes | Indicates the layout direction of the icon and text.<br>Default value:SecurityComponentLayoutDirection.HORIZONTAL. |
 
 **Return value:**
 
@@ -880,7 +877,7 @@ Sets the anchor of the security component for moving the component with its top-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Position | Yes | Anchor of the security component for moving the component with its top-left corner as the reference point. Generally, this attribute is used in conjunction with **position()** and **offset()** for more precise positioning. No default value. This attribute does not take effect when it is set to an invalid value. |
+| value | Position | Yes | Anchor of the security component for moving the component with its top-left corner as the reference point. Generally, this attribute is used in conjunction with **position()** and **offset()** for more precise positioning.<br>No default value. <br>This attribute does not take effect when it is set to an invalid value. |
 
 **Return value:**
 
@@ -910,7 +907,7 @@ This API can be used in conjunction with [minFontScale](#minfontscale). **maxFon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| [Resource](arkts-arkui-resource-t.md) | Yes | Maximum font scale factor for the text. The value must be greater than or equal to 1.    **NOTE：**If the set value is less than 1, the value **1** is used. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
+| scale | number &#124; [Resource](arkts-arkui-resource-t.md) | Yes | Maximum font scale factor for the text.<br>The value must be greater than or equal to 1. <br> **NOTE:**<br>If the set value is less than 1, the value **1** is used. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
 
 **Return value:**
 
@@ -946,7 +943,7 @@ Sets the maximum font size for text display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxSize | number \| string \| [Resource](arkts-arkui-resource-t.md) | Yes | Maximum display font size of the text. The value must be greater than 0. When the unit is not explicitly specified, the unit is fp.    **NOTE：**When the set value is less than or equal to 0, the adaptive font size does not take effect. When an invalid value is set, this attribute does not take effect. |
+| maxSize | number &#124; string &#124; [Resource](arkts-arkui-resource-t.md) | Yes | Maximum display font size of the text.<br>The value must be greater than 0. <br>When the unit is not explicitly specified, the unit is fp. <br>**NOTE:**<br>When the set value is less than or equal to 0, the adaptive font size does not take effect. When an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 
@@ -974,7 +971,7 @@ Sets the maximum number of lines for text. By default, text wraps automatically.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| line | number \| [Resource](arkts-arkui-resource-t.md) | Yes | Maximum number of lines for the text. The number type accepts values in [1, +∞). The Resource type is supported since API version 20. The parameter of the Resource type supports only integers in the range [1, +∞).    **NOTE：**A value less than 1 is handled as the default value **1000000**.<br>**Since:** 20 |
+| line | number &#124; [Resource](arkts-arkui-resource-t.md) | Yes | Maximum number of lines for the text.<br>The number type accepts values in [1, +∞). The Resource type is supported since API version 20. The parameter of the Resource type supports only integers in the range [1, +∞). <br>**NOTE:**<br>A value less than 1 is handled as the default value **1000000**.<br>**Since:** 20 |
 
 **Return value:**
 
@@ -1004,7 +1001,7 @@ This API can be used in conjunction with [maxFontScale](#maxfontscale). **minFon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| [Resource](arkts-arkui-resource-t.md) | Yes | Minimum font scale factor for the text. Value range: [0,1].    **NOTE：**If the set value is less than 0, the value **0** is used, meaning scaling down to any factor is allowed. If the set value is greater than 1, the value **1** is used, meaning font scaling is not allowed. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
+| scale | number &#124; [Resource](arkts-arkui-resource-t.md) | Yes | Minimum font scale factor for the text.<br>Value range: [0,1]. <br>**NOTE:**<br>If the set value is less than 0, the value **0** is used, meaning scaling down to any factor is allowed. If the set value is greater than 1, the value **1** is used, meaning font scaling is not allowed. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
 
 **Return value:**
 
@@ -1041,7 +1038,7 @@ Sets the minimum font size for text display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minSize | number \| string \| [Resource](arkts-arkui-resource-t.md) | Yes | Minimum display font size of the text. The value must be greater than 0. When the unit is not explicitly specified, the unit is fp.    **minFontSize** must be less than **maxFontSize**. If the set value is greater than **maxFontSize**, **maxFontSize** is used instead. If this parameter is less than or equal to 0, the adaptive font size does not take effect. |
+| minSize | number &#124; string &#124; [Resource](arkts-arkui-resource-t.md) | Yes | Minimum display font size of the text.<br>The value must be greater than 0. <br>When the unit is not explicitly specified, the unit is fp.<br> **minFontSize** must be less than **maxFontSize**. If the set value is greater than **maxFontSize**, **maxFontSize** is used instead. If this parameter is less than or equal to 0, the adaptive font size does not take effect. |
 
 **Return value:**
 
@@ -1069,7 +1066,7 @@ Sets the coordinate offset of the security component relative to its own layout 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Position \| [Edges](arkts-arkui-edges-i.md) \| [LocalizedEdges](arkts-arkui-localizededges-i.md) | Yes | Coordinate offset of the security component relative to its own layout position. This attribute does not affect the layout in the parent container. The offset is used only during drawing. When the unit is not explicitly specified, the unit is vp. No default value. This attribute does not take effect when it is set to an invalid value.<br>**Since:** 12 |
+| value | Position &#124; [Edges](arkts-arkui-edges-i.md) &#124; [LocalizedEdges](arkts-arkui-localizededges-i.md) | Yes | Coordinate offset of the security component relative to its own layout position. This attribute does not affect the layout in the parent container. The offset is used only during drawing.<br>When the unit is not explicitly specified, the unit is vp. <br>No default value. <br>This attribute does not take effect when it is set to an invalid value.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -1097,7 +1094,7 @@ Sets the padding of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Padding \| [Dimension](arkts-arkui-dimension-t.md) | Yes | Padding of the security component. Default value: 8 vp for the top and bottom and 16 vp for the left and right. When the unit is not explicitly specified, the unit is vp. Note: Percentage strings are not supported. If a percentage string is set, the corresponding padding is **0**. |
+| value | Padding &#124; [Dimension](arkts-arkui-dimension-t.md) | Yes | Padding of the security component.<br>Default value: 8 vp for the top and bottom and 16 vp for the left and right. <br>When the unit is not explicitly specified, the unit is vp. <br>Note: Percentage strings are not supported. If a percentage string is set, the corresponding padding is **0**. |
 
 **Return value:**
 
@@ -1125,7 +1122,7 @@ Sets the absolute position, which is the offset of the top-left corner of the se
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Position | Yes | Offset position of the security component's top-left corner relative to the parent container's top-left corner. Applicable to scenarios where the security component is placed in a fixed area of the page through absolute positioning. When the unit is not explicitly specified, the unit is vp. It is recommended that you pass numeric coordinates for both **x** and **y**.If the parameter is **undefined** or **null**, or **x** and **y** are non-numeric types, this attribute does not take effect, and invalid coordinates are treated as **0**. |
+| value | Position | Yes | Offset position of the security component's top-left corner relative to the parent container's top-left corner. Applicable to scenarios where the security component is placed in a fixed area of the page through absolute positioning.<br>When the unit is not explicitly specified, the unit is vp. <br>It is recommended that you pass numeric coordinates for both **x** and **y**.<br>If the parameter is **undefined** or **null**, or **x** and **y** are non-numeric types, this attribute does not take effect, and invalid coordinates are treated as **0**. |
 
 **Return value:**
 
@@ -1153,7 +1150,7 @@ Sets the width and height. If not set, the width and height adapt to the element
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SizeOptions](arkts-arkui-sizeoptions-i.md) | Yes | Width and height of the security component. When this parameter is not specified, the security component automatically adapts its size to the element content. If no unit is explicitly specified, the unit is vp. When used in conjunction with [minFontSize](#minfontsize), [maxFontSize](#maxfontsize), [maxLines](#maxlines), and [heightAdaptivePolicy](#heightadaptivepolicy) for adaptive font sizing, if the text on the security component is truncated, clicking the component does not perform authorization. If an invalid value is set, this attribute does not take effect. |
+| value | [SizeOptions](arkts-arkui-sizeoptions-i.md) | Yes | Width and height of the security component. When this parameter is not specified, the security component automatically adapts its size to the element content. <br>If no unit is explicitly specified, the unit is vp. <br>When used in conjunction with [minFontSize](#minfontsize), [maxFontSize](#maxfontsize), [maxLines](#maxlines), and [heightAdaptivePolicy](#heightadaptivepolicy) for adaptive font sizing, if the text on the security component is truncated, clicking the component does not perform authorization. If an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 
@@ -1181,7 +1178,7 @@ Sets the spacing between the icon and text in the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | Spacing between the icon and text in the security component. Default value: **4vp**. When the unit is not explicitly specified, the unit is vp. Note: Percentage strings are not supported. If a percentage string is set, the corresponding spacing between the icon and text is **0**. Since API version 14, negative values are treated as the default value. |
+| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | Spacing between the icon and text in the security component.<br>Default value: **4vp**. <br>When the unit is not explicitly specified, the unit is vp. <br>Note: Percentage strings are not supported. If a percentage string is set, the corresponding spacing between the icon and text is **0**. Since API version 14, negative values are treated as the default value. |
 
 **Return value:**
 
@@ -1209,7 +1206,7 @@ Sets the width of the security component. If not set, the width adapts to the el
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) | Yes | Width of the security component itself. If not set, the width adapts to the element content. When the unit is not explicitly specified, the unit is vp.When used in conjunction with [minFontSize](#minfontsize), [maxFontSize](#maxfontsize), [maxLines](#maxlines), and [heightAdaptivePolicy](#heightadaptivepolicy) for adaptive font sizing, if the text on the security component is truncated, clicking the component does not perform authorization. If an invalid value is set, this attribute does not take effect. |
+| value | [Length](arkts-arkui-length-t.md) | Yes | Width of the security component itself. If not set, the width adapts to the element content. <br>When the unit is not explicitly specified, the unit is vp.<br>When used in conjunction with [minFontSize](#minfontsize), [maxFontSize](#maxfontsize), [maxLines](#maxlines), and [heightAdaptivePolicy](#heightadaptivepolicy) for adaptive font sizing, if the text on the security component is truncated, clicking the component does not perform authorization. If an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 

@@ -27,7 +27,7 @@ Obtains the attributes of a **Text** node. If the node is not created using ArkT
 
 | Type | Description |
 | --- | --- |
-| [TextAttribute](../arkts-components/arkts-arkui-text-attribute.md) \| undefined | Attributes of the **Text** node, or **undefined** if they fail to be obtained. |
+| [TextAttribute](../arkts-components/arkts-arkui-text-comp-attribute.md) &#124; undefined | Attributes of the **Text** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -98,7 +98,7 @@ Obtains the attributes of a **Column** node. If the node is not created using Ar
 
 | Type | Description |
 | --- | --- |
-| [ColumnAttribute](../arkts-components/arkts-arkui-column-attribute.md) \| undefined | Attributes of the **Column** node, or **undefined** if they fail to be obtained. |
+| [ColumnAttribute](../arkts-components/arkts-arkui-column-comp-attribute.md) &#124; undefined | Attributes of the **Column** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -168,7 +168,7 @@ Obtains the attributes of a **Row** node. If the node is not created using ArkTS
 
 | Type | Description |
 | --- | --- |
-| [RowAttribute](../arkts-components/arkts-arkui-row-attribute.md) \| undefined | Attributes of the **Row** node, or **undefined** if they fail to be obtained. |
+| [RowAttribute](../arkts-components/arkts-arkui-row-comp-attribute.md) &#124; undefined | Attributes of the **Row** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -238,7 +238,7 @@ Obtains the attributes of a **Stack** node. If the node is not created using Ark
 
 | Type | Description |
 | --- | --- |
-| [StackAttribute](../arkts-components/arkts-arkui-stack-attribute.md) \| undefined | Attributes of the **Stack** node, or **undefined** if they fail to be obtained. |
+| [StackAttribute](../arkts-components/arkts-arkui-stack-comp-attribute.md) &#124; undefined | Attributes of the **Stack** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -308,7 +308,7 @@ Obtains the Flex node attributes. If the node is not created using ArkTS, cross-
 
 | Type | Description |
 | --- | --- |
-| [FlexAttribute](../arkts-components/arkts-arkui-flex-attribute.md) \| undefined | Flex node type. If the operation fails, undefined is returned. |
+| [FlexAttribute](../arkts-components/arkts-arkui-flex-comp-attribute.md) &#124; undefined | Flex node type. If the operation fails, undefined is returned. |
 
 **Examples**
 
@@ -378,7 +378,7 @@ Obtains the attributes of a **Swiper** node. If the node is not created using Ar
 
 | Type | Description |
 | --- | --- |
-| [SwiperAttribute](../arkts-components/arkts-arkui-swiper-attribute.md) \| undefined | Properties of the **Swiper** node, or **undefined** if they fail to be obtained. |
+| [SwiperAttribute](../arkts-components/arkts-arkui-swiper-comp-attribute.md) &#124; undefined | Properties of the **Swiper** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -413,7 +413,7 @@ Obtains the attributes of a **Progress** node. If the node is not created using 
 
 | Type | Description |
 | --- | --- |
-| [ProgressAttribute](../arkts-components/arkts-arkui-progress-attribute.md) \| undefined | Properties of the **Progress** node, or **undefined** if they fail to be obtained. |
+| [ProgressAttribute](../arkts-components/arkts-arkui-progress-comp-attribute.md) &#124; undefined | Properties of the **Progress** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -482,7 +482,7 @@ Obtains the attributes of a **Scroll** node. If the node is not created using Ar
 
 | Type | Description |
 | --- | --- |
-| [ScrollAttribute](../arkts-components/arkts-arkui-scroll-attribute.md) \| undefined | Attributes of the **Scroll** node, or **undefined** if they fail to be obtained. |
+| [ScrollAttribute](../arkts-components/arkts-arkui-scroll-comp-attribute.md) &#124; undefined | Attributes of the **Scroll** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -517,7 +517,7 @@ Obtains the attributes of a **RelativeContainer** node. If the node is not creat
 
 | Type | Description |
 | --- | --- |
-| [RelativeContainerAttribute](../arkts-components/arkts-arkui-relativecontainer-attribute.md) \| undefined | Attributes of the **RelativeContainer** node, or **undefined** if they fail to be obtained. |
+| [RelativeContainerAttribute](../arkts-components/arkts-arkui-relativecontainer-comp-attribute.md) &#124; undefined | Attributes of the **RelativeContainer** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -587,7 +587,7 @@ Obtains the attributes of a LoadingProgress node. If the node is not created usi
 
 | Type | Description |
 | --- | --- |
-| [LoadingProgressAttribute](../arkts-components/arkts-arkui-loadingprogress-attribute.md) \| undefined | Properties of the **LoadingProgress** node, or **undefined** if they fail to be obtained. |
+| [LoadingProgressAttribute](../arkts-components/arkts-arkui-loadingprogress-comp-attribute.md) &#124; undefined | Properties of the **LoadingProgress** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -654,7 +654,7 @@ Obtains the attributes of an **Image** node. If the node is not created using Ar
 
 | Type | Description |
 | --- | --- |
-| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) \| undefined | Properties of the **Image** node, or **undefined** if they fail to be obtained. |
+| [ImageAttribute](../arkts-components/arkts-arkui-image-comp-attribute.md) &#124; undefined | Properties of the **Image** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -730,7 +730,7 @@ Obtains the attributes of a **List** node. If the node is not created using ArkT
 
 | Type | Description |
 | --- | --- |
-| [ListAttribute](../arkts-components/arkts-arkui-list-attribute.md) \| undefined | Attributes of the **List** node, or **undefined** if they fail to be obtained. |
+| [ListAttribute](../arkts-components/arkts-arkui-list-comp-attribute.md) &#124; undefined | Attributes of the **List** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -765,7 +765,7 @@ Obtains the attributes of a **ListItem** node. If the node is not created using 
 
 | Type | Description |
 | --- | --- |
-| [ListItemAttribute](../arkts-components/arkts-arkui-listitem-attribute.md) \| undefined | Attributes of the **ListItem** node, or **undefined** if they fail to be obtained. |
+| [ListItemAttribute](../arkts-components/arkts-arkui-listitem-comp-attribute.md) &#124; undefined | Attributes of the **ListItem** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -800,7 +800,7 @@ Obtains the attributes of a **TextInput** node. If the node is not created using
 
 | Type | Description |
 | --- | --- |
-| [TextInputAttribute](../arkts-components/arkts-arkui-textinput-attribute.md) \| undefined | Properties of the **TextInput** node, or **undefined** if they fail to be obtained. |
+| [TextInputAttribute](../arkts-components/arkts-arkui-textinput-comp-attribute.md) &#124; undefined | Properties of the **TextInput** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -867,7 +867,7 @@ Obtains the attributes of a **Button** node. If the node is not created using Ar
 
 | Type | Description |
 | --- | --- |
-| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) \| undefined | Attributes of the **Button** node, or **undefined** if they fail to be obtained. |
+| [ButtonAttribute](../arkts-components/arkts-arkui-button-comp-attribute.md) &#124; undefined | Attributes of the **Button** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -940,7 +940,7 @@ Obtains the attributes of a **ListItemGroup** node. If the node is not created u
 
 | Type | Description |
 | --- | --- |
-| [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-attribute.md) \| undefined | Attributes of the **ListItemGroup** node, or **undefined** if they fail to be obtained. |
+| [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-comp-attribute.md) &#124; undefined | Attributes of the **ListItemGroup** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -976,7 +976,7 @@ Obtains the attributes of a **WaterFlow** node. If the node is not created using
 
 | Type | Description |
 | --- | --- |
-| [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-attribute.md) \| undefined | Properties of the **WaterFlow** node, or **undefined** if they fail to be obtained. |
+| [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-comp-attribute.md) &#124; undefined | Properties of the **WaterFlow** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -1011,7 +1011,7 @@ Obtains the attributes of a **FlowItem** node. If the node is not created using 
 
 | Type | Description |
 | --- | --- |
-| [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md) \| undefined | Properties of the **FlowItem** node, or **undefined** if they fail to be obtained. |
+| [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-comp-attribute.md) &#124; undefined | Properties of the **FlowItem** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -1046,7 +1046,7 @@ Obtain the attributes of an **XComponent** node. If the node is not created usin
 
 | Type | Description |
 | --- | --- |
-| [XComponentAttribute](../arkts-components/arkts-arkui-xcomponent-attribute.md) \| undefined | Properties of the **XComponent** node, or **undefined** if they fail to be obtained. |
+| [XComponentAttribute](../arkts-components/arkts-arkui-xcomponent-comp-attribute.md) &#124; undefined | Properties of the **XComponent** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -1082,7 +1082,7 @@ Obtains the attributes of a **Checkbox** node. If the node is not created using 
 
 | Type | Description |
 | --- | --- |
-| [CheckboxAttribute](../arkts-components/arkts-arkui-checkbox-attribute.md) \| undefined | Attributes of the **Checkbox** node, or **undefined** if they fail to be obtained. |
+| [CheckboxAttribute](../arkts-components/arkts-arkui-checkbox-comp-attribute.md) &#124; undefined | Attributes of the **Checkbox** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -1157,7 +1157,7 @@ Obtains the attributes of a **Radio** node. If the node is not created using Ark
 
 | Type | Description |
 | --- | --- |
-| [RadioAttribute](../arkts-components/arkts-arkui-radio-attribute.md) \| undefined | Properties of the **Radio** node, or **undefined** if they fail to be obtained. |
+| [RadioAttribute](../arkts-components/arkts-arkui-radio-comp-attribute.md) &#124; undefined | Properties of the **Radio** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -1231,7 +1231,7 @@ Obtains the attributes of a **Slider** node. If the node is not created using Ar
 
 | Type | Description |
 | --- | --- |
-| [SliderAttribute](../arkts-components/arkts-arkui-slider-attribute.md) \| undefined | Properties of the **Slider** node, or **undefined** if they fail to be obtained. |
+| [SliderAttribute](../arkts-components/arkts-arkui-slider-comp-attribute.md) &#124; undefined | Properties of the **Slider** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -1300,7 +1300,7 @@ Obtains the attributes of a **Toggle** node. If the node is not created using Ar
 
 | Type | Description |
 | --- | --- |
-| [ToggleAttribute](../arkts-components/arkts-arkui-toggle-attribute.md) \| undefined | Properties of the **Toggle** node, or **undefined** if they fail to be obtained. |
+| [ToggleAttribute](../arkts-components/arkts-arkui-toggle-comp-attribute.md) &#124; undefined | Properties of the **Toggle** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -1369,7 +1369,7 @@ Obtains the attributes of a **TextArea** node. If the node is not created using 
 
 | Type | Description |
 | --- | --- |
-| [TextAreaAttribute](../arkts-components/arkts-arkui-textarea-attribute.md) \| undefined | Properties of the **TextArea** node, or **undefined** if they fail to be obtained. |
+| [TextAreaAttribute](../arkts-components/arkts-arkui-textarea-comp-attribute.md) &#124; undefined | Properties of the **TextArea** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -1436,7 +1436,7 @@ Obtains the attributes of a **Grid** node. If the node is not created using ArkT
 
 | Type | Description |
 | --- | --- |
-| [GridAttribute](../arkts-components/arkts-arkui-grid-attribute.md) \| undefined | Properties of the **Grid** node, or **undefined** if they fail to be obtained. |
+| [GridAttribute](../arkts-components/arkts-arkui-grid-comp-attribute.md) &#124; undefined | Properties of the **Grid** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -1471,7 +1471,7 @@ Obtains the attributes of a **GridItem** node. If the node is not created using 
 
 | Type | Description |
 | --- | --- |
-| [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md) \| undefined | Properties of the **GridItem** node, or **undefined** if they fail to be obtained. |
+| [GridItemAttribute](../arkts-components/arkts-arkui-griditem-comp-attribute.md) &#124; undefined | Properties of the **GridItem** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 

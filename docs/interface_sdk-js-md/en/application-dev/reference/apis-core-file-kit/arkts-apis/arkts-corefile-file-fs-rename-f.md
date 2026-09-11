@@ -14,7 +14,7 @@ declare function rename(oldPath: string, newPath: string): Promise<void>
 
 Renames a file or directory. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is not supported in a distributed directory.
 
@@ -70,7 +70,7 @@ declare function rename(oldPath: string, newPath: string, callback: AsyncCallbac
 
 Renames a file or directory. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is not supported in a distributed directory.
 

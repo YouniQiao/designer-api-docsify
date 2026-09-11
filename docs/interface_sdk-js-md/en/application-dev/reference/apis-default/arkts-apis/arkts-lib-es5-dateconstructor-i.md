@@ -35,7 +35,7 @@ new(value: number | string): Date
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string | Yes |  |
+| value | number &#124; string | Yes |  |
 
 **Return value:**
 

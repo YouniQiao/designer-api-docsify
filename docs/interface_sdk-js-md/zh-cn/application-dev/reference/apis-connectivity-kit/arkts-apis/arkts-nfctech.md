@@ -1,10 +1,12 @@
 # nfctech(标准NFC-Tag Nfc 技术)
 
 本模块主要用于采用不同Nfc技术的Tag的读写操作。
- > **注意：**
+
+> **注意：**
  >
  > 导入tag模块编辑器报错，在某个具体设备型号上能力可能超出工程默认设备定义的能力集范围，如需要使用此部分能力需额外配置自定义syscap，参考
  > [syscap开发指南](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/syscap)。
+
 
 
 ## 汇总

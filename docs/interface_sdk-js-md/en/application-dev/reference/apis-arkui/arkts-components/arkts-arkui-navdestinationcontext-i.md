@@ -31,7 +31,7 @@ Obtains the routing configuration of the current **NavDestination** component.
 
 | Type | Description |
 | --- | --- |
-| [RouteMapConfig](arkts-arkui-routemapconfig-i.md) \| undefined | Routing configuration of the current page. |
+| [RouteMapConfig](arkts-arkui-routemapconfig-i.md) &#124; undefined | Routing configuration of the current page.<br> **undefined** is returned when the page is not configured through the route table. |
 
 ## mode
 

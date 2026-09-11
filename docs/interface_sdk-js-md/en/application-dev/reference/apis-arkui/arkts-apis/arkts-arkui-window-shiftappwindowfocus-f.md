@@ -16,7 +16,7 @@ Shifts the window focus from the source window to the target window in the same 
 
 Ensure that the target window can gain focus (configurable by calling [setWindowFocusable()](arkts-arkui-window-window-i.md#setwindowfocusable)) and that [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Before calling **shiftAppWindowFocus()**, ensure that the target window has called
 > [loadContent()](arkts-arkui-window-window-i.md#loadcontent)

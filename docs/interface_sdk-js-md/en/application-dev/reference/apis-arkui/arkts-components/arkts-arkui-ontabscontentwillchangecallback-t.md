@@ -25,4 +25,4 @@ Defines the callback invoked when a new page is about to be displayed.
 
 | Type | Description |
 | --- | --- |
-| boolean | The return value **true** means that the tab can switch to the new page. |
+| boolean | The return value **true** means that the tab can switch to the new page.<br>The value **false** means that the tab cannot switch to the new page and will remain on the current page. |

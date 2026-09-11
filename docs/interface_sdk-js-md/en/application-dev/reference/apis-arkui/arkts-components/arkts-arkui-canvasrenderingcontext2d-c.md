@@ -2,7 +2,7 @@
 
 After the **CanvasRenderingContext2D** object is bound to the **Canvas** component, you can draw shapes, texts, and images on the **Canvas** component.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > * It is recommended that the **CanvasRenderingContext2D** object and the **Canvas** component be
 > encapsulated into the same custom component, ensuring a one-to-one correspondence and consistent
@@ -57,7 +57,7 @@ Constructs a canvas object, which supports configuration of parameters for the *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. For details, see [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md). If the value is **undefined** or **null**, the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) is used. |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. For details, see [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md). <br>If the value is **undefined** or **null**, the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) is used. |
 
 **Examples**
 
@@ -123,8 +123,8 @@ Creates a **CanvasRenderingContext2D** object, allowing for initial configuratio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. For details, see [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md). If the value is **undefined** or **null**, the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) is used. |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No | Unit mode of the **CanvasRenderingContext2D** object. The value cannot be dynamically changed once set. Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value. Default value: **DEFAULT**. |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. For details, see [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md). <br>If the value is **undefined** or **null**, the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) is used. |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No | Unit mode of the **CanvasRenderingContext2D** object. The value cannot be dynamically changed once set.<br>Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value. <br>Default value: **DEFAULT**. |
 
 **Examples**
 
@@ -138,7 +138,7 @@ static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, o
 
 Obtains a **CanvasRenderingContext2D** object from a **DrawingRenderingContext** object. This **CanvasRenderingContext2D** object is bound to the same **Canvas** component as the input **DrawingRenderingContext** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The **CanvasRenderingContext2D** object obtained via this API cannot be used as a
 > parameter to create a Canvas
@@ -159,8 +159,8 @@ Obtains a **CanvasRenderingContext2D** object from a **DrawingRenderingContext**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| drawingContext | [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | Yes | An object of the **DrawingRenderingContext** type.   **undefined** and **null** are treated as invalid values. |
-| options | [RenderingContextOptions](arkts-arkui-renderingcontextoptions-i.md) | No | Configuration options of the rendering context. Default value: **{ antialias: false } |
+| drawingContext | [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | Yes | An object of the **DrawingRenderingContext** type.<br>**undefined** and **null** are treated as invalid values. |
+| options | [RenderingContextOptions](arkts-arkui-renderingcontextoptions-i.md) | No | Configuration options of the rendering context.<br>Default value: **{ antialias: false } |
 
 **Return value:**
 
@@ -222,8 +222,8 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is bound 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'onAttach' | Yes | Event type, which is **'onAttach'** in this case.    **undefined** and **null** are treated as invalid values. |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is bound to the **Canvas** component are unsubscribed.If this parameter is not left empty, the callback corresponding to the bind event is unsubscribed.   **undefined** and **null** are treated as invalid values. |
+| type | 'onAttach' | Yes | Event type, which is **'onAttach'** in this case.<br> **undefined** and **null** are treated as invalid values. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is bound to the **Canvas** component are unsubscribed.<br>If this parameter is not left empty, the callback corresponding to the bind event is unsubscribed.<br>**undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
@@ -251,8 +251,8 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is unboun
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'onDetach' | Yes | Event type, which is **'onDetach'** in this case.    **undefined** and **null** are treated as invalid values. |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is unbound from the **Canvas** component are unsubscribed.If this parameter is not left empty, the callback corresponding to the unbind event is unsubscribed.   **undefined** and **null** are treated as invalid values. |
+| type | 'onDetach' | Yes | Event type, which is **'onDetach'** in this case.<br> **undefined** and **null** are treated as invalid values. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is unbound from the **Canvas** component are unsubscribed.<br>If this parameter is not left empty, the callback corresponding to the unbind event is unsubscribed.<br>**undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
@@ -361,26 +361,21 @@ on(type: 'onAttach', callback: Callback<void>): void
 
 Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a **Canvas** component.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > A **CanvasRenderingContext2D** object can only be bound to one **Canvas** component
-> at a time.
-   
+> at a time.<br>
 > When a **CanvasRenderingContext2D** object is bound to a **Canvas** component, the
 > **onAttach** callback is triggered, indicating that the
 > [canvas](#canvas)
-> object is accessible.
-   
+> object is accessible.<br>
 > Avoid performing drawing operations in the **onAttach** callback. Make sure the
 > **Canvas** component has completed its
-> [onReady](arkts-arkui-canvas-attribute.md#onready)
-> event before performing any drawing.
-   
-> The **onAttach** callback is triggered when:
-   
+> [onReady](arkts-arkui-canvas-comp-attribute.md#onready)
+> event before performing any drawing.<br>
+> The **onAttach** callback is triggered when:<br>
 > 1. A **Canvas** component is created and bound to a **CanvasRenderingContext2D**
-> object.
-   
+> object.<br>
 > 2. A **CanvasRenderingContext2D** object is bound to a new **Canvas** component.
 
 **Since:** 13
@@ -395,8 +390,8 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'onAttach' | Yes | Event type, which is **'onAttach'** in this case.    **undefined** and **null** are treated as invalid values. |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is bound to the **Canvas** component.   **undefined** and **null** are treated as invalid values. |
+| type | 'onAttach' | Yes | Event type, which is **'onAttach'** in this case.<br> **undefined** and **null** are treated as invalid values. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is bound to the **Canvas** component.<br>**undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
@@ -412,16 +407,13 @@ on(type: 'onDetach', callback: Callback<void>): void
 
 Subscribes to the event when a **CanvasRenderingContext2D** object is unbound from a **Canvas** component.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When a **CanvasRenderingContext2D** object is unbound from a **Canvas** component,
-> the **onDetach** callback is triggered. In this case, cease any drawing operations.
-   
-> The **onDetach** callback is triggered when:
-   
+> the **onDetach** callback is triggered. In this case, cease any drawing operations.<br>
+> The **onDetach** callback is triggered when:<br>
 > 1. A **Canvas** component is destroyed and unbound from a **CanvasRenderingContext2D**
-> object.
-   
+> object.<br>
 > 2. A **CanvasRenderingContext2D** object is bound to a different **Canvas** component,
 > causing the existing binding to be released.
 
@@ -437,8 +429,8 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is unbound fr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'onDetach' | Yes | Event type, which is **'onDetach'** in this case.    **undefined** and **null** are treated as invalid values. |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is unbound from the **Canvas** component.   **undefined** and **null** are treated as invalid values. |
+| type | 'onDetach' | Yes | Event type, which is **'onDetach'** in this case.<br> **undefined** and **null** are treated as invalid values. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is unbound from the **Canvas** component.<br>**undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
@@ -452,9 +444,9 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is unbound fr
 startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 ```
 
-Configures and starts the AI analyzer. This API uses a promise to return the result. Before use, set [enableAnalyzer](arkts-arkui-canvas-attribute.md#enableanalyzer) to **true** to enable the image AI analyzer.Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.Repeated calls to this method before completion trigger an error callback. For the sample code, see the code for **stopImageAnalyzer**.
+Configures and starts the AI analyzer. This API uses a promise to return the result. Before use, set [enableAnalyzer](arkts-arkui-canvas-comp-attribute.md#enableanalyzer) to **true** to enable the image AI analyzer.<br>Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.<br> Repeated calls to this method before completion trigger an error callback. For the sample code, see the code for **stopImageAnalyzer**.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The image analysis type cannot be dynamically modified.
 > When image changes are detected, the analysis result is automatically destroyed. You can
@@ -474,7 +466,7 @@ Configures and starts the AI analyzer. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | Yes | Settings of the AI analyzer.   **undefined** and **null** are treated as invalid values. |
+| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | Yes | Settings of the AI analyzer.<br>**undefined** and **null** are treated as invalid values. |
 
 **Return value:**
 
@@ -498,7 +490,7 @@ stopImageAnalyzer(): void
 
 Stops AI image analysis. The content displayed by the AI image analyzer will be destroyed.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If this API is called when the **startImageAnalyzer** API has not yet returned any result,
 > an error is reported.
@@ -598,8 +590,8 @@ Creates a data URL that contains a representation of an image. This API involves
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | No | Image format. The options are **image/png**, **image/jpeg**, and **image/webp**. Invalid values **undefined** and **null** are treated as the default value. Default value: **image/png |
-| quality | any | No | Image quality, which ranges from 0 to 1, when the image format is **image/jpeg** or **image/webp**. If the set value is beyond the value range, the default value **0.92** is used. Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as the default value. Default value: **0.92 |
+| type | string | No | Image format.<br>The options are **image/png**, **image/jpeg**, and **image/webp**. <br>Invalid values **undefined** and **null** are treated as the default value. <br>Default value: **image/png |
+| quality | any | No | Image quality, which ranges from 0 to 1, when the image format is **image/jpeg** or **image/webp**. If the set value is beyond the value range, the default value **0.92** is used.<br>Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as the default value. <br>Default value: **0.92 |
 
 **Return value:**
 

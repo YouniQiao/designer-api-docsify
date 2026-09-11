@@ -29,7 +29,7 @@ function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceDescriptor | string | 是 | 键鼠穿越目标设备描述符。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ state: boolean }&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ state: boolean }&gt; | 是 | 回调函数。当获取键鼠穿越开关状态成功，err为undefined，data为键鼠穿越开关状态（true表示打开，false表示关闭）；否则为错误对象。 |
 
 **错误码：**
 
@@ -98,7 +98,7 @@ function getState(deviceDescriptor: string): Promise<{ state: boolean }>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;{ state: boolean | > } Promise对象，返回键鼠穿越开关状态。true表示键鼠穿越开关打开，false表示键鼠穿越开关关闭。 |
+| Promise&lt;{ state: boolean }&gt; | Promise对象，返回键鼠穿越开关状态。true表示键鼠穿越开关打开，false表示键鼠穿越开关关闭。 |
 
 **错误码：**
 

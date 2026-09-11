@@ -36,7 +36,7 @@ Connects to Wi-Fi network.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the network connection is successful, returns `false` otherwise. |
 
 **Examples**
 

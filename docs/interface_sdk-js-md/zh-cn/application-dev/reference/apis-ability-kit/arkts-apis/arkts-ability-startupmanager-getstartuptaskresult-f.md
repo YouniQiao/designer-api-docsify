@@ -30,7 +30,7 @@ function getStartupTaskResult(startupTask: string): Object
 
 | 类型 | 说明 |
 | --- | --- |
-| Object | 输入为启动任务名时，返回指定的启动任务[init]{ |
+| Object | 输入为启动任务名时，返回指定的启动任务[init](arkts-ability-app-appstartup-startuptask-startuptask-c.md#init)返回的执行结果。输入为so文件名时，返回undefined。 |
 
 **错误码：**
 

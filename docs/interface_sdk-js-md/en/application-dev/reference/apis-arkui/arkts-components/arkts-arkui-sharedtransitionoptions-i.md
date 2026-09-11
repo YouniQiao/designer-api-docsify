@@ -2,7 +2,7 @@
 
 Parameters of the shared element transition animation.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > **motionPath** is effective only when **type** is set to **SharedTransitionEffectType.Exchange**.
 > 
@@ -35,7 +35,7 @@ For the string type, this parameter indicates an animation interpolation curve. 
 
 Default value: **Curve.Linear**
 
-**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| [ICurve](arkts-arkui-icurve-i.md)
+**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) &#124; string &#124; [ICurve](arkts-arkui-icurve-i.md)
 
 **Default:** Curve.Linear
 

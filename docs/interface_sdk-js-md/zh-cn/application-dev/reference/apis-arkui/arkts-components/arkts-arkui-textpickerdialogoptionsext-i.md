@@ -332,7 +332,7 @@ defaultPickerItemHeight?: number | string
 > 
 > 当defaultPickerItemHeight的值为负数时，使用默认值。
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **起始版本：** 20
 
@@ -400,26 +400,16 @@ disappearTextStyle?: TextPickerTextStyle
 
 > 默认值：
 > 
-> 
-{   
-> 
-color: '#ff182431',   
-> 
-font: {   
-> 
-size: '14fp',   
-> 
-weight: FontWeight.Regular   
-> 
-},   
-> 
-minFontSize: 0,   
-> 
-maxFontSize: 0,   
-> 
-overflow: TextOverflow.CLIP   
-> 
-}
+> <br>{
+> <br>color: '#ff182431',
+> <br>font: {
+> <br>size: '14fp',
+> <br>weight: FontWeight.Regular
+> <br>},
+> <br>minFontSize: 0,
+> <br>maxFontSize: 0,
+> <br>overflow: TextOverflow.CLIP
+> <br>}
 
 **类型：** [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)
 
@@ -639,14 +629,10 @@ selectedBackgroundStyle?: PickerBackgroundStyle
 
 > 默认值：
 > 
-> 
-{   
-> 
-color: \$r('sys.color.comp_background_tertiary'),   
-> 
-borderRadius: \$r('sys.float.corner_radius_level12')   
-> 
-}
+> <br>{
+> <br>color: \$r('sys.color.comp_background_tertiary'),
+> <br>borderRadius: \$r('sys.float.corner_radius_level12')
+> <br>}
 
 **类型：** [PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)
 
@@ -670,26 +656,16 @@ selectedTextStyle?: TextPickerTextStyle
 
 > 默认值：
 > 
-> 
-{   
-> 
-color: '#ff007dff',   
-> 
-font: {   
-> 
-size: '20fp',   
-> 
-weight: FontWeight.Medium   
-> 
-},   
-> 
-minFontSize: 0,   
-> 
-maxFontSize: 0,   
-> 
-overflow: TextOverflow.CLIP   
-> 
-}
+> <br>{
+> <br>color: '#ff007dff',
+> <br>font: {
+> <br>size: '20fp',
+> <br>weight: FontWeight.Medium
+> <br>},
+> <br>minFontSize: 0,
+> <br>maxFontSize: 0,
+> <br>overflow: TextOverflow.CLIP
+> <br>}
 
 **类型：** [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)
 
@@ -711,7 +687,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM
 
-**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
+**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 20
 
@@ -760,7 +736,7 @@ textStyle?: TextPickerTextStyle
 
 默认值：
 
-{color: '#ff182431', font: {size: '16fp', weight: FontWeight.Regular }, minFontSize: 0, maxFontSize: 0, overflow: TextOverflow.CLIP }
+<br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>}, <br>minFontSize: 0, <br>maxFontSize: 0, <br>overflow: TextOverflow.CLIP <br>}
 
 **类型：** [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)
 

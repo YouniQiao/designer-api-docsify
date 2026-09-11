@@ -5,9 +5,11 @@ The module provides information in the
  obtained through
  [getAppProvisionInfo](arkts-ability-bundlemanager-getappprovisioninfo-f-sys.md)
  .
- > **NOTE**
+
+> **NOTE**
  >
  > The APIs provided by this module are system APIs.
+
 
 
 ## 汇总

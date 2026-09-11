@@ -38,7 +38,7 @@ Constructor for the smart gesture page switch action handling.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node that responds to the page switch action. |
-| pageCount | number | Yes | Number of pages to switch.Value range: [0, +∞). Values less than 0 are treated as 0.Unit: pages. |
+| pageCount | number | Yes | Number of pages to switch.<br>Value range: [0, +∞). Values less than 0 are treated as 0.<br>Unit: pages. |
 
 ## pageCount
 

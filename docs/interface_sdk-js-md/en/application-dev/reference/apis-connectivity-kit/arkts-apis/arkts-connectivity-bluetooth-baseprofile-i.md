@@ -75,7 +75,7 @@ Obtains the profile state of device.
 
 | Type | Description |
 | --- | --- |
-| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) | Returns { |
+| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) | Returns [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) of device. |
 
 **Examples**
 

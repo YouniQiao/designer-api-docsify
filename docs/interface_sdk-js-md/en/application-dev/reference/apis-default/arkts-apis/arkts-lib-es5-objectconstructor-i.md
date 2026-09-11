@@ -59,7 +59,7 @@ Creates an object that has the specified prototype or that has null prototype.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| o | object \| null | Yes |  |
+| o | object &#124; null | Yes |  |
 
 **Return value:**
 
@@ -77,7 +77,7 @@ Creates an object that has the specified prototype, and that optionally contains
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| o | object \| null | Yes |  |
+| o | object &#124; null | Yes |  |
 | properties | PropertyDescriptorMap & ThisType&lt;any&gt; | Yes |  |
 
 **Return value:**

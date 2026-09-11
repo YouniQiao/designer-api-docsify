@@ -17,7 +17,7 @@
 > 
 > - [on('error')](#onerror)：监听错误事件。
 > 
-> - on('errorOccurred')：监听错误事件，同时返回
+> - [on('errorOccurred')](#onerroroccurred)：监听错误事件，同时返回
 > [errorInfo](arkts-media-soundpool-errorinfo-i.md)。
 > 
 > - SoundPool目前不支持后台播放、设置音频打断等音频焦点策略和跳过音频头尾的静音帧。SoundPool低时延播放可参考
@@ -548,7 +548,7 @@ setLoop(streamID: number, loop: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | streamID | number | 是 | 音频流ID，通过play方法获取。 |
-| loop | number | 是 | 设置循环次数。当loop≥0时，实际播放次数为loop+1。当loop＜0时，表示一直循环。 |
+| loop | number | 是 | 设置循环次数。<br>当loop≥0时，实际播放次数为loop+1。<br> 当loop＜0时，表示一直循环。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当setLoop的回调成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -576,7 +576,7 @@ setLoop(streamID: number, loop: number): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | streamID | number | 是 | 音频流ID，通过play方法获取。 |
-| loop | number | 是 | 设置循环次数。当loop≥0时，实际播放次数为loop+1。当loop＜0时，表示一直循环。 |
+| loop | number | 是 | 设置循环次数。<br>当loop≥0时，实际播放次数为loop+1。<br> 当loop＜0时，表示一直循环。 |
 
 **返回值：**
 

@@ -2,7 +2,7 @@
 
 Encapsulates binary data. The core field **data** is of the Uint8Array type.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The Uint8Array typed array represents an array of 8-bit unsigned integers.
 

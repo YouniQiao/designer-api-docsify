@@ -18,7 +18,7 @@ This API only takes effect on PCs/2-in-1 devices and returns an empty array on o
 
 You are advised to use the [getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md) API to obtain the latest system-supported font list data.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Since API version 10, you can use the
 > [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in

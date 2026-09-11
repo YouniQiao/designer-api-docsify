@@ -42,7 +42,7 @@ This API is supported since API version 10 and deprecated since API version 12. 
 
 **Deprecated since:** 12
 
-**Substitutes:** OH_AVScreenCapture
+**Substitutes:** OH_AVScreenCapture in native interface.
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 

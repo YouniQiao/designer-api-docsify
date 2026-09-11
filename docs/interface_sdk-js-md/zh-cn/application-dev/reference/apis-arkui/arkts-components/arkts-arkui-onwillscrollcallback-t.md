@@ -7,6 +7,8 @@ declare type OnWillScrollCallback =
 
 Called before scroll to allow developer to control real offset the Scrollable can scroll.
 
+@typedef { function } OnWillScrollCallback
+
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -27,4 +29,4 @@ Called before scroll to allow developer to control real offset the Scrollable ca
 
 | 类型 | 说明 |
 | --- | --- |
-| void \| [ScrollResult](arkts-arkui-scrollresult-c.md) | the remain offset for the scrollable, same as scrollOffset when no ScrollResult is returned. |
+| void &#124; [ScrollResult](arkts-arkui-scrollresult-c.md) | the remain offset for the scrollable, same as scrollOffset when no ScrollResult is returned. |

@@ -12,7 +12,7 @@ import { inputMethod } from '@kit.IMEKit';
 function switchInputMethod(target: InputMethodProperty, callback: AsyncCallback<boolean>): void
 ```
 
-切换输入法，使用callback异步回调。含义/功能：将当前输入法切换为指定的目标输入法。使用场景：当前输入法应用需要切换到另一个输入法时使用（如用户在输入法设置中选择了新的输入法）。使用后效果：成功时系统将当前输入法切换为目标输入法，目标输入法成为新的当前输入法；失败时当前输入法不变。
+切换输入法，使用callback异步回调。<br> <br>含义/功能：将当前输入法切换为指定的目标输入法。<br> <br>使用场景：当前输入法应用需要切换到另一个输入法时使用（如用户在输入法设置中选择了新的输入法）。<br> <br>使用后效果：成功时系统将当前输入法切换为目标输入法，目标输入法成为新的当前输入法；失败时当前输入法不变。
 
 **起始版本：** 9
 
@@ -26,7 +26,7 @@ function switchInputMethod(target: InputMethodProperty, callback: AsyncCallback<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | 是 | 目标输入法。使用场景：指定要切换到的目标输入法，通过name和id唯一确定。说明：只需填写name和id字段即可唯一指定一个输入法，无需填写label、icon等可选字段。 |
+| target | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | 是 | 目标输入法。<br>使用场景：指定要切换到的目标输入法，通过name和id唯一确定。<br>说明：只需填写name和id字段即可唯一指定一个输入法，无需填写label、icon等可选字段。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当输入法切换成功，err为undefined，data为true；否则为错误对象。 |
 
 **错误码：**
@@ -64,7 +64,7 @@ inputMethod.switchInputMethod(currentIme, (err: BusinessError, result: boolean) 
 function switchInputMethod(target: InputMethodProperty): Promise<boolean>
 ```
 
-切换输入法，使用promise异步回调。含义/功能：将当前输入法切换为指定的目标输入法。使用场景：当前输入法应用需要切换到另一个输入法时使用。使用后效果：成功时系统将当前输入法切换为目标输入法；失败时当前输入法不变。
+切换输入法，使用promise异步回调。<br> <br>含义/功能：将当前输入法切换为指定的目标输入法。<br> <br>使用场景：当前输入法应用需要切换到另一个输入法时使用。<br> <br>使用后效果：成功时系统将当前输入法切换为目标输入法；失败时当前输入法不变。
 
 **起始版本：** 9
 
@@ -78,7 +78,7 @@ function switchInputMethod(target: InputMethodProperty): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | 是 | 目标输入法。使用场景：指定要切换到的目标输入法，通过name和id唯一确定。说明：只需填写name和id字段即可唯一指定一个输入法。 |
+| target | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | 是 | 目标输入法。<br>使用场景：指定要切换到的目标输入法，通过name和id唯一确定。<br>说明：只需填写name和id字段即可唯一指定一个输入法。 |
 
 **返回值：**
 

@@ -4,7 +4,7 @@ The **browser** module provides browser management, including setting, canceling
 
 Browser policies are a collection of rules and settings that govern how a browser behaves, ensuring security, compliance, performance optimization, and a consistent user experience.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The APIs of this module can be called only by a device administrator application that is enabled. For details, see
 > [MDM Kit Development](../../../mdm/mdm-kit-guide.md).

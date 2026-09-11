@@ -14,7 +14,7 @@ function createVpnConnection(context: VpnExtensionContext): VpnConnection
 
 Creates a **VpnConnection** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Before calling **createVpnConnection**, call **startVpnExtensionAbility** to enable the VPN function.
 

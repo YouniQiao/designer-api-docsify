@@ -27,7 +27,7 @@ function setDistributedEnabled(enable: boolean, deviceType: string): Promise<voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | 表示指定设备类型是否支持跨设备协同通知。true表示支持，false表示不支持。 |
-| deviceType | string | 是 | 设备类型。当前仅支持以下类型：   - headset（可穿戴式音频设备）。   - liteWearable（轻量级智能穿戴设备）。   - wearable（智能穿戴设备）。   - current（本设备）。   - 2in1（PC设备）。   - tablet（平板）。 |
+| deviceType | string | 是 | 设备类型。当前仅支持以下类型：<br>- headset（可穿戴式音频设备）。<br>- liteWearable（轻量级智能穿戴设备）。<br>- wearable（智能穿戴设备）。<br>- current（本设备）。<br>- 2in1（PC设备）。<br>- tablet（平板）。 |
 
 **返回值：**
 

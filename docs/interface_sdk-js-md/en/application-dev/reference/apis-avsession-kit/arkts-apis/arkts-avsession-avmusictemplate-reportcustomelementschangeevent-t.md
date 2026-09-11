@@ -7,6 +7,8 @@ type ReportCustomElementsChangeEvent = (actionType: ActionType, customType: Cust
 
 The report custom elements change event.
 
+@typedef { function } ReportCustomElementsChangeEvent
+
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.

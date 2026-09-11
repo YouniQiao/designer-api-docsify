@@ -46,8 +46,8 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [isSupportAction](arkts-mechanic-mechanicmanager-issupportaction-f-sys.md) | 判断是否支持某个动作 |
 | [move](arkts-mechanic-mechanicmanager-move-f-sys.md) | 以特定参数移动一个具身设备 |
 | [moveBySpeed](arkts-mechanic-mechanicmanager-movebyspeed-f-sys.md) | 以特定速度移动一个具身设备 |
-| [off](arkts-mechanic-mechanicmanager-off-f.md) | Unregister a listener for axis state changes. |
-| [on](arkts-mechanic-mechanicmanager-on-f.md) | Register a listener for axis state changes. The status of the rotation axis changes dynamically, which needs to be monitored. |
+| [off](arkts-mechanic-mechanicmanager-off-f-sys.md#offrotationaxesstatuschange) | Unregister a listener for axis state changes. |
+| [on](arkts-mechanic-mechanicmanager-on-f-sys.md#onrotationaxesstatuschange) | Register a listener for axis state changes. The status of the rotation axis changes dynamically, which needs to be monitored. |
 | [rotate](arkts-mechanic-mechanicmanager-rotate-f-sys.md) | 将机械设备旋转到相对角度 |
 | [rotateBySpeed](arkts-mechanic-mechanicmanager-rotatebyspeed-f-sys.md) | 以指定的速度旋转机械设备 |
 | [rotateToEulerAngles](arkts-mechanic-mechanicmanager-rotatetoeulerangles-f-sys.md) | 将机械设备旋转到绝对角度 |
@@ -64,8 +64,8 @@ import { mechanicManager } from '@kit.MechanicKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AttachStateChangeInfo](arkts-mechanic-mechanicmanager-attachstatechangeinfo-i.md) | 设备吸附状态回调信息 |
-| [MechInfo](arkts-mechanic-mechanicmanager-mechinfo-i.md) | 机械设备信息 |
+| [AttachStateChangeInfo](arkts-mechanic-mechanicmanager-attachstatechangeinfo-i.md) | 设备吸附状态回调信息@typedef AttachStateChangeInfo |
+| [MechInfo](arkts-mechanic-mechanicmanager-mechinfo-i.md) | 机械设备信息@typedef MechInfo |
 | [TrackingEventInfo](arkts-mechanic-mechanicmanager-trackingeventinfo-i.md) | Tracking event callback info. |
 
 <!--Del-->
@@ -78,11 +78,11 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [EulerAngles](arkts-mechanic-mechanicmanager-eulerangles-i-sys.md) | Absolute euler angles relative to the home position. |
 | [MechEvent](arkts-mechanic-mechanicmanager-mechevent-i-sys.md) | 具身设备事件定义 |
 | [MoveParams](arkts-mechanic-mechanicmanager-moveparams-i-sys.md) | 设备移动参数 |
-| [RotationAngles](arkts-mechanic-mechanicmanager-rotationangles-i-sys.md) | The rotion angles, relative to the current position. |
-| [RotationAxesStateChangeInfo](arkts-mechanic-mechanicmanager-rotationaxesstatechangeinfo-i-sys.md) | 旋转轴状态变更信息 |
+| [RotationAngles](arkts-mechanic-mechanicmanager-rotationangles-i-sys.md) | The rotion angles, relative to the current position. @typedef RotationAngles |
+| [RotationAxesStateChangeInfo](arkts-mechanic-mechanicmanager-rotationaxesstatechangeinfo-i-sys.md) | 旋转轴状态变更信息@typedef RotationAxesStateChangeInfo |
 | [RotationAxesStatus](arkts-mechanic-mechanicmanager-rotationaxesstatus-i-sys.md) | Rotation axes status |
-| [RotationLimits](arkts-mechanic-mechanicmanager-rotationlimits-i-sys.md) | 相对于参考点的旋转角度限制 |
-| [RotationSpeed](arkts-mechanic-mechanicmanager-rotationspeed-i-sys.md) | 转速，负值表示顺时针旋转。正值表示逆时针旋转。 |
+| [RotationLimits](arkts-mechanic-mechanicmanager-rotationlimits-i-sys.md) | 相对于参考点的旋转角度限制@typedef RotationLimits |
+| [RotationSpeed](arkts-mechanic-mechanicmanager-rotationspeed-i-sys.md) | 转速，负值表示顺时针旋转。正值表示逆时针旋转。@typedef RotationSpeed |
 | [SearchParams](arkts-mechanic-mechanicmanager-searchparams-i-sys.md) | Parameters for target searching. |
 | [SearchResult](arkts-mechanic-mechanicmanager-searchresult-i-sys.md) | Search result. |
 | [SpeedParams](arkts-mechanic-mechanicmanager-speedparams-i-sys.md) | 速度控制参数 |

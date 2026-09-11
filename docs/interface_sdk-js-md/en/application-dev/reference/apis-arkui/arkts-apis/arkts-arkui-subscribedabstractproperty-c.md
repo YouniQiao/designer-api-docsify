@@ -75,7 +75,7 @@ abstract set(newValue: T): void
 
 Sets the data of the synchronized property in [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md). The value of **newValue** must be of the **T** type. Since API version 12, it can be **null** or **undefined**.
 
-> **NOTE：**
+> **NOTE:**
 
 > Since API version 12, AppStorage and LocalStorage support the Map, Set, Date types, as well as **null**,
 > **undefined**, and union types.

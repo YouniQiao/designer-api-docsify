@@ -6,6 +6,8 @@ declare type ResourceColor = Color | number | string | Resource
 
 Defines the color which can use resource.
 
+@typedef { Color | number | string | Resource } ResourceColor
+
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。

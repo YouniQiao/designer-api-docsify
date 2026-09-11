@@ -14,7 +14,7 @@ function setPointerColorSync(color: number): void
 
 Sets the pointer color. This API returns the result synchronously.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
 
@@ -35,7 +35,7 @@ Sets the pointer color. This API returns the result synchronously.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 

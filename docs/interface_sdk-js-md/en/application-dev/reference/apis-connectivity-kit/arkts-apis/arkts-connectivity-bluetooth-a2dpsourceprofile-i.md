@@ -46,7 +46,7 @@ Connect to device with a2dp.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the connect is in process; returns `false` otherwise. |
 
 **Examples**
 
@@ -83,7 +83,7 @@ Disconnect to device with a2dp.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the disconnect is in process; returns `false` otherwise. |
 
 **Examples**
 
@@ -118,7 +118,7 @@ Obtains the playing state of device.
 
 | Type | Description |
 | --- | --- |
-| [PlayingState](arkts-connectivity-bluetooth-playingstate-e.md) | Returns { |
+| [PlayingState](arkts-connectivity-bluetooth-playingstate-e.md) | Returns [PlayingState](arkts-connectivity-bluetooth-playingstate-e.md) of the remote device. |
 
 **Examples**
 

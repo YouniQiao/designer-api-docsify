@@ -2,7 +2,7 @@
 
 Enumerates the information levels of the console messages.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > On the HTML5 side, calling console.log or console.info both correspond to the console message level of
 > MessageLevel.Info.

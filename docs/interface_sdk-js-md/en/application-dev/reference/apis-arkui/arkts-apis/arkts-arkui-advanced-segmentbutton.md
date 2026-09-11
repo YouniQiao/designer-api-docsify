@@ -14,7 +14,7 @@ import { SegmentButton, SegmentButtonOptions, SegmentButtonItemOptionsArray, Tab
 | --- | --- |
 | [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md) | Button options in a segmented button. |
 | [SegmentButtonItemOptionsArray](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptionsarray-c.md) | Represents an array for storing button information. |
-| [SegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md) | > **NOTE：** >  > The component does not support custom font type settings. |
+| [SegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md) |  |
 
 ### Structs
 

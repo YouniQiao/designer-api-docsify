@@ -75,7 +75,7 @@ Obtains all screens. This API uses an asynchronous callback to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Screen](arkts-arkui-screen-screen-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If obtaining all screens is successful is successful, **err** is **undefined**, and the returned object is screen object set obtained. Otherwise, **err** is an error object. |
-| isNeedUnused | boolean | No | Indicates whether unused screen information is required. **true** means they should be provided, **false** means they should not. Default value: false. |
+| isNeedUnused | boolean | No | Indicates whether unused screen information is required. **true** means they should be provided, **false** means they should not.<br>Default value: false. |
 
 **Error codes:**
 
@@ -171,7 +171,7 @@ Obtains all screens. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isNeedUnused | boolean | No | Indicates whether unused screen information is required. This parameter is optional. If not provided, the unused screen information will not be returned Default value: false. |
+| isNeedUnused | boolean | No | Indicates whether unused screen information is required. This parameter is optional. If not provided, the unused screen information will not be returned<br>Default value: false. |
 
 **Return value:**
 

@@ -26,13 +26,13 @@ function startOsu(slotId: number): Promise<OsuStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[OsuStatus](arkts-telephony-esim-osustatus-e-sys.md)&gt; | Promise对象，返回操作系统升级的状态。 |
+| Promise&lt;[OsuStatus](arkts-telephony-esim-osustatus-e-sys.md)&gt; | Promise对象，返回操作系统升级的状态。<br> 1. 正在升级。 <br> 2. 升级失败。<br> 3. 升级成功。<br> 4. 当前版本是最新版本。<br> 5. 升级服务不可用。 |
 
 **错误码：**
 

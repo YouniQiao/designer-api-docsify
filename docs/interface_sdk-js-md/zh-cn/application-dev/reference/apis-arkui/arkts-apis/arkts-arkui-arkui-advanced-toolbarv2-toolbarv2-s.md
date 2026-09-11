@@ -56,7 +56,7 @@ dividerModifier?: DividerModifier
 
 Define divider Modifier.
 
-**类型：** DividerModifier
+**类型：** [DividerModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **起始版本：** 18
 

@@ -20,7 +20,7 @@ import { functionManager } from '@kit.AbilityKit';
 context?: Context
 ```
 
-执行Function调用时的应用上下文信息。说明：目前仅支持[UIAbilityContext](arkts-ability-uiabilitycontext-c.md)。
+执行Function调用时的应用上下文信息。<br>说明：目前仅支持[UIAbilityContext](arkts-ability-uiabilitycontext-c.md)。
 
 **类型：** [Context](arkts-ability-context-c.md)
 

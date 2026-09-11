@@ -2,7 +2,7 @@
 
 Enumerates the fold statuses of a foldable device. For dual-fold axis devices, when oriented with the charging port at the bottom, the hinges are identified from right to left as the first and second fold axes, respectively.
 
-> **NOTE：**
+> **NOTE:**
 
 > Devices with only one fold axis can be in the **FOLD_STATUS_EXPANDED**, **FOLD_STATUS_FOLDED**, or
 > **FOLD_STATUS_HALF_FOLDED** state.

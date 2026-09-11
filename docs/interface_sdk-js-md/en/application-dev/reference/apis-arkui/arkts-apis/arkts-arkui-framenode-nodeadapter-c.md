@@ -2,7 +2,7 @@
 
 Provides lazy loading capabilities for FrameNode data, implementing LazyForEach API functionality.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Negative input parameters are ignored and trigger no processing.
 
@@ -18,7 +18,7 @@ static attachNodeAdapter(adapter: NodeAdapter, node: FrameNode): boolean
 
 Attaches a FrameNode to a NodeAdapter. Each node can be bound to only one NodeAdapter. Attempts to re-attach to a NodeAdapter that has already been attached to will fail and return **false**.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The following components can be bound: **Column**, **Row**, **Stack**, **GridRow**, **Flex**, **Swiper**,
 > **RelativeContainer**, **List**, **ListItemGroup**, **WaterFlow**, and **Grid**.
@@ -140,8 +140,8 @@ Inserts a specified number of items starting from a specific index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | Starting index of the items to insert. Value range: 0, +∞). |
-| count | number | Yes | Number of the items to insert. Value range: [0, +∞). |
+| start | number | Yes | Starting index of the items to insert.<br>Value range: 0, +∞). |
+| count | number | Yes | Number of the items to insert.<br>Value range: [0, +∞). |
 
 ## isDisposed
 
@@ -190,8 +190,8 @@ Moves items from the starting index to the ending index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | number | Yes | Original index from which the data will be moved. Value range: [0, +∞). |
-| to | number | Yes | Target index to which the data will be moved. Value range: [0, +∞). |
+| from | number | Yes | Original index from which the data will be moved.<br>Value range: [0, +∞). |
+| to | number | Yes | Target index to which the data will be moved.<br>Value range: [0, +∞). |
 
 ## onAttachToNode
 
@@ -201,7 +201,7 @@ onAttachToNode?(target: FrameNode): void
 
 Called when a FrameNode is attached to the NodeAdapter.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > In versions earlier than API version 26.0.0, this callback is triggered when the host node is attached to the
 > main tree. If you set this callback by dynamically assigning a value, you can complete the setting after calling
@@ -250,7 +250,7 @@ Called during node initialization or when new child nodes are detected. When add
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the loaded node. Value range: [0, +∞). |
+| index | number | Yes | Index of the loaded node.<br>Value range: [0, +∞). |
 
 **Return value:**
 
@@ -317,7 +317,7 @@ Called during node initialization or when new child nodes are detected. The **in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the loaded node. Value range: [0, +∞). |
+| index | number | Yes | Index of the loaded node.<br>Value range: [0, +∞). |
 
 **Return value:**
 
@@ -384,8 +384,8 @@ Reloads a specified number of items starting from a specific index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | Starting index of the items to reload. Value range: 0, +∞). |
-| count | number | Yes | Number of the items to reload. Value range: [0, +∞). |
+| start | number | Yes | Starting index of the items to reload.<br>Value range: 0, +∞). |
+| count | number | Yes | Number of the items to reload.<br>Value range: [0, +∞). |
 
 ## removeItem
 
@@ -407,8 +407,8 @@ Removes a specified number of items starting from a specific index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | Starting index of the items to remove. Value range: [0, +∞). |
-| count | number | Yes | Number of the items to remove. Value range: [0, +∞). |
+| start | number | Yes | Starting index of the items to remove.<br>Value range: [0, +∞). |
+| count | number | Yes | Number of the items to remove.<br>Value range: [0, +∞). |
 
 ## totalNodeCount
 

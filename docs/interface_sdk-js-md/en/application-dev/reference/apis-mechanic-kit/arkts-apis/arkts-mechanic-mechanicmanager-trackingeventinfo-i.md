@@ -2,6 +2,8 @@
 
 Tracking event callback info.
 
+@typedef TrackingEventInfo
+
 **Since:** 20
 
 **System capability:** SystemCapability.Mechanic.Core

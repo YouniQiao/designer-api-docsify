@@ -151,3 +151,10 @@ Obtains the file name of uri.
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.FileManagement.AppFileService
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |

@@ -35,7 +35,7 @@ icon?: string | Resource
 
 string格式可用于加载网络图片和本地图片，常用于加载网络图片。当使用相对路径引用本地图片时，例如Image("common/test.jpg")。
 
-**类型：** string \| [Resource](arkts-arkui-resource-t.md)
+**类型：** string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 8
 
@@ -55,7 +55,7 @@ title: string | Resource
 
 文本超长时会触发滚动条。
 
-**类型：** string \| [Resource](arkts-arkui-resource-t.md)
+**类型：** string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 8
 

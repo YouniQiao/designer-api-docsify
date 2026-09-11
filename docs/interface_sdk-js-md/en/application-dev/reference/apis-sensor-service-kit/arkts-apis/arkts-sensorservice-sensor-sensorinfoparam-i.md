@@ -18,7 +18,7 @@ import { sensor } from '@kit.SensorServiceKit';
 deviceId?: number
 ```
 
-Device ID. The default value is -1, indicating the local device. You can use [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md) or sensorStatusChange to obtain the device ID.
+Device ID. The default value is -1, indicating the local device. You can use [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md) or [sensorStatusChange](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange) to obtain the device ID.
 
 **Type:** number
 
@@ -34,7 +34,7 @@ Device ID. The default value is -1, indicating the local device. You can use [ge
 sensorIndex?: number
 ```
 
-Sensor index. The default value is **0**, indicating the default sensor on the device. You can use [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md) or sensorStatusChange to obtain the sensor index.
+Sensor index. The default value is **0**, indicating the default sensor on the device. You can use [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md) or [sensorStatusChange](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange) to obtain the sensor index.
 
 **Type:** number
 

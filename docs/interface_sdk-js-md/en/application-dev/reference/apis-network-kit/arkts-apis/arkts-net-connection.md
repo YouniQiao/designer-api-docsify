@@ -2,7 +2,7 @@
 
 The network connection management module provides basic network management capabilities. You can obtain the default active network, the list of all active networks, and network capability information.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Unless otherwise specified, the APIs of this module do not support concurrent calls.
 

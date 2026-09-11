@@ -30,9 +30,9 @@ import { ble } from '@kit.ConnectivityKit';
 | [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md) | Enable the advertising with a specific ID temporarily. |
 | [getConnectedBLEDevices](arkts-connectivity-ble-getconnectedbledevices-f.md) | Obtains the list of devices in the connected status. On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual. |
 | [getConnectedBLEDevices](arkts-connectivity-ble-getconnectedbledevices-f.md) | Obtains the list of devices in the connected status. On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual. |
-| off | Unsubscribe from advertising state change event. |
+| [off](arkts-connectivity-ble-off-f.md#offadvertisingstatechange) | Unsubscribe from advertising state change event. |
 | [off](arkts-connectivity-ble-off-f.md#offbledevicefind) | Unsubscribe BLE scan result. |
-| on | Subscribing to advertising state change event. |
+| [on](arkts-connectivity-ble-on-f.md#onadvertisingstatechange) | Subscribing to advertising state change event. |
 | [on](arkts-connectivity-ble-on-f.md#onbledevicefind) | Subscribe BLE scan result. On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual. |
 | [startAdvertising](arkts-connectivity-ble-startadvertising-f.md) | Starts BLE advertising. |
 | [startAdvertising](arkts-connectivity-ble-startadvertising-f.md) | Starts BLE advertising. The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md) or [disableAdvertising](arkts-connectivity-ble-disableadvertising-f.md). To completely stop the advertising corresponding to the ID, invoke the API [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md) with ID. |

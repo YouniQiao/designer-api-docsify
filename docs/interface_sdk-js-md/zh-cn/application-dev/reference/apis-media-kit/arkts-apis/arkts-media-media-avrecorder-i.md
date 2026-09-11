@@ -25,7 +25,7 @@ import { media } from '@kit.MediaKit';
 addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise<number>
 ```
 
-添加自定义水印图像到录制视频中。适用于需要在录制视频中嵌入品牌标识、版权信息或时间戳等水印的场景。使用Promise异步回调。  
+添加自定义水印图像到录制视频中。适用于需要在录制视频中嵌入品牌标识、版权信息或时间戳等水印的场景。使用Promise异步回调。<br>   
 > **说明：**
 > - 应用最多可添加5个水印。
 > - 必须在[prepare](#prepare-1)之前调用。
@@ -64,7 +64,7 @@ addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise
 getAudioCapturerMaxAmplitude(callback: AsyncCallback<number>): void
 ```
 
-获取当前音频最大振幅。适用于需要实时监控音频振幅的场景，如录音音量可视化显示、音频质量检测等。使用callback异步回调。必须在[prepare](#prepare)和[stop](#stop)之间调用。调用接口时，获取到的返回值是上一次获取最大振幅的时刻到当前这段区间内的音频最大振幅。例如，在1s时获取了一次最大振幅，到2s时再获取到的最大振幅是1-2s这个区间内的最大值。
+获取当前音频最大振幅。适用于需要实时监控音频振幅的场景，如录音音量可视化显示、音频质量检测等。使用callback异步回调。<br>必须在[prepare](#prepare)和[stop](#stop)之间调用。<br>调用接口时，获取到的返回值是上一次获取最大振幅的时刻到当前这段区间内的音频最大振幅。例如，在1s时获取了一次最大振幅，到2s时再获取到的最大振幅是1-2s这个区间内的最大值。
 
 **起始版本：** 11
 
@@ -89,7 +89,7 @@ getAudioCapturerMaxAmplitude(callback: AsyncCallback<number>): void
 getAudioCapturerMaxAmplitude(): Promise<number>
 ```
 
-获取当前音频最大振幅。适用于需要实时监控音频振幅的场景，如录音音量可视化显示、音频质量检测等。使用Promise异步回调。必须在[prepare](#prepare-1)和[stop](#stop)之间调用。调用接口时，获取到的返回值是上一次获取最大振幅的时刻到当前这段区间内的音频最大振幅。例如，在1s时获取了一次最大振幅，到2s时再获取到的最大振幅是1-2s这个区间内的最大值。
+获取当前音频最大振幅。适用于需要实时监控音频振幅的场景，如录音音量可视化显示、音频质量检测等。使用Promise异步回调。<br>必须在[prepare](#prepare-1)和[stop](#stop)之间调用。<br>调用接口时，获取到的返回值是上一次获取最大振幅的时刻到当前这段区间内的音频最大振幅。例如，在1s时获取了一次最大振幅，到2s时再获取到的最大振幅是1-2s这个区间内的最大值。
 
 **起始版本：** 11
 
@@ -114,7 +114,7 @@ getAudioCapturerMaxAmplitude(): Promise<number>
 getAvailableEncoder(callback: AsyncCallback<Array<EncoderInfo>>): void
 ```
 
-获取可用的编码器参数。适用于需要根据设备能力选择合适编码器的场景。使用callback异步回调。必须在非released/error状态下调用。
+获取可用的编码器参数。适用于需要根据设备能力选择合适编码器的场景。使用callback异步回调。<br>必须在非released/error状态下调用。
 
 **起始版本：** 11
 
@@ -139,7 +139,7 @@ getAvailableEncoder(callback: AsyncCallback<Array<EncoderInfo>>): void
 getAvailableEncoder(): Promise<Array<EncoderInfo>>
 ```
 
-获取可用的编码器参数。适用于需要根据设备能力选择合适编码器的场景。使用Promise异步回调。必须在非released/error状态下调用。
+获取可用的编码器参数。适用于需要根据设备能力选择合适编码器的场景。使用Promise异步回调。<br>必须在非released/error状态下调用。
 
 **起始版本：** 11
 
@@ -164,7 +164,7 @@ getAvailableEncoder(): Promise<Array<EncoderInfo>>
 getAVRecorderConfig(callback: AsyncCallback<AVRecorderConfig>): void
 ```
 
-获取实时的配置参数。适用于需要确认录制配置是否正确应用的场景，如调试录制参数、验证配置生效情况等。使用callback异步回调。
+获取实时的配置参数。适用于需要确认录制配置是否正确应用的场景，如调试录制参数、验证配置生效情况等。使用callback异步回调。<br>
 
 必须在[prepare](#prepare)之后调用。
 
@@ -192,7 +192,7 @@ getAVRecorderConfig(callback: AsyncCallback<AVRecorderConfig>): void
 getAVRecorderConfig(): Promise<AVRecorderConfig>
 ```
 
-获取实时的配置参数。适用于需要确认录制配置是否正确应用的场景，如调试录制参数、验证配置生效情况等。使用Promise异步回调。
+获取实时的配置参数。适用于需要确认录制配置是否正确应用的场景，如调试录制参数、验证配置生效情况等。使用Promise异步回调。<br>
 
 必须在[prepare](#prepare-1)之后调用。
 
@@ -220,7 +220,7 @@ getAVRecorderConfig(): Promise<AVRecorderConfig>
 getCurrentAudioCapturerInfo(callback: AsyncCallback<audio.AudioCapturerChangeInfo>): void
 ```
 
-获取当前音频采集参数。适用于需要确认当前音频采集设备类型或验证音频配置的场景。使用callback异步回调。必须在[prepare](#prepare)和[stop](#stop)之间调用。
+获取当前音频采集参数。适用于需要确认当前音频采集设备类型或验证音频配置的场景。使用callback异步回调。<br>必须在[prepare](#prepare)和[stop](#stop)之间调用。
 
 **起始版本：** 11
 
@@ -246,7 +246,7 @@ getCurrentAudioCapturerInfo(callback: AsyncCallback<audio.AudioCapturerChangeInf
 getCurrentAudioCapturerInfo(): Promise<audio.AudioCapturerChangeInfo>
 ```
 
-获取当前音频采集参数。适用于需要确认当前音频采集设备类型或验证音频配置的场景。使用Promise异步回调。必须在[prepare](#prepare-1)和[stop](#stop)之间调用。
+获取当前音频采集参数。适用于需要确认当前音频采集设备类型或验证音频配置的场景。使用Promise异步回调。<br>必须在[prepare](#prepare-1)和[stop](#stop)之间调用。
 
 **起始版本：** 11
 
@@ -272,7 +272,7 @@ getCurrentAudioCapturerInfo(): Promise<audio.AudioCapturerChangeInfo>
 getInputSurface(callback: AsyncCallback<string>): void
 ```
 
-获得录制需要的surface。适用于纯视频或音视频录制时需要获取surface传递视频数据的场景。相机视频录制功能需配合相机模块使用，详情请参考[相机管理](../apis-camera-kit/arkts-apis-camera.md)。使用callback异步回调。开发者从此surface中获取surfaceBuffer，填入待录制的视频数据。填入视频数据时需携带时间戳（单位ns）和buffer size。时间戳的起始时间以系统启动时间为基准。必须在[prepare](#prepare)和[start](#start)之间调用。
+获得录制需要的surface。适用于纯视频或音视频录制时需要获取surface传递视频数据的场景。相机视频录制功能需配合相机模块使用，详情请参考[相机管理](../apis-camera-kit/arkts-apis-camera.md)。使用callback异步回调。<br>开发者从此surface中获取surfaceBuffer，填入待录制的视频数据。<br>填入视频数据时需携带时间戳（单位ns）和buffer size。时间戳的起始时间以系统启动时间为基准。<br>必须在[prepare](#prepare)和[start](#start)之间调用。
 
 **起始版本：** 9
 
@@ -298,7 +298,7 @@ getInputSurface(callback: AsyncCallback<string>): void
 getInputSurface(): Promise<string>
 ```
 
-获得录制需要的surface。适用于纯视频或音视频录制时需要获取surface传递视频数据的场景。相机视频录制功能需配合相机模块使用，详情请参考[相机管理](../apis-camera-kit/arkts-apis-camera.md)。使用callback异步回调。开发者从此surface中获取surfaceBuffer，填入待录制的视频数据。填入视频数据时需携带时间戳（单位ns）和buffer size。时间戳的起始时间以系统启动时间为基准。必须在[prepare](#prepare-1)和[start](#start)之间调用。
+获得录制需要的surface。适用于纯视频或音视频录制时需要获取surface传递视频数据的场景。相机视频录制功能需配合相机模块使用，详情请参考[相机管理](../apis-camera-kit/arkts-apis-camera.md)。使用callback异步回调。<br>开发者从此surface中获取surfaceBuffer，填入待录制的视频数据。<br>填入视频数据时需携带时间戳（单位ns）和buffer size。时间戳的起始时间以系统启动时间为基准。<br>必须在[prepare](#prepare-1)和[start](#start)之间调用。
 
 **起始版本：** 9
 
@@ -337,7 +337,7 @@ off(type: 'stateChange', callback?: OnAVRecorderStateChangeHandler): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 录制状态机切换的回调类型，支持的事件：'stateChange'，用户操作和系统都会触发此事件。 |
-| callback | [OnAVRecorderStateChangeHandler](arkts-media-media-onavrecorderstatechangehandler-t.md) | 否 | 回调函数，用于接收录制状态机切换事件。如果指定参数则取消对应callback（callback对象不能是匿名函数），否则取消所有callback。从API version 12开始支持此参数。 |
+| callback | [OnAVRecorderStateChangeHandler](arkts-media-media-onavrecorderstatechangehandler-t.md) | 否 | 回调函数，用于接收录制状态机切换事件。如果指定参数则取消对应callback（callback对象不能是匿名函数），否则取消所有callback。<br>从API version 12开始支持此参数。 |
 
 ## off('error')
 
@@ -358,7 +358,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 录制错误的回调类型，支持的事件：'error'。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数，用于接收录制错误事件。如果指定参数则取消对应callback（callback对象不能是匿名函数），否则取消所有callback。从API version 12开始支持此参数。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数，用于接收录制错误事件。如果指定参数则取消对应callback（callback对象不能是匿名函数），否则取消所有callback。<br>从API version 12开始支持此参数。 |
 
 ## off('audioCapturerChange')
 
@@ -377,7 +377,7 @@ off(type: 'audioCapturerChange', callback?: Callback<audio.AudioCapturerChangeIn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | 是 | 录音配置变化的回调类型，支持的事件：'audioCapturerChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[audio.AudioCapturerChangeInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | 否 | 回调函数，用于接收变化后的录音配置全量信息。如果指定参数则取消对应callback（callback对象不能是匿名函数），否则取消所有callback。从API version 12开始支持此参数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[audio.AudioCapturerChangeInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | 否 | 回调函数，用于接收变化后的录音配置全量信息。如果指定参数则取消对应callback（callback对象不能是匿名函数），否则取消所有callback。<br>从API version 12开始支持此参数。 |
 
 ## off('photoAssetAvailable')
 
@@ -404,7 +404,7 @@ off(type: 'photoAssetAvailable', callback?: Callback<photoAccessHelper.PhotoAsse
 on(type: 'audioCapturerChange', callback: Callback<audio.AudioCapturerChangeInfo>): void
 ```
 
-订阅录音配置变化的回调事件。当录音配置发生变化时，会触发回调返回变化后的录音配置全量信息。使用callback异步回调。用户只能订阅一个录音配置变化事件的回调方法，当用户重复订阅时，以最后一次订阅的回调接口为准。
+订阅录音配置变化的回调事件。当录音配置发生变化时，会触发回调返回变化后的录音配置全量信息。使用callback异步回调。<br>用户只能订阅一个录音配置变化事件的回调方法，当用户重复订阅时，以最后一次订阅的回调接口为准。
 
 **起始版本：** 11
 
@@ -429,7 +429,7 @@ on(type: 'audioCapturerChange', callback: Callback<audio.AudioCapturerChangeInfo
 on(type: 'photoAssetAvailable', callback: Callback<photoAccessHelper.PhotoAsset>): void
 ```
 
-订阅媒体资源创建完成的回调事件。当[FileGenerationMode](arkts-media-media-filegenerationmode-e.md)枚举设置为系统创建媒体文件时，[stop](#stop)操作结束后会把[PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md)对象回调给应用。使用callback异步回调。用户只能订阅一个媒体资源回调事件的回调方法，当用户重复订阅时，以最后一次订阅的回调接口为准。
+订阅媒体资源创建完成的回调事件。当[FileGenerationMode](arkts-media-media-filegenerationmode-e.md)枚举设置为系统创建媒体文件时，[stop](#stop)操作结束后会把[PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md)对象回调给应用。使用callback异步回调。<br>用户只能订阅一个媒体资源回调事件的回调方法，当用户重复订阅时，以最后一次订阅的回调接口为准。
 
 **起始版本：** 12
 
@@ -455,7 +455,7 @@ on(type: 'photoAssetAvailable', callback: Callback<photoAccessHelper.PhotoAsset>
 on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler): void
 ```
 
-订阅录制状态机[AVRecorderState](arkts-media-media-avrecorderstate-t.md)切换的回调事件。当AVRecorderState发生变化时，会通过回调方法通知用户。用户只能订阅一个回调方法，重复订阅时以最后一次订阅的回调接口为准。使用callback异步回调。
+订阅录制状态机[AVRecorderState](arkts-media-media-avrecorderstate-t.md)切换的回调事件。当AVRecorderState发生变化时，会通过回调方法通知用户。<br>用户只能订阅一个回调方法，重复订阅时以最后一次订阅的回调接口为准。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -483,7 +483,7 @@ on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler): void
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-订阅录制错误的回调事件。该事件仅用于错误提示，用户无需停止录制操作。如果[AVRecorderState](arkts-media-media-avrecorderstate-t.md)也切换至error状态，用户需通过[reset](#reset)或者[release](#release)接口退出录制操作。使用callback异步回调。用户只能订阅一个错误事件的回调方法，当用户重复订阅时，以最后一次订阅的回调接口为准。
+订阅录制错误的回调事件。该事件仅用于错误提示，用户无需停止录制操作。如果[AVRecorderState](arkts-media-media-avrecorderstate-t.md)也切换至error状态，用户需通过[reset](#reset)或者[release](#release)接口退出录制操作。使用callback异步回调。<br>用户只能订阅一个错误事件的回调方法，当用户重复订阅时，以最后一次订阅的回调接口为准。
 
 **起始版本：** 9
 
@@ -503,7 +503,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
@@ -519,7 +519,7 @@ on(type: 'error', callback: ErrorCallback): void
 pause(callback: AsyncCallback<void>): void
 ```
 
-暂停录制。使用callback异步回调。必须在[start](#start)之后调用，调用成功后进入paused状态，之后可以通过调用[resume](#resume)接口来恢复录制。
+暂停录制。使用callback异步回调。<br>必须在[start](#start)之后调用，调用成功后进入paused状态，之后可以通过调用[resume](#resume)接口来恢复录制。
 
 **起始版本：** 9
 
@@ -545,7 +545,7 @@ pause(callback: AsyncCallback<void>): void
 pause(): Promise<void>
 ```
 
-暂停录制。使用Promise异步回调。必须在[start](#start)之后调用，调用成功后进入paused状态，之后可以通过调用[resume](#resume)接口来恢复录制。
+暂停录制。使用Promise异步回调。<br>必须在[start](#start)之后调用，调用成功后进入paused状态，之后可以通过调用[resume](#resume)接口来恢复录制。
 
 **起始版本：** 9
 
@@ -573,7 +573,7 @@ pause(): Promise<void>
 prepare(config: AVRecorderConfig, callback: AsyncCallback<void>): void
 ```
 
-准备录制。设置音视频录制的参数，并初始化录制上下文。使用callback异步回调。必须在[start](#start)之前调用，调用成功后进入prepared状态，此时，纯音频录制可直接调用[start](#start)接口开始录制；纯视频或音视频录制需先调用[getInputSurface](#getinputsurface)接口获取surface，再调用[start](#start)接口开始录制。
+准备录制。设置音视频录制的参数，并初始化录制上下文。使用callback异步回调。<br>必须在[start](#start)之前调用，调用成功后进入prepared状态，此时，纯音频录制可直接调用[start](#start)接口开始录制；纯视频或音视频录制需先调用[getInputSurface](#getinputsurface)接口获取surface，再调用[start](#start)接口开始录制。
 
 **起始版本：** 9
 
@@ -593,7 +593,7 @@ prepare(config: AVRecorderConfig, callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Return by callback. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 
@@ -603,7 +603,7 @@ prepare(config: AVRecorderConfig, callback: AsyncCallback<void>): void
 prepare(config: AVRecorderConfig): Promise<void>
 ```
 
-准备录制。设置音视频录制的参数，并初始化录制上下文。使用Promise异步回调。必须在[start](#start)之前调用，调用成功后进入prepared状态，此时，纯音频录制可直接调用[start](#start)接口开始录制；纯视频或音视频录制需先调用[getInputSurface](#getinputsurface)接口获取surface，再调用[start](#start)接口开始录制。
+准备录制。设置音视频录制的参数，并初始化录制上下文。使用Promise异步回调。<br>必须在[start](#start)之前调用，调用成功后进入prepared状态，此时，纯音频录制可直接调用[start](#start)接口开始录制；纯视频或音视频录制需先调用[getInputSurface](#getinputsurface)接口获取surface，再调用[start](#start)接口开始录制。
 
 **起始版本：** 9
 
@@ -630,7 +630,7 @@ prepare(config: AVRecorderConfig): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Return by promise. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
@@ -640,7 +640,7 @@ prepare(config: AVRecorderConfig): Promise<void>
 release(callback: AsyncCallback<void>): void
 ```
 
-释放音视频录制资源。使用callback异步回调。必须在非released状态下调用，调用成功后进入released状态。与[createAVRecorder](arkts-media-media-createavrecorder-f.md)配对使用，录制流程结束后应调用此接口释放资源。释放音视频录制资源之后，该AVRecorder实例不能再进行任何操作。
+释放音视频录制资源。使用callback异步回调。<br>必须在非released状态下调用，调用成功后进入released状态。<br>与[createAVRecorder](arkts-media-media-createavrecorder-f.md)配对使用，录制流程结束后应调用此接口释放资源。释放音视频录制资源之后，该AVRecorder实例不能再进行任何操作。
 
 **起始版本：** 9
 
@@ -664,7 +664,7 @@ release(callback: AsyncCallback<void>): void
 release(): Promise<void>
 ```
 
-释放音视频录制资源。使用Promise异步回调。必须在非released状态下调用，调用成功后进入released状态。与[createAVRecorder](arkts-media-media-createavrecorder-f.md)配对使用，录制流程结束后应调用此接口释放资源。释放音视频录制资源之后，该AVRecorder实例不能再进行任何操作。
+释放音视频录制资源。使用Promise异步回调。<br>必须在非released状态下调用，调用成功后进入released状态。<br>与[createAVRecorder](arkts-media-media-createavrecorder-f.md)配对使用，录制流程结束后应调用此接口释放资源。释放音视频录制资源之后，该AVRecorder实例不能再进行任何操作。
 
 **起始版本：** 9
 
@@ -690,7 +690,7 @@ release(): Promise<void>
 reset(callback: AsyncCallback<void>): void
 ```
 
-重置音视频录制，将录制器恢复至初始状态以便重新配置参数。使用callback异步回调。必须在非released状态下调用，调用成功后进入idle状态。纯音频录制时，需要重新调用[prepare](#prepare)接口才能重新录制。纯视频录制、音视频录制时，需要重新调用[prepare](#prepare)和[getInputSurface](#getinputsurface)接口才能重新录制。
+重置音视频录制，将录制器恢复至初始状态以便重新配置参数。使用callback异步回调。<br>必须在非released状态下调用，调用成功后进入idle状态。<br>纯音频录制时，需要重新调用[prepare](#prepare)接口才能重新录制。纯视频录制、音视频录制时，需要重新调用[prepare](#prepare)和[getInputSurface](#getinputsurface)接口才能重新录制。
 
 **起始版本：** 9
 
@@ -715,7 +715,7 @@ reset(callback: AsyncCallback<void>): void
 reset(): Promise<void>
 ```
 
-重置音视频录制，将录制器恢复至初始状态以便重新配置参数。使用Promise异步回调。必须在非released状态下调用，调用成功后进入idle状态。纯音频录制时，需要重新调用[prepare](#prepare-1)接口才能重新录制。纯视频录制、音视频录制时，需要重新调用[prepare](#prepare-1)和[getInputSurface](#getinputsurface)接口才能重新录制。
+重置音视频录制，将录制器恢复至初始状态以便重新配置参数。使用Promise异步回调。<br>必须在非released状态下调用，调用成功后进入idle状态。<br>纯音频录制时，需要重新调用[prepare](#prepare-1)接口才能重新录制。纯视频录制、音视频录制时，需要重新调用[prepare](#prepare-1)和[getInputSurface](#getinputsurface)接口才能重新录制。
 
 **起始版本：** 9
 
@@ -740,7 +740,7 @@ reset(): Promise<void>
 resume(callback: AsyncCallback<void>): void
 ```
 
-恢复录制。使用callback异步回调。必须在[pause](#pause)之后调用，调用成功后进入started状态，之后可以再次调用[pause](#pause)接口暂停录制，或调用[stop](#stop)接口停止录制。
+恢复录制。使用callback异步回调。<br>必须在[pause](#pause)之后调用，调用成功后进入started状态，之后可以再次调用[pause](#pause)接口暂停录制，或调用[stop](#stop)接口停止录制。
 
 **起始版本：** 9
 
@@ -766,7 +766,7 @@ resume(callback: AsyncCallback<void>): void
 resume(): Promise<void>
 ```
 
-恢复录制。使用Promise异步回调。必须在[pause](#pause)之后调用，调用成功后进入started状态，之后可以再次调用[pause](#pause)接口暂停录制，或调用[stop](#stop)接口停止录制。
+恢复录制。使用Promise异步回调。<br>必须在[pause](#pause)之后调用，调用成功后进入started状态，之后可以再次调用[pause](#pause)接口暂停录制，或调用[stop](#stop)接口停止录制。
 
 **起始版本：** 9
 
@@ -794,7 +794,7 @@ resume(): Promise<void>
 setMetadata(metadata: Record<string, string>): void
 ```
 
-设置录制的元数据信息。适用于需要在录制文件中嵌入自定义元数据（如作者、标题、标签等）的场景。如果metadata参数与config.metadata.customInfo（参考[prepare()](#prepare-1)和[AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md)）中存在相同的键，前者的对应值将覆盖后者。必须在[prepare()](#prepare-1)和[stop()](#stop)之间调用。
+设置录制的元数据信息。适用于需要在录制文件中嵌入自定义元数据（如作者、标题、标签等）的场景。如果metadata参数与config.metadata.customInfo（参考[prepare()](#prepare-1)和[AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md)）中存在相同的键，前者的对应值将覆盖后者。<br>必须在[prepare()](#prepare-1)和[stop()](#stop)之间调用。
 
 **起始版本：** 26.0.0
 
@@ -821,7 +821,7 @@ setMetadata(metadata: Record<string, string>): void
 setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>
 ```
 
-设置当前录制音频流是否启用静音打断模式。启用后，录制音频流被更高优先级音频打断时将录制静音而非停止录制，适用于需要在打断期间保持录制连续性的场景（如会议录音、语音备忘）。不启用则保持默认打断模式（音频流被打断时停止录制）。使用Promise异步回调。必须在[prepare()](#prepare-1)之前调用。
+设置当前录制音频流是否启用静音打断模式。启用后，录制音频流被更高优先级音频打断时将录制静音而非停止录制，适用于需要在打断期间保持录制连续性的场景（如会议录音、语音备忘）。不启用则保持默认打断模式（音频流被打断时停止录制）。使用Promise异步回调。<br>必须在[prepare()](#prepare-1)之前调用。
 
 **起始版本：** 20
 
@@ -852,7 +852,7 @@ setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>
 start(callback: AsyncCallback<void>): void
 ```
 
-开始录制。使用callback异步回调。必须在[prepare](#prepare)之后调用，调用成功后进入started状态。录制视频时，还需在[getInputSurface](#getinputsurface)接口调用成功后，才能调用此接口。
+开始录制。使用callback异步回调。<br>必须在[prepare](#prepare)之后调用，调用成功后进入started状态。录制视频时，还需在[getInputSurface](#getinputsurface)接口调用成功后，才能调用此接口。
 
 **起始版本：** 9
 
@@ -878,7 +878,7 @@ start(callback: AsyncCallback<void>): void
 start(): Promise<void>
 ```
 
-开始录制。使用Promise异步回调。必须在[prepare](#prepare-1)之后调用，调用成功后进入started状态。录制视频时，还需在[getInputSurface](#getinputsurface)接口调用成功后，才能调用此接口。
+开始录制。使用Promise异步回调。<br>必须在[prepare](#prepare-1)之后调用，调用成功后进入started状态。录制视频时，还需在[getInputSurface](#getinputsurface)接口调用成功后，才能调用此接口。
 
 **起始版本：** 9
 
@@ -906,7 +906,7 @@ start(): Promise<void>
 stop(callback: AsyncCallback<void>): void
 ```
 
-停止录制。使用callback异步回调。必须在[start](#start)或[pause](#pause)之后调用，调用成功后进入stopped状态。当prepare配置中将FileGenerationMode设置为系统创建媒体文件模式时，本接口调用结束后会触发on('photoAssetAvailable')回调。纯音频录制时，需要重新调用[prepare](#prepare)接口才能重新录制；纯视频录制、音视频录制时，需要重新调用[prepare](#prepare)和[getInputSurface](#getinputsurface)接口才能重新录制。
+停止录制。使用callback异步回调。<br>必须在[start](#start)或[pause](#pause)之后调用，调用成功后进入stopped状态。当prepare配置中将FileGenerationMode设置为系统创建媒体文件模式时，本接口调用结束后会触发on('photoAssetAvailable')回调。纯音频录制时，需要重新调用[prepare](#prepare)接口才能重新录制；纯视频录制、音视频录制时，需要重新调用[prepare](#prepare)和[getInputSurface](#getinputsurface)接口才能重新录制。
 
 **起始版本：** 9
 
@@ -932,7 +932,7 @@ stop(callback: AsyncCallback<void>): void
 stop(): Promise<void>
 ```
 
-停止录制。使用Promise异步回调。必须在[start](#start)或[pause](#pause)之后调用，调用成功后进入stopped状态。当prepare配置中将FileGenerationMode设置为系统创建媒体文件模式时，本接口调用结束后会触发on('photoAssetAvailable')回调。纯音频录制时，需要重新调用[prepare](#prepare-1)接口才能重新录制；纯视频录制、音视频录制时，需要重新调用[prepare](#prepare-1)和[getInputSurface](#getinputsurface)接口才能重新录制。
+停止录制。使用Promise异步回调。<br>必须在[start](#start)或[pause](#pause)之后调用，调用成功后进入stopped状态。当prepare配置中将FileGenerationMode设置为系统创建媒体文件模式时，本接口调用结束后会触发on('photoAssetAvailable')回调。纯音频录制时，需要重新调用[prepare](#prepare-1)接口才能重新录制；纯视频录制、音视频录制时，需要重新调用[prepare](#prepare-1)和[getInputSurface](#getinputsurface)接口才能重新录制。
 
 **起始版本：** 9
 
@@ -960,7 +960,7 @@ stop(): Promise<void>
 updateRotation(rotation: number): Promise<void>
 ```
 
-更新视频旋转角度。适用于设备方向发生变化（如横竖屏切换）时需要动态调整录制视频旋转角度的场景。使用Promise异步回调。必须在[prepare](#prepare-1)和[start](#start)之间调用。
+更新视频旋转角度。适用于设备方向发生变化（如横竖屏切换）时需要动态调整录制视频旋转角度的场景。使用Promise异步回调。<br>必须在[prepare](#prepare-1)和[start](#start)之间调用。
 
 **起始版本：** 12
 
@@ -993,7 +993,7 @@ updateRotation(rotation: number): Promise<void>
 readonly state: AVRecorderState
 ```
 
-音视频录制的状态。
+音视频录制的状态。<br>
 
 **原子化服务API：** 从API version 12 开始，该接口支持在原子化服务中使用。
 

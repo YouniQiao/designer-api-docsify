@@ -1,7 +1,8 @@
 # @ohos.arkui.advanced.ExceptionPrompt
 
 异常提示，适用于有异常需要提示异常内容的情况。
- > **说明：**
+
+> **说明：**
  >
  > - 该组件仅可在Stage模型下使用。
  >

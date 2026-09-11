@@ -123,7 +123,7 @@ createModuleContext(moduleName: string): Context
 
 Creates the context based on the module name.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Only the context of other modules in the current application and the context of the intra-application HSP can
 > be obtained. The context of other applications cannot be obtained.
@@ -255,7 +255,7 @@ Obtains the shared directory based on a group ID. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dataGroupID | string | Yes | Group ID, which is assigned by the system when an application of the atomic service type is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the shared directory obtained (or empty if or is empty if non-existent). Otherwise, an error object is returned.Note: Only the EL2 encryption level is supported. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the shared directory obtained (or empty if or is empty if non-existent). Otherwise, an error object is returned.<br>Note: Only the EL2 encryption level is supported. |
 
 **Error codes:**
 
@@ -371,7 +371,7 @@ Checks if the current instance is associated with the specified context type.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the contextType is matched; returns `false` otherwise. |
 
 **Examples**
 
@@ -613,7 +613,7 @@ resourceDir: string
 
 Resource directory.
 
-> **NOTE: **
+> **NOTE:**
 > 
 > You are required to manually create the resfile directory in **&lt;module-name&gt;\resource**.
 > The **resfile** directory can be accessed only in read-only mode.

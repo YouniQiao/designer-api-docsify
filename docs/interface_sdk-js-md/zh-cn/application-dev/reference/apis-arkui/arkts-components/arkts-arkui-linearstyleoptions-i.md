@@ -27,7 +27,7 @@ strokeRadius?: PX | VP | LPX | Resource
 
 超出取值范围时按默认值处理。
 
-**类型：** [PX](../arkts-apis/arkts-arkui-px-t.md) \| [VP](../arkts-apis/arkts-arkui-vp-t.md) \| [LPX](../arkts-apis/arkts-arkui-lpx-t.md) \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**类型：** [PX](../arkts-apis/arkts-arkui-px-t.md) &#124; [VP](../arkts-apis/arkts-arkui-vp-t.md) &#124; [LPX](../arkts-apis/arkts-arkui-lpx-t.md) &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **默认值：** strokeWidth / 2
 

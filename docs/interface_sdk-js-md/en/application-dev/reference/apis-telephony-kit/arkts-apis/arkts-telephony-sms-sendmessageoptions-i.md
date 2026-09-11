@@ -20,7 +20,7 @@ content: string | Array<number>
 
 SMS message type. If the content is composed of character strings, the SMS message is a text message. If the content is composed of byte arrays, the SMS message is a data message.
 
-**Type:** string \| Array&lt;number&gt;
+**Type:** string &#124; Array&lt;number&gt;
 
 **Since:** 6
 

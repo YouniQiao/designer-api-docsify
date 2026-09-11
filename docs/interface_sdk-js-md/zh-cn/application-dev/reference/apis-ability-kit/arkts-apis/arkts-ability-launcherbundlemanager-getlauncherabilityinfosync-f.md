@@ -31,7 +31,7 @@ function getLauncherAbilityInfoSync(bundleName: string, userId: number): Array<L
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md)&gt; | Array形式返回bundle包含的[LauncherAbilityInfo]{ |
+| Array&lt;[LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md)&gt; | Array形式返回bundle包含的[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md)信息。 |
 
 **错误码：**
 

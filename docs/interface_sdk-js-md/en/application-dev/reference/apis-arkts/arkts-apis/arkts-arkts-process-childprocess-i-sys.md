@@ -96,7 +96,7 @@ Send a signal to process
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| signal | number \| string | Yes | Number or string represents the signal sent. |
+| signal | number &#124; string | Yes | Number or string represents the signal sent. |
 
 ## wait
 

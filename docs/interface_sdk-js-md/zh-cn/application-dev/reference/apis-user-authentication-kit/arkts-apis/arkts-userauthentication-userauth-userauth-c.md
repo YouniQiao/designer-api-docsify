@@ -52,7 +52,7 @@ auth(
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | ContextId，作为取消认证[cancelAuth]{ |
+| Uint8Array | ContextId，作为取消认证[cancelAuth](#cancelauth)接口的入参。 |
 
 **示例**
 
@@ -105,7 +105,7 @@ cancelAuth(contextID: Uint8Array): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 取消认证的结果，结果为SUCCESS时表示取消成功，其他返回值参见[ResultCode]{ |
+| number | 取消认证的结果，结果为SUCCESS时表示取消成功，其他返回值参见[ResultCode](arkts-userauthentication-userauth-resultcode-e.md)。 |
 
 **示例**
 
@@ -176,7 +176,7 @@ getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLevel): numb
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 查询结果，结果为SUCCESS时表示支持，其他返回值参见[ResultCode]{ |
+| number | 查询结果，结果为SUCCESS时表示支持，其他返回值参见[ResultCode](arkts-userauthentication-userauth-resultcode-e.md)。 |
 
 **示例**
 

@@ -27,7 +27,8 @@ Value range: [0, +∞)
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
-**Default:** 8.0vp [since 11]
+**Default:**
+- API version 11+: 8.0vp
 
 **Since:** 10
 

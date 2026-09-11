@@ -86,7 +86,7 @@ Initiates a call. You can set call options as needed. This API uses a promise to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number. |
-| options | [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md) | No | Call options, which carry other configuration information of the call. If this field is not set, the following configuration is used by default. For details, see [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md).    - **accountId**: 0 (card slot 1)    - **videoState**: voice call    - **dialScene**: common call    - **dialType**: carrier call |
+| options | [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md) | No | Call options, which carry other configuration information of the call. <br>If this field is not set, the following configuration is used by default. For details, see [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md). <br>- **accountId**: 0 (card slot 1) <br>- **videoState**: voice call <br>- **dialScene**: common call <br>- **dialType**: carrier call |
 
 **Return value:**
 

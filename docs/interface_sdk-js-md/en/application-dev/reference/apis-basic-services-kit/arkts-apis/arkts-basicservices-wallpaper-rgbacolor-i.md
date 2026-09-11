@@ -2,6 +2,8 @@
 
 RgbaColor definition
 
+@typedef RgbaColor
+
 **Since:** 7
 
 **Deprecated since:** 9

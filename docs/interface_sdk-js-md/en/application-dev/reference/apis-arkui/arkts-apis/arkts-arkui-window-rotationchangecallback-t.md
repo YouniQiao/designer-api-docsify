@@ -24,4 +24,4 @@ In this callback function, the parameter type is [RotationChangeInfo](arkts-arku
 
 | Type | Description |
 | --- | --- |
-| U | Value of type [RotationChangeResult]{ |
+| U | Value of type [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) &#124; void. |

@@ -53,21 +53,6 @@ import { wantAgent, WantAgent } from '@kit.AbilityKit';
 | --- | --- |
 | [CompleteData](arkts-ability-wantagent-completedata-i.md) | 表示主动触发WantAgent返回的数据。 |
 
-### 枚举
-
-| 名称 | 说明 |
-| --- | --- |
-| [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md) | 表示WantAgent行为控制标志，用于配置WantAgent的创建和触发行为。 |
-| [OperationType](arkts-ability-wantagent-operationtype-e.md) | 表示WantAgent支持的操作类型。 |
-
-<!--Del-->
-### 枚举（系统接口）
-
-| 名称 | 说明 |
-| --- | --- |
-| [OperationType](arkts-ability-wantagent-operationtype-e-sys.md) | 表示WantAgent支持的操作类型。 |
-<!--DelEnd-->
-
 ### 类型
 
 | 名称 | 说明 |
@@ -81,4 +66,19 @@ import { wantAgent, WantAgent } from '@kit.AbilityKit';
 | 名称 | 说明 |
 | --- | --- |
 | [LocalWantAgentInfo](arkts-ability-wantagent-localwantagentinfo-t-sys.md) | LocalWantAgentInfo对象。 |
+<!--DelEnd-->
+
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md) | 表示WantAgent行为控制标志，用于配置WantAgent的创建和触发行为。 |
+| [OperationType](arkts-ability-wantagent-operationtype-e.md) | 表示WantAgent支持的操作类型。 |
+
+<!--Del-->
+### 枚举（系统接口）
+
+| 名称 | 说明 |
+| --- | --- |
+| [OperationType](arkts-ability-wantagent-operationtype-e-sys.md) | 表示WantAgent支持的操作类型。 |
 <!--DelEnd-->

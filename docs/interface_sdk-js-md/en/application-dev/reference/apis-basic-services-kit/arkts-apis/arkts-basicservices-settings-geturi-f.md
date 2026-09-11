@@ -60,7 +60,7 @@ Constructs a URI for a specific name-value pair for monitoring data of the abili
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;object&gt; | Returns the corresponding URI; returns { |
+| Promise&lt;object&gt; | Returns the corresponding URI; returns `null` if the URI does not exist. |
 
 **Examples**
 

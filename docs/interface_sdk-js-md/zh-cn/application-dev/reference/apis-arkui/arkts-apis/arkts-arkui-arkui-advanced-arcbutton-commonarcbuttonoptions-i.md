@@ -78,7 +78,7 @@ fontFamily?: string | Resource
 
 弧形按钮字体名。
 
-**类型：** string \| [Resource](arkts-arkui-resource-t.md)
+**类型：** string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 18
 

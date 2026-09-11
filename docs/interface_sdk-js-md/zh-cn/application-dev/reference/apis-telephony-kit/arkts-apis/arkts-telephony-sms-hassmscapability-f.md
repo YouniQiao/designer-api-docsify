@@ -22,7 +22,7 @@ function hasSmsCapability(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | true：设备具备短信发送和接收能力。 |
+| boolean | true：设备具备短信发送和接收能力。<br>- false：设备不具备短信发送和接收能力。 |
 
 **示例**
 

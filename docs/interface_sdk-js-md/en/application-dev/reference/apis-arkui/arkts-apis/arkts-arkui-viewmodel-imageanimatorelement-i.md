@@ -24,8 +24,6 @@ Obtains the playback state. Available values are as follows: Playing Paused Stop
 
 | Type | Description |
 | --- | --- |
-| "Playing" \| "Paused" \| "Stopped" |  |
-
 ## pause
 
 ```TypeScript

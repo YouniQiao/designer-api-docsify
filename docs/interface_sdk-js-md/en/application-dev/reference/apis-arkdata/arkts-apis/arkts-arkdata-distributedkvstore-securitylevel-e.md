@@ -2,7 +2,7 @@
 
 Enumerates the KV store security levels.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For the scenarios involving a single device, you can upgrade the security level of a KV store by modifying the
 > **securityLevel** parameter. When upgrading the database security level, observe the following:

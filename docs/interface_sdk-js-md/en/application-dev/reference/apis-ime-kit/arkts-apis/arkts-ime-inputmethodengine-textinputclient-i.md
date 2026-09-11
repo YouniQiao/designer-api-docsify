@@ -1,6 +1,6 @@
 # TextInputClient
 
-In the following API examples, you must first use on('inputStart') to obtain a **TextInputClient** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [on('inputStart')](arkts-ime-inputmethodengine-inputmethodengine-i.md#oninputstart) to obtain a **TextInputClient** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -28,7 +28,7 @@ Deletes the fixed-length text after the cursor. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteBackward](arkts-ime-inputmethodengine-inputclient-i.md#deletebackward)(length: int, callback: AsyncCallback&lt;boolean&gt;)
+**Substitutes:** [deleteBackward](arkts-ime-inputmethodengine-inputclient-i.md#deletebackward)(length: number, callback: AsyncCallback&lt;boolean&gt;)
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -70,7 +70,7 @@ Deletes the fixed-length text after the cursor. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** deleteBackward(length: int): Promise&lt;boolean&gt;
+**Substitutes:** deleteBackward(length: number): Promise&lt;boolean&gt;
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -115,7 +115,7 @@ Deletes the fixed-length text before the cursor. This API uses an asynchronous c
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteForward](arkts-ime-inputmethodengine-inputclient-i.md#deleteforward)(length: int, callback: AsyncCallback&lt;boolean&gt;)
+**Substitutes:** [deleteForward](arkts-ime-inputmethodengine-inputclient-i.md#deleteforward)(length: number, callback: AsyncCallback&lt;boolean&gt;)
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -157,7 +157,7 @@ Deletes the fixed-length text before the cursor. This API uses a promise to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** deleteForward(length: int): Promise&lt;boolean&gt;
+**Substitutes:** deleteForward(length: number): Promise&lt;boolean&gt;
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -202,7 +202,7 @@ Obtains the specific-length text after the cursor. This API uses an asynchronous
 
 **Deprecated since:** 9
 
-**Substitutes:** [getBackward](arkts-ime-inputmethodengine-inputclient-i.md#getbackward)(length: int, callback: AsyncCallback&lt;string&gt;)
+**Substitutes:** [getBackward](arkts-ime-inputmethodengine-inputclient-i.md#getbackward)(length: number, callback: AsyncCallback&lt;string&gt;)
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -240,7 +240,7 @@ Obtains the specific-length text after the cursor. This API uses a promise to re
 
 **Deprecated since:** 9
 
-**Substitutes:** getBackward(length: int): Promise&lt;string&gt;
+**Substitutes:** getBackward(length: number): Promise&lt;string&gt;
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -355,7 +355,7 @@ Obtains the specific-length text before the cursor. This API uses an asynchronou
 
 **Deprecated since:** 9
 
-**Substitutes:** [getForward](arkts-ime-inputmethodengine-inputclient-i.md#getforward)(length: int, callback: AsyncCallback&lt;string&gt;)
+**Substitutes:** [getForward](arkts-ime-inputmethodengine-inputclient-i.md#getforward)(length: number, callback: AsyncCallback&lt;string&gt;)
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -393,7 +393,7 @@ Obtains the specific-length text before the cursor. This API uses a promise to r
 
 **Deprecated since:** 9
 
-**Substitutes:** getForward(length: int): Promise&lt;string&gt;
+**Substitutes:** getForward(length: number): Promise&lt;string&gt;
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -519,7 +519,7 @@ Sends the function key. This API uses an asynchronous callback to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendKeyFunction](arkts-ime-inputmethodengine-inputclient-i.md#sendkeyfunction)(action: int, callback: AsyncCallback&lt;boolean&gt;)
+**Substitutes:** [sendKeyFunction](arkts-ime-inputmethodengine-inputclient-i.md#sendkeyfunction)(action: number, callback: AsyncCallback&lt;boolean&gt;)
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -527,7 +527,7 @@ Sends the function key. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | number | Yes | Action of the function key.    - **0**: invalid key.    - **1**: confirm key (Enter key). |
+| action | number | Yes | Action of the function key.<br>- **0**: invalid key. <br>- **1**: confirm key (Enter key). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 **Examples**
@@ -561,7 +561,7 @@ Sends the function key. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** sendKeyFunction(action: int): Promise&lt;boolean&gt;
+**Substitutes:** sendKeyFunction(action: number): Promise&lt;boolean&gt;
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -569,7 +569,7 @@ Sends the function key. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | number | Yes | Action of the function key.    **0**: invalid key.    **1**: confirm key (Enter key). |
+| action | number | Yes | Action of the function key.<br>**0**: invalid key. <br>**1**: confirm key (Enter key). |
 
 **Return value:**
 

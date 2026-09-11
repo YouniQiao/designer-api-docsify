@@ -825,8 +825,6 @@ delete(uri: string) : Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; |  |
-
 **错误码：**
 
 | 错误码ID | 错误信息 |

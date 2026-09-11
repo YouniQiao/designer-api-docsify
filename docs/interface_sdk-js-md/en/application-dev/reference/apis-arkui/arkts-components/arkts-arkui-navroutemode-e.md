@@ -2,13 +2,13 @@
 
 Defines the routing policy.
 
-> **NOTE：**
+> **NOTE:**
 
 **Since:** 10
 
 **Deprecated since:** 13
 
-**Substitutes:** [NavPathStack](arkts-arkui-navpathstack-c.md)
+**Substitutes:** NavPathStack and navDestination
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -2,6 +2,8 @@
 
 音频流时间戳和当前数据帧位置信息。
 
+@typedef AudioTimestampInfo
+
 **起始版本：** 19
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

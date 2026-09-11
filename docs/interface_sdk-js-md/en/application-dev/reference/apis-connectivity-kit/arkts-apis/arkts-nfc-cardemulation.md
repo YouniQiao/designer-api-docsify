@@ -6,8 +6,9 @@
 
 ## HCE and AID Declaration
 
-Before developing an application related to HCE, you must declare NFC-related attributes in the **module.json5**file.  
- ```json5
+Before developing an application related to HCE, you must declare NFC-related attributes in the **module.json5**file.
+
+```json5
 // Applicable to devices other than lite wearables
 {
   "module": {
@@ -43,8 +44,9 @@ Before developing an application related to HCE, you must declare NFC-related at
     ]
   }
 }
-```  
- ```json5
+```
+
+```json5
 // Applicable to lite wearables
 {
   "module": {
@@ -102,8 +104,9 @@ Before developing an application related to HCE, you must declare NFC-related at
     ]
   }
 }
-```  
-> **NOTE：**
+```
+
+> **NOTE:**
 > 
    
 > 1. The **actions** field must contain **ohos.nfc.cardemulation.action.HOST_APDU_SERVICE** and cannot be changed.

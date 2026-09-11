@@ -68,7 +68,7 @@ Obtains the **WebHttpBodyStream** instance in this resource request.
 
 | Type | Description |
 | --- | --- |
-| [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) \| null | WebHttpBodyStream** instance in the resource request. If there is no **WebHttpBodyStream** instance, **null** is returned. |
+| [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) &#124; null | WebHttpBodyStream** instance in the resource request. If there is no **WebHttpBodyStream** instance, **null** is returned. |
 
 ## getReferrer
 

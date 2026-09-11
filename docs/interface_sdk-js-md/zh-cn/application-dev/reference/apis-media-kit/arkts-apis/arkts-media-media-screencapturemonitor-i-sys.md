@@ -32,7 +32,7 @@ off(type: 'systemScreenRecorder', callback?: Callback<ScreenCaptureEvent>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'systemScreenRecorder' | 是 | 录屏状态回调类型'systemScreenRecorder'。  - 'systemScreenRecorder'：系统录屏应用的录屏状态发生变化，触发该事件。 |
+| type | 'systemScreenRecorder' | 是 | 录屏状态回调类型'systemScreenRecorder'。<br>   - 'systemScreenRecorder'：系统录屏应用的录屏状态发生变化，触发该事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | 否 | 回调函数，返回系统录屏状态。[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)表示切换到的状态，不填此参数则会取消最后一次订阅事件。 |
 
 **错误码：**
@@ -65,7 +65,7 @@ on(type: 'systemScreenRecorder', callback: Callback<ScreenCaptureEvent>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'systemScreenRecorder' | 是 | 录屏状态回调类型'systemScreenRecorder'。  - 'systemScreenRecorder'：系统录屏应用的录屏状态发生变化，触发该事件。 |
+| type | 'systemScreenRecorder' | 是 | 录屏状态回调类型'systemScreenRecorder'。<br>   - 'systemScreenRecorder'：系统录屏应用的录屏状态发生变化，触发该事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | 是 | 回调函数，返回系统录屏状态。[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)表示切换到的状态。 |
 
 **错误码：**

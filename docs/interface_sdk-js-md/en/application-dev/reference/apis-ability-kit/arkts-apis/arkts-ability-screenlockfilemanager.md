@@ -2,7 +2,7 @@
 
 This module provides the capability to protect app sensitive data under the lock screen, supporting requesting and releasing access permissions for sensitive data under the lock screen, as well as querying the status of sensitive data keys. When the reference count of a sensitive data key reaches zero and the screen has been locked for a duration reaching the system-configured lock duration threshold, the key is destroyed, and operations on that data become impossible. These keys can be restored only after the screen is unlocked. By calling the [acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md) API of this module, you can prevent the key from being destroyed after the screen has been locked for a duration reaching the system-configured lock duration threshold.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - To enable the sensitive data protection function under the lock screen for an app, you need to configure the
 > ohos.permission.PROTECT_SCREEN_LOCK_DATA permission in

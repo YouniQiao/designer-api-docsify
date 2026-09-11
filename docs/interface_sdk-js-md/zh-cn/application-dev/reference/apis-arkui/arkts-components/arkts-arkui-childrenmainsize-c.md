@@ -35,13 +35,13 @@ ChildrenMainSize有参构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| childDefaultSize | number | 是 | 子组件在主轴方向的默认大小。单位：vp   **说明：** 必须是有限的非负数值，否则抛出异常。 |
+| childDefaultSize | number | 是 | 子组件在主轴方向的默认大小。<br>单位：vp<br>**说明：** <br>必须是有限的非负数值，否则抛出异常。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## splice
 
@@ -63,15 +63,15 @@ splice(start: number, deleteCount?: number, childrenSize?: Array<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | number | 是 | 从0开始计算的索引值，表示要开始修改子组件在主轴方向大小信息的位置。   **说明：** 1. 必须是有限的非负数值，否则抛出异常。 2. 非整数会被截断为整数。 3. 超过最大索引值不生效。 取值范围：[0, +∞) |
-| deleteCount | number | 否 | 从start开始删除的大小信息的数量。   **说明：** 1. 必须是有限的非负数值，否则处理为0。 2. 非整数会被截断为整数。 3. start + deleteCount - 1可以超过最大索引值，会删除索引值start开始之后的所有子组件的大小信息。 默认值为+∞。 取值范围：[0, +∞) |
-| childrenSize | Array&lt;number&gt; | 否 | 要在start位置插入的所有子组件的主轴方向的大小。Array中各个数值单位：vp    **说明：** 1.数组中数值如果是有限的非负值，则认为是指定的大小，后续不随默认大小的变化而变化。 2. 数组中数值如果不是有限的非负值，会被处理成默认大小，后续会随默认大小的变化而变化。 默认值为空数组。 取值范围：[0, +∞) |
+| start | number | 是 | 从0开始计算的索引值，表示要开始修改子组件在主轴方向大小信息的位置。<br>**说明：** <br>1. 必须是有限的非负数值，否则抛出异常。<br>2. 非整数会被截断为整数。<br>3. 超过最大索引值不生效。<br>取值范围：[0, +∞) |
+| deleteCount | number | 否 | 从start开始删除的大小信息的数量。<br>**说明：** <br>1. 必须是有限的非负数值，否则处理为0。<br>2. 非整数会被截断为整数。<br>3. start + deleteCount - 1可以超过最大索引值，会删除索引值start开始之后的所有子组件的大小信息。<br>默认值为+∞。 <br>取值范围：[0, +∞) |
+| childrenSize | Array&lt;number&gt; | 否 | 要在start位置插入的所有子组件的主轴方向的大小。<br>Array中各个数值单位：vp <br>**说明：** <br>1.数组中数值如果是有限的非负值，则认为是指定的大小，后续不随默认大小的变化而变化。<br>2. 数组中数值如果不是有限的非负值，会被处理成默认大小，后续会随默认大小的变化而变化。<br>默认值为空数组。 <br>取值范围：[0, +∞) |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## update
 
@@ -93,14 +93,14 @@ update(index: number, childSize: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 从0开始计算的索引值，表示要开始修改子组件在主轴方向大小信息的位置。   **说明：** 1. 必须是有限的非负数值，否则抛出异常。 2. 非整数会被截断为整数。 3. 超过最大索引值不生效。  取值范围：[0, +∞) |
-| childSize | number | 是 | 要更新成的大小。单位：vp    **说明：** 1.数值如果是有限的非负值，则认为是指定的大小，后续不随默认大小的变化而变化。 2. 数值如果不是有限的非负值，会被处理成默认大小，后续会随默认大小的变化而变化。  取值范围：[0, +∞) |
+| index | number | 是 | 从0开始计算的索引值，表示要开始修改子组件在主轴方向大小信息的位置。<br>**说明：** <br>1. 必须是有限的非负数值，否则抛出异常。<br>2. 非整数会被截断为整数。<br>3. 超过最大索引值不生效。 <br>取值范围：[0, +∞) |
+| childSize | number | 是 | 要更新成的大小。<br>单位：vp <br>**说明：** <br>1.数值如果是有限的非负值，则认为是指定的大小，后续不随默认大小的变化而变化。<br>2. 数值如果不是有限的非负值，会被处理成默认大小，后续会随默认大小的变化而变化。 <br>取值范围：[0, +∞) |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## childDefaultSize
 
@@ -119,6 +119,12 @@ set childDefaultSize(value: number)
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ```TypeScript
 get childDefaultSize(): number

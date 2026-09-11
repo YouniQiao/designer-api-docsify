@@ -1,7 +1,7 @@
 # SegmentButtonOptions
 
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The component does not support custom font type settings.
 
@@ -67,7 +67,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TabSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-tabsegmentbuttonoptions-i.md) \| [CapsuleSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-capsulesegmentbuttonoptions-i.md) | Yes | Configuration options for tab-style or capsule-style segmented buttons. |
+| options | [TabSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-tabsegmentbuttonoptions-i.md) &#124; [CapsuleSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-capsulesegmentbuttonoptions-i.md) | Yes | Configuration options for tab-style or capsule-style segmented buttons. |
 
 ## tab
 
@@ -125,7 +125,7 @@ backgroundBorderRadius?: LengthMetrics
 
 Container border radius.
 
-**NOTE：**
+**NOTE:**
 
 This attribute takes effect only when **borderRadiusMode** is set to **BorderRadiusMode.CUSTOM**.
 
@@ -225,7 +225,7 @@ Icon + text button: **{ top: 6, right: 8, bottom: 6, left: 8 }**.
 
 Unit: vp
 
-**Type:** Padding \| [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Padding &#124; [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 11
 
@@ -347,7 +347,7 @@ When the value is **undefined**, the image size is { width: 24, height: 24 }.
 
 Unit: vp
 
-**NOTE：**
+**NOTE:**
 
 The **imageSize** property takes effect only for icon-only and icon-with-text buttons.
 
@@ -369,7 +369,7 @@ itemBorderRadius?: LengthMetrics
 
 Individual button border radius.
 
-**NOTE：**
+**NOTE:**
 
 This attribute takes effect only when **borderRadiusMode** is set to **BorderRadiusMode.CUSTOM**.
 
@@ -559,7 +559,7 @@ When the value is **undefined**, the text padding is 0.
 
 Unit: vp
 
-**Type:** Padding \| [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Padding &#124; [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 11
 
@@ -577,13 +577,13 @@ type: "tab" | "capsule"
 
 Type of the **SegmentButton** component.
 
-**NOTE：**
+**NOTE:**
 
 **"tab"**: tab-style segmented buttons, designed for page or content section switching.
 
 **"capsule"**: capsule-style segmented buttons, suitable for single or multiple selection scenarios.
 
-**Type:** "tab" \| "capsule"
+**Type:** "tab" &#124; "capsule"
 
 **Since:** 11
 

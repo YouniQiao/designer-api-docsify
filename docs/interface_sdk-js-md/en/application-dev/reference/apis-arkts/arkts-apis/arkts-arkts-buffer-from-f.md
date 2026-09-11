@@ -61,7 +61,7 @@ Creates a **Buffer** object of the specified length that shares memory with Arra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayBuffer | ArrayBuffer \| SharedArrayBuffer | Yes | ArrayBuffer** or **SharedArrayBuffer** object whose memory is to be shared. |
+| arrayBuffer | ArrayBuffer &#124; SharedArrayBuffer | Yes | ArrayBuffer** or **SharedArrayBuffer** object whose memory is to be shared. |
 | byteOffset | number | No | Byte offset. The default value is **0**. |
 | length | number | No | Length of the **Buffer** object to create, in bytes. The default value is **arrayBuffer.byteLength** minus **byteOffset**. |
 
@@ -106,7 +106,7 @@ Copies the data of a passed **Buffer** object to create a new **Buffer** object 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | Buffer \| Uint8Array | Yes | Target object. |
+| buffer | Buffer &#124; Uint8Array | Yes | Target object. |
 
 **Return value:**
 
@@ -151,7 +151,7 @@ Creates a **Buffer** object based on the specified object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | object | Object | Yes | Object that supports **Symbol.toPrimitive** or **valueOf()**. |
-| offsetOrEncoding | number \| string | Yes | Byte offset or encoding format. |
+| offsetOrEncoding | number &#124; string | Yes | Byte offset or encoding format. |
 | length | number | Yes | Length of the **Buffer** object to create, in bytes. This parameter is valid only when the return value of **valueOf()** of **object** is **ArrayBuffer**. Value range: 0 &lt;= length &lt;= ArrayBuffer.byteLength. Error 10200001 is reported if a value outside this range is reported. In other cases, you can set this parameter to any value of the number type. This parameter does not affect the result. |
 
 **Return value:**

@@ -6,6 +6,7 @@ The module defines the bundle information. An application can obtain its own bun
  contained in the returned [BundleInfo](arkts-ability-bundleinfo-i.md).
 
 
+
 ## 汇总
 
 ### 接口

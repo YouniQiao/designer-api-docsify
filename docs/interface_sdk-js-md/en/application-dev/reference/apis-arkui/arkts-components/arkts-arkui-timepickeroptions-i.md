@@ -33,7 +33,7 @@ End time of the time picker.
 
 Default value: **Date(0, 0, 0, 23, 59, 59)**.
 
-**NOTE：**
+**NOTE:**
 
 1. Only the hour and minute values take effect.
 2. If **end** is set and is not the default value, **loop** does not take effect.
@@ -100,7 +100,7 @@ Start time of the time picker.
 
 Default value: **Date(0, 0, 0, 0, 0, 0)**
 
-**NOTE：**
+**NOTE:**
 
 1. Only the hour and minute values take effect.
 2. If **start** is set and is not the default value, **loop** does not take effect.

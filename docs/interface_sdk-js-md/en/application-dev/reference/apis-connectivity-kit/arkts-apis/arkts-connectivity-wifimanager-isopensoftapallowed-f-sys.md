@@ -26,7 +26,7 @@ Check whether Wi-Fi hotspot is can be operated under some situation. When the ai
 
 | Type | Description |
 | --- | --- |
-| boolean | { |
+| boolean | `true` if Wi-Fi hotspot can be operated, returns `false` otherwise. |
 
 **Error codes:**
 

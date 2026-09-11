@@ -8,7 +8,7 @@ Enum for location scenario
 
 **Substitutes:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
 
-**Required permissions:** ohos.permission.LOCATION
+**Required permissions:** ohos.permission.LOCATION @enum { number }
 
 **System capability:** SystemCapability.Location.Location.Core
 

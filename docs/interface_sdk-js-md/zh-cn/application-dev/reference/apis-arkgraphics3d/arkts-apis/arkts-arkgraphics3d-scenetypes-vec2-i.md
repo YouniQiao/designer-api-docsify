@@ -2,6 +2,8 @@
 
 二维向量，通常用于表示2D空间中的点或方向，由x和y两个分量组成。
 
+@typedef Vec2
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

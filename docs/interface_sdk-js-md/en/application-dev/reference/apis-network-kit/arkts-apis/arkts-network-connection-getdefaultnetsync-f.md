@@ -14,7 +14,7 @@ function getDefaultNetSync(): NetHandle
 
 Obtains the network handle used by the system by default, including the network ID. This API returns the result synchronously.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Default network used by the system. The network must have the
 > [NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md) capability and is not a VPN network.

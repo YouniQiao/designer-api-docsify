@@ -70,7 +70,7 @@ trustCerts: Array<X509Cert>
 
 Trusted certificates.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You need to configure the trust certificates of all signers.
 

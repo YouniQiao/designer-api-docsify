@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> - 本Interface的起始版本为API version 12。接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素
+> - 本Interface的起始版本为API version 12。接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素@since版本号大于内层元素的情况，不影响接口使用。
 
 **起始版本：** 12
 
@@ -34,7 +34,7 @@ hasFlash(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 表示设备是否支持闪光灯。true表示支持闪光灯，false表示不支持闪光灯。 |
+| boolean | 表示设备是否支持闪光灯。true表示支持闪光灯，false表示不支持闪光灯。<br>如果返回false，则[isFlashModeSupported](#isflashmodesupported)、[setFlashMode](arkts-camera-camera-flash-i.md#setflashmode)和[getFlashMode](arkts-camera-camera-flash-i.md#getflashmode)都不会生效。<br>接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -66,7 +66,7 @@ isFlashModeSupported(flashMode: FlashMode): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 检测表示支持该闪光灯模式。true表示支持，false表示不支持。接口调用失败会抛出相应错误码并返回undefined，错误码类型[CameraErrorCode]{ |
+| boolean | 检测表示支持该闪光灯模式。true表示支持，false表示不支持。接口调用失败会抛出相应错误码并返回undefined，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 

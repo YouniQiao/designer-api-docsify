@@ -4,7 +4,8 @@ The **UiTest** module provides UI automation test capabilities, such as componen
  clicking/sliding, key injections, screenshot, window management, multi-finger operations, and mouse/stylus/touchpad
  operations.
  This module provides the following functions:
- - [On<sup>9+</sup>](arkts-test-uitest-on-c.md): provides UI component feature description APIs for component filtering and matching.
+
+- [On<sup>9+</sup>](arkts-test-uitest-on-c.md): provides UI component feature description APIs for component filtering and matching.
  - [Component<sup>9+</sup>](arkts-test-uitest-component-c.md): represents a component on the UI and provides APIs for obtaining
  component attributes, clicking a component, scrolling to search for a component, and text injection.
  - [Driver<sup>9+</sup>](arkts-test-uitest-driver-c.md): works as the entry class and provides APIs for features such as component
@@ -22,11 +23,13 @@ The **UiTest** module provides UI automation test capabilities, such as componen
  component matching/search, key injection, coordinate clicking/sliding, and screenshot.
  This API is supported since API version 8 and deprecated since API version 9.
  You are advised to use [Driver<sup>9+</sup>](arkts-test-uitest-driver-c.md) instead.
- > **NOTE**
+
+> **NOTE**
  >
  > - The APIs of this module can be used only in [UITest](../../../application-test/uitest-guidelines.md).
  >
  > - The APIs of this module do not support concurrent calls.
+
 
 
 ## Modules to Import

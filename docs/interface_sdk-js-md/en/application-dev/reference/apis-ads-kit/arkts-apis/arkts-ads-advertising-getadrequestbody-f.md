@@ -22,7 +22,7 @@ Obtains the body of an ad request. This API uses a promise to return the result 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adParams | [AdRequestParams](arkts-ads-advertising-adrequestparams-i.md)[] | Yes | Ad request parameters. **Note:** The **adId** parameter of this API can be empty. |
+| adParams | [AdRequestParams](arkts-ads-advertising-adrequestparams-i.md)[] | Yes | Ad request parameters. **Note:**The **adId** parameter of this API can be empty. |
 | adOptions | [AdOptions](arkts-ads-advertising-adoptions-i.md) | Yes | Ad configuration parameters. |
 
 **Return value:**

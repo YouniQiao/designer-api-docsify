@@ -28,7 +28,7 @@ Closes a file descriptor. This API is a static method.
 
 **Deprecated since:** 9
 
-**Substitutes:** [closeFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#closefiledescriptor)(fd: int)
+**Substitutes:** [closeFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#closefiledescriptor)(fd: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -147,7 +147,7 @@ Duplicates a file descriptor. This API is a static method.
 
 **Deprecated since:** 9
 
-**Substitutes:** [dupFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#dupfiledescriptor)(fd: int)
+**Substitutes:** [dupFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#dupfiledescriptor)(fd: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -651,7 +651,7 @@ Reads the byte array from this **MessageParcel** object and writes it to the cre
 
 **Deprecated since:** 9
 
-**Substitutes:** [readByteArray](arkts-ipc-rpc-messagesequence-c.md#readbytearray)(dataIn: int[])
+**Substitutes:** [readByteArray](arkts-ipc-rpc-messagesequence-c.md#readbytearray)(dataIn: number[])
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -770,7 +770,7 @@ Reads the character array from this **MessageParcel** object and writes it to th
 
 **Deprecated since:** 9
 
-**Substitutes:** [readCharArray](arkts-ipc-rpc-messagesequence-c.md#readchararray)(dataIn: int[])
+**Substitutes:** [readCharArray](arkts-ipc-rpc-messagesequence-c.md#readchararray)(dataIn: number[])
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -888,7 +888,7 @@ Reads the double array from this **MessageParcel** object and writes it to the c
 
 **Deprecated since:** 9
 
-**Substitutes:** [readDoubleArray](arkts-ipc-rpc-messagesequence-c.md#readdoublearray)(dataIn: double[])
+**Substitutes:** [readDoubleArray](arkts-ipc-rpc-messagesequence-c.md#readdoublearray)(dataIn: number[])
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1141,7 +1141,7 @@ Reads the double array from this **MessageParcel** object and writes it to the c
 
 **Deprecated since:** 9
 
-**Substitutes:** [readFloatArray](arkts-ipc-rpc-messagesequence-c.md#readfloatarray)(dataIn: double[])
+**Substitutes:** [readFloatArray](arkts-ipc-rpc-messagesequence-c.md#readfloatarray)(dataIn: number[])
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1259,7 +1259,7 @@ Reads the integer array from this **MessageParcel** object and writes it to the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [readIntArray](arkts-ipc-rpc-messagesequence-c.md#readintarray)(dataIn: int[])
+**Substitutes:** [readIntArray](arkts-ipc-rpc-messagesequence-c.md#readintarray)(dataIn: number[])
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1415,7 +1415,7 @@ Reads the long array from this **MessageParcel** object and writes it to the cre
 
 **Deprecated since:** 9
 
-**Substitutes:** [readLongArray](arkts-ipc-rpc-messagesequence-c.md#readlongarray)(dataIn: long[])
+**Substitutes:** [readLongArray](arkts-ipc-rpc-messagesequence-c.md#readlongarray)(dataIn: number[])
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1494,7 +1494,7 @@ Reads raw data from this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [readRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#readrawdatabuffer)(size: int)
+**Substitutes:** [readRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#readrawdatabuffer)(size: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1861,7 +1861,7 @@ Reads the short array from this **MessageParcel** object and writes it to the cr
 
 **Deprecated since:** 9
 
-**Substitutes:** [readShortArray](arkts-ipc-rpc-messagesequence-c.md#readshortarray)(dataIn: int[])
+**Substitutes:** [readShortArray](arkts-ipc-rpc-messagesequence-c.md#readshortarray)(dataIn: number[])
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2088,7 +2088,7 @@ Moves the read pointer to the specified position.
 
 **Deprecated since:** 9
 
-**Substitutes:** [rewindRead](arkts-ipc-rpc-messagesequence-c.md#rewindread)(pos: int)
+**Substitutes:** [rewindRead](arkts-ipc-rpc-messagesequence-c.md#rewindread)(pos: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2136,7 +2136,7 @@ Moves the write pointer to the specified position.
 
 **Deprecated since:** 9
 
-**Substitutes:** [rewindWrite](arkts-ipc-rpc-messagesequence-c.md#rewindwrite)(pos: int)
+**Substitutes:** [rewindWrite](arkts-ipc-rpc-messagesequence-c.md#rewindwrite)(pos: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2182,7 +2182,7 @@ Sets the storage capacity of this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCapacity](arkts-ipc-rpc-messagesequence-c.md#setcapacity)(size: int)
+**Substitutes:** [setCapacity](arkts-ipc-rpc-messagesequence-c.md#setcapacity)(size: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2225,7 +2225,7 @@ Sets the size of data contained in this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [setSize](arkts-ipc-rpc-messagesequence-c.md#setsize)(size: int)
+**Substitutes:** [setSize](arkts-ipc-rpc-messagesequence-c.md#setsize)(size: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2398,7 +2398,7 @@ Writes a Byte value to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeByte](arkts-ipc-rpc-messagesequence-c.md#writebyte)(val: int)
+**Substitutes:** [writeByte](arkts-ipc-rpc-messagesequence-c.md#writebyte)(val: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2441,7 +2441,7 @@ Writes a byte array to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeByteArray](arkts-ipc-rpc-messagesequence-c.md#writebytearray)(byteArray: int[])
+**Substitutes:** [writeByteArray](arkts-ipc-rpc-messagesequence-c.md#writebytearray)(byteArray: number[])
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2485,7 +2485,7 @@ Writes a single character value to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeChar](arkts-ipc-rpc-messagesequence-c.md#writechar)(val: int)
+**Substitutes:** [writeChar](arkts-ipc-rpc-messagesequence-c.md#writechar)(val: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2528,7 +2528,7 @@ Writes a single character array to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeCharArray](arkts-ipc-rpc-messagesequence-c.md#writechararray)(charArray: int[])
+**Substitutes:** [writeCharArray](arkts-ipc-rpc-messagesequence-c.md#writechararray)(charArray: number[])
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2571,7 +2571,7 @@ Writes a double value to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeDouble](arkts-ipc-rpc-messagesequence-c.md#writedouble)(val: double)
+**Substitutes:** [writeDouble](arkts-ipc-rpc-messagesequence-c.md#writedouble)(val: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2614,7 +2614,7 @@ Writes a double array to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeDoubleArray](arkts-ipc-rpc-messagesequence-c.md#writedoublearray)(doubleArray: double[])
+**Substitutes:** [writeDoubleArray](arkts-ipc-rpc-messagesequence-c.md#writedoublearray)(doubleArray: number[])
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2657,7 +2657,7 @@ Writes a file descriptor to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#writefiledescriptor)(fd: int)
+**Substitutes:** [writeFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#writefiledescriptor)(fd: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2703,7 +2703,7 @@ Writes a double value to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeFloat](arkts-ipc-rpc-messagesequence-c.md#writefloat)(val: double)
+**Substitutes:** [writeFloat](arkts-ipc-rpc-messagesequence-c.md#writefloat)(val: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2746,7 +2746,7 @@ Writes a double array to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeFloatArray](arkts-ipc-rpc-messagesequence-c.md#writefloatarray)(floatArray: double[])
+**Substitutes:** [writeFloatArray](arkts-ipc-rpc-messagesequence-c.md#writefloatarray)(floatArray: number[])
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2789,7 +2789,7 @@ Writes an int value to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeInt](arkts-ipc-rpc-messagesequence-c.md#writeint)(val: int)
+**Substitutes:** [writeInt](arkts-ipc-rpc-messagesequence-c.md#writeint)(val: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2832,7 +2832,7 @@ Writes an integer array to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeIntArray](arkts-ipc-rpc-messagesequence-c.md#writeintarray)(intArray: int[])
+**Substitutes:** [writeIntArray](arkts-ipc-rpc-messagesequence-c.md#writeintarray)(intArray: number[])
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2918,7 +2918,7 @@ Writes a long int value to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeLong](arkts-ipc-rpc-messagesequence-c.md#writelong)(val: long)
+**Substitutes:** [writeLong](arkts-ipc-rpc-messagesequence-c.md#writelong)(val: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2961,7 +2961,7 @@ Writes a long array to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeLongArray](arkts-ipc-rpc-messagesequence-c.md#writelongarray)(longArray: long[])
+**Substitutes:** [writeLongArray](arkts-ipc-rpc-messagesequence-c.md#writelongarray)(longArray: number[])
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -3049,7 +3049,7 @@ Writes raw data to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#writerawdatabuffer)(rawData: ArrayBuffer, size: int)
+**Substitutes:** [writeRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#writerawdatabuffer)(rawData: ArrayBuffer, size: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -3331,7 +3331,7 @@ Writes a short int value to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeShort](arkts-ipc-rpc-messagesequence-c.md#writeshort)(val: int)
+**Substitutes:** [writeShort](arkts-ipc-rpc-messagesequence-c.md#writeshort)(val: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -3374,7 +3374,7 @@ Writes a short array to this **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeShortArray](arkts-ipc-rpc-messagesequence-c.md#writeshortarray)(shortArray: int[])
+**Substitutes:** [writeShortArray](arkts-ipc-rpc-messagesequence-c.md#writeshortarray)(shortArray: number[])
 
 **System capability:** SystemCapability.Communication.IPC.Core
 

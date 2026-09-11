@@ -158,7 +158,7 @@ onAccessibilityKeyEvent(keyEvent: KeyEvent): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回true表示此事件被消费，不会继续传递。 |
+| boolean | 返回true表示此事件被消费，不会继续传递。<br>返回false表示此事件未被消费，会继续传递。 |
 
 **错误码：**
 

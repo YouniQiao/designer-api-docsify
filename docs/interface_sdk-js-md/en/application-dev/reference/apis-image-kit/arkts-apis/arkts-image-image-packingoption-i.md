@@ -68,7 +68,7 @@ Format of the packed image.
 
 Currently, only the following formats are supported: image/jpeg, image/webp, image/png, image/heic (or image/heif)&lt;sup&gt;12+&lt;/sup&gt;, image/sdr_astc_4x4&lt;sup&gt;18+&lt;/sup&gt;, image/sdr_sut_superfast_4x4&lt;sup&gt;18+&lt;/sup&gt; (depending on the hardware), and image/hdr_astc_4x4&lt;sup&gt;20+&lt;/sup&gt;.
 
-**NOTE：**: The JPEG format does not support the alpha channel. If the JPEG format with the alpha channel is used for data encoding, the transparent color turns black.
+**NOTE:** The JPEG format does not support the alpha channel. If the JPEG format with the alpha channel is used for data encoding, the transparent color turns black.
 
 **Type:** string
 
@@ -84,7 +84,7 @@ Currently, only the following formats are supported: image/jpeg, image/webp, ima
 maxEmbedThumbnailDimension?: number
 ```
 
-This parameter is valid only when needsPackProperties is set to true. It specifies the maximum width and height of the thumbnail generated during encoding. If this parameter is not specified, no thumbnail will be generated during encoding. The value should be an integer. Unit:px.
+This parameter is valid only when needsPackProperties is set to true. It specifies the maximum width and height of the thumbnail generated during encoding. If this parameter is not specified, no thumbnail will be generated during encoding. The value should be an integer. <br>Unit:px.
 
 **Type:** number
 

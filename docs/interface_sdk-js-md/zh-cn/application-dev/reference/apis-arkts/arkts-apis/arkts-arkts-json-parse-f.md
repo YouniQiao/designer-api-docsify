@@ -32,4 +32,4 @@ function parse(text: string, reviver?: Transformer, options?: ParseOptions): Obj
 
 | 类型 | 说明 |
 | --- | --- |
-| Object \| null | 当传入的字符串为'null'时，返回null。 |
+| Object &#124; null | 当传入的字符串为'null'时，返回null。 |

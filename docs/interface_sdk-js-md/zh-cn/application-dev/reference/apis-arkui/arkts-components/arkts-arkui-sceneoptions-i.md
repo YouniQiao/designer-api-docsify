@@ -39,7 +39,7 @@ scene?: ResourceStr | Scene
 
 3D渲染的资源类型，3D场景控制的Scene类型
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [Scene](arkts-arkui-scene-t.md)
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [Scene](arkts-arkui-scene-t.md)
 
 **起始版本：** 12
 

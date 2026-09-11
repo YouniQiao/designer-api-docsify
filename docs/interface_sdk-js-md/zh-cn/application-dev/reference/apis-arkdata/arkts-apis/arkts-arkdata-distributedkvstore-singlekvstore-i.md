@@ -22,6 +22,8 @@ backup(file: string, callback: AsyncCallback<void>): void
 
 以指定名称备份数据库到默认路径（context.databaseDir），使用callback异步回调。如需备份到自定义路径，请使用[backupEx](#backupex)接口。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -37,7 +39,8 @@ backup(file: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Parameter verification failed. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Parameter verification failed. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 **示例**
 
@@ -67,6 +70,8 @@ backup(file: string): Promise<void>
 
 以指定名称备份数据库到默认路径（context.databaseDir），使用Promise异步回调。如需备份到自定义路径，请使用[backupEx](#backupex)接口。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -87,7 +92,8 @@ backup(file: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Parameter verification failed. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Parameter verification failed. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 **示例**
 
@@ -115,6 +121,8 @@ backupEx(backupConfig: BackupConfig): Promise<void>
 
 以指定名称和路径备份数据库，使用Promise异步回调。
 
+**起始版本：** 24
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -136,6 +144,7 @@ backupEx(backupConfig: BackupConfig): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [15100000](../errorcode-distributedKVStore.md#15100000-无效的参数) | Input parameters do not meet the API requirements, such as invalid value ranges, length limits, or incorrect formats. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 **示例**
 
@@ -166,6 +175,8 @@ closeResultSet(resultSet: KVStoreResultSet, callback: AsyncCallback<void>): void
 
 关闭由[SingleKVStore.getResultSet](#getresultset-1)返回的KVStoreResultSet对象，使用callback异步回调。关闭结果集后，该结果集对象将不可再用，相关数据库资源被释放。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -181,7 +192,7 @@ closeResultSet(resultSet: KVStoreResultSet, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 
 **示例**
 
@@ -221,6 +232,8 @@ closeResultSet(resultSet: KVStoreResultSet): Promise<void>
 
 关闭由[SingleKVStore.getResultSet](#getresultset-1)返回的KVStoreResultSet对象，使用Promise异步回调。关闭结果集后，该结果集对象将不可再用，相关数据库资源被释放。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -241,7 +254,7 @@ closeResultSet(resultSet: KVStoreResultSet): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 
 **示例**
 
@@ -366,6 +379,8 @@ delete(key: string, callback: AsyncCallback<void>): void
 
 从数据库中删除指定键值的数据，使用callback异步回调。删除成功后，指定键值对将被永久删除，无法再通过get等方法查询；若已订阅数据变更通知，将触发变更通知回调。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -381,8 +396,10 @@ delete(key: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
 **示例**
 
@@ -422,6 +439,8 @@ delete(key: string): Promise<void>
 
 从数据库中删除指定键值的数据，使用Promise异步回调。删除成功后，指定键值对将被永久删除，无法再通过get等方法查询；若已订阅数据变更通知，将触发变更通知回调。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -442,8 +461,10 @@ delete(key: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
 **示例**
 
@@ -479,6 +500,8 @@ deleteBackup(files: Array<string>, callback: AsyncCallback<Array<[string, number
 
 根据指定名称从默认路径（context.databaseDir）删除备份文件，使用callback异步回调。删除备份文件后，将无法再通过[restore](#restore-1)接口恢复该备份文件中的数据。如需从自定义路径删除备份，请使用[deleteBackupEx](#deletebackupex)接口。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -494,7 +517,7 @@ deleteBackup(files: Array<string>, callback: AsyncCallback<Array<[string, number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Parameter verification failed. |
 
 **示例**
 
@@ -546,7 +569,7 @@ deleteBackup(files: Array<string>): Promise<Array<[string, number]>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Parameter verification failed. |
 
 **示例**
 
@@ -627,6 +650,8 @@ deleteBatch(keys: string[], callback: AsyncCallback<void>): void
 
 批量删除SingleKVStore数据库中的键值对，使用callback异步回调。删除成功后，指定键值对将被永久删除，无法再通过get等方法查询；若已订阅数据变更通知，将触发变更通知回调。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -642,8 +667,10 @@ deleteBatch(keys: string[], callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
 **示例**
 
@@ -696,6 +723,8 @@ deleteBatch(keys: string[]): Promise<void>
 
 批量删除SingleKVStore数据库中的键值对，使用Promise异步回调。删除成功后，指定键值对将被永久删除，无法再通过get等方法查询；若已订阅数据变更通知，将触发变更通知回调。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -716,8 +745,10 @@ deleteBatch(keys: string[]): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
 **示例**
 
@@ -783,7 +814,7 @@ enableSync(enabled: boolean, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 
 **示例**
 
@@ -834,7 +865,7 @@ enableSync(enabled: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 
 **示例**
 
@@ -861,6 +892,8 @@ get(key: string, callback: AsyncCallback<boolean | string | number | number | Ui
 
 获取指定键的值，使用callback异步回调。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -870,14 +903,16 @@ get(key: string, callback: AsyncCallback<boolean | string | number | number | Ui
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要查询数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| number \| number \| Uint8Array&gt; | 是 | 回调函数。返回获取查询的值，值的类型取决于存储时的数据类型。[ |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean &#124; string &#124; number &#124; number &#124; Uint8Array&gt; | 是 | 回调函数。返回获取查询的值，值的类型取决于存储时的数据类型。[ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
 | [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 **示例**
 
@@ -943,6 +978,8 @@ get(key: string): Promise<boolean | string | number | number | Uint8Array>
 
 获取指定键的值，使用Promise异步回调。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -957,14 +994,16 @@ get(key: string): Promise<boolean | string | number | number | Uint8Array>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean \| string \| number \| number \| Uint8Array&gt; | Promise对象。返回指定键对应的值，值的类型取决于存储时的数据类型。[ |
+| Promise&lt;boolean &#124; string &#124; number &#124; number &#124; Uint8Array&gt; | Promise对象。返回指定键对应的值，值的类型取决于存储时的数据类型。[ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
 | [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 **示例**
 
@@ -1030,6 +1069,8 @@ getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 
 获取匹配指定键前缀的所有键值对，使用callback异步回调。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -1045,7 +1086,8 @@ getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 **示例**
@@ -1099,6 +1141,8 @@ getEntries(keyPrefix: string): Promise<Entry[]>
 
 获取匹配指定键前缀的所有键值对，使用Promise异步回调。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -1119,7 +1163,8 @@ getEntries(keyPrefix: string): Promise<Entry[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 **示例**
@@ -1169,6 +1214,8 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 
 获取与指定Query对象匹配的键值对列表，使用callback异步回调。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -1184,7 +1231,8 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 **示例**
@@ -1241,6 +1289,8 @@ getEntries(query: Query): Promise<Entry[]>
 
 获取与指定Query对象匹配的键值对列表，使用Promise异步回调。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -1261,7 +1311,8 @@ getEntries(query: Query): Promise<Entry[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 **示例**
@@ -1313,6 +1364,8 @@ getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 
 从SingleKVStore数据库中获取具有指定前缀的结果集，使用callback异步回调。获取结果集后，在使用完毕时需调用[closeResultSet](#closeresultset)关闭结果集释放资源。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -1328,8 +1381,10 @@ getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
+| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.<br>**适用版本：** 10+ |
 
 **示例**
 
@@ -1390,6 +1445,8 @@ getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 
 从SingleKVStore数据库中获取具有指定前缀的结果集，使用Promise异步回调。获取结果集后，在使用完毕时需调用[closeResultSet](#closeresultset)关闭结果集释放资源。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -1410,8 +1467,10 @@ getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
+| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.<br>**适用版本：** 10+ |
 
 **示例**
 
@@ -1464,6 +1523,8 @@ getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 
 获取与指定Query对象匹配的KVStoreResultSet对象，使用callback异步回调。获取结果集后，在使用完毕时需调用[closeResultSet](#closeresultset)关闭结果集释放资源。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -1479,8 +1540,10 @@ getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
+| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.<br>**适用版本：** 10+ |
 
 **示例**
 
@@ -1533,6 +1596,8 @@ getResultSet(query: Query): Promise<KVStoreResultSet>
 
 获取与指定Query对象匹配的KVStoreResultSet对象，使用Promise异步回调。获取结果集后，在使用完毕时需调用[closeResultSet](#closeresultset)关闭结果集释放资源。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -1553,8 +1618,10 @@ getResultSet(query: Query): Promise<KVStoreResultSet>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
+| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.<br>**适用版本：** 10+ |
 
 **示例**
 
@@ -1600,6 +1667,8 @@ getResultSize(query: Query, callback: AsyncCallback<number>): void
 
 获取与指定Query对象匹配的结果数，使用callback异步回调。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -1615,8 +1684,10 @@ getResultSize(query: Query, callback: AsyncCallback<number>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
 | [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 **示例**
 
@@ -1668,6 +1739,8 @@ getResultSize(query: Query): Promise<number>
 
 获取与指定Query对象匹配的结果数，使用Promise异步回调。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -1688,8 +1761,10 @@ getResultSize(query: Query): Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
 | [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 **示例**
 
@@ -1821,7 +1896,7 @@ try {
 off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 ```
 
-取消订阅数据变更通知。必须先调用on('dataChange')订阅后，才能调用off取消订阅。
+取消订阅数据变更通知。必须先调用[on('dataChange')](#on)订阅后，才能调用off取消订阅。
 
 **起始版本：** 9
 
@@ -1838,7 +1913,7 @@ off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 **示例**
@@ -1881,7 +1956,7 @@ class KvstoreModel {
 off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void
 ```
 
-取消订阅端端同步完成事件回调通知。必须先调用on('syncComplete')订阅后，才能调用off取消订阅。
+取消订阅端端同步完成事件回调通知。必须先调用[on('syncComplete')](#on-1)订阅后，才能调用off取消订阅。
 
 **起始版本：** 9
 
@@ -1898,7 +1973,7 @@ off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 
 **示例**
 
@@ -1940,7 +2015,7 @@ class KvstoreModel {
 on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void
 ```
 
-订阅指定类型的数据变更通知。调用on订阅后，在不需要监听时必须调用off('dataChange')取消订阅。
+订阅指定类型的数据变更通知。调用on订阅后，在不需要监听时必须调用[off('dataChange')](#off)取消订阅。
 
 **起始版本：** 9
 
@@ -1958,7 +2033,7 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 | [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
@@ -1983,7 +2058,7 @@ try {
 on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 ```
 
-订阅端端同步完成事件回调通知。调用on订阅后，在不需要监听时必须调用off('syncComplete')取消订阅。
+订阅端端同步完成事件回调通知。调用on订阅后，在不需要监听时必须调用[off('syncComplete')](#off-1)取消订阅。
 
 **起始版本：** 9
 
@@ -2000,7 +2075,7 @@ on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 
 **示例**
 
@@ -2044,14 +2119,14 @@ put(key: string, value: Uint8Array | string | number | number | boolean, callbac
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要添加数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
-| value | Uint8Array \| string \| number \| number \| boolean | 是 | 要添加数据的value，支持Uint8Array、string、number、boolean，Uint8Array、string的长度范围为0-[MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
+| value | Uint8Array &#124; string &#124; number &#124; number &#124; boolean | 是 | 要添加数据的value，支持Uint8Array、string、number、boolean，Uint8Array、string的长度范围为0-[MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。数据添加成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
@@ -2113,7 +2188,7 @@ put(key: string, value: Uint8Array | string | number | number | boolean): Promis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要添加数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
-| value | Uint8Array \| string \| number \| number \| boolean | 是 | 要添加数据的value，支持Uint8Array、string、number、boolean，Uint8Array、string的长度范围为0-[MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
+| value | Uint8Array &#124; string &#124; number &#124; number &#124; boolean | 是 | 要添加数据的value，支持Uint8Array、string、number、boolean，Uint8Array、string的长度范围为0-[MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
 
 **返回值：**
 
@@ -2125,7 +2200,7 @@ put(key: string, value: Uint8Array | string | number | number | boolean): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
@@ -2159,7 +2234,7 @@ putBatch(entries: Entry[], callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
@@ -2237,7 +2312,7 @@ putBatch(entries: Entry[]): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
@@ -2345,6 +2420,8 @@ removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 > deviceId具体获取方式请参考
 > [sync接口示例](#sync)。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
@@ -2360,7 +2437,8 @@ removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Parameter verification failed. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Parameter verification failed. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 **示例**
 
@@ -2420,6 +2498,8 @@ removeDeviceData(deviceId: string): Promise<void>
 > deviceId具体获取方式请参考
 > [sync接口示例](#sync)。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
@@ -2440,7 +2520,8 @@ removeDeviceData(deviceId: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Parameter verification failed. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Parameter verification failed. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 **示例**
 
@@ -2480,6 +2561,8 @@ restore(file: string, callback: AsyncCallback<void>): void
 
 从数据库默认路径（context.databaseDir）下指定名称的备份文件恢复数据库，使用callback异步回调。恢复成功后，当前数据库中的数据将被替换为备份文件中的数据，原有的未备份数据将丢失。如需从自定义路径恢复，请使用[restoreEx](#restoreex)接口。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -2495,7 +2578,8 @@ restore(file: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Parameter verification failed. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Parameter verification failed. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 **示例**
 
@@ -2525,6 +2609,8 @@ restore(file: string): Promise<void>
 
 从数据库默认路径（context.databaseDir）下指定名称的备份文件恢复数据库，使用Promise异步回调。恢复成功后，当前数据库中的数据将被替换为备份文件中的数据，原有的未备份数据将丢失。如需从自定义路径恢复，请使用[restoreEx](#restoreex)接口。
 
+**起始版本：** 9
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -2545,7 +2631,8 @@ restore(file: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Parameter verification failed. [ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Parameter verification failed. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 **示例**
 
@@ -2573,6 +2660,8 @@ restoreEx(backupConfig: BackupConfig): Promise<void>
 
 从指定路径和名称的备份文件恢复数据库，使用Promise异步回调。恢复成功后，当前数据库中的数据将被替换为备份文件中的数据，原有的未备份数据将丢失。
 
+**起始版本：** 24
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -2594,6 +2683,7 @@ restoreEx(backupConfig: BackupConfig): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [15100000](../errorcode-distributedKVStore.md#15100000-无效的参数) | Input parameters do not meet the API requirements, such as invalid value ranges, length limits, or incorrect formats. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 **示例**
 
@@ -2735,7 +2825,7 @@ setSyncParam(defaultAllowedDelayMs: number, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 
 **示例**
 
@@ -2793,7 +2883,7 @@ setSyncParam(defaultAllowedDelayMs: number): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 
 **示例**
 
@@ -2839,7 +2929,7 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: Asy
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 
 **示例**
 
@@ -2893,7 +2983,7 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 
 **示例**
 
@@ -3044,7 +3134,7 @@ try {
 sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 ```
 
-在手动同步方式下，触发数据库端端同步。同步结果可通过订阅on('syncComplete')事件获取。关于键值型数据库的端端同步方式说明，请见[键值型数据库跨设备数据同步](../../../database/data-sync-of-kv-store.md)。
+在手动同步方式下，触发数据库端端同步。同步结果可通过订阅[on('syncComplete')](#on-1)事件获取。关于键值型数据库的端端同步方式说明，请见[键值型数据库跨设备数据同步](../../../database/data-sync-of-kv-store.md)。
 
 > **说明：**
 > 
@@ -3073,7 +3163,7 @@ sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 | [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
 
@@ -3138,7 +3228,7 @@ export default class EntryAbility extends UIAbility {
 sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: number): void
 ```
 
-在手动同步方式下，触发数据库端端同步，支持按查询条件过滤同步数据。同步结果可通过订阅on('syncComplete')事件获取。关于键值型数据库的端端同步方式说明，请见[键值型数据库跨设备数据同步](../../../database/data-sync-of-kv-store.md)。
+在手动同步方式下，触发数据库端端同步，支持按查询条件过滤同步数据。同步结果可通过订阅[on('syncComplete')](#on-1)事件获取。关于键值型数据库的端端同步方式说明，请见[键值型数据库跨设备数据同步](../../../database/data-sync-of-kv-store.md)。
 
 > **说明：**
 > 
@@ -3168,7 +3258,7 @@ sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 | [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
 

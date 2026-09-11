@@ -4,7 +4,7 @@
 declare type VP = `${number}vp` | number
 ```
 
-定义长度属性，可以是数字或以 vp 为单位的数字。
+定义长度属性，可以是数字或以 vp 为单位的数字。@typedef { `\${number}vp` | number } VP
 
 **起始版本：** 23
 
@@ -18,5 +18,5 @@ declare type VP = `${number}vp` | number
 
 | 类型 | 说明 |
 | --- | --- |
-| `\${number}vp` |  |
+| `&#36;{number}vp` |  |
 | number |  |

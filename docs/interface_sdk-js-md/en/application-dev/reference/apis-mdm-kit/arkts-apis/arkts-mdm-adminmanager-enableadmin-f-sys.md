@@ -96,7 +96,7 @@ Enables a device administrator application for a user (specified by **userId**).
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | enterpriseInfo | [EnterpriseInfo](arkts-mdm-adminmanager-enterpriseinfo-i-sys.md) | Yes | Enterprise information of the device administrator application. |
 | type | [AdminType](arkts-mdm-adminmanager-admintype-e.md) | Yes | Type of the device administrator application to enable. |
-| userId | number | Yes | User ID, which must be greater than or equal to 0. The default value is the user ID of the caller. |
+| userId | number | Yes | User ID, which must be greater than or equal to 0.<br>The default value is the user ID of the caller. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -162,7 +162,7 @@ Enables the device administrator application for the current or specified user. 
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | enterpriseInfo | [EnterpriseInfo](arkts-mdm-adminmanager-enterpriseinfo-i-sys.md) | Yes | Enterprise information of the device administrator application. |
 | type | [AdminType](arkts-mdm-adminmanager-admintype-e.md) | Yes | Type of the device administrator application to enable. |
-| userId | number | No | User ID, which must be greater than or equal to 0.     - If **userId** is passed in, this API applies to the specified user.     - If **userId** is not passed in, this API applies to the current user. |
+| userId | number | No | User ID, which must be greater than or equal to 0.<br> - If **userId** is passed in, this API applies to the specified user. <br> - If **userId** is not passed in, this API applies to the current user. |
 
 **Return value:**
 

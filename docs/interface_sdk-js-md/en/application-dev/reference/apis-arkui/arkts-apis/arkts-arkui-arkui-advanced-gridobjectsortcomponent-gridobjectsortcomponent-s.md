@@ -2,7 +2,7 @@
 
 **GridObjectSortComponent** is a grid object organizer that you can use to edit, drag to sort, add, and delete grid objects.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This component can be used only in the stage model.
 > 

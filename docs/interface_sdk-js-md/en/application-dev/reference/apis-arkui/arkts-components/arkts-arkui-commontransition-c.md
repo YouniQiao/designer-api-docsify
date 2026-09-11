@@ -43,7 +43,7 @@ Sets the starting opacity value for entrance or the ending opacity value for exi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Starting opacity value for entrance or the ending opacity value for exit.Value range: [0, 1] |
+| value | number | Yes | Starting opacity value for entrance or the ending opacity value for exit.<br>Value range: [0, 1] |
 
 **Return value:**
 
@@ -69,7 +69,7 @@ Sets the scaling effect for page transitions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScaleOptions](arkts-arkui-scaleoptions-i.md) | Yes | Scaling effect for page transitions, specifying the start value for entrance and the end value for exit.   - **x**: scale factor along the x-axis.   - **y**: scale factor along the y-axis.   - **z**: scale factor along the z-axis.   - **centerX** and **centerY**: scaling center. The default values are both **"50%"**, meaning the center of the page is used as the scaling center by default.   - If the center point is (0, 0), it refers to the upper left corner of the component.<br>**Since:** 18 |
+| value | [ScaleOptions](arkts-arkui-scaleoptions-i.md) | Yes | Scaling effect for page transitions, specifying the start value for entrance and the end value for exit.<br>- **x**: scale factor along the x-axis.<br>- **y**: scale factor along the y-axis.<br>- **z**: scale factor along the z-axis.<br>- **centerX** and **centerY**: scaling center. The default values are both **"50%"**, meaning the center of the page is used as the scaling center by default.<br>- If the center point is (0, 0), it refers to the upper left corner of the component.<br>**Since:** 18 |
 
 **Return value:**
 
@@ -121,7 +121,7 @@ Sets the translation effect for page transitions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TranslateOptions](arkts-arkui-translateoptions-i.md) | Yes | Translation effect for page transitions, specifying the start value for entrance and the end value for exit. When this parameter is set together with **slide**, the latter takes effect by default.   - **x**: translation distance along the x-axis.   - **y**: translation distance along the y-axis.   - **z**: translation distance along the y-axis.<br>**Since:** 18 |
+| value | [TranslateOptions](arkts-arkui-translateoptions-i.md) | Yes | Translation effect for page transitions, specifying the start value for entrance and the end value for exit. When this parameter is set together with **slide**, the latter takes effect by default.<br>- **x**: translation distance along the x-axis.<br>- **y**: translation distance along the y-axis.<br>- **z**: translation distance along the y-axis.<br>**Since:** 18 |
 
 **Return value:**
 

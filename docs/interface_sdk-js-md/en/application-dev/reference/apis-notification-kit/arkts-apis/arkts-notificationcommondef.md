@@ -3,6 +3,7 @@
 The **NotificationCommonDef** module defines the common data structures used in notification-related APIs.
 
 
+
 ## Summary
 
 ### Interfaces

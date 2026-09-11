@@ -80,7 +80,7 @@ Obtains the OverlayModuleInfo about a module with the overlay feature in the cur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md)&gt; | Promise used to return the result, which is an [OverlayModuleInfo]{ |
+| Promise&lt;[OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md)&gt; | Promise used to return the result, which is an [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) object. |
 
 **Error codes:**
 

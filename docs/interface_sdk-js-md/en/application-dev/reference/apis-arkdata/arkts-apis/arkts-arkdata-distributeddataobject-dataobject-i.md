@@ -241,7 +241,7 @@ Unsubscribes from the status change of this distributed data object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'status' | Yes | Event type. The value is 'status', which indicates the status change (online or offline) of the distributed object. |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for status changes of this distributed object. sessionId indicates the session ID distributed data object. networkId identifies the distributed data object. status indicates the indicates the object status, which can be online or offline. |
+| callback | (sessionId: string, networkId: string, status: 'online' &#124; 'offline' ) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for status changes of this distributed object. sessionId indicates the session ID distributed data object. networkId identifies the distributed data object. status indicates the indicates the object status, which can be online or offline. |
 
 **Error codes:**
 
@@ -460,7 +460,7 @@ Subscribes to status changes of this distributed data object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'status' | Yes | Event type. The value is 'status', which indicates the status change (online or offline) of the distributed object. |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | Yes | Callback used to return the status change. sessionId indicates the session ID of the distributed data object. networkId identifies the device. status indicates the object status, which can be online or offline. |
+| callback | (sessionId: string, networkId: string, status: 'online' &#124; 'offline' ) =&gt; void | Yes | Callback used to return the status change. sessionId indicates the session ID of the distributed data object. networkId identifies the device. status indicates the object status, which can be online or offline. |
 
 **Error codes:**
 

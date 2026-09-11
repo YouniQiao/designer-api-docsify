@@ -6,6 +6,7 @@ The **NotificationContent** defines the content structure of a notification and 
  plain text, long text, multi-line text, picture, or live view).
 
 
+
 ## Summary
 
 ### Interfaces

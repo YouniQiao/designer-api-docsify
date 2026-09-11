@@ -35,7 +35,7 @@ static genDHCommonParamsSpec(pLen: number, skLen?: number): DHCommonParamsSpec
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pLen | number | 是 | 用于指定DH公共密钥参数中素数P的长度，单位为bits。 |
-| skLen | number | 否 | 用于指定生成DH私钥的最大长度，单位为bits，默认值为0。当参数值设置为0时，生成DH私钥的最大长度为：ffdhe2048：255 bits。ffdhe3072：275 bits。ffdhe4096：325 bits。ffdhe6144：375 bits。ffdhe8192：400 bits。 |
+| skLen | number | 否 | 用于指定生成DH私钥的最大长度，单位为bits，默认值为0。<br>当参数值设置为0时，生成DH私钥的最大长度为：<br>ffdhe2048：255 bits。<br>ffdhe3072：275 bits。<br>ffdhe4096：325 bits。<br>ffdhe6144：375 bits。<br>ffdhe8192：400 bits。 |
 
 **返回值：**
 
@@ -47,7 +47,7 @@ static genDHCommonParamsSpec(pLen: number, skLen?: number): DHCommonParamsSpec
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | This operation is not supported. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |

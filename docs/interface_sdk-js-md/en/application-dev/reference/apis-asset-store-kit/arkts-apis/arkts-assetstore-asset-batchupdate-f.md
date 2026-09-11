@@ -24,8 +24,8 @@ Only assets with the same [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceAttributes | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of map objects containing asset attributes to query. The [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#require_attr_encrypted) attributes of all assets must be the same. |
-| destAttributes | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of map objects containing asset attributes to be updated. The [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#require_attr_encrypted) attributes of all assets must be the same. |
+| sourceAttributes | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of map objects containing asset attributes to query. <br>The [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#require_attr_encrypted) attributes of all assets must be the same. |
+| destAttributes | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of map objects containing asset attributes to be updated. <br>The [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#require_attr_encrypted) attributes of all assets must be the same. |
 
 **Return value:**
 

@@ -14,7 +14,7 @@ function off(type: 'uninstallDLPSandbox', listener?: Callback<DLPSandboxState>):
 
 Unsubscribes from the DLP sandbox uninstall event. After the API is successfully called, the application will no longer receive callback notifications for the DLP sandbox uninstall event.
 
-This API can be called only after a listener is registered using on.
+This API can be called only after a listener is registered using [on](arkts-dataprotection-dlppermission-on-f-sys.md#onuninstalldlpsandbox).
 
 When the DLP management application exits or no longer needs to track sandbox status changes, unregister the listener to release resources.
 

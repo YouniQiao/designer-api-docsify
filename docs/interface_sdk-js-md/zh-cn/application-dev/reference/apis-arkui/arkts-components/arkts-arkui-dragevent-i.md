@@ -31,7 +31,7 @@ executeDropAnimation(customDropAnimation: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| customDropAnimation | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | 是 | 在此回调函数中实现自定义落位动效。   **说明：** 1. 该接口仅在onDrop回调中使用有效。  2.使用前需设置useCustomDropAnimation为true，否则该接口不生效。  3. 不要在动画callback中实现与动效无关的逻辑，避免影响执行效率。 |
+| customDropAnimation | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | 是 | 在此回调函数中实现自定义落位动效。<br> **说明：** <br>1. 该接口仅在onDrop回调中使用有效。<br> 2.使用前需设置useCustomDropAnimation为true，否则该接口不生效。<br> 3. 不要在动画callback中实现与动效无关的逻辑，避免影响执行效率。 |
 
 ## getData
 
@@ -170,7 +170,7 @@ getGlobalDisplayX(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回当前拖拽点相对于全局屏幕的左上角的X坐标。 |
+| number | 返回当前拖拽点相对于全局屏幕的左上角的X坐标。<br>单位：vp，取值范围：[0, +∞) |
 
 ## getGlobalDisplayY
 
@@ -192,7 +192,7 @@ getGlobalDisplayY(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回当前拖拽点相对于全局屏幕的左上角的Y坐标。 |
+| number | 返回当前拖拽点相对于全局屏幕的左上角的Y坐标。<br>单位：vp，取值范围：[0, +∞) |
 
 ## getModifierKeyState
 
@@ -214,7 +214,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | 是 | 获取功能键按压状态。报错信息请参考以下错误码。支持功能键 'Ctrl' \| 'Alt' \| 'Shift'。   **说明：**此接口不支持在手写笔场景下使用。 |
+| keys | Array&lt;string&gt; | 是 | 获取功能键按压状态。报错信息请参考以下错误码。支持功能键 'Ctrl' &#124; 'Alt' &#124; 'Shift'。<br>**说明：**<br>此接口不支持在手写笔场景下使用。 |
 
 **返回值：**
 
@@ -426,7 +426,7 @@ getX(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回当前拖拽点相对于窗口左上角的x轴坐标。 |
+| number | 返回当前拖拽点相对于窗口左上角的x轴坐标。<br>单位：vp |
 
 ## getY
 
@@ -450,7 +450,7 @@ getY(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回当前拖拽点相对于窗口左上角的y轴坐标。 |
+| number | 返回当前拖拽点相对于窗口左上角的y轴坐标。<br>单位：vp |
 
 ## isRemote
 
@@ -589,9 +589,9 @@ autoHideComponentUniqueIds?: number | number[]
 
 组件的uniqueId可通过[UIContext.getFrameNodeById()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getframenodebyid)配合[FrameNode.getUniqueId()](../arkts-apis/arkts-arkui-framenode-c.md#getuniqueid)获取。
 
-开发者应在[onDragEnd](arkts-arkui-commonmethod-c.md#ondragend)或onDrop中恢复组件显示状态。
+开发者应在[onDragEnd](arkts-arkui-commonmethod-c.md#ondragend)或[onDrop](arkts-arkui-commonmethod-c.md#ondrop)中恢复组件显示状态。
 
-**类型：** number \| number[]
+**类型：** number &#124; number[]
 
 **起始版本：** 26.0.0
 

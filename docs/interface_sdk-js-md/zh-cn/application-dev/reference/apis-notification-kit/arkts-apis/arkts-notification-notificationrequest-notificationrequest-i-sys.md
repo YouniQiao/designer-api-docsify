@@ -114,7 +114,7 @@ forceDistributed?: boolean
 
 通知是否强制进行全场景跨设备协同显示，默认为false。
 
-**说明：**:
+**说明：**
 
 仅当应用在跨设备协同管控名单中且notDistributed为false时，该字段才会生效。通过读取notification_config.json文件（文件配置路径见：[notification_config_parse.h] (https://gitcode.com/openharmony/notification_distributed_notification_service/blob/master/services/ans/include/notification_config_parse.h)中的NOTIFICATION_CONFIG_FILE属性）中的collaborationFilter字段，查看是否包含应用的UID或包名。如果包含，说明是在应用跨设备协同管控名单中。
 
@@ -183,7 +183,7 @@ notDistributed?: boolean
 
 通知是否不进行全场景跨设备协同显示，默认为false。
 
-**说明：**:
+**说明：**
 
 该字段与forceDistributed字段互斥，当两者同时为true时，仅notDistributed字段生效。
 

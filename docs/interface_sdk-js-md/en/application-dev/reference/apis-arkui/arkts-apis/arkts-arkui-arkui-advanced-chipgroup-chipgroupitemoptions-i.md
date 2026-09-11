@@ -2,7 +2,7 @@
 
 Defines the specific attributes of individual chips.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If **suffixIcon** is specified, **allowClose** has no effect.
 

@@ -14,7 +14,7 @@ function pairDevice(deviceId: string, callback: AsyncCallback<void>): void
 
 主动发起与对端蓝牙设备的配对流程。使用Callback异步回调。
 
-若开发者不知道目标设备的[地址类型](arkts-connectivity-common-bluetoothaddresstype-e.md)，建议调用此接口发起配对。蓝牙配对状态通过on('bondStateChange')的回调结果获取。
+若开发者不知道目标设备的[地址类型](arkts-connectivity-common-bluetoothaddresstype-e.md)，建议调用此接口发起配对。蓝牙配对状态通过[on('bondStateChange')](arkts-connectivity-connection-on-f.md#onbondstatechange)的回调结果获取。
 
 **起始版本：** 10
 
@@ -67,7 +67,7 @@ function pairDevice(deviceId: string): Promise<void>
 
 主动发起与对端蓝牙设备的配对流程。使用Promise异步回调。
 
-若开发者不知道目标设备的[地址类型](arkts-connectivity-common-bluetoothaddresstype-e.md)，建议调用此接口发起配对。蓝牙配对状态通过on('bondStateChange')的回调结果获取。
+若开发者不知道目标设备的[地址类型](arkts-connectivity-common-bluetoothaddresstype-e.md)，建议调用此接口发起配对。蓝牙配对状态通过[on('bondStateChange')](arkts-connectivity-connection-on-f.md#onbondstatechange)的回调结果获取。
 
 **起始版本：** 10
 
@@ -128,7 +128,7 @@ function pairDevice(deviceId: BluetoothAddress): Promise<void>
 
 主动发起与对端蓝牙设备的配对流程。使用Promise异步回调。
 
-若开发者已知目标设备的MAC地址及[地址类型](arkts-connectivity-common-bluetoothaddresstype-e.md)，建议调用此接口发起配对。蓝牙配对状态通过on('bondStateChange')的回调结果获取。
+若开发者已知目标设备的MAC地址及[地址类型](arkts-connectivity-common-bluetoothaddresstype-e.md)，建议调用此接口发起配对。蓝牙配对状态通过[on('bondStateChange')](arkts-connectivity-connection-on-f.md#onbondstatechange)的回调结果获取。
 
 **起始版本：** 21
 

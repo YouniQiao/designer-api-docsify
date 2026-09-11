@@ -34,7 +34,7 @@ Obtains the status monitor. This API is used to obtain the status monitor object
 
 | Type | Description |
 | --- | --- |
-| [StatusMonitor](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md) | Status monitor object. It can be used to query the template status ([getTemplateStatus]{ |
+| [StatusMonitor](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md) | Status monitor object. It can be used to query the template status ([getTemplateStatus](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md#gettemplatestatus)), subscribe to template changes ([onTemplateChange](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md#ontemplatechange)), subscribe to available device status changes ([onAvailableDeviceChange](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md#onavailabledevicechange)), and subscribe to continuous authentication status changes ([onContinuousAuthChange](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md#oncontinuousauthchange)). |
 
 **Error codes:**
 

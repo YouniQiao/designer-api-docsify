@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> 此参数必须与[unionMode](arkts-arkui-unioneffectcontainer-attribute.md#unionmode)一起使用，且unionMode须为UnionMode.GRAVITY_UNION，
+> 此参数必须与[unionMode](arkts-arkui-unioneffectcontainer-comp-attribute.md#unionmode)一起使用，且unionMode须为UnionMode.GRAVITY_UNION，
 > 同时useUnionEffect的value须为true时才生效，单独设置不生效。
 
 **起始版本：** 26.0.0

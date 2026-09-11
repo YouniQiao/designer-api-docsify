@@ -1,6 +1,6 @@
 # WifiWapiConfig
 
-Wi-Fi WAPI config.
+Wi-Fi WAPI config. @typedef WifiWapiConfig
 
 **Since:** 12
 

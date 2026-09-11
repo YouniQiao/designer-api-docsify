@@ -2,6 +2,8 @@
 
 Describes the capability of a partner device.
 
+@typedef DeviceCapability
+
 **Since:** 23
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core

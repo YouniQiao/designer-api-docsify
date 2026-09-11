@@ -53,4 +53,4 @@ Sets the styled string displayed in the rich text component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | Styled string to set.   **NOTE：**The child class [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) of **StyledString** can also serve as the argument. |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | Styled string to set.<br>**NOTE:**<br>The child class [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) of **StyledString** can also serve as the argument. |

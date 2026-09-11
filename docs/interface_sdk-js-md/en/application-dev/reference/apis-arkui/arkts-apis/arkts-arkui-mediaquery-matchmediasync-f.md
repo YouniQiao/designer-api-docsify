@@ -14,7 +14,7 @@ function matchMediaSync(condition: string): MediaQueryListener
 
 Sets the media query condition. This API returns the corresponding media query listener.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API is supported since API version 7 and deprecated since API version 18. You are advised to use
 > [matchMediaSync](arkts-arkui-arkui-uicontext-mediaquery-c.md#matchmediasync) instead. Before calling this API, you

@@ -30,7 +30,7 @@ constructor(buffer: ArrayBuffer | DataView, encoding?: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| DataView | 是 | 用于解析的XML文本数据所在的ArrayBuffer或DataView内存。 |
+| buffer | ArrayBuffer &#124; DataView | 是 | 用于解析的XML文本数据所在的ArrayBuffer或DataView内存。 |
 | encoding | string | 否 | 编码格式，默认'utf-8'（目前仅支持'utf-8'）。 |
 
 **示例**

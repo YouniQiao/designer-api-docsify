@@ -597,7 +597,7 @@ static sendData(...args: Object[]): void
 
 Sends data to the host thread and triggers the registered callback. Before calling this method, you need to construct a **Task** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The API should be called in the TaskPool thread.
 > 
@@ -696,7 +696,7 @@ setCloneList(cloneList: Object[] | ArrayBuffer[]): void
 
 Sets the task clone list. Before using this method, you need to construct a **Task** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API must be used together with the
 > [@Sendable decorator](../../../arkts-utils/arkts-sendable.md#sendable-decorator). Otherwise, an exception is
@@ -712,7 +712,7 @@ Sets the task clone list. Before using this method, you need to construct a **Ta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cloneList | Object[] \| ArrayBuffer[] | Yes | The type of the passed-in array must be [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types) or ArrayBuffer.   - All [Sendable class](../../../arkts-utils/arkts-sendable.md#sendable-class) instances or ArrayBuffer objects passed in to **cloneList** are transferred in copy mode between threads. This means that any modification to the destination objects does not affect the original objects. |
+| cloneList | Object[] &#124; ArrayBuffer[] | Yes | The type of the passed-in array must be [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types) or ArrayBuffer.<br>- All [Sendable class](../../../arkts-utils/arkts-sendable.md#sendable-class) instances or ArrayBuffer objects passed in to **cloneList** are transferred in copy mode between threads. This means that any modification to the destination objects does not affect the original objects. |
 
 **Error codes:**
 
@@ -857,7 +857,7 @@ setTransferList(transfer?: ArrayBuffer[]): void
 
 Sets the task transfer list. Before using this API, you must create a **Task** instance. If this API is not called, the ArrayBuffer in the data is transferred by default.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is used to set the task transfer list in the form of **ArrayBuffer** in the task pool. The
 > **ArrayBuffer** instance does not copy the content in the task to the worker thread during transfer. Instead,
@@ -923,7 +923,7 @@ console.info("testTransfer view3 byteLength: " + view1.byteLength);
 arguments?: Object[]
 ```
 
-Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types).This API can be used in atomic services since API version 11.
+Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types).<br> This API can be used in atomic services since API version 11.
 
 **Type:** Object[]
 
@@ -939,7 +939,7 @@ Arguments of the function. For details about the supported parameter types, see 
 cpuDuration: number
 ```
 
-CPU time of the task. in ms. You are advised not to change the value.This API can be used in atomic services since API version 11.
+CPU time of the task. in ms. You are advised not to change the value.<br> This API can be used in atomic services since API version 11.
 
 **Type:** number
 
@@ -957,7 +957,7 @@ CPU time of the task. in ms. You are advised not to change the value.This API ca
 function: Function
 ```
 
-Function to be passed in during task creation. For details about the supported return value types of the function, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types).This API can be used in atomic services since API version 11.
+Function to be passed in during task creation. For details about the supported return value types of the function, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types).<br> This API can be used in atomic services since API version 11.
 
 **Type:** Function
 
@@ -973,7 +973,7 @@ Function to be passed in during task creation. For details about the supported r
 ioDuration: number
 ```
 
-Asynchronous I/O time of the task. in ms. You are advised not to change the value.This API can be used in atomic services since API version 11.
+Asynchronous I/O time of the task. in ms. You are advised not to change the value.<br> This API can be used in atomic services since API version 11.
 
 **Type:** number
 
@@ -991,7 +991,7 @@ Asynchronous I/O time of the task. in ms. You are advised not to change the valu
 name: string
 ```
 
-Name of the task specified when the task is created. You are advised not to change the value.This API can be used in atomic services since API version 11.
+Name of the task specified when the task is created. You are advised not to change the value.<br> This API can be used in atomic services since API version 11.
 
 **Type:** string
 
@@ -1007,7 +1007,7 @@ Name of the task specified when the task is created. You are advised not to chan
 taskId: number
 ```
 
-Task ID, which is globally unique by default. You are advised not to change the value.This API can be used in atomic services since API version 18.
+Task ID, which is globally unique by default. You are advised not to change the value.<br> This API can be used in atomic services since API version 18.
 
 **Type:** number
 
@@ -1025,7 +1025,7 @@ Task ID, which is globally unique by default. You are advised not to change the 
 totalDuration: number
 ```
 
-Total execution time of the task. in ms. You are advised not to change the value.This API can be used in atomic services since API version 11.
+Total execution time of the task. in ms. You are advised not to change the value.<br> This API can be used in atomic services since API version 11.
 
 **Type:** number
 

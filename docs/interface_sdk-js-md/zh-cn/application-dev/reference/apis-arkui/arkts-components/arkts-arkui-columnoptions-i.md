@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
@@ -23,7 +23,7 @@ space?: string | number
 
 纵向布局元素垂直方向间距。
 
-space为负数或者[justifyContent](arkts-arkui-column-attribute.md#justifycontent)设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时，space不生效。
+space为负数或者[justifyContent](arkts-arkui-column-comp-attribute.md#justifycontent)设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时，space不生效。
 
 取值范围：[0, +∞)
 
@@ -37,7 +37,7 @@ space为负数或者[justifyContent](arkts-arkui-column-attribute.md#justifycont
 
 space取值是大于等于0的数字，或者可以转换为非负数字的字符串。
 
-**类型：** string \| number
+**类型：** string &#124; number
 
 **起始版本：** 7
 

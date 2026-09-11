@@ -30,7 +30,7 @@ Scans Wi-Fi hotspot.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the accessibility is succeed; returns `false` otherwise. |
 
 **Examples**
 

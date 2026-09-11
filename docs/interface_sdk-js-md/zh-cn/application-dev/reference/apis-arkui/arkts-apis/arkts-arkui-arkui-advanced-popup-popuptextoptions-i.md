@@ -46,7 +46,7 @@ string类型可选值：可以转化为数字的字符串（如'10'）或带长�
 
 number：取值范围(0,+∞)。为number类型时默认单位：fp。
 
-**类型：** number \| string \| [Resource](arkts-arkui-resource-t.md)
+**类型：** number &#124; string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 11
 
@@ -70,7 +70,7 @@ string类型仅支持number类型取值的字符串形式，例如“400”，�
 
 默认值：FontWeight.Regular
 
-**类型：** number \| [FontWeight](arkts-arkui-fontweight-e.md) \| string
+**类型：** number &#124; [FontWeight](arkts-arkui-fontweight-e.md) &#124; string
 
 **起始版本：** 11
 

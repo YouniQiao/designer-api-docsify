@@ -32,7 +32,7 @@ function convertFromContext(context: common.Context): SendableContext
 
 | 类型 | 说明 |
 | --- | --- |
-| [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | [SendableContext]{ |
+| [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | [SendableContext](arkts-ability-sendablecontext-i.md)对象。 |
 
 **错误码：**
 

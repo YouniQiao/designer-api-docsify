@@ -18,7 +18,7 @@ Sets the system date. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 10
 
-**Substitutes:** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md)(time: long, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md)(time: number, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.SET_TIME
 
@@ -39,7 +39,7 @@ Sets the system date. This API uses an asynchronous callback to return the resul
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameter types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. <br> 3. Parameter verification failed. |
 
 **Examples**
 
@@ -74,7 +74,7 @@ Sets the system date. This API uses a promise to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md)(time: long, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md)(time: number, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.SET_TIME
 
@@ -100,7 +100,7 @@ Sets the system date. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameter types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. <br> 3. Parameter verification failed. |
 
 **Examples**
 

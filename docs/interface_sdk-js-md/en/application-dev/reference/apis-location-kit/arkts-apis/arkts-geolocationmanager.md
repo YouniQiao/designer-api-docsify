@@ -98,10 +98,10 @@ import { geoLocationManager } from '@kit.LocationKit';
 | [isFusionFenceSupported](arkts-location-geolocationmanager-isfusionfencesupported-f-sys.md) | Check whether the fusion fence service is supported. |
 | [isLocationEnabledByUserId](arkts-location-geolocationmanager-islocationenabledbyuserid-f-sys.md) | Obtaining the location switch status of a specified user. |
 | [isLocationPrivacyConfirmed](arkts-location-geolocationmanager-islocationprivacyconfirmed-f-sys.md) | Querying location privacy protocol confirmation status. |
-| off | Stop WiFi/BT scanning and unsubscribe from WiFi/BT scanning information changes. |
-| off | Unsubscribe location icon status changed. |
-| on | Subscribe to changes in WiFi/BT scanning information, and use the WiFi/BT scanning information for localization. |
-| on | Subscribe location icon status changed. |
+| [off](arkts-location-geolocationmanager-off-f-sys.md#offlocatingrequireddatachange) | Stop WiFi/BT scanning and unsubscribe from WiFi/BT scanning information changes. |
+| [off](arkts-location-geolocationmanager-off-f-sys.md#offlocationiconstatuschange) | Unsubscribe location icon status changed. |
+| [on](arkts-location-geolocationmanager-on-f-sys.md#onlocatingrequireddatachange) | Subscribe to changes in WiFi/BT scanning information, and use the WiFi/BT scanning information for localization. |
+| [on](arkts-location-geolocationmanager-on-f-sys.md#onlocationiconstatuschange) | Subscribe location icon status changed. |
 | [removeFusionFence](arkts-location-geolocationmanager-removefusionfence-f-sys.md) | Remove a fusion fence. |
 | [setLocationPrivacyConfirmStatus](arkts-location-geolocationmanager-setlocationprivacyconfirmstatus-f-sys.md) | Set location privacy protocol confirmation status. |
 | [setLocationSwitchIgnored](arkts-location-geolocationmanager-setlocationswitchignored-f-sys.md) | Set the app locating behavior not controlled by the location switch. |

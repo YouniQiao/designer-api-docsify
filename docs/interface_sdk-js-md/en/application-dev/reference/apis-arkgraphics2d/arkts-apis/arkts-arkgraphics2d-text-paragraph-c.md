@@ -575,7 +575,7 @@ Obtains the line measurement information of a line.
 
 | Type | Description |
 | --- | --- |
-| [LineMetrics](arkts-arkgraphics2d-text-linemetrics-i.md) \| undefined | LineMetrics** object containing the measurement information if the specified line number is valid and the measurement information exists. If the line number is invalid or the measurement information cannot be obtained, **undefined** is returned. |
+| [LineMetrics](arkts-arkgraphics2d-text-linemetrics-i.md) &#124; undefined | LineMetrics** object containing the measurement information if the specified line number is valid and the measurement information exists. If the line number is invalid or the measurement information cannot be obtained, **undefined** is returned. |
 
 **Examples**
 
@@ -765,7 +765,7 @@ Obtains the style configuration of a paragraph.
 
 | Type | Description |
 | --- | --- |
-| [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | Style configuration of the paragraph. |
+| [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | Style configuration of the paragraph. <br>The `textStyle.color`, `textStyle.textShadows.color`, `textStyle.backgroundRect.color`, and `textStyle.decoration.color` properties return a 32-bit unsigned integer color value. Example: The return value `4278190080` corresponds to the pure black hexadecimal color value `0xFF000000`, which is equivalent to the [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) object parameters: alpha=255, red=0, green =0, blue=0. The example provides the numberToRGBA conversion method as a reference. |
 
 **Examples**
 
@@ -1024,7 +1024,7 @@ getVisibleTextRanges(): Array<Range>
 
 Obtains the range of text that is visible on the screen in a paragraph. Excludes text that is not displayed due to truncation by the maximum line count (the maxLines attribute of [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)) or replacement in ellipsis mode ([EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md)).
 
-**NOTE：**
+**NOTE:**
 
 The returned range depends on the specific truncation of the paragraph (for example, whether the maximum number of lines or ellipsis is set):
 

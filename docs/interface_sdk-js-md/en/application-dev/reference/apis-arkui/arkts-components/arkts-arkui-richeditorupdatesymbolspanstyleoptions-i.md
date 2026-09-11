@@ -21,7 +21,7 @@ Inherits [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.m
 symbolStyle: RichEditorSymbolSpanStyle
 ```
 
-Style of the symbol span.
+Style information of the SymbolSpan.
 
 **Type:** [RichEditorSymbolSpanStyle](arkts-arkui-richeditorsymbolspanstyle-i.md)
 

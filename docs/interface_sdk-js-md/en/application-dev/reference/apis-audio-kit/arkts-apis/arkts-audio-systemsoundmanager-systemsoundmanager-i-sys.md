@@ -600,7 +600,7 @@ Obtains a mock haptic ringtone player for playing vibration files and their corr
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md) \| null&gt; | Promise used to return a ringtone player instance, or null when an error happens. |
+| Promise&lt;[RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md) &#124; null&gt; | Promise used to return a ringtone player instance, or null when an error happens. |
 
 **Error codes:**
 
@@ -638,7 +638,7 @@ Obtains a mock haptic ringtone player for playing vibration files and their corr
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md) \| null&gt; | Promise used to return a ringtone player instance, or null when an error happens. |
+| Promise&lt;[RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md) &#124; null&gt; | Promise used to return a ringtone player instance, or null when an error happens. |
 
 **Error codes:**
 

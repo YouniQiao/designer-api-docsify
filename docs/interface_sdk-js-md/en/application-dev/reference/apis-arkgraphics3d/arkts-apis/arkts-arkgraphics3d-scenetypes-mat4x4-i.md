@@ -2,6 +2,8 @@
 
 A camera matrix, which is a mathematical tool for transforming 3D world coordinates into 2D image coordinates.
 
+@typedef Mat4x4
+
 **Since:** 23
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

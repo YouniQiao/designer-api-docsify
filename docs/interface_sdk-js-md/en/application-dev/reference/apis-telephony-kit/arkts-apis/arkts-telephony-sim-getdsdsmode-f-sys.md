@@ -75,7 +75,7 @@ Obtains the value of dsds mode.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[DsdsMode](arkts-telephony-sim-dsdsmode-e-sys.md)&gt; | Returns one of the following dsds mode states: &lt;ul&gt; &lt;li&gt;{ |
+| Promise&lt;[DsdsMode](arkts-telephony-sim-dsdsmode-e-sys.md)&gt; | Returns one of the following dsds mode states: &lt;ul&gt; &lt;li&gt;`DsdsMode#DSDS_MODE_V2` &lt;li&gt;`DsdsMode#DSDS_MODE_V3` &lt;li&gt;`DsdsMode#DSDS_MODE_V5_TDM` &lt;li&gt;`DsdsMode#DSDS_MODE_V5_DSDA` &lt;/ul&gt; |
 
 **Error codes:**
 

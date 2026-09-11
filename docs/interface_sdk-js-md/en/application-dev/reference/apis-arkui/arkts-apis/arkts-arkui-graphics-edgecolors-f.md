@@ -20,7 +20,7 @@ Generates an **edgeColors** object with the specified edge color for all edges.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| all | number | Yes | Edge color, in ARGB format, for example, **0xffff00ff**. Value range: [0, 0xffffffff] |
+| all | number | Yes | Edge color, in ARGB format, for example, **0xffff00ff**.<br>Value range: [0, 0xffffffff] |
 
 **Return value:**
 

@@ -26,7 +26,7 @@ Enables or disables static subscription for an app. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether static subscription is enabled.    **true**: enabled; **false**: disabled. |
+| enable | boolean | Yes | Whether static subscription is enabled.<br> **true**: enabled; **false**: disabled. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -73,7 +73,7 @@ Enables or disables static subscription for an app. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether static subscription is enabled.    **true**: enabled; **false**: disabled. |
+| enable | boolean | Yes | Whether static subscription is enabled.<br> **true**: enabled; **false**: disabled. |
 
 **Return value:**
 
@@ -123,7 +123,7 @@ Enables or disables static subscription to a common event for the current app. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether static subscription is enabled.    **true**: enabled; **false**: disabled. |
+| enable | boolean | Yes | Whether static subscription is enabled.<br> **true**: enabled; **false**: disabled. |
 | events | Array&lt;string&gt; | No | List of common event names to be set. By default, the list is empty, indicating that the status of all common events subscribed to in static mode by the current app is to be set. |
 
 **Return value:**

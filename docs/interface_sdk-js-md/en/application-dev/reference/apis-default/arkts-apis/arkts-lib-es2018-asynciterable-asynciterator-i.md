@@ -15,7 +15,7 @@ next(...args: [] | [TNext]): Promise<IteratorResult<T, TReturn>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| args | [] \| [TNext] | Yes |  |
+| args | [] &#124; [TNext] | Yes |  |
 
 **Return value:**
 
@@ -31,7 +31,7 @@ return?(value?: TReturn | PromiseLike<TReturn>): Promise<IteratorResult<T, TRetu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | TReturn \| PromiseLike&lt;TReturn&gt; | No |  |
+| value | TReturn &#124; PromiseLike&lt;TReturn&gt; | No |  |
 
 **Return value:**
 

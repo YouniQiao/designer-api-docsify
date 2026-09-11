@@ -16,7 +16,7 @@ operationType?: abilityWantAgent.OperationType
 
 Type of the operation to execute.
 
-**Type:** abilityWantAgent.OperationType
+**Type:** [abilityWantAgent.OperationType](../../apis-ability-kit/arkts-apis/arkts-app-ability-wantagent.md)
 
 **Since:** 20
 

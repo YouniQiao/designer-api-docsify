@@ -18,8 +18,6 @@ get size(): Vec3
 
 Width, height, and depth of the cube, indicating the size of the cube. The unit is the scene unit of the world coordinate system (such as cm, m, km, etc.).
 
-@return { Vec3 }
-
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 
 **Since:** 18

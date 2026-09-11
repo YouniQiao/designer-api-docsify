@@ -88,7 +88,7 @@ constructor(entries?: readonly (readonly [K, V])[] | null)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| entries | readonly (readonly [K, V])[] \| null | 否 | 键值对数组或其它可迭代对象。默认值为**null**，创建一个空Map对象。 |
+| entries | readonly (readonly [K, V])[] &#124; null | 否 | 键值对数组或其它可迭代对象。默认值为**null**，创建一个空Map对象。 |
 
 **错误码：**
 
@@ -268,7 +268,7 @@ get(key: K): V | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| V \| undefined | 与指定键相关联的元素，如果键在Map对象中找不到，则返回**undefined**。 |
+| V &#124; undefined | 与指定键相关联的元素，如果键在Map对象中找不到，则返回**undefined**。 |
 
 **错误码：**
 
@@ -345,7 +345,7 @@ put(key: K, value: V): V | undefined
 
 向该Map添加或更新一个指定的键值对，并返回该键之前关联的值。
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - 返回**undefined**时无法直接区分是键不存在还是键存在但值为**undefined**，可在使用本接口前先使用
 > **has**接口判断键是否存在，进而区分返回的**undefined**所属情况。
@@ -369,7 +369,7 @@ put(key: K, value: V): V | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| V \| undefined | 该键之前关联的值。如果键在Map对象中找不到，则返回**undefined**。 |
+| V &#124; undefined | 该键之前关联的值。如果键在Map对象中找不到，则返回**undefined**。 |
 
 **错误码：**
 
@@ -444,7 +444,7 @@ remove(key: K): V | undefined
 
 删除该Map中的指定键及其对应值。
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - 返回**undefined**时无法直接区分是键不存在还是键存在但值为**undefined**，可在使用本接口前先使用
 > **has**接口判断键是否存在，进而区分返回的**undefined**所属情况。
@@ -467,7 +467,7 @@ remove(key: K): V | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| V \| undefined | 被删除的值。如果键在Map对象中找不到，则返回**undefined**。 |
+| V &#124; undefined | 被删除的值。如果键在Map对象中找不到，则返回**undefined**。 |
 
 **错误码：**
 

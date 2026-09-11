@@ -63,13 +63,13 @@ at(index: number): number | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 要返回的Array元素的索引（从零开始），取值为整数。如果为负数，则从最后一个元素开始倒数。 |
+| index | number | 是 | 要返回的Array元素的索引（从零开始），取值为整数。<br>如果为负数，则从最后一个元素开始倒数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| number \| undefined | 指定下标的元素；如果不存在，则返回undefined。 |
+| number &#124; undefined | 指定下标的元素；如果不存在，则返回undefined。 |
 
 **错误码：**
 
@@ -168,7 +168,7 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Uint8ClampedArray的对象。 |
+| array | ArrayLike&lt;number&gt; &#124; ArrayBuffer | 是 | 用于构造ArkTS Uint8ClampedArray的对象。 |
 
 **错误码：**
 
@@ -391,7 +391,7 @@ find(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): number | unde
 
 | 类型 | 说明 |
 | --- | --- |
-| number \| undefined | 第一个满足条件的元素的值；如果所有元素都不满足条件，则返回undefined。 |
+| number &#124; undefined | 第一个满足条件的元素的值；如果所有元素都不满足条件，则返回undefined。 |
 
 **错误码：**
 
@@ -759,7 +759,7 @@ static of(...items: number[]): Uint8ClampedArray
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 新的ArkTS Uint8ClampedArray实例。可能的错误原因：1.必填参数未指定； |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 新的ArkTS Uint8ClampedArray实例。可能的错误原因：1.必填参数未指定；<br>2.参数类型不正确；3.参数校验失败。 |
 
 ## reduce
 
@@ -847,7 +847,7 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Cla
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 对Uint8ClampedArray中的每个元素调用的函数。 |
-| initialValue | U | 是 | 作为回调函数首次调用的第一个参数的值。如果未提供初始值，则使用Uint8ClampedArray的最后一个元素，并且回调函数将从倒数第二个元素开始调用。 |
+| initialValue | U | 是 | 作为回调函数首次调用的第一个参数的值。<br>如果未提供初始值，则使用Uint8ClampedArray的最后一个元素，<br>并且回调函数将从倒数第二个元素开始调用。 |
 
 **返回值：**
 

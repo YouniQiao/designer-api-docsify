@@ -1,6 +1,6 @@
 # WebResourceResponse
 
-WebResourceResponse是Web组件中表示HTTP响应并允许自定义网页资源响应的类。它在onHttpErrorReceive等事件中向应用提供服务器返回响应的状态码、状态描述、响应头、响应数据、编码、MIME类型等信息；在资源请求拦截场景中允许应用自定义响应的状态码、状态描述、响应头、响应数据、编码、MIME类型及数据就绪状态，从而由应用接管特定资源的返回内容。示例代码参考[onHttpErrorReceive事件](arkts-arkweb-web-attribute.md#onhttperrorreceive)。
+WebResourceResponse是Web组件中表示HTTP响应并允许自定义网页资源响应的类。它在onHttpErrorReceive等事件中向应用提供服务器返回响应的状态码、状态描述、响应头、响应数据、编码、MIME类型等信息；在资源请求拦截场景中允许应用自定义响应的状态码、状态描述、响应头、响应数据、编码、MIME类型及数据就绪状态，从而由应用接管特定资源的返回内容。示例代码参考[onHttpErrorReceive事件](arkts-arkweb-web-comp-attribute.md#onhttperrorreceive)。
 
 **起始版本：** 8
 
@@ -101,7 +101,7 @@ getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| string \| number \| ArrayBuffer \| Resource \| undefined | string返回HTML格式的字符串。 number返回文件句柄。 ArrayBuffer返回二进制数据。 Resource返回`\\$rawfile`资源。 如果没有可用数据，返回`undefined`。 |
+| string &#124; number &#124; ArrayBuffer &#124; Resource &#124; undefined | string返回HTML格式的字符串。 number返回文件句柄。 ArrayBuffer返回二进制数据。 Resource返回`\&#36;rawfile`资源。 如果没有可用数据，返回`undefined`。 |
 
 ## getResponseEncoding
 
@@ -239,7 +239,7 @@ setResponseData(data: string | number | Resource | ArrayBuffer): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | string \| number \| Resource \| ArrayBuffer | 是 | 要设置的资源响应数据。string表示HTML格式的字符串。number表示文件句柄，此句柄由系统的Web组件负责关闭。Resource表示应用rawfile目录下文件资源。ArrayBuffer表示资源的原始二进制数据。<br>**适用版本：** 11 |
+| data | string &#124; number &#124; Resource &#124; ArrayBuffer | 是 | 要设置的资源响应数据。string表示HTML格式的字符串。number表示文件句柄，此句柄由系统的Web组件负责关闭。Resource表示应用rawfile目录下文件资源。ArrayBuffer表示资源的原始二进制数据。<br>**适用版本：** 11 |
 
 ## setResponseEncoding
 
@@ -308,7 +308,7 @@ setResponseIsReady(IsReady: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| IsReady | boolean | 是 | 资源响应数据是否已经就绪。true表示资源响应数据已经就绪，false表示资源响应数据未就绪。如果数据是异步提供，需要显式设置为false。设置为非法值如null，undefined或者不设置都会被认为数据已经准备好。 |
+| IsReady | boolean | 是 | 资源响应数据是否已经就绪。<br>true表示资源响应数据已经就绪，false表示资源响应数据未就绪。<br>如果数据是异步提供，需要显式设置为false。设置为非法值如null，undefined或者不设置都会被认为数据已经准备好。 |
 
 ## setResponseMimeType
 

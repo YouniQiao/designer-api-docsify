@@ -2,7 +2,7 @@
 
 The **ArcAlphabetIndexer** component is an arc-shaped component designed for quick navigation through alphabetically sorted items. It can be integrated with container components to quickly locate items within the visible area.
 
-> **NOTE：**
+> **NOTE:**
 
 > - This component can be used on phones, PCs, 2-in-1 devices, tablets, TVs, and wearables. In API version 22 and
 > earlier versions, a compilation warning will be reported when this component is used on phones, PCs, 2-in-1
@@ -42,4 +42,3 @@ Creates an instance of the **ArcAlphabetIndexer** component with initialization 
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |

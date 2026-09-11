@@ -2,7 +2,7 @@
 
 Registers the callback capability with the system ability (SA). This API is used in the **registerPlugin** API.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > [registerPlugin](arkts-dataprotection-dlppermission-dlpconnmanager-c.md#registerplugin) requires identical parameters to this API.
 > [connectServer](#connectserver) is called by the SA and the parameters are
@@ -28,7 +28,7 @@ This API is called by the SA. After the request of connecting to the cloud serve
 
 This API can be used in enterprise account authentication and cloud permission verification to enable communication between the SA and the cloud server.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > **connectServer** indicates a call from the system capability side to the frontend.
 

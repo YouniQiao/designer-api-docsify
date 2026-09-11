@@ -6,6 +6,8 @@ declare type PX = `${number}px`
 
 Defines the length property with number in units of px.
 
+@typedef { `\${number}px` } PX
+
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.

@@ -50,7 +50,7 @@ signal: AbortSignal<T> | null
 
 The object used to abort the async operation. If signal.aborted is true, the callback will not be called.
 
-**Type:** [AbortSignal](arkts-arkts-locks-abortsignal-c.md)&lt;T&gt; \| null
+**Type:** [AbortSignal](arkts-arkts-locks-abortsignal-c.md)&lt;T&gt; &#124; null
 
 **Since:** 12
 

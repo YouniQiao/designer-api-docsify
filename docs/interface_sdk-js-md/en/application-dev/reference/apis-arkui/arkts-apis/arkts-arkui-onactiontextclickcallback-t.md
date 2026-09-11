@@ -4,7 +4,7 @@
 declare type OnActionTextClickCallback = () => void
 ```
 
-Declare the callback function type to be called when clicking the icon button.
+Declare the callback function type to be called when clicking the icon button. @typedef { function } OnActionTextClickCallback
 
 **Since:** 26.0.0
 

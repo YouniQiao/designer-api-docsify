@@ -6,7 +6,7 @@ XmlDynamicSerializer类用于动态生成XML字符串。当无法确定XML内容
 > 
 > 使用该类构造的对象无需自行创建ArrayBuffer，程序动态扩容，可以不断添加XML元素，最终序列化结果字符串长度上限为100000。
 
-**起始版本：** 20
+**起始版本：** 23
 
 **系统能力：** SystemCapability.Utils.Lang
 

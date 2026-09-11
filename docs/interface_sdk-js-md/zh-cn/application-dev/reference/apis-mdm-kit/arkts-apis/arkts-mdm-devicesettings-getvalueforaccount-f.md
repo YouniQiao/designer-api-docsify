@@ -28,13 +28,13 @@ function getValueForAccount(admin: Want, item: SettingsItem, accountId: number):
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | item | [SettingsItem](arkts-mdm-devicesettings-settingsitem-e.md) | 是 | 设备设置策略类型。支持的策略类型包括：DEVICE_NAME（设备名称）、FLOATING_NAVIGATION（三键导航）。 |
-| accountId | number | 是 | 用户ID，取值范围：大于等于0。accountId可以通过[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
+| accountId | number | 是 | 用户ID，取值范围：大于等于0。<br>accountId可以通过[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 策略类型值。 |
+| string | 策略类型值。<br>当item为[SettingsItem.DEVICE_NAME](arkts-mdm-devicesettings-settingsitem-e.md)时，返回当前用户的设备名称，查询非当前用户的设备名称返回9200012错误码。 <br>当item为[SettingsItem.FLOATING_NAVIGATION](arkts-mdm-devicesettings-settingsitem-e.md)时，返回指定用户的三键导航的开关状态。<br>当item为[SettingsItem.FLOATING_NAVIGATION](arkts-mdm-devicesettings-settingsitem-e.md)时，该接口在Phone和Tablet设备中可正常调用，在其他设备中返回801错误码。 |
 
 **错误码：**
 

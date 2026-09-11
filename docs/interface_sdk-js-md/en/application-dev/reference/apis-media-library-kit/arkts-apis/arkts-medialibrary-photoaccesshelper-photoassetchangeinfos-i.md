@@ -20,7 +20,7 @@ assetChangeDatas: PhotoAssetChangeData[] | null
 
 Array of changed media assets. If all media assets need to be queried again, **assetChangeDatas** is null.
 
-**Type:** [PhotoAssetChangeData](arkts-medialibrary-photoaccesshelper-photoassetchangedata-i.md)[] \| null
+**Type:** [PhotoAssetChangeData](arkts-medialibrary-photoaccesshelper-photoassetchangedata-i.md)[] &#124; null
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ isForRecheck: boolean
 
 Whether the application should query all media assets again. **true** if the application should query all assets again, **false** otherwise.
 
-**NOTE：**
+**NOTE:**
 
 In scenarios involving bulk asset operations or abnormal notifications, **isForRecheck** will be **true**. In this case, the application should query all assets again.
 

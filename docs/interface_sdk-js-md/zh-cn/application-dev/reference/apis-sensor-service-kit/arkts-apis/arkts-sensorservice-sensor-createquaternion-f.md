@@ -24,7 +24,7 @@ function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback
 
 **废弃版本：** 9
 
-**替代接口：** [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md)(rotationVector: Array&lt;double&gt;, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
+**替代接口：** [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md)(rotationVector: Array&lt;number&gt;, callback: AsyncCallback&lt;Array&lt;number&gt;&gt;)
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -71,7 +71,7 @@ function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>
 
 **废弃版本：** 9
 
-**替代接口：** [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md)(rotationVector: Array&lt;double&gt;)
+**替代接口：** [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md)(rotationVector: Array&lt;number&gt;)
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

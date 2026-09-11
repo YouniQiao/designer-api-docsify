@@ -38,7 +38,7 @@ function connectServiceExtensionAbility(context: AgentExtensionContext, want: Wa
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回一个连接ID，用于标识当前AgentExtensionAbility与ServiceExtensionAbility之间的连接。该连接ID可用于后续调用[disconnectServiceExtensionAbility]{ |
+| number | 返回一个连接ID，用于标识当前AgentExtensionAbility与ServiceExtensionAbility之间的连接。该连接ID可用于后续调用[disconnectServiceExtensionAbility](arkts-ability-agentmanager-disconnectserviceextensionability-f-sys.md)接口断开连接。 |
 
 **错误码：**
 

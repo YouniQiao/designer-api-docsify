@@ -2,6 +2,8 @@
 
 定义可弹出菜单的组件的位置。
 
+@typedef MenuPosition
+
 **起始版本：** 22
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast

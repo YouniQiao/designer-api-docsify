@@ -88,7 +88,7 @@ Binds a buffer to a target
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The target to bind the buffer to |
-| buffer | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes | The buffer to bind |
+| buffer | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) &#124; null | Yes | The buffer to bind |
 
 ## bindFramebuffer
 
@@ -109,7 +109,7 @@ Binds a framebuffer to a target
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The target to bind the framebuffer to |
-| framebuffer | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | Yes | The framebuffer to bind |
+| framebuffer | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) &#124; null | Yes | The framebuffer to bind |
 
 ## bindRenderbuffer
 
@@ -130,7 +130,7 @@ Binds a renderbuffer to a target
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The target to bind the renderbuffer to |
-| renderbuffer | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes | The renderbuffer to bind |
+| renderbuffer | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) &#124; null | Yes | The renderbuffer to bind |
 
 ## bindTexture
 
@@ -151,7 +151,7 @@ Binds a texture to a target
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The target to bind the texture to |
-| texture | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes | The texture to bind |
+| texture | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) &#124; null | Yes | The texture to bind |
 
 ## blendColor
 
@@ -462,7 +462,7 @@ Creates a buffer
 
 | Type | Description |
 | --- | --- |
-| [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | The created buffer |
+| [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) &#124; null | The created buffer |
 
 ## createFramebuffer
 
@@ -482,7 +482,7 @@ Creates a framebuffer
 
 | Type | Description |
 | --- | --- |
-| [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | The created framebuffer |
+| [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) &#124; null | The created framebuffer |
 
 ## createProgram
 
@@ -502,7 +502,7 @@ Creates a program
 
 | Type | Description |
 | --- | --- |
-| [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | The created program |
+| [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) &#124; null | The created program |
 
 ## createRenderbuffer
 
@@ -522,7 +522,7 @@ Creates a renderbuffer
 
 | Type | Description |
 | --- | --- |
-| [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | The created renderbuffer |
+| [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) &#124; null | The created renderbuffer |
 
 ## createShader
 
@@ -548,7 +548,7 @@ Creates a shader
 
 | Type | Description |
 | --- | --- |
-| [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) \| null | The created shader |
+| [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) &#124; null | The created shader |
 
 ## createTexture
 
@@ -568,7 +568,7 @@ Creates a texture
 
 | Type | Description |
 | --- | --- |
-| [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | The created texture |
+| [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) &#124; null | The created texture |
 
 ## cullFace
 
@@ -608,7 +608,7 @@ Deletes a buffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes | The buffer to delete |
+| buffer | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) &#124; null | Yes | The buffer to delete |
 
 ## deleteFramebuffer
 
@@ -628,7 +628,7 @@ Deletes a framebuffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| framebuffer | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | Yes | The framebuffer to delete |
+| framebuffer | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) &#124; null | Yes | The framebuffer to delete |
 
 ## deleteProgram
 
@@ -648,7 +648,7 @@ Deletes a program
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | Yes | The program to delete |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) &#124; null | Yes | The program to delete |
 
 ## deleteRenderbuffer
 
@@ -668,7 +668,7 @@ Deletes a renderbuffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| renderbuffer | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes | The renderbuffer to delete |
+| renderbuffer | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) &#124; null | Yes | The renderbuffer to delete |
 
 ## deleteShader
 
@@ -688,7 +688,7 @@ Deletes a shader
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) \| null | Yes | The shader to delete |
+| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) &#124; null | Yes | The shader to delete |
 
 ## deleteTexture
 
@@ -708,7 +708,7 @@ Deletes a texture
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| texture | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes | The texture to delete |
+| texture | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) &#124; null | Yes | The texture to delete |
 
 ## depthFunc
 
@@ -971,7 +971,7 @@ Attaches a renderbuffer to a framebuffer
 | target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Framebuffer target |
 | attachment | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Attachment point |
 | renderbuffertarget | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Renderbuffer target |
-| renderbuffer | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes | The renderbuffer to attach |
+| renderbuffer | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) &#124; null | Yes | The renderbuffer to attach |
 
 ## framebufferTexture2D
 
@@ -1000,7 +1000,7 @@ Attaches a texture to a framebuffer
 | target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Framebuffer target |
 | attachment | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Attachment point |
 | textarget | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
-| texture | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes | The texture to attach |
+| texture | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) &#124; null | Yes | The texture to attach |
 | level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
 
 ## frontFace
@@ -1068,7 +1068,7 @@ Returns information about an active attribute
 
 | Type | Description |
 | --- | --- |
-| [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) \| null | Information about the active attribute |
+| [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) &#124; null | Information about the active attribute |
 
 ## getActiveUniform
 
@@ -1095,7 +1095,7 @@ Returns information about an active uniform
 
 | Type | Description |
 | --- | --- |
-| [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) \| null | Information about the active uniform |
+| [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) &#124; null | Information about the active uniform |
 
 ## getAttachedShaders
 
@@ -1121,7 +1121,7 @@ Returns the shaders attached to a program
 
 | Type | Description |
 | --- | --- |
-| [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md)[] \| null | Array of attached shaders |
+| [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md)[] &#124; null | Array of attached shaders |
 
 ## getAttribLocation
 
@@ -1195,7 +1195,7 @@ Returns the WebGLContextAttributes for the current context
 
 | Type | Description |
 | --- | --- |
-| [WebGLContextAttributes](arkts-arkgraphics2d-webgl-webglcontextattributes-i.md) \| null | The WebGLContextAttributes object |
+| [WebGLContextAttributes](arkts-arkgraphics2d-webgl-webglcontextattributes-i.md) &#124; null | The WebGLContextAttributes object |
 
 ## getError
 
@@ -1321,7 +1321,7 @@ Returns the program info log
 
 | Type | Description |
 | --- | --- |
-| string \| null | The program info log |
+| string &#124; null | The program info log |
 
 ## getProgramParameter
 
@@ -1401,7 +1401,7 @@ Returns the shader info log
 
 | Type | Description |
 | --- | --- |
-| string \| null | The shader info log |
+| string &#124; null | The shader info log |
 
 ## getShaderParameter
 
@@ -1455,7 +1455,7 @@ Returns the shader precision format
 
 | Type | Description |
 | --- | --- |
-| [WebGLShaderPrecisionFormat](arkts-arkgraphics2d-webgl-webglshaderprecisionformat-i.md) \| null | The precision format |
+| [WebGLShaderPrecisionFormat](arkts-arkgraphics2d-webgl-webglshaderprecisionformat-i.md) &#124; null | The precision format |
 
 ## getShaderSource
 
@@ -1481,7 +1481,7 @@ Returns the shader source
 
 | Type | Description |
 | --- | --- |
-| string \| null | The shader source |
+| string &#124; null | The shader source |
 
 ## getSupportedExtensions
 
@@ -1501,7 +1501,7 @@ Returns a list of supported extensions
 
 | Type | Description |
 | --- | --- |
-| string[] \| null | List of supported extensions |
+| string[] &#124; null | List of supported extensions |
 
 ## getTexParameter
 
@@ -1582,7 +1582,7 @@ Returns the location of a uniform variable
 
 | Type | Description |
 | --- | --- |
-| [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | The uniform location |
+| [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | The uniform location |
 
 ## getVertexAttrib
 
@@ -1677,7 +1677,7 @@ Returns whether a buffer is valid
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes | The buffer |
+| buffer | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) &#124; null | Yes | The buffer |
 
 **Return value:**
 
@@ -1749,7 +1749,7 @@ Returns whether a framebuffer is valid
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| framebuffer | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | Yes | The framebuffer |
+| framebuffer | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) &#124; null | Yes | The framebuffer |
 
 **Return value:**
 
@@ -1775,7 +1775,7 @@ Returns whether a program is valid
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | Yes | The program |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) &#124; null | Yes | The program |
 
 **Return value:**
 
@@ -1801,7 +1801,7 @@ Returns whether a renderbuffer is valid
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| renderbuffer | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes | The renderbuffer |
+| renderbuffer | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) &#124; null | Yes | The renderbuffer |
 
 **Return value:**
 
@@ -1827,7 +1827,7 @@ Returns whether a shader is valid
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) \| null | Yes | The shader |
+| shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) &#124; null | Yes | The shader |
 
 **Return value:**
 
@@ -1853,7 +1853,7 @@ Returns whether a texture is valid
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| texture | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes | The texture |
+| texture | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) &#124; null | Yes | The texture |
 
 **Return value:**
 
@@ -1920,7 +1920,7 @@ Sets pixel storage parameters
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
-| param | [GLint](arkts-arkgraphics2d-glint-t.md) \| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Parameter value |
+| param | [GLint](arkts-arkgraphics2d-glint-t.md) &#124; [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Parameter value |
 
 ## polygonOffset
 
@@ -2228,7 +2228,7 @@ Sets a uniform1f value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
 
 ## uniform1i
@@ -2249,7 +2249,7 @@ Sets a uniform1i value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X value |
 
 ## uniform2f
@@ -2270,7 +2270,7 @@ Sets a uniform2f value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
 | y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Y value |
 
@@ -2292,7 +2292,7 @@ Sets a uniform2i value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X value |
 | y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y value |
 
@@ -2314,7 +2314,7 @@ Sets a uniform3f value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
 | y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Y value |
 | z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Z value |
@@ -2337,7 +2337,7 @@ Sets a uniform3i value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X value |
 | y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y value |
 | z | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Z value |
@@ -2360,7 +2360,7 @@ Sets a uniform4f value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
 | y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Y value |
 | z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Z value |
@@ -2384,7 +2384,7 @@ Sets a uniform4i value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X value |
 | y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y value |
 | z | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Z value |
@@ -2408,7 +2408,7 @@ Uses a program
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | Yes | The program to use |
+| program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) &#124; null | Yes | The program to use |
 
 ## validateProgram
 
@@ -3147,7 +3147,7 @@ readonly canvas: HTMLCanvasElement | OffscreenCanvas
 
 The canvas element
 
-**Type:** HTMLCanvasElement \| OffscreenCanvas
+**Type:** HTMLCanvasElement &#124; OffscreenCanvas
 
 **Since:** 7
 

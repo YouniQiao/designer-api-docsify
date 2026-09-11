@@ -13,6 +13,7 @@ WebNativeMessagingExtensionAbility is a base class for web native message commun
  manage pipe read/write operations, permission verification, and the Ability lifecycle on its own.
 
 
+
 ## Modules to Import
 
 ```TypeScript

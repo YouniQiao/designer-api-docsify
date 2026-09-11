@@ -32,7 +32,7 @@ getReusePool(): IReusePool | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [IReusePool](arkts-arkui-arkui-statemanagement-ireusepool-i.md) \| undefined | 当前组件配置全局复用池时，返回复用池信息，否则返回`undefined`。 |
+| [IReusePool](arkts-arkui-arkui-statemanagement-ireusepool-i.md) &#124; undefined | 当前组件配置全局复用池时，返回复用池信息，否则返回`undefined`。 |
 
 **示例**
 

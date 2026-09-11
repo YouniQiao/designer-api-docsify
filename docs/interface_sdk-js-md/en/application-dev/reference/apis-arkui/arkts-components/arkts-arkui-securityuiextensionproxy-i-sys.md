@@ -80,7 +80,7 @@ Subscribes to the callback triggered for asynchronous registration of the starte
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'asyncReceiverRegister' | Yes | The value is fixed to **asyncReceiverRegister**, indicating a subscription to the callback triggered for asynchronous registration of the extended ability. |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | Yes | Callback triggered after the extension ability registers a setReceiveDataCallback. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | Yes | Callback triggered after the extension ability registers a [setReceiveDataCallback](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md#setreceivedatacallback). |
 
 ## on('syncReceiverRegister')
 
@@ -103,7 +103,7 @@ Subscribes to the callback triggered for synchronous registration of the started
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'syncReceiverRegister' | Yes | The value is fixed to **syncReceiverRegister**, indicating subscription to the asynchronous registration of the extension ability. |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | Yes | Callback triggered after the extension ability registers a setReceiveDataForResultCallback. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | Yes | Callback triggered after the extension ability registers a [setReceiveDataForResultCallback](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md#setreceivedataforresultcallback). |
 
 ## send
 

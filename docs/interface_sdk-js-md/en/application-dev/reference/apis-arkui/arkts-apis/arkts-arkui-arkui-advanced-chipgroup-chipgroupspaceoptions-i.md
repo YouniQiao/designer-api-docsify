@@ -58,7 +58,7 @@ Unit: vp
 
 If the value is **undefined**, the default value is used.
 
-**Type:** string \| number
+**Type:** string &#124; number
 
 **Since:** 12
 

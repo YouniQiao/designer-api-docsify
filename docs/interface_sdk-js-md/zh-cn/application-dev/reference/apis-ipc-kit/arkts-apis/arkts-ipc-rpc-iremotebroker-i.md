@@ -28,7 +28,7 @@ asObject(): IRemoteObject
 
 | 类型 | 说明 |
 | --- | --- |
-| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 如果调用者是RemoteObject对象，则直接返回本身；如果调用者是[RemoteProxy]{ |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 如果调用者是RemoteObject对象，则直接返回本身；如果调用者是[RemoteProxy](arkts-ipc-rpc-remoteproxy-c.md)对象，则返回它的持有者[IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)。 |
 
 **示例**
 

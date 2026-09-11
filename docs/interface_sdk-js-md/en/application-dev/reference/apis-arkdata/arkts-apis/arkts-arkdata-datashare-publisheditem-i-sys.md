@@ -22,7 +22,7 @@ data: string | ArrayBuffer
 
 Data to publish. If the data to publish exceeds 20 KB, you are advised to use the data in ArrayBuffer format.
 
-**Type:** string \| ArrayBuffer
+**Type:** string &#124; ArrayBuffer
 
 **Since:** 10
 

@@ -201,7 +201,7 @@ getLocalAddress(): Promise<NetAddress>
 
 Obtains the local socket address of a **UDPSocket** connection. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **bind** is successfully called.
 
@@ -255,7 +255,7 @@ getSocketFd(): Promise<number>
 
 Obtains the UDPSocket file descriptor. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API can be called only after
 > [bind](#bind) is successfully called.
@@ -317,7 +317,7 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 
 Obtains the status of the UDP socket connection. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **bind** is successfully called.
 
@@ -374,7 +374,7 @@ getState(): Promise<SocketStateBase>
 
 Obtains the status of the UDP socket connection. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **bind** is successfully called.
 
@@ -437,7 +437,7 @@ Unsubscribes from **message** events of the **UDPSocket** object. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'message' | Yes | Event type.    **message**: message receiving event. |
+| type | 'message' | Yes | Event type.<br> **message**: message receiving event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
 
 **Examples**
@@ -480,7 +480,7 @@ Unsubscribes from **listening** events or **close** events of the **UDPSocket** 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'listening' \| 'close' | Yes | Event type.    - **listening**: data packet message event.    - **close**: close event. |
+| type | 'listening' &#124; 'close' | Yes | Event type.<br>- **listening**: data packet message event. <br>- **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
@@ -522,7 +522,7 @@ Unsubscribes from **listening** events or **close** events of the **UDPSocket** 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'listening' \| 'close' | Yes | Event type.    - **listening**: data packet message event.    - **close**: close event. |
+| type | 'listening' &#124; 'close' | Yes | Event type.<br>- **listening**: data packet message event. <br>- **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
@@ -545,7 +545,7 @@ Unsubscribes from **error** events of the **UDPSocket** object. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type.    **error**: error event. |
+| type | 'error' | Yes | Event type.<br> **error**: error event. |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
@@ -580,7 +580,7 @@ Subscribes to **message** events of the **UDPSocket** object. This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'message' | Yes | Event type.    **message**: message receiving event. |
+| type | 'message' | Yes | Event type.<br> **message**: message receiving event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
 
 **Examples**
@@ -620,7 +620,7 @@ Subscribes to **listening** events or **close** events of the **UDPSocket** obje
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'listening' \| 'close' | Yes | Event type.   - **listening**: data packet message event.    - **close**: close event. |
+| type | 'listening' &#124; 'close' | Yes | Event type.<br> <br>- **listening**: data packet message event. <br>- **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
@@ -654,7 +654,7 @@ Subscribes to **listening** events or **close** events of the **UDPSocket** obje
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'listening' \| 'close' | Yes | Event type.   - **listening**: data packet message event.    - **close**: close event. |
+| type | 'listening' &#124; 'close' | Yes | Event type.<br> <br>- **listening**: data packet message event. <br>- **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
@@ -677,7 +677,7 @@ Subscribes to **error** events of the **UDPSocket** object. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type.    **error**: error event. |
+| type | 'error' | Yes | Event type.<br> **error**: error event. |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the result. |
 
 **Examples**
@@ -937,7 +937,7 @@ setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void
 
 Sets other properties of the **UDPSocket** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **bind** is successfully called.
 
@@ -952,7 +952,7 @@ Sets other properties of the **UDPSocket** object. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md) | Yes | Other properties of the **UDPSocket** object. For details, see [UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -1004,7 +1004,7 @@ setExtraOptions(options: UDPExtraOptions): Promise<void>
 
 Sets other properties of the **UDPSocket** object. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **bind** is successfully called.
 

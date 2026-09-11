@@ -39,7 +39,7 @@ A maximum of 400 contacts can be synchronized at a time. The caller must be runn
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Returns the array of contacts creation results. Valid contact ID (which can be obtained by { |
+| Promise&lt;Array&lt;number&gt;&gt; | Returns the array of contacts creation results. Valid contact ID (which can be obtained by getId) indicates that the creation was successful. [INVALID_CONTACT_ID](arkts-contacts-contact-contact-c.md#invalid_contact_id) indicates the creation failed. |
 
 **Error codes:**
 

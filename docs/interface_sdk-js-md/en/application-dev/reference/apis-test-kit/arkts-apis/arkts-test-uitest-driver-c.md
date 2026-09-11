@@ -232,7 +232,7 @@ Creates a **Driver** object and returns the object created. This API is a static
 
 | Type | Description |
 | --- | --- |
-| [Driver](arkts-test-uitest-driver-c.md) | { |
+| [Driver](arkts-test-uitest-driver-c.md) | [Driver](arkts-test-uitest-driver-c.md)** object created. |
 
 **Error codes:**
 
@@ -312,7 +312,7 @@ Injects a crown rotation event. You can specify the rotation speed. This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | d | number | Yes | Number of rotation ticks. A positive value indicates rotation, and a negative value indicates counterclockwise rotation. The value must be an integer. If the value is not an integer, error code 401 is returned. |
-| speed | number | No | Rotation speed. Unit: ticks/s. Value range: [1, 500] If the value is a non-negative number that is not within the specified range or is null or undefined, the default value 20 is used. Throws error code 17000007 if negative. Default value: 20 |
+| speed | number | No | Rotation speed.<br>Unit: ticks/s. <br>Value range: [1, 500] <br>If the value is a non-negative number that is not within the specified range or is null or undefined, the default value 20 is used. <br>Throws error code 17000007 if negative. <br>Default value: 20 |
 
 **Return value:**
 
@@ -509,7 +509,7 @@ Drags from the start coordinate point to the target coordinate point. This metho
 | starty | number | Yes | Vertical coordinate of the start point, in pixels. The value is an integer greater than or equal to 0. |
 | endx | number | Yes | Horizontal coordinate of the end point, in pixels. The value is an integer greater than or equal to 0. |
 | endy | number | Yes | Vertical coordinate of the end point, in pixels. The value is an integer greater than or equal to 0. |
-| speed | number | No | Drag speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used. Value range:[200, 40000] Unit: px/s. Throws error code 401 if negative. Default value: 600 |
+| speed | number | No | Drag speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used.<br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 401 if negative. <br>Default value: 600 |
 
 **Return value:**
 
@@ -557,8 +557,8 @@ Drags from the start point to the target point. You can specify the drag speed a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
-| to | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs.    **Note：**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
-| speed | number | No | Drag speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used. Value range:[200, 40000] Unit: px/s. Throws error code 17000007 if negative. Default value: 600 |
+| to | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs.<br> **Note:** The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
+| speed | number | No | Drag speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used.<br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 17000007 if negative. <br>Default value: 600 |
 | duration | number | No | Click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, the 17000007 error code is thrown. If the value is **null** or **undefined**, the default value is used. |
 
 **Return value:**
@@ -662,7 +662,7 @@ Dumps the current layout information and saves it as a JSON file. This method is
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | savePath | string | Yes | the path where to store the json, must be in the application sandbox directory. The path must be the [sandbox path](../../../file-management/app-sandbox-directory.md) of the current application. |
-| displayId | number | No | Display ID. The default value is the default screen ID of the device.    **Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. |
+| displayId | number | No | Display ID. The default value is the default screen ID of the device.<br> **Note:** If the input **displayId** does not exist, the exception **17000007** is reported. |
 
 **Return value:**
 
@@ -716,7 +716,7 @@ Searches for the target component based on the specified attributes. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; | Promise used to return the { |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; | Promise used to return the [Component](arkts-test-uitest-component-c.md) or undefined. |
 
 **Error codes:**
 
@@ -765,7 +765,7 @@ Searches for all matched components based on the specified attributes and saves 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[Component](arkts-test-uitest-component-c.md)&gt;&gt; | Promise used to return the list of { |
+| Promise&lt;Array&lt;[Component](arkts-test-uitest-component-c.md)&gt;&gt; | Promise used to return the list of [Component](arkts-test-uitest-component-c.md)s. |
 
 **Error codes:**
 
@@ -814,7 +814,7 @@ Searches for a window based on the specified attributes. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[UiWindow](arkts-test-uitest-uiwindow-c.md)&gt; | Promise used to return the target { |
+| Promise&lt;[UiWindow](arkts-test-uitest-uiwindow-c.md)&gt; | Promise used to return the target [UiWindow](arkts-test-uitest-uiwindow-c.md). |
 
 **Error codes:**
 
@@ -857,8 +857,8 @@ Simulates a fling operation. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the point where the finger touches the screen. |
 | to | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the point where the finger leaves the screen. |
-| stepLen | number | Yes | Sliding step length, in pixels. If the value is a negative number, error code 401 is returned. Unit: px |
-| speed | number | Yes | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used. Value range:[200, 40000] Unit: px/s. Throws error code 17000007 if negative. Default value: 600 |
+| stepLen | number | Yes | Sliding step length, in pixels. If the value is a negative number, error code 401 is returned.<br>Unit: px |
+| speed | number | Yes | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used.<br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 17000007 if negative. <br>Default value: 600 |
 
 **Return value:**
 
@@ -906,7 +906,7 @@ Simulates a fling operation with the specified direction and speed. This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | Yes | Direction of the fling operation. |
-| speed | number | Yes | Swipe speed. Value range:[200, 40000] Unit: px/s. Throws error code 401 if negative. Default value: 600 |
+| speed | number | Yes | Swipe speed.<br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 401 if negative. <br>Default value: 600 |
 
 **Return value:**
 
@@ -954,8 +954,8 @@ Simulates a fling operation on a specified display with the specified direction 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | Yes | Direction of the fling operation. |
-| speed | number | Yes | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used. Value range:[200, 40000] Unit: px/s. Throws error code 401 if negative. Default value: 600 |
-| displayId | number | Yes | Display ID. The value is an integer greater than or equal to 0.    **Note：**: If the input **displayId** does not exist, the exception **401** is reported. |
+| speed | number | Yes | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used.<br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 401 if negative. <br>Default value: 600 |
+| displayId | number | Yes | Display ID. The value is an integer greater than or equal to 0.<br> **Note:** If the input **displayId** does not exist, the exception **401** is reported. |
 
 **Return value:**
 
@@ -990,7 +990,7 @@ getDisplayDensity(): Promise<Point>
 
 Obtains the display density of the current device. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This method can only be used to obtain the display density of the home screen. To obtain the display density
 > of a specified screen, use [getDisplayDensity](#getdisplaydensity)(displayId: number).
@@ -1047,7 +1047,7 @@ Obtains the density of the specified display of the current device. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | number | Yes | Display ID. The value is an integer greater than or equal to 0.    **Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. |
+| displayId | number | Yes | Display ID. The value is an integer greater than or equal to 0.<br> **Note:** If the input **displayId** does not exist, the exception **17000007** is reported. |
 
 **Return value:**
 
@@ -1082,7 +1082,7 @@ getDisplayRotation(): Promise<DisplayRotation>
 
 Obtains the display rotation of the current device. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This method can only be used to obtain the display rotation of the home screen. To obtain the display rotation
 > of a specified screen, use [getDisplayRotation](#getdisplayrotation)(displayId: number).
@@ -1139,7 +1139,7 @@ Obtains the display rotation of the specified device. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | number | Yes | Display ID. The value is an integer greater than or equal to 0.    **Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. |
+| displayId | number | Yes | Display ID. The value is an integer greater than or equal to 0.<br> **Note:** If the input **displayId** does not exist, the exception **17000007** is reported. |
 
 **Return value:**
 
@@ -1174,7 +1174,7 @@ getDisplaySize(): Promise<Point>
 
 Obtains the display size of the current device. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This method can only be used to obtain the display size of the home screen. To obtain the display size of a
 > specified screen, use [getDisplaySize](#getdisplaysize)(displayId: number).
@@ -1231,7 +1231,7 @@ Obtains the size of the specified display on the current device. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | number | Yes | Display ID. The value is an integer greater than or equal to 0.    **Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. |
+| displayId | number | Yes | Display ID. The value is an integer greater than or equal to 0.<br> **Note:** If the input **displayId** does not exist, the exception **17000007** is reported. |
 
 **Return value:**
 
@@ -1266,7 +1266,7 @@ injectKnucklePointerAction(pointers: PointerMatrix, speed?: number): Promise<voi
 
 Simulates a multi-point knuckle scrolling operation. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the knuckle gesture is disabled on the device, 17000005 is returned.
 
@@ -1282,8 +1282,8 @@ Simulates a multi-point knuckle scrolling operation. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | Yes | Scroll trajectory, including the number of fingers and an array of coordinates along the trajectory.  **Note：**: Currently, only the single-finger operation is supported. The value of **fingers** in **PointerMatrix** must be set to **1**. |
-| speed | number | No | Knuckle pointer action speed. Value range:[200, 40000] Unit: px/s. Throws error code 17000007 if negative. Default value: 600 |
+| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | Yes | Scroll trajectory, including the number of fingers and an array of coordinates along the trajectory.  **Note:** Currently, only the single-finger operation is supported. The value of **fingers** in **PointerMatrix** must be set to **1**. |
+| speed | number | No | Knuckle pointer action speed.<br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 17000007 if negative. <br>Default value: 600 |
 
 **Return value:**
 
@@ -1340,7 +1340,7 @@ Injects a multi-finger operation into a device. This method applies to test scen
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | Yes | Scroll trajectory, including the number of fingers and an array of coordinates along the trajectory. |
-| speed | number | No | Pointer action speed, in px/s. Value range:[200, 40000] Unit: px/s. Throws error code 401 if negative. Default value: 600 |
+| speed | number | No | Pointer action speed, in px/s.<br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 401 if negative. <br>Default value: 600 |
 
 **Return value:**
 
@@ -1403,8 +1403,8 @@ Simulates a continuous multi-point pen injection operation. This method is appli
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | Yes | Scroll trajectory, including the number of fingers and an array of coordinates along the trajectory. **Note：**: Currently, only the single-finger operation is supported. The value of **fingers** in **PointerMatrix** must be set to **1**. |
-| speed | number | No | Pen pointer action speed. Value range:[200, 40000] Unit: px/s. Throws error code 401 if negative. Default value: 600 |
+| pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | Yes | Scroll trajectory, including the number of fingers and an array of coordinates along the trajectory. **Note:** Currently, only the single-finger operation is supported. The value of **fingers** in **PointerMatrix** must be set to **1**. |
+| speed | number | No | Pen pointer action speed.<br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 401 if negative. <br>Default value: 600 |
 | pressure | number | No | Injection pressure. The value range is [0.0, 1.0]. The default value is **1.0**. If the value is **null** or **undefined**, the default value is used. If the value is out of the value range, error code 401 is thrown. |
 
 **Return value:**
@@ -1515,7 +1515,7 @@ Inputs text at a specified coordinate point in a specified input mode. This API 
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the end point. |
 | text | string | Yes | Input text. Currently, English, Chinese, and special characters are supported. |
-| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | Yes | Text input mode. For details, see [InputTextMode](arkts-test-uitest-inputtextmode-i.md). **NOTE：**  If **InputTextMode.addition** is set to **true**, the cursor moves to the end of the text and the specified text is input. If the value is **false**, the specified text is input at the coordinate point. If the input text contains Chinese characters or special characters or contains more than 200 characters, the text is copied and pasted regardless of the value of [InputTextMode](arkts-test-uitest-inputtextmode-i.md).paste. |
+| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | Yes | Text input mode. For details, see [InputTextMode](arkts-test-uitest-inputtextmode-i.md). **NOTE:**  If **InputTextMode.addition** is set to **true**, the cursor moves to the end of the text and the specified text is input. If the value is **false**, the specified text is input at the coordinate point. <br> If the input text contains Chinese characters or special characters or contains more than 200 characters, the text is copied and pasted regardless of the value of [InputTextMode](arkts-test-uitest-inputtextmode-i.md).paste. |
 
 **Return value:**
 
@@ -1575,8 +1575,8 @@ Drags from the start point to the end point and checks whether the target compon
 | --- | --- | --- | --- |
 | on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md). |
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
-| to | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs.    **Note：**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
-| speed | number | No | Drag speed. Value range:[200, 40000] Throws error code 17000007 if negative. Default value: 600 |
+| to | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs.<br> **Note:** The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
+| speed | number | No | Drag speed.<br>Value range:[200, 40000] <br>Throws error code 17000007 if negative. <br>Default value: 600 |
 | duration | number | No | Click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, the 17000007 error code is thrown. If the value is **null** or **undefined**, the default value is used. |
 
 **Return value:**
@@ -1675,8 +1675,8 @@ Swipes from the start point to the end point and checks whether the target compo
 | --- | --- | --- | --- |
 | on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target component. |
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
-| to | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs.    **Note：**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
-| speed | number | No | Swipe speed. Value range:[200, 40000] Throws error code 17000007 if negative. Default value: 600 |
+| to | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs.<br> **Note:** The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
+| speed | number | No | Swipe speed.<br>Value range:[200, 40000] <br>Throws error code 17000007 if negative. <br>Default value: 600 |
 
 **Return value:**
 
@@ -1711,7 +1711,7 @@ knuckleKnock(pointers: Array<Point>, times: number): Promise<void>
 
 Simulates a knuckle knock on the display. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the knuckle gesture is disabled on the device, 17000005 is returned.
 
@@ -1929,8 +1929,8 @@ Injects a mouse click action at the specified coordinates, with the optional key
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Target coordinates of the mouse click. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | number | No | First key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). Default value: 0 |
-| key2 | number | No | Second key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). Default value: 0 |
+| key1 | number | No | First key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
+| key2 | number | No | Second key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 
 **Return value:**
 
@@ -1979,8 +1979,8 @@ Injects a double-click action at the specified coordinates, with the optional ke
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the double-click. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | number | No | First key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). Default value: 0 |
-| key2 | number | No | Second key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). Default value: 0 |
+| key1 | number | No | First key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
+| key2 | number | No | Second key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 
 **Return value:**
 
@@ -2029,7 +2029,7 @@ Drags the mouse pointer from the start point to the end point. This API uses a p
 | --- | --- | --- | --- |
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the start point. |
 | to | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the end point. |
-| speed | number | No | Swipe speed. Value range:[200, 40000] Unit: px/s. Throws error code 401 if negative. Default value: 600 |
+| speed | number | No | Swipe speed.<br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 401 if negative. <br>Default value: 600 |
 
 **Return value:**
 
@@ -2078,7 +2078,7 @@ Drags the mouse from the start point to the end point. You can specify the dragg
 | --- | --- | --- | --- |
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the start point. |
 | to | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the end point. |
-| speed | number | No | Swipe speed. Value range:[200, 40000] Unit: px/s. If the value is a non-negative number that is not within the specified range or is null or undefined, the default value 600 is used. Throws error code 401 if negative. Default value: 600 |
+| speed | number | No | Swipe speed.<br>Value range:[200, 40000] <br>Unit: px/s. <br>If the value is a non-negative number that is not within the specified range or is null or undefined, the default value 600 is used. <br>Throws error code 401 if negative. <br>Default value: 600 |
 | duration | number | No | Click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, error code 401 is thrown. If the value is **null** or **undefined**, the default value is used. |
 
 **Return value:**
@@ -2187,8 +2187,8 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-click of the mouse device. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | number | No | First key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). Default value: 0 |
-| key2 | number | No | Second key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). Default value: 0 |
+| key1 | number | No | First key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
+| key2 | number | No | Second key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 
 **Return value:**
 
@@ -2238,8 +2238,8 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-click of the mouse device. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | number | No | First key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). Default value: 0 |
-| key2 | number | No | Second key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). Default value: 0 |
+| key1 | number | No | First key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
+| key2 | number | No | Second key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 | duration | number | No | Long-click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, error code 401 is thrown. If the value is **null** or **undefined**, the default value is used. |
 
 **Return value:**
@@ -2337,7 +2337,7 @@ Moves the mouse pointer from the start point to the end point, with a visible mo
 | --- | --- | --- | --- |
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the start point. |
 | to | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the end point. |
-| speed | number | No | Swipe speed. Value range:[200, 40000] Unit: px/s. If the value is a non-negative number that is not within the specified range or is null or undefined, the default value 600 is used. Throws error code 401 if negative. Default value: 600 |
+| speed | number | No | Swipe speed.<br>Value range:[200, 40000] <br>Unit: px/s. <br>If the value is a non-negative number that is not within the specified range or is null or undefined, the default value 600 is used. <br>Throws error code 401 if negative. <br>Default value: 600 |
 
 **Return value:**
 
@@ -2387,8 +2387,8 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Target coordinates of mouse scrolling. |
 | down | boolean | Yes | Whether the mouse wheel scrolls downward. The value **true** indicates the mouse wheel scrolls downward, and **false** indicates the mouse wheel scrolls upward. |
 | d | number | Yes | Number of ticks scrolled by the mouse wheel. A tick indicates a 120 px scroll at the mouse cursor position. If the value is a negative number, error code 401 is returned. |
-| key1 | number | No | First key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). Default value: 0 |
-| key2 | number | No | Second key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). Default value: 0 |
+| key1 | number | No | First key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
+| key2 | number | No | Second key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 
 **Return value:**
 
@@ -2438,9 +2438,9 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Target coordinates of mouse scrolling. |
 | down | boolean | Yes | Whether the mouse wheel scrolls downward. The value **true** indicates the mouse wheel scrolls downward, and **false** indicates the mouse wheel scrolls upward. |
 | d | number | Yes | Number of ticks scrolled by the mouse wheel. A tick indicates a 120 px scroll at the mouse cursor position. If the value is a negative number, error code 401 is returned. |
-| key1 | number | No | First key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). Default value: 0 |
-| key2 | number | No | Second key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). Default value: 0 |
-| speed | number | No | Swipe speed of the mouse wheel. Value range:[1, 500] Unit: ticks/s Throws error code 401 if negative. Default value: 20 |
+| key1 | number | No | First key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
+| key2 | number | No | Second key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
+| speed | number | No | Swipe speed of the mouse wheel.<br>Value range:[1, 500] <br>Unit: ticks/s <br>Throws error code 401 if negative. <br>Default value: 20 |
 
 **Return value:**
 
@@ -2631,7 +2631,7 @@ Simulates a pen swipe operation. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | startPoint | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the start point. |
 | endPoint | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the end point. |
-| speed | number | No | Speed of pen swipe. Value range:[200, 40000] Unit: px/s. Throws error code 401 if negative. Default value: 600 |
+| speed | number | No | Speed of pen swipe.<br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 401 if negative. <br>Default value: 600 |
 | pressure | number | No | Swipe pressure of the pen. The value ranges from 0.0 to 1.0. The default value is **1.0**. If the value is **null** or **undefined**, the default value is used. If the value is out of the value range, error code 401 is thrown. |
 
 **Return value:**
@@ -2667,7 +2667,7 @@ pressBack(): Promise<void>
 
 Simulates pressing the Back button. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This method only simulates pressing the Back button on the home screen. To simulate pressing the Back button
 > on a specified screen, use pressBack(displayId: number).
@@ -2724,7 +2724,7 @@ Simulates pressing the Back button on a specified screen. This API uses a promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | number | Yes | Display ID. The value is an integer greater than or equal to 0.    **Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. |
+| displayId | number | Yes | Display ID. The value is an integer greater than or equal to 0.<br> **Note:** If the input **displayId** does not exist, the exception **17000007** is reported. |
 
 **Return value:**
 
@@ -2811,7 +2811,7 @@ Injects an operation of returning to the home screen on the specified display. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | number | Yes | Display ID. The value is an integer greater than or equal to 0.    **Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. |
+| displayId | number | Yes | Display ID. The value is an integer greater than or equal to 0.<br> **Note:** If the input **displayId** does not exist, the exception **17000007** is reported. |
 
 **Return value:**
 
@@ -2906,7 +2906,7 @@ Captures the specified screen and saves it as a PNG image to the given save path
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | savePath | string | Yes | File save path. The path must be the [sandbox path](../../../file-management/app-sandbox-directory.md) of the current application. |
-| displayId | number | Yes | Display ID. The value is an integer greater than or equal to 0.    **Note：**: If the input **displayId** does not exist, the exception **401** is reported. |
+| displayId | number | Yes | Display ID. The value is an integer greater than or equal to 0.<br> **Note:** If the input **displayId** does not exist, the exception **401** is reported. |
 
 **Return value:**
 
@@ -3104,7 +3104,7 @@ Swipes from the start coordinate point to the target coordinate point. This meth
 | starty | number | Yes | Vertical coordinate of the start point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
 | endx | number | Yes | Horizontal coordinate of the end point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
 | endy | number | Yes | Vertical coordinate of the end point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
-| speed | number | No | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used. Value range:[200, 40000] Unit: px/s. Throws error code 401 if negative. Default value: 600 |
+| speed | number | No | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used.<br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 401 if negative. <br>Default value: 600 |
 
 **Return value:**
 
@@ -3154,8 +3154,8 @@ Swipes from the start coordinate point to the target coordinate point. This API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
-| to | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs.    **Note：**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
-| speed | number | No | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used. Value range:[200, 40000] Unit: px/s. Throws error code 17000007 if negative. Default value: 600 |
+| to | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs.<br> **Note:** The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
+| speed | number | No | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used.<br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 17000007 if negative. <br>Default value: 600 |
 
 **Return value:**
 
@@ -3309,7 +3309,7 @@ Simulates a two-finger scroll gesture on the touchpad. This API uses a promise t
 | point | [Point](arkts-test-uitest-point-i.md) | Yes | Point of the mouse cursor when the two-finger scrolling is performed on the touchpad. |
 | direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | Yes | Direction of two-finger scrolling on the touchpad. |
 | d | number | Yes | Number of grids scrolled by two fingers on the touchpad. A tick indicates a 120 px scroll at the mouse cursor position. If the value is a negative number, the 17000007 error code is returned. |
-| speed | number | No | Speed of two-finger scrolling on the touchpad. Unit: ticks/s. Value range: [1, 500] Throws error code 17000007 if negative. Default value: 20 |
+| speed | number | No | Speed of two-finger scrolling on the touchpad.<br>Unit: ticks/s. <br>Value range: [1, 500] <br>Throws error code 17000007 if negative. <br>Default value: 20 |
 
 **Return value:**
 
@@ -3359,7 +3359,7 @@ Triggers a combination key event based on the specified key code values. This AP
 | --- | --- | --- | --- |
 | key0 | number | Yes | First key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
 | key1 | number | Yes | Second key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
-| key2 | number | No | Third key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). Default value: 0 |
+| key2 | number | No | Third key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 
 **Return value:**
 
@@ -3409,7 +3409,7 @@ Triggers a combination key event based on the specified key code values on the s
 | --- | --- | --- | --- |
 | key0 | number | Yes | First key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
 | key1 | number | Yes | Second key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
-| key2 | number | No | Third key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). Default value: 0 |
+| key2 | number | No | Third key code value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 | displayId | number | No | Display ID. The default value is the default display ID of the device. |
 
 **Return value:**
@@ -3506,7 +3506,7 @@ Triggers a key event by passing the key code value on the specified screen. This
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyCode | number | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
-| displayId | number | Yes | Display ID. The value is an integer greater than or equal to 0.    **Note：**: If the input **displayId** does not exist, the exception **401** is reported. |
+| displayId | number | Yes | Display ID. The value is an integer greater than or equal to 0.<br> **Note:** If the input **displayId** does not exist, the exception **401** is reported. |
 
 **Return value:**
 
@@ -3563,7 +3563,7 @@ HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK opera
 | key | [PenKey](arkts-test-uitest-penkey-e.md) | Yes | Stylus key type, which specifies the stylus key to be used for the operation, such as the handwriting key, air mouse key, and smart key. |
 | mode | [PenMode](arkts-test-uitest-penmode-e.md) | Yes | Stylus mode, which specifies the current operation mode of the stylus, such as the handwriting mode or air mouse mode. |
 | operation | [PenKeyOperation](arkts-test-uitest-penkeyoperation-e.md) | Yes | Stylus key operation mode, which specifies the operation mode of the key, such as single-tap or double-tap. |
-| options | [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md) | No | Operation options, including optional coordinates. The default values are inherited from the default values of the properties in [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md).    **Note：**: When **mode** is set to [AIR_MOUSE](arkts-test-uitest-penmode-e.md#air_mouse) and **key** is set to [AIR_MOUSE](arkts-test-uitest-penkey-e.md#air_mouse), the **point** attribute in **options** must be set. Otherwise, error code 17000007 will be thrown. |
+| options | [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md) | No | Operation options, including optional coordinates. The default values are inherited from the default values of the properties in [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md). <br> **Note:** When **mode** is set to [AIR_MOUSE](arkts-test-uitest-penmode-e.md#air_mouse) and **key** is set to [AIR_MOUSE](arkts-test-uitest-penkey-e.md#air_mouse), the **point** attribute in **options** must be set. Otherwise, error code 17000007 will be thrown. |
 
 **Return value:**
 
@@ -3617,13 +3617,13 @@ Searches for the target component based on the attributes within a specified tim
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md). |
-| time | number | Yes | Duration for searching for the target [Component](arkts-test-uitest-component-c.md), in ms. The value is an integer greater than or equal to 0. Unit: ms Value range: The value should be &gt;= 0 |
+| time | number | Yes | Duration for searching for the target [Component](arkts-test-uitest-component-c.md), in ms. The value is an integer greater than or equal to 0. <br>Unit: ms <br>Value range: The value should be &gt;= 0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; | the first matched { |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; | the first matched [Component](arkts-test-uitest-component-c.md) or undefined. |
 
 **Error codes:**
 

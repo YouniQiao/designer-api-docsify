@@ -85,7 +85,9 @@ backgroundColor?: ResourceColor
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
-**默认值：** When isSidebarMiddle is false, the default value is #00000000, Otherwise,the default value is #1918243 1 [since 10 - 10] @default When isSidebarMiddle is false, the default value is #00000000, Otherwise, the default value is #1918243 1 [since 11]
+**默认值：**
+- API版本10：When isSidebarMiddle is false, the default value is #00000000, Otherwise,the default value is #1918243 1
+- API版本11+：When isSidebarMiddle is false, the default value is #00000000, Otherwise, the default value is #1918243 1
 
 **起始版本：** 10
 

@@ -25,7 +25,7 @@ used to control the ad rotation interval. Type number, unit: ms, value range [30
 
 <!--RP3--><!--RP3End-->
 
-**Type:** number \| boolean \| string \| undefined
+**Type:** number &#124; boolean &#124; string &#124; undefined
 
 **Since:** 11
 

@@ -22,4 +22,4 @@ Defines a callback to intercept the soft keyboard initiated from editable elemen
 
 | Type | Description |
 | --- | --- |
-| [WebKeyboardOptions](arkts-arkweb-webkeyboardoptions-i.md) | [WebKeyboardOptions]{ |
+| [WebKeyboardOptions](arkts-arkweb-webkeyboardoptions-i.md) | [WebKeyboardOptions](arkts-arkweb-webkeyboardoptions-i.md) instance, which is used to determine which type of soft keyboard to start by the ArkWeb kernel. |

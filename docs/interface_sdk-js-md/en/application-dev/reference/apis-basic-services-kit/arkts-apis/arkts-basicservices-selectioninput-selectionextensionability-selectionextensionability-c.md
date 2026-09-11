@@ -7,7 +7,7 @@ This module provides APIs for word selection extension, which can implement exte
 - **context**: You can use **context** to call  
 [startAbility](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c.md#startability) to start the target ability in the same app, or use **context** as an input parameter of [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md) to create a word selection panel.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This module is supported only on PCs/2-in-1 devices. You can use
 > **canIUse('SystemCapability.SelectionInput.Selection')** to check whether the current device supports the
@@ -90,7 +90,7 @@ class ServiceExtAbility extends SelectionExtensionAbility {
 onDisconnect(): void
 ```
 
-Defines a callback triggered when the client disconnects from the **SelectionExtensionAbility** (for example, when the user disables the word selection function or switches the word selection app). You can perform cleanup operations for the **onConnect** callback in this callback. For example, you can call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md) to destroy the created panel, or call off('selectionCompleted') to unsubscribe from the word selection completion event.
+Defines a callback triggered when the client disconnects from the **SelectionExtensionAbility** (for example, when the user disables the word selection function or switches the word selection app). You can perform cleanup operations for the **onConnect** callback in this callback. For example, you can call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md) to destroy the created panel, or call [off('selectionCompleted')](arkts-basicservices-selectionmanager-off-f.md#offselectioncompleted) to unsubscribe from the word selection completion event.
 
 The callback is triggered only when the **SelectionExtensionAbility** is disconnected normally. It is not triggered in cases of abnormal disconnection (for example, process termination due to low memory conditions).
 

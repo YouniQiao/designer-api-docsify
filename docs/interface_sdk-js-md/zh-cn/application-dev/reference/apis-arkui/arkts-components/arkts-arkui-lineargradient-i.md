@@ -21,7 +21,7 @@ angle?: number | string
 
 Linear Gradient Angle
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **起始版本：** 11
 

@@ -34,7 +34,7 @@ Initiates a P2P connection to a device with the specified configuration.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the operation is successful, returns `false` otherwise. |
 
 **Examples**
 

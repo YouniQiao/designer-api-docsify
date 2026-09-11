@@ -43,7 +43,7 @@ static createComposePathEffect(outer: PathEffect, inner: PathEffect): PathEffect
 
 | 类型 | 说明 |
 | --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的组合路径效果对象，可通过[Pen.setPathEffect]{ |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的组合路径效果对象，可通过[Pen.setPathEffect](arkts-arkgraphics2d-drawing-pen-c.md#setpatheffect)将其应用到画笔上以改变路径渲染样式。 |
 
 ## createCornerPathEffect
 
@@ -67,13 +67,13 @@ static createCornerPathEffect(radius: number): PathEffect
 
 | 类型 | 说明 |
 | --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的圆角路径效果对象，可通过[Pen.setPathEffect]{ |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的圆角路径效果对象，可通过[Pen.setPathEffect](arkts-arkgraphics2d-drawing-pen-c.md#setpatheffect)将其应用到画笔上以改变路径渲染样式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createDashPathEffect
 
@@ -98,13 +98,13 @@ static createDashPathEffect(intervals: Array<number>, phase: number): PathEffect
 
 | 类型 | 说明 |
 | --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的虚线路径效果对象，可通过[Pen.setPathEffect]{ |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的虚线路径效果对象，可通过[Pen.setPathEffect](arkts-arkgraphics2d-drawing-pen-c.md#setpatheffect)将其应用到画笔上以改变路径渲染样式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createDiscretePathEffect
 
@@ -130,7 +130,7 @@ static createDiscretePathEffect(segLength: number, dev: number, seedAssist?: num
 
 | 类型 | 说明 |
 | --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的离散路径效果对象，可通过[Pen.setPathEffect]{ |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的离散路径效果对象，可通过[Pen.setPathEffect](arkts-arkgraphics2d-drawing-pen-c.md#setpatheffect)将其应用到画笔上以改变路径渲染样式。 |
 
 ## createPathDashEffect
 
@@ -157,13 +157,13 @@ static createPathDashEffect(path: Path, advance: number, phase: number, style: P
 
 | 类型 | 说明 |
 | --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的虚线路径效果对象，可通过[Pen.setPathEffect]{ |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的虚线路径效果对象，可通过[Pen.setPathEffect](arkts-arkgraphics2d-drawing-pen-c.md#setpatheffect)将其应用到画笔上以改变路径渲染样式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createSumPathEffect
 
@@ -188,4 +188,4 @@ static createSumPathEffect(firstPathEffect: PathEffect, secondPathEffect: PathEf
 
 | 类型 | 说明 |
 | --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的叠加路径效果对象，可通过[Pen.setPathEffect]{ |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | 返回创建的叠加路径效果对象，可通过[Pen.setPathEffect](arkts-arkgraphics2d-drawing-pen-c.md#setpatheffect)将其应用到画笔上以改变路径渲染样式。 |

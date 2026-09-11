@@ -2,7 +2,9 @@
 
 ## Child Components
 
-Supported Since API version 10, you are advised to use [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md) for page routing.
+Supported
+
+Since API version 10, you are advised to use [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md) for page routing.
 
 ## Modules to Import
 

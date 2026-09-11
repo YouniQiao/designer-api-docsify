@@ -2,7 +2,7 @@
 
 Defines the common attributes shared by all chips.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 1. The size settings for chips can be of two types: (1) **ChipSize**, which conveniently offers two size options,
 > **NORMAL** and **SMALL**; (2) **SizeOptions**.
@@ -120,7 +120,7 @@ Default value: **ChipSize.NORMAL** or **{ height: 0, width: 0 }**
 
 If the value is **undefined**, the default value is used.
 
-**Type:** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) \| [SizeOptions](arkts-arkui-sizeoptions-i.md)
+**Type:** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) &#124; [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **Since:** 12
 

@@ -31,4 +31,3 @@ Send key event.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |

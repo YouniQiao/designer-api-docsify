@@ -31,7 +31,7 @@ function getCfgFiles(relPath: string, callback: AsyncCallback<Array<string>>): v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 
 
 ## getCfgFiles
@@ -60,7 +60,7 @@ function getCfgFiles(relPath: string, followMode: FollowXMode, callback: AsyncCa
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 
 
 ## getCfgFiles
@@ -90,7 +90,7 @@ function getCfgFiles(relPath: string, followMode: FollowXMode, extra: string, ca
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 
 
 ## getCfgFiles
@@ -123,7 +123,7 @@ function getCfgFiles(relPath: string): Promise<Array<string>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 
 
 ## getCfgFiles
@@ -158,4 +158,4 @@ function getCfgFiles(relPath: string, followMode: FollowXMode, extra?: string): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified;  2.Incorrect parameter types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types; <br>3.Parameter verification failed. |

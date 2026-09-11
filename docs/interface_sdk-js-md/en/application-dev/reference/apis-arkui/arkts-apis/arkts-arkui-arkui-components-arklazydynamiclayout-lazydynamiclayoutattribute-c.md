@@ -36,10 +36,9 @@ Called when visible indexes change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;number[]&gt; \| undefined | Yes | Callback used to return the list of index numbers of visible subcomponents. Passing undefined will unregister the callback. |
+| callback | Callback&lt;number[]&gt; &#124; undefined | Yes | Callback used to return the list of index numbers of visible subcomponents.<br>Passing undefined will unregister the callback. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) |  |

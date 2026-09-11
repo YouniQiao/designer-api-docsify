@@ -11,7 +11,7 @@
 localeMatcher?: "lookup" | "best fit" | undefined
 ```
 
-**Type:** "lookup" \| "best fit" \| undefined
+**Type:** "lookup" &#124; "best fit" &#124; undefined
 
 ## maximumFractionDigits
 
@@ -19,7 +19,7 @@ localeMatcher?: "lookup" | "best fit" | undefined
 maximumFractionDigits?: number | undefined
 ```
 
-**Type:** number \| undefined
+**Type:** number &#124; undefined
 
 ## maximumSignificantDigits
 
@@ -27,7 +27,7 @@ maximumFractionDigits?: number | undefined
 maximumSignificantDigits?: number | undefined
 ```
 
-**Type:** number \| undefined
+**Type:** number &#124; undefined
 
 ## minimumFractionDigits
 
@@ -35,7 +35,7 @@ maximumSignificantDigits?: number | undefined
 minimumFractionDigits?: number | undefined
 ```
 
-**Type:** number \| undefined
+**Type:** number &#124; undefined
 
 ## minimumIntegerDigits
 
@@ -43,7 +43,7 @@ minimumFractionDigits?: number | undefined
 minimumIntegerDigits?: number | undefined
 ```
 
-**Type:** number \| undefined
+**Type:** number &#124; undefined
 
 ## minimumSignificantDigits
 
@@ -51,7 +51,7 @@ minimumIntegerDigits?: number | undefined
 minimumSignificantDigits?: number | undefined
 ```
 
-**Type:** number \| undefined
+**Type:** number &#124; undefined
 
 ## type
 
@@ -59,4 +59,4 @@ minimumSignificantDigits?: number | undefined
 type?: PluralRuleType | undefined
 ```
 
-**Type:** [PluralRuleType](arkts-intl-pluralruletype-t.md) \| undefined
+**Type:** [PluralRuleType](arkts-intl-pluralruletype-t.md) &#124; undefined

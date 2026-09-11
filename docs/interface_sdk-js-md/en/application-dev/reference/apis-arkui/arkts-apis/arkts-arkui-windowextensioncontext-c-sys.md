@@ -4,7 +4,7 @@ The WindowExtensionContext module provides the context environment for the Windo
 
 The module provides the capabilities of the [WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md), including starting the ability.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This module is deprecated since API version 21. You are advised to use
 > [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md) instead.

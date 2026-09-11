@@ -29,7 +29,7 @@ Obtains all SkillInfo of a specified application based on bundleName. To query i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Indicates the bundle name of the application. |
-| flags | number | Yes | { |
+| flags | number | Yes | [SkillInfoFlag](arkts-ability-skillmanager-skillinfoflag-e.md) - Indicates the flag used to specify information contained in the SkillInfo objects that will be returned. |
 | userId | number | No | Indicates the user ID. If not provided, the user ID of the caller is used. |
 
 **Return value:**

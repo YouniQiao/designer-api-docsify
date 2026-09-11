@@ -38,7 +38,7 @@ function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, drag
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| customArray | Array&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md)&gt; | 是 | 拖拽发起后跟手效果所拖拽的对象。 |
+| customArray | Array&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md)&gt; | 是 | 拖拽发起后跟手效果所拖拽的对象。 |
 | dragInfo | [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | 是 | 拖拽信息。 |
 
 **返回值：**
@@ -51,7 +51,7 @@ function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, drag
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |
 
 **示例**

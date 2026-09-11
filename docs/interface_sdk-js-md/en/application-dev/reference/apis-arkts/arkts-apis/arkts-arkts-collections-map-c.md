@@ -2,7 +2,7 @@
 
 A non-linear data structure.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > This section uses the following to identify the use of generics:
@@ -88,7 +88,7 @@ A constructor used to create an ArkTS map.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | readonly (readonly [K, V])[] \| null | No | Array containing key-value pairs, or iterator object. The default value is **null**, indicating that an empty map is created. |
+| entries | readonly (readonly [K, V])[] &#124; null | No | Array containing key-value pairs, or iterator object. The default value is **null**, indicating that an empty map is created. |
 
 **Error codes:**
 
@@ -268,7 +268,7 @@ Obtains the value of the specified key in this ArkTS map.
 
 | Type | Description |
 | --- | --- |
-| V \| undefined | Value obtained. If the key is not found, **undefined** is returned. |
+| V &#124; undefined | Value obtained. If the key is not found, **undefined** is returned. |
 
 **Error codes:**
 
@@ -345,7 +345,7 @@ put(key: K, value: V): V | undefined
 
 Adds or updates a key-value pair to this ArkTS map and returns the previous value associated with the key.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - When **undefined** is returned, you cannot directly distinguish whether the key does not exist or the
 > key exists but its value is **undefined**. Before calling this API, you can use **has** to check whether
@@ -370,7 +370,7 @@ Adds or updates a key-value pair to this ArkTS map and returns the previous valu
 
 | Type | Description |
 | --- | --- |
-| V \| undefined | Previous value associated with the key. If the key is not found, **undefined** is returned. |
+| V &#124; undefined | Previous value associated with the key. If the key is not found, **undefined** is returned. |
 
 **Error codes:**
 
@@ -445,7 +445,7 @@ remove(key: K): V | undefined
 
 Removes the specified key and its corresponding value from this ArkTS map.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - When **undefined** is returned, you cannot directly distinguish whether the key does not exist or the
 > key exists but its value is **undefined**. Before calling this API, you can use **has** to check whether
@@ -469,7 +469,7 @@ Removes the specified key and its corresponding value from this ArkTS map.
 
 | Type | Description |
 | --- | --- |
-| V \| undefined | Value removed. If the key is not found, **undefined** is returned. |
+| V &#124; undefined | Value removed. If the key is not found, **undefined** is returned. |
 
 **Error codes:**
 

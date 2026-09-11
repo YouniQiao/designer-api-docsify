@@ -38,7 +38,7 @@ Obtains the glyph width array of each glyph within the specified range of the ru
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Returns the glyph width array of each glyph in the run unit relative to the horizontal direction. In [common2D.Point]{ |
+| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Returns the glyph width array of each glyph in the run unit relative to the horizontal direction. In [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md), the x value represents the glyph width of each glyph relative to the horizontal direction, in physical pixels (px). The y value is a reserved field and returns **0** by default. |
 
 **Examples**
 
@@ -189,7 +189,7 @@ getImageBounds(): common2D.Rect
 
 Obtains the image boundaries of the typographic unit. Equivalent to visual boundaries, these boundaries are associated with the typographic font, font size, and characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), only "a b" is visible to users, and therefore the image boundaries do not include these spaces at the beginning and end of the line.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The figure shows the image boundaries for the string " a b ".
 > 
@@ -451,7 +451,7 @@ Obtains the text style of this typesetting unit.
 
 | Type | Description |
 | --- | --- |
-| [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) | Text style of this typesetting unit. |
+| [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) | Text style of this typesetting unit. <br>**Note:**<br>1. The `textStyle.color`, `textStyle.textShadows.color`, `textStyle.backgroundRect.color`, and `textStyle.decoration.color` attributes: return a 32-bit unsigned integer color value. Example: The return value `4278190080` corresponds to the solid black hexadecimal color value `0xFF000000`, which is equivalent to the [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) object parameters: alpha=255, red=0, green=0, blue=0. The example provides a numberToRGBA conversion method for reference. <br>2. `textStyle.ellipsis` and `textStyle.ellipsisMode` are paragraph attributes and cannot be obtained through this API. Use [getParagraphStyle()](arkts-arkgraphics2d-text-paragraph-c.md#getparagraphstyle) instead. |
 
 **Examples**
 
@@ -520,7 +520,7 @@ getTypographicBounds(): TypographicBounds
 
 Obtains the typographic boundaries of the typographic unit. These boundaries are associated with the typographic font and font size, but not with the characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The figure shows the typesetting boundaries for the string " a b ".
 > 

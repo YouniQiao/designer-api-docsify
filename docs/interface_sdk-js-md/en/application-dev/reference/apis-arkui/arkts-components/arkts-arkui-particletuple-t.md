@@ -6,6 +6,8 @@ declare type ParticleTuple<T1, T2> = [T1, T2]
 
 Defines a pair of given type for particle.
 
+@typedef { [T1, T2] } ParticleTuple
+
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.

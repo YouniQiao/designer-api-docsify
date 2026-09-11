@@ -24,7 +24,7 @@ Only assets with the same [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assetsToBeRemoved | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of attributes of the asset to remove, such as the asset alias, access control attributes, and custom data. The [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#require_attr_encrypted) attributes of all data must be the same. |
+| assetsToBeRemoved | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of attributes of the asset to remove, such as the asset alias, access control attributes, and custom data. <br>The [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#require_attr_encrypted) attributes of all data must be the same. |
 
 **Return value:**
 

@@ -38,7 +38,7 @@ getAdvances(range: Range): Array<common2D.Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 返回该排版单元中每个字形相对于水平方向的字形宽度数组。其中，[common2D.Point]{ |
+| Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 返回该排版单元中每个字形相对于水平方向的字形宽度数组。其中，[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)中的x值代表每个字形相对于水平方向的字形宽度，单位为物理像素px，y值为保留字段，默认返回0。 |
 
 **示例**
 
@@ -451,7 +451,7 @@ getTextStyle(): TextStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) | 该排版单元的文本样式。 |
+| [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) | 该排版单元的文本样式。<br>**说明：** <br>1.`textStyle.color`、`textStyle.textShadows.color`、`textStyle.backgroundRect.color`、`textStyle.decoration.color`属性：返回32位无符号整型颜色数值。示例：返回值`4278190080`，对应纯黑色十六进制颜色值`0xFF000000`，等价于[common2D.Color](arkts-arkgraphics2d-common2d-color-i.md)对象参数：alpha=255、red=0、green=0、blue=0，示例中提供numberToRGBA转换方法作为参考。<br>2.`textStyle.ellipsis`和`textStyle.ellipsisMode`为段落属性，不支持通过本接口获取，应使用[getParagraphStyle()](arkts-arkgraphics2d-text-paragraph-c.md#getparagraphstyle)。 |
 
 **示例**
 

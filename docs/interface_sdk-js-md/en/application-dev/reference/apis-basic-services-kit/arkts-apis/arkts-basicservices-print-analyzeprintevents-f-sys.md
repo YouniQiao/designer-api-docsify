@@ -28,8 +28,8 @@ Analyze print events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | string | Yes | Indicates the printer ID. Printer ID to be analyzed. |
-| eventType | string | Yes | Indicates the avant type. Event types to be analyzed. |
+| printerId | string | Yes | Indicates the printer ID.<br>Printer ID to be analyzed. |
+| eventType | string | Yes | Indicates the avant type.<br>Event types to be analyzed. |
 
 **Return value:**
 

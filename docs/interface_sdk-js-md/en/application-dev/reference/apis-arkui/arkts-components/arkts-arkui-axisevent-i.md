@@ -55,7 +55,7 @@ Obtains the horizontal axis value of this axis event.
 
 | Type | Description |
 | --- | --- |
-| number | Horizontal axis value. |
+| number | Horizontal axis value.<br>Unit: vp |
 
 ## getPinchAxisScaleValue
 
@@ -77,7 +77,7 @@ Obtains the two-finger pinch zoom ratio from the axis event.
 
 | Type | Description |
 | --- | --- |
-| number | Two-finger pinch zoom ratio. |
+| number | Two-finger pinch zoom ratio.<br> Note: This ratio is calculated as the current distance between two fingers during a touchpad pinch event divided by the initial distance when the fingers first made contact. <br>Default value: **0**. <br>Value range: [0, +∞). <br> |
 
 ## getVerticalAxisValue
 
@@ -99,7 +99,7 @@ Obtains the vertical axis value of this axis event.
 
 | Type | Description |
 | --- | --- |
-| number | Vertical axis value. |
+| number | Vertical axis value.<br>Unit: vp |
 
 ## hasAxis
 
@@ -127,7 +127,7 @@ Checks whether this axis event contains the specified axis type.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the axis event contains the specified axis type. |
+| boolean | Whether the axis event contains the specified axis type.<br>**true** if the axis event contains the specified axis type; **false** otherwise. |
 
 ## action
 
@@ -197,7 +197,7 @@ Unique identifier for event processing.
 
 Value range: [0, +∞)
 
-**NOTE：**
+**NOTE:**
 
 This field is used when dispatching events using the [postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postinputeventwithstrategy) API. Each time an event is dispatched, this field is increased by 100000.
 

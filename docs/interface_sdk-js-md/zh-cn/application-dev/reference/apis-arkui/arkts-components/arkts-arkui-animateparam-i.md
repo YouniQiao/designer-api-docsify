@@ -93,7 +93,7 @@ curve?: Curve | string | ICurve
 
 **说明：** 当curve传入的string值不在上述可选值范围内时，使用默认值Curve.EaseInOut。当curve配置为弹簧类曲线（interpolating-spring、responsive-spring- motion、spring-motion）时，duration参数不生效。
 
-**类型：** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| [ICurve](arkts-arkui-icurve-i.md)
+**类型：** [Curve](../arkts-apis/arkts-arkui-curve-e.md) &#124; string &#124; [ICurve](arkts-arkui-icurve-i.md)
 
 **默认值：** Curve.EaseInOut
 

@@ -21,13 +21,13 @@ Position to display the badge relative to the parent component.
 
 Default value: **BadgePosition.RightTop**
 
-**NOTE：**
+**NOTE:**
 
 With the **Position** type, percentage values are not supported. If an invalid value is set, the default value **(0,0)**, which indicates the upper left corner of the component, will be used.
 
 With the **BadgePosition** type, the position is mirrored based on the Direction property.
 
-**Type:** [BadgePosition](arkts-arkui-badgeposition-e.md) \| Position
+**Type:** [BadgePosition](arkts-arkui-badgeposition-e.md) &#124; Position
 
 **Default:** BadgePosition.RightTop
 

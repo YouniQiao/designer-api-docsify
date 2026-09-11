@@ -26,7 +26,7 @@ function getVoNRState(slotId: number, callback: AsyncCallback<VoNRState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VoNRState](arkts-telephony-call-vonrstate-e-sys.md)&gt; | 是 | 回调函数。返回NR语音开关的状态。 |
 
 **错误码：**
@@ -77,7 +77,7 @@ function getVoNRState(slotId: number): Promise<VoNRState>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 
 **返回值：**
 

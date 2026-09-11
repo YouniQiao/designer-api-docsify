@@ -19,7 +19,7 @@ group?: string
 
 Group name.
 
-**NOTE：**
+**NOTE:**
 
 Among multiple check box groups with the same group name, only the first one takes effect.
 

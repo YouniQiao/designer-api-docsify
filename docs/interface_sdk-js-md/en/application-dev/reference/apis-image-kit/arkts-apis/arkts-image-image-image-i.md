@@ -24,7 +24,7 @@ getBufferData(): ImageBufferData | null
 
 Obtains ImageBufferData from an image.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > **byteBuffer** in **ImageBufferData** is a shallow copy of the internal buffer. When the lifecycle of an image
 > ends, do not perform any operations on **byteBuffer**, as this may lead to undefined behavior.
@@ -39,7 +39,7 @@ Obtains ImageBufferData from an image.
 
 | Type | Description |
 | --- | --- |
-| [ImageBufferData](arkts-image-image-imagebufferdata-i.md) \| null | Struct that encapsulates the image data buffer. If no struct is obtained, **null** is returned. |
+| [ImageBufferData](arkts-image-image-imagebufferdata-i.md) &#124; null | Struct that encapsulates the image data buffer. If no struct is obtained, **null** is returned. |
 
 ## getComponent
 
@@ -108,7 +108,7 @@ Obtains the HDR metadata from an image based on the HDR metadata type.
 
 | Type | Description |
 | --- | --- |
-| [HdrMetadataValue](arkts-image-image-hdrmetadatavalue-t.md) \| null | Value of the HDR metadata key. If the image does not have HDR metadata, **null** is returned. |
+| [HdrMetadataValue](arkts-image-image-hdrmetadatavalue-t.md) &#124; null | Value of the HDR metadata key. If the image does not have HDR metadata, **null** is returned. |
 
 **Error codes:**
 

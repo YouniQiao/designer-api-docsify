@@ -322,7 +322,7 @@ onNewProcessRequest(want: Want): string
 > **说明：**
 > 
 > - 在API version 19及之前版本，仅支持在指定进程中启动UIAbility。<!--Del-->从API version 20开始，新增支持在指定进程中启动UIExtensionAbility。&lt;!--DelEnd
-&gt; --
+> --
 > 
 > 
 > - 从API version 20开始，当[AbilityStage.onNewProcessRequestAsync](#onnewprocessrequestasync)实现时，本回调函

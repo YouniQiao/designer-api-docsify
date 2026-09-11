@@ -58,7 +58,7 @@ Decodes the input content into a Uint8Array object. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array \| string | Yes | Uint8Array object or string to decode. |
+| src | Uint8Array &#124; string | Yes | Uint8Array object or string to decode. |
 
 **Return value:**
 
@@ -97,7 +97,7 @@ Decodes the input content into a Uint8Array object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array \| string | Yes | Uint8Array object or string to decode. |
+| src | Uint8Array &#124; string | Yes | Uint8Array object or string to decode. |
 
 **Return value:**
 

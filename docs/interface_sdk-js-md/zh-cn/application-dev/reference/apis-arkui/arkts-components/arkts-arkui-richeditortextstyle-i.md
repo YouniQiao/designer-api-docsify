@@ -95,7 +95,7 @@ Font Feature当前支持的属性见fontFeature属性列表。
 
 设置 Font Feature 属性，Font Feature 是 OpenType 字体的高级排版能力，如支持连字、数字等宽等特性，一般用在自定义字体中，其能力需要字体本身支持。
 
-更多 Font Feature 能力介绍可参考 https://www.w3.org/TR/css-fonts-3/#font-feature-settings-prop 和 https://sparanoid.com/lab/ opentype-features/
+更多 Font Feature 能力介绍可参考[font-feature-settings property](https://www.w3.org/TR/css-fonts-3/#font-feature-settings-prop)和[OpenType Features](https://sparanoid.com/lab/opentype-features/)。
 
 **类型：** string
 
@@ -115,7 +115,7 @@ fontSize?: Length | number
 
 设置字体大小，Length为number类型时，使用fp单位。number类型取值范围：(0, +∞)。设置为0或负值时，按默认值处理。字体默认大小为16fp。不支持设置百分比字符串。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| number
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; number
 
 **起始版本：** 10
 
@@ -159,7 +159,7 @@ string类型仅支持number类型取值的字符串形式，例如"400"，以及
 
 默认值：FontWeight.Normal。
 
-**类型：** number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| string
+**类型：** number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; string
 
 **起始版本：** 10
 
@@ -199,7 +199,7 @@ letterSpacing?: number | string
 
 设置文本字符间距，默认单位为fp。默认值：0。当取值为负值时，文字会发生压缩。
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **起始版本：** 12
 
@@ -219,9 +219,9 @@ lineHeight?: number | string | Resource
 
 默认值：不设置时自适应字体大小。
 
-number类型取值范围：(0, +∞)，设置值不大于0时，不限制文本行高，自适应字体大小。number类型时单位为fp，不支持设置百分比字符串。当lineHeight设置值小于当前字号下文本渲染出的实际高度时，[fallbackLineSpacing](arkts-arkui-richeditor-attribute.md#fallbacklinespacing)属性将生效。
+number类型取值范围：(0, +∞)，设置值不大于0时，不限制文本行高，自适应字体大小。number类型时单位为fp，不支持设置百分比字符串。当lineHeight设置值小于当前字号下文本渲染出的实际高度时，[fallbackLineSpacing](arkts-arkui-richeditor-comp-attribute.md#fallbacklinespacing)属性将生效。
 
-**类型：** number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**类型：** number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 12
 
@@ -291,7 +291,7 @@ strokeWidth?: LengthMetrics | number
 
 与[shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md)同时设置时，shaderStyle不生效。
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| number
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) &#124; number
 
 **起始版本：** 23
 
@@ -339,7 +339,7 @@ textShadow?: ShadowOptions | Array<ShadowOptions>
 
 仅支持设置阴影模糊半径、颜色和偏移量，不支持智能取色。
 
-**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt;
+**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) &#124; Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt;
 
 **起始版本：** 11
 

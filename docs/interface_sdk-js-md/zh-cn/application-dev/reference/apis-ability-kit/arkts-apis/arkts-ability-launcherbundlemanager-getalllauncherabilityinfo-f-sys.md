@@ -88,7 +88,7 @@ function getAllLauncherAbilityInfo(userId: number) : Promise<Array<LauncherAbili
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md)&gt;&gt; | Promise对象。返回指定用户下所有应用的[LauncherAbilityInfo]{ |
+| Promise&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md)&gt;&gt; | Promise对象。返回指定用户下所有应用的[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md)。 |
 
 **错误码：**
 

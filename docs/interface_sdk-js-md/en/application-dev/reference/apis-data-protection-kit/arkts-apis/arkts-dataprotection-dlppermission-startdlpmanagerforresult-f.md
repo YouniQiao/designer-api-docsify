@@ -16,7 +16,7 @@ Starts the DLP manager application on the current [UIAbility](../../apis-ability
 
 This API starts the DLP manager application to configure file permissions and return the user operation result to the caller.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only by domain accounts.
 
@@ -83,7 +83,7 @@ Starts the DLP manager application on the current page in borderless mode. This 
 
 This API starts the DLP manager application to configure file permissions and return the user operation result to the caller.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only by domain accounts.
 

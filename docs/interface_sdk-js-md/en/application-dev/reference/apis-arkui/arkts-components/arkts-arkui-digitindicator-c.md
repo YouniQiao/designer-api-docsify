@@ -2,7 +2,7 @@
 
 A constructor used to create a **DigitIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When pages are turned by group, the child nodes displayed in the digit-style navigation indicator do not count
 > placeholder nodes.
@@ -31,7 +31,7 @@ constructor()
 
 A constructor used to create a **DotIndicator** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - When pressed, the navigation indicator is zoomed in to 1.33 times. To account for this, there is a certain
 > distance between the navigation indicator's visible boundary and its actual boundary in the non-pressed state.
@@ -73,7 +73,7 @@ Sets the font style of the digit-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-i.md) | Yes | Font style of the digit-style navigation indicator.Only the **size** and **weight** parameters in **Font** are adjustable. Setting **family** and **style** has no effect.Default value:{size:?14,?weight:?FontWeight.Normal?} |
+| value | [Font](../arkts-apis/arkts-arkui-font-i.md) | Yes | Font style of the digit-style navigation indicator.<br>Only the **size** and **weight** parameters in **Font** are adjustable. Setting **family** and **style** has no effect.<br>Default value:<br>{size:?14,?weight:?FontWeight.Normal?} |
 
 **Return value:**
 
@@ -103,7 +103,7 @@ Sets the font color of the digit-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the digit-style navigation indicator.Default value: **'#ff182431' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the digit-style navigation indicator.<br>Default value: **'#ff182431' |
 
 **Return value:**
 
@@ -133,7 +133,7 @@ Sets the font style of the selected digit-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-i.md) | Yes | Font style of the selected digit-style navigation indicator.Default value:{?size:?1 4,?weight:?FontWeight.Normal?} |
+| value | [Font](../arkts-apis/arkts-arkui-font-i.md) | Yes | Font style of the selected digit-style navigation indicator.<br>Default value:<br>{?size:?1 4,?weight:?FontWeight.Normal?} |
 
 **Return value:**
 
@@ -163,7 +163,7 @@ Sets the font color of the selected digit-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the selected digit-style navigation indicator.Default value: **'#ff182431' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the selected digit-style navigation indicator.<br>Default value: **'#ff182431' |
 
 **Return value:**
 

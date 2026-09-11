@@ -2,6 +2,8 @@
 
 Describes a result object from raycasting, containing details about the 3D object hit by the ray.
 
+@typedef RaycastResult
+
 **Since:** 20
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

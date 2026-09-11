@@ -66,7 +66,7 @@ string类型可选值：可以转化为数字的字符串（如'10'）或带长�
 
 设置值为异常值时取默认值。
 
-**类型：** number \| string \| [Resource](arkts-arkui-resource-t.md)
+**类型：** number &#124; string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 11
 

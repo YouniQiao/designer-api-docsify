@@ -22,8 +22,7 @@ static getInfo(options?: GetDeviceOptions): void
 
 获取当前设备的信息。该接口异步读取系统设备信息，通过回调函数返回设备品牌、型号、屏幕参数等数据。
 
-> **说明：**
-   
+> **说明：**<br>
 > 
 > 在首页的onShow生命周期之前不建议调用Device.getInfo接口。
 

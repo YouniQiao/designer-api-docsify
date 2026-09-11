@@ -83,7 +83,7 @@ isTetheringOn(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Returns the value { |
+| boolean | Returns the value `true` is tethering is on, returns `false` otherwise. |
 
 **错误码：**
 

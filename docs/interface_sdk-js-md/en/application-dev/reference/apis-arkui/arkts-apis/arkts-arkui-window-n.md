@@ -69,12 +69,12 @@ import { window } from '@kit.ArkUI';
 | [setSpecificSystemWindowZIndex](arkts-arkui-window-setspecificsystemwindowzindex-f-sys.md) | Sets the z-level of a system window. This API uses a promise to return the result. |
 | [getTopNavDestinationName](arkts-arkui-window-gettopnavdestinationname-f-sys.md) | Obtains the name of NavDestination in the current top-level Navigation component of the specified foreground window. This API uses a promise to return the result. |
 | [getSnapshot](arkts-arkui-window-getsnapshot-f-sys.md) | Obtains a snapshot of the same size as the specified window. This API uses a promise to return the result. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)), taking a screenshot will result in a blank screen. |
-| [on](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md) | Subscribes to the property change event of the status bar and navigation bar. |
-| [off](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md) | Unsubscribes from the property change event of the status bar and navigation bar. |
-| [on](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md) | Subscribes to the gesture navigation status change event. |
-| [off](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md) | Unsubscribes from the gesture navigation status change event. |
-| [on](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md) | Subscribes to the watermark status change event. |
-| [off](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md) | Unsubscribes from the watermark status change event. |
+| [on](arkts-arkui-window-on-f-sys.md#onsystembartintchange) | Subscribes to the property change event of the status bar and navigation bar. |
+| [off](arkts-arkui-window-off-f-sys.md#offsystembartintchange) | Unsubscribes from the property change event of the status bar and navigation bar. |
+| [on](arkts-arkui-window-on-f-sys.md#ongesturenavigationenabledchange) | Subscribes to the gesture navigation status change event. |
+| [off](arkts-arkui-window-off-f-sys.md#offgesturenavigationenabledchange) | Unsubscribes from the gesture navigation status change event. |
+| [on](arkts-arkui-window-on-f-sys.md#onwatermarkflagchange) | Subscribes to the watermark status change event. |
+| [off](arkts-arkui-window-off-f-sys.md#offwatermarkflagchange) | Unsubscribes from the watermark status change event. |
 | [notifyScreenshotEvent](arkts-arkui-window-notifyscreenshotevent-f-sys.md) | Notifies a screenshot event. This API uses a promise to return the result. |
 | [moveMainWindowToTargetDisplay](arkts-arkui-window-movemainwindowtotargetdisplay-f-sys.md) | Move a window to the target display. The window must be a main window. |
 <!--DelEnd-->
@@ -151,6 +151,13 @@ import { window } from '@kit.ArkUI';
 | [ExtensionWindowConfig](arkts-arkui-window-extensionwindowconfig-i-sys.md) | Describes the parameters for creating a window for a UI ServiceExtensionAbility. |
 <!--DelEnd-->
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md) | Describes a generic callback function for rotation event notifications. |
+| [SpecificSystemBar](arkts-arkui-window-specificsystembar-t.md) | Defines the type of system bar that can be displayed or hidden. |
+
 ### Enums
 
 | Name | Description |
@@ -194,10 +201,3 @@ import { window } from '@kit.ArkUI';
 | [BlurStyle](arkts-arkui-window-blurstyle-e-sys.md) | Enumerates the window blur styles. |
 | [ExtensionWindowAttribute](arkts-arkui-window-extensionwindowattribute-e-sys.md) | Enumerates the attributes of a window for a UI ServiceExtensionAbility. |
 <!--DelEnd-->
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md) | Describes a generic callback function for rotation event notifications. |
-| [SpecificSystemBar](arkts-arkui-window-specificsystembar-t.md) | Defines the type of system bar that can be displayed or hidden. |

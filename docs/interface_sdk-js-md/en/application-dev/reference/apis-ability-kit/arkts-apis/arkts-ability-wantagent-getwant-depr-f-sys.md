@@ -59,4 +59,4 @@ Obtains the [Want](arkts-ability-app-ability-want-want-c.md) of an [WantAgent](a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Returns the { |
+| Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Returns the [Want](arkts-ability-app-ability-want-want-c.md) of the [WantAgent](arkts-ability-wantagent-depr-t.md#wantagent). |

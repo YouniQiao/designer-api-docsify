@@ -92,7 +92,7 @@ symbol: SymbolGlyphModifier
 
 Set symbol.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **Since:** 26.0.0
 

@@ -21,7 +21,7 @@ function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>,
 
 **废弃版本：** 19
 
-**替代接口：** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md)(deviceId: long, onDisconnect: AsyncCallback&lt;long&gt;)
+**替代接口：** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md)(deviceId: number, onDisconnect: AsyncCallback&lt;number&gt;)
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -33,7 +33,7 @@ function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>,
 | --- | --- | --- | --- |
 | deviceId | number | 是 | 设备ID，通过[queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md)获得。 |
 | onDisconnect | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当绑定设备断开时，err为undefined，data为解绑的设备ID；否则为错误对象。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{deviceId: number; remote: rpc.IRemoteObject;}&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{deviceId: number; remote: rpc.IRemoteObject;}&gt; | 是 | 回调函数。当绑定设备成功时，err为undefined，data包含设备ID和绑定设备驱动通信对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -87,7 +87,7 @@ function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>): Prom
 
 **废弃版本：** 19
 
-**替代接口：** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md)(deviceId: long, onDisconnect: AsyncCallback&lt;long&gt;)
+**替代接口：** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md)(deviceId: number, onDisconnect: AsyncCallback&lt;number&gt;)
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -104,7 +104,7 @@ function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>): Prom
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;{deviceId: number; remote: rpc.IRemoteObject; | > } Promise对象，返回一个包含设备ID和IRemoteObject的对象。 |
+| Promise&lt;{deviceId: number; remote: rpc.IRemoteObject;}&gt; | Promise对象，返回一个包含设备ID和IRemoteObject的对象。 |
 
 **错误码：**
 

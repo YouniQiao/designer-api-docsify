@@ -2,7 +2,7 @@
 
 This module provides JavaScript APIs of the scan framework for discovering and connecting to scanners.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This topic describes only public APIs provided by the module.
 
@@ -47,10 +47,10 @@ import { scan } from '@kit.BasicServicesKit';
 | [addScanner](arkts-basicservices-scan-addscanner-f-sys.md) | Adds a scanner. This API uses a promise to return the result. |
 | [deleteScanner](arkts-basicservices-scan-deletescanner-f-sys.md) | Deletes a scanner. This API uses a promise to return the result. |
 | [getAddedScanners](arkts-basicservices-scan-getaddedscanners-f-sys.md) | Obtains the added scanners. This API uses a promise to return the result. |
-| off | Unregisters the callback used to listen for the scanner addition event. This API uses an asynchronous callback to return the result. |
-| off | Unregisters the callback used to listen for the scanner deletion event. This API uses an asynchronous callback to return the result. |
-| on | Registers a callback used to listen for the scanner addition event. This API uses an asynchronous callback to return the result. |
-| on | Registers a callback used to listen for the scanner deletion event. This API uses an asynchronous callback to return the result. |
+| [off](arkts-basicservices-scan-off-f-sys.md#offscandeviceadd) | Unregisters the callback used to listen for the scanner addition event. This API uses an asynchronous callback to return the result. |
+| [off](arkts-basicservices-scan-off-f-sys.md#offscandevicedel) | Unregisters the callback used to listen for the scanner deletion event. This API uses an asynchronous callback to return the result. |
+| [on](arkts-basicservices-scan-on-f-sys.md#onscandeviceadd) | Registers a callback used to listen for the scanner addition event. This API uses an asynchronous callback to return the result. |
+| [on](arkts-basicservices-scan-on-f-sys.md#onscandevicedel) | Registers a callback used to listen for the scanner deletion event. This API uses an asynchronous callback to return the result. |
 <!--DelEnd-->
 
 ### Interfaces

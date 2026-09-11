@@ -30,7 +30,7 @@ handleBufferedEndTimeChanged(bufferedEndTime: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bufferedEndTime | number | 是 | 媒体缓冲的时长。单位：秒，取值范围：[0, duration]。超出范围时，ArkWeb 内核将不会执行。 |
+| bufferedEndTime | number | 是 | 媒体缓冲的时长。<br>单位：秒，取值范围：[0, duration]。超出范围时，ArkWeb 内核将不会执行。 |
 
 ## handleDurationChanged
 
@@ -50,7 +50,7 @@ handleDurationChanged(duration: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| duration | number | 是 | 媒体的总时长。单位：秒，取值范围：[0, +∞)。传入负数时，ArkWeb 内核将不会执行。 |
+| duration | number | 是 | 媒体的总时长。<br>单位：秒，取值范围：[0, +∞)。传入负数时，ArkWeb 内核将不会执行。 |
 
 ## handleEnded
 
@@ -105,7 +105,7 @@ handleFullscreenChanged(fullscreen: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fullscreen | boolean | 是 | 是否全屏。true表示全屏，false表示未全屏。 |
+| fullscreen | boolean | 是 | 是否全屏。<br>true表示全屏，false表示未全屏。 |
 
 ## handleMutedChanged
 
@@ -125,7 +125,7 @@ handleMutedChanged(muted: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| muted | boolean | 是 | 当前播放器是否静音。true表示当前播放器静音，false表示当前播放器未静音。 |
+| muted | boolean | 是 | 当前播放器是否静音。<br>true表示当前播放器静音，false表示当前播放器未静音。 |
 
 ## handleNetworkStateChanged
 
@@ -253,7 +253,7 @@ handleTimeUpdate(currentPlayTime: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| currentPlayTime | number | 是 | 当前播放时间。单位：秒，取值范围：[0, duration]。超出范围时，ArkWeb 内核将不会执行。 |
+| currentPlayTime | number | 是 | 当前播放时间。<br>单位：秒，取值范围：[0, duration]。超出范围时，ArkWeb 内核将不会执行。 |
 
 ## handleVideoSizeChanged
 

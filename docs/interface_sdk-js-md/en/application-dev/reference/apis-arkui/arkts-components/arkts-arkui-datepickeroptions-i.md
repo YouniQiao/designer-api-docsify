@@ -2,14 +2,14 @@
 
 Describes the parameters of the date picker.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - For details about how to use **Date**, see [TimePickerOptions](arkts-arkui-timepickeroptions-i.md).
 > 
 > - Property modifications made to **DatePickerOptions** during the **DatePicker** scrolling process may not take
 > effect.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Handle exceptions for the start and end dates first, followed by exceptions for the selected date.
 
@@ -36,7 +36,8 @@ Value range: [Date('1900-01-31'), Date('2100-12-31')].
 
 **Type:** Date
 
-**Default:** Date('2100-12-31') [since 11]
+**Default:**
+- API version 11+: Date('2100-12-31')
 
 **Since:** 8
 
@@ -58,8 +59,7 @@ In DatePickerDialog, when **showTime** in [DatePickerDialogOptions](arkts-arkui-
 
 **Type:** [DatePickerMode](arkts-arkui-datepickermode-e.md)
 
-**Default:** DatePickerMode.DATE - which means to display three columns: year, month, and day. 
-Decimal values are rounded off.
+**Default:** DatePickerMode.DATE - which means to display three columns: year, month, and day. <br>Decimal values are rounded off.
 
 **Since:** 18
 
@@ -85,7 +85,8 @@ Since API version 10, this parameter supports two-way binding through [\$\$](../
 
 **Type:** Date
 
-**Default:** current system date [since 11]
+**Default:**
+- API version 11+: current system date
 
 **Since:** 8
 
@@ -107,7 +108,8 @@ Value range: [Date('1900-01-31'), Date('2100-12-31')].
 
 **Type:** Date
 
-**Default:** Date('1970-1-1') [since 11]
+**Default:**
+- API version 11+: Date('1970-1-1')
 
 **Since:** 8
 

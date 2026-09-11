@@ -34,7 +34,7 @@ function getRawDescriptor(pipe: USBDevicePipe): Uint8Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified.  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified.  <br>2.Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 | [14400001](../errorcode-usb.md#14400001-usb设备访问权限被拒绝) |  |
 | [14400004](../errorcode-usb.md#14400004-服务异常) |  |

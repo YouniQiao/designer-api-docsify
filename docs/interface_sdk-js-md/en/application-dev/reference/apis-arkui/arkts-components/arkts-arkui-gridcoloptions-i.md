@@ -27,7 +27,7 @@ The value must be a non-negative integer. Default value: **0**.
 
 Invalid values are treated as the default value.
 
-**Type:** number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
+**Type:** number &#124; [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **Since:** 9
 
@@ -49,13 +49,13 @@ The value must be a non-negative integer. Default value: **0**.
 
 Invalid values are treated as the default value.
 
-**NOTE：**
+**NOTE:**
 
 If a child component shares an **order** value with another child component or does not have **order** set, it is displayed based on its code sequence number.
 
 If **order** is not set for all child components, those that have **order** set are displayed after those that do not and are sorted in ascending order based on the value.
 
-**Type:** number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
+**Type:** number &#124; [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **Since:** 9
 
@@ -77,7 +77,7 @@ The value must be a non-negative integer. Default value: **1**.
 
 Invalid values are treated as the default value.
 
-**Type:** number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
+**Type:** number &#124; [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **Since:** 9
 

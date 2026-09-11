@@ -52,9 +52,9 @@ import { observer } from '@kit.TelephonyKit';
 
 | Name | Description |
 | --- | --- |
-| [off](arkts-telephony-observer-off-f.md) | Unregisters the observer for cell information change events. This API uses an asynchronous callback to return the result. |
-| [on](arkts-telephony-observer-on-f.md) | Registers an observer for cell information change events. This API uses an asynchronous callback to return the result. |
-| [on](arkts-telephony-observer-on-f.md) | Registers an observer for signal status change events of the SIM card in the specified slot. This API uses an asynchronous callback to return the execution result. |
+| [off](arkts-telephony-observer-off-f-sys.md#offcellinfochange) | Unregisters the observer for cell information change events. This API uses an asynchronous callback to return the result. |
+| [on](arkts-telephony-observer-on-f-sys.md#oncellinfochange) | Registers an observer for cell information change events. This API uses an asynchronous callback to return the result. |
+| [on](arkts-telephony-observer-on-f-sys.md#oncellinfochange) | Registers an observer for signal status change events of the SIM card in the specified slot. This API uses an asynchronous callback to return the execution result. |
 <!--DelEnd-->
 
 ### Interfaces

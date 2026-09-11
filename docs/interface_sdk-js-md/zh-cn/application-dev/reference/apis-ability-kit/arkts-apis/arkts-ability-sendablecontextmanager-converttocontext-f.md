@@ -32,7 +32,7 @@ function convertToContext(sendableContext: SendableContext): common.Context
 
 | 类型 | 说明 |
 | --- | --- |
-| [common.Context](arkts-ability-common-context-t.md) | [Context]{ |
+| [common.Context](arkts-ability-common-context-t.md) | Context object. |
 
 **错误码：**
 

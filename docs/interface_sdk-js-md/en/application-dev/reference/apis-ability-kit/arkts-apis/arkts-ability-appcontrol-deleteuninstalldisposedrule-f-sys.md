@@ -26,8 +26,8 @@ Deletes an uninstallation disposed rule for an application or an application clo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appIdentifier | string | Yes | appIdentifier of the target application.If the application does not have an appIdentifier, use its appId instead. **appId** is the unique identifier of an application and is determined by the bundle name and signature information of the application. For details about how to delete **appId**, see How do I obtain appId from application information. |
-| appIndex | number | No | Index of the application clone. The default value is **0**.The value **0** means to delete the uninstallation disposed rule of the main application. A value greater than 0 means to delete the uninstallation disposed rule of the application clone. |
+| appIdentifier | string | Yes | appIdentifier of the target application.<br> If the application does not have an appIdentifier, use its appId instead. **appId** is the unique identifier of an application and is determined by the bundle name and signature information of the application. For details about how to delete **appId**, see How do I obtain appId from application information. |
+| appIndex | number | No | Index of the application clone. The default value is **0**.<br> The value **0** means to delete the uninstallation disposed rule of the main application. A value greater than 0 means to delete the uninstallation disposed rule of the application clone. |
 
 **Error codes:**
 

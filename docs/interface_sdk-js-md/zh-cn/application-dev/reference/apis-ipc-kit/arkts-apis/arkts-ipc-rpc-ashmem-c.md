@@ -284,7 +284,7 @@ mapAshmem(mapType: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [mapTypedAshmem](#maptypedashmem)(mapType: int)
+**替代接口：** [mapTypedAshmem](#maptypedashmem)(mapType: number)
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -517,7 +517,7 @@ readAshmem(size: number, offset: number): number[]
 
 **废弃版本：** 11
 
-**替代接口：** [readDataFromAshmem](#readdatafromashmem)(size: int, offset: int)
+**替代接口：** [readDataFromAshmem](#readdatafromashmem)(size: number, offset: number)
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -641,7 +641,7 @@ readFromAshmem(size: number, offset: number): number[]
 
 **废弃版本：** 9
 
-**替代接口：** [readDataFromAshmem](#readdatafromashmem)(size: int, offset: int)
+**替代接口：** [readDataFromAshmem](#readdatafromashmem)(size: number, offset: number)
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -690,7 +690,7 @@ setProtection(protectionType: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [setProtectionType](#setprotectiontype)(protectionType: int)
+**替代接口：** [setProtectionType](#setprotectiontype)(protectionType: number)
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -806,7 +806,7 @@ writeAshmem(buf: number[], size: number, offset: number): void
 
 **废弃版本：** 11
 
-**替代接口：** [writeDataToAshmem](#writedatatoashmem)(buf: ArrayBuffer, size: int, offset: int)
+**替代接口：** [writeDataToAshmem](#writedatatoashmem)(buf: ArrayBuffer, size: number, offset: number)
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -915,7 +915,7 @@ writeToAshmem(buf: number[], size: number, offset: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeDataToAshmem](#writedatatoashmem)(buf: ArrayBuffer, size: int, offset: int)
+**替代接口：** [writeDataToAshmem](#writedatatoashmem)(buf: ArrayBuffer, size: number, offset: number)
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 

@@ -23,7 +23,7 @@ Rotation angle for the **RotationGesture** event, in deg.
 
 Angle of the swipe gesture for the **SwipeGesture** event, that is, the angle between the instantaneous direction of finger sliding and the positive horizontal direction, in deg.
 
-**NOTE：**
+**NOTE:**
 
 Rotation gesture angle calculation: When a rotation gesture is detected, the line connecting the two fingers is identified as the starting line. As the fingers slide, the line between them rotates. Based on the coordinates of the end points of the starting line and the current line, the arctangent function is used to calculate the included angles relative to the horizontal direction. The rotation angle is calculated as arctan2(cy2-cy1, cx2-cx1) - arctan 2(y2-y1, x2-x1). With the starting line as the reference axis, clockwise rotation ranges from 0 to 180 degrees, and counterclockwise rotation ranges from 0 to –180 degrees.
 
@@ -45,7 +45,7 @@ fingerInfos?: FingerInfo[]
 
 Information about touch points of the gesture event. For gesture events initiated by a touchscreen, **fingerInfos** includes information about all touch points. For gesture events initiated by a mouse or touchpad, **fingerInfos** contains only one touch point.
 
-**NOTE：**
+**NOTE:**
 
 **fingerInfos** only records information about effective fingers that participate in the touch. Fingers that are pressed first but do not participate in triggering of the current gesture will not be shown in **fingerInfos**. The default value is an empty array **[]**, and an empty array indicates no effective touch point information.
 
@@ -67,7 +67,7 @@ fingerList: FingerInfo[]
 
 List of touch points of the gesture event. If the event input device is touchscreen, the list includes all touch points. If the event input device is mouse or touchpad, the list contains only one touch point.
 
-**NOTE：**
+**NOTE:**
 
 1. The index of a finger corresponds to its position, that is, the ID of a finger in **fingerList[index]** refers
 to its index. If a finger is pressed first and does not participate in triggering of the current gesture, its position in **fingerList** is left empty.

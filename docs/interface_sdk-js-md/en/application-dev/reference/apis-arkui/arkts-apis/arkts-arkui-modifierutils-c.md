@@ -33,7 +33,7 @@ Checks if the given instance is of the specified component type.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the instance is of the specified component type. Otherwise, returns false. |
+| boolean | Returns true if the instance is of the specified component type. Otherwise, returns false. @static |
 
 **Examples**
 

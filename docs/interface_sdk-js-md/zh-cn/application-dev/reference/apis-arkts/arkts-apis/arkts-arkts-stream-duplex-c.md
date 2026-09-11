@@ -80,7 +80,7 @@ doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| chunk | string \| Uint8Array | 是 | 要写出的数据。 |
+| chunk | string &#124; Uint8Array | 是 | 要写出的数据。 |
 | encoding | string | 是 | 字符编码类型。当前版本支持'utf8'、'gb18030'、'gbk'以及'gb2312'。 |
 | callback | Function | 是 | 回调函数。 |
 
@@ -123,7 +123,7 @@ doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| chunks | string[] \| Uint8Array[] | 是 | 待批量写出的数据块数组。 |
+| chunks | string[] &#124; Uint8Array[] | 是 | 待批量写出的数据块数组。 |
 | callback | Function | 是 | 回调函数。 |
 
 **示例**
@@ -173,7 +173,7 @@ end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writab
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| chunk | string \| Uint8Array | 否 | 需要写入的数据。默认值为undefined。 |
+| chunk | string &#124; Uint8Array | 否 | 需要写入的数据。默认值为undefined。 |
 | encoding | string | 否 | 编码格式。默认值为**'utf8'**。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
 | callback | Function | 否 | 回调函数。传入时异步调用，不传入时，不调用回调函数。 |
 
@@ -323,7 +323,7 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| chunk | string \| Uint8Array | 否 | 需要写入的数据。默认值为undefined。当前版本不支持传入null、undefined和空字符串，会抛出异常。 |
+| chunk | string &#124; Uint8Array | 否 | 需要写入的数据。默认值为undefined。当前版本不支持传入null、undefined和空字符串，会抛出异常。 |
 | encoding | string | 否 | 编码格式。默认值为**'utf8'**。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
 | callback | Function | 否 | 回调函数，用于在数据写入完成后执行特定逻辑。传入callback时，数据写入缓冲区后会调用该回调函数；不传入时，不调用回调函数。 |
 

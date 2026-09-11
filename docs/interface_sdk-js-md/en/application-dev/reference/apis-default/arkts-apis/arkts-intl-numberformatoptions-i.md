@@ -11,7 +11,7 @@
 currency?: string | undefined
 ```
 
-**Type:** string \| undefined
+**Type:** string &#124; undefined
 
 ## currencySign
 
@@ -19,7 +19,7 @@ currency?: string | undefined
 currencySign?: string | undefined
 ```
 
-**Type:** string \| undefined
+**Type:** string &#124; undefined
 
 ## localeMatcher
 
@@ -27,7 +27,7 @@ currencySign?: string | undefined
 localeMatcher?: string | undefined
 ```
 
-**Type:** string \| undefined
+**Type:** string &#124; undefined
 
 ## maximumFractionDigits
 
@@ -35,7 +35,7 @@ localeMatcher?: string | undefined
 maximumFractionDigits?: number | undefined
 ```
 
-**Type:** number \| undefined
+**Type:** number &#124; undefined
 
 ## maximumSignificantDigits
 
@@ -43,7 +43,7 @@ maximumFractionDigits?: number | undefined
 maximumSignificantDigits?: number | undefined
 ```
 
-**Type:** number \| undefined
+**Type:** number &#124; undefined
 
 ## minimumFractionDigits
 
@@ -51,7 +51,7 @@ maximumSignificantDigits?: number | undefined
 minimumFractionDigits?: number | undefined
 ```
 
-**Type:** number \| undefined
+**Type:** number &#124; undefined
 
 ## minimumIntegerDigits
 
@@ -59,7 +59,7 @@ minimumFractionDigits?: number | undefined
 minimumIntegerDigits?: number | undefined
 ```
 
-**Type:** number \| undefined
+**Type:** number &#124; undefined
 
 ## minimumSignificantDigits
 
@@ -67,7 +67,7 @@ minimumIntegerDigits?: number | undefined
 minimumSignificantDigits?: number | undefined
 ```
 
-**Type:** number \| undefined
+**Type:** number &#124; undefined
 
 ## numberingSystem
 
@@ -75,7 +75,7 @@ minimumSignificantDigits?: number | undefined
 numberingSystem?: string | undefined
 ```
 
-**Type:** string \| undefined
+**Type:** string &#124; undefined
 
 ## roundingIncrement
 
@@ -83,7 +83,7 @@ numberingSystem?: string | undefined
 roundingIncrement?: number | undefined
 ```
 
-**Type:** number \| undefined
+**Type:** number &#124; undefined
 
 ## roundingMode
 
@@ -91,7 +91,7 @@ roundingIncrement?: number | undefined
 roundingMode?: string | undefined
 ```
 
-**Type:** string \| undefined
+**Type:** string &#124; undefined
 
 ## roundingPriority
 
@@ -99,7 +99,7 @@ roundingMode?: string | undefined
 roundingPriority?: string | undefined
 ```
 
-**Type:** string \| undefined
+**Type:** string &#124; undefined
 
 ## style
 
@@ -107,7 +107,7 @@ roundingPriority?: string | undefined
 style?: string | undefined
 ```
 
-**Type:** string \| undefined
+**Type:** string &#124; undefined
 
 ## useGrouping
 
@@ -115,4 +115,4 @@ style?: string | undefined
 useGrouping?: boolean | undefined
 ```
 
-**Type:** boolean \| undefined
+**Type:** boolean &#124; undefined

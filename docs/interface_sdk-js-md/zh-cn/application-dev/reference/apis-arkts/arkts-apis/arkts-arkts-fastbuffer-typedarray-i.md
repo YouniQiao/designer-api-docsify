@@ -2,7 +2,7 @@
 
 TypedArray 继承 Int8Array 的特性与方法。
 
-@extends Int8Array
+@extends Int8Array @typedef TypedArray
 
 **继承/实现关系：** TypedArray extends [Int8Array](arkts-arkts-collections-int8array-c.md)
 

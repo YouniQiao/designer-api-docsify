@@ -2,7 +2,7 @@
 
 Describes the rectangle of the surface held by the **XComponent**.
 
-> **NOTE：**
+> **NOTE:**
 
 > The **surfaceWidth** and **surfaceHeight** attributes default to the size of the **XComponent** if the
 > [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect) API is not called and neither

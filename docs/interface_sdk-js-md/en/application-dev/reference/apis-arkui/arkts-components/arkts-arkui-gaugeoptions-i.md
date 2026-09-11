@@ -21,7 +21,7 @@ Maximum value of the current data segment.
 
 Default value: **100**
 
-**NOTE：**
+**NOTE:**
 
 If the value of **max** is less than that of **min**, the default values **0** and **100** are used.
 
@@ -67,7 +67,7 @@ Current value of the gauge, that is, the position to which the indicator points 
 
 Default value: **0**
 
-**NOTE：**
+**NOTE:**
 
 If the value is not within the range defined by the **min** and **max** parameters, the value of **min** is used.
 

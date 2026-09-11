@@ -60,7 +60,7 @@ Obtains the tethering enable or disable.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns the value { |
+| boolean | Returns the value `true` is tethering is on, returns `false` otherwise. |
 
 **Error codes:**
 

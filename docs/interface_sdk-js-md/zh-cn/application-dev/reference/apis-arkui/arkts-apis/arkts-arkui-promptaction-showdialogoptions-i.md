@@ -18,8 +18,7 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 alignment?: DialogAlignment
 ```
 
-对话框在竖直方向上的对齐方式。默认值：DialogAlignment.Default   
-**说明：** 若在UIExtension中设置showInSubWindow为true, 弹窗将基于UIExtension的宿主窗口对齐。
+对话框在竖直方向上的对齐方式。<br>默认值：DialogAlignment.Default <br>**说明：** <br>若在UIExtension中设置showInSubWindow为true, 弹窗将基于UIExtension的宿主窗口对齐。
 
 **类型：** [DialogAlignment](arkts-arkui-dialogalignment-e.md)
 
@@ -37,8 +36,7 @@ alignment?: DialogAlignment
 backgroundBlurStyle?: BlurStyle
 ```
 
-对话框背板模糊材质。默认值：从API版本26.0.0开始，为BlurStyle.NONE，API版本26.0.0之前，为BlurStyle.COMPONENT_ULTRA_THICK。  
-**说明：** 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
+对话框背板模糊材质。<br>默认值：从API版本26.0.0开始，为BlurStyle.NONE，API版本26.0.0之前，为BlurStyle.COMPONENT_ULTRA_THICK。<br>**说明：** <br>设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
 
 **类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
@@ -76,8 +74,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundColor?: ResourceColor
 ```
 
-对话框背板颜色。默认值：Color.Transparent   
-**说明：** backgroundColor会与模糊属性backgroundBlurStyle叠加产生效果，如果不符合预期，可将backgroundBlurStyle设置为BlurStyle.NONE，即可取消模糊。
+对话框背板颜色。<br>默认值：Color.Transparent <br>**说明：** <br>backgroundColor会与模糊属性backgroundBlurStyle叠加产生效果，如果不符合预期，可将backgroundBlurStyle设置为BlurStyle.NONE，即可取消模糊。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -131,8 +128,7 @@ buttons?: Array<Button>
 enableHoverMode?: boolean
 ```
 
-是否响应悬停态，值为true时，响应悬停态。默认值：false，默认不响应。  
-**说明：** PC/2in1设备弹窗默认显示在上半屏，在enableHoverMode设置为true时，可以通过设置hoverModeArea参数显示在下半屏。其他设备弹窗在enableHoverMode设置为true时默认显示在下半屏，可以通过设置hoverModeArea参数显示在上半屏。
+是否响应悬停态，值为true时，响应悬停态。<br>默认值：false，默认不响应。<br>**说明：** <br>PC/2in1设备弹窗默认显示在上半屏，在enableHoverMode设置为true时，可以通过设置hoverModeArea参数显示在下半屏。其他设备弹窗在enableHoverMode设置为true时默认显示在下半屏，可以通过设置hoverModeArea参数显示在上半屏。
 
 **类型：** boolean
 
@@ -152,7 +148,7 @@ enableHoverMode?: boolean
 hoverModeArea?: HoverModeAreaType
 ```
 
-设置悬停态下对话框的默认展示区域。默认值：HoverModeAreaType.BOTTOM_SCREEN
+设置悬停态下对话框的默认展示区域。<br>默认值：HoverModeAreaType.BOTTOM_SCREEN
 
 **类型：** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
 
@@ -172,10 +168,7 @@ hoverModeArea?: HoverModeAreaType
 immersiveMode?: ImmersiveMode
 ```
 
-设置页面内对话框蒙层效果。  
-**说明：**
-- 默认值：ImmersiveMode.DEFAULT
-- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
+设置页面内对话框蒙层效果。<br>**说明：** <br>- 默认值：ImmersiveMode.DEFAULT <br>- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
 **类型：** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
@@ -195,7 +188,7 @@ immersiveMode?: ImmersiveMode
 isModal?: boolean
 ```
 
-对话框是否为模态窗口。值为true表示为模态窗口且有蒙层，不可与对话框周围其他控件进行交互，即蒙层区域无法事件透传。值为false表示为非模态窗口且无蒙层，可以与对话框周围其他控件进行交互。默认值：true
+对话框是否为模态窗口。值为true表示为模态窗口且有蒙层，不可与对话框周围其他控件进行交互，即蒙层区域无法事件透传。值为false表示为非模态窗口且无蒙层，可以与对话框周围其他控件进行交互。<br>默认值：true
 
 **类型：** boolean
 
@@ -215,10 +208,7 @@ isModal?: boolean
 levelMode?: LevelMode
 ```
 
-设置对话框显示层级。  
-**说明：**
-- 默认值：LevelMode.OVERLAY
-- 当且仅当showInSubWindow属性设置为false时生效。
+设置对话框显示层级。<br>**说明：** <br>- 默认值：LevelMode.OVERLAY <br>- 当且仅当showInSubWindow属性设置为false时生效。
 
 **类型：** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
@@ -238,10 +228,7 @@ levelMode?: LevelMode
 levelOrder?: LevelOrder
 ```
 
-设置对话框显示的顺序。  
-**说明：**
-- 默认值：LevelOrder.clamp(0)
-- 不支持动态刷新顺序。
+设置对话框显示的顺序。<br>**说明：** <br>- 默认值：LevelOrder.clamp(0) <br>- 不支持动态刷新顺序。
 
 **类型：** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
 
@@ -261,9 +248,7 @@ levelOrder?: LevelOrder
 levelUniqueId?: number
 ```
 
-置页面级对话框需要显示的层级下的节点UniqueID。取值范围：大于等于0的数字。  
-**说明：**
-- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
+置页面级对话框需要显示的层级下的节点UniqueID。<br>取值范围：大于等于0的数字。<br>**说明：** <br>- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
 **类型：** number
 
@@ -281,8 +266,7 @@ levelUniqueId?: number
 maskRect?: Rectangle
 ```
 
-对话框遮蔽层区域，在遮蔽层区域内的事件不透传，在遮蔽层区域外的事件透传。默认值：{ x: 0, y: 0, width: '100%', height: '100%' }   
-**说明：** showInSubWindow为true时，maskRect不生效。maskRect在设置[Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)中的部分属性后，若未设置其余的属性，则其余属性的默认值为0。
+对话框遮蔽层区域，在遮蔽层区域内的事件不透传，在遮蔽层区域外的事件透传。<br>默认值：{ x: 0, y: 0, width: '100%', height: '100%' } <br>**说明：** <br>showInSubWindow为true时，maskRect不生效。<br>maskRect在设置[Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)中的部分属性后，若未设置其余的属性，则其余属性的默认值为0。
 
 **类型：** [Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)
 
@@ -300,9 +284,9 @@ maskRect?: Rectangle
 message?: string | Resource
 ```
 
-内容文本。默认值：undefined，取值为undefined默认不显示内容。
+内容文本。<br>默认值：undefined，取值为undefined默认不显示内容。
 
-**类型：** string \| [Resource](arkts-arkui-resource-t.md)
+**类型：** string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 9
 
@@ -316,7 +300,7 @@ message?: string | Resource
 offset?: Offset
 ```
 
-对话框相对alignment所在位置的偏移量。默认值：{&nbsp;dx:&nbsp;0&nbsp;,&nbsp;dy:&nbsp;0&nbsp;}
+对话框相对alignment所在位置的偏移量。<br>默认值：{&nbsp;dx:&nbsp;0&nbsp;,&nbsp;dy:&nbsp;0&nbsp;}
 
 **类型：** Offset
 
@@ -334,12 +318,7 @@ offset?: Offset
 onDidAppear?: Callback<void>
 ```
 
-对话框弹出后的事件回调。  
-**说明：**
-1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
-2.在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
-3.快速点击弹出，关闭对话框时，onWillDisappear在onDidAppear前生效。
-4.对话框入场动效未完成时彻底关闭对话框，动效打断，onDidAppear不会触发。
+对话框弹出后的事件回调。<br>**说明：** <br>1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。<br>2.在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。<br>3.快速点击弹出，关闭对话框时，onWillDisappear在onDidAppear前生效。<br>4.对话框入场动效未完成时彻底关闭对话框，动效打断，onDidAppear不会触发。
 
 **类型：** Callback&lt;void&gt;
 
@@ -357,9 +336,7 @@ onDidAppear?: Callback<void>
 onDidDisappear?: Callback<void>
 ```
 
-对话框消失后的事件回调。  
-**说明：**
-1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
+对话框消失后的事件回调。<br>**说明：** <br>1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
 **类型：** Callback&lt;void&gt;
 
@@ -377,10 +354,7 @@ onDidDisappear?: Callback<void>
 onWillAppear?: Callback<void>
 ```
 
-对话框显示动效前的事件回调。  
-**说明：**
-1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
-2.在onWillAppear内设置改变对话框显示效果的回调事件，二次弹出生效。
+对话框显示动效前的事件回调。<br>**说明：** <br>1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。<br>2.在onWillAppear内设置改变对话框显示效果的回调事件，二次弹出生效。
 
 **类型：** Callback&lt;void&gt;
 
@@ -398,9 +372,7 @@ onWillAppear?: Callback<void>
 onWillDisappear?: Callback<void>
 ```
 
-对话框退出动效前的事件回调。  
-**说明：**
-1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
+对话框退出动效前的事件回调。<br>**说明：** <br>1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
 **类型：** Callback&lt;void&gt;
 
@@ -418,9 +390,9 @@ onWillDisappear?: Callback<void>
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-设置对话框背板的阴影。当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
+设置对话框背板的阴影。<br> 当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
 
-**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
+**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 12
 
@@ -436,8 +408,7 @@ shadow?: ShadowOptions | ShadowStyle
 showInSubWindow?: boolean
 ```
 
-某对话框需要显示在主窗口之外时，是否在子窗口显示此对话框。值为true表示在子窗口显示对话框。默认值：false，对话框显示在应用内，而非独立子窗口。  
-**说明：** showInSubWindow为true的对话框无法触发显示另一个showInSubWindow为true的对话框。
+某对话框需要显示在主窗口之外时，是否在子窗口显示此对话框。值为true表示在子窗口显示对话框。<br>默认值：false，对话框显示在应用内，而非独立子窗口。<br>**说明：** showInSubWindow为true的对话框无法触发显示另一个showInSubWindow为true的对话框。
 
 **类型：** boolean
 
@@ -457,10 +428,7 @@ showInSubWindow?: boolean
 systemMaterial?: SystemUiMaterial
 ```
 
-设置弹窗的系统材质。  
-**说明：**
-- 默认值：[ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md)的style为ImmersiveStyle.ULTRA_THICK的[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)对象。设置undefined时与默认值保持一致。
-- 不同的材质具有不同的效果，该接口影响背景色backgroundColor、背景模糊backgroundBlurStyle、背景效果backgroundEffect、阴影shadow，不建议与上述接口一起使用。
+设置弹窗的系统材质。<br>**说明：** <br>- 默认值：[ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md)的style为ImmersiveStyle.ULTRA_THICK的[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)对象。设置undefined时与默认值保持一致。<br>- 不同的材质具有不同的效果，该接口影响背景色backgroundColor、背景模糊backgroundBlurStyle、背景效果backgroundEffect、阴影shadow，不建议与上述接口一起使用。
 
 **类型：** [SystemUiMaterial](../arkts-components/arkts-arkui-systemuimaterial-t.md)
 
@@ -478,9 +446,9 @@ systemMaterial?: SystemUiMaterial
 title?: string | Resource
 ```
 
-标题文本。默认值：undefined，取值为undefined默认不显示标题。
+标题文本。<br>默认值：undefined，取值为undefined默认不显示标题。
 
-**类型：** string \| [Resource](arkts-arkui-resource-t.md)
+**类型：** string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 9
 

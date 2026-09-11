@@ -2,7 +2,7 @@
 
 This module provides API for creating and displaying toasts, dialog boxes, and action menus.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This module cannot be used in the file declaration of the [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md). In
 > other words, the APIs of this module can be used only after a component instance is created; they cannot be called
@@ -71,6 +71,16 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 | [ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i-sys.md) | Describes the options for showing the action menu. |
 <!--DelEnd-->
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [DialogOptionsCornerRadius](arkts-arkui-promptaction-dialogoptionscornerradius-t.md) | Defines the allowed data types for specifying the background corner radius of a dialog box. |
+| [DialogOptionsBorderWidth](arkts-arkui-promptaction-dialogoptionsborderwidth-t.md) | Defines the allowed data types for specifying the background border width of a dialog box. |
+| [DialogOptionsBorderColor](arkts-arkui-promptaction-dialogoptionsbordercolor-t.md) | Defines the allowed data types for specifying the background border color of a dialog box. |
+| [DialogOptionsBorderStyle](arkts-arkui-promptaction-dialogoptionsborderstyle-t.md) | Defines the allowed data types for specifying the background border style of a dialog box. |
+| [DialogOptionsShadow](arkts-arkui-promptaction-dialogoptionsshadow-t.md) | Defines the allowed data types for specifying the background shadow of a dialog box. |
+
 ### Enums
 
 | Name | Description |
@@ -85,16 +95,6 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 | --- | --- |
 | [ToastShowMode](arkts-arkui-promptaction-toastshowmode-e-sys.md) | Enumerates display modes for toasts. By default, the toast is displayed within the application and supports display in subwindows. |
 <!--DelEnd-->
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [DialogOptionsCornerRadius](arkts-arkui-promptaction-dialogoptionscornerradius-t.md) | Defines the allowed data types for specifying the background corner radius of a dialog box. |
-| [DialogOptionsBorderWidth](arkts-arkui-promptaction-dialogoptionsborderwidth-t.md) | Defines the allowed data types for specifying the background border width of a dialog box. |
-| [DialogOptionsBorderColor](arkts-arkui-promptaction-dialogoptionsbordercolor-t.md) | Defines the allowed data types for specifying the background border color of a dialog box. |
-| [DialogOptionsBorderStyle](arkts-arkui-promptaction-dialogoptionsborderstyle-t.md) | Defines the allowed data types for specifying the background border style of a dialog box. |
-| [DialogOptionsShadow](arkts-arkui-promptaction-dialogoptionsshadow-t.md) | Defines the allowed data types for specifying the background shadow of a dialog box. |
 
 ## Examples
 

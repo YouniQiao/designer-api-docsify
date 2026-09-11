@@ -14,7 +14,7 @@ function dumpJsHeapData(filename : string) : void
 
 Dumps VM heap data.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Exporting the VM heap is time-consuming, and this API is a synchronous API. Therefore, you are advised not to
 > call this API in the release version. Otherwise, the application screen may freeze, affecting user experience.
@@ -57,7 +57,7 @@ function dumpJsHeapData(filename : string, needClean : boolean) : void
 
 Dumps VM heap data and clears the nodeId cache.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Exporting the VM heap is time-consuming, and this API is a synchronous API. Therefore, you are advised not to
 > call this API in the release version. Otherwise, the application screen may freeze, affecting user experience.

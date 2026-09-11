@@ -36,7 +36,7 @@ function getStatusMonitor(localUserId: number): StatusMonitor
 
 | 类型 | 说明 |
 | --- | --- |
-| [StatusMonitor](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md) | 状态监听器对象。可用于查询模板状态（[getTemplateStatus]{ |
+| [StatusMonitor](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md) | 状态监听器对象。可用于查询模板状态（[getTemplateStatus](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md#gettemplatestatus)）、订阅模板变化（[onTemplateChange](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md#ontemplatechange)）、订阅可添加设备变化（[onAvailableDeviceChange](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md#onavailabledevicechange)）、订阅持续认证状态（[onContinuousAuthChange](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md#oncontinuousauthchange)）等操作。 |
 
 **错误码：**
 

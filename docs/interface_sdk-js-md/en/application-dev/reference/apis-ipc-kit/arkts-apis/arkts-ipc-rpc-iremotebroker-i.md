@@ -28,7 +28,7 @@ Obtains a proxy or remote object. This API must be implemented by its derived cl
 
 | Type | Description |
 | --- | --- |
-| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Returns the **RemoteObject** if it is the caller; returns the [IRemoteObject]{ |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Returns the **RemoteObject** if it is the caller; returns the [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md), the holder of this **RemoteProxy** object, if the caller is a [RemoteProxy](arkts-ipc-rpc-remoteproxy-c.md) object. |
 
 **Examples**
 

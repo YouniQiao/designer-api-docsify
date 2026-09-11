@@ -126,7 +126,7 @@ Obtains a string value that matches the specified device ID and key. This API us
 | --- | --- | --- | --- |
 | deviceId | string | Yes | ID of the target device. |
 | key | string | Yes | Key to match. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| number \| Uint8Array&gt; | Yes | Callback used to return the value obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean &#124; string &#124; number &#124; Uint8Array&gt; | Yes | Callback used to return the value obtained. |
 
 **Examples**
 
@@ -173,7 +173,7 @@ Obtains a string value that matches the specified device ID and key. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean \| string \| number \| Uint8Array&gt; | Promise used to return the string value that matches the given condition. |
+| Promise&lt;boolean &#124; string &#124; number &#124; Uint8Array&gt; | Promise used to return the string value that matches the given condition. |
 
 **Examples**
 

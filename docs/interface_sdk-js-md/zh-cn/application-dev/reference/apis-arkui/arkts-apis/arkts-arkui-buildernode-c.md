@@ -80,7 +80,7 @@ build(builder: WrappedBuilder<Args>, arg?: Object): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;Args&gt; | 是 | 创建对应节点树的时候所需的无状态UI方法[@Builder](../../../ui/state-management/arkts-builder.md)。 |
-| arg | Object | 否 | builder的入参。当前仅支持一个入参，且入参对象类型与@Builder定义的入参类型保持一致。默认值：undefined |
+| arg | Object | 否 | builder的入参。当前仅支持一个入参，且入参对象类型与@Builder定义的入参类型保持一致。<br>默认值：undefined |
 
 **示例**
 
@@ -270,7 +270,7 @@ constructor(uiContext: UIContext, options?: RenderOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考[UIContext获取方法](../../../reference/apis-arkui/js-apis-arkui-node.md#uicontext获取方法)。uiContext需要为一个有效的值，即UI上下文正确，如果传入非法值或者未设置，会导致创建失败。 |
-| options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | 否 | BuilderNode的构造可选参数，参数用于构造节点的理想大小和节点的渲染类型。默认值：undefined |
+| options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | 否 | BuilderNode的构造可选参数，参数用于构造节点的理想大小和节点的渲染类型。<br>默认值：undefined |
 
 ## dispose
 
@@ -314,7 +314,7 @@ getFrameNode(): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | BuilderNode持有的FrameNode对象，用于将该BuilderNode作为子节点挂载到其他FrameNode上。若该BuilderNode不包含FrameNode，则返回空对象null。 |
+| [FrameNode](arkts-arkui-framenode-c.md) &#124; null | BuilderNode持有的FrameNode对象，用于将该BuilderNode作为子节点挂载到其他FrameNode上。若该BuilderNode不包含FrameNode，则返回空对象null。 |
 
 ## inheritFreezeOptions
 
@@ -341,7 +341,7 @@ inheritFreezeOptions(enabled: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | BuilderNode对象是否设置为继承父组件中自定义组件的冻结策略。true：继承父组件中自定义组件的冻结策略；false：不继承父组件中自定义组件的冻结策略。   **说明：** 仅当父组件为自定义组件、BuilderNode、ComponentContent、ReactiveBuilderNode或ReactiveComponentContent时，设置为true才会生效。 |
+| enabled | boolean | 是 | BuilderNode对象是否设置为继承父组件中自定义组件的冻结策略。<br>true：继承父组件中自定义组件的冻结策略；false：不继承父组件中自定义组件的冻结策略。<br>**说明：** 仅当父组件为自定义组件、BuilderNode、ComponentContent、ReactiveBuilderNode或ReactiveComponentContent时，设置为true才会生效。 |
 
 **示例**
 
@@ -840,7 +840,7 @@ offsetA为builderNode相对于父组件的偏移量，可以通过FrameNode中�
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 派发事件是否成功。true：已命中响应事件的组件；false：未命中任何可响应事件的组件。 |
+| boolean | 派发事件是否成功。true：已命中响应事件的组件；false：未命中任何可响应事件的组件。<br>**说明：** <br>如果未按照预期命中组件，需要确认以下几点：<br>1. 坐标系是否转换正确。<br>2. 组件是否处于可交互状态。<br>3. 是否绑定事件。 |
 
 **示例**
 

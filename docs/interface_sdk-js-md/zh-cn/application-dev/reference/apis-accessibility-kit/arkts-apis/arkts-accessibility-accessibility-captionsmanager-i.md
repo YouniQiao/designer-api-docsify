@@ -32,7 +32,7 @@ off(type: 'enableChange', callback?: Callback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'enableChange' | 是 | 取消监听的事件名，固定为‘enableChange’，即字幕配置启用状态变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与on('enableChange')的callback一致。缺省时，表示注销所有已注册事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与[on('enableChange')](#onenablechange)的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **错误码：**
 
@@ -89,7 +89,7 @@ off(type: 'styleChange', callback?: Callback<CaptionsStyle>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'styleChange' | 是 | 取消监听的事件名，固定为‘styleChange’，即字幕风格变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与on('styleChange')的callback一致。缺省时，表示注销所有已注册事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与[on('styleChange')](#onstylechange)的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **错误码：**
 
@@ -140,7 +140,7 @@ on(type: 'enableChange', callback: Callback<boolean>): void
 > - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
 > 
 > - 调用此方法后，务必在组件实例销毁前（如aboutToDisappear生命周期中）使用
-> off('enableChange')
+> [off('enableChange')](#offenablechange)
 > 取消监听，否则可能会导致崩溃。
 
 **起始版本：** 8
@@ -200,7 +200,7 @@ on(type: 'styleChange', callback: Callback<CaptionsStyle>): void
 > - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
 > 
 > - 调用此方法后，务必在组件实例销毁前（如aboutToDisappear生命周期中）使用
-> off('styleChange')
+> [off('styleChange')](#offstylechange)
 > 取消监听，否则可能会导致崩溃。
 
 **起始版本：** 8

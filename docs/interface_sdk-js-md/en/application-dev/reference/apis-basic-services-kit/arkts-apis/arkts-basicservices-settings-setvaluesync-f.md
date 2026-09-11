@@ -38,7 +38,7 @@ Set settingsdata value(synchronous method)
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the operation is successful; returns `false` otherwise. |
 
 **Examples**
 
@@ -80,7 +80,7 @@ Set settingsdata value(synchronous method)
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the operation is successful; returns `false` otherwise. |
 
 **Examples**
 
@@ -124,7 +124,7 @@ Set settingsdata value(synchronous method). [DEVICE_SHARED, USER_PROPERTY] domai
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the operation is successful; returns `false` otherwise. |
 
 **Error codes:**
 

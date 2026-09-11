@@ -18,10 +18,7 @@ import { inputMethod } from '@kit.IMEKit';
 abilityName?: string
 ```
 
-Ability name set for the edit box.   
-- If the ability name is set for the edit box, the length cannot exceed 127 characters. (A name longer than 127 characters will be automatically truncated to 127 characters.)   
-- If the ability name is not set for the edit box, the value is an empty string by default.   
-- This field is provided for the input method application when [attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach) is called.
+Ability name set for the edit box. <br> <br>- If the ability name is set for the edit box, the length cannot exceed 127 characters. (A name longer than 127 characters will be automatically truncated to 127 characters.) <br>- If the ability name is not set for the edit box, the value is an empty string by default. <br>- This field is provided for the input method application when [attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach) is called.
 
 **Type:** string
 
@@ -67,10 +64,7 @@ Function type represented by the Enter key.
 placeholder?: string
 ```
 
-Placeholder information set for the edit box.   
-- When placeholder information is set for the edit box, the length cannot exceed 255 characters (a placeholder longer than 255 characters will be automatically truncated to 255 characters). It is used to prompt or guide users to enter temporary text or symbols. (For example, the placeholder prompts whether the input item is mandatory.)   
-- If no placeholder is set for the edit box, the value is an empty string by default.   
-- This field is provided for the input method application when [attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach) is called.
+Placeholder information set for the edit box. <br> <br>- When placeholder information is set for the edit box, the length cannot exceed 255 characters (a placeholder longer than 255 characters will be automatically truncated to 255 characters). It is used to prompt or guide users to enter temporary text or symbols. (For example, the placeholder prompts whether the input item is mandatory.) <br>- If no placeholder is set for the edit box, the value is an empty string by default. <br>- This field is provided for the input method application when [attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach) is called.
 
 **Type:** string
 

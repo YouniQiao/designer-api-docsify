@@ -547,7 +547,7 @@ getVolume(volumeType: AudioVolumeType): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回指定流的音量等级。指定流的音量等级范围可通过[getMinVolume]{ |
+| Promise&lt;number&gt; | Promise对象，返回指定流的音量等级。指定流的音量等级范围可通过[getMinVolume](#getminvolume)和[getMaxVolume](#getmaxvolume)获取。 |
 
 ## getVolumeManager
 

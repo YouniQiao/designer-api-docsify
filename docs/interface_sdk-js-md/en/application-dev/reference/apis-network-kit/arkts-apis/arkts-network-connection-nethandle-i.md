@@ -30,7 +30,7 @@ Binds the TCPSocket or UDPSocket to the network specified by **NetHandle**. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| socketParam | [TCPSocket](arkts-network-connection-tcpsocket-t.md) \| [UDPSocket](arkts-network-connection-udpsocket-t.md) | Yes | TCPSocket** or **UDPSocket** object. |
+| socketParam | [TCPSocket](arkts-network-connection-tcpsocket-t.md) &#124; [UDPSocket](arkts-network-connection-udpsocket-t.md) | Yes | TCPSocket** or **UDPSocket** object. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the **TCPSocket** or **UDPSocket** object is successfully bound to the current network, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
@@ -120,7 +120,7 @@ Binds the TCPSocket or UDPSocket to the network specified by **NetHandle**. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| socketParam | [TCPSocket](arkts-network-connection-tcpsocket-t.md) \| [UDPSocket](arkts-network-connection-udpsocket-t.md) | Yes | TCPSocket** or **UDPSocket** object. |
+| socketParam | [TCPSocket](arkts-network-connection-tcpsocket-t.md) &#124; [UDPSocket](arkts-network-connection-udpsocket-t.md) | Yes | TCPSocket** or **UDPSocket** object. |
 
 **Return value:**
 

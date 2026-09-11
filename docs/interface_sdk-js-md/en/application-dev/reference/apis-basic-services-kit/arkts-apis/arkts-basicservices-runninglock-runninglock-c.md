@@ -30,7 +30,7 @@ Holds a running lock.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeout | number | Yes | Duration for locking and holding the **RunningLock** object, in ms.The value must be a number:   **-1**: The lock is permanently held and needs to be released automatically.   **0**: The lock is released 3 seconds after the timer expires by default.  > 0: The lock is released based on the input value after the timer expires. |
+| timeout | number | Yes | Duration for locking and holding the **RunningLock** object, in ms.<br>The value must be a number:<br>**-1**: The lock is permanently held and needs to be released automatically.<br>**0**: The lock is released 3 seconds after the timer expires by default.<br>   > 0: The lock is released based on the input value after the timer expires. |
 
 **Error codes:**
 

@@ -15,7 +15,7 @@ new <T extends object = object>(values?: readonly T[] | null): WeakSet<T>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | readonly T[] \| null | No |  |
+| values | readonly T[] &#124; null | No |  |
 
 **Return value:**
 

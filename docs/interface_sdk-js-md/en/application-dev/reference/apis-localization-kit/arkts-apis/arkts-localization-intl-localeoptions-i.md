@@ -2,7 +2,7 @@
 
 Options for initializing the **Locale** object. Since API version 9, the **LocaleOptions** attribute is changed from mandatory to optional.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - For details about **calendar**, see Table 1 in
 > [Calendar Setting](../../../internationalization/i18n-calendar.md).

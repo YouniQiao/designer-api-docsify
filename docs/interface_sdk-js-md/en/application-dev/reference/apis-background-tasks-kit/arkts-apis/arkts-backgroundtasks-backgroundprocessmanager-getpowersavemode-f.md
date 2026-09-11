@@ -24,7 +24,7 @@ Obtains the power saving mode of a process. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pid | number | Yes | Process ID.Value range: any integer greater than 0. |
+| pid | number | Yes | Process ID.<br>Value range: any integer greater than 0. |
 
 **Return value:**
 

@@ -14,7 +14,7 @@ function enableBluetoothAsync(): Promise<void>
 
 开启蓝牙。使用Promise异步回调。
 
-调用该接口时，系统弹出开启蓝牙的对话框，由用户确认是否需要开启蓝牙。应用可以感知用户操作对话框的行为。蓝牙开关状态结果可通过access.on('stateChange')的回调函数获取到。建议蓝牙开关状态是[STATE_OFF](arkts-connectivity-access-bluetoothstate-e.md)时，才调用该接口开启蓝牙（可使用[access.getState](arkts-connectivity-access-getstate-f.md)判断当前蓝牙开关状态）。
+调用该接口时，系统弹出开启蓝牙的对话框，由用户确认是否需要开启蓝牙。应用可以感知用户操作对话框的行为。蓝牙开关状态结果可通过[access.on('stateChange')](arkts-connectivity-access-on-f.md#onstatechange)的回调函数获取到。建议蓝牙开关状态是[STATE_OFF](arkts-connectivity-access-bluetoothstate-e.md)时，才调用该接口开启蓝牙（可使用[access.getState](arkts-connectivity-access-getstate-f.md)判断当前蓝牙开关状态）。
 
 **起始版本：** 20
 

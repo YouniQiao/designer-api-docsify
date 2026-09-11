@@ -139,7 +139,7 @@ Specifies the display to which the target component belongs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | number | Yes | ID of the display to which the component belongs. The value is an integer greater than or equal to 0.    **Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. You can use [getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md) to obtain all current **display** objects and use them to obtain the corresponding display IDs. |
+| displayId | number | Yes | ID of the display to which the component belongs. The value is an integer greater than or equal to 0. <br>**Note:** If the input **displayId** does not exist, the exception **17000007** is reported. You can use [getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md) to obtain all current **display** objects and use them to obtain the corresponding display IDs. |
 
 **Return value:**
 
@@ -312,7 +312,7 @@ Specifies the description of the target component. Multiple match patterns are s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | val | string | Yes | Description of the component. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md) . Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md) . <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 
@@ -442,7 +442,7 @@ Specifies the hint text attribute of the target component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | val | string | Yes | The specified hint text of the component. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern[MatchPattern](arkts-test-uitest-matchpattern-e.md). Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern[MatchPattern](arkts-test-uitest-matchpattern-e.md). <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 
@@ -734,7 +734,7 @@ originalText(text: string, pattern?: MatchPattern): On
 
 Specifies the text content and text matching pattern of the component.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the accessibilityLevel
 > of a component is set to **no** or **no-hide-descendants**, this API can be used to specify the text attribute of
@@ -754,7 +754,7 @@ Specifies the text content and text matching pattern of the component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Component text, used to match the target component. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern[MatchPattern](arkts-test-uitest-matchpattern-e.md). Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern[MatchPattern](arkts-test-uitest-matchpattern-e.md). <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 
@@ -871,7 +871,7 @@ text(txt: string, pattern?: MatchPattern): On
 
 Specifies the text attribute of the target component. Multiple match patterns are supported.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the accessibilityLevel
 > of a component is set to **no** or **no-hide-descendants**, this API cannot be used to specify the text attribute
@@ -891,7 +891,7 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | txt | string | Yes | Component text, used to match the target component. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md) . Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md) . <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 

@@ -24,8 +24,8 @@ function isImsSmsSupported(slotId: number, callback: AsyncCallback<boolean>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | SIM卡槽ID：   - 0：卡槽1   - 1：卡槽2 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 指示是否支持IMS发送SMS的回调函数，默认false。   -true：是   -false：否 |
+| slotId | number | 是 | SIM卡槽ID：<br>- 0：卡槽1<br>- 1：卡槽2 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 指示是否支持IMS发送SMS的回调函数，默认false。<br>-true：是<br>-false：否 |
 
 **错误码：**
 
@@ -69,7 +69,7 @@ function isImsSmsSupported(slotId: number): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1   - 1：卡槽2 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1<br>- 1：卡槽2 |
 
 **返回值：**
 

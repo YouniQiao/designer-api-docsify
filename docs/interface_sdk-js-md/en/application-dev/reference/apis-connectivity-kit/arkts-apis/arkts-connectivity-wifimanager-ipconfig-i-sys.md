@@ -1,6 +1,6 @@
 # IpConfig (System API)
 
-Wi-Fi IP configuration information.
+Wi-Fi IP configuration information. @typedef IpConfig
 
 **Since:** 9
 

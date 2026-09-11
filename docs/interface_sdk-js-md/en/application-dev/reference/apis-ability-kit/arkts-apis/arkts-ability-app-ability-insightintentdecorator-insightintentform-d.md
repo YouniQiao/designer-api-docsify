@@ -6,7 +6,7 @@ export declare const InsightIntentForm: ((intentInfo: FormIntentDecoratorInfo) =
 
 Decorates a [FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md) to specify the name of the widget bound to the [FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md). This enables the AI entry point to add the widget via intent calls. For details on the parameters supported by this decorator, see [FormIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-formintentdecoratorinfo-i.md).
 
-> **NOTE: **
+> **NOTE:**
 > For details about the requirements for defining widget names, see Widget Configuration.
 
 **Since:** 20

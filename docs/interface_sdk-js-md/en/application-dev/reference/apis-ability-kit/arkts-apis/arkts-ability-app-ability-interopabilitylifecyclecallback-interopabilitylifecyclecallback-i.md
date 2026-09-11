@@ -2,6 +2,8 @@
 
 The interop ability lifecycle callback.
 
+@typedef InteropAbilityLifecycleCallback
+
 **Since:** 23
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore

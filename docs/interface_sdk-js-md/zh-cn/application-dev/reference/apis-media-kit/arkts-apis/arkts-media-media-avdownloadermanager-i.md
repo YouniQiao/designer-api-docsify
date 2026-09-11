@@ -30,7 +30,7 @@ addAVDownloadTask(source: MediaSource): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [MediaSource](arkts-media-media-mediasource-i.md) | 是 | 媒体资源描述，至少包含资源URL。值不能为null。 |
+| source | [MediaSource](arkts-media-media-mediasource-i.md) | 是 | 媒体资源描述，至少包含资源URL。<br>值不能为null。 |
 
 **返回值：**
 
@@ -134,7 +134,7 @@ getTaskProgress(taskId: string): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 下载进度比例值。 |
+| number | 下载进度比例值。<br>取值范围：[0.0, 1.0]，若返回值为-1，表示资源大小未知。 |
 
 **错误码：**
 
@@ -192,7 +192,7 @@ offProgressChange(callback?: OnAVDownloadProgressChangeHandle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnAVDownloadProgressChangeHandle](arkts-media-media-onavdownloadprogresschangehandle-t.md) | 否 | 进度变化事件的处理函数，必须是通过onProgressChange注册过的处理函数。默认值：不指定此参数时，取消注册该事件的所有处理函数。 |
+| callback | [OnAVDownloadProgressChangeHandle](arkts-media-media-onavdownloadprogresschangehandle-t.md) | 否 | 进度变化事件的处理函数，必须是通过onProgressChange注册过的处理函数。<br>默认值：不指定此参数时，取消注册该事件的所有处理函数。 |
 
 ## offStatusChange
 
@@ -212,7 +212,7 @@ offStatusChange(callback?: OnAVDownloadTaskStateHandle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnAVDownloadTaskStateHandle](arkts-media-media-onavdownloadtaskstatehandle-t.md) | 否 | 状态变化事件的处理函数，必须是通过onStatusChange注册过的处理函数。默认值：不指定此参数时，取消注册该事件的所有处理函数。 |
+| callback | [OnAVDownloadTaskStateHandle](arkts-media-media-onavdownloadtaskstatehandle-t.md) | 否 | 状态变化事件的处理函数，必须是通过onStatusChange注册过的处理函数。<br>默认值：不指定此参数时，取消注册该事件的所有处理函数。 |
 
 ## onProgressChange
 
@@ -232,7 +232,7 @@ onProgressChange(callback: OnAVDownloadProgressChangeHandle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnAVDownloadProgressChangeHandle](arkts-media-media-onavdownloadprogresschangehandle-t.md) | 是 | 进度变化事件的处理函数。由应用实现。第一个参数为下载任务ID，第二个参数为下载进度值。进度值取值范围为-1或[0.0, 1.0]。-1表示资源大小未知。 |
+| callback | [OnAVDownloadProgressChangeHandle](arkts-media-media-onavdownloadprogresschangehandle-t.md) | 是 | 进度变化事件的处理函数。由应用实现。<br>第一个参数为下载任务ID，第二个参数为下载进度值。<br>进度值取值范围为-1或[0.0, 1.0]。-1表示资源大小未知。 |
 
 ## onStatusChange
 
@@ -252,7 +252,7 @@ onStatusChange(callback: OnAVDownloadTaskStateHandle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnAVDownloadTaskStateHandle](arkts-media-media-onavdownloadtaskstatehandle-t.md) | 是 | 状态变化事件的处理函数。由应用实现。第一个参数为状态变化的任务ID，第二个参数为任务的新状态。 |
+| callback | [OnAVDownloadTaskStateHandle](arkts-media-media-onavdownloadtaskstatehandle-t.md) | 是 | 状态变化事件的处理函数。由应用实现。<br>第一个参数为状态变化的任务ID，第二个参数为任务的新状态。 |
 
 ## pauseDownloadTask
 
@@ -272,7 +272,7 @@ pauseDownloadTask(taskId?: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| taskId | string | 否 | 要暂停的离线下载任务ID。默认值：不指定此参数时，暂停所有下载任务。 |
+| taskId | string | 否 | 要暂停的离线下载任务ID。<br>默认值：不指定此参数时，暂停所有下载任务。 |
 
 **错误码：**
 
@@ -313,7 +313,7 @@ removeDownloadTask(taskId?: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| taskId | string | 否 | 要移除的离线下载任务ID。默认值：不指定此参数时，移除所有离线下载任务。 |
+| taskId | string | 否 | 要移除的离线下载任务ID。<br>默认值：不指定此参数时，移除所有离线下载任务。 |
 
 **错误码：**
 
@@ -339,7 +339,7 @@ resumeDownloadTask(taskId?: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| taskId | string | 否 | 要恢复的离线下载任务ID，任务需处于已暂停状态。默认值：不指定此参数时，恢复所有已暂停的离线下载任务。 |
+| taskId | string | 否 | 要恢复的离线下载任务ID，任务需处于已暂停状态。<br>默认值：不指定此参数时，恢复所有已暂停的离线下载任务。 |
 
 **错误码：**
 
@@ -366,4 +366,4 @@ setRequestTimeout(timeout: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| timeout | number | 是 | 超时时间，单位为毫秒。取值限定为整数。如果值大于0，表示超时时间，取值范围(0, +∞)。如果值小于等于0，表示无超时限制，建议根据业务场景设置合理的超时时间以避免任务长时间挂起。如果不设置，使用默认超时时间，默认时间为60000毫秒。 |
+| timeout | number | 是 | 超时时间，单位为毫秒。<br>取值限定为整数。<br>如果值大于0，表示超时时间，取值范围(0, +∞)。<br>如果值小于等于0，表示无超时限制，建议根据业务场景设置合理的超时时间以避免任务长时间挂起。<br>如果不设置，使用默认超时时间，默认时间为60000毫秒。 |

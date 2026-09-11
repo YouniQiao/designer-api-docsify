@@ -176,7 +176,7 @@ modifier?: TextModifier
 
 默认值：undefined，不应用修饰器。
 
-**类型：** TextModifier
+**类型：** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **起始版本：** 26.0.0
 

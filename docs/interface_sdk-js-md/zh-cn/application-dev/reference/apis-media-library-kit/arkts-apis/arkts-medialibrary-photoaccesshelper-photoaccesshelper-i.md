@@ -45,7 +45,7 @@ applyChanges(mediaChangeRequest: MediaChangeRequest): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 ## checkPhotoUrisReadPermission
@@ -78,8 +78,8 @@ checkPhotoUrisReadPermission(uris: string[]): Promise<Map<string, MediaAssetPerm
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario-specific parameters are incorrect. Possible causes are as follows:  1. The length of the input parameter queue is greater than 500.  2. The input parameter is null or undefined. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario-specific parameters are incorrect. Possible causes are as follows:<br>1. The length of the input parameter queue is greater than 500. <br>2. The input parameter is null or undefined. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## createAsset
 
@@ -105,7 +105,7 @@ createAsset(photoType: PhotoType, extension: string, options: CreateOptions, cal
 | --- | --- | --- | --- |
 | photoType | [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md) | 是 | 创建的文件类型，IMAGE或者VIDEO类型。 |
 | extension | string | 是 | 文件名后缀参数，例如：'jpg'。 |
-| options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | 是 | 创建选项，当前仅支持'title'，例如{title: 'testPhoto'}。   **注意：** 传入'subtype'选项，配置不生效，仅支持保存DEFAULT类型图片。文件名中不允许出现非法英文字符，包括： . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
+| options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | 是 | 创建选项，当前仅支持'title'，例如{title: 'testPhoto'}。<br>**注意：** <br>传入'subtype'选项，配置不生效，仅支持保存DEFAULT类型图片。<br>文件名中不允许出现非法英文字符，包括： . .. \ / : * ? " ' ` &lt; &gt; &#124; { } [ ] |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | callback返回创建的图片和视频的uri。 |
 
 **错误码：**
@@ -113,7 +113,7 @@ createAsset(photoType: PhotoType, extension: string, options: CreateOptions, cal
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 11+ |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**适用版本：** 10 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
@@ -223,7 +223,7 @@ createAsset(photoType: PhotoType, extension: string, callback: AsyncCallback<str
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 11+ |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**适用版本：** 10 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
@@ -326,7 +326,7 @@ createAsset(photoType: PhotoType, extension: string, options?: CreateOptions): P
 | --- | --- | --- | --- |
 | photoType | [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md) | 是 | 创建的文件类型，IMAGE或者VIDEO类型。 |
 | extension | string | 是 | 文件名后缀参数，例如：'jpg'。 |
-| options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | 否 | 创建选项，当前仅支持'title'，例如{title: 'testPhoto'}。   **注意：** 传入'subtype'选项，配置不生效，仅支持保存DEFAULT类型图片。文件名中不允许出现非法英文字符，包括： . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
+| options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | 否 | 创建选项，当前仅支持'title'，例如{title: 'testPhoto'}。<br>**注意：** <br>传入'subtype'选项，配置不生效，仅支持保存DEFAULT类型图片。<br>文件名中不允许出现非法英文字符，包括： . .. \ / : * ? " ' ` &lt; &gt; &#124; { } [ ] |
 
 **返回值：**
 
@@ -339,7 +339,7 @@ createAsset(photoType: PhotoType, extension: string, options?: CreateOptions): P
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 11+ |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**适用版本：** 10 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
@@ -438,20 +438,20 @@ createAssetWithShortTermPermission(photoCreationConfig: PhotoCreationConfig): Pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| photoCreationConfig | [PhotoCreationConfig](arkts-medialibrary-photoaccesshelper-photocreationconfig-i.md) | 是 | 保存图片/视频到媒体库的配置，包括保存的文件名等。   **注意：** 传入'subtype'选项，配置项不生效，仅支持保存DEFAULT类型图片。 |
+| photoCreationConfig | [PhotoCreationConfig](arkts-medialibrary-photoaccesshelper-photocreationconfig-i.md) | 是 | 保存图片/视频到媒体库的配置，包括保存的文件名等。<br>**注意：** <br>传入'subtype'选项，配置项不生效，仅支持保存DEFAULT类型图片。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回给应用的媒体库文件uri。uri已对应用授权，支持应用写入数据。如果生成uri异常，则返回批量创建错误码。 |
+| Promise&lt;string&gt; | Promise对象，返回给应用的媒体库文件uri。uri已对应用授权，支持应用写入数据。如果生成uri异常，则返回批量创建错误码。<br>返回-3006表示不允许出现非法字符；返回-2004表示图片类型和后缀不符；返回-203表示文件操作异常。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 ## createAssetWithShortTermPermissionEx
@@ -528,7 +528,7 @@ createDeleteRequest(uriList: Array<string>, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
@@ -571,7 +571,7 @@ createDeleteRequest(uriList: Array<string>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
@@ -615,8 +615,8 @@ createPhotoAsset(photoType: PhotoType, extension: string, title?: string): Promi
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. The extension format is unsupported  2. Title contains unsupported character, such as . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ]  3. The title is an empty string  4. The total length of title and extension is more than 255 |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: <br>1. The extension format is unsupported <br>2. Title contains unsupported character, such as . .. \ / : * ? " ' ` &lt; &gt; &#124; { } [ ] <br>3. The title is an empty string <br>4. The total length of title and extension is more than 255 |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## getAlbumIdByLpath
 
@@ -653,7 +653,7 @@ getAlbumIdByLpath(lpath: string): Promise<number>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The lpath is invalid, such as null, undefined and empty. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
 ## getAlbums
 
@@ -690,7 +690,7 @@ getAlbums(
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 12+ |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**适用版本：** 10 - 11 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
@@ -724,7 +724,7 @@ getAlbums(type: AlbumType, subtype: AlbumSubtype, callback: AsyncCallback<FetchR
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 12+ |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**适用版本：** 10 - 11 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
@@ -764,7 +764,7 @@ getAlbums(type: AlbumType, subtype: AlbumSubtype, options?: FetchOptions): Promi
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 12+ |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**适用版本：** 10 - 11 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
@@ -795,7 +795,7 @@ getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied<br>**适用版本：** 12+ |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied<br>**适用版本：** 10 - 11 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
@@ -897,7 +897,7 @@ getPhotoPickerComponentDefaultAlbumName(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. The IPC request timed out.  2. system running error |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. The IPC request timed out. <br>2. system running error |
 
 ## getRecentPhotoInfo
 
@@ -917,7 +917,7 @@ getRecentPhotoInfo(options?: RecentPhotoOptions): Promise<RecentPhotoInfo>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RecentPhotoOptions](arkts-medialibrary-photoaccesshelper-recentphotooptions-c.md) | 否 | 最近图片配置选项参数。若无此参数，则取按照创建时间排序的最新一张图片。该参数在配置的情况下，需与RecentPhotoComponent组件中的options配置相同才可以查到一样的图片，否则可能存在接口能查到最近图片，组件没查到最近图片的情况。 |
+| options | [RecentPhotoOptions](arkts-medialibrary-photoaccesshelper-recentphotooptions-c.md) | 否 | 最近图片配置选项参数。若无此参数，则取按照创建时间排序的最新一张图片。<br>该参数在配置的情况下，需与RecentPhotoComponent组件中的options配置相同才可以查到一样的图片，否则可能存在接口能查到最近图片，组件没查到最近图片的情况。 |
 
 **返回值：**
 
@@ -953,7 +953,7 @@ getSupportedPhotoFormats(photoType: PhotoType): Promise<Array<string>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. |
 
 ## off('photoChange')
@@ -975,14 +975,14 @@ off(type: 'photoChange', callback?: Callback<PhotoAssetChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'photoChange' | 是 | 取消监听媒体资产，取值为'photoChange'。取消监听后，有资产发生变化时，不再通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 取消on('photoChange')注册时指定的callback监听；不填时，则取消对'photoChange'的所有监听。   **注意：** 取消注册的callback后，有资产发生变化时，不会进入此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 取消[on('photoChange')](#onphotochange)注册时指定的callback监听；不填时，则取消对'photoChange'的所有监听。<br>**注意：** <br>取消注册的callback后，有资产发生变化时，不会进入此回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## off('photoAlbumChange')
@@ -1004,14 +1004,14 @@ off(type: 'photoAlbumChange', callback?: Callback<AlbumChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'photoAlbumChange' | 是 | 取消监听相册，取值为'photoAlbumChange'。取消监听后，有相册发生变化时，不再通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 取消on('photoAlbumChange')注册时指定的callback监听；不填时，则取消对'photoAlbumChange'的所有监听。   **注意：** 取消注册的callback后，有相册发生变化时，不会进入此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 取消[on('photoAlbumChange')](#onphotoalbumchange)注册时指定的callback监听；不填时，则取消对'photoAlbumChange'的所有监听。<br>**注意：** <br>取消注册的callback后，有相册发生变化时，不会进入此回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs.<br>Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## offMediaLibraryAvailability
@@ -1041,7 +1041,7 @@ offMediaLibraryAvailability(callback? : Callback<MediaLibraryAvailability>):void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## offSinglePhotoAlbumChange
 
@@ -1073,7 +1073,7 @@ offSinglePhotoAlbumChange(album?: Album, callback?: Callback<AlbumChangeInfos>):
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## offSinglePhotoChange
@@ -1106,7 +1106,7 @@ offSinglePhotoChange(asset?: PhotoAsset, callback?: Callback<PhotoAssetChangeInf
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## on('photoChange')
@@ -1128,14 +1128,14 @@ on(type: 'photoChange', callback: Callback<PhotoAssetChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'photoChange' | 是 | 注册监听媒体资产，取值为'photoChange'。注册完成后，有资产发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的媒体资产信息[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)。   **注意：** 该接口可以注册多个不同的callback监听，off('photoChange')既可以关闭所有监听，也可以关闭指定callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的媒体资产信息[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)。<br>**注意：** <br>该接口可以注册多个不同的callback监听，[off('photoChange')](#offphotochange)既可以关闭所有监听，也可以关闭指定callback监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs.<br>Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## on('photoAlbumChange')
@@ -1157,14 +1157,14 @@ on(type: 'photoAlbumChange', callback: Callback<AlbumChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'photoAlbumChange' | 是 | 注册监听相册，取值为'photoAlbumChange'。注册完成后，有相册发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的相册信息[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。   **注意：** 该接口可以注册多个不同的callback监听，off('photoAlbumChange')既可以关闭所有监听，也可以关闭指定callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的相册信息[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。<br>**注意：** <br>该接口可以注册多个不同的callback监听，[off('photoAlbumChange')](#offphotoalbumchange)既可以关闭所有监听，也可以关闭指定callback监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## onMediaLibraryAvailability
@@ -1194,8 +1194,8 @@ onMediaLibraryAvailability(callback: Callback<MediaLibraryAvailability>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario-specific parameters are incorrect. Possible causes are as follows:  1. The input parameter is null or undefined. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario-specific parameters are incorrect. Possible causes are as follows:<br>1. The input parameter is null or undefined. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## onSinglePhotoAlbumChange
 
@@ -1216,14 +1216,14 @@ onSinglePhotoAlbumChange(album: Album, callback: Callback<AlbumChangeInfos>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | album | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | 是 | 注册单个监听的媒体相册。注册完成后，当该相册发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的媒体相册信息[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)。   **注意：** 该接口可以注册多个不同的callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的媒体相册信息[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)。<br>**注意：** <br>该接口可以注册多个不同的callback监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## onSinglePhotoChange
@@ -1245,14 +1245,14 @@ onSinglePhotoChange(asset: PhotoAsset, callback: Callback<PhotoAssetChangeInfos>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | asset | [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) | 是 | 注册单个监听的媒体资产。注册完成后，有资产发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的媒体资产信息PhotoAssetChangeInfos。   **注意：** 该接口可以注册多个不同的callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的媒体资产信息PhotoAssetChangeInfos。<br>**注意：** <br>该接口可以注册多个不同的callback监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## registerChange
@@ -1279,7 +1279,7 @@ registerChange(uri: string, forChildUris: boolean, callback: Callback<ChangeData
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
 | 13900020 | Invalid argument |
 
@@ -1307,7 +1307,7 @@ release(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
@@ -1335,7 +1335,7 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
@@ -1357,7 +1357,7 @@ requestPhotoUrisReadPermission(srcFileUris: Array<string>): Promise<Array<string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| srcFileUris | Array&lt;string&gt; | 是 | 需进行授权的图片/视频文件对应的[媒体文件URI](../../../file-management/user-file-uri-intro.md#媒体文件uri)。   **注意：** 仅支持处理图片、视频URI，且最大数量限制为100个。 |
+| srcFileUris | Array&lt;string&gt; | 是 | 需进行授权的图片/视频文件对应的[媒体文件URI](../../../file-management/user-file-uri-intro.md#媒体文件uri)。<br>**注意：** <br>仅支持处理图片、视频URI，且最大数量限制为100个。 |
 
 **返回值：**
 
@@ -1369,7 +1369,7 @@ requestPhotoUrisReadPermission(srcFileUris: Array<string>): Promise<Array<string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 ## requestPhotoUrisReadPermissionEx
@@ -1394,7 +1394,7 @@ requestPhotoUrisReadPermissionEx(srcFileUris: Array<string>): Promise<RequestRea
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| srcFileUris | Array&lt;string&gt; | 是 | 需进行授权的图片/视频文件对应的[媒体库uri](../../../file-management/user-file-uri-intro.md#媒体文件uri)。   **注意：** 仅支持处理图片、视频uri，且最大数量限制为100个。 |
+| srcFileUris | Array&lt;string&gt; | 是 | 需进行授权的图片/视频文件对应的[媒体库uri](../../../file-management/user-file-uri-intro.md#媒体文件uri)。<br>**注意：** <br>仅支持处理图片、视频uri，且最大数量限制为100个。 |
 
 **返回值：**
 
@@ -1406,7 +1406,7 @@ requestPhotoUrisReadPermissionEx(srcFileUris: Array<string>): Promise<RequestRea
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## setAssetCompatibleCapability
 
@@ -1441,7 +1441,7 @@ setAssetCompatibleCapability(capability: AssetCompatibleCapability): Promise<voi
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The capability is invalid. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -1485,20 +1485,20 @@ showAssetsCreationDialog(srcFileUris: Array<string>, photoCreationConfigs: Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| srcFileUris | Array&lt;string&gt; | 是 | 需保存到媒体库中的图片/视频文件对应的[媒体文件URI](../../../file-management/user-file-uri-intro.md#媒体文件uri)。   **注意：**    - 一次弹窗最多保存100张图片。   - 仅支持处理图片、视频URI。   - 不支持手动拼接的URI，需调用接口获取，获取方式参考[媒体文件URI获取方式](../../../file-management/user-file-uri-intro.md#媒体文件uri获取方式)。 |
-| photoCreationConfigs | Array&lt;[PhotoCreationConfig](arkts-medialibrary-photoaccesshelper-photocreationconfig-i.md)&gt; | 是 | 保存图片或视频到媒体库的配置，包括文件名等，与srcFileUris保持一一对应。   **注意：** 传入'subtype'选项，配置项不生效，仅支持保存DEFAULT类型图片。 |
+| srcFileUris | Array&lt;string&gt; | 是 | 需保存到媒体库中的图片/视频文件对应的[媒体文件URI](../../../file-management/user-file-uri-intro.md#媒体文件uri)。<br>**注意：** <br>- 一次弹窗最多保存100张图片。<br>- 仅支持处理图片、视频URI。<br>- 不支持手动拼接的URI，需调用接口获取，获取方式参考[媒体文件URI获取方式](../../../file-management/user-file-uri-intro.md#媒体文件uri获取方式)。 |
+| photoCreationConfigs | Array&lt;[PhotoCreationConfig](arkts-medialibrary-photoaccesshelper-photocreationconfig-i.md)&gt; | 是 | 保存图片或视频到媒体库的配置，包括文件名等，与srcFileUris保持一一对应。<br>**注意：** <br>传入'subtype'选项，配置项不生效，仅支持保存DEFAULT类型图片。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回给应用的媒体库文件URI列表。URI已对应用授权，支持应用写入数据。如果生成URI异常，则返回批量创建错误码。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回给应用的媒体库文件URI列表。URI已对应用授权，支持应用写入数据。如果生成URI异常，则返回批量创建错误码。<br>具体返回值情况如下：<br>- 返回-3006表示不允许出现非法字符。<br>- 返回-2004表示图片类型和后缀不符。<br>- 返回-203表示文件操作异常。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 ## showAssetsCreationDialogEx
@@ -1530,7 +1530,7 @@ showAssetsCreationDialogEx(srcFileUris: Array<string>, creationSettings: Array<C
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| srcFileUris | Array&lt;string&gt; | 是 | 需保存到媒体库中的图片或视频文件对应的[媒体文件URI](../../../file-management/user-file-uri-intro.md#媒体文件uri)。   **注意：**    - 一次弹窗最多保存100张图片。   - 仅支持处理图片和视频URI。   - 不支持手动拼接URI，需调用接口获取，具体请参考[媒体文件URI获取方式](../../../file-management/user-file-uri-intro.md#媒体文件uri获取方式)。 |
+| srcFileUris | Array&lt;string&gt; | 是 | 需保存到媒体库中的图片或视频文件对应的[媒体文件URI](../../../file-management/user-file-uri-intro.md#媒体文件uri)。<br>**注意：** <br>- 一次弹窗最多保存100张图片。<br>- 仅支持处理图片和视频URI。<br>- 不支持手动拼接URI，需调用接口获取，具体请参考[媒体文件URI获取方式](../../../file-management/user-file-uri-intro.md#媒体文件uri获取方式)。 |
 | creationSettings | Array&lt;[CreationSetting](arkts-medialibrary-photoaccesshelper-creationsetting-i.md)&gt; | 是 | 保存图片或视频到媒体库的配置，包括文件名等，与srcFileUris参数中的URI保持一一对应。 |
 
 **返回值：**
@@ -1543,7 +1543,7 @@ showAssetsCreationDialogEx(srcFileUris: Array<string>, creationSettings: Array<C
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## showSingleAssetCreationDialogEx
 
@@ -1574,7 +1574,7 @@ showSingleAssetCreationDialogEx(srcFileUri: string, creationSetting: CreationSet
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| srcFileUri | string | 是 | 需要保存到媒体库中的图片/视频文件所对应的[媒体文件URI](../../../file-management/user-file-uri-intro.md#媒体文件uri)。   **注意：**    - 一次弹窗最多保存1张图片。   - 仅支持处理图片、视频URI。   - 不支持手动拼接的URI，需调用接口获取，具体请参考[媒体文件URI获取方式](../../../file-management/user-file-uri-intro.md#媒体文件uri获取方式)。 |
+| srcFileUri | string | 是 | 需要保存到媒体库中的图片/视频文件所对应的[媒体文件URI](../../../file-management/user-file-uri-intro.md#媒体文件uri)。<br>**注意：** <br>- 一次弹窗最多保存1张图片。<br>- 仅支持处理图片、视频URI。<br>- 不支持手动拼接的URI，需调用接口获取，具体请参考[媒体文件URI获取方式](../../../file-management/user-file-uri-intro.md#媒体文件uri获取方式)。 |
 | creationSetting | [CreationSetting](arkts-medialibrary-photoaccesshelper-creationsetting-i.md) | 是 | 保存图片或视频到媒体库的配置（包括文件名等），与srcFileUri保持对应。 |
 | isImageFullyDisplayed | boolean | 是 | 表示是否完整显示图片。true表示完整显示，false表示不完整显示。 |
 
@@ -1582,13 +1582,13 @@ showSingleAssetCreationDialogEx(srcFileUri: string, creationSetting: CreationSet
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回给应用的媒体库文件URI。URI已对应用授权，支持应用写入数据。如果生成URI异常，则返回批量创建错误码。 |
+| Promise&lt;string&gt; | Promise对象，返回给应用的媒体库文件URI。URI已对应用授权，支持应用写入数据。如果生成URI异常，则返回批量创建错误码。<br>具体返回值情况如下：<br>- 返回-3006表示不允许出现非法字符。<br>- 返回-2004表示图片类型和后缀不符。<br>- 返回-203表示文件操作异常。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## unRegisterChange
 
@@ -1613,6 +1613,6 @@ unRegisterChange(uri: string, callback?: Callback<ChangeData>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
 | 13900020 | Invalid argument |

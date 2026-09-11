@@ -63,9 +63,10 @@ maxFontSize?: number | ResourceStr
 
 取值范围：[minFontSize, +∞)。异常值时取默认值。
 
-**类型：** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** number &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
-**默认值：** 0.0fp [since 11]
+**默认值：**
+- API版本11+：0.0fp
 
 **起始版本：** 10
 
@@ -105,9 +106,10 @@ minFontSize?: number | ResourceStr
 
 取值范围：(0, +∞)。异常值时取默认值。
 
-**类型：** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** number &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
-**默认值：** 0.0fp [since 11]
+**默认值：**
+- API版本11+：0.0fp
 
 **起始版本：** 10
 

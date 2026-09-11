@@ -2,15 +2,15 @@
 
 Signature verification interface, defining methods for verifying signatures using a public key. Before use, you must create a **Verify** instance by using [createVerify(algName: string): Verify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md). Invoke **init()**, **update()**, and **verify()** in this class in sequence to complete the signature verification. For details about the sample code, see Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode).
 
-The **Verify** class does not support repeated initialization. When a new key is used for signature verification, you must create a new **Verify** instance and call **init()** for initialization.
+<br>The **Verify** class does not support repeated initialization. When a new key is used for signature verification, you must create a new **Verify** instance and call **init()** for initialization.
 
-The signature verification mode is determined in **createVerify()**, and the key is set by **init()**.
+<br>The signature verification mode is determined in **createVerify()**, and the key is set by **init()**.
 
-If the signed message is short, you can call **verify()** to pass in the signed message and signature (**signatureData**) for signature verification after **init()**. That is, you do not need to use **update()**.
+<br>If the signed message is short, you can call **verify()** to pass in the signed message and signature (**signatureData**) for signature verification after **init()**. That is, you do not need to use **update()**.
 
-If the signed message is too long, you can call **update()** multiple times to pass in the signed message by segment, and then call **verify()** to verify the full text of the message. In versions earlier than API version 10, the input parameter **data** of **verify()** supports only **DataBlob**. Since API version 10, **data** also supports **null**. After all the data is passed in by using **update()**, **verify()** can be called to verify the signature data.
+<br>If the signed message is too long, you can call **update()** multiple times to pass in the signed message by segment, and then call **verify()** to verify the full text of the message. In versions earlier than API version 10, the input parameter **data** of **verify()** supports only **DataBlob**. Since API version 10, **data** also supports **null**. After all the data is passed in by using **update()**, **verify()** can be called to verify the signature data.
 
-If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
+<br>If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
 **Since:** 9
 
@@ -50,13 +50,13 @@ Obtains signature verification specifications. Currently, only RSA is supported.
 
 | Type | Description |
 | --- | --- |
-| string \| number | Returns the value of the parameter obtained. |
+| string &#124; number | Returns the value of the parameter obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
@@ -102,11 +102,11 @@ Initializes the **Verify** object using a public key. This API uses an asynchron
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:  1. Incorrect key type.<br>**Applicable version:** 26.0.0 and later |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:<br>1. Incorrect key type.<br>**Applicable version:** 26.0.0 and later |
 
 ## init
 
@@ -140,11 +140,11 @@ Initializes the **Verify** object using a public key. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:  1. Incorrect key type.<br>**Applicable version:** 26.0.0 and later |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:<br>1. Incorrect key type.<br>**Applicable version:** 26.0.0 and later |
 
 ## initSync
 
@@ -154,7 +154,7 @@ initSync(pubKey: PubKey): void
 
 Initializes the **Verify** instance with a public key. This API returns the result synchronously. **initSync**, **updateSync**, and **verifySync** must be used together. **initSync** and **verifySync** are mandatory, and **updateSync** is optional.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -172,11 +172,11 @@ Initializes the **Verify** instance with a public key. This API returns the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:  1. Incorrect key type.<br>**Applicable version:** 26.0.0 and later |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:<br>1. Incorrect key type.<br>**Applicable version:** 26.0.0 and later |
 
 ## recover
 
@@ -186,7 +186,7 @@ recover(signatureData: DataBlob): Promise<DataBlob | null>
 
 Recovers the original data from a signature. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Currently, only RSA is supported.
 
@@ -206,13 +206,13 @@ Recovers the original data from a signature. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null&gt; | Promise used to return the raw data recovered from the signature. |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) &#124; null&gt; | Promise used to return the raw data recovered from the signature. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
@@ -304,11 +304,11 @@ recoverSync(signatureData: DataBlob): DataBlob | null
 
 Recovers the original data from a signature. This API returns the result synchronously.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Currently, only RSA is supported.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, [recover](#recover). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, [recover](#recover). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -326,13 +326,13 @@ Recovers the original data from a signature. This API returns the result synchro
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Data restored. |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) &#124; null | Data restored. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
@@ -346,9 +346,9 @@ setVerifySpec(itemType: SignSpecItem, itemValue: number): void
 
 Sets signature verification specifications. You can use this API to set signature verification parameters that cannot be set by [createVerify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md).
 
-Currently, only RSA and SM2 are supported. Since API version 11, SM2 signature verification parameters can be set.
+<br>Currently, only RSA and SM2 are supported. Since API version 11, SM2 signature verification parameters can be set.
 
-The parameters for signature verification must be the same as those for signing.
+<br>The parameters for signature verification must be the same as those for signing.
 
 **Since:** 10
 
@@ -369,7 +369,7 @@ The parameters for signature verification must be the same as those for signing.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
@@ -404,9 +404,9 @@ setVerifySpec(itemType: SignSpecItem, itemValue: number | Uint8Array): void
 
 Sets the specified parameter for the Verify instance.
 
-Currently, only PSS_SALT_LEN in RSA and USER_ID in SM2 are supported.
+<br>Currently, only PSS_SALT_LEN in RSA and USER_ID in SM2 are supported.
 
-The parameters for signature verification must be the same as those for signing.
+<br>The parameters for signature verification must be the same as those for signing.
 
 **Since:** 11
 
@@ -421,13 +421,13 @@ The parameters for signature verification must be the same as those for signing.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | itemType | [SignSpecItem](arkts-cryptoarchitecture-cryptoframework-signspecitem-e.md) | Yes | Indicates the specified parameter type. |
-| itemValue | number \| Uint8Array | Yes | The value of the specified parameter. |
+| itemValue | number &#124; Uint8Array | Yes | The value of the specified parameter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters.<br>**Applicable version:** 26.0.0 and later |
@@ -455,9 +455,9 @@ setVerifySpec(itemType: SignSpecItem, itemValue: number | Uint8Array | boolean):
 
 Sets the specified parameter for the Verify instance.
 
-Currently, only PSS_SALT_LEN in RSA, USER_ID in SM2, and ML_DSA_DETERMINISTIC, ML_DSA_MU and ML_DSA_CONTEXT in ML-DSA are supported.
+<br>Currently, only PSS_SALT_LEN in RSA, USER_ID in SM2, and ML_DSA_DETERMINISTIC, ML_DSA_MU and ML_DSA_CONTEXT in ML-DSA are supported.
 
-The parameters for signature verification must be the same as those for signing.
+<br>The parameters for signature verification must be the same as those for signing.
 
 **Since:** 26.0.0
 
@@ -472,7 +472,7 @@ The parameters for signature verification must be the same as those for signing.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | itemType | [SignSpecItem](arkts-cryptoarchitecture-cryptoframework-signspecitem-e.md) | Yes | Indicates the specified parameter type. |
-| itemValue | number \| Uint8Array \| boolean | Yes | The value of the specified parameter. |
+| itemValue | number &#124; Uint8Array &#124; boolean | Yes | The value of the specified parameter. |
 
 **Error codes:**
 
@@ -504,12 +504,12 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 
 Updates the data for signature verification. This API uses an asynchronous callback to return the result.
 
-This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) instance is initialized using [init](#init) or [initSync](#initsync).
+<br>This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) instance is initialized using [init](#init) or [initSync](#initsync).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You can call **update** multiple times or do not use **update** (call
-> [verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md)
+> [verify](#verify-1)
 > after [init](#init)), depending on
 > the data volume.
 > 
@@ -546,7 +546,7 @@ This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptofr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
@@ -560,9 +560,9 @@ update(data: DataBlob): Promise<void>
 
 Updates the data for signature verification. This API uses a promise to return the result.
 
-This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) instance is initialized using [init()](#init).
+<br>This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) instance is initialized using [init()](#init).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You can call **update** multiple times or do not use **update** (call
 > [verify](#verify-3) after
@@ -606,7 +606,7 @@ This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptofr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
@@ -620,9 +620,9 @@ updateSync(data: DataBlob): void
 
 Updates the data for signature verification. This API returns the result synchronously.
 
-This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) instance is initialized by using [initSync()](#initsync).
+<br>This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) instance is initialized by using [initSync()](#initsync).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You can call **updateSync** multiple times or do not use **updateSync** (call
 > [verifySync](#verifysync) after [initSync](#initsync)),
@@ -642,7 +642,7 @@ This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptofr
 > If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **updateSync**
 > is not supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -660,7 +660,7 @@ This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptofr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
@@ -694,7 +694,7 @@ Verifies the message, including the update data. This API uses an asynchronous c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
@@ -720,7 +720,7 @@ Verifies the signature of the data. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Data to pass in. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) &#124; null | Yes | Data to pass in. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
 | signatureData | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Signature data. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the signature verification is successful, and **false** indicates the opposite. |
 
@@ -728,7 +728,7 @@ Verifies the signature of the data. This API uses an asynchronous callback to re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
@@ -767,7 +767,7 @@ Verifies the message, including the update data. This API uses a promise to retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
@@ -793,7 +793,7 @@ Verifies the signature of the data. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Data to pass in. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) &#124; null | Yes | Data to pass in. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
 | signatureData | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Signature data. |
 
 **Return value:**
@@ -806,7 +806,7 @@ Verifies the signature of the data. This API uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
@@ -820,7 +820,7 @@ verifySync(data: DataBlob | null, signatureData: DataBlob): boolean
 
 Verifies the signature. This API returns the verification result synchronously.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, [verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, [verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -832,7 +832,7 @@ Verifies the signature. This API returns the verification result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Data to pass in. |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) &#124; null | Yes | Data to pass in. |
 | signatureData | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Signature data. |
 
 **Return value:**
@@ -845,7 +845,7 @@ Verifies the signature. This API returns the verification result synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |

@@ -2,7 +2,7 @@
 
 Provides APIs for X.509 CRL operations.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use [X509CRL()](arkts-devicecertificate-cert-x509crl-i.md)
 > instead.
@@ -29,7 +29,7 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 Obtains the serialized X.509 CRL data. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getEncoded()](arkts-devicecertificate-cert-x509crl-i.md#getencoded) instead.
@@ -52,9 +52,9 @@ Obtains the serialized X.509 CRL data. This API uses an asynchronous callback to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -111,7 +111,7 @@ getEncoded(): Promise<EncodingBlob>
 
 Obtains the serialized X.509 CRL data. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getEncoded()](arkts-devicecertificate-cert-x509crl-i.md#getencoded) instead.
@@ -134,9 +134,9 @@ Obtains the serialized X.509 CRL data. This API uses a promise to return the res
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -190,7 +190,7 @@ getIssuerName(): DataBlob
 
 Obtains the issuer of the X.509 CRL.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getIssuerName()](arkts-devicecertificate-cert-x509crl-i.md#getissuername) instead.
@@ -214,7 +214,7 @@ Obtains the issuer of the X.509 CRL.
 | Error Code ID | Error Message |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -272,7 +272,7 @@ getLastUpdate(): string
 
 Obtains the last update date of this X.509 CRL.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getLastUpdate()](arkts-devicecertificate-cert-x509crl-i.md#getlastupdate) instead.
@@ -296,7 +296,7 @@ Obtains the last update date of this X.509 CRL.
 | Error Code ID | Error Message |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -354,7 +354,7 @@ getNextUpdate(): string
 
 Obtains the next update date of this CRL.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getNextUpdate()](arkts-devicecertificate-cert-x509crl-i.md#getnextupdate) instead.
@@ -378,7 +378,7 @@ Obtains the next update date of this CRL.
 | Error Code ID | Error Message |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -436,7 +436,7 @@ getRevokedCert(serialNumber: number): X509CrlEntry
 
 Obtains the revoked certificate entry from the X.509 CRL based on the specified serial number of the certificate.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getRevokedCert()](arkts-devicecertificate-cert-x509crl-i.md#getrevokedcert) instead.
@@ -465,7 +465,7 @@ Obtains the revoked certificate entry from the X.509 CRL based on the specified 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
@@ -524,7 +524,7 @@ getRevokedCerts(callback: AsyncCallback<Array<X509CrlEntry>>): void
 
 Obtains all the revoked certificate entries from the X.509 CRL. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getRevokedCerts()](arkts-devicecertificate-cert-x509crl-i.md#getrevokedcerts)
@@ -548,7 +548,7 @@ Obtains all the revoked certificate entries from the X.509 CRL. This API uses an
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
@@ -606,7 +606,7 @@ getRevokedCerts(): Promise<Array<X509CrlEntry>>
 
 Obtains all the revoked certificate entries from the X.509 CRL. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getRevokedCerts()](arkts-devicecertificate-cert-x509crl-i.md#getrevokedcerts) instead.
@@ -629,7 +629,7 @@ Obtains all the revoked certificate entries from the X.509 CRL. This API uses a 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
@@ -684,7 +684,7 @@ getRevokedCertWithCert(cert: X509Cert): X509CrlEntry
 
 Obtains the revoked certificate entry from the X.509 CRL based on the specified certificate.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getRevokedCertWithCert()](arkts-devicecertificate-cert-x509crl-i.md#getrevokedcertwithcert) instead.
@@ -713,7 +713,7 @@ Obtains the revoked certificate entry from the X.509 CRL based on the specified 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
@@ -808,7 +808,7 @@ getSignature(): DataBlob
 
 Obtains the signature data of the X.509 CRL.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getSignature()](arkts-devicecertificate-cert-x509crl-i.md#getsignature) instead.
@@ -832,7 +832,7 @@ Obtains the signature data of the X.509 CRL.
 | Error Code ID | Error Message |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -890,7 +890,7 @@ getSignatureAlgName(): string
 
 Obtains the signing algorithm of the X.509 CRL.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getSignatureAlgName()](arkts-devicecertificate-cert-x509crl-i.md#getsignaturealgname) instead.
@@ -914,7 +914,7 @@ Obtains the signing algorithm of the X.509 CRL.
 | Error Code ID | Error Message |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -972,7 +972,7 @@ getSignatureAlgOid(): string
 
 Obtains the OID of the X.509 CRL signing algorithm. OIDs are allocated by the International Organization for Standardization (ISO).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getSignatureAlgOid()](arkts-devicecertificate-cert-x509crl-i.md#getsignaturealgoid) instead.
@@ -996,7 +996,7 @@ Obtains the OID of the X.509 CRL signing algorithm. OIDs are allocated by the In
 | Error Code ID | Error Message |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -1054,7 +1054,7 @@ getSignatureAlgParams(): DataBlob
 
 Obtains the parameters of the X.509 CRL signing algorithm.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getSignatureAlgParams()](arkts-devicecertificate-cert-x509crl-i.md#getsignaturealgparams) instead.
@@ -1079,7 +1079,7 @@ Obtains the parameters of the X.509 CRL signing algorithm.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -1137,7 +1137,7 @@ getTbsInfo(): DataBlob
 
 Obtains the DER-encoded CRL information, that is, **tbsCertList** from this CRL.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getTBSInfo()](arkts-devicecertificate-cert-x509crl-i.md#gettbsinfo) instead.
@@ -1161,7 +1161,7 @@ Obtains the DER-encoded CRL information, that is, **tbsCertList** from this CRL.
 | Error Code ID | Error Message |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -1219,7 +1219,7 @@ getType(): string
 
 Obtains the CRL type.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getType()](arkts-devicecertificate-cert-x509crl-i.md#gettype) instead.
@@ -1287,7 +1287,7 @@ getVersion(): number
 
 Obtains the version of the X.509 CRL.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getVersion()](arkts-devicecertificate-cert-x509crl-i.md#getversion) instead.
@@ -1355,7 +1355,7 @@ isRevoked(cert: X509Cert): boolean
 
 Checks whether an X.509 certificate is revoked.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.isRevoked()](arkts-devicecertificate-cert-x509crl-i.md#isrevoked) instead.
@@ -1384,7 +1384,7 @@ Checks whether an X.509 certificate is revoked.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 
 **Examples**
 
@@ -1464,7 +1464,7 @@ verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 
 Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.verify()](arkts-devicecertificate-cert-x509crl-i.md#verify)
@@ -1489,7 +1489,7 @@ Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -1625,7 +1625,7 @@ verify(key: cryptoFramework.PubKey): Promise<void>
 
 Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.verify()](arkts-devicecertificate-cert-x509crl-i.md#verify) instead.
@@ -1654,7 +1654,7 @@ Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**

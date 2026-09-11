@@ -4,7 +4,7 @@ Search初始化参数。
 
 > **说明：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
@@ -83,7 +83,7 @@ value?: string | Bindable<string>
 
 Text input in the search text box.
 
-**类型：** string \| Bindable&lt;string&gt;
+**类型：** string &#124; Bindable&lt;string&gt;
 
 **起始版本：** 20
 

@@ -81,7 +81,7 @@ When the type is string, it represents an animation interpolation curve, support
 
 Default value: **Curve.EaseInOut**
 
-**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| [ICurve](arkts-arkui-icurve-i.md)
+**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) &#124; string &#124; [ICurve](arkts-arkui-icurve-i.md)
 
 **Default:** Curve.EaseInOut
 

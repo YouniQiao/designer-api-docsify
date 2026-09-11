@@ -20,7 +20,7 @@ create(config: VpnConfig): Promise<number>
 
 Creates a VPN based on the specified configuration. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You are advised to call [destroy()](#destroy) or
 > [destroy(vpnId: string)](#destroy-1) to destroy the VPN and clear
@@ -241,7 +241,7 @@ Generates a unique VPN ID. This API uses a promise to return the result.
 
 To use the multi-VPN capability of the system, you need to call this API to generate a VPN ID and configure it in **VpnConfig**.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, the multi-VPN capability of the system supports only IPv4.
 

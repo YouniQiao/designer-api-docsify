@@ -34,7 +34,7 @@ function getProfile(profileId: ProfileId): A2dpSourceProfile | HandsFreeAudioGat
 
 | 类型 | 说明 |
 | --- | --- |
-| [A2dpSourceProfile](arkts-connectivity-bluetooth-a2dpsourceprofile-i.md) \| [HandsFreeAudioGatewayProfile](arkts-connectivity-bluetooth-handsfreeaudiogatewayprofile-i.md) | 对应的profile的对象实例，当前支持A2dpSourceProfile，HandsFreeAudioGatewayProfile。 |
+| [A2dpSourceProfile](arkts-connectivity-bluetooth-a2dpsourceprofile-i.md) &#124; [HandsFreeAudioGatewayProfile](arkts-connectivity-bluetooth-handsfreeaudiogatewayprofile-i.md) | 对应的profile的对象实例，当前支持A2dpSourceProfile，HandsFreeAudioGatewayProfile。 |
 
 **示例**
 

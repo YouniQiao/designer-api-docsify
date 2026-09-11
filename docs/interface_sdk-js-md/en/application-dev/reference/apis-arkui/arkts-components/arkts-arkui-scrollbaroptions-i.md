@@ -2,7 +2,7 @@
 
 Parameters of the **ScrollBar** component.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The **ScrollBar** component defines the behavior style of the scrollable area, and its child nodes define the
 > behavior style of the scrollbar.
@@ -33,7 +33,7 @@ Parameters of the **ScrollBar** component.
 direction?: ScrollBarDirection
 ```
 
-Scrollbar direction in which scrollable components scroll.Default value: **ScrollBarDirection.Vertical**
+Scrollbar direction in which scrollable components scroll.<br>Default value: **ScrollBarDirection.Vertical**
 
 **Type:** [ScrollBarDirection](arkts-arkui-scrollbardirection-e.md)
 
@@ -65,7 +65,7 @@ Scroller, which can be bound to scrollable components for scrolling control.
 state?: BarState
 ```
 
-Scrollbar state.Default value: **BarState.Auto**
+Scrollbar state.<br>Default value: **BarState.Auto**
 
 **Type:** [BarState](../arkts-apis/arkts-arkui-barstate-e.md)
 

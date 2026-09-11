@@ -34,7 +34,7 @@ blockedApplications?: Array<string>
 
 List of blocked applications, which are represented by bundle names of the string type. After such a list is configured, only applications that are not in the list can be proxied by the VPN according to the specified **routes**. Before API version 23, a maximum of 64 blocked application bundle names can be configured. Since API version 23, a maximum of 256 blocked application bundle names can be configured.
 
-**Note：**: Configure either **trustedApplications** or **blockedApplications** as they are mutually exclusive.
+**Note:** Configure either **trustedApplications** or **blockedApplications** as they are mutually exclusive.
 
 **Type:** Array&lt;string&gt;
 
@@ -166,7 +166,7 @@ trustedApplications?: Array<string>
 
 List of trusted applications, which are represented by bundle names of the string type. After such a list is configured, only the applications in the list can be proxied by the VPN according to the specified **routes**. Before API version 23, a maximum of 64 trusted application bundle names can be configured. Since API version 23, a maximum of 256 trusted application bundle names can be configured.
 
-**Note：**: Configure either **trustedApplications** or **blockedApplications** as they are mutually exclusive.
+**Note:** Configure either **trustedApplications** or **blockedApplications** as they are mutually exclusive.
 
 **Type:** Array&lt;string&gt;
 

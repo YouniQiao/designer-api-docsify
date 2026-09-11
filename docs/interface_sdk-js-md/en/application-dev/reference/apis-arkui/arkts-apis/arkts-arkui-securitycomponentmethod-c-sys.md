@@ -44,7 +44,7 @@ key(value: string): T
 
 Sets the unique ID for the component. You shall guarantee its uniqueness. Upon successful invocation, the component is assigned the specified ID for precise positioning of the component instance during testing. If this API is used together with [id](arkts-arkui-securitycomponentmethod-c.md#id), the value set later overrides the value set earlier. You are advised to set only **id**.
 
-This API is intended exclusively for app testing to verify attribute configurations and interactive behaviors of security components. In production environments, use the public API [id](arkts-arkui-securitycomponentmethod-c.md#id).
+<br>This API is intended exclusively for app testing to verify attribute configurations and interactive behaviors of security components. In production environments, use the public API [id](arkts-arkui-securitycomponentmethod-c.md#id).
 
 **Since:** 10
 

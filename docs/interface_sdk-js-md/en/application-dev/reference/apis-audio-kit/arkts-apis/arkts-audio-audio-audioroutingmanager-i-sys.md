@@ -4,7 +4,7 @@ This interface implements audio routing management.
 
 Before calling any API in AudioRoutingManager, you must use [getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager) to obtain an AudioRoutingManager instance.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The initial APIs of this interface are supported since API version 9.
 

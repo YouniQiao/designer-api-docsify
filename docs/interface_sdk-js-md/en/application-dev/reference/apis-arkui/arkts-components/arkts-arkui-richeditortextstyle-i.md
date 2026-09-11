@@ -1,6 +1,6 @@
 # RichEditorTextStyle
 
-Provides the text style information.
+Provides text style information.
 
 **Since:** 10
 
@@ -17,7 +17,7 @@ Provides the text style information.
 decoration?: DecorationStyleInterface
 ```
 
-Style, color, and thickness of the text decoration.
+Style, color, and thickness of text decoration.
 
 Default value of **type**: **TextDecorationType.None**
 
@@ -43,7 +43,11 @@ Default value of **thicknessScale**: **1.0**
 fontColor?: ResourceColor
 ```
 
-Font color.
+Text color.
+
+Default value: \$r('sys.color.font_primary'). When [shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md) is also set, shaderStyle takes precedence over fontColor.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -61,7 +65,9 @@ Font color.
 fontFamily?: ResourceStr
 ```
 
-Font family.
+Sets the font list. Currently, the 'HarmonyOS Sans' font and [registered custom fonts](../arkts-apis/arkts-font.md) are supported. Default font: 'HarmonyOS Sans'.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -79,7 +85,21 @@ Font family.
 fontFeature?: string
 ```
 
-Font feature.
+Sets the font feature, for example, monospaced digits. If this parameter is not specified, proportional digits are used by default. Invalid characters are disregarded, and the default is preserved.
+
+Format: normal | &lt;feature-tag-value&gt;
+
+Format of **&lt;feature-tag-value&gt;**: &lt;string&gt; [ &lt;integer&gt; | on | off ]
+
+There can be multiple **&lt;feature-tag-value&gt;** values, which are separated by commas (,).
+
+For example, the input format for monospaced clock fonts is "ss01" on.
+
+For details about the supported font features, see Font Feature List.
+
+Font features are advanced typographic features, such as ligatures and monospace, for OpenType fonts. They are typically used in custom fonts and require the support of the font itself.
+
+For more information about the font features, visit [font-feature-settings property](https://www.w3.org/TR/css-fonts-3/#font-feature-settings-prop) and [OpenType Features](https://sparanoid.com/lab/opentype-features/).
 
 **Type:** string
 
@@ -97,9 +117,11 @@ Font feature.
 fontSize?: Length | number
 ```
 
-Font size. The default unit is fp.
+Sets the font size. When Length is of the number type, the unit fp is used. Value range of the number type: (0, +∞). If the value is set to 0 or a negative value, the default value is used. The default font size is 16fp. Percentage strings are not supported.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| number
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; number
 
 **Since:** 10
 
@@ -116,6 +138,8 @@ fontStyle?: FontStyle
 ```
 
 Font style.
+
+Default value: **FontStyle.Normal**
 
 **Type:** [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md)
 
@@ -135,7 +159,15 @@ fontWeight?: number | FontWeight | string
 
 Font weight.
 
-**Type:** number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| string
+For the number type, the value ranges from 100 to 900, at an interval of 100. The default value is 400. A larger value indicates a heavier font. If the value is out of range, the default value 400 is used.
+
+For the string type, only the string form of the number type value is supported, for example, "400". In addition, "bold", "bolder", "lighter", "regular", and "medium" correspond to the respective enum values in FontWeight.
+
+Default value: FontWeight.Normal.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
+
+**Type:** number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; string
 
 **Since:** 10
 
@@ -153,7 +185,7 @@ halfLeading?: boolean
 
 Whether half leading is enabled.
 
-Whether half leading is enabled. Half leading is the leading split in half and applied equally to the top and bottom edges. The value **true** means that half leading is enabled, and **false** means the opposite.
+**true**: Half leading is enabled. **false**: Half leading is not enabled.
 
 Default value: **false**
 
@@ -173,9 +205,11 @@ Default value: **false**
 letterSpacing?: number | string
 ```
 
-Letter spacing. The default unit is fp.
+Sets the character spacing of the text. The default unit is fp. Default value: 0. When the value is negative, the text is compressed.
 
-**Type:** number \| string
+**Atomic service API:** Since API version 12, this API is supported in atomic services.
+
+**Type:** number &#124; string
 
 **Since:** 12
 
@@ -191,9 +225,15 @@ Letter spacing. The default unit is fp.
 lineHeight?: number | string | Resource
 ```
 
-Line height. The default unit is fp.
+Sets the line height of the text.
 
-**Type:** number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+Default value: if not set, the line height adapts to the font size.
+
+Value range of the number type: (0, +∞). If the value is not greater than 0, the line height is not limited and adapts to the font size. For the number type, the unit is fp. Percentage strings are not supported. When the lineHeight value is smaller than the actual rendered height of the text at the current font size, the [fallbackLineSpacing](arkts-arkui-richeditor-comp-attribute.md#fallbacklinespacing) attribute takes effect.
+
+**Atomic service API:** Since API version 12, this API is supported in atomic services.
+
+**Type:** number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 12
 
@@ -211,9 +251,9 @@ strokeColor?: ResourceColor
 
 Text stroke color.
 
-Default value: Follow the font color.
+Default value: follows the font color.
 
-Sets the font color for abnormal values.
+When the value is invalid, it follows the font color.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -231,7 +271,11 @@ Sets the font color for abnormal values.
 strokeJoinStyle?: StrokeJoinStyle
 ```
 
-The stroke join style of the text.
+Text stroke join style.
+
+Default value: StrokeJoinStyle.MITER_JOIN.
+
+**Atomic service API:** Since API version 26.0.0, this API is supported in atomic services.
 
 **Type:** [StrokeJoinStyle](../arkts-apis/arkts-arkui-strokejoinstyle-e.md)
 
@@ -249,17 +293,21 @@ The stroke join style of the text.
 strokeWidth?: LengthMetrics | number
 ```
 
-Text stroke width. If the unit value of LengthMetrics is [PERCENT](../arkts-apis/arkts-arkui-graphics-lengthunit-e.md), the current setting does not take effect and is processed as 0.
+Text stroke width. If the unit value of LengthMetrics is [PERCENT](../arkts-apis/arkts-arkui-graphics-lengthunit-e.md), the current setting does not take effect and is treated as 0.
 
-If the value is less than 0, the value is an entity word. If the value is greater than 0, the value is an outline word. If the value is equal to 0, there is no stroke effect.
+If the value is less than 0, the text is rendered as solid; if greater than 0, the text is rendered as outline; if equal to 0, no stroke effect is applied.
 
-The default value is 0vp.
+Default value: 0.
 
-Unit: LengthMetrics is followed by LengthMetrics when the type is LengthMetrics, and vp when the type is number.
+Unit: follows LengthMetrics when the type is LengthMetrics, and is vp when the type is number.
 
 Value range: (-∞, +∞)
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| number
+When set together with [shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md), shaderStyle does not take effect.
+
+**Atomic service API:** Since API version 23, this API is supported in atomic services.
+
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) &#124; number
 
 **Since:** 23
 
@@ -303,13 +351,19 @@ radius: 0
 textShadow?: ShadowOptions | Array<ShadowOptions>
 ```
 
-Text shadow. It supports input parameters in an array to implement multiple text shadows.
+Sets the text shadow effect.
 
-**NOTE：**
+Default value: undefined, which means no text shadow effect is set.
+
+This API supports an array as the input parameter to implement multiple text shadows.
+
+**Note:**
 
 Only the shadow blur radius, color, and offset can be set. Smart color picking is not supported.
 
-**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt;
+**Atomic service API:** Since API version 12, this API is supported in atomic services.
+
+**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) &#124; Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt;
 
 **Since:** 11
 

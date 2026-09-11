@@ -28,8 +28,8 @@ Query printer capabilityies by printer uri.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerUri | string | Yes | Indicates the printer uri. Printer URI in the process of connecting. |
-| printerId | string | Yes | Indicates the printer ID. Printer ID in the process of connecting. |
+| printerUri | string | Yes | Indicates the printer uri.<br>Printer URI in the process of connecting. |
+| printerId | string | Yes | Indicates the printer ID.<br>Printer ID in the process of connecting. |
 
 **Return value:**
 

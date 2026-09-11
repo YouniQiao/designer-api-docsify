@@ -22,7 +22,7 @@ function getDefaultVoiceSimId(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。与SIM卡绑定，从1开始递增。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。<br>与SIM卡绑定，从1开始递增。 |
 
 **错误码：**
 
@@ -68,7 +68,7 @@ function getDefaultVoiceSimId(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 以Promise形式返回默认语音业务的SIM卡ID。 |
+| Promise&lt;number&gt; | 以Promise形式返回默认语音业务的SIM卡ID。<br>与SIM卡绑定，从1开始递增。 |
 
 **错误码：**
 

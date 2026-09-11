@@ -2,6 +2,8 @@
 
 Defines the popup init info.
 
+@typedef PopupV2InitInfo
+
 **Since:** 26.0.0
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -68,7 +70,7 @@ iconModifier?: ImageModifier
 
 The icon attributes of Popup.
 
-**Type:** ImageModifier
+**Type:** [ImageModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **Since:** 26.0.0
 
@@ -116,7 +118,7 @@ messageModifier?: TextModifier
 
 The message attributes of Popup.
 
-**Type:** TextModifier
+**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **Since:** 26.0.0
 
@@ -148,7 +150,7 @@ showClose?: boolean | Resource
 
 The show close of Popup.
 
-**Type:** boolean \| [Resource](arkts-arkui-resource-t.md)
+**Type:** boolean &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 26.0.0
 
@@ -180,7 +182,7 @@ titleModifier?: TextModifier
 
 The title attributes of Popup.
 
-**Type:** TextModifier
+**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **Since:** 26.0.0
 

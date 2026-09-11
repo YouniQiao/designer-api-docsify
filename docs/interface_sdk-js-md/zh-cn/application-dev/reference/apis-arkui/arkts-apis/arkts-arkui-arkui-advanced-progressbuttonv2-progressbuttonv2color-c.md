@@ -46,7 +46,7 @@ constructor(options: ProgressButtonV2ColorOptions)
 public backgroundColor?: ColorMetrics
 ```
 
-按钮背景颜色。默认值：\\$r('sys.color.ohos_id_color_foreground_contrary')装饰器类型：@Trace
+按钮背景颜色。<br>默认值：\\$r('sys.color.ohos_id_color_foreground_contrary')<br>装饰器类型：@Trace
 
 **类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -64,7 +64,7 @@ public backgroundColor?: ColorMetrics
 public borderColor?: ColorMetrics
 ```
 
-按钮描边颜色。默认值：#330A59F7装饰器类型：@Trace
+按钮描边颜色。<br>默认值：#330A59F7<br>装饰器类型：@Trace
 
 **类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -82,7 +82,7 @@ public borderColor?: ColorMetrics
 public progressColor?: ColorMetrics
 ```
 
-进度条颜色。默认值：#330A59F7装饰器类型：@Trace
+进度条颜色。<br>默认值：#330A59F7<br>装饰器类型：@Trace
 
 **类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -100,7 +100,7 @@ public progressColor?: ColorMetrics
 public textColor?: ColorMetrics
 ```
 
-按钮文本颜色。默认值：系统默认值，#CE000000装饰器类型：@Trace
+按钮文本颜色。<br>默认值：系统默认值，#CE000000<br>装饰器类型：@Trace
 
 **类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 

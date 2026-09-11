@@ -196,7 +196,7 @@ static setKeepScreenOn(options?: SetKeepScreenOnOptions): void
 
 Sets whether to always keep the screen on. Call this API in **onShow()**.
 
-**NOTE：**
+**NOTE:**
 
 - This API is no longer maintained since API version 7 except for lite wearables. You are advised to use  
 [window.setWindowKeepScreenOn()](../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowkeepscreenon) instead.

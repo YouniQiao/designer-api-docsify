@@ -31,14 +31,12 @@ Creates a pan gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-ges
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { fingers?: number; direction?: PanDirection; distance?: number } \| [PanGestureOptions](arkts-arkui-pangestureoptions-c.md) | No |  |
+| value | { fingers?: number; direction?: PanDirection; distance?: number } &#124; [PanGestureOptions](arkts-arkui-pangestureoptions-c.md) | No | Parameters for the pan gesture. <br> - **fingers**: minimum number of fingers to trigger a pan gesture. The value ranges from 1 to 10. <br>Default value: **1**<br>Value range: [1, 10] <br>**NOTE:**<br>If the value is less than 1 or is not set, the default value is used. <br> - **direction**: pan direction. The value supports the AND (&amp;) and OR (\&#124;) operations. <br>Default value: **PanDirection.All** <br> - **distance**: minimum pan distance to trigger the gesture, in vp.<br>Value range: [0, +∞) <br>Default value: **8** for the stylus and **5** for other input sources. <br>**NOTE:**<br>If a pan gesture and a [tab](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.<br>If the value specified is less than **0**, the default value is used.<br>When the scale attribute is applied to the component, the actual pan distance is adjusted based on the **scale** ratio. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
-
 ## [[Call]]
 
 ```TypeScript
@@ -65,8 +63,6 @@ Creates a pan gesture. Compared with PanGesture | PanGestureOptions)}, this API 
 
 | Type | Description |
 | --- | --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
-
 ## onActionCancel
 
 ```TypeScript
@@ -91,8 +87,6 @@ Registers the callback for pan gesture cancellation. This callback is triggered 
 
 | Type | Description |
 | --- | --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
-
 ## onActionCancel
 
 ```TypeScript
@@ -119,8 +113,6 @@ Registers the callback for pan gesture cancellation. This callback is triggered 
 
 | Type | Description |
 | --- | --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
-
 ## onActionEnd
 
 ```TypeScript
@@ -145,8 +137,6 @@ Registers the callback for pan gesture completion. This callback is triggered wh
 
 | Type | Description |
 | --- | --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
-
 ## onActionStart
 
 ```TypeScript
@@ -171,8 +161,6 @@ Registers the callback for successful pan gesture recognition.
 
 | Type | Description |
 | --- | --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
-
 ## onActionUpdate
 
 ```TypeScript
@@ -197,4 +185,3 @@ Registers the callback for pan gesture updates. If **fingerList** contains multi
 
 | Type | Description |
 | --- | --- |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |

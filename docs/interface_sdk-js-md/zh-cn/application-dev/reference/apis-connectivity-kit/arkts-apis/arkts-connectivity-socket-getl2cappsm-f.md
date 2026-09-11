@@ -30,7 +30,7 @@ function getL2capPsm(serverSocket: number): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回L2CAP链路类型套接字的psm值。[SppType]{ |
+| number | 返回L2CAP链路类型套接字的psm值。[SppType](arkts-connectivity-socket-spptype-e.md)设置为SPP_L2CAP_BLE时，返回值的有效值范围为[0x01, 0xFF]。[SppType](arkts-connectivity-socket-spptype-e.md)设置为SPP_L2CAP时，返回值的有效值范围为[0x0000, 0xFFFF]。服务端通道建立异常或[SppType](arkts-connectivity-socket-spptype-e.md)非L2CAP链路类型时，返回-1。 |
 
 **示例**
 

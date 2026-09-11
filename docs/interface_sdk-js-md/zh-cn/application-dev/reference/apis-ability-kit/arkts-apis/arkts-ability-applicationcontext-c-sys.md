@@ -213,7 +213,7 @@ registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallb
 
 注册监听应用内UIAbility的生命周期。使用callback异步回调。
 
-<p>**说明：**: 仅支持主线程调用。</p>
+<p>**说明：**: <br>仅支持主线程调用。</p>
 
 **起始版本：** 9
 
@@ -237,7 +237,7 @@ registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallb
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回此次注册的callbackID，该ID用于在[ApplicationContext.unregisterAbilityLifecycleCallback()]{ |
+| number | 返回此次注册的callbackID，该ID用于在[ApplicationContext.unregisterAbilityLifecycleCallback()](#unregisterabilitylifecyclecallback)方法中取消注册对应的callback。 |
 
 **示例**
 
@@ -305,7 +305,7 @@ registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 
 注册对系统环境变化的监听。使用callback异步回调。
 
-<p>**说明：**: 仅支持主线程调用。</p>
+<p>**说明：**: <br>仅支持主线程调用。</p>
 
 **起始版本：** 9
 
@@ -329,7 +329,7 @@ registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回此次注册的callbackID，该ID用于在[ApplicationContext.unregisterEnvironmentCallback]{ |
+| number | 返回此次注册的callbackID，该ID用于在[ApplicationContext.unregisterEnvironmentCallback](#unregisterenvironmentcallback)方法中取消注册对应的callback。 |
 
 **示例**
 
@@ -372,7 +372,7 @@ unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<v
 
 取消监听应用内UIAbility的生命周期。使用callback异步回调。
 
-<p>**说明：**: 仅支持主线程调用。</p>
+<p>**说明：**: <br>仅支持主线程调用。</p>
 
 **起始版本：** 9
 
@@ -429,7 +429,7 @@ unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 
 取消监听应用内UIAbility的生命周期。使用Promise异步回调。
 
-<p>**说明：**: 仅支持主线程调用。</p>
+<p>**说明：**: <br>仅支持主线程调用。</p>
 
 **起始版本：** 9
 
@@ -491,7 +491,7 @@ unregisterEnvironmentCallback(callbackId: number, envcallback: AsyncCallback<voi
 
 取消对系统环境变化的监听。使用callback异步回调。
 
-<p>**说明：**: 仅支持主线程调用。</p>
+<p>**说明：**: <br>仅支持主线程调用。</p>
 
 **起始版本：** 9
 

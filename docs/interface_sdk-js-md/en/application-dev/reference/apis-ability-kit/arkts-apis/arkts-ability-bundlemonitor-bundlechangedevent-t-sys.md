@@ -6,6 +6,8 @@ type BundleChangedEvent = 'add' | 'update' | 'remove'
 
 Indicates the event type of bundle change
 
+@typedef { 'add' | 'update' | 'remove' }
+
 **Since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

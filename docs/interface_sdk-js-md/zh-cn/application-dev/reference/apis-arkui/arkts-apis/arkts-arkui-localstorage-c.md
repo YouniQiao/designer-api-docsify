@@ -157,7 +157,7 @@ get<T>(propName: string): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T \| undefined | LocalStorage中propName对应的属性值，如果不存在则返回undefined。 |
+| T &#124; undefined | LocalStorage中propName对应的属性值，如果不存在则返回undefined。 |
 
 **示例**
 
@@ -402,7 +402,7 @@ public ref<T>(propName: string): AbstractProperty<T> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; \| undefined | 返回LocalStorage中propName对应属性的引用，如果LocalStorage中不存在对应的propName，则返回undefined。 |
+| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; &#124; undefined | 返回LocalStorage中propName对应属性的引用，如果LocalStorage中不存在对应的propName，则返回undefined。 |
 
 **示例**
 
@@ -594,7 +594,7 @@ setOrCreate<T>(propName: string, newValue: T): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 如果LocalStorage中存在propName，则更新其值为newValue，返回true。 |
+| boolean | 如果LocalStorage中存在propName，则更新其值为newValue，返回true。<br>如果LocalStorage中不存在propName，则创建propName，并初始化其值为newValue，返回true。<br>API version 12之前，当newValue为null或undefined时返回false。 |
 
 **示例**
 

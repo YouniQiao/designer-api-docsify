@@ -14,7 +14,7 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback:
 
 Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework
 > checks whether the destination is proper and whether the widget has the redirection permission, and then
@@ -59,7 +59,7 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<
 
 Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses a promise to return the result. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework
 > checks whether the destination is proper and whether the widget has the redirection permission, and then

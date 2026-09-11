@@ -198,7 +198,7 @@ static Get<T>(propName: string): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T \| undefined | AppStorage中propName对应的属性值，如果不存在则返回undefined。 |
+| T &#124; undefined | AppStorage中propName对应的属性值，如果不存在则返回undefined。 |
 
 **示例**
 
@@ -231,7 +231,7 @@ static get<T>(propName: string): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T \| undefined | AppStorage中propName对应的属性值，如果不存在则返回undefined。 |
+| T &#124; undefined | AppStorage中propName对应的属性值，如果不存在则返回undefined。 |
 
 **示例**
 
@@ -579,7 +579,7 @@ static ref<T>(propName: string): AbstractProperty<T> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; \| undefined | 返回AppStorage中propName对应属性的引用，如果AppStorage中不存在对应的propName，则返回undefined。 |
+| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; &#124; undefined | 返回AppStorage中propName对应属性的引用，如果AppStorage中不存在对应的propName，则返回undefined。 |
 
 **示例**
 

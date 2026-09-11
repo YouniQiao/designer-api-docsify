@@ -2,7 +2,7 @@
 
 Enumerates the storage security levels of a key.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When using a key whose storage level is ECE, you are advised to clear the session resources created using the key
 > by detecting the

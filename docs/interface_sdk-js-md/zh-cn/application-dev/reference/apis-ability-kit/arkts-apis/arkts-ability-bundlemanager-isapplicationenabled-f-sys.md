@@ -25,7 +25,7 @@ function isApplicationEnabled(bundleName: string, appIndex: number): Promise<boo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示应用程序的bundleName。 |
-| appIndex | number | 是 | 表示分身应用的索引。appIndex为0时，表示获取主应用的禁用或使能状态。appIndex大于0时，表示获取指定分身应用的禁用或使能状态。 |
+| appIndex | number | 是 | 表示分身应用的索引。<br> appIndex为0时，表示获取主应用的禁用或使能状态。appIndex大于0时，表示获取指定分身应用的禁用或使能状态。 |
 
 **返回值：**
 

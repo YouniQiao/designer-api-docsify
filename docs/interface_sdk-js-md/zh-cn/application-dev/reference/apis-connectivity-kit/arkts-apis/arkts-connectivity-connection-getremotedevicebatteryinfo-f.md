@@ -14,7 +14,7 @@ function getRemoteDeviceBatteryInfo(deviceId: string): Promise<BatteryInfo>
 
 获取对端蓝牙设备的电量信息。使用Promise异步回调。
 
-对端蓝牙设备的电量信息变更通过on('batteryChange')的回调结果获取。从API version 21开始，此接口支持使用对端设备的实际MAC地址获取电量信息。
+对端蓝牙设备的电量信息变更通过[on('batteryChange')](arkts-connectivity-connection-on-f.md#onbatterychange)的回调结果获取。从API version 21开始，此接口支持使用对端设备的实际MAC地址获取电量信息。
 
 **起始版本：** 12
 

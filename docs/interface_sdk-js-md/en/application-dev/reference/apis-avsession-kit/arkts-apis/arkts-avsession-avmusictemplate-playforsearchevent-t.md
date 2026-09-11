@@ -6,6 +6,8 @@ type PlayForSearchEvent = (command: SearchPlayInfoType, args: SearchPlayInfo) =>
 
 The play for search event.
 
+@typedef { function } ExecuteActionEvent
+
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.

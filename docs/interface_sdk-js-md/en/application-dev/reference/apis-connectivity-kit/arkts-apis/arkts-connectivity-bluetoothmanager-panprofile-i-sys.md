@@ -85,7 +85,7 @@ Obtains the tethering enable or disable. On API 10 and above, the permission req
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns the value { |
+| boolean | Returns the value `true` is tethering is on, returns `false` otherwise. |
 
 **Error codes:**
 

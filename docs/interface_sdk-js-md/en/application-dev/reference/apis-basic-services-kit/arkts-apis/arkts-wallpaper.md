@@ -54,8 +54,8 @@ import { wallpaper } from '@kit.BasicServicesKit';
 | [getPixelMap](arkts-basicservices-wallpaper-getpixelmap-f-sys.md) | Obtains the default pixel map of a wallpaper of the specified type. Returns the default pixel map. |
 | [getPixelMap](arkts-basicservices-wallpaper-getpixelmap-f-sys.md) | Obtains the default pixel map of a wallpaper of the specified type. Returns the default pixel map. |
 | [getWallpaperByState](arkts-basicservices-wallpaper-getwallpaperbystate-f-sys.md) | Obtains the default pixel map of a wallpaper of the specified device type. Returns the default pixel map. Only the static wallpaper set by using setAllWallpapers can be obtained. |
-| off | Unregisters a listener for wallpaper changes. |
-| on | Registers a listener for wallpaper changes to receive notifications about the changes. |
+| [off](arkts-basicservices-wallpaper-off-f-sys.md#offwallpaperchange) | Unregisters a listener for wallpaper changes. |
+| [on](arkts-basicservices-wallpaper-on-f-sys.md#onwallpaperchange) | Registers a listener for wallpaper changes to receive notifications about the changes. |
 | [restore](arkts-basicservices-wallpaper-restore-f-sys.md) | Removes a wallpaper of the specified type and restores the default one. |
 | [restore](arkts-basicservices-wallpaper-restore-f-sys.md) | Removes a wallpaper of the specified type and restores the default one. |
 | [setAllWallpapers](arkts-basicservices-wallpaper-setallwallpapers-f-sys.md) | Set wallpapers for all forms of devices. |

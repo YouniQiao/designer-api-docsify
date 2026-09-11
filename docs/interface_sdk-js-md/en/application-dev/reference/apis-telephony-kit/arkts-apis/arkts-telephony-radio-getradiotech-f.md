@@ -26,7 +26,7 @@ Obtains the RAT used in the CS and PS domains for the SIM card in the specified 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2 |
+| slotId | number | Yes | Card slot ID.<br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetworkRadioTech](arkts-telephony-radio-networkradiotech-i.md)&gt; | Yes | Callback used to return the result. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain.<br>**Since:** 11 |
 
 **Error codes:**
@@ -87,14 +87,14 @@ Obtains the RAT used in the CS and PS domains for the SIM card in the specified 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2 |
+| slotId | number | Yes | Card slot ID.<br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;{psRadioTech: RadioTechnology, csRadioTech: RadioTechnology | > } Promise used to return the result. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain.<br>**Since:** 6 - 10 |
-| Promise&lt;[NetworkRadioTech](arkts-telephony-radio-networkradiotech-i.md)&gt; | Returns the RAT of PS domain and CS domain of registered network. The values of RAT are as follows: &lt;ul&gt; &lt;li&gt;{ |
+| Promise&lt;{psRadioTech: RadioTechnology, csRadioTech: RadioTechnology}&gt; | Promise used to return the result. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain.<br>**Since:** 6 - 10 |
+| Promise&lt;[NetworkRadioTech](arkts-telephony-radio-networkradiotech-i.md)&gt; | Returns the RAT of PS domain and CS domain of registered network. The values of RAT are as follows: &lt;ul&gt; &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_UNKNOWN` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_GSM` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_1XRTT` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_WCDMA` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_HSPA` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_HSPAP` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_TD_SCDMA` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_EVDO` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_EHRPD` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_LTE` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_LTE_CA` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_IWLAN` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_NR` &lt;/ul&gt;<br>**Since:** 11 |
 
 **Error codes:**
 

@@ -17,7 +17,7 @@ Matches a string or an object that supports being matched against, and returns a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| matcher | { [Symbol.match](string: string): RegExpMatchArray \| null; } | Yes |  |
+| matcher | { [Symbol.match](string: string): RegExpMatchArray &#124; null; } | Yes |  |
 
 **Return value:**
 

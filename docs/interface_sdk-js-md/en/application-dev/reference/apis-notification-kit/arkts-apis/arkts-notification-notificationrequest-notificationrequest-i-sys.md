@@ -112,7 +112,7 @@ Extended parameters customized for the system applications to publish notificati
 forceDistributed?: boolean
 ```
 
-Whether notifications are forcibly displayed in all scenario across devices. The default value is **false**. **NOTE：**This field takes effect only when the application is in the cross-device collaborative management list and **notDistributed** is set to **false**. Check whether the **collaborationFilter** field in the **notification_config.json** file contains the UID or bundle name of the application. For details about the file configuration path, see the **NOTIFICATION_CONFIG_FILE** property in [notification_config_parse.h](https://gitcode.com/openharmony/notification_distributed_notification_service/blob/master/services/ans/include/notification_config_parse.h). If yes, the application is on the cross-device collaborative management list.
+Whether notifications are forcibly displayed in all scenario across devices. The default value is **false**. **NOTE:**This field takes effect only when the application is in the cross-device collaborative management list and **notDistributed** is set to **false**. Check whether the **collaborationFilter** field in the **notification_config.json** file contains the UID or bundle name of the application. For details about the file configuration path, see the **NOTIFICATION_CONFIG_FILE** property in [notification_config_parse.h](https://gitcode.com/openharmony/notification_distributed_notification_service/blob/master/services/ans/include/notification_config_parse.h). If yes, the application is on the cross-device collaborative management list.
 - **true**: Notifications are displayed on all collaboration devices.
 - **false**: Notifications are displayed on the applications that are on the collaborative management list.
 
@@ -175,7 +175,7 @@ Whether the notification can be removed. If a notification is not removable, it 
 notDistributed?: boolean
 ```
 
-Whether notifications are not displayed in all scenarios across devices. The default value is **false**. **NOTE：**This field is mutually exclusive with the **forceDistributed** field. When both fields are set to **true**, only the **notDistributed** field takes effect.
+Whether notifications are not displayed in all scenarios across devices. The default value is **false**. **NOTE:**This field is mutually exclusive with the **forceDistributed** field. When both fields are set to **true**, only the **notDistributed** field takes effect.
 - **true**: Notifications are displayed only on the local device.
 - **false**: Notifications are displayed on all collaboration devices.
 

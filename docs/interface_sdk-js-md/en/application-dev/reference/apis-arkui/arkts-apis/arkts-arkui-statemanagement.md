@@ -2,11 +2,14 @@
 
 The state management module provides data storage, persistent data management, UIAbility data storage, and
  environment state and tools required by applications.
- T and S in this topic represent the types as described below.
- | Type  | Description                                    |
+
+T and S in this topic represent the types as described below.
+
+| Type  | Description                                    |
  | ---- | -------------------------------------- |
 | T    | Class, number, boolean, string, and arrays of these types.|
 | S    | number, boolean, string.                |
+
 
 
 ## Modules to Import

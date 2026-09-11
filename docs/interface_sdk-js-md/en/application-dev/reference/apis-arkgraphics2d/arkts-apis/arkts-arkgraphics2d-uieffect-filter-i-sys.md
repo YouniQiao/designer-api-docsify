@@ -571,7 +571,7 @@ haloBloom(tintColor: Color, bloomFactor: number, glowExposure: number): Filter
 
 Applies a soft halo bloom effect to the image, creating a gentle glow around bright areas.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > It is recommended to use as a foreground filter.
 
@@ -925,7 +925,7 @@ spinBlur(center: common2D.Point, angle: number, samples: number): Filter
 
 Applies a spin blur effect to the image, creating rotational motion trails around a specified center.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > It is recommended to use as a foreground filter.
 

@@ -2,7 +2,7 @@
 
 Enumerates the button types.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The corner radius of the rounded rectangle button is set using the universal attribute
 > borderRadius.
@@ -16,9 +16,9 @@ Enumerates the button types.
 > If neither its width nor height is set, the button radius is as specified by **borderRadius**; if **borderRadius**
 > is set to a negative value, the value **0** will be used.
 > 
-> - The button text is set using [fontSize](arkts-arkui-button-attribute.md#fontsize),
-> [fontColor](arkts-arkui-button-attribute.md#fontcolor), [fontStyle](arkts-arkui-button-attribute.md#fontstyle),
-> [fontFamily](arkts-arkui-button-attribute.md#fontfamily), and [fontWeight](arkts-arkui-button-attribute.md#fontweight).
+> - The button text is set using [fontSize](arkts-arkui-button-comp-attribute.md#fontsize),
+> [fontColor](arkts-arkui-button-comp-attribute.md#fontcolor), [fontStyle](arkts-arkui-button-comp-attribute.md#fontstyle),
+> [fontFamily](arkts-arkui-button-comp-attribute.md#fontfamily), and [fontWeight](arkts-arkui-button-comp-attribute.md#fontweight).
 > 
 > - Before setting the gradient color, you need to set
 > backgroundColor to transparent.

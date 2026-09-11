@@ -17,7 +17,7 @@ Replace all instances of a substring in a string, using a regular expression or 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchValue | string \| RegExp | Yes |  |
+| searchValue | string &#124; RegExp | Yes |  |
 | replaceValue | string | Yes |  |
 
 **Return value:**
@@ -36,7 +36,7 @@ Replace all instances of a substring in a string, using a regular expression or 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchValue | string \| RegExp | Yes |  |
+| searchValue | string &#124; RegExp | Yes |  |
 | replacer | (substring: string, ...args: any[]) =&gt; string | Yes |  |
 
 **Return value:**

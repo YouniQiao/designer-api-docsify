@@ -62,7 +62,7 @@ SLIDE_DOWN = 3
 
 Swiping down.
 
-**NOTE：**
+**NOTE:**
 
 This API is effective only in sheet transition.
 
@@ -82,7 +82,7 @@ SLIDE = 4
 
 Swiping left or right on the screen. By default, swiping right dismisses the popup, while swiping left is used in the mirror scenario. This setting is not user-defined.
 
-**NOTE：**
+**NOTE:**
 
 This API is effective only in sheet transition.
 

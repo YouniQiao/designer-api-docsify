@@ -75,7 +75,7 @@ Verifies the passed-in parameter types and return value type of a concurrent fun
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | Yes | Function to be executed. The function must be decorated using [@Concurrent](../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
+| func | (...args: A) =&gt; R &#124; Promise&lt;R&gt; | Yes | Function to be executed. The function must be decorated using [@Concurrent](../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
 | args | A | Yes | Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The default value is **undefined**. |
 
 **Return value:**
@@ -335,8 +335,6 @@ Execute a concurrent task with Configs.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Object&gt; |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -486,8 +484,6 @@ Execute a concurrent generics task with Configs.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;R&gt; |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -637,8 +633,6 @@ Execute a concurrent task group with Configs.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Object[]&gt; |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |

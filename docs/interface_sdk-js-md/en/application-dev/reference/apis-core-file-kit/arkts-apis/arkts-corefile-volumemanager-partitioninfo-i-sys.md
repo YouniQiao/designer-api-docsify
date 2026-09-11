@@ -92,7 +92,7 @@ Partition number.
 sizeBytes: number
 ```
 
-Partition total size. Unit: Byte.
+Partition total size. <br>Unit: Byte.
 
 **Type:** number
 

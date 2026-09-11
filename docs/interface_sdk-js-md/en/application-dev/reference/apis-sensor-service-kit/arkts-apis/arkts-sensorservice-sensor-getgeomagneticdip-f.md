@@ -18,7 +18,7 @@ Obtains the magnetic dip based on the inclination matrix. This API uses an async
 
 **Deprecated since:** 9
 
-**Substitutes:** [getInclination](arkts-sensorservice-sensor-getinclination-f.md)(inclinationMatrix: Array&lt;double&gt;, callback: AsyncCallback&lt;double&gt;)
+**Substitutes:** [getInclination](arkts-sensorservice-sensor-getinclination-f.md)(inclinationMatrix: Array&lt;number&gt;, callback: AsyncCallback&lt;number&gt;)
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -57,7 +57,7 @@ Obtains the magnetic dip based on the inclination matrix. This API uses a promis
 
 **Deprecated since:** 9
 
-**Substitutes:** [getInclination](arkts-sensorservice-sensor-getinclination-f.md)(inclinationMatrix: Array&lt;double&gt;)
+**Substitutes:** [getInclination](arkts-sensorservice-sensor-getinclination-f.md)(inclinationMatrix: Array&lt;number&gt;)
 
 **System capability:** SystemCapability.Sensors.Sensor
 

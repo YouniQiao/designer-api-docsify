@@ -32,13 +32,13 @@ function closePipe(pipe: USBDevicePipe): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 关闭设备连接通道成功返回0；关闭设备连接通道失败返回其他错误码如下： |
+| number | 关闭设备连接通道成功返回0；关闭设备连接通道失败返回其他错误码如下：<br>- 22：服务异常。可能原因：1.USB服务未正常运行；2.设备连接通道状态异常。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified.  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified.  <br>2.Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 **示例**

@@ -120,7 +120,7 @@ autoCancel?: boolean
 backgroundBlurStyle?: BlurStyle
 ```
 
-对话框的背景模糊样式。设置为BlurStyle.NONE将禁用背景模糊。
+对话框的背景模糊样式。<br>设置为BlurStyle.NONE将禁用背景模糊。
 
 **类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
@@ -158,7 +158,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundColor?: ResourceColor
 ```
 
-对话框的背景颜色。当backgroundColor设置为非透明色时，backgroundBlurStyle必须设置为BlurStyle.NONE。
+对话框的背景颜色。<br>当backgroundColor设置为非透明色时，backgroundBlurStyle必须设置为BlurStyle.NONE。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -198,7 +198,7 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 对话框的边框颜色。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; EdgeColors &#124; [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **默认值：** Color.Black
 
@@ -218,7 +218,7 @@ borderRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 
 背景的边框半径。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
+**类型：** [Dimension](arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **默认值：** { topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }
 
@@ -238,7 +238,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 对话框边框样式。
 
-**类型：** [BorderStyle](arkts-arkui-borderstyle-e.md) \| EdgeStyles
+**类型：** [BorderStyle](arkts-arkui-borderstyle-e.md) &#124; EdgeStyles
 
 **默认值：** BorderStyle.Solid
 
@@ -258,7 +258,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 对话框边框宽度。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
+**类型：** [Dimension](arkts-arkui-dimension-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **默认值：** 0
 
@@ -528,7 +528,7 @@ levelOrder?: LevelOrder
 levelUniqueId?: number
 ```
 
-页面级对话框显示层下节点的唯一标识。取值限定为整数。该参数仅在levelMode为LevelMode.EMBEDDED时生效。
+页面级对话框显示层下节点的唯一标识。取值限定为整数。<br>该参数仅在levelMode为LevelMode.EMBEDDED时生效。
 
 **类型：** number
 
@@ -620,7 +620,7 @@ offset?: Offset
 onWillDismiss?: Callback<DialogDismissal>
 ```
 
-对话框交互关闭的回调。如果注册了此回调，则用户点击后对话框不会立即关闭遮罩或返回按钮。回调中的reason参数用于判断是否可以关闭对话框。
+对话框交互关闭的回调。<br>如果注册了此回调，则用户点击后对话框不会立即关闭遮罩或返回按钮。回调中的reason参数用于判断是否可以关闭对话框。
 
 **类型：** Callback&lt;[DialogDismissal](arkts-arkui-arkui-dialog-dialogdismissal-i.md)&gt;
 
@@ -640,7 +640,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 对话框的阴影。
 
-**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
+**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 26.1.0
 
@@ -656,7 +656,7 @@ shadow?: ShadowOptions | ShadowStyle
 showInSubWindow?: boolean
 ```
 
-是否在子窗口中显示。isModal = true和showInSubWindow = true不能同时使用。
+是否在子窗口中显示。<br>isModal = true和showInSubWindow = true不能同时使用。
 
 **类型：** boolean
 

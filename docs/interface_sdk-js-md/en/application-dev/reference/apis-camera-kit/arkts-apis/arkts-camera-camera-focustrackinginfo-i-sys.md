@@ -1,6 +1,6 @@
 # FocusTrackingInfo (System API)
 
-Describes the focus tracking information, which is obtained by calling VideoSessionForSys. on('focusTrackingInfoAvailable').
+Describes the focus tracking information, which is obtained by calling VideoSessionForSys. [on('focusTrackingInfoAvailable')](arkts-camera-camera-videosession-i-sys.md#onfocustrackinginfoavailable).
 
 **Since:** 15
 

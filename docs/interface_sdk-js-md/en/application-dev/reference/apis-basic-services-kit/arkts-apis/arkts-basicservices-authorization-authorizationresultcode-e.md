@@ -30,7 +30,7 @@ The authorization is canceled by the user or the user's agent.
 
 Possible causes: The user explicitly dismissed the authorization dialog (e.g., clicking the 'Cancel'button, clicking the window close action).
 
-> **NOTE：**
+> **NOTE:**
 > Suggested solutions:
 > 1. Treat this as an expected human-driven workflow discontinuation rather than a system fault.
 > 2. Implement a non-intrusive UX notification or status fallback (e.g., smoothly roll back the UI
@@ -52,7 +52,7 @@ The authorization is denied by the system policy.
 
 Possible causes: The authorization policy for the privilege is not met. For example, the privilege requires the caller to possess the specified application permissions and run under an administrative OS account session.
 
-> **NOTE：**
+> **NOTE:**
 > Suggested solutions:
 > 1. Check the authorization policy configurations for the target privilege.
 > 2. Implement appropriate fallback handling or graceful degradation(e.g., suggesting the user
@@ -74,7 +74,7 @@ Authorization is not supported. This indicates that the requested target privile
 
 Possible causes: A newer application version containing cutting-edge system features is running on an unupgraded, legacy host OS that has no definition of this newly introduced privilege.
 
-> **NOTE：**
+> **NOTE:**
 > Suggested solutions: A fallback mechanism should be implemented,
 > such as prompting that the feature is unavailable or skipping the operation.
 

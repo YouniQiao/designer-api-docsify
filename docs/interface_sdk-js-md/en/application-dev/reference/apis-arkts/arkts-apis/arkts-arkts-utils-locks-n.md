@@ -25,14 +25,14 @@ import { ArkTSUtils } from '@kit.ArkTS';
 | [AbortSignal](arkts-arkts-locks-abortsignal-c.md) | Object used to abort an async operation. An instance of this class must be accessed in the same thread where the instance is created. Access to fields of this class from another thread is undefined behaviour. |
 | [ConditionVariable](arkts-arkts-locks-conditionvariable-c.md) | Object used for thread synchronization. |
 
-### Enums
-
-| Name | Description |
-| --- | --- |
-| [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | Mode of lock operations. |
-
 ### Types
 
 | Name | Description |
 | --- | --- |
 | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md) | Type of callback for asyncLock operation. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | Mode of lock operations. |

@@ -250,7 +250,7 @@ slotType?: notification.SlotType
 
 指明提醒的通道渠道类型。
 
-**类型：** notification.SlotType
+**类型：** [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notificationmanager.md)
 
 **起始版本：** 9
 
@@ -292,7 +292,7 @@ snoozeSlotType?: notification.SlotType
 
 指明延时提醒的通道渠道类型（不适用于倒计时提醒类型）。
 
-**类型：** notification.SlotType
+**类型：** [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notificationmanager.md)
 
 **起始版本：** 11
 

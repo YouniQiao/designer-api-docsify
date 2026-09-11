@@ -34,7 +34,7 @@ OFFSCREEN = 1
 
 Offscreen rendering mode. The content to be rendered is first rendered to the offscreen canvas without rounded corners, and then clipped with rounded corners and rendered to the main canvas.
 
-**NOTE：**
+**NOTE:**
 
 1. Compared with online rendering, offscreen rendering requires additional performance overhead.
 2. In offscreen rendering, the content is first rendered on an additional canvas, and then rendered on the main

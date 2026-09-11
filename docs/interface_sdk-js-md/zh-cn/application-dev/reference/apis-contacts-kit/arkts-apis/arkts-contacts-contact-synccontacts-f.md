@@ -39,7 +39,7 @@ function syncContacts(context: Context, mode: ContactSyncMode, progress: Contact
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | 返回联系人创建结果的数组。有效的联系人ID (可为通过 { |
+| Promise&lt;Array&lt;number&gt;&gt; | 返回联系人创建结果的数组。有效的联系人ID (可为通过 getId)获得的值表示创建成功。[INVALID_CONTACT_ID](arkts-contacts-contact-contact-c.md#invalid_contact_id) 表示创建失败。 |
 
 **错误码：**
 

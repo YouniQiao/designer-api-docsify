@@ -408,7 +408,7 @@ Sets the text direction for certain text within a paragraph, including RTL (righ
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Text for which the direction needs to be set. |
-| direction | 'RTL' \| 'LTR' | Yes | The value can be "RTL" or "LTR"."RTL" indicates setting the input text direction from right to left."LTR" indicates setting the input text direction from left to right. |
+| direction | 'RTL' &#124; 'LTR' | Yes | The value can be "RTL" or "LTR"."RTL" indicates setting the input text direction from right to left."LTR" indicates setting the input text direction from left to right. |
 
 **Return value:**
 

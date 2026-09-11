@@ -1,10 +1,12 @@
 # @system.router(Page Routing)
 
 The **Router** module provides APIs to access pages through URIs.
- > **NOTE**
+
+> **NOTE**
  >
  > - The APIs of this module are no longer maintained since API version 8. You are advised to use
  > [@ohos.router](arkts-router.md) instead.
+
 
 
 ## Modules to Import

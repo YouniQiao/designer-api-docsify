@@ -112,7 +112,7 @@ flags?: number
 
 [Flags](arkts-ability-wantconstant-flags-e.md) of the URIs authorized by the intent caller to the intent executor during the call.
 
-**NOTE：**
+**NOTE:**
 
 This parameter supports only **FLAG_AUTH_READ_URI_PERMISSION**, **FLAG_AUTH_WRITE_URI_PERMISSION**, and FLAG_AUTH_READ_URI_PERMISSION|
 
@@ -206,7 +206,7 @@ userId?: number
 
 ID of the user to which the intent belongs.
 
-**NOTE：**
+**NOTE:**
 
 If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
 

@@ -14,7 +14,7 @@ function getStateByUrl(url: string): Array<RouterState>
 
 Obtains the status information about a page by its URL.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Since API version 12, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in

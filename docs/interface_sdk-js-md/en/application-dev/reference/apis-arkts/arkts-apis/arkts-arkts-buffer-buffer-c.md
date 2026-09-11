@@ -36,7 +36,7 @@ Compares this **Buffer** object with another object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | Buffer \| Uint8Array | Yes | Target **Buffer** object to compare. |
+| target | Buffer &#124; Uint8Array | Yes | Target **Buffer** object to compare. |
 | targetStart | number | No | Offset to the start of the data to compare in the target **Buffer** object. The default value is **0**. |
 | targetEnd | number | No | Offset to the end of the data to compare in the target **Buffer** object (not inclusive). The default value is the length of the target **Buffer** object. |
 | sourceStart | number | No | Offset to the start of the data to compare in this **Buffer** object. The default value is **0**. |
@@ -46,7 +46,7 @@ Compares this **Buffer** object with another object.
 
 | Type | Description |
 | --- | --- |
-| -1 \| 0 \| 1 | Comparison result. The value **0** is returned if the two **Buffer** objects are the same; **1** is returned if this object comes after the target object when sorted; **-1** is returned if this object comes before the target object when sorted. |
+| -1 &#124; 0 &#124; 1 | Comparison result. The value **0** is returned if the two **Buffer** objects are the same; **1** is returned if this object comes after the target object when sorted; **-1** is returned if this object comes before the target object when sorted. |
 
 **Error codes:**
 
@@ -88,7 +88,7 @@ Copies data at the specified position in this **Buffer** object to the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | Buffer \| Uint8Array | Yes | Buffer** or **Uint8Array** object to which data is copied. |
+| target | Buffer &#124; Uint8Array | Yes | Buffer** or **Uint8Array** object to which data is copied. |
 | targetStart | number | No | Offset to the start position in the target object where data is copied. The default value is **0**. |
 | sourceStart | number | No | Offset to the start position in this **Buffer** object where data is copied. The default value is **0**. |
 | sourceEnd | number | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
@@ -183,7 +183,7 @@ Checks whether this **Buffer** object is the same as another **Buffer** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| otherBuffer | Uint8Array \| Buffer | Yes | Buffer** object to compare. |
+| otherBuffer | Uint8Array &#124; Buffer | Yes | Buffer** object to compare. |
 
 **Return value:**
 
@@ -229,7 +229,7 @@ Fills this **Buffer** object at the specified position. By default, data is fill
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Buffer \| Uint8Array \| number \| number \| number | Yes | Value to fill.<br>**Since:** 11 |
+| value | string &#124; Buffer &#124; Uint8Array &#124; number &#124; number &#124; number | Yes | Value to fill.<br>**Since:** 11 |
 | offset | number | No | Offset to the start position in this **Buffer** object where data is filled. The default value is **0**. |
 | end | number | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
 | encoding | BufferEncoding | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
@@ -274,7 +274,7 @@ Checks whether this **Buffer** object contains the specified value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| number \| number \| number \| Buffer \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
+| value | string &#124; number &#124; number &#124; number &#124; Buffer &#124; Uint8Array | Yes | Value to match.<br>**Since:** 11 |
 | byteOffset | number | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is **0**. |
 | encoding | BufferEncoding | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
 
@@ -314,7 +314,7 @@ Obtains the index of the first occurrence of the specified value in this **Buffe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| number \| number \| number \| Buffer \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
+| value | string &#124; number &#124; number &#124; number &#124; Buffer &#124; Uint8Array | Yes | Value to match.<br>**Since:** 11 |
 | byteOffset | number | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is **0**. |
 | encoding | BufferEncoding | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
 
@@ -394,7 +394,7 @@ Obtains the index of the last occurrence of the specified value in this **Buffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| number \| number \| number \| Buffer \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
+| value | string &#124; number &#124; number &#124; number &#124; Buffer &#124; Uint8Array | Yes | Value to match.<br>**Since:** 11 |
 | byteOffset | number | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is the length of this **Buffer** object. |
 | encoding | BufferEncoding | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
 
@@ -2778,6 +2778,12 @@ buffer: ArrayBuffer
 
 **System capability:** SystemCapability.Utils.Lang
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200013](../errorcode-utils.md#10200013-read-only-property) | Buffer cannot be set for the buffer that has only a getter. |
+
 ## byteOffset
 
 ```TypeScript
@@ -2794,6 +2800,12 @@ Offset of the **Buffer** object in the memory pool.
 
 **System capability:** SystemCapability.Utils.Lang
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200013](../errorcode-utils.md#10200013-read-only-property) | ByteOffset cannot be set for the buffer that has only a getter. |
+
 ## length
 
 ```TypeScript
@@ -2809,3 +2821,9 @@ Length of the **Buffer** object, in bytes.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200013](../errorcode-utils.md#10200013-read-only-property) | Length cannot be set for the buffer that has only a getter. |

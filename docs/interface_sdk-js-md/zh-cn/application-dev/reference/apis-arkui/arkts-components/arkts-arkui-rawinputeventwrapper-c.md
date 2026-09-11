@@ -45,7 +45,7 @@ asKeyEvent(): KeyEvent | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [KeyEvent](arkts-arkui-keyevent-i.md) \| null | 获取按键事件，如果是触摸事件则返回事件对象，否则返回null。 |
+| [KeyEvent](arkts-arkui-keyevent-i.md) &#124; null | 获取按键事件，如果是触摸事件则返回事件对象，否则返回null。 |
 
 ## asMouseEvent
 
@@ -67,7 +67,7 @@ asMouseEvent(): MouseEvent | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [MouseEvent](arkts-arkui-mouseevent-i.md) \| null | 获取鼠标事件，如果是鼠标事件则返回事件对象，否则返回null。 |
+| [MouseEvent](arkts-arkui-mouseevent-i.md) &#124; null | 获取鼠标事件，如果是鼠标事件则返回事件对象，否则返回null。 |
 
 ## asTouchEvent
 
@@ -89,7 +89,7 @@ asTouchEvent(): TouchEvent | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [TouchEvent](arkts-arkui-touchevent-i.md) \| null | 获取触摸事件，如果是触摸事件则返回事件对象，否则返回null。 |
+| [TouchEvent](arkts-arkui-touchevent-i.md) &#124; null | 获取触摸事件，如果是触摸事件则返回事件对象，否则返回null。 |
 
 ## isKeyEvent
 

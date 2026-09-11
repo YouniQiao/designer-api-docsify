@@ -28,7 +28,7 @@ function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.Audi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) \| 'all' | 是 | 会话令牌。SessionToken表示单个token；字符串`'all'`指所有token。 |
+| session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) &#124; 'all' | 是 | 会话令牌。SessionToken表示单个token；字符串`'all'`指所有token。 |
 | audioDevices | Array&lt;[audio.AudioDeviceDescriptor](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiodevicedescriptor-i.md)&gt; | 是 | 媒体设备列表。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当投播成功，err为undefined，否则返回错误对象。 |
 
@@ -85,7 +85,7 @@ function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.Audi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) \| 'all' | 是 | 会话令牌。SessionToken表示单个token；字符串`'all'`指所有token。 |
+| session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) &#124; 'all' | 是 | 会话令牌。SessionToken表示单个token；字符串`'all'`指所有token。 |
 | audioDevices | Array&lt;[audio.AudioDeviceDescriptor](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiodevicedescriptor-i.md)&gt; | 是 | 媒体设备列表。 |
 
 **返回值：**

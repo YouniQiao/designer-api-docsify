@@ -333,7 +333,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 Starts an ability. This API uses an asynchronous callback to return the result. UI extension uses this method to start a specific ability.If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -409,7 +409,7 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 
 Starts an ability with **options** specified. This API uses an asynchronous callback to return the result. UI extension uses this method to start a specific ability.If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -488,7 +488,7 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 Starts an ability. This API uses a promise to return the result. UI extension uses this method to start a specific ability.If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -818,7 +818,7 @@ is returned to the caller.
 - If different applications call this API to start an ability that uses the singleton mode and then call  
 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -903,7 +903,7 @@ is returned to the caller.
 - If different applications call this API to start an ability that uses the singleton mode and then call  
 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -990,7 +990,7 @@ is returned to the caller.
 - If different applications call this API to start an ability that uses the singleton mode and then call  
 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).

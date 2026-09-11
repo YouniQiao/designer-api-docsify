@@ -518,7 +518,7 @@ getTopProportionColorsAndPercentage(colorCount: number): Map<Color | null, numbe
 
 | 类型 | 说明 |
 | --- | --- |
-| Map&lt;[Color](arkts-arkgraphics2d-effectkit-color-i.md) \| null, number \| null&gt; | 图像占比前`colorCount`的颜色值与对应比例的字典，比例的取值范围为[0,1]。 |
+| Map&lt;[Color](arkts-arkgraphics2d-effectkit-color-i.md) &#124; null, number &#124; null&gt; | 图像占比前`colorCount`的颜色值与对应比例的字典，比例的取值范围为[0,1]。   - 当实际读取的特征色个数小于`colorCount`时，字典大小为实际特征色个数。   - 取色失败或取色个数小于1返回`Map()`。 |
 
 **错误码：**
 

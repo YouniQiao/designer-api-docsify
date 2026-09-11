@@ -2,7 +2,7 @@
 
 Implements a **UIContext** instance.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
 > 
@@ -108,7 +108,7 @@ animateTo(value: AnimateParam, event: () => void): void
 
 Adds transition animations for state changes in closure code.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Avoid using **animateTo** in **aboutToAppear** or **aboutToDisappear**.
 > 
@@ -235,7 +235,7 @@ closeBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>): Promise
 
 Closes the sheet corresponding to **bindSheetContent**. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Closing a sheet using this API will not invoke the **shouldDismiss** callback.
 
@@ -263,7 +263,7 @@ Closes the sheet corresponding to **bindSheetContent**. This API uses a promise 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
 | [120003](../errorcode-bindSheet.md#120003-no-matching-modal-found) | The bindSheetContent cannot be found. |
 
@@ -275,7 +275,7 @@ constructor()
 
 Construct a **UIContext** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > A **UIContext** object created using the constructor points to an ambiguous UI context, meaning it is not bound
 > to any specific UI instance. The unique ID of such a UIContext instance is -1.
@@ -320,7 +320,7 @@ Creates an **Animator** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## createAnimator
 
@@ -342,7 +342,7 @@ Creates an **AnimatorResult** object for animations. Compared to the previous [c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Animator options. |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) &#124; [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Animator options. |
 
 **Return value:**
 
@@ -354,7 +354,7 @@ Creates an **AnimatorResult** object for animations. Compared to the previous [c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## createUIContextWithoutWindow
 
@@ -364,7 +364,7 @@ static createUIContextWithoutWindow(context: common.UIAbilityContext | common.Ex
 
 Creates a UI instance that does not depend on a window and returns its UI context. The created UI instance is a singleton.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The returned UI context can only be used to create [custom nodes](../../../ui/arkts-user-defined-node.md). It
 > cannot be used for other UI operations.
@@ -381,19 +381,19 @@ Creates a UI instance that does not depend on a window and returns its UI contex
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [common.UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) \| [common.ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-extensioncontext-t.md) | Yes | Context corresponding to [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md) or [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md). |
+| context | [common.UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) &#124; [common.ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-extensioncontext-t.md) | Yes | Context corresponding to [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md) or [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined | Context of the created UI instance, or **undefined** if creation fails. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) &#124; undefined | Context of the created UI instance, or **undefined** if creation fails. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. The number of parameters is incorrect.   2. Invalid parameter type of context. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. The number of parameters is incorrect. <br> 2. Invalid parameter type of context. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## destroyUIContextWithoutWindow
@@ -432,7 +432,7 @@ Dispach keyboard event to the frameNode with inspector key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | number \| string | Yes | The uniqueId or inspector key of the target FrameNode. |
+| node | number &#124; string | Yes | The uniqueId or inspector key of the target FrameNode. |
 | event | [KeyEvent](../arkts-components/arkts-arkui-keyevent-i.md) | Yes | The key event to be sent. |
 
 **Return value:**
@@ -510,8 +510,6 @@ Converts a value in fp units to a value in px.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## getAllUIContexts
 
 ```TypeScript
@@ -582,7 +580,7 @@ Get the FrameNode attached to current window by id.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | The instance of FrameNode. |
+| [FrameNode](arkts-arkui-framenode-c.md) &#124; null | The instance of FrameNode. |
 
 ## getCallingScopeUIContext
 
@@ -592,7 +590,7 @@ static getCallingScopeUIContext(): UIContext | undefined
 
 Obtains the UIContext of this [calling scope](../../../ui/arkts-global-interface.md#basic-concepts). This API returns **undefined** if the calling scope is ambiguous.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The returned UIContext object may point to a destroyed UI instance, which usually occurs when an asynchronous
 > task is dispatched from an instance that has already been destroyed. As such, you are advised to verify its
@@ -610,7 +608,7 @@ Obtains the UIContext of this [calling scope](../../../ui/arkts-global-interface
 
 | Type | Description |
 | --- | --- |
-| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined | UIContext of the current [calling scope](../../../ui/arkts-global-interface.md#basic-concepts). Returns **undefined** if the calling scope is ambiguous. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) &#124; undefined | UIContext of the current [calling scope](../../../ui/arkts-global-interface.md#basic-concepts). Returns **undefined** if the calling scope is ambiguous. |
 
 ## getComponentSnapshot
 
@@ -750,7 +748,7 @@ Get DragController.
 getFilteredInspectorTree(filters?: Array<string>): string
 ```
 
-Obtains the component tree and component attributes. This API has a long processing time and is intended for testing scenarios only.
+Obtains the component tree and component attributes. This API has a long processing time and is intended for <br>testing scenarios only.
 
 **Since:** 12
 
@@ -764,19 +762,19 @@ Obtains the component tree and component attributes. This API has a long process
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported:    **"id"**: unique ID of the component.    **"src"**: source of the resource.    **"content"**: information or data contained in the element, component, or object.    **"editable"**: whether the component is editable.    **"scrollable"**: whether the component is scrollable.    **"selectable"**: whether the component is selectable.    **"focusable"**: whether the component is focusable.    **"focused"**: whether the component is currently focused. If **filters** includes one or more fields, unspecified fields will be filtered out from the results. If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. The following filter field is supported since API version 20:    **"isLayoutInspector"**: whether the component tree contains custom components. If **filters** is omitted or does not contain **"isLayoutInspector"**, the returned component tree will not include custom component details. Other filter fields are used only in testing scenarios. |
+| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported:<br>**"id"**: unique ID of the component. <br>**"src"**: source of the resource. <br>**"content"**: information or data contained in the element, component, or object. <br>**"editable"**: whether the component is editable. <br>**"scrollable"**: whether the component is scrollable. <br>**"selectable"**: whether the component is selectable. <br>**"focusable"**: whether the component is focusable. <br>**"focused"**: whether the component is currently focused. <br>If **filters** includes one or more fields, unspecified fields will be filtered out from the results. <br>If **filters** is not provided or is an empty array, none of the aforementioned fields <br>will be filtered out. <br>The following filter field is supported since API version 20: <br>**"isLayoutInspector"**: whether the component tree contains custom components. <br>If **filters** is omitted or <br>does not contain **"isLayoutInspector"**, the returned component tree <br>will not include custom component details. <br>Other filter fields are used only in testing scenarios. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | JSON string of the component tree and component attributes. For details about each field in the component, see the return value description of [getInspectorInfo]{ |
+| string | JSON string of the component tree and component attributes. For details about each field in the component, see the return value description of [getInspectorInfo](arkts-arkui-framenode-c.md#getinspectorinfo). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## getFilteredInspectorTreeById
 
@@ -784,7 +782,7 @@ Obtains the component tree and component attributes. This API has a long process
 getFilteredInspectorTreeById(id: string, depth: number, filters?: Array<string>): string
 ```
 
-Obtains the attributes of the specified component and its child components. This API has a long processing time and is intended for testing scenarios only.
+Obtains the attributes of the specified component and its child components. This API has a long processing time <br>and is intended for testing scenarios only.
 
 **Since:** 12
 
@@ -799,20 +797,20 @@ Obtains the attributes of the specified component and its child components. This
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | ID of the target component. |
-| depth | number | Yes | Number of layers of child components. If the value is **0**, the attributes of the specified component and all its child components are obtained. If the value is **1**, only the attributes of the specified component are obtained. If the value is **2**, the attributes of the specified component and its level-1 child components are obtained. The rest can be deduced by analogy. |
-| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported:    **"id"**: unique ID of the component.    **"src"**: source of the resource.    **"content"**: information or data contained in the element, component, or object.    **"editable"**: whether the component is editable.    **"scrollable"**: whether the component is scrollable.    **"selectable"**: whether the component is selectable.    **"focusable"**: whether the component is focusable.    **"focused"**: whether the component is currently focused. If **filters** includes one or more fields, unspecified fields will be filtered out from the results. If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. Other filter fields are used only in testing scenarios. |
+| depth | number | Yes | Number of layers of child components. If the value is **0**, the attributes of the specified component and all its child components are obtained. If the value is **1**, only the attributes of<br>the specified component are obtained. If the value is **2**, the attributes of <br>the specified component and its <br>level-1 child components are obtained. The rest can be deduced by analogy. |
+| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported:<br>**"id"**: unique ID of the component. <br>**"src"**: source of the resource. <br>**"content"**: information or data contained in the element, component, or object. <br>**"editable"**: whether the component is editable. <br>**"scrollable"**: whether the component is scrollable. <br>**"selectable"**: whether the component is selectable. <br>**"focusable"**: whether the component is focusable. <br>**"focused"**: whether the component is currently focused. <br>If **filters** includes one or more fields, unspecified fields will be filtered out from the results. <br>If **filters** is not provided or is an empty array, none of the aforementioned fields <br>will be filtered out. <br>Other filter fields are used only in testing scenarios. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | JSON string of the attributes of the specified component and its child components. For details about each field in the component, see the return value |
+| string | JSON string of the attributes of the specified component and its child components. For details about each field in the component, see the return value <br>description of [getInspectorInfo](arkts-arkui-framenode-c.md#getinspectorinfo). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## getFocusController
 
@@ -884,7 +882,7 @@ Get FrameNode by id.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | The instance of FrameNode. |
+| [FrameNode](arkts-arkui-framenode-c.md) &#124; null | The instance of FrameNode. |
 
 ## getFrameNodeByUniqueId
 
@@ -917,7 +915,7 @@ returned, with the type __Common__; if the component has no rendered content, th
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
+| [FrameNode](arkts-arkui-framenode-c.md) &#124; null | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
 
 ## getHostContext
 
@@ -939,7 +937,7 @@ Obtains the context of this ability.
 
 | Type | Description |
 | --- | --- |
-| [Context](arkts-arkui-context-t.md) \| undefined | Context of the ability. The context type depends on the ability type. For example, if this API is called in a page within a UIAbility window, the returned context type is [UIAbilityContext]{ |
+| [Context](arkts-arkui-context-t.md) &#124; undefined | Context of the ability. The context type depends on the ability type. For example, if this API is called in a page within a UIAbility window, the returned context type is [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md). If this API is called in a page within an ExtensionAbility window, the returned context type is [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). If the ability context does not exist, **undefined** is returned. |
 
 ## getId
 
@@ -1005,7 +1003,7 @@ Obtains the UIContext of the UI instance that most recently switched to the focu
 
 | Type | Description |
 | --- | --- |
-| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined | UIContext of the UI instance that most recently switched to the focused state. Returns **undefined** if the most recently focused instance has been destroyed or if no instance has ever been focused. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) &#124; undefined | UIContext of the UI instance that most recently switched to the focused state. Returns **undefined** if the most recently focused instance has been destroyed or if no instance has ever been focused. |
 
 ## getLastForegroundUIContext
 
@@ -1027,7 +1025,7 @@ Obtains the UIContext of the UI instance that most recently switched to the fore
 
 | Type | Description |
 | --- | --- |
-| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined | UIContext of the UI instance that most recently switched to the foreground state. Returns **undefined** if the most recently foreground UI instance has been destroyed or if no UI instance has ever been in the foreground. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) &#124; undefined | UIContext of the UI instance that most recently switched to the foreground state. Returns **undefined** if the most recently foreground UI instance has been destroyed or if no UI instance has ever been in the foreground. |
 
 ## getMagnifier
 
@@ -1143,7 +1141,7 @@ Get navigation information of the frameNode with uniqueId.
 
 | Type | Description |
 | --- | --- |
-| observer.NavigationInfo \| undefined | The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
+| [observer.NavigationInfo](../../apis-arkui/arkts-apis/arkts-arkui-observer.md) &#124; undefined | The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
 
 ## getOverlayManager
 
@@ -1235,7 +1233,7 @@ Obtains the root node of the page corresponding to the UIContext.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | FrameNode of the root node of the page or **null**. |
+| [FrameNode](arkts-arkui-framenode-c.md) &#124; null | FrameNode of the root node of the page or **null**.<br>If no valid FrameNode is available, **null** is returned. <br>If no page is loaded in the window, **null** is returned. |
 
 **Error codes:**
 
@@ -1329,7 +1327,7 @@ Obtains the **LocalStorage** instance shared by this stage.
 
 | Type | Description |
 | --- | --- |
-| [LocalStorage](arkts-arkui-localstorage-c.md) \| undefined | LocalStorage** instance if it exists; **undefined** if it does not exist. |
+| [LocalStorage](arkts-arkui-localstorage-c.md) &#124; undefined | LocalStorage** instance if it exists; **undefined** if it does not exist. |
 
 ## getSmartGestureController
 
@@ -1449,7 +1447,7 @@ getWindowId(): number | undefined
 
 Obtains the ID of the window to which the current application instance belongs.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the UIContext resides inside a
 > [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) that runs in the main
@@ -1467,7 +1465,7 @@ Obtains the ID of the window to which the current application instance belongs.
 
 | Type | Description |
 | --- | --- |
-| number \| undefined | ID of the window to which the current application instance belongs. If the window does not exist, **undefined** is returned. |
+| number &#124; undefined | ID of the window to which the current application instance belongs. If the window does not exist, **undefined** is returned. |
 
 ## getWindowName
 
@@ -1489,7 +1487,7 @@ Obtains the name of the window where this instance is located.
 
 | Type | Description |
 | --- | --- |
-| string \| undefined | Name of the window where the current instance is located. If the window does not exist, **undefined** is returned. |
+| string &#124; undefined | Name of the window where the current instance is located. If the window does not exist, **undefined** is returned. |
 
 ## getWindowWidthBreakpoint
 
@@ -1628,8 +1626,6 @@ Converts a value in lpx units to a value in px.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## openBindSheet
 
 ```TypeScript
@@ -1638,7 +1634,7 @@ openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOpti
 
 Creates a sheet whose content is as defined in **bindSheetContent** and displays the sheet. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 1. When calling this API, if no valid value is provided for **targetId**, you won't be able to set
 > **SheetOptions.preferType** to **POPUP** or **SheetOptions.mode** to **EMBEDDED**.
@@ -1661,7 +1657,7 @@ Creates a sheet whose content is as defined in **bindSheetContent** and displays
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bindSheetContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content to display on the sheet. |
-| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | No | Style of the sheet.   **NOTE：** 1. **SheetOptions.uiContext** cannot be set. Its value is fixed to the **UIContext** object of the current instance. 2. If **targetId** is not passed in, **SheetOptions.preferType** cannot be set to **POPUP**; if **POPUP** is set, it will be replaced with **CENTER**. 3. If **targetId** is not passed in, **SheetOptions.mode** cannot be set to **EMBEDDED**; the default mode is **OVERLAY**. 4. For the default values of other attributes, see [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md). |
+| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | No | Style of the sheet.<br>**NOTE:**<br>1. **SheetOptions.uiContext** cannot be set. Its value is fixed to the **UIContext** object of the current instance.<br>2. If **targetId** is not passed in, **SheetOptions.preferType** cannot be set to **POPUP**; if **POPUP** is set, it will be replaced with **CENTER**.<br>3. If **targetId** is not passed in, **SheetOptions.mode** cannot be set to **EMBEDDED**; the default mode is **OVERLAY**.<br>4. For the default values of other attributes, see [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md). |
 | targetId | number | No | ID of the component to be bound. If this parameter is not set, no component is bound. If the ID does not exist, the error code 120004 is returned. Returns error code 401 if **undefined** is passed in. |
 
 **Return value:**
@@ -1674,7 +1670,7 @@ Creates a sheet whose content is as defined in **bindSheetContent** and displays
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
 | [120002](../errorcode-bindSheet.md#120002-modal-for-bindsheetcontent-already-exists) | The bindSheetContent already exists. |
 | [120004](../errorcode-bindSheet.md#120004-specified-targetid-does-not-exist) | The targetId does not exist. |
@@ -1752,8 +1748,6 @@ Converts a value in px units to a value in fp.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## px2lpx
 
 ```TypeScript
@@ -1780,8 +1774,6 @@ Converts a value in px units to a value in lpx.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## px2vp
 
 ```TypeScript
@@ -1808,8 +1800,6 @@ Converts a value in px units to a value in vp.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## removeLocalInputEventMonitor
 
 ```TypeScript
@@ -1874,7 +1864,7 @@ static resolveUIContext(): ResolvedUIContext
 
 Obtains a UIContext instance along with its resolution strategy using a predefined priority order.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API resolves and returns a UIContext instance together with the strategy used to determine it,
 > 
@@ -2004,7 +1994,7 @@ setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 
 Sets the avoidance mode for the virtual keyboard.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > With **KeyboardAvoidMode.RESIZE**, the page is resized to prevent the virtual keyboard from obstructing the
 > view. Regarding components on the page, those whose width and height are set in percentage are resized with the
@@ -2032,7 +2022,7 @@ Sets the avoidance mode for the virtual keyboard.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | Yes | Avoidance mode of the virtual keyboard.Default value: **KeyboardAvoidMode.OFFSET**, which means that the page moves up when the keyboard is displayed.When **setKeyboardAvoidMode** is set to an invalid value, this attribute does not take effect. |
+| value | [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | Yes | Avoidance mode of the virtual keyboard.<br>Default value: **KeyboardAvoidMode.OFFSET**, which means that the page moves up when the keyboard is displayed.<br>When **setKeyboardAvoidMode** is set to an invalid value, this attribute does not take effect. |
 
 ## setOverlayManagerOptions
 
@@ -2082,7 +2072,7 @@ Sets the pixel rounding mode for this page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | Yes | Pixel rounding mode. Default value:**PixelRoundMode.PIXEL_ROUND_ON_LAYOUT_FINISH**.If this parameter is set to an invalid value, the default value will be used. |
+| mode | [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | Yes | Pixel rounding mode. Default value:**PixelRoundMode.PIXEL_ROUND_ON_LAYOUT_FINISH**.<br>If this parameter is set to an invalid value, the default value will be used. |
 
 ## setResourceManagerCacheMaxCountForHSP
 
@@ -2180,7 +2170,7 @@ Shows an alert dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) \| [AlertDialogParamWithButtons](arkts-arkui-alertdialogparamwithbuttons-i.md) \| [AlertDialogParamWithOptions](arkts-arkui-alertdialogparamwithoptions-i.md) | Yes | Shows an AlertDialog component in the given settings. |
+| options | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) &#124; [AlertDialogParamWithButtons](arkts-arkui-alertdialogparamwithbuttons-i.md) &#124; [AlertDialogParamWithOptions](arkts-arkui-alertdialogparamwithoptions-i.md) | Yes | Shows an AlertDialog component in the given settings. |
 
 ## showDatePickerDialog
 
@@ -2246,7 +2236,7 @@ textPickerDialog display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [TextPickerDialogOptions](../arkts-components/arkts-arkui-textpickerdialogoptions-i.md) \| [TextPickerDialogOptionsExt](../arkts-components/arkts-arkui-textpickerdialogoptionsext-i.md) | Yes | Dialog style. |
+| style | [TextPickerDialogOptions](../arkts-components/arkts-arkui-textpickerdialogoptions-i.md) &#124; [TextPickerDialogOptionsExt](../arkts-components/arkts-arkui-textpickerdialogoptionsext-i.md) | Yes | Dialog style. |
 
 ## showTimePickerDialog
 
@@ -2325,7 +2315,7 @@ updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOp
 
 Updates the style of the sheet corresponding to the provided **bindSheetContent**. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > **SheetOptions.UIContext**, **SheetOptions.mode**, and callback functions cannot be updated.
 
@@ -2342,8 +2332,8 @@ Updates the style of the sheet corresponding to the provided **bindSheetContent*
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bindSheetContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content to display on the sheet. |
-| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | Yes | Style of the sheet.   **NOTE：** **SheetOptions.UIContext** and **SheetOptions.mode** cannot be updated. |
-| partialUpdate | boolean | No | Whether to update the sheet in incremental mode.Default value: **false**   **NOTE：** 1. **true**: incremental update, where the specified properties in **SheetOptions** are updated, and other properties stay at their current value. 2. **false**: full update, where all properties except those specified in **SheetOptions** are restored to default values. |
+| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | Yes | Style of the sheet.<br>**NOTE:**<br>**SheetOptions.UIContext** and **SheetOptions.mode** cannot be updated. |
+| partialUpdate | boolean | No | Whether to update the sheet in incremental mode.<br>Default value: **false**<br> **NOTE:**<br>1. **true**: incremental update, where the specified properties in **SheetOptions** are updated, and other properties stay at their current value.<br>2. **false**: full update, where all properties except those specified in **SheetOptions** are restored to default values. |
 
 **Return value:**
 
@@ -2355,7 +2345,7 @@ Updates the style of the sheet corresponding to the provided **bindSheetContent*
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
 | [120003](../errorcode-bindSheet.md#120003-no-matching-modal-found) | The bindSheetContent cannot be found. |
 
@@ -2385,4 +2375,3 @@ Converts a value in vp units to a value in px.
 
 | Type | Description |
 | --- | --- |
-| number |  |

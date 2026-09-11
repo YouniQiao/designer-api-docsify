@@ -62,8 +62,8 @@ import { statistics } from '@kit.NetworkKit';
 | [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md) | Obtains the historical data traffic of the specified application. This API uses an asynchronous callback to return the result. |
 | [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md) | Obtains the historical data traffic of the specified application. This API uses a promise to return the result. |
 | [getTrafficStatsByUidNetwork](arkts-network-statistics-gettrafficstatsbyuidnetwork-f-sys.md) | Obtains the traffic statistics of the specified application on the specified network within the specified period. This method uses a promise to return the result. |
-| off | Unsubscribes from traffic change events. This API uses an asynchronous callback to return the result. |
-| on | Subscribes to traffic change events. This API uses an asynchronous callback to return the result. |
+| [off](arkts-network-statistics-off-f-sys.md#offnetstatschange) | Unsubscribes from traffic change events. This API uses an asynchronous callback to return the result. |
+| [on](arkts-network-statistics-on-f-sys.md#onnetstatschange) | Subscribes to traffic change events. This API uses an asynchronous callback to return the result. |
 | [setCalibrationTraffic](arkts-network-statistics-setcalibrationtraffic-f-sys.md) | Sets traffic calibration data. You can use this API to set traffic data during traffic calibration. This API uses a promise to return the result. |
 | [setTrafficPlanInfo](arkts-network-statistics-settrafficplaninfo-f-sys.md) | Set traffic plan info. |
 | [updateIfacesStats](arkts-network-statistics-updateifacesstats-f-sys.md) | Updates network interface statistics data. |

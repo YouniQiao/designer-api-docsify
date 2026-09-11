@@ -64,7 +64,7 @@ GRANTED_ALWAYS = 4
 
 The authorization is granted always.
 
-**NOTE：**
+**NOTE:**
 
 When the following common events are received, the related authorization records will be cleared:
 

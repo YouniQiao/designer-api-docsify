@@ -195,7 +195,7 @@ Obtains the value of the property corresponding to **propName** from [AppStorage
 
 | Type | Description |
 | --- | --- |
-| T \| undefined | Value of the property corresponding to **propName** in AppStorage, or **undefined** if it does not exist. |
+| T &#124; undefined | Value of the property corresponding to **propName** in AppStorage, or **undefined** if it does not exist. |
 
 **Examples**
 
@@ -228,7 +228,7 @@ Obtains the value of the property corresponding to **propName** from [AppStorage
 
 | Type | Description |
 | --- | --- |
-| T \| undefined | Value of the property corresponding to **propName** in AppStorage, or **undefined** if it does not exist. |
+| T &#124; undefined | Value of the property corresponding to **propName** in AppStorage, or **undefined** if it does not exist. |
 
 **Examples**
 
@@ -480,7 +480,7 @@ static Prop(propName: string): any
 
 Establishes a one-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given property exists in AppStorage, the one-way bound data of the property in AppStorage is returned. If the given property does not exist in AppStorage, **undefined** is returned. Updates of the one-way bound data are not synchronized back to AppStorage.
 
-> **NOTE：**
+> **NOTE:**
 
 > Prop supports only simple types.
 
@@ -574,7 +574,7 @@ This API is similar to [link](#link) but does not require manually releasing the
 
 | Type | Description |
 | --- | --- |
-| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; \| undefined | A reference to the property in AppStorage, or **undefined** if the property does not exist. |
+| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; &#124; undefined | A reference to the property in AppStorage, or **undefined** if the property does not exist. |
 
 **Examples**
 
@@ -630,7 +630,7 @@ static set<T>(propName: string, newValue: T): boolean
 
 Sets the value of the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the value of **newValue** is the same as the current value of the property, no assignment is performed, and the state variable does not instruct the UI to update the value of the property.
 
-> **NOTE：**
+> **NOTE:**
 
 > Since API version 12, AppStorage supports
 > [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type),
@@ -711,7 +711,7 @@ static setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractPrope
 
 Similar to the [link](#link) API, establishes a two-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given property exists in AppStorage, this API returns the two-way bound data for the property. If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its two- way bound data.
 
-> **NOTE：**
+> **NOTE:**
 
 > Since API version 12, AppStorage supports
 > [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type),
@@ -791,7 +791,7 @@ static setAndProp<T>(propName: string, defaultValue: T): SubscribedAbstractPrope
 
 Similar to the [prop](#prop) API, establishes a one-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given property exists in AppStorage, this API returns the one-way bound data for the property. If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its one- way bound data.
 
-> **NOTE：**
+> **NOTE:**
 
 > Since API version 12, AppStorage supports
 > [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type),
@@ -836,7 +836,7 @@ Similar to the [ref](#ref) API, returns a reference to the property correspondin
 
 This API is similar to [setAndLink](#setandlink) but does not require manually releasing the returned variable of the [AbstractProperty](arkts-arkui-abstractproperty-i.md) type.
 
-> **NOTE：**
+> **NOTE:**
 
 > Since API version 12, AppStorage supports
 > [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type),
@@ -913,7 +913,7 @@ Sets the value of the property corresponding to **propName** in [AppStorage](../
 
 If the property does not exist, this API creates it with the value of **newValue**. This **setOrCreate** API can create only one AppStorage key-value pair each time. To create multiple key-value pairs, call this API multiple times.
 
-> **NOTE：**
+> **NOTE:**
 
 > Since API version 12, AppStorage supports
 > [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type),

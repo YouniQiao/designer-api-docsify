@@ -14,7 +14,7 @@ function getFontByName(fontName: string): FontInfo
 
 Obtains information about a system font based on the font name.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Since API version 10, you can use the
 > [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in

@@ -298,7 +298,7 @@ getCurrentMediaSource(): MediaSource | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaSource](arkts-media-media-mediasource-i.md) \| undefined | 如果操作成功，则返回当前媒体源，否则返回 undefined。 |
+| [MediaSource](arkts-media-media-mediasource-i.md) &#124; undefined | 如果操作成功，则返回当前媒体源，否则返回 undefined。 |
 
 **错误码：**
 
@@ -358,7 +358,7 @@ getLoadedTimeRanges(): Promise<Array<Range>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[Range](arkts-media-media-range-i.md)&gt;&gt; | Promise对象，返回播放器当前已加载的时间区间段的列表。 |
+| Promise&lt;Array&lt;[Range](arkts-media-media-range-i.md)&gt;&gt; | Promise对象，返回播放器当前已加载的时间区间段的列表。<br>时间区间段以播放时间轴上的[start, end]位置表示，单位为毫秒。 |
 
 ## getMediaKeySystemInfos
 
@@ -366,7 +366,7 @@ getLoadedTimeRanges(): Promise<Array<Range>>
 getMediaKeySystemInfos(): Array<drm.MediaKeySystemInfo>
 ```
 
-获取当前播放的媒体资源的MediaKeySystemInfo。需要在on('mediaKeySystemInfoUpdate')事件触发成功后才能调用。
+获取当前播放的媒体资源的MediaKeySystemInfo。需要在[on('mediaKeySystemInfoUpdate')](#onmediakeysysteminfoupdate)事件触发成功后才能调用。
 
 **起始版本：** 11
 
@@ -400,7 +400,7 @@ getMediaSources(): Array<MediaSource | undefined>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[MediaSource](arkts-media-media-mediasource-i.md) \| undefined&gt; | 播放列表中的媒体源数组。 |
+| Array&lt;[MediaSource](arkts-media-media-mediasource-i.md) &#124; undefined&gt; | 播放列表中的媒体源数组。 |
 
 **错误码：**
 
@@ -512,7 +512,7 @@ getSeekableTimeRanges(): Promise<Array<Range>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[Range](arkts-media-media-range-i.md)&gt;&gt; | Promise对象，返回播放器当前可跳转的时间区间段的列表。 |
+| Promise&lt;Array&lt;[Range](arkts-media-media-range-i.md)&gt;&gt; | Promise对象，返回播放器当前可跳转的时间区间段的列表。<br>时间区间段以播放时间轴上的[start, end]位置表示，单位为毫秒。 |
 
 ## getSelectedTracks
 
@@ -741,7 +741,7 @@ off(type: 'seekDone', callback?: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'seekDone' | 是 | seek生效的事件回调类型，取消注册的事件：'seekDone'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 回调函数。seek生效的事件回调方法，只会上报用户请求的time位置。   **视频播放：** [SeekMode](arkts-media-media-seekmode-e.md)会造成实际跳转位置与用户设置产生偏差，精准位置需要通过currentTime获取，事件回调的time仅代表完成用户某一次请求。如果填写该参数，仅取消注册此回调的方法，否则取消注册seekDone事件的所有回调方法。<br>**适用版本：** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 回调函数。seek生效的事件回调方法，只会上报用户请求的time位置。<br>**视频播放：** [SeekMode](arkts-media-media-seekmode-e.md)会造成实际跳转位置与用户设置产生偏差，精准位置需要通过currentTime获取，事件回调的time仅代表完成用户某一次请求。如果填写该参数，仅取消注册此回调的方法，否则取消注册seekDone事件的所有回调方法。<br>**适用版本：** 12 |
 
 ## off('speedDone')
 
@@ -999,7 +999,7 @@ off(type: 'audioOutputDeviceChangeWithInfo', callback?: Callback<audio.AudioStre
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## off('subtitleUpdate')
 
@@ -1291,7 +1291,7 @@ on(type: 'seekDone', callback: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'seekDone' | 是 | seek生效的事件回调类型，支持的事件：'seekDone'，除SEEK_CONTINUOUS外的[SeekMode](arkts-media-media-seekmode-e.md)每次调用seek后都会回调此事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 回调函数。seek生效的事件回调方法，只会上报用户请求的time位置。   **视频播放：** [SeekMode](arkts-media-media-seekmode-e.md)会造成实际跳转位置与用户设置产生偏差，精准位置需要通过currentTime获取，事件回调的time仅代表完成用户某一次请求。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 回调函数。seek生效的事件回调方法，只会上报用户请求的time位置。<br>**视频播放：** [SeekMode](arkts-media-media-seekmode-e.md)会造成实际跳转位置与用户设置产生偏差，精准位置需要通过currentTime获取，事件回调的time仅代表完成用户某一次请求。 |
 
 ## on('speedDone')
 
@@ -1590,7 +1590,7 @@ on(type: 'audioOutputDeviceChangeWithInfo', callback: Callback<audio.AudioStream
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## on('subtitleUpdate')
 
@@ -2106,7 +2106,7 @@ seek(timeMs: number, mode?: SeekMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| timeMs | number | 是 | 指定的跳转时间节点，单位毫秒（ms），取值范围为[0, [duration](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md)]。当模式为[SEEK_CONTINUOUS](arkts-media-media-seekmode-e.md)时，可以取值-1，表示SEEK_CONTINUOUS模式结束。该值必须为整数。 |
+| timeMs | number | 是 | 指定的跳转时间节点，单位毫秒（ms），取值范围为[0, [duration](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md)]。<br>当模式为[SEEK_CONTINUOUS](arkts-media-media-seekmode-e.md)时，可以取值-1，表示SEEK_CONTINUOUS模式结束。该值必须为整数。 |
 | mode | [SeekMode](arkts-media-media-seekmode-e.md) | 否 | 基于视频I帧的跳转模式，默认为SEEK_PREV_SYNC模式，**仅在视频资源播放时设置**。 |
 
 ## seekToDefaultPosition
@@ -2149,8 +2149,8 @@ selectTrack(index: number, mode?: SwitchMode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 多音视频资源的轨道索引。该值必须为整数。取值约束：可通过[getTrackDescription](#gettrackdescription)接口返回的音视频轨道信息[MediaDescription](arkts-media-media-mediadescription-i.md)中读取的key为MD_KEY_TRACK_INDEX所对应的值。每个key值的Object类型和范围，请参考[MediaDescriptionKey](arkts-media-media-mediadescriptionkey-e.md)对应Key值的说明。 |
-| mode | [SwitchMode](arkts-media-media-switchmode-e.md) | 否 | 切换轨道的模式。取值约束：该模式仅适用于视频轨道的切换。默认值：SMOOTH模式，在片段末尾进行切换，以确保视频播放的连续性。**仅在DASH/HLS协议网络流视频轨切换时生效。**从API版本26.0.0开始支持HLS协议网络流视频。<br>**适用版本：** 26.0.0 |
+| index | number | 是 | 多音视频资源的轨道索引。该值必须为整数。<br>取值约束：可通过[getTrackDescription](#gettrackdescription)接口返回的音视频轨道信息[MediaDescription](arkts-media-media-mediadescription-i.md)中读取的key为MD_KEY_TRACK_INDEX所对应的值。<br>每个key值的Object类型和范围，请参考[MediaDescriptionKey](arkts-media-media-mediadescriptionkey-e.md)对应Key值的说明。 |
+| mode | [SwitchMode](arkts-media-media-switchmode-e.md) | 否 | 切换轨道的模式。<br>取值约束：该模式仅适用于视频轨道的切换。<br>默认值：SMOOTH模式，在片段末尾进行切换，以确保视频播放的连续性。**仅在DASH/HLS协议网络流视频轨切换时生效。**<br>从API版本26.0.0开始支持HLS协议网络流视频。<br>**适用版本：** 26.0.0 |
 
 **返回值：**
 
@@ -2191,7 +2191,7 @@ setBitrate(bitrate: number): void
 setDecryptionConfig(mediaKeySession: drm.MediaKeySession, secureVideoPath: boolean): void
 ```
 
-设置解密配置。当收到on('mediaKeySystemInfoUpdate')事件时，需根据事件上报的信息创建相关配置并设置解密配置，否则无法播放。
+设置解密配置。当收到[on('mediaKeySystemInfoUpdate')](#onmediakeysysteminfoupdate)事件时，需根据事件上报的信息创建相关配置并设置解密配置，否则无法播放。
 
 **起始版本：** 11
 
@@ -2210,7 +2210,7 @@ setDecryptionConfig(mediaKeySession: drm.MediaKeySession, secureVideoPath: boole
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## setLoudnessGain
 
@@ -2271,8 +2271,8 @@ setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mediaType | [MediaType](arkts-media-media-mediatype-e.md) | 是 | 媒体类型枚举。   **API version 12-19**：仅支持设置MEDIA_TYPE_AUD。   **API version 20及以后**：增加支持设置MEDIA_TYPE_VID。 |
-| muted | boolean | 是 | API version 12-19**：仅支持设置音频播放策略，表示音频是否静音播放。true为静音播放，false为取消静音播放。    **API version 20及以后**：增加支持设置视频播放策略，表示视频画面是否关闭。true为关闭画面，false为恢复画面。 |
+| mediaType | [MediaType](arkts-media-media-mediatype-e.md) | 是 | 媒体类型枚举。<br>**API version 12-19**：仅支持设置MEDIA_TYPE_AUD。<br>**API version 20及以后**：增加支持设置MEDIA_TYPE_VID。 |
+| muted | boolean | 是 | API version 12-19**：仅支持设置音频播放策略，表示音频是否静音播放。true为静音播放，false为取消静音播放。<br> **API version 20及以后**：增加支持设置视频播放策略，表示视频画面是否关闭。true为关闭画面，false为恢复画面。 |
 
 **返回值：**
 
@@ -2318,7 +2318,7 @@ setMediaSource(src: MediaSource, strategy?: PlaybackStrategy): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## setPlaybackRange
@@ -2341,7 +2341,7 @@ setPlaybackRange(startTimeMs: number, endTimeMs: number, mode?: SeekMode) : Prom
 | --- | --- | --- | --- |
 | startTimeMs | number | 是 | 区间开始位置，单位ms，取值[0, duration)。可以设置-1值，系统将会从0位置开始播放。 |
 | endTimeMs | number | 是 | 区间结束位置，单位ms，取值(startTimeMs, duration]。可以设置-1值，系统将会播放到资源末尾。 |
-| mode | [SeekMode](arkts-media-media-seekmode-e.md) | 否 | 支持SeekMode.SEEK_PREV_SYNC和SeekMode.SEEK_CLOSEST, 默认值: SeekMode.SEEK_PREV_SYNC。 |
+| mode | [SeekMode](arkts-media-media-seekmode-e.md) | 否 | 支持SeekMode.SEEK_PREV_SYNC和SeekMode.SEEK_CLOSEST,<br>默认值: SeekMode.SEEK_PREV_SYNC。 |
 
 **返回值：**
 

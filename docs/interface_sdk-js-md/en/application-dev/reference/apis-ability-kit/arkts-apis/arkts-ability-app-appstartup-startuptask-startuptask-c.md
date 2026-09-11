@@ -38,7 +38,7 @@ Called when all the dependent startup tasks are complete. You can initialize the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Object \| void&gt; | Promise used to return the execution result. |
+| Promise&lt;Object &#124; void&gt; | Promise used to return the execution result. |
 
 **Examples**
 

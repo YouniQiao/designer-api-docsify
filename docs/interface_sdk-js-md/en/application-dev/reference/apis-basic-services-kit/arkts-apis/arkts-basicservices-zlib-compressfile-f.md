@@ -14,7 +14,7 @@ function compressFile(inFile: string, outFile: string, options: Options, callbac
 
 Compresses a file. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive
 > periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
@@ -80,7 +80,7 @@ function compressFile(inFile: string, outFile: string, options: Options): Promis
 
 Compresses a file. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive
 > periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.

@@ -171,7 +171,7 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 当borderColor属性类型为LocalizedEdgeColors时，支持随语言习惯改变布局顺序。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; EdgeColors &#124; [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **默认值：** Color.Black - borderColor must be used with borderWidth in pairs.
 
@@ -195,7 +195,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 如果使用borderStyle属性，需要和borderWidth属性一起使用。
 
-**类型：** [BorderStyle](arkts-arkui-borderstyle-e.md) \| EdgeStyles
+**类型：** [BorderStyle](arkts-arkui-borderstyle-e.md) &#124; EdgeStyles
 
 **默认值：** BorderStyle.Solid - borderStyle must be used with borderWidth in pairs.
 
@@ -227,7 +227,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 当borderWidth属性类型为LocalizedEdgeWidths时，支持随语言习惯改变布局顺序。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
+**类型：** [Dimension](arkts-arkui-dimension-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **默认值：** 0 - When set to a percentage, the value defines the border width as a percentage of the parent dialog box's width. If the left and right borders are greater than its width, or the top and bottom borders are greater than its height, the dialog box may not display as expected.
 
@@ -275,7 +275,7 @@ cornerRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 
 当cornerRadius属性类型为LocalizedBorderRadiuses时，支持随语言习惯改变布局顺序。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
+**类型：** [Dimension](arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **默认值：** - {topLeft:'32vp', topRight:'32vp', bottomLeft:'32vp', bottomRight:'32vp'}, The corner radius is subject to the component size, with the maximum value being half of the component width or height. If the value is negative, the default value is used. When set to a percentage, the value defines the radius as a percentage of the parent component's width or height.
 
@@ -328,8 +328,7 @@ height?: Dimension
 
 **类型：** [Dimension](arkts-arkui-dimension-t.md)
 
-**默认值：** - Default maximum height of the dialog box: 0.9 x (Window height – Safe area) 
-When this parameter is set to a percentage, the reference height of the dialog box is the height of the window where the dialog box is located minus the safe area. You can decrease or increase the height as needed.
+**默认值：** - Default maximum height of the dialog box: 0.9 x (Window height – Safe area) <br>When this parameter is set to a percentage, the reference height of the dialog box is the height of the window where the dialog box is located minus the safe area. You can decrease or increase the height as needed.
 
 **起始版本：** 12
 
@@ -498,7 +497,8 @@ showInSubWindow为true时，maskRect不生效。
 
 **类型：** [Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)
 
-**默认值：** - {x:0,y:0, width:'100%', height:'100%'} [since 11]
+**默认值：**
+- API版本11+：- {x:0,y:0, width:'100%', height:'100%'}
 
 **起始版本：** 10
 
@@ -518,7 +518,7 @@ message: string | Resource
 
 文本超长时会触发滚动条。
 
-**类型：** string \| [Resource](arkts-arkui-resource-t.md)
+**类型：** string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 8
 
@@ -690,7 +690,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
 
-**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
+**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **默认值：** - Default value on 2-in-1 devices: ShadowStyle.OUTER_FLOATING_MD when the dialog box is focused and ShadowStyle.OUTER_FLOATING_SM otherwise.
 
@@ -799,7 +799,7 @@ title: string | Resource
 
 当文本内容过长无法显示时，用省略号代替未显示的部分。
 
-**类型：** string \| [Resource](arkts-arkui-resource-t.md)
+**类型：** string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 8
 

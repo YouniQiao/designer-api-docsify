@@ -14,7 +14,7 @@ function on(type: 'enabledAccessibilityExtensionListChange', callback: Callback<
 
 Adds a listener for changes in the list of enabled accessibility extensions. This API uses an asynchronous callback to return the result.
 
-This API must be used together with config.off('enabledAccessibilityExtensionListChange'). Call off to unregister the listener when it is no longer needed to avoid resource leaks.
+This API must be used together with [config.off('enabledAccessibilityExtensionListChange')](arkts-accessibility-config-off-f-sys.md#offenabledaccessibilityextensionlistchange). Call off to unregister the listener when it is no longer needed to avoid resource leaks.
 
 **Since:** 9
 
@@ -58,7 +58,7 @@ function on(type: 'installedAccessibilityListChange', callback: Callback<void>):
 
 Adds a listener for changes in the list of installed accessibility extensions. This API uses an asynchronous callback to return the result.
 
-This API must be used together with config.off('installedAccessibilityListChange'). Call off to unregister the listener when it is no longer needed to avoid resource leaks.
+This API must be used together with [config.off('installedAccessibilityListChange')](arkts-accessibility-config-off-f-sys.md#offinstalledaccessibilitylistchange). Call off to unregister the listener when it is no longer needed to avoid resource leaks.
 
 **Since:** 12
 

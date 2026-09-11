@@ -22,7 +22,7 @@ details?: Record<string, number | number | number | string | Uint8Array>
 
 A dictionary type object, where the key is of the string type, and the value can be a number, a string, or a Uint 8Array. The default value is an empty dictionary object.
 
-**Type:** Record&lt;string, number \| number \| number \| string \| Uint8Array&gt;
+**Type:** Record&lt;string, number &#124; number &#124; number &#124; string &#124; Uint8Array&gt;
 
 **Since:** 10
 

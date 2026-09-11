@@ -2,6 +2,8 @@
 
 表示投播设备支持的音频能力。
 
+@typedef AudioCapabilities
+
 **起始版本：** 20
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast

@@ -24,7 +24,7 @@ Executes a task periodically. In this execution mode, you can set the task prior
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| period | number | Yes | Execution period, in ms. The value must be greater than or equal to 0. The value should be an integer. Unit:milliseconds. |
+| period | number | Yes | Execution period, in ms. The value must be greater than or equal to 0. The value should be an integer.<br>Unit:milliseconds. |
 | task | [Task](arkts-arkts-taskpool-task-c.md) | Yes | Task to be executed. |
 | priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
@@ -98,7 +98,7 @@ Executes a generic task periodically, without verifying the parameter type and r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| period | number | Yes | Execution period, in ms. The value must be greater than or equal to 0. The value should be an integer. Unit:milliseconds. |
+| period | number | Yes | Execution period, in ms. The value must be greater than or equal to 0. The value should be an integer.<br>Unit:milliseconds. |
 | task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | Yes | Generic task to be executed periodically. |
 | priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 

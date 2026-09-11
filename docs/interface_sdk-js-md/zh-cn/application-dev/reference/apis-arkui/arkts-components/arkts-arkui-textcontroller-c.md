@@ -75,7 +75,7 @@ setStyledString(value: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 | 属性字符串。   **说明：** StyledString的子类[MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md)也可以作为入参值。 |
+| value | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 | 属性字符串。<br>**说明：** <br>StyledString的子类[MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md)也可以作为入参值。 |
 
 ## setTextSelection
 
@@ -88,9 +88,9 @@ setTextSelection(selectionStart: number | undefined, selectionEnd: number | unde
 
 > **说明：**
 > 
-> 当[copyOption](arkts-arkui-text-attribute.md#copyoption)设置为CopyOptions.None时，设置setTextSelection不生效。
+> 当[copyOption](arkts-arkui-text-comp-attribute.md#copyoption)设置为CopyOptions.None时，设置setTextSelection不生效。
 > 
-> 当[textOverflow](arkts-arkui-text-attribute.md#textoverflow)设置为TextOverflow.MARQUEE时，设置setTextSelection不生效。
+> 当[textOverflow](arkts-arkui-text-comp-attribute.md#textoverflow)设置为TextOverflow.MARQUEE时，设置setTextSelection不生效。
 > 
 > 当selectionStart大于等于selectionEnd时不选中。可选范围为[0, textSize]，其中textSize为文本内容最大字符数，入参小于0时处理为0，大于textSize时处理为textSize。
 > 
@@ -112,6 +112,6 @@ setTextSelection(selectionStart: number | undefined, selectionEnd: number | unde
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| selectionStart | number \| undefined | 是 | 文本选择区域起始位置。取值范围：[0, +∞），值为负数或undefined时按0处理。 |
-| selectionEnd | number \| undefined | 是 | 文本选择区域结束位置。取值范围：[0, +∞），值为负数或undefined时按0处理。 |
-| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | 否 | 选中文字时的配置。默认值：SelectionOptions中MenuPolicy.DEFAULT |
+| selectionStart | number &#124; undefined | 是 | 文本选择区域起始位置。<br>取值范围：[0, +∞），值为负数或undefined时按0处理。 |
+| selectionEnd | number &#124; undefined | 是 | 文本选择区域结束位置。<br>取值范围：[0, +∞），值为负数或undefined时按0处理。 |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | 否 | 选中文字时的配置。<br>默认值：SelectionOptions中MenuPolicy.DEFAULT |

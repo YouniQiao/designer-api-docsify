@@ -30,7 +30,7 @@ function isSupportEffect(effectId: string, callback: AsyncCallback<boolean>): vo
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -98,14 +98,14 @@ function isSupportEffect(effectId: string): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示设备支持该effectId，可用于[startVibration]{ |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示设备支持该effectId，可用于[startVibration](arkts-sensorservice-vibrator-startvibration-f.md)；返回false表示不支持，使用该effectId触发振动可能效果不佳。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 

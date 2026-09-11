@@ -12,7 +12,7 @@ import { socket } from '@kit.ConnectivityKit';
 function getMaxReceiveDataSize(clientSocket: number): number
 ```
 
-客户端和服务端均可使用，获取当前套接字链路类型下最大接收数据的大小。通过[socket.sppReadAsync](arkts-connectivity-socket-sppreadasync-f.md)或socket.on('sppRead')接收数据时，单次接收的数据大小受此返回值约束（SPP_RFCOMM链路类型无此限制）。例如在文件传输、数据同步等需要接收大量数据的场景中，可调用此接口获取单次接收的最大数据量，以便对接收数据进行分片处理。
+客户端和服务端均可使用，获取当前套接字链路类型下最大接收数据的大小。通过[socket.sppReadAsync](arkts-connectivity-socket-sppreadasync-f.md)或[socket.on('sppRead')](arkts-connectivity-socket-on-f.md#onsppread)接收数据时，单次接收的数据大小受此返回值约束（SPP_RFCOMM链路类型无此限制）。例如在文件传输、数据同步等需要接收大量数据的场景中，可调用此接口获取单次接收的最大数据量，以便对接收数据进行分片处理。
 
 若客户端使用，需在调用[socket.sppConnect](arkts-connectivity-socket-sppconnect-f.md)后，且连接成功后使用。若服务端使用，需在调用[socket.sppAccept](arkts-connectivity-socket-sppaccept-f.md)后，且连接成功后使用。若套接字链路类型为[SPP_RFCOMM](arkts-connectivity-socket-spptype-e.md)时，最大接收数据大小无限制且返回值为0。
 

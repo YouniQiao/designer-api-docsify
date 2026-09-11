@@ -25,7 +25,7 @@ Gets the remote grant status. This function queries whether the remote authoriza
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[RemoteGrantStatus](arkts-ability-abilitytoolaccessctrl-remotegrantstatus-e-sys.md)&gt; | Promise used to return \\${RemoteGrantStatus}. |
+| Promise&lt;[RemoteGrantStatus](arkts-ability-abilitytoolaccessctrl-remotegrantstatus-e-sys.md)&gt; | Promise used to return \&#36;{RemoteGrantStatus}. |
 
 **Error codes:**
 

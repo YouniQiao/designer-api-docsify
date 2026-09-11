@@ -2,7 +2,7 @@
 
 Describes the options of the rectangle.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer
@@ -43,7 +43,7 @@ radius?: Length | Array<any>
 
 Radius of the rounded corner. You can set separate radii for the four rounded corners. The value must be greater than or equal to 0. This attribute takes precedence over **radiusWidth** and **radiusHeight** when used together. Unit: vp, The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. Default value: **0**.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| Array&lt;any&gt;
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; Array&lt;any&gt;
 
 **Since:** 7
 

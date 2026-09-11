@@ -27,8 +27,8 @@ import { distributedMissionManager } from '@kit.AbilityKit';
 | [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md) | 通过指定任务ID（missionId）的方式进行迁移任务。使用promise异步回调。 |
 | [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md) | 通过指定包名（bundleName）的方式进行迁移任务。使用callback异步回调。 |
 | [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md) | 通过指定包名（bundleName）的方式进行迁移任务。使用Promise异步回调。 |
-| off | 取消当前任务流转的状态监听。此接口需与on('continueStateChange')成对使用，在不需要监听时应及时调用以释放资源。 |
-| on | 注册当前任务流转状态的监听。此接口需与off('continueStateChange')成对使用，不再监听时应及时取消；调用顺序为先通过on注册监听，不需要时再调用off取消监听。 |
+| [off](arkts-ability-distributedmissionmanager-off-f-sys.md#offcontinuestatechange) | 取消当前任务流转的状态监听。此接口需与on('continueStateChange')成对使用，在不需要监听时应及时调用以释放资源。 |
+| [on](arkts-ability-distributedmissionmanager-on-f-sys.md#oncontinuestatechange) | 注册当前任务流转状态的监听。此接口需与off('continueStateChange')成对使用，不再监听时应及时取消；调用顺序为先通过on注册监听，不需要时再调用off取消监听。 |
 | [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md) | 注册任务状态监听。使用callback异步回调。调用成功后，系统将开始监听指定设备上的任务状态变化，该监听需与unRegisterMissionListener成对使用，注册后应在不需要监听任务状态时及时取消。 |
 | [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md) | 注册任务状态监听。使用promise异步回调。调用成功后，系统将开始监听指定设备上的任务状态变化，该监听需与unRegisterMissionListener成对使用，注册后应在不需要监听任务状态时及时取消。 |
 | [startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md) | 开始同步远端设备的任务列表。使用callback异步回调。使用时须与stopSyncRemoteMissions严格配对，按"先启动、后停止"的顺序执行，同步完成后应立即停止以释放系统资源。 |

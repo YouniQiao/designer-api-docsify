@@ -14,7 +14,7 @@ function addAllowedPermissionBundle(admin: Want, permission: string, application
 
 Adds an application to the permission usage exception list. Applications in the list are not subject to the permission restriction policy set via [setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md). This API is applicable to enterprise scenarios. For example, when the camera permission is disabled, attendance applications and collaborative office applications can still use the camera, ensuring that critical enterprise business operates normally.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 1. The permission must first be disabled via the
 > [setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md) API before an application can be added

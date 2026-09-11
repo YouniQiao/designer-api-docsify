@@ -14,7 +14,7 @@ function offBatteryChange(callback?: Callback<BatteryInfo>): void
 
 取消订阅远端设备电量状态变化事件。
 
-不可与connection.off('batteryChange')混用。
+不可与[connection.off('batteryChange')](arkts-connectivity-connection-off-f.md#offbatterychange)混用。
 
 **起始版本：** 26.0.0
 

@@ -63,13 +63,13 @@ at(index: number): number | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 要返回的元素的索引（从零开始）。如果传入负数，则从末尾倒数访问。 |
+| index | number | 是 | 要返回的元素的索引（从零开始）。<br>如果传入负数，则从末尾倒数访问。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| number \| undefined | 指定下标的元素；如果不存在，则返回**undefined**。 |
+| number &#124; undefined | 指定下标的元素；如果不存在，则返回**undefined**。 |
 
 **错误码：**
 
@@ -168,7 +168,7 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Int32Array的对象。当参数类型是ArrayBuffer时，buffer所占的字节数须是4的整数倍。 |
+| array | ArrayLike&lt;number&gt; &#124; ArrayBuffer | 是 | 用于构造ArkTS Int32Array的对象。当参数类型是ArrayBuffer时，buffer所占的字节数须是4的整数倍。 |
 
 **错误码：**
 
@@ -391,7 +391,7 @@ find(predicate: TypedArrayPredicateFn<number, Int32Array>): number | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| number \| undefined | 第一个满足条件的元素的值；如果所有元素都不满足条件，则返回**undefined**。 |
+| number &#124; undefined | 第一个满足条件的元素的值；如果所有元素都不满足条件，则返回**undefined**。 |
 
 **错误码：**
 
@@ -759,7 +759,7 @@ static of(...items: number[]): Int32Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Int32Array | 新的ArkTS Int32Array实例。可能原因：1.必填参数未指定； |
+| Int32Array | 新的ArkTS Int32Array实例。可能原因：1.必填参数未指定；<br>2.参数类型不正确；3.参数校验失败。 |
 
 ## reduce
 
@@ -881,7 +881,7 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Int32Arr
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Int32Array&gt; | 是 | 对Int32Array中每个元素调用的函数。 |
-| initialValue | U | 是 | 作为回调函数首次调用的第一个参数的初始值。如果未提供初始值，则使用Int32Array的最后一个元素作为初始值，并且回调从倒数第二个元素开始执行。 |
+| initialValue | U | 是 | 作为回调函数首次调用的第一个参数的初始值。<br>如果未提供初始值，则使用Int32Array的最后一个元素作为初始值，<br>并且回调从倒数第二个元素开始执行。 |
 
 **返回值：**
 

@@ -98,7 +98,7 @@ imageRes: ResourceStr | PixelMap
 
 Sets the TipsDialog imageRes.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md)
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) &#124; [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md)
 
 **Since:** 18
 
@@ -206,7 +206,7 @@ theme?: Theme | CustomTheme
 
 Custom Theme.
 
-**Type:** [Theme](arkts-arkui-arkui-theme-theme-i.md) \| [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
+**Type:** [Theme](arkts-arkui-arkui-theme-theme-i.md) &#124; [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
 
 **Since:** 12
 

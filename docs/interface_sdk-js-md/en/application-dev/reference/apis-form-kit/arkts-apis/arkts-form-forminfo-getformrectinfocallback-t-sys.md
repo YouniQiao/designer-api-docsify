@@ -6,6 +6,8 @@ type GetFormRectInfoCallback = (formId: string) => Promise<formInfo.Rect>
 
 Get form rect info callback
 
+@typedef { function } GetFormRectInfoCallback
+
 **Since:** 20
 
 **System capability:** SystemCapability.Ability.Form

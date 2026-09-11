@@ -32,7 +32,7 @@ enableBFrame?: boolean
 enablePause?: boolean
 ```
 
-表示录屏过程中是否允许暂停录屏。true表示允许，false表示不允许。默认是false。
+表示录屏过程中是否允许暂停录屏。<br>true表示允许，false表示不允许。默认是false。
 
 **类型：** boolean
 
@@ -64,12 +64,9 @@ keepCaptureDuringCall?: boolean
 privacyMaskMode?: number
 ```
 
-设置屏幕录制时对隐私窗口的屏蔽模式。
-
-- 0：表示存在隐私窗口时，采用全屏屏蔽模式，默认是0。
-
-- 1：表示存在隐私窗口时，采用隐私窗口屏蔽模式。
-
+设置屏幕录制时对隐私窗口的屏蔽模式。<br>  
+- 0：表示存在隐私窗口时，采用全屏屏蔽模式，默认是0。<br>  
+- 1：表示存在隐私窗口时，采用隐私窗口屏蔽模式。<br>  
 - 设置为其他值时返回错误。
 
 **类型：** number

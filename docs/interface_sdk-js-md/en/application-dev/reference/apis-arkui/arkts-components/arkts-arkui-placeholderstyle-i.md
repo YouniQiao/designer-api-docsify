@@ -1,6 +1,6 @@
 # PlaceholderStyle
 
-Style of the placeholder text.
+Sets the style of the placeholder text.
 
 **Since:** 12
 
@@ -17,9 +17,9 @@ Style of the placeholder text.
 font?: Font
 ```
 
-Style of the placeholder text.
+Sets the prompt text style.
 
-The default value follows the theme.
+The default value follows the theme settings.
 
 **Type:** [Font](../arkts-apis/arkts-arkui-font-i.md)
 
@@ -37,9 +37,9 @@ The default value follows the theme.
 fontColor?: ResourceColor
 ```
 
-Color of the placeholder text.
+Sets the prompt text color.
 
-The default value follows the theme.
+The default value follows the theme settings.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

@@ -12,7 +12,7 @@ import { proxyChannelManager } from '@kit.DistributedServiceKit';
 function off(type: 'receiveData', channelId: number, callback?: Callback<DataInfo>): void
 ```
 
-Unsubscribes from data receive events and no longer receives data through the callback. This is applicable to scenarios where the phone-side app no longer needs to receive data from the wearable device-side app, such as when the user switches to another functional module. You must call [openProxyChannel](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md) to successfully open a proxy channel before unsubscribing. This method must be used in pair with on('receiveData') to cancel the data receive callback previously registered through **on('receiveData')**.
+Unsubscribes from data receive events and no longer receives data through the callback. This is applicable to scenarios where the phone-side app no longer needs to receive data from the wearable device-side app, such as when the user switches to another functional module. You must call [openProxyChannel](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md) to successfully open a proxy channel before unsubscribing. This method must be used in pair with [on('receiveData')](arkts-distributedservice-proxychannelmanager-on-f.md#onreceivedata) to cancel the data receive callback previously registered through **on('receiveData')**.
 
 **Since:** 20
 
@@ -74,7 +74,7 @@ struct Index {
 function off(type: 'channelStateChange', channelId: number, callback?: Callback<ChannelStateInfo>): void
 ```
 
-Unsubscribes from channel state events. This is applicable to scenarios where the phone-side app no longer needs to listen for proxy channel connection state changes, such as when the user exits the relevant service page or completes the data transmission process. You must call [openProxyChannel](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md) to successfully open a proxy channel before unsubscribing. This method must be used in pair with on('channelStateChange') to cancel the channel state callback previously registered through **on('channelStateChange')**.
+Unsubscribes from channel state events. This is applicable to scenarios where the phone-side app no longer needs to listen for proxy channel connection state changes, such as when the user exits the relevant service page or completes the data transmission process. You must call [openProxyChannel](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md) to successfully open a proxy channel before unsubscribing. This method must be used in pair with [on('channelStateChange')](arkts-distributedservice-proxychannelmanager-on-f.md#onchannelstatechange) to cancel the channel state callback previously registered through **on('channelStateChange')**.
 
 **Since:** 20
 

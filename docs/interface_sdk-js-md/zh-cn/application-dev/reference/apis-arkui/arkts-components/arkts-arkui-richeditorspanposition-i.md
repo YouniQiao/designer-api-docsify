@@ -35,7 +35,7 @@ Span索引值。
 spanRange: [number, number]
 ```
 
-Span内容在RichEditor内的起始和结束位置。
+Span内容在RichEditor内的起始和结束位置，取值范围为[起始位置, 结束位置)，结束位置对应的Span不包含在内。
 
 **类型：** [number, number]
 

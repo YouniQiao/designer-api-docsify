@@ -78,7 +78,7 @@ fontFamily?: string | Resource
 
 Font family of the arc button.
 
-**Type:** string \| [Resource](arkts-arkui-resource-t.md)
+**Type:** string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 18
 

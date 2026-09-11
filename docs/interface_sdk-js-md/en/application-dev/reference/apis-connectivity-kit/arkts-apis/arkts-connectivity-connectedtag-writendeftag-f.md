@@ -14,7 +14,7 @@ function writeNdefTag(data: string): Promise<void>
 
 Writes data to this active tag. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. Use
 > [connectedTag.write](arkts-connectivity-connectedtag-write-f.md) instead.
@@ -64,7 +64,7 @@ function writeNdefTag(data: string, callback: AsyncCallback<void>): void
 
 Writes data to this active tag. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. Use
 > [connectedTag.write](arkts-connectivity-connectedtag-write-f.md) instead.

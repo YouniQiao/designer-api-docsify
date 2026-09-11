@@ -34,7 +34,7 @@ getFocalLength(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 用于获取当前焦距，单位mm。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| number | 用于获取当前焦距，单位mm。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -60,7 +60,7 @@ getFocusMode(): FocusMode
 
 | 类型 | 说明 |
 | --- | --- |
-| [FocusMode](arkts-camera-camera-focusmode-e.md) | 获取当前设备的焦距模式。接口调用失败会抛出相应错误码并返回undefined，错误码类型[CameraErrorCode]{ |
+| [FocusMode](arkts-camera-camera-focusmode-e.md) | 获取当前设备的焦距模式。接口调用失败会抛出相应错误码并返回undefined，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -86,7 +86,7 @@ getFocusPoint(): Point
 
 | 类型 | 说明 |
 | --- | --- |
-| [Point](arkts-camera-camera-point-i.md) | 用于获取当前的焦点。接口调用失败会返回相应错误码，错误码类型为[CameraErrorCode]{ |
+| [Point](arkts-camera-camera-point-i.md) | 用于获取当前的焦点。接口调用失败会返回相应错误码，错误码类型为[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 

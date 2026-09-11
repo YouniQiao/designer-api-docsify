@@ -54,7 +54,7 @@ Index of the **TabContent** component. The index is zero-based.
 lastIndex?: number
 ```
 
-Index of the previously focused **TabContent** component. The index is zero-based. This parameter is available only in the callback of on('tabChange').
+Index of the previously focused **TabContent** component. The index is zero-based. This parameter is available only in the callback of [on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#ontabchange).
 
 **Type:** number
 

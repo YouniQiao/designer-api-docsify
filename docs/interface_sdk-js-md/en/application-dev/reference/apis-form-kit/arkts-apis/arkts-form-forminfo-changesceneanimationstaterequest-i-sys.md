@@ -2,6 +2,8 @@
 
 ChangeSceneAnimationStateRequest
 
+@typedef { ChangeSceneAnimationStateRequest }
+
 **Since:** 20
 
 **System capability:** SystemCapability.Ability.Form

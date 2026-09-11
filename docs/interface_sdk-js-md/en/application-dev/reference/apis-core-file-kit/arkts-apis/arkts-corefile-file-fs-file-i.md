@@ -63,7 +63,7 @@ Applies an exclusive lock or a shared lock on this file in blocking mode. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | No | Lock to apply.The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
+| exclusive | boolean | No | Lock to apply.<br> The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
 
 **Return value:**
 
@@ -160,7 +160,7 @@ Applies an exclusive lock or a shared lock on this file in blocking mode. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | Yes | Lock to apply.The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
+| exclusive | boolean | Yes | Lock to apply.<br> The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -207,7 +207,7 @@ Applies an exclusive lock or a shared lock on this file in non-blocking mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | No | Lock to apply.The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
+| exclusive | boolean | No | Lock to apply.<br> The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
 
 **Error codes:**
 
@@ -294,6 +294,13 @@ Name of the file.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
 ## path
 
 ```TypeScript
@@ -307,3 +314,11 @@ Path of the file.
 **Since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+| 14300002 | Invalid URI |

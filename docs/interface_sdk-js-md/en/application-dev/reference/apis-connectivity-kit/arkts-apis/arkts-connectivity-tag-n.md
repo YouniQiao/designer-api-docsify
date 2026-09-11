@@ -6,7 +6,7 @@ Background mode: The device reads the tag by using NFC without starting any appl
 
 Foreground mode: A foreground application has priority to read the NFC tag discovered.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 2. Since API version 26.0.0, it is more accurate to determine whether a device supports NFC by calling both
 > [canIUse("SystemCapability.Communication.NFC.Tag")](../../../reference/common/init.md#caniuse) and
@@ -57,7 +57,7 @@ import { tag } from '@kit.ConnectivityKit';
 | [getTagInfo](arkts-connectivity-tag-gettaginfo-f.md) | Obtains **TagInfo** from **Want**, which is initialized by the NFC service and contains the attributes required by **TagInfo**. |
 | [registerForegroundDispatch](arkts-connectivity-tag-registerforegrounddispatch-f.md) | Registers a listener for the NFC tag read event so that the tag can be preferentially dispatched to a foreground application. You can set the supported NFC tag technologies in **discTech**. The [TagInfo](arkts-connectivity-tag-taginfo-i.md) read is returned through a callback. This API can be called only by an application running in the foreground. It must be used with [tag.unregisterForegroundDispatch](arkts-connectivity-tag-unregisterforegrounddispatch-f.md) in pairs. The registered callback must be unregistered before the tag reading page exits the foreground or is destroyed. This API uses an asynchronous callback to return the result. |
 | [unregisterForegroundDispatch](arkts-connectivity-tag-unregisterforegrounddispatch-f.md) | Unregisters the listener for the NFC tag read event. If the listener is unregistered, the NFC tag discovered will not be dispatched to foreground applications. The registered callback must be unregistered before the tag reading page exits the foreground or is destroyed. |
-| [on](arkts-connectivity-tag-on-f.md#onreadermode) | Subscribes to the NFC tag read event to implement dispatch of the tag to a foreground application preferentially. The device enters the reader mode and disables card emulation. You can set the supported NFC tag technologies in **discTech**. The [TagInfo](arkts-connectivity-tag-taginfo-i.md) read is returned through a callback. This API must be used with tag.off in pairs. If the NFC reader mode is enabled by **tag.on**, tag.off must be called when the application page exits the foreground or is destroyed. This API uses an asynchronous callback to return the result. This API and tag.on are mutually exclusive. |
+| [on](arkts-connectivity-tag-on-f.md#onreadermode) | Subscribes to the NFC tag read event to implement dispatch of the tag to a foreground application preferentially. The device enters the reader mode and disables card emulation. You can set the supported NFC tag technologies in **discTech**. The [TagInfo](arkts-connectivity-tag-taginfo-i.md) read is returned through a callback. This API must be used with [tag.off](arkts-connectivity-tag-off-f.md#offreadermode) in pairs. If the NFC reader mode is enabled by **tag.on**, [tag.off](arkts-connectivity-tag-off-f.md#offreadermode) must be called when the application page exits the foreground or is destroyed. This API uses an asynchronous callback to return the result. This API and tag.on are mutually exclusive. |
 | [off](arkts-connectivity-tag-off-f.md#offreadermode) | Unsubscribes from the NFC tag card read event. The device exits the reader mode and resumes card emulation. If the NFC reader mode is enabled by tag.on, this API must be used when the application page exits the foreground or is destroyed. |
 | [on](arkts-connectivity-tag-on-f.md#onreadermodewithinterval) | Subscribes to the NFC tag read event so that the tag can be preferentially dispatched to a foreground application. You can also set the interval for detecting whether a card is present. This API uses an asynchronous callback to return the result. |
 | [off](arkts-connectivity-tag-off-f.md#offreadermodewithinterval) | Unsubscribes from the NFC tag card read event. The device exits the reader mode and resumes card emulation. If the NFC reader mode is enabled by tag.on, this API must be used when the application page exits the foreground or is destroyed. This API uses an asynchronous callback to return the result. |
@@ -78,16 +78,6 @@ import { tag } from '@kit.ConnectivityKit';
 | [TagInfo](arkts-connectivity-tag-taginfo-i-sys.md) | Before a card with tags is read or written, **[TagInfo](arkts-connectivity-tag-taginfo-i.md)** must be obtained to determine the tag technologies supported by the card. In this way, the application can invoke the correct API to communicate with the card. |
 <!--DelEnd-->
 
-### Enums
-
-| Name | Description |
-| --- | --- |
-| [TnfType](arkts-connectivity-tag-tnftype-e.md) | Enumerates the TNF types. For details, see *NFCForum-TS-NDEF_1.0*. |
-| [NfcForumType](arkts-connectivity-tag-nfcforumtype-e.md) | Enumerates the NFC Forum tag types. |
-| [MifareClassicType](arkts-connectivity-tag-mifareclassictype-e.md) | Enumerates the MIFARE Classic tag types. |
-| [MifareClassicSize](arkts-connectivity-tag-mifareclassicsize-e.md) | Enumerates the sizes of a MIFARE Classic tag. |
-| [MifareUltralightType](arkts-connectivity-tag-mifareultralighttype-e.md) | Enumerates the MIFARE Ultralight tag types. |
-
 ### Types
 
 | Name | Description |
@@ -104,6 +94,16 @@ import { tag } from '@kit.ConnectivityKit';
 | [NdefMessage](arkts-connectivity-tag-ndefmessage-t.md) | Obtains an **NdefMessage** object. |
 | [TagSession](arkts-connectivity-tag-tagsession-t.md) | Obtains a **TagSession** object. |
 | [BarcodeTag](arkts-connectivity-tag-barcodetag-t.md) | Obtains a **BarcodeTag** object. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [TnfType](arkts-connectivity-tag-tnftype-e.md) | Enumerates the TNF types. For details, see *NFCForum-TS-NDEF_1.0*. |
+| [NfcForumType](arkts-connectivity-tag-nfcforumtype-e.md) | Enumerates the NFC Forum tag types. |
+| [MifareClassicType](arkts-connectivity-tag-mifareclassictype-e.md) | Enumerates the MIFARE Classic tag types. |
+| [MifareClassicSize](arkts-connectivity-tag-mifareclassicsize-e.md) | Enumerates the sizes of a MIFARE Classic tag. |
+| [MifareUltralightType](arkts-connectivity-tag-mifareultralighttype-e.md) | Enumerates the MIFARE Ultralight tag types. |
 
 ### Constants
 

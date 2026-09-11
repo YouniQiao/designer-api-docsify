@@ -1,6 +1,6 @@
 # UploadFile (System API)
 
-Describes upload file information.
+Describes upload file information. @typedef UploadFile
 
 **Since:** 12
 

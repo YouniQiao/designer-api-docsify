@@ -91,7 +91,7 @@ function getLauncherAbilityInfo(bundleName: string, userId: number) : Promise<Ar
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md)&gt;&gt; | Promise对象。返回bundle包含的[LauncherAbilityInfo]{ |
+| Promise&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md)&gt;&gt; | Promise对象。返回bundle包含的[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md)信息。 |
 
 **错误码：**
 

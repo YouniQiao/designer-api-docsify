@@ -25,7 +25,7 @@ Starts a timer. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timer | number | Yes | ID of the timer. |
-| triggerTime | number | Yes | Time when the timer is triggered, in milliseconds.If **TIMER_TYPE_REALTIME** is set as the timer type, the value of **triggerTime** is the system startup time, which can be obtained by calling [systemDateTime.getUptime(STARTUP)](arkts-basicservices-systemdatetime-getuptime-f.md).If **TIMER_TYPE_REALTIME** is not set, the value of **triggerTime** is the wall time, which can be obtained by calling [systemDateTime.getTime()](arkts-basicservices-systemdatetime-gettime-f.md). |
+| triggerTime | number | Yes | Time when the timer is triggered, in milliseconds.<br>If **TIMER_TYPE_REALTIME** is set as the timer type, the value of **triggerTime** is the system startup time, which can be obtained by calling [systemDateTime.getUptime(STARTUP)](arkts-basicservices-systemdatetime-getuptime-f.md).<br>If **TIMER_TYPE_REALTIME** is not set, the value of **triggerTime** is the wall time, which can be obtained by calling [systemDateTime.getTime()](arkts-basicservices-systemdatetime-gettime-f.md). |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -33,7 +33,7 @@ Starts a timer. This API uses an asynchronous callback to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 
 **Examples**
 
@@ -86,7 +86,7 @@ Starts a timer. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timer | number | Yes | ID of the timer. |
-| triggerTime | number | Yes | Time when the timer is triggered, in milliseconds.If **TIMER_TYPE_REALTIME** is set as the timer type, the value of **triggerTime** is the system startup time, which can be obtained by calling [systemDateTime.getUptime(STARTUP)](arkts-basicservices-systemdatetime-getuptime-f.md).If **TIMER_TYPE_REALTIME** is not set, the value of **triggerTime** is the wall time, which can be obtained by calling [systemDateTime.getTime()](arkts-basicservices-systemdatetime-gettime-f.md). |
+| triggerTime | number | Yes | Time when the timer is triggered, in milliseconds.<br>If **TIMER_TYPE_REALTIME** is set as the timer type, the value of **triggerTime** is the system startup time, which can be obtained by calling [systemDateTime.getUptime(STARTUP)](arkts-basicservices-systemdatetime-getuptime-f.md).<br>If **TIMER_TYPE_REALTIME** is not set, the value of **triggerTime** is the wall time, which can be obtained by calling [systemDateTime.getTime()](arkts-basicservices-systemdatetime-gettime-f.md). |
 
 **Return value:**
 
@@ -99,7 +99,7 @@ Starts a timer. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 
 **Examples**
 

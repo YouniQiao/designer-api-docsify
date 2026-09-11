@@ -28,7 +28,7 @@ function getAllSkillInfos(flags: number, userId?: number): Promise<Array<SkillIn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flags | number | 是 | { |
+| flags | number | 是 | [SkillInfoFlag](arkts-ability-skillmanager-skillinfoflag-e.md) - 指定返回的SkillInfo所包含的信息。详情请参考SkillInfoFlag。 |
 | userId | number | 否 | 指定查询的用户ID，可以通过getOsAccountLocalId获取。默认值：调用方所在用户。取值范围：大于等于0。 |
 
 **返回值：**

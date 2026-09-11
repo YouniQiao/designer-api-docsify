@@ -43,7 +43,7 @@ Minimum pan distance to trigger the gesture, in vp.
 
 Default value: **8** for the stylus and **5** for other input sources
 
-**NOTE：**
+**NOTE:**
 
 If a pan gesture and a [tab](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.
 
@@ -97,7 +97,7 @@ Default value: **1**
 
 Value range: [1, 10]
 
-**NOTE：**
+**NOTE:**
 
 If the value is less than 1 or is not set, the default value is used.
 

@@ -35,7 +35,7 @@ getConnectedDevices(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 返回已连接Profile的对端设备列表。基于信息安全考虑，此处获取的设备地址为虚拟MAC地址。已配对的地址不会变更。若该设备重启蓝牙开关，重新获取到的虚拟地址会立即变更。若取消配对，蓝牙子系统会根据该地址的实际使用情况，决策后续变更时机；若其他应用正在使用该地址，则不会立刻变更。若要持久化保存该地址，可使用[access.addPersistentDeviceId]{ |
+| Array&lt;string&gt; | 返回已连接Profile的对端设备列表。基于信息安全考虑，此处获取的设备地址为虚拟MAC地址。已配对的地址不会变更。若该设备重启蓝牙开关，重新获取到的虚拟地址会立即变更。若取消配对，蓝牙子系统会根据该地址的实际使用情况，决策后续变更时机；若其他应用正在使用该地址，则不会立刻变更。若要持久化保存该地址，可使用[access.addPersistentDeviceId](arkts-connectivity-access-addpersistentdeviceid-f.md)方法。 |
 
 **错误码：**
 
@@ -139,7 +139,7 @@ off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | 是 | 事件回调类型，支持的事件为'connectionStateChange'，表示Profile连接状态变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StateChangeParam](arkts-connectivity-baseprofile-statechangeparam-i.md)&gt; | 否 | 指定取消订阅的回调函数。若传参，则需与on('connectionStateChange')中的回调函数一致，此时取消订阅该回调函数；若传入的回调与已订阅的回调不一致，则无法取消对应订阅；若无传参，则取消订阅该type对应的所有回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StateChangeParam](arkts-connectivity-baseprofile-statechangeparam-i.md)&gt; | 否 | 指定取消订阅的回调函数。若传参，则需与[on('connectionStateChange')](#onconnectionstatechange)中的回调函数一致，此时取消订阅该回调函数；若传入的回调与已订阅的回调不一致，则无法取消对应订阅；若无传参，则取消订阅该type对应的所有回调函数。 |
 
 **错误码：**
 

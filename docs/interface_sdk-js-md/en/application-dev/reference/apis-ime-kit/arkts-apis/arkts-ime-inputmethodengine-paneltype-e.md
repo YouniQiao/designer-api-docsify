@@ -1,7 +1,6 @@
 # PanelType
 
-Enumerates the types of the input method panel.
-
+Enumerates the types of the input method panel.<br> <br>  
 | Name | Value| Description |  
 | ------------ | -- | ------------------ |  
 | [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) | 0 | Soft keyboard type.|

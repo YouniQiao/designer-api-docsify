@@ -21,7 +21,7 @@ list as the new master process and triggers the [onNewProcessRequest](arkts-abil
 - For a UIExtensionAbility, the system first tries to reuse an existing UIExtensionAbility process as the new  
 master process. If no available process exists, it creates an empty process as the master process. This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 801 is returned.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the current process is already the
 > [master process](../../../application-models/ability-terminology.md#master-process), calling this API has no

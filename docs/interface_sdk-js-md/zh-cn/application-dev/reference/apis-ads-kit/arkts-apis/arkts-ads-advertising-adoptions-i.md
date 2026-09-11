@@ -22,7 +22,7 @@ import { advertising } from '@kit.AdsKit';
 
 <!--RP1--><!--RP1End-->
 
-**类型：** number \| boolean \| string \| undefined
+**类型：** number &#124; boolean &#124; string &#124; undefined
 
 **起始版本：** 11
 

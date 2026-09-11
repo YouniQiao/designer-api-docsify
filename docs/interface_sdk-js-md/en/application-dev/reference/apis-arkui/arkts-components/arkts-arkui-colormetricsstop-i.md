@@ -37,7 +37,7 @@ offset: Length
 
 Value of the linear gradient color stop. The value is a proportion ranging from 0 to 1. If a value less than 0 is passed, the value is set to **0**. If a value greater than 1 is passed, the value is set to **1**.
 
-**NOTE：**
+**NOTE:**
 
 If the value is a string that represents a number, it will be converted to a number. For example, **'10vp'** is converted to **10**, and **'10%'** is converted to **0.1**.
 

@@ -39,7 +39,7 @@ Indicates the maximum number of data records to be loaded.
 types?: Set<string>
 ```
 
-Represents the data type or supported types to load. This parameter is mandatory when used by the data provider.
+Represents the data type or supported types to load. <br>This parameter is mandatory when used by the data provider.
 
 **Type:** Set&lt;string&gt;
 

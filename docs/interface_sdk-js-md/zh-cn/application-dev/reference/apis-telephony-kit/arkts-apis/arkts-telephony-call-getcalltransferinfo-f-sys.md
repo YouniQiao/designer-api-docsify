@@ -26,7 +26,7 @@ function getCallTransferInfo(slotId: number, type: CallTransferType, callback: A
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 | type | [CallTransferType](arkts-telephony-call-calltransfertype-e.md) | 是 | 呼叫转移类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CallTransferResult](arkts-telephony-call-calltransferresult-i.md)&gt; | 是 | 回调函数。返回呼叫转移信息。 |
 
@@ -77,7 +77,7 @@ function getCallTransferInfo(slotId: number, type: CallTransferType): Promise<Ca
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 | type | [CallTransferType](arkts-telephony-call-calltransfertype-e.md) | 是 | 呼叫转移类型。 |
 
 **返回值：**

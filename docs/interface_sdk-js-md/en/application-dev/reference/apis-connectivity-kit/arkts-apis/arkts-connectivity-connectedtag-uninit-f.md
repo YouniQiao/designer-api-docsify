@@ -14,7 +14,7 @@ function uninit(): boolean
 
 Uninitializes the active tag resources.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. Use
 > [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md) instead.
@@ -33,4 +33,4 @@ Uninitializes the active tag resources.
 
 | Type | Description |
 | --- | --- |
-| boolean | true**: The uninstallation is successful. |
+| boolean | true**: The uninstallation is successful.<br>**false**: The uninstallation fails. |

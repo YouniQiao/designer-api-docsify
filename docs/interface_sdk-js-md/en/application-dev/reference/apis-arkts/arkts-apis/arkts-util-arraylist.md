@@ -7,11 +7,14 @@ ArrayList is a linear data structure that is implemented based on arrays. ArrayL
  other elements in the container.
  **Recommended use case**: Use ArrayList when elements in a container need to be frequently read.
  This topic uses the following to identify the use of generics:
- - T: Type
- > **NOTE**
+
+- T: Type
+
+> **NOTE**
  >
  > - Container classes, implemented in static languages, have restrictions on storage locations and properties, and do
  > not support custom properties or methods.
+
 
 
 ## Modules to Import

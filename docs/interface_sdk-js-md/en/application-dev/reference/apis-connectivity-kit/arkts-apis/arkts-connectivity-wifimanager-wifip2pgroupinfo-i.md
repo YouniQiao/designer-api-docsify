@@ -2,6 +2,8 @@
 
 P2P group information.
 
+@typedef WifiP2pGroupInfo
+
 **Since:** 9
 
 **System capability:** SystemCapability.Communication.WiFi.P2P

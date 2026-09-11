@@ -40,7 +40,7 @@ createCameraInput(camera: CameraDevice): CameraInput
 
 | 类型 | 说明 |
 | --- | --- |
-| [CameraInput](arkts-camera-camera-camerainput-i.md) | 返回CameraInput实例。接口调用失败会返回相应错误码，错误码类型为[CameraErrorCode]{ |
+| [CameraInput](arkts-camera-camera-camerainput-i.md) | 返回CameraInput实例。接口调用失败会返回相应错误码，错误码类型为[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -79,7 +79,7 @@ createCameraInput(position: CameraPosition, type: CameraType): CameraInput
 
 | 类型 | 说明 |
 | --- | --- |
-| [CameraInput](arkts-camera-camera-camerainput-i.md) | 返回CameraInput实例。接口调用失败会返回相应错误码，错误码类型为[CameraErrorCode]{ |
+| [CameraInput](arkts-camera-camera-camerainput-i.md) | 返回CameraInput实例。接口调用失败会返回相应错误码，错误码类型为[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -113,7 +113,7 @@ createCaptureSession(): CaptureSession
 
 | 类型 | 说明 |
 | --- | --- |
-| [CaptureSession](arkts-camera-camera-capturesession-i.md) | CaptureSession实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [CaptureSession](arkts-camera-camera-capturesession-i.md) | CaptureSession实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -145,7 +145,7 @@ createDeferredPreviewOutput(profile: Profile): PreviewOutput
 
 | 类型 | 说明 |
 | --- | --- |
-| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | PreviewOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | PreviewOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -179,7 +179,7 @@ createMetadataOutput(metadataObjectTypes: Array<MetadataObjectType>): MetadataOu
 
 | 类型 | 说明 |
 | --- | --- |
-| [MetadataOutput](arkts-camera-camera-metadataoutput-i.md) | MetadataOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [MetadataOutput](arkts-camera-camera-metadataoutput-i.md) | MetadataOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -221,7 +221,7 @@ createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 
 | 类型 | 说明 |
 | --- | --- |
-| [PhotoOutput](arkts-camera-camera-photooutput-i.md) | PhotoOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [PhotoOutput](arkts-camera-camera-photooutput-i.md) | PhotoOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -247,13 +247,13 @@ createPhotoOutput(profile?: Profile): PhotoOutput
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | 否 | 支持的拍照配置信息，通过[getSupportedOutputCapability](#getsupportedoutputcapability-1)接口获取。API version 11时，该参数必填；从API version 12开始，如果使用[preconfig](arkts-camera-camera-photosession-i.md#preconfig)进行预配置，传入profile参数会覆盖preconfig的预配置参数。 |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | 否 | 支持的拍照配置信息，通过[getSupportedOutputCapability](#getsupportedoutputcapability-1)接口获取。<br>API version 11时，该参数必填；从API version 12开始，如果使用[preconfig](arkts-camera-camera-photosession-i.md#preconfig)进行预配置，传入profile参数会覆盖preconfig的预配置参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [PhotoOutput](arkts-camera-camera-photooutput-i.md) | PhotoOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [PhotoOutput](arkts-camera-camera-photooutput-i.md) | PhotoOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -287,7 +287,7 @@ createPreviewOutput(profile: Profile, surfaceId: string): PreviewOutput
 
 | 类型 | 说明 |
 | --- | --- |
-| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | PreviewOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | PreviewOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -320,7 +320,7 @@ createPreviewOutput(surfaceId: string): PreviewOutput
 
 | 类型 | 说明 |
 | --- | --- |
-| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | PreviewOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | PreviewOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -353,7 +353,7 @@ createSession<T extends Session>(mode: SceneMode): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Session实例。接口调用失败会返回相应的错误码，错误码类型为[CameraErrorCode]{ |
+| T | Session实例。接口调用失败会返回相应的错误码，错误码类型为[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -375,7 +375,7 @@ createVideoOutput(profile: VideoProfile, surfaceId: string): VideoOutput
 | SDR/HDR拍摄 | CameraFormat | ColorSpace |  
 |--------------------|--------------------------|------------------|  
 | SDR | [CAMERA_FORMAT_YUV_420_SP](arkts-camera-camera-cameraformat-e.md) | [BT709_LIMIT](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) |
-| HDR_VIVID | CAMERA_FORMAT_YCRCB_P010CAMERA_FORMAT_YCBCR_P010 | BT2020_HLG_LIMIT BT2020_HLG_FULL |
+| HDR_VIVID | [CAMERA_FORMAT_YCRCB_P010](arkts-camera-camera-cameraformat-e.md)<br>CAMERA_FORMAT_YCBCR_P010 | [BT2020_HLG_LIMIT](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md)<br>BT2020_HLG_FULL |
 
 **起始版本：** 10
 
@@ -394,7 +394,7 @@ createVideoOutput(profile: VideoProfile, surfaceId: string): VideoOutput
 
 | 类型 | 说明 |
 | --- | --- |
-| [VideoOutput](arkts-camera-camera-videooutput-i.md) | VideoOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [VideoOutput](arkts-camera-camera-videooutput-i.md) | VideoOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -427,7 +427,7 @@ createVideoOutput(surfaceId: string): VideoOutput
 
 | 类型 | 说明 |
 | --- | --- |
-| [VideoOutput](arkts-camera-camera-videooutput-i.md) | VideoOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [VideoOutput](arkts-camera-camera-videooutput-i.md) | VideoOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -789,7 +789,7 @@ isTorchSupported(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 表示设备是否支持手电筒，true表示设备支持手电筒，false表示设备不支持手电。 |
+| boolean | 表示设备是否支持手电筒，true表示设备支持手电筒，false表示设备不支持手电。<br>如果返回false，则[isTorchModeSupported](#istorchmodesupported)、[getTorchMode](#gettorchmode)、[setTorchMode](#settorchmode)、[isTorchLevelControlSupported](#istorchlevelcontrolsupported)和[setTorchModeOnWithLevel](#settorchmodeonwithlevel)都不会生效。<br>若接口调用失败，返回undefined。 |
 
 ## off('cameraStatus')
 

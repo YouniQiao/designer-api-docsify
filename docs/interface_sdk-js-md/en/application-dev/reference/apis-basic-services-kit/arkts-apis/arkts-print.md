@@ -72,13 +72,13 @@ import { print } from '@kit.BasicServicesKit';
 | [notifyPrintService](arkts-basicservices-print-notifyprintservice-f-sys.md) | Notifies the print service of the spooler shutdown information. This API uses a promise to return the result. |
 | [notifyPrintServiceEvent](arkts-basicservices-print-notifyprintserviceevent-f-sys.md) | Notifies the print service of the print application events. This API uses a promise to return the result. |
 | [notifyPrintServiceEvent](arkts-basicservices-print-notifyprintserviceevent-f-sys.md) | Notifies the print service of the print application events. This API uses a promise to return the result. |
-| off | Unregisters the listener for printer state change events. This API uses a callback to return the result. |
-| off | Unregisters the listener for print job state change events. This API uses a callback to return the result. |
-| off | Unregisters the listener for printer extension information change events. This API uses a callback to return the result. |
+| [off](arkts-basicservices-print-off-f-sys.md#offprinterstatechange) | Unregisters the listener for printer state change events. This API uses a callback to return the result. |
+| [off](arkts-basicservices-print-off-f-sys.md#offjobstatechange) | Unregisters the listener for print job state change events. This API uses a callback to return the result. |
+| [off](arkts-basicservices-print-off-f-sys.md#offextinfochange) | Unregisters the listener for printer extension information change events. This API uses a callback to return the result. |
 | [offPrinterInfoQuery](arkts-basicservices-print-offprinterinfoquery-f-sys.md) | Unregister event callback for the printer info queried. |
-| on | Registers a listener for printer state change events. This API uses a callback to return the result. |
-| on | Registers a listener for print job state change events. This API uses a callback to return the result. |
-| on | Registers a listener for printer extension information change events. This API uses a callback to return the result. |
+| [on](arkts-basicservices-print-on-f-sys.md#onprinterstatechange) | Registers a listener for printer state change events. This API uses a callback to return the result. |
+| [on](arkts-basicservices-print-on-f-sys.md#onjobstatechange) | Registers a listener for print job state change events. This API uses a callback to return the result. |
+| [on](arkts-basicservices-print-on-f-sys.md#onextinfochange) | Registers a listener for printer extension information change events. This API uses a callback to return the result. |
 | [onPrinterInfoQuery](arkts-basicservices-print-onprinterinfoquery-f-sys.md) | Register event callback for the printer info queried. |
 | [queryAllActivePrintJobs](arkts-basicservices-print-queryallactiveprintjobs-f-sys.md) | Queries all active print jobs. This API uses a promise to return the result. |
 | [queryAllPrinterExtensionInfos](arkts-basicservices-print-queryallprinterextensioninfos-f-sys.md) | Obtains the information of all installed printer extensions. This API uses an asynchronous callback to return the result. |

@@ -20,7 +20,7 @@ error?: Error | Object
 
 Error message. By default, the value is the same as the **message** field of **BusinessError**. You are advised not to change the value.
 
-**Type:** Error \| Object
+**Type:** Error &#124; Object
 
 **Since:** 20
 

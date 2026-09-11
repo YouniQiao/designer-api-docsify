@@ -2,6 +2,8 @@
 
 The result of publish form.
 
+@typedef PublishFormResult
+
 **Since:** 12
 
 **System capability:** SystemCapability.Ability.Form

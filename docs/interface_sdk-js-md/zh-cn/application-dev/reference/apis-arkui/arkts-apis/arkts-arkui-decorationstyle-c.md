@@ -39,7 +39,7 @@ constructor(value: DecorationStyleInterface)
 constructor(value: DecorationStyleInterface, options?: DecorationOptions)
 ```
 
-文本装饰线样式的构造函数，包含额外配置选项。未通过该接口设置时，默认装饰线类型为TextDecorationType.None，颜色为Color.Black，样式为TextDecorationStyle.SOLID，粗细缩放为1. 0。
+文本装饰线样式的构造函数，包含额外配置选项。未通过该接口设置时，默认装饰线类型为TextDecorationType.None，颜色为Color.Black，样式为TextDecorationStyle.SOLID，粗细缩放为1.0。
 
 **起始版本：** 20
 

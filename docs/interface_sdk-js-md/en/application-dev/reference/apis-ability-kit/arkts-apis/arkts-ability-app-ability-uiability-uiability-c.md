@@ -93,7 +93,7 @@ onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateRes
 
 Callback invoked to return the collaboration result in multi-device collaboration scenarios.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This callback does not support ability launch in
 > [specified mode](../../../application-models/uiability-launch-type.md#specified).
@@ -149,7 +149,7 @@ onContinue(wantParam: Record<string, Object>):
 
 Called when a UIAbility is to be migrated across devices. You can save service data to be migrated.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For versions prior to API version 18, only synchronous calls are supported. Starting from API version 18,
 > asynchronous calls are also supported.
@@ -173,7 +173,7 @@ Called when a UIAbility is to be migrated across devices. You can save service d
 | Type | Description |
 | --- | --- |
 | [AbilityConstant.OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md) | Return the result of onContinue.<br>**Since:** 9 - 11 |
-| [AbilityConstant.OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md) \| Promise&lt;[AbilityConstant.OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md)&gt; | Whether the migration is accepted. The options are as follows: |
+| [AbilityConstant.OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md) &#124; Promise&lt;[AbilityConstant.OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md)&gt; | Whether the migration is accepted. The options are as follows:<br>- **AGREE**: The migration is allowed. <br>- **REJECT**: The migration is rejected, for example, when an application is abnormal in **onContinue()**. <br>- **MISMATCH**: The application versions of the source and target devices do not match. The application on the source device can obtain the version of the target application from **onContinue**. If the ability continuation cannot be performed due to version mismatch, this result is returned. <br> This callback comes in pairs with **onWindowStageRestore**. In ability continuation scenarios, the source UIAbility triggers **onContinue** to save custom data, and the target UIAbility triggers **onWindowStageRestore** to restore the custom data.<br>**Since:** 12 |
 
 **Examples**
 
@@ -265,7 +265,7 @@ Called when the UIAbility is destroyed (for example, when the UIAbility is termi
 
 This API returns the result synchronously or uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Once the **onDestroy** lifecycle callback completes, the application may exit. This can interrupt any pending
 > asynchronous operations (such as asynchronously writing data to a database), preventing them from finishing
@@ -523,7 +523,7 @@ onPrepareToTerminate(): boolean
 
 Triggered by the system just before the UIAbility is about to close (for example, when the user clicks the close button in the top-right corner of the application window or exits from the dock or system tray), allowing for additional operations to be performed before the UIAbility is officially shut down. You can return **true** to block the current closure attempt and then manually call [terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateself) at an appropriate time to close it. For example, you might ask the user to confirm whether they want to close the UIAbility and then proceed with the closure manually. This API executes the callback normally only on 2-in-1 devices and tablets. It does not execute the callback on other devices.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Starting from API version 15, this callback is not executed when
 > [UIAbility.onPrepareToTerminateAsync](#onpreparetoterminateasync) is implemented. When
@@ -550,7 +550,7 @@ Triggered by the system just before the UIAbility is about to close (for example
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether to terminate the UIAbility. |
+| boolean | Whether to terminate the UIAbility.<br>The value &lt;code&gt;true&lt;/code&gt; means that the termination process is canceled. <br>The value &lt;code&gt;false&lt;/code&gt; means to continue terminating the UIAbility. |
 
 **Examples**
 
@@ -595,7 +595,7 @@ Triggered by the system just before the UIAbility is close (for example, when th
 
 You can return **true** to block the current closure attempt and then manually call [terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateself) at an appropriate time to close it. For example, you might ask the user to confirm whether they want to close the UIAbility and then proceed with the closure manually. Starting from API version 15, this API executes the callback normally only on 2-in-1 devices. It does not execute the callback on other devices. Starting from API version 19, this API executes the callback normally only on 2-in-1 devices and tablets. It does not execute the callback on other devices.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - When
 > [AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)
@@ -624,7 +624,7 @@ You can return **true** to block the current closure attempt and then manually c
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. |
+| Promise&lt;boolean&gt; | Promise used to return the result.<br>The value &lt;code&gt;true&lt;/code&gt; means that the termination process is canceled. <br>The value &lt;code&gt;false&lt;/code&gt; means to continue terminating the UIAbility. |
 
 **Examples**
 
@@ -649,7 +649,7 @@ onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>
 
 This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md) set to **SAVE_WHEN_ERROR**), this callback is invoked to save the UIAbility data in the case of an application fault.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Starting from API version 20, this callback is not executed when
 > [onSaveStateAsync](#onsavestateasync)
@@ -973,7 +973,7 @@ onWindowStageRestore(windowStage: window.WindowStage): void
 
 Called when the page stack is restored for the target UIAbility during cross-device migration.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When an application is launched as a result of a migration, the **onWindowStageRestore()** lifecycle callback
 > function, rather than **onWindowStageCreate()**, is triggered following [onCreate()](#oncreate) or

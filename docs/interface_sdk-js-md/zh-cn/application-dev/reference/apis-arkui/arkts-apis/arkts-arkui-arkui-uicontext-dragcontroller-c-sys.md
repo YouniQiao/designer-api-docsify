@@ -39,4 +39,4 @@ interruptFollowHandMorphDropAnimation(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回中断结果。 |
+| boolean | 返回中断结果。<br>返回true表示中断成功，返回false表示当前不存在待中断的跟手变形落位动效。 |

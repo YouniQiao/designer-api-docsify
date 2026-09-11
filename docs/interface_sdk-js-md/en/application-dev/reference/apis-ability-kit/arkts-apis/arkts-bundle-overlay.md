@@ -4,7 +4,7 @@ The module provides APIs for querying the [OverlayModuleInfo](arkts-ability-over
 
 An application with the overlay feature contains an overlay resource package. For details about this package, see [Overlay Mechanism](../../../quick-start/resource-categories-and-access.md#overlay-mechanism).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The APIs provided by this module apply only to the stage model and
 > [static overlay](../../../quick-start/resource-categories-and-access.md#using-overlay-in-static-mode) mode.

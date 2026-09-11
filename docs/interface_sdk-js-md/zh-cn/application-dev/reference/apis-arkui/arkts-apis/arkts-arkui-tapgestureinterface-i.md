@@ -43,8 +43,6 @@
 
 | 类型 | 说明 |
 | --- | --- |
-| [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) |  |
-
 ## onAction
 
 ```TypeScript
@@ -69,4 +67,3 @@ onAction(event: (event: GestureEvent) => void): TapGestureInterface
 
 | 类型 | 说明 |
 | --- | --- |
-| [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) |  |

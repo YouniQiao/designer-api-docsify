@@ -174,7 +174,7 @@ connect(url: string, callback: AsyncCallback<boolean>): void
 > **说明：**
 > 
 > callback中返回的boolean值仅表示连接请求创建是否成功。如需感知WebSocket是否连接成功，需要在调用该接口前调用
-> on('open')订阅open事件。
+> [on('open')](#onopen)订阅open事件。
 > 
 > **注意：**
 > 
@@ -235,7 +235,7 @@ connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<b
 > **说明：**
 > 
 > callback中返回的boolean值仅表示连接请求创建是否成功。如需感知WebSocket是否连接成功，需要在调用该接口前调用
-> on('open')订阅open事件。
+> [on('open')](#onopen)订阅open事件。
 > 
 > **注意：**
 > 
@@ -321,7 +321,7 @@ connect(url: string, options?: WebSocketRequestOptions): Promise<boolean>
 > **说明：**
 > 
 > callback中返回的boolean值仅表示连接请求创建是否成功。如需感知WebSocket是否连接成功，需要在调用该接口前调用
-> on('open')订阅open事件。
+> [on('open')](#onopen)订阅open事件。
 > 
 > **注意：**
 > 
@@ -488,7 +488,7 @@ off(type: 'message', callback?: AsyncCallback<string | ArrayBuffer>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 取消订阅的事件类型。'message'：WebSocket的接收到服务器消息事件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | 否 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string &#124; ArrayBuffer&gt; | 否 | 回调函数。 |
 
 **示例**
 
@@ -522,7 +522,7 @@ off(type: 'close', callback?: AsyncCallback<CloseResult>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'close' | 是 | 取消订阅的事件类型。'close'：WebSocket的关闭事件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | 否 | 回调函数。close：close错误码，reason：错误码说明 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | 否 | 回调函数。<br>close：close错误码，reason：错误码说明 |
 
 **示例**
 
@@ -691,7 +691,7 @@ on(type: 'message', callback: AsyncCallback<string | ArrayBuffer>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 订阅的事件类型。'message'：WebSocket的接收服务器消息事件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string &#124; ArrayBuffer&gt; | 是 | 回调函数。 |
 
 **示例**
 
@@ -761,7 +761,7 @@ on(type: 'close', callback: AsyncCallback<CloseResult>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'close' | 是 | 订阅的事件类型。'close'：WebSocket的关闭事件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | 是 | 回调函数。close：close错误码，reason：错误码说明 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | 是 | 回调函数。<br>close：close错误码，reason：错误码说明 |
 
 **示例**
 
@@ -890,7 +890,7 @@ send(data: string | ArrayBuffer, callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | string \| ArrayBuffer | 是 | 发送的数据。API 6及更早版本仅支持string类型。API 8起同时支持string和ArrayBuffer类型。最大支持发送5242864字节数据(即5 * 1024 * 1024 - 16)，超过该大小会返回401错误码。 |
+| data | string &#124; ArrayBuffer | 是 | 发送的数据。<br>API 6及更早版本仅支持string类型。API 8起同时支持string和ArrayBuffer类型。最大支持发送5242864字节数据(即5 * 1024 * 1024 - 16)，超过该大小会返回401错误码。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。true:发送请求创建成功；false:发送请求创建失败。 |
 
 **错误码：**
@@ -951,7 +951,7 @@ send(data: string | ArrayBuffer): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | string \| ArrayBuffer | 是 | 发送的数据。API 6及更早版本仅支持string类型。API 8起同时支持string和ArrayBuffer类型。最大支持发送5242864字节数据(即5 * 1024 * 1024 - 16)，超过该大小会返回401错误码。 |
+| data | string &#124; ArrayBuffer | 是 | 发送的数据。<br>API 6及更早版本仅支持string类型。API 8起同时支持string和ArrayBuffer类型。最大支持发送5242864字节数据(即5 * 1024 * 1024 - 16)，超过该大小会返回401错误码。 |
 
 **返回值：**
 

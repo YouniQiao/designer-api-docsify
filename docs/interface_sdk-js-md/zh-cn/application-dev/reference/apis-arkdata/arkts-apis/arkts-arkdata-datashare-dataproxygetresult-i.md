@@ -20,7 +20,7 @@ allowList: string[] | undefined
 
 如果获取操作成功，则为共享配置的允许列表；如果获取操作失败，则未定义。只有发布者才能获取允许列表，其他应用只能获取值。
 
-**类型：** string[] \| undefined
+**类型：** string[] &#124; undefined
 
 **起始版本：** 20
 
@@ -68,7 +68,7 @@ value: ValueType | undefined
 
 如果获取操作成功，则为共享配置的值；如果获取操作失败，则未定义。
 
-**类型：** [ValueType](arkts-arkdata-valuetype-t.md) \| undefined
+**类型：** [ValueType](arkts-arkdata-valuetype-t.md) &#124; undefined
 
 **起始版本：** 20
 

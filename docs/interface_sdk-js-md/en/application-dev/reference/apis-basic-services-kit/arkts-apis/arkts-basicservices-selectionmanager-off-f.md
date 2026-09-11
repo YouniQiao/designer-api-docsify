@@ -12,7 +12,7 @@ import { selectionManager } from '@kit.BasicServicesKit';
 function off(type: 'selectionCompleted', callback?: Callback<SelectionInfo>): void
 ```
 
-Unsubscribes from the word selection completion event. This API is used together with on('selectionCompleted').
+Unsubscribes from the word selection completion event. This API is used together with [on('selectionCompleted')](arkts-basicservices-selectionmanager-on-f.md#onselectioncompleted).
 
 **Since:** 24
 

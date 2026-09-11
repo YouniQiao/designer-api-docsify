@@ -31,7 +31,7 @@ Sets the callback for the [onAppear](arkts-arkui-commonmethod-c.md#onappear) eve
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes | Callback invoked when the component appears. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; &#124; undefined | Yes | Callback invoked when the component appears. |
 
 ## setOnBlur
 
@@ -53,7 +53,7 @@ Sets the callback for the [onBlur](arkts-arkui-commonmethod-c.md#onblur) event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes | Callback for the blur event. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; &#124; undefined | Yes | Callback for the blur event. |
 
 ## setOnClick
 
@@ -61,7 +61,7 @@ Sets the callback for the [onBlur](arkts-arkui-commonmethod-c.md#onblur) event.
 setOnClick(callback: Callback<ClickEvent> | undefined): void
 ```
 
-Set the callback for the click event.
+Set the callback for the [click event](arkts-arkui-commonmethod-c.md#onclick).
 
 **Since:** 12
 
@@ -75,7 +75,7 @@ Set the callback for the click event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;[ClickEvent](arkts-arkui-clickevent-i.md)&gt; \| undefined | Yes | Callback for the click event. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[ClickEvent](arkts-arkui-clickevent-i.md)&gt; &#124; undefined | Yes | Callback for the click event. |
 
 ## setOnDisappear
 
@@ -97,7 +97,7 @@ Sets the callback for the [onDisAppear](arkts-arkui-commonmethod-c.md#ondisappea
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes | Callback invoked when the component disappears. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; &#124; undefined | Yes | Callback invoked when the component disappears. |
 
 ## setOnFocus
 
@@ -119,7 +119,7 @@ Sets the callback for the [onFocus](arkts-arkui-commonmethod-c.md#onfocus) event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes | Callback for the focus event. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; &#124; undefined | Yes | Callback for the focus event. |
 
 ## setOnHover
 
@@ -141,7 +141,7 @@ Sets the callback for the [onHover](arkts-arkui-commonmethod-c.md#onhover) event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [HoverCallback](arkts-arkui-hovercallback-t.md) \| undefined | Yes | Callback for the hover event. |
+| callback | [HoverCallback](arkts-arkui-hovercallback-t.md) &#124; undefined | Yes | Callback for the hover event. |
 
 ## setOnKeyEvent
 
@@ -163,7 +163,7 @@ Sets the callback for the key event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;[KeyEvent](arkts-arkui-keyevent-i.md)&gt; \| undefined | Yes | Callback for the key event. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[KeyEvent](arkts-arkui-keyevent-i.md)&gt; &#124; undefined | Yes | Callback for the key event. |
 
 ## setOnMouse
 
@@ -185,7 +185,7 @@ Sets the callback for the [onMouse](arkts-arkui-commonmethod-c.md#onmouse) event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;[MouseEvent](arkts-arkui-mouseevent-i.md)&gt; \| undefined | Yes | Callback for the mouse event. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[MouseEvent](arkts-arkui-mouseevent-i.md)&gt; &#124; undefined | Yes | Callback for the mouse event. |
 
 ## setOnSizeChange
 
@@ -207,7 +207,7 @@ Sets the callback for the [onSizeChange](arkts-arkui-commonmethod-c.md#onsizecha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [SizeChangeCallback](arkts-arkui-sizechangecallback-t.md) \| undefined | Yes | Callback invoked when the component's size changes. |
+| callback | [SizeChangeCallback](arkts-arkui-sizechangecallback-t.md) &#124; undefined | Yes | Callback invoked when the component's size changes. |
 
 ## setOnTouch
 
@@ -215,7 +215,7 @@ Sets the callback for the [onSizeChange](arkts-arkui-commonmethod-c.md#onsizecha
 setOnTouch(callback: Callback<TouchEvent> | undefined): void
 ```
 
-Sets the callback for the touch event.
+Sets the callback for the [touch event](arkts-arkui-commonmethod-c.md#ontouch).
 
 **Since:** 12
 
@@ -229,7 +229,7 @@ Sets the callback for the touch event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;[TouchEvent](arkts-arkui-touchevent-i.md)&gt; \| undefined | Yes | Callback for the touch event. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[TouchEvent](arkts-arkui-touchevent-i.md)&gt; &#124; undefined | Yes | Callback for the touch event. |
 
 ## setOnVisibleAreaApproximateChange
 
@@ -252,4 +252,4 @@ Sets the callback for the [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#on
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [VisibleAreaEventOptions](arkts-arkui-visibleareaeventoptions-i.md) | Yes | Configuration options for visible area change detection. |
-| event | [VisibleAreaChangeCallback](arkts-arkui-visibleareachangecallback-t.md) \| undefined | Yes | Callback invoked when the ratio of the component's visible area to its total area crosses the threshold specified in **options**. |
+| event | [VisibleAreaChangeCallback](arkts-arkui-visibleareachangecallback-t.md) &#124; undefined | Yes | Callback invoked when the ratio of the component's visible area to its total area crosses the threshold specified in **options**. |

@@ -14,7 +14,7 @@ export function getAppPreloadType(): AppPreloadType
 
 Obtains the preloading type of the current application process.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API can return the actual preloading type only if it is called before the first execution of
 > [AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate).

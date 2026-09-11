@@ -34,7 +34,7 @@ Checks whether this device supports a specified feature.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if this device supports the specified feature, returns `false` otherwise. |
 
 **Examples**
 

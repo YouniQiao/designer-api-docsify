@@ -1,5 +1,7 @@
 # Result
 
+@typedef Result
+
 **Since:** 5
 
 **Deprecated since:** 8

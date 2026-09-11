@@ -39,7 +39,7 @@ shape?: CircleAttribute | EllipseAttribute | PathAttribute | RectAttribute
 
 设置滑块使用的自定义形状。
 
-**类型：** [CircleAttribute](arkts-arkui-circle-attribute.md) \| [EllipseAttribute](arkts-arkui-ellipse-attribute.md) \| [PathAttribute](arkts-arkui-path-attribute.md) \| [RectAttribute](arkts-arkui-rect-attribute.md)
+**类型：** [CircleAttribute](arkts-arkui-circle-comp-attribute.md) &#124; [EllipseAttribute](arkts-arkui-ellipse-comp-attribute.md) &#124; [PathAttribute](arkts-arkui-path-comp-attribute.md) &#124; [RectAttribute](arkts-arkui-rect-comp-attribute.md)
 
 **起始版本：** 10
 
@@ -61,7 +61,8 @@ type: SliderBlockType
 
 **类型：** [SliderBlockType](arkts-arkui-sliderblocktype-e.md)
 
-**默认值：** SliderBlockType.DEFAULT - indicating the round slider. [since 11]
+**默认值：**
+- API版本11+：SliderBlockType.DEFAULT - indicating the round slider.
 
 **起始版本：** 10
 

@@ -153,7 +153,7 @@ Obtains the UID of the remote process.
 
 | Type | Description |
 | --- | --- |
-| number | Return the UID of the { |
+| number | Return the UID of the [RemoteProxy](arkts-ipc-rpc-remoteproxy-c.md) object. |
 
 **Examples**
 
@@ -407,7 +407,7 @@ onRemoteMessageRequest(
 
 Called to return a response to **sendMessageRequest()**. The server processes the request synchronously or asynchronously and returns the result in this API.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - You are advised to overload **onRemoteMessageRequest** preferentially, which implements synchronous and
 > asynchronous message processing.
@@ -434,7 +434,7 @@ Called to return a response to **sendMessageRequest()**. The server processes th
 
 | Type | Description |
 | --- | --- |
-| boolean \| Promise&lt;boolean&gt; | If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
+| boolean &#124; Promise&lt;boolean&gt; | If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite.<br>- If the request is processed asynchronously in **onRemoteMessageRequest**, a promise object is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 **Examples**
 
@@ -534,7 +534,7 @@ onRemoteMessageRequest(
 
 Provides a response to **sendMessageRequest()**. The server processes the request and returns a response in this API. The IPC context can be obtained from the input parameter **callingInfo**.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You are advised to overload the **onRemoteMessageRequest** method with the **CallingInfo** parameter to
 > implement synchronous and asynchronous message processing.
@@ -559,7 +559,7 @@ Provides a response to **sendMessageRequest()**. The server processes the reques
 
 | Type | Description |
 | --- | --- |
-| boolean \| Promise&lt;boolean&gt; | If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
+| boolean &#124; Promise&lt;boolean&gt; | If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite.<br>- If the request is processed asynchronously in **onRemoteMessageRequest**, a promise object is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 **Examples**
 
@@ -660,7 +660,7 @@ Called to return a response to **sendRequest()**. The server processes the reque
 
 **Deprecated since:** 9
 
-**Substitutes:** [onRemoteMessageRequest](#onremotemessagerequest)(code: int, data: MessageSequence, reply: MessageSequence,
+**Substitutes:** [onRemoteMessageRequest](#onremotemessagerequest)(code: number, data: MessageSequence, reply: MessageSequence,
      *     options: MessageOption)
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -930,7 +930,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 8
 
-**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: int, data: MessageSequence, reply: MessageSequence,
+**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence,
      *     options: MessageOption)
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1003,7 +1003,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: int, data: MessageSequence, reply: MessageSequence,
+**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence,
      *     options: MessageOption)
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1087,7 +1087,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: int, data: MessageSequence, reply: MessageSequence,
+**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence,
      *     options: MessageOption, callback: AsyncCallback&lt;RequestResult&gt;)
 
 **System capability:** SystemCapability.Communication.IPC.Core

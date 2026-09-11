@@ -36,10 +36,9 @@ onVisibleIndexesChange(callback: Callback<number[]> | undefined): LazyDynamicLay
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;number[]&gt; \| undefined | 是 | 可见索引变化时回调的回调函数。传递undefined将取消注册回调。 |
+| callback | Callback&lt;number[]&gt; &#124; undefined | 是 | 可见索引变化时回调的回调函数。<br>传递undefined将取消注册回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) |  |

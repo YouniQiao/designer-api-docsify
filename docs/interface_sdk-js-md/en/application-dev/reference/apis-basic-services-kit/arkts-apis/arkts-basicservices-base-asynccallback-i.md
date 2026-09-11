@@ -6,6 +6,8 @@ The error parameter is of the [BusinessError](arkts-basicservices-base-businesse
 
 The type of the asynchronous return value is defined by the developer.
 
+@typedef AsyncCallback [since 6 - 11] @typedef AsyncCallback&lt;T, E = void&gt; [since 12]
+
 **Since:** 6
 
 **System capability:** SystemCapability.Base

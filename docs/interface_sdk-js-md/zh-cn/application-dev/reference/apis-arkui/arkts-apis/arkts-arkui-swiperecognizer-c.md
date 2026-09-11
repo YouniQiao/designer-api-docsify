@@ -55,4 +55,4 @@ getVelocityThreshold(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 预设快滑手势识别器识别滑动最小速度阈值，单位为vp/s。 |
+| number | 预设快滑手势识别器识别滑动最小速度阈值，单位为vp/s。<br>取值范围：[0, +∞) |

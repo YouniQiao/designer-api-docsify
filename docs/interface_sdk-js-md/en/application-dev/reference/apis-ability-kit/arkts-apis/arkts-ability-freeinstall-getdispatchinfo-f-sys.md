@@ -57,7 +57,7 @@ Obtains the dispatch information. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[DispatchInfo](arkts-ability-freeinstall-dispatchinfo-t-sys.md)&gt; | Promise used to return the [DispatchInfo]{ |
+| Promise&lt;[DispatchInfo](arkts-ability-freeinstall-dispatchinfo-t-sys.md)&gt; | Promise used to return the [DispatchInfo](arkts-ability-dispatchinfo-i-sys.md) object obtained. |
 
 **Error codes:**
 

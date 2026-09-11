@@ -8,7 +8,7 @@ Defines the controller of the custom dialog box.
 dialogController : CustomDialogController | null = new CustomDialogController(CustomDialogControllerOptions)
 ```
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - **CustomDialogController** is effective only when it is a member variable of the @CustomDialog and @Component
 > decorated struct and is defined in the @Component decorated struct. For details, see the following example.
@@ -47,7 +47,7 @@ constructor(value: CustomDialogControllerOptions)
 
 Constructor for a custom dialog box.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Custom dialog box parameters do not support dynamic updates. However, by setting **customStyle** to **true** and
 > configuring attributes such as background color,
@@ -104,7 +104,7 @@ open()
 
 Opens the content of the custom dialog box. This API can be called multiple times. If the dialog box is displayed in a subwindow, no new subwindow is allowed.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > **CustomDialog** with subwindow display (**showInSubwindow** set to **true**) is not supported in input method
 > windows. For details, see the constraints in

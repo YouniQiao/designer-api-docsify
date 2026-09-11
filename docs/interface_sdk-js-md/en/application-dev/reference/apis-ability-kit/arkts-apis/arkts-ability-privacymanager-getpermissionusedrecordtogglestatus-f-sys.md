@@ -79,7 +79,7 @@ A system application can call this API to obtain the permission usage record tog
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subProfileId | number | Yes | ID of the sub-profile. It can be obtained from [OsAccountSubProfile.id](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md#id). The value should be an integer. Value constraint: This parameter must be an integer greater than 0. |
+| subProfileId | number | Yes | ID of the sub-profile. It can be obtained from [OsAccountSubProfile.id](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md#id). <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. |
 
 **Return value:**
 

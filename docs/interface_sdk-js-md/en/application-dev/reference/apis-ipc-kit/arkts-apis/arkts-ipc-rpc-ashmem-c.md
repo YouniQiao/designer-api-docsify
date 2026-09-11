@@ -20,7 +20,7 @@ closeAshmem(): void
 
 Closes this **Ashmem** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Before closing the **Ashmem** object, you need to remove the address mapping.
 
@@ -275,7 +275,7 @@ Creates the shared file mapping on the virtual address space of this process. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [mapTypedAshmem](#maptypedashmem)(mapType: int)
+**Substitutes:** [mapTypedAshmem](#maptypedashmem)(mapType: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -500,7 +500,7 @@ readAshmem(size: number, offset: number): number[]
 
 Reads data from the shared file associated with this **Ashmem** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Before writing an **Ashmem** object, you need to call
 > [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
@@ -509,7 +509,7 @@ Reads data from the shared file associated with this **Ashmem** object.
 
 **Deprecated since:** 11
 
-**Substitutes:** [readDataFromAshmem](#readdatafromashmem)(size: int, offset: int)
+**Substitutes:** [readDataFromAshmem](#readdatafromashmem)(size: number, offset: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -562,7 +562,7 @@ readDataFromAshmem(size: number, offset: number): ArrayBuffer
 
 Reads data from the shared file associated with this **Ashmem** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Before writing an **Ashmem** object, you need to call
 > [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
@@ -626,7 +626,7 @@ readFromAshmem(size: number, offset: number): number[]
 
 Reads data from the shared file associated with this **Ashmem** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Before writing an **Ashmem** object, you need to call
 > [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
@@ -635,7 +635,7 @@ Reads data from the shared file associated with this **Ashmem** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [readDataFromAshmem](#readdatafromashmem)(size: int, offset: int)
+**Substitutes:** [readDataFromAshmem](#readdatafromashmem)(size: number, offset: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -684,7 +684,7 @@ Sets the protection level of the memory region to which the shared file is mappe
 
 **Deprecated since:** 9
 
-**Substitutes:** [setProtectionType](#setprotectiontype)(protectionType: int)
+**Substitutes:** [setProtectionType](#setprotectiontype)(protectionType: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -792,7 +792,7 @@ writeAshmem(buf: number[], size: number, offset: number): void
 
 Writes data to the shared file associated with this **Ashmem** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Before writing an **Ashmem** object, you need to call
 > [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
@@ -801,7 +801,7 @@ Writes data to the shared file associated with this **Ashmem** object.
 
 **Deprecated since:** 11
 
-**Substitutes:** [writeDataToAshmem](#writedatatoashmem)(buf: ArrayBuffer, size: int, offset: int)
+**Substitutes:** [writeDataToAshmem](#writedatatoashmem)(buf: ArrayBuffer, size: number, offset: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -847,7 +847,7 @@ writeDataToAshmem(buf: ArrayBuffer, size: number, offset: number): void
 
 Writes data to the shared file associated with this **Ashmem** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Before writing an **Ashmem** object, you need to call
 > [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
@@ -903,7 +903,7 @@ writeToAshmem(buf: number[], size: number, offset: number): boolean
 
 Writes data to the shared file associated with this **Ashmem** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Before writing an **Ashmem** object, you need to call
 > [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
@@ -912,7 +912,7 @@ Writes data to the shared file associated with this **Ashmem** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeDataToAshmem](#writedatatoashmem)(buf: ArrayBuffer, size: int, offset: int)
+**Substitutes:** [writeDataToAshmem](#writedatatoashmem)(buf: ArrayBuffer, size: number, offset: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 

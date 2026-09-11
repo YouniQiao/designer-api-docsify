@@ -1,6 +1,6 @@
 # DistributedObject
 
-表示一个分布式数据对象。在使用以下接口前，需调用[createDistributedObject()](arkts-arkdata-distributeddataobject-createdistributedobject-f.md)获取DistributedObject对象。  
+表示一个分布式数据对象。在使用以下接口前，需调用[createDistributedObject()](arkts-arkdata-distributeddataobject-createdistributedobject-f.md)获取DistributedObject对象。<br>   
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，暂无替代接口。
@@ -31,7 +31,7 @@ off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => voi
 
 **废弃版本：** 9
 
-**替代接口：** off(type: 'change', callback?: (sessionId: string, fields: Array&lt;string&gt;) =&gt; void )
+**替代接口：** [off](arkts-arkdata-distributeddataobject-dataobject-i.md#offchange)(type: 'change', callback?: (sessionId: string, fields: Array&lt;string&gt;) =&gt; void )
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -40,7 +40,7 @@ off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 事件类型，固定为'change'，表示数据变更。 |
-| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | 否 | 需要删除的数据变更回调，若不设置则删除该对象所有的数据变更回调。sessionId：标识变更对象的sessionId；fields：标识对象变更的属性名。 |
+| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | 否 | 需要删除的数据变更回调，若不设置则删除该对象所有的数据变更回调。<br>sessionId：标识变更对象的sessionId；<br>fields：标识对象变更的属性名。 |
 
 **示例**
 
@@ -87,7 +87,7 @@ off(
 
 **废弃版本：** 9
 
-**替代接口：** off( type: 'status', callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) =&gt; void )
+**替代接口：** [off](arkts-arkdata-distributeddataobject-dataobject-i.md#offstatus)( type: 'status', callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) =&gt; void )
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -96,7 +96,7 @@ off(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'status' | 是 | 事件类型，固定为'status'，表示对象上下线。 |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | 否 | 需要删除的上下线回调，若不设置则删除该对象所有的上下线回调。sessionId：标识变更对象的sessionId；networkId：对端设备的网络标识；status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
+| callback | (sessionId: string, networkId: string, status: 'online' &#124; 'offline' ) =&gt; void | 否 | 需要删除的上下线回调，若不设置则删除该对象所有的上下线回调。<br>sessionId：标识变更对象的sessionId；<br>networkId：对端设备的网络标识；<br>status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
 
 **示例**
 
@@ -135,7 +135,7 @@ on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void)
 
 **废弃版本：** 9
 
-**替代接口：** on(type: 'change', callback: (sessionId: string, fields: Array&lt;string&gt;) =&gt; void )
+**替代接口：** [on](arkts-arkdata-distributeddataobject-dataobject-i.md#onchange)(type: 'change', callback: (sessionId: string, fields: Array&lt;string&gt;) =&gt; void )
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -144,7 +144,7 @@ on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 事件类型，固定为'change'，表示数据变更。 |
-| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | 是 | 变更回调对象实例。sessionId：标识变更对象的sessionId；fields：标识对象变更的属性名。 |
+| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | 是 | 变更回调对象实例。<br>sessionId：标识变更对象的sessionId；<br>fields：标识对象变更的属性名。 |
 
 **示例**
 
@@ -188,7 +188,7 @@ on(
 
 **废弃版本：** 9
 
-**替代接口：** on( type: 'status', callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) =&gt; void )
+**替代接口：** [on](arkts-arkdata-distributeddataobject-dataobject-i.md#onstatus)( type: 'status', callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) =&gt; void )
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -197,7 +197,7 @@ on(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'status' | 是 | 事件类型，固定为'status'，表示对象上下线。 |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | 是 | 监听上下线回调实例。sessionId：标识变更对象的sessionId；networkId：对端设备的网络标识；status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
+| callback | (sessionId: string, networkId: string, status: 'online' &#124; 'offline' ) =&gt; void | 是 | 监听上下线回调实例。<br>sessionId：标识变更对象的sessionId；<br>networkId：对端设备的网络标识；<br>status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
 
 **示例**
 
@@ -250,7 +250,7 @@ setSessionId(sessionId?: string): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | true：表示设置sessionId成功。 |
+| boolean | true：表示设置sessionId成功。<br>false：表示设置sessionId失败。 |
 
 **示例**
 

@@ -26,7 +26,7 @@ Adds a callback for receiving death notifications of the remote object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [registerDeathRecipient](arkts-ipc-rpc-iremoteobject-c.md#registerdeathrecipient)(recipient: DeathRecipient, flags: int)
+**Substitutes:** [registerDeathRecipient](arkts-ipc-rpc-iremoteobject-c.md#registerdeathrecipient)(recipient: DeathRecipient, flags: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -607,7 +607,7 @@ Removes the callback used to receive death notifications of the remote object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [unregisterDeathRecipient](arkts-ipc-rpc-iremoteobject-c.md#unregisterdeathrecipient)(recipient: DeathRecipient, flags: int)
+**Substitutes:** [unregisterDeathRecipient](arkts-ipc-rpc-iremoteobject-c.md#unregisterdeathrecipient)(recipient: DeathRecipient, flags: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -923,7 +923,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 8
 
-**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: int, data: MessageSequence, reply: MessageSequence,
+**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence,
      *     options: MessageOption)
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1031,7 +1031,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: int, data: MessageSequence, reply: MessageSequence,
+**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence,
      *     options: MessageOption)
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -1148,7 +1148,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: int, data: MessageSequence, reply: MessageSequence,
+**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence,
      *     options: MessageOption, callback: AsyncCallback&lt;RequestResult&gt;)
 
 **System capability:** SystemCapability.Communication.IPC.Core

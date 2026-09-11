@@ -120,7 +120,7 @@ lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;T \| U&gt; | 回调执行后解决的Promise，或者在超时情况下被拒绝。 |
+| Promise&lt;T &#124; U&gt; | 回调执行后解决的Promise，或者在超时情况下被拒绝。 |
 
 **错误码：**
 

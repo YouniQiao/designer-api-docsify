@@ -1,6 +1,6 @@
 # PageIntentDecoratorInfo
 
-PageIntentDecoratorInfo inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md) and describes the parameters supported by the [@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage) decorator, such as the name of [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-navigation-attribute.md#navdestination) of the target page.
+PageIntentDecoratorInfo inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md) and describes the parameters supported by the [@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage) decorator, such as the name of [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-navigation-comp-attribute.md#navdestination) of the target page.
 
 **Inheritance/Implementation:** PageIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)
 
@@ -20,7 +20,7 @@ import { InsightIntentLink, InsightIntentPage, InsightIntentFunctionMethod, Insi
 navDestinationName?: string
 ```
 
-Name of the [navDestination](../../apis-arkui/arkts-components/arkts-arkui-navigation-attribute.md#navdestination) component bound to the intent.
+Name of the [navDestination](../../apis-arkui/arkts-components/arkts-arkui-navigation-comp-attribute.md#navdestination) component bound to the intent.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ Name of the [navDestination](../../apis-arkui/arkts-components/arkts-arkui-navig
 navigationId?: string
 ```
 
-ID of the [NavDestination组件](../../apis-arkui/arkts-components/arkts-arkui-navigation-attribute.md#navigationattribute) component bound to the intent.
+ID of the [NavDestination组件](../../apis-arkui/arkts-components/arkts-arkui-navigation-comp-attribute.md#navigationattribute) component bound to the intent.
 
 **Type:** string
 

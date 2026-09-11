@@ -6,7 +6,7 @@ You can create an entity encapsulation component in either of the following ways
 
 **ReactiveComponentContent** represents an entity encapsulation of component content, which can be created and transmitted outside of UI components. It allows you to encapsulate and decouple dialog box components. Its underlying implementation uses **ReactiveBuilderNode**. For details, see [ReactiveBuilderNode](arkts-arkui-buildernode-reactivebuildernode-c.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - **ComponentContent** and **ReactiveComponentContent** are not available in DevEco Studio Previewer.
 > 
@@ -281,7 +281,7 @@ dispose(): void
 
 Immediately releases the reference relationship between this **ComponentContent** object and its [entity node](../../../ui/arkts-user-defined-node.md#basic-concepts). For details about the scenarios involving **ComponentContent** unbinding, see [Canceling the Reference to the Entity Node](../../../ui/arkts-user-defined-arktsNode-builderNode.md#canceling-the-reference-to-the-entity-node).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > After calling **dispose()**, the **ComponentContent** object cancels its reference to the backend entity node. If
 > the frontend object **ComponentContent** cannot be released, memory leaks may occur. To avoid this, be sure to
@@ -366,7 +366,7 @@ inheritFreezeOptions(enabled: boolean): void
 
 Sets whether the current **ComponentContent** object inherits the freeze policy from its parent component's custom components. When inheritance is disabled (set to **false**), the **ComponentContent** object's freeze policy is set to **false**, which means its associated node remains unfrozen even in an inactive state.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When **inheritFreezeOptions** is set to **true** for **ComponentContent** and the parent component is a custom
 > component, BuilderNode, ComponentContent, ReactiveBuilderNode, or ReactiveComponentContent, the freeze policy of
@@ -816,7 +816,7 @@ updateConfiguration(): void
 
 Transfers a system environment change event and triggers full update of a node. For details about system environment changes, see [@ohos.app.ability.Configuration (Environment Variables)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The updateConfiguration API is used to notify an object of updating the current system environment change.
 

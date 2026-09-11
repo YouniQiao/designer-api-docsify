@@ -2,7 +2,7 @@
 
 Implements a **UIContext** instance.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
 > 
@@ -91,7 +91,7 @@ Sets whether to freeze a specific component by **id** to prevent it from being m
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | ID of the target component. |
-| isFrozen | boolean | Yes | Whether to freeze the component.The value **true** means to freeze the component, and **false** means the opposite.Default value: **false**. |
+| isFrozen | boolean | Yes | Whether to freeze the component.<br>The value **true** means to freeze the component, and **false** means the opposite.<br>Default value: **false**. |
 
 **Error codes:**
 
@@ -120,7 +120,7 @@ Sets whether to freeze a specific component by **uniqueId** to prevent it from b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uniqueId | number | Yes | Unique ID of the component. |
-| isFrozen | boolean | Yes | Whether to freeze the component.The value **true** means to freeze the component, and **false** means the opposite.Default value: **false**. |
+| isFrozen | boolean | Yes | Whether to freeze the component.<br>The value **true** means to freeze the component, and **false** means the opposite.<br>Default value: **false**. |
 
 **Error codes:**
 
@@ -154,7 +154,7 @@ get the luminance sampler of the specified node. If the node cannot be found, re
 
 | Type | Description |
 | --- | --- |
-| [LuminanceSampler](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md) \| undefined | the luminance sampler or undefined. |
+| [LuminanceSampler](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md) &#124; undefined | the luminance sampler or undefined. |
 
 **Examples**
 
@@ -181,7 +181,7 @@ Set the switch for memory recycling of invisible image nodes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | The switch for memory recycling. Default value: false, Passing `undefined` restores the default value. |
+| enabled | boolean | Yes | The switch for memory recycling. <br>Default value: false, Passing `undefined` restores the default value. |
 
 **Examples**
 
@@ -215,7 +215,7 @@ setDynamicDimming(id: string, value: number): void
 
 Sets the dynamic dimming degree of the component.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Applying other visual effects after this API is called may result in conflicts.
 

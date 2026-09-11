@@ -248,7 +248,7 @@ readonly atime: number
 
 Time when the file was last accessed. The value is the number of seconds elapsed since 00:00:00 on January 1, 1970.
 
-**Note：**: Currently, user data partitions are mounted in **noatime** mode by default, and **atime** update is disabled.
+**Note:** Currently, user data partitions are mounted in **noatime** mode by default, and **atime** update is disabled.
 
 **Type:** number
 
@@ -258,6 +258,13 @@ Time when the file was last accessed. The value is the number of seconds elapsed
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
 ## atimeNs
 
 ```TypeScript
@@ -266,13 +273,19 @@ readonly atimeNs?:bigint
 
 Time of the last access to the file. The value is the number of nanoseconds elapsed since 00:00:00 on January 1, 19 70.
 
-**Note：**: Currently, user data partitions are mounted in **noatime** mode by default, and **atime** update is disabled.
+**Note:** Currently, user data partitions are mounted in **noatime** mode by default, and **atime** update is disabled.
 
 **Type:** bigint
 
 **Since:** 15
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900042 | Internal error |
 
 ## ctime
 
@@ -288,6 +301,13 @@ Time when the file metadata was last modified. The value is the number of second
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
 ## ctimeNs
 
 ```TypeScript
@@ -301,6 +321,12 @@ Time of the last status change of the file. The value is the number of nanosecon
 **Since:** 15
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900042 | Internal error |
 
 ## gid
 
@@ -316,6 +342,13 @@ ID of the user group of the file.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
 ## ino
 
 ```TypeScript
@@ -330,6 +363,13 @@ File ID. Different files on the same device have different **ino**s.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
 ## location
 
 ```TypeScript
@@ -343,6 +383,12 @@ File location, which indicates whether the file is stored in a local device or i
 **Since:** 11
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900042 | Unknown error |
 
 ## mode
 
@@ -374,6 +420,13 @@ directory.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
 ## mtime
 
 ```TypeScript
@@ -390,6 +443,13 @@ Time when the file content was last modified. The value is the number of seconds
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
 ## mtimeNs
 
 ```TypeScript
@@ -403,6 +463,12 @@ Time of the last modification to the file. The value is the number of nanosecond
 **Since:** 15
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900042 | Internal error |
 
 ## size
 
@@ -420,6 +486,13 @@ File size, in bytes. This parameter is valid only for regular files.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
 ## uid
 
 ```TypeScript
@@ -433,3 +506,10 @@ ID of the file owner.
 **Since:** 9
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |

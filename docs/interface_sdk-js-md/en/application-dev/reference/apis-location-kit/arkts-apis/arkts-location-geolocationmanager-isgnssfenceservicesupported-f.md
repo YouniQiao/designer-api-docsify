@@ -26,7 +26,7 @@ Check whether the GNSS fence service is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if GNSS fence service is available, returns `false` otherwise. |
 
 **Error codes:**
 

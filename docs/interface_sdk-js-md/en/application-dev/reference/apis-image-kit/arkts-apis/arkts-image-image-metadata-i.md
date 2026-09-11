@@ -48,7 +48,7 @@ For details about how to query the property values, see [PropertyKey](arkts-imag
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the values of all properties. |
+| Promise&lt;Record&lt;string, string &#124; null&gt;&gt; | Promise used to return the values of all properties. |
 
 ## getBlob
 
@@ -92,7 +92,7 @@ Obtains the values of properties from the image's metadata. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the property values. If the operation fails, an error code is returned. |
+| Promise&lt;Record&lt;string, string &#124; null&gt;&gt; | Promise used to return the property values. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -151,7 +151,7 @@ For details about how to query the property values, see [PropertyKey](arkts-imag
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | Yes | Array of properties and their values. |
+| records | Record&lt;string, string &#124; null&gt; | Yes | Array of properties and their values. |
 
 **Return value:**
 

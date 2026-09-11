@@ -11,7 +11,7 @@
 day?: "numeric" | "2-digit" | undefined
 ```
 
-**Type:** "numeric" \| "2-digit" \| undefined
+**Type:** "numeric" &#124; "2-digit" &#124; undefined
 
 ## era
 
@@ -19,7 +19,7 @@ day?: "numeric" | "2-digit" | undefined
 era?: "number" | "short" | "narrow" | undefined
 ```
 
-**Type:** "number" \| "short" \| "narrow" \| undefined
+**Type:** "number" &#124; "short" &#124; "narrow" &#124; undefined
 
 ## formatMatcher
 
@@ -27,7 +27,7 @@ era?: "number" | "short" | "narrow" | undefined
 formatMatcher?: "best fit" | "basic" | undefined
 ```
 
-**Type:** "best fit" \| "basic" \| undefined
+**Type:** "best fit" &#124; "basic" &#124; undefined
 
 ## hour
 
@@ -35,7 +35,7 @@ formatMatcher?: "best fit" | "basic" | undefined
 hour?: "numeric" | "2-digit" | undefined
 ```
 
-**Type:** "numeric" \| "2-digit" \| undefined
+**Type:** "numeric" &#124; "2-digit" &#124; undefined
 
 ## hour12
 
@@ -43,7 +43,7 @@ hour?: "numeric" | "2-digit" | undefined
 hour12?: boolean | undefined
 ```
 
-**Type:** boolean \| undefined
+**Type:** boolean &#124; undefined
 
 ## localeMatcher
 
@@ -51,7 +51,7 @@ hour12?: boolean | undefined
 localeMatcher?: "best fit" | "lookup" | undefined
 ```
 
-**Type:** "best fit" \| "lookup" \| undefined
+**Type:** "best fit" &#124; "lookup" &#124; undefined
 
 ## minute
 
@@ -59,7 +59,7 @@ localeMatcher?: "best fit" | "lookup" | undefined
 minute?: "numeric" | "2-digit" | undefined
 ```
 
-**Type:** "numeric" \| "2-digit" \| undefined
+**Type:** "numeric" &#124; "2-digit" &#124; undefined
 
 ## month
 
@@ -67,7 +67,7 @@ minute?: "numeric" | "2-digit" | undefined
 month?: "numeric" | "2-digit" | "number" | "short" | "narrow" | undefined
 ```
 
-**Type:** "numeric" \| "2-digit" \| "number" \| "short" \| "narrow" \| undefined
+**Type:** "numeric" &#124; "2-digit" &#124; "number" &#124; "short" &#124; "narrow" &#124; undefined
 
 ## second
 
@@ -75,7 +75,7 @@ month?: "numeric" | "2-digit" | "number" | "short" | "narrow" | undefined
 second?: "numeric" | "2-digit" | undefined
 ```
 
-**Type:** "numeric" \| "2-digit" \| undefined
+**Type:** "numeric" &#124; "2-digit" &#124; undefined
 
 ## timeZone
 
@@ -83,7 +83,7 @@ second?: "numeric" | "2-digit" | undefined
 timeZone?: string | undefined
 ```
 
-**Type:** string \| undefined
+**Type:** string &#124; undefined
 
 ## timeZoneName
 
@@ -91,7 +91,7 @@ timeZone?: string | undefined
 timeZoneName?: "short" | "number" | "shortOffset" | "longOffset" | "shortGeneric" | "longGeneric" | undefined
 ```
 
-**Type:** "short" \| "number" \| "shortOffset" \| "longOffset" \| "shortGeneric" \| "longGeneric" \| undefined
+**Type:** "short" &#124; "number" &#124; "shortOffset" &#124; "longOffset" &#124; "shortGeneric" &#124; "longGeneric" &#124; undefined
 
 ## weekday
 
@@ -99,7 +99,7 @@ timeZoneName?: "short" | "number" | "shortOffset" | "longOffset" | "shortGeneric
 weekday?: "number" | "short" | "narrow" | undefined
 ```
 
-**Type:** "number" \| "short" \| "narrow" \| undefined
+**Type:** "number" &#124; "short" &#124; "narrow" &#124; undefined
 
 ## year
 
@@ -107,4 +107,4 @@ weekday?: "number" | "short" | "narrow" | undefined
 year?: "numeric" | "2-digit" | undefined
 ```
 
-**Type:** "numeric" \| "2-digit" \| undefined
+**Type:** "numeric" &#124; "2-digit" &#124; undefined

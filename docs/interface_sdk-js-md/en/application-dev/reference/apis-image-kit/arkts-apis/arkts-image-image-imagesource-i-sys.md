@@ -146,7 +146,7 @@ Modify the value of properties in an image with the specified keys.The HwMnote r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | Yes | Property Records whose values are to be modified, when the value is set to null the tag will be removed. |
+| records | Record&lt;string, string &#124; null&gt; | Yes | Property Records whose values are to be modified, when the value is set to null the tag will be removed. |
 
 **Return value:**
 

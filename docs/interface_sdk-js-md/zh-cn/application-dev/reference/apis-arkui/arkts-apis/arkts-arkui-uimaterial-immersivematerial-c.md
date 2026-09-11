@@ -36,4 +36,4 @@ ImmersiveMaterial的构造函数。创建沉浸式材质对象，仅在支持沉
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md) | 否 | 系统材质配置选项，包括材质样式、材质层赋色等。默认值参考ImmersiveOptions接口各参数的默认值，即`{style:uiMaterial.ImmersiveStyle.REGULAR, materialColor:undefined, colorInvert:false, applyShadow:true, interactive:false, lightEffect:undefined}`。 |
+| options | [ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md) | 否 | 系统材质配置选项，包括材质样式、材质层赋色等。<br>默认值参考ImmersiveOptions接口各参数的默认值，即`{style:uiMaterial.ImmersiveStyle.REGULAR, materialColor:undefined, colorInvert:false, applyShadow:true, interactive:false, lightEffect:undefined}`。 |

@@ -50,7 +50,7 @@ getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
 | --- | --- | --- | --- |
 | start | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | 是 | 范围开始的组件的ID。 |
 | end | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | 是 | 范围结束的组件的ID。 |
-| isStartRect | boolean | 是 | 范围是否以开始组件的外接矩形为准。true表示以开始组件的外接矩形为准，false表示以结束组件的外接矩形为准。默认值为true。 |
+| isStartRect | boolean | 是 | 范围是否以开始组件的外接矩形为准。<br>true表示以开始组件的外接矩形为准，false表示以结束组件的外接矩形为准。<br>默认值为true。 |
 | options | [componentSnapshot.SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | 否 | 截图相关的自定义参数，不支持region参数。 |
 
 **返回值：**

@@ -70,7 +70,7 @@ password?: string
 
 使用代理的用户密码。
 
-**说明:** 需同时设置username参数才会生效。
+**说明：**需同时设置username参数才会生效。
 
 **类型：** string
 
@@ -102,7 +102,7 @@ username?: string
 
 使用代理的用户名。
 
-**说明:** 需同时设置password参数才会生效。
+**说明：**需同时设置password参数才会生效。
 
 **类型：** string
 

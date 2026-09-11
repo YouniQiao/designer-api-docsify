@@ -31,7 +31,7 @@ A constructor used to create a **TabBarOptions** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [TabBarSymbol](../arkts-components/arkts-arkui-tabbarsymbol-c.md) | Yes | Image for the tab. |
+| icon | [ResourceStr](arkts-arkui-resourcestr-t.md) &#124; [TabBarSymbol](../arkts-components/arkts-arkui-tabbarsymbol-c.md) | Yes | Image for the tab. |
 | text | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | Text of the tab. |
-| unselectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No | Color of the tab when it is not selected. Default value: **#99182431 |
-| selectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No | Color of the tab when it is selected. Default value: **#FF007DFF |
+| unselectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No | Color of the tab when it is not selected.<br>Default value: **#99182431 |
+| selectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No | Color of the tab when it is selected.<br>Default value: **#FF007DFF |

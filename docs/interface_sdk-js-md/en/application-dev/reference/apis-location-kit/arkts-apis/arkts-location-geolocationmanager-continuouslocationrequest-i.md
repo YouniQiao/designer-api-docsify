@@ -36,7 +36,7 @@ locationScenario: UserActivityScenario | PowerConsumptionScenario
 
 Location scenario. You can select a user activity scenario or power consumption scenario.
 
-**Type:** [UserActivityScenario](arkts-location-geolocationmanager-useractivityscenario-e.md) \| [PowerConsumptionScenario](arkts-location-geolocationmanager-powerconsumptionscenario-e.md)
+**Type:** [UserActivityScenario](arkts-location-geolocationmanager-useractivityscenario-e.md) &#124; [PowerConsumptionScenario](arkts-location-geolocationmanager-powerconsumptionscenario-e.md)
 
 **Since:** 12
 

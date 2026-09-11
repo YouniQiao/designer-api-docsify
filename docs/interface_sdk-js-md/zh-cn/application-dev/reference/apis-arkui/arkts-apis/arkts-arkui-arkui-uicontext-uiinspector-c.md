@@ -65,7 +65,7 @@ createComponentObserver(id: string | number): inspector.ComponentObserver
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string \| number | 是 | 指定组件id，该id通过通用属性id或者key设置。 |
+| id | string &#124; number | 是 | 指定组件id，该id通过通用属性id或者key设置。 |
 
 **返回值：**
 

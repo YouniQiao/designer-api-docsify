@@ -28,7 +28,7 @@ function setPriorityIntelligentEnabled(enable: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 优先通知智能服务使能状态。    - true：优先通知智能服务为打开状态。    - false：优先通知智能服务为关闭状态。 |
+| enable | boolean | 是 | 优先通知智能服务使能状态。<br> - true：优先通知智能服务为打开状态。<br> - false：优先通知智能服务为关闭状态。 |
 
 **返回值：**
 

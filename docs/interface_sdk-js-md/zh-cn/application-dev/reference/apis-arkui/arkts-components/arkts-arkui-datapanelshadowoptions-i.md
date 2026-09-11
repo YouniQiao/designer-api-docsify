@@ -29,7 +29,7 @@ colors?: Array<ResourceColor | LinearGradient>
 
 若设置的投影颜色的个数多于数据段个数时，则显示的投影颜色的个数和数据段个数一致。
 
-**类型：** Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md)&gt;
+**类型：** Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [LinearGradient](arkts-arkui-lineargradient-c.md)&gt;
 
 **默认值：** Consistent with valueColors
 

@@ -33,4 +33,3 @@ Get inspector node info by node id.
 
 | Type | Description |
 | --- | --- |
-| object |  |

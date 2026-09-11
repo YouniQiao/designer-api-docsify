@@ -133,7 +133,7 @@ Obtains an AudioDebuggingManager instance. <p>&lt;strong&gt;NOTE&lt;/strong&gt;:
 
 | Type | Description |
 | --- | --- |
-| [AudioDebuggingManager](arkts-audio-audio-audiodebuggingmanager-i.md) | this { |
+| [AudioDebuggingManager](arkts-audio-audio-audiodebuggingmanager-i.md) | this [AudioDebuggingManager](arkts-audio-audio-audiodebuggingmanager-i.md) object. |
 
 ## getDeviceEnhanceManager
 
@@ -495,7 +495,7 @@ Obtains the volume of a stream. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the volume of the stream. The volume range of a specified stream can be obtained by calling [getMinVolume]{ |
+| Promise&lt;number&gt; | Promise used to return the volume of the stream. The volume range of a specified stream can be obtained by calling [getMinVolume](#getminvolume) and [getMaxVolume](#getmaxvolume). |
 
 ## getVolumeManager
 
@@ -887,7 +887,7 @@ on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback<InterruptAct
 
 Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result.
 
-Same as on('audioInterrupt'), this API is used to listen for focus changes. However, this API is used in scenarios without audio streams (no AudioRenderer instance is created), such as frequency modulation (FM) and voice wakeup.
+Same as [on('audioInterrupt')](arkts-audio-audio-audiorenderer-i.md#onaudiointerrupt), this API is used to listen for focus changes. However, this API is used in scenarios without audio streams (no AudioRenderer instance is created), such as frequency modulation (FM) and voice wakeup.
 
 **Since:** 7
 

@@ -27,7 +27,7 @@ Sets the slot flags for a specified application. This API uses a promise to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundle | [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md) | Yes | Bundle information of the application. |
-| slotFlags | number | Yes | Notification slot flags.   - Bit 0: sound alert. The value **0** means to disable the feature, and **1** means the opposite.   - Bit 1: locking the screen. The value **0** means to disable the feature, and **1** means the opposite.   - Bit 2: banner. The value **0** means to disable the feature, and **1** means the opposite.   - Bit 3: turning on the screen. The value **0** means to disable the feature, and **1** means the opposite.   - Bit 4: vibration. The value **0** means to disable the feature, and **1** means the opposite.   - Bit 5: notification icon in the status bar. The value **0** means to disable the feature, and **1** means the opposite. |
+| slotFlags | number | Yes | Notification slot flags.<br>- Bit 0: sound alert. The value **0** means to disable the feature, and **1** means the opposite.<br>- Bit 1: locking the screen. The value **0** means to disable the feature, and **1** means the opposite.<br>- Bit 2: banner. The value **0** means to disable the feature, and **1** means the opposite.<br>- Bit 3: turning on the screen. The value **0** means to disable the feature, and **1** means the opposite.<br>- Bit 4: vibration. The value **0** means to disable the feature, and **1** means the opposite.<br>- Bit 5: notification icon in the status bar. The value **0** means to disable the feature, and **1** means the opposite. |
 
 **Return value:**
 

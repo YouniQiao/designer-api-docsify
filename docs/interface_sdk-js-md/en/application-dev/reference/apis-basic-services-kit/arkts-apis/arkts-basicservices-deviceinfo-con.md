@@ -218,7 +218,7 @@ const diskSN: string
 
 Serial number of the disk. This API will start a temporary process during execution. When the system load is high, blocking may occur. To ensure the response of the main thread of your application, you are advised not to call this API in the main thread. This value varies depending on the device and is fixed. To improve performance, you can store this information on a local device after obtaining it for the first time.
 
-**NOTE：**
+**NOTE:**
 
 This field can be queried only on the 2-in-1 device. For other devices, the query result is empty.
 
@@ -384,7 +384,7 @@ const hardwareProfile: string
 
 Hardware profile.
 
-**NOTE：**
+**NOTE:**
 
 This API is supported since API version 6 and deprecated since API version 9. You are advised to use [SystemCapability](../../../reference/syscap.md) instead.
 
@@ -486,7 +486,7 @@ Applications with the same **developerId** use different ODIDs on different devi
 
 Applications with different **developerId**s use different ODIDs on different devices.
 
-**NOTE：**
+**NOTE:**
 
 The data length is 37 bytes (including the terminator).
 
@@ -704,7 +704,7 @@ const serial: string
 
 Serial number of the device. This API will start a temporary process during execution. When the system load is high, blocking may occur. To ensure the response of the main thread of your application, you are advised not to call this API in the main thread. This value varies depending on the device and is fixed. To improve performance, you can store this information on a local device after obtaining it for the first time..
 
-**NOTE：**
+**NOTE:**
 
 The device SN can be used as the unique identifier of a device.
 
@@ -744,7 +744,7 @@ const udid: string
 
 UDID of the device. This API will start a temporary process during execution. When the system load is high, blocking may occur. To ensure the response of the main thread of your application, you are advised not to call this API in the main thread. This value varies depending on the device and is fixed. To improve performance, you can store this information on a local device after obtaining it for the first time.
 
-**NOTE：**
+**NOTE:**
 
 The data length is 65 bytes. The UDID can be used as the unique identifier of a device.
 

@@ -25,7 +25,7 @@ new <K, V>(entries?: readonly (readonly [K, V])[] | null): Map<K, V>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | readonly (readonly [K, V])[] \| null | No |  |
+| entries | readonly (readonly [K, V])[] &#124; null | No |  |
 
 **Return value:**
 

@@ -14,7 +14,7 @@ function setPreferredApn(apnId: number): Promise<boolean>
 
 Sets the APN corresponding to the specified **apnId** as the preferred APN. This API returns the result asynchronously.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the input APN ID is invalid, the default preferred APN configured by the carrier is used.
 

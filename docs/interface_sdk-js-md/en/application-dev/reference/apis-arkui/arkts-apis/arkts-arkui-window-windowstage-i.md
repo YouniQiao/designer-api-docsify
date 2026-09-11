@@ -197,8 +197,6 @@ Get main window of the stage.
 
 | Type | Description |
 | --- | --- |
-| [Window](arkts-arkui-window-window-i.md) |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -226,8 +224,6 @@ Get sub window of the stage.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[Window](arkts-arkui-window-window-i.md)&gt;&gt; |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -353,8 +349,6 @@ Loads the content of a page, with its path in the current project specified, to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -872,7 +866,7 @@ setImageForRecent(imageResource: number | image.PixelMap, value: ImageFit): Prom
 
 Sets the image displayed in the multitasking view and on dock hover. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Before calling this API, you are advised to complete page loading via
 > [loadContent](arkts-arkui-window-window-i.md#loadcontent) or
@@ -894,7 +888,7 @@ Sets the image displayed in the multitasking view and on dock hover. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageResource | number \| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | imageResourceId or pixelMap for recent image. imageResourceId Value Range: [0x1000000, 0xffffffff]. |
+| imageResource | number &#124; [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | imageResourceId or pixelMap for recent image. imageResourceId Value Range: [0x1000000, 0xffffffff]. |
 | value | ImageFit | Yes | Sets the zoom type of an image. |
 
 **Return value:**

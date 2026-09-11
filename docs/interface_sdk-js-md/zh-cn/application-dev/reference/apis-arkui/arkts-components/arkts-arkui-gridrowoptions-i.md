@@ -58,7 +58,7 @@ columns?: number | GridRowColumnOption
 
 非法值：按默认值处理。
 
-**类型：** number \| [GridRowColumnOption](arkts-arkui-gridrowcolumnoption-i.md)
+**类型：** number &#124; [GridRowColumnOption](arkts-arkui-gridrowcolumnoption-i.md)
 
 **起始版本：** 9
 
@@ -104,7 +104,7 @@ gutter?: Length | GutterOption
 
 单位：vp
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| [GutterOption](arkts-arkui-gutteroption-i.md)
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [GutterOption](arkts-arkui-gutteroption-i.md)
 
 **起始版本：** 9
 

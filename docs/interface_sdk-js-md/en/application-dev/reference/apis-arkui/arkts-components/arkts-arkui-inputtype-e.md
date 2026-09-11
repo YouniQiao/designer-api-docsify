@@ -82,7 +82,7 @@ The entered text is briefly displayed before turning to dots by default. Since A
 
 The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices.
 
-The [decoration](arkts-arkui-textinput-attribute.md#decoration), [showUnderline](arkts-arkui-textinput-attribute.md#showunderline), and [lineHeight](arkts-arkui-textinput-attribute.md#lineheight) attributes do not take effect in password input mode.
+The [decoration](arkts-arkui-textinput-comp-attribute.md#decoration), [showUnderline](arkts-arkui-textinput-comp-attribute.md#showunderline), and [lineHeight](arkts-arkui-textinput-comp-attribute.md#lineheight) attributes do not take effect in password input mode.
 
 If Password Vault is enabled, autofill is available for the username and password.
 

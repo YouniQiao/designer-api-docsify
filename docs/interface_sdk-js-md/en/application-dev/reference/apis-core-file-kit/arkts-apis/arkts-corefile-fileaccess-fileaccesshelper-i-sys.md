@@ -846,8 +846,6 @@ Deletes a file or directory. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |

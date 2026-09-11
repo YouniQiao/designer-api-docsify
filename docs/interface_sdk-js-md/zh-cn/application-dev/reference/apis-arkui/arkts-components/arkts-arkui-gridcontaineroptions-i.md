@@ -10,7 +10,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
+**替代接口：** grid_col/GridColOptions and grid_row/GridRowOptions
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,13 +29,13 @@ columns?: number | "auto"
 
 默认值：'auto'
 
-**类型：** number \| "auto"
+**类型：** number &#124; "auto"
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
+**替代接口：** grid_col/GridColOptions and grid_row/GridRowOptions
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,13 +47,13 @@ gutter?: number | string
 
 栅格布局列间距，不支持百分比。number类型默认单位为vp，取值范围[0, +∞)。不设置时根据设备宽度类型自动确定：XS为12vp，SM/MD/LG为24vp。
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
+**替代接口：** grid_col/GridColOptions and grid_row/GridRowOptions
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,13 +65,13 @@ margin?: number | string
 
 栅格布局两侧间距，不支持百分比。number类型默认单位为vp，取值范围[0, +∞)。不设置时根据设备宽度类型自动确定：XS为12vp，SM为24vp，MD为32vp，LG为48vp。
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
+**替代接口：** grid_col/GridColOptions and grid_row/GridRowOptions
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -91,6 +91,6 @@ sizeType?: SizeType
 
 **废弃版本：** 9
 
-**替代接口：** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
+**替代接口：** grid_col/GridColOptions and grid_row/GridRowOptions
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

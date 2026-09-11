@@ -2,6 +2,8 @@
 
 AgentCard describes the basic information and capabilities provided by an Agent.
 
+@typedef AgentCard
+
 **Since:** 24
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core

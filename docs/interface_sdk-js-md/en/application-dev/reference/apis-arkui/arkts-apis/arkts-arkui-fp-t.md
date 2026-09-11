@@ -6,6 +6,8 @@ declare type FP = `${number}fp`
 
 Defines the length property with number in units of fp.
 
+@typedef { `\${number}fp` } FP
+
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.

@@ -24,7 +24,7 @@ Whether the hotspot is metered hotspot or not.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the hotspot is metered hotspot, returns `false` otherwise. |
 
 **Error codes:**
 

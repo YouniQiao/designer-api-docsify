@@ -607,7 +607,7 @@ deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, window
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
 | level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 | 参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md)。 |
 | method | [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md) | 是 | 参考[CompressMethod枚举定义](arkts-basicservices-zlib-compressmethod-e.md)。 |
-| windowBits | number | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：zlib格式：[1, 15]。gzip格式：大于15。raw deflate格式：[-15, -1]。 |
+| windowBits | number | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：<br>zlib格式：[1, 15]。<br>gzip格式：大于15。<br>raw deflate格式：[-15, -1]。 |
 | memLevel | [MemLevel](arkts-basicservices-zlib-memlevel-e.md) | 是 | 参考[MemLevel枚举定义](arkts-basicservices-zlib-memlevel-e.md)。 |
 | strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | 是 | 参考[CompressStrategy枚举定义](arkts-basicservices-zlib-compressstrategy-e.md)。 |
 
@@ -1544,7 +1544,7 @@ inflateBackInit(strm: ZStream, windowBits: number, window: ArrayBuffer): Promise
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| windowBits | number | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：zlib格式：[1, 15]。gzip格式：大于1 5。raw deflate格式：[-15, -1]。 |
+| windowBits | number | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：<br>zlib格式：[1, 15]。<br>gzip格式：大于1 5。<br>raw deflate格式：[-15, -1]。 |
 | window | ArrayBuffer | 是 | 预设的窗口缓冲区。 |
 
 **返回值：**
@@ -1952,7 +1952,7 @@ inflateInit2(strm: ZStream, windowBits: number): Promise<ReturnStatus>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| windowBits | number | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：zlib格式：[1, 15]。gzip格式：大于15。raw deflate格式：[-15, -1]。 |
+| windowBits | number | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：<br>zlib格式：[1, 15]。<br>gzip格式：大于15。<br>raw deflate格式：[-15, -1]。 |
 
 **返回值：**
 
@@ -2194,7 +2194,7 @@ inflateReset2(strm: ZStream, windowBits: number): Promise<ReturnStatus>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| windowBits | number | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：zlib格式：[1, 15]。gzip格式：大于15。raw deflate格式：[-15, -1]。 |
+| windowBits | number | 是 | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：<br>zlib格式：[1, 15]。<br>gzip格式：大于15。<br>raw deflate格式：[-15, -1]。 |
 
 **返回值：**
 

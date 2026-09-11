@@ -2,7 +2,7 @@
 
 Configures the annular emitter area.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - If the value of outerRadius or innerRadius is less than 0 or uses the percentage unit, the value is considered as
 > 0.

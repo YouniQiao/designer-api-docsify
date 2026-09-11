@@ -22,7 +22,7 @@ function getDefaultCellularDataSlotIdSync(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 获取默认移动数据的SIM卡。 |
+| number | 获取默认移动数据的SIM卡。<br>- 0：卡槽1。 <br>- 1：卡槽2。<br>- 2：esim和天际通场景下，默认移动数据的slotId为2。 |
 
 **示例**
 

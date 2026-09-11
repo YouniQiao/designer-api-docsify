@@ -36,10 +36,9 @@ columnsTemplate(value: string | ItemFillPolicy | undefined): LazyVWaterFlowLayou
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md) \| undefined | 是 | 布局中的列数。默认值：'1fr' |
+| value | string &#124; [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md) &#124; undefined | 是 | 布局中的列数。<br>默认值：'1fr' |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-c.md) |  |

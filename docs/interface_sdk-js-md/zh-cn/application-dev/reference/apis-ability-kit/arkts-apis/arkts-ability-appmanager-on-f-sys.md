@@ -34,7 +34,7 @@ function on(type: 'applicationState', observer: ApplicationStateObserver, filter
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 已注册监听器ID，可用于[off]{ |
+| number | 已注册监听器ID，可用于off接口注销监听器。 |
 
 **错误码：**
 

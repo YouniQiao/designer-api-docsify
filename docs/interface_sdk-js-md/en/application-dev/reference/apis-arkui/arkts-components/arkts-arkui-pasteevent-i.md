@@ -1,6 +1,6 @@
 # PasteEvent
 
-Defines a custom paste event.
+Defines a user paste event.
 
 **Since:** 11
 
@@ -17,7 +17,9 @@ Defines a custom paste event.
 preventDefault?: Callback<void>
 ```
 
-Prevents the default paste event.
+Prevents the system default paste event.
+
+When omitted, the system default paste behavior is executed.
 
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 

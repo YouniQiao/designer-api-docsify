@@ -47,10 +47,10 @@ import { scan } from '@kit.BasicServicesKit';
 | [addScanner](arkts-basicservices-scan-addscanner-f-sys.md) | 添加扫描仪（系统API）。使用Promise异步回调。 |
 | [deleteScanner](arkts-basicservices-scan-deletescanner-f-sys.md) | 删除扫描仪（系统API）。使用Promise异步回调。 |
 | [getAddedScanners](arkts-basicservices-scan-getaddedscanners-f-sys.md) | 获取已添加的扫描仪（系统API）。使用Promise异步回调。 |
-| off | 取消注册扫描仪设备添加事件回调（系统API）。使用callback异步回调。 |
-| off | 取消注册扫描仪设备删除事件回调（系统API）。使用callback异步回调。 |
-| on | 注册扫描仪设备添加事件回调（系统API）。使用callback异步回调。 |
-| on | 注册扫描仪设备删除事件回调（系统API）。使用callback异步回调。 |
+| [off](arkts-basicservices-scan-off-f-sys.md#offscandeviceadd) | 取消注册扫描仪设备添加事件回调（系统API）。使用callback异步回调。 |
+| [off](arkts-basicservices-scan-off-f-sys.md#offscandevicedel) | 取消注册扫描仪设备删除事件回调（系统API）。使用callback异步回调。 |
+| [on](arkts-basicservices-scan-on-f-sys.md#onscandeviceadd) | 注册扫描仪设备添加事件回调（系统API）。使用callback异步回调。 |
+| [on](arkts-basicservices-scan-on-f-sys.md#onscandevicedel) | 注册扫描仪设备删除事件回调（系统API）。使用callback异步回调。 |
 <!--DelEnd-->
 
 ### 接口

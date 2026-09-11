@@ -57,11 +57,13 @@ Default value: depending on the rendering strategy
 fontSize?: number | string | Resource
 ```
 
-Size of the symbol span. The default unit is fp.
+Sets the size of the SymbolSpan component. The default unit is fp.
 
-The default value follows the theme.
+Value range of the number type: (0, +∞). When set to 0, the default font size is used.
 
-**Type:** number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+Default value: follows the theme.
+
+**Type:** number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 11
 
@@ -77,7 +79,7 @@ The default value follows the theme.
 fontWeight?: number | FontWeight | string
 ```
 
-Weight of the symbol span.
+Font weight of the symbol span.
 
 For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**.
 
@@ -85,7 +87,7 @@ For the string type, only strings of the number type are supported, for example,
 
 Default value: **FontWeight.Normal**
 
-**Type:** number \| [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| string
+**Type:** number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; string
 
 **Since:** 11
 

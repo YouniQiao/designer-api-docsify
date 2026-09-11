@@ -436,7 +436,7 @@ mask?: boolean | PopupMaskType
 
 设置气泡是否有遮罩层及遮罩颜色。设置为false时不显示遮罩层，设置为true时显示透明色遮罩层，设置为PopupMaskType时显示指定颜色的遮罩层。默认值：true
 
-**类型：** boolean \| [PopupMaskType](arkts-arkui-popupmasktype-i.md)
+**类型：** boolean &#124; [PopupMaskType](arkts-arkui-popupmasktype-i.md)
 
 **起始版本：** 18
 
@@ -490,7 +490,7 @@ onWillDismiss?: boolean | Callback<DismissPopupAction>
 1. 在onWillDismiss回调中，不能再做onWillDismiss拦截。
 2. 不支持通过[updatePopup](../arkts-apis/arkts-arkui-arkui-uicontext-promptaction-c.md#updatepopup)进行更新。
 
-**类型：** boolean \| [Callback](arkts-arkui-callback-i.md)&lt;[DismissPopupAction](arkts-arkui-dismisspopupaction-i.md)&gt;
+**类型：** boolean &#124; [Callback](arkts-arkui-callback-i.md)&lt;[DismissPopupAction](arkts-arkui-dismisspopupaction-i.md)&gt;
 
 **起始版本：** 18
 
@@ -619,7 +619,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 The style of popup Shadow.
 
-**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
+**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **默认值：** ShadowStyle.OUTER_DEFAULT_MD.
 

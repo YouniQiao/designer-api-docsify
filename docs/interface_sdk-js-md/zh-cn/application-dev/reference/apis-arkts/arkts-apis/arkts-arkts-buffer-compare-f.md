@@ -24,14 +24,14 @@ function compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): -1 | 0 |
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buf1 | Buffer \| Uint8Array | 是 | 待比较的第一个Buffer或Uint8Array实例。 |
-| buf2 | Buffer \| Uint8Array | 是 | 待比较的第二个Buffer或Uint8Array实例。 |
+| buf1 | Buffer &#124; Uint8Array | 是 | 待比较的第一个Buffer或Uint8Array实例。 |
+| buf2 | Buffer &#124; Uint8Array | 是 | 待比较的第二个Buffer或Uint8Array实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| -1 \| 0 \| 1 | 如果buf1与buf2相同，则返回0。 |
+| -1 &#124; 0 &#124; 1 | 如果buf1与buf2相同，则返回0。<br>如果排序时buf1位于buf2之后，则返回1。<br>如果排序时buf1位于buf2之前，则返回-1。 |
 
 **示例**
 

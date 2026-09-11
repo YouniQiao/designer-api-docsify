@@ -31,7 +31,7 @@ Closes a WebSocket connection. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | connection | [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md) | Yes | Client information, including the IP address and port number. |
-| options | [webSocket.WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | No | Optional parameters carried in the request for closing a WebSocket connection. By default, the error code is 200, and the cause is **Websocket connect failed**. |
+| options | [webSocket.WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | No | Optional parameters carried in the request for closing a WebSocket connection.<br>By default, the error code is 200, and the cause is **Websocket connect failed**. |
 
 **Return value:**
 
@@ -92,7 +92,7 @@ Obtains information about all clients connected to the server.
 
 **Required permission**: ohos.permission.INTERNET
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is called asynchronously. The **await** keyword needs to be used to wait until the asynchronous
 > operation is complete, ensuring that information about all clients connected to the server can be correctly
@@ -164,7 +164,7 @@ off(type: 'connect', callback?: Callback<WebSocketConnection>): void
 
 Unsubscribes from WebSocketServer connection events (the connection between the client and server is successfully established). This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
 > If you do not pass the callback, you will cancel listening for all events.
@@ -198,7 +198,7 @@ off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void
 
 Unsubscribes from the WebSocketServer event of receiving client messages. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
 > If you do not pass the callback, you will cancel listening for all events.
@@ -212,7 +212,7 @@ Unsubscribes from the WebSocketServer event of receiving client messages. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'messageReceive' | Yes | Event type, which has a fixed value of **messageReceive**. Successful calling of **offmessageReceive()** indicates that listening for **messageReceive** events is canceled successfully. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | No | Callback used to return the result, which contains:    - **clientconnection**: client information.    - **data**: data sent by the client. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | No | Callback used to return the result, which contains:<br>- **clientconnection**: client information. <br>- **data**: data sent by the client. |
 
 **Examples**
 
@@ -232,7 +232,7 @@ off(type: 'close', callback?: ClientConnectionCloseCallback): void
 
 Unsubscribes from WebSocketServer close events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
 > If you do not pass the callback, you will cancel listening for all events.
@@ -246,7 +246,7 @@ Unsubscribes from WebSocketServer close events. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'close' | Yes | Event type, which has a fixed value of **close**. Successful calling of **offclose()** indicates that listening for the **close** events is canceled successfully. |
-| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | No | Callback used to return the result.    **close** and **reason** indicate the error code and error cause for closing the connection, respectively. |
+| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | No | Callback used to return the result.<br>**close** and **reason** indicate the error code and error cause for closing the connection, respectively. |
 
 **Examples**
 
@@ -266,7 +266,7 @@ off(type: 'error', callback?: ErrorCallback): void
 
 Unsubscribes from WebSocketServer error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event.
 > If you do not pass the callback, you will cancel listening for all events.
@@ -340,7 +340,7 @@ Subscribes to the WebSocketServer event of receiving client messages. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'messageReceive' | Yes | Event type, which has a fixed value of **messageReceive**. Successful calling of **onmessageReceive()** indicates that a message is received from the client. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | Yes | Callback used to return the result.    **clientconnection** indicates the client information and **data** indicates the data message sent by the client. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | Yes | Callback used to return the result.<br>**clientconnection** indicates the client information and **data** indicates the data message sent by the client. |
 
 **Examples**
 
@@ -371,7 +371,7 @@ Subscribes to WebSocketServer close events. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'close' | Yes | Event type, which has a fixed value of **close**. Successful calling of **onclose()** indicates that the connection is closed successfully. |
-| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | Yes | Callback used to return the result.    **close** and **reason** indicate the error code and error cause for closing the connection, respectively. |
+| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | Yes | Callback used to return the result.<br>**close** and **reason** indicate the error code and error cause for closing the connection, respectively. |
 
 **Examples**
 
@@ -424,7 +424,7 @@ send(data: string | ArrayBuffer, connection: WebSocketConnection): Promise<boole
 
 Sends data through the WebSocket connection. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The **send** API can be called only after a **connect** event is listened.
 > **Required permission**: ohos.permission.INTERNET
@@ -439,7 +439,7 @@ Sends data through the WebSocket connection. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string \| ArrayBuffer | Yes | Data to send, which can be of the string or ArrayBuffer type. A maximum of 5,242,864 bytes (that is, 5 x 1024 x 1024 - 16) can be sent. If the data size exceeds the upper limit, error code 401 will be returned. |
+| data | string &#124; ArrayBuffer | Yes | Data to send, which can be of the string or ArrayBuffer type. A maximum of 5,242,864 bytes (that is, 5 x 1024 x 1024 - 16) can be sent. If the data size exceeds the upper limit, error code 401 will be returned. |
 | connection | [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md) | Yes | Client information. |
 
 **Return value:**
@@ -502,7 +502,7 @@ start(config: WebSocketServerConfig): Promise<boolean>
 
 Starts the WebSocketServer service based on the specified **config**. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You are advised not to listen for the same port when calling this API multiple times.
 > **Required permission**: ohos.permission.INTERNET

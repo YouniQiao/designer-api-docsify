@@ -40,4 +40,3 @@ Defines the dynamic layout container.
 
 | Type | Description |
 | --- | --- |
-| [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-c.md) |  |

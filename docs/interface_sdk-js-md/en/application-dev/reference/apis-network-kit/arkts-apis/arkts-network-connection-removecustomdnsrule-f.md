@@ -14,7 +14,7 @@ function removeCustomDnsRule(host: string, callback: AsyncCallback<void>): void
 
 Removes the custom DNS rules of the specified host from the current application. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You can call [addCustomDnsRule](arkts-network-connection-addcustomdnsrule-f.md) to add a custom rule.
 
@@ -67,7 +67,7 @@ function removeCustomDnsRule(host: string): Promise<void>
 
 Removes the custom DNS rules of the specified host from the current application. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You can call [addCustomDnsRule](arkts-network-connection-addcustomdnsrule-f.md) to add a custom rule.
 

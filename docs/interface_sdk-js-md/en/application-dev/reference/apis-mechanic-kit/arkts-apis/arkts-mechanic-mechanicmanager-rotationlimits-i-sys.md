@@ -1,6 +1,6 @@
 # RotationLimits (System API)
 
-Rotation angle limits relative to the reference point.
+Rotation angle limits relative to the reference point. @typedef RotationLimits
 
 **Since:** 20
 

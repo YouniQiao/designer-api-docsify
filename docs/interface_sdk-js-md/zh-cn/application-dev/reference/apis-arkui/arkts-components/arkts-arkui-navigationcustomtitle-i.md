@@ -35,7 +35,7 @@ height: TitleHeight | Length
 
 设置标题栏高度。
 
-**类型：** [TitleHeight](../arkts-apis/arkts-arkui-titleheight-e.md) \| [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** [TitleHeight](../arkts-apis/arkts-arkui-titleheight-e.md) &#124; [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 9
 

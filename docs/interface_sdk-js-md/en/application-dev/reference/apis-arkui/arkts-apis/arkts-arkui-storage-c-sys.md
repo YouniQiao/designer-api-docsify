@@ -92,8 +92,6 @@ Called when data is obtained.
 
 | Type | Description |
 | --- | --- |
-| string \| undefined |  |
-
 ## set
 
 ```TypeScript

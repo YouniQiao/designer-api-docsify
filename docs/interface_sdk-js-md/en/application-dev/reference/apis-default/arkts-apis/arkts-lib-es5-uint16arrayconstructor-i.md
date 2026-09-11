@@ -31,7 +31,7 @@ new(array: ArrayLike<number> | ArrayBufferLike): Uint16Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; \| [ArrayBufferLike](arkts-arraybufferlike-t.md) | Yes |  |
+| array | ArrayLike&lt;number&gt; &#124; [ArrayBufferLike](arkts-arraybufferlike-t.md) | Yes |  |
 
 **Return value:**
 

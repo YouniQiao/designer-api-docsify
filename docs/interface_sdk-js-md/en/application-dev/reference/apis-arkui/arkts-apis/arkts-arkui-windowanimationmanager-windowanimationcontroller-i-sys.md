@@ -66,7 +66,7 @@ Called on closing a window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| closingWindowTarget | [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) | Yes |  |
+| closingWindowTarget | [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) | Yes | Window target of the closing window. |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
 **Examples**

@@ -983,7 +983,7 @@ Verify whether the specified permission is allowed for a particular pid and uid 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | asynchronous callback with { |
+| Promise&lt;number&gt; | asynchronous callback with `0` if the PID and UID have the permission; callback with `-1` otherwise. |
 
 ## verifyPermission
 

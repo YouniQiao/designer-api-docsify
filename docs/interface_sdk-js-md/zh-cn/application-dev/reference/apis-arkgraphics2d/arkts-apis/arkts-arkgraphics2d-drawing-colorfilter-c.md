@@ -47,7 +47,7 @@ static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): Color
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createBlendModeColorFilter
 
@@ -65,7 +65,7 @@ static createBlendModeColorFilter(color: common2D.Color | number, mode: BlendMod
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | 是 | 颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，用16进制ARGB格式的无符号整数表示，取值范围为[0, 0xFFFFFFFF]。 |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) &#124; number | 是 | 颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，用16进制ARGB格式的无符号整数表示，取值范围为[0, 0xFFFFFFFF]。 |
 | mode | [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md) | 是 | 混合模式，用于指定两个着色器叠加时的颜色混合算法。 |
 
 **返回值：**
@@ -78,7 +78,7 @@ static createBlendModeColorFilter(color: common2D.Color | number, mode: BlendMod
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createComposeColorFilter
 
@@ -109,7 +109,7 @@ static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## createLightingColorFilter
 
@@ -127,8 +127,8 @@ static createLightingColorFilter(mutColor: common2D.Color | number, addColor: co
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mutColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | 是 | 用来进行乘法运算的颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，用16进制ARGB格式的无符号整数表示，取值范围为[0, 0xFFFFFFFF]。 |
-| addColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | 是 | 用来进行加法运算的颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，用16进制ARGB格式的无符号整数表示，取值范围为[0, 0xFFFFFFFF]。 |
+| mutColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) &#124; number | 是 | 用来进行乘法运算的颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，用16进制ARGB格式的无符号整数表示，取值范围为[0, 0xFFFFFFFF]。 |
+| addColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) &#124; number | 是 | 用来进行加法运算的颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，用16进制ARGB格式的无符号整数表示，取值范围为[0, 0xFFFFFFFF]。 |
 
 **返回值：**
 
@@ -200,7 +200,7 @@ static createMatrixColorFilter(matrix: Array<number>): ColorFilter
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createSRGBGammaToLinear
 

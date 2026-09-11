@@ -317,7 +317,7 @@ letterSpacing?: number | string | Resource
 
 Letter spacing. A positive value causes characters to spread farther apart, and a negative value bring characters closer together. The value for floating point numbers is **0.0**, in units of px. If the input is not a number and cannot be parsed as a number, the default value will be used.
 
-**Type:** number \| string \| [Resource](arkts-arkui-resource-t.md)
+**Type:** number &#124; string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 18
 
@@ -333,7 +333,7 @@ maxFontSize?: number | string | Resource
 
 Maximum font size. For the setting to take effect, this attribute must be used together with **minFontSize** or layout constraint settings. Default value: **undefined**.
 
-**Type:** number \| string \| [Resource](arkts-arkui-resource-t.md)
+**Type:** number &#124; string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 18
 
@@ -365,7 +365,7 @@ minFontSize?: number | string | Resource
 
 Minimum font size. For the setting to take effect, this attribute must be used together with **maxFontSize** or layout constraint settings. Default value: **undefined**.
 
-**Type:** number \| string \| [Resource](arkts-arkui-resource-t.md)
+**Type:** number &#124; string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 18
 
@@ -461,7 +461,7 @@ onSubmit?: Callback<string> | SearchSubmitCallback
 
 Callback triggered when users click the search icon or the search button, or touch the search button on a soft keyboard. Default value: **undefined**.
 
-**Type:** Callback&lt;string&gt; \| [SearchSubmitCallback](../arkts-components/arkts-arkui-searchsubmitcallback-t.md)
+**Type:** Callback&lt;string&gt; &#124; [SearchSubmitCallback](../arkts-components/arkts-arkui-searchsubmitcallback-t.md)
 
 **Since:** 18
 
@@ -580,7 +580,7 @@ Default value in light mode: **{size: '16vp', color: '#99182431', src:' '}**.
 
 Default value in dark mode: **{size: '16vp', color: '#99ffffff', src:' '}**.
 
-**Type:** IconOptions \| [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
+**Type:** IconOptions &#124; [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 18
 

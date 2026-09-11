@@ -913,7 +913,7 @@ onLogCollected(result: common.Result): void
 
 Callback triggered upon completion of log collection, after a log collection task is successfully created via the [systemManager.startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md) API. It contains the log collection result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When log collection succeeds, the app must access the sandbox directory (**\/data/edm/log**) in its
 > **EnterpriseAdminExtensionAbility** to retrieve the logs. For details about how to obtain logs, see the following

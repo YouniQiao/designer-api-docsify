@@ -63,7 +63,7 @@ setHostPageOverlayForbidden(isForbidden: boolean) : void
 
 Sets whether the page started by the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) can be overlaid by the page of the user.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -108,7 +108,7 @@ is returned to the caller.
 - If different applications call this API to start an ability that uses the singleton mode and then call  
 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -211,7 +211,7 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<
 
 Starts a ServiceExtensionAbility under a specified system account. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -269,7 +269,7 @@ startUIAbilities(wantList: Array<Want>): Promise<void>
 
 Starts multiple UIAbility components simultaneously. This API uses a promise to return the result. You can pass the Want information of multiple UIAbility instances, which can point to one or more applications. If all the UIAbility instances can be started successfully, the system displays these UIAbility instances in multiple windows simultaneously. Depending on the window handling, different devices may have varying display effects (including window shape, quantity, and layout). This API can be properly called only on phones and tablets. If it is called on other device types, error code 801 is returned.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
@@ -329,7 +329,7 @@ startUIAbilitiesInSplitWindowMode(primaryWindowId: number, secondaryWant: Want):
 
 Starts a second UIAbility after the first UIAbility instance is created, and displays them in split-screen mode. This API uses a promise to return the result. This API can be properly called only on phones. If it is called on other device types, error code 801 is returned.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the first UIAbility instance is destroyed, the second UIAbility is started in full-screen mode.
 > 

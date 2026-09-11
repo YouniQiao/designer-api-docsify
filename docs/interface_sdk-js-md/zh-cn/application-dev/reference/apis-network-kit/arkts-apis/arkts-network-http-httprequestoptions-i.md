@@ -38,7 +38,7 @@ HTTP请求体内容。设置该字段后，框架会优先将该字段作为请�
 - 当body与extraData同时配置时，body优先，extraData会被忽略。  
 - 可与任意请求方法搭配使用，用于显式指定请求体。
 
-**类型：** string \| Object \| ArrayBuffer
+**类型：** string &#124; Object &#124; ArrayBuffer
 
 **起始版本：** 26.0.0
 
@@ -90,7 +90,7 @@ certificatePinning?: CertificatePinning | CertificatePinning[]
 
 支持动态设置证书锁定配置，可以传入单个或多个证书PIN码。
 
-**类型：** [CertificatePinning](arkts-network-http-certificatepinning-i.md) \| [CertificatePinning](arkts-network-http-certificatepinning-i.md)[]
+**类型：** [CertificatePinning](arkts-network-http-certificatepinning-i.md) &#124; [CertificatePinning](arkts-network-http-certificatepinning-i.md)[]
 
 **起始版本：** 12
 
@@ -253,7 +253,7 @@ extraData?: string | Object | ArrayBuffer
 
 2. 当HTTP请求为GET、OPTIONS、TRACE、CONNECT等方法时，此字段为HTTP请求参数的补充。开发者需传入Encode编码后的string类型参数，Object类型的参数无需预编码，参数内容会拼接到URL中进行发送。ArrayBuffer类型的参数不会做拼接处理。
 
-**类型：** string \| Object \| ArrayBuffer
+**类型：** string &#124; Object &#124; ArrayBuffer
 
 **起始版本：** 6
 
@@ -404,7 +404,7 @@ queryParams?: string | QueryParamObject
 - 使用string时不需要携带前导`?`，多个参数用`&`分隔。  
 - 当queryParams与extraData同时配置时，queryParams优先，extraData中的URL参数补充逻辑会被忽略。
 
-**类型：** string \| [QueryParamObject](arkts-network-http-queryparamobject-t.md)
+**类型：** string &#124; [QueryParamObject](arkts-network-http-queryparamobject-t.md)
 
 **起始版本：** 26.0.0
 
@@ -606,7 +606,7 @@ HTTP代理配置，该项不配置时默认使用系统代理。
 - 当usingProxy为HttpProxy类型时，使用指定网络代理。从API version 22开始，HttpProxy支持指定username和password字段。  
 - 从API version 26.0.0开始，当usingSocks5Proxy被正确配置时，usingProxy项不生效。
 
-**类型：** boolean \| [HttpProxy](arkts-network-http-httpproxy-t.md)
+**类型：** boolean &#124; [HttpProxy](arkts-network-http-httpproxy-t.md)
 
 **起始版本：** 10
 

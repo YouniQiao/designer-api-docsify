@@ -130,7 +130,7 @@ imageRes: ResourceStr | PixelMap
 
 Sets the TipsDialogV2 imageRes.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md)
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) &#124; [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md)
 
 **Since:** 18
 

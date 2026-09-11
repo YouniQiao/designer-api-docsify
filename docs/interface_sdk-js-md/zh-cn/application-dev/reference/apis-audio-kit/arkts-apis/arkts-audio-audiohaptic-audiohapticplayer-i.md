@@ -2,6 +2,8 @@
 
 音振播放器，提供音振协同播放功能。在调用AudioHapticPlayer的接口前，需要先通过[createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createplayer)创建实例。
 
+@typedef AudioHapticPlayer
+
 **起始版本：** 11
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core

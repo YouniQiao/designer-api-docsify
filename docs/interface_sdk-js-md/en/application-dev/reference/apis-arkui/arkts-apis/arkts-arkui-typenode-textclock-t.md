@@ -14,4 +14,4 @@ Represents a FrameNode of the **TextClock** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;TextClockInterface, [TextClockAttribute](../arkts-components/arkts-arkui-textclock-attribute.md)&gt;
+**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;TextClockInterface, [TextClockAttribute](../arkts-components/arkts-arkui-textclock-comp-attribute.md)&gt;

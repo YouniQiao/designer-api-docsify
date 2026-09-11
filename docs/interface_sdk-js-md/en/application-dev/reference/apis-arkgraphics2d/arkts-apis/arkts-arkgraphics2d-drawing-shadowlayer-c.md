@@ -2,7 +2,7 @@
 
 Implements a shadow layer.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The initial APIs of this class are supported since API version 12.
 > 
@@ -52,7 +52,7 @@ Creates a **ShadowLayer** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## create
 
@@ -73,7 +73,7 @@ Creates a **ShadowLayer** object.
 | blurRadius | number | Yes | Radius of the shadow layer. The value must be a floating point number greater than 0. |
 | x | number | Yes | Offset on the X axis. The value is a floating point number. |
 | y | number | Yes | Offset on the Y axis. The value is a floating point number. |
-| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) &#124; number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
 
 **Return value:**
 
@@ -85,4 +85,4 @@ Creates a **ShadowLayer** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |

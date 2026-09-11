@@ -6,7 +6,7 @@ The **LiteResultSet** instance is not refreshed in real time. After using the re
 
 In the following API examples, you need to obtain an **LiteResultSet** instance by using a query method, such as [queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querywithoutrowcount) or [querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount), and then call the corresponding method through this instance.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The initial APIs of this class are supported since API version 23.
 

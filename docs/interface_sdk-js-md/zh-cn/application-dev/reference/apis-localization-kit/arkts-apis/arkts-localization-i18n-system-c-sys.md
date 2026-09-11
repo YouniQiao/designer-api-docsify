@@ -33,7 +33,7 @@ static addPreferredLanguage(language: string, index?: number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | language | string | 是 | 待添加的偏好语言，要求是合法的语言ID。 |
-| index | number | 否 | 偏好语言的添加位置。取值范围：[0, 系统偏好语言列表长度]，小于0时取值为0，大于系统偏好语言列表长度时取值为系统偏好语言列表长度。默认值：系统偏好语言列表长度。 |
+| index | number | 否 | 偏好语言的添加位置。<br>取值范围：[0, 系统偏好语言列表长度]，小于0时取值为0，大于系统偏好语言列表长度时取值为系统偏好语言列表长度。<br>默认值：系统偏好语言列表长度。 |
 
 **错误码：**
 
@@ -119,7 +119,7 @@ static getSystemMeasurements(): Map<string, string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Map&lt;string, string&gt; | 系统支持的度量衡及其名称。其中Map的key表示度量衡的标识，value表示度量衡的名称。支持的度量衡如下： |
+| Map&lt;string, string&gt; | 系统支持的度量衡及其名称。其中Map的key表示度量衡的标识，value表示度量衡的名称。支持的度量衡如下：   - metric：公制。   - uksystem：英制。   - ussystem：美制。 |
 
 **错误码：**
 
@@ -319,7 +319,7 @@ static getUsingMeasurement(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 系统当前使用的度量衡，取值及对应含义如下： |
+| string | 系统当前使用的度量衡，取值及对应含义如下：   - metric：公制。   - uksystem：英制。   - ussystem：美制。 |
 
 **错误码：**
 
@@ -481,7 +481,7 @@ static removePreferredLanguage(index: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 待删除偏好语言在系统偏好语言列表中的位置。取值范围：[0, 系统偏好语言列表长度]，小于0时取值为0，大于系统偏好语言列表长度时取值为系统偏好语言列表长度。 |
+| index | number | 是 | 待删除偏好语言在系统偏好语言列表中的位置。<br>取值范围：[0, 系统偏好语言列表长度]，小于0时取值为0，大于系统偏好语言列表长度时取值为系统偏好语言列表长度。 |
 
 **错误码：**
 
@@ -648,8 +648,7 @@ try {
 static setSystemLanguage(language: string): void
 ```
 
-设置系统语言。若要监听系统语言变化，可以监听[公共事件](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_locale_changed) OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考[系统语言与区域](../../../internationalization/i18n-system-language-region.md#开发步骤)。  
-**说明：** 可以通过[i18n.System.getSystemLanguage()](../../../reference/apis-localization-kit/js-apis-i18n.md#getsystemlanguage9)接口获取系统语言。从API version 21开始，也可以使用[param工具](../../../tools/param-tool.md#获取系统参数的值)的“param get persist.global.language”命令获取系统语言。
+设置系统语言。若要监听系统语言变化，可以监听[公共事件](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_locale_changed) OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考[系统语言与区域](../../../internationalization/i18n-system-language-region.md#开发步骤)。<br>**说明：** <br>可以通过[i18n.System.getSystemLanguage()](../../../reference/apis-localization-kit/js-apis-i18n.md#getsystemlanguage9)接口获取系统语言。<br>从API version 21开始，也可以使用[param工具](../../../tools/param-tool.md#获取系统参数的值)的“param get persist.global.language”命令获取系统语言。
 
 **起始版本：** 9
 
@@ -917,8 +916,7 @@ try {
 static setSystemRegion(region: string): void
 ```
 
-设置系统地区。若要监听系统地区变化，可以监听[公共事件](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_locale_changed) OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考[系统语言与区域](../../../internationalization/i18n-system-language-region.md#开发步骤)。  
-**说明：** 可以通过[i18n.System.getSystemRegion()](../../../reference/apis-localization-kit/js-apis-i18n.md#getsystemregion9)接口获取系统地区。
+设置系统地区。若要监听系统地区变化，可以监听[公共事件](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_locale_changed) OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考[系统语言与区域](../../../internationalization/i18n-system-language-region.md#开发步骤)。<br>**说明：** <br>可以通过[i18n.System.getSystemRegion()](../../../reference/apis-localization-kit/js-apis-i18n.md#getsystemregion9)接口获取系统地区。
 
 **起始版本：** 9
 

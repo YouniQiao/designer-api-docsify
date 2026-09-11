@@ -40,7 +40,7 @@ Before calling this API, call [getSupportedCameras](#getsupportedcameras) to obt
 
 | Type | Description |
 | --- | --- |
-| [CameraInput](arkts-camera-camera-camerainput-i.md) | CameraInput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [CameraInput](arkts-camera-camera-camerainput-i.md) | CameraInput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -79,7 +79,7 @@ Before calling this API, specify the camera position and type based on the usage
 
 | Type | Description |
 | --- | --- |
-| [CameraInput](arkts-camera-camera-camerainput-i.md) | CameraInput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [CameraInput](arkts-camera-camera-camerainput-i.md) | CameraInput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -109,7 +109,7 @@ Creates a **CaptureSession** instance. This API returns the result synchronously
 
 | Type | Description |
 | --- | --- |
-| [CaptureSession](arkts-camera-camera-capturesession-i.md) | CaptureSession** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [CaptureSession](arkts-camera-camera-capturesession-i.md) | CaptureSession** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -141,7 +141,7 @@ Creates a deferred **PreviewOutput** instance and adds it, instead of a common *
 
 | Type | Description |
 | --- | --- |
-| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | PreviewOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | PreviewOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -175,7 +175,7 @@ Creates a **MetadataOutput** instance. This API returns the result synchronously
 
 | Type | Description |
 | --- | --- |
-| [MetadataOutput](arkts-camera-camera-metadataoutput-i.md) | MetadataOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [MetadataOutput](arkts-camera-camera-metadataoutput-i.md) | MetadataOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -192,7 +192,7 @@ createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 
 Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API can only be used to create a **PhotoOutput** object in JPEG format.
 
@@ -215,7 +215,7 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| [PhotoOutput](arkts-camera-camera-photooutput-i.md) | PhotoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [PhotoOutput](arkts-camera-camera-photooutput-i.md) | PhotoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -241,13 +241,13 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | No | Supported photo profile, which is obtained through [getSupportedOutputCapability](#getsupportedoutputcapability-1). In API version 11, this parameter is mandatory. Starting from API version 12, it will overwrite the preconfigured parameters passed in through [preconfig](arkts-camera-camera-photosession-i.md#preconfig). |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | No | Supported photo profile, which is obtained through [getSupportedOutputCapability](#getsupportedoutputcapability-1). <br>In API version 11, this parameter is mandatory. Starting from API version 12, it will overwrite the preconfigured parameters passed in through [preconfig](arkts-camera-camera-photosession-i.md#preconfig). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PhotoOutput](arkts-camera-camera-photooutput-i.md) | PhotoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [PhotoOutput](arkts-camera-camera-photooutput-i.md) | PhotoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -281,7 +281,7 @@ Creates a **PreviewOutput** instance. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | PreviewOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | PreviewOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -314,7 +314,7 @@ Creates a **PreviewOutput** instance without configuration. This API returns the
 
 | Type | Description |
 | --- | --- |
-| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | PreviewOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | PreviewOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -347,7 +347,7 @@ Creates a **Session** instance with a given scene mode. This API returns the res
 
 | Type | Description |
 | --- | --- |
-| T | Session** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| T | Session** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -369,7 +369,7 @@ In video recording mode, if SDR or HDR VIVID is enabled, the camera format and c
 | SDR/HDR Photo Capture | CameraFormat | ColorSpace |  
 |--------------------|--------------------------|------------------|  
 | SDR | [CAMERA_FORMAT_YUV_420_SP](arkts-camera-camera-cameraformat-e.md) | [BT709_LIMIT](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) |
-| HDR_VIVID | CAMERA_FORMAT_YCRCB_P010CAMERA_FORMAT_YCBCR_P010 | BT2020_HLG_LIMIT BT2020_HLG_FULL |
+| HDR_VIVID | [CAMERA_FORMAT_YCRCB_P010](arkts-camera-camera-cameraformat-e.md)<br>CAMERA_FORMAT_YCBCR_P010 | [BT2020_HLG_LIMIT](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md)<br>BT2020_HLG_FULL |
 
 **Since:** 10
 
@@ -388,7 +388,7 @@ In video recording mode, if SDR or HDR VIVID is enabled, the camera format and c
 
 | Type | Description |
 | --- | --- |
-| [VideoOutput](arkts-camera-camera-videooutput-i.md) | VideoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [VideoOutput](arkts-camera-camera-videooutput-i.md) | VideoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -421,7 +421,7 @@ Creates a **VideoOutput** instance without configuration. This API returns the r
 
 | Type | Description |
 | --- | --- |
-| [VideoOutput](arkts-camera-camera-videooutput-i.md) | VideoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [VideoOutput](arkts-camera-camera-videooutput-i.md) | VideoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -561,7 +561,7 @@ getSupportedFullOutputCapability(camera: CameraDevice, mode: SceneMode): CameraO
 
 Obtains the complete output capabilities supported by a specified camera in a specified mode, including YUV, HEIF, and HDR.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Before using YUV, HEIF, or HDR, you need to explicitly call this method to ensure that the complete output
 > capabilities are obtained.
@@ -780,7 +780,7 @@ Checks whether the camera device supports the flashlight.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the device supports the flashlight. **true** if supported, **false** otherwise. |
+| boolean | Whether the device supports the flashlight. **true** if supported, **false** otherwise. <br>If **false** is returned, [isTorchModeSupported](#istorchmodesupported), [getTorchMode](#gettorchmode), [setTorchMode](#settorchmode), [isTorchLevelControlSupported](#istorchlevelcontrolsupported), and [setTorchModeOnWithLevel](../../../reference/apis-camera-kit/arkts-apis-camera-CameraManager.md#settorchmodeonwithlevel) do not take effect. <br>If the API call fails, undefined is returned. |
 
 ## off('cameraStatus')
 
@@ -853,7 +853,7 @@ on(type: 'cameraStatus', callback: AsyncCallback<CameraStatusInfo>): void
 
 Subscribes to camera status events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -878,7 +878,7 @@ on(type: 'foldStatusChange', callback: AsyncCallback<FoldStatusInfo>): void
 
 Subscribes to fold status change events of the foldable device. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -903,7 +903,7 @@ on(type: 'torchStatusChange', callback: AsyncCallback<TorchStatusInfo>): void
 
 Subscribes to flashlight status change events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 

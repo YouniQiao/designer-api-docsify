@@ -98,7 +98,7 @@ avQueueImage?: image.PixelMap | string
 
 The artwork of play list as a PixelMap or an uri formatted String,
 
-**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| string
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) &#124; string
 
 **Since:** 11
 
@@ -260,7 +260,7 @@ mediaImage?: image.PixelMap | string
 
 The image of the media as a PixelMap or an uri formatted String, used to display in media center.
 
-**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| string
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) &#124; string
 
 **Since:** 10
 

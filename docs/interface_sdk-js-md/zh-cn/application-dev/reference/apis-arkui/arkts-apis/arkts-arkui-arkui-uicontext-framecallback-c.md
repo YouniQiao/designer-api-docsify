@@ -43,7 +43,7 @@ onFrame(frameTimeInNano: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| frameTimeInNano | number | 是 | 下一帧渲染开始执行的时间，以纳秒为单位，由系统回调时传入，开发者无需手动传入。取值范围：[0, +∞) |
+| frameTimeInNano | number | 是 | 下一帧渲染开始执行的时间，以纳秒为单位，由系统回调时传入，开发者无需手动传入。<br>取值范围：[0, +∞) |
 
 ## onIdle
 
@@ -65,4 +65,4 @@ onIdle(timeLeftInNano: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| timeLeftInNano | number | 是 | 这一帧剩余的空闲时间，以纳秒为单位，由系统回调时传入，开发者无需手动传入。取值范围：[0, +∞) |
+| timeLeftInNano | number | 是 | 这一帧剩余的空闲时间，以纳秒为单位，由系统回调时传入，开发者无需手动传入。<br>取值范围：[0, +∞) |

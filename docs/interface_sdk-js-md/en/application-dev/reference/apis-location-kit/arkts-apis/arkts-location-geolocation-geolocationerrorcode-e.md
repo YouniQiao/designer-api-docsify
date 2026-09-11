@@ -6,7 +6,7 @@ Enum for error code
 
 **Deprecated since:** 9
 
-**Required permissions:** ohos.permission.LOCATION
+**Required permissions:** ohos.permission.LOCATION @enum { number }
 
 **System capability:** SystemCapability.Location.Location.Core
 

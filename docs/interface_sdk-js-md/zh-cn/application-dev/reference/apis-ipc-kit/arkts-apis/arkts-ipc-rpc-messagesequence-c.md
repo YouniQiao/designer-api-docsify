@@ -545,7 +545,7 @@ readAshmem(): Ashmem
 
 | 类型 | 说明 |
 | --- | --- |
-| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 返回匿名共享对象，用于跨进程共享内存数据。读取数据前需先调用[mapReadWriteAshmem]{ |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 返回匿名共享对象，用于跨进程共享内存数据。读取数据前需先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)方法进行内存映射。 |
 
 **错误码：**
 
@@ -1893,7 +1893,7 @@ readRawData(size: number): number[]
 
 **废弃版本：** 11
 
-**替代接口：** [readRawDataBuffer](#readrawdatabuffer)(size: int)
+**替代接口：** [readRawDataBuffer](#readrawdatabuffer)(size: number)
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -3738,7 +3738,7 @@ writeRawData(rawData: number[], size: number): void
 
 **废弃版本：** 11
 
-**替代接口：** [writeRawDataBuffer](#writerawdatabuffer)(rawData: ArrayBuffer, size: int)
+**替代接口：** [writeRawDataBuffer](#writerawdatabuffer)(rawData: ArrayBuffer, size: number)
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 

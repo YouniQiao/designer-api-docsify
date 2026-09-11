@@ -30,7 +30,7 @@ Performs preprocessing for the asset query. This API is used when user authentic
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Challenge value. |
+| Uint8Array | Challenge value.<br>**Note:** The challenge value is used for subsequent user authentication. |
 
 **Error codes:**
 

@@ -31,7 +31,7 @@ export function grantToolPermissionsByUser(userAuthResult: UserAuthResult[]): Pr
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[TicketInfo](arkts-ability-abilitytoolaccessctrl-ticketinfo-i-sys.md)[]&gt; | Promise用于返回\\${TicketInfo[]}。 |
+| Promise&lt;[TicketInfo](arkts-ability-abilitytoolaccessctrl-ticketinfo-i-sys.md)[]&gt; | Promise用于返回\&#36;{TicketInfo[]}。 |
 
 **错误码：**
 

@@ -57,7 +57,7 @@ Whether the space occupied by system applications or system services needs to be
 size: number
 ```
 
-The business size. Unit: Byte.
+The business size. <br>Unit: Byte.
 
 **Type:** number
 

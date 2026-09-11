@@ -38,7 +38,7 @@ Disables a specified network.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the specified network is disabled, returns `false` otherwise. |
 
 **Examples**
 

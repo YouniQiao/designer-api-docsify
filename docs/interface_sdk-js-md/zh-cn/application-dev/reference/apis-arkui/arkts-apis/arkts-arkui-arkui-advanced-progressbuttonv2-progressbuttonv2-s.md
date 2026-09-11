@@ -88,7 +88,7 @@ readonly content: ResourceStr
 readonly isEnabled: boolean
 ```
 
-下载按钮是否可以点击。true：可以点击。false：不可点击。
+下载按钮是否可以点击。<br> true：可以点击。<br> false：不可点击。
 
 **类型：** boolean
 
@@ -106,7 +106,7 @@ readonly isEnabled: boolean
 readonly progress: number
 ```
 
-下载按钮的当前进度值。取值范围：[0,100]。设置小于0的数值时置为0，设置大于100的数值置为100。默认值：0
+下载按钮的当前进度值。<br>取值范围：[0,100]。设置小于0的数值时置为0，设置大于100的数值置为100。<br>默认值：0
 
 **类型：** number
 
@@ -126,7 +126,7 @@ readonly progress: number
 progressButtonRadius?: LengthMetrics
 ```
 
-下载按钮的圆角（不支持百分比设置）。取值范围：[0, height/2]默认值：height/2设置非法数值时，按照默认值处理。
+下载按钮的圆角（不支持百分比设置）。<br>取值范围：[0, height/2]<br>默认值：height/2<br>设置非法数值时，按照默认值处理。
 
 **类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -144,7 +144,7 @@ progressButtonRadius?: LengthMetrics
 progressButtonWidth?: LengthMetrics
 ```
 
-下载按钮的宽度。默认值：44vp
+下载按钮的宽度。<br>默认值：44vp
 
 **类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 

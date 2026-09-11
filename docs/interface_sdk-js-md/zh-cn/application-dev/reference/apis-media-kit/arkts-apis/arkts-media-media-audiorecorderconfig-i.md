@@ -26,8 +26,7 @@ import { media } from '@kit.MediaKit';
 audioEncodeBitRate?: number
 ```
 
-音频编码比特率，默认值为48000。单位为比特每秒（bit/s）。  
-**说明：** 从API version 6开始支持，从API version 9开始废弃，建议使用[AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)中的audioBitrate替代。
+音频编码比特率，默认值为48000。单位为比特每秒（bit/s）。<br> **说明：** 从API version 6开始支持，从API version 9开始废弃，建议使用[AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)中的audioBitrate替代。
 
 **类型：** number
 
@@ -45,8 +44,7 @@ audioEncodeBitRate?: number
 audioEncoder?: AudioEncoder
 ```
 
-音频编码格式，默认设置为AAC_LC。  
-**说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用audioEncoderMime替代。
+音频编码格式，默认设置为AAC_LC。<br> **说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用audioEncoderMime替代。
 
 **类型：** [AudioEncoder](arkts-media-media-audioencoder-e.md)
 
@@ -64,8 +62,7 @@ audioEncoder?: AudioEncoder
 audioEncoderMime?: CodecMimeType
 ```
 
-音频编码格式。  
-**说明：** 从API version 8开始支持，从API version 9开始废弃，建议使用[AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)中的audioCodec替代。
+音频编码格式。<br> **说明：** 从API version 8开始支持，从API version 9开始废弃，建议使用[AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)中的audioCodec替代。
 
 **类型：** [CodecMimeType](arkts-media-media-codecmimetype-e.md)
 
@@ -83,8 +80,7 @@ audioEncoderMime?: CodecMimeType
 audioSampleRate?: number
 ```
 
-音频采集采样率，默认值为48000。单位为赫兹（Hz）。可变比特率模式，码率仅作参考。  
-**说明：** 从API version 6开始支持，从API version 9开始废弃，建议使用[AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)中的audioSampleRate替代。
+音频采集采样率，默认值为48000。单位为赫兹（Hz）。<br>可变比特率模式，码率仅作参考。<br> **说明：** 从API version 6开始支持，从API version 9开始废弃，建议使用[AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)中的audioSampleRate替代。
 
 **类型：** number
 
@@ -102,8 +98,7 @@ audioSampleRate?: number
 fileFormat?: ContainerFormatType
 ```
 
-文件容器格式。  
-**说明：** 从API version 8开始支持，从API version 9开始废弃，建议使用[AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)中的fileFormat替代。
+文件容器格式。<br> **说明：** 从API version 8开始支持，从API version 9开始废弃，建议使用[AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)中的fileFormat替代。
 
 **类型：** [ContainerFormatType](arkts-media-media-containerformattype-e.md)
 
@@ -121,8 +116,7 @@ fileFormat?: ContainerFormatType
 format?: AudioOutputFormat
 ```
 
-音频输出封装格式，默认设置为MPEG_4。  
-**说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用fileFormat替代。
+音频输出封装格式，默认设置为MPEG_4。<br> **说明：** 从API version 6开始支持，从API version 8开始废弃，建议使用fileFormat替代。
 
 **类型：** [AudioOutputFormat](arkts-media-media-audiooutputformat-e.md)
 
@@ -140,8 +134,7 @@ format?: AudioOutputFormat
 location?: Location
 ```
 
-音频采集的地理位置。  
-**说明：** 从API version 6开始支持，从API version 9开始废弃，建议使用[AVMetadata](arkts-media-media-avmetadata-i.md)中的location替代。
+音频采集的地理位置。<br> **说明：** 从API version 6开始支持，从API version 9开始废弃，建议使用[AVMetadata](arkts-media-media-avmetadata-i.md)中的location替代。
 
 **类型：** [Location](arkts-media-media-location-i.md)
 
@@ -159,8 +152,7 @@ location?: Location
 numberOfChannels?: number
 ```
 
-音频采集声道数，默认值为2。  
-**说明：** 从API version 6开始支持，从API version 9开始废弃，建议使用[AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)中的audioChannels替代。
+音频采集声道数，默认值为2。<br> **说明：** 从API version 6开始支持，从API version 9开始废弃，建议使用[AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)中的audioChannels替代。
 
 **类型：** number
 
@@ -178,8 +170,7 @@ numberOfChannels?: number
 uri: string
 ```
 
-音频输出URI：fd://xx (fd number)文件需要由调用者创建，并赋予适当的权限。  
-**说明：** 从API version 6开始支持，从API version 9开始废弃，建议使用[AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md)中的url替代。
+音频输出URI：fd://xx (fd number)<br>文件需要由调用者创建，并赋予适当的权限。<br> **说明：** 从API version 6开始支持，从API version 9开始废弃，建议使用[AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md)中的url替代。
 
 **类型：** string
 

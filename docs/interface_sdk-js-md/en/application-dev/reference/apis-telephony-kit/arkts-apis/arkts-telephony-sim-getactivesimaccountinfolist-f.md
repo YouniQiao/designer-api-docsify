@@ -16,7 +16,7 @@ Obtains the list of activated SIM card accounts. This API uses an asynchronous c
 
 **Required permission**: ohos.permission.GET_TELEPHONY_STATE
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The **GET_TELEPHONY_STATE** permission is required to obtain the ICCID and phone number. Such information is
 > sensitive and not open to third-party applications. When this API is called, the returned ICCID and phone number
@@ -67,7 +67,7 @@ Obtains the list of activated SIM card accounts. This API uses a promise to retu
 
 **Required permission**: ohos.permission.GET_TELEPHONY_STATE
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The **GET_TELEPHONY_STATE** permission is required to obtain the ICCID and phone number. Such information is
 > sensitive and not open to third-party applications. When this API is called, the returned ICCID and phone number

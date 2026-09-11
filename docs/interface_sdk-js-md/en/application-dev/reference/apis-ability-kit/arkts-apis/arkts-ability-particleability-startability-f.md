@@ -14,7 +14,7 @@ function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<
 
 Starts a ParticleAbility. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the FA model, see
 > [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
@@ -70,7 +70,7 @@ function startAbility(parameter: StartAbilityParameter): Promise<void>
 
 Starts a ParticleAbility. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the FA model, see
 > [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).

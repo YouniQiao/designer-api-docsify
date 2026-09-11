@@ -487,7 +487,7 @@ Starts discovering services.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[GattService](arkts-connectivity-ble-gattservice-i.md)&gt;&gt; | Returns the list of services { |
+| Promise&lt;Array&lt;[GattService](arkts-connectivity-ble-gattservice-i.md)&gt;&gt; | Returns the list of services [GattService](arkts-connectivity-ble-gattservice-i.md) of the BLE peripheral device. |
 
 **Error codes:**
 

@@ -18,7 +18,7 @@ Checks whether the last execution of a task timed out. This API uses an asynchro
 
 **Deprecated since:** 10
 
-**Substitutes:** [isLastWorkTimeOut](#islastworktimeout-1)(workId: int, callback: AsyncCallback&lt;boolean&gt;)
+**Substitutes:** [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md)(workId: number, callback: AsyncCallback&lt;boolean&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 

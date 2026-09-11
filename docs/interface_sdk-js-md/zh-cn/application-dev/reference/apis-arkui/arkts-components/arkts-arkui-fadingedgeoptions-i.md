@@ -2,6 +2,8 @@
 
 fadingEdge属性边缘渐隐参数对象。
 
+@typedef FadingEdgeOptions
+
 **起始版本：** 14
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

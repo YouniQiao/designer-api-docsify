@@ -2,7 +2,7 @@
 
 For details about how to use PersistentStorage on the UI, see [PersistentStorage: Persisting Application State](../../../ui/state-management/arkts-persiststorage.md).
 
-> **NOTE：**
+> **NOTE:**
 
 > Since API version 12, PersistentStorage supports **null** and **undefined**.
 
@@ -229,7 +229,7 @@ Persists multiple properties. This API is similar to [PersistProp](#persistprop)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| properties | {       key: string;       defaultValue: any;     }[] | Yes |  |
+| properties | {       key: string;       defaultValue: any;     }[] | Yes | Array of properties to persist.<br>**key**: property name. <br>**defaultValue**: default value. The rule is the same as that for **PersistProp**. |
 
 **Examples**
 

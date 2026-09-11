@@ -2,7 +2,7 @@
 
 A linear data structure that is implemented on arrays. A bit vector stores bit values and provides bit-level storage and processing.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > **Decorator**: \@Sendable

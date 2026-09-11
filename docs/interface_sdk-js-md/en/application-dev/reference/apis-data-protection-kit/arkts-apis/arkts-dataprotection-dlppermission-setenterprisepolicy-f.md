@@ -16,7 +16,7 @@ Sets the protection policy for enterprise applications. After the API is success
 
 This API is used by the enterprise administrator to configure DLP security policies for unified management of data security protection rules.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only by enterprise accounts.
 

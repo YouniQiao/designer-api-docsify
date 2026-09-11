@@ -4,6 +4,8 @@ AgentCard相当于Agent(智能体)的"名片"，用于描述Agent的能力和技
 
 一个Agent就是一个AgentExtensionAbility实例。开发者可以通过AgentExtensionContext中的agentCard属性获取到当前AgentExtensionAbility的AgentCard。
 
+@typedef AgentCard
+
 **起始版本：** 24
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core

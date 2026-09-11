@@ -4,6 +4,7 @@ The **DataShareResultSet** module provides APIs for accessing the result set obt
  access the values in the specified rows or the value of the specified data type.
 
 
+
 ## Modules to Import
 
 ```TypeScript

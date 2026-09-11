@@ -22,7 +22,7 @@ function isNRSupported(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | true：支持。 |
+| boolean | true：支持。<br>- false：不支持。 |
 
 **示例**
 
@@ -48,13 +48,13 @@ function isNRSupported(slotId: number): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | true：支持。 |
+| boolean | true：支持。<br>- false：不支持。 |
 
 **示例**
 

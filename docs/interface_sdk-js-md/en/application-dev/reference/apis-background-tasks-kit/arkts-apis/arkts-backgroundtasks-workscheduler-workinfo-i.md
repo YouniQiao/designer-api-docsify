@@ -226,7 +226,7 @@ parameters?: Record<string, number | number | string | boolean>
 
 Carried parameters.
 
-**Type:** Record&lt;string, number \| number \| string \| boolean&gt;
+**Type:** Record&lt;string, number &#124; number &#124; string &#124; boolean&gt;
 
 **Since:** 9
 

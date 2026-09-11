@@ -20,7 +20,7 @@ credentialCount: number
 
 Number of enrolled credentials. This parameter indicates the number of credentials of a specified type enrolled by the current user, for example, the number of fingerprints or faces.
 
-**Note：**: When an authentication result is reused, if the credential used for the previous authentication has been deleted, the returned value of **credentialCount** may be **0**.
+**Note:** When an authentication result is reused, if the credential used for the previous authentication has been deleted, the returned value of **credentialCount** may be **0**.
 
 **Type:** number
 
@@ -38,7 +38,7 @@ credentialDigest: number
 
 Credential digest, which is randomly generated when a credential is added. This value is used to identify the version of the currently registered credential. It changes when a credential is added or deleted. The application can save this value and compare it with the value obtained in subsequent queries to determine whether the credential has changed.
 
-**Note：**: When the authentication result is reused, if the credential used for the previous authentication has been deleted, the return value of **credentialDigest** may be **0**.
+**Note:** When the authentication result is reused, if the credential used for the previous authentication has been deleted, the return value of **credentialDigest** may be **0**.
 
 **Type:** number
 

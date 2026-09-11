@@ -64,7 +64,7 @@ Get file name of gentle haptics.
 
 | Type | Description |
 | --- | --- |
-| string \| null | Haptics file name or null if not gentle haptics not exist. |
+| string &#124; null | Haptics file name or null if not gentle haptics not exist. |
 
 **Error codes:**
 
@@ -96,7 +96,7 @@ Get title of gentle haptics.
 
 | Type | Description |
 | --- | --- |
-| string \| null | Haptics title or null if not gentle haptics not exist. |
+| string &#124; null | Haptics title or null if not gentle haptics not exist. |
 
 **Error codes:**
 
@@ -128,7 +128,7 @@ Get gentle haptics URI.
 
 | Type | Description |
 | --- | --- |
-| string \| null | Haptics URI or null if not gentle haptics not exist. |
+| string &#124; null | Haptics URI or null if not gentle haptics not exist. |
 
 **Error codes:**
 

@@ -42,8 +42,6 @@ During finger-following swipes and post-release transition animations, the [Swip
 
 | Type | Description |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
-
 ## digitalCrownSensitivity
 
 ```TypeScript
@@ -62,14 +60,12 @@ Sets the sensitivity to the digital crown rotation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sensitivity | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[CrownSensitivity](arkts-arkui-crownsensitivity-e.md)&gt; | Yes | Sensitivity to the digital crown rotation.Default value: **CrownSensitivity.MEDIUM**. |
+| sensitivity | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[CrownSensitivity](arkts-arkui-crownsensitivity-e.md)&gt; | Yes | Sensitivity to the digital crown rotation.<br>Default value: **CrownSensitivity.MEDIUM**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
-
 ## disableSwipe
 
 ```TypeScript
@@ -88,14 +84,12 @@ Sets whether to disable the swipe feature.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| disabled | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to disable the swipe feature. The value **true** means to disable the feature, and **false** means the opposite.Default value: **false |
+| disabled | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to disable the swipe feature. The value **true** means to disable the feature, and **false** means the opposite.<br>Default value: **false |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
-
 ## disableTransitionAnimation
 
 ```TypeScript
@@ -114,14 +108,12 @@ Sets whether to disable the transition animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| disabled | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to disable the transition animation.   **true**: Disable the animation effect. **false**: Do not disable the animation effect.If the input parameter is invalid, the value **false** is used. |
+| disabled | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to disable the transition animation.<br>**true**: Disable the animation effect. **false**: Do not disable the animation effect.<br>If the input parameter is invalid, the value **false** is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
-
 ## duration
 
 ```TypeScript
@@ -140,14 +132,12 @@ Sets the duration of the animation for child component switching.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| duration | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Duration of the autoplay for child component switching.Default value: **400**Unit: ms |
+| duration | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Duration of the autoplay for child component switching.<br>Default value: **400**<br>Unit: ms |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
-
 ## effectMode
 
 ```TypeScript
@@ -166,14 +156,12 @@ Sets the effect used when the scroll boundary is reached. For details about the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| edgeEffect | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[EdgeEffect](arkts-arkui-edgeeffect-e.md)&gt; | Yes | Effect used when the component is at one of the edges.Default value: **EdgeEffect.Spring |
+| edgeEffect | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[EdgeEffect](arkts-arkui-edgeeffect-e.md)&gt; | Yes | Effect used when the component is at one of the edges.<br>Default value: **EdgeEffect.Spring |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
-
 ## index
 
 ```TypeScript
@@ -192,14 +180,12 @@ Sets the index of the child component currently displayed in the container. If t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Index of the child component currently displayed in the container.If **index** is set to **undefined**, the value **0** is used. |
+| index | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Index of the child component currently displayed in the container.<br>If **index** is set to **undefined**, the value **0** is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
-
 ## indicator
 
 ```TypeScript
@@ -218,14 +204,12 @@ Sets the style of the arc dot navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) \| boolean&gt; | Yes | Style of the arc dot navigation indicator.    - **ArcDotIndicator**: properties and behavior of the arc dot navigation indicator.    - **boolean**: whether to enable the arc dot navigation indicator. **true** to enable, **false** otherwise.    Default value: **true**Default type: **ArcDotIndicator |
+| style | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) &#124; boolean&gt; | Yes | Style of the arc dot navigation indicator.<br> - **ArcDotIndicator**: properties and behavior of the arc dot navigation indicator.<br> - **boolean**: whether to enable the arc dot navigation indicator. **true** to enable, **false** otherwise.<br> Default value: **true**<br> Default type: **ArcDotIndicator |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
-
 ## onAnimationEnd
 
 ```TypeScript
@@ -252,8 +236,6 @@ This event is triggered when the page transition animation of the **ArcSwiper** 
 
 | Type | Description |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
-
 ## onAnimationStart
 
 ```TypeScript
@@ -278,8 +260,6 @@ Triggered when the page transition animation starts.
 
 | Type | Description |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
-
 ## onChange
 
 ```TypeScript
@@ -306,8 +286,6 @@ When the **ArcSwiper** component is used together with [LazyForEach](../../../ui
 
 | Type | Description |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
-
 ## onGestureSwipe
 
 ```TypeScript
@@ -332,8 +310,6 @@ Triggered on a frame-by-frame basis when the page is turned by a swipe.
 
 | Type | Description |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
-
 ## vertical
 
 ```TypeScript
@@ -352,10 +328,9 @@ Sets whether vertical swiping is used.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isVertical | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether vertical swiping is used.The value **true** means vertical swiping, and **false** means horizontal swiping.Default value: **false |
+| isVertical | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether vertical swiping is used.<br>The value **true** means vertical swiping, and **false** means horizontal swiping.<br>Default value: **false |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |

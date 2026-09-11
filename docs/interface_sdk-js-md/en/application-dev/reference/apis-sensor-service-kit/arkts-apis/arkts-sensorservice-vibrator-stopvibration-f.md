@@ -24,7 +24,7 @@ Stops vibration in the specified mode. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stopMode | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | Yes | Vibration stop mode:   - **VIBRATOR_STOP_MODE_TIME**: used to stop vibration of the specified duration.   - **VIBRATOR_STOP_MODE_PRESET**: used to stop vibration of the preset effect.   To stop custom vibration, use [vibrator.stopVibration&lt;sup&gt;10+&lt;/sup&gt;](arkts-sensorservice-vibrator-stopvibration-f.md). |
+| stopMode | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | Yes | Vibration stop mode:<br>- **VIBRATOR_STOP_MODE_TIME**: used to stop vibration of the specified duration.<br>- **VIBRATOR_STOP_MODE_PRESET**: used to stop vibration of the preset effect.<br>To stop custom vibration, use [vibrator.stopVibration&lt;sup&gt;10+&lt;/sup&gt;](arkts-sensorservice-vibrator-stopvibration-f.md). |
 
 **Return value:**
 
@@ -37,7 +37,7 @@ Stops vibration in the specified mode. This API uses a promise to return the res
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -136,7 +136,7 @@ Stops vibration in the specified mode. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stopMode | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | Yes | Mode to stop the vibration. The options are as follows:   - **VIBRATOR_STOP_MODE_TIME**: used to stop vibration of the specified duration.   - **VIBRATOR_STOP_MODE_PRESET**: used to stop vibration of the preset effect.   To stop custom vibration, use [vibrator.stopVibration&lt;sup&gt;10+&lt;/sup&gt;](arkts-sensorservice-vibrator-stopvibration-f.md). |
+| stopMode | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | Yes | Mode to stop the vibration. The options are as follows:<br>- **VIBRATOR_STOP_MODE_TIME**: used to stop vibration of the specified duration.<br>- **VIBRATOR_STOP_MODE_PRESET**: used to stop vibration of the preset effect.<br>To stop custom vibration, use [vibrator.stopVibration&lt;sup&gt;10+&lt;/sup&gt;](#stopvibration-2). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the vibration stops, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -144,7 +144,7 @@ Stops vibration in the specified mode. This API uses an asynchronous callback to
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 

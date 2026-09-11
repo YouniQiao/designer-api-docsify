@@ -19,7 +19,7 @@ angle: number | string
 
 Angle to rotate. A positive angle indicates a clockwise rotation, and a negative angle indicates a counterclockwise rotation. The value can be of the string type, for example, **'90deg'**.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 7
 
@@ -39,7 +39,7 @@ X coordinate of the transformation center point (anchor). The value can be of th
 
 Unit: vp
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 7
 
@@ -59,7 +59,7 @@ Y coordinate of the transformation center point (anchor). The value can be of th
 
 Unit: vp
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 7
 

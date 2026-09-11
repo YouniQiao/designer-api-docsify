@@ -59,7 +59,7 @@ key?: string | Array<string>
 
 Keys to assign to the inserted data records. The original keys are used by default.
 
-**Type:** string \| Array&lt;string&gt;
+**Type:** string &#124; Array&lt;string&gt;
 
 **Since:** 12
 

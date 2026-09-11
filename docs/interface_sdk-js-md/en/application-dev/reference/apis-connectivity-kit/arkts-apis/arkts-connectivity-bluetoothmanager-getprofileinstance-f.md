@@ -32,7 +32,7 @@ Obtains the instance of profile.
 
 | Type | Description |
 | --- | --- |
-| [A2dpSourceProfile](arkts-connectivity-bluetoothmanager-a2dpsourceprofile-i.md) \| [HandsFreeAudioGatewayProfile](arkts-connectivity-bluetoothmanager-handsfreeaudiogatewayprofile-i.md) \| [HidHostProfile](arkts-connectivity-bluetoothmanager-hidhostprofile-i.md) \| [PanProfile](arkts-connectivity-bluetoothmanager-panprofile-i.md) | Returns the instance of profile. |
+| [A2dpSourceProfile](arkts-connectivity-bluetoothmanager-a2dpsourceprofile-i.md) &#124; [HandsFreeAudioGatewayProfile](arkts-connectivity-bluetoothmanager-handsfreeaudiogatewayprofile-i.md) &#124; [HidHostProfile](arkts-connectivity-bluetoothmanager-hidhostprofile-i.md) &#124; [PanProfile](arkts-connectivity-bluetoothmanager-panprofile-i.md) | Returns the instance of profile. |
 
 **Error codes:**
 

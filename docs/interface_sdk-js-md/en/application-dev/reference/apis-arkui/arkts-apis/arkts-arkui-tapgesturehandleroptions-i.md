@@ -25,7 +25,7 @@ Default value: **1**
 
 Value range: [0, +∞)
 
-**NOTE：**
+**NOTE:**
 
 1. If multi-tap is configured, the timeout interval between a lift and the next tap is 300 ms.
 2. If the distance between the last tapped position and the current tapped position exceeds 60 vp, gesture
@@ -53,7 +53,7 @@ Default value: **2^31-1**
 
 Unit: vp
 
-**NOTE：**
+**NOTE:**
 
 If the finger movement exceeds the preset movement threshold, the gesture recognition fails. If the default threshold is used during initialization and the finger moves beyond the component's touch target, the tap gesture recognition fails.
 
@@ -79,7 +79,7 @@ Number of fingers required to trigger a tap. The value ranges from 1 to 10. If t
 
 Default value: **1**
 
-**NOTE：**
+**NOTE:**
 
 1. If the value is greater than 1, the tap gesture will fail to be recognized when the required number of fingers
 is not pressed within 300 milliseconds after the first finger touches down, or when the required number of fingers is not lifted within 300 milliseconds after the first finger is lifted.

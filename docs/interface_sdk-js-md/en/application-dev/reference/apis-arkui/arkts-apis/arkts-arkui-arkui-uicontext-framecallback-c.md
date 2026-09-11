@@ -2,7 +2,7 @@
 
 Implements the API for setting the task that needs to be executed during the next frame rendering.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The following APIs must be used in conjunction with [postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback) and
 > [postDelayedFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postdelayedframecallback) from [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md).
@@ -42,7 +42,7 @@ Called when the next frame is rendered.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| frameTimeInNano | number | Yes | Time when the rendering of the next frame starts, in nanoseconds.Value range: [0, +∞) |
+| frameTimeInNano | number | Yes | Time when the rendering of the next frame starts, in nanoseconds.<br>Value range: [0, +∞) |
 
 ## onIdle
 
@@ -64,4 +64,4 @@ Called after the rendering of the subsequent frame has finished and there is mor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeLeftInNano | number | Yes | Remaining idle time for the current frame, in nanoseconds.Value range: [0, +∞) |
+| timeLeftInNano | number | Yes | Remaining idle time for the current frame, in nanoseconds.<br>Value range: [0, +∞) |

@@ -97,7 +97,7 @@ albumName: string
 
 Name of the album.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The user album is writable, but the system album is not writable.
 
@@ -201,7 +201,7 @@ coverUri: string
 
 URI of the cover file of the album.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The user album is writable, but the system album is not writable.
 

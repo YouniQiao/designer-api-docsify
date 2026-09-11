@@ -32,7 +32,7 @@ Obtains a node by path. If no node is obtained, null is returned.
 
 | Type | Description |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Returns the node object. |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) &#124; null | Returns the node object. |
 
 **Examples**
 
@@ -127,7 +127,7 @@ readonly parent: Node | null
 
 Parent node of the node and null if it does not exist.
 
-**Type:** [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null
+**Type:** [Node](arkts-arkgraphics3d-scenenodes-node-i.md) &#124; null
 
 **Since:** 12
 

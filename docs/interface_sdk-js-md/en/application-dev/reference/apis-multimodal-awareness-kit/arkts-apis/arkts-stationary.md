@@ -2,7 +2,7 @@
 
 The **stationary** module provides APIs to report the device status, including absolute still and relative still.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This module does not support x86 emulators.
 

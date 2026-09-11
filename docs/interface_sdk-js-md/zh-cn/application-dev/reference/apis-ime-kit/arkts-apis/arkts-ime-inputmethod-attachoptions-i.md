@@ -36,9 +36,7 @@ requestKeyboardReason?: RequestKeyboardReason
 showKeyboard?: boolean
 ```
 
-绑定输入法成功后，是否拉起输入法键盘。  
-- true表示拉起。  
-- false表示不拉起。
+绑定输入法成功后，是否拉起输入法键盘。<br> <br>- true表示拉起。<br>- false表示不拉起。
 
 **类型：** boolean
 

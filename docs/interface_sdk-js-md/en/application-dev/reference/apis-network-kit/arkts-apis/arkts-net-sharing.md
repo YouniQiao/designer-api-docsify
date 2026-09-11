@@ -35,12 +35,12 @@ import { sharing } from '@kit.NetworkKit';
 | [isSharing](arkts-network-sharing-issharing-f-sys.md) | Obtains the current network sharing status. This API uses a promise to return the result. |
 | [isSharingSupported](arkts-network-sharing-issharingsupported-f-sys.md) | Checks whether network sharing is supported. This API uses an asynchronous callback to return the result. |
 | [isSharingSupported](arkts-network-sharing-issharingsupported-f-sys.md) | Checks whether network sharing is supported. This API uses a promise to return the result. |
-| off | Unregisters the network sharing status change event. This method uses an asynchronous callback to return the result. |
-| off | Unsubscribes from network sharing state changes of a specified NIC. This API uses an asynchronous callback to return the result. |
-| off | Unsubscribes from upstream network changes. This API uses an asynchronous callback to return the result. |
-| on | Registers the network sharing status change event. This API uses an asynchronous callback to return the result. |
-| on | Subscribes to network sharing state changes of a specified NIC. This API uses an asynchronous callback to return the result. |
-| on | Subscribes to upstream network changes. This API uses an asynchronous callback to return the result. |
+| [off](arkts-network-sharing-off-f-sys.md#offsharingstatechange) | Unregisters the network sharing status change event. This method uses an asynchronous callback to return the result. |
+| [off](arkts-network-sharing-off-f-sys.md#offinterfacesharingstatechange) | Unsubscribes from network sharing state changes of a specified NIC. This API uses an asynchronous callback to return the result. |
+| [off](arkts-network-sharing-off-f-sys.md#offsharingupstreamchange) | Unsubscribes from upstream network changes. This API uses an asynchronous callback to return the result. |
+| [on](arkts-network-sharing-on-f-sys.md#onsharingstatechange) | Registers the network sharing status change event. This API uses an asynchronous callback to return the result. |
+| [on](arkts-network-sharing-on-f-sys.md#oninterfacesharingstatechange) | Subscribes to network sharing state changes of a specified NIC. This API uses an asynchronous callback to return the result. |
+| [on](arkts-network-sharing-on-f-sys.md#onsharingupstreamchange) | Subscribes to upstream network changes. This API uses an asynchronous callback to return the result. |
 | [startSharing](arkts-network-sharing-startsharing-f-sys.md) | Enables sharing of a specified type. This API uses an asynchronous callback to return the result. |
 | [startSharing](arkts-network-sharing-startsharing-f-sys.md) | Enables sharing of a specified type. This API uses a promise to return the result. |
 | [stopSharing](arkts-network-sharing-stopsharing-f-sys.md) | Disables sharing of a specified type. This API uses an asynchronous callback to return the result. |

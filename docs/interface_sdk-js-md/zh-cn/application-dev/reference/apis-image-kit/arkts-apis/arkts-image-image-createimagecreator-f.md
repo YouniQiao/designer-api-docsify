@@ -24,7 +24,7 @@ function createImageCreator(width: number, height: number, format: number, capac
 
 **废弃版本：** 11
 
-**替代接口：** [createImageCreator](#createimagecreator-1)(size: Size, format: ImageFormat, capacity: int)
+**替代接口：** [createImageCreator](arkts-image-image-createimagecreator-f.md)(size: Size, format: ImageFormat, capacity: number)
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageCreator
 

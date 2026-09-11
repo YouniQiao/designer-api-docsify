@@ -26,7 +26,7 @@ function setSmscAddr(slotId: number, smscAddr: string, callback: AsyncCallback<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | SIM卡槽ID：   - 0：卡槽1   - 1：卡槽2 |
+| slotId | number | 是 | SIM卡槽ID：<br>- 0：卡槽1<br>- 1：卡槽2 |
 | smscAddr | string | 是 | 短信服务中心地址。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置短信服务中心（SMSC）地址的回调函数。 |
 
@@ -76,7 +76,7 @@ function setSmscAddr(slotId: number, smscAddr: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | SIM卡槽ID：   - 0：卡槽1   - 1：卡槽2 |
+| slotId | number | 是 | SIM卡槽ID：<br>- 0：卡槽1<br>- 1：卡槽2 |
 | smscAddr | string | 是 | 短信服务中心地址。 |
 
 **返回值：**

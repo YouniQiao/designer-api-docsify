@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [notificationManager/notificationManager](arkts-notificationmanager.md)
+**替代接口：** notificationSubscribe/notificationSubscribe
 
 **系统能力：** SystemCapability.Notification.Notification
 

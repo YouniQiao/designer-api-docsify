@@ -307,7 +307,7 @@ cancelAuth(contextID: Uint8Array): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid contextId. |
 
@@ -394,7 +394,7 @@ getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): number
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid authType or authTrustLevel. |
 | [12300117](../errorcode-account.md#12300117-pin码过期) | PIN is expired. |
@@ -752,7 +752,7 @@ setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid request. |
 
@@ -815,7 +815,7 @@ setProperty(request: SetPropertyRequest): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid request. |
 

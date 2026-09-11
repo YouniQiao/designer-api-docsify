@@ -30,7 +30,7 @@ Obtains the timestamp of the time zone transition point.
 
 | Type | Description |
 | --- | --- |
-| number | Timestamp of the time zone transition point. It is measured as the number of milliseconds from 00:00:00 on January 1, 1970 (UTC) to the time zone transition point, for example, 1762074000000. If the [raw offset]{ |
+| number | Timestamp of the time zone transition point. It is measured as the number of milliseconds from 00:00:00 on January 1, 1970 (UTC) to the time zone transition point, for example, 1762074000000. If the [raw offset](arkts-localization-i18n-timezone-c.md#getrawoffset) remains unchanged and DST is not used, **0** is returned. |
 
 **Examples**
 

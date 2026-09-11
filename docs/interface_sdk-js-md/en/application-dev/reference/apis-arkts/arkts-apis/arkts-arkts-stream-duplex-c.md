@@ -80,7 +80,7 @@ A data write API. You need to implement this API but do not call it directly. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chunk | string \| Uint8Array | Yes | Data to write. |
+| chunk | string &#124; Uint8Array | Yes | Data to write. |
 | encoding | string | Yes | Encoding format. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
 | callback | Function | Yes | Callback function. |
 
@@ -123,7 +123,7 @@ A batch data write API. You need to implement this API but do not call it direct
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chunks | string[] \| Uint8Array[] | Yes | Data arrays to write in batches. |
+| chunks | string[] &#124; Uint8Array[] | Yes | Data arrays to write in batches. |
 | callback | Function | Yes | Callback function. |
 
 **Examples**
@@ -173,7 +173,7 @@ Ends the writing process in a duplex stream. If the value of **writableCorked** 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chunk | string \| Uint8Array | No | Data to write. The default value is **undefined**. |
+| chunk | string &#124; Uint8Array | No | Data to write. The default value is **undefined**. |
 | encoding | string | No | Encoding format. The default value is **'utf8'**. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
 | callback | Function | No | Callback used to return the result. It is not called by default. |
 
@@ -323,7 +323,7 @@ Writes data to the buffer of the stream. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chunk | string \| Uint8Array | No | Data to write. It cannot be **null**, **undefined**, or an empty string. |
+| chunk | string &#124; Uint8Array | No | Data to write. It cannot be **null**, **undefined**, or an empty string. |
 | encoding | string | No | Encoding format. The default value is **'utf8'**. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
 | callback | Function | No | Callback used to return the result. It is not called by default. |
 

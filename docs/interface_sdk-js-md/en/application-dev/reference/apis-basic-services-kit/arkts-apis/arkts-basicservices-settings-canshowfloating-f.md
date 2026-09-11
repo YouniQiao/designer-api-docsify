@@ -57,7 +57,7 @@ Checks whether a specified application can show as a floating window.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Returns `true` if the application can draw over other applications; returns `false` otherwise. |
 
 **Examples**
 

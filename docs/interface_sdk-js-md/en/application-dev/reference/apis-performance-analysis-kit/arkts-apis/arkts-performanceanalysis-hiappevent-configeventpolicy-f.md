@@ -32,7 +32,7 @@ In the same lifecycle, you can set system event configuration by policy.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. <br>For details about the event configuration policy, see [EventPolicy](arkts-performanceanalysis-hiappevent-eventpolicy-i.md). If the configuration policy is incorrect, the API returns a failure message. <br>- If the parameter type is incorrect, error code 401 is returned. <br>- If the parameter specifications are incorrect, the error information is output in HiLog logs. |
 
 **Examples**
 

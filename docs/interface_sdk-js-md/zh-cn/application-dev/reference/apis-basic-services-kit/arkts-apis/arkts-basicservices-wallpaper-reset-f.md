@@ -12,7 +12,7 @@ import { wallpaper } from '@kit.BasicServicesKit';
 function reset(wallpaperType: WallpaperType, callback: AsyncCallback<void>): void
 ```
 
-移除指定类型的壁纸，恢复为默认显示的壁纸。使用callback异步回调。  
+移除指定类型的壁纸，恢复为默认显示的壁纸。使用callback异步回调。<br>   
 > **说明：**
 > 
 > 从 API version 7开始支持，从API version 9开始废弃。
@@ -53,7 +53,7 @@ wallpaper.reset(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessError)
 function reset(wallpaperType: WallpaperType): Promise<void>
 ```
 
-移除指定类型的壁纸，恢复为默认显示的壁纸。使用Promise异步回调。  
+移除指定类型的壁纸，恢复为默认显示的壁纸。使用Promise异步回调。<br>   
 > **说明：**
 > 
 > 从 API version 7开始支持，从API version 9开始废弃。

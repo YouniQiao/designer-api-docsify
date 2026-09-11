@@ -382,7 +382,7 @@ inheritFreezeOptions(enabled: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | ComponentContent对象是否设置为继承父组件中自定义组件的冻结策略。true：继承父组件中自定义组件的冻结策略；false：不继承父组件中自定义组件的冻结策略。   **说明：** 仅当父组件为自定义组件、BuilderNode、ComponentContent、ReactiveBuilderNode或ReactiveComponentContent时，设置true才会继承父组件的冻结策略。 |
+| enabled | boolean | 是 | ComponentContent对象是否设置为继承父组件中自定义组件的冻结策略。<br>true：继承父组件中自定义组件的冻结策略；false：不继承父组件中自定义组件的冻结策略。<br>**说明：** 仅当父组件为自定义组件、BuilderNode、ComponentContent、ReactiveBuilderNode或ReactiveComponentContent时，设置true才会继承父组件的冻结策略。 |
 
 **示例**
 
@@ -688,7 +688,7 @@ isTransferred(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回ComponentContent是否通过transfer.transferStatic或transfer.transferDynamic方法创建。 |
+| boolean | 返回ComponentContent是否通过transfer.transferStatic或transfer.transferDynamic方法创建。<br>true：ComponentContent通过transfer.transferStatic或transfer.transferDynamic方法创建。<br>false：ComponentContent不通过transfer.transferStatic或transfer.transferDynamic方法创建。 |
 
 ## recycle
 

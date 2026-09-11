@@ -2,7 +2,7 @@
 
 Defines the common icon options of the chip.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > **fillColor** and **activatedFillColor** take effect only when the icon format is SVG.
 

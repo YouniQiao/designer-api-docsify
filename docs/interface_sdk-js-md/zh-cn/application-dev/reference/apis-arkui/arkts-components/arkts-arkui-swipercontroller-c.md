@@ -33,8 +33,8 @@ changeIndex(index: number, useAnimation?: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 指定页面在Swiper中的索引值。   **说明：** 设置的值小于0或大于最大页面索引时，取0。 |
-| useAnimation | boolean | 否 | 设置翻至指定页面时是否有动效，true表示有动效，false表示没有动效。默认值：false。 |
+| index | number | 是 | 指定页面在Swiper中的索引值。<br>**说明：** <br>设置的值小于0或大于最大页面索引时，取0。 |
+| useAnimation | boolean | 否 | 设置翻至指定页面时是否有动效，true表示有动效，false表示没有动效。<br>默认值：false。 |
 
 ## changeIndex
 
@@ -63,8 +63,8 @@ changeIndex(index: number, animationMode?: SwiperAnimationMode | boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 指定页面在Swiper中的索引值。   **说明：** 设置的值小于0或大于最大页面索引时，取0。 |
-| animationMode | [SwiperAnimationMode](arkts-arkui-swiperanimationmode-e.md) \| boolean | 否 | 设置翻页到指定页面的动效模式。默认值：SwiperAnimationMode.NO_ANIMATION   **说明：** 当传入true时有动效，等同于SwiperAnimationMode.DEFAULT_ANIMATION；当传入false时无动效，等同于SwiperAnimationMode.NO_ANIMATION。 |
+| index | number | 是 | 指定页面在Swiper中的索引值。<br>**说明：** <br>设置的值小于0或大于最大页面索引时，取0。 |
+| animationMode | [SwiperAnimationMode](arkts-arkui-swiperanimationmode-e.md) &#124; boolean | 否 | 设置翻页到指定页面的动效模式。<br>默认值：SwiperAnimationMode.NO_ANIMATION<br> **说明：** <br>当传入true时有动效，等同于SwiperAnimationMode.DEFAULT_ANIMATION；当传入false时无动效，等同于SwiperAnimationMode.NO_ANIMATION。 |
 
 ## constructor
 
@@ -94,12 +94,12 @@ fakeDragBy(offset: number): boolean
 
 > - 模拟拖拽的距离需要依赖布局体现，建议接口在布局前调用，拖拽效果可以在当前帧布局后体现。如果在未布局前调用了多次该接口，当前帧布局时只生效最后一次调用传入的拖拽距离。
 > 
-> - 在[loop](arkts-arkui-swiper-attribute.md#loop)设置为true的循环场景下，如果设置的模拟拖拽的距离大于布局总长度，此时模拟拖拽距离会被调整为拖拽到刚好显示第一个子节点（向布局起点拖拽）或者最后一个子
+> - 在[loop](arkts-arkui-swiper-comp-attribute.md#loop)设置为true的循环场景下，如果设置的模拟拖拽的距离大于布局总长度，此时模拟拖拽距离会被调整为拖拽到刚好显示第一个子节点（向布局起点拖拽）或者最后一个子
 > 节点（向布局终点方向拖拽）的距离。
 > 
-> - [onGestureSwipe](arkts-arkui-swiper-attribute.md#ongestureswipe)事件、
-> [onContentWillScroll](arkts-arkui-swiper-attribute.md#oncontentwillscroll)事件在拖拽过程中不触发。
-> [customContentTransition](arkts-arkui-swiper-attribute.md#customcontenttransition)会在布局前触发，由于真实的拖拽距离可能在布局时被调整，在传入拖拽距离过大时，触发事
+> - [onGestureSwipe](arkts-arkui-swiper-comp-attribute.md#ongestureswipe)事件、
+> [onContentWillScroll](arkts-arkui-swiper-comp-attribute.md#oncontentwillscroll)事件在拖拽过程中不触发。
+> [customContentTransition](arkts-arkui-swiper-comp-attribute.md#customcontenttransition)会在布局前触发，由于真实的拖拽距离可能在布局时被调整，在传入拖拽距离过大时，触发事
 > 件时的返回的节点显示信息可能与布局结果不一致。
 
 **起始版本：** 23
@@ -116,13 +116,13 @@ fakeDragBy(offset: number): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 是 | 需要模拟拖拽的拖拽距离。正数表示向布局起点拖拽；负数表示向布局终点方向拖拽。单位为：vp。 |
+| offset | number | 是 | 需要模拟拖拽的拖拽距离。<br>正数表示向布局起点拖拽；负数表示向布局终点方向拖拽。<br>单位为：vp。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 是否消费传入的拖拽距离。 |
+| boolean | 是否消费传入的拖拽距离。<br>true表示消费任意传入的拖拽距离；false表示当前没有在模拟拖拽中，或者已经拖拽到边界，没有消费传入的拖拽距离。<br>设置0为不可消费的拖拽距离。 |
 
 ## finishAnimation
 
@@ -168,7 +168,7 @@ isFakeDragging(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 是否处在模拟拖拽状态。 |
+| boolean | 是否处在模拟拖拽状态。<br>true表示当前处在模拟拖拽状态；false表示当前不处在模拟拖拽状态。 |
 
 ## preloadItems
 
@@ -212,7 +212,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter invalid. Possible causes:   1. The parameter type is not Array&lt;number&gt;.   2. The parameter is an empty array.   3. The parameter contains an invalid index. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter invalid. Possible causes:<br> 1. The parameter type is not Array&lt;number&gt;. <br> 2. The parameter is an empty array. <br> 3. The parameter contains an invalid index. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to component. |
 
 ## showNext
@@ -221,7 +221,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 showNext()
 ```
 
-翻至下一页。翻页带动效切换过程，时长通过Swiper的[duration](arkts-arkui-swiper-attribute.md#duration)属性设置。
+翻至下一页。翻页带动效切换过程，时长通过Swiper的[duration](arkts-arkui-swiper-comp-attribute.md#duration)属性设置。
 
 **起始版本：** 7
 
@@ -237,7 +237,7 @@ showNext()
 showPrevious()
 ```
 
-翻至上一页。翻页带动效切换过程，时长通过Swiper的[duration](arkts-arkui-swiper-attribute.md#duration)属性设置。
+翻至上一页。翻页带动效切换过程，时长通过Swiper的[duration](arkts-arkui-swiper-comp-attribute.md#duration)属性设置。
 
 **起始版本：** 7
 
@@ -275,7 +275,7 @@ startFakeDrag(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 是否开启模拟拖拽功能。 |
+| boolean | 是否开启模拟拖拽功能。<br>true表示开启模拟拖拽功能成功；false表示开启模拟拖拽功能失败。 |
 
 ## stopFakeDrag
 
@@ -303,4 +303,4 @@ stopFakeDrag(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 是否关闭模拟拖拽功能。 |
+| boolean | 是否关闭模拟拖拽功能。<br>true表示关闭模拟拖拽功能成功；false表示关闭模拟拖拽功能失败。 |

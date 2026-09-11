@@ -14,7 +14,7 @@ export function createBundleContext(context: Context, bundleName: string): Promi
 
 Creates the context for an application. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Starting from API version 18, the context can obtain the
 > [process name](../../../reference/apis-ability-kit/js-apis-inner-application-context.md#context) of the current

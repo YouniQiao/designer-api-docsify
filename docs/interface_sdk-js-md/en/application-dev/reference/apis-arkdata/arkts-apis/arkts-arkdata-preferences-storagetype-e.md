@@ -2,7 +2,7 @@
 
 Enumerates the storage types of preferences.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Before using this mode, you are advised to call **isStorageTypeSupported** to check whether this storage type
 > is supported.

@@ -39,4 +39,3 @@ create(value: any): any
 
 | 类型 | 说明 |
 | --- | --- |
-| any |  |

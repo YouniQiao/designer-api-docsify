@@ -32,7 +32,7 @@ getNodeByPath(path: string): Node | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | 返回节点对象。 |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) &#124; null | 返回节点对象。 |
 
 **示例**
 
@@ -127,7 +127,7 @@ readonly parent: Node | null
 
 节点的父节点，不存在则为空值。
 
-**类型：** [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null
+**类型：** [Node](arkts-arkgraphics3d-scenenodes-node-i.md) &#124; null
 
 **起始版本：** 12
 

@@ -8,7 +8,7 @@
 
 **替代接口：** [LocationPrivacyType](arkts-location-geolocationmanager-locationprivacytype-e-sys.md)
 
-**需要权限：** ohos.permission.LOCATION
+**需要权限：** ohos.permission.LOCATION @enum { number }
 
 **系统能力：** SystemCapability.Location.Location.Core
 

@@ -34,7 +34,7 @@ Obtains the focal length in use.
 
 | Type | Description |
 | --- | --- |
-| number | Focal length, in mm. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| number | Focal length, in mm. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -60,7 +60,7 @@ Obtains the focus mode in use.
 
 | Type | Description |
 | --- | --- |
-| [FocusMode](arkts-camera-camera-focusmode-e.md) | Focus mode obtained. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
+| [FocusMode](arkts-camera-camera-focusmode-e.md) | Focus mode obtained. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is thrown. |
 
 **Error codes:**
 
@@ -86,7 +86,7 @@ Obtains the focal point in use.
 
 | Type | Description |
 | --- | --- |
-| [Point](arkts-camera-camera-point-i.md) | Focal point obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [Point](arkts-camera-camera-point-i.md) | Focal point obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 

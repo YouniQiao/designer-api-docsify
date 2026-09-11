@@ -5,6 +5,7 @@ The module defines the callbacks invoked after synchronization starts. These cal
  [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md)
 
 
+
 ## 汇总
 
 <!--Del-->
@@ -20,7 +21,7 @@ The module defines the callbacks invoked after synchronization starts. These cal
 
 | 名称 | 说明 |
 | --- | --- |
-| [NotifyMissionsChangedCallback](arkts-ability-notifymissionschangedcallback-t-sys.md) |  |
-| [NotifyNetDisconnectCallback](arkts-ability-notifynetdisconnectcallback-t-sys.md) |  |
-| [NotifySnapshotCallback](arkts-ability-notifysnapshotcallback-t-sys.md) |  |
+| [NotifyMissionsChangedCallback](arkts-ability-notifymissionschangedcallback-t-sys.md) | @typedef { function } NotifyMissionsChangedCallback |
+| [NotifyNetDisconnectCallback](arkts-ability-notifynetdisconnectcallback-t-sys.md) | @typedef { function } NotifyNetDisconnectCallback |
+| [NotifySnapshotCallback](arkts-ability-notifysnapshotcallback-t-sys.md) | @typedef { function } NotifySnapshotCallback |
 <!--DelEnd-->

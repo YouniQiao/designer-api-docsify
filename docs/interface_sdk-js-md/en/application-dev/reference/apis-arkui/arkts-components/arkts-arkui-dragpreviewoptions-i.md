@@ -23,7 +23,7 @@ Default value: **DragPreviewMode.AUTO**
 
 If **DragPreviewMode.AUTO** is set concurrently with other enumerated values, **DragPreviewMode.AUTO** takes precedence and the other values are ignored.
 
-**Type:** [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md) \| Array&lt;[DragPreviewMode](arkts-arkui-dragpreviewmode-e.md)&gt;
+**Type:** [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md) &#124; Array&lt;[DragPreviewMode](arkts-arkui-dragpreviewmode-e.md)&gt;
 
 **Since:** 11
 
@@ -77,13 +77,13 @@ numberBadge?: boolean | number
 
 Whether to display the number badge or the number displayed on the badge. For a number badge, the value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. Values outside this range will be processed as the default state. If the value specified is a floating-point number, only the integer part is displayed.
 
-**NOTE：**
+**NOTE:**
 
 When multiple items are dragged, use this API to set the number of items dragged.
 
 Default value: **true**.
 
-**Type:** boolean \| number
+**Type:** boolean &#124; number
 
 **Since:** 12
 

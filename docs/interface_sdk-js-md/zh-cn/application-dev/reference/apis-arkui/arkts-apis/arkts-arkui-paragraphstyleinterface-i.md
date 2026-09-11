@@ -21,7 +21,7 @@ leadingMargin?: LengthMetrics | LeadingMarginPlaceholder
 
 默认值：0
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [LeadingMarginPlaceholder](../arkts-components/arkts-arkui-leadingmarginplaceholder-i.md)
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [LeadingMarginPlaceholder](../arkts-components/arkts-arkui-leadingmarginplaceholder-i.md)
 
 **起始版本：** 12
 
@@ -149,7 +149,7 @@ tailIndents?: LengthMetrics | Array<LengthMetrics>
 
 设置文本段落的文本尾部缩进。不支持百分比。当提供一个单独的LengthMetrics值时，所有行共享相同的尾部缩进；当提供一个数组时，第i个元素指定第i行的尾部缩进；如果文本行数超过数组长度，则数组中的最后一个元素将用于剩余的行。默认值：0
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Array&lt;[LengthMetrics](arkts-arkui-lengthmetrics-t.md)&gt;
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; Array&lt;[LengthMetrics](arkts-arkui-lengthmetrics-t.md)&gt;
 
 **起始版本：** 26.0.0
 

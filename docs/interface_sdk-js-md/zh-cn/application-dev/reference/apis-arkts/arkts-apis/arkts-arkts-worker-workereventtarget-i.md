@@ -79,8 +79,6 @@ dispatchEvent(event: Event): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean |  |
-
 **错误码：**
 
 | 错误码ID | 错误信息 |

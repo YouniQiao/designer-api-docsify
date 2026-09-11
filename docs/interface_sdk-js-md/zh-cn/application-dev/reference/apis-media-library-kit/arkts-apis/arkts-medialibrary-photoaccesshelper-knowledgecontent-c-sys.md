@@ -52,8 +52,8 @@ static getRelatedEntity (topic: string, context: ContextMap, option?: Options): 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by nonsystem application |
-| 13900020 | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| 13900020 | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## getSearchResult
 
@@ -91,8 +91,8 @@ static getSearchResult(query: SearchQuery): Promise<SearchResult>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. Invalid input data format.  2. The length of **queryString** or **param** in **SearchQuery** exceeds 16KB. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. Possible causes:  1. IPC timeout;  2. System exception. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Invalid input data format. <br>2. The length of **queryString** or **param** in **SearchQuery** exceeds 16KB. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. Possible causes:<br>1. IPC timeout; <br>2. System exception. |
 
 ## getSearchSuggestion
 
@@ -116,7 +116,7 @@ static getSearchSuggestion( searchSuggestionTypes: Array<SearchSuggestionType>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| searchSuggestionTypes | Array&lt;[SearchSuggestionType](arkts-medialibrary-photoaccesshelper-searchsuggestiontype-e-sys.md)&gt; | 是 | 搜索推荐词场景类型列表最大长度为7且不能为空。The maximum length is 7 and cannot be empty. |
+| searchSuggestionTypes | Array&lt;[SearchSuggestionType](arkts-medialibrary-photoaccesshelper-searchsuggestiontype-e-sys.md)&gt; | 是 | 搜索推荐词场景类型列表<br>最大长度为7且不能为空。<br>The maximum length is 7 and cannot be empty. |
 
 **返回值：**
 
@@ -130,5 +130,5 @@ static getSearchSuggestion( searchSuggestionTypes: Array<SearchSuggestionType>):
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by nonsystem application |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario parameters fail to pass the verification.Possible causes:  1. The searchSuggestionTypes list is empty.  2. The searchSuggestionTypes error. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario parameters fail to pass the verification.Possible causes:<br>1. The searchSuggestionTypes list is empty. <br>2. The searchSuggestionTypes error. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |

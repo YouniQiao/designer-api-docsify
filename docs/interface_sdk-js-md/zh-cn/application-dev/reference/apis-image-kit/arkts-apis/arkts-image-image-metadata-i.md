@@ -52,7 +52,7 @@ getAllProperties(): Promise<Record<string, string | null>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise对象，返回元数据拥有的所有属性的值。 |
+| Promise&lt;Record&lt;string, string &#124; null&gt;&gt; | Promise对象，返回元数据拥有的所有属性的值。 |
 
 ## getBlob
 
@@ -98,7 +98,7 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise对象，返回元数据要获取的属性的值，如获取失败则返回错误码。 |
+| Promise&lt;Record&lt;string, string &#124; null&gt;&gt; | Promise对象，返回元数据要获取的属性的值，如获取失败则返回错误码。 |
 
 **错误码：**
 
@@ -157,7 +157,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | 是 | 要修改的属性和值的数组。 |
+| records | Record&lt;string, string &#124; null&gt; | 是 | 要修改的属性和值的数组。 |
 
 **返回值：**
 

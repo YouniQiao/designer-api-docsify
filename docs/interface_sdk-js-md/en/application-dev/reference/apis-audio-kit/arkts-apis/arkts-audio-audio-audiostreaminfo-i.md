@@ -76,7 +76,7 @@ samplingRate: AudioSamplingRate | number
 
 Audio sampling rate.
 
-**Type:** [AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md) \| number
+**Type:** [AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md) &#124; number
 
 **Since:** 8
 

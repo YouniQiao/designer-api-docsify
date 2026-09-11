@@ -22,13 +22,13 @@ Creates a criterion color space management instance that is sendable.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorSpaceName | [colorSpaceManager.ColorSpace](arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | Yes | Type of the color space.    **UNKNOWN** and **CUSTOM** cannot be used when creating standard color space objects. |
+| colorSpaceName | [colorSpaceManager.ColorSpace](arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | Yes | Type of the color space.<br>**UNKNOWN** and **CUSTOM** cannot be used when creating standard color space objects. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | Sendable color space object created. |
+| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | Sendable color space object created. <br>This instance inherits from **ISendable** and can be passed by reference between concurrent ArkTS instances (including the main thread and the worker threads of TaskPool or Worker). For details, see [Using Sendable Objects](../../../arkts-utils/sendable-guide.md). |
 
 **Error codes:**
 
@@ -70,7 +70,7 @@ Creates a custom color space object that is sendable.
 
 | Type | Description |
 | --- | --- |
-| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | Sendable color space object created. |
+| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | Sendable color space object created. <br>The color space type is **CUSTOM**, which is one of the enumerated values of [colorSpaceManager.ColorSpace](arkts-arkgraphics2d-colorspacemanager-colorspace-e.md). <br>This instance inherits from **ISendable** and can be passed by reference between concurrent ArkTS instances (including the main thread and the worker threads of TaskPool or Worker). For details, see [Using Sendable Objects](../../../arkts-utils/sendable-guide.md). |
 
 **Error codes:**
 

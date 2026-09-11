@@ -58,7 +58,7 @@ A trap for `Object.defineProperty()`.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | T | Yes |  |
-| property | string \| symbol | Yes |  |
+| property | string &#124; symbol | Yes |  |
 | attributes | PropertyDescriptor | Yes |  |
 
 **Return value:**
@@ -78,7 +78,7 @@ A trap for the `delete` operator.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | T | Yes |  |
-| p | string \| symbol | Yes |  |
+| p | string &#124; symbol | Yes |  |
 
 **Return value:**
 
@@ -97,7 +97,7 @@ A trap for getting a property value.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | T | Yes |  |
-| p | string \| symbol | Yes |  |
+| p | string &#124; symbol | Yes |  |
 | receiver | any | Yes |  |
 
 **Return value:**
@@ -117,7 +117,7 @@ A trap for `Object.getOwnPropertyDescriptor()`.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | T | Yes |  |
-| p | string \| symbol | Yes |  |
+| p | string &#124; symbol | Yes |  |
 
 **Return value:**
 
@@ -154,7 +154,7 @@ A trap for the `in` operator.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | T | Yes |  |
-| p | string \| symbol | Yes |  |
+| p | string &#124; symbol | Yes |  |
 
 **Return value:**
 
@@ -227,7 +227,7 @@ A trap for setting a property value.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | T | Yes |  |
-| p | string \| symbol | Yes |  |
+| p | string &#124; symbol | Yes |  |
 | newValue | any | Yes |  |
 | receiver | any | Yes |  |
 
@@ -248,7 +248,7 @@ A trap for `Object.setPrototypeOf()`.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | T | Yes |  |
-| v | object \| null | Yes |  |
+| v | object &#124; null | Yes |  |
 
 **Return value:**
 

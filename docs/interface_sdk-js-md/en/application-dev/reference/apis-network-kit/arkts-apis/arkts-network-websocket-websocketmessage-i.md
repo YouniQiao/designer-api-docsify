@@ -34,7 +34,7 @@ data: string | ArrayBuffer
 
 Message data sent by the client.
 
-**Type:** string \| ArrayBuffer
+**Type:** string &#124; ArrayBuffer
 
 **Since:** 19
 

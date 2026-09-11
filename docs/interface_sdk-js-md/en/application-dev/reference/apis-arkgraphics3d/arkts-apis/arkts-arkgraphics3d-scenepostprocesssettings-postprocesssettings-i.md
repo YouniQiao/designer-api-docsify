@@ -2,6 +2,8 @@
 
 Post-processing settings, which are used to configure the image processing effect after camera rendering, including tone mapping, bloom, vignetting, and chromatic aberration. This is used as the postProcess attribute of Camera.
 
+@typedef PostProcessSettings
+
 **Since:** 12
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

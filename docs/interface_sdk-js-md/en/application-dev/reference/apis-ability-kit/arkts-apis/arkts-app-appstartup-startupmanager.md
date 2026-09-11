@@ -2,7 +2,7 @@
 
 The module provides the capability to manage startup tasks in [AppStartup](../../../application-models/app-startup.md). The APIs of this module can be called only on the main thread.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This module supports .so file preloading since API version 18.
 

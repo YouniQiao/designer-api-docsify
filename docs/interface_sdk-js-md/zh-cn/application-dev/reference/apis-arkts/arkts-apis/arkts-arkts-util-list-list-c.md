@@ -897,7 +897,7 @@ sort(comparator: ListComparatorFn<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| comparator | [ListComparatorFn](arkts-arkts-listcomparatorfn-t.md)&lt;T&gt; | 是 | 回调函数。API version 23开始发生兼容性变更，在API version 22及之前的版本其类型为：`(firstValue: T, secondValue: T) =&gt; number`。<br>**适用版本：** 23 |
+| comparator | [ListComparatorFn](arkts-arkts-listcomparatorfn-t.md)&lt;T&gt; | 是 | 回调函数。<br> API version 23开始发生兼容性变更，在API version 22及之前的版本其类型为：`(firstValue: T, secondValue: T) =&gt; number`。<br>**适用版本：** 23 |
 
 **错误码：**
 

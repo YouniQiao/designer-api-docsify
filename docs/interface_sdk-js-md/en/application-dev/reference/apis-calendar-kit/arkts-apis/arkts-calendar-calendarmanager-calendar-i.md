@@ -49,7 +49,7 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:<br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -113,7 +113,7 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:<br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -180,7 +180,7 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:<br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -249,7 +249,7 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:<br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -686,7 +686,7 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:<br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -758,7 +758,7 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:<br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -843,7 +843,7 @@ For versions earlier than API version 20, the default fields to be obtained incl
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:<br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -998,7 +998,7 @@ Queries the event instance with a specified event key in a calendar. This API us
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:<br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 

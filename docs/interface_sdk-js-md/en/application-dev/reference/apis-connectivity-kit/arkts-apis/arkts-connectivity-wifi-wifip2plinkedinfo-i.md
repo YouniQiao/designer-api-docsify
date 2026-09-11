@@ -1,6 +1,6 @@
 # WifiP2pLinkedInfo
 
-P2P linked information.
+P2P linked information. @typedef WifiP2pLinkedInfo
 
 **Since:** 8
 

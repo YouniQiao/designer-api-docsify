@@ -16,7 +16,7 @@ Sets whether local installation of enterprise applications is supported for a sp
 
 Only enterprise applications signed with the **enterprise_normal** or **enterprise_mdm** signature type are supported.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > A PC/2-in-1 enterprise device supports local installation of enterprise applications for the current user if any
 > of the following conditions is met:
@@ -40,7 +40,7 @@ Only enterprise applications signed with the **enterprise_normal** or **enterpri
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | isEnable | boolean | Yes | Whether local installation of enterprise applications is supported. The value **true** indicates that the local installation of enterprise applications is supported, and the value **false** indicates the opposite. |
-| accountId | number | Yes | User ID, which must be greater than or equal to 0.    **accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
+| accountId | number | Yes | User ID, which must be greater than or equal to 0. <br>**accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 
 **Error codes:**
 

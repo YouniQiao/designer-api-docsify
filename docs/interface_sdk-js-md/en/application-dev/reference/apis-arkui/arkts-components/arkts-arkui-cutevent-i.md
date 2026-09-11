@@ -17,7 +17,9 @@ Defines a custom cut event.
 preventDefault?: Callback<void>
 ```
 
-Prevents the default cut event.
+Whether to prevent the system default cut event.
+
+If omitted, the system default cut behavior is performed.
 
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 

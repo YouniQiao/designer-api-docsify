@@ -35,7 +35,7 @@ function importContactsViaUI(context: Context, contacts: Array<Contact>): Promis
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | 返回联系人创建结果的数组。返回的联系人id有效（可通过[getId]{ |
+| Promise&lt;Array&lt;number&gt;&gt; | 返回联系人创建结果的数组。返回的联系人id有效（可通过getId获取）表示创建成功。返回值为-1[INVALID_CONTACT_ID](arkts-contacts-contact-contact-c.md#invalid_contact_id) 表示创建失败。-2表示用户未选择该联系人。 |
 
 **错误码：**
 

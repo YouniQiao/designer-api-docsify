@@ -30,7 +30,7 @@ Unit: vp.
 
 If the value is invalid, 0 vp is used.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ Unit: vp.
 
 If the value is invalid, 0 vp is used.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 12
 

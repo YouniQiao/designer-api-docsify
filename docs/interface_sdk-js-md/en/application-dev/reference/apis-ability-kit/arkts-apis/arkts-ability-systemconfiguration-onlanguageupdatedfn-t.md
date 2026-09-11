@@ -6,6 +6,8 @@ type OnLanguageUpdatedFn = (language: string) => void
 
 Defines an OnLanguageUpdatedFn function.
 
+@typedef { function }
+
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.

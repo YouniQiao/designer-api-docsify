@@ -364,7 +364,7 @@ function on(type: 'callStateChange', callback: Callback<CallStateInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'callStateChange' | 是 | 通话状态变化事件，参数固定为'callStateChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | 是 | 回调函数，返回通话状态信息对象。应用可获取到CallStateInfo。其中，三方应用仅能获取state通话状态。number受系统权限管控，仅面向系统应用开放。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | 是 | 回调函数，返回通话状态信息对象。<br>应用可获取到CallStateInfo。<br>其中，三方应用仅能获取state通话状态。number受系统权限管控，仅面向系统应用开放。 |
 
 **错误码：**
 
@@ -403,7 +403,7 @@ function on(type: 'callStateChange', options: ObserverOptions, callback: Callbac
 | --- | --- | --- | --- |
 | type | 'callStateChange' | 是 | 通话状态变化事件，参数固定为'callStateChange'。 |
 | options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | 是 | 电话相关事件订阅参数可选项。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | 是 | 回调函数，返回通话状态信息对象。应用可获取到CallStateInfo。其中，三方应用仅能获取state通话状态。number受系统权限管控，仅面向系统应用开放。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | 是 | 回调函数，返回通话状态信息对象。<br>应用可获取到CallStateInfo。<br>其中，三方应用仅能获取state通话状态。number受系统权限管控，仅面向系统应用开放。 |
 
 **错误码：**
 
@@ -444,7 +444,7 @@ function on(type: 'callStateChangeEx', callback: Callback<TelCallState>, options
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'callStateChangeEx' | 是 | 通话状态变化事件，参数固定为'callStateChangeEx'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TelCallState](arkts-telephony-observer-telcallstate-t.md)&gt; | 是 | 回调函数，返回通话状态对象。应用可获取到TelCallState。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TelCallState](arkts-telephony-observer-telcallstate-t.md)&gt; | 是 | 回调函数，返回通话状态对象。<br>应用可获取到TelCallState。<br> |
 | options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | 否 | 电话相关事件订阅参数可选项。 |
 
 **错误码：**

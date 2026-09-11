@@ -72,7 +72,7 @@ SELECT = 2
 DEFAULT = 3
 ```
 
-注册此类型的菜单，但未注册RIGHT_CLICK、LONG_PRESS、SELECT时，右键、长按、鼠标、[selection](arkts-arkui-text-attribute.md#selection)选中均会触发并显示此类型对应的菜单。
+注册此类型的菜单，但未注册RIGHT_CLICK、LONG_PRESS、SELECT时，右键、长按、鼠标、[selection](arkts-arkui-text-comp-attribute.md#selection)选中均会触发并显示此类型对应的菜单。
 
 **起始版本：** 15
 

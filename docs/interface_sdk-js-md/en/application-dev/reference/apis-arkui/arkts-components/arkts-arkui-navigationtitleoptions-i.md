@@ -37,7 +37,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 Options for the title bar background blur style.
 
-**NOTE：**
+**NOTE:**
 
 This parameter is only effective when **backgroundBlurStyle** is set.
 
@@ -79,7 +79,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 Title bar background properties, including blur radius, brightness, saturation, and color.
 
-**NOTE：**
+**NOTE:**
 
 Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
 
@@ -180,9 +180,9 @@ Padding at the end of the title bar.
 Only supported in one of the following scenarios:
 
 1. Using a non-custom menu, that is, the  
-[menu value](arkts-arkui-navigation-attribute.md#menus) is Array&lt;NavigationMenuItem&gt;
+[menu value](arkts-arkui-navigation-comp-attribute.md#menus) is Array&lt;NavigationMenuItem&gt;
 2. Using a non-custom menu without a menu in the upper right corner, that is,
-the [title value](arkts-arkui-navigation-attribute.md#title) type is **ResourceStr** or **NavigationCommonTitle**
+the [title value](arkts-arkui-navigation-comp-attribute.md#title) type is **ResourceStr** or **NavigationCommonTitle**
 
 Default value:
 
@@ -210,8 +210,8 @@ Padding at the start of the title bar.
 
 Only supported in one of the following scenarios:
 
-1. Displaying the back icon, that is, [hideBackButton](arkts-arkui-navigation-attribute.md#hidebackbutton) is **false**
-2. Using a non-custom title, that is, the [title value](arkts-arkui-navigation-attribute.md#title) type is **ResourceStr** or **NavigationCommonTitle**
+1. Displaying the back icon, that is, [hideBackButton](arkts-arkui-navigation-comp-attribute.md#hidebackbutton) is **false**
+2. Using a non-custom title, that is, the [title value](arkts-arkui-navigation-comp-attribute.md#title) type is **ResourceStr** or **NavigationCommonTitle**
 
 Default value:
 

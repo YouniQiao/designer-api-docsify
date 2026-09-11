@@ -14,7 +14,7 @@ function hideAlertBeforeBackPage(): void
 
 Disables the display of a confirm dialog box before returning to the previous page.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in

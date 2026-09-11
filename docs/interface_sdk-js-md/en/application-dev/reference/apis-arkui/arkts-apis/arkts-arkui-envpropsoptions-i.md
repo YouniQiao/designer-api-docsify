@@ -19,7 +19,7 @@ defaultValue: number | string | boolean
 
 Default value used if the value of the specified environment variable key is not found in AppStorage.
 
-**Type:** number \| string \| boolean
+**Type:** number &#124; string &#124; boolean
 
 **Since:** 10
 

@@ -43,7 +43,7 @@ static registerInputer(authType: AuthType, inputer: IInputer): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid authType or inputer. |
 | [12300103](../errorcode-account.md#12300103-凭据输入器已注册) | The credential inputer already exists. |
@@ -97,7 +97,7 @@ static unregisterInputer(authType: AuthType): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid authType. |
 
 **示例**

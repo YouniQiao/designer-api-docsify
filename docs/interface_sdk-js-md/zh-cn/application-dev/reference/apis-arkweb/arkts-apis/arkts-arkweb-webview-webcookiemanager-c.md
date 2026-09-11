@@ -50,7 +50,7 @@ static clearAllCookies(): Promise<void>
 static clearAllCookies(callback: AsyncCallback<void>): void
 ```
 
-清除所有cookie（包括会话cookie和持久化cookie），使用callback异步回调。如需仅清除会话cookie，请使用[clearSessionCookie](#clearsessioncookie)。
+清除所有cookie（包括会话cookie和持久化cookie），使用callback异步回调。如需仅清除会话cookie，请使用[clearSessionCookie](#clearsessioncookie-1)。
 
 **起始版本：** 11
 
@@ -68,7 +68,7 @@ static clearAllCookies(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
 ## clearAllCookiesSync
 
@@ -88,7 +88,7 @@ static clearAllCookiesSync(incognito?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| incognito | boolean | 否 | true表示清除隐私模式下Webview的所有内存cookies，false表示清除正常非隐私模式下的持久化cookies。默认值：false。传入undefined或null时不清除cookies。 |
+| incognito | boolean | 否 | true表示清除隐私模式下Webview的所有内存cookies，false表示清除正常非隐私模式下的持久化cookies。<br>默认值：false。<br>传入undefined或null时不清除cookies。 |
 
 ## clearSessionCookie
 
@@ -140,7 +140,7 @@ static clearSessionCookie(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
 ## clearSessionCookieSync
 
@@ -169,7 +169,7 @@ static configCookie(url: string, value: string): Promise<void>
 > - configCookie中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
 > 
 > - cookie每30s周期性保存到磁盘中，也可以使用接口
-> [saveCookieAsync](#savecookieasync)进行强制落盘。
+> [saveCookieAsync](#savecookieasync-1)进行强制落盘。
 > 
 > - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。
 > 
@@ -204,9 +204,9 @@ static configCookie(url: string, value: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
-| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified in RFC 6265. |
+| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified<br>in RFC 6265. |
 
 ## configCookie
 
@@ -221,7 +221,7 @@ static configCookie(url: string, value: string, incognito: boolean, includeHttpO
 > - configCookie中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
 > 
 > - cookie每30s周期性保存到磁盘中，也可以使用接口
-> [saveCookieAsync](#savecookieasync)进行强制落盘。
+> [saveCookieAsync](#savecookieasync-1)进行强制落盘。
 > 
 > - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。
 > 
@@ -254,9 +254,9 @@ static configCookie(url: string, value: string, incognito: boolean, includeHttpO
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
-| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified in RFC 6265. |
+| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified<br>in RFC 6265. |
 
 ## configCookie
 
@@ -271,7 +271,7 @@ static configCookie(url: string, value: string, callback: AsyncCallback<void>): 
 > - configCookie中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
 > 
 > - cookie每30s周期性保存到磁盘中，也可以使用接口
-> [saveCookieAsync](#savecookieasync)进行强制落盘。
+> [saveCookieAsync](#savecookieasync-1)进行强制落盘。
 > 
 > - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。
 > 
@@ -301,9 +301,9 @@ static configCookie(url: string, value: string, callback: AsyncCallback<void>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
-| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified in RFC 6265. |
+| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified<br>in RFC 6265. |
 
 ## configCookieSync
 
@@ -318,7 +318,7 @@ static configCookieSync(url: string, value: string, incognito?: boolean): void
 > - configCookieSync中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
 > 
 > - cookie每30s周期性保存到磁盘中，也可以使用接口
-> [saveCookieAsync](#savecookieasync)进行强制落盘。
+> [saveCookieAsync](#savecookieasync-1)进行强制落盘。
 > 
 > - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。
 > 
@@ -342,15 +342,15 @@ static configCookieSync(url: string, value: string, incognito?: boolean): void
 | --- | --- | --- | --- |
 | url | string | 是 | 要设置的cookie所属的url，建议使用完整的url。 |
 | value | string | 是 | 要设置的cookie的值。 |
-| incognito | boolean | 否 | true表示设置隐私模式下对应url的cookies，false表示设置正常非隐私模式下对应url的cookies。默认值：false。传入undefined或null会抛出异常错误码401。 |
+| incognito | boolean | 否 | true表示设置隐私模式下对应url的cookies，false表示设置正常非隐私模式下对应url的cookies。<br>默认值：false。<br>传入undefined或null会抛出异常错误码401。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
-| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified in RFC 6265. |
+| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified<br>in RFC 6265. |
 
 ## configCookieSync
 
@@ -365,7 +365,7 @@ static configCookieSync(url: string, value: string, incognito: boolean, includeH
 > - configCookieSync中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
 > 
 > - cookie每30s周期性保存到磁盘中，也可以使用接口
-> [saveCookieAsync](#savecookieasync)进行强制落盘。
+> [saveCookieAsync](#savecookieasync-1)进行强制落盘。
 > 
 > - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。
 > 
@@ -392,9 +392,9 @@ static configCookieSync(url: string, value: string, incognito: boolean, includeH
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
-| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified in RFC 6265. |
+| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified<br>in RFC 6265. |
 
 ## deleteEntireCookie
 
@@ -446,7 +446,7 @@ static existCookie(incognito?: boolean): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| incognito | boolean | 否 | true表示隐私模式下查询是否存在cookies，false表示正常非隐私模式下查询是否存在cookies。默认值：false。传入undefined或null时返回undefined。<br>**适用版本：** 11 |
+| incognito | boolean | 否 | true表示隐私模式下查询是否存在cookies，false表示正常非隐私模式下查询是否存在cookies。<br>默认值：false。<br>传入undefined或null时返回undefined。<br>**适用版本：** 11 |
 
 **返回值：**
 
@@ -508,7 +508,7 @@ static fetchCookie(url: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 
 ## fetchCookie
@@ -540,7 +540,7 @@ static fetchCookie(url: string, incognito: boolean): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 
 ## fetchCookie
@@ -564,8 +564,8 @@ static fetchCookie(url: string, incognito: boolean, includePartitionedCookies: b
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 要获取的cookie所属的url，建议使用完整的url。 |
-| incognito | boolean | 是 | true表示获取隐私模式下webview的内存cookies，false表示获取非隐私模式下的cookies。传入undefined或null会抛出异常错误码401。 |
-| includePartitionedCookies | boolean | 是 | true表示允许获取第一方partitioned cookies，false表示不允许获取第一方partitioned cookies。传入undefined或null会抛出异常错误码401。 |
+| incognito | boolean | 是 | true表示获取隐私模式下webview的内存cookies，false表示获取非隐私模式下的cookies。<br>传入undefined或null会抛出异常错误码401。 |
+| includePartitionedCookies | boolean | 是 | true表示允许获取第一方partitioned cookies，false表示不允许获取第一方partitioned cookies。<br>传入undefined或null会抛出异常错误码401。 |
 
 **返回值：**
 
@@ -604,7 +604,7 @@ static fetchCookie(url: string, callback: AsyncCallback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 
 ## fetchCookieSync
@@ -634,7 +634,7 @@ static fetchCookieSync(url: string, incognito?: boolean): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 要获取cookie的url，建议使用完整的url。 |
-| incognito | boolean | 否 | true表示获取隐私模式下webview的内存cookies，false表示正常非隐私模式下的cookies。默认值：false。传入undefined或null会抛出异常错误码401。 |
+| incognito | boolean | 否 | true表示获取隐私模式下webview的内存cookies，false表示正常非隐私模式下的cookies。<br>默认值：false。<br>传入undefined或null会抛出异常错误码401。 |
 
 **返回值：**
 
@@ -646,7 +646,7 @@ static fetchCookieSync(url: string, incognito?: boolean): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 
 ## fetchCookieSync
@@ -676,8 +676,8 @@ static fetchCookieSync(url: string, incognito?: boolean, includePartitionedCooki
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 要获取的cookie所属的url，建议使用完整的url。 |
-| incognito | boolean | 否 | true表示获取隐私模式下webview的内存cookies，false表示获取非隐私模式下的cookies。默认值：false。传入undefined或null会抛出异常错误码401。 |
-| includePartitionedCookies | boolean | 否 | true表示允许获取第一方partitioned cookies，false表示不允许获取第一方partitioned cookies。默认值：false。传入undefined或null会抛出异常错误码401。 |
+| incognito | boolean | 否 | true表示获取隐私模式下webview的内存cookies，false表示获取非隐私模式下的cookies。<br>默认值：false。<br>传入undefined或null会抛出异常错误码401。 |
+| includePartitionedCookies | boolean | 否 | true表示允许获取第一方partitioned cookies，false表示不允许获取第一方partitioned cookies。<br>默认值：false。<br>传入undefined或null会抛出异常错误码401。 |
 
 **返回值：**
 
@@ -723,7 +723,7 @@ static getCookie(url: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 
 ## isCookieAllowed
@@ -744,7 +744,7 @@ static isCookieAllowed(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 是否拥有发送和接收cookie的权限。 |
+| boolean | 是否拥有发送和接收cookie的权限。<br>true表示拥有发送和接收cookie的权限，false表示无发送和接收cookie的权限。<br>默认值：true。 |
 
 ## isThirdPartyCookieAllowed
 
@@ -764,7 +764,7 @@ static isThirdPartyCookieAllowed(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 是否拥有发送和接收第三方cookie的权限。 |
+| boolean | 是否拥有发送和接收第三方cookie的权限。<br>true表示拥有发送和接收第三方cookie的权限，false表示无发送和接收第三方cookie的权限。<br>默认值：false。 |
 
 ## putAcceptCookieEnabled
 
@@ -790,7 +790,7 @@ static putAcceptCookieEnabled(accept: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## putAcceptThirdPartyCookieEnabled
 
@@ -810,13 +810,13 @@ static putAcceptThirdPartyCookieEnabled(accept: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| accept | boolean | 是 | 是否允许发送和接收第三方cookie。true表示允许，false表示不允许。 |
+| accept | boolean | 是 | 是否允许发送和接收第三方cookie。<br>true表示允许，false表示不允许。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## saveCookieAsync
 
@@ -847,7 +847,7 @@ static saveCookieAsync(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## saveCookieAsync
 
@@ -878,7 +878,7 @@ static saveCookieAsync(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## saveCookieSync
 
@@ -926,9 +926,9 @@ static setCookie(url: string, value: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
-| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified in RFC 6265. |
+| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified<br>in RFC 6265. |
 
 ## setLazyInitializeWebEngine
 

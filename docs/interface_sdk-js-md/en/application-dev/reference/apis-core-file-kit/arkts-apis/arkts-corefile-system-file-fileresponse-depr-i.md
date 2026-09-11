@@ -69,7 +69,7 @@ type: 'dir' | 'file'
 
 File type. Available values are as follows: **dir**: directory **file**: file
 
-**Type:** 'dir' \| 'file'
+**Type:** 'dir' &#124; 'file'
 
 **Since:** 3
 

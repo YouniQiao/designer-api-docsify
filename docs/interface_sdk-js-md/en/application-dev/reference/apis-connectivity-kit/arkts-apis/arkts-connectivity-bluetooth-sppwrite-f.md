@@ -33,7 +33,7 @@ Write data through the socket.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the data is write successfully; returns `false` otherwise. |
 
 **Examples**
 

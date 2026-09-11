@@ -92,7 +92,7 @@ refreshNode(parentId: number, parentSubTitle: ResourceStr, currentSubtitle: Reso
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parentId | number | 是 | 父节点Id。取值范围：大于等于-1。 |
+| parentId | number | 是 | 父节点Id。<br>取值范围：大于等于-1。 |
 | parentSubTitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 | 父节点副标题。 |
 | currentSubtitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 | 当前节点副标题。 |
 

@@ -65,7 +65,7 @@ Minimum speed of the swipe gesture.
 
 Default value: 100 vp/s
 
-**NOTE：**
+**NOTE:**
 
 If the value is less than or equal to 0, it will be converted to the default value.
 

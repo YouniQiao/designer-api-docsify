@@ -321,7 +321,7 @@ enableDrag(enable: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 是否允许拖拽。true表示允许，false表示不允许。&lt;/br&gt; |
+| enable | boolean | 是 | 是否允许拖拽。<br>true表示允许，false表示不允许。&lt;/br&gt; |
 
 **返回值：**
 
@@ -1250,7 +1250,7 @@ getWindowTransitionAnimation(transitionType: WindowTransitionType): TransitionAn
 
 | 类型 | 说明 |
 | --- | --- |
-| [TransitionAnimation](arkts-arkui-window-transitionanimation-i.md) \| undefined | 对应场景下的转场动画配置。当未使用过[setWindowTransitionAnimation]{ |
+| [TransitionAnimation](arkts-arkui-window-transitionanimation-i.md) &#124; undefined | 对应场景下的转场动画配置。当未使用过[setWindowTransitionAnimation](#setwindowtransitionanimation)接口时，返回undefined。 |
 
 **错误码：**
 
@@ -1318,7 +1318,7 @@ isFloatNavigationAvoidAreaEnabled(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 是否支持获取三键导航类型的避让区域。 |
+| boolean | 是否支持获取三键导航类型的避让区域。<br>true表示支持，false表示不支持。 |
 
 **错误码：**
 
@@ -1334,7 +1334,7 @@ isFocused(): boolean
 
 判断当前窗口是否已获焦。为获取准确的获焦状态，需要在[WindowEventType](arkts-arkui-window-windoweventtype-e.md)生命周期处于WINDOW_ACTIVE之后调用。
 
-可使用on('windowEvent')监听对应状态变更，再执行对应具体业务。
+可使用[on('windowEvent')](#onwindowevent)监听对应状态变更，再执行对应具体业务。
 
 **起始版本：** 12
 
@@ -1580,7 +1580,7 @@ isSupportWideGamut(callback: AsyncCallback<boolean>): void
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [isWindowSupportWideGamut()](#iswindowsupportwidegamut)替代。
+> [isWindowSupportWideGamut()](#iswindowsupportwidegamut-1)替代。
 
 **起始版本：** 8
 
@@ -1614,7 +1614,7 @@ isSystemAvoidAreaEnabled(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 是否可以获取窗口内容的避让区。 |
+| boolean | 是否可以获取窗口内容的避让区。<br> true表示可以获取避让区；false表示不可以获取避让区。 |
 
 **错误码：**
 
@@ -1633,7 +1633,7 @@ isWindowHighlighted(): boolean
 
 获取当前窗口是否为激活态。为准确获取激活态，需要在[WindowEventType](arkts-arkui-window-windoweventtype-e.md)生命周期处于WINDOW_ACTIVE之后调用。
 
-可使用on('windowHighlightChange')监听对应状态变更，再执行对应具体业务。
+可使用[on('windowHighlightChange')](#onwindowhighlightchange)监听对应状态变更，再执行对应具体业务。
 
 **起始版本：** 18
 
@@ -2071,7 +2071,7 @@ maximize(presentation?: MaximizePresentation, acrossDisplay?: boolean): Promise<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | presentation | [MaximizePresentation](arkts-arkui-window-maximizepresentation-e.md) | 否 | 主窗口或子窗口最大化时的布局枚举。默认值window.MaximizePresentation.ENTER_IMMERSIVE，即默认最大化时进入全屏模式。 |
-| acrossDisplay | boolean | 否 | 控制悬停态下主窗口在最大化时的瀑布流模式行为。默认值为`undefined`。仅主窗口可设置此参数，非主窗口调用时返回错误码`1300004`。取值为`true`时：   - 悬停态下，窗口将直接进入瀑布流模式；   - 展开态下，窗口进入最大化，并在悬停态下保持瀑布流模式。   取值为`false`时：   - 悬停态下，窗口将退出瀑布流模式，进入单面最大化（即窗口最大化时只在上半屏或下半屏显示）；   - 展开态下，窗口进入最大化，并在悬停态下退出瀑布流模式。   取值为`undefined`时，不修改窗口瀑布流模式行为：   - 悬停态下，窗口进入单面最大化；   - 展开态下，窗口进入最大化，并在悬停态下默认保持瀑布流模式。   **设备行为差异：** 仅在具备折叠功能的2in1设备可正常调用；在其他设备上调用不生效。 |
+| acrossDisplay | boolean | 否 | 控制悬停态下主窗口在最大化时的瀑布流模式行为。默认值为`undefined`。<br>仅主窗口可设置此参数，非主窗口调用时返回错误码`1300004`。<br>取值为`true`时：<br>- 悬停态下，窗口将直接进入瀑布流模式；<br>- 展开态下，窗口进入最大化，并在悬停态下保持瀑布流模式。<br>取值为`false`时：<br>- 悬停态下，窗口将退出瀑布流模式，进入单面最大化（即窗口最大化时只在上半屏或下半屏显示）；<br>- 展开态下，窗口进入最大化，并在悬停态下退出瀑布流模式。<br>取值为`undefined`时，不修改窗口瀑布流模式行为：<br>- 悬停态下，窗口进入单面最大化；<br>- 展开态下，窗口进入最大化，并在悬停态下默认保持瀑布流模式。<br>**设备行为差异：** 仅在具备折叠功能的2in1设备可正常调用；在其他设备上调用不生效。 |
 
 **返回值：**
 
@@ -2210,7 +2210,7 @@ moveTo(x: number, y: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [moveWindowTo](#movewindowto)(x: int, y: int)
+**替代接口：** [moveWindowTo](#movewindowto)(x: number, y: number)
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2246,7 +2246,7 @@ moveTo(x: number, y: number, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [moveWindowTo](#movewindowto-1)(x: int, y: int, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [moveWindowTo](#movewindowto)(x: number, y: number, callback: AsyncCallback&lt;void&gt;)
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -2608,7 +2608,7 @@ off(type: 'rotationChange',
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'rotationChange' | 是 | 监听事件，固定为'rotationChange'，即窗口旋转变化事件。 |
-| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md), [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) \| void&gt; | 否 | 回调函数。如果传入参数，则关闭该监听。如果未传入参数，则关闭该窗口的所有监听。 |
+| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md), [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) &#124; void&gt; | 否 | 回调函数。如果传入参数，则关闭该监听。如果未传入参数，则关闭该窗口的所有监听。 |
 
 **错误码：**
 
@@ -2738,7 +2738,7 @@ off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> off('avoidAreaChange')
+> [off('avoidAreaChange')](#offavoidareachange)
 > 替代。
 
 **起始版本：** 7
@@ -3455,7 +3455,7 @@ on(type: 'rotationChange', callback: RotationChangeCallback<RotationChangeInfo, 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'rotationChange' | 是 | 监听事件，固定为'rotationChange'，即窗口旋转变化事件。 |
-| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md), [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) \| void&gt; | 是 | 回调函数。返回窗口旋转信息[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md)，应用返回当前窗口变化结果[RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md)。 |
+| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md), [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) &#124; void&gt; | 是 | 回调函数。返回窗口旋转信息[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md)，应用返回当前窗口变化结果[RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md)。 |
 
 **错误码：**
 
@@ -3502,7 +3502,7 @@ on(type: 'frameMetricsMeasured', callback: Callback<FrameMetrics>): void
 
 开启窗口帧率指标变化事件的监听。该接口需要在[loadContent()](#loadcontent)或[setUIContent()](#setuicontent)调用生效后使用。
 
-应用注册帧率变化监听后，只有当客户端UI内容发生重绘时（如页面切换、和可响应组件交互、设置背景色和透明度等），才会触发注册的回调。但当同时使用该接口和[postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback)、[postDelayedFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postdelayedframecallback)、displaySync.on('frame')中的任意一个时，即使无UI内容重绘，也可能触发回调。
+应用注册帧率变化监听后，只有当客户端UI内容发生重绘时（如页面切换、和可响应组件交互、设置背景色和透明度等），才会触发注册的回调。但当同时使用该接口和[postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback)、[postDelayedFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postdelayedframecallback)、[displaySync.on('frame')](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-displaysync-displaysync-i.md#onframe)中的任意一个时，即使无UI内容重绘，也可能触发回调。
 
 **起始版本：** 22
 
@@ -3592,7 +3592,7 @@ on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> on('avoidAreaChange')替
+> [on('avoidAreaChange')](#onavoidareachange)替
 > 代。
 
 **起始版本：** 7
@@ -4065,9 +4065,9 @@ on(type: 'windowEvent', callback: Callback<WindowEventType>): void
 on(type: 'windowStatusChange', callback: Callback<WindowStatusType>): void
 ```
 
-开启窗口模式变化的监听，当窗口windowStatus发生变化时进行通知（此时窗口属性可能还没有更新，如果需要在收到windowStatus变化通知时能够立即获取到变化后的窗口大小、位置，建议使用on('windowStatusDidChange')）。
+开启窗口模式变化的监听，当窗口windowStatus发生变化时进行通知（此时窗口属性可能还没有更新，如果需要在收到windowStatus变化通知时能够立即获取到变化后的窗口大小、位置，建议使用[on('windowStatusDidChange')](#onwindowstatusdidchange)）。
 
-使用当前接口开启监听后，在调用maximize、recover方法时会收到多次回调，如需获取去重后的回调，可使用on('windowStatusDidChange')。
+使用当前接口开启监听后，在调用maximize、recover方法时会收到多次回调，如需获取去重后的回调，可使用[on('windowStatusDidChange')](#onwindowstatusdidchange)。
 
 > **说明：**
 > 
@@ -4133,9 +4133,9 @@ on(type: 'subWindowClose', callback: Callback<void>): void
 
 当重复注册窗口关闭事件的监听时，最后一次注册成功的监听事件生效。
 
-该接口触发的窗口关闭事件监听回调函数是同步执行，子窗口的异步关闭事件监听参考on('windowWillClose')方法。
+该接口触发的窗口关闭事件监听回调函数是同步执行，子窗口的异步关闭事件监听参考[on('windowWillClose')](#onwindowwillclose)方法。
 
-如果存在on('windowWillClose')监听事件，只响应on('windowWillClose')接口。
+如果存在[on('windowWillClose')](#onwindowwillclose)监听事件，只响应[on('windowWillClose')](#onwindowwillclose)接口。
 
 **起始版本：** 12
 
@@ -4167,7 +4167,7 @@ on(type: 'windowWillClose', callback: Callback<void, Promise<boolean>>): void
 
 开启主窗口或子窗口关闭事件的监听。此监听仅能通过系统提供的窗口标题栏关闭按键触发，其余关闭窗口的方式不触发回调。
 
-该接口触发的回调函数是异步执行。子窗口的同步关闭事件监听参考on('subWindowClose')方法。主窗口的同步关闭事件监听参考on('windowStageClose')方法。
+该接口触发的回调函数是异步执行。子窗口的同步关闭事件监听参考[on('subWindowClose')](#onsubwindowclose)方法。主窗口的同步关闭事件监听参考on('windowStageClose')方法。
 
 **起始版本：** 15
 
@@ -4549,7 +4549,7 @@ resetSize(width: number, height: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [resize](#resize)(width: int, height: int)
+**替代接口：** [resize](#resize)(width: number, height: number)
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -4597,7 +4597,7 @@ resetSize(width: number, height: number, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [resize](#resize-1)(width: int, height: int, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [resize](#resize)(width: number, height: number, callback: AsyncCallback&lt;void&gt;)
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -4987,7 +4987,7 @@ setBrightness(brightness: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [setWindowBrightness](#setwindowbrightness)(brightness: double)
+**替代接口：** [setWindowBrightness](#setwindowbrightness)(brightness: number)
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -5023,7 +5023,7 @@ setBrightness(brightness: number, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [setWindowBrightness](#setwindowbrightness-1)(brightness: double, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [setWindowBrightness](#setwindowbrightness)(brightness: number, callback: AsyncCallback&lt;void&gt;)
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -5078,7 +5078,7 @@ setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [setWindowColorSpace()](#setwindowcolorspace)
+> [setWindowColorSpace()](#setwindowcolorspace-1)
 > 替代。
 
 **起始版本：** 8
@@ -5124,8 +5124,8 @@ setContentAspectRatio(ratio: number, isPersistent?: boolean, needUpdateRect?: bo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ratio | number | 是 | 窗口内容布局（不含边框和标题栏等装饰）的宽高比。该参数为浮点数，受窗口最大最小尺寸限制，比例值下限为最小宽度/最大高度，上限为最大宽度/最小高度。窗口最大最小尺寸由[WindowLimits](arkts-arkui-window-windowlimits-i.md)和系统限制的交集决定，系统限制优先级高于[WindowLimits](arkts-arkui-window-windowlimits-i.md)。ratio的有效范围会随[WindowLimits](arkts-arkui-window-windowlimits-i.md)变化而变化。如果先设置了[WindowLimits](arkts-arkui-window-windowlimits-i.md)，后设置的ratio与其冲突，会返回错误码；如果先设置了ratio，后设置的[WindowLimits](arkts-arkui-window-windowlimits-i.md)与其冲突，窗口的宽高比可能会不跟随设置的宽高比（ratio）。 |
-| isPersistent | boolean | 否 | 是否持久化保存该比例参数。如为`true`，比例参数会持久化保存，销毁窗口、关闭应用或重启设备后，当再次切换到自由悬浮窗口模式时仍然生效。可通过[resetAspectRatio](#resetaspectratio)清除持久化保存的比例参数。如为`false`，比例参数仅对当前窗口生效，窗口销毁后清除该数据。默认值为`true`。 |
-| needUpdateRect | boolean | 否 | 是否立即根据当前比例更新窗口大小。如为`true`，立即根据当前比例更新窗口大小。如为`false`，窗口将在拖拽缩放时根据当前比例更新，也可以使用[resize](#resize)或[resizeAsync](#resizeasync)进行主动更新。默认值为`true`。 |
+| isPersistent | boolean | 否 | 是否持久化保存该比例参数。<br>如为`true`，比例参数会持久化保存，销毁窗口、关闭应用或重启设备后，当再次切换到自由悬浮窗口模式时仍然生效。可通过[resetAspectRatio](#resetaspectratio)清除持久化保存的比例参数。<br>如为`false`，比例参数仅对当前窗口生效，窗口销毁后清除该数据。<br>默认值为`true`。 |
+| needUpdateRect | boolean | 否 | 是否立即根据当前比例更新窗口大小。<br>如为`true`，立即根据当前比例更新窗口大小。<br>如为`false`，窗口将在拖拽缩放时根据当前比例更新，也可以使用[resize](#resize)或[resizeAsync](#resizeasync)进行主动更新。<br>默认值为`true`。 |
 
 **返回值：**
 
@@ -5190,7 +5190,7 @@ setDialogBackGestureEnabled(enabled: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | 是否响应手势返回事件。true表示响应手势返回事件，触发onBackPress回调；false表示不响应手势返回事件，不触发onBackPress回调。&lt;/br &gt; |
+| enabled | boolean | 是 | 是否响应手势返回事件。<br>true表示响应手势返回事件，触发onBackPress回调；false表示不响应手势返回事件，不触发onBackPress回调。&lt;/br &gt; |
 
 **返回值：**
 
@@ -5337,7 +5337,7 @@ setFloatNavigationAvoidAreaEnabled(enabled: boolean): Promise<void>
 
 设置当前窗口是否支持获取三键导航类型的避让区域。未调用此接口设置前，系统默认不支持获取三键导航类型的避让区域。使用Promise异步回调。
 
-调用该接口使能后才可以通过[getWindowAvoidArea()](#getwindowavoidarea)获取到[TYPE_FLOAT_NAVIGATION](arkts-arkui-window-avoidareatype-e.md)避让类型对应的避让区域或通过on('avoidAreaChange')监听TYPE_FLOAT_NAVIGATION避让类型对应的避让区域的变化。
+调用该接口使能后才可以通过[getWindowAvoidArea()](#getwindowavoidarea)获取到[TYPE_FLOAT_NAVIGATION](arkts-arkui-window-avoidareatype-e.md)避让类型对应的避让区域或通过[on('avoidAreaChange')](#onavoidareachange)监听TYPE_FLOAT_NAVIGATION避让类型对应的避让区域的变化。
 
 **起始版本：** 26.0.0
 
@@ -5351,7 +5351,7 @@ setFloatNavigationAvoidAreaEnabled(enabled: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | 是否支持获取三键导航类型的避让区域。true表示支持，false表示不支持。&lt;/br&gt; |
+| enabled | boolean | 是 | 是否支持获取三键导航类型的避让区域。<br>true表示支持，false表示不支持。&lt;/br&gt; |
 
 **返回值：**
 
@@ -5411,7 +5411,7 @@ setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowFocusable()](#setwindowfocusable)
+> [setWindowFocusable()](#setwindowfocusable-1)
 > 替代。
 
 **起始版本：** 7
@@ -5532,7 +5532,7 @@ setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议联合使用
-> [setWindowSystemBarEnable()](#setwindowsystembarenable)
+> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
 > 和[setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)替代实现全
 > 屏。
 
@@ -5566,7 +5566,7 @@ setFullScreen(isFullScreen: boolean): Promise<void>
 > **说明：**
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议联合使用
-> [setWindowSystemBarEnable()](#setwindowsystembarenable)
+> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
 > 和[setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)替代实现全
 > 屏。
 
@@ -5648,7 +5648,7 @@ setImmersiveModeEnabledState(enabled: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | 是否开启沉浸式布局。true表示开启，false表示关闭。&lt;/br&gt; |
+| enabled | boolean | 是 | 是否开启沉浸式布局。<br>true表示开启，false表示关闭。&lt;/br&gt; |
 
 **错误码：**
 
@@ -5703,7 +5703,7 @@ setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [setWindowKeepScreenOn()](#setwindowkeepscreenon)
+> [setWindowKeepScreenOn()](#setwindowkeepscreenon-1)
 > 替代。
 
 **起始版本：** 6
@@ -6030,7 +6030,7 @@ setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowPrivacyMode()](#setwindowprivacymode)
+> [setWindowPrivacyMode()](#setwindowprivacymode-1)
 > 替代。
 
 **起始版本：** 7
@@ -6519,7 +6519,7 @@ setSubWindowZLevel(zLevel: number): Promise<void>
 setSystemAvoidAreaEnabled(enabled: boolean): Promise<void>
 ```
 
-创建全局悬浮窗、模态窗或WindowType窗口类型为系统窗口时，调用该接口使能后才可以通过[getWindowAvoidArea()](#getwindowavoidarea)获取窗口避让区信息或通过on('avoidAreaChange')监听窗口避让区变化。
+创建全局悬浮窗、模态窗或WindowType窗口类型为系统窗口时，调用该接口使能后才可以通过[getWindowAvoidArea()](#getwindowavoidarea)获取窗口避让区信息或通过[on('avoidAreaChange')](#onavoidareachange)监听窗口避让区变化。
 
 **起始版本：** 18
 
@@ -6563,7 +6563,7 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallbac
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowSystemBarEnable()](#setwindowsystembarenable)
+> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
 > 替代。
 
 **起始版本：** 7
@@ -6578,7 +6578,7 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | 是 | 设置窗口全屏模式时状态栏和<!--RP15-->三键导航栏<!--RP15End-->是否显示。例如，需全部显示，该参数设置为['status','navigation']；设置为[]，则不显示。 |
+| names | Array&lt;'status' &#124; 'navigation'&gt; | 是 | 设置窗口全屏模式时状态栏和<!--RP15-->三键导航栏<!--RP15End-->是否显示。<br>例如，需全部显示，该参数设置为['status','navigation']；设置为[]，则不显示。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## setSystemBarEnable
@@ -6596,7 +6596,7 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowSystemBarEnable()](#setwindowsystembarenable)
+> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
 > 替代。
 
 **起始版本：** 7
@@ -6611,7 +6611,7 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | 是 | 设置窗口全屏模式时状态栏和<!--RP15-->三键导航栏<!--RP15End-->是否显示。例如，需全部显示，该参数设置为['status','navigation']；设置为[]，则不显示。 |
+| names | Array&lt;'status' &#124; 'navigation'&gt; | 是 | 设置窗口全屏模式时状态栏和<!--RP15-->三键导航栏<!--RP15End-->是否显示。<br>例如，需全部显示，该参数设置为['status','navigation']；设置为[]，则不显示。 |
 
 **返回值：**
 
@@ -6704,8 +6704,8 @@ setTitleAndDockHoverShown(isTitleHoverShown?: boolean, isDockHoverShown?: boolea
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isTitleHoverShown | boolean | 否 | 是否显示窗口标题栏。true表示显示窗口标题栏；false表示不显示窗口标题栏。默认值是true。&lt;/br&gt; |
-| isDockHoverShown | boolean | 否 | 是否显示dock栏。true表示显示dock栏；false表示不显示dock栏。默认值是true。&lt;/br&gt; |
+| isTitleHoverShown | boolean | 否 | 是否显示窗口标题栏。<br>true表示显示窗口标题栏；false表示不显示窗口标题栏。默认值是true。&lt;/br&gt; |
+| isDockHoverShown | boolean | 否 | 是否显示dock栏。<br>true表示显示dock栏；false表示不显示dock栏。默认值是true。&lt;/br&gt; |
 
 **返回值：**
 
@@ -6765,7 +6765,7 @@ setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowTouchable()](#setwindowtouchable)
+> [setWindowTouchable()](#setwindowtouchable-1)
 > 替代。
 
 **起始版本：** 7
@@ -6908,7 +6908,7 @@ Stage模型下，该接口需要在[loadContent()](#loadcontent)或[setUIContent
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | string \| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 是 | 需要设置的背景色，为十六进制RGB或ARGB颜色，不区分大小写，例如'#00FF00'或'#FF00FF00'。从API version 18开始，此参数支持ColorMetrics类型。<br>**适用版本：** 18 |
+| color | string &#124; [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 是 | 需要设置的背景色，为十六进制RGB或ARGB颜色，不区分大小写，例如'#00FF00'或'#FF00FF00'。从API version 18开始，此参数支持ColorMetrics类型。<br>**适用版本：** 18 |
 
 **错误码：**
 
@@ -7252,7 +7252,7 @@ setWindowDelayRaiseOnDrag(isEnabled: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isEnabled | boolean | 是 | 是否使能延迟抬升。true表示使能窗口延迟抬升；false表示不使能窗口延迟抬升。 |
+| isEnabled | boolean | 是 | 是否使能延迟抬升。<br>true表示使能窗口延迟抬升；false表示不使能窗口延迟抬升。 |
 
 **错误码：**
 
@@ -7595,13 +7595,13 @@ setWindowLimits(windowLimits: WindowLimits, isForcible: boolean): Promise<Window
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | windowLimits | [WindowLimits](arkts-arkui-window-windowlimits-i.md) | 是 | 目标窗口的尺寸限制，单位为px或vp。 |
-| isForcible | boolean | 是 | 是否强制设置窗口的尺寸限制。入参[windowLimits](arkts-arkui-window-windowlimits-i.md)的单位为vp时：无论设置true还是false，都按照false处理，窗口宽高的最小值和最大值都取决于系统限制。入参[windowLimits](arkts-arkui-window-windowlimits-i.md)的单位为px时：设置为true，表示窗口宽高最小值以系统限制值和40vp两者中的低数值为准，窗口宽高的最大值仍取决于系统限制；设置为false，表示窗口宽高的最小值和最大值都取决于系统限制。 |
+| isForcible | boolean | 是 | 是否强制设置窗口的尺寸限制。<br>入参[windowLimits](arkts-arkui-window-windowlimits-i.md)的单位为vp时：无论设置true还是false，都按照false处理，窗口宽高的最小值和最大值都取决于系统限制。<br>入参[windowLimits](arkts-arkui-window-windowlimits-i.md)的单位为px时：设置为true，表示窗口宽高最小值以系统限制值和40vp两者中的低数值为准，窗口宽高的最大值仍取决于系统限制；设置为false，表示窗口宽高的最小值和最大值都取决于系统限制。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[WindowLimits](arkts-arkui-window-windowlimits-i.md)&gt; | Promise对象。返回设置后的窗口尺寸限制。 |
+| Promise&lt;[WindowLimits](arkts-arkui-window-windowlimits-i.md)&gt; | Promise对象。返回设置后的窗口尺寸限制。<br>入参[windowLimits](arkts-arkui-window-windowlimits-i.md)的单位为vp时，返回入参与系统默认窗口尺寸限制的交集。<br>入参[windowLimits](arkts-arkui-window-windowlimits-i.md)的单位为px时，isForcible为false则返回入参与系统默认窗口尺寸限制的交集；isForcible为true则返回入参与[系统限制的最小值与40vp两者中的低数值，系统限制的最大值]的交集。 |
 
 **错误码：**
 
@@ -7672,8 +7672,8 @@ setWindowMaskWithAlpha(windowMask: Uint8Array, maskWidth: number, maskHeight: nu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | windowMask | Uint8Array | 是 | windowMask仅包含每像素alpha透明度值。有效范围：0（完全透明）到255（完全不透明），大小必须等于(maskWidth*mask Heights) |
-| maskWidth | number | 是 | 掩码宽度（以像素为单位）。必须等于目标窗口宽度取值范围为全体整数。 |
-| maskHeight | number | 是 | 以像素为单位的遮罩高度。必须等于目标窗口高度取值范围为全体整数。 |
+| maskWidth | number | 是 | 掩码宽度（以像素为单位）。必须等于目标窗口宽度<br>取值范围为全体整数。 |
+| maskHeight | number | 是 | 以像素为单位的遮罩高度。必须等于目标窗口高度<br>取值范围为全体整数。 |
 
 **返回值：**
 
@@ -7848,7 +7848,7 @@ setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncC
 > **说明：**
 > 
 > 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的
-> [setWindowSystemBarEnable()](#setwindowsystembarenable)
+> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
 > 替代。
 
 **起始版本：** 9
@@ -7865,7 +7865,7 @@ setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncC
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | 是 | 设置窗口全屏模式时状态栏和<!--RP15-->三键导航栏<!--RP15End-->是否显示。例如，需全部显示，该参数设置为['status','navigation']；设置为[]，则不显示。 |
+| names | Array&lt;'status' &#124; 'navigation'&gt; | 是 | 设置窗口全屏模式时状态栏和<!--RP15-->三键导航栏<!--RP15End-->是否显示。<br>例如，需全部显示，该参数设置为['status','navigation']；设置为[]，则不显示。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
@@ -7896,7 +7896,7 @@ setWindowSystemBarEnable(names: Array<'status'|'navigation'>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | 是 | The set of system bar |
+| names | Array&lt;'status' &#124; 'navigation'&gt; | 是 | The set of system bar |
 
 **返回值：**
 
@@ -8398,7 +8398,7 @@ showWindow(options: ShowWindowOptions): Promise<void>
 snapshot(callback: AsyncCallback<image.PixelMap>): void
 ```
 
-获取窗口截图，使用callback异步回调。若当前窗口设置为隐私模式（可通过[setWindowPrivacyMode](#setwindowprivacymode)接口设置），截图结果为白屏。
+获取窗口截图，使用callback异步回调。若当前窗口设置为隐私模式（可通过[setWindowPrivacyMode](#setwindowprivacymode-1)接口设置），截图结果为白屏。
 
 **起始版本：** 9
 
@@ -8424,7 +8424,7 @@ snapshot(callback: AsyncCallback<image.PixelMap>): void
 snapshot(): Promise<image.PixelMap>
 ```
 
-获取当前窗口截图。若当前窗口设置为隐私模式（可通过[setWindowPrivacyMode](#setwindowprivacymode)接口设置），截图结果为白屏。
+获取当前窗口截图。若当前窗口设置为隐私模式（可通过[setWindowPrivacyMode](#setwindowprivacymode-1)接口设置），截图结果为白屏。
 
 **起始版本：** 9
 
@@ -8450,7 +8450,7 @@ snapshot(): Promise<image.PixelMap>
 snapshotIgnorePrivacy(): Promise<image.PixelMap>
 ```
 
-获取当前窗口截图。即使当前窗口设置为隐私模式（可通过[setWindowPrivacyMode](#setwindowprivacymode)接口设置），仍可调用本接口返回当前窗口截图。
+获取当前窗口截图。即使当前窗口设置为隐私模式（可通过[setWindowPrivacyMode](#setwindowprivacymode-1)接口设置），仍可调用本接口返回当前窗口截图。
 
 **起始版本：** 18
 
@@ -8477,7 +8477,7 @@ snapshotIgnorePrivacy(): Promise<image.PixelMap>
 snapshotSync(): image.PixelMap
 ```
 
-获取当前窗口截图，此接口为同步接口。若当前窗口设置为隐私模式（[setWindowPrivacyMode](#setwindowprivacymode)接口设置），截图结果为白屏。
+获取当前窗口截图，此接口为同步接口。若当前窗口设置为隐私模式（[setWindowPrivacyMode](#setwindowprivacymode-1)接口设置），截图结果为白屏。
 
 Stage模型下，该接口需要在[loadContent()](#loadcontent)或[setUIContent()](#setuicontent)调用生效后使用。
 

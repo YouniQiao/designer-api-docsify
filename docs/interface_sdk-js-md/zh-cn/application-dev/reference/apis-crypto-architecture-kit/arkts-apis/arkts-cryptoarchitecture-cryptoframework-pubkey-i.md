@@ -2,7 +2,7 @@
 
 公钥，是[Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)的子类，在非对称加密、签名验证、密钥协商时需要将其对象作为输入使用。
 
-公钥可以通过非对称密钥生成器[AsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-asykeygenerator-i.md)、[AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md)来生成。
+<br>公钥可以通过非对称密钥生成器[AsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-asykeygenerator-i.md)、[AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md)来生成。
 
 **继承/实现关系：** PubKey extends [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)
 
@@ -44,13 +44,13 @@ getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | number
 
 | 类型 | 说明 |
 | --- | --- |
-| bigint \| string \| number | 获取的密钥参数内容。 |
+| bigint &#124; string &#124; number | 获取的密钥参数内容。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | This operation is not supported.<br>**适用版本：** 12+ |
@@ -118,7 +118,7 @@ getEncodedDer(format: string): DataBlob
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| format | string | 是 | 用于指定当前密钥格式。支持EC密钥，format取值支持"X509\|COMPRESSED"和"X509\|UNCOMPRESSED"。从API版本26.0.0开始，支持RSA密钥，format取值支持"PKCS1"和"X509"。从API版本26.0.0开始，支持ML-DSA和ML-KEM密钥，format取值支持"X509"。 |
+| format | string | 是 | 用于指定当前密钥格式。支持EC密钥，format取值支持"X509&#124;COMPRESSED"和"X509&#124;UNCOMPRESSED"。<br>从API版本26.0.0开始，支持RSA密钥，format取值支持"PKCS1"和"X509"。<br>从API版本26.0.0开始，支持ML-DSA和ML-KEM密钥，format取值支持"X509"。 |
 
 **返回值：**
 
@@ -130,7 +130,7 @@ getEncodedDer(format: string): DataBlob
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
@@ -169,7 +169,7 @@ getEncodedPem(format: string): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| format | string | 是 | 指定的获取密钥字符串的编码格式。支持RSA密钥，format取值支持"X509"或"PKCS1"。自API版本26.0.0起，支持EC、ML-DSA和ML-KEM密钥，format取值支持"X509"。 |
+| format | string | 是 | 指定的获取密钥字符串的编码格式。支持RSA密钥，format取值支持"X509"或"PKCS1"。<br>自API版本26.0.0起，支持EC、ML-DSA和ML-KEM密钥，format取值支持"X509"。 |
 
 **返回值：**
 
@@ -181,7 +181,7 @@ getEncodedPem(format: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
@@ -265,7 +265,7 @@ getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array
 
 获取指定的密钥数据类型对应的公钥数据。此API以同步方式返回结果。
 
-**说明：** 建议优先使用异步API，getKeyData。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：** <br>建议优先使用异步API，getKeyData。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 26.0.0
 

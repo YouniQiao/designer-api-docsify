@@ -118,7 +118,7 @@ Default value: **true**.
 isStandard?: boolean
 ```
 
-Whether the scheme with this option set is processed as a standard scheme. A standard scheme must comply with the URL parsing rules defined in RFC 1738 section 3.1 and the URL normalization rules defined in RFC 3986 section 6. 2.
+Whether the scheme with this option set is processed as a standard scheme. A standard scheme must comply with the URL parsing rules defined in RFC 1738 section 3.1 and the URL normalization rules defined in RFC 3986 section 6.2.
 
 **true** indicates that the scheme with this option set is processed as a standard scheme, and **false** indicates that it is not processed as a standard scheme.
 

@@ -24,7 +24,7 @@ function isCellularDataEnabled(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 以callback形式异步返回结果。true：蜂窝数据业务已启用。false：蜂窝数据业务已禁用。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 以callback形式异步返回结果。<br>true：蜂窝数据业务已启用。<br>false：蜂窝数据业务已禁用。 |
 
 **错误码：**
 
@@ -71,7 +71,7 @@ function isCellularDataEnabled(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | 以Promise形式返回检查蜂窝数据业务是否启用。 |
+| Promise&lt;boolean&gt; | 以Promise形式返回检查蜂窝数据业务是否启用。<br>true：蜂窝数据业务已启用。<br>false：蜂窝数据业务已禁用。 |
 
 **错误码：**
 

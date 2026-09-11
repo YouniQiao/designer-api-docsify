@@ -152,7 +152,7 @@ fastConvertToJSObject(xml: string, options?: ConvertOptions): Object
 
 Converts an XML text to an object of the object type.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API cannot parse XML files with a large amount of data. If the text content of a single element exceeds
 > 10 MB, an error message is displayed and an object that contains only the XML tag header will be returned.

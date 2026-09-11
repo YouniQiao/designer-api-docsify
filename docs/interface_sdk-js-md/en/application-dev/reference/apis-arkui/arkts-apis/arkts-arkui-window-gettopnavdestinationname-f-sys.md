@@ -30,7 +30,7 @@ Obtains the name of NavDestination in the current top-level Navigation component
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the [NavDestination]{ |
+| Promise&lt;string&gt; | Promise used to return the NavDestination name obtained.<br>If there are nested Navigation components or multiple Navigation components on the current page, the information of the most recently created Navigation component is queried. <br>If the page does not have the Navigation component or the Navigation component does not have NavDestination, an empty string is returned. |
 
 **Error codes:**
 

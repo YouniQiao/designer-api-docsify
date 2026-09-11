@@ -14,7 +14,7 @@ function on(type: 'bluetoothDeviceFind', callback: Callback<Array<string>>): voi
 
 订阅蓝牙设备扫描结果上报事件。使用Callback异步回调。
 
-可扫描到的设备类型包括传统蓝牙设备和低功耗蓝牙设备。该上报方式只支持获取设备地址信息。推荐使用API version 18开始支持的connection.on('discoveryResult')扫描上报方式，可获取到更多设备信息，包括设备地址、设备信号强度、设备名称和设备类型。
+可扫描到的设备类型包括传统蓝牙设备和低功耗蓝牙设备。该上报方式只支持获取设备地址信息。推荐使用API version 18开始支持的[connection.on('discoveryResult')](#ondiscoveryresult)扫描上报方式，可获取到更多设备信息，包括设备地址、设备信号强度、设备名称和设备类型。
 
 **起始版本：** 10
 

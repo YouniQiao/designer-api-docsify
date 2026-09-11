@@ -79,8 +79,6 @@ If 0.5 is returned, 50% of the current component is visible.
 
 | Type | Description |
 | --- | --- |
-| [observer](arkts-arkui-viewmodel-observer-i.md) |  |
-
 ## focus
 
 ```TypeScript
@@ -99,7 +97,7 @@ Requests or cancels the focus for a component. If focus is set to true, the focu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) | No | { focus: true \| false } |
+| obj | [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) | No | { focus: true &#124; false } |
 
 ## getBoundingClientRect
 
@@ -139,7 +137,7 @@ Requests or cancels the crown rotation focus for a component. If focus is set to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) | No | { focus: true \| false } |
+| obj | [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) | No | { focus: true &#124; false } |
 
 ## setAttribute
 

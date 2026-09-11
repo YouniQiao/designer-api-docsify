@@ -2,6 +2,8 @@
 
 定义基础的回调函数。
 
+@typedef Callback&lt;T, V = void&gt;
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

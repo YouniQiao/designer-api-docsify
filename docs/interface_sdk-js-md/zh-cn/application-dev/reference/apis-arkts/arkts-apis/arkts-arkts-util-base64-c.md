@@ -58,7 +58,7 @@ decode(src: Uint8Array | string): Promise<Uint8Array>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | Uint8Array \| string | 是 | 要解码的 Uint8Array 对象或字符串。 |
+| src | Uint8Array &#124; string | 是 | 要解码的 Uint8Array 对象或字符串。 |
 
 **返回值：**
 
@@ -97,7 +97,7 @@ decodeSync(src: Uint8Array | string): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | Uint8Array \| string | 是 | 要解码的 Uint8Array 对象或字符串。 |
+| src | Uint8Array &#124; string | 是 | 要解码的 Uint8Array 对象或字符串。 |
 
 **返回值：**
 

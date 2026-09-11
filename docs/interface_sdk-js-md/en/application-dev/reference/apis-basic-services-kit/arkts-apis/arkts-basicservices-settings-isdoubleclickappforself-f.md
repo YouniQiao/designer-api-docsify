@@ -25,7 +25,7 @@ function isDoubleClickAppForSelf(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Check result. { |
+| Promise&lt;boolean&gt; | Check result. `true` is returned if the specified application is started. Otherwise, `false` is returned. |
 
 **Examples**
 

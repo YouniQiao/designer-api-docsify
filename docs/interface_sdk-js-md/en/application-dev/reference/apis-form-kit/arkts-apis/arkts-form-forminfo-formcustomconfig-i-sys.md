@@ -2,6 +2,8 @@
 
 FormCustomConfig
 
+@typedef FormCustomConfig
+
 **Since:** 26.0.0
 
 **System capability:** SystemCapability.Ability.Form

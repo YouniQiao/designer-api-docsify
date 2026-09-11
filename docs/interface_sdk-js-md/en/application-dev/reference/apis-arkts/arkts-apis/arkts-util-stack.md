@@ -6,11 +6,14 @@ Stack is implemented based on the array data structure. It follows the principle
  at one end and removal at the other end, Stack supports insertion and removal at the same end.
  **Recommended use case**: Use Stack in LOFI scenarios.
  This topic uses the following to identify the use of generics:
- - T: Type
- > **NOTE**
+
+- T: Type
+
+> **NOTE**
  >
  > - Container classes, implemented in static languages, have restrictions on storage locations and properties, and do
  > not support custom properties or methods.
+
 
 
 ## Modules to Import

@@ -14,7 +14,7 @@ declare function moveFile(src: string, dest: string, mode?: number): Promise<voi
 
 Moves a file. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is not supported in a distributed directory.
 
@@ -28,7 +28,7 @@ Moves a file. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the file to move. |
 | dest | string | Yes | Application sandbox path of the destination file. |
-| mode | number | No | Move mode.The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
+| mode | number | No | Move mode.<br> The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
 
 **Return value:**
 
@@ -69,7 +69,7 @@ declare function moveFile(src: string, dest: string, callback: AsyncCallback<voi
 
 Moves a file and forcibly overwrites the file with the same name in the destination directory. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is not supported in a distributed directory.
 
@@ -118,7 +118,7 @@ declare function moveFile(src: string, dest: string, mode: number, callback: Asy
 
 Moves a file with the specified mode. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is not supported in a distributed directory.
 
@@ -132,7 +132,7 @@ Moves a file with the specified mode. This API uses an asynchronous callback to 
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the file to move. |
 | dest | string | Yes | Application sandbox path of the destination file. |
-| mode | number | Yes | Move mode.The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
+| mode | number | Yes | Move mode.<br> The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**

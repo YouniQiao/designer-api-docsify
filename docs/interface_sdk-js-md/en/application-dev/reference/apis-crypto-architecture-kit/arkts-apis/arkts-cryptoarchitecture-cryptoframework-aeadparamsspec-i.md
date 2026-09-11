@@ -2,9 +2,9 @@
 
 Describes parameters in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption and decryption using authenticated encryption with associated data (AEAD). It inherits from [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md).
 
-It is applicable to the CCM and GCM modes of AES. It is applicable to the GCM mode of SM4. It is applicable to ChaCha20-Poly1305.
+<br>It is applicable to the CCM and GCM modes of AES. <br>It is applicable to the GCM mode of SM4. <br>It is applicable to ChaCha20-Poly1305.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When **AeadParamsSpec** is used for encryption in AES-CCM mode:
 > - If the tag length is specified during encryption, the same length must be passed during decryption.
@@ -51,7 +51,7 @@ nonce: Uint8Array
 
 Number used once.
 
-> **NOTE：**
+> **NOTE:**
 > - For AES-CCM, the nonce length ranges from 7 to 13 bytes.
 > - For AES-GCM, the nonce length ranges from 1 to 128 bytes, 12 bytes are recommended.
 > - For SM4-GCM, the nonce length ranges from 1 to 128 bytes, 12 bytes are recommended.
@@ -75,9 +75,9 @@ tagLen?: number
 
 Authentication tag length, in bytes.
 
-For encryption, the tag will be added to the end of the ciphertext. For decryption, the tag should be at the end of the ciphertext. The value should be an integer.
+<br>For encryption, the tag will be added to the end of the ciphertext. <br>For decryption, the tag should be at the end of the ciphertext. <br>The value should be an integer.
 
-> **NOTE：**
+> **NOTE:**
 > - For AES-CCM, the default value is 12. The supported values are 4, 6, 8, 10, 12, 14, and 16.
 > - For AES-GCM, the default value is 16. The supported values are 4, 8, 12, 13, 14, 15, and 16.
 > - For SM4-GCM, the default value is 16. The supported values are 4, 8, 12, 13, 14, 15, and 16.

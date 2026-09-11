@@ -27,7 +27,7 @@ Obtains the number of bytes of a string based on the encoding format.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| string | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | Yes | Target string. |
+| string | string &#124; Buffer &#124; TypedArray &#124; DataView &#124; ArrayBuffer &#124; SharedArrayBuffer | Yes | Target string. |
 | encoding | BufferEncoding | No | Encoding format. The default value is **'utf8'**. |
 
 **Return value:**

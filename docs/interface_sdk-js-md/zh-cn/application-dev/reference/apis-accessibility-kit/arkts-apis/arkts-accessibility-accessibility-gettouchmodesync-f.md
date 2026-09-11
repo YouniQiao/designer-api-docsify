@@ -27,7 +27,7 @@ function getTouchModeSync(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 表示当前操作模式。 |
+| string | 表示当前操作模式。<br>- singleTouchMode：表示单击操作模式。<br>- doubleTouchMode：表示双击操作模式。<br>- none：表示未开启触摸浏览功能。 |
 
 **示例**
 

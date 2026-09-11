@@ -19,7 +19,7 @@ Binds a peripheral device based on the device information returned by **queryDev
 
 **Deprecated since:** 19
 
-**Substitutes:** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md)(deviceId: long, onDisconnect: AsyncCallback&lt;long&gt;)
+**Substitutes:** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md)(deviceId: number, onDisconnect: AsyncCallback&lt;number&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -31,7 +31,7 @@ Binds a peripheral device based on the device information returned by **queryDev
 | --- | --- | --- | --- |
 | deviceId | number | Yes | Device ID, which can be obtained via **queryDevices()**. |
 | onDisconnect | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device. Otherwise, **err** is an error object. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{deviceId: number; remote: rpc.IRemoteObject;}&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{deviceId: number; remote: rpc.IRemoteObject;}&gt; | Yes | Callback used to return the result. When the device is bound successfully, **err** is **undefined**, and **data** contains the device ID and the bound device driver communication object. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -83,7 +83,7 @@ Binds a peripheral device based on the device information returned by **queryDev
 
 **Deprecated since:** 19
 
-**Substitutes:** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md)(deviceId: long, onDisconnect: AsyncCallback&lt;long&gt;)
+**Substitutes:** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md)(deviceId: number, onDisconnect: AsyncCallback&lt;number&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -100,7 +100,7 @@ Binds a peripheral device based on the device information returned by **queryDev
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;{deviceId: number; remote: rpc.IRemoteObject; | > } Promise used to return an object containing the device ID and **IRemoteObject**. |
+| Promise&lt;{deviceId: number; remote: rpc.IRemoteObject;}&gt; | Promise used to return an object containing the device ID and **IRemoteObject**. |
 
 **Error codes:**
 

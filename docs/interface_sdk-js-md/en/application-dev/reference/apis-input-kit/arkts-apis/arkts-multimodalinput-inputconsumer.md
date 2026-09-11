@@ -2,7 +2,7 @@
 
 The **inputConsumer** module implements listening for combination key events as well as listening and interception for volume key events.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Global shortcut keys are combination keys defined by the system or application. System shortcut keys are defined
 > by the system, and application shortcut keys are defined by applications.
@@ -35,9 +35,9 @@ import { inputConsumer } from '@kit.InputKit';
 | Name | Description |
 | --- | --- |
 | [getShieldStatus](arkts-input-inputconsumer-getshieldstatus-f-sys.md) | Obtains the system hotkey shield status. |
-| [off](arkts-input-inputdevice-off-f.md) | Disables listening for system hotkey change events. This API uses an asynchronous callback to return the result. |
+| [off](arkts-input-inputconsumer-off-f-sys.md#offkey) | Disables listening for system hotkey change events. This API uses an asynchronous callback to return the result. |
 | [offKey](arkts-input-inputconsumer-offkey-f-sys.md) | Unsubscribe system keys. |
-| [on](arkts-input-inputdevice-on-f.md) | Enables listening for system hotkey change events. This API uses an asynchronous callback to return the system hotkey data when a system hotkey event that meets the specified condition occurs. |
+| [on](arkts-input-inputconsumer-on-f-sys.md#onkey) | Enables listening for system hotkey change events. This API uses an asynchronous callback to return the system hotkey data when a system hotkey event that meets the specified condition occurs. |
 | [onKey](arkts-input-inputconsumer-onkey-f-sys.md) | Subscribe system keys. |
 | [setShieldStatus](arkts-input-inputconsumer-setshieldstatus-f-sys.md) | Sets the system hotkey shield status. |
 <!--DelEnd-->

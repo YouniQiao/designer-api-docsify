@@ -4,7 +4,7 @@ The **HiTraceMeter** module provides the functions of tracing service processes 
 
 For details about the development process, see [Using HiTraceMeter (ArkTS)](../../../dfx/hitracemeter-guidelines-arkts.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You are advised to use the performance tracing APIs of API version 19. The
 > [startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md), [finishTrace()](arkts-performanceanalysis-hitracemeter-finishtrace-f.md), and
@@ -41,7 +41,7 @@ import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 | [finishSyncTrace](arkts-performanceanalysis-hitracemeter-finishsynctrace-f.md) | Stops a synchronous trace with the trace output level specified. |
 | [finishTrace](arkts-performanceanalysis-hitracemeter-finishtrace-f.md) | Stops an asynchronous trace. |
 | [isTraceEnabled](arkts-performanceanalysis-hitracemeter-istraceenabled-f.md) | Checks whether application trace capture is enabled. |
-| [registerTraceListener](arkts-performanceanalysis-hitracemeter-registertracelistener-f.md) | Registers a callback to notify whether the application trace capture is enabled. This API uses a synchronous callback to return the result. |
+| [registerTraceListener](arkts-performanceanalysis-hitracemeter-registertracelistener-f.md) | Registers a callback to notify whether the application trace capture is enabled. This API uses an asynchronous callback to return the result. |
 | [startAsyncTrace](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md) | Starts an asynchronous trace with the trace output level specified. |
 | [startSyncTrace](arkts-performanceanalysis-hitracemeter-startsynctrace-f.md) | Starts a synchronous trace with the trace output level specified. For details, see [finishSyncTrace()](arkts-performanceanalysis-hitracemeter-finishsynctrace-f.md). |
 | [startTrace](arkts-performanceanalysis-hitracemeter-starttrace-f.md) | Starts an asynchronous trace. |

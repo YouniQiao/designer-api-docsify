@@ -293,7 +293,7 @@ borderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses
 
 当设置BorderRadiuses或LocalizedBorderRadiuses类型且传参为异常值时，菜单默认没有圆角。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **默认值：** 8vp for 2-in-1 devices and 20vp for other devices
 
@@ -511,7 +511,7 @@ true：有蒙层；false：没有蒙层；MenuMaskType：自定义蒙层的样�
 
 当设备配置不显示菜单蒙层时，该接口不生效。如当前在2in1设备上该接口不生效。
 
-**类型：** boolean \| [MenuMaskType](arkts-arkui-menumasktype-i.md)
+**类型：** boolean &#124; [MenuMaskType](arkts-arkui-menumasktype-i.md)
 
 **默认值：** true when preview is enabled, or is false
 
@@ -617,7 +617,9 @@ offset最终取值与placement设置值的关系参见表1：同时设置offset�
 
 **类型：** Position
 
-**默认值：** - [since 10 - 10] @default {x:0,y:0} - Percentage values are not supported. [since 11]
+**默认值：**
+- API版本10：-
+- API版本11+：{x:0,y:0} - Percentage values are not supported.
 
 **起始版本：** 10
 
@@ -735,7 +737,7 @@ outlineColor?: ResourceColor | EdgeColors
 
 默认值：'#19ffffff'
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; EdgeColors
 
 **默认值：** '#19ffffff'
 
@@ -761,7 +763,7 @@ outlineWidth?: Dimension | EdgeOutlineWidths
 
 不支持百分比，若需要外描边效果，outlineWidth为必填项。
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeOutlineWidths
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; EdgeOutlineWidths
 
 **默认值：** 0vp - Percentage values are not supported.
 
@@ -790,7 +792,9 @@ placement?: Placement
 
 **类型：** [Placement](../arkts-apis/arkts-arkui-placement-e.md)
 
-**默认值：** - [since 10 - 10] @default Placement.BottomLeft [since 11]
+**默认值：**
+- API版本10：-
+- API版本11+：Placement.BottomLeft
 
 **起始版本：** 10
 
@@ -816,7 +820,7 @@ preview?: MenuPreviewMode | CustomBuilder
 - 当未设置preview参数或preview参数设置为MenuPreviewMode.NONE时，enableArrow参数生效。  
 - 当preview参数设置为MenuPreviewMode.IMAGE或CustomBuilder时，enableArrow为true时也不显示箭头。
 
-**类型：** [MenuPreviewMode](arkts-arkui-menupreviewmode-e.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**类型：** [MenuPreviewMode](arkts-arkui-menupreviewmode-e.md) &#124; [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **默认值：** MenuPreviewMode.NONE
 
@@ -844,7 +848,8 @@ previewAnimationOptions?: ContextMenuAnimationOptions
 
 **类型：** [ContextMenuAnimationOptions](arkts-arkui-contextmenuanimationoptions-i.md)
 
-**默认值：** { scale: [0.95, 1.1], transition: undefined, hoverScale: undefined } [since 12]
+**默认值：**
+- API版本12+：{ scale: [0.95, 1.1], transition: undefined, hoverScale: undefined }
 
 **起始版本：** 11
 

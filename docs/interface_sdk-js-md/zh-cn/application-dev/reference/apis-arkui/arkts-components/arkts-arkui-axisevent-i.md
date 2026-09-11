@@ -55,7 +55,7 @@ getHorizontalAxisValue(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 水平轴值。 |
+| number | 水平轴值。<br>单位：vp |
 
 ## getPinchAxisScaleValue
 
@@ -77,7 +77,7 @@ getPinchAxisScaleValue(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 双指缩放比例。 |
+| number | 双指缩放比例。<br> **说明：** 缩放比例指的是触控板双指缩放事件触发过程中双指当前的距离与双指最初按下时的距离的比值。<br>默认值：0 <br>取值范围：[0, +∞)<br> |
 
 ## getVerticalAxisValue
 
@@ -99,7 +99,7 @@ getVerticalAxisValue(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 垂直轴值。 |
+| number | 垂直轴值。<br>单位：vp |
 
 ## hasAxis
 
@@ -127,7 +127,7 @@ hasAxis(axisType: AxisType): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 此轴事件是否包含指定的轴类型。 |
+| boolean | 此轴事件是否包含指定的轴类型。<br>true：包含指定的轴类型；false：不包含指定的轴类型。 |
 
 ## action
 

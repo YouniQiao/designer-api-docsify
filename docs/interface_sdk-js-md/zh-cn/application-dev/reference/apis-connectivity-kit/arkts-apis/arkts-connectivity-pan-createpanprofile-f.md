@@ -24,7 +24,7 @@ function createPanProfile(): PanProfile
 
 | 类型 | 说明 |
 | --- | --- |
-| [PanProfile](arkts-connectivity-pan-panprofile-i.md) | 返回PAN实例。该类继承于[BaseProfile]{ |
+| [PanProfile](arkts-connectivity-pan-panprofile-i.md) | 返回PAN实例。该类继承于[BaseProfile](arkts-connectivity-pan-baseprofile-t.md)，因此可以使用其父类中的方法。 |
 
 **错误码：**
 

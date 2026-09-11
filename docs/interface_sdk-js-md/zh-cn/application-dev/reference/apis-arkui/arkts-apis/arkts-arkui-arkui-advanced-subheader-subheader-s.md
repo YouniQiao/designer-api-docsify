@@ -74,8 +74,7 @@ contentMargin?: LocalizedMargin
 
 **类型：** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
 
-**默认值：** {start: LengthMetrics.resource($r('sys.float.margin_left')), 
- end: LengthMetrics.resource($r('sys.float.margin_right'))}
+**默认值：** {start: LengthMetrics.resource($r('sys.float.margin_left')), <br> end: LengthMetrics.resource($r('sys.float.margin_right'))}
 
 **起始版本：** 12
 
@@ -103,9 +102,7 @@ contentPadding?: LocalizedPadding
 
 **类型：** [LocalizedPadding](arkts-arkui-localizedpadding-i.md)
 
-**默认值：** set different default values according to the width of the subHeader: 
- When the left area is secondaryTitle or the group of secondaryTitle and icon, 
- the default value is {start: LengthMetrics.vp(12), end: LengthMetrics.vp(12)};
+**默认值：** set different default values according to the width of the subHeader: <br> When the left area is secondaryTitle or the group of secondaryTitle and icon, <br> the default value is {start: LengthMetrics.vp(12), end: LengthMetrics.vp(12)};
 
 **起始版本：** 12
 
@@ -261,7 +258,7 @@ primaryTitleModifier?: TextModifier
 
 **说明：** 只有primaryTitle生效时，该参数才会生效。
 
-**类型：** TextModifier
+**类型：** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **起始版本：** 12
 
@@ -303,7 +300,7 @@ secondaryTitleModifier?: TextModifier
 
 默认值：undefined，表示使用系统默认样式。
 
-**类型：** TextModifier
+**类型：** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **起始版本：** 12
 

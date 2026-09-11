@@ -91,7 +91,7 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md)&gt;&gt; | Promise used to return the array of [LauncherAbilityInfo]{ |
+| Promise&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md)&gt;&gt; | Promise used to return the array of [LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md) objects obtained. |
 
 **Error codes:**
 

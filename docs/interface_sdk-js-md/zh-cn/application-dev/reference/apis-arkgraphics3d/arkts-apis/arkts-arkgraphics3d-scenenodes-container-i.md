@@ -78,7 +78,7 @@ get(index: number): T | null
 
 | 类型 | 说明 |
 | --- | --- |
-| T \| null | 返回获取到的对象，获取不到则返回空值。 |
+| T &#124; null | 返回获取到的对象，获取不到则返回空值。 |
 
 ## insertAfter
 
@@ -97,7 +97,7 @@ insertAfter(item: T, sibling: T | null): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | item | T | 是 | 要插入节点。 |
-| sibling | T \| null | 是 | 兄弟节点。当为null时，表示插入到容器的开头位置。 |
+| sibling | T &#124; null | 是 | 兄弟节点。当为null时，表示插入到容器的开头位置。 |
 
 ## remove
 

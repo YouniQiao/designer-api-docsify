@@ -24,13 +24,13 @@ function isCellularDataRoamingEnabledSync(slotId: number): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 用来返回检查蜂窝数据业务是否启用漫游。 |
+| boolean | 用来返回检查蜂窝数据业务是否启用漫游。<br>true：蜂窝数据业务已启用漫游。<br>false：蜂窝数据业务已禁用漫游。 |
 
 **错误码：**
 

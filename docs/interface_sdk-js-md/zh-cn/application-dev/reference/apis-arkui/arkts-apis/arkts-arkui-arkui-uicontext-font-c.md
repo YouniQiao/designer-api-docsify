@@ -47,7 +47,7 @@ getFontByName(fontName: string): font.FontInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [font.FontInfo](arkts-arkui-font-fontinfo-i.md) | 字体的详细信息。 |
+| [font.FontInfo](arkts-arkui-font-fontinfo-i.md) | 字体的详细信息。<br>如果查询不到字体，返回undefined。 |
 
 ## getSystemFontList
 
@@ -100,4 +100,4 @@ registerFont(options: font.FontOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [font.FontOptions](arkts-arkui-font-fontoptions-i.md) | 是 | 注册的自定义字体信息。   **说明：**设置注册字体文件的路径，读取系统沙箱路径内的资源时，建议使用file://路径前缀的字符串，需要确保沙箱目录路径下的文件存在并且有可读权限。 |
+| options | [font.FontOptions](arkts-arkui-font-fontoptions-i.md) | 是 | 注册的自定义字体信息。<br>**说明：**<br>设置注册字体文件的路径，读取系统沙箱路径内的资源时，建议使用file://路径前缀的字符串，需要确保沙箱目录路径下的文件存在并且有可读权限。 |

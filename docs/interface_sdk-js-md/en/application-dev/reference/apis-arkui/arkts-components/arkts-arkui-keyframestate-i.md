@@ -41,11 +41,11 @@ For the string type, this parameter indicates an animation interpolation curve. 
 
 Default value: **Curve.EaseInOut**
 
-**NOTE：**
+**NOTE:**
 
 Because the [springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md), [responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md), and [interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md) curves do not have effective duration settings, they are not supported.
 
-**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| [ICurve](arkts-arkui-icurve-i.md)
+**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) &#124; string &#124; [ICurve](arkts-arkui-icurve-i.md)
 
 **Default:** Curve.EaseInOut
 
@@ -67,7 +67,7 @@ Duration of the keyframe animation, in ms.
 
 Value range: [0, +∞)
 
-**NOTE：**
+**NOTE:**
 
 - If this parameter is set to a value less than 0, the value **0** is used.  
 - Floating-point values will be rounded down to integers. For example, if the value set is 1.2, **1** will be used.

@@ -37,7 +37,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回连接id，客户端可以通过[disconnectServiceExtensionAbility]{ |
+| number | 返回连接id，客户端可以通过[disconnectServiceExtensionAbility](#disconnectserviceextensionability)传入该连接id来断开连接。 |
 
 **错误码：**
 
@@ -88,7 +88,7 @@ connectUIServiceExtensionAbility(want: Want, callback: UIServiceExtensionConnect
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[UIServiceProxy](arkts-ability-uiserviceproxy-i.md)&gt; | Promise对象，连接UIServiceExtensionAbility成功时，返回[UIServiceProxy]{ |
+| Promise&lt;[UIServiceProxy](arkts-ability-uiserviceproxy-i.md)&gt; | Promise对象，连接UIServiceExtensionAbility成功时，返回[UIServiceProxy](arkts-ability-uiserviceproxy-i.md)对象，借助该对象可以往UIServiceExtensionAbility发送数据。 |
 
 **错误码：**
 
@@ -370,7 +370,7 @@ setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorMode | [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-e.md) | 是 | 设置颜色模式，包括：    - COLOR_MODE_DARK：深色模式     - COLOR_MODE_LIGHT：浅色模式     - COLOR_MODE_NOT_SET：不设置（跟随系统或应用） |
+| colorMode | [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-e.md) | 是 | 设置颜色模式，包括：<br> - COLOR_MODE_DARK：深色模式 <br> - COLOR_MODE_LIGHT：浅色模式 <br> - COLOR_MODE_NOT_SET：不设置（跟随系统或应用） |
 
 **错误码：**
 

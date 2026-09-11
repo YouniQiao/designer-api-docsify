@@ -12,7 +12,7 @@ import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions
 
 | Name | Description |
 | --- | --- |
-| [ChipGroup](arkts-arkui-arkui-advanced-chipgroup-chipgroup-s.md) | > **NOTE：** >  > 1. When **multiple** is set to **false**, if **selectedIndexes** is not passed in, the first chip is automatically > selected by default. However, if the provided **selectedIndexes** includes multiple elements, the chip at the first > index is selected by default. >  > 2. To use the suffix functionality, the **IconGroupSuffix** API must be imported. If this API is not provided, the > suffix area will remain empty. >  > 3. The icon fill colors (**fillColor** and **activedFillColor**) must match the font color (**fontColor**). If > different colors need to be set, use **prefixSymbol** when passing in > [ChipGroupSpaceOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupspaceoptions-i.md). |
+| [ChipGroup](arkts-arkui-arkui-advanced-chipgroup-chipgroup-s.md) |  |
 | [IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroup-icongroupsuffix-s.md) | The **ChipGroup** component provides a set of chips for organizing and categorizing files or resource content. |
 
 ### Interfaces

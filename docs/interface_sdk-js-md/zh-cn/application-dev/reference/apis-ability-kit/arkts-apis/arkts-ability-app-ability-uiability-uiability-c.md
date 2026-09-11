@@ -167,7 +167,7 @@ onContinue(wantParam: Record<string, Object>):
 | 类型 | 说明 |
 | --- | --- |
 | [AbilityConstant.OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md) | Return the result of onContinue.<br>**适用版本：** 9 - 11 |
-| [AbilityConstant.OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md) \| Promise&lt;[AbilityConstant.OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md)&gt; | 表示是否同意迁移的结果： |
+| [AbilityConstant.OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md) &#124; Promise&lt;[AbilityConstant.OnContinueResult](arkts-ability-abilityconstant-oncontinueresult-e.md)&gt; | 表示是否同意迁移的结果：<br>- AGREE：表示同意。<br>- REJECT：表示拒绝，如应用在onContinue中异常可以返回REJECT。<br>- MISMATCH：表示版本不匹配，接续源端应用可以在onContinue中获取到迁移对端应用的版本号，进行协商后，如果版本不匹配导致无法迁移，可以返回该结果。<br> 该回调与onWindowStageRestore成对出现。在接续场景下，源端的UIAbility触发onContinue保存自定义数据，在目标端UIAbility触发onWindowStageRestore恢复自定义数据。<br>**适用版本：** 12 |
 
 **示例**
 
@@ -540,7 +540,7 @@ onPrepareToTerminate(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether to terminate the UIAbility. |
+| boolean | Whether to terminate the UIAbility.<br>The value &lt;code&gt;true&lt;/code&gt; means that the termination process is canceled. <br>The value &lt;code&gt;false&lt;/code&gt; means to continue terminating the UIAbility. |
 
 **示例**
 
@@ -612,7 +612,7 @@ onPrepareToTerminateAsync(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. |
+| Promise&lt;boolean&gt; | Promise used to return the result.<br>The value &lt;code&gt;true&lt;/code&gt; means that the termination process is canceled. <br>The value &lt;code&gt;false&lt;/code&gt; means to continue terminating the UIAbility. |
 
 **示例**
 

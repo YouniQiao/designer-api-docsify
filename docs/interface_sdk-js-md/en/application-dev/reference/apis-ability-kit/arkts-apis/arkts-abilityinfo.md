@@ -6,6 +6,7 @@ The module defines the ability information. An application can obtain its own ab
  [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md).
 
 
+
 ## Summary
 
 ### Interfaces

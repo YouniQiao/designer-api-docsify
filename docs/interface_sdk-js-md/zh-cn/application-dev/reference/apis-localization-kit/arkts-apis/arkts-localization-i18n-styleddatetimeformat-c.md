@@ -31,7 +31,7 @@ constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dateTimeFormat | [Intl.DateTimeFormat](arkts-localization-intl-datetimeformat-c.md) \| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) | 是 | 用于格式化时间日期的对象。 |
+| dateTimeFormat | [Intl.DateTimeFormat](arkts-localization-intl-datetimeformat-c.md) &#124; [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) | 是 | 用于格式化时间日期的对象。 |
 | options | [StyledDateTimeFormatOptions](arkts-localization-i18n-styleddatetimeformatoptions-i.md) | 否 |  |
 
 **示例**
@@ -89,7 +89,7 @@ format(date: Date): StyledString
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | Date | 是 | 时间日期。   **说明：** 月份从0开始计数，0表示一月。 |
+| date | Date | 是 | 时间日期。<br>**说明：** <br>月份从0开始计数，0表示一月。 |
 
 **返回值：**
 

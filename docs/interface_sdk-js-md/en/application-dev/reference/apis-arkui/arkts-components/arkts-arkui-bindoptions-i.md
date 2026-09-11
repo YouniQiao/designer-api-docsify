@@ -81,7 +81,7 @@ Callback function before overlay popAnimation starts.
 backgroundColor?: ResourceColor
 ```
 
-Background color of the sheet. Default value: **Color.White**.
+Background color of the sheet. <br>Default value: **Color.White**.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

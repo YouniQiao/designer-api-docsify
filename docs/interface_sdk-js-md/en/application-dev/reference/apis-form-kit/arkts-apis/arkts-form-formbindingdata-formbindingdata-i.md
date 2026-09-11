@@ -2,6 +2,8 @@
 
 Defines the createFormBindingData result interface.
 
+@typedef FormBindingData
+
 **Since:** 9
 
 **System capability:** SystemCapability.Ability.Form

@@ -17,9 +17,9 @@ Sets the offset and style of the **SymbolSpan** component.
 offset?: number
 ```
 
-Position of the symbol span to be added. If this parameter is omitted, the span is added to the end of all content.
+Position at which the SymbolSpan is added. If omitted, it is added to the end of all content.
 
-If the value is less than 0, the span is added to the beginning of all content. If the value is greater than the length of all content, the span is added to the end of all content.
+If the value is less than 0, it is added to the beginning of all content; if the value is greater than the length of all content, it is added to the end of all content.
 
 **Type:** number
 
@@ -37,7 +37,7 @@ If the value is less than 0, the span is added to the beginning of all content. 
 style?: RichEditorSymbolSpanStyle
 ```
 
-Style of the symbol span. If this parameter is left empty, the default style will be used.
+Style information of the SymbolSpan. Pass this parameter when you need to customize the color, size, weight, rendering policy, and other styles of the SymbolSpan; if omitted, the system default style information is used.
 
 **Type:** [RichEditorSymbolSpanStyle](arkts-arkui-richeditorsymbolspanstyle-i.md)
 

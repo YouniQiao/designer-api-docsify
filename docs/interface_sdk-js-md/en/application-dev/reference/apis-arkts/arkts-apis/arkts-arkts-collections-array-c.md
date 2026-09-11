@@ -2,7 +2,7 @@
 
 A linear data structure that is implemented on arrays and can be passed between ArkTS concurrent instances. Pass-by-reference is recommended for better transfer performance.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > This section uses the following to identify the use of generics:
@@ -74,7 +74,7 @@ Returns the element at a given index in this ArkTS array.
 
 | Type | Description |
 | --- | --- |
-| T \| undefined | Element at the given index. If the index is out of range or invalid, **undefined** is returned. |
+| T &#124; undefined | Element at the given index. If the index is out of range or invalid, **undefined** is returned. |
 
 **Error codes:**
 
@@ -285,7 +285,7 @@ Copies elements within a given range from this ArkTS array to another position i
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | ArkTS array after being modified. Possible causes: |
+| Array&lt;T&gt; | ArkTS array after being modified. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 
 **Error codes:**
 
@@ -513,7 +513,7 @@ Returns the value of the first element that passes a test provided by a callback
 
 | Type | Description |
 | --- | --- |
-| T \| undefined | Value of the first element that passes the test. If none of the elements pass the test, **undefined** is returned. |
+| T &#124; undefined | Value of the first element that passes the test. If none of the elements pass the test, **undefined** is returned. |
 
 **Error codes:**
 
@@ -666,7 +666,7 @@ Creates an ArkTS array from an array-like object, and uses a custom function to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; \| Iterable&lt;T&gt; | Yes | Array-like object. |
+| arrayLike | ArrayLike&lt;T&gt; &#124; Iterable&lt;T&gt; | Yes | Array-like object. |
 | mapFn | [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md)&lt;T, T&gt; | Yes | Functions used to process the array elements. |
 
 **Return value:**
@@ -693,7 +693,7 @@ Creates an ArkTS array from an array-like object, and uses a custom function to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;U&gt; \| Iterable&lt;U&gt; | Yes | Array-like object. |
+| arrayLike | ArrayLike&lt;U&gt; &#124; Iterable&lt;U&gt; | Yes | Array-like object. |
 | mapFn | [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md)&lt;U, T&gt; | Yes | Functions used to process the array elements. |
 
 **Return value:**
@@ -788,13 +788,13 @@ Check whether the input parameter is an ArkTS array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object \| undefined \| null | Yes | Value to check. |
+| value | Object &#124; undefined &#124; null | Yes | Value to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the input parameter is an ArkTS array; otherwise, **false** is returned. Possible causes: |
+| boolean | Check result. The value **true** is returned if the input parameter is an ArkTS array; otherwise, **false** is returned. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 
 ## join
 
@@ -947,7 +947,7 @@ Creates an ArkTS array with a variable number of parameters.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Newly created ArkTS array. Possible causes: |
+| Array&lt;T&gt; | Newly created ArkTS array. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 
 ## pop
 
@@ -967,7 +967,7 @@ Removes the last element from this ArkTS array and returns that element. If the 
 
 | Type | Description |
 | --- | --- |
-| T \| undefined | Element removed. If the array is empty, **undefined** is returned. |
+| T &#124; undefined | Element removed. If the array is empty, **undefined** is returned. |
 
 **Error codes:**
 
@@ -1085,7 +1085,7 @@ Similar to the previous API, this API takes an initial value as the second param
 reduceRight<U = T>(callbackFn: ArrayReduceCallback<U, T, Array<T>>, initialValue: U): U
 ```
 
-This API is similar to the [reduceRight](#reduceright) API, but it takes an initial value as the second parameter to initialize the accumulator before the array traversal starts from right to left.
+This API is similar to the [reduceRight](#reduceright-1) API, but it takes an initial value as the second parameter to initialize the accumulator before the array traversal starts from right to left.
 
 **Since:** 18
 
@@ -1298,7 +1298,7 @@ Removes the first element from this ArkTS array and returns that element. If the
 
 | Type | Description |
 | --- | --- |
-| T \| undefined | Element removed. If the array is empty, **undefined** is returned. |
+| T &#124; undefined | Element removed. If the array is empty, **undefined** is returned. |
 
 **Error codes:**
 
@@ -1633,6 +1633,12 @@ Returns the element at a given index in this array.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## length
 

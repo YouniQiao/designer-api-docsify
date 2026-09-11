@@ -15,7 +15,7 @@ function filterBundleListByDeviceModeDistributionPolicies(
 
 Filters the bundle list by device mode distribution policies. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The input parameter cannot be empty. All values must be within the range of the enumerated values of
 > DeviceModeDistributionPolicy, and the policies for all different packages

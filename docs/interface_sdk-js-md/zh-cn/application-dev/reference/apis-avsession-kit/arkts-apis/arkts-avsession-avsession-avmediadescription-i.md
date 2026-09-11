@@ -296,7 +296,7 @@ mediaImage?: image.PixelMap | string
 
 从API version 23开始，支持入参为image.PixelMap类型给对端设备设置媒体信息。
 
-**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| string
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) &#124; string
 
 **起始版本：** 10
 

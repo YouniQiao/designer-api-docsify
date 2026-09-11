@@ -30,7 +30,7 @@ SLIDING_WINDOW = 1
 
 Sliding window mode. Only the layout information inside the viewport is considered, with no dependency on **FlowItem** components above the viewport. Hence, when jumping forward or switching column counts, only the **FlowItem** components within the viewport need to be laid out. This mode is recommended, especially when the application needs to support screen rotation or dynamic column‑count switching.
 
-**NOTE：**
+**NOTE:**
 
 1. During a non-animated redirection to a distant position, water flow items are laid out forward or backward based
 on the target position. If the user then swipes back to the original position, the layout of the content may differ from before. This can lead to misalignment of the top nodes when a user swipes back to the top after the redirection. To counteract this issue, in this layout mode, the layout will be automatically adjusted after reaching the top of the viewport to ensure that the top is aligned. If there are multiple sections, adjustments will be made to the sections within the viewport when sliding ends.

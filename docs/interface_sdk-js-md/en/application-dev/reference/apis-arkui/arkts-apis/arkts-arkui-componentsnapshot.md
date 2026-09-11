@@ -6,7 +6,7 @@ Transformation attributes such as scaling, translation, and rotation only apply 
 
 For typical use cases (for example, long screenshots) and best practices of component snapshots, see [Using Component Snapshot (ComponentSnapshot)](../../../ui/arkts-uicontext-component-snapshot.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - In scenarios where XComponent is used to, for example, display video or camera streams,
 > obtain images through

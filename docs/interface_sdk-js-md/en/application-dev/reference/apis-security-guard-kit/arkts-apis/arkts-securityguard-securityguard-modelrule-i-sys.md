@@ -2,6 +2,8 @@
 
 Provides the ModelRule type.
 
+@typedef ModelRule
+
 **Since:** 12
 
 **System capability:** SystemCapability.Security.SecurityGuard

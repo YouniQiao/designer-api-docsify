@@ -22,7 +22,7 @@ Removes a specified notification slot. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | notification.SlotType | Yes | Type of the notification slot. |
+| slotType | [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notificationmanager.md) | Yes | Type of the notification slot. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification slot is removed, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -65,7 +65,7 @@ Removes a specified notification slot. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | notification.SlotType | Yes | Type of the notification slot. |
+| slotType | [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notificationmanager.md) | Yes | Type of the notification slot. |
 
 **Return value:**
 

@@ -1,6 +1,12 @@
 # AudioSpatializationManager
 
-Implements audio spatialization management.
+Implements audio spatialization management. @typedef AudioSpatializationManager This interface implements spatial audio management.
+
+Before calling any API in AudioSpatializationManager, you must use [getSpatializationManager](arkts-audio-audio-audiomanager-i.md#getspatializationmanager) to obtain an AudioSpatializationManager instance.
+
+> **NOTE:**
+> 
+> - The initial APIs of this interface are supported since API version 18.
 
 **Since:** 18
 

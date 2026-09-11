@@ -2,7 +2,7 @@
 
 Information about the custom font to register.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Directly using **font** can lead to the issue of
 > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the
@@ -28,7 +28,7 @@ familyName: string | Resource
 
 Name of the custom font to register.
 
-**Type:** string \| [Resource](arkts-arkui-resource-t.md)
+**Type:** string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 9
 
@@ -44,11 +44,11 @@ familySrc: string | Resource
 
 Path of the custom font file to register.
 
-**NOTE：**
+**NOTE:**
 
 If the font file to specify is a resource located within the system sandbox directory, you are advised to use a string with the **file://** path prefix. Ensure the target file exists in the sandbox path and has read permissions granted.
 
-**Type:** string \| [Resource](arkts-arkui-resource-t.md)
+**Type:** string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 9
 

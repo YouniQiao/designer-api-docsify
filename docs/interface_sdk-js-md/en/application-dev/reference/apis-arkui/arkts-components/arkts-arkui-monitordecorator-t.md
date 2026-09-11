@@ -20,7 +20,7 @@ Defines Monitor Decorator type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| [MonitorDecoratorOptions](arkts-arkui-monitordecoratoroptions-i.md) | Yes | Monitored path input by the user or config options. |
+| value | string &#124; [MonitorDecoratorOptions](arkts-arkui-monitordecoratoroptions-i.md) | Yes | Monitored path input by the user or config options. |
 | args | string[] | Yes | Monitored path(s) input by the user |
 
 **Return value:**

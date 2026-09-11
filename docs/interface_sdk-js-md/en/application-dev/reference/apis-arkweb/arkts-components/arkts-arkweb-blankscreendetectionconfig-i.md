@@ -39,7 +39,7 @@ detectionMethods?: BlankScreenDetectionMethod[]
 
 Methods of the detection policy. The value is an array.
 
-**NOTE：**
+**NOTE:**
 
 1. Duplicate values are ignored.
 

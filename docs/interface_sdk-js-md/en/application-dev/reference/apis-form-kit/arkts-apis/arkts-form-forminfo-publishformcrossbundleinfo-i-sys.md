@@ -2,6 +2,8 @@
 
 PublishFormCrossBundleInfo
 
+@typedef PublishFormCrossBundleInfo
+
 **Since:** 23
 
 **System capability:** SystemCapability.Ability.Form

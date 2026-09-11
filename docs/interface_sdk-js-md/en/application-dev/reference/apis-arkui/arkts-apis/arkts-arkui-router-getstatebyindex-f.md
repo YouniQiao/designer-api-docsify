@@ -14,7 +14,7 @@ function getStateByIndex(index: number): RouterState | undefined
 
 Obtains the status information about a page by its index.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Since API version 12, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
@@ -43,7 +43,7 @@ Obtains the status information about a page by its index.
 
 | Type | Description |
 | --- | --- |
-| [RouterState](arkts-arkui-router-routerstate-i.md) \| undefined | State information about the target page; **undefined** if the specified index does not exist. |
+| [RouterState](arkts-arkui-router-routerstate-i.md) &#124; undefined | State information about the target page; **undefined** if the specified index does not exist. |
 
 **Examples**
 

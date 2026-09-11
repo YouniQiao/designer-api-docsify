@@ -30,7 +30,7 @@ Re-connects to current network.
 
 | Type | Description |
 | --- | --- |
-| boolean | { |
+| boolean | `true` if the Wi-Fi network is re-connect successfully. |
 
 **Examples**
 

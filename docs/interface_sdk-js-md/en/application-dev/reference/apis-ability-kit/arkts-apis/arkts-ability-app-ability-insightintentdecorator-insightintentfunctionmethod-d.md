@@ -6,7 +6,7 @@ export declare const InsightIntentFunctionMethod: ((intentInfo: FunctionIntentDe
 
 This decorator must be used together with the [@InsightIntentFunction](arkts-ability-app-ability-insightintentdecorator-insightintentfunction-d.md#insightintentfunction) decorator. [@InsightIntentFunction](arkts-ability-app-ability-insightintentdecorator-insightintentfunction-d.md#insightintentfunction) is used to decorate a class, and this decorator is used to decorate a static function in that class. This setup defines the static function as an intent, enabling AI systems to execute it rapidly.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The class containing static methods must be exported using export.
 > Parameter names and types of a function must align with those specified in the intent definition.

@@ -2,6 +2,8 @@
 
 The callback of start vertical panel.
 
+@typedef PanelStartCallback
+
 **Since:** 20
 
 **System capability:** SystemCapability.Ability.AppExtension.VerticalPanel

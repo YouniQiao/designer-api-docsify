@@ -14,7 +14,7 @@ function setDevicePairingConfirmation(deviceId: string, accept: boolean): void
 
 收到对端蓝牙设备的配对请求事件后，确认请求结果。
 
-对端蓝牙的配对请求通过on('pinRequired')的回调结果获取。
+对端蓝牙的配对请求通过[on('pinRequired')](arkts-connectivity-connection-on-f.md#onpinrequired)的回调结果获取。
 
 **起始版本：** 10
 

@@ -14,4 +14,4 @@ Represents a FrameNode of the **Radio** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;RadioInterface, [RadioAttribute](../arkts-components/arkts-arkui-radio-attribute.md)&gt;
+**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;RadioInterface, [RadioAttribute](../arkts-components/arkts-arkui-radio-comp-attribute.md)&gt;

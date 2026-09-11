@@ -2337,7 +2337,7 @@ Set the metadata of this session. In addition to the required properties, users 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) | Yes | { |
+| data | [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) | Yes | [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
@@ -2366,7 +2366,7 @@ Set the metadata of this session. In addition to the required properties, users 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) | Yes | { |
+| data | [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) | Yes | [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) |
 
 **Return value:**
 
@@ -2398,7 +2398,7 @@ Set the playback state of this session.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) | Yes | { |
+| state | [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) | Yes | [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
@@ -2427,7 +2427,7 @@ Set the playback state of this session.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) | Yes | { |
+| state | [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) | Yes | [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) |
 
 **Return value:**
 

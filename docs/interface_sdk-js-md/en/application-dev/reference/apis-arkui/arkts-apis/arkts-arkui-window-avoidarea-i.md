@@ -6,7 +6,7 @@ When adapting window content for an [immersive layout](../../../windowmanager/wi
 
 In the avoid area, the application window content is obscured and does not respond to user click events.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The figure below shows the meanings of **leftRect**, **topRect**, **rightRect**, and **bottomRect**.
 > 

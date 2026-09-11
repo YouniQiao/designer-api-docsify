@@ -25,7 +25,7 @@ Allocates a new FastBuffer for a fixed size bytes. If fill is undefined, the Fas
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | size | number | Yes | The desired size (in bytes) of the new FastBuffer |
-| fill | string \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| number | No | fill [fill=0] A value to pre-fill the new FastBuffer with |
+| fill | string &#124; [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; number | No | fill [fill=0] A value to pre-fill the new FastBuffer with |
 | encoding | BufferEncoding | No | encoding [encoding='utf8'] If `fill` is a string, this is its encoding |
 
 **Return value:**

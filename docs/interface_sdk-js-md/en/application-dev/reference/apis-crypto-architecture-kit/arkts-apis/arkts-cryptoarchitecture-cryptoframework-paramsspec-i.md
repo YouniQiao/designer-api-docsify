@@ -2,15 +2,15 @@
 
 Encapsulates the parameters used for encryption or decryption. You need to construct its child class object and pass it to [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption or decryption.
 
-It applies to the symmetric block cipher modes that require parameters such as the initialization vector (IV). If the IV is not required (for example, the ECB mode), pass in **null** to [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init).
+<br>It applies to the symmetric block cipher modes that require parameters such as the initialization vector (IV). If the IV is not required (for example, the ECB mode), pass in **null** to [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > An initialization vector (IV) is a byte sequence used to introduce randomness or uniqueness in symmetric
 > encryption modes (such as CBC, CTR, OFB, CFB, GCM, CCM, and ChaCha20-Poly1305). It ensures that different
 > ciphertexts are generated for the same plaintext under the same key.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The **params** parameter in
 > [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) is of the

@@ -110,7 +110,7 @@ Determines whether two strings are equivalent in the current or specified locale
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | that | string | Yes |  |
-| locales | string \| string[] | No |  |
+| locales | string &#124; string[] | No |  |
 | options | [Intl.CollatorOptions](arkts-intl-collatoroptions-i.md) | No |  |
 
 **Return value:**
@@ -129,7 +129,7 @@ Matches a string with a regular expression, and returns an array containing the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| regexp | string \| RegExp | Yes |  |
+| regexp | string &#124; RegExp | Yes |  |
 
 **Return value:**
 
@@ -147,7 +147,7 @@ Replaces text in a string, using a regular expression or search string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchValue | string \| RegExp | Yes |  |
+| searchValue | string &#124; RegExp | Yes |  |
 | replaceValue | string | Yes |  |
 
 **Return value:**
@@ -166,7 +166,7 @@ Replaces text in a string, using a regular expression or search string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchValue | string \| RegExp | Yes |  |
+| searchValue | string &#124; RegExp | Yes |  |
 | replacer | (substring: string, ...args: any[]) =&gt; string | Yes |  |
 
 **Return value:**
@@ -185,7 +185,7 @@ Finds the first substring match in a regular expression search.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| regexp | string \| RegExp | Yes |  |
+| regexp | string &#124; RegExp | Yes |  |
 
 **Return value:**
 
@@ -222,7 +222,7 @@ Split a string into substrings using the specified separator and return them as 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| separator | string \| RegExp | Yes |  |
+| separator | string &#124; RegExp | Yes |  |
 | limit | number | No |  |
 
 **Return value:**
@@ -281,7 +281,7 @@ Converts all alphabetic characters to lowercase, taking into account the host en
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locales | string \| string[] | No |  |
+| locales | string &#124; string[] | No |  |
 
 **Return value:**
 
@@ -299,7 +299,7 @@ Returns a string where all alphabetic characters have been converted to uppercas
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locales | string \| string[] | No |  |
+| locales | string &#124; string[] | No |  |
 
 **Return value:**
 

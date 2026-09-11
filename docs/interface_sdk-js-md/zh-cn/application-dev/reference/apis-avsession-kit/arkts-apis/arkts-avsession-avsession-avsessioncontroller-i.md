@@ -548,7 +548,7 @@ getExtras(callback: AsyncCallback<{[key: string]: Object}>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{[key: string]: Object}&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{[key: string]: Object}&gt; | 是 | 回调函数，返回媒体提供方设置的自定义媒体数据包，数据包的内容与setExtras设置的内容完全一致。 |
 
 **错误码：**
 
@@ -579,7 +579,7 @@ getExtras(): Promise<{[key: string]: Object}>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;{[key: string]: Object | > } Promise对象，返回媒体提供方设置的自定义媒体数据包，数据包的内容与setExtras设置的内容完全一致。 |
+| Promise&lt;{[key: string]: Object}&gt; | Promise对象，返回媒体提供方设置的自定义媒体数据包，数据包的内容与setExtras设置的内容完全一致。 |
 
 **错误码：**
 
@@ -608,13 +608,13 @@ getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| extraEvent | string | 是 | 远端分布式事件类型。可获取的事件类型来自于setExtras)}。对Wearable设备类型，额外提供以下预设的事件类型：'AUDIO_GET_VOLUME'：获取远端设备音量。'AUDIO_GET_AVAILABLE_DEVICES'：获取远端所有可连接设备。'AUDIO_GET_PREFERRED_OUTPUT_DEVICE_FOR_RENDERER_INFO'：获取远端实际发声设备。 |
+| extraEvent | string | 是 | 远端分布式事件类型。可获取的事件类型来自于setExtras)}。<br>对Wearable设备类型，额外提供以下预设的事件类型：<br>'AUDIO_GET_VOLUME'：获取远端设备音量。<br>'AUDIO_GET_AVAILABLE_DEVICES'：获取远端所有可连接设备。<br>'AUDIO_GET_PREFERRED_OUTPUT_DEVICE_FOR_RENDERER_INFO'：获取远端实际发声设备。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[ExtraInfo](arkts-avsession-avsession-extrainfo-t.md)&gt; | Promise对象，返回远端分布式媒体提供方设置的自定义媒体数据包。 |
+| Promise&lt;[ExtraInfo](arkts-avsession-avsession-extrainfo-t.md)&gt; | Promise对象，返回远端分布式媒体提供方设置的自定义媒体数据包。<br>参数ExtraInfo支持的数据类型有：字符串、数字、布尔、对象、数组和文件描述符等，详细介绍请参见[@ohos.app.ability.Want (Want)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)。 |
 
 **错误码：**
 
@@ -669,7 +669,7 @@ getLaunchAbility(): Promise<WantAgent>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | Promise对象，返回在[setLaunchAbility]{ |
+| Promise&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | Promise对象，返回在[setLaunchAbility](arkts-avsession-avsession-avsession-i.md#setlaunchability)保存的对象，包括应用的相关属性信息，如bundleName，abilityName，deviceId等。 |
 
 **错误码：**
 
@@ -1118,7 +1118,7 @@ off(type: 'metadataChange', callback?: (data: AVMetadata) => void)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'metadataChange' | 是 |  |
-| callback | (data: AVMetadata) =&gt; void | 否 | 回调函数，参数data是需要更新的元数据。只包含需要更新的元数据属性，并不代表当前全量的元数据。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | (data: AVMetadata) =&gt; void | 否 | 回调函数，参数data是需要更新的元数据。只包含需要更新的元数据属性，并不代表当前全量的元数据。<br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -1147,7 +1147,7 @@ off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | 是 |  |
-| callback | (state: AVPlaybackState) =&gt; void | 否 | 回调函数，参数state是需要更新的播放状态。只包含需要更新的播放状态属性，并不代表当前全量的播放状态。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | (state: AVPlaybackState) =&gt; void | 否 | 回调函数，参数state是需要更新的播放状态。只包含需要更新的播放状态属性，并不代表当前全量的播放状态。<br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -1176,7 +1176,7 @@ off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'callMetadataChange' | 是 | 取消对应的监听事件，支持事件`'callMetadataChange'`。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 否 | 回调函数，参数calldata是变化后的通话原数据。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 否 | 回调函数，参数calldata是变化后的通话原数据。<br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -1205,7 +1205,7 @@ off(type: 'callStateChange', callback?: Callback<AVCallState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'callStateChange' | 是 | 取消对应的监听事件，支持事件`'callStateChange'`。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 否 | 回调函数，参数callstate是变化后的通话状态。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 否 | 回调函数，参数callstate是变化后的通话状态。<br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -1234,7 +1234,7 @@ off(type: 'sessionDestroy', callback?: () => void)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'sessionDestroy' | 是 | 取消对应的监听事件，支持事件`'sessionDestroy'`。 |
-| callback | () =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | () =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。<br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -1263,7 +1263,7 @@ off(type: 'activeStateChange', callback?: (isActive: boolean) => void)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'activeStateChange' | 是 | 取消对应的监听事件，支持事件`'activeStateChange'`。 |
-| callback | (isActive: boolean) =&gt; void | 否 | 回调函数。参数isActive表示会话是否被激活。true表示被激活，false表示禁用。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | (isActive: boolean) =&gt; void | 否 | 回调函数。参数isActive表示会话是否被激活。true表示被激活，false表示禁用。<br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -1292,7 +1292,7 @@ off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'validCommandChange' | 是 | 取消对应的监听事件，支持事件`'validCommandChange'`。 |
-| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | 否 | 回调函数。参数commands是有效命令的集合。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | 否 | 回调函数。参数commands是有效命令的集合。<br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -1321,7 +1321,7 @@ off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: Outp
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'outputDeviceChange' | 是 | 取消对应的监听事件，支持事件`'outputDeviceChange'`。 |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | 否 | 回调函数，参数device是设备相关信息。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | 否 | 回调函数，参数device是设备相关信息。<br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -1379,7 +1379,7 @@ off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'queueItemsChange' | 是 | 取消对应的监听事件，支持事件`'queueItemsChange'`。 |
-| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | 否 | 回调函数，参数items是变化的播放列表。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | 否 | 回调函数，参数items是变化的播放列表。<br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -1408,7 +1408,7 @@ off(type: 'queueTitleChange', callback?: (title: string) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'queueTitleChange' | 是 | 取消对应的监听事件，支持事件`'queueTitleChange'`。 |
-| callback | (title: string) =&gt; void | 否 | 回调函数，参数items是变化的播放列表名称。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | (title: string) =&gt; void | 否 | 回调函数，参数items是变化的播放列表名称。<br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -1437,7 +1437,7 @@ off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'extrasChange' | 是 | 取消对应的监听事件，支持事件`'extrasChange'`。 |
-| callback | (extras: {[key: string]: Object}) =&gt; void | 否 | 注册监听事件时的回调函数。该参数为可选参数，若不填写该参数，则认为取消会话所有与此事件相关的监听。 |
+| callback | (extras: {[key: string]: Object}) =&gt; void | 否 | 注册监听事件时的回调函数。<br>该参数为可选参数，若不填写该参数，则认为取消会话所有与此事件相关的监听。 |
 
 **错误码：**
 
@@ -1493,7 +1493,7 @@ offDesktopLyricEnabled(callback?: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有桌面歌词功能启用状态变更事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。<br>该参数为可选参数，若不填写该参数，则认为取消所有桌面歌词功能启用状态变更事件监听。 |
 
 **错误码：**
 
@@ -1520,7 +1520,7 @@ offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有桌面歌词状态变更事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。<br>该参数为可选参数，若不填写该参数，则认为取消所有桌面歌词状态变更事件监听。 |
 
 **错误码：**
 
@@ -1547,7 +1547,7 @@ offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有显示桌面歌词状态变更事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。<br>该参数为可选参数，若不填写该参数，则认为取消所有显示桌面歌词状态变更事件监听。 |
 
 **错误码：**
 
@@ -1668,7 +1668,7 @@ on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (d
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'metadataChange' | 是 |  |
-| filter | Array&lt;keyof AVMetadata&gt; \| 'all' | 是 | 'all'表示关注元数据所有字段变化；Array&lt;keyof AVMetadata&gt;表示关注Array中的字段变化。 |
+| filter | Array&lt;keyof AVMetadata&gt; &#124; 'all' | 是 | 'all'表示关注元数据所有字段变化；Array&lt;keyof AVMetadata&gt;表示关注Array中的字段变化。 |
 | callback | (data: AVMetadata) =&gt; void | 是 | 回调函数，参数data是需要更新的元数据。只包含需要更新的元数据属性，不代表当前全量的元数据。 |
 
 **错误码：**
@@ -1700,7 +1700,7 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | 是 |  |
-| filter | Array&lt;keyof AVPlaybackState&gt; \| 'all' | 是 | 'all'表示关注播放状态所有字段更新。Array&lt;keyof AVPlaybackstate&gt; 表示关注Array中的字段更新。 |
+| filter | Array&lt;keyof AVPlaybackState&gt; &#124; 'all' | 是 | 'all'表示关注播放状态所有字段更新。<br>Array&lt;keyof AVPlaybackstate&gt; 表示关注Array中的字段更新。 |
 | callback | (state: AVPlaybackState) =&gt; void | 是 | 回调函数，参数state是需要更新的播放状态。只包含需要更新的播放状态属性，并不代表当前全量的播放状态。 |
 
 **错误码：**
@@ -1732,7 +1732,7 @@ on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callba
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'callMetadataChange' | 是 | 事件回调类型，支持事件`'callMetadataChange'`：当通话元数据变化时，触发该事件。 |
-| filter | Array&lt;keyof CallMetadata&gt; \| 'all' | 是 | 'all'表示关注通话元数据所有字段变化；Array&lt;keyof CallMetadata&gt; 表示关注Array中的字段变化。\| 'all'。 |
+| filter | Array&lt;keyof CallMetadata&gt; &#124; 'all' | 是 | 'all'表示关注通话元数据所有字段变化；Array&lt;keyof CallMetadata&gt; 表示关注Array中的字段变化。&#124; 'all'。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 | 回调函数，参数callmetadata是变化后的通话元数据。 |
 
 **错误码：**
@@ -1764,7 +1764,7 @@ on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'callStateChange' | 是 | 事件回调类型，支持事件`'callStateChange'`：当通话状态变化时，触发该事件。 |
-| filter | Array&lt;keyof AVCallState&gt; \| 'all' | 是 | 'all' 表示关注通话状态所有字段变化；Array&lt;keyof AVCallState&gt;表示关注Array中的字段变化。\| 'all'。 |
+| filter | Array&lt;keyof AVCallState&gt; &#124; 'all' | 是 | 'all' 表示关注通话状态所有字段变化；Array&lt;keyof AVCallState&gt;表示关注Array中的字段变化。&#124; 'all'。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 | 回调函数，参数callstate是变化后的通话状态。 |
 
 **错误码：**
@@ -2368,8 +2368,8 @@ sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): vo
 > **说明：**
 > 
 > 媒体控制方在使用sendControlCommand命令前，需要确保控制对应的媒体会话注册了对应的监听，注册媒体会话相关监听的方法请参见接口
-> on('play')、
-> on('pause')等。
+> [on('play')](arkts-avsession-avsession-avsession-i.md#onplay)、
+> [on('pause')](arkts-avsession-avsession-avsession-i.md#onpause)等。
 
 **起始版本：** 10
 
@@ -2405,8 +2405,8 @@ sendControlCommand(command: AVControlCommand): Promise<void>
 > **说明：**
 > 
 > 媒体控制方在使用sendControlCommand命令前，需要确保控制对应的媒体会话注册了对应的监听，注册媒体会话相关监听的方法请参见接口
-> on('play')、
-> on('pause')等。
+> [on('play')](arkts-avsession-avsession-avsession-i.md#onplay)、
+> [on('pause')](arkts-avsession-avsession-avsession-i.md#onpause)等。
 
 **起始版本：** 10
 

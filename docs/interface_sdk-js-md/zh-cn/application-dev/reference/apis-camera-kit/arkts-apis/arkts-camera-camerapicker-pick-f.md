@@ -36,7 +36,7 @@ function pick(context: Context, mediaTypes: Array<PickerMediaType>, pickerProfil
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PickerResult](arkts-camera-camerapicker-pickerresult-c.md)&gt; | Promise对象，返回相机选择器的处理结果[PickerResult]{ |
+| Promise&lt;[PickerResult](arkts-camera-camerapicker-pickerresult-c.md)&gt; | Promise对象，返回相机选择器的处理结果[PickerResult](arkts-camera-camerapicker-pickerresult-c.md)。 |
 
 **示例**
 

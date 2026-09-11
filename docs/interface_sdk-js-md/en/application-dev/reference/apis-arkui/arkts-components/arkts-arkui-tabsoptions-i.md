@@ -19,17 +19,17 @@ barModifier?: CommonModifier
 
 Universal attributes of the tab bar.
 
-**NOTE：**
+**NOTE:**
 
 If this parameter is dynamically set to **undefined**, the current state will be preserved, and universal attributes will not be reset.
 
 If the setting switches from one **CommonModifier** to another, overlapping attributes will be overwritten, while non-overlapping attributes will coexist without resetting the attributes of the previous **CommonModifier**.
 
-The [barWidth](arkts-arkui-tabs-attribute.md#barwidth), [barHeight](arkts-arkui-tabs-attribute.md#barheight), [barBackgroundColor](arkts-arkui-tabs-attribute.md#barbackgroundcolor), [barBackgroundBlurStyle](arkts-arkui-tabs-attribute.md#barbackgroundblurstyle), and [barBackgroundEffect](arkts-arkui-tabs-attribute.md#barbackgroundeffect) attributes of **Tabs** will overwrite the width, height, backgroundColor, backgroundBlurStyle, and backgroundEffect attributes of **CommonModifier**.
+The [barWidth](arkts-arkui-tabs-comp-attribute.md#barwidth), [barHeight](arkts-arkui-tabs-comp-attribute.md#barheight), [barBackgroundColor](arkts-arkui-tabs-comp-attribute.md#barbackgroundcolor), [barBackgroundBlurStyle](arkts-arkui-tabs-comp-attribute.md#barbackgroundblurstyle), and [barBackgroundEffect](arkts-arkui-tabs-comp-attribute.md#barbackgroundeffect) attributes of **Tabs** will overwrite the width, height, backgroundColor, backgroundBlurStyle, and backgroundEffect attributes of **CommonModifier**.
 
-The align attribute works only in [BarMode.Scrollable](arkts-arkui-tabs-attribute.md#barmode) mode. In addition, for a horizontal **Tabs** component, it only takes effect when [nonScrollableLayoutStyle](arkts-arkui-scrollablebarmodeoptions-i.md) is set to an invalid value or is not set.
+The align attribute works only in [BarMode.Scrollable](arkts-arkui-tabs-comp-attribute.md#barmode) mode. In addition, for a horizontal **Tabs** component, it only takes effect when [nonScrollableLayoutStyle](arkts-arkui-scrollablebarmodeoptions-i.md) is set to an invalid value or is not set.
 
-When set to the bottom tab style, [tabBar](arkts-arkui-tabcontent-attribute.md#tabbar) attribute of the TabContent component does not support the dragging feature.
+When set to the bottom tab style, [tabBar](arkts-arkui-tabcontent-comp-attribute.md#tabbar) attribute of the TabContent component does not support the dragging feature.
 
 **Type:** [CommonModifier](arkts-arkui-commonmodifier-t.md)
 
@@ -53,7 +53,8 @@ Default value: **BarPosition.Start**
 
 **Type:** [BarPosition](arkts-arkui-barposition-e.md)
 
-**Default:** BarPosition.Start [since 11]
+**Default:**
+- API version 11+: BarPosition.Start
 
 **Since:** 7
 
@@ -87,7 +88,7 @@ Index of the currently displayed tab.
 
 Default value: **0**
 
-**NOTE：**
+**NOTE:**
 
 A value less than 0 evaluates to the default value.
 
@@ -101,7 +102,8 @@ When the **Tabs** component is rebuilt, system resources are switched (for examp
 
 **Type:** number
 
-**Default:** 0 [since 11]
+**Default:**
+- API version 11+: 0
 
 **Since:** 7
 

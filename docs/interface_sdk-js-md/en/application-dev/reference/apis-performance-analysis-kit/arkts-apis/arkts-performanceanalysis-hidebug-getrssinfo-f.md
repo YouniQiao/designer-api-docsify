@@ -14,7 +14,7 @@ function getRssInfo(): RssInfo
 
 Obtains the physical memory usage of the application process. Reads data from the **\/proc/{pid}/status** node.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Reading the /proc/{pid}/status node takes a short time. The value obtained by this API is slightly different from
 > the **rss** value obtained by the [hidebug.getAppNativeMemInfo](arkts-performanceanalysis-hidebug-getappnativememinfo-f.md) API. However,

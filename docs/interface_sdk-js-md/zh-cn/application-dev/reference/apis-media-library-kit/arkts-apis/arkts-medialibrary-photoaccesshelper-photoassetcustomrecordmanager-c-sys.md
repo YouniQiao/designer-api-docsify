@@ -45,8 +45,8 @@ addLcdJumpCount(ids: Array<number>): Promise<Array<number>>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario parameters fail to pass the verification.Possible causes:  1. The ids list is empty.  2. The number of ids lists exceeds 500. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario parameters fail to pass the verification.Possible causes:<br>1. The ids list is empty. <br>2. The number of ids lists exceeds 500. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## addShareCount
 
@@ -79,8 +79,8 @@ addShareCount(ids: Array<number>): Promise<Array<number>>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario parameters fail to pass the verification.Possible causes:  1. The ids list is empty. 2. The number of ids lists exceeds 500. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario parameters fail to pass the verification.Possible causes:<br>1. The ids list is empty. 2. The number of ids lists exceeds 500. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 ## createCustomRecords
 
@@ -113,8 +113,8 @@ createCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario parameters fail to pass the verification.Possible causes:  1. The value range of mandatory parameters in photoAssetCustomRecord does not meet the requirements.  2. The transferred record already exists. 3. The number of transferred records exceeds 200. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario parameters fail to pass the verification.Possible causes:<br>1. The value range of mandatory parameters in photoAssetCustomRecord does not meet the requirements. <br>2. The transferred record already exists. 3. The number of transferred records exceeds 200. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -213,7 +213,7 @@ getCustomRecords(optionCheck: FetchOptions): Promise<FetchResult<PhotoAssetCusto
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario parameters fail to pass the verification.Possible causes: 1. The filter criteria or fetchColumns that are not supported by options are transferred. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -270,8 +270,8 @@ removeCustomRecords(optionCheck: FetchOptions): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario parameters fail to pass the verification.Possible causes:  1. The filter criteria or fetchColumns that are not supported by options are transferred. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario parameters fail to pass the verification.Possible causes:<br>1. The filter criteria or fetchColumns that are not supported by options are transferred. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -327,8 +327,8 @@ setCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<Array<nu
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario parameters fail to pass the verification.Possible causes:  1. The value range of mandatory parameters in photoAssetCustomRecord does not meet the requirements.  2. The number of transferred records exceeds 200. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario parameters fail to pass the verification.Possible causes:<br>1. The value range of mandatory parameters in photoAssetCustomRecord does not meet the requirements. <br>2. The number of transferred records exceeds 200. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 

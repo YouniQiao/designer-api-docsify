@@ -2,6 +2,8 @@
 
 The fun interaction form params.
 
+@typedef { FunInteractionParams }
+
 **Since:** 20
 
 **System capability:** SystemCapability.Ability.Form

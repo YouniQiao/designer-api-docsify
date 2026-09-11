@@ -2,6 +2,8 @@
 
 Describes the settings for bloom effects. It is unavailable when RenderingPipelineType is set to FORWARD_LIGHTWEIGHT.
 
+@typedef BloomSettings
+
 **Since:** 18
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

@@ -1,7 +1,7 @@
 # SizeResult
 
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The custom layout does not support the LazyForEach syntax.
 > - When a custom layout is created in builder mode, only **this.builder()** is allowed in the **build()** method

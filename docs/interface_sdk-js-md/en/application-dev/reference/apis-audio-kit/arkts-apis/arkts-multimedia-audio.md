@@ -71,7 +71,7 @@ import { audio } from '@kit.AudioKit';
 | [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md) | This interface implements audio session management. |
 | [AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md) | Describes the event indicating that the audio session state changes. |
 | [AudioSessionStrategy](arkts-audio-audio-audiosessionstrategy-i.md) | Describes an audio session strategy. |
-| [AudioSpatializationManager](arkts-audio-audio-audiospatializationmanager-i.md) | Implements audio spatialization management. |
+| [AudioSpatializationManager](arkts-audio-audio-audiospatializationmanager-i.md) | Implements audio spatialization management. @typedef AudioSpatializationManager This interface implements spatial audio management. |
 | [AudioStreamDeviceChangeInfo](arkts-audio-audio-audiostreamdevicechangeinfo-i.md) | Describes the event received by the application when the audio stream device is changed. |
 | [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md) | Describes audio stream information. |
 | [AudioStreamManager](arkts-audio-audio-audiostreammanager-i.md) | This interface implements audio stream management. |
@@ -107,7 +107,7 @@ import { audio } from '@kit.AudioKit';
 | [AudioCollaborativeManager](arkts-audio-audio-audiocollaborativemanager-i-sys.md) | Implements audio collaborative management. |
 | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md) | Describes an audio device. |
 | [AudioDeviceEnhanceManager](arkts-audio-audio-audiodeviceenhancemanager-i-sys.md) | Provides enhanced audio device management capabilities. |
-| [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md) | Implements audio effect management. |
+| [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md) | Implements audio effect management. @typedef AudioEffectManager |
 | [AudioEffectProperty](arkts-audio-audio-audioeffectproperty-i-sys.md) | Describes an audio effect property. |
 | [AudioHRTFAnonymousDescriptor](arkts-audio-audio-audiohrtfanonymousdescriptor-i-sys.md) | Anonymous personalzied HRTF file descriptor for cross-process transfer. |
 | [AudioManager](arkts-audio-audio-audiomanager-i-sys.md) | This interface implements audio volume and device management. |
@@ -121,7 +121,7 @@ import { audio } from '@kit.AudioKit';
 | [AudioRoutingManager](arkts-audio-audio-audioroutingmanager-i-sys.md) | This interface implements audio routing management. |
 | [AudioSpatialDeviceState](arkts-audio-audio-audiospatialdevicestate-i-sys.md) | Describes spatial device state. |
 | [AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md) | This interface is used to notify the listener of any device Spatialization or Head Tracking enable or Adaptive Spatial Rendering state change. |
-| [AudioSpatializationManager](arkts-audio-audio-audiospatializationmanager-i-sys.md) | Implements audio spatialization management. |
+| [AudioSpatializationManager](arkts-audio-audio-audiospatializationmanager-i-sys.md) | Implements audio spatialization management. @typedef AudioSpatializationManager This interface implements spatial audio management. |
 | [AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i-sys.md) | This interface implements volume management for an audio group. |
 | [AudioVolumeManager](arkts-audio-audio-audiovolumemanager-i-sys.md) | This interface implements audio volume management. |
 | [InterruptResult](arkts-audio-audio-interruptresult-i-sys.md) | Describes audio interrupt operation results. |

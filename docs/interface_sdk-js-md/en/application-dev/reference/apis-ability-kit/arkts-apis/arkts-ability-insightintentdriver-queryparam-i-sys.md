@@ -2,6 +2,8 @@
 
 Param when query insight intent entity.
 
+@typedef QueryParam
+
 **Since:** 26.0.0
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

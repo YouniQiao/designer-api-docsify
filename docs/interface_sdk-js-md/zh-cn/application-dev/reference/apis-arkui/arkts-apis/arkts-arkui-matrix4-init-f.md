@@ -43,7 +43,7 @@ Matrix的构造函数，可以通过传入的参数创建一个四阶矩阵，�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number     ] | 是 | 参数为长度为16（4*4）的number数组，详情见四阶矩阵说明。各number取值范围：(-∞, +∞) 默认值：   [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1] |
+| options | [       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number     ] | 是 | 参数为长度为16（4*4）的number数组，详情见四阶矩阵说明。<br>各number取值范围：(-∞, +∞) <br>默认值：<br>[1, 0, 0, 0, <br>0, 1, 0, 0, <br>0, 0, 1, 0, <br>0, 0, 0, 1] |
 
 **返回值：**
 

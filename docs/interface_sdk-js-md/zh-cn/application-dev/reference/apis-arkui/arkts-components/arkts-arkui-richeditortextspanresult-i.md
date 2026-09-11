@@ -17,7 +17,7 @@
 offsetInSpan: [number, number]
 ```
 
-文本Span内容里有效内容的起始和结束位置。
+文本Span内容里有效内容的起始和结束位置，取值范围为[起始位置, 结束位置)，结束位置对应的内容不包含在内。
 
 **类型：** [number, number]
 

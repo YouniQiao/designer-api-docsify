@@ -44,7 +44,7 @@ Used to control whether applications run in recoverable mode when the probabilit
 
 The default value is **false**.
 
-**Note：**: This parameter takes effect only when GWP-ASan is enabled with a 100% probability. When GWP-ASan is enabled with a 1/128 probability, the recoverable mode is used by default and is not controlled by **isRecover**.
+**Note:** This parameter takes effect only when GWP-ASan is enabled with a 100% probability. When GWP-ASan is enabled with a 1/128 probability, the recoverable mode is used by default and is not controlled by **isRecover**.
 
 **Type:** boolean
 

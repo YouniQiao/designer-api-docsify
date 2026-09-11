@@ -36,7 +36,7 @@ function off(type: 'locationChange', callback?: Callback<Location>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. Introduced in API 9 and will not be threw above API 24.<br>**适用版本：** 9 - 24 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \\${geoLocationManager.off('locationChange')} due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \&#36;{geoLocationManager.off('locationChange')} due to limited device capabilities. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) | The location service is unavailable. |
 | [3301100](../errorcode-geoLocationManager.md#3301100-位置功能的开关未开启导致功能失败) | The location switch is off. Introduced in API 9 and will not be threw above API 17.<br>**适用版本：** 9 - 17 |
 | [3301200](../errorcode-geoLocationManager.md#3301200-定位失败未获取到定位结果) | Failed to obtain the geographical location. Introduced in API 9 and will not be threw above API 17.<br>**适用版本：** 9 - 17 |
@@ -94,7 +94,7 @@ function off(type: 'locationError', callback?: Callback<LocationError>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \\${geoLocationManager.off('locationError')} due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \&#36;{geoLocationManager.off('locationError')} due to limited device capabilities. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) | The location service is unavailable. |
 
 **示例**
@@ -138,7 +138,7 @@ function off(type: 'locationEnabledChange', callback?: Callback<boolean>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \\${geoLocationManager.off('locationEnabledChange')} due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \&#36;{geoLocationManager.off('locationEnabledChange')} due to limited device capabilities. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) | The location service is unavailable. |
 
 **示例**
@@ -185,7 +185,7 @@ function off(type: 'cachedGnssLocationsChange', callback?: Callback<Array<Locati
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \\${geoLocationManager.off('cachedGnssLocationsChange')} due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \&#36;{geoLocationManager.off('cachedGnssLocationsChange')} due to limited device capabilities. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) | The location service is unavailable. |
 | [3301100](../errorcode-geoLocationManager.md#3301100-位置功能的开关未开启导致功能失败) | The location switch is off. |
 | [3301200](../errorcode-geoLocationManager.md#3301200-定位失败未获取到定位结果) | Failed to obtain the geographical location.<br>**适用版本：** 9 - 17 |
@@ -240,7 +240,7 @@ function off(type: 'satelliteStatusChange', callback?: Callback<SatelliteStatusI
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \\${geoLocationManager.off('satelliteStatusChange')} due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \&#36;{geoLocationManager.off('satelliteStatusChange')} due to limited device capabilities. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) | The location service is unavailable. |
 | [3301100](../errorcode-geoLocationManager.md#3301100-位置功能的开关未开启导致功能失败) | The location switch is off. |
 
@@ -290,7 +290,7 @@ function off(type: 'nmeaMessage', callback?: Callback<string>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \\${geoLocationManager.off('nmeaMessage')} due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \&#36;{geoLocationManager.off('nmeaMessage')} due to limited device capabilities. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) | The location service is unavailable. |
 | [3301100](../errorcode-geoLocationManager.md#3301100-位置功能的开关未开启导致功能失败) | The location switch is off. |
 
@@ -344,7 +344,7 @@ function off(type: 'gnssFenceStatusChange', request: GeofenceRequest, want: Want
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 9 - 24 |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \\${geoLocationManager.off('gnssFenceStatusChange')} due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \&#36;{geoLocationManager.off('gnssFenceStatusChange')} due to limited device capabilities. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) | The location service is unavailable. |
 | [3301100](../errorcode-geoLocationManager.md#3301100-位置功能的开关未开启导致功能失败) | The location switch is off. |
 | [3301600](../errorcode-geoLocationManager.md#3301600-地理围栏操作失败) | Failed to operate the geofence. |
@@ -410,7 +410,7 @@ function off(type: 'countryCodeChange', callback?: Callback<CountryCode>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \\${geoLocationManager.off('countryCodeChange')} due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \&#36;{geoLocationManager.off('countryCodeChange')} due to limited device capabilities. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) | The location service is unavailable. |
 | [3301500](../errorcode-geoLocationManager.md#3301500-区域信息包含国家码查询失败) | Failed to query the area information. |
 
@@ -459,7 +459,7 @@ function off(type: 'bluetoothScanResultChange', callback?: Callback<BluetoothSca
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \\${geoLocationManager.off('bluetoothScanResultChange')} due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call \&#36;{geoLocationManager.off('bluetoothScanResultChange')} due to limited device capabilities. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) | The location service is unavailable. |
 
 **示例**

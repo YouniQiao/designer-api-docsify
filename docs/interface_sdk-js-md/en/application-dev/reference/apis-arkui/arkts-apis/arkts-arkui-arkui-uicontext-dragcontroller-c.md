@@ -2,7 +2,7 @@
 
 Provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > In the following API examples, you must first use [getDragController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) in
 > **UIContext** to obtain a **DragController** instance, and then call the APIs using the obtained instance.
@@ -57,7 +57,7 @@ createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dra
 
 Creates a drag action object for initiating drag and drop operations. You need to explicitly specify one or more drag previews, the drag data, and the drag handle point. If a drag operation initiated by an existing drag action object is not completed, no new object can be created, and calling the API will throw an exception. After the lifecycle of the drag action object ends, the callback functions registered on this object become invalid. Therefore, it is necessary to hold this object within a longer scope and replace the old value with a new object returned by **createDragAction** before each drag initiation.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For optimal drag and drop performance, limit the number of drag previews.
 
@@ -73,7 +73,7 @@ Creates a drag action object for initiating drag and drop operations. You need t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| customArray | Array&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md)&gt; | Yes | Object to be dragged. |
+| customArray | Array&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md)&gt; | Yes | Object to be dragged. |
 | dragInfo | [dragController.DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | Yes | Drag information. |
 
 **Return value:**
@@ -86,7 +86,7 @@ Creates a drag action object for initiating drag and drop operations. You need t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
 
 ## enableDropDisallowedBadge
@@ -132,15 +132,15 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | Yes | Object to be dragged.   **NOTE：**The global builder is not supported. If the [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) component is used in the builder, enable synchronous loading, that is, set the syncLoad attribute of the component to **true**. The builder is used only to generate the image displayed during the current dragging. If the root component of the builder has zero width or height, it will cause failure in drag image generation, which in turn breaks the entire drag operation. Changes to the builder, if any, apply to the next dragging, but not to the current dragging. |
+| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | Yes | Object to be dragged.<br> **NOTE:**<br>The global builder is not supported. If the [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) component is used in the builder, enable synchronous loading, that is, set the syncLoad attribute of the component to **true**. The builder is used only to generate the image displayed during the current dragging. If the root component of the builder has zero width or height, it will cause failure in drag image generation, which in turn breaks the entire drag operation. Changes to the builder, if any, apply to the next dragging, but not to the current dragging. |
 | dragInfo | [dragController.DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | Yes | Drag information. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[dragController.DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | Yes | Callback used to return the result.   - **event**: drag event information that includes only the drag result.   - **extraParams**: extra information about the drag event.<br>**Since:** 12 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[dragController.DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | Yes | Callback used to return the result.<br>- **event**: drag event information that includes only the drag result.<br>- **extraParams**: extra information about the drag event.<br>**Since:** 12 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
 
 ## executeDrag
@@ -164,21 +164,21 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | Yes | Object to be dragged. |
+| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | Yes | Object to be dragged. |
 | dragInfo | [dragController.DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | Yes | Drag information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;{ event: DragEvent, extraParams: string | > } Callback used to return the result. |
+| Promise&lt;{ event: DragEvent, extraParams: string }&gt; | Callback used to return the result.<br>- **event**: drag event information that includes only the drag result. <br>- **extraParams**: extra information about the drag event.<br>**Since:** 11 |
 | Promise&lt;[dragController.DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | A Promise with the drag event information.<br>**Since:** 12 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
 
 ## getDragPreview

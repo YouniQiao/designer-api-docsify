@@ -60,7 +60,7 @@ data?: string | Array<FormItem>
 - 上传时，data是表单项数组Array&lt;  
 [FormItem](arkts-basicservices-agent-formitem-i.md)&gt;。从API version 15开始，创建单个任务可以上传最多100个文件。默认为空。
 
-**类型：** string \| Array&lt;[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;
+**类型：** string &#124; Array&lt;[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;
 
 **起始版本：** 10
 

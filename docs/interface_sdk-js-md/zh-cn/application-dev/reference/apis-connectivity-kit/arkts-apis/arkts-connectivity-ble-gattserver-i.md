@@ -2,7 +2,7 @@
 
 GATT通信中的服务端类。
 
-通过[ble.createGattServer](arkts-connectivity-ble-creategattserver-f.md)方法可以构造server实例。通过该实例可以操作server端的行为，如添加服务[addService](#addservice)、通知特征值变化notifyCharacteristicChanged等。可通过订阅on('connectionStateChange')事件来感知连接状态，以及发起连接的client端设备地址。
+通过[ble.createGattServer](arkts-connectivity-ble-creategattserver-f.md)方法可以构造server实例。通过该实例可以操作server端的行为，如添加服务[addService](#addservice)、通知特征值变化notifyCharacteristicChanged等。可通过订阅[on('connectionStateChange')](#onconnectionstatechange)事件来感知连接状态，以及发起连接的client端设备地址。
 
 **起始版本：** 10
 
@@ -131,7 +131,7 @@ connect(deviceId: string, autoConnect?: boolean): void
 
 调用方充当GATT客户端，发起和远端BLE设备连接，通过参数autoConnect设置是否直接连接到远端设备或者在远端设备可用时自动重连。
 
-若要实现在远端设备可用时自动重连（即[autoConnect](arkts-connectivity-ble-gattsetting-i.md)为true），需保证client端[createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md)发起连接，并设置[autoConnect](arkts-connectivity-ble-gattsetting-i.md)为true。server端可通过订阅on('BLEConnectionStateChange')事件感知连接状态。当server端想要断开连接时，可主动调用[disconnect](#disconnect)。
+若要实现在远端设备可用时自动重连（即[autoConnect](arkts-connectivity-ble-gattsetting-i.md)为true），需保证client端[createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md)发起连接，并设置[autoConnect](arkts-connectivity-ble-gattsetting-i.md)为true。server端可通过订阅[on('BLEConnectionStateChange')](arkts-connectivity-ble-gattclientdevice-i.md#onbleconnectionstatechange)事件感知连接状态。当server端想要断开连接时，可主动调用[disconnect](#disconnect)。
 
 **起始版本：** 26.0.0
 
@@ -181,7 +181,7 @@ disconnect(deviceId: string): void
 
 调用方充当GATT客户端，主动发起与远端设备断连，或停止正在进行的连接。
 
-可通过订阅on('BLEConnectionStateChange')事件来感知连接状态。
+可通过订阅[on('BLEConnectionStateChange')](arkts-connectivity-ble-gattclientdevice-i.md#onbleconnectionstatechange)事件来感知连接状态。
 
 **起始版本：** 26.0.0
 
@@ -536,7 +536,7 @@ server端取消订阅client的特征值读请求事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'characteristicRead' | 是 | 事件回调类型，支持的事件为'characteristicRead'，表示特征值读请求事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicReadRequest](arkts-connectivity-ble-characteristicreadrequest-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与on('characteristicRead')中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicReadRequest](arkts-connectivity-ble-characteristicreadrequest-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与[on('characteristicRead')](#oncharacteristicread)中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
 
 **错误码：**
 
@@ -581,7 +581,7 @@ server端取消订阅client的特征值写请求事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'characteristicWrite' | 是 | 事件回调类型，支持的事件为'characteristicWrite'，表示特征值写请求事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicWriteRequest](arkts-connectivity-ble-characteristicwriterequest-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与on('characteristicWrite')中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicWriteRequest](arkts-connectivity-ble-characteristicwriterequest-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与[on('characteristicWrite')](#oncharacteristicwrite)中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
 
 **错误码：**
 
@@ -626,7 +626,7 @@ server端取消订阅client的描述符读请求事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'descriptorRead' | 是 | 事件回调类型，支持的事件为'descriptorRead'，表示描述符读请求事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorReadRequest](arkts-connectivity-ble-descriptorreadrequest-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与on('descriptorRead')中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorReadRequest](arkts-connectivity-ble-descriptorreadrequest-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与[on('descriptorRead')](#ondescriptorread)中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
 
 **错误码：**
 
@@ -671,7 +671,7 @@ server端取消订阅client的描述符写请求事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'descriptorWrite' | 是 | 事件回调类型，支持的事件为'descriptorWrite'，表示描述符写请求事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorWriteRequest](arkts-connectivity-ble-descriptorwriterequest-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与on('descriptorWrite')中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorWriteRequest](arkts-connectivity-ble-descriptorwriterequest-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与[on('descriptorWrite')](#ondescriptorwrite)中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
 
 **错误码：**
 
@@ -716,7 +716,7 @@ server端取消订阅GATT profile协议的连接状态变化事件。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | 是 | 事件回调类型，支持的事件为'connectionStateChange'，表示GATT profile连接状态发生变化的事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectionChangeState](arkts-connectivity-ble-bleconnectionchangestate-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与on('connectionStateChange')中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectionChangeState](arkts-connectivity-ble-bleconnectionchangestate-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与[on('connectionStateChange')](#onconnectionstatechange)中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
 
 **错误码：**
 
@@ -1223,7 +1223,7 @@ readPhy(deviceId: string): Promise<PhyValue>
 
 获取server端和指定设备连接链路的物理通道类型。使用Promise异步回调。
 
-需先由client端发起连接，并等待连接成功后，再调用该方法。deviceId为对端client的蓝牙设备地址，可从server端订阅的on('connectionStateChange')回调中获取。
+需先由client端发起连接，并等待连接成功后，再调用该方法。deviceId为对端client的蓝牙设备地址，可从server端订阅的[on('connectionStateChange')](#onconnectionstatechange)回调中获取。
 
 **起始版本：** 23
 
@@ -1368,13 +1368,13 @@ server端收到client的请求操作后，需要调用此接口回复client，�
 
 client请求是指通过下述接口订阅回调收到的请求消息：
 
-on('characteristicRead')
+[on('characteristicRead')](#oncharacteristicread)
 
-on('characteristicWrite')，需根据[CharacteristicWriteRequest](arkts-connectivity-ble-characteristicwriterequest-i.md)中的needRsp决定是否需要回复。
+[on('characteristicWrite')](#oncharacteristicwrite)，需根据[CharacteristicWriteRequest](arkts-connectivity-ble-characteristicwriterequest-i.md)中的needRsp决定是否需要回复。
 
-on('descriptorRead')
+[on('descriptorRead')](#ondescriptorread)
 
-on('descriptorWrite')，需根据[DescriptorWriteRequest](arkts-connectivity-ble-descriptorwriterequest-i.md)中的needRsp决定是否需要回复。
+[on('descriptorWrite')](#ondescriptorwrite)，需根据[DescriptorWriteRequest](arkts-connectivity-ble-descriptorwriterequest-i.md)中的needRsp决定是否需要回复。
 
 **起始版本：** 10
 

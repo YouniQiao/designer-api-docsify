@@ -16,7 +16,7 @@ Parses the file header in a DLP file to obtain the DLP plaintext policy. The ret
 
 This API obtains the policy information of a DLP file for analysis in scenarios such as viewing the DLP file permission configuration.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only by enterprise accounts.
 

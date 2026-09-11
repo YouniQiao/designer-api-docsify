@@ -15,7 +15,7 @@ format(date?: Date | number): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date \| number | No |  |
+| date | Date &#124; number | No |  |
 
 **Return value:**
 

@@ -4,7 +4,7 @@ This interface provides APIs for audio capture.
 
 Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) to create an AudioCapturer instance.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The initial APIs of this interface are supported since API version 8.
 
@@ -106,7 +106,7 @@ Obtains the timestamp of the current recording position, measured in nanoseconds
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return a timestamp representing the number of nanoseconds elapsed since the Unix epoch (January 1, 1970). |
+| Promise&lt;number&gt; | Promise used to return a timestamp representing the number of nanoseconds elapsed since the Unix epoch (January 1, 1970).<br>The timestamp unit is nanoseconds. |
 
 ## getAudioTimestampInfo
 
@@ -192,7 +192,7 @@ Obtains a reasonable minimum buffer size in bytes for capturing. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the minimum buffer size obtained; otherwise, **err** is an error object.The unit is bytes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the minimum buffer size obtained; otherwise, **err** is an error object.<br>The unit is bytes. |
 
 ## getBufferSize
 
@@ -210,7 +210,7 @@ Obtains a reasonable minimum buffer size in bytes for capturing. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the buffer size. |
+| Promise&lt;number&gt; | Promise used to return the buffer size.<br>The unit is bytes. |
 
 ## getBufferSizeSync
 
@@ -338,7 +338,7 @@ Gets the noise reduction mode for current audio capturer. The mode will only con
 
 | Type | Description |
 | --- | --- |
-| [NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md) | The noise reduction mode for current audio capturer, the default value is { |
+| [NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md) | The noise reduction mode for current audio capturer, the default value is [FIDELITY](arkts-audio-audio-noisereductionmode-e.md#fidelity). |
 
 ## getOverflowCount
 
@@ -448,7 +448,7 @@ Gets all the supported noise reduction modes for current device platform. Curren
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md)&gt; | The supported noise reduction mode array, at least { |
+| Array&lt;[NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md)&gt; | The supported noise reduction mode array, at least [FIDELITY](arkts-audio-audio-noisereductionmode-e.md#fidelity) is supported. |
 
 **Error codes:**
 
@@ -914,7 +914,7 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: num
 
 Sets the independent audio session strategy and behavior parameters.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If this API is called while an audio capturer is running, you must call the
 > [start](#start) API again for
@@ -931,7 +931,7 @@ Sets the independent audio session strategy and behavior parameters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | strategy | [AudioSessionStrategy](arkts-audio-audio-audiosessionstrategy-i.md) | Yes | Audio session strategy. |
-| behavior | number | Yes | Specifies the audio session behavior.This can be a single flag or a bitwise OR combination of multiple flags.For details about the supported audio session behaviors, see [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md). |
+| behavior | number | Yes | Specifies the audio session behavior.<br>This can be a single flag or a bitwise OR combination of multiple flags.<br>For details about the supported audio session behaviors, see [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md). |
 
 **Error codes:**
 
@@ -1047,7 +1047,7 @@ Starts this audio capturer to start capturing audio data. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. If the operation fails, an error object with the following error code is returned:Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. If the operation fails, an error object with the following error code is returned:<br>Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
 
 ## start
 
@@ -1065,7 +1065,7 @@ Starts this audio capturer to start capturing audio data. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise object, which indicates that the capturer is started successfully. If the operation fails, an error object with the following error code is returned: |
+| Promise&lt;void&gt; | Promise object, which indicates that the capturer is started successfully. If the operation fails, an error object with the following error code is returned:<br>Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
 
 ## stop
 

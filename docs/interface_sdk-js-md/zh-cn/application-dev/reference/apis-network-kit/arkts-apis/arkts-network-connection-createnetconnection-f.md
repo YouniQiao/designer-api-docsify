@@ -29,7 +29,7 @@ function createNetConnection(netSpecifier?: NetSpecifier, timeout?: number): Net
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | netSpecifier | [NetSpecifier](arkts-network-connection-netspecifier-i.md) | 否 | 需要监听网络的网络特征，缺省则表示监听默认网络。 |
-| timeout | number | 否 | 获取netSpecifier指定网络时的超时时间，传入值需为uint32_t范围内的整数，仅netSpecifier存在时生效，默认值为0。   **说明：**当监听网络不存在时，会尝试激活此网络。若超过设置的超时时间，且注册了网络状态监听，则会触发netUnavailable事件。 |
+| timeout | number | 否 | 获取netSpecifier指定网络时的超时时间，传入值需为uint32_t范围内的整数，仅netSpecifier存在时生效，默认值为0。<br>**说明：**当监听网络不存在时，会尝试激活此网络。若超过设置的超时时间，且注册了网络状态监听，则会触发netUnavailable事件。 |
 
 **返回值：**
 

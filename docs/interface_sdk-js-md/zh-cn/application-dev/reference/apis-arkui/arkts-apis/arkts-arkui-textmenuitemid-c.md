@@ -37,7 +37,7 @@ equals(id: TextMenuItemId): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 两个TextMenuItemId是否相等。 |
+| boolean | 两个TextMenuItemId是否相等。<br>true表示相等，false表示不相等。 |
 
 ## of
 

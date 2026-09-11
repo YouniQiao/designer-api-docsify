@@ -201,7 +201,7 @@ verifyCodeParams?: Array<VerifyCodeParam>
 
 Information about the code signature file. The default value is null.
 
-**NOTE：**
+**NOTE:**
 
 Starting from API version 10, the code signature file of an application is integrated into the installation package, rather than being specified by using this field. This field is deprecated since API version 11.
 

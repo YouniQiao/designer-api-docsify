@@ -14,7 +14,7 @@ function off(type: 'userAgeGroupDetected', callback?: Callback<UserClassificatio
 
 Disables the age group detection function.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported only on some phones. Error code **33900003** is returned if it is called on unsupported
 > phones.
@@ -36,9 +36,9 @@ Disables the age group detection function.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function can not work correctly due to limited device capabilities. |
-| [33900001](../errorcode-userStatus.md#33900001-service-exception) | Service exception. Possible causes:  1. System error, such as a null pointer and container-related exception.  2. Node-API invocation exception, such as invalid Node-API status. |
-| 33900003 | Unsubscription failed. Possible causes:  1. Callback failure.  2. Node-API invocation exception, such as invalid Node-API status.  3. IPC request exception. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function can not work correctly due to limited<br> device capabilities. |
+| [33900001](../errorcode-userStatus.md#33900001-service-exception) | Service exception. Possible causes:<br>1. System error, such as a null pointer and container-related exception. <br>2. Node-API invocation exception, such as invalid Node-API status. |
+| 33900003 | Unsubscription failed. Possible causes:<br>1. Callback failure. <br>2. Node-API invocation exception, such as invalid Node-API status. <br>3. IPC request exception. |
 
 **Examples**
 

@@ -30,8 +30,6 @@ Obtains the number of attributes for the current start tag.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 **Examples**
 
 ```TypeScript
@@ -70,8 +68,6 @@ Obtains the current column number, starting from 1.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 **Examples**
 
 ```TypeScript
@@ -110,8 +106,6 @@ Obtains the depth of this element.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 **Examples**
 
 ```TypeScript
@@ -154,8 +148,6 @@ Obtains the current line number, starting from 1.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 **Examples**
 
 ```TypeScript
@@ -194,8 +186,6 @@ Obtains the name of this element.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 **Examples**
 
 ```TypeScript
@@ -234,8 +224,6 @@ Obtains the namespace of this element.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 **Examples**
 
 ```TypeScript
@@ -278,8 +266,6 @@ Obtains the prefix of this element.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 **Examples**
 
 ```TypeScript
@@ -322,8 +308,6 @@ Obtains the text of the current event.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 **Examples**
 
 ```TypeScript
@@ -362,8 +346,6 @@ Checks whether the current element is empty.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 **Examples**
 
 ```TypeScript
@@ -406,8 +388,6 @@ Checks whether the current event contains only whitespace characters.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 **Examples**
 
 ```TypeScript

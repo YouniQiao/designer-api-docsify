@@ -39,8 +39,8 @@ Installs a private credential. This API uses an asynchronous callback to return 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;  2. Memory operation error; 3. File operation error. Please try again. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [17500003](../errorcode-certManager.md#17500003-invalid-certificate-or-credential) | The keystore is in an invalid format or the keystore password is incorrect. |
 | [17500004](../errorcode-certManager.md#17500004-the-number-of-certificates-or-credentials-reaches-the-limit) | The number of certificates or credentials reaches the maximum allowed.<br>**Applicable version:** 12 and later |
 
@@ -95,15 +95,15 @@ Installs a private credential. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise used to return the operation result, that is, **uri** in the [CMResult]{ |
+| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise used to return the operation result, that is, **uri** in the [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md) object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;  2. Memory operation error; 3. File operation error. Please try again. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [17500003](../errorcode-certManager.md#17500003-invalid-certificate-or-credential) | The keystore is in an invalid format or the keystore password is incorrect. |
 | [17500004](../errorcode-certManager.md#17500004-the-number-of-certificates-or-credentials-reaches-the-limit) | The number of certificates or credentials reaches the maximum allowed.<br>**Applicable version:** 12 and later |
 
@@ -151,23 +151,23 @@ Installs a private credential and specifies its storage level. This API uses a p
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keystore | Uint8Array | Yes | Keystore file with a key pair and certificate. The value contains up to 20480 bytes. |
-| keystorePwd | string | Yes | Password of the keystore file.The value contains up to 32 bytes. |
-| certAlias | string | Yes | Alias of the credential entered by the user. Only digits, letters, and underscores (_) are supported.The value should contain up to 32 bytes. |
+| keystorePwd | string | Yes | Password of the keystore file.<br>The value contains up to 32 bytes. |
+| certAlias | string | Yes | Alias of the credential entered by the user. Only digits, letters, and underscores (_) are supported.<br>The value should contain up to 32 bytes. |
 | level | [AuthStorageLevel](arkts-devicecertificate-certificatemanager-authstoragelevel-e.md) | Yes | Credential storage level. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise used to return the operation result, that is, **uri** in the [CMResult]{ |
+| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise used to return the operation result, that is, **uri** in the [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md) object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;  2. Memory operation error; 3. File operation error. Please try again. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [17500003](../errorcode-certManager.md#17500003-invalid-certificate-or-credential) | The keystore is in an invalid format or the keystore password is incorrect. |
 | [17500004](../errorcode-certManager.md#17500004-the-number-of-certificates-or-credentials-reaches-the-limit) | The number of certificates or credentials reaches the maximum allowed. |
 

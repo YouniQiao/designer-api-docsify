@@ -2,6 +2,8 @@
 
 Agent的应用信息。
 
+@typedef AgentAppInfo
+
 **起始版本：** 24
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core

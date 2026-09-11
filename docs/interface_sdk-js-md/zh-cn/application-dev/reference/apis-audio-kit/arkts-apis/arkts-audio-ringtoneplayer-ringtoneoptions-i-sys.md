@@ -2,6 +2,8 @@
 
 铃声参数选项。
 
+@typedef RingtoneOptions
+
 **起始版本：** 10
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core

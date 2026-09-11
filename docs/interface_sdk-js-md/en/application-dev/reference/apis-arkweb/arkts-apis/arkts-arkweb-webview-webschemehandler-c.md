@@ -23,7 +23,7 @@ onRequestStart(
 
 Called when a request starts. In this callback, you can determine whether to intercept the request. If **false** is returned, the request is not intercepted and the handler is invalid. If **true** is returned, the request is intercepted.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Redirected URLs cannot be intercepted individually. To intercept a redirected URL, you must also intercept
 > the original request URL.
@@ -44,7 +44,7 @@ Called when a request starts. In this callback, you can determine whether to int
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
 ## onRequestStop
 
@@ -52,7 +52,7 @@ Called when a request starts. In this callback, you can determine whether to int
 onRequestStop(callback: Callback<WebSchemeHandlerRequest>): void
 ```
 
-Called when the request is complete. This callback is triggered only when the onRequestStart callback intercepts the request. Specifically, this callback is invoked in the following cases:
+Called when the request is complete. This callback is triggered only when the [onRequestStart](#onrequeststart) callback intercepts the request. Specifically, this callback is invoked in the following cases:
 
 1. WebResourceHandler calls didFail or didFinish.
 2. The request is interrupted due to other reasons (such as network errors or system exceptions).

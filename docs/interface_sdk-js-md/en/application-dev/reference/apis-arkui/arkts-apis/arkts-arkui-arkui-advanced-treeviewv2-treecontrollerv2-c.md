@@ -92,7 +92,7 @@ This interface is called when a secondaryTitle needs to be updated
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parentId | number | Yes | ID of the parent node. Value range:The value must be greater than or equal to -1. |
+| parentId | number | Yes | ID of the parent node.<br>Value range:The value must be greater than or equal to -1. |
 | parentSubTitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | secondaryTitle of parent node. |
 | currentSubtitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | secondaryTitle of current node. |
 

@@ -48,7 +48,7 @@ getViewEnd(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 可视区域的结束位置。 |
+| number | 可视区域的结束位置。<br>单位：px。 |
 
 ## getViewStart
 
@@ -70,7 +70,7 @@ getViewStart(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 可视区域的起始位置。 |
+| number | 可视区域的起始位置。<br>单位：px。 |
 
 ## setAdjustedOffset
 

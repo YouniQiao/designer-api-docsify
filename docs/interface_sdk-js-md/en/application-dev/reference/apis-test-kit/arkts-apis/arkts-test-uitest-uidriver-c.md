@@ -120,7 +120,7 @@ static create(): UiDriver
 
 Creates a **UiDriver** object and returns the object created. This API is a static API.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This method is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [create&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#create) instead.
@@ -499,7 +499,7 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [triggerKey](arkts-test-uitest-driver-c.md#triggerkey)(keyCode: int)
+**Substitutes:** [triggerKey](arkts-test-uitest-driver-c.md#triggerkey)(keyCode: number)
 
 **System capability:** SystemCapability.Test.UiTest
 

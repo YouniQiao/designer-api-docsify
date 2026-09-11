@@ -22,7 +22,7 @@ details?: Record<string, number | number | number | string | Uint8Array>
 
 是一个字典类型对象，key是string类型，value可以写入number（数值类型）、string（字符串类型）、Uint8Array（二进制字节数组）类型数据。非必填字段，默认值为空字典对象。
 
-**类型：** Record&lt;string, number \| number \| number \| string \| Uint8Array&gt;
+**类型：** Record&lt;string, number &#124; number &#124; number &#124; string &#124; Uint8Array&gt;
 
 **起始版本：** 10
 

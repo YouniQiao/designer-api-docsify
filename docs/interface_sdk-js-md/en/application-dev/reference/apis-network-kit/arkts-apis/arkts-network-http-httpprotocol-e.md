@@ -42,7 +42,7 @@ HTTP3 = 2
 
 HTTP3. If the system or server does not support HTTP3, the HTTP protocol of an earlier version is used.
 
-**Note：**: This parameter takes effect only for HTTPS URLs. If this parameter is set to HTTP, the request will fail.
+**Note:** This parameter takes effect only for HTTPS URLs. If this parameter is set to HTTP, the request will fail.
 
 **Since:** 11
 

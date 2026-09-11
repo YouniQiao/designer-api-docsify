@@ -44,7 +44,7 @@ getBufferData(): ImageBufferData | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageBufferData](arkts-image-image-imagebufferdata-i.md) \| null | 获取封装图像数据缓冲区的结构体，获取不到时返回空值。 |
+| [ImageBufferData](arkts-image-image-imagebufferdata-i.md) &#124; null | 获取封装图像数据缓冲区的结构体，获取不到时返回空值。 |
 
 ## getComponent
 
@@ -113,7 +113,7 @@ getMetadata(key: HdrMetadataKey): HdrMetadataValue | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [HdrMetadataValue](arkts-image-image-hdrmetadatavalue-t.md) \| null | 返回关键字对应的HDR元数据的值。如果图像没有HDR元数据，返回空值。 |
+| [HdrMetadataValue](arkts-image-image-hdrmetadatavalue-t.md) &#124; null | 返回关键字对应的HDR元数据的值。如果图像没有HDR元数据，返回空值。 |
 
 **错误码：**
 

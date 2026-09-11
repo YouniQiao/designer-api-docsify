@@ -45,7 +45,7 @@ ServiceExtensionAbility提供后台服务扩展能力，支持后台运行并对
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回连接id，客户端可以通过[disconnectServiceExtensionAbility]{ |
+| number | 返回连接id，客户端可以通过[disconnectServiceExtensionAbility](#disconnectserviceextensionability)传入该连接id来断开连接。 |
 
 **错误码：**
 

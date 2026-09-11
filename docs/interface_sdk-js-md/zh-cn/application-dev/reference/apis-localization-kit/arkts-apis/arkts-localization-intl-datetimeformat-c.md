@@ -69,8 +69,8 @@ constructor(locale: string | Array<string>, options?: DateTimeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
-| options | [DateTimeOptions](arkts-localization-intl-datetimeoptions-i.md) | 否 | 创建时间日期格式化对象时可设置的配置项。若所有选项均未设置时，year、month、day三个属性的默认值为numeric。默认值：所有属性都取默认值时的配置项。 |
+| locale | string &#124; Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
+| options | [DateTimeOptions](arkts-localization-intl-datetimeoptions-i.md) | 否 | 创建时间日期格式化对象时可设置的配置项。<br>若所有选项均未设置时，year、month、day三个属性的默认值为numeric。<br>默认值：所有属性都取默认值时的配置项。 |
 
 **示例**
 
@@ -108,7 +108,7 @@ format(date: Date): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | Date | 是 | 时间日期。   **说明：** 月份从0开始计数，0表示一月。 |
+| date | Date | 是 | 时间日期。<br>**说明：** <br>月份从0开始计数，0表示一月。 |
 
 **返回值：**
 
@@ -155,8 +155,8 @@ formatRange(startDate: Date, endDate: Date): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startDate | Date | 是 | 时间日期的开始。   **说明：** 月份从0开始计数，0表示一月。 |
-| endDate | Date | 是 | 时间日期的结束。   **说明：** 月份从0开始计数，0表示一月。 |
+| startDate | Date | 是 | 时间日期的开始。<br>**说明：** <br>月份从0开始计数，0表示一月。 |
+| endDate | Date | 是 | 时间日期的结束。<br>**说明：** <br>月份从0开始计数，0表示一月。 |
 
 **返回值：**
 

@@ -2,7 +2,7 @@
 
 This module defines a struct for setting typeface arguments.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The initial APIs of this class are supported since API version 20.
 > 

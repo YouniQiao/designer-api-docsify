@@ -1,7 +1,8 @@
 # @ohos.animator(动画)
 
 本模块提供组件动画效果，包括定义动画、启动动画和以相反的顺序播放动画等。
- > **说明：**
+
+> **说明：**
  >
  > - 本模块从API version 9开始支持在ArkTS中使用。
  >
@@ -21,6 +22,7 @@
  > 为空函数，再调用[finish](arkts-arkui-animator-animatorresult-i.md#finish)。
  >
  > - 对于无限循环的Animator动画，即使开发者选项中将全局动画速率设置为0（关闭动画），循环动画仍会继续执行。
+
 
 
 ## 导入模块

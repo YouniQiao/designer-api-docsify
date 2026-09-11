@@ -24,7 +24,7 @@ function getRadioTech(slotId: number, callback: AsyncCallback<NetworkRadioTech>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetworkRadioTech](arkts-telephony-radio-networkradiotech-i.md)&gt; | 是 | 回调函数。返回当前接入的CS域和PS域无线接入技术。其中，CS域为电路交换域，PS为分组交换域。<br>**适用版本：** 11 |
 
 **错误码：**
@@ -85,14 +85,14 @@ function getRadioTech(slotId: number): Promise<NetworkRadioTech>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;{psRadioTech: RadioTechnology, csRadioTech: RadioTechnology | > } 以Promise形式返回当前接入的CS域和PS域技术。CS域为电路交换域，PS为分组交换域。<br>**适用版本：** 6 - 10 |
-| Promise&lt;[NetworkRadioTech](arkts-telephony-radio-networkradiotech-i.md)&gt; | Returns the RAT of PS domain and CS domain of registered network. The values of RAT are as follows: &lt;ul&gt; &lt;li&gt;{ |
+| Promise&lt;{psRadioTech: RadioTechnology, csRadioTech: RadioTechnology}&gt; | 以Promise形式返回当前接入的CS域和PS域技术。CS域为电路交换域，PS为分组交换域。<br>**适用版本：** 6 - 10 |
+| Promise&lt;[NetworkRadioTech](arkts-telephony-radio-networkradiotech-i.md)&gt; | Returns the RAT of PS domain and CS domain of registered network. The values of RAT are as follows: &lt;ul&gt; &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_UNKNOWN` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_GSM` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_1XRTT` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_WCDMA` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_HSPA` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_HSPAP` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_TD_SCDMA` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_EVDO` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_EHRPD` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_LTE` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_LTE_CA` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_IWLAN` &lt;li&gt;`RadioTechnology#RADIO_TECHNOLOGY_NR` &lt;/ul&gt;<br>**适用版本：** 11 |
 
 **错误码：**
 

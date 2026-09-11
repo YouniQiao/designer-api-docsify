@@ -2,7 +2,7 @@
 
 Calls **registerPlugin** and **unregisterPlugin** to register or unregister callback capabilities in the SA.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > **registerPlugin** registers callback capabilities in the SA, and **unregisterPlugin** unregisters callback
 > capabilities from the SA.
@@ -57,7 +57,7 @@ static registerPlugin(plugin: DlpConnPlugin): number
 
 Registers a callback with the SA.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > **registerPlugin** registers the callback with the SA.
 
@@ -128,7 +128,7 @@ Unregisters a callback from the SA.
 
 This API unregisters a callback and releases resources when an application exits, ensuring that the callback capability is correctly released.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > **unregisterPlugin** unregisters a plug-in from the SA.
 

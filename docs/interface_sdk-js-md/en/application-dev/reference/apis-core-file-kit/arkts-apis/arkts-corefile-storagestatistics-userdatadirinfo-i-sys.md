@@ -56,7 +56,7 @@ The size of inode count.
 totalSize: number
 ```
 
-The size of user data dirs. Unit: Byte.
+The size of user data dirs. <br>Unit: Byte.
 
 **Type:** number
 

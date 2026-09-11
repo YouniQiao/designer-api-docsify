@@ -318,7 +318,7 @@ readonly subIntentInfo: LinkIntentInfo | PageIntentInfo | FunctionIntentInfo | F
 
 对于使用配置文件开发的意图，该字段返回值默认为[EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md)。
 
-**类型：** [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) \| [PageIntentInfo](arkts-ability-insightintentdriver-pageintentinfo-i-sys.md) \| [FunctionIntentInfo](arkts-ability-insightintentdriver-functionintentinfo-i-sys.md) \| [FormIntentInfo](arkts-ability-insightintentdriver-formintentinfo-i-sys.md) \| [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md)
+**类型：** [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) &#124; [PageIntentInfo](arkts-ability-insightintentdriver-pageintentinfo-i-sys.md) &#124; [FunctionIntentInfo](arkts-ability-insightintentdriver-functionintentinfo-i-sys.md) &#124; [FormIntentInfo](arkts-ability-insightintentdriver-formintentinfo-i-sys.md) &#124; [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md)
 
 **起始版本：** 20
 

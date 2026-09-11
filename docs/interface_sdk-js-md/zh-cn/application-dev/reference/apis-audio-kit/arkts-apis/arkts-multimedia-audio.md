@@ -236,7 +236,7 @@ import { audio } from '@kit.AudioKit';
 | --- | --- |
 | [ActiveStreamsVolumeInfoArray](arkts-audio-audio-activestreamsvolumeinfoarray-t-sys.md) | ActiveStreamVolumeInfo数组。 |
 | [StreamUsageArray](arkts-audio-audio-streamusagearray-t-sys.md) | 音频类型数组 |
-| [VolumeGroupInfos](arkts-audio-audio-volumegroupinfos-t-sys.md) |  |
+| [VolumeGroupInfos](arkts-audio-audio-volumegroupinfos-t-sys.md) | @typedef { Array&lt;Readonly&lt;VolumeGroupInfo&gt;  > } VolumeGroupInfos |
 <!--DelEnd-->
 
 ### 常量

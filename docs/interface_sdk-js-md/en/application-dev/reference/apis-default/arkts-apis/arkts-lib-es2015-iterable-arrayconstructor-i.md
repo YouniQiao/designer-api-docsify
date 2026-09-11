@@ -17,7 +17,7 @@ Creates an array from an iterable object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iterable | Iterable&lt;T&gt; \| ArrayLike&lt;T&gt; | Yes |  |
+| iterable | Iterable&lt;T&gt; &#124; ArrayLike&lt;T&gt; | Yes |  |
 
 **Return value:**
 
@@ -35,7 +35,7 @@ Creates an array from an iterable object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iterable | Iterable&lt;T&gt; \| ArrayLike&lt;T&gt; | Yes |  |
+| iterable | Iterable&lt;T&gt; &#124; ArrayLike&lt;T&gt; | Yes |  |
 | mapfn | (v: T, k: number) =&gt; U | Yes |  |
 | thisArg | any | No |  |
 

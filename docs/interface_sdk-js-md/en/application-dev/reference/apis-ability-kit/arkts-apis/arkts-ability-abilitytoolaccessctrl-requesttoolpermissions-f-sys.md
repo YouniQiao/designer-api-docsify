@@ -31,7 +31,7 @@ Queries tool permissions based on the specified operations. This function checks
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[PermissionQueryResult](arkts-ability-abilitytoolaccessctrl-permissionqueryresult-i-sys.md)&gt; | Promise used to return \\${PermissionQueryResult}. |
+| Promise&lt;[PermissionQueryResult](arkts-ability-abilitytoolaccessctrl-permissionqueryresult-i-sys.md)&gt; | Promise used to return \&#36;{PermissionQueryResult}. |
 
 **Error codes:**
 

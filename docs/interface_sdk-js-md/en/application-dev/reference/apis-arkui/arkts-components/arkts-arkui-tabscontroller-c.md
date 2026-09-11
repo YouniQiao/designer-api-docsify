@@ -29,7 +29,7 @@ Switches to the specified tab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Index of the tab. The value starts from 0.   **NOTE：**If this parameter is set to a value less than 0 or greater than the maximum number, the default value **0** is used. |
+| value | number | Yes | Index of the tab. The value starts from 0.<br>**NOTE:**<br>If this parameter is set to a value less than 0 or greater than the maximum number, the default value **0** is used. |
 
 ## constructor
 
@@ -75,7 +75,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 Preloads child nodes. After this API is called, all specified child nodes will be loaded at once. Therefore, for performance considerations, it is recommended that you load child nodes in batches.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - **preloadItems** of **Tabs** needs to be called after **Tabs** is created. You are advised to control the first
 > preloading in the onAppear lifecycle of **Tabs**.
@@ -100,7 +100,7 @@ Preloads child nodes. After this API is called, all specified child nodes will b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indices | [Optional](arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | Yes | Array of indexes of the child nodes to preload.The default value is an empty array. |
+| indices | [Optional](arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | Yes | Array of indexes of the child nodes to preload.<br>The default value is an empty array. |
 
 **Return value:**
 
@@ -112,7 +112,7 @@ Preloads child nodes. After this API is called, all specified child nodes will b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter invalid. Possible causes:   1. The parameter type is not Array&lt;number&gt;.   2. The parameter is an empty array.   3. The parameter contains an invalid index. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter invalid. Possible causes:<br> 1. The parameter type is not Array&lt;number&gt;. <br> 2. The parameter is an empty array. <br> 3. The parameter contains an invalid index. |
 
 ## setTabBarOpacity
 
@@ -122,7 +122,7 @@ setTabBarOpacity(opacity: number): void
 
 Sets the opacity of the tab bar.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When a **Tabs** component is bound to a scrollable container using APIs like
 > [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable)
@@ -143,7 +143,7 @@ Sets the opacity of the tab bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| opacity | number | Yes | Opacity of the tab bar. The value range is [0.0, 1.0]. A value less than 0.0 is handed as **0.0**. A value greater than **1.0** is handed as **1.0**.Default value: **1.0**. |
+| opacity | number | Yes | Opacity of the tab bar. The value range is [0.0, 1.0]. A value less than 0.0 is handed as **0.0**. A value greater than **1.0** is handed as **1.0**.<br> Default value: **1.0**. |
 
 ## setTabBarTranslate
 
@@ -153,7 +153,7 @@ setTabBarTranslate(translate: TranslateOptions): void
 
 Sets the translation distance of the tab bar.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When a **Tabs** component is bound to a scrollable container using APIs like
 > [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable)

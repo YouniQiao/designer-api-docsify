@@ -4,6 +4,7 @@
  [continueMission接口](arkts-ability-distributedmissionmanager-continuemission-f-sys.md)
 
 
+
 ## 汇总
 
 <!--Del-->
@@ -19,5 +20,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [OnContinueDoneCallback](arkts-ability-oncontinuedonecallback-t-sys.md) |  |
+| [OnContinueDoneCallback](arkts-ability-oncontinuedonecallback-t-sys.md) | @typedef { function } OnContinueDoneCallback |
 <!--DelEnd-->

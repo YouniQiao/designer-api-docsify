@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
@@ -53,7 +53,7 @@ rating: number
 
 取值范围： [0, stars]
 
-小于0取0，大于[stars](arkts-arkui-rating-attribute.md#stars)取最大值stars。
+小于0取0，大于[stars](arkts-arkui-rating-comp-attribute.md#stars)取最大值stars。
 
 该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 

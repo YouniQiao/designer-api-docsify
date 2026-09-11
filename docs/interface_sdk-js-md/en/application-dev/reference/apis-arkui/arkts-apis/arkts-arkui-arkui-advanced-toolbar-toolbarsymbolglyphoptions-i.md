@@ -22,7 +22,7 @@ Icon symbol of the toolbar item in activated state.
 
 Default value: **fontColor: \$r('sys.color.icon_emphasize'), fontSize: 24vp**
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **Since:** 13
 
@@ -42,7 +42,7 @@ Icon symbol of the toolbar item in normal state.
 
 Default value: **fontColor: \$r('sys.color.icon_primary'), fontSize: 24vp**
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **Since:** 13
 

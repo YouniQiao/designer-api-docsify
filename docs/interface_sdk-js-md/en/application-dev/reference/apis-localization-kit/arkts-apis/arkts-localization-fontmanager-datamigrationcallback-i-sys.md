@@ -118,7 +118,7 @@ Callback function that is invoked after the data migration task is completed (wh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | number | Yes | Data migration result.    **0**: Data migration succeeded.    **1**: No data migration is required.    **2**: Failed to obtain the user ID.    **3**: Failed to check the directory.    **4**: Failed to initialize the cache directory.    **5**: Failed to open the source file.    **6**: Failed to copy the file.    **7**: Failed to rename the file.    **8**: Failed to delete the file. |
+| result | number | Yes | Data migration result.<br>**0**: Data migration succeeded. <br>**1**: No data migration is required. <br>**2**: Failed to obtain the user ID. <br>**3**: Failed to check the directory. <br>**4**: Failed to initialize the cache directory. <br>**5**: Failed to open the source file. <br>**6**: Failed to copy the file. <br>**7**: Failed to rename the file. <br>**8**: Failed to delete the file. |
 
 **Examples**
 

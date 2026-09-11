@@ -38,7 +38,7 @@ closeKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Parameter verification failed. |
 
 **示例**
 
@@ -114,7 +114,7 @@ closeKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Parameter verification failed. |
 
 **示例**
 
@@ -183,7 +183,7 @@ deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Parameter verification failed. |
 | [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
 
 **示例**
@@ -261,7 +261,7 @@ deleteKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Parameter verification failed. |
 | [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
 
 **示例**
@@ -330,7 +330,7 @@ getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Parameter verification failed. |
 
 **示例**
 
@@ -383,7 +383,7 @@ getAllKVStoreId(appId: string): Promise<string[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Parameter verification failed. |
 
 **示例**
 
@@ -436,7 +436,7 @@ getKVStore<T>(storeId: string, options: Options, callback: AsyncCallback<T>): vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 | [15100002](../errorcode-distributedKVStore.md#15100002-打开已有数据库时参数配置发生变化) | Open existed database with changed options. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 
@@ -509,7 +509,7 @@ getKVStore<T>(storeId: string, options: Options): Promise<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 | [15100002](../errorcode-distributedKVStore.md#15100002-打开已有数据库时参数配置发生变化) | Open existed database with changed options. |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 
@@ -548,7 +548,7 @@ try {
 off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
 ```
 
-取消订阅服务状态变更通知。必须先调用on('distributedDataServiceDie')订阅后，才能调用off取消订阅。参数中的deathCallback必须是已经订阅过的deathCallback，否则会取消订阅失败。
+取消订阅服务状态变更通知。必须先调用[on('distributedDataServiceDie')](#on)订阅后，才能调用off取消订阅。参数中的deathCallback必须是已经订阅过的deathCallback，否则会取消订阅失败。
 
 **起始版本：** 9
 
@@ -565,7 +565,7 @@ off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
 **示例**
 
@@ -590,7 +590,7 @@ try {
 on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 ```
 
-订阅服务终止事件。如果服务终止，需要重新调用on('dataChange')和on('syncComplete')注册数据变更通知和端端同步完成事件回调通知，并且端端同步操作会返回失败。调用on订阅后，在不需要监听时必须调用off('distributedDataServiceDie')取消订阅。
+订阅服务终止事件。如果服务终止，需要重新调用[on('dataChange')](arkts-arkdata-distributedkvstore-singlekvstore-i.md#on)和[on('syncComplete')](arkts-arkdata-distributedkvstore-singlekvstore-i.md#on)注册数据变更通知和端端同步完成事件回调通知，并且端端同步操作会返回失败。调用on订阅后，在不需要监听时必须调用[off('distributedDataServiceDie')](#off)取消订阅。
 
 **起始版本：** 9
 
@@ -607,7 +607,7 @@ on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameters types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
 **示例**
 

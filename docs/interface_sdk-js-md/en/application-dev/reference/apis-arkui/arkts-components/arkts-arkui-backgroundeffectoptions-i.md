@@ -41,7 +41,9 @@ Grayscale blur.
 
 **Type:** [BlurOptions](arkts-arkui-bluroptions-i.md)
 
-**Default:** { grayScale: [0,1] } [since 11 - 11] @default { grayScale: [0,0] } [since 12]
+**Default:**
+- API version 11: { grayScale: [0,1] }
+- API version 12+: { grayScale: [0,0] }
 
 **Since:** 11
 
@@ -57,7 +59,7 @@ Grayscale blur.
 brightness?: number
 ```
 
-Brightness. Value range: [0, +∞). Default value: **1** Recommended value range: [0, 2].
+Brightness. <br>Value range: [0, +∞). <br>Default value: **1** Recommended value range: [0, 2].
 
 **Type:** number
 

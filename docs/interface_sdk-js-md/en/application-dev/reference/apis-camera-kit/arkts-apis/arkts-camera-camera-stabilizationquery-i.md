@@ -2,7 +2,7 @@
 
 StabilizationQuery provides APIs to check the support for video stabilization.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This interface was first introduced in API version 12. In this version, a compatibility change was made that
 > preserved the initial version information of inner elements. As a result, you might see outer element's
@@ -41,7 +41,7 @@ Checks whether a video stabilization mode is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the video stabilization mode. **true** if supported, **false** otherwise. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
+| boolean | Check result for the support of the video stabilization mode. **true** if supported, **false** otherwise. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is thrown. |
 
 **Error codes:**
 

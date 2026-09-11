@@ -24,7 +24,7 @@ Deletes the ad JavaScript object injected through **registerWebAdInterface** (th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | web_webview.WebviewController | Yes | Web component controller. |
+| controller | [web_webview.WebviewController](../../apis-arkweb/arkts-apis/arkts-web-webview.md) | Yes | Web component controller. |
 | needRefresh | boolean | Yes | Whether to refresh the page (true: yes; false: no). |
 
 **Error codes:**

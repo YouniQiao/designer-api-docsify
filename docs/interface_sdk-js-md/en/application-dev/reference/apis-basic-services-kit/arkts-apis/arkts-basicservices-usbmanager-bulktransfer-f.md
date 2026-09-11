@@ -19,7 +19,7 @@ function bulkTransfer(
 
 Performs bulk transfer. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The total size of data (including **pipe**, **endpoint**, **buffer**, and **timeout**) to be transferred in a
 > single bulk transfer must be less than 200 KB. Otherwise, the transfer fails and **-1** is returned.
@@ -45,13 +45,13 @@ Performs bulk transfer. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result, which is the size of the transferred or received data block if the transfer is successful. If the API call fails, the following error codes are returned: |
+| Promise&lt;number&gt; | Promise used to return the result, which is the size of the transferred or received data block if the transfer is successful. If the API call fails, the following error codes are returned:  - -1: The driver is abnormal. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified.  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified.  <br>2.Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 **Examples**

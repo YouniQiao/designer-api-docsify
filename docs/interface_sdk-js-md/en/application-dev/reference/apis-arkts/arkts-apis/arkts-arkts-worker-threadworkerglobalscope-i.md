@@ -34,7 +34,7 @@ Calls a method of an object registered with the host thread. This API is called 
 | --- | --- | --- | --- |
 | instanceName | string | Yes | Key used for registration. It is used to search for the object in the host thread. |
 | methodName | string | Yes | Name of the method to call. Note that the method cannot be modified by async or generator, or return results asynchronously by using the asynchronous mechanism at the bottom layer. Otherwise, an exception is thrown. |
-| timeout | number | Yes | Maximum duration that the current synchronous invoking waits, in ms. The value is an integer ranging from 1 to 5000. The value 0 means that the 5000 ms duration is used. The value should be an integer. Unit:ms. |
+| timeout | number | Yes | Maximum duration that the current synchronous invoking waits, in ms. The value is an integer ranging from 1 to 5000. The value 0 means that the 5000 ms duration is used. The value should be an integer.<br>Unit:ms. |
 | args | Object[] | Yes | the method argument called on registered globalCallObject. |
 
 **Return value:**

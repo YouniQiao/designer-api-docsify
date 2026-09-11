@@ -18,7 +18,7 @@ Obtains the current system date. This API uses an asynchronous callback to retur
 
 **Deprecated since:** 10
 
-**Substitutes:** new
+**Substitutes:** new Date()
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -32,7 +32,7 @@ Obtains the current system date. This API uses an asynchronous callback to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. System error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. System error. |
 
 **Examples**
 
@@ -66,7 +66,7 @@ Obtains the current system date. This API uses a promise to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** new
+**Substitutes:** new Date()
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -80,7 +80,7 @@ Obtains the current system date. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. System error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. System error. |
 
 **Examples**
 

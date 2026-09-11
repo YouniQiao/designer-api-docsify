@@ -30,7 +30,7 @@ compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: numbe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | 是 | 要比较的实例对象。 |
+| target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; Uint8Array | 是 | 要比较的实例对象。 |
 | targetStart | number | 否 | `target`实例中开始的偏移量。默认值：0。取值范围：0 &lt;= targetStart &lt;= target.length。 |
 | targetEnd | number | 否 | `target`实例中结束的偏移量（不包含结束位置）。默认值：目标对象的字节长度。取值范围：0 &lt;= targetEnd &lt;= target.length。 |
 | sourceStart | number | 否 | `this`实例中开始的偏移量。默认值：0。取值范围：0 &lt;= sourceStart &lt;= this.length。 |
@@ -40,7 +40,7 @@ compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: numbe
 
 | 类型 | 说明 |
 | --- | --- |
-| -1 \| 0 \| 1 | 返回比较结果。 |
+| -1 &#124; 0 &#124; 1 | 返回比较结果。<br>-1：当前排列在目标前；<br>0：当前与目标相同；<br>1：当前排列在目标后。 |
 
 **错误码：**
 
@@ -88,7 +88,7 @@ copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | 是 | 要复制到的Buffer或Uint8Array实例。 |
+| target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; Uint8Array | 是 | 要复制到的Buffer或Uint8Array实例。 |
 | targetStart | number | 否 | `target`实例中开始写入的偏移量。默认值：0。取值范围：0 &lt;= targetStart &lt;= UINT32_MAX。 |
 | sourceStart | number | 否 | `this`实例中开始复制的偏移量。默认值：0。取值范围：0 &lt;= sourceStart &lt;= UINT32_MAX。 |
 | sourceEnd | number | 否 | `this`实例中结束复制的偏移量（不包含结束位置）。默认值：当前对象的字节长度。取值范围：0 &lt;= sourceEnd &lt;= this.length。 |
@@ -192,7 +192,7 @@ equals(otherBuffer: Uint8Array | FastBuffer): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| otherBuffer | Uint8Array \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 是 | 比较的目标对象。 |
+| otherBuffer | Uint8Array &#124; [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 是 | 比较的目标对象。 |
 
 **返回值：**
 
@@ -239,7 +239,7 @@ fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: nu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array \| number | 是 | 用于填充的值。 |
+| value | string &#124; [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; Uint8Array &#124; number | 是 | 用于填充的值。 |
 | offset | number | 否 | 起始偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length。 |
 | end | number | 否 | 结束偏移量（不包含结束位置）。默认值：当前对象的字节长度。取值范围：0 &lt;= end &lt;= this.length。 |
 | encoding | BufferEncoding | 否 | 字符编码格式（`value`为string才有意义）。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
@@ -289,7 +289,7 @@ includes(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| number \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | 是 | 要搜索的内容。 |
+| value | string &#124; number &#124; [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; Uint8Array | 是 | 要搜索的内容。 |
 | byteOffset | number | 否 | 字节偏移量。若为正数，则从0开始计算偏移量；若为负数，则从末尾开始计算偏移量。默认值：0。 |
 | encoding | BufferEncoding | 否 | 字符编码格式（当`value`为string时，才有意义）。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
 
@@ -333,7 +333,7 @@ indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, e
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| number \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | 是 | 要查找的内容。 |
+| value | string &#124; number &#124; [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; Uint8Array | 是 | 要查找的内容。 |
 | byteOffset | number | 否 | 字节偏移量。若byteOffset为正数，则从0开始计算偏移量；如果为负数，则从末尾开始计算偏移量。默认值：0。 |
 | encoding | BufferEncoding | 否 | 字符编码格式（当`value`为string时，才有意义）。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
 
@@ -417,7 +417,7 @@ lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: numbe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| number \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | 是 | 要搜索的内容。 |
+| value | string &#124; number &#124; [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; Uint8Array | 是 | 要搜索的内容。 |
 | byteOffset | number | 否 | 字节偏移量。若byteOffset为正数，则从0开始计算偏移量；如果为负数，则从末尾开始计算偏移量。默认值：this.length - 1。 |
 | encoding | BufferEncoding | 否 | 字符编码格式（当`value`为string时，才有意义）。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
 

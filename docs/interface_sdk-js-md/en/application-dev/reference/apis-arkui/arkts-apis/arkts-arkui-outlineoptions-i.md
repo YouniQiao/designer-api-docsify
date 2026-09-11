@@ -21,7 +21,7 @@ color?: EdgeColors | ResourceColor | LocalizedEdgeColors
 
 Defines the outline color.
 
-**Type:** EdgeColors \| [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
+**Type:** EdgeColors &#124; [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **Since:** 12
 
@@ -41,7 +41,7 @@ radius?: OutlineRadiuses | Dimension
 
 Defines the outline radius.
 
-**Type:** OutlineRadiuses \| [Dimension](arkts-arkui-dimension-t.md)
+**Type:** OutlineRadiuses &#124; [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 12
 
@@ -61,7 +61,7 @@ style?: EdgeOutlineStyles | OutlineStyle
 
 Defines the outline style.
 
-**Type:** EdgeOutlineStyles \| [OutlineStyle](../arkts-components/arkts-arkui-outlinestyle-e.md)
+**Type:** EdgeOutlineStyles &#124; [OutlineStyle](../arkts-components/arkts-arkui-outlinestyle-e.md)
 
 **Since:** 12
 
@@ -81,7 +81,7 @@ width?: EdgeOutlineWidths | Dimension
 
 Defines the outline width.
 
-**Type:** EdgeOutlineWidths \| [Dimension](arkts-arkui-dimension-t.md)
+**Type:** EdgeOutlineWidths &#124; [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 12
 

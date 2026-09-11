@@ -2,7 +2,7 @@
 
 Defines the radial gradient parameters.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer element
@@ -91,7 +91,8 @@ Default value: **false**.
 
 **Type:** boolean
 
-**Default:** false [since 18]
+**Default:**
+- API version 18+: false
 
 **Since:** 7
 

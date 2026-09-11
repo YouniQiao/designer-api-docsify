@@ -241,7 +241,7 @@ Registers an observer for the main thread freeze event of the application. If th
 
 This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the callback function runs for more than 1 second, the
 > [AppRecovery](arkts-app-ability-apprecovery.md) feature may not work. The execution duration can

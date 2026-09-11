@@ -1080,7 +1080,7 @@ fillStyle?: string | CanvasGradient | CanvasPattern
 
 Sets the style of a paint to fill an area. Paint color used to fill the area. Canvas gradient object used by the paint. You can call createLinearGradient() to create a CanvasGradient object. Canvas pattern. You can call createPattern() to create a CanvasPattern object.
 
-**Type:** string \| [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) \| [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md)
+**Type:** string &#124; [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) &#124; [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md)
 
 **Since:** 4
 
@@ -1304,7 +1304,7 @@ strokeStyle?: string | CanvasGradient | CanvasPattern
 
 Sets the stroke paint style. Color of the stroke paint. Canvas gradient object used by the paint. You can call createLinearGradient() to create a CanvasGradient object. Canvas pattern. You can call createPattern() to create a CanvasPattern object.
 
-**Type:** string \| [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) \| [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md)
+**Type:** string &#124; [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) &#124; [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md)
 
 **Since:** 4
 
@@ -1320,7 +1320,7 @@ textAlign: "left" | "right" | "center" | "start" | "end"
 
 Sets the text alignment mode. Text alignment mode. Available values include: left (default): The text is left-aligned. right: The text is right-aligned. center: The text is center-aligned. start: The text is aligned with the start bound. Can't be supported by smartVision. end: The text is aligned with the end bound. Can't be supported by smartVision. NOTE In the ltr layout mode, the value start equals to left. In the rtl layout mode, the value start equals to right.
 
-**Type:** "left" \| "right" \| "center" \| "start" \| "end"
+**Type:** "left" &#124; "right" &#124; "center" &#124; "start" &#124; "end"
 
 **Since:** 4
 

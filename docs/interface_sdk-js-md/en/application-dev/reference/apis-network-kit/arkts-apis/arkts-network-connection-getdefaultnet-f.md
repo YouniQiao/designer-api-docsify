@@ -14,7 +14,7 @@ function getDefaultNet(callback: AsyncCallback<NetHandle>): void
 
 Obtains the network handle used by the system by default, including the network ID. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Default network used by the system. The network must have the
 > [NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md) capability and is not a VPN network.
@@ -79,7 +79,7 @@ function getDefaultNet(): Promise<NetHandle>
 
 Obtains the network handle used by the system by default, including the network ID. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Default network used by the system. The network must have the
 > [NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md) capability and is not a VPN network.

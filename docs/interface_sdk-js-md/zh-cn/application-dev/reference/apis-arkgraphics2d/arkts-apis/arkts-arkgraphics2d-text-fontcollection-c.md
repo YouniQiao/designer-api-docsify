@@ -109,7 +109,7 @@ static getLocalInstance(): FontCollection
 
 | 类型 | 说明 |
 | --- | --- |
-| [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) | 本地FontCollection实例对象，推荐卡片场景使用，可用于管理字体加载、卸载和排版等操作。 |
+| [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) | 本地FontCollection实例对象，推荐卡片场景使用，可用于管理字体加载、卸载和排版等操作。@static |
 
 **示例**
 
@@ -139,7 +139,7 @@ loadFont(name: string, path: string | Resource): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 加载字体后，调用该字体所使用的别名，可填写任意字符串，可使用该别名指定并使用该字体。 |
-| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 需要加载的字体文件的路径，支持两种格式： "file:// + 字体文件绝对路径" 或 "rawfile/目录or文件名"。 |
+| path | string &#124; [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 需要加载的字体文件的路径，支持两种格式： "file:// + 字体文件绝对路径" 或 "rawfile/目录or文件名"。 |
 
 **返回值：**
 
@@ -201,7 +201,7 @@ loadFontSync(name: string, path: string | Resource): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 加载字体后，调用该字体所使用的名称。 |
-| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 需要导入的字体文件的路径，应为 "file:// + 字体文件绝对路径" 或 "rawfile/目录or文件名"。 |
+| path | string &#124; [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 需要导入的字体文件的路径，应为 "file:// + 字体文件绝对路径" 或 "rawfile/目录or文件名"。 |
 
 **示例**
 
@@ -260,8 +260,8 @@ loadFontSyncWithCheck(name: string, path: string | Resource, index?: number): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 加载字体成功后，该字体对应的名称，可填写任意字符串，可使用该名称指定并使用该字体。 |
-| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 需要加载的字体文件的路径，支持两种格式： "file:// + 字体文件绝对路径" 或 \\$rawfile('字体文件路径')。 |
-| index | number | 否 | 字体文件格式为ttc时，指定加载的字体索引。默认为0：表示加载ttc的第一个字体。非ttc格式文件索引值无意义，若指定索引，只能为0。 |
+| path | string &#124; [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 需要加载的字体文件的路径，支持两种格式： "file:// + 字体文件绝对路径" 或 \&#36;rawfile('字体文件路径')。 |
+| index | number | 否 | 字体文件格式为ttc时，指定加载的字体索引。默认为0：表示加载ttc的第一个字体。<br>非ttc格式文件索引值无意义，若指定索引，只能为0。 |
 
 **错误码：**
 
@@ -336,8 +336,8 @@ loadFontWithCheck(name: string, path: string | Resource, index?: number): Promis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 加载字体成功后，该字体对应的名称，可填写任意字符串，可使用该名称指定并使用该字体。 |
-| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 需要加载的字体文件的路径，支持两种格式： "file:// + 字体文件绝对路径" 或 \\$rawfile('字体文件路径')。 |
-| index | number | 否 | 字体文件格式为ttc时，指定加载的字体索引。默认为0：表示加载ttc的第一个字体。非ttc格式文件索引值无意义，若指定索引，只能为0。 |
+| path | string &#124; [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 需要加载的字体文件的路径，支持两种格式： "file:// + 字体文件绝对路径" 或 \&#36;rawfile('字体文件路径')。 |
+| index | number | 否 | 字体文件格式为ttc时，指定加载的字体索引。默认为0：表示加载ttc的第一个字体。<br>非ttc格式文件索引值无意义，若指定索引，只能为0。 |
 
 **返回值：**
 

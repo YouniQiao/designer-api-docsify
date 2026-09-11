@@ -2,6 +2,8 @@
 
 ToolInfo describes the basic information of a cli tool.
 
+@typedef ToolInfo
+
 **Since:** 26.0.0
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core

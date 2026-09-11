@@ -2,6 +2,8 @@
 
 Rectangle in a plane.
 
+@typedef Rect
+
 **Since:** 12
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

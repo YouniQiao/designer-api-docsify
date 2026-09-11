@@ -2,7 +2,7 @@
 
 Implements an upload or download task. Before using this API, you must obtain a **Task** object, from a promise through [request.agent.create](arkts-basicservices-agent-create-f.md) or from a callback through [request.agent.create](arkts-basicservices-agent-create-f.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The **Task** object and its mounting callback function are released and automatically reclaimed by the system
 > after the **remove** method is called.
@@ -25,7 +25,7 @@ off(event: 'progress', callback?: (progress: Progress) => void): void
 
 Unsubscribes from task progress events.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -41,14 +41,14 @@ Unsubscribes from task progress events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'progress' | Yes | Event type.   - **'progress'**: task progress. |
+| event | 'progress' | Yes | Event type.<br>- **'progress'**: task progress. |
 | callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task progress events are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [21900005](../errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 |
 
 ## off
@@ -59,7 +59,7 @@ off(event: 'completed', callback?: (progress: Progress) => void): void
 
 Unsubscribes from task completion events.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -75,14 +75,14 @@ Unsubscribes from task completion events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'completed' | Yes | Event type.   - **'completed'**: task completion. |
+| event | 'completed' | Yes | Event type.<br>- **'completed'**: task completion. |
 | callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task completion events are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
 
 ## off
@@ -93,7 +93,7 @@ off(event: 'failed', callback?: (progress: Progress) => void): void
 
 Unsubscribes from task failure events.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -109,14 +109,14 @@ Unsubscribes from task failure events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'failed' | Yes | Event type.   - **'failed'**: task failure. |
+| event | 'failed' | Yes | Event type.<br>- **'failed'**: task failure. |
 | callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task failure events are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
 
 ## off
@@ -127,7 +127,7 @@ off(event: 'pause', callback?: (progress: Progress) => void): void
 
 Unsubscribes from the foreground task pause event.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -141,14 +141,14 @@ Unsubscribes from the foreground task pause event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'pause' | Yes | Event type.   - **'pause'**: task pause. |
+| event | 'pause' | Yes | Event type.<br>- **'pause'**: task pause. |
 | callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task pause events are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## off
 
@@ -158,7 +158,7 @@ off(event: 'resume', callback?: (progress: Progress) => void): void
 
 Unsubscribes from foreground task resume events.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -172,14 +172,14 @@ Unsubscribes from foreground task resume events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'resume' | Yes | Event type.   - **'resume'**: task resume. |
+| event | 'resume' | Yes | Event type.<br>- **'resume'**: task resume. |
 | callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task resume events are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## off
 
@@ -189,7 +189,7 @@ off(event: 'remove', callback?: (progress: Progress) => void): void
 
 Unsubscribes from the task removal event.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -203,14 +203,14 @@ Unsubscribes from the task removal event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'remove' | Yes | Event type.   - **'remove'**: task removal. |
+| event | 'remove' | Yes | Event type.<br>- **'remove'**: task removal. |
 | callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task removal events are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameter types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. <br> 3. Parameter verification failed. |
 
 ## off
 
@@ -220,7 +220,7 @@ off(event: 'response', callback?: Callback<HttpResponse>): void
 
 Unsubscribes from task response headers.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -236,14 +236,14 @@ Unsubscribes from task response headers.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'response' | Yes | Event type.   - **response**: task response. |
+| event | 'response' | Yes | Event type.<br>- **response**: task response. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[HttpResponse](arkts-basicservices-agent-httpresponse-i.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## off
 
@@ -253,7 +253,7 @@ off(event: 'faultOccur', callback?: Callback<Faults>): void
 
 Unsubscribes from task failure events.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -267,14 +267,14 @@ Unsubscribes from task failure events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'faultOccur' | Yes | Event type.   - **'faultOccur'**: task failure. |
+| event | 'faultOccur' | Yes | Event type.<br>- **'faultOccur'**: task failure. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## off
 
@@ -284,7 +284,7 @@ off(event: 'wait', callback?: Callback<WaitingReason>): void
 
 Unsubscribes from task waiting events.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -298,14 +298,14 @@ Unsubscribes from task waiting events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'wait' | Yes | Event type.   - 'wait': The task is waiting. |
+| event | 'wait' | Yes | Event type.<br>- 'wait': The task is waiting. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## on
 
@@ -315,7 +315,7 @@ on(event: 'progress', callback: (progress: Progress) => void): void
 
 Subscribes to task progress changes. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -331,14 +331,14 @@ Subscribes to task progress changes. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'progress' | Yes | Event type.   - **'progress'**: task progress. |
+| event | 'progress' | Yes | Event type.<br>- **'progress'**: task progress. |
 | callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [21900005](../errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 |
 
 ## on
@@ -349,7 +349,7 @@ on(event: 'completed', callback: (progress: Progress) => void): void
 
 Subscribes to task completion events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -365,14 +365,14 @@ Subscribes to task completion events. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'completed' | Yes | Event type.   - **'completed'**: task completion. |
+| event | 'completed' | Yes | Event type.<br>- **'completed'**: task completion. |
 | callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [21900005](../errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 |
 
 ## on
@@ -383,7 +383,7 @@ on(event: 'failed', callback: (progress: Progress) => void): void
 
 Subscribes to task failure events. This API uses an asynchronous callback to return the result. You can call [request.agent.show](arkts-basicservices-agent-show-f.md) to view the error cause.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -399,14 +399,14 @@ Subscribes to task failure events. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'failed' | Yes | Event type.   - **'failed'**: task failure. |
+| event | 'failed' | Yes | Event type.<br>- **'failed'**: task failure. |
 | callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [21900005](../errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 |
 
 ## on
@@ -417,7 +417,7 @@ on(event: 'pause', callback: (progress: Progress) => void): void
 
 Subscribes to task pause events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -431,14 +431,14 @@ Subscribes to task pause events. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'pause' | Yes | Event type.   - **'pause'**: task pause. |
+| event | 'pause' | Yes | Event type.<br>- **'pause'**: task pause. |
 | callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## on
 
@@ -448,7 +448,7 @@ on(event: 'resume', callback: (progress: Progress) => void): void
 
 Subscribes to task resume events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -462,14 +462,14 @@ Subscribes to task resume events. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'resume' | Yes | Event type.   - **'resume'**: task resume. |
+| event | 'resume' | Yes | Event type.<br>- **'resume'**: task resume. |
 | callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## on
 
@@ -479,7 +479,7 @@ on(event: 'remove', callback: (progress: Progress) => void): void
 
 Subscribes to task removal events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -493,14 +493,14 @@ Subscribes to task removal events. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'remove' | Yes | Event type.   - **'remove'**: task removal. |
+| event | 'remove' | Yes | Event type.<br>- **'remove'**: task removal. |
 | callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## on
 
@@ -510,7 +510,7 @@ on(event: 'response', callback: Callback<HttpResponse>): void
 
 Subscribes to task response headers. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -526,14 +526,14 @@ Subscribes to task response headers. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'response' | Yes | Event type.   - **'response'**: task response. |
+| event | 'response' | Yes | Event type.<br>- **'response'**: task response. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[HttpResponse](arkts-basicservices-agent-httpresponse-i.md)&gt; | Yes | Callback used to return the data structure of the task response header. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## on
 
@@ -543,7 +543,7 @@ on(event: 'faultOccur', callback: Callback<Faults>): void
 
 Subscribes to task failure events. This API uses a callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -557,14 +557,14 @@ Subscribes to task failure events. This API uses a callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'faultOccur' | Yes | Event type.   - **'faultOccur'**: task failure. |
+| event | 'faultOccur' | Yes | Event type.<br>- **'faultOccur'**: task failure. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | Yes | Callback used to return the failure cause of the task. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## on
 
@@ -574,7 +574,7 @@ on(event: 'wait', callback: Callback<WaitingReason>): void
 
 Subscribes to task wait events. This API uses a callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -588,14 +588,14 @@ Subscribes to task wait events. This API uses a callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'wait' | Yes | Event type.   - 'wait': The task is waiting. |
+| event | 'wait' | Yes | Event type.<br>- 'wait': The task is waiting. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | Yes | Callback used to return the waiting reason of the task. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## pause
 
@@ -735,7 +735,7 @@ Sets the maximum number of bytes that can be transmitted by a task per second. T
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 
 ## start
@@ -751,7 +751,7 @@ Tasks in the following states can be started:
 1. Task created by **request.agent.create**.
 2. Download tasks that are created by **request.agent.create** but have failed or paused.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -792,7 +792,7 @@ Tasks in the following states can be started:
 1. Task created by **request.agent.create**.
 2. Download tasks that are created by **request.agent.create** but have failed or paused.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)

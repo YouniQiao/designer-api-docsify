@@ -42,7 +42,7 @@ Unit: px
 
 Default value: **0**
 
-**NOTE：**
+**NOTE:**
 
 The value **0** indicates that the transformation center coincides with the component's x-axis anchor. For details about the implementation, see [Example 3: Implementing Rotation Around a Center Point](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md#example-3-implementing-rotation-around-a-center-point).
 
@@ -66,7 +66,7 @@ Unit: px
 
 Default value: **0**
 
-**NOTE：**
+**NOTE:**
 
 The value **0** indicates that the transformation center coincides with the component's y-axis anchor. For details about the implementation, see [Example 3: Implementing Rotation Around a Center Point](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md#example-3-implementing-rotation-around-a-center-point).
 
@@ -130,7 +130,7 @@ Default value: **0**
 
 Value range: (-∞, +∞)
 
-**NOTE：**
+**NOTE:**
 
 The rotation axis vector is valid only when at least one of **x**, **y**, and **z** is not 0.
 

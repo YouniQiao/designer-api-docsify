@@ -4,9 +4,11 @@ This interface implements audio session management.
 
 Before calling any API in AudioSessionManager, you must use [getSessionManager](arkts-audio-audio-audiomanager-i.md#getsessionmanager) to obtain an AudioSessionManager instance.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The initial APIs of this interface are supported since API version 12.
+
+@typedef AudioSessionManager [since 12 - 24]
 
 **Since:** 12
 
@@ -208,7 +210,7 @@ Obtains the default audio output device set by calling [setDefaultOutputDevice](
 
 | Type | Description |
 | --- | --- |
-| [DeviceType](arkts-audio-audio-devicetype-e.md) | Device type. |
+| [DeviceType](arkts-audio-audio-devicetype-e.md) | Device type.<br>The options are **EARPIECE**, **SPEAKER**, and **DEFAULT**. |
 
 **Error codes:**
 
@@ -554,7 +556,7 @@ selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>
 
 Selects a media input device. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API is not suitable for VoIP call recording; that is, it does not apply to scenarios where
 > [SourceType](arkts-audio-audio-sourcetype-e.md) is **SOURCE_TYPE_VOICE_COMMUNICATION**.
@@ -566,7 +568,7 @@ Selects a media input device. This API uses a promise to return the result.
 > device used will follow the input device selected by these applications.
 > 
 > - Applications can listen for the
-> currentInputDeviceChanged
+> [currentInputDeviceChanged](#oncurrentinputdevicechanged)
 > event to find out the actual input device being used.
 
 **Since:** 21
@@ -600,7 +602,7 @@ setAudioSessionBehavior(behavior: number): void
 
 Sets audio session behavior parameters. (Multiple flags can be combined.)
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If this API is called while an audio session is active, you must call the
 > [activateAudioSession](#activateaudiosession) API again
@@ -616,7 +618,7 @@ Sets audio session behavior parameters. (Multiple flags can be combined.)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| behavior | number | Yes | Specifies the audio session behavior.This can be a single flag or a bitwise OR combination of multiple flags.For details about the supported audio session behaviors, see [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md). |
+| behavior | number | Yes | Specifies the audio session behavior.<br>This can be a single flag or a bitwise OR combination of multiple flags.<br>For details about the supported audio session behaviors, see [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md). |
 
 **Error codes:**
 
@@ -659,7 +661,7 @@ setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPre
 
 Sets the preferred device category for recording with Bluetooth or NearLink. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Applications can set this category before connecting to Bluetooth or NearLink devices, and the system
 > prioritizes using the device for recording when the device is connected.
@@ -668,7 +670,7 @@ Sets the preferred device category for recording with Bluetooth or NearLink. Thi
 > device used will follow the input device selected by these applications.
 > 
 > - Applications can listen for the
-> currentInputDeviceChanged
+> [currentInputDeviceChanged](#oncurrentinputdevicechanged)
 > event to find out the actual input device being used.
 
 **Since:** 21
@@ -734,7 +736,7 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 
 Sets the default audio output device. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API applies to the following scenario: When
 > [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md) is set to **VoIP**, the setting takes
@@ -757,7 +759,7 @@ Sets the default audio output device. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceType | [DeviceType](arkts-audio-audio-devicetype-e.md) | Yes | Device type.The options are **EARPIECE**, **SPEAKER**, and **DEFAULT**. |
+| deviceType | [DeviceType](arkts-audio-audio-devicetype-e.md) | Yes | Device type.<br>The options are **EARPIECE**, **SPEAKER**, and **DEFAULT**. |
 
 **Return value:**
 

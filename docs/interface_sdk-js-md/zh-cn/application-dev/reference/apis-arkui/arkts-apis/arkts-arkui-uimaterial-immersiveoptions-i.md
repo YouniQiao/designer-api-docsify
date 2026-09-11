@@ -62,7 +62,7 @@ Image组件的fillColor，
 
 Search组件的placeholderColor、fontColor，searchIcon中的图标颜色、cancelButton中的图标颜色、caretStyle中的光标颜色，searchButton 中的按钮颜色，
 
-TabContent组件的[tabBar](../arkts-components/arkts-arkui-tabcontent-attribute.md#tabbar)属性使用[BottomTabBarStyle](../arkts-components/arkts-arkui-bottomtabbarstyle-c.md)，
+TabContent组件的[tabBar](../arkts-components/arkts-arkui-tabcontent-comp-attribute.md#tabbar)属性使用[BottomTabBarStyle](../arkts-components/arkts-arkui-bottomtabbarstyle-c.md)，
 
 Chip组件的[prefixIcon](arkts-arkui-arkui-advanced-chip-prefixiconoptions-i.md)、suffixIcon属性的[fillColor](arkts-arkui-arkui-advanced-chip-iconcommonoptions-i.md)，[label](arkts-arkui-arkui-advanced-chip-labeloptions-i.md)属性的[fontColor](arkts-arkui-arkui-advanced-chip-labeloptions-i.md)，
 
@@ -130,7 +130,7 @@ lightEffect?: LightEffectOptions | null
 
 默认值：undefined，不设置光感交互反馈效果。
 
-**类型：** [LightEffectOptions](arkts-arkui-uimaterial-lighteffectoptions-i.md) \| null
+**类型：** [LightEffectOptions](arkts-arkui-uimaterial-lighteffectoptions-i.md) &#124; null
 
 **起始版本：** 26.0.0
 

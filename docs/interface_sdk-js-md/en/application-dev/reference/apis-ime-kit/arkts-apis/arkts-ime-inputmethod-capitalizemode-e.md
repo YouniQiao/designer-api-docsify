@@ -1,7 +1,6 @@
 # CapitalizeMode
 
-Enumerates the modes of capitalizing the first letter of a text. 
-
+Enumerates the modes of capitalizing the first letter of a text. <br>  
 | Name| Value| Description|  
 | -------- | -- | -------- |  
 | NONE | 0 | The first letter is not capitalized.|

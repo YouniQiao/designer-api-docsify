@@ -1,7 +1,6 @@
 # RequestKeyboardReason
 
-Enumerates the reasons for requesting keyboard input.
-
+Enumerates the reasons for requesting keyboard input.<br> <br>  
 | Name | Value| Description |  
 | ------------ | -- | ------------------ |  
 | NONE | 0 | The keyboard request is triggered for no reason.|

@@ -34,7 +34,7 @@ data: string | ArrayBuffer
 
 Data to send.
 
-**Type:** string \| ArrayBuffer
+**Type:** string &#124; ArrayBuffer
 
 **Since:** 7
 

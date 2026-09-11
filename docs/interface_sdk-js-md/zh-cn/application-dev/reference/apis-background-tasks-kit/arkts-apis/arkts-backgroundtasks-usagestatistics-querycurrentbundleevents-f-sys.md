@@ -33,10 +33,10 @@ function queryCurrentBundleEvents(begin: number, end: number, callback: AsyncCal
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;   2. Incorrect parameters types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameters types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [10000001](../errorcode-DeviceUsageStatistics.md#10000001-内存操作失败) | Memory operation failed. |
-| [10000002](../errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failed) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters;   2. Failed to apply for memory. |
+| [10000002](../errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failed) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters;<br> 2. Failed to apply for memory. |
 | [10000003](../errorcode-DeviceUsageStatistics.md#10000003-系统服务操作失败) | Failed to get system ability manager. |
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) | Failed to access the device usage service. |
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) | Failed to get the application information. |
@@ -94,10 +94,10 @@ function queryCurrentBundleEvents(begin: number, end: number): Promise<Array<Bun
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;   2. Incorrect parameters types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameters types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [10000001](../errorcode-DeviceUsageStatistics.md#10000001-内存操作失败) | Memory operation failed. |
-| [10000002](../errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failed) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters;   2. Failed to apply for memory. |
+| [10000002](../errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failed) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters;<br> 2. Failed to apply for memory. |
 | [10000003](../errorcode-DeviceUsageStatistics.md#10000003-系统服务操作失败) | Failed to get system ability manager. |
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) | Failed to access the device usage service. |
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) | Failed to get the application information. |
@@ -141,9 +141,9 @@ function queryCurrentBundleEvents(begin: number, end: number, maxNum: number): P
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| begin | number | 是 | 起始时间。单位：ms |
-| end | number | 是 | 结束时间。单位：ms |
-| maxNum | number | 是 | 返回的事件的条数。取值范围：[1, 1000] |
+| begin | number | 是 | 起始时间。<br>单位：ms |
+| end | number | 是 | 结束时间。<br>单位：ms |
+| maxNum | number | 是 | 返回的事件的条数。<br>取值范围：[1, 1000] |
 
 **返回值：**
 
@@ -157,12 +157,12 @@ function queryCurrentBundleEvents(begin: number, end: number, maxNum: number): P
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 | [10000001](../errorcode-DeviceUsageStatistics.md#10000001-内存操作失败) | Memory operation failed. |
-| [10000002](../errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failed) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters;   2. Failed to apply for memory. |
+| [10000002](../errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failed) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters;<br> 2. Failed to apply for memory. |
 | [10000003](../errorcode-DeviceUsageStatistics.md#10000003-系统服务操作失败) | Failed to get system ability manager. |
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) | Failed to access the device usage service. |
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) | Failed to get the application information. |
 | [10000007](../errorcode-DeviceUsageStatistics.md#10000007-时间操作失败) | Failed to get the system time. |
-| [10000008](../errorcode-DeviceUsageStatistics.md#10000008-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;   2. Incorrect parameters types; 3. Parameter verification failed. |
+| [10000008](../errorcode-DeviceUsageStatistics.md#10000008-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameters types; 3. Parameter verification failed. |
 
 **示例**
 

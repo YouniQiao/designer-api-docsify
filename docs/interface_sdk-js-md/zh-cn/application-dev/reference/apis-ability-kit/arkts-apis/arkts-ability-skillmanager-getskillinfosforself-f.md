@@ -26,7 +26,7 @@ function getSkillInfosForSelf(flags: number): Promise<Array<SkillInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flags | number | 是 | { |
+| flags | number | 是 | [SkillInfoFlag](arkts-ability-skillmanager-skillinfoflag-e.md) - 指定返回的SkillInfo所包含的信息。详情请参考SkillInfoFlag。 |
 
 **返回值：**
 

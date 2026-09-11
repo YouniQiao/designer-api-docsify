@@ -42,7 +42,7 @@ getCertIssuer(): DataBlob
 | --- | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | This operation is not supported. |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -126,8 +126,8 @@ getCertIssuer(encodingType: EncodingType): string
 | --- | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | This operation is not supported. |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
-| [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes:  1. The value of encodingType is not in the EncodingType enumeration range. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes:<br>1. The value of encodingType is not in the EncodingType enumeration range. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -205,7 +205,7 @@ getCertIssuerX500DistinguishedName(): X500DistinguishedName
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -275,9 +275,9 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -358,9 +358,9 @@ getEncoded(): Promise<EncodingBlob>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -440,7 +440,7 @@ getExtensions(): DataBlob
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -520,7 +520,7 @@ getExtensionsObject(): CertExtension
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -658,7 +658,7 @@ getRevocationDate(): string
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -735,7 +735,7 @@ getSerialNumber(): bigint
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -812,7 +812,7 @@ hasExtensions(): boolean
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -889,7 +889,7 @@ hashCode(): Uint8Array
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -960,7 +960,7 @@ toString(): string
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**

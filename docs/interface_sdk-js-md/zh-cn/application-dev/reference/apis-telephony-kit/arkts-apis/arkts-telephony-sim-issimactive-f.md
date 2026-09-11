@@ -22,8 +22,8 @@ function isSimActive(slotId: number, callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回指定卡槽是否激活。   - true:激活。   - false：未激活。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回指定卡槽是否激活。<br>- true:激活。<br>- false：未激活。 |
 
 **示例**
 
@@ -57,13 +57,13 @@ function isSimActive(slotId: number): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | 以Promise形式返回指定卡槽是否激活。 |
+| Promise&lt;boolean&gt; | 以Promise形式返回指定卡槽是否激活。<br>- true:激活。<br>- false：未激活。 |
 
 **示例**
 

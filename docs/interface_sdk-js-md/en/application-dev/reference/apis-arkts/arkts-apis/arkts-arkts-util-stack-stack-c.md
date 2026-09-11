@@ -30,8 +30,6 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |

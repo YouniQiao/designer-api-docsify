@@ -20,7 +20,7 @@ albumAfterChange: AlbumChangeInfo | null
 
 变更后的相册数据。如果是删除相册，albumAfterChange为null。
 
-**类型：** [AlbumChangeInfo](arkts-medialibrary-photoaccesshelper-albumchangeinfo-i.md) \| null
+**类型：** [AlbumChangeInfo](arkts-medialibrary-photoaccesshelper-albumchangeinfo-i.md) &#124; null
 
 **起始版本：** 20
 
@@ -34,7 +34,7 @@ albumBeforeChange: AlbumChangeInfo | null
 
 变更前的相册数据。如果是新增相册，albumBeforeChange为null。
 
-**类型：** [AlbumChangeInfo](arkts-medialibrary-photoaccesshelper-albumchangeinfo-i.md) \| null
+**类型：** [AlbumChangeInfo](arkts-medialibrary-photoaccesshelper-albumchangeinfo-i.md) &#124; null
 
 **起始版本：** 20
 

@@ -14,9 +14,9 @@ function createCipher(transformation: string): Cipher
 
 Creates a **Cipher** instance.
 
-For details about the supported specifications, seeEncryption and Decryption Algorithm Specifications.
+<br>For details about the supported specifications, seeEncryption and Decryption Algorithm Specifications.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 1. In symmetric encryption and decryption, PKCS #5 and PKCS #7 share the same implementation, with padding
 > length and block size remaining consistent. In 3DES, padding is applied in 8-byte blocks; in AES, padding
@@ -42,7 +42,7 @@ For details about the supported specifications, seeEncryption and Decryption Alg
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transformation | string | Yes | Combination of the algorithm name (including the key length), encryption mode, and padding algorithm of the **Cipher** instance to create.For details about the supported specifications, see Symmetric Key Encryption and Decryption Algorithm Specifications and Asymmetric Key Encryption and Decryption Algorithm Specifications. |
+| transformation | string | Yes | Combination of the algorithm name (including the key length), encryption mode, and padding algorithm of the **Cipher** instance to create.<br>For details about the supported specifications, see Symmetric Key Encryption and Decryption Algorithm Specifications and Asymmetric Key Encryption and Decryption Algorithm Specifications. |
 
 **Return value:**
 
@@ -54,7 +54,7 @@ For details about the supported specifications, seeEncryption and Decryption Alg
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 

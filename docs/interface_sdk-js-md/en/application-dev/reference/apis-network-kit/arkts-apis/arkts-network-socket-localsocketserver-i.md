@@ -20,7 +20,7 @@ close(): Promise<void>
 
 Stops listening for events of the **LocalSocketServer** object and releases the port bound by [listen](#listen). This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API does not close existing connections. To close the connection, call the [close] (#close11-1) API of
 > [LocalSocketConnection] (#localsocketconnection11).
@@ -79,7 +79,7 @@ getExtraOptions(): Promise<ExtraOptionsBase>
 
 Obtains the socket properties of the **LocalSocketServer** object. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **listen** is successfully called.
 
@@ -135,7 +135,7 @@ getLocalAddress(): Promise<string>
 
 Obtains the local socket address of a **LocalSocketServer** connection. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **listen** is successfully called.
 
@@ -194,7 +194,7 @@ getSocketFd(): Promise<number>
 
 Obtains the file descriptor bound to the LocalSocketServer listening port. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This method can be called only after the [listen](#listen) method is
 > successfully called.
@@ -253,7 +253,7 @@ getState(): Promise<SocketStateBase>
 
 Obtains the status of a local socket server connection. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **listen** is successfully called.
 
@@ -304,7 +304,7 @@ listen(address: LocalAddress): Promise<void>
 
 Binds the address of the local socket file. The server listens to and accepts local socket connections established over the socket. Multiple threads are used to process client data concurrently. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The server uses this API to complete the **bind**, **listen**, and **accept** operations. If the address of the
 > local socket file is passed for binding, a socket file is automatically created when this API is called.
@@ -374,7 +374,7 @@ Unsubscribes from **connect** events of the **LocalSocketServer** object. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' | Yes | Event type.'connect': connection event. |
+| type | 'connect' | Yes | Event type.<br> 'connect': connection event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalSocketConnection](arkts-network-socket-localsocketconnection-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Error codes:**
@@ -416,7 +416,7 @@ Unsubscribes from **error** events of the **LocalSocketServer** object. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type.    **error**: error event. |
+| type | 'error' | Yes | Event type.<br> **error**: error event. |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Error codes:**
@@ -448,7 +448,7 @@ on(type: 'connect', callback: Callback<LocalSocketConnection>): void
 
 Subscribes to **connect** events of the **LocalSocketServer** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **listen** is successfully called.
 
@@ -460,7 +460,7 @@ Subscribes to **connect** events of the **LocalSocketServer** object. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' | Yes | Event type.    **connect**: connection event. |
+| type | 'connect' | Yes | Event type.<br> **connect**: connection event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalSocketConnection](arkts-network-socket-localsocketconnection-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -490,7 +490,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to **error** events of the **LocalSocketServer** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **listen** is successfully called.
 
@@ -502,7 +502,7 @@ Subscribes to **error** events of the **LocalSocketServer** object. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type.    **error**: error event. |
+| type | 'error' | Yes | Event type.<br> **error**: error event. |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -530,7 +530,7 @@ setExtraOptions(options: ExtraOptionsBase): Promise<void>
 
 Sets the socket properties of the **LocalSocketServer** object. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **listen** is successfully called.
 

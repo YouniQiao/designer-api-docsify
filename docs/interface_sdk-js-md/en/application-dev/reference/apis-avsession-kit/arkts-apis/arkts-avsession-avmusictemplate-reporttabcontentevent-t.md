@@ -6,6 +6,8 @@ type ReportTabContentEvent = (tabId: string, tabContent: MediaTabContent) => voi
 
 The report tab content event.
 
+@typedef { function } ReportTabContentEvent
+
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.

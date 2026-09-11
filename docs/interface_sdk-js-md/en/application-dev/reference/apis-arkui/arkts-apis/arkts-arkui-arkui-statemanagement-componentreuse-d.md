@@ -6,7 +6,7 @@ export declare const ComponentReuse: MethodDecorator
 
 Decorates a function that is called when a reusable custom component is re-added to the node tree from the cache, that is, when the component status changes from the **CustomComponentLifecycleState.RECYCLED** to **CustomComponentLifecycleState.BUILT** phase, to receive the constructor parameters. At last, the function decorated by **@ComponentReuse** recursively traverses all child components, and the **@ComponentReuse** decorated function in each reused child component will be called.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The value of **params** is not **undefined** in the callback of the reused state management V1 component.
 > 

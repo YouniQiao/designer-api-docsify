@@ -10,7 +10,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
+**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,7 +26,7 @@ Auto = 0
 
 **废弃版本：** 9
 
-**替代接口：** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
+**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,7 +42,7 @@ XS
 
 **废弃版本：** 9
 
-**替代接口：** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
+**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,7 +58,7 @@ SM
 
 **废弃版本：** 9
 
-**替代接口：** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
+**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,7 +74,7 @@ MD
 
 **废弃版本：** 9
 
-**替代接口：** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
+**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,6 +90,6 @@ LG
 
 **废弃版本：** 9
 
-**替代接口：** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
+**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

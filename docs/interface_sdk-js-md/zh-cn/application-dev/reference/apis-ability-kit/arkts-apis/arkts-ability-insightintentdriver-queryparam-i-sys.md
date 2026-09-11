@@ -2,6 +2,8 @@
 
 查询洞察意图实体时的Param。
 
+@typedef QueryParam
+
 **起始版本：** 26.0.0
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

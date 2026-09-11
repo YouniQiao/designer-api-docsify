@@ -2,7 +2,7 @@
 
 This module provides the input method system panel management functions, which are used for communication and state synchronization between the input method system panel and the system-default input method application.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The APIs provided by this module are system APIs.
 > 

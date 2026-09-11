@@ -2,7 +2,7 @@
 
 This module provides application management capabilities, including managing the application running blocklist, application running trustlist, auto-startup application list, keep-alive application list, non-stoppable application list, background freeze-exempt application list, notification trustlist, and cross-device application trustlist. It is suitable for enterprise device management scenarios, enabling control over application running permissions, auto- startup management, keep-alive application management, and more, thereby enhancing enterprise device security and compliance.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The APIs of this module can be called only by a device administrator application that is enabled. For details, see
 > [MDM Kit Development](../../../mdm/mdm-kit-guide.md). The
@@ -64,6 +64,7 @@ import { applicationManager } from '@kit.MDMKit';
 | [isAppKioskAllowed](arkts-mdm-applicationmanager-isappkioskallowed-f.md) | Checks whether an application is allowed to run in kiosk mode. |
 | [isModifyAutoStartAppsDisallowed](arkts-mdm-applicationmanager-ismodifyautostartappsdisallowed-f.md) | Checks whether a specified user is prohibited from canceling application auto-start. |
 | [isModifyKeepAliveAppsDisallowed](arkts-mdm-applicationmanager-ismodifykeepaliveappsdisallowed-f.md) | Checks whether the application is forbidden to cancel the keep-alive status. |
+| [publishFormToDesktop](arkts-mdm-applicationmanager-publishformtodesktop-f.md) | Publishes the form to the desktop. |
 | [queryBundleStatsInfos](arkts-mdm-applicationmanager-querybundlestatsinfos-f.md) | Queries the accumulated foreground runtime statistics of applications under a specified user account within a given time period. The minimum query granularity is one day. The API requires the start time (**startTime**), end time (**endTime**), and target user account ID (**accountId**) to be passed in. **startTime** and **endTime** are millisecond-level timestamps. The caller can pass custom values. The default value of **startTime** is 00:00:00.000 of the current day, and the default of **endTime** is 24:00:00.000 of the current day (that is, 00:00:00 of the following day). The API returns an array of **BundleStatsInfo**, where each element contains the bundle name of an application, its clone index, and the foreground usage duration (in milliseconds) within the specified time period. If **startTime** is set to **0**, the query starts from the device's first boot time. If **startTime** is later than **endTime**, the API returns error code 9200012. |
 | [queryTrafficStats](arkts-mdm-applicationmanager-querytrafficstats-f.md) | Queries the data usage of a specified application within a specified period for the current user. This API uses a promise to return the result. |
 | [removeAllowedDistributeAbilityConnBundles](arkts-mdm-applicationmanager-removealloweddistributeabilityconnbundles-f.md) | Removes the cross-device application trustlist for a specific distributed service for a specified user. After the trustlist is removed, if there are still remaining applications in the list, only those applications can use the specific distributed service to transmit data across devices without being subject to the restrictions imposed by [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md). If the list has been removed and there are no remaining applications, no applications under the specified user are allowed to use the specific distributed service for cross-device data transmission. |
@@ -103,6 +104,7 @@ import { applicationManager } from '@kit.MDMKit';
 | --- | --- |
 | [BundleStatsInfo](arkts-mdm-applicationmanager-bundlestatsinfo-i.md) | Application bundle statistics. |
 | [DockInfo](arkts-mdm-applicationmanager-dockinfo-i.md) | Describes information about an application in the shortcut bar. |
+| [FormInfo](arkts-mdm-applicationmanager-forminfo-i.md) | Information about a form. |
 | [WindowStateInfo](arkts-mdm-applicationmanager-windowstateinfo-i.md) | Defines the application window state information. |
 
 ### Enums

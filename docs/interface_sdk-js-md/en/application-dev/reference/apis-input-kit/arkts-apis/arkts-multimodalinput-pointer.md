@@ -21,6 +21,8 @@ import { pointer } from '@kit.InputKit';
 | [getPointerStyle](arkts-input-pointer-getpointerstyle-f.md) | Obtains the mouse pointer style type of a specified window. This API can obtain only the mouse pointer style type of windows within the current application process. This API uses an asynchronous callback to return the result. |
 | [getPointerStyle](arkts-input-pointer-getpointerstyle-f.md) | Obtains the mouse pointer style type. This API can obtain only the mouse pointer style type of windows within the current application process. This API uses a promise to return the result. |
 | [getPointerStyleSync](arkts-input-pointer-getpointerstylesync-f.md) | Queries the mouse pointer style type of a specified window, such as east arrow, west arrow, south arrow, and north arrow. This API can obtain only the mouse pointer style type of windows within the current application process. |
+| [getTouchpadScrollDirection](arkts-input-pointer-gettouchpadscrolldirection-f.md) | Obtains the touchpad scroll direction. This API uses an asynchronous callback to return the result. |
+| [getTouchpadScrollDirection](arkts-input-pointer-gettouchpadscrolldirection-f.md) | Obtains the scroll direction of the touchpad. This API uses a promise to return the result. |
 | [isPointerVisible](arkts-input-pointer-ispointervisible-f.md) | Obtains the visible status of the mouse pointer. This API uses an asynchronous callback to return the result. |
 | [isPointerVisible](arkts-input-pointer-ispointervisible-f.md) | Obtains the visible status of the mouse pointer. This API uses a promise to return the result. |
 | [isPointerVisibleSync](arkts-input-pointer-ispointervisiblesync-f.md) | Checks whether the mouse pointer is visible in the current window. This API returns the result synchronously. |
@@ -63,8 +65,6 @@ import { pointer } from '@kit.InputKit';
 | [getTouchpadPointerSpeed](arkts-input-pointer-gettouchpadpointerspeed-f-sys.md) | Obtains the touchpad pointer speed. This API uses a promise to return the result. |
 | [getTouchpadRightClickType](arkts-input-pointer-gettouchpadrightclicktype-f-sys.md) | Obtains the touchpad right-click menu type. This API uses an asynchronous callback to return the result. |
 | [getTouchpadRightClickType](arkts-input-pointer-gettouchpadrightclicktype-f-sys.md) | Obtains the touchpad right-click menu type. This API uses a promise to return the result. |
-| [getTouchpadScrollDirection](arkts-input-pointer-gettouchpadscrolldirection-f-sys.md) | Obtains the touchpad scroll direction. This API uses an asynchronous callback to return the result. |
-| [getTouchpadScrollDirection](arkts-input-pointer-gettouchpadscrolldirection-f-sys.md) | Obtains the scroll direction of the touchpad. This API uses a promise to return the result. |
 | [getTouchpadScrollSwitch](arkts-input-pointer-gettouchpadscrollswitch-f-sys.md) | Obtains the touchpad scroll switch state. This API uses an asynchronous callback to return the result. |
 | [getTouchpadScrollSwitch](arkts-input-pointer-gettouchpadscrollswitch-f-sys.md) | Obtains the touchpad scroll switch state. This API uses a promise to return the result. |
 | [getTouchpadSwipeSwitch](arkts-input-pointer-gettouchpadswipeswitch-f-sys.md) | Obtains the touchpad multi-finger swipe switch state. This API uses an asynchronous callback to return the result. |

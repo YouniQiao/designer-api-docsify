@@ -270,7 +270,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md)&gt;&gt; | Promise used to return an array of [AbilityInfo]{ |
+| Promise&lt;Array&lt;[AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md)&gt;&gt; | Promise used to return an array of AbilityInfo object. |
 
 **Error codes:**
 

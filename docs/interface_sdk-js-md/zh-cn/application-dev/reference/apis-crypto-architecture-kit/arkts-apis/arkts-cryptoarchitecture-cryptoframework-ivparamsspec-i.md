@@ -2,7 +2,7 @@
 
 加解密参数[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，用于在对称加解密时作为[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法的参数。
 
-适用于CBC、CTR、OFB、CFB这些需要iv作为参数的加解密模式。
+<br>适用于CBC、CTR、OFB、CFB这些需要iv作为参数的加解密模式。
 
 > **说明：**
 > 

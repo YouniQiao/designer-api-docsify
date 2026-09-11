@@ -24,8 +24,8 @@ Checks whether SMS is supported on IMS. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | SIM card slot ID.    - **0**: card slot 1    - **1**: card slot 2 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Whether SMS is supported on IMS. The default value is **false**.    - **true**: yes    - **false**: no |
+| slotId | number | Yes | SIM card slot ID.<br>- **0**: card slot 1 <br>- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Whether SMS is supported on IMS. The default value is **false**.<br>- **true**: yes <br>- **false**: no |
 
 **Error codes:**
 
@@ -69,7 +69,7 @@ Checks whether SMS is supported on IMS. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Card slot ID.    - **0**: card slot 1    - **1**: card slot 2 |
+| slotId | number | Yes | Card slot ID.<br>- **0**: card slot 1 <br>- **1**: card slot 2 |
 
 **Return value:**
 

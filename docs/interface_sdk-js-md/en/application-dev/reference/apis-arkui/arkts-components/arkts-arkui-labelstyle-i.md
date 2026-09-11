@@ -63,9 +63,10 @@ Maximum font size of the label text. It cannot be set in percentage. For the set
 
 Value range: [minFontSize, +∞)
 
-**Type:** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** number &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
-**Default:** 0.0fp [since 11]
+**Default:**
+- API version 11+: 0.0fp
 
 **Since:** 10
 
@@ -105,9 +106,10 @@ Minimum font size of the label text. It cannot be set in percentage. For the set
 
 Value range: (0, +∞)
 
-**Type:** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** number &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
-**Default:** 0.0fp [since 11]
+**Default:**
+- API version 11+: 0.0fp
 
 **Since:** 10
 

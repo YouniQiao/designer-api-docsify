@@ -28,7 +28,7 @@ Enables Bluetooth on a device.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if Bluetooth is being enabled; returns `false` if an error occurs. |
 
 **Examples**
 

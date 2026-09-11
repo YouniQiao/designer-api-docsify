@@ -14,7 +14,7 @@ function createAVTranscoder(): Promise<AVTranscoder>
 
 Creates an AVTranscoder instance. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > A maximum of 2 AVTranscoder instances can be created.
 

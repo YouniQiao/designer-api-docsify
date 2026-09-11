@@ -30,7 +30,7 @@ Removes all the saved Wi-Fi configurations.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if all the saved Wi-Fi configurations are removed; returns `false` otherwise. |
 
 **Examples**
 

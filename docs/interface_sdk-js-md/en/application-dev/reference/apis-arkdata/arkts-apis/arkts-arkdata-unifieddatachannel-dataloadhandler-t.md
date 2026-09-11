@@ -26,4 +26,4 @@ This API is a synchronous function and is applicable to simple service logic. If
 
 | Type | Description |
 | --- | --- |
-| [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddata-c.md) \| null | Returns **UnifiedData** or **null** when the processing function for lazy data loading is triggered. |
+| [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddata-c.md) &#124; null | Returns **UnifiedData** or **null** when the processing function for lazy data loading is triggered. |

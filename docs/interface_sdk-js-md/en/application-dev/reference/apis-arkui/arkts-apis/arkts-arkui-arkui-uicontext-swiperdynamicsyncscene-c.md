@@ -2,7 +2,7 @@
 
 Provides frame rate configuration APIs for the **Swiper** component.
 
-> **NOTE：**
+> **NOTE:**
 
 > - The initial APIs of this class are supported since API version 12.
 > 

@@ -28,7 +28,7 @@ Query printer info by ip.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerIp | string | Yes | Indicates the printer IP. Indicates the printer IP. |
+| printerIp | string | Yes | Indicates the printer IP.<br>Indicates the printer IP. |
 
 **Return value:**
 

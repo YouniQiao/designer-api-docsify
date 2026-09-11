@@ -31,7 +31,7 @@ Registers an observer to listen for lifecycle changes of all applications.
 
 | Type | Description |
 | --- | --- |
-| number | ID of the observer registered. You can pass this ID to [off('applicationState')]{ |
+| number | ID of the observer registered. You can pass this ID to off('applicationState') to unregister the observer. |
 
 **Error codes:**
 
@@ -108,7 +108,7 @@ Registers an observer to listen for lifecycle changes of the specified applicati
 
 | Type | Description |
 | --- | --- |
-| number | ID of the observer registered. You can pass this ID to [off('applicationState')]{ |
+| number | ID of the observer registered. You can pass this ID to off('applicationState') to unregister the observer. |
 
 **Error codes:**
 

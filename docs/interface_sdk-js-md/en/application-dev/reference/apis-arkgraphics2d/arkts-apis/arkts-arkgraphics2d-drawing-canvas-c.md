@@ -2,7 +2,7 @@
 
 A carrier that carries the drawn content and drawing status.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This module uses the physical pixel unit, px.
 > 
@@ -31,7 +31,7 @@ attachBrush(brush: Brush): void
 
 Attaches a brush to the canvas. When you draw on the canvas, the brush's style is used to fill the interior of shapes.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the brush effect changes after this API is called, you must call the API again if you want to use the new
 > effect in the subsequent drawing.
@@ -50,7 +50,7 @@ Attaches a brush to the canvas. When you draw on the canvas, the brush's style i
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## attachPen
 
@@ -60,7 +60,7 @@ attachPen(pen: Pen): void
 
 Attaches a pen to the canvas. When you draw on the canvas, the pen's style is used to outline shapes.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the pen effect changes after this API is called, you must call the API again if you want to use the new
 > effect in the subsequent drawing.
@@ -79,7 +79,7 @@ Attaches a pen to the canvas. When you draw on the canvas, the pen's style is us
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## clear
 
@@ -103,7 +103,7 @@ Clears the canvas with a given color. This API has the same effect as [drawColor
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## clear
 
@@ -121,7 +121,7 @@ Clears the canvas with a given color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) &#124; number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
 
 ## clipPath
 
@@ -147,7 +147,7 @@ Clips the drawable area of the canvas using a custom path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## clipRect
 
@@ -173,7 +173,7 @@ Clips the drawable area of the canvas using a rectangle.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## clipRegion
 
@@ -198,7 +198,7 @@ Clips a region on the canvas.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## clipRoundRect
 
@@ -224,7 +224,7 @@ Clips a rounded rectangle on the canvas.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## concatMatrix
 
@@ -248,7 +248,7 @@ Multiplies the current canvas matrix by the incoming matrix on the left. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## constructor
 
@@ -274,7 +274,7 @@ Creates a **Canvas** object that uses a **PixelMap** as the drawing target.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## detachBrush
 
@@ -324,7 +324,7 @@ Draws an arc on the canvas. with the start angle and sweep angle specified. If t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawArcWithCenter
 
@@ -369,7 +369,7 @@ Uses a brush to fill the drawable area of the canvas.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawCircle
 
@@ -395,7 +395,7 @@ Draws a circle. If the radius is less than or equal to zero, nothing is drawn. B
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawColor
 
@@ -420,7 +420,7 @@ Fills the drawable area of the canvas with the specified color and [BlendMode](a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawColor
 
@@ -448,7 +448,7 @@ Fills the drawable area of the canvas with the specified color and [BlendMode](a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawColor
 
@@ -473,7 +473,7 @@ Fills the drawable area of the canvas with the specified color and [BlendMode](a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawGlyphs
 
@@ -532,7 +532,7 @@ Draws an image. The coordinates of the upper left corner of the image are (left,
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawImageLattice
 
@@ -562,7 +562,7 @@ The intersections of even-numbered rows and columns (starting from 0) are fixed 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawImageNine
 
@@ -592,7 +592,7 @@ If the four corner sections are smaller than the target rectangle, they will be 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawImageRect
 
@@ -618,7 +618,7 @@ Draws an image onto a specified area of the canvas.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawImageRectWithSrc
 
@@ -647,7 +647,7 @@ Draws a portion of an image onto a specified area of the canvas.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawLine
 
@@ -674,7 +674,7 @@ Draws a line segment from the start point to the end point. If the coordinates o
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawNestedRoundRect
 
@@ -699,7 +699,7 @@ Draws two nested rounded rectangles. The outer rectangle boundary must contain t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawOval
 
@@ -723,7 +723,7 @@ Draws an oval on the canvas, where the shape and position of the oval are define
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawPath
 
@@ -747,7 +747,7 @@ Draws a custom path, which contains a set of path outlines. Each path outline ca
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawPixelMapMesh
 
@@ -771,14 +771,14 @@ Draws a **PixelMap** based on a mesh, with the mesh vertices evenly distributed 
 | meshHeight | number | Yes | Number of rows in the mesh. The value is an integer greater than 0. |
 | vertices | Array&lt;number&gt; | Yes | Array of vertices, which specify the position to draw. The value is a floating-point array and the size must be ((meshWidth+1) * (meshHeight+1) + vertOffset) * 2. |
 | vertOffset | number | Yes | Number of vert elements to skip before drawing. The value is an integer greater than or equal to 0. |
-| colors | Array&lt;number&gt; \| null | Yes | Array of colors, which specify the color at each vertex. The value is an integer array and can be null. The size must be (meshWidth+1) * (meshHeight+1) + colorOffset.<br>**Since:** 20 |
+| colors | Array&lt;number&gt; &#124; null | Yes | Array of colors, which specify the color at each vertex. The value is an integer array and can be null. The size must be (meshWidth+1) * (meshHeight+1) + colorOffset.<br>**Since:** 20 |
 | colorOffset | number | Yes | Number of color elements to skip before drawing. The value is an integer greater than or equal to 0. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawPoint
 
@@ -803,7 +803,7 @@ Draws a point.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawPoints
 
@@ -828,7 +828,7 @@ Draws a group of points, line segments, or polygons on the canvas, with the spec
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawRecordCmd
 
@@ -872,7 +872,7 @@ Draws a rectangle. By default, black is used for filling.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawRect
 
@@ -899,7 +899,7 @@ Draws a rectangle. By default, black is used for filling. This API provides bett
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawRegion
 
@@ -923,7 +923,7 @@ Draws a region.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawRoundRect
 
@@ -947,7 +947,7 @@ Draws a rounded rectangle.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawShadow
 
@@ -978,7 +978,7 @@ Draws a spot shadow and uses a given path to outline the ambient shadow.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawShadow
 
@@ -1001,15 +1001,15 @@ Draws a spot shadow and uses a given path to outline the ambient shadow.
 | planeParams | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | Yes | 3D vector, which is used to calculate the offset in the Z axis. |
 | devLightPos | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | Yes | Position of the light relative to the canvas. |
 | lightRadius | number | Yes | Radius of the light. The value is a floating point number. |
-| ambientColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | Yes | Ambient shadow color, represented by a 32-bit unsigned integer in hexadecimal ARGB format. |
-| spotColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | Yes | Spot shadow color, represented by a 32-bit unsigned integer in hexadecimal ARGB format. |
+| ambientColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) &#124; number | Yes | Ambient shadow color, represented by a 32-bit unsigned integer in hexadecimal ARGB format. |
+| spotColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) &#124; number | Yes | Spot shadow color, represented by a 32-bit unsigned integer in hexadecimal ARGB format. |
 | flag | [ShadowFlag](arkts-arkgraphics2d-drawing-shadowflag-e.md) | Yes | Defines an enum for the shadow flags. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawSingleCharacter
 
@@ -1036,7 +1036,7 @@ Draws a single character. If the typeface of the current font does not support t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawSingleCharacterWithFeatures
 
@@ -1090,7 +1090,7 @@ Draws a text blob. If the typeface used to construct **blob** does not support a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawVertices
 
@@ -1113,10 +1113,10 @@ Draws a triangle mesh described by the vertex array.
 | vertexMode | [VertexMode](arkts-arkgraphics2d-drawing-vertexmode-e.md) | Yes | Connection mode of the vertex to be drawn. |
 | vertexCount | number | Yes | Number of elements in the vertex array. The value is an integer greater than or equal to 3. |
 | positions | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | Yes | Array that holds the position of every vertex. The array cannot be null and its length must be equal to the value of **vertexCount**. |
-| texs | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; \| null | Yes | Array of texture space coordinates corresponding to the vertices. This array can be null, which indicates that the texture space is invalid. If not null, the length of the array must be equal to the value of **vertexCount**. |
-| colors | Array&lt;number&gt; \| null | Yes | Array of colors corresponding to the vertices, which is used for interpolation in triangles. This array can be null, which indicates that the color effect is the default color set by the user. If not null, the length of the array must be equal to the value of **vertexCount**. |
+| texs | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; &#124; null | Yes | Array of texture space coordinates corresponding to the vertices. This array can be null, which indicates that the texture space is invalid. If not null, the length of the array must be equal to the value of **vertexCount**. |
+| colors | Array&lt;number&gt; &#124; null | Yes | Array of colors corresponding to the vertices, which is used for interpolation in triangles. This array can be null, which indicates that the color effect is the default color set by the user. If not null, the length of the array must be equal to the value of **vertexCount**. |
 | indexCount | number | Yes | Number of indices. The value can be **0** or a value greater than or equal to 3. If the value is not **0**, the value must be an integer greater than or equal to 3. |
-| indices | Array&lt;number&gt; \| null | Yes | Array of vertex indices. The value can be null. In this case, the value of **indexCount** is ignored (an integer greater than or equal to 3 or equal to 0). If not null, the value length must be the same as that of **indexCount**. |
+| indices | Array&lt;number&gt; &#124; null | Yes | Array of vertex indices. The value can be null. In this case, the value of **indexCount** is ignored (an integer greater than or equal to 3 or equal to 0). If not null, the value length must be the same as that of **indexCount**. |
 | mode | [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md) | Yes | Color blend mode. |
 
 **Error codes:**
@@ -1361,7 +1361,7 @@ Restores the canvas state (canvas matrix and clipping area) to a specified numbe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## rotate
 
@@ -1387,7 +1387,7 @@ Applies a rotation matrix on top of the current canvas matrix (identity matrix b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## save
 
@@ -1423,8 +1423,8 @@ Saves the matrix and cropping region of the canvas, and allocates a **PixelMap**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) \| null | No | Rect** object, which is used to limit the size of the graphics layer. The default value is the current canvas size. |
-| brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) \| null | No | Brush** object. The alpha value, filter effect, and blend mode of the brush are applied when the **PixelMap** is drawn. If null is passed in, no effect is applied. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) &#124; null | No | Rect** object, which is used to limit the size of the graphics layer. The default value is the current canvas size. |
+| brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) &#124; null | No | Brush** object. The alpha value, filter effect, and blend mode of the brush are applied when the **PixelMap** is drawn. If null is passed in, no effect is applied. |
 
 **Return value:**
 
@@ -1461,7 +1461,7 @@ Applies a scaling matrix on top of the current canvas matrix (identity matrix by
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## setMatrix
 
@@ -1485,7 +1485,7 @@ Sets a matrix for the canvas. Subsequent drawing and clipping operations will be
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## skew
 
@@ -1510,7 +1510,7 @@ Applies a skewing matrix on top of the current canvas matrix (identity matrix by
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## translate
 
@@ -1535,4 +1535,4 @@ Applies a translation matrix on top of the current canvas matrix (identity matri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |

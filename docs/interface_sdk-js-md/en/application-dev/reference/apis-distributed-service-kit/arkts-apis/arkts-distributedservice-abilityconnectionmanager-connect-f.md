@@ -30,7 +30,7 @@ Sets up a UIAbility connection after a collaboration session is created and the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ConnectResult](arkts-distributedservice-abilityconnectionmanager-connectresult-i.md)&gt; | Promise used to return the [connection result]{ |
+| Promise&lt;[ConnectResult](arkts-distributedservice-abilityconnectionmanager-connectresult-i.md)&gt; | Promise used to return the [connection result](arkts-distributedservice-abilityconnectionmanager-connectresult-i.md). |
 
 **Error codes:**
 

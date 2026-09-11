@@ -19,7 +19,7 @@ Defines the parameters of the center of gravity.
 gravityCenter?: boolean
 ```
 
-Specifies whether the current component is the center of gravity. Default value:false.
+Specifies whether the current component is the center of gravity. <br>Default value:false.
 
 **Type:** boolean
 
@@ -37,7 +37,7 @@ Specifies whether the current component is the center of gravity. Default value:
 gravityIntensity?: number
 ```
 
-Defines the gravitational strength of the attraction/repulsion force at the gravitational center. Default value:0. Negative numbers are repulsion, positive numbers are attractionn.
+Defines the gravitational strength of the attraction/repulsion force at the gravitational center. <br>Default value:0. <br>Negative numbers are repulsion, positive numbers are attractionn.
 
 **Type:** number
 

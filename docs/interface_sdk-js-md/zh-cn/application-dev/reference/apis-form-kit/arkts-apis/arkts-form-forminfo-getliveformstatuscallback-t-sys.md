@@ -6,6 +6,8 @@ type GetLiveFormStatusCallback = () => Record<string, string>
 
 Get live form status info callback
 
+@typedef { function } GetLiveFormStatusCallback
+
 **起始版本：** 20
 
 **系统能力：** SystemCapability.Ability.Form

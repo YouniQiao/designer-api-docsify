@@ -245,7 +245,7 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 
 Sets whether to hide non-secure windows. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - A non-secure window refers to any window that may obstruct the
 > EmbeddedComponent or
@@ -331,7 +331,7 @@ hidePrivacyContentForHost(shouldHide: boolean): Promise<void>
 
 Sets whether to enable privacy protection for the UIExtension component during non-system screenshots. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When privacy protection is enabled, neither
 > window.snapshot nor
@@ -407,7 +407,7 @@ Unsubscribes from events of system avoidance area changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'avoidAreaChange' | Yes | Event type. The value is fixed at **'avoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[{ type: window.AvoidAreaType](arkts-arkui-window-avoidareatype-e.md), area: window.AvoidArea }&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[{ type: window.AvoidAreaType](arkts-arkui-window-avoidareatype-e.md), area: window.AvoidArea }&gt; | No | Callback used for unsubscription. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -497,7 +497,7 @@ Subscribes to events of system avoidance area changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'avoidAreaChange' | Yes | Event type. The value is fixed at **'avoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[{ type: window.AvoidAreaType](arkts-arkui-window-avoidareatype-e.md), area: window.AvoidArea }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[{ type: window.AvoidAreaType](arkts-arkui-window-avoidareatype-e.md), area: window.AvoidArea }&gt; | Yes | Callback function that receives the information about the current avoidance area. The **type** parameter indicates the type of the avoidance area, and the **area** parameter indicates the avoidance area for the content of the window. |
 
 **Error codes:**
 
@@ -578,7 +578,7 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 
 Adds or deletes the watermark flag for this window. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > With the watermark flag added, the watermark is applied on the full screen when the window is in the foreground
 > , regardless of whether the window is displayed in full screen, floating, and split screen mode.
@@ -648,7 +648,7 @@ properties: UIExtensionHostWindowProxyProperties
 
 Information about the host application window and the **UIExtensionComponent**.
 
-Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate). Instead, when possible, obtain the value after receiving the on('windowSizeChange') callback.
+Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate). Instead, when possible, obtain the value after receiving the [on('windowSizeChange')](#onwindowsizechange) callback.
 
 **Type:** [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md)
 

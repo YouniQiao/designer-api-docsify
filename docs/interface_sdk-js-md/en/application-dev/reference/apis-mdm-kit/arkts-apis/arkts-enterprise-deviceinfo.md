@@ -9,7 +9,7 @@ This module provides APIs for enterprise device information management, includin
 - Device information collection and statistics  
 - Fault diagnosis and device identification
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The APIs of this module can be called only by a device administrator application that is enabled. For details, see
 > [MDM Kit Development](../../../mdm/mdm-kit-guide.md).

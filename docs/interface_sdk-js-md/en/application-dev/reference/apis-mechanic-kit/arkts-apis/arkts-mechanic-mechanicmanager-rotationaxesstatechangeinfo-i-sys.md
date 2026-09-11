@@ -1,6 +1,6 @@
 # RotationAxesStateChangeInfo (System API)
 
-Rotation axes state change information.
+Rotation axes state change information. @typedef RotationAxesStateChangeInfo
 
 **Since:** 20
 

@@ -147,7 +147,7 @@ number类型取值[100, 900]，取值间隔为100，默认为400，取值越大
 
 默认值：FontWeight.Normal
 
-**类型：** number \| [FontWeight](arkts-arkui-fontweight-e.md) \| string
+**类型：** number &#124; [FontWeight](arkts-arkui-fontweight-e.md) &#124; string
 
 **起始版本：** 12
 

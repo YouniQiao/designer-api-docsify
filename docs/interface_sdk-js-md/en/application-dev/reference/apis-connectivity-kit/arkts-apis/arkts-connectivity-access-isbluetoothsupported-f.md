@@ -24,7 +24,7 @@ Check whether Bluetooth is available.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if Bluetooth is available, returns `false` otherwise. |
 
 **Error codes:**
 

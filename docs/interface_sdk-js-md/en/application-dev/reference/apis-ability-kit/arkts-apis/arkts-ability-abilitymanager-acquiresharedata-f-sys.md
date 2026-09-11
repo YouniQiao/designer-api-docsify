@@ -60,7 +60,7 @@ Called by a system dialog box to obtain shared data, which is set by the target 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;{ [key: string]: Object | > } The promise returned by the function.<br>**Since:** 10 |
+| Promise&lt;{ [key: string]: Object }&gt; | The promise returned by the function.<br>**Since:** 10 |
 | Promise&lt;Record&lt;string, Object&gt;&gt; | Promise used to return the API call result and the shared data. You can perform error handling or other custom processing.<br>**Since:** 11 |
 
 **Error codes:**

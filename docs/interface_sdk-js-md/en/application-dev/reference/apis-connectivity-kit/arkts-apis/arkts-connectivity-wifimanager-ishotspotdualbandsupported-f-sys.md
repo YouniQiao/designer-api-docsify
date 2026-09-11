@@ -26,7 +26,7 @@ Check whether a device serving as a Wi-Fi hotspot supports both the 2.4 GHz and 
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the method is called successfully, returns `false` otherwise. |
 
 **Error codes:**
 

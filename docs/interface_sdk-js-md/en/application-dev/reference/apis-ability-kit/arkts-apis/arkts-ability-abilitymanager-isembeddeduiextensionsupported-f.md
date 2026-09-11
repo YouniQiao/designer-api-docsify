@@ -24,7 +24,7 @@ Indicates whether the current device supports EmbeddedUIExtensionAbility.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if EmbeddedUIExtensionAbility is supported, returns `false` otherwise. |
 
 **Examples**
 

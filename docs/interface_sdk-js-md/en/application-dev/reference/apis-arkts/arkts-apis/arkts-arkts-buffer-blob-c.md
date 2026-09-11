@@ -30,8 +30,6 @@ Puts the **Blob** data into an **ArrayBuffer** object. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; |  |
-
 **Examples**
 
 ```TypeScript
@@ -64,8 +62,8 @@ A constructor used to create a **Blob** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sources | string[] \| ArrayBuffer[] \| TypedArray[] \| DataView[] \| [Blob](arkts-arkts-buffer-blob-c.md)[] | Yes | Data sources of the **Blob** object. |
-| options | Object | No | options:   - **endings**: specifies how the terminator **'\n'** is output. The value can be **'native'** or **'transparent'**. **'native'** means that the terminator follows the system. **'transparent'** means that the terminator stored in the **Blob** object remains unchanged. The default value is **'transparent'**.   - **type**: type of the data in the **Blob** object. This type represents the MIME type of the data. However, it is not used for type format validation. The default value is **''**. |
+| sources | string[] &#124; ArrayBuffer[] &#124; TypedArray[] &#124; DataView[] &#124; [Blob](arkts-arkts-buffer-blob-c.md)[] | Yes | Data sources of the **Blob** object. |
+| options | Object | No | options:<br>- **endings**: specifies how the terminator **'\n'** is output. The value can be **'native'** or **'transparent'**. **'native'** means that the terminator follows the system. **'transparent'** means that the terminator stored in the **Blob** object remains unchanged. The default value is **'transparent'**.<br>- **type**: type of the data in the **Blob** object. This type represents the MIME type of the data. However, it is not used for type format validation. The default value is **''**. |
 
 **Examples**
 
@@ -108,8 +106,6 @@ Creates and returns a **Blob** object that contains specified data from this **B
 
 | Type | Description |
 | --- | --- |
-| [Blob](arkts-arkts-buffer-blob-c.md) |  |
-
 **Examples**
 
 ```TypeScript
@@ -139,8 +135,6 @@ Decodes data using UTF-8 and returns a string. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; |  |
-
 **Examples**
 
 ```TypeScript

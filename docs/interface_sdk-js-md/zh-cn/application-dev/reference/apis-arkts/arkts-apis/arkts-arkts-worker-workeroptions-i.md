@@ -68,7 +68,7 @@ type?: 'classic' | 'module'
 
 Worker执行脚本的模式类型，暂不支持module类型，默认值为classic。
 
-**类型：** 'classic' \| 'module'
+**类型：** 'classic' &#124; 'module'
 
 **起始版本：** 7
 

@@ -2,7 +2,7 @@
 
 Provides the capability to control the closing of context menus.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The initial APIs of this class are supported since API version 12.
 > 

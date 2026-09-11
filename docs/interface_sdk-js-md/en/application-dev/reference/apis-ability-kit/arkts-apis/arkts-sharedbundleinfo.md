@@ -3,9 +3,11 @@
 The module provides information about the shared bundle. The information can be obtained by calling
  [bundleManager.getSharedBundleInfo](arkts-ability-bundlemanager-getsharedbundleinfo-f-sys.md)
  .
- > **NOTE**
+
+> **NOTE**
  >
  > The APIs provided by this module are system APIs.
+
 
 
 ## Summary

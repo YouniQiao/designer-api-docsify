@@ -21,7 +21,7 @@ data: CdmaCellInformation | GsmCellInformation | LteCellInformation | NrCellInfo
 
 Obtains signal strength under different network formats.
 
-**类型：** [CdmaCellInformation](arkts-telephony-radio-cdmacellinformation-i-sys.md) \| [GsmCellInformation](arkts-telephony-radio-gsmcellinformation-i-sys.md) \| [LteCellInformation](arkts-telephony-radio-ltecellinformation-i-sys.md) \| [NrCellInformation](arkts-telephony-radio-nrcellinformation-i-sys.md) \| [TdscdmaCellInformation](arkts-telephony-radio-tdscdmacellinformation-i-sys.md) \| [WcdmaCellInformation](arkts-telephony-radio-wcdmacellinformation-i-sys.md)
+**类型：** [CdmaCellInformation](arkts-telephony-radio-cdmacellinformation-i-sys.md) &#124; [GsmCellInformation](arkts-telephony-radio-gsmcellinformation-i-sys.md) &#124; [LteCellInformation](arkts-telephony-radio-ltecellinformation-i-sys.md) &#124; [NrCellInformation](arkts-telephony-radio-nrcellinformation-i-sys.md) &#124; [TdscdmaCellInformation](arkts-telephony-radio-tdscdmacellinformation-i-sys.md) &#124; [WcdmaCellInformation](arkts-telephony-radio-wcdmacellinformation-i-sys.md)
 
 **起始版本：** 8
 

@@ -2,7 +2,7 @@
 
 The **ChipGroup** component provides a set of chips for organizing and categorizing files or resource content.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > With **SymbolGlyphModifier**, neither modifying the animation type with **symbolEffect** nor setting the effect
 > strategy with effectStrategy is supported.
@@ -47,7 +47,7 @@ items: Array<IconItemOptions | SymbolGlyphModifier | SymbolItemOptions>
 
 Custom builder items.
 
-**Type:** Array&lt;[IconItemOptions](arkts-arkui-arkui-advanced-chipgroup-iconitemoptions-i.md) \| SymbolGlyphModifier \| [SymbolItemOptions](arkts-arkui-arkui-advanced-chipgroup-symbolitemoptions-i.md)&gt;
+**Type:** Array&lt;[IconItemOptions](arkts-arkui-arkui-advanced-chipgroup-iconitemoptions-i.md) &#124; [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md) &#124; [SymbolItemOptions](arkts-arkui-arkui-advanced-chipgroup-symbolitemoptions-i.md)&gt;
 
 **Since:** 12
 

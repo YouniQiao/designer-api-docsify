@@ -24,7 +24,7 @@ enableMacro(enabled: boolean): void
 
 Enables or disables macro photography.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Before calling this API, call [isMacroSupported](arkts-camera-camera-macroquery-i.md#ismacrosupported) to check whether the
 > current device supports macro photography.

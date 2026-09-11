@@ -2,6 +2,8 @@
 
 Represents the distributed hardware information.
 
+@typedef HardwareDescriptor
+
 **Since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK

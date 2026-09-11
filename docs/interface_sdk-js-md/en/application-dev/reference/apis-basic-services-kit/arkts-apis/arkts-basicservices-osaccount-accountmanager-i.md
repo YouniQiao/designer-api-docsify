@@ -34,7 +34,7 @@ Checks whether multiple OS accounts are supported. This API uses an asynchronous
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 **Examples**
@@ -107,7 +107,7 @@ checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void
 
 Checks whether an OS account is activated. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
 > only to system applications.
@@ -132,7 +132,7 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -169,7 +169,7 @@ checkOsAccountActivated(localId: number): Promise<boolean>
 
 Checks whether an OS account is activated. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
 > only to system applications.
@@ -199,7 +199,7 @@ Checks whether an OS account is activated. This API uses a promise to return the
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -234,7 +234,7 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: A
 
 Checks whether the specified constraint is enabled for an OS account. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
 > only to system applications.
@@ -260,7 +260,7 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or constraint. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -298,7 +298,7 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<bo
 
 Checks whether the specified constraint is enabled for an OS account. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
 > only to system applications.
@@ -329,7 +329,7 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or constraint. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -381,7 +381,7 @@ Checks whether the current OS account is a test account. This API uses an asynch
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 **Examples**
@@ -456,7 +456,7 @@ checkOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 Checks whether the current OS account is unlocked. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. You are advised to use
 > [isOsAccountUnlocked](#isosaccountunlocked) instead.
@@ -509,7 +509,7 @@ checkOsAccountVerified(): Promise<boolean>
 
 Checks whether the current OS account has been verified. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. You are advised to use
 > [isOsAccountUnlocked](#isosaccountunlocked) instead.
@@ -560,7 +560,7 @@ checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 
 Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
 > only to system applications.
@@ -585,7 +585,7 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -620,7 +620,7 @@ checkOsAccountVerified(localId: number): Promise<boolean>
 
 Checks whether an OS account has been verified. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
 > only to system applications.
@@ -650,7 +650,7 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -697,7 +697,7 @@ Obtains information about all activated OS accounts. This API uses an asynchrono
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 **Examples**
@@ -773,7 +773,7 @@ getCreatedOsAccountsCount(callback: AsyncCallback<number>): void
 
 Obtains the number of OS accounts created. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getOsAccountCount](#getosaccountcount) instead.
@@ -782,7 +782,7 @@ Obtains the number of OS accounts created. This API uses an asynchronous callbac
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountCount](#getosaccountcount)(callback: AsyncCallback&lt;int&gt;)
+**Substitutes:** [getOsAccountCount](#getosaccountcount)(callback: AsyncCallback&lt;number&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -817,7 +817,7 @@ getCreatedOsAccountsCount(): Promise<number>
 
 Obtains the number of OS accounts created. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getOsAccountCount](#getosaccountcount) instead.
@@ -859,7 +859,7 @@ getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 
 Obtains information about the OS account to which the current process belongs. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
 > only to system applications.
@@ -915,7 +915,7 @@ getCurrentOsAccount(): Promise<OsAccountInfo>
 
 Obtains information about the OS account to which the current process belongs. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
 > only to system applications.
@@ -969,7 +969,7 @@ getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 
 Obtains the ID of a distributed virtual device. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [queryDistributedVirtualDeviceId](#querydistributedvirtualdeviceid)
@@ -1014,7 +1014,7 @@ getDistributedVirtualDeviceId(): Promise<string>
 
 Queries the ID of a distributed virtual device. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [queryDistributedVirtualDeviceId](#querydistributedvirtualdeviceid) instead.
@@ -1098,7 +1098,7 @@ getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string
 
 Obtains all constraints enabled for an OS account. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
 > only to system applications.
@@ -1145,7 +1145,7 @@ getOsAccountAllConstraints(localId: number): Promise<Array<string>>
 
 Obtains all constraints enabled for an OS account. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
 > only to system applications.
@@ -1195,7 +1195,7 @@ getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>)
 
 Obtains all constraints enabled for an OS account. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
 > only to system applications.
@@ -1220,7 +1220,7 @@ Obtains all constraints enabled for an OS account. This API uses an asynchronous
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -1257,7 +1257,7 @@ getOsAccountConstraints(localId: number): Promise<Array<string>>
 
 Obtains all constraints enabled for an OS account. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
 > only to system applications.
@@ -1287,7 +1287,7 @@ Obtains all constraints enabled for an OS account. This API uses a promise to re
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -1339,7 +1339,7 @@ Obtains the number of OS accounts created. This API uses an asynchronous callbac
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 **Examples**
@@ -1438,7 +1438,7 @@ Obtains the domain account information associated with a specified OS account. T
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | OS account not found. |
 
@@ -1484,7 +1484,7 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 **Examples**
@@ -1557,7 +1557,7 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<
 
 Obtains the OS account ID based on the SN. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)
@@ -1567,7 +1567,7 @@ Obtains the OS account ID based on the SN. This API uses an asynchronous callbac
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)(serialNumber: long, callback: AsyncCallback&lt;int&gt;)
+**Substitutes:** [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)(serialNumber: number, callback: AsyncCallback&lt;number&gt;)
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1604,7 +1604,7 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>
 
 Obtains the OS account ID based on the SN. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)
@@ -1614,7 +1614,7 @@ Obtains the OS account ID based on the SN. This API uses a promise to return the
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber-1)(serialNumber: long)
+**Substitutes:** [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)(serialNumber: number)
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1672,7 +1672,7 @@ Obtains the OS account ID based on the domain account information. This API uses
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid domainInfo. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Domain account not found. |
@@ -1729,7 +1729,7 @@ Obtains the OS account ID based on the domain account information. This API uses
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid domainInfo. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Domain account not found. |
@@ -1776,7 +1776,7 @@ Obtains the OS account ID based on the SN. This API uses an asynchronous callbac
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid serialNumber. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | The account indicated by serialNumber does not exist. |
@@ -1833,7 +1833,7 @@ Obtains the OS account ID based on the SN. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid serialNumber. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | The account indicated by serialNumber does not exist. |
@@ -1883,7 +1883,7 @@ Obtains the OS account ID based on the process UID. This API uses an asynchronou
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
 
@@ -1939,7 +1939,7 @@ Obtains the OS account ID based on the process UID. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
 
@@ -1993,7 +1993,7 @@ Obtains the OS account ID based on the process UID. The API returns the result s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
 
 **Examples**
@@ -2023,7 +2023,7 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCall
 
 Obtains the OS account ID based on the domain account information. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain)
@@ -2033,7 +2033,7 @@ Obtains the OS account ID based on the domain account information. This API uses
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain)(domainInfo: DomainAccountInfo, callback: AsyncCallback&lt;int&gt;)
+**Substitutes:** [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain)(domainInfo: DomainAccountInfo, callback: AsyncCallback&lt;number&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2070,7 +2070,7 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>
 
 Obtains the OS account ID based on the domain account information. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain-1)
@@ -2120,7 +2120,7 @@ getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void
 
 Obtains the ID of the OS account to which the current process belongs. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getOsAccountLocalId](#getosaccountlocalid)
@@ -2130,7 +2130,7 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalId](#getosaccountlocalid)(callback: AsyncCallback&lt;int&gt;)
+**Substitutes:** [getOsAccountLocalId](#getosaccountlocalid)(callback: AsyncCallback&lt;number&gt;)
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2163,7 +2163,7 @@ getOsAccountLocalIdFromProcess(): Promise<number>
 
 Obtains the ID of the OS account to which the current process belongs. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getOsAccountLocalId](#getosaccountlocalid) instead.
@@ -2203,7 +2203,7 @@ getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void
 
 Obtains the OS account ID based on the process UID. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)
@@ -2213,7 +2213,7 @@ Obtains the OS account ID based on the process UID. This API uses an asynchronou
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)(uid: int, callback: AsyncCallback&lt;int&gt;)
+**Substitutes:** [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)(uid: number, callback: AsyncCallback&lt;number&gt;)
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2250,7 +2250,7 @@ getOsAccountLocalIdFromUid(uid: number): Promise<number>
 
 Obtains the OS account ID based on the process UID. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getOsAccountLocalIdForUid](#getosaccountlocalidforuid) instead.
@@ -2259,7 +2259,7 @@ Obtains the OS account ID based on the process UID. This API uses a promise to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForUid](#getosaccountlocalidforuid-1)(uid: int)
+**Substitutes:** [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)(uid: number)
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2457,7 +2457,7 @@ Obtains the type of the account to which the current process belongs. This API u
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 **Examples**
@@ -2530,7 +2530,7 @@ getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void
 
 Obtains the type of the account to which the current process belongs. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getOsAccountType](#getosaccounttype)
@@ -2573,7 +2573,7 @@ getOsAccountTypeFromProcess(): Promise<OsAccountType>
 
 Obtains the type of the account to which the current process belongs. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getOsAccountType](#getosaccounttype) instead.
@@ -2613,7 +2613,7 @@ getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<numbe
 
 Obtains the SN of an OS account based on the account ID. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)
@@ -2623,7 +2623,7 @@ Obtains the SN of an OS account based on the account ID. This API uses an asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)(localId: int, callback: AsyncCallback&lt;long&gt;)
+**Substitutes:** [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)(localId: number, callback: AsyncCallback&lt;number&gt;)
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2661,7 +2661,7 @@ getSerialNumberByOsAccountLocalId(localId: number): Promise<number>
 
 Obtains the SN of an OS account based on the account ID. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)
@@ -2671,7 +2671,7 @@ Obtains the SN of an OS account based on the account ID. This API uses a promise
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid-1)(localId: int)
+**Substitutes:** [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)(localId: number)
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2727,7 +2727,7 @@ Obtains the SN of an OS account based on the account ID. This API uses an asynch
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -2784,7 +2784,7 @@ Obtains the SN of an OS account based on the account ID. This API uses a promise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -2819,7 +2819,7 @@ isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void
 
 Checks whether multiple OS accounts are supported. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [checkMultiOsAccountEnabled](#checkmultiosaccountenabled)
@@ -2862,7 +2862,7 @@ isMultiOsAccountEnable(): Promise<boolean>
 
 Checks whether multiple OS accounts are supported. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [checkMultiOsAccountEnabled](#checkmultiosaccountenabled) instead.
@@ -2902,7 +2902,7 @@ isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void
 
 Checks whether an OS account is activated. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
 > only to system applications.
@@ -2949,7 +2949,7 @@ isOsAccountActived(localId: number): Promise<boolean>
 
 Checks whether an OS account is activated. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
 > only to system applications.
@@ -2999,7 +2999,7 @@ isOsAccountConstraintEnable(localId: number, constraint: string, callback: Async
 
 Checks whether the specified constraint is enabled for an OS account. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
 > only to system applications.
@@ -3048,7 +3048,7 @@ isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolea
 
 Checks whether the specified constraint is enabled for an OS account. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
 > only to system applications.
@@ -3120,7 +3120,7 @@ Checks whether a constraint is enabled for the current OS account. This API uses
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 **Examples**
@@ -3194,7 +3194,7 @@ isOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [checkOsAccountVerified](#checkosaccountverified)
@@ -3239,7 +3239,7 @@ isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 
 Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
 > only to system applications.
@@ -3284,7 +3284,7 @@ isOsAccountVerified(localId?: number): Promise<boolean>
 
 Checks whether an OS account has been verified. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
 > only to system applications.
@@ -3330,7 +3330,7 @@ isTestOsAccount(callback: AsyncCallback<boolean>): void
 
 Checks whether the current OS account is a test account. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [checkOsAccountTestable](#checkosaccounttestable)
@@ -3375,7 +3375,7 @@ isTestOsAccount(): Promise<boolean>
 
 Checks whether the current OS account is a test account. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [checkOsAccountTestable](#checkosaccounttestable) instead.
@@ -3417,7 +3417,7 @@ queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void
 
 Obtains information about all activated OS accounts. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids)
@@ -3427,7 +3427,7 @@ Obtains information about all activated OS accounts. This API uses an asynchrono
 
 **Deprecated since:** 9
 
-**Substitutes:** [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids)(callback: AsyncCallback&lt;Array&lt;int&gt;&gt;)
+**Substitutes:** [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids)(callback: AsyncCallback&lt;Array&lt;number&gt;&gt;)
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -3463,7 +3463,7 @@ queryActivatedOsAccountIds(): Promise<Array<number>>
 
 Obtains information about all activated OS accounts. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids) instead.
@@ -3503,7 +3503,7 @@ queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 
 Obtains information about the OS account to which the current process belongs. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
 > only to system applications.
@@ -3545,7 +3545,7 @@ queryCurrentOsAccount(): Promise<OsAccountInfo>
 
 Obtains information about the OS account to which the current process belongs. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
 > only to system applications.
@@ -3602,7 +3602,7 @@ Queries the ID of a distributed virtual device. This API uses an asynchronous ca
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 **Examples**

@@ -14,7 +14,7 @@ function setDisallowedPermission(admin: Want, permission: string, disallow: bool
 
 Disables the specified permission of the specified user. After the permission is disabled, all applications under the specified user will be denied by default when applying for or using the specified permission. This API is applicable to enterprise security compliance scenarios, such as disabling high-risk permissions like camera and microphone to prevent privacy leaks, or disabling specific features (such as Bluetooth sharing) to prevent enterprise data from being transferred out.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 1. Only permissions with an
 > [APL level](../../../security/AccessToken/app-permission-mgmt-overview.md#basic-concepts-in-the-permission-mechanism)

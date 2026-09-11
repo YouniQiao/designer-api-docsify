@@ -34,7 +34,7 @@ data: string | ArrayBuffer
 
 接收到的客户端发的消息数据。
 
-**类型：** string \| ArrayBuffer
+**类型：** string &#124; ArrayBuffer
 
 **起始版本：** 19
 

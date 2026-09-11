@@ -44,7 +44,7 @@ Default value: **'1fr'**
 
 Invalid values are treated as the default value.
 
-**Type:** string \| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md)
+**Type:** string &#124; [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md)
 
 **Default:** '1fr'
 

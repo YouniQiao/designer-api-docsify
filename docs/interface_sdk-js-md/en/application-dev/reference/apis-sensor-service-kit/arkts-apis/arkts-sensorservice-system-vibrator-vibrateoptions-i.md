@@ -93,7 +93,7 @@ mode?: 'number' | 'short'
 
 Vibration mode. The value **long** indicates long vibration, and **short** indicates short vibration. The default value is **long**.
 
-**Type:** 'number' \| 'short'
+**Type:** 'number' &#124; 'short'
 
 **Since:** 3
 

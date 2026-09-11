@@ -35,7 +35,7 @@ controller: WebController | WebviewController
 
 控制器。从API version 9开始，WebController不再维护，建议使用WebviewController替代。
 
-**类型：** [WebController](arkts-arkweb-webcontroller-c.md) \| [WebviewController](arkts-arkweb-webviewcontroller-t.md)
+**类型：** [WebController](arkts-arkweb-webcontroller-c.md) &#124; [WebviewController](arkts-arkweb-webviewcontroller-t.md)
 
 **起始版本：** 12
 

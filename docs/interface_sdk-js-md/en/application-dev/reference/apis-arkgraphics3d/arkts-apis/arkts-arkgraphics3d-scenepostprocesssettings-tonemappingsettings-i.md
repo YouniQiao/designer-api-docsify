@@ -2,6 +2,8 @@
 
 Describes the tone mapping settings.
 
+@typedef ToneMappingSettings
+
 **Since:** 12
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

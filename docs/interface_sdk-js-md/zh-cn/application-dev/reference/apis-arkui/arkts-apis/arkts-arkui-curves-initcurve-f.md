@@ -24,7 +24,7 @@ function initCurve(curve?: Curve): ICurve
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| curve | [Curve](arkts-arkui-curves-curve-e.md) | 否 | [曲线类型。默认值：Curve.Linear](arkts-arkui-curves-curve-e.md) |
+| curve | [Curve](arkts-arkui-curves-curve-e.md) | 否 | 曲线类型。<br>默认值：Curve.Linear |
 
 **返回值：**
 

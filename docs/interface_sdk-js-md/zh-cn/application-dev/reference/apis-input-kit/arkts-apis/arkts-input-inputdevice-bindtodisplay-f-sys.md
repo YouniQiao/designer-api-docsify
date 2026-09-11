@@ -28,8 +28,8 @@ function bindToDisplay(inputDeviceId: number, displayId: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inputDeviceId | number | 是 | 输入设备的ID。如果输入服务重启或输入设备重连，此ID可能会发生变化。取值应为≥0的整数。 |
-| displayId | number | 是 | 目标显示器的ID。取值应为≥0的整数。 |
+| inputDeviceId | number | 是 | 输入设备的ID。如果输入服务重启或输入设备重连，此ID可能会发生变化。<br>取值应为≥0的整数。 |
+| displayId | number | 是 | 目标显示器的ID。<br>取值应为≥0的整数。 |
 
 **返回值：**
 

@@ -17,7 +17,9 @@ Sets the offset and style of an image span.
 onHover?: OnHoverCallback
 ```
 
-Callback triggered on mouse hover. If this parameter is omitted, no corresponding action is taken.
+Callback triggered when the mouse hovers over the component. If this parameter is omitted, the mouse hover callback behavior is not executed.
+
+**Atomic service API:** Since API version 14, this API is supported in atomic services.
 
 **Since:** 14
 
@@ -33,7 +35,7 @@ Callback triggered on mouse hover. If this parameter is omitted, no correspondin
 gesture?: RichEditorGesture
 ```
 
-Behavior-triggered callback. If this parameter is left empty, only the default system behavior is supported.
+Gesture event that triggers a callback. If this parameter is omitted, only the default system behavior is supported.
 
 **Type:** [RichEditorGesture](arkts-arkui-richeditorgesture-i.md)
 
@@ -51,7 +53,9 @@ Behavior-triggered callback. If this parameter is left empty, only the default s
 imageStyle?: RichEditorImageSpanStyle
 ```
 
-Image style.
+Image style information. Pass this parameter when you need to customize the image size, vertical alignment mode, scaling type, and other styles. If this parameter is omitted, the default image style of the system is used.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** [RichEditorImageSpanStyle](arkts-arkui-richeditorimagespanstyle-i.md)
 

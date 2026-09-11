@@ -31,4 +31,4 @@ setTransform(transform?: Matrix2D): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transform | [Matrix2D](arkts-arkui-matrix2d-c.md) | 否 | 转换矩阵。异常值undefined和null按无效值不做矩阵变换处理。默认值：不做矩阵变换。 |
+| transform | [Matrix2D](arkts-arkui-matrix2d-c.md) | 否 | 转换矩阵。<br>异常值undefined和null按无效值不做矩阵变换处理。<br>默认值：不做矩阵变换。 |

@@ -1,6 +1,6 @@
 # RotationAxesStateChangeInfo（系统接口）
 
-旋转轴状态变更信息
+旋转轴状态变更信息@typedef RotationAxesStateChangeInfo
 
 **起始版本：** 20
 

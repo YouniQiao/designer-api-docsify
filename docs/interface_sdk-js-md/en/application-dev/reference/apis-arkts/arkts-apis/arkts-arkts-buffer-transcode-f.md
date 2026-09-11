@@ -24,7 +24,7 @@ Transcodes a **Buffer** or **Uint8Array** object from one encoding format to ano
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | Buffer \| Uint8Array | Yes | Instance object. |
+| source | Buffer &#124; Uint8Array | Yes | Instance object. |
 | fromEnc | string | Yes | Current encoding format. For details about the supported formats, see [BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md). |
 | toEnc | string | Yes | Target encoding format. For details about the supported formats, see [BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md). |
 

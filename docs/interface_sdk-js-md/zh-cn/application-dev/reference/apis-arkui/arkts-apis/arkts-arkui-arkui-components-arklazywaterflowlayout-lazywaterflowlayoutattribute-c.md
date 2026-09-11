@@ -36,14 +36,12 @@ columnsGap(value: LengthMetrics | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | LengthMetrics \| undefined | 是 | 列之间的间距。默认值：LengthMetrics.vp(0) |
+| value | LengthMetrics &#124; undefined | 是 | 列之间的间距。<br>默认值：LengthMetrics.vp(0) |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## footer
 
 ```TypeScript
@@ -64,14 +62,12 @@ footer(builder: CustomBuilder | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 | footer生成器函数传递undefined将删除footer。 |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; undefined | 是 | footer生成器函数<br>传递undefined将删除footer。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## header
 
 ```TypeScript
@@ -92,14 +88,12 @@ header(builder: CustomBuilder | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 | header生成器函数传递undefined将删除header。 |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; undefined | 是 | header生成器函数<br>传递undefined将删除header。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## onVisibleIndexesChange
 
 ```TypeScript
@@ -120,14 +114,12 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | 是 | 回调函数，当可见区域中子组件的索引发生变化时触发。传递undefined将取消注册回调。 |
+| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) &#124; undefined | 是 | 回调函数，当可见区域中子组件的索引发生变化时触发。<br>传递undefined将取消注册回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## rowsGap
 
 ```TypeScript
@@ -148,14 +140,12 @@ rowsGap(value: LengthMetrics | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | LengthMetrics \| undefined | 是 | 行之间的间距。默认值：LengthMetrics.vp(0) |
+| value | LengthMetrics &#124; undefined | 是 | 行之间的间距。<br>默认值：LengthMetrics.vp(0) |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## sticky
 
 ```TypeScript
@@ -176,10 +166,9 @@ sticky(sticky: StickyStyle | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sticky | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) \| undefined | 是 | header和footer的吸顶吸底样式 |
+| sticky | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) &#124; undefined | 是 | header和footer的吸顶吸底样式 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |

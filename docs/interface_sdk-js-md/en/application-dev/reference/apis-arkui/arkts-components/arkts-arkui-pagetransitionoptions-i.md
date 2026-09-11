@@ -27,7 +27,7 @@ For the string type, this parameter indicates an animation interpolation curve. 
 
 Default value: **Curve.Linear**
 
-**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| [ICurve](arkts-arkui-icurve-i.md)
+**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) &#124; string &#124; [ICurve](arkts-arkui-icurve-i.md)
 
 **Default:** Curve.Linear
 
@@ -49,7 +49,7 @@ Unit: ms
 
 Default value: **0**
 
-**NOTE：**
+**NOTE:**
 
 If no match is found, the default page transition effect is used (which may vary according to the device). To disable the default page transition effect, set **duration** to **0**.
 

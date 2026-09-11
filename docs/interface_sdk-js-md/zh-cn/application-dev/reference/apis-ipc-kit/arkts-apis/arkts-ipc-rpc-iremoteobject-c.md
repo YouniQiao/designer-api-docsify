@@ -24,7 +24,7 @@ addDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** registerDeathRecipient(recipient: DeathRecipient, flags: int)
+**替代接口：** registerDeathRecipient(recipient: DeathRecipient, flags: number)
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -202,7 +202,7 @@ removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** unregisterDeathRecipient(recipient: DeathRecipient, flags: int)
+**替代接口：** unregisterDeathRecipient(recipient: DeathRecipient, flags: number)
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -303,7 +303,7 @@ sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: Me
 
 **废弃版本：** 9
 
-**替代接口：** sendMessageRequest(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
+**替代接口：** sendMessageRequest(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -339,7 +339,7 @@ sendRequest(
 
 **废弃版本：** 9
 
-**替代接口：** sendMessageRequest(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
+**替代接口：** sendMessageRequest(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -376,7 +376,7 @@ sendRequest(
 
 **废弃版本：** 9
 
-**替代接口：** sendMessageRequest(code: int, data: MessageSequence, reply: MessageSequence,
+**替代接口：** sendMessageRequest(code: number, data: MessageSequence, reply: MessageSequence,
      *     options: MessageOption, callback: AsyncCallback&lt;RequestResult&gt;)
 
 **系统能力：** SystemCapability.Communication.IPC.Core

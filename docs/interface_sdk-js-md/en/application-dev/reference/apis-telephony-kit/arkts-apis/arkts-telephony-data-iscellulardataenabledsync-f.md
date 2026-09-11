@@ -26,7 +26,7 @@ Checks whether the cellular data service is enabled. This API returns the result
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the cellular data service is enabled. |
+| boolean | Whether the cellular data service is enabled.<br>**true**: The cellular data service is enabled. <br>**false**: The cellular data service is disabled. |
 
 **Error codes:**
 

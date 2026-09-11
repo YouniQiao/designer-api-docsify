@@ -32,7 +32,7 @@ Media.
 
 **Deprecated since:** 10
 
-**Substitutes:** [STREAM_USAGE_MUSIC](#stream_usage_music)
+**Substitutes:** [STREAM_USAGE_AUDIOBOOK](#stream_usage_audiobook)
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 

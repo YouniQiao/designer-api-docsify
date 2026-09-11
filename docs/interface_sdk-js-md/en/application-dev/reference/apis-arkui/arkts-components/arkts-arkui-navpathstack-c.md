@@ -4,7 +4,7 @@ A navigation controller that manages all child pages in the **Navigation** compo
 
 Starting from API version 12, **NavPathStack** is inheritable. Objects of a derived class can replace those of the base class. For details, see [Example 10](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-10-defining-a-derived-class-of-navpathstack).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 1. When multiple navigation controller operations are triggered in succession, the intermediate states are
 > bypassed, and only the final result of the operations is rendered.
@@ -47,7 +47,7 @@ Clears the routing stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true<br>**Since:** 11 |
+| animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true<br>**Since:** 11 |
 
 ## constructor
 
@@ -85,7 +85,7 @@ Disables or enables the transition animation in the **Navigation** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to disable the transition animation.Default value: **false**   **true**: Disable the transition animation.   **false**: Enable the transition animation. |
+| value | boolean | Yes | Whether to disable the transition animation.<br>Default value: **false**<br>**true**: Disable the transition animation.<br>**false**: Enable the transition animation. |
 
 ## getAllPathName
 
@@ -163,7 +163,7 @@ Obtains the parameter information of the navigation destination page specified b
 
 | Type | Description |
 | --- | --- |
-| unknown \| undefined | unknown**: parameter information of the corresponding navigation destination page. **unknown** can represent a user-defined type. |
+| unknown &#124; undefined | unknown**: parameter information of the corresponding navigation destination page. **unknown** can represent a user-defined type.<br>**undefined**: an invalid index is provided. |
 
 ## getParamByName
 
@@ -215,7 +215,7 @@ When a **Navigation** component is nested (directly or indirectly) inside anothe
 
 | Type | Description |
 | --- | --- |
-| [NavPathStack](arkts-arkui-navpathstack-c.md) \| null | Navigation path stack of the outer **Navigation** component in which the current **Navigation** component is nested. If there is no outer **Navigation** component., **null** is returned. |
+| [NavPathStack](arkts-arkui-navpathstack-c.md) &#124; null | Navigation path stack of the outer **Navigation** component in which the current **Navigation** component is nested. If there is no outer **Navigation** component., **null** is returned. |
 
 ## getPathStack
 
@@ -260,7 +260,7 @@ Moves to the top of the routing stack the navigation destination page specified 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | number | Yes | Index of the navigation destination page. The index is zero-based. |
-| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true<br>**Since:** 11 |
+| animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true<br>**Since:** 11 |
 
 ## moveToTop
 
@@ -283,7 +283,7 @@ Moves the first navigation destination page that matches **name** from the botto
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
-| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true<br>**Since:** 11 |
+| animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true<br>**Since:** 11 |
 
 **Return value:**
 
@@ -299,7 +299,7 @@ pop(animated?: boolean): NavPathInfo | undefined
 
 Pops the top element out of the routing stack.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When multiple navigation controller methods are called consecutively, any pages popped during the sequence are
 > cached. If a page with the same name is later pushed, the system reuses the cached instance instead of
@@ -333,13 +333,13 @@ Pops the top element out of the routing stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true<br>**Since:** 11 |
+| animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NavPathInfo](arkts-arkui-navpathinfo-c.md) \| undefined | NavPathInfo**: information about the navigation destination page at the top of the stack. |
+| [NavPathInfo](arkts-arkui-navpathinfo-c.md) &#124; undefined | NavPathInfo**: information about the navigation destination page at the top of the stack.<br>**undefined**: the routing stack is empty. |
 
 ## pop
 
@@ -349,7 +349,7 @@ pop(result: Object, animated?: boolean): NavPathInfo | undefined
 
 Pops the top element out of the routing stack and invokes the **onPop** callback to pass the page processing result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When multiple navigation controller methods are called consecutively, any pages popped during the sequence are
 > cached. If a page with the same name is later pushed, the system reuses the cached instance instead of
@@ -384,13 +384,13 @@ Pops the top element out of the routing stack and invokes the **onPop** callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | result | Object | Yes | Custom processing result on the page. The boolean type is not supported. |
-| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true |
+| animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NavPathInfo](arkts-arkui-navpathinfo-c.md) \| undefined | NavPathInfo**: information about the navigation destination page at the top of the stack. |
+| [NavPathInfo](arkts-arkui-navpathinfo-c.md) &#124; undefined | NavPathInfo**: information about the navigation destination page at the top of the stack.<br>**undefined**: the routing stack is empty. |
 
 ## popToIndex
 
@@ -413,7 +413,7 @@ Returns the routing stack to the page specified by **index**.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | number | Yes | Index of the navigation destination page. The index is zero-based. |
-| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true<br>**Since:** 11 |
+| animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true<br>**Since:** 11 |
 
 ## popToIndex
 
@@ -437,7 +437,7 @@ Returns the routing stack to the page specified by **index** and invokes the **o
 | --- | --- | --- | --- |
 | index | number | Yes | Index of the navigation destination page. The index is zero-based. |
 | result | Object | Yes | Custom processing result on the page. The boolean type is not supported. |
-| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true |
+| animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true |
 
 ## popToName
 
@@ -460,7 +460,7 @@ Pops pages until the first navigation destination page that matches **name** fro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
-| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true<br>**Since:** 11 |
+| animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true<br>**Since:** 11 |
 
 **Return value:**
 
@@ -490,7 +490,7 @@ Pops pages until the first navigation destination page that matches **name** fro
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
 | result | Object | Yes | Custom processing result on the page. The boolean type is not supported. |
-| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true |
+| animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true |
 
 **Return value:**
 
@@ -543,7 +543,7 @@ pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 
 Pushes the navigation destination page specified by **info** onto the routing stack. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You are not advised to use stack operations in aboutToAppear, as the
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
@@ -562,7 +562,7 @@ Pushes the navigation destination page specified by **info** onto the routing st
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
-| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true |
+| animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true |
 
 **Return value:**
 
@@ -587,7 +587,7 @@ pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 
 Pushes the navigation destination page specified by **info** onto the routing stack. This API uses a promise to return the result. Depending on the [LaunchMode](arkts-arkui-launchmode-e.md) specified in the **options** parameter, different behaviors will be implemented.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You are not advised to use stack operations in aboutToAppear, as the
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
@@ -631,7 +631,7 @@ pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<
 
 Pushes the navigation destination page specified by **name**, with the data specified by **param**, to the routing stack. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You are not advised to use stack operations in aboutToAppear, as the
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
@@ -651,7 +651,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
 | param | Object | Yes | Detailed parameters for the custom **NavDestination** page. |
-| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true |
+| animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true |
 
 **Return value:**
 
@@ -676,7 +676,7 @@ pushDestinationByName(name: string, param: Object, onPop: import('../api/@ohos.b
 
 Pushes the navigation destination page specified by **name**, with the data specified by **param**, to the routing stack. This API uses the **onPop** callback to handle the result returned when the page is popped out of the stack. It uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You are not advised to use stack operations in aboutToAppear, as the
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
@@ -697,7 +697,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 | name | string | Yes | Name of the navigation destination page. |
 | param | Object | Yes | Detailed parameters for the custom **NavDestination** page. |
 | onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | Yes | Callback used to handle the result returned when the page is popped out of the stack. It is triggered only when the **result** parameter is set in [pop](#pop-1), [popToName](#poptoname-1), or [popToIndex](#poptoindex-1). |
-| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true |
+| animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true |
 
 **Return value:**
 
@@ -735,7 +735,7 @@ Pushes the navigation destination page specified by **info** onto the routing st
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
-| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no If the input parameter is invalid, the value **true** is used.<br>**Since:** 11 |
+| animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>If the input parameter is invalid, the value **true** is used.<br>**Since:** 11 |
 
 ## pushPath
 
@@ -782,7 +782,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
 | param | unknown | Yes | Detailed parameters for the custom **NavDestination** page. The **unknown** type can be replaced with a user-defined type. |
-| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true<br>**Since:** 11 |
+| animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true<br>**Since:** 11 |
 
 ## pushPathByName
 
@@ -807,7 +807,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 | name | string | Yes | Name of the navigation destination page. |
 | param | Object | Yes | Detailed parameters for the custom **NavDestination** page. |
 | onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | Yes | Callback used to receive the result. It is triggered only when the **result** parameter is set in [pop](#pop-1), [popToName](#poptoname-1), or [popToIndex](#poptoindex-1). |
-| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true |
+| animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true |
 
 ## removeByIndexes
 
@@ -891,7 +891,7 @@ Removes the navigation destination page specified by **navDestinationId** from t
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the page is removed successfully. |
+| boolean | Whether the page is removed successfully.<br>**true**: Removal succeeded. <br>**false**: Removal failed. |
 
 ## replaceDestination
 
@@ -952,7 +952,7 @@ Replaces the top of the routing stack with the navigation destination page speci
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Parameters for the new top page of the routing stack. |
-| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true |
+| animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true |
 
 ## replacePath
 
@@ -999,7 +999,7 @@ Replaces the top of the routing stack with the page specified by **name**.
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
 | param | Object | Yes | Detailed parameters for the custom **NavDestination** page. |
-| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true |
+| animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true |
 
 ## setInterception
 
@@ -1031,7 +1031,7 @@ setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void
 
 Updates the array of route page information in this routing stack to the specified content and performs route transitions.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 1. You can add or remove pages in batches based on the existing stack. Among the pages added in batches, only the
 > visible pages will trigger creation; other pages, although added to the stack, will not be created immediately.
@@ -1059,8 +1059,8 @@ Updates the array of route page information in this routing stack to the specifi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathStack | Array&lt;[NavPathInfo](arkts-arkui-navpathinfo-c.md)&gt; | Yes | Array of route page information in the current routing stack.   **NOTE：**The array length is not limited. |
-| animated | boolean | No | Whether to enable the transition animation.   **true**: yes; **false**: no Default value: **true |
+| pathStack | Array&lt;[NavPathInfo](arkts-arkui-navpathinfo-c.md)&gt; | Yes | Array of route page information in the current routing stack.<br>**NOTE:**<br>The array length is not limited. |
+| animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true |
 
 ## size
 
@@ -1082,4 +1082,4 @@ Obtains the stack size.
 
 | Type | Description |
 | --- | --- |
-| number | Stack size. |
+| number | Stack size.<br>Value range: [0, +��) |

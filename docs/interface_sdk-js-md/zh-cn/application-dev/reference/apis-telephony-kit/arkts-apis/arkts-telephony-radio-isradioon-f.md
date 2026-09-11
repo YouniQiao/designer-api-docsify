@@ -24,8 +24,8 @@ function isRadioOn(slotId: number, callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回指定卡槽的Radio状态。   - true：Radio打开。   - false：Radio关闭。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回指定卡槽的Radio状态。<br>- true：Radio打开。<br>- false：Radio关闭。 |
 
 **错误码：**
 
@@ -72,13 +72,13 @@ function isRadioOn(slotId?: number): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 否 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。   如果不指定slotId，默认判断主卡Radio是否打开 |
+| slotId | number | 否 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。<br>如果不指定slotId，默认判断主卡Radio是否打开 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | 以Promise形式返回判断Radio是否打开的结果。 |
+| Promise&lt;boolean&gt; | 以Promise形式返回判断Radio是否打开的结果。<br>- true：Radio打开。<br>- false：Radio关闭。 |
 
 **错误码：**
 
@@ -123,7 +123,7 @@ function isRadioOn(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回主卡的Radio状态。   - true：Radio打开。   - false：Radio关闭。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回主卡的Radio状态。<br>- true：Radio打开。<br>- false：Radio关闭。 |
 
 **错误码：**
 

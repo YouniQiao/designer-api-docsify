@@ -36,7 +36,7 @@ Adds a specified untrusted hotspot configuration.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Returns `true` if the untrusted hotspot configuration is added, returns `false` otherwise. |
 
 **Examples**
 

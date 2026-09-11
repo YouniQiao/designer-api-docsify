@@ -24,4 +24,4 @@ Defines a callback for unmarshalling an ArrayBuffer to obtain [StyledStringMarsh
 
 | Type | Description |
 | --- | --- |
-| [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) | [StyledStringMarshallingValue]{ |
+| [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) | [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) obtained after unmarshalling. |

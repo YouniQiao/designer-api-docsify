@@ -2,7 +2,7 @@
 
 The **font** module provides APIs for registering custom fonts.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used
 > where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see

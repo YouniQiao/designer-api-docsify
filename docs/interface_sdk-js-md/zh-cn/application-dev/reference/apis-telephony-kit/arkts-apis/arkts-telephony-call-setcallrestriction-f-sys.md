@@ -26,7 +26,7 @@ function setCallRestriction(slotId: number, info: CallRestrictionInfo, callback:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 | info | [CallRestrictionInfo](arkts-telephony-call-callrestrictioninfo-i-sys.md) | 是 | 呼叫限制信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调函数的方式返回设置呼叫限制状态的结果。 |
 
@@ -82,7 +82,7 @@ function setCallRestriction(slotId: number, info: CallRestrictionInfo): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 | info | [CallRestrictionInfo](arkts-telephony-call-callrestrictioninfo-i-sys.md) | 是 | 呼叫限制信息。 |
 
 **返回值：**

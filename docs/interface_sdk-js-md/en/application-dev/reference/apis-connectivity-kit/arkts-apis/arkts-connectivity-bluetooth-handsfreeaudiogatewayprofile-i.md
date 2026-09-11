@@ -46,7 +46,7 @@ Connect to device with hfp.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the connect is in process; returns `false` otherwise. |
 
 **Examples**
 
@@ -84,7 +84,7 @@ Disconnect to device with hfp.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the disconnect is in process; returns `false` otherwise. |
 
 **Examples**
 

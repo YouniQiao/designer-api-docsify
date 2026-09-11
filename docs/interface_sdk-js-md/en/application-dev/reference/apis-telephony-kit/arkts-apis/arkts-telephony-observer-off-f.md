@@ -14,7 +14,7 @@ function off(type: 'networkStateChange', callback?: Callback<NetworkState>): voi
 
 Unregisters the observer for network status change events. This API uses an asynchronous callback to return the execution result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
 > you do not pass the callback, you will cancel listening for all events.
@@ -61,7 +61,7 @@ function off(type: 'signalInfoChange', callback?: Callback<Array<SignalInformati
 
 Unregisters the observer for signal status change events. This API uses an asynchronous callback to return the execution result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
 > you do not pass the callback, you will cancel listening for all events.
@@ -110,7 +110,7 @@ function off(type: 'cellularDataConnectionStateChange', callback?: Callback<Data
 
 Unregisters the observer for connection status change events of the cellular data link. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
 > you do not pass the callback, you will cancel listening for all events.
@@ -157,7 +157,7 @@ function off(type: 'cellularDataFlowChange', callback?: Callback<DataFlowType>):
 
 Unregisters the observer for the uplink and downlink data flow status change events of the cellular data service. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
 > you do not pass the callback, you will cancel listening for all events.
@@ -206,7 +206,7 @@ function off(type: 'callStateChange', callback?: Callback<CallStateInfo>): void
 
 Unregisters the observer for call status change events. This API uses an asynchronous callback to return the execution result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
 > you do not pass the callback, you will cancel listening for all events.
@@ -220,7 +220,7 @@ Unregisters the observer for call status change events. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callStateChange' | Yes | Call status change event. This field has a fixed value of **callStateChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | No | Callback function used to return the call status information object. For details, see [CallState](arkts-telephony-call-callstate-e.md).    **number**: phone number. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | No | Callback function used to return the call status information object. For details, see [CallState](arkts-telephony-call-callstate-e.md). <br>**number**: phone number. |
 
 **Error codes:**
 
@@ -253,7 +253,7 @@ function off(type: 'callStateChangeEx', callback?: Callback<TelCallState>): void
 
 Unregisters the observer for extended call status change events. This API uses an asynchronous callback to return the execution result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
 > you do not pass the callback, you will cancel listening for all events.
@@ -267,7 +267,7 @@ Unregisters the observer for extended call status change events. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callStateChangeEx' | Yes | Call status change event. This field has a fixed value of **callStateChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TelCallState](arkts-telephony-observer-telcallstate-t.md)&gt; | No | Callback function used to return the call status information object. For details, see [TelCallState](arkts-telephony-call-telcallstate-e.md) in **call**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TelCallState](arkts-telephony-observer-telcallstate-t.md)&gt; | No | Callback function used to return the call status information object. For details, see [TelCallState](arkts-telephony-call-telcallstate-e.md) in **call**. <br> |
 
 **Error codes:**
 
@@ -300,7 +300,7 @@ function off(type: 'simStateChange', callback?: Callback<SimStateData>): void
 
 Unregisters the observer for SIM card status change events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
 > you do not pass the callback, you will cancel listening for all events.
@@ -347,7 +347,7 @@ function off(type: 'iccAccountInfoChange', callback?: Callback<void>): void
 
 Unregisters the observer for account information change events of the SIM card. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
 > you do not pass the callback, you will cancel listening for all events.

@@ -10,7 +10,7 @@ This module provides word selection management capabilities, including creating,
 7. Call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md) to destroy the panel.
 8. Call [off('selectionCompleted')](arkts-basicservices-selectionmanager-off-f.md) to unsubscribe from the selection completion event.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This module is supported only on PCs/2-in-1 devices. You can use
 > **canIUse('SystemCapability.SelectionInput.Selection')** to check whether the current device supports this
@@ -39,9 +39,9 @@ import { selectionManager } from '@kit.BasicServicesKit';
 | --- | --- |
 | [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md) | Creates a word selection panel, which is used to display the service-related operation UI or text processing result. After the panel is used, call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md) to destroy the panel and release resources. This API uses a promise to return the result. |
 | [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md) | Destroys the word selection panel. This API is used together with [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md) to destroy the panel object created by **createPanel()**. This API uses a promise to return the result. |
-| [getSelectionContent](arkts-basicservices-selectionmanager-getselectioncontent-f.md) | Obtains the content of the selected text. This API uses a promise to return the result. This API must be called in the on('selectionCompleted') callback and is valid only after the word selection completion event is triggered. |
-| [off](arkts-basicservices-selectionmanager-off-f.md#offselectioncompleted) | Unsubscribes from the word selection completion event. This API is used together with on('selectionCompleted'). |
-| [on](arkts-basicservices-selectionmanager-on-f.md#onselectioncompleted) | Subscribes to the word selection completion event. This API is used together with off('selectionCompleted'). |
+| [getSelectionContent](arkts-basicservices-selectionmanager-getselectioncontent-f.md) | Obtains the content of the selected text. This API uses a promise to return the result. This API must be called in the [on('selectionCompleted')](arkts-basicservices-selectionmanager-on-f.md#onselectioncompleted) callback and is valid only after the word selection completion event is triggered. |
+| [off](arkts-basicservices-selectionmanager-off-f.md#offselectioncompleted) | Unsubscribes from the word selection completion event. This API is used together with [on('selectionCompleted')](arkts-basicservices-selectionmanager-on-f.md#onselectioncompleted). |
+| [on](arkts-basicservices-selectionmanager-on-f.md#onselectioncompleted) | Subscribes to the word selection completion event. This API is used together with [off('selectionCompleted')](arkts-basicservices-selectionmanager-off-f.md#offselectioncompleted). |
 
 ### Interfaces
 

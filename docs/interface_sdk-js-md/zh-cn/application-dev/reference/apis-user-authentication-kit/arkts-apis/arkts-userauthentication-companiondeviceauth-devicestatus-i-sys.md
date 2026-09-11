@@ -1,6 +1,6 @@
 # DeviceStatus（系统接口）
 
-设备状态信息。用于描述伴随设备的当前状态，包括设备业务标识、用户名、型号信息、设备名、在线状态以及支持的业务ID列表等。
+设备状态信息。用于描述伴随设备的当前状态，包括设备业务标识、用户名、型号信息、设备名、在线状态、支持的业务ID列表以及设备子身份资料名称等。
 
 **起始版本：** 23
 
@@ -20,7 +20,7 @@ import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 deviceKey: DeviceKey
 ```
 
-设备关键信息。包含设备ID类型、设备ID和设备用户ID，作为设备的唯一标识。
+设备关键信息。包含设备ID类型、设备ID、设备用户ID和设备子身份资料ID，作为设备的唯一标识。
 
 **类型：** [DeviceKey](arkts-userauthentication-companiondeviceauth-devicekey-i-sys.md)
 
@@ -61,6 +61,26 @@ deviceName: string
 **类型：** string
 
 **起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
+
+**系统接口：** 此接口为系统接口。
+
+## deviceSubProfileName
+
+```TypeScript
+deviceSubProfileName?: string
+```
+
+设备子身份资料名称。对应分布式账号的昵称，作为设备上前台子身份资料的显示名称，用于在设备选择界面展示。默认值：默认值为“”。
+
+**类型：** string
+
+**默认值：** ""
+
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,6 +2,8 @@
 
 用于表示平面中的矩形。
 
+@typedef Rect
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

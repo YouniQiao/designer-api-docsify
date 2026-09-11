@@ -8,18 +8,22 @@ LinkedList is implemented based on the doubly linked list. Each node of the doub
  insertion and removal at both ends.
  LinkedList is more efficient in data insertion than [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md), but less efficient in
  data access.
- > **NOTE**
+
+> **NOTE**
  >
  > Accessing elements in a LinkedList using the \[index\] syntax may lead to undefined results. You are advised to use
  > **get()** instead.
  > **Recommended use case**: Use LinkedList for frequent insertion and removal operations when a doubly linked list is
  > required.
  > This topic uses the following to identify the use of generics:
- - T: Type
- > **NOTE**
+
+- T: Type
+
+> **NOTE**
  >
  > - Container classes, implemented in static languages, have restrictions on storage locations and properties, and do
  > not support custom properties or methods.
+
 
 
 ## Modules to Import

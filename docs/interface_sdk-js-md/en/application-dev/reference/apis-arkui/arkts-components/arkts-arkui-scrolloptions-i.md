@@ -19,13 +19,14 @@ animation?: ScrollAnimationOptions | boolean
 
 Animation configuration Anonymous Object Rectification.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; Currently, the &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Scroll&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; support the &lt;em&gt;Boolean&lt;/em&gt; type and &lt;em&gt;ICurve&lt;/em&gt;. </p>
+<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>Currently, the &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Scroll&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; support the &lt;em&gt;Boolean&lt;/em&gt; type and &lt;em&gt;ICurve&lt;/em&gt;. </p>
 
 parameters and the boolean type enables default spring animation. [since 10 - 11] and the boolean type enables default spring animation. [since 12]
 
-**Type:** [ScrollAnimationOptions](arkts-arkui-scrollanimationoptions-i.md) \| boolean
+**Type:** [ScrollAnimationOptions](arkts-arkui-scrollanimationoptions-i.md) &#124; boolean
 
-**Default:** ScrollAnimationOptions: { duration: 1000, curve: Curve.Ease, canOverScroll: false } [since 18]
+**Default:**
+- API version 18+: ScrollAnimationOptions: { duration: 1000, curve: Curve.Ease, canOverScroll: false }
 
 **Since:** 10
 
@@ -61,9 +62,9 @@ xOffset: number | string
 
 Horizontal scrolling offset. Anonymous Object Rectification.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; This parameter cannot be set in percentage. This parameter takes effect only when the scroll axis is the x-axis. Value range: Values less than 0 are treated as 0, and scrolling occurs without animation. Animated scrolling stops at the starting position by default. By setting the **animation** parameter, you can enable a bounce effect when the scrolling goes beyond the boundary. If the parameter type is number, the unit is vp. </p>
+<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>This parameter cannot be set in percentage. <br>This parameter takes effect only when the scroll axis is the x-axis. <br>Value range: Values less than 0 are treated as 0, and scrolling occurs without animation. Animated scrolling stops at the starting position by default. By setting the **animation** parameter, you can enable a bounce effect when the scrolling goes beyond the boundary. <br>If the parameter type is number, the unit is vp. </p>
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 10
 
@@ -81,9 +82,9 @@ yOffset: number | string
 
 Vertical scrolling offset. Anonymous Object Rectification.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; This parameter cannot be set in percentage. This parameter takes effect only when the scroll axis is the y-axis. Value range: Values less than 0 are treated as 0, and scrolling occurs without animation. Animated scrolling stops at the starting position by default. By setting the **animation** parameter, you can enable a bounce effect when the scrolling goes beyond the boundary.If the parameter type is number, the unit is vp. </p>
+<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>This parameter cannot be set in percentage. <br>This parameter takes effect only when the scroll axis is the y-axis. <br>Value range: Values less than 0 are treated as 0, and scrolling occurs without animation. Animated scrolling stops at the starting position by default. By setting the **animation** parameter, you can enable a bounce effect when the scrolling goes beyond the boundary.<br>If the parameter type is number, the unit is vp. </p>
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 10
 

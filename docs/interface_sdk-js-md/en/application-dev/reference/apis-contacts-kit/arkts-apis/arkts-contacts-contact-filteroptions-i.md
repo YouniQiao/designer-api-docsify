@@ -36,7 +36,7 @@ value?: string | ValueType[]
 
 Filter value. The default value is **undefined**.
 
-**Type:** string \| [ValueType](../../apis-arkdata/arkts-apis/arkts-arkdata-valuetype-t.md)[]
+**Type:** string &#124; [ValueType](../../apis-arkdata/arkts-apis/arkts-arkdata-valuetype-t.md)[]
 
 **Since:** 15
 

@@ -30,7 +30,7 @@ Compares buf with target and returns a number indicating whether buf comes befor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | The buffer to compare with this buffer |
+| target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; Uint8Array | Yes | The buffer to compare with this buffer |
 | targetStart | number | No | targetStart [targetStart = 0] The offset within target at which to begin comparison |
 | targetEnd | number | No | targetEnd [targetEnd = target.length] The offset within target at which to end comparison (not inclusive) |
 | sourceStart | number | No | sourceStart [sourceStart = 0] The offset within buf at which to begin comparison |
@@ -40,7 +40,7 @@ Compares buf with target and returns a number indicating whether buf comes befor
 
 | Type | Description |
 | --- | --- |
-| -1 \| 0 \| 1 | 0 is returned if target is the same as buf 1 is returned if target should come before buf when sorted. -1 is returned if target should come after buf when sorted. |
+| -1 &#124; 0 &#124; 1 | 0 is returned if target is the same as buf 1 is returned if target should come before buf when sorted. -1 is returned if target should come after buf when sorted. |
 
 **Error codes:**
 
@@ -83,7 +83,7 @@ Copies data from a region of buf to a region in target, even if the target memor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | The buffer to copy data into |
+| target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; Uint8Array | Yes | The buffer to copy data into |
 | targetStart | number | No | targetStart [targetStart = 0] The offset within target at which to begin writing |
 | sourceStart | number | No | sourceStart [sourceStart = 0] The offset within buf from which to begin copying |
 | sourceEnd | number | No | sourceEnd [sourceEnd = buf.length] The offset within buf at which to stop copying (not inclusive) |
@@ -139,8 +139,6 @@ Creates and returns an iterator of [index, byte] pairs from the contents of buf.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, number]&gt; |  |
-
 **Examples**
 
 ```TypeScript
@@ -181,7 +179,7 @@ Returns true if both buf and otherBuffer have exactly the same bytes, false othe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| otherBuffer | Uint8Array \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Yes | The buffer to compare with this buffer for equality |
+| otherBuffer | Uint8Array &#124; [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Yes | The buffer to compare with this buffer for equality |
 
 **Return value:**
 
@@ -228,7 +226,7 @@ Fills buf with the specified value. If the offset and end are not given, the ent
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array \| number | Yes | The value to fill into the buffer |
+| value | string &#124; [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; Uint8Array &#124; number | Yes | The value to fill into the buffer |
 | offset | number | No | offset [offset = 0] Number of bytes to skip before starting to fill buf |
 | end | number | No | end [end = buf.length] Where to stop filling buf (not inclusive) |
 | encoding | BufferEncoding | No | encoding [encoding='utf8'] The encoding for value if value is a string |
@@ -274,7 +272,7 @@ Returns true if value was found in buf, false otherwise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| number \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | The value to search for in the buffer |
+| value | string &#124; number &#124; [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; Uint8Array | Yes | The value to search for in the buffer |
 | byteOffset | number | No | byteOffset [byteOffset = 0] Where to begin searching in buf. If negative, then offset is calculated from the end of buf |
 | encoding | BufferEncoding | No | encoding [encoding='utf8'] If value is a string, this is its encoding |
 
@@ -314,7 +312,7 @@ The index of the first occurrence of value in buf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| number \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | The value to find the index for in the buffer |
+| value | string &#124; number &#124; [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; Uint8Array | Yes | The value to find the index for in the buffer |
 | byteOffset | number | No | byteOffset [byteOffset = 0] Where to begin searching in buf |
 | encoding | BufferEncoding | No | encoding [encoding='utf8'] If value is a string, this is the encoding used to determine the binary representation of the string that will be searched for in buf |
 
@@ -354,8 +352,6 @@ Creates and returns an iterator of buf keys (indices).
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |  |
-
 **Examples**
 
 ```TypeScript
@@ -394,7 +390,7 @@ The index of the last occurrence of value in buf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| number \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | The value to find the last index for in the buffer |
+| value | string &#124; number &#124; [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; Uint8Array | Yes | The value to find the last index for in the buffer |
 | byteOffset | number | No | byteOffset [byteOffset = 0] Where to begin searching in buf |
 | encoding | BufferEncoding | No | encoding [encoding='utf8'] If value is a string, this is the encoding used to determine the binary representation of the string that will be searched for in buf |
 
@@ -993,8 +989,6 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -1037,8 +1031,6 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -1296,8 +1288,6 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -1339,8 +1329,6 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -1573,8 +1561,6 @@ Decodes buf to a string according to the specified character encoding in encodin
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -1612,8 +1598,6 @@ Creates and returns an iterator for buf values (bytes).
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |  |
-
 **Examples**
 
 ```TypeScript

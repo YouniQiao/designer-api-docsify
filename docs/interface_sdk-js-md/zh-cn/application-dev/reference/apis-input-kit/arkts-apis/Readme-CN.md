@@ -180,8 +180,7 @@
   - [getTouchpadPointerSpeed(系统接口)](arkts-input-pointer-gettouchpadpointerspeed-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getTouchpadRightClickType(系统接口)](arkts-input-pointer-gettouchpadrightclicktype-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getTouchpadScrollDirection(系统接口)](arkts-input-pointer-gettouchpadscrolldirection-f-sys.md)<!--DelEnd-->
+  - [getTouchpadScrollDirection](arkts-input-pointer-gettouchpadscrolldirection-f.md)
   <!--Del-->
   - [getTouchpadScrollSwitch(系统接口)](arkts-input-pointer-gettouchpadscrollswitch-f-sys.md)<!--DelEnd-->
   <!--Del-->

@@ -34,7 +34,7 @@ addrType: 'public' | 'random'
 
 The addrType of address, may be public or random
 
-**Type:** 'public' \| 'random'
+**Type:** 'public' &#124; 'random'
 
 **Since:** 6
 

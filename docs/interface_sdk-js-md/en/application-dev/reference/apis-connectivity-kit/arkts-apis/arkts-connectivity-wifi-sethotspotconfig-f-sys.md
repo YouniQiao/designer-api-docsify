@@ -38,7 +38,7 @@ Sets the hotspot for a device.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the method is called successfully, returns `false` otherwise. |
 
 **Examples**
 

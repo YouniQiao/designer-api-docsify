@@ -18,7 +18,7 @@ In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 ar
 
 [LogType](arkts-mdm-networkmanager-logtype-e.md) is supported since API version 23.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - After a rule with [Action](arkts-mdm-networkmanager-action-e.md) set to **ALLOW** is added, a default **DENY** rule is
 > added automatically to discard or intercept domain name resolution packets that are not covered by the **ALLOW**

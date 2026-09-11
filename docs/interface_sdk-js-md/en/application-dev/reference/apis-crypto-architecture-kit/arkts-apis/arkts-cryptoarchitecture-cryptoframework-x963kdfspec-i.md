@@ -2,7 +2,7 @@
 
 Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md). It is a parameter for X963KDF key derivation function (KDF).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > **key** is the original key material entered by the user.
 
@@ -42,7 +42,7 @@ key: string | Uint8Array
 
 Key material.
 
-**Type:** string \| Uint8Array
+**Type:** string &#124; Uint8Array
 
 **Since:** 22
 

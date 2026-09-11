@@ -42,10 +42,10 @@ import { abilityManager } from '@kit.AbilityKit';
 | [notifyDebugAssertResult](arkts-ability-abilitymanager-notifydebugassertresult-f-sys.md) | 将断言调试结果通知应用程序。使用Promise异步回调。 |
 | [notifySaveAsResult](arkts-ability-abilitymanager-notifysaveasresult-f-sys.md) | 该接口仅供[DLP](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md)（Data Loss Prevention, 数据丢失防护）管理应用使用，其他应用禁止使用，DLP管理应用通过该接口通知沙箱应用另存为结果。使用callback异步回调。 |
 | [notifySaveAsResult](arkts-ability-abilitymanager-notifysaveasresult-f-sys.md) | 该接口仅供[DLP](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md)（Data Loss Prevention, 数据丢失防护）管理应用使用，其他应用禁止使用，DLP管理应用通过该接口通知沙箱应用另存为结果。使用Promise异步回调。 |
-| off | 取消注册Ability启动和退出的观测器。 |
+| [off](arkts-ability-abilitymanager-off-f-sys.md#offabilityforegroundstate) | 取消注册Ability启动和退出的观测器。 |
 | [offPreloadedUIExtensionAbilityDestroyed](arkts-ability-abilitymanager-offpreloadeduiextensionabilitydestroyed-f-sys.md) | 注销当前进程中预加载的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)实例的销毁监听。 |
 | [offPreloadedUIExtensionAbilityLoaded](arkts-ability-abilitymanager-offpreloadeduiextensionabilityloaded-f-sys.md) | 注销当前进程中预加载的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)实例的加载监听。 |
-| on | 注册Ability的启动和退出的观测器。 |
+| [on](arkts-ability-abilitymanager-on-f-sys.md#onabilityforegroundstate) | 注册Ability的启动和退出的观测器。 |
 | [onPreloadedUIExtensionAbilityDestroyed](arkts-ability-abilitymanager-onpreloadeduiextensionabilitydestroyed-f-sys.md) | 监听当前进程中预加载的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)实例的销毁事件。 |
 | [onPreloadedUIExtensionAbilityLoaded](arkts-ability-abilitymanager-onpreloadeduiextensionabilityloaded-f-sys.md) | 监听当前进程中预加载的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)实例的加载事件。 |
 | [preloadUIExtensionAbility](arkts-ability-abilitymanager-preloaduiextensionability-f-sys.md) | 预加载指定的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)并返回预加载UIExtensionAbility实例的ID。使用Promise异步回调。 |

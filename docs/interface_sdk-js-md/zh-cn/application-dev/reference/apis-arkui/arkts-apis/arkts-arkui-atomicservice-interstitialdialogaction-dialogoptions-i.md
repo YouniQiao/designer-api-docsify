@@ -132,7 +132,7 @@ subtitleColor?: ResourceStr | Color
 
 弹框副标题文本颜色。默认为\$r('sys.color.ohos_id_color_text_secondary_contrary')。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [Color](arkts-arkui-color-e.md)
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) &#124; [Color](arkts-arkui-color-e.md)
 
 **起始版本：** 12
 
@@ -164,7 +164,7 @@ titleColor?: ResourceStr | Color
 
 弹框主标题文本颜色。默认为\$r('sys.color.ohos_id_color_text_primary_contrary')。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [Color](arkts-arkui-color-e.md)
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) &#124; [Color](arkts-arkui-color-e.md)
 
 **起始版本：** 12
 

@@ -20,7 +20,7 @@ validate(certChain: CertChainData, callback: AsyncCallback<void>): void
 
 表示校验X.509证书链。使用Callback异步回调。
 
-由于端侧系统时间不可信，证书链校验不包含对证书有效时间的校验。如果需要检查证书的时间有效性，可使用X.509证书的[checkValidityWithDate](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate)方法进行检查。详见[证书规格](../../../security/DeviceCertificateKit/certificate-framework-overview.md#证书规格)。
+<br>由于端侧系统时间不可信，证书链校验不包含对证书有效时间的校验。如果需要检查证书的时间有效性，可使用X.509证书的[checkValidityWithDate](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate)方法进行检查。详见[证书规格](../../../security/DeviceCertificateKit/certificate-framework-overview.md#证书规格)。
 
 **起始版本：** 9
 
@@ -39,9 +39,9 @@ validate(certChain: CertChainData, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 | [19030002](../errorcode-cert.md#19030002-证书签名验证错误) | The certificate signature verification failed. |
 | [19030003](../errorcode-cert.md#19030003-证书尚未生效) | The certificate has not taken effect. |
@@ -151,7 +151,7 @@ validate(certChain: CertChainData): Promise<void>
 
 表示校验X.509证书链。使用Promise方式返回结果。
 
-由于端侧系统时间不可信，证书链校验不包含对证书有效时间的校验。如果需要检查证书的时间有效性，可使用X.509证书的[checkValidityWithDate](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate)方法进行检查。详见[证书规格](../../../security/DeviceCertificateKit/certificate-framework-overview.md#证书规格)。
+<br>由于端侧系统时间不可信，证书链校验不包含对证书有效时间的校验。如果需要检查证书的时间有效性，可使用X.509证书的[checkValidityWithDate](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate)方法进行检查。详见[证书规格](../../../security/DeviceCertificateKit/certificate-framework-overview.md#证书规格)。
 
 **起始版本：** 9
 
@@ -175,9 +175,9 @@ validate(certChain: CertChainData): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 | [19030002](../errorcode-cert.md#19030002-证书签名验证错误) | The certificate signature verification failed. |
 | [19030003](../errorcode-cert.md#19030003-证书尚未生效) | The certificate has not taken effect. |
@@ -285,7 +285,7 @@ validateCert(cert: X509Cert, params: CertValidationParams): Promise<CertValidati
 
 通过构建和验证证书链来验证证书。该接口使用Promise返回结果。
 
-证书链构建过程遵循以下规则：
+<br>证书链构建过程遵循以下规则：
 1. 信任锚来源：始终以信任证书列表（trustedCerts）作为信任锚源。仅当trustSystemCa设置为true时，才使用预配置证书作为信任锚源。
 2. 颁发者搜索顺序：系统首先从信任锚来源中搜索颁发者，若未找到，则继续在非信任证书列表（untrustedCerts）中查找。在线下载的中间CA证书
 属于非受信任证书。
@@ -320,7 +320,7 @@ validateCert(cert: X509Cert, params: CertValidationParams): Promise<CertValidati
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 | [19030002](../errorcode-cert.md#19030002-证书签名验证错误) | The certificate signature verification failed. |

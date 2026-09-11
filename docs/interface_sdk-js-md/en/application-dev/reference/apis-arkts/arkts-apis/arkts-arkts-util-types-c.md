@@ -288,7 +288,7 @@ isBooleanObject(value: Object): boolean
 
 Checks whether the value is of the Boolean type.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
@@ -329,7 +329,7 @@ isBoxedPrimitive(value: Object): boolean
 
 Checks whether the value is of the Boolean, Number, String, or Symbol type.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
@@ -924,7 +924,7 @@ isNumberObject(value: Object): boolean
 
 Checks whether the value is of the Number type.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
@@ -1181,7 +1181,7 @@ isStringObject(value: Object): boolean
 
 Checks whether the value is a string object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
@@ -1222,7 +1222,7 @@ isSymbolObject(value: Object): boolean
 
 Checks whether the value is a symbol object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 

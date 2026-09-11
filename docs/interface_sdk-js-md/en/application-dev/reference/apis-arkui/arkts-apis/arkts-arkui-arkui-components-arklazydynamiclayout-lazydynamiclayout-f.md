@@ -32,4 +32,3 @@ Defines LazyDynamicLayout Component.
 
 | Type | Description |
 | --- | --- |
-| [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) |  |

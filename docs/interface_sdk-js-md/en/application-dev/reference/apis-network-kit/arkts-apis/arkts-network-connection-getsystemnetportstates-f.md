@@ -14,7 +14,7 @@ function getSystemNetPortStates(): Promise<NetPortStatesInfo>
 
 Obtains information about all TCP and UDP ports currently listened by the system, and the PID and UID of the processes that listen for the ports. Both IPv4 and IPv6 addresses are supported.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is used to obtain information about the TCP and UDP ports currently listened by the system. The detailed
 > fields are as follows:

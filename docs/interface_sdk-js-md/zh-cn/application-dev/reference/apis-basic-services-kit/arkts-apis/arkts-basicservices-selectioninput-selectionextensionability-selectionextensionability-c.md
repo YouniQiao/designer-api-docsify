@@ -88,7 +88,7 @@ class ServiceExtAbility extends SelectionExtensionAbility {
 onDisconnect(): void
 ```
 
-当客户端断开与SelectionExtensionAbility的连接（例如用户关闭划词开关或切换划词应用）时，系统会触发该回调。开发者可在该回调中执行与onConnect对应的清理操作，如调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md)销毁已创建的面板、调用off('selectionCompleted')取消订阅的划词完成事件等。
+当客户端断开与SelectionExtensionAbility的连接（例如用户关闭划词开关或切换划词应用）时，系统会触发该回调。开发者可在该回调中执行与onConnect对应的清理操作，如调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md)销毁已创建的面板、调用[off('selectionCompleted')](arkts-basicservices-selectionmanager-off-f.md#offselectioncompleted)取消订阅的划词完成事件等。
 
 仅当SelectionExtensionAbility正常断开连接时会触发该回调，异常断开场景（例如低内存终止进程）不会触发该回调。
 

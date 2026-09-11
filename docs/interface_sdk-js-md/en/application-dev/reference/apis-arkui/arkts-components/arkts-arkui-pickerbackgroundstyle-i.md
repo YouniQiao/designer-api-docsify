@@ -21,13 +21,13 @@ Border radius of the selected item.
 
 Default value: **{ value:24, unit:LengthUnit.VP }**, meaning 24 vp for all corners.
 
-**NOTE：**
+**NOTE:**
 
 1. [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md): uniform radius with a customizable unit
 2. [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md): per-corner radius values (vp units only)
 3. [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md): per-corner radius values with individual units
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **Default:** { value:24, unit:LengthUnit.VP }
 

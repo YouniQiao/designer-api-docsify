@@ -34,7 +34,7 @@ Obtains the zoom ratio in use.
 
 | Type | Description |
 | --- | --- |
-| number | Zoom ratio obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| number | Zoom ratio obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -88,7 +88,7 @@ Sets a zoom ratio, with a maximum precision of two decimal places.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| zoomRatio | number | Yes | Zoom ratio. The supported zoom ratio range can be obtained by calling [getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange). If the value passed in is not within the supported range, the value within the precision range is retained. It takes some time for the zoom ratio to take effect at the bottom layer. To obtain the correct zoom ratio, you need to wait for one to two frames. |
+| zoomRatio | number | Yes | Zoom ratio. The supported zoom ratio range can be obtained by calling [getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange). If the value passed in is not within the supported range, the value within the precision range is retained. <br>It takes some time for the zoom ratio to take effect at the bottom layer. To obtain the correct zoom ratio, you need to wait for one to two frames. |
 
 **Error codes:**
 

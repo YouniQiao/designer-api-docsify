@@ -2,6 +2,8 @@
 
 音振播放器选项。
 
+@typedef AudioHapticPlayerOptions
+
 **起始版本：** 11
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core

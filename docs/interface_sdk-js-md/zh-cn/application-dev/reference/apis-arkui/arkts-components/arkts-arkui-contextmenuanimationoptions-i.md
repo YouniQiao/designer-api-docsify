@@ -83,7 +83,8 @@ scale?: AnimationRange<number>
 
 **类型：** [AnimationRange](arkts-arkui-animationrange-t.md)&lt;number&gt;
 
-**默认值：** [0.95, 1.1] [since 11 - 11]
+**默认值：**
+- API版本11：[0.95, 1.1]
 
 **起始版本：** 11
 

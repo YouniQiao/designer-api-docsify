@@ -306,7 +306,7 @@ maxFontScale?: number | Resource
 
 Maximum font scale for Chip.
 
-**Type:** number \| [Resource](arkts-arkui-resource-t.md)
+**Type:** number &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 26.0.0
 
@@ -324,7 +324,7 @@ minFontScale?: number | Resource
 
 Minimum font scale for Chip.
 
-**Type:** number \| [Resource](arkts-arkui-resource-t.md)
+**Type:** number &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 26.0.0
 
@@ -396,7 +396,7 @@ size?: ChipV2Size | SizeT<LengthMetrics>
 
 Chip size.
 
-**Type:** [ChipV2Size](arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) \| [SizeT](arkts-arkui-graphics-sizet-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt;
+**Type:** [ChipV2Size](arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) &#124; [SizeT](arkts-arkui-graphics-sizet-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt;
 
 **Since:** 26.0.0
 

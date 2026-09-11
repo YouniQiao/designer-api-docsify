@@ -31,7 +31,7 @@ Disables listening for the input method binding event.
 
 **Deprecated since:** 23
 
-**Substitutes:** off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClient: InputClient) =&gt; void)
+**Substitutes:** [off](arkts-ime-inputmethodengine-inputmethodability-i.md#offinputstart)(type: 'inputStart', callback?: (kbController: KeyboardController, inputClient: InputClient) =&gt; void)
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -72,7 +72,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
+| type | 'keyboardShow' &#124; 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
@@ -102,7 +102,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
+| type | 'keyboardShow' &#124; 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
@@ -124,7 +124,7 @@ Enables listening for the input method binding event. This API uses an asynchron
 
 **Deprecated since:** 23
 
-**Substitutes:** on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) =&gt; void)
+**Substitutes:** [on](arkts-ime-inputmethodengine-inputmethodability-i.md#oninputstart)(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) =&gt; void)
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -166,7 +166,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
+| type | 'keyboardShow' &#124; 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
 
 **Examples**
@@ -200,7 +200,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
+| type | 'keyboardShow' &#124; 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
 
 **Examples**

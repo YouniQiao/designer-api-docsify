@@ -21,7 +21,7 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 speed?: number
 ```
 
-Swipe speed. Value range:[200, 40000] Unit: px/s. Throws error code 17000007 if negative. Default value: 2000
+Swipe speed. <br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 17000007 if negative. <br>Default value: 2000
 
 **Type:** number
 
@@ -39,7 +39,7 @@ Swipe speed. Value range:[200, 40000] Unit: px/s. Throws error code 17000007 if 
 stay?: boolean
 ```
 
-Whether the swipe gesture stays on the touchpad for 1s before it is lifted. The value **true** indicates that the swipe gesture stays on the touchpad for 1s, and **false** indicates the opposite. Default value: false
+Whether the swipe gesture stays on the touchpad for 1s before it is lifted. The value **true** indicates that the swipe gesture stays on the touchpad for 1s, and **false** indicates the opposite. <br>Default value: false
 
 **Type:** boolean
 

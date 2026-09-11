@@ -2,7 +2,7 @@
 
 Describes the initialization options of the **Search** component.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer element
@@ -41,7 +41,7 @@ icon?: string
 
 Path to the search icon. By default, the system search icon is used.
 
-**NOTE：**
+**NOTE:**
 
 The icon data source supports both [relative paths](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#example-25-displaying-an-image-using-a-relative-path) and network images.
 

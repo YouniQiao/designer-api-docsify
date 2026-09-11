@@ -1435,7 +1435,7 @@ off(type: 'connect' | 'close', callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'connect' \| 'close' | 是 | 订阅的事件类型。   - 'connect'：连接事件。   - 'close'：关闭事件。 |
+| type | 'connect' &#124; 'close' | 是 | 订阅的事件类型。<br>- 'connect'：连接事件。<br>- 'close'：关闭事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。TLSSocket连接订阅某类事件触发的调用函数。 |
 
 **错误码：**
@@ -1482,7 +1482,7 @@ off(type: 'connect' | 'close', callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'connect' \| 'close' | 是 | 订阅的事件类型。   - 'connect'：连接事件。   - 'close'：关闭事件。 |
+| type | 'connect' &#124; 'close' | 是 | 订阅的事件类型。<br>- 'connect'：连接事件。<br>- 'close'：关闭事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。TLSSocket连接订阅某类事件触发的调用函数。 |
 
 **错误码：**
@@ -1615,7 +1615,7 @@ on(type: 'connect' | 'close', callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'connect' \| 'close' | 是 | 订阅的事件类型。   - 'connect'：连接事件。   - 'close'：关闭事件。 |
+| type | 'connect' &#124; 'close' | 是 | 订阅的事件类型。<br>- 'connect'：连接事件。<br>- 'close'：关闭事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。TLSSocket连接订阅某类事件触发的调用函数。 |
 
 **错误码：**
@@ -1670,7 +1670,7 @@ on(type: 'connect' | 'close', callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'connect' \| 'close' | 是 | 订阅的事件类型。   - 'connect'：连接事件。   - 'close'：关闭事件。 |
+| type | 'connect' &#124; 'close' | 是 | 订阅的事件类型。<br>- 'connect'：连接事件。<br>- 'close'：关闭事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。TLSSocket连接订阅某类事件触发的调用函数。 |
 
 **错误码：**
@@ -1751,7 +1751,7 @@ send(data: string | ArrayBuffer, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | string \| ArrayBuffer | 是 | 发送的数据内容。<br>**适用版本：** 9 - 11 |
+| data | string &#124; ArrayBuffer | 是 | 发送的数据内容。<br>**适用版本：** 9 - 11 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数,返回TLSSocket发送数据的结果。失败返回错误码、错误信息。 |
 
 **错误码：**
@@ -1797,7 +1797,7 @@ send(data: string | ArrayBuffer): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | string \| ArrayBuffer | 是 | 发送的数据内容。<br>**适用版本：** 9 - 11 |
+| data | string &#124; ArrayBuffer | 是 | 发送的数据内容。<br>**适用版本：** 9 - 11 |
 
 **返回值：**
 

@@ -35,7 +35,7 @@ Generates common parameters for a DH key based on the prime **p** length and the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pLen | number | Yes | Length of the prime **p**, in bits. |
-| skLen | number | No | Maximum length of the generated DH private key, in bits. The default value is **0**.When this parameter is set to **0**, the maximum length of the generated DH private key is as follows:ffdhe2048: 255 bits.ffdhe3072: 275 bits.ffdhe4096: 325 bits.ffdhe6144: 375 bits.ffdhe8192: 400 bits. |
+| skLen | number | No | Maximum length of the generated DH private key, in bits. The default value is **0**.<br> When this parameter is set to **0**, the maximum length of the generated DH private key is as follows:<br> ffdhe2048: 255 bits.<br>ffdhe3072: 275 bits.<br>ffdhe4096: 325 bits.<br>ffdhe6144: 375 bits.<br>ffdhe8192: 400 bits. |
 
 **Return value:**
 
@@ -47,7 +47,7 @@ Generates common parameters for a DH key based on the prime **p** length and the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |

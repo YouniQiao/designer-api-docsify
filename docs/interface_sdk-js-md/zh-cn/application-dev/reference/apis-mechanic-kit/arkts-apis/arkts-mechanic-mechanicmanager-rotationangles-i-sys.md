@@ -1,6 +1,6 @@
 # RotationAngles（系统接口）
 
-The rotion angles, relative to the current position.
+The rotion angles, relative to the current position. @typedef RotationAngles
 
 **起始版本：** 20
 

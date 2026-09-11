@@ -203,7 +203,7 @@ equalTo(field: string, value: number | string | boolean): Query
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 表示指定字段，不能包含' ^ '。 |
-| value | number \| string \| boolean | 是 | 表示指定的值。 |
+| value | number &#124; string &#124; boolean | 是 | 表示指定的值。 |
 
 **返回值：**
 
@@ -279,7 +279,7 @@ greaterThan(field: string, value: number | string | boolean): Query
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 表示指定字段，不能包含' ^ '。 |
-| value | number \| string \| boolean | 是 | 表示指定的值。 |
+| value | number &#124; string &#124; boolean | 是 | 表示指定的值。 |
 
 **返回值：**
 
@@ -321,7 +321,7 @@ greaterThanOrEqualTo(field: string, value: number | string): Query
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 表示指定字段，不能包含' ^ '。 |
-| value | number \| string | 是 | 表示指定的值。 |
+| value | number &#124; string | 是 | 表示指定的值。 |
 
 **返回值：**
 
@@ -529,7 +529,7 @@ lessThan(field: string, value: number | string): Query
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 表示指定字段，不能包含' ^ '。 |
-| value | number \| string | 是 | 表示指定的值。 |
+| value | number &#124; string | 是 | 表示指定的值。 |
 
 **返回值：**
 
@@ -571,7 +571,7 @@ lessThanOrEqualTo(field: string, value: number | string): Query
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 表示指定字段，不能包含' ^ '。 |
-| value | number \| string | 是 | 表示指定的值。 |
+| value | number &#124; string | 是 | 表示指定的值。 |
 
 **返回值：**
 
@@ -700,7 +700,7 @@ notEqualTo(field: string, value: number | string | boolean): Query
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 表示指定字段，不能包含' ^ '。 |
-| value | number \| string \| boolean | 是 | 表示指定的值。 |
+| value | number &#124; string &#124; boolean | 是 | 表示指定的值。 |
 
 **返回值：**
 

@@ -432,7 +432,7 @@ sendMessageRequest请求的响应处理函数，服务端在该函数里同步�
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean \| Promise&lt;boolean&gt; | 若在onRemoteMessageRequest中同步处理请求，则返回一个布尔值。返回true表示操作成功，返回false表示操作失败。 |
+| boolean &#124; Promise&lt;boolean&gt; | 若在onRemoteMessageRequest中同步处理请求，则返回一个布尔值。返回true表示操作成功，返回false表示操作失败。<br>- 若在onRemoteMessageRequest中异步处理请求，则返回一个Promise对象。返回true表示操作成功，返回false表示操作失败。 |
 
 **示例**
 
@@ -556,7 +556,7 @@ sendMessageRequest请求的响应处理函数，服务端在该函数里同步�
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean \| Promise&lt;boolean&gt; | 若在onRemoteMessageRequest中同步处理请求，则返回一个布尔值。返回true表示操作成功，返回false表示操作失败。 |
+| boolean &#124; Promise&lt;boolean&gt; | 若在onRemoteMessageRequest中同步处理请求，则返回一个布尔值。返回true表示操作成功，返回false表示操作失败。<br>- 若在onRemoteMessageRequest中异步处理请求，则返回一个Promise对象。返回true表示操作成功，返回false表示操作失败。 |
 
 **示例**
 
@@ -657,7 +657,7 @@ sendRequest请求的响应处理函数，服务端在该函数里处理请求，
 
 **废弃版本：** 9
 
-**替代接口：** [onRemoteMessageRequest](#onremotemessagerequest)(code: int, data: MessageSequence, reply: MessageSequence,
+**替代接口：** [onRemoteMessageRequest](#onremotemessagerequest)(code: number, data: MessageSequence, reply: MessageSequence,
      *     options: MessageOption)
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -927,7 +927,7 @@ sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: Me
 
 **废弃版本：** 8
 
-**替代接口：** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: int, data: MessageSequence, reply: MessageSequence,
+**替代接口：** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence,
      *     options: MessageOption)
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -1000,7 +1000,7 @@ sendRequest(
 
 **废弃版本：** 9
 
-**替代接口：** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: int, data: MessageSequence, reply: MessageSequence,
+**替代接口：** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence,
      *     options: MessageOption)
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -1084,7 +1084,7 @@ sendRequest(
 
 **废弃版本：** 9
 
-**替代接口：** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: int, data: MessageSequence, reply: MessageSequence,
+**替代接口：** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code: number, data: MessageSequence, reply: MessageSequence,
      *     options: MessageOption, callback: AsyncCallback&lt;RequestResult&gt;)
 
 **系统能力：** SystemCapability.Communication.IPC.Core

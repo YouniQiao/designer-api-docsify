@@ -34,7 +34,7 @@ simId?: number
 
 SIM card ID. The default value is the maximum value of the uint32_t type.
 
-**Note：**: If **type** is set to **cellular**, this field must be specified.
+**Note:** If **type** is set to **cellular**, this field must be specified.
 
 **Type:** number
 
@@ -64,7 +64,7 @@ type: NetBearType
 
 Network type.
 
-**Note：**: If **type** is set to **cellular**, the **simId** field must be specified.
+**Note:** If **type** is set to **cellular**, the **simId** field must be specified.
 
 **Type:** [NetBearType](arkts-network-statistics-netbeartype-t.md)
 

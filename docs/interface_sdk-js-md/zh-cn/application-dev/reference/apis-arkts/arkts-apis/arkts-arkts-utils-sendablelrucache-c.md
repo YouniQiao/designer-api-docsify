@@ -118,7 +118,7 @@ get(key: K): V | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| V \| undefined | 如果指定的键存在于缓存中，则返回与键关联的值；否则调用createDefault方法创建值。若createDefault返回非undefined值，则将该键值对添加到缓存中，并返回该值；若createDefault返回undefined，则最终返回undefined。当因添加新条目导致缓存中值的数量超过容量时，将淘汰最少使用的键值对。 |
+| V &#124; undefined | 如果指定的键存在于缓存中，则返回与键关联的值；否则调用createDefault方法创建值。若createDefault返回非undefined值，则将该键值对添加到缓存中，并返回该值；若createDefault返回undefined，则最终返回undefined。当因添加新条目导致缓存中值的数量超过容量时，将淘汰最少使用的键值对。 |
 
 ## getCapacity
 
@@ -331,7 +331,7 @@ remove(key: K): V | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| V \| undefined | 返回与key关联的值；若key不存在，则返回undefined。 |
+| V &#124; undefined | 返回与key关联的值；若key不存在，则返回undefined。 |
 
 ## toString
 

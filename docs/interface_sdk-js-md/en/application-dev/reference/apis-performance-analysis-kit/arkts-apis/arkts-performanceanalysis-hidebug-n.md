@@ -86,15 +86,15 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 | [GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md) | Enumerates the GWP-ASan configuration items. You can configure whether to enable GWP-Asan, the sampling frequency, and the maximum number of allocated slots. |
 | [RssInfo](arkts-performanceanalysis-hidebug-rssinfo-i.md) | Describes the physical memory information about an application process. |
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md) | Describes the key-value pair used to store GC statistics. This type does not support multi-thread operations. If this type is operated by multiple threads at the same time in an application, use a lock for it. |
+
 ### Enums
 
 | Name | Description |
 | --- | --- |
 | [TraceFlag](arkts-performanceanalysis-hidebug-traceflag-e.md) | Describes types of trace collection threads, including the main thread and all threads. |
 | [JsRawHeapTrimLevel](arkts-performanceanalysis-hidebug-jsrawheaptrimlevel-e.md) | Enumerates the trimming levels of the heap snapshot. |
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md) | Describes the key-value pair used to store GC statistics. This type does not support multi-thread operations. If this type is operated by multiple threads at the same time in an application, use a lock for it. |

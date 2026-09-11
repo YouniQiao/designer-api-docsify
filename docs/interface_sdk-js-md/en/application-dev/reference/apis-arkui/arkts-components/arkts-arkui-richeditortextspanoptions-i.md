@@ -1,6 +1,6 @@
 # RichEditorTextSpanOptions
 
-Describes the options for adding a text span.
+Defines the options for adding a text span.
 
 **Since:** 10
 
@@ -17,7 +17,9 @@ Describes the options for adding a text span.
 gesture?: RichEditorGesture
 ```
 
-Behavior-triggered callback. If this parameter is left empty, only the default system behavior is supported.
+Behavior trigger callback. Pass this parameter when the tap or long-press interaction behavior of a text span needs to be customized. If omitted, only the system default behavior is used.
+
+**Atomic service API:** Since API version 12, this API is supported in atomic services.
 
 **Type:** [RichEditorGesture](arkts-arkui-richeditorgesture-i.md)
 
@@ -35,9 +37,9 @@ Behavior-triggered callback. If this parameter is left empty, only the default s
 offset?: number
 ```
 
-Position of the text span to be added. If this parameter is omitted, the paragraph is added to the end of all content.
+Position of the text span to be added. If this parameter is omitted, the span is added to the end of all content.
 
-If the value specified is less than 0, the paragraph is placed at the beginning of all content. If the value is greater than the length of all content, the paragraph is placed at the end of all content.
+If the value specified is less than 0, the span is placed at the beginning of all content. If the value is greater than the length of all content, the span is placed at the end of all content.
 
 **Type:** number
 
@@ -55,7 +57,9 @@ If the value specified is less than 0, the paragraph is placed at the beginning 
 paragraphStyle?: RichEditorParagraphStyle
 ```
 
-Paragraph style.
+Paragraph style. Pass this parameter when paragraph-level layout properties such as text alignment, indentation, and line breaking rules need to be set. If not passed, the system default paragraph style (left-aligned, no indentation, word-based line breaking) is used.
+
+**Atomic service API:** Since API version 12, this API is supported in atomic services.
 
 **Type:** [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md)
 
@@ -73,7 +77,9 @@ Paragraph style.
 style?: RichEditorTextStyle
 ```
 
-Style of the text span to be added. If this parameter is left empty, the default text style will be used.
+Text style information. Pass this parameter when custom styles such as text color, font size, and font weight need to be set. If omitted, the system default text information is used.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)
 

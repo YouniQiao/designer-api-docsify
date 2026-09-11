@@ -1,4 +1,4 @@
-# distributedData
+# distributedData(Distributed Data Management)
 
 The distributed data management module implements collaboration between databases of different devices for applications. The APIs provided by distributed data management can be used to save data to distributed databases and perform operations such as adding, deleting, modifying, querying, and synchronizing data in distributed databases. This module provides the following functions:
 

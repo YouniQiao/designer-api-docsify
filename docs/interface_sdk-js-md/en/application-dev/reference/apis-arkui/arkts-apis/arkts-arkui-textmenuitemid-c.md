@@ -37,7 +37,7 @@ Checks whether this **TextMenuItemId** object is the same as another **TextMenuI
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the two **TextMenuItemId** objects are the same. |
+| boolean | Whether the two **TextMenuItemId** objects are the same.<br>**true** if the objects are equal; **false** otherwise. |
 
 ## of
 

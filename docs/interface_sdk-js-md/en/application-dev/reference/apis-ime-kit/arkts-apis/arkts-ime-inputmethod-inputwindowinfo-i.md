@@ -18,8 +18,7 @@ import { inputMethod } from '@kit.IMEKit';
 displayId?: number
 ```
 
-ID of the display where the soft keyboard window is located.   
-**Model restriction**: This parameter can be used only in the stage model.
+ID of the display where the soft keyboard window is located. <br> <br>**Model restriction**: This parameter can be used only in the stage model.
 
 **Type:** number
 

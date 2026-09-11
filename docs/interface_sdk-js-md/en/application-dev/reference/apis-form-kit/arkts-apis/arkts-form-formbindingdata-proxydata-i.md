@@ -2,6 +2,8 @@
 
 Defines the form proxy data.
 
+@typedef ProxyData
+
 **Since:** 10
 
 **System capability:** SystemCapability.Ability.Form

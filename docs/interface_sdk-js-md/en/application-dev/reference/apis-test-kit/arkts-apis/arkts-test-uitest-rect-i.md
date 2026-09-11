@@ -39,7 +39,7 @@ Y coordinate of the lower right corner of the component border, in pixels. The v
 displayId?: number
 ```
 
-ID of the display to which the component border belongs. The value is an integer greater than or equal to 0. Default value: the default screen ID of the device.
+ID of the display to which the component border belongs. The value is an integer greater than or equal to 0. <br>Default value: the default screen ID of the device.
 
 **Type:** number
 

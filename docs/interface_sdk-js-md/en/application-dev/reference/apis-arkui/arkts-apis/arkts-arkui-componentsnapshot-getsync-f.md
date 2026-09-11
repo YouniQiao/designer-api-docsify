@@ -14,7 +14,7 @@ function getSync(id: string, options?: SnapshotOptions): image.PixelMap
 
 Obtains the snapshot of a component that has been loaded based on the provided component ID. This API synchronously waits for the snapshot to complete and returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
 > update, the re-rendered content will not be included in the obtained snapshot.
@@ -44,7 +44,7 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
 | [160002](../errorcode-snapshot.md#160002-snapshot-timeout) | Timeout. |
 | [160003](../errorcode-snapshot.md#160003-color-space-or-dynamic-range-mode-set-in-screenshot-options-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |

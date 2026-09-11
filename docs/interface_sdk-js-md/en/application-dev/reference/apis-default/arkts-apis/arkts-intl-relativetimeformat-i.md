@@ -28,7 +28,7 @@ It is the caller's responsibility to handle cut-off logic such as deciding betwe
 
 | Type | Description |
 | --- | --- |
-| string | Internationalized relative time message as string |
+| string | Internationalized relative time message as string  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format). |
 
 ## formatToParts
 

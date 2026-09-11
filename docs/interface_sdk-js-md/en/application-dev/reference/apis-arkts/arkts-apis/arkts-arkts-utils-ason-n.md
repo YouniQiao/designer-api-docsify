@@ -27,16 +27,16 @@ import { ArkTSUtils } from '@kit.ArkTS';
 | --- | --- |
 | [ParseOptions](arkts-arkts-ason-parseoptions-i.md) | Parse's options |
 
-### Enums
-
-| Name | Description |
-| --- | --- |
-| [BigIntMode](arkts-arkts-ason-bigintmode-e.md) | Enum defining modes for handling bigint. |
-| [ParseReturnType](arkts-arkts-ason-parsereturntype-e.md) | The return types for parsing. |
-
 ### Types
 
 | Name | Description |
 | --- | --- |
 | [ISendable](arkts-arkts-ason-isendable-t.md) | Redefines ISendable for convenience. |
 | [Transformer](arkts-arkts-ason-transformer-t.md) | The type of conversion result function. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [BigIntMode](arkts-arkts-ason-bigintmode-e.md) | Enum defining modes for handling bigint. |
+| [ParseReturnType](arkts-arkts-ason-parsereturntype-e.md) | The return types for parsing. |

@@ -6,6 +6,8 @@ declare type Length = string | number | Resource
 
 定义包含字符串、数字和资源单位的长度属性。
 
+@typedef { string | number | Resource } Length
+
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。

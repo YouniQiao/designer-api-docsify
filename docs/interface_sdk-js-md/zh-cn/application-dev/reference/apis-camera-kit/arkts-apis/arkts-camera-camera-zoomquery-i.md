@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> - 本Interface的起始版本为API version 12。接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素
+> - 本Interface的起始版本为API version 12。接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素@since版本号大于内层元素的情况，不影响接口使用。
 
 **起始版本：** 12
 
@@ -90,7 +90,7 @@ getZoomRatioRange(): Array<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;number&gt; | 用于获取可变焦距比范围，返回的数组包括其最小值和最大值。接口调用失败会抛出相应错误码并返回undefined，错误码类型[CameraErrorCode]{ |
+| Array&lt;number&gt; | 用于获取可变焦距比范围，返回的数组包括其最小值和最大值。接口调用失败会抛出相应错误码并返回undefined，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。若当前设备不支持变焦，调用该接口会返回undefined。 |
 
 **错误码：**
 

@@ -20,7 +20,7 @@ onConfigurationUpdate(newConfig: Configuration): void
 
 Called when a system environment variable changes. You can override this callback to respond to changes in the system environment variables. For example, when the system language changes, the application can perform customized processing in the callback.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > There are certain restrictions when this callback is actually triggered. For example, if you set the application
 > language by calling [setLanguage](arkts-ability-applicationcontext-c.md#setlanguage), the
@@ -62,7 +62,7 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 
 Called when the available memory of the entire device changes to a specified level. You can override this callback to respond to changes in the memory level, for example, releasing cached data.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Releasing UI components in the **onMemoryLevel** callback may block the main thread tasks of the current process.
 > Therefore, you are advised not to release UI components in this callback.
@@ -79,7 +79,7 @@ Called when the available memory of the entire device changes to a specified lev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | [AbilityConstant.MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md) | Yes | Level of the available memory.   **NOTE：**The trigger conditions may differ across various devices. For example, on a standard device with 12 GB of memory: - When the available memory of the entire device drops to 1700 MB to 1800 MB, the **onMemoryLevel** callback of the MEMORY_LEVEL_MODERATE type is triggered, indicating that the available memory is moderate. - When the available memory of the entire device drops to 1600 MB to 1700 MB, the **onMemoryLevel** callback of the MEMORY_LEVEL_LOW type is triggered, indicating that the available memory is low. - When the available memory of the entire device drops below 1600 MB, the **onMemoryLevel** callback of the MEMORY_LEVEL_CRITICAL type is triggered, indicating that the available memory is critically low. |
+| level | [AbilityConstant.MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md) | Yes | Level of the available memory.<br>**NOTE:**<br>The trigger conditions may differ across various devices. For example, on a standard device with 12 GB of memory:<br>- When the available memory of the entire device drops to 1700 MB to 1800 MB, the **onMemoryLevel** callback of the MEMORY_LEVEL_MODERATE type is triggered, indicating that the available memory is moderate.<br>- When the available memory of the entire device drops to 1600 MB to 1700 MB, the **onMemoryLevel** callback of the MEMORY_LEVEL_LOW type is triggered, indicating that the available memory is low.<br>- When the available memory of the entire device drops below 1600 MB, the **onMemoryLevel** callback of the MEMORY_LEVEL_CRITICAL type is triggered, indicating that the available memory is critically low. |
 
 **Examples**
 

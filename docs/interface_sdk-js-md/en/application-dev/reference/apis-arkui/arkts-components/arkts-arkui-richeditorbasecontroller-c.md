@@ -19,7 +19,9 @@ Represents the base class of the **RichEditor** component controller.
 closeSelectionMenu(): void
 ```
 
-Closes the custom or default context menu on selection.
+Closes the custom selection menu or the system default selection menu.
+
+When the controller is not bound to a component or the component bound to the controller is released, this API call does not take effect.
 
 **Since:** 10
 
@@ -35,9 +37,9 @@ Closes the custom or default context menu on selection.
 deleteBackward(): void
 ```
 
-The capability of deleting characters is provided. If no content is selected, the character before the caret is deleted. If some content is selected, the selected content is deleted.
+Deletes the character before the caret or the selected content. If no content is selected, one character before the current caret position is deleted. If content is selected, the selected content is deleted.
 
-This API cannot be used in the pre-screen display scenario.
+This API is not supported in preview display scenarios.
 
 **Since:** 23
 
@@ -55,7 +57,7 @@ getCaretOffset(): number
 
 Obtains the current caret position.
 
-If the caret position cannot be obtained (for example, the controller is not bound to a component), -1 is returned.
+If the caret position cannot be obtained (for example, when the controller is not bound to the component), the return value is **-1**.
 
 **Since:** 10
 
@@ -77,7 +79,7 @@ If the caret position cannot be obtained (for example, the controller is not bou
 getCaretRect(): RectResult | undefined
 ```
 
-Obtains the relative position of the caret in the **RichEditor** component. If the caret is not blinking, the API returns **undefined**.
+Returns the position of the current caret relative to the RichEditor component. If the caret does not blink or the controller is not bound to a component, undefined is returned.
 
 **Since:** 18
 
@@ -91,7 +93,7 @@ Obtains the relative position of the caret in the **RichEditor** component. If t
 
 | Type | Description |
 | --- | --- |
-| [RectResult](arkts-arkui-rectresult-i.md) \| undefined | Relative position of the caret in the **RichEditor** component. |
+| [RectResult](arkts-arkui-rectresult-i.md) &#124; undefined | Relative position of the caret in the **RichEditor** component. |
 
 ## getLayoutManager
 
@@ -99,7 +101,7 @@ Obtains the relative position of the caret in the **RichEditor** component. If t
 getLayoutManager(): LayoutManager
 ```
 
-Obtains a **LayoutManager** object.
+Obtains the **LayoutManager** object.
 
 **Since:** 12
 
@@ -113,7 +115,7 @@ Obtains a **LayoutManager** object.
 
 | Type | Description |
 | --- | --- |
-| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) | LayoutManager** object. |
+| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) | Layout manager object, which can be used to obtain information such as the layout position of the component content.<br>Returns undefined when the controller is not bound to a component or the component bound to the controller is released. |
 
 ## getPreviewText
 
@@ -135,7 +137,7 @@ Obtains the preview text.
 
 | Type | Description |
 | --- | --- |
-| [PreviewText](../arkts-apis/arkts-arkui-previewtext-i.md) | Preview text. |
+| [PreviewText](../arkts-apis/arkts-arkui-previewtext-i.md) | Preview text information, including the candidate text content pre-displayed by the input method and its start position.<br>Returns undefined when the controller is not bound to a component or the component bound to the controller is released. |
 
 ## getTypingStyle
 
@@ -157,7 +159,7 @@ Obtains the preset text style of a user.
 
 | Type | Description |
 | --- | --- |
-| [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | Preset typing style. |
+| [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | A user-preset text input style object that contains style attributes such as font color, size, and weight. It can be used to query the input text style configuration of the current component.<br>When the controller is not bound to a component, or the component bound to the controller is released, undefined is returned. |
 
 ## isEditing
 
@@ -165,7 +167,7 @@ Obtains the preset text style of a user.
 isEditing(): boolean
 ```
 
-Obtains the editing state of this **RichEditor** component.
+Obtains the current editing state of the rich text. If the controller is not bound to a component or the component bound to the controller is released, false is returned.
 
 **Since:** 12
 
@@ -179,7 +181,7 @@ Obtains the editing state of this **RichEditor** component.
 
 | Type | Description |
 | --- | --- |
-| boolean | Editing state. The value **true** indicates the editing state, and **false** indicates the non -editing state. |
+| boolean | true indicates the editing state, and false indicates the non-editing state. |
 
 ## scrollToVisible
 
@@ -187,7 +189,7 @@ Obtains the editing state of this **RichEditor** component.
 scrollToVisible(range?: TextRange): void
 ```
 
-Scroll the input field component to make the specified content visible.
+Scrolls the content in the specified range into the visible area.
 
 **Since:** 26.0.0
 
@@ -199,7 +201,7 @@ Scroll the input field component to make the specified content visible.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | The visible range. If the parameter is invalid, this method will have no effect. |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | Content range to scroll into the visible area, including the start position and end position of the content.<br>The start position must be less than or equal to the end position; otherwise, the API call does not take effect. A start position less than 0 is treated as 0, and an end position greater than the total text length is treated as the total text length. <br>If no range is specified, all content is used by default. If no start position is specified, the start position defaults to 0; if no end position is specified, the end position defaults to the total text length. |
 
 ## setCaretOffset
 
@@ -207,7 +209,9 @@ Scroll the input field component to make the specified content visible.
 setCaretOffset(offset: number): boolean
 ```
 
-Sets the cursor offset.
+Sets the caret position.
+
+When the controller is not bound to a component or the component bound to the controller is released, this API returns false and the setting fails.
 
 **Since:** 10
 
@@ -227,7 +231,7 @@ Sets the cursor offset.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the caret offset is set successfully. |
+| boolean | Whether the caret offset is set successfully.<br>**true** if the caret offset is set successfully; **false** otherwise. |
 
 ## setSelection
 
@@ -235,20 +239,18 @@ Sets the cursor offset.
 setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void
 ```
 
-Sets the range of content selection. The selected content is highlighted.
+Selects the content in the component, and the backplate of the selected part is highlighted.
 
-If both selectionStart and selectionEnd are set to -1, all the content is selected. If both selectionStart and selectionEnd are set to 0, the selected content can be cleared.
+If both **selectionStart** and **selectionEnd** are set to **-1**, all content is selected. If both **selectionStart** and **selectionEnd** are set to **0**, the current selection is cleared.
 
 If this API is called when the text box is not focused, the selected effect is not displayed.
 
-Since API version 12, on 2-in-1 devices, regardless of the value of **options**, calling the **setSelection** API will not display the menu. In addition, if there is already a menu present within the component, calling the **setSelection** API will close the menu.
-
-On non-2-in-1 devices, when **options** is set to **MenuPolicy.DEFAULT**, the following rules apply:
+Since API version 12, on PC/2-in-1 devices (which can be determined by obtaining the device type through deviceInfo.deviceType), calling setSelection does not pop up a menu regardless of the value of options. If a menu already exists in the component, calling setSelection closes the menu. On non-PC/2-in-1 devices, when options is set to MenuPolicy.DEFAULT, the following rules apply:
 
 1. If the component has a selection handle menu, calling the API will not close the menu,
 and the menu position will be adjusted.
-2. If the component has a menu without a selection handle, calling the API will not close the menu,
-and the menu position will remain unchanged.
+2. If the component has a menu without a selection handle, calling the API will not
+close the menu, and the menu position will remain unchanged.
 3. If there is no menu within the component, calling the API will not display the menu.
 
 **Since:** 11
@@ -265,7 +267,7 @@ and the menu position will remain unchanged.
 | --- | --- | --- | --- |
 | selectionStart | number | Yes | Start position of the selection. |
 | selectionEnd | number | Yes | End position of the selection. |
-| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No | Configuration of options.<br>**Since:** 12 |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No | Selection option configuration, used to control the menu popup policy during selection operations.<br>Pass this parameter when you need to customize the menu popup behavior (such as forcing the menu to show or hide); <br>when omitted, MenuPolicy.DEFAULT is used by default, following the system default menu popup policy. <br>For the applicable scenarios of each MenuPolicy value, see the SelectionOptions object description.<br>**Since:** 12 |
 
 ## setStyledPlaceholder
 
@@ -273,7 +275,7 @@ and the menu position will remain unchanged.
 setStyledPlaceholder(styledString: StyledString): void
 ```
 
-Set the styledString placeholder.
+Sets the placeholder text of the styled string when there is no input.
 
 **Since:** 24
 
@@ -287,7 +289,7 @@ Set the styledString placeholder.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | The styledString for placeholder. If the parameter is invalid, this method will have no effect. |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | Sets the placeholder text of the styled string. It takes higher priority than the placeholder text set by the [placeholder](arkts-arkui-richeditor-comp-attribute.md#placeholder) attribute. <br>The placeholder text does not support gesture events bound to the [GestureStyle](../arkts-apis/arkts-arkui-gesturestyle-c.md) of the styled string, or hyperlink navigation provided by [UrlStyle](../arkts-apis/arkts-arkui-urlstyle-c.md). |
 
 ## setTypingParagraphStyle
 
@@ -295,7 +297,7 @@ Set the styledString placeholder.
 setTypingParagraphStyle(style: RichEditorParagraphStyle): void
 ```
 
-Sets the preset paragraph style. The input text takes effect only when the component content is empty or a line break is added at the end of the component.
+Sets the user-preset paragraph style. It takes effect only when the component content is empty or text is entered after a line break at the end of the component. When the controller is not bound to a component or the component bound to the controller is released, this API call does not take effect.
 
 **Since:** 20
 
@@ -319,6 +321,8 @@ setTypingStyle(value: RichEditorTextStyle): void
 
 Sets the preset typing style.
 
+When the controller is not bound to a component or the component bound to the controller is released, this API call does not take effect.
+
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
@@ -331,7 +335,7 @@ Sets the preset typing style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | Yes | Preset typing style. |
+| value | [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | Yes | Preset text input style, including font color, size, weight, and other attributes, used to set the default style for subsequently input text. |
 
 ## stopEditing
 
@@ -340,6 +344,8 @@ stopEditing(): void
 ```
 
 Exits the editing state.
+
+If the controller is not bound to a component or the component bound to the controller is released, this API call does not take effect.
 
 **Since:** 12
 

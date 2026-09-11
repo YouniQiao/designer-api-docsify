@@ -6,6 +6,8 @@ declare type PositionT<T> = import('../api/arkui/Graphics').PositionT<T>
 
 Defines the PositionT type.
 
+@typedef { import('../api/arkui/Graphics').PositionT&lt;T&gt; }
+
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.

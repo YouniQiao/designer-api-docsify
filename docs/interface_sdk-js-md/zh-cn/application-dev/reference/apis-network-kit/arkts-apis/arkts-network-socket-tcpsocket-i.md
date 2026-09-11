@@ -853,7 +853,7 @@ off(type: 'connect' | 'close', callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'connect' \| 'close' | 是 | 取消订阅的事件类型。   - 'connect'：连接事件。   - 'close'：关闭事件。 |
+| type | 'connect' &#124; 'close' | 是 | 取消订阅的事件类型。<br>- 'connect'：连接事件。<br>- 'close'：关闭事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **示例**
@@ -895,7 +895,7 @@ off(type: 'connect' | 'close', callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'connect' \| 'close' | 是 | 取消订阅的事件类型。   - 'connect'：连接事件。   - 'close'：关闭事件。 |
+| type | 'connect' &#124; 'close' | 是 | 取消订阅的事件类型。<br>- 'connect'：连接事件。<br>- 'close'：关闭事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **示例**
@@ -992,7 +992,7 @@ on(type: 'connect' | 'close', callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'connect' \| 'close' | 是 | 订阅的事件类型。   - 'connect'：连接事件。   - 'close'：关闭事件。 |
+| type | 'connect' &#124; 'close' | 是 | 订阅的事件类型。<br>- 'connect'：连接事件。<br>- 'close'：关闭事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。TCPSocket的连接事件或关闭事件触发时调用回调函数。 |
 
 **示例**
@@ -1026,7 +1026,7 @@ on(type: 'connect' | 'close', callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'connect' \| 'close' | 是 | 订阅的事件类型。   - 'connect'：连接事件。   - 'close'：关闭事件。 |
+| type | 'connect' &#124; 'close' | 是 | 订阅的事件类型。<br>- 'connect'：连接事件。<br>- 'close'：关闭事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。TCPSocket的连接事件或关闭事件触发时调用回调函数。 |
 
 **示例**

@@ -97,7 +97,7 @@ id: number | string
 
 id大于等于0小于2^32。
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **起始版本：** 12
 

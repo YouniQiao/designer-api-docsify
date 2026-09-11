@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-backgroundtaskskit-->
 
-- [@ohos.backgroundTaskManager](arkts-backgroundtaskmanager.md)
+- [@ohos.backgroundTaskManager(Background Task Management)](arkts-backgroundtaskmanager.md)
   - [cancelSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-cancelsuspenddelay-depr-f.md)
   - [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-depr-f.md)
   - [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md)
@@ -102,7 +102,7 @@
   - [ClearType(system api)](arkts-backgroundtasks-backgroundprocessmanager-cleartype-e-sys.md)<!--DelEnd-->
   - [PowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-powersavemode-e.md)
   - [ProcessPriority](arkts-backgroundtasks-backgroundprocessmanager-processpriority-e.md)
-- [@ohos.resourceschedule.backgroundTaskManager](arkts-resourceschedule-backgroundtaskmanager.md)
+- [@ohos.resourceschedule.backgroundTaskManager(Background Task Management)](arkts-resourceschedule-backgroundtaskmanager.md)
   <!--Del-->
   - [applyEfficiencyResources(system api)](arkts-backgroundtasks-backgroundtaskmanager-applyefficiencyresources-f-sys.md)<!--DelEnd-->
   - [cancelSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-cancelsuspenddelay-f.md)
@@ -232,7 +232,7 @@
   - [GroupType(system api)](arkts-backgroundtasks-usagestatistics-grouptype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [IntervalType(system api)](arkts-backgroundtasks-usagestatistics-intervaltype-e-sys.md)<!--DelEnd-->
-- [@ohos.resourceschedule.workScheduler](arkts-resourceschedule-workscheduler.md)
+- [@ohos.resourceschedule.workScheduler(Deferred Task Scheduling)](arkts-resourceschedule-workscheduler.md)
   - [getWorkStatus](arkts-backgroundtasks-workscheduler-getworkstatus-f.md)
   - [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md)
   - [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md)
@@ -252,10 +252,10 @@
   - [StorageRequest](arkts-backgroundtasks-workscheduler-storagerequest-e.md)
   <!--Del-->
   - [Constants(system api)](arkts-backgroundtasks-workscheduler-con-sys.md)<!--DelEnd-->
-- [@ohos.WorkSchedulerExtensionAbility](arkts-workschedulerextensionability.md)
+- [@ohos.WorkSchedulerExtensionAbility(Deferred Task Scheduling Callbacks)](arkts-workschedulerextensionability.md)
   - [WorkSchedulerExtensionAbility](arkts-backgroundtasks-workschedulerextensionability-c.md)
   - [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md)
 - application<!--arkts-backgroundtaskskit-application-->
-  - [WorkSchedulerExtensionContext](arkts-workschedulerextensioncontext.md)
+  - [WorkSchedulerExtensionContext(ExtensionAbility Context for Deferred Task Scheduling Callbacks)](arkts-workschedulerextensioncontext.md)
     <!--Del-->
     - [WorkSchedulerExtensionContext(system api)](arkts-backgroundtasks-workschedulerextensioncontext-c-sys.md)<!--DelEnd-->

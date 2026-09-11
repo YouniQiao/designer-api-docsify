@@ -29,7 +29,7 @@ Obtains the PIN authentication state. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[HuksExternalPinAuthState](arkts-universalkeystore-huksexternalcrypto-huksexternalpinauthstate-e.md)&gt; | Promise used to return the authentication result. |
+| Promise&lt;[HuksExternalPinAuthState](arkts-universalkeystore-huksexternalcrypto-huksexternalpinauthstate-e.md)&gt; | Promise used to return the authentication result.<br>**HUKS_EXT_CRYPTO_PIN_NO_AUTH**: The PIN authentication fails. **HUKS_EXT_CRYPTO_PIN_AUTH_SUCCEEDED**: The PIN authentication is successful. **HUKS_EXT_CRYPTO_PIN_LOCKED**: The PIN is locked. |
 
 **Error codes:**
 

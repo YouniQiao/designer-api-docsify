@@ -12,7 +12,7 @@ import { uiObserver } from '@kit.ArkUI';
 export function off(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callback?: Callback<NavDestinationInfo>): void
 ```
 
-取消监听NavDestination组件的状态变化。与uiObserver.off相比，新增了options参数，即支持指定监听的Navigation的id。
+取消监听NavDestination组件的状态变化。与[uiObserver.off](#offnavdestinationupdate)相比，新增了options参数，即支持指定监听的Navigation的id。
 
 **起始版本：** 11
 
@@ -194,7 +194,7 @@ export function off(type: 'routerPageUpdate', context: UIAbilityContext | UICont
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'routerPageUpdate' | 是 | 监听事件，固定为'routerPageUpdate'，即router中page页面的状态变化。 |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext | 是 | 上下文信息，用以指定监听页面的范围。 |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) &#124; UIContext | 是 | 上下文信息，用以指定监听页面的范围。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RouterPageInfo](arkts-arkui-uiobserver-routerpageinfo-c.md)&gt; | 否 | 需要被注销的回调函数。 |
 
 **示例**
@@ -374,7 +374,7 @@ export function off(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'navDestinationSwitch' | 是 | 监听事件，固定为'navDestinationSwitch'，即Navigation的页面切换事件。 |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext | 是 | 上下文信息，用以指定监听页面切换事件的范围。 |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) &#124; UIContext | 是 | 上下文信息，用以指定监听页面切换事件的范围。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md)&gt; | 否 | 需要被注销的回调函数。 |
 
 
@@ -389,7 +389,7 @@ export function off(
   ): void
 ```
 
-取消监听Navigation的页面切换事件。与uiObserver.off相比，新增了observerOptions参数，即支持设置监听选项。
+取消监听Navigation的页面切换事件。与[uiObserver.off](#offnavdestinationswitch)相比，新增了observerOptions参数，即支持设置监听选项。
 
 **起始版本：** 12
 
@@ -404,6 +404,6 @@ export function off(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'navDestinationSwitch' | 是 | 监听事件，固定为'navDestinationSwitch'，即Navigation的页面切换事件。 |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext | 是 | 上下文信息，用以指定监听页面切换事件的范围。 |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) &#124; UIContext | 是 | 上下文信息，用以指定监听页面切换事件的范围。 |
 | observerOptions | [NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | 是 | 监听选项。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md)&gt; | 否 | 需要被注销的回调函数。 |

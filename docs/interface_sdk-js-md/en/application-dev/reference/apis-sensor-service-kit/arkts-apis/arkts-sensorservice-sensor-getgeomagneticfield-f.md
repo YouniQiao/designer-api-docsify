@@ -18,7 +18,7 @@ Obtains the geomagnetic field of a geographic location. This API uses an asynchr
 
 **Deprecated since:** 9
 
-**Substitutes:** [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md)(locationOptions: LocationOptions, timeMillis: long, callback: AsyncCallback&lt;GeomagneticResponse&gt;)
+**Substitutes:** [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md)(locationOptions: LocationOptions, timeMillis: number, callback: AsyncCallback&lt;GeomagneticResponse&gt;)
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -61,7 +61,7 @@ Obtains the geomagnetic field of a geographic location. This API uses a promise 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md)(locationOptions: LocationOptions, timeMillis: long)
+**Substitutes:** [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md)(locationOptions: LocationOptions, timeMillis: number)
 
 **System capability:** SystemCapability.Sensors.Sensor
 

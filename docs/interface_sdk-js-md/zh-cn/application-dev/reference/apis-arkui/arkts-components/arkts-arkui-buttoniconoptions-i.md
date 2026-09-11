@@ -4,7 +4,7 @@
 
 > **说明：**
 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
@@ -23,7 +23,7 @@ hidden: string | PixelMap | Resource
 
 Defines whether an icon is hidden.
 
-**类型：** string \| [PixelMap](arkts-arkui-pixelmap-t.md) \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**类型：** string &#124; [PixelMap](arkts-arkui-pixelmap-t.md) &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 8
 
@@ -39,7 +39,7 @@ shown: string | PixelMap | Resource
 
 Defines whether an icon is shown.
 
-**类型：** string \| [PixelMap](arkts-arkui-pixelmap-t.md) \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**类型：** string &#124; [PixelMap](arkts-arkui-pixelmap-t.md) &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 8
 
@@ -55,7 +55,7 @@ switching?: string | PixelMap | Resource
 
 Defines whether an icon is switching.
 
-**类型：** string \| [PixelMap](arkts-arkui-pixelmap-t.md) \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**类型：** string &#124; [PixelMap](arkts-arkui-pixelmap-t.md) &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 8
 

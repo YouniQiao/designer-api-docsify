@@ -76,7 +76,7 @@ at(index: number): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T \| undefined | 返回指定索引处的元素；如果索引超出范围或无效，则返回**undefined**。 |
+| T &#124; undefined | 返回指定索引处的元素；如果索引超出范围或无效，则返回**undefined**。 |
 
 **错误码：**
 
@@ -287,7 +287,7 @@ copyWithin(target: number, start: number, end?: number): Array<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;T&gt; | 修改后的ArkTS Array。可能的原因： |
+| Array&lt;T&gt; | 修改后的ArkTS Array。可能的原因： 1. 必填参数未指定。 2. 参数类型不正确。 3. 参数校验失败。 |
 
 **错误码：**
 
@@ -509,7 +509,7 @@ find(predicate: (value: T, index: number, obj: Array<T>) => boolean): T | undefi
 
 | 类型 | 说明 |
 | --- | --- |
-| T \| undefined | 第一个满足条件的元素的值；如果所有元素都不满足条件，则返回**undefined**。 |
+| T &#124; undefined | 第一个满足条件的元素的值；如果所有元素都不满足条件，则返回**undefined**。 |
 
 **错误码：**
 
@@ -660,7 +660,7 @@ static from<T>(arrayLike: ArrayLike<T> | Iterable<T>, mapFn: ArrayFromMapFn<T, T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; \| Iterable&lt;T&gt; | 是 | 用于构造ArkTS Array的对象。 |
+| arrayLike | ArrayLike&lt;T&gt; &#124; Iterable&lt;T&gt; | 是 | 用于构造ArkTS Array的对象。 |
 | mapFn | [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md)&lt;T, T&gt; | 是 | 用于处理数组元素的函数。 |
 
 **返回值：**
@@ -687,7 +687,7 @@ static from<U, T>(arrayLike: ArrayLike<U> | Iterable<U>, mapFn: ArrayFromMapFn<U
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;U&gt; \| Iterable&lt;U&gt; | 是 | 用于构造ArkTS Array的对象。 |
+| arrayLike | ArrayLike&lt;U&gt; &#124; Iterable&lt;U&gt; | 是 | 用于构造ArkTS Array的对象。 |
 | mapFn | [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md)&lt;U, T&gt; | 是 | 用于处理数组元素的函数。 |
 
 **返回值：**
@@ -782,13 +782,13 @@ static isArray(value: Object | undefined | null): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Object \| undefined \| null | 是 | 需要检查的值。 |
+| value | Object &#124; undefined &#124; null | 是 | 需要检查的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 检查结果。如果传入的参数是ArkTS Array，则返回**true**；否则返回**false**。可能的原因： |
+| boolean | 检查结果。如果传入的参数是ArkTS Array，则返回**true**；否则返回**false**。可能的原因： 1. 必填参数未指定。 2. 参数类型不正确。 3. 参数校验失败。 |
 
 ## join
 
@@ -941,7 +941,7 @@ static of<T>(...items: T[]): Array<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;T&gt; | 新创建的ArkTS Array实例。可能的原因： |
+| Array&lt;T&gt; | 新创建的ArkTS Array实例。可能的原因： 1. 必填参数未指定。 2. 参数类型不正确。 3. 参数校验失败。 |
 
 ## pop
 
@@ -961,7 +961,7 @@ pop(): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T \| undefined | 从Array中移除的元素；如果Array为空，则返回**undefined**。 |
+| T &#124; undefined | 从Array中移除的元素；如果Array为空，则返回**undefined**。 |
 
 **错误码：**
 
@@ -1079,7 +1079,7 @@ reduce<U>(
 reduceRight<U = T>(callbackFn: ArrayReduceCallback<U, T, Array<T>>, initialValue: U): U
 ```
 
-此API与[reduceRight](#reduceright)方法类似，但它接受一个初始值作为第二个参数，用于在Array从右到左顺序遍历开始前初始化累加器。
+此API与[reduceRight](#reduceright-1)方法类似，但它接受一个初始值作为第二个参数，用于在Array从右到左顺序遍历开始前初始化累加器。
 
 **起始版本：** 18
 
@@ -1290,7 +1290,7 @@ shift(): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T \| undefined | 从Array中移除的元素；如果Array为空，则返回**undefined**。 |
+| T &#124; undefined | 从Array中移除的元素；如果Array为空，则返回**undefined**。 |
 
 **错误码：**
 
@@ -1623,6 +1623,12 @@ values(): IterableIterator<T>
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
 
 ## length
 

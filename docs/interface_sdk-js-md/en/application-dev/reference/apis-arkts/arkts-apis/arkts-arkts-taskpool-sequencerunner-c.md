@@ -46,7 +46,7 @@ constructor(name: string, priority?: Priority)
 
 A constructor used to create a **SequenceRunner** instance. This instance represents a global serial queue. If the passed-in name is the same as an existing name, the same serial queue is returned.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The bottom layer uses the singleton mode to ensure that the same instance is obtained when a serial queue
 > with the same name is created.
@@ -80,7 +80,7 @@ execute(task: Task): Promise<Object>
 
 Adds a task to the serial queue for execution. Before using this API, you must create a **SequenceRunner** instance. Tasks in another task group, serial queue, or asynchronous queue, dependent tasks, and tasks that have been executed cannot be added to the serial queue. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Tasks that depend others cannot be added to the serial queue.
 > 

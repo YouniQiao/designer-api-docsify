@@ -45,7 +45,7 @@ GestureType: gesture event type;
 
 PageUpdateType: page update type.
 
-**Type:** [accessibility.EventType](arkts-accessibility-accessibility-eventtype-t.md) \| [accessibility.WindowUpdateType](arkts-accessibility-accessibility-windowupdatetype-t.md) \| [TouchGuideType](arkts-accessibility-touchguidetype-t.md) \| [GestureType](arkts-accessibility-gesturetype-t.md) \| [PageUpdateType](arkts-accessibility-pageupdatetype-t.md)
+**Type:** [accessibility.EventType](arkts-accessibility-accessibility-eventtype-t.md) &#124; [accessibility.WindowUpdateType](arkts-accessibility-accessibility-windowupdatetype-t.md) &#124; [TouchGuideType](arkts-accessibility-touchguidetype-t.md) &#124; [GestureType](arkts-accessibility-gesturetype-t.md) &#124; [PageUpdateType](arkts-accessibility-pageupdatetype-t.md)
 
 **Since:** 9
 

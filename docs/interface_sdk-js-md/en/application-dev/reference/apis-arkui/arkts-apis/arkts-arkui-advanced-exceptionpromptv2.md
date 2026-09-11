@@ -36,8 +36,8 @@ import { MarginTypeV2, PromptOptionsV2, PromptOptionsV2Config, ExceptionPromptV2
 
 | Name | Description |
 | --- | --- |
-| [OnActionTextClickCallback](arkts-arkui-onactiontextclickcallback-t.md) | Declare the callback function type to be called when clicking the icon button. |
-| [OnTipClickCallback](arkts-arkui-ontipclickcallback-t.md) | Declare the callback function type to be called when clicking the text on the left. |
+| [OnActionTextClickCallback](arkts-arkui-onactiontextclickcallback-t.md) | Declare the callback function type to be called when clicking the icon button. @typedef { function } OnActionTextClickCallback |
+| [OnTipClickCallback](arkts-arkui-ontipclickcallback-t.md) | Declare the callback function type to be called when clicking the text on the left. @typedef { function } OnTipClickCallback |
 
 ## Examples
 

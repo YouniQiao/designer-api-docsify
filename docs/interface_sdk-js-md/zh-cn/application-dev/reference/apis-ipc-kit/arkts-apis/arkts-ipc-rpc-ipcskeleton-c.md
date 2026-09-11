@@ -75,7 +75,7 @@ static flushCommands(object: IRemoteObject): number
 
 **废弃版本：** 9
 
-**替代接口：** static
+**替代接口：** [flushCmdBuffer](#flushcmdbuffer)(object: IRemoteObject)
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -473,7 +473,7 @@ static setCallingIdentity(identity: string): boolean
 
 **废弃版本：** 9
 
-**替代接口：** static
+**替代接口：** [restoreCallingIdentity](#restorecallingidentity)(identity: string)
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 

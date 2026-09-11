@@ -52,7 +52,7 @@ parameter?: LoopMode | string | number
 
 parameter of the command. Whether this command requires parameters, see AVSessionCommand seek command requires a number parameter setSpeed command requires a number parameter setLoopMode command requires a [LoopMode](arkts-avsession-avsession-loopmode-e.md) parameter. toggleFavorite command requires assetId [assetId](arkts-avsession-avsession-avmetadata-i.md#assetid) parameter other commands need no parameter
 
-**Type:** [LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| number
+**Type:** [LoopMode](arkts-avsession-avsession-loopmode-e.md) &#124; string &#124; number
 
 **Since:** 10
 

@@ -27,7 +27,7 @@ function getRunningFormInfos(callback: AsyncCallback<Array<formInfo.RunningFormI
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt;&gt; | 是 | 回调函数。获取设备上正在运行的所有非临时卡片信息。当获取卡片信息成功时，error为undefined，data为查询到的卡片信息。 |
-| hostBundleName | string | 否 | 指定要查询的卡片使用方名称，指定后会仅返回该卡片使用方下正在运行的非临时卡片信息。缺省时，返回设备上所有正在运行的非临时卡片信息。 |
+| hostBundleName | string | 否 | 指定要查询的卡片使用方名称，指定后会仅返回该卡片使用方下正在运行的非临时卡片信息。<br> 缺省时，返回设备上所有正在运行的非临时卡片信息。 |
 
 **错误码：**
 
@@ -86,8 +86,8 @@ function getRunningFormInfos(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[formInfo.RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)&gt;&gt; | 是 | 回调函数。获取设备上正在运行的所有非临时卡片信息。当获取成功时，回调中的error为undefined，data为查询到的卡片信息。 |
-| isUnusedIncluded | boolean | 是 | 表示是否包含未使用的卡片。true: 表示包含未使用的卡片。false: 表示不包含未使用的卡片。 |
-| hostBundleName | string | 否 | 指定要查询的卡片使用方名称，指定后会仅返回该卡片使用方下正在运行的非临时卡片信息。缺省时，返回设备上所有正在运行的非临时卡片信息。 |
+| isUnusedIncluded | boolean | 是 | 表示是否包含未使用的卡片。<br>true: 表示包含未使用的卡片。<br>false: 表示不包含未使用的卡片。 |
+| hostBundleName | string | 否 | 指定要查询的卡片使用方名称，指定后会仅返回该卡片使用方下正在运行的非临时卡片信息。<br> 缺省时，返回设备上所有正在运行的非临时卡片信息。 |
 
 **错误码：**
 
@@ -141,7 +141,7 @@ function getRunningFormInfos(hostBundleName?: string): Promise<Array<formInfo.Ru
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hostBundleName | string | 否 | 指定要查询的卡片使用方名称，指定后会仅返回该卡片使用方下正在运行的非临时卡片信息。缺省时，返回设备上所有正在运行的非临时卡片信息。 |
+| hostBundleName | string | 否 | 指定要查询的卡片使用方名称，指定后会仅返回该卡片使用方下正在运行的非临时卡片信息。<br> 缺省时，返回设备上所有正在运行的非临时卡片信息。 |
 
 **返回值：**
 
@@ -200,8 +200,8 @@ function getRunningFormInfos(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isUnusedIncluded | boolean | 是 | 表示是否包含未使用的卡片。true: 表示包含未使用的卡片。false: 表示不包含未使用的卡片。 |
-| hostBundleName | string | 否 | 指定要查询的卡片使用方名称，指定后会仅返回该卡片使用方下正在运行的非临时卡片信息。缺省时，返回设备上所有正在运行的非临时卡片信息。 |
+| isUnusedIncluded | boolean | 是 | 表示是否包含未使用的卡片。<br>true: 表示包含未使用的卡片。<br>false: 表示不包含未使用的卡片。 |
+| hostBundleName | string | 否 | 指定要查询的卡片使用方名称，指定后会仅返回该卡片使用方下正在运行的非临时卡片信息。<br> 缺省时，返回设备上所有正在运行的非临时卡片信息。 |
 
 **返回值：**
 

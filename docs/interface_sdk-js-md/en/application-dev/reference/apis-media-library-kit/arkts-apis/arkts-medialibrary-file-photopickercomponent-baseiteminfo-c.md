@@ -186,7 +186,7 @@ URI of the image or video.
 
 This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
-**NOTE：**
+**NOTE:**
 
 If the resource is a burst shot photo, only the cover image of the burst shot photo group is returned.
 

@@ -74,7 +74,7 @@ Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) object
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | Promise used to return the { |
+| Promise&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | Promise used to return the [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) object. |
 
 **Examples**
 

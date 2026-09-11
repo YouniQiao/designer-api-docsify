@@ -28,7 +28,7 @@ Queries the Wi-Fi status
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the Wi-Fi is active, returns `false` otherwise. |
 
 **Examples**
 

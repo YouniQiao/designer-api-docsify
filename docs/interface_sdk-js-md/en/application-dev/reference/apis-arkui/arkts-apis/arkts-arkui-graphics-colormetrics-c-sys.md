@@ -214,4 +214,4 @@ Check if ColorMetrics represents an HDR color. Returns true if color was created
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether ColorMetrics is an HDR color. Returns true if: |
+| boolean | Whether ColorMetrics is an HDR color. Returns true if:   - The color was created using createHDRColorWithXx() method.   - Any RGB channel value is greater than 1.0. |

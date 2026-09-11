@@ -11,4 +11,4 @@
 source: "startRange" | "endRange" | "shared"
 ```
 
-**Type:** "startRange" \| "endRange" \| "shared"
+**Type:** "startRange" &#124; "endRange" &#124; "shared"

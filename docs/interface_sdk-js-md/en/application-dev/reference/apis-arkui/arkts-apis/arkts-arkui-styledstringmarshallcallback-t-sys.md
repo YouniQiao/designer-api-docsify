@@ -24,4 +24,4 @@ Defines a callback for marshalling [StyledStringMarshallingValue](arkts-arkui-st
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | Marshaled data of [StyledStringMarshallingValue]{ |
+| ArrayBuffer | Marshaled data of [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md). |

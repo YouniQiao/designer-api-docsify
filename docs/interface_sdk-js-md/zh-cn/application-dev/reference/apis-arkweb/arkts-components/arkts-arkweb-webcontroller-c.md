@@ -195,7 +195,7 @@ getCookieManager(): WebCookie
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebCookie](arkts-arkweb-webcookie-c.md) | Web组件cookie管理对象，参考[WebCookie]{ |
+| [WebCookie](arkts-arkweb-webcookie-c.md) | Web组件cookie管理对象，参考WebCookie定义。 |
 
 ## getHitTest
 
@@ -269,7 +269,7 @@ loadUrl(options: { url: string | Resource, headers?: Array<Header> })
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | { url: string \| Resource, headers?: Array&lt;[Header](arkts-arkweb-header-i.md)&gt; } | 是 | The options with the URL and other information. |
+| options | { url: string &#124; Resource, headers?: Array&lt;[Header](arkts-arkweb-header-i.md)&gt; } | 是 | The options with the URL and other information. |
 
 ## onActive
 

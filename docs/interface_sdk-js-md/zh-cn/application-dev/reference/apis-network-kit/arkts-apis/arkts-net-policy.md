@@ -50,16 +50,16 @@ import { policy } from '@kit.NetworkKit';
 | [isUidNetAllowed](arkts-network-policy-isuidnetallowed-f-sys.md) | 判断对应 uid 能否访问计量或非计量网络，使用 Promise 异步回调。 |
 | [isUidNetAllowed](arkts-network-policy-isuidnetallowed-f-sys.md) | 获取对应 uid 能否访问指定的 iface 的网络，使用 callback 异步回调。 |
 | [isUidNetAllowed](arkts-network-policy-isuidnetallowed-f-sys.md) | 获取对应 uid 能否访问指定的 iface 的网络，使用 Promise 异步回调。 |
-| off | 注销 policy 发生改变时的回调，使用 callback 异步回调。 |
-| off | 注销 rule 发生改变时的回调，使用 callback 异步回调。 |
-| off | 注销计量 iface 发生改变时的回调，使用 callback 异步回调。 |
-| off | 注销计量网络策略发生改变时的回调，使用 callback 异步回调。 |
-| off | 注销后台网络策略发生改变时的回调，使用 callback 异步回调。 |
-| on | 注册 policy 发生改变时的回调，使用 callback 异步回调。 |
-| on | 注册 rule 发生改变时的回调，使用 callback 异步回调。 |
-| on | 注册计量 iface 发生改变时的回调，使用 callback 异步回调。 |
-| on | 注册计量网络策略发生改变时的回调，使用 callback 异步回调。 |
-| on | 注册后台网络策略发生改变时的回调，使用 callback 异步回调。 |
+| [off](arkts-network-policy-off-f-sys.md#offnetuidpolicychange) | 注销 policy 发生改变时的回调，使用 callback 异步回调。 |
+| [off](arkts-network-policy-off-f-sys.md#offnetuidrulechange) | 注销 rule 发生改变时的回调，使用 callback 异步回调。 |
+| [off](arkts-network-policy-off-f-sys.md#offnetmeteredifaceschange) | 注销计量 iface 发生改变时的回调，使用 callback 异步回调。 |
+| [off](arkts-network-policy-off-f-sys.md#offnetquotapolicychange) | 注销计量网络策略发生改变时的回调，使用 callback 异步回调。 |
+| [off](arkts-network-policy-off-f-sys.md#offnetbackgroundpolicychange) | 注销后台网络策略发生改变时的回调，使用 callback 异步回调。 |
+| [on](arkts-network-policy-on-f-sys.md#onnetuidpolicychange) | 注册 policy 发生改变时的回调，使用 callback 异步回调。 |
+| [on](arkts-network-policy-on-f-sys.md#onnetuidrulechange) | 注册 rule 发生改变时的回调，使用 callback 异步回调。 |
+| [on](arkts-network-policy-on-f-sys.md#onnetmeteredifaceschange) | 注册计量 iface 发生改变时的回调，使用 callback 异步回调。 |
+| [on](arkts-network-policy-on-f-sys.md#onnetquotapolicychange) | 注册计量网络策略发生改变时的回调，使用 callback 异步回调。 |
+| [on](arkts-network-policy-on-f-sys.md#onnetbackgroundpolicychange) | 注册后台网络策略发生改变时的回调，使用 callback 异步回调。 |
 | [resetPolicies](arkts-network-policy-resetpolicies-f-sys.md) | 重置对应 sim 卡 id 的蜂窝网络、后台网络策略、防火墙策略、应用对应的策略，使用 callback 异步回调。 |
 | [resetPolicies](arkts-network-policy-resetpolicies-f-sys.md) | 重置对应 sim 卡 id 的蜂窝网络、后台网络策略、防火墙策略、应用对应的策略，使用 Promise 异步回调。 |
 | [restoreAllPolicies](arkts-network-policy-restoreallpolicies-f-sys.md) | 根据指定的SIM卡识别码，恢复所有网络管理相关的策略配置，如UID策略、配额策略、防火墙规则等。 |

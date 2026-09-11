@@ -30,10 +30,10 @@ import { vpn } from '@kit.NetworkKit';
 | [getConnectedVpnAppInfo](arkts-network-vpn-getconnectedvpnappinfo-f-sys.md) | 获取已连接的VPN应用信息。 |
 | [getSysVpnConfig](arkts-network-vpn-getsysvpnconfig-f-sys.md) | 获取指定vpnId的系统VPN网络配置。 |
 | [getSysVpnConfigList](arkts-network-vpn-getsysvpnconfiglist-f-sys.md) | 获取所有系统VPN网络配置。 |
-| off | 取消订阅VPN连接状态变化事件。 |
-| off | 取消订阅VPN连接状态变化事件。 |
-| on | 订阅VPN连接状态变化事件。 |
-| on | 订阅VPN连接状态变化事件。 |
+| [off](arkts-network-vpn-off-f-sys.md#offconnect) | 取消订阅VPN连接状态变化事件。 |
+| [off](arkts-network-vpn-off-f-sys.md#offconnectmulti) | 取消订阅VPN连接状态变化事件。 |
+| [on](arkts-network-vpn-on-f-sys.md#onconnect) | 订阅VPN连接状态变化事件。 |
+| [on](arkts-network-vpn-on-f-sys.md#onconnectmulti) | 订阅VPN连接状态变化事件。 |
 <!--DelEnd-->
 
 <!--Del-->

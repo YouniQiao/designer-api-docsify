@@ -2,7 +2,7 @@
 
 **AtomicServiceWeb** is an advanced web component offering customization to meet specific demands. It shields irrelevant APIs from the native **Web** component and extends functionality through JavaScript capabilities.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
 
@@ -128,7 +128,7 @@ nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt
 
 Sets the nested scroll options.
 
-**Type:** [NestedScrollOptions](../arkts-components/arkts-arkui-nestedscrolloptions-i.md) \| [NestedScrollOptionsExt](../../apis-arkweb/arkts-components/arkts-arkweb-nestedscrolloptionsext-i.md)
+**Type:** [NestedScrollOptions](../arkts-components/arkts-arkui-nestedscrolloptions-i.md) &#124; [NestedScrollOptionsExt](../../apis-arkweb/arkts-components/arkts-arkweb-nestedscrolloptionsext-i.md)
 
 **Since:** 15
 

@@ -1,6 +1,6 @@
 # ClientAuthenticationHandler
 
-ClientAuthenticationHandler是Web组件中处理SSL客户端证书认证请求的类。当服务器请求客户端证书进行TLS双向认证时，该处理器通过`onClientAuthenticationRequest`事件回调提供给应用，允许应用选择合适的证书凭据进行响应。示例代码参考[onClientAuthenticationRequest](arkts-arkweb-web-attribute.md#onclientauthenticationrequest)事件。
+ClientAuthenticationHandler是Web组件中处理SSL客户端证书认证请求的类。当服务器请求客户端证书进行TLS双向认证时，该处理器通过`onClientAuthenticationRequest`事件回调提供给应用，允许应用选择合适的证书凭据进行响应。示例代码参考[onClientAuthenticationRequest](arkts-arkweb-web-comp-attribute.md#onclientauthenticationrequest)事件。
 
 **起始版本：** 9
 
@@ -83,7 +83,7 @@ confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | identity | string | 是 | 用于识别凭据的唯一标识值。 |
-| credentialTypeOrCertChainFile | [CredentialType](arkts-arkweb-credentialtype-e.md) \| string | 是 | 类型为CredentialType时，代表凭据类型；类型为string时，表示证书链文件路径。 |
+| credentialTypeOrCertChainFile | [CredentialType](arkts-arkweb-credentialtype-e.md) &#124; string | 是 | 类型为CredentialType时，代表凭据类型；类型为string时，表示证书链文件路径。 |
 
 **错误码：**
 

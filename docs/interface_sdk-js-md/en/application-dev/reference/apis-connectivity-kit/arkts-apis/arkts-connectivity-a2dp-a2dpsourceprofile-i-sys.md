@@ -341,7 +341,7 @@ Obtains the duration for which automatic playback is disabled.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns the duration &lt;milliseconds&gt;; If returns { |
+| Promise&lt;number&gt; | Returns the duration &lt;milliseconds&gt;; If returns { @code -1 } means allow devices automatic play music when connected. |
 
 **Error codes:**
 

@@ -32,7 +32,7 @@ Sets the background color of the toolbar. By overriding this API, you can implem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| backgroundColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Toolbar background color Default value: **\\$r('sys.color.ohos_id_color_toolbar_bg') |
+| backgroundColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Toolbar background color<br>Default value: **\&#36;r('sys.color.ohos_id_color_toolbar_bg') |
 
 **Return value:**
 
@@ -60,7 +60,7 @@ Sets the height of the toolbar. By overriding this API, you can implement custom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Yes | Height of the toolbar. The default height of the toolbar is 56 vp, which does not include the divider. |
+| height | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Yes | Height of the toolbar.<br>The default height of the toolbar is 56 vp, which does not include the divider. |
 
 **Return value:**
 
@@ -88,7 +88,7 @@ Sets the left and right padding of the toolbar. By overriding this API, you can 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| padding | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Yes | Left and right padding of the toolbar, which is effective only when there are fewer than five items. By default, the padding is 24 vp when there are fewer than five items and 0 when there are five or more items. |
+| padding | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Yes | Left and right padding of the toolbar, which is effective only when there are fewer than five items.<br>By default, the padding is 24 vp when there are fewer than five items and 0 when there are five or more items. |
 
 **Return value:**
 
@@ -116,7 +116,7 @@ Sets whether to display the pressed state effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stateEffect | boolean | Yes | Whether to display the pressed state effect on the toolbar. The value **true** means to display the pressed state effect on the toolbar, and **false** means the opposite. Default value: **true |
+| stateEffect | boolean | Yes | Whether to display the pressed state effect on the toolbar.<br>The value **true** means to display the pressed state effect on the toolbar, and **false** means the opposite. <br>Default value: **true |
 
 **Return value:**
 

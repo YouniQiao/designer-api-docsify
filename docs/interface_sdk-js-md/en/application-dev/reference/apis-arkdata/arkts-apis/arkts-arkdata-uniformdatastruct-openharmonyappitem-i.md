@@ -116,7 +116,7 @@ details?: Record<string, number | number | number | string | Uint8Array>
 
 Object of the dictionary type used to describe the icon. The key is of the string type, and the value can be a number, a string, or a Uint8Array. By default, it is an empty dictionary object.
 
-**Type:** Record&lt;string, number \| number \| number \| string \| Uint8Array&gt;
+**Type:** Record&lt;string, number &#124; number &#124; number &#124; string &#124; Uint8Array&gt;
 
 **Since:** 12
 

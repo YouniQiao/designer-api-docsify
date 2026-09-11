@@ -12,7 +12,7 @@ import { selectionManager } from '@kit.BasicServicesKit';
 function on(type: 'selectionCompleted', callback: Callback<SelectionInfo>): void
 ```
 
-订阅划词完成事件，与off('selectionCompleted')搭配使用取消订阅。
+订阅划词完成事件，与[off('selectionCompleted')](arkts-basicservices-selectionmanager-off-f.md#offselectioncompleted)搭配使用取消订阅。
 
 **起始版本：** 24
 

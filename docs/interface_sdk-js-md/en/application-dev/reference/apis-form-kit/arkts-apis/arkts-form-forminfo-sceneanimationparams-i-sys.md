@@ -2,6 +2,8 @@
 
 The scene animation form params.
 
+@typedef { SceneAnimationParams }
+
 **Since:** 20
 
 **System capability:** SystemCapability.Ability.Form

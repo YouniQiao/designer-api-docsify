@@ -6,7 +6,7 @@ WebContextMenuParam是ArkWeb组件中用于承载长按页面元素或鼠标右�
 
 自定义Web组件长按或右键菜单（如替换默认菜单、根据不同元素类型提供差异化菜单项、预览图片等）时，在`onContextMenuShow`事件回调中使用WebContextMenuParam获取上下文信息。
 
-示例代码参考[onContextMenuShow](arkts-arkweb-web-attribute.md#oncontextmenushow)。
+示例代码参考[onContextMenuShow](arkts-arkweb-web-comp-attribute.md#oncontextmenushow)。
 
 **起始版本：** 9
 
@@ -87,7 +87,7 @@ getEditStateFlags(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 获取网页元素可编辑标识，参照[ContextMenuEditStateFlags]{ |
+| number | 获取网页元素可编辑标识，参照[ContextMenuEditStateFlags](arkts-arkweb-contextmenueditstateflags-e.md)。 |
 
 ## getInputFieldType
 
@@ -174,7 +174,7 @@ getPreviewHeight(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 预览图的高。 |
+| number | 预览图的高。<br>单位：px（物理像素）。 |
 
 ## getPreviewWidth
 
@@ -192,7 +192,7 @@ getPreviewWidth(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 预览图的宽。 |
+| number | 预览图的宽。<br>单位：px（物理像素）。 |
 
 ## getSelectionText
 
@@ -312,7 +312,7 @@ x(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 获取成功时返回非负整数，失败时返回-1。 |
+| number | 获取成功时返回非负整数，失败时返回-1。<br>单位：px（物理像素）。 |
 
 ## y
 
@@ -332,4 +332,4 @@ y(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 获取成功时返回非负整数，失败时返回-1。 |
+| number | 获取成功时返回非负整数，失败时返回-1。<br>单位：px（物理像素）。 |

@@ -2,7 +2,7 @@
 
 A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > **Decorator**: \@Sendable
@@ -69,7 +69,7 @@ Returns the element at the given index. If no element is found, **undefined** is
 
 | Type | Description |
 | --- | --- |
-| number \| undefined | Element obtained. If no element is found, **undefined** is returned. |
+| number &#124; undefined | Element obtained. If no element is found, **undefined** is returned. |
 
 **Error codes:**
 
@@ -168,7 +168,7 @@ A constructor that creates an ArkTS Int8Array from an array-like object or ArkTS
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; \| ArrayBuffer | Yes | Object used to construct the ArkTS Int8Array. When the parameter type is ArrayBuffer, the number of bytes occupied by the buffer must be an integer multiple of 1. |
+| array | ArrayLike&lt;number&gt; &#124; ArrayBuffer | Yes | Object used to construct the ArkTS Int8Array. When the parameter type is ArrayBuffer, the number of bytes occupied by the buffer must be an integer multiple of 1. |
 
 **Error codes:**
 
@@ -397,7 +397,7 @@ Returns the value of the first element that passes a test provided by a callback
 
 | Type | Description |
 | --- | --- |
-| number \| undefined | Value of the first element that passes the test. If none of the elements pass the test, **undefined** is returned. |
+| number &#124; undefined | Value of the first element that passes the test. If none of the elements pass the test, **undefined** is returned. |
 
 **Error codes:**
 
@@ -769,7 +769,7 @@ Creates an ArkTS Int8Array with a variable number of parameters.
 
 | Type | Description |
 | --- | --- |
-| Int8Array | New ArkTS Int8Array instance. Possible causes: 1. Mandatory parameters are left unspecified; |
+| Int8Array | New ArkTS Int8Array instance. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## reduce
 
@@ -891,7 +891,7 @@ Reversely traverses this ArkTS Int8Array, applies a reduce function for each ele
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Int8Array&gt; | Yes | A function that is called for each element in the Int8Array. |
-| initialValue | U | Yes | A value to use as the first argument to the first call of the callback. If no initial value is provided, the last element of the Int8Array will be used, and the callback will start with the second-to-last element. |
+| initialValue | U | Yes | A value to use as the first argument to the first call of the callback.<br>If no initial value is provided, the last element of the Int8Array will be used, <br>and the callback will start with the second-to-last element. |
 
 **Return value:**
 

@@ -6,6 +6,8 @@ declare type DrawContext = import('../api/arkui/Graphics').DrawContext
 
 DrawContext
 
+@typedef { import('../api/arkui/Graphics').DrawContext } DrawContext
+
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。

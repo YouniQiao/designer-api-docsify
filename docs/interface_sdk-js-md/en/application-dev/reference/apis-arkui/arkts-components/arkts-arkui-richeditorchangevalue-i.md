@@ -1,6 +1,6 @@
 # RichEditorChangeValue
 
-Image and text change information.
+Defines image and text change information.
 
 **Since:** 12
 

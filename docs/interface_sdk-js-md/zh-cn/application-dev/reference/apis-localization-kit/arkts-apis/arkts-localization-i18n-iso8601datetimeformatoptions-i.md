@@ -28,7 +28,7 @@ dateFormat?: 'calendar' | 'ordinal' | 'week'
 
 默认值：**calendar**。模式中字符含义参考[日期字段符号表](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)。
 
-**类型：** 'calendar' \| 'ordinal' \| 'week'
+**类型：** 'calendar' &#124; 'ordinal' &#124; 'week'
 
 **起始版本：** 26.0.0
 
@@ -70,7 +70,7 @@ separatorStyle?: 'extended' | 'basic'
 
 默认值：**extended**。
 
-**类型：** 'extended' \| 'basic'
+**类型：** 'extended' &#124; 'basic'
 
 **起始版本：** 26.0.0
 
@@ -100,7 +100,7 @@ timePrecision?: 'dateOnly' | 'hours' | 'minutes' | 'seconds' | 'milliSeconds'
 
 默认值：**seconds**。
 
-**类型：** 'dateOnly' \| 'hours' \| 'minutes' \| 'seconds' \| 'milliSeconds'
+**类型：** 'dateOnly' &#124; 'hours' &#124; 'minutes' &#124; 'seconds' &#124; 'milliSeconds'
 
 **起始版本：** 26.0.0
 

@@ -14,7 +14,7 @@ function getChildProcessInfos(): Promise<Array<ChildProcessInformation>>
 
 Obtains the information about the child processes of the current application. This API uses a promise to return the result. The returned child processes include those created through [startChildProcess](arkts-ability-childprocessmanager-startchildprocess-f.md) (in APP_SPAWN_FORK mode), [startArkChildProcess](arkts-ability-childprocessmanager-startarkchildprocess-f.md), and [startNativeChildProcess](arkts-ability-childprocessmanager-startnativechildprocess-f.md). [OH_Ability_CreateNativeChildProcess] [OH_Ability_CreateNativeChildProcessWithConfigs] [OH_Ability_StartNativeChildProcess] [OH_Ability_StartNativeChildProcessWithConfigs]
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The child process started in SELF_FORK mode is not included in the returned list.
 > If no child processes exist, an empty array is returned.

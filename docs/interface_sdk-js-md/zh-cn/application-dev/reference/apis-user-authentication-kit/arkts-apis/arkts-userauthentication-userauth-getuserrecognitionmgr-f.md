@@ -31,7 +31,7 @@ function getUserRecognitionMgr(): UserRecognitionMgr | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [UserRecognitionMgr](arkts-userauthentication-userauth-userrecognitionmgr-i.md) \| null | 用户识别管理器实例。如果设备不支持此能力则返回null。 |
+| [UserRecognitionMgr](arkts-userauthentication-userauth-userrecognitionmgr-i.md) &#124; null | 用户识别管理器实例。如果设备不支持此能力则返回null。 |
 
 **错误码：**
 

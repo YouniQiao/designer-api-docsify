@@ -14,7 +14,7 @@ function getSockfdTxBytes(sockfd: number, callback: AsyncCallback<number>): void
 
 Obtains the uplink traffic of the specified socket (in bytes). This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > It is recommended to use this API when the socket is connected. Otherwise, the corresponding traffic data cannot
 > be queried after the socket is closed.
@@ -64,7 +64,7 @@ function getSockfdTxBytes(sockfd: number): Promise<number>
 
 Obtains the uplink traffic (in bytes) of the specified socket. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > It is recommended to use this API when the socket is connected. Otherwise, the corresponding traffic data cannot
 > be queried after the socket is closed.

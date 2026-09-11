@@ -22,7 +22,7 @@ Obtains the opkey of the SIM card in the specified slot. This API uses an asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2 |
+| slotId | number | Yes | Card slot ID.<br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -72,7 +72,7 @@ Obtains the opkey of the SIM card in the specified slot. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2 |
+| slotId | number | Yes | Card slot ID.<br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 

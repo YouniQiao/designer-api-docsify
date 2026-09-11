@@ -6,6 +6,8 @@ declare type PageTransitionCallback = (type: RouteType, progress: number) => voi
 
 Represents the callback for page transition events.
 
+@typedef { function } PageTransitionCallback
+
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.

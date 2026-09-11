@@ -88,7 +88,7 @@ constructor(context: Context, window: window.Window)
 
 A constructor used to create a **DocumentViewPicker** object in a window created by an application. In other scenarios, you are advised to use **constructor(context: Context)** to create a **DocumentViewPicker** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This method is supported on 2-in-1 devices and tablets since API version 19.
 
@@ -152,7 +152,7 @@ Obtains the index of the file suffix type of the file saved. This method takes e
 
 | Type | Description |
 | --- | --- |
-| number | Subscript (number) of the selected suffix type in [DocumentSaveOptions.fileSuffixChoices]{ |
+| number | Subscript (number) of the selected suffix type in [DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md). The default value is **-1**. |
 
 ## save
 
@@ -178,7 +178,7 @@ Starts a **documentPicker** page for the user to save one or more documents. Thi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the documents saved. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the documents saved. <br>**Note:** For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 **Examples**
 
@@ -222,7 +222,7 @@ Starts a **documentPicker** page for the user to save one or more documents. Thi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | option | [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c.md) | Yes | Options for saving the documents. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents saved.    **Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents saved. <br>**Note:** For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 **Examples**
 
@@ -267,7 +267,7 @@ Starts a **documentPicker** page for the user to save one or more documents. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents saved.    **Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents saved. <br>**Note:** For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 **Examples**
 
@@ -316,7 +316,7 @@ Starts a **documentPicker** page for the user to select one or more documents. T
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the documents selected. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the documents selected. <br> **Note:** For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 **Examples**
 
@@ -359,7 +359,7 @@ Starts a **documentPicker** page for the user to select one or more documents. T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | option | [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c.md) | Yes | Options for selecting documents. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents selected.    **Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents selected. <br>**Note:** For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 **Examples**
 
@@ -403,7 +403,7 @@ Starts a **documentPicker** page for the user to select one or more documents. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents selected.    **Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents selected. <br>**Note:** For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 **Examples**
 

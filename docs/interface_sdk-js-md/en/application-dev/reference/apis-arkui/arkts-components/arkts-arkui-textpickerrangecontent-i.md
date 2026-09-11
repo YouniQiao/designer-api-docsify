@@ -19,7 +19,7 @@ icon: string | Resource
 
 Image resource. If the value is a string, such as **"/common/hello.png"**, it represents the path to the image.
 
-**Type:** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**Type:** string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 10
 
@@ -41,7 +41,7 @@ An empty character string is used by default.
 
 Note: Text truncation occurs when content exceeds column width.
 
-**Type:** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**Type:** string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Default:** ""
 

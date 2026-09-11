@@ -6,6 +6,8 @@ type QueryCustomContentEvent = (queryType: CustomType[]) => Promise<CustomElemen
 
 自定义内容查询事件。使用Promise异步回调。
 
+@typedef { function } QueryCustomContentEvent
+
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。

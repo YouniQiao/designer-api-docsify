@@ -47,7 +47,7 @@ pointRadius?: number | Resource
 
 默认算法：（组件高度（单位：vp） / 2） - （2vp * 组件高度（单位：vp） / 20vp）。
 
-**类型：** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**类型：** number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 12
 
@@ -73,7 +73,7 @@ trackBorderRadius?: number | Resource
 
 默认算法：组件高度（单位：vp） / 2。
 
-**类型：** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**类型：** number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 12
 

@@ -41,8 +41,6 @@ Indicates whether to enable anti-aliasing
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## fill
 
 ```TypeScript
@@ -69,8 +67,6 @@ Fill color.
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## fillOpacity
 
 ```TypeScript
@@ -91,14 +87,12 @@ fill Opacity
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 |  |
+| value | number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## stroke
 
 ```TypeScript
@@ -125,8 +119,6 @@ border Color
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## strokeDashArray
 
 ```TypeScript
@@ -153,8 +145,6 @@ Sets the gap for the border.
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## strokeDashOffset
 
 ```TypeScript
@@ -175,14 +165,12 @@ Offset from the start point of the border drawing.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string | 是 |  |
+| value | number &#124; string | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## strokeLineCap
 
 ```TypeScript
@@ -209,8 +197,6 @@ Path endpoint drawing style.
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## strokeLineJoin
 
 ```TypeScript
@@ -237,8 +223,6 @@ Border corner drawing style.
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## strokeMiterLimit
 
 ```TypeScript
@@ -259,14 +243,12 @@ Limits for drawing acute angles as bevels
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string | 是 |  |
+| value | number &#124; string | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## strokeOpacity
 
 ```TypeScript
@@ -287,14 +269,12 @@ Sets the opacity of the border.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 |  |
+| value | number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## strokeWidth
 
 ```TypeScript
@@ -321,4 +301,3 @@ Sets the width of the dividing line.
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |

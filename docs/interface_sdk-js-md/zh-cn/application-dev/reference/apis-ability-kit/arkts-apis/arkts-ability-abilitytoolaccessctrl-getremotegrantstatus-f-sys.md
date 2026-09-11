@@ -25,7 +25,7 @@ export function getRemoteGrantStatus(): Promise<RemoteGrantStatus>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[RemoteGrantStatus](arkts-ability-abilitytoolaccessctrl-remotegrantstatus-e-sys.md)&gt; | Promise用于返回\\${RemoteGrantStatus}。 |
+| Promise&lt;[RemoteGrantStatus](arkts-ability-abilitytoolaccessctrl-remotegrantstatus-e-sys.md)&gt; | Promise用于返回\&#36;{RemoteGrantStatus}。 |
 
 **错误码：**
 

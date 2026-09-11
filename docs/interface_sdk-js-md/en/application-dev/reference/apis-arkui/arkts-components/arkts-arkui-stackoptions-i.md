@@ -1,7 +1,7 @@
 # StackOptions
 
 
-> **NOTE：**
+> **NOTE:**
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. The
 > initial version information of the historical anonymous objects has been retained, which may result in the outer
@@ -22,7 +22,7 @@
 alignContent?: Alignment
 ```
 
-Alignment of child components in the container. Default value: Alignment.Center. Invalid values are treated as the default value.
+Alignment of child components in the container. Default value: Alignment.Center. <br>Invalid values are treated as the default value.
 
 **Type:** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
 

@@ -2,7 +2,7 @@
 
 The accessibility hover action triggers this method invocation.
 
-@extends BaseEvent
+@extends BaseEvent @typedef AccessibilityHoverEvent
 
 **继承/实现关系：** AccessibilityHoverEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 

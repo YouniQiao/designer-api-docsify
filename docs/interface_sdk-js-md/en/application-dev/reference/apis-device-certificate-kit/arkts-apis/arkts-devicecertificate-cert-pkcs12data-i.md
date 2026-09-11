@@ -52,7 +52,7 @@ privateKey?: string | Uint8Array
 
 Private key. **string** corresponds to PEM format, and **Uint8Array** corresponds to DER format.
 
-**Type:** string \| Uint8Array
+**Type:** string &#124; Uint8Array
 
 **Since:** 18
 

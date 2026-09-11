@@ -142,7 +142,7 @@ title: ResourceStr | EditableTitleV2
 
 默认值：new EditableTitleV2()，表示标题内容为空。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [EditableTitleV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlev2-c.md)
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) &#124; [EditableTitleV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlev2-c.md)
 
 **起始版本：** 26.0.0
 

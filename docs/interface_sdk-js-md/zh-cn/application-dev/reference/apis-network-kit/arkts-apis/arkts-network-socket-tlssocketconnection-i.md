@@ -1353,7 +1353,7 @@ send(data: string | ArrayBuffer, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | string \| ArrayBuffer | 是 | TLSSocketServer发送数据所需要的参数。<br>**适用版本：** 10 - 11 |
+| data | string &#124; ArrayBuffer | 是 | TLSSocketServer发送数据所需要的参数。<br>**适用版本：** 10 - 11 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，成功返回空，失败返回错误码、错误信息。 |
 
 **错误码：**
@@ -1426,7 +1426,7 @@ send(data: string | ArrayBuffer): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | string \| ArrayBuffer | 是 | TLSSocketServer发送数据所需要的参数。<br>**适用版本：** 10 - 11 |
+| data | string &#124; ArrayBuffer | 是 | TLSSocketServer发送数据所需要的参数。<br>**适用版本：** 10 - 11 |
 
 **返回值：**
 

@@ -35,7 +35,7 @@ Sheet icon. By default, no icon is displayed.
 
 The string type can be used to load local images and, more frequently, online images. The value can be a relative path to a local image, for example, **Image("common/test.jpg")**.
 
-**Type:** string \| [Resource](arkts-arkui-resource-t.md)
+**Type:** string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 8
 
@@ -55,7 +55,7 @@ Sheet text.
 
 If the text is too long to display, a scrollbar is displayed.
 
-**Type:** string \| [Resource](arkts-arkui-resource-t.md)
+**Type:** string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 8
 

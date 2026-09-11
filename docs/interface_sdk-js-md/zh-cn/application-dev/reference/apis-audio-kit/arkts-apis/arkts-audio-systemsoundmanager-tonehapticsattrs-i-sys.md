@@ -64,7 +64,7 @@ getGentleFileName(): string | null
 
 | 类型 | 说明 |
 | --- | --- |
-| string \| null | 柔和振动文件名，振动文件为Json格式。如果不存在柔和振动，则振动文件名为空。 |
+| string &#124; null | 柔和振动文件名，振动文件为Json格式。如果不存在柔和振动，则振动文件名为空。 |
 
 **错误码：**
 
@@ -96,7 +96,7 @@ getGentleTitle(): string | null
 
 | 类型 | 说明 |
 | --- | --- |
-| string \| null | 柔和振动的标题。如果不存在柔和振动，则振动标题为空。 |
+| string &#124; null | 柔和振动的标题。如果不存在柔和振动，则振动标题为空。 |
 
 **错误码：**
 
@@ -130,7 +130,7 @@ getGentleUri(): string | null
 
 | 类型 | 说明 |
 | --- | --- |
-| string \| null | 柔和振动的uri（如：'/data/storage/el2/base/haptics/synchronized/alarms/test.json'）。 如果不存在柔和振动，则uri为空。 柔和振动是指马达振动强度较标准较弱。 |
+| string &#124; null | 柔和振动的uri（如：'/data/storage/el2/base/haptics/synchronized/alarms/test.json'）。 如果不存在柔和振动，则uri为空。 柔和振动是指马达振动强度较标准较弱。 |
 
 **错误码：**
 

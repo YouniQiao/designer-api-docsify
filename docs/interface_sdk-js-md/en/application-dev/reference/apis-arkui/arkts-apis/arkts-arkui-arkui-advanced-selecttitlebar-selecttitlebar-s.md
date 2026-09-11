@@ -2,7 +2,7 @@
 
 The **SelectTitleBar** component represents a drop-down menu title bar used for switching between pages of different levels (configured with the **Back** button).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This component can be used only in the stage model.
 > 

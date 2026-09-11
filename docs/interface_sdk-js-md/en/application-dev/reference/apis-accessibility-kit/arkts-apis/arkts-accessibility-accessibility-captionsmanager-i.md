@@ -32,7 +32,7 @@ Unsubscribes from the state changes of captions configuration. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'enableChange' | Yes | Event type, which is set to **'enableChange'** in this API. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in on('enableChange'). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('enableChange')](#onenablechange). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 
@@ -89,7 +89,7 @@ Unsubscribes from the captions style changes. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'styleChange' | Yes | Event type, which is set to **'styleChange'** in this API. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | No | Callback used to unregister. It must be consistent with the callback used in on('styleChange'). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('styleChange')](#onstylechange). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 
@@ -135,13 +135,13 @@ on(type: 'enableChange', callback: Callback<boolean>): void
 
 Subscribes to the state changes of captions configuration. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
 > - After calling this method, ensure that
-> off('enableChange')
+> [off('enableChange')](#offenablechange)
 > is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear**
 > lifecycle callback). Otherwise, a crash may occur.
 
@@ -197,13 +197,13 @@ on(type: 'styleChange', callback: Callback<CaptionsStyle>): void
 
 Subscribes to captions style changes. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
 > - After calling this method, ensure that
-> off('styleChange')
+> [off('styleChange')](#offstylechange)
 > is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear**
 > lifecycle callback). Otherwise, a crash may occur.
 

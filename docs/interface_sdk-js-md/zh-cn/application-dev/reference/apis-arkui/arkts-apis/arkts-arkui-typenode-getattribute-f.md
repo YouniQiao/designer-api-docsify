@@ -27,7 +27,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Text'): TextAttribute |
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextAttribute](../arkts-components/arkts-arkui-text-attribute.md) \| undefined | Text节点类型的属性，若获取失败，则返回undefined。 |
+| [TextAttribute](../arkts-components/arkts-arkui-text-comp-attribute.md) &#124; undefined | Text节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -98,7 +98,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Column'): ColumnAttribu
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColumnAttribute](../arkts-components/arkts-arkui-column-attribute.md) \| undefined | Column节点类型的属性，若获取失败，则返回undefined。 |
+| [ColumnAttribute](../arkts-components/arkts-arkui-column-comp-attribute.md) &#124; undefined | Column节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -168,7 +168,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Row'): RowAttribute | u
 
 | 类型 | 说明 |
 | --- | --- |
-| [RowAttribute](../arkts-components/arkts-arkui-row-attribute.md) \| undefined | Row节点类型的属性，若获取失败，则返回undefined。 |
+| [RowAttribute](../arkts-components/arkts-arkui-row-comp-attribute.md) &#124; undefined | Row节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -238,7 +238,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Stack'): StackAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [StackAttribute](../arkts-components/arkts-arkui-stack-attribute.md) \| undefined | Stack节点类型的属性，若获取失败，则返回undefined。 |
+| [StackAttribute](../arkts-components/arkts-arkui-stack-comp-attribute.md) &#124; undefined | Stack节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -308,7 +308,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Flex'): FlexAttribute |
 
 | 类型 | 说明 |
 | --- | --- |
-| [FlexAttribute](../arkts-components/arkts-arkui-flex-attribute.md) \| undefined | Flex节点类型的属性，若获取失败，则返回undefined。 |
+| [FlexAttribute](../arkts-components/arkts-arkui-flex-comp-attribute.md) &#124; undefined | Flex节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -378,7 +378,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Swiper'): SwiperAttribu
 
 | 类型 | 说明 |
 | --- | --- |
-| [SwiperAttribute](../arkts-components/arkts-arkui-swiper-attribute.md) \| undefined | Swiper节点类型的属性，若获取失败，则返回undefined。 |
+| [SwiperAttribute](../arkts-components/arkts-arkui-swiper-comp-attribute.md) &#124; undefined | Swiper节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -413,7 +413,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Progress'): ProgressAtt
 
 | 类型 | 说明 |
 | --- | --- |
-| [ProgressAttribute](../arkts-components/arkts-arkui-progress-attribute.md) \| undefined | Progress节点类型的属性，若获取失败，则返回undefined。 |
+| [ProgressAttribute](../arkts-components/arkts-arkui-progress-comp-attribute.md) &#124; undefined | Progress节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -482,7 +482,7 @@ function getAttribute(node: FrameNode, nodeType: 'Scroll'): ScrollAttribute | un
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScrollAttribute](../arkts-components/arkts-arkui-scroll-attribute.md) \| undefined | Scroll节点类型的属性，若获取失败，则返回undefined。 |
+| [ScrollAttribute](../arkts-components/arkts-arkui-scroll-comp-attribute.md) &#124; undefined | Scroll节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -517,7 +517,7 @@ export function getAttribute(node: FrameNode, nodeType: 'RelativeContainer'): Re
 
 | 类型 | 说明 |
 | --- | --- |
-| [RelativeContainerAttribute](../arkts-components/arkts-arkui-relativecontainer-attribute.md) \| undefined | RelativeContainer节点类型的属性，若获取失败，则返回undefined。 |
+| [RelativeContainerAttribute](../arkts-components/arkts-arkui-relativecontainer-comp-attribute.md) &#124; undefined | RelativeContainer节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -587,7 +587,7 @@ export function getAttribute(node: FrameNode, nodeType: 'LoadingProgress'): Load
 
 | 类型 | 说明 |
 | --- | --- |
-| [LoadingProgressAttribute](../arkts-components/arkts-arkui-loadingprogress-attribute.md) \| undefined | LoadingProgress节点类型的属性，若获取失败，则返回undefined。 |
+| [LoadingProgressAttribute](../arkts-components/arkts-arkui-loadingprogress-comp-attribute.md) &#124; undefined | LoadingProgress节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -654,7 +654,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Image'): ImageAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) \| undefined | Image节点类型的属性，若获取失败，则返回undefined。 |
+| [ImageAttribute](../arkts-components/arkts-arkui-image-comp-attribute.md) &#124; undefined | Image节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -730,7 +730,7 @@ export function getAttribute(node: FrameNode, nodeType: 'List'): ListAttribute |
 
 | 类型 | 说明 |
 | --- | --- |
-| [ListAttribute](../arkts-components/arkts-arkui-list-attribute.md) \| undefined | List节点类型的属性，若获取失败，则返回undefined。 |
+| [ListAttribute](../arkts-components/arkts-arkui-list-comp-attribute.md) &#124; undefined | List节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -765,7 +765,7 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItem'): ListItemAtt
 
 | 类型 | 说明 |
 | --- | --- |
-| [ListItemAttribute](../arkts-components/arkts-arkui-listitem-attribute.md) \| undefined | ListItem节点类型的属性，若获取失败，则返回undefined。 |
+| [ListItemAttribute](../arkts-components/arkts-arkui-listitem-comp-attribute.md) &#124; undefined | ListItem节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -800,7 +800,7 @@ export function getAttribute(node: FrameNode, nodeType: 'TextInput'): TextInputA
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextInputAttribute](../arkts-components/arkts-arkui-textinput-attribute.md) \| undefined | TextInput节点类型的属性，若获取失败，则返回undefined。 |
+| [TextInputAttribute](../arkts-components/arkts-arkui-textinput-comp-attribute.md) &#124; undefined | TextInput节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -867,7 +867,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Button'): ButtonAttribu
 
 | 类型 | 说明 |
 | --- | --- |
-| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) \| undefined | Button节点类型的属性，若获取失败，则返回undefined。 |
+| [ButtonAttribute](../arkts-components/arkts-arkui-button-comp-attribute.md) &#124; undefined | Button节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -940,7 +940,7 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItemGroup'): ListIt
 
 | 类型 | 说明 |
 | --- | --- |
-| [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-attribute.md) \| undefined | ListItemGroup节点类型的属性，若获取失败，则返回undefined。 |
+| [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-comp-attribute.md) &#124; undefined | ListItemGroup节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -976,7 +976,7 @@ export function getAttribute(node: FrameNode, nodeType: 'WaterFlow'): WaterFlowA
 
 | 类型 | 说明 |
 | --- | --- |
-| [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-attribute.md) \| undefined | WaterFlow节点类型的属性，若获取失败，则返回undefined。 |
+| [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-comp-attribute.md) &#124; undefined | WaterFlow节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -1011,7 +1011,7 @@ export function getAttribute(node: FrameNode, nodeType: 'FlowItem'): FlowItemAtt
 
 | 类型 | 说明 |
 | --- | --- |
-| [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md) \| undefined | FlowItem节点类型的属性，若获取失败，则返回undefined。 |
+| [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-comp-attribute.md) &#124; undefined | FlowItem节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -1046,7 +1046,7 @@ export function getAttribute(node: FrameNode, nodeType: 'XComponent'): XComponen
 
 | 类型 | 说明 |
 | --- | --- |
-| [XComponentAttribute](../arkts-components/arkts-arkui-xcomponent-attribute.md) \| undefined | XComponent节点类型的属性，若获取失败，则返回undefined。 |
+| [XComponentAttribute](../arkts-components/arkts-arkui-xcomponent-comp-attribute.md) &#124; undefined | XComponent节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -1082,7 +1082,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Checkbox'): CheckboxAtt
 
 | 类型 | 说明 |
 | --- | --- |
-| [CheckboxAttribute](../arkts-components/arkts-arkui-checkbox-attribute.md) \| undefined | Checkbox节点类型的属性，若获取失败，则返回undefined。 |
+| [CheckboxAttribute](../arkts-components/arkts-arkui-checkbox-comp-attribute.md) &#124; undefined | Checkbox节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -1157,7 +1157,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Radio'): RadioAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [RadioAttribute](../arkts-components/arkts-arkui-radio-attribute.md) \| undefined | Radio节点类型的属性，若获取失败，则返回undefined。 |
+| [RadioAttribute](../arkts-components/arkts-arkui-radio-comp-attribute.md) &#124; undefined | Radio节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -1231,7 +1231,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Slider'): SliderAttribu
 
 | 类型 | 说明 |
 | --- | --- |
-| [SliderAttribute](../arkts-components/arkts-arkui-slider-attribute.md) \| undefined | Slider节点类型的属性，若获取失败，则返回undefined。 |
+| [SliderAttribute](../arkts-components/arkts-arkui-slider-comp-attribute.md) &#124; undefined | Slider节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -1300,7 +1300,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Toggle'): ToggleAttribu
 
 | 类型 | 说明 |
 | --- | --- |
-| [ToggleAttribute](../arkts-components/arkts-arkui-toggle-attribute.md) \| undefined | Toggle节点类型的属性，若获取失败，则返回undefined。 |
+| [ToggleAttribute](../arkts-components/arkts-arkui-toggle-comp-attribute.md) &#124; undefined | Toggle节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -1369,7 +1369,7 @@ export function getAttribute(node: FrameNode, nodeType: 'TextArea'): TextAreaAtt
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextAreaAttribute](../arkts-components/arkts-arkui-textarea-attribute.md) \| undefined | TextArea节点类型的属性，若获取失败，则返回undefined。 |
+| [TextAreaAttribute](../arkts-components/arkts-arkui-textarea-comp-attribute.md) &#124; undefined | TextArea节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -1436,7 +1436,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Grid'): GridAttribute |
 
 | 类型 | 说明 |
 | --- | --- |
-| [GridAttribute](../arkts-components/arkts-arkui-grid-attribute.md) \| undefined | Grid节点类型的属性，若获取失败，则返回undefined。 |
+| [GridAttribute](../arkts-components/arkts-arkui-grid-comp-attribute.md) &#124; undefined | Grid节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 
@@ -1471,7 +1471,7 @@ export function getAttribute(node: FrameNode, nodeType: 'GridItem'): GridItemAtt
 
 | 类型 | 说明 |
 | --- | --- |
-| [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md) \| undefined | GridItem节点类型的属性，若获取失败，则返回undefined。 |
+| [GridItemAttribute](../arkts-components/arkts-arkui-griditem-comp-attribute.md) &#124; undefined | GridItem节点类型的属性，若获取失败，则返回undefined。 |
 
 **示例**
 

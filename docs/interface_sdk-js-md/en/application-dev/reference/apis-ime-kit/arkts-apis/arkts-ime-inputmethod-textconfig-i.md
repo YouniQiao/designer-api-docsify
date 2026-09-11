@@ -90,7 +90,7 @@ Text selection range.
 windowId?: number
 ```
 
-ID of the window where the edit box is located. The value must be an integer. You are advised to call [getWindowProperties](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#getwindowproperties) to obtain the window ID.
+ID of the window where the edit box is located. The value must be an integer. <br> <br>You are advised to call [getWindowProperties](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#getwindowproperties) to obtain the window ID.
 
 **Type:** number
 

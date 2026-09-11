@@ -6,7 +6,7 @@ Background mode: The device reads the tag by using NFC without starting any appl
 
 Foreground mode: A foreground application has priority to read the NFC tag discovered.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 2. Since API version 26.0.0, it is more accurate to determine whether a device supports NFC by calling both
 > [canIUse("SystemCapability.Communication.NFC.Tag")](../../../reference/common/init.md#caniuse) and

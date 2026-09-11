@@ -128,7 +128,7 @@ modifier?: TextModifier
 
 Modifier for the label text.
 
-**Type:** TextModifier
+**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **Since:** 26.0.0
 

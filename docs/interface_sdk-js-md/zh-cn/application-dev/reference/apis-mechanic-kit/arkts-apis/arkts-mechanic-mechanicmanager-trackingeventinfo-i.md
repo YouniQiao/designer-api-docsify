@@ -2,6 +2,8 @@
 
 Tracking event callback info.
 
+@typedef TrackingEventInfo
+
 **起始版本：** 20
 
 **系统能力：** SystemCapability.Mechanic.Core

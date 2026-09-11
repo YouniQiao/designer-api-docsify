@@ -30,7 +30,7 @@ Creates and returns an XmlPullParser object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| DataView | Yes | A instance, the new XmlPullParser with. |
+| buffer | ArrayBuffer &#124; DataView | Yes | A instance, the new XmlPullParser with. |
 | encoding | string | No | [encoding='utf8'] this is its encoding. |
 
 **Examples**

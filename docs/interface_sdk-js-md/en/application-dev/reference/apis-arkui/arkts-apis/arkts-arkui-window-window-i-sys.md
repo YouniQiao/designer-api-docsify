@@ -22,7 +22,7 @@ attachLayoutToParentWindow(anchorInfo?: WindowAnchorInfo, attachOptions?: SubWin
 
 Attaches a first-level child window to the main window to maintain a fixed relative position. This API uses a promise to return the result. The relative position is represented by the anchor point offset between the child window and the parent window. The child window and the parent window use the same window anchor point.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Only first-level child windows can call this API. The child window must be in floating window mode
 > (that is, the window mode is **window.WindowStatusType.FLOATING**).
@@ -449,7 +449,7 @@ detachLayoutToParentWindow(): Promise<void>
 
 Detach a first-level child window from the main window to cancel a fixed relative position. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - When the child window calls this API, the child window must be in the attached state.
 > 
@@ -1502,7 +1502,7 @@ export default class EntryAbility extends UIAbility {
 requestFocus(isFocused: boolean): Promise<void>
 ```
 
-Allows this window to proactively request to gain or lose focus. This API uses a promise to return the result. A value is returned as long as the API is successfully called. The return value does not indicate that the window has gained or lost focus. You can use on('windowEvent') to listen for the focus status of the window.
+Allows this window to proactively request to gain or lose focus. This API uses a promise to return the result. A value is returned as long as the API is successfully called. The return value does not indicate that the window has gained or lost focus. You can use [on('windowEvent')](arkts-arkui-window-window-i.md#onwindowevent) to listen for the focus status of the window.
 
 When a focus request is sent, whether the window can successfully gain focus depends on its capability of being focused and its current visibility. To gain focus, the window must be capable of receiving focus and in a visible state (actively displayed and not hidden or destroyed).
 
@@ -2193,7 +2193,7 @@ setRotationLocked(locked: boolean): Promise<void>
 
 Allows a [system window](../../../windowmanager/window-terminology.md#system-window) to lock or unlock its own screen-rotation behavior. When locked, the window's orientation remains unchanged. When unlocked, the window's orientation follows the main window's orientation, the system rotation-lock button, and the device's physical rotation sensor. If this API is called by a non-system window, error code 1300029 is thrown. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - If the main window sets the display orientation via
 > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)
@@ -2285,7 +2285,7 @@ Sets the shadow for the window borders.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | number | Yes | Radius of the shadow. The value is a floating-point number greater than or equal to 0. 0, in px. The value **0.0** means that the shadow is disabled for the window borders. |
+| radius | number | Yes | Radius of the shadow. The value is a floating-point number greater than or equal to 0.0, in px. The value **0.0** means that the shadow is disabled for the window borders. |
 | color | string | No | Color of the shadow. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, **#00FF00** or **#FF00FF00**. The default value is **'#000000'**. |
 | offsetX | number | No | Offset of the shadow along the x-axis, in px. The value is a floating-point number, in px. The default value is **0.0**. |
 | offsetY | number | No | Offset of the shadow along the y-axis, in px. The value is a floating-point number, in px. The default value is **0.0**. |
@@ -2372,7 +2372,7 @@ setSnapshotSkip(isSkip: boolean): void
 
 Sets whether to ignore this window during screen capture, recording, or casting. This API is typically used in situations where you want to prevent screen capture, recording, or casting.
 
-If you want the window to always be ignored during screen capture, recording, or casting while it is in the foreground, listen for window lifecycle changes using on('windowEvent'). Set **isSkip** to **false** when the window is in the background and **true** when it is in the foreground.
+If you want the window to always be ignored during screen capture, recording, or casting while it is in the foreground, listen for window lifecycle changes using [on('windowEvent')](arkts-arkui-window-window-i.md#onwindowevent). Set **isSkip** to **false** when the window is in the background and **true** when it is in the foreground.
 
 **Since:** 9
 
@@ -2384,7 +2384,7 @@ If you want the window to always be ignored during screen capture, recording, or
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isSkip | boolean | Yes | Whether to ignore the window. The default value is **false**.   **true** to ignore, **false** otherwise. |
+| isSkip | boolean | Yes | Whether to ignore the window. The default value is **false**.<br>**true** to ignore, **false** otherwise.<br> |
 
 **Error codes:**
 
@@ -2603,7 +2603,7 @@ Adds or deletes the watermark flag for this window. This API uses an asynchronou
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300008](../errorcode-window.md#1300008-display-device-exception) | The display device is abnormal. |
@@ -2658,7 +2658,7 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300008](../errorcode-window.md#1300008-display-device-exception) | The display device is abnormal. |

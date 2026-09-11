@@ -373,7 +373,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | string | Yes | Value to match.Wildcards are supported. An asterisk (*) indicates zero, one, or multiple digits or characters, and a question mark (?) indicates a single digit or character. |
+| value | string | Yes | Value to match.<br>Wildcards are supported. An asterisk (*) indicates zero, one, or multiple digits or characters, and a question mark (?) indicates a single digit or character. |
 
 **Return value:**
 
@@ -568,7 +568,7 @@ inDevices(devices: Array<string>): RdbPredicates
 
 Creates an **RdbPredicates** object to specify the remote devices to connect on the network during distributed database sync.
 
-> **NOTE：**
+> **NOTE:**
 
 > The value of **devices** can be obtained by using <!--RP2--
 > 

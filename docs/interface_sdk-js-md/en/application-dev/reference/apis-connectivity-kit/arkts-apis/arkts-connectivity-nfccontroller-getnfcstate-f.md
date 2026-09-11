@@ -24,7 +24,7 @@ Obtains the NFC state.
 
 | Type | Description |
 | --- | --- |
-| [NfcState](arkts-connectivity-nfccontroller-nfcstate-e.md) | NFC state obtained. For details, see [NfcState]{ |
+| [NfcState](arkts-connectivity-nfccontroller-nfcstate-e.md) | NFC state obtained. For details, see [NfcState](arkts-connectivity-nfccontroller-nfcstate-e.md). |
 
 **Examples**
 

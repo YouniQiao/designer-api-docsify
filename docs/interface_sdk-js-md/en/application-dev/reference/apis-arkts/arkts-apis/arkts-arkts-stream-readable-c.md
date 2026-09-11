@@ -374,7 +374,7 @@ Pushes data into the buffer of the readable stream.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chunk | Uint8Array \| string \| undefined \| null | Yes | Data to read.There has been a compatibility change since API version 22. In API version 21 and earlier versions, the type is `Uint8Array \| string \| null`.<br>**Since:** 23 |
+| chunk | Uint8Array &#124; string &#124; undefined &#124; null | Yes | Data to read.<br> There has been a compatibility change since API version 22. In API version 21 and earlier versions, the type is `Uint8Array &#124; string &#124; null`.<br>**Since:** 23 |
 | encoding | string | No | Encoding format. The default value is **'utf8'**. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
 
 **Return value:**
@@ -425,7 +425,7 @@ Reads data from the buffer of the readable stream and returns the read data. If 
 
 | Type | Description |
 | --- | --- |
-| string \| null | Data read from the readable stream. |
+| string &#124; null | Data read from the readable stream. |
 
 **Error codes:**
 

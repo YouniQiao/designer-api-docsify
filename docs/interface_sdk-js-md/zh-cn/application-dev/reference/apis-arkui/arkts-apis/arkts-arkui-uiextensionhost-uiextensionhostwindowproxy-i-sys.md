@@ -402,7 +402,7 @@ off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, a
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'avoidAreaChange' | 是 | 注销的事件类型，固定为'avoidAreaChange'，即系统避让区变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[{ type: window.AvoidAreaType](arkts-arkui-window-avoidareatype-e.md), area: window.AvoidArea }&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[{ type: window.AvoidAreaType](arkts-arkui-window-avoidareatype-e.md), area: window.AvoidArea }&gt; | 否 | 回调函数：如果传入该参数，则关闭该监听。如果未传入参数，则关闭所有系统避让区变化的监听。 |
 
 **错误码：**
 
@@ -492,7 +492,7 @@ on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, are
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'avoidAreaChange' | 是 | 监听的事件类型，固定为'avoidAreaChange'，即系统避让区变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[{ type: window.AvoidAreaType](arkts-arkui-window-avoidareatype-e.md), area: window.AvoidArea }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[{ type: window.AvoidAreaType](arkts-arkui-window-avoidareatype-e.md), area: window.AvoidArea }&gt; | 是 | 回调函数：入参用于接收当前避让区的信息，其中，"type"表示窗口避让区类型，"area"表示窗口内容避让区域。 |
 
 **错误码：**
 
@@ -642,7 +642,7 @@ properties: UIExtensionHostWindowProxyProperties
 
 UIExtensionComponent组件以及宿主窗口的信息。
 
-**约束：** 由于架构约束，不建议在[onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)阶段同步获取该值，建议在收到on('windowSizeChange')回调之后获取。
+**约束：** 由于架构约束，不建议在[onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)阶段同步获取该值，建议在收到[on('windowSizeChange')](#onwindowsizechange)回调之后获取。
 
 **类型：** [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md)
 

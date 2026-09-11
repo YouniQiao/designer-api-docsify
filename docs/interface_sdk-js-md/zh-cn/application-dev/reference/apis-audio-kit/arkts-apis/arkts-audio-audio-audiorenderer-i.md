@@ -280,7 +280,7 @@ getBufferSize(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取音频渲染器的最小缓冲区大小成功，err为undefined，data为获取到的最小缓冲区大小；否则为错误对象。单位为字节。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取音频渲染器的最小缓冲区大小成功，err为undefined，data为获取到的最小缓冲区大小；否则为错误对象。<br>单位为字节。 |
 
 ## getBufferSize
 
@@ -298,7 +298,7 @@ getBufferSize(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回缓冲区大小。 |
+| Promise&lt;number&gt; | Promise对象，返回缓冲区大小。  单位为字节。 |
 
 ## getBufferSizeSync
 
@@ -449,7 +449,7 @@ getMaxStreamVolume(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取音频流的最大音量成功，err为undefined，data为获取到的应用基于音频流的最大音量；否则为错误对象。音量范围为[0.0, 1.0]。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取音频流的最大音量成功，err为undefined，data为获取到的应用基于音频流的最大音量；否则为错误对象。<br>音量范围为[0.0, 1.0]。 |
 
 ## getMaxStreamVolume
 
@@ -467,7 +467,7 @@ getMaxStreamVolume(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回音频流最大音量。 |
+| Promise&lt;number&gt; | Promise对象，返回音频流最大音量。  音量范围为[0.0, 1.0]。 |
 
 ## getMaxStreamVolumeSync
 
@@ -503,7 +503,7 @@ getMinStreamVolume(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取音频流的最小音量成功，err为undefined，data为获取到的应用基于音频流的最小音量；否则为错误对象。音量范围为[0.0, 1.0]。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取音频流的最小音量成功，err为undefined，data为获取到的应用基于音频流的最小音量；否则为错误对象。<br>音量范围为[0.0, 1.0]。 |
 
 ## getMinStreamVolume
 
@@ -521,7 +521,7 @@ getMinStreamVolume(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回音频流最小音量。 |
+| Promise&lt;number&gt; | Promise对象，返回音频流最小音量。  音量范围为[0.0, 1.0]。 |
 
 ## getMinStreamVolumeSync
 
@@ -559,7 +559,7 @@ Gets the noise reduction mode for current audio renderer. The mode will only con
 
 | 类型 | 说明 |
 | --- | --- |
-| [NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md) | The noise reduction mode for current audio renderer, the default value is { |
+| [NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md) | The noise reduction mode for current audio renderer, the default value is [FIDELITY](arkts-audio-audio-noisereductionmode-e.md#fidelity). |
 
 ## getRendererInfo
 
@@ -801,7 +801,7 @@ Gets all the supported noise reduction modes for current device platform. Curren
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md)&gt; | The supported noise reduction mode array, at least { |
+| Array&lt;[NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md)&gt; | The supported noise reduction mode array, at least [FIDELITY](arkts-audio-audio-noisereductionmode-e.md#fidelity) is supported. |
 
 **错误码：**
 
@@ -1038,7 +1038,7 @@ off(type: 'writeData', callback?: AudioRendererWriteDataCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'writeData' | 是 | 事件回调类型，支持的事件为'writeData'，当取消监听音频数据写入回调事件时，触发该事件。 |
-| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | 否 | 回调函数，入参代表应用接收待写入的数据缓冲区。API version 11 不支持返回回调结果，从 API version 1 2 开始支持返回回调结果[AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md)。 |
+| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | 否 | 回调函数，入参代表应用接收待写入的数据缓冲区。<br>API version 11 不支持返回回调结果，从 API version 1 2 开始支持返回回调结果[AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md)。 |
 
 **错误码：**
 
@@ -1207,7 +1207,7 @@ on(type: 'writeData', callback: AudioRendererWriteDataCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'writeData' | 是 | 事件回调类型，支持的事件为'writeData'，当需要写入音频数据时，触发该事件。 |
-| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | 是 | 回调函数，入参代表应用接收待写入的数据缓冲区。API version 11 不支持返回回调结果，从 API version 1 2 开始支持返回回调结果[AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md)。 |
+| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | 是 | 回调函数，入参代表应用接收待写入的数据缓冲区。<br>API version 11 不支持返回回调结果，从 API version 1 2 开始支持返回回调结果[AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md)。 |
 
 **错误码：**
 
@@ -1395,7 +1395,7 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceType | [DeviceType](arkts-audio-audio-devicetype-e.md) | 是 | 设备类型。仅支持以下设备：EARPIECE（听筒）、SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
+| deviceType | [DeviceType](arkts-audio-audio-devicetype-e.md) | 是 | 设备类型。<br>仅支持以下设备：EARPIECE（听筒）、SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
 
 **返回值：**
 
@@ -1435,7 +1435,7 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: num
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | strategy | [AudioSessionStrategy](arkts-audio-audio-audiosessionstrategy-i.md) | 是 | 音频会话策略。 |
-| behavior | number | 是 | 用于设置音频会话行为。该参数可以是单个标志，也可以是多个标志的按位OR组合。当前支持的音频会话行为详见[AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md)中定义的标志。 |
+| behavior | number | 是 | 用于设置音频会话行为。<br>该参数可以是单个标志，也可以是多个标志的按位OR组合。<br>当前支持的音频会话行为详见[AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md)中定义的标志。 |
 
 **错误码：**
 
@@ -1771,7 +1771,7 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动音频渲染器成功，err为undefined，否则为错误对象。异常将返回error对象：错误码6800301：表示包含状态检查异常、焦点抢占失败、系统处理异常（具体错误查看系统日志）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动音频渲染器成功，err为undefined，否则为错误对象。异常将返回error对象：<br>错误码6800301：表示包含状态检查异常、焦点抢占失败、系统处理异常（具体错误查看系统日志）。 |
 
 ## start
 
@@ -1789,7 +1789,7 @@ start(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，成功表示启动音频渲染器成功。异常将返回error对象： |
+| Promise&lt;void&gt; | Promise对象，成功表示启动音频渲染器成功。异常将返回error对象：  错误码6800301：表示包含状态检查异常、焦点抢占失败、系统处理异常（具体错误查看系统日志）。 |
 
 ## stop
 

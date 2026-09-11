@@ -25,7 +25,7 @@ function getLauncherAbilityInfos(bundleName: string,
 
 **废弃版本：** 9
 
-**替代接口：** [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md)(bundleName: string, userId: int, callback: AsyncCallback&lt;Array&lt;LauncherAbilityInfo&gt;&gt;)
+**替代接口：** [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md)(bundleName: string, userId: number, callback: AsyncCallback&lt;Array&lt;LauncherAbilityInfo&gt;&gt;)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -60,7 +60,7 @@ function getLauncherAbilityInfos(bundleName: string, userId: number): Promise<Ar
 
 **废弃版本：** 9
 
-**替代接口：** [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md)(bundleName: string, userId: int, callback: AsyncCallback&lt;Array&lt;LauncherAbilityInfo&gt;&gt;)
+**替代接口：** [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md)(bundleName: string, userId: number, callback: AsyncCallback&lt;Array&lt;LauncherAbilityInfo&gt;&gt;)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

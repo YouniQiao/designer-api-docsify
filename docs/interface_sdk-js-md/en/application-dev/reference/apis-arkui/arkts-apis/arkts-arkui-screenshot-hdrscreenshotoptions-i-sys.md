@@ -76,7 +76,7 @@ Whether to capture all displays on the current screen. If the screen contains mu
 isNotificationNeeded?: boolean
 ```
 
-Whether to send a notification after a snapshot is captured. **true** to send, **false** otherwise. The default value is **true**. Such a notification can be listened for through captureStatusChange.
+Whether to send a notification after a snapshot is captured. **true** to send, **false** otherwise. The default value is **true**. Such a notification can be listened for through [captureStatusChange](arkts-arkui-display-on-f.md#oncapturestatuschange).
 
 **Type:** boolean
 

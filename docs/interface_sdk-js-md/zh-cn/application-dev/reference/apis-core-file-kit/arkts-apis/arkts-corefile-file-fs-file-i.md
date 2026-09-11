@@ -294,6 +294,13 @@ readonly name: string
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
 ## path
 
 ```TypeScript
@@ -307,3 +314,11 @@ readonly path: string
 **起始版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+| 14300002 | Invalid URI |

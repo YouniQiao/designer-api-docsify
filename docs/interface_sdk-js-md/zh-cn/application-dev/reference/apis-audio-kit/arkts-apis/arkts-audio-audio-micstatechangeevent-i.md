@@ -2,6 +2,8 @@
 
 麦克风状态变化时，应用接收到的事件。
 
+@typedef MicStateChangeEvent
+
 **起始版本：** 9
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device

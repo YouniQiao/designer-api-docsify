@@ -49,4 +49,3 @@ Invoked when an error occurs during the running of the **IsolatedComponent**. Yo
 
 | Type | Description |
 | --- | --- |
-| [IsolatedComponentAttribute](arkts-arkui-isolatedcomponentattribute-c-sys.md) |  |

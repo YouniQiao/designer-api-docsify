@@ -19,7 +19,7 @@ onGetItemMainSizeByIndex?: GetItemMainSizeByIndex
 
 Callback used to obtain the main axis size, in vp, of the water flow item at a specified index during the layout process of the **WaterFlow** component. For a vertical **WaterFlow** component, this size refers to the height, and for a horizontal **WaterFlow** component, it refers to the width.
 
-**NOTE：**
+**NOTE:**
 
 1. When both **onGetItemMainSizeByIndex** and the width or height attribute of **FlowItem** are used,
 the main-axis size is determined by the return value of **onGetItemMainSizeByIndex**, which will override the main-axis length of **FlowItem**.
@@ -41,7 +41,7 @@ or index in the **WaterFlow** component. Avoid mixing the use of **onGetItemMain
 columnsGap?: Dimension
 ```
 
-Column gap of the section. If this parameter is not set, the [columnsGap](arkts-arkui-waterflow-attribute.md#columnsgap) of the **WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
+Column gap of the section. If this parameter is not set, the [columnsGap](arkts-arkui-waterflow-comp-attribute.md#columnsgap) of the **WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -109,7 +109,7 @@ Unit: vp
 
 When **margin** is set to a percentage, the width of the **WaterFlow** component is used as the base value for the top, bottom, left, and right margins.
 
-**Type:** [Margin](../arkts-apis/arkts-arkui-margin-t.md) \| [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** [Margin](../arkts-apis/arkts-arkui-margin-t.md) &#124; [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** {top: 0, right: 0, bottom: 0, left: 0}
 
@@ -127,7 +127,7 @@ When **margin** is set to a percentage, the width of the **WaterFlow** component
 rowsGap?: Dimension
 ```
 
-Row gap of the section. If this parameter is not set, the [rowsGap](arkts-arkui-waterflow-attribute.md#rowsgap) of the **WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
+Row gap of the section. If this parameter is not set, the [rowsGap](arkts-arkui-waterflow-comp-attribute.md#rowsgap) of the **WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 

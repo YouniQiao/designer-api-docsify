@@ -24,8 +24,8 @@ Listens for events of the request type and returns the requested data, or listen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventType | string | Yes | Type of the event to listen for. The options are as follows:   **"push"**: The component provider pushes data to the component user.   **"request"**: The component user proactively requests data from the component provider. |
-| callback | [OnPushEventCallback](arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md) \| [OnRequestEventCallback](arkts-arkui-plugincomponentmanager-onrequesteventcallback-t.md) | Yes | Callback used to return the result. The type is [OnPushEventCallback](arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md) for the push event and [OnRequestEventCallback](arkts-arkui-plugincomponentmanager-onrequesteventcallback-t.md) for the request event. |
+| eventType | string | Yes | Type of the event to listen for. The options are as follows:<br>**"push"**: The component provider pushes data to the component user.<br>**"request"**: The component user proactively requests data from the component provider. |
+| callback | [OnPushEventCallback](arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md) &#124; [OnRequestEventCallback](arkts-arkui-plugincomponentmanager-onrequesteventcallback-t.md) | Yes | Callback used to return the result. The type is [OnPushEventCallback](arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md) for the push event and [OnRequestEventCallback](arkts-arkui-plugincomponentmanager-onrequesteventcallback-t.md) for the request event. |
 
 **Examples**
 

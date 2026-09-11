@@ -28,4 +28,3 @@ Obtains the current locale of the application, which is the same as the system l
 
 | Type | Description |
 | --- | --- |
-| [LocaleResponse](arkts-arkui-system-configuration-localeresponse-i.md) |  |

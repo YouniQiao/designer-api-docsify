@@ -176,7 +176,7 @@ iconModifier?: ImageModifier
 
 装饰器类型：@Trace
 
-**类型：** ImageModifier
+**类型：** [ImageModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **起始版本：** 18
 
@@ -242,7 +242,7 @@ symbolModifier?: SymbolGlyphModifier
 
 装饰器类型：@Trace
 
-**类型：** SymbolGlyphModifier
+**类型：** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **起始版本：** 18
 
@@ -290,7 +290,7 @@ textModifier?: TextModifier
 
 装饰器类型：@Trace
 
-**类型：** TextModifier
+**类型：** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **起始版本：** 18
 

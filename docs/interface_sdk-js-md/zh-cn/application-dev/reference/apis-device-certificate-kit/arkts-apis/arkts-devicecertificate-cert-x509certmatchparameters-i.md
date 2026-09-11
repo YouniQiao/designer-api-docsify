@@ -148,7 +148,7 @@ privateKey?: string | Uint8Array
 
 指定证书私钥，string表示PEM格式私钥，Uint8Array表示DER格式私钥。
 
-**类型：** string \| Uint8Array
+**类型：** string &#124; Uint8Array
 
 **起始版本：** 26.0.0
 

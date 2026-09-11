@@ -24,7 +24,7 @@ export function getInstance(locale?:string): IndexUtil
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| locale | string | 否 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组成。默认值：系统当前区域ID。 |
+| locale | string | 否 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组成。<br>默认值：系统当前区域ID。 |
 
 **返回值：**
 

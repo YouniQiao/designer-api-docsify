@@ -22,7 +22,7 @@ function removeNotificationSlot(slotType: notification.SlotType, callback: Async
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotType | notification.SlotType | 是 | 通知渠道类型。 |
+| slotType | [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notificationmanager.md) | 是 | 通知渠道类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当删除成功，err为undefined；否则为错误对象。 |
 
 **错误码：**
@@ -65,7 +65,7 @@ function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotType | notification.SlotType | 是 | 通知渠道类型。 |
+| slotType | [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notificationmanager.md) | 是 | 通知渠道类型。 |
 
 **返回值：**
 

@@ -437,7 +437,7 @@ Chip组件文本与图标的最大的字体缩放倍数。
 
 **使用场景**：适用于需要限制字体放大上限的无障碍场景，防止字体过大导致布局溢出。
 
-**类型：** number \| [Resource](arkts-arkui-resource-t.md)
+**类型：** number &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 23
 
@@ -465,7 +465,7 @@ Chip组件文本与图标的最小的字体缩放倍数。
 
 **使用场景**：适用于需要限制字体缩小下限的场景，保证文本可读性。
 
-**类型：** number \| [Resource](arkts-arkui-resource-t.md)
+**类型：** number &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 23
 
@@ -593,7 +593,7 @@ SizeOptions类型参数不支持百分比设置，异常值按默认值处理。
 
 **说明：**[适老化](../../../ui/arkui-support-for-aging-adaptation.md)在size指定具体宽高时不生效，size设置为{ height: 0, width: 0 }除外。
 
-**类型：** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) \| [SizeOptions](arkts-arkui-sizeoptions-i.md)
+**类型：** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) &#124; [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **起始版本：** 11
 

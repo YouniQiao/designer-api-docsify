@@ -34,4 +34,3 @@ Construct the lazy column layout attribute.
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |

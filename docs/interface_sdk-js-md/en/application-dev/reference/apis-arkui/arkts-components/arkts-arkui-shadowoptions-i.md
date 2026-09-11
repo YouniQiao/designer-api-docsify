@@ -21,7 +21,7 @@ Color of the shadow.
 
 The default color is black.
 
-**NOTE：**
+**NOTE:**
 
 Since API version 11, this API supports **ColoringStrategy**, which cannot be used with ArkTS widgets or the textShadow attribute.
 
@@ -29,7 +29,7 @@ With **ColoringStrategy**, the average color or primary color can be obtained, a
 
 The **'average'** string can be used to trigger the mode for obtaining the average color, and the **'primary'** string for obtaining the primary color.
 
-**Type:** [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [ColoringStrategy](../arkts-apis/arkts-arkui-coloringstrategy-e.md)
+**Type:** [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; [ColoringStrategy](../arkts-apis/arkts-arkui-coloringstrategy-e.md)
 
 **Since:** 7
 
@@ -51,7 +51,7 @@ Whether to fill the inside of the component with shadow. **true**: Fill the insi
 
 Default value: **false**.
 
-**NOTE：**
+**NOTE:**
 
 This attribute does not take effect in textShadow.
 
@@ -79,13 +79,13 @@ Default value: **0**
 
 Unit: px
 
-**NOTE：**
+**NOTE:**
 
 To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
 
 If **offsetX** is of the Resource type, its value must be of the number type.
 
-**Type:** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**Type:** number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 7
 
@@ -107,13 +107,13 @@ Default value: **0**
 
 Unit: px
 
-**NOTE：**
+**NOTE:**
 
 To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
 
 If **offsetY** is of the Resource type, its value must be of the number type.
 
-**Type:** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**Type:** number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 7
 
@@ -135,7 +135,7 @@ Value range: [0, +∞)
 
 Unit: px
 
-**NOTE：**
+**NOTE:**
 
 A value less than 0 evaluates to the value **0**.
 
@@ -143,7 +143,7 @@ To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-
 
 If **radius** is of the Resource type, its value must be of the number type.
 
-**Type:** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**Type:** number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 7
 

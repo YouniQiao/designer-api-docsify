@@ -2,6 +2,8 @@
 
 TemplateFormDetailInfo
 
+@typedef TemplateFormDetailInfo
+
 **Since:** 23
 
 **System capability:** SystemCapability.Ability.Form

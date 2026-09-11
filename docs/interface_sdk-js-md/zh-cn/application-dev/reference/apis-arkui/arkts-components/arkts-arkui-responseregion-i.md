@@ -33,7 +33,7 @@ height?: LengthMetrics | string
 
 默认值：LengthMetrics.percent(1)
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| string
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) &#124; string
 
 **默认值：** LengthMetrics.percent(1)
 
@@ -77,7 +77,7 @@ width?: LengthMetrics | string
 
 默认值：LengthMetrics.percent(1)
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| string
+**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) &#124; string
 
 **默认值：** LengthMetrics.percent(1)
 

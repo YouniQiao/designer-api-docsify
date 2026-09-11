@@ -14,4 +14,4 @@ Represents a FrameNode of the Flex type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;FlexInterface, [FlexAttribute](../arkts-components/arkts-arkui-flex-attribute.md)&gt;
+**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;FlexInterface, [FlexAttribute](../arkts-components/arkts-arkui-flex-comp-attribute.md)&gt;

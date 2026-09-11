@@ -1,9 +1,11 @@
 # soundPool
 
 音频池提供了短音频的加载、播放、音量设置、循环设置、停止播放、资源卸载等功能。
- SoundPool需要和@ohos.multimedia.media配合使用，需要先通过
+
+SoundPool需要和@ohos.multimedia.media配合使用，需要先通过
  [createSoundPool](arkts-media-media-createsoundpool-f.md)
  完成音频池实例的创建。
+
 
 
 ## 汇总

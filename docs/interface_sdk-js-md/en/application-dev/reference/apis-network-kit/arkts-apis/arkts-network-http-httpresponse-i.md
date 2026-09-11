@@ -85,7 +85,7 @@ responseCode: ResponseCode | number
 
 Result code for an HTTP request. If the callback function is successfully executed, a result code defined in [ResponseCode](arkts-network-http-responsecode-e.md) will be returned. Otherwise, an error code will be returned in the **err** field in **AsyncCallback**.
 
-**Type:** [ResponseCode](arkts-network-http-responsecode-e.md) \| number
+**Type:** [ResponseCode](arkts-network-http-responsecode-e.md) &#124; number
 
 **Since:** 6
 
@@ -108,7 +108,7 @@ Response content returned based on **Content-type** in the response header. If *
 
 If **HttpRequestOptions** contains the **expectDataType** field, the response content must be of the same type as the data returned by the server.
 
-**Type:** string \| Object \| ArrayBuffer
+**Type:** string &#124; Object &#124; ArrayBuffer
 
 **Since:** 6
 

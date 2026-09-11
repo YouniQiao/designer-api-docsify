@@ -1,6 +1,6 @@
 # HotspotConfig (System API)
 
-Wi-Fi hotspot configuration information.
+Wi-Fi hotspot configuration information. @typedef HotspotConfig
 
 **Since:** 9
 

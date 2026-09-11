@@ -29,7 +29,7 @@ function getDefaultApplicationCandidates(type: ApplicationType, abilityFlags: nu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md) | 是 | 目标应用类型。详见[ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md)。当前仅支持**BROWSER**，传入其它值时返回错误码17700025。 |
-| abilityFlags | number | 是 | [Ability flag](arkts-ability-bundlemanager-abilityflag-e.md)，表示要获取的Ability信息。多个标志可使用按位或运算符组合，例如bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT \| bundleManager.AbilityFlag.GET_ABILITY_INFO_WITH_PERMISSION，可同时获取默认Ability信息和权限信息。 |
+| abilityFlags | number | 是 | [Ability flag](arkts-ability-bundlemanager-abilityflag-e.md)，表示要获取的Ability信息。多个标志可使用按位或运算符组合，例如bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT &#124; bundleManager.AbilityFlag.GET_ABILITY_INFO_WITH_PERMISSION，可同时获取默认Ability信息和权限信息。 |
 | userId | number | 否 | 表示用户ID，可以通过[getOsAccountLocalId接口](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取。默认值：调用方所在用户的用户ID。查询其它用户需要ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS。 |
 
 **返回值：**

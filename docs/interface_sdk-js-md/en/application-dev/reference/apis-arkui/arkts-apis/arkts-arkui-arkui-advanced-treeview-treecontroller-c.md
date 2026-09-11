@@ -92,7 +92,7 @@ Refreshes the tree view. You can call this API to update the information about t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parentId | number | Yes | ID of the parent node. The value must be greater than or equal to -1. |
+| parentId | number | Yes | ID of the parent node.<br>The value must be greater than or equal to -1. |
 | parentSubTitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | Secondary text of the parent node. |
 | currentSubtitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | Secondary text of the current node. |
 

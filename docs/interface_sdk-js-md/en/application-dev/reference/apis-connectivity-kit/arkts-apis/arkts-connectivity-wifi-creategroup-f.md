@@ -34,7 +34,7 @@ Creates a P2P group.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the operation is successful, returns `false` otherwise. |
 
 **Examples**
 

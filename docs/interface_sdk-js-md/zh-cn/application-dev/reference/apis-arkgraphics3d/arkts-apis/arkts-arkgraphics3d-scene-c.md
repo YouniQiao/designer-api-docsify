@@ -30,7 +30,7 @@ cloneNode(node: Node, parent: Node, name: string): Node | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | 返回克隆节点。克隆失败则返回null。 |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) &#124; null | 返回克隆节点。克隆失败则返回null。 |
 
 **示例**
 
@@ -155,7 +155,7 @@ getComponent(node: Node, name: string): SceneComponent | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) \| null | 返回对应名称的组件对象，若未找到则返回null。 |
+| [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) &#124; null | 返回对应名称的组件对象，若未找到则返回null。 |
 
 **示例**
 
@@ -197,7 +197,7 @@ static getDefaultRenderContext(): RenderContext | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) \| null | 返回当前对象关联的渲染上下文，若对象尚未关联任何渲染上下文，则返回null。 |
+| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) &#124; null | 返回当前对象关联的渲染上下文，若对象尚未关联任何渲染上下文，则返回null。@static |
 
 **示例**
 
@@ -238,7 +238,7 @@ getNodeByPath(path: string, type?: NodeType): Node | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | 返回请求节点的实例，如果没有找到或者找到的节点类型与传入的参数不相符则返回空。 |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) &#124; null | 返回请求节点的实例，如果没有找到或者找到的节点类型与传入的参数不相符则返回空。 |
 
 **示例**
 
@@ -310,7 +310,7 @@ importNode(name: string, node: Node, parent: Node | null): Node
 | --- | --- | --- | --- |
 | name | string | 是 | 导入节点后的名称，由开发者自定义，无特殊要求。 |
 | node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 被导入的节点。 |
-| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | 是 | 被导入节点在新场景中的父节点。 |
+| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) &#124; null | 是 | 被导入节点在新场景中的父节点。 |
 
 **返回值：**
 
@@ -360,7 +360,7 @@ importScene(name: string, scene: Scene, parent: Node | null): Node
 | --- | --- | --- | --- |
 | name | string | 是 | 导入场景的根节点名称，由开发者自定义，无特殊要求。 |
 | scene | [Scene](arkts-arkgraphics3d-scene-c.md) | 是 | 被导入的场景。 |
-| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | 是 | 被导入场景在新场景中的父节点。 |
+| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) &#124; null | 是 | 被导入场景在新场景中的父节点。 |
 
 **返回值：**
 
@@ -408,7 +408,7 @@ static load(uri? : ResourceStr): Promise<Scene>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; | Promise对象，返回场景对象。 |
+| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; | Promise对象，返回场景对象。@static |
 
 **示例**
 
@@ -508,8 +508,6 @@ get animations(): Animation[]
 
 动画数组，用于保存3D场景中的动画对象。
 
-@return { Animation[] } @readonly
-
 **类型：** [Animation](arkts-arkgraphics3d-sceneresources-animation-i.md)[]
 
 **起始版本：** 12
@@ -523,8 +521,6 @@ get environment(): Environment
 ```
 
 环境对象。
-
-@return { Environment }
 
 **类型：** [Environment](arkts-arkgraphics3d-sceneresources-environment-i.md)
 
@@ -565,8 +561,6 @@ get root(): Node | null
 ```
 
 3D场景树根节点。
-
-@return { Node | null } @readonly
 
 **类型：** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 

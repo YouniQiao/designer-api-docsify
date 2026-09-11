@@ -30,7 +30,7 @@ Check whether the current device supports the specified band.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the specified band is supported, returns `false` otherwise. |
 
 **Error codes:**
 

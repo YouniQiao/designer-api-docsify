@@ -35,7 +35,7 @@ controller: WebController | WebviewController
 
 Controller. Since API version 9, WebController is no longer maintained. You are advised to use WebviewController instead.
 
-**Type:** [WebController](arkts-arkweb-webcontroller-c.md) \| [WebviewController](arkts-arkweb-webviewcontroller-t.md)
+**Type:** [WebController](arkts-arkweb-webcontroller-c.md) &#124; [WebviewController](arkts-arkweb-webviewcontroller-t.md)
 
 **Since:** 12
 

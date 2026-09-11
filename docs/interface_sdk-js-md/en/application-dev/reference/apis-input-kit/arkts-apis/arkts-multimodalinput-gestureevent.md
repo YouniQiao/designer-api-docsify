@@ -3,6 +3,7 @@
 The **gestureEvent** module provides APIs for gesture events reported by devices.
 
 
+
 ## Modules to Import
 
 ```TypeScript

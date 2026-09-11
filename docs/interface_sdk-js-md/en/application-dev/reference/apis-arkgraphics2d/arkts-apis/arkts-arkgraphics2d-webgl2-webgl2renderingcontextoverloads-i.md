@@ -47,7 +47,7 @@ Sets buffer data from BufferSource
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer target |
-| srcData | BufferSource \| null | Yes | Buffer data |
+| srcData | BufferSource &#124; null | Yes | Buffer data |
 | usage | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer usage |
 
 ## bufferData
@@ -316,7 +316,7 @@ Reads pixels from the framebuffer to ArrayBufferView
 | height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 | format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
 | type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
-| dstData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes | Destination data |
+| dstData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) &#124; null | Yes | Destination data |
 
 ## readPixels
 
@@ -424,7 +424,7 @@ Sets texture image 2D from pixels
 | border | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
 | format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
 | type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
-| pixels | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes | Pixel data |
+| pixels | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) &#124; null | Yes | Pixel data |
 
 ## texImage2D
 
@@ -610,7 +610,7 @@ Sets texture sub image 2D from pixels
 | height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 | format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
 | type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
-| pixels | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes | Pixel data |
+| pixels | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) &#124; null | Yes | Pixel data |
 
 ## texSubImage2D
 
@@ -785,7 +785,7 @@ Sets uniform1fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
 | srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
@@ -813,7 +813,7 @@ Sets uniform1iv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | data | [webgl.Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
 | srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
@@ -841,7 +841,7 @@ Sets uniform2fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
 | srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
@@ -869,7 +869,7 @@ Sets uniform2iv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | data | [webgl.Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
 | srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
@@ -897,7 +897,7 @@ Sets uniform3fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
 | srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
@@ -925,7 +925,7 @@ Sets uniform3iv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | data | [webgl.Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
 | srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
@@ -953,7 +953,7 @@ Sets uniform4fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
 | srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
@@ -981,7 +981,7 @@ Sets uniform4iv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | data | [webgl.Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
 | srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
@@ -1010,7 +1010,7 @@ Sets uniformMatrix2fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | transpose | [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Transpose |
 | data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
@@ -1040,7 +1040,7 @@ Sets uniformMatrix3fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | transpose | [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Transpose |
 | data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
@@ -1070,7 +1070,7 @@ Sets uniformMatrix4fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | transpose | [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Transpose |
 | data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |

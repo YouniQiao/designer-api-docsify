@@ -14,7 +14,7 @@ function replyCustomEapData(result: CustomResult, data: EapData): void
 
 该接口用于通知系统已完成该步定制化处理。
 
-> **说明：**:
+> **说明：**
 > 
 > - 若用于处理收EAP数据包(rx)时的callback，传给系统的EAP数据需要剥离服务器添加的定制部分。
 > 

@@ -40,7 +40,7 @@ getAuxiliaryPicture(type: AuxiliaryPictureType): AuxiliaryPicture | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) \| null | 返回AuxiliaryPicture对象，如果没有则返回null。 |
+| [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) &#124; null | 返回AuxiliaryPicture对象，如果没有则返回null。 |
 
 **错误码：**
 
@@ -64,7 +64,7 @@ getGainmapPixelmap(): PixelMap | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) \| null | 返回Pixelmap对象，如果没有则返回null。 |
+| [PixelMap](arkts-image-image-pixelmap-i.md) &#124; null | 返回Pixelmap对象，如果没有则返回null。 |
 
 ## getHdrComposedPixelmap
 
@@ -117,7 +117,7 @@ getHdrComposedPixelmapWithOptions(options?: HdrComposeOptions): Promise<PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md) \| undefined&gt; | Promise对象，返回PixelMap或undefined。 |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md) &#124; undefined&gt; | Promise对象，返回PixelMap或undefined。 |
 
 **错误码：**
 

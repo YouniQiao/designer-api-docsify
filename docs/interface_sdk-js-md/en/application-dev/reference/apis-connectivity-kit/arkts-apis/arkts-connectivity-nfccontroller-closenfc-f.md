@@ -14,7 +14,7 @@ function closeNfc(): boolean
 
 Closes NFC.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. Use
 > [disableNfc](arkts-connectivity-nfccontroller-disablenfc-f.md) instead.

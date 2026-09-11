@@ -31,7 +31,7 @@ export function requestToolPermissions(permissionQuery: PermissionQuery): Promis
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PermissionQueryResult](arkts-ability-abilitytoolaccessctrl-permissionqueryresult-i-sys.md)&gt; | Promise用于返回\\${PermissionQueryResult}。 |
+| Promise&lt;[PermissionQueryResult](arkts-ability-abilitytoolaccessctrl-permissionqueryresult-i-sys.md)&gt; | Promise用于返回\&#36;{PermissionQueryResult}。 |
 
 **错误码：**
 

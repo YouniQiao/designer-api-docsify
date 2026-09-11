@@ -22,7 +22,7 @@ onBeforeDownload(callback: Callback<WebDownloadItem>): void
 
 Invoked to notify the app before the download starts. The app must call **WebDownloadItem.start("xxx")** in this API and provide a download path. Otherwise, the download remains in the PENDING state.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For a download task in the PENDING state, the file is first saved to a temporary directory. After
 > [WebDownloadItem.start](arkts-arkweb-webview-webdownloaditem-c.md#start) is called and the target path is specified, the

@@ -38,4 +38,3 @@ import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainer
 
 | 类型 | 说明 |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |  |

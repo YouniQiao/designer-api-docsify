@@ -8,6 +8,7 @@ The **inputMethod.Panel** module provides APIs for managing the attributes of th
  Newly added APIs will be marked with a superscript to indicate their earliest API version.
 
 
+
 ## Modules to Import
 
 ```TypeScript
@@ -26,5 +27,5 @@ import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
 
 | Name | Description |
 | --- | --- |
-| [PanelFlag](arkts-ime-inputmethod-panel-panelflag-e.md) | Enumerates the state types of the input method panel.  > **NOTE：**   >    > Currently, only the **SOFT_KEYBOARD** panel is supported. |
+| [PanelFlag](arkts-ime-inputmethod-panel-panelflag-e.md) | Enumerates the state types of the input method panel.<br> <br> |
 | [PanelType](arkts-ime-inputmethod-panel-paneltype-e.md) | Enumerates the types of the input method panel. |

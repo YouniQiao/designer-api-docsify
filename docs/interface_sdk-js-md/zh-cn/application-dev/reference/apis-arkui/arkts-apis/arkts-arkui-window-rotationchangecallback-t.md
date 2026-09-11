@@ -24,4 +24,4 @@ type RotationChangeCallback<T, U> = (info: T) => U
 
 | 类型 | 说明 |
 | --- | --- |
-| U | 回调函数需要返回[RotationChangeResult]{ |
+| U | 回调函数需要返回[RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) &#124; void类型的返回值。 |

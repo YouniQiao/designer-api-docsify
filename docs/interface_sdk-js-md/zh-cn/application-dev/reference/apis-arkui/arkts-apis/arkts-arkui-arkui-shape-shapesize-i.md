@@ -30,7 +30,7 @@ height?: number | string
 
 不设置时默认值为0vp。
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **起始版本：** 12
 
@@ -60,7 +60,7 @@ width?: number | string
 
 不设置时默认值为0vp。
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **起始版本：** 12
 

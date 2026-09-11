@@ -26,7 +26,7 @@ function deleteProfile(slotId: number, iccid: string): Promise<ResultCode>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 | iccid | string | 是 | 配置文件的ID。 |
 
 **返回值：**

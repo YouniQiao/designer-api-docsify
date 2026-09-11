@@ -45,9 +45,9 @@ Creates a Calendar object based on the calendar account information. This API us
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:<br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -98,9 +98,9 @@ Creates a Calendar object based on the calendar account information. This API us
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:<br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -161,9 +161,9 @@ Deletes a specified Calendar object. This API uses a promise to return the resul
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:<br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -225,9 +225,9 @@ Deletes a specified Calendar object. This API uses an asynchronous callback to r
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:<br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -340,7 +340,7 @@ Obtains the created and default Calendar objects of the current application. Thi
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:<br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -390,9 +390,9 @@ Obtains the created and default Calendar objects of the current application. Thi
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:<br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -453,7 +453,7 @@ Obtains the default or specified Calendar object. This API uses a promise to ret
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [23900003](../errorcode-calendarManager.md#23900003-specified-account-not-found) | The specified account was not found.<br>**Applicable version:** 23 and later |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:<br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -501,10 +501,10 @@ Obtains a specified Calendar object. This API uses an asynchronous callback to r
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [23900003](../errorcode-calendarManager.md#23900003-specified-account-not-found) | The specified account was not found.<br>**Applicable version:** 23 and later |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:<br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -563,9 +563,9 @@ Obtains the default Calendar object, which is created when the data storage runs
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:  1. dataShare database execution error;  2. null pointer error;  3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:<br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
 

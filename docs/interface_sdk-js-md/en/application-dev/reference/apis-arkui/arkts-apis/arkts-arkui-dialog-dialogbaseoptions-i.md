@@ -120,7 +120,7 @@ Whether to allow dismissal by touching the mask or pressing the Back button.
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the dialog box. Setting this parameter to BlurStyle.NONE disables the background blur.
+Background blur style of the dialog box. <br>Setting this parameter to BlurStyle.NONE disables the background blur.
 
 **Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
@@ -158,7 +158,7 @@ Background blur style with options.
 backgroundColor?: ResourceColor
 ```
 
-Background color of the dialog box. When backgroundColor is set to a non-transparent color, backgroundBlurStyle must be set to BlurStyle.NONE.
+Background color of the dialog box. <br>When backgroundColor is set to a non-transparent color, backgroundBlurStyle must be set to BlurStyle.NONE.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -198,7 +198,7 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 Border color of the dialog box.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; EdgeColors &#124; [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **Default:** Color.Black
 
@@ -218,7 +218,7 @@ borderRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 
 Border radius of the background.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
+**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **Default:** { topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }
 
@@ -238,7 +238,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 Border style of the dialog box.
 
-**Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) \| EdgeStyles
+**Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) &#124; EdgeStyles
 
 **Default:** BorderStyle.Solid
 
@@ -258,7 +258,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 Border width of the dialog box.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
+**Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **Default:** 0
 
@@ -528,7 +528,7 @@ Display order of the dialog.
 levelUniqueId?: number
 ```
 
-Unique ID of the node under the display level for the page-level dialog box. The value should be an integer. This parameter takes effect only when levelMode is set to LevelMode.EMBEDDED.
+Unique ID of the node under the display level for the page-level dialog box. The value should be an integer. <br>This parameter takes effect only when levelMode is set to LevelMode.EMBEDDED.
 
 **Type:** number
 
@@ -620,7 +620,7 @@ Offset of the dialog relative to the alignment position.
 onWillDismiss?: Callback<DialogDismissal>
 ```
 
-Callback for interactive closure of the dialog box. If this callback is registered, the dialog box will not be closed immediately after the user touches the mask or the Back button. The reason parameter in the callback is used to determine whether the dialog can be closed.
+Callback for interactive closure of the dialog box. <br>If this callback is registered, the dialog box will not be closed immediately after the user touches the mask or the Back button. The reason parameter in the callback is used to determine whether the dialog can be closed.
 
 **Type:** Callback&lt;[DialogDismissal](arkts-arkui-arkui-dialog-dialogdismissal-i.md)&gt;
 
@@ -640,7 +640,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Shadow of the dialog box.
 
-**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
+**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **Since:** 26.1.0
 
@@ -656,7 +656,7 @@ Shadow of the dialog box.
 showInSubWindow?: boolean
 ```
 
-Whether to display in a subwindow. isModal = true and showInSubWindow = true cannot be used at the same time.
+Whether to display in a subwindow. <br>isModal = true and showInSubWindow = true cannot be used at the same time.
 
 **Type:** boolean
 

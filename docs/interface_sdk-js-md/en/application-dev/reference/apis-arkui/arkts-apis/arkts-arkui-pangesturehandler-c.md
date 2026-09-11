@@ -167,7 +167,7 @@ Sets the callback for pan gesture movement updates. The callback is triggered wh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked during pan gesture movement.If **fingerList** contains multiple fingers, this callback updates the location information of only one finger each time. |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked during pan gesture movement.<br>If **fingerList** contains multiple fingers, this callback updates the location information of only one finger each time. |
 
 **Return value:**
 

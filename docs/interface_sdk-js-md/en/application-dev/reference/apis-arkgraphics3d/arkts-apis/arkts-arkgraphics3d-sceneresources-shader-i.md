@@ -28,7 +28,7 @@ Sets the inputs for the shader. This API delivers better performance than direct
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputs | Record&lt;string, number \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| [Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt; | Yes | A mapping of strings to values for setting shader inputs. |
+| inputs | Record&lt;string, number &#124; [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) &#124; [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) &#124; [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) &#124; [Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt; | Yes | A mapping of strings to values for setting shader inputs. |
 
 **Examples**
 
@@ -77,7 +77,7 @@ readonly inputs: Record<string, number | Vec2 | Vec3 | Vec4 | Image>
 
 Inputs of the shader.
 
-**Type:** Record&lt;string, number \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| [Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt;
+**Type:** Record&lt;string, number &#124; [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) &#124; [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) &#124; [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) &#124; [Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt;
 
 **Since:** 12
 

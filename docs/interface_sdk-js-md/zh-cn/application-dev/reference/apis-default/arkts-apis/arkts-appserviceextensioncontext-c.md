@@ -39,7 +39,7 @@ connectServiceExtensionAbility(want: Want, callback: ConnectOptions): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回连接id，客户端可以通过[disconnectServiceExtensionAbility]{ |
+| number | 返回连接id，客户端可以通过[disconnectServiceExtensionAbility](#disconnectserviceextensionability)传入该连接id来断开连接。 |
 
 **错误码：**
 

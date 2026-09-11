@@ -18,7 +18,7 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 collectMinidump?: boolean
 ```
 
-Policy for the APP_CRASH event the value true means to the minidump capture capability is enabled. the value false means to the minidump capture function is disabled. Default value:false.
+Policy for the APP_CRASH event the value true means to the minidump capture capability is enabled. the value false means to the minidump capture function is disabled. <br>Default value:false.
 
 **Type:** boolean
 

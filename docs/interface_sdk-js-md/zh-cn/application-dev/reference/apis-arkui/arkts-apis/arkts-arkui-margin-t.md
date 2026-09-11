@@ -6,6 +6,8 @@ declare type Margin = Padding
 
 Defines the margin property.
 
+@typedef { Padding } Margin
+
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。

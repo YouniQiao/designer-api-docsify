@@ -47,14 +47,14 @@ static connect<T extends object>(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | 是 | 指定的类型，若未指定key，则使用type的name作为key。 |
-| keyOrDefaultCreator | string \| [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)&lt;T&gt; | 否 | 指定的key，或者是获取默认值的构造器。默认值为undefined。 |
+| keyOrDefaultCreator | string &#124; [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)&lt;T&gt; | 否 | 指定的key，或者是获取默认值的构造器。默认值为undefined。 |
 | defaultCreator | [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)&lt;T&gt; | 否 | 获取默认值的构造器。默认值为undefined。如果数据未存储在AppStorageV2中，且没有传递默认构造器，则返回undefined。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T \| undefined | 创建或获取AppStorageV2数据成功时，返回数据；否则返回undefined。 |
+| T &#124; undefined | 创建或获取AppStorageV2数据成功时，返回数据；否则返回undefined。 |
 
 **示例**
 
@@ -133,7 +133,7 @@ static remove<T>(keyOrType: string | TypeConstructorWithArgs<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyOrType | string \| [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | 是 | 需要删除的key；如果指定的是type类型，删除的key为type的name。 |
+| keyOrType | string &#124; [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | 是 | 需要删除的key；如果指定的是type类型，删除的key为type的name。 |
 
 **示例**
 

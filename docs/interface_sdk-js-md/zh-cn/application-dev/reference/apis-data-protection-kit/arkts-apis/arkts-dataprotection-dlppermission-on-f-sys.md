@@ -14,7 +14,7 @@ function on(type: 'uninstallDLPSandbox', listener: Callback<DLPSandboxState>): v
 
 注册监听DLP沙箱卸载事件，用于感知沙箱环境的变化。注册成功后，当DLP沙箱被卸载时，系统会通过回调函数通知应用。
 
-调用on注册监听后，建议在不需要监听时调用off取消监听释放资源。
+调用on注册监听后，建议在不需要监听时调用[off](arkts-dataprotection-dlppermission-off-f-sys.md#offuninstalldlpsandbox)取消监听释放资源。
 
 DLP管理应用需要追踪沙箱的创建和销毁状态，以便维护沙箱列表或执行相关的清理操作。
 

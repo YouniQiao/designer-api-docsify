@@ -2,7 +2,7 @@
 
 Provides APIs to create and display toasts, dialog boxes, action menus, and custom popups.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The initial APIs of this class are supported since API version 10.
 > 
@@ -54,7 +54,7 @@ Closes a custom dialog box corresponding to **dialogContent**. This API uses a p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | Dialog content not found. The ComponentContent cannot be found. |
 
@@ -84,7 +84,7 @@ Closes the specified custom dialog box.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## closeMenu
@@ -119,7 +119,7 @@ Closes the menu corresponding to the provided content. This API uses a promise t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
 
@@ -155,7 +155,7 @@ Closes the popup corresponding to the provided **content**. This API uses a prom
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
 
@@ -185,7 +185,7 @@ Closes the specified toast.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [103401](../errorcode-promptAction.md#103401-toast-not-found) | Cannot find the toast. |
 
@@ -256,7 +256,7 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dialogContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content of the custom dialog box. |
-| options | [promptAction.BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md) | No | Dialog box style.Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| options | [promptAction.BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md) | No | Dialog box style.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
@@ -268,7 +268,7 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | Dialog content already exist. The ComponentContent has already been opened. |
 
@@ -294,7 +294,7 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [promptAction.CustomDialogOptions](arkts-arkui-promptaction-customdialogoptions-i.md) | Yes | Content of the custom dialog box.+ * Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) + * and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, + * only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. + |
+| options | [promptAction.CustomDialogOptions](arkts-arkui-promptaction-customdialogoptions-i.md) | Yes | Content of the custom dialog box.<br> + * Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) + * and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, + * only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. + |
 
 **Return value:**
 
@@ -306,7 +306,7 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## openCustomDialogWithController
@@ -334,7 +334,7 @@ The dialog box displayed through this API has its content fully following style 
 | --- | --- | --- | --- |
 | dialogContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content of the custom dialog box. |
 | controller | [promptAction.DialogController](arkts-arkui-promptaction-dialogcontroller-c.md) | Yes | Controller of the custom dialog box. |
-| options | [promptAction.BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md) | No | Style of the custom dialog box.Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| options | [promptAction.BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md) | No | Style of the custom dialog box.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
@@ -346,7 +346,7 @@ The dialog box displayed through this API has its content fully following style 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | Dialog content already exist. The ComponentContent has already been opened. |
 
@@ -358,7 +358,7 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 
 Opens a menu with the specified content. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - If an invalid **target** is provided, the menu will not be displayed.
 > 
@@ -387,7 +387,7 @@ Opens a menu with the specified content. This API uses a promise to return the r
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content displayed in the menu. |
 | target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | Information about the target component to bind. |
-| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | No | Style of the menu.   **NOTE：**The **title** property is not effective.The **preview** parameter supports only the **MenuPreviewMode** type. |
+| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | No | Style of the menu.<br>**NOTE:**<br>The **title** property is not effective.<br> The **preview** parameter supports only the **MenuPreviewMode** type. |
 
 **Return value:**
 
@@ -399,7 +399,7 @@ Opens a menu with the specified content. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | The ComponentContent already exists. |
 | [103304](../errorcode-promptAction.md#103304-target-id-not-found) | The targetId does not exist. |
@@ -413,7 +413,7 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 
 Creates and displays a popup with the specified content. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - If an invalid **target** is provided, the popup will not be displayed.
 > 
@@ -451,7 +451,7 @@ Creates and displays a popup with the specified content. This API uses a promise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | The ComponentContent already exists. |
 | [103304](../errorcode-promptAction.md#103304-target-id-not-found) | The targetId does not exist. |
@@ -477,7 +477,7 @@ Displays a toast. This API uses a promise to return the toast ID for use with **
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.ShowToastOptions | Yes | Toast configuration options. |
+| options | [promptAction.ShowToastOptions](arkts-arkui-promptaction-showtoastoptions-i.md) | Yes | Toast configuration options. |
 
 **Return value:**
 
@@ -489,7 +489,7 @@ Displays a toast. This API uses a promise to return the toast ID for use with **
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## presentCustomDialog
@@ -515,9 +515,9 @@ The dialog box ID can be included in the dialog box content for related operatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) | Yes | Content of the custom dialog box. |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) | Yes | Content of the custom dialog box. |
 | controller | [promptAction.DialogController](arkts-arkui-promptaction-dialogcontroller-c.md) | No | Controller of the custom dialog box. |
-| options | promptAction.DialogOptions | No | Style of the custom dialog box.Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| options | [promptAction.DialogOptions](arkts-arkui-promptaction-dialogoptions-i.md) | No | Style of the custom dialog box.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
@@ -529,7 +529,7 @@ The dialog box ID can be included in the dialog box content for related operatio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## showActionMenu
@@ -554,14 +554,14 @@ Shows an action menu in the given settings. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.ActionMenuOptions | Yes | Action menu options. |
-| callback | promptAction.ActionMenuSuccessResponse | Yes | Callback used to return the action menu response result. |
+| options | [promptAction.ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md) | Yes | Action menu options. |
+| callback | [promptAction.ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md) | Yes | Callback used to return the action menu response result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## showActionMenu
@@ -584,14 +584,14 @@ Creates and displays an action menu. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.ActionMenuOptions | Yes | Action menu options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the action menu response. On failure, **err** provides error details. |
+| options | [promptAction.ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md) | Yes | Action menu options. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[promptAction.ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md)&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the action menu response. On failure, **err** provides error details. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## showActionMenu
@@ -614,19 +614,19 @@ Creates and displays an action menu. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.ActionMenuOptions | Yes | Action menu options. |
+| options | [promptAction.ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md) | Yes | Action menu options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;promptAction.ActionMenuSuccessResponse&gt; | callback - Promise that returns the action menu response. |
+| Promise&lt;[promptAction.ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md)&gt; | callback - Promise that returns the action menu response. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## showDialog
@@ -649,14 +649,14 @@ Creates and displays a dialog box. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.ShowDialogOptions | Yes | Dialog box configuration options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the dialog box response. On failure, **err** provides error details. |
+| options | [promptAction.ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | Yes | Dialog box configuration options. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[promptAction.ShowDialogSuccessResponse](arkts-arkui-promptaction-showdialogsuccessresponse-i.md)&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the dialog box response. On failure, **err** provides error details. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## showDialog
@@ -679,19 +679,19 @@ Creates and displays a dialog box. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.ShowDialogOptions | Yes | Dialog box configuration options. |
+| options | [promptAction.ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | Yes | Dialog box configuration options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;promptAction.ShowDialogSuccessResponse&gt; | Promise that returns the dialog box response. |
+| Promise&lt;[promptAction.ShowDialogSuccessResponse](arkts-arkui-promptaction-showdialogsuccessresponse-i.md)&gt; | Promise that returns the dialog box response. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## showToast
@@ -714,13 +714,13 @@ Creates and displays a toast.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.ShowToastOptions | Yes | Toast configuration options |
+| options | [promptAction.ShowToastOptions](arkts-arkui-promptaction-showtoastoptions-i.md) | Yes | Toast configuration options |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 ## updateCustomDialog
@@ -756,7 +756,7 @@ Updates a custom dialog box corresponding to **dialogContent**. This API uses a 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | Dialog content not found. The ComponentContent cannot be found. |
 
@@ -768,7 +768,7 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 
 Updates the style of the menu corresponding to the provided **content**. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Updating for the following is not supported: **showInSubWindow**, **preview**, **previewAnimationOptions**,
 > **transition**, **onAppear**, **aboutToAppear**, **onDisappear**, **aboutToDisappear**, **onWillAppear**,
@@ -791,8 +791,8 @@ Updates the style of the menu corresponding to the provided **content**. This AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content displayed in the menu. |
-| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | Yes | Style of the menu.   **NOTE：** 1. Updating for the following is not supported: **showInSubWindow**, **preview**, **previewAnimationOptions**, **transition**, **onAppear**, **aboutToAppear**, **onDisappear**, **aboutToDisappear**, **onWillAppear**, **onDidAppear**, **onWillDisappear**, and **onDidDisappear**. 2. The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md). However, this API does not support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by setting a boolean value. |
-| partialUpdate | boolean | No | Whether to update the menu in incremental mode. Default value: **false**.   **NOTE：** 1. **true**: incremental update, where the specified properties in **options** are updated, and other properties stay at their current value. 2. **false**: full update, where all properties except those specified in **options** are restored to default values. |
+| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | Yes | Style of the menu.<br>**NOTE:**<br>1. Updating for the following is not supported: **showInSubWindow**, **preview**, **previewAnimationOptions**, **transition**, **onAppear**, **aboutToAppear**, **onDisappear**, **aboutToDisappear**, **onWillAppear**, **onDidAppear**, **onWillDisappear**, and **onDidDisappear**.<br>2. The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md). However, this API does not support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by setting a boolean value. |
+| partialUpdate | boolean | No | Whether to update the menu in incremental mode. Default value: **false**.<br> **NOTE:**<br>1. **true**: incremental update, where the specified properties in **options** are updated, and other properties stay at their current value.<br>2. **false**: full update, where all properties except those specified in **options** are restored to default values. |
 
 **Return value:**
 
@@ -804,7 +804,7 @@ Updates the style of the menu corresponding to the provided **content**. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
 
@@ -816,7 +816,7 @@ updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommon
 
 Updates the style of the popup corresponding to the provided **content**. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Updating the following properties is not supported: **showInSubWindow**, **focusable**, **onStateChange**, **onWillDismiss**, and **transition**.
 
@@ -833,8 +833,8 @@ Updates the style of the popup corresponding to the provided **content**. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content displayed in the popup. |
-| options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | Yes | Style of the popup.   **NOTE：**Updating the following properties is not supported: **showInSubWindow**, **focusable**, **onStateChange**, **onWillDismiss**, and **transition**. |
-| partialUpdate | boolean | No | Whether to update the popup in incremental mode.Default value: **false**   **NOTE：**  **true**: Incremental update. Only specified attributes in **options** are updated, and the other attributes retain their current values. If the attribute value passed in **options** is invalid or **undefined**, the attribute is not updated.    **false**: Full update. Specified attributes in **options** are updated, and the other attributes are restored to their default values. |
+| options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | Yes | Style of the popup.<br> **NOTE:**<br> Updating the following properties is not supported: **showInSubWindow**, **focusable**, **onStateChange**, **onWillDismiss**, and **transition**. |
+| partialUpdate | boolean | No | Whether to update the popup in incremental mode.<br> Default value: **false**<br> **NOTE:**<br> **true**: Incremental update. Only specified attributes in **options** are updated, and the other attributes retain their current values. If the attribute value passed in **options** is invalid or **undefined**, the attribute is not updated.<br> **false**: Full update. Specified attributes in **options** are updated, and the other attributes are restored to their default values. |
 
 **Return value:**
 
@@ -846,6 +846,6 @@ Updates the style of the popup corresponding to the provided **content**. This A
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |

@@ -72,7 +72,7 @@ maxFontScale: number | Resource
 
 默认值：1
 
-**类型：** number \| [Resource](arkts-arkui-resource-t.md)
+**类型：** number &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 14
 

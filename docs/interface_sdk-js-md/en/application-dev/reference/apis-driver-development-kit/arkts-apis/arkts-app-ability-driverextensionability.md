@@ -1,4 +1,4 @@
-# @ohos.app.ability.DriverExtensionAbility
+# @ohos.app.ability.DriverExtensionAbility(Driver Extension Ability)
 
 ## Modules to Import
 

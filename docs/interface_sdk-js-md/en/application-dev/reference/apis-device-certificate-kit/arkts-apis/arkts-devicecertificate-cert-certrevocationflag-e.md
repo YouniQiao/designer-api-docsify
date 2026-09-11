@@ -35,7 +35,7 @@ CERT_REVOCATION_CRL_CHECK = 1
 
 Enables the CRL check. Checks the certificate status using a certificate revocation list.
 
-First, the **crls** parameter of [X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md) is used. If no matching CRL is found and **allowDownloadCrl** of [X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md) is set to **true**, the CDP extension of the certificate is used to download the CRL.
+<br>First, the **crls** parameter of [X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md) is used. If no matching CRL is found and **allowDownloadCrl** of [X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md) is set to **true**, the CDP extension of the certificate is used to download the CRL.
 
 **Since:** 26.0.0
 
@@ -53,9 +53,9 @@ CERT_REVOCATION_OCSP_CHECK = 2
 
 Enables OCSP check. Checks the certificate status using the Online Certificate Status Protocol.
 
-First, the **ocspResponses** parameter of [X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md) is used. If no matching OCSP response is found and **allowOcspCheckOnline** of [X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md) is set to **true**, the system attempts to obtain the OCSP URL from the certificate AIA extension and sends a request to obtain the response.
+<br>First, the **ocspResponses** parameter of [X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md) is used. If no matching OCSP response is found and **allowOcspCheckOnline** of [X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md) is set to **true**, the system attempts to obtain the OCSP URL from the certificate AIA extension and sends a request to obtain the response.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Always verify the validity period of the OCSP response against the current system time, and allow a time
 > tolerance of ±5 minutes.

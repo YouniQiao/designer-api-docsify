@@ -14,7 +14,7 @@ Defines the PacMap type used for data storage.
 
 Indicates the parameter of the PacMap type. If a custom Sequenceable object is put in the PacMap object and will be transferred across processes, you must call BasePacMap.setClassLoader(ClassLoader) to set a class loader for the custom object. If the PacMap object is to be transferred to a non-OHOS process, values of primitive types are supported, but not custom Sequenceable objects.
 
-**Type:** number \| string \| boolean \| Array&lt;string \| number \| boolean&gt; \| null
+**Type:** number &#124; string &#124; boolean &#124; Array&lt;string &#124; number &#124; boolean&gt; &#124; null
 
 **Since:** 7
 

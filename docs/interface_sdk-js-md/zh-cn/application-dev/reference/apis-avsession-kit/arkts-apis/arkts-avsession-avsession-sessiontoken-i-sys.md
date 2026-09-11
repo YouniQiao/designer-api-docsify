@@ -2,6 +2,8 @@
 
 会话令牌的信息。
 
+@typedef SessionToken
+
 **起始版本：** 9
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager

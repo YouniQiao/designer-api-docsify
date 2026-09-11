@@ -2,7 +2,7 @@
 
 Custom Component base class and it is migrated from class CustomComponent.
 
-**Inheritance/Implementation:** BaseCustomComponent extends [CommonAttribute](arkts-arkui-common-attribute.md#commonattribute)
+**Inheritance/Implementation:** BaseCustomComponent extends [CommonAttribute](arkts-arkui-common-comp-attribute.md#commonattribute)
 
 **Since:** 18
 
@@ -101,7 +101,7 @@ The dialog controller of the custom component.
 
 | Type | Description |
 | --- | --- |
-| [PromptActionDialogController](arkts-arkui-promptactiondialogcontroller-t.md) \| undefined | The controller of dialog, or undefined if it is not available |
+| [PromptActionDialogController](arkts-arkui-promptactiondialogcontroller-t.md) &#124; undefined | The controller of dialog, or undefined if it is not available |
 
 ## getUIContext
 
@@ -247,8 +247,8 @@ Invoked when the custom component needs to determine its size. Through this call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selfLayoutInfo | [GeometryInfo](arkts-arkui-geometryinfo-i.md) | Yes | Information about the component's computed layout properties after measurement.During the first layout, the component will use its own set attributes as the basis for layout. |
-| children | Array&lt;[Measurable](arkts-arkui-measurable-i.md)&gt; | Yes | Array containing layout information for all child components after measurement. When a child component does not have its layout information set, it retains the previous layout settings or, if no previous layout settings are available, stays at the default size of 0. |
+| selfLayoutInfo | [GeometryInfo](arkts-arkui-geometryinfo-i.md) | Yes | Information about the component's computed layout properties after measurement.<br>During the first layout, the component will use its own set attributes as the basis for layout. |
+| children | Array&lt;[Measurable](arkts-arkui-measurable-i.md)&gt; | Yes | Array containing layout information for all child components after measurement.<br>When a child component does not have its layout information set, it retains the previous layout settings or, if no previous layout settings are available, stays at the default size of 0. |
 | constraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Layout constraints applied to the component. |
 
 **Return value:**
@@ -287,7 +287,7 @@ onPageHide?(): void
 
 Invoked each time a router-managed page (a custom component decorated with [\@Entry](../../../ui/state-management/arkts-create-custom-components.md#entry)) is hidden, including scenarios such as route navigation and the application moving to the background.
 
-> **NOTE：**
+> **NOTE:**
 
 > To ensure smooth UI responsiveness, avoid executing time-consuming operations within the callback function that
 > may block the main thread. For resource-intensive tasks such as camera resource deallocation, consider
@@ -349,7 +349,7 @@ Invoked before the **build()** function of a new instance of the custom componen
 > * * Note: * *
 > Since API version 18, this API can be used in the status management V2 component.
 
-> **NOTE：**
+> **NOTE:**
 
 > Since API version 18, this API is supported in the components of V2.
 
@@ -401,7 +401,7 @@ Queries the **NavDestination** information of this custom component. This API ha
 
 | Type | Description |
 | --- | --- |
-| [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) \| undefined | NavDestinationInfo** instance obtained. |
+| [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) &#124; undefined | NavDestinationInfo** instance obtained. |
 
 ## queryNavDestinationInfo
 
@@ -423,13 +423,13 @@ Queries the information of the nearest **NavDestination** component (a navigatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isInner | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to search inward for the nearest **NavDestination** component in the navigation stack.   **true**: Search inward.   **false**: Search outward. |
+| isInner | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to search inward for the nearest **NavDestination** component in the navigation stack.<br>**true**: Search inward.<br>**false**: Search outward. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) \| undefined | NavDestinationInfo** instance obtained. |
+| [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) &#124; undefined | NavDestinationInfo** instance obtained. |
 
 ## queryNavigationInfo
 
@@ -451,7 +451,7 @@ Queries the **Navigation** information of this custom component.
 
 | Type | Description |
 | --- | --- |
-| [NavigationInfo](arkts-arkui-navigationinfo-t.md) \| undefined | NavigationInfo** instance obtained. |
+| [NavigationInfo](arkts-arkui-navigationinfo-t.md) &#124; undefined | NavigationInfo** instance obtained. |
 
 ## queryRouterPageInfo
 
@@ -473,4 +473,4 @@ Obtains a **RouterPageInfo** instance.
 
 | Type | Description |
 | --- | --- |
-| [RouterPageInfo](arkts-arkui-routerpageinfo-t.md) \| undefined | RouterPageInfo** instance obtained. |
+| [RouterPageInfo](arkts-arkui-routerpageinfo-t.md) &#124; undefined | RouterPageInfo** instance obtained. |

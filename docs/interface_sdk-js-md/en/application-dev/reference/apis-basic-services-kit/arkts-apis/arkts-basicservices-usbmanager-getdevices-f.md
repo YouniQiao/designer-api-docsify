@@ -14,7 +14,7 @@ function getDevices(): Array<Readonly<USBDevice>>
 
 Obtains the list of USB devices connected to the host.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Third-party applications are not allowed to obtain the device serial number from the **serial** field unless they
 > request permission using [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md)

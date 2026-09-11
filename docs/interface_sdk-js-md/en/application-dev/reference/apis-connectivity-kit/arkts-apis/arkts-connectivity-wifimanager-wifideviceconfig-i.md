@@ -1,6 +1,6 @@
 # WifiDeviceConfig
 
-Wi-Fi device configuration information.
+Wi-Fi device configuration information. @typedef WifiDeviceConfig
 
 **Since:** 12
 

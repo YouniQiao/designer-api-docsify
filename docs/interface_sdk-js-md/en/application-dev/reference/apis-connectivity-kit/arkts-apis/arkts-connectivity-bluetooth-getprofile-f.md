@@ -32,7 +32,7 @@ Obtains the instance of profile.
 
 | Type | Description |
 | --- | --- |
-| [A2dpSourceProfile](arkts-connectivity-bluetooth-a2dpsourceprofile-i.md) \| [HandsFreeAudioGatewayProfile](arkts-connectivity-bluetooth-handsfreeaudiogatewayprofile-i.md) | Returns instance of profile. |
+| [A2dpSourceProfile](arkts-connectivity-bluetooth-a2dpsourceprofile-i.md) &#124; [HandsFreeAudioGatewayProfile](arkts-connectivity-bluetooth-handsfreeaudiogatewayprofile-i.md) | Returns instance of profile. |
 
 **Examples**
 

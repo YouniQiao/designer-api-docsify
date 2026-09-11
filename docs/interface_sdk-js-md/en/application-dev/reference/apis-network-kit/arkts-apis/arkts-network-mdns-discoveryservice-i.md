@@ -30,7 +30,7 @@ Disables listening for **discoveryStart** events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'discoveryStart' | Yes | Event type. This field has a fixed value of **discoveryStart**.    **discoveryStart**: event of starting discovery of MDNS services on the LAN. |
+| type | 'discoveryStart' | Yes | Event type. This field has a fixed value of **discoveryStart**.<br>**discoveryStart**: event of starting discovery of MDNS services on the LAN. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | No | Callback used to return the MDNS service and error information. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
 
 **Examples**
@@ -79,7 +79,7 @@ Disables listening for **discoveryStop** events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'discoveryStop' | Yes | Event type. This field has a fixed value of **discoveryStop**.    **discoveryStop**: event of stopping discovery of MDNS services on the LAN. |
+| type | 'discoveryStop' | Yes | Event type. This field has a fixed value of **discoveryStop**.<br>**discoveryStop**: event of stopping discovery of MDNS services on the LAN. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | No | Callback used to return the MDNS service and error information. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
 
 ## off('serviceFound')
@@ -100,7 +100,7 @@ Disables listening for **serviceFound** events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'serviceFound' | Yes | Event type. This field has a fixed value of **serviceFound**.    **serviceFound**: event indicating an MDNS service is found. |
+| type | 'serviceFound' | Yes | Event type. This field has a fixed value of **serviceFound**.<br>**serviceFound**: event indicating an MDNS service is found. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | No | MDNS service information. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
 
 **Examples**
@@ -152,7 +152,7 @@ Disables listening for **serviceLost** events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'serviceLost' | Yes | Event type. This field has a fixed value of **serviceLost**.    **serviceLost**: event indicating that an MDNS service is removed. |
+| type | 'serviceLost' | Yes | Event type. This field has a fixed value of **serviceLost**.<br>**serviceLost**: event indicating that an MDNS service is removed. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | No | MDNS service information. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
@@ -201,7 +201,7 @@ Enables listening for **discoveryStart** events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'discoveryStart' | Yes | Event type. This field has a fixed value of **discoveryStart**.    **discoveryStart**: event of starting discovery of MDNS services on the LAN. |
+| type | 'discoveryStart' | Yes | Event type. This field has a fixed value of **discoveryStart**.<br>**discoveryStart**: event of starting discovery of MDNS services on the LAN. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | Yes | Callback used to return the MDNS service and error information.<br>**Since:** 11 |
 
 **Examples**
@@ -246,7 +246,7 @@ Enables listening for **discoveryStop** events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'discoveryStop' | Yes | Event type. This field has a fixed value of **discoveryStop**.    **discoveryStop**: event of stopping discovery of MDNS services on the LAN. |
+| type | 'discoveryStop' | Yes | Event type. This field has a fixed value of **discoveryStop**.<br>**discoveryStop**: event of stopping discovery of MDNS services on the LAN. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | Yes | Callback used to return the MDNS service and error information.<br>**Since:** 11 |
 
 **Examples**
@@ -291,7 +291,7 @@ Enables listening for **serviceFound** events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'serviceFound' | Yes | Event type. This field has a fixed value of **serviceFound**.    **serviceFound**: event indicating an MDNS service is found. |
+| type | 'serviceFound' | Yes | Event type. This field has a fixed value of **serviceFound**.<br>**serviceFound**: event indicating an MDNS service is found. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | Callback used to return the MDNS service information. You need to call **resolveLocalService** to parse the information. |
 
 **Examples**
@@ -339,7 +339,7 @@ Enables listening for **serviceLost** events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'serviceLost' | Yes | Event type. This field has a fixed value of **serviceLost**.    **serviceLost**: event indicating that an MDNS service is removed. |
+| type | 'serviceLost' | Yes | Event type. This field has a fixed value of **serviceLost**.<br>**serviceLost**: event indicating that an MDNS service is removed. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | MDNS service information. |
 
 **Examples**

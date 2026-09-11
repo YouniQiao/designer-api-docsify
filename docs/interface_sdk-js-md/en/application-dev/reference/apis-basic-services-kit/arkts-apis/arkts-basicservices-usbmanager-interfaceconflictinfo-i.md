@@ -2,7 +2,7 @@
 
 Describes the conflict information when the USB interface that has been exclusively claimed is claimed by another process in non-exclusive mode by calling [usbManager.claimInterfaceExclusive](arkts-basicservices-usbmanager-claiminterfaceexclusive-f.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This callback is triggered when another process calls
 > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) non-exclusively to claim the same USB interface. The exclusive holder of the interface can learn about potential access conflicts through this callback.

@@ -2,6 +2,8 @@
 
 Provides information about a form.
 
+@typedef FormInfo
+
 **Since:** 9
 
 **System capability:** SystemCapability.Ability.Form

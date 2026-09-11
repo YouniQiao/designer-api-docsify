@@ -2,9 +2,9 @@
 
 Provides the text span style information returned by the backend.
 
-While **fontWeight** in **RichEditorTextStyle** sets the font weight, **fontWeight** in **RichEditorTextStyleResult** returns the set font weight after conversion to digits.
+While **fontWeight** in **RichEditorTextStyle** sets the font weight,
 
-Conversion relationship between fontWeight in RichEditorSymbolSpanStyle and RichEditorSymbolSpanStyleResult, the conversion relationship is the same as that of fontWeight in RichEditorTextStyle and RichEditorTextStyleResult.
+**fontWeight** in **RichEditorTextStyleResult** returns the set font weight after conversion to digits.
 
 **Since:** 10
 
@@ -21,7 +21,7 @@ Conversion relationship between fontWeight in RichEditorSymbolSpanStyle and Rich
 decoration: DecorationStyleResult
 ```
 
-Text decorative line.
+Text decoration.
 
 **Type:** [DecorationStyleResult](../arkts-apis/arkts-arkui-decorationstyleresult-i.md)
 
@@ -149,7 +149,7 @@ halfLeading?: boolean
 
 Whether half leading is enabled.
 
-Whether half leading is enabled. Half leading is the leading split in half and applied equally to the top and bottom edges. The value **true** means that half leading is enabled, and **false** means the opposite.
+**true**: Half leading is enabled. **false**: Half leading is not enabled.
 
 Default value: **false**
 
@@ -223,7 +223,11 @@ Text stroke color.
 strokeJoinStyle?: StrokeJoinStyle
 ```
 
-Get the stroke join style of the text.
+Corner style of the text stroke.
+
+Default value: StrokeJoinStyle.MITER_JOIN.
+
+**Atomic service API:** Since API version 26.0.0, this API is supported in atomic services.
 
 **Type:** [StrokeJoinStyle](../arkts-apis/arkts-arkui-strokejoinstyle-e.md)
 
@@ -291,7 +295,7 @@ textShadow?: Array<ShadowOptions>
 
 Text shadow.
 
-**NOTE：**
+**NOTE:**
 
 Only the shadow blur radius, shadow color, and shadow offset can be queried.
 

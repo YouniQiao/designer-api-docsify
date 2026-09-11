@@ -42,7 +42,7 @@ onExecuteInServiceExtensionAbility(name: string, param: Record<string, Object>):
 
 | 类型 | 说明 |
 | --- | --- |
-| [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) \| Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) &#124; Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **示例**
 
@@ -151,7 +151,7 @@ onExecuteInUIAbilityBackgroundMode、[onBackground](arkts-ability-app-ability-ui
 
 | 类型 | 说明 |
 | --- | --- |
-| [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) \| Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) &#124; Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **示例**
 
@@ -247,7 +247,7 @@ onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>, 
 
 | 类型 | 说明 |
 | --- | --- |
-| [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) \| Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) &#124; Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **示例**
 
@@ -366,7 +366,7 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageL
 
 | 类型 | 说明 |
 | --- | --- |
-| [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) \| Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) &#124; Promise&lt;[insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md)&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **示例**
 

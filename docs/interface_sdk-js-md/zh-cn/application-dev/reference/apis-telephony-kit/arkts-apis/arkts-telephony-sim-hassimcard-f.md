@@ -22,8 +22,8 @@ function hasSimCard(slotId: number, callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调返回指定卡槽是否插卡。   - true:插卡。   - false：未插卡。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调返回指定卡槽是否插卡。<br>- true:插卡。<br>- false：未插卡。 |
 
 **错误码：**
 
@@ -67,13 +67,13 @@ function hasSimCard(slotId: number): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | 以Promise形式返回指定卡槽是否插卡。 |
+| Promise&lt;boolean&gt; | 以Promise形式返回指定卡槽是否插卡。<br>- true:插卡。<br>- false：未插卡。 |
 
 **错误码：**
 

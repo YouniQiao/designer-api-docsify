@@ -36,14 +36,12 @@ The spacing between columns.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | LengthMetrics \| undefined | Yes | The spacing between columns. Default value: LengthMetrics.vp(0) |
+| value | LengthMetrics &#124; undefined | Yes | The spacing between columns.<br>Default value: LengthMetrics.vp(0) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## footer
 
 ```TypeScript
@@ -64,14 +62,12 @@ Sets the footer of the lazy waterflow layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | The footer builder function. Passing undefined will remove the footer. |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; undefined | Yes | The footer builder function.<br>Passing undefined will remove the footer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## header
 
 ```TypeScript
@@ -92,14 +88,12 @@ Sets the header of the lazy waterflow layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | The header builder function. Passing undefined will remove the header. |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; undefined | Yes | The header builder function.<br>Passing undefined will remove the header. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## onVisibleIndexesChange
 
 ```TypeScript
@@ -120,14 +114,12 @@ Called when the first or last item displayed in the component changes. It is tri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | Yes | callback function, triggered when the index of child components in the visible area changes. Passing undefined will unregister the callback. |
+| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) &#124; undefined | Yes | callback function, triggered when the index of child components in the visible area changes.<br>Passing undefined will unregister the callback. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## rowsGap
 
 ```TypeScript
@@ -148,14 +140,12 @@ The spacing between rows.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | LengthMetrics \| undefined | Yes | The spacing between rows. Default value: LengthMetrics.vp(0) |
+| value | LengthMetrics &#124; undefined | Yes | The spacing between rows.<br>Default value: LengthMetrics.vp(0) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## sticky
 
 ```TypeScript
@@ -176,10 +166,9 @@ Sets the sticky style for header and footer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sticky | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) \| undefined | Yes | The sticky style for header and footer. |
+| sticky | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) &#124; undefined | Yes | The sticky style for header and footer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |

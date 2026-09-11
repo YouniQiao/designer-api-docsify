@@ -38,7 +38,7 @@ assetFilter?: Array<OperationItem>
 
 Media asset filter, with a maximum length of 50 items. If the limit is exceeded, only the first 50 items are used.
 
-**NOTE：**
+**NOTE:**
 
 1. When this filter is applied, other filters become invalid.
 2. When setting multiple conditions, enclose the filter conditions in parentheses to prevent conflicts with

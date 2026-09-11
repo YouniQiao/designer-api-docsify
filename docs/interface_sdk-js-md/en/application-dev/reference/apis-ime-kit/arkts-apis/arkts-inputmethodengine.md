@@ -1,10 +1,8 @@
 # @ohos.inputMethodEngine(Input Method Service)
 
-The **inputMethodEngine** module is oriented to input method applications (including system and third-party input method applications). With the APIs of this module, input method applications are able to create soft keyboard windows, insert or delete characters, select text, and listen for physical keyboard events.   
-> **NOTE：**
-   
-> 
-> The initial APIs of this module are supported since API version 8. Newly added APIs will be marked with a superscript to indicate their earliest API version.
+The **inputMethodEngine** module is oriented to input method applications (including system and third-party input method applications). With the APIs of this module, input method applications are able to create soft keyboard windows, insert or delete characters, select text, and listen for physical keyboard events. <br> <br>   
+> **NOTE:**<br>
+> <br> &gt;The initial APIs of this module are supported since API version 8. Newly added APIs will be marked with a superscript to indicate their earliest API version.
 
 **Since:** 8
 
@@ -23,9 +21,9 @@ import { inputMethodEngine } from '@kit.IMEKit';
 | Name | Description |
 | --- | --- |
 | [createKeyboardDelegate](arkts-ime-inputmethodengine-createkeyboarddelegate-f.md) | Obtains a [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) instance for the input method. The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more. |
-| [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md) | Obtains an [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) instance for the input method. This API can be called only by an input method. The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event, create/ destroy an input method panel, and the like. |
-| [getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md) | Obtains an [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md) instance for the input method. The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event. |
-| [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md) | Obtains a [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) instance for the input method. The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more. |
+| [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md) | Obtains an [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) instance for the input method. This API can be called only by an input method. <br> <br>The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event, create/ destroy an input method panel, and the like. |
+| [getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md) | Obtains an [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md) instance for the input method. <br> <br>The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event. |
+| [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md) | Obtains a [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) instance for the input method. <br> <br>The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more. |
 
 ### Interfaces
 
@@ -35,21 +33,21 @@ import { inputMethodEngine } from '@kit.IMEKit';
 | [EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md) | Represents the attributes of the edit box. |
 | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | Indicates the size of the enhanced input method panel, including the custom avoid area and touch area. |
 | [ImmersiveEffect](arkts-ime-inputmethodengine-immersiveeffect-i.md) | Describes the immersive effect. |
-| [InputClient](arkts-ime-inputmethodengine-inputclient-i.md) | You must first use on('inputStart') to obtain a **InputClient** instance, and then use this instance to call the following APIs. |
+| [InputClient](arkts-ime-inputmethodengine-inputclient-i.md) | You must first use [on('inputStart')](arkts-ime-inputmethodengine-inputmethodability-i.md#oninputstart) to obtain a **InputClient** instance, and then use this instance to call the following APIs. |
 | [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) | In the following API examples, you must first use [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md) to obtain an **InputMethodAbility** instance, and then call the APIs using the obtained instance. |
 | [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md) | In the following API examples, you must first use [getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md) to obtain an **InputMethodEngine** instance, and then call the APIs using the obtained instance. |
 | [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) | Represents the keyboard area on the panel. |
-| [KeyboardController](arkts-ime-inputmethodengine-keyboardcontroller-i.md) | You must first use on('inputStart') to obtain a **KeyboardController** instance, and then use this instance to call the following APIs. |
+| [KeyboardController](arkts-ime-inputmethodengine-keyboardcontroller-i.md) | You must first use [on('inputStart')](arkts-ime-inputmethodengine-inputmethodability-i.md#oninputstart) to obtain a **KeyboardController** instance, and then use this instance to call the following APIs. |
 | [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance. |
 | [KeyEvent](arkts-ime-inputmethodengine-keyevent-i.md) | Represents the attributes of a key. |
-| [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) | Represents a custom communication object.  > **NOTE：**   >    > You can register this object to receive custom communication data sent by the edit box application attached to the input method application. When the custom communication data is received, the [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage) callback in this object is triggered.   >    > This object is globally unique. After multiple registrations, only the last registered object is valid and retained, and the [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback of the penultimate registered object is triggered.   >    > If this object is unregistered, its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered. |
+| [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) | Represents a custom communication object.<br> <br> |
 | [Movement](arkts-ime-inputmethodengine-movement-i.md) | Describes the direction in which the cursor moves when the text is selected. |
 | [Panel](arkts-ime-inputmethodengine-panel-i.md) | You need to use [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) to obtain the panel instance and then call the following APIs through the instance. |
 | [PanelInfo](arkts-ime-inputmethodengine-panelinfo-i.md) | Describes the attributes of the input method panel. |
 | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | Represents the size of the input method panel. |
 | [Range](arkts-ime-inputmethodengine-range-i.md) | Describes the range of the selected text. |
 | [SystemPanelInsets](arkts-ime-inputmethodengine-systempanelinsets-i.md) | Defines the offset area between the input method soft keyboard and the system panel. |
-| [TextInputClient](arkts-ime-inputmethodengine-textinputclient-i.md) | In the following API examples, you must first use on('inputStart') to obtain a **TextInputClient** instance, and then call the APIs using the obtained instance. |
+| [TextInputClient](arkts-ime-inputmethodengine-textinputclient-i.md) | In the following API examples, you must first use [on('inputStart')](arkts-ime-inputmethodengine-inputmethodengine-i.md#oninputstart) to obtain a **TextInputClient** instance, and then call the APIs using the obtained instance. |
 | [WindowInfo](arkts-ime-inputmethodengine-windowinfo-i.md) | Represents window information. |
 
 <!--Del-->
@@ -66,14 +64,14 @@ import { inputMethodEngine } from '@kit.IMEKit';
 
 | Name | Description |
 | --- | --- |
-| [CapitalizeMode](arkts-ime-inputmethodengine-capitalizemode-e.md) | Enumerates the modes of capitalizing the first letter of a text. |
+| [CapitalizeMode](arkts-ime-inputmethodengine-capitalizemode-e.md) | Enumerates the modes of capitalizing the first letter of a text.<br> <br>  &#124; Name&#124; Value&#124; Description&#124;  &#124; -------- &#124; -- &#124; -------- &#124;  &#124; NONE &#124; 0 &#124; The first letter is not capitalized.&#124;  &#124; SENTENCES &#124; 1 &#124; The first letter of each sentence is capitalized.&#124;  &#124; WORDS &#124; 2 &#124; The first letter of each word is capitalized.&#124;  &#124; CHARACTERS &#124; 3 &#124; All letters are capitalized.&#124; |
 | [Direction](arkts-ime-inputmethodengine-direction-e.md) | Enumerates the directions of cursor movement of the input method. |
 | [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md) | Describes the type of the extended edit action on the text box. |
-| [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md) | Enumerates the gradient modes of the input method. |
-| [ImmersiveMode](arkts-ime-inputmethodengine-immersivemode-e.md) | Enumerates the immersive modes of the input method. |
-| [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Enumerates the state types of the input method panel. |
-| [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) | Enumerates the types of the input method panel. |
-| [RequestKeyboardReason](arkts-ime-inputmethodengine-requestkeyboardreason-e.md) | Enumerates the reasons for requesting keyboard input. |
+| [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md) | Enumerates the gradient modes of the input method.<br> <br>  &#124; Name &#124; Value&#124; Description &#124;  &#124; ------------ &#124; -- &#124; ------------------ &#124;  &#124; NONE &#124; 0 &#124; The gradient mode is not used.&#124;  &#124; LINEAR_GRADIENT &#124; 1 &#124; Linear gradient.&#124; |
+| [ImmersiveMode](arkts-ime-inputmethodengine-immersivemode-e.md) | Enumerates the immersive modes of the input method.<br> <br>  &#124; Name &#124; Value&#124; Description &#124;  &#124; ------------ &#124; -- &#124; ------------------ &#124;  &#124; NONE_IMMERSIVE &#124; 0 &#124; The immersive mode is not used.&#124;  &#124; IMMERSIVE &#124; 1 &#124; The immersive mode is used. Its style is determined by the input method application.&#124;  &#124; LIGHT_IMMERSIVE &#124; 2 &#124; Immersive style in light mode.&#124;  &#124; DARK_IMMERSIVE &#124; 3 &#124; Immersive style in dark mode.&#124; |
+| [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Enumerates the state types of the input method panel.<br> <br>  &#124; Name &#124; Value&#124; Description &#124;  &#124; ------------ &#124; -- &#124; ------------------ &#124;  &#124; FLG_FIXED &#124; 0 &#124; Fixed state type.&#124;  &#124; FLG_FLOATING &#124; 1 &#124; Floating state type.&#124;  &#124; FLAG_CANDIDATE&lt;sup&gt;15+&lt;/sup&gt; &#124; 2 &#124; Candidate state type.&#124; |
+| [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) | Enumerates the types of the input method panel.<br> <br>  &#124; Name &#124; Value&#124; Description &#124;  &#124; ------------ &#124; -- &#124; ------------------ &#124;  &#124; SOFT_KEYBOARD &#124; 0 &#124; Soft keyboard type.&#124;  &#124; STATUS_BAR &#124; 1 &#124; Status bar type.&#124; |
+| [RequestKeyboardReason](arkts-ime-inputmethodengine-requestkeyboardreason-e.md) | Enumerates the reasons for requesting keyboard input.<br> <br>  &#124; Name &#124; Value&#124; Description &#124;  &#124; ------------ &#124; -- &#124; ------------------ &#124;  &#124; NONE &#124; 0 &#124; The keyboard request is triggered for no reason.&#124;  &#124; MOUSE &#124; 1 &#124; The keyboard request is triggered by a mouse operation.&#124;  &#124; TOUCH &#124; 2 &#124; The keyboard request is triggered by a touch operation.&#124;  &#124; OTHER &#124; 20 &#124; The keyboard request is triggered by other reasons.&#124; |
 | [SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md) | Describes the security mode. |
 
 <!--Del-->
@@ -81,7 +79,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 
 | Name | Description |
 | --- | --- |
-| [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md) | Enumerates the fluid light modes of the input method. |
+| [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md) | Enumerates the fluid light modes of the input method.<br> <br>  &#124; Name &#124; Value&#124; Description &#124;  &#124; ------------ &#124; -- &#124; ------------------ &#124;  &#124; NONE &#124; 0 &#124; The fluid light mode is not used.&#124;  &#124; BACKGROUND_FLUID_LIGHT &#124; 1 &#124; When the background fluid light mode is enabled, the system panel turns transparent.The fluid light effect must be implemented by the host application of the edit box.&#124; |
 <!--DelEnd-->
 
 ### Types

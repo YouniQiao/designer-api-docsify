@@ -20,7 +20,7 @@ albumChangeInfos?: AlbumChangeInfo[] | null
 
 Smart album change information.
 
-**Type:** [AlbumChangeInfo](arkts-medialibrary-photoaccesshelper-albumchangeinfo-i.md)[] \| null
+**Type:** [AlbumChangeInfo](arkts-medialibrary-photoaccesshelper-albumchangeinfo-i.md)[] &#124; null
 
 **Since:** 23
 
@@ -86,7 +86,7 @@ Date when the media asset was created.
 dateModifiedMs?: number
 ```
 
-The modified time of asset. Unit:milliseconds.
+The modified time of asset. <br>Unit:milliseconds.
 
 **Type:** number
 
@@ -168,7 +168,7 @@ ID of the media asset.
 hiddenTime?: number
 ```
 
-The hidden time of asset. Unit:milliseconds.
+The hidden time of asset. <br>Unit:milliseconds.
 
 **Type:** number
 

@@ -177,7 +177,7 @@ borderColor?: ResourceColor | EdgeColors
 
 如果使用borderColor属性，需要和borderWidth属性一起使用。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; EdgeColors
 
 **起始版本：** 12
 
@@ -199,7 +199,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 如果使用borderStyle属性，需要和borderWidth属性一起使用。
 
-**类型：** [BorderStyle](arkts-arkui-borderstyle-e.md) \| EdgeStyles
+**类型：** [BorderStyle](arkts-arkui-borderstyle-e.md) &#124; EdgeStyles
 
 **起始版本：** 12
 
@@ -225,7 +225,7 @@ borderWidth?: Dimension | EdgeWidths
 
 当弹窗左边框和右边框大于弹窗宽度，弹窗上边框和下边框大于弹窗高度，显示可能不符合预期。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths
+**类型：** [Dimension](arkts-arkui-dimension-t.md) &#124; EdgeWidths
 
 **起始版本：** 12
 
@@ -299,7 +299,7 @@ cornerRadius?: Dimension | BorderRadiuses
 
 **说明：**自定义弹窗默认的背板圆角半径为32vp，如果需要使用cornerRadius属性，请和borderRadius属性一起使用。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
+**类型：** [Dimension](arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
 **起始版本：** 10
 
@@ -868,7 +868,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
 
-**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
+**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 12
 
@@ -892,7 +892,8 @@ showInSubWindow?: boolean
 
 **类型：** boolean
 
-**默认值：** false [since 11]
+**默认值：**
+- API版本11+：false
 
 **起始版本：** 10
 

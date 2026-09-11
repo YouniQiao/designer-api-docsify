@@ -4,7 +4,7 @@
 declare type FP = `${number}fp`
 ```
 
-定义长度属性，单位为fp。
+定义长度属性，单位为fp。@typedef { `\${number}fp` } FP
 
 **起始版本：** 23
 

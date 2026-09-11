@@ -34,7 +34,7 @@ Starts pairing with a remote Bluetooth device.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the pairing process is started; returns `false` otherwise. |
 
 **Examples**
 

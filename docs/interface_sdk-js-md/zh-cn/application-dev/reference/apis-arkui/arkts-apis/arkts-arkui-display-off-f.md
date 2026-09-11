@@ -24,7 +24,7 @@ function off(type: 'add' | 'remove' | 'change', callback?: Callback<number>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'add' \| 'remove' \| 'change' | 是 | 监听事件。   - type为"add"，表示增加显示设备事件。例如：插入显示器。   - type为"remove"，表示移除显示设备事件。例如：移除显示器。   - type为"change"，表示改变显示设备事件。例如：显示器方向改变。 |
+| type | 'add' &#124; 'remove' &#124; 'change' | 是 | 监听事件。<br>- type为"add"，表示增加显示设备事件。例如：插入显示器。<br>- type为"remove"，表示移除显示设备事件。例如：移除显示器。<br>- type为"change"，表示改变显示设备事件。例如：显示器方向改变。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 需要取消注册的回调函数。返回监听到的屏幕ID，该参数为整数。若无此参数，则取消注册当前type类型事件监听的所有回调函数。<br>**适用版本：** 20 |
 
 **错误码：**
@@ -67,7 +67,7 @@ function off(type: 'add' | 'remove' | 'change', callback?: Callback<number>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'add' \| 'remove' \| 'change' | 是 | 监听事件。   - type为"add"，表示增加显示设备事件。例如：插入显示器。   - type为"remove"，表示移除显示设备事件。例如：移除显示器。   - type为"change"，表示改变显示设备事件。例如：显示器方向改变。 |
+| type | 'add' &#124; 'remove' &#124; 'change' | 是 | 监听事件。<br>- type为"add"，表示增加显示设备事件。例如：插入显示器。<br>- type为"remove"，表示移除显示设备事件。例如：移除显示器。<br>- type为"change"，表示改变显示设备事件。例如：显示器方向改变。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 需要取消注册的回调函数。返回监听到的屏幕ID，该参数为整数。若无此参数，则取消注册当前type类型事件监听的所有回调函数。<br>**适用版本：** 20 |
 
 **错误码：**
@@ -99,7 +99,7 @@ function off(type: 'add' | 'remove' | 'change', callback?: Callback<number>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'add' \| 'remove' \| 'change' | 是 | 监听事件。   - type为"add"，表示增加显示设备事件。例如：插入显示器。   - type为"remove"，表示移除显示设备事件。例如：移除显示器。   - type为"change"，表示改变显示设备事件。例如：显示器方向改变。 |
+| type | 'add' &#124; 'remove' &#124; 'change' | 是 | 监听事件。<br>- type为"add"，表示增加显示设备事件。例如：插入显示器。<br>- type为"remove"，表示移除显示设备事件。例如：移除显示器。<br>- type为"change"，表示改变显示设备事件。例如：显示器方向改变。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 需要取消注册的回调函数。返回监听到的屏幕ID，该参数为整数。若无此参数，则取消注册当前type类型事件监听的所有回调函数。<br>**适用版本：** 20 |
 
 **错误码：**
@@ -138,7 +138,7 @@ function off(type: 'foldStatusChange', callback?: Callback<FoldStatus>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 **示例**
@@ -226,7 +226,7 @@ function off(type: 'captureStatusChange', callback?: Callback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 **示例**
@@ -270,7 +270,7 @@ function off(type: 'foldDisplayModeChange', callback?: Callback<FoldDisplayMode>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 **示例**

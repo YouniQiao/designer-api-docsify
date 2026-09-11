@@ -17,7 +17,9 @@ Sets menu options.
 onAppear?: MenuOnAppearCallback
 ```
 
-Callback invoked when the custom context menu on selection appears.
+Callback invoked when the custom selection menu is displayed. If custom logic needs to be executed when the menu is displayed (for example, recording user operations or dynamically adjusting menu content), this parameter can be passed; if it is not passed, no additional callback is triggered.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Since:** 10
 
@@ -33,7 +35,9 @@ Callback invoked when the custom context menu on selection appears.
 onMenuHide?: MenuCallback
 ```
 
-Callback invoked when the custom context menu on selection is hidden.
+Callback invoked when the custom selection menu is hidden. If custom logic needs to be executed when the menu is hidden, this parameter can be passed; if it is not passed, no callback is triggered.
+
+**Atomic service API:** Since API version 15, this API is supported in atomic services.
 
 **Since:** 15
 
@@ -49,7 +53,9 @@ Callback invoked when the custom context menu on selection is hidden.
 onMenuShow?: MenuCallback
 ```
 
-Callback invoked when the custom context menu on selection is shown.
+Callback invoked when the custom selection menu is shown. If custom logic needs to be executed when the menu is shown, this parameter can be passed; if it is not passed, no callback is triggered.
+
+**Atomic service API:** Since API version 15, this API is supported in atomic services.
 
 **Since:** 15
 
@@ -85,7 +91,9 @@ Default value: **MenuType.SELECTION_MENU**
 onDisappear?: Callback<void>
 ```
 
-Callback invoked when the custom context menu on selection disappears.
+Callback invoked when the custom selection menu is closed. If custom logic needs to be executed when the menu is closed (for example, restoring the UI state or clearing temporary data), this parameter can be passed; if it is not passed, no additional callback is triggered.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
@@ -103,7 +111,13 @@ Callback invoked when the custom context menu on selection disappears.
 previewMenuOptions?: PreviewMenuOptions
 ```
 
-Options of the preview menu. This parameter is valid only in **RichEditor**.
+Options of the preview menu. This parameter takes effect only in RichEditor.
+
+Since API version 26.0.0, this parameter also takes effect in the Text component.
+
+If this parameter is not passed, the preview menu uses the default configuration.
+
+**Atomic service API:** Since API version 18, this API is supported in atomic services.
 
 **Type:** [PreviewMenuOptions](arkts-arkui-previewmenuoptions-i.md)
 

@@ -28,7 +28,7 @@ Obtains the subscription information about the notification extension of this ap
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[NotificationExtensionSubscriptionInfo](arkts-notification-notificationextensionsubscription-notificationextensionsubscriptioninfo-t.md)[]&gt; | Promise used to return the [NotificationExtensionSubscriptionInfo]{ |
+| Promise&lt;[NotificationExtensionSubscriptionInfo](arkts-notification-notificationextensionsubscription-notificationextensionsubscriptioninfo-t.md)[]&gt; | Promise used to return the [NotificationExtensionSubscriptionInfo](arkts-notification-notificationextensionsubscriptioninfo-i.md) array. |
 
 **Error codes:**
 

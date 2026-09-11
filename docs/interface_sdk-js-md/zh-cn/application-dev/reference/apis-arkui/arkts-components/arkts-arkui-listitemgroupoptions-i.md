@@ -167,7 +167,7 @@ space?: number | string
 
 设置为负数或者大于等于List内容区长度时，按默认值显示。如果同时设置了spaceWidth和space，则spaceWidth优先生效。当spaceWidth为undefined或null时，space生效。
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **默认值：** 0
 
@@ -223,7 +223,7 @@ style?: ListItemGroupStyle
 
 **说明：**
 
-当设置为ListItemGroupStyle.CARD时，List的listDirection属性值须为Axis.Vertical，如果设置为Axis.Horizontal，会导致显示混乱；List属性[alignListItem](arkts-arkui-list-attribute.md#alignlistitem)默认为ListItemAlign.Center，居中对齐显示。
+当设置为ListItemGroupStyle.CARD时，List的listDirection属性值须为Axis.Vertical，如果设置为Axis.Horizontal，会导致显示混乱；List属性[alignListItem](arkts-arkui-list-comp-attribute.md#alignlistitem)默认为ListItemAlign.Center，居中对齐显示。
 
 **类型：** [ListItemGroupStyle](arkts-arkui-listitemgroupstyle-e.md)
 

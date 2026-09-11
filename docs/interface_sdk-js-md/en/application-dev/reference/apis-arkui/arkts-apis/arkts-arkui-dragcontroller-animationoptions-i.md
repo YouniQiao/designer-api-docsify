@@ -22,7 +22,7 @@ Animation curve.
 
 Default value: **Curve.EaseInOut**
 
-**Type:** Curve \| ICurve
+**Type:** Curve &#124; ICurve
 
 **Since:** 11
 
@@ -42,7 +42,7 @@ Animation duration, in ms.
 
 Default value: **1000**
 
-**NOTE：**
+**NOTE:**
 
 - If this parameter is set to a value less than 0, the value **0** is used.  
 - Floating-point values will be rounded down to integers. For example, if the value set is 1.2, **1** will be  

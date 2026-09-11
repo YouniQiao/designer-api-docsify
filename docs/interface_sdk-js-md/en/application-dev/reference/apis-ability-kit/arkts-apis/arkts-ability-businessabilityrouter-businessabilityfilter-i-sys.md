@@ -2,6 +2,8 @@
 
 This filter value is used to filter business ability info
 
+@typedef BusinessAbilityFilter
+
 **Since:** 10
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

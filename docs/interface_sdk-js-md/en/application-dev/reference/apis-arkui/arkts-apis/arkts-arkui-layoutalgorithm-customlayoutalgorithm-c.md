@@ -2,7 +2,7 @@
 
 Custom layout algorithm class.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The object of the **CustomLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as
 > the input parameter of the
@@ -25,7 +25,7 @@ onLayout(self: FrameNode, position: Position): void
 
 Customizes the position of the child component to be arranged. When the position of the dynamic layout component is determined, the ArkUI framework will transfer the FrameNode and layout position of the component to you through **onLayout**. State variables should not be changed in this callback.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > In this callback, you can call
 > [getChild()](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#getchild12) of
@@ -66,7 +66,7 @@ onMeasure(self: FrameNode, constraint: LayoutConstraint): void
 
 Customizes the size of the child component to be measured. When the size of the dynamic layout component is determined, the ArkUI framework will transfer the FrameNode and layout constraint of the component to you through **onMeasure**. State variables should not be changed in this callback.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > In this callback, you can call
 > [getChild()](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#getchild12) of

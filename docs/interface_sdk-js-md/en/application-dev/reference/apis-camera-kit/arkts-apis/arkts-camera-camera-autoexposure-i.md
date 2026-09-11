@@ -52,7 +52,7 @@ getExposureMode(): ExposureMode
 
 Obtains the exposure mode in use.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API directly returns an invalid value if you have not set the exposure mode using
 > [setExposureMode](#setexposuremode).
@@ -67,7 +67,7 @@ Obtains the exposure mode in use.
 
 | Type | Description |
 | --- | --- |
-| [ExposureMode](arkts-camera-camera-exposuremode-e.md) | Exposure mode obtained. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
+| [ExposureMode](arkts-camera-camera-exposuremode-e.md) | Exposure mode obtained. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is thrown. |
 
 **Error codes:**
 
@@ -93,7 +93,7 @@ Obtains the exposure value in use.
 
 | Type | Description |
 | --- | --- |
-| number | Exposure value obtained. There is a step for EV. For example, if the step is 0.5 and this parameter is set to 1.2, the EV that takes effect is 1.0. |
+| number | Exposure value obtained. There is a step for EV. For example, if the step is 0.5 and this parameter is set to 1.2, the EV that takes effect is 1.0. <br>If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -119,7 +119,7 @@ Obtains the metering point of the camera device.
 
 | Type | Description |
 | --- | --- |
-| [Point](arkts-camera-camera-point-i.md) | Metering point obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [Point](arkts-camera-camera-point-i.md) | Metering point obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -191,7 +191,7 @@ Before the setting, you are advised to use [getExposureBiasRange](arkts-camera-c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exposureBias | number | Yes | EV. The supported EV range can be obtained by calling [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange). If the value passed is not within the supported range, the nearest critical point is used. Exposure compensation is adjusted in steps, and the step size may vary across devices due to hardware differences. For example, if the step size is 0.5, setting a value of 1.2 would result in an actual effective exposure compensation value of 1.0. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
+| exposureBias | number | Yes | EV. The supported EV range can be obtained by calling [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange). If the value passed is not within the supported range, the nearest critical point is used. <br>Exposure compensation is adjusted in steps, and the step size may vary across devices due to hardware differences. For example, if the step size is 0.5, setting a value of 1.2 would result in an actual effective exposure compensation value of 1.0. <br>If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 

@@ -42,13 +42,13 @@ Disabled
 
 **说明：**
 
-从API version 8开始支持，从API version 22开始废弃，建议使用[indicatorInteractive](arkts-arkui-swiper-attribute.md#indicatorinteractive)替代。
+从API version 8开始支持，从API version 22开始废弃，建议使用[indicatorInteractive](arkts-arkui-swiper-comp-attribute.md#indicatorinteractive)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 22
 
-**替代接口：** [indicatorInteractive](arkts-arkui-swiper-attribute.md#indicatorinteractive)
+**替代接口：** [indicatorInteractive](arkts-arkui-swiper-comp-attribute.md#indicatorinteractive)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 

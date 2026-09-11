@@ -26,7 +26,7 @@ Check whether the Wi-Fi connection has been set up.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if a Wi-Fi connection has been set up, returns `false` otherwise. |
 
 **Error codes:**
 

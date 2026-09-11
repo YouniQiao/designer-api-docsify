@@ -11,10 +11,12 @@ The text selection panel is an operation panel that pops up after a user selects
  [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md) and
  [show](arkts-basicservices-selectionmanager-panel-i.md#show) are used to create and display the
  word selection panel.
- > **NOTE**
+
+> **NOTE**
  >
  > - This module is supported only on PCs/2-in-1 devices. You can use **canIUse('
  > SystemCapability.SelectionInput.Selection')** to check whether the current device supports this function.
+
 
 
 ## Modules to Import

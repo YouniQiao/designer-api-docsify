@@ -56,7 +56,7 @@ Task value.
 - Use [request.agent.show](arkts-basicservices-agent-show-f.md)  
 and [request.agent.touch](arkts-basicservices-agent-touch-f.md) to query the value.
 
-**Type:** string \| Array&lt;[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;
+**Type:** string &#124; Array&lt;[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;
 
 **Since:** 10
 

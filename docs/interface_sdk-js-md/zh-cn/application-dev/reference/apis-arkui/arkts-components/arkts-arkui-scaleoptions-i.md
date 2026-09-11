@@ -27,7 +27,7 @@ centerX?: number | string
 
 单位：vp
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **起始版本：** 7
 
@@ -47,7 +47,7 @@ centerY?: number | string
 
 单位：vp
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **起始版本：** 7
 

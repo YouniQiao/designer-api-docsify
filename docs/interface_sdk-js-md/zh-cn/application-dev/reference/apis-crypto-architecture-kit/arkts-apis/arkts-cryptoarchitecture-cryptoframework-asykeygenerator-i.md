@@ -42,7 +42,7 @@ convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
@@ -115,15 +115,15 @@ convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCall
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增加支持null。 |
-| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增加支持null。 |
+| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) &#124; null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增加支持null。 |
+| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) &#124; null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增加支持null。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
@@ -186,7 +186,7 @@ convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
@@ -259,8 +259,8 @@ convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增加支持null。 |
-| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增加支持null。 |
+| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) &#124; null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增加支持null。 |
+| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) &#124; null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增加支持null。 |
 
 **返回值：**
 
@@ -272,7 +272,7 @@ convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
@@ -310,7 +310,7 @@ convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair
 
 同步获取指定数据生成非对称密钥。
 
-**说明：** 建议优先使用异步API，convertKey。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：** <br>建议优先使用异步API，convertKey。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
@@ -322,8 +322,8 @@ convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | 是 | 指定公钥材料。如果公钥无需转换，请传入null。API 10前仅支持DataBlob，API 10起支持传入null。 |
-| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | 是 | 指定私钥材料。如果私钥无需转换，请传入null。API 10前仅支持DataBlob，API 10起支持传入null。 |
+| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) &#124; null | 是 | 指定公钥材料。如果公钥无需转换，请传入null。API 10前仅支持DataBlob，API 10起支持传入null。 |
+| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) &#124; null | 是 | 指定私钥材料。如果私钥无需转换，请传入null。API 10前仅支持DataBlob，API 10起支持传入null。 |
 
 **返回值：**
 
@@ -335,7 +335,7 @@ convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
@@ -395,8 +395,8 @@ convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pubKey | string \| null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。 |
-| priKey | string \| null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。   **说明：**公钥和私钥材料不能同时为null或空字符串。 |
+| pubKey | string &#124; null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。 |
+| priKey | string &#124; null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。<br>**说明：**公钥和私钥材料不能同时为null或空字符串。 |
 
 **返回值：**
 
@@ -408,7 +408,7 @@ convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
@@ -481,8 +481,8 @@ convertPemKey(pubKey: string | null, priKey: string | null, password: string): P
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pubKey | string \| null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。 |
-| priKey | string \| null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。   **说明：**公钥和私钥材料不能同时为null或空字符串。 |
+| pubKey | string &#124; null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。 |
+| priKey | string &#124; null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。<br>**说明：**公钥和私钥材料不能同时为null或空字符串。 |
 | password | string | 是 | 指定口令，用于解密私钥。 |
 
 **返回值：**
@@ -495,7 +495,7 @@ convertPemKey(pubKey: string | null, priKey: string | null, password: string): P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 
@@ -548,7 +548,7 @@ convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair
 > [convertPemKey](#convertpemkey)
 > 接口说明。
 
-**说明：** 建议优先使用异步API，[convertPemKey](#convertpemkey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：** <br>建议优先使用异步API，[convertPemKey](#convertpemkey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
@@ -560,8 +560,8 @@ convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pubKey | string \| null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。 |
-| priKey | string \| null | 是 | 指定私钥材料。私钥无需转换时，请传入null。   **说明：**公钥和私钥材料不能同时为null或空字符串。 |
+| pubKey | string &#124; null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。 |
+| priKey | string &#124; null | 是 | 指定私钥材料。私钥无需转换时，请传入null。<br>**说明：**公钥和私钥材料不能同时为null或空字符串。 |
 
 **返回值：**
 
@@ -573,7 +573,7 @@ convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
@@ -634,7 +634,7 @@ convertPemKeySync(pubKey: string | null, priKey: string | null, password: string
 > [convertPemKey](#convertpemkey-1)
 > 接口说明。
 
-**说明：** 建议优先使用异步API，[convertPemKey](#convertpemkey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：** <br>建议优先使用异步API，[convertPemKey](#convertpemkey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 18
 
@@ -646,8 +646,8 @@ convertPemKeySync(pubKey: string | null, priKey: string | null, password: string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pubKey | string \| null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。 |
-| priKey | string \| null | 是 | 指定私钥材料。若无需转换，请传入 null。注意：公钥与私钥材料不可同时为 null。 |
+| pubKey | string &#124; null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。 |
+| priKey | string &#124; null | 是 | 指定私钥材料。若无需转换，请传入 null。<br>注意：公钥与私钥材料不可同时为 null。 |
 | password | string | 是 | 指定口令，用于解密私钥。 |
 
 **返回值：**
@@ -660,7 +660,7 @@ convertPemKeySync(pubKey: string | null, priKey: string | null, password: string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 
@@ -774,7 +774,7 @@ generateKeyPair(): Promise<KeyPair>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 
@@ -801,7 +801,7 @@ generateKeyPairSync(): KeyPair
 
 同步获取非对称密钥生成器随机生成的密钥。
 
-**说明：** 建议优先使用异步API，generateKeyPair。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：** <br>建议优先使用异步API，generateKeyPair。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
@@ -819,7 +819,7 @@ generateKeyPairSync(): KeyPair
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 

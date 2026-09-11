@@ -174,7 +174,7 @@ Obtains the video stabilization mode in use.
 
 | Type | Description |
 | --- | --- |
-| [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | Video stabilization mode obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | Video stabilization mode obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -202,7 +202,7 @@ Obtains the exposure compensation values of the camera device.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Array of compensation values. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| Array&lt;number&gt; | Array of compensation values. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -230,7 +230,7 @@ Obtains the exposure mode in use.
 
 | Type | Description |
 | --- | --- |
-| [ExposureMode](arkts-camera-camera-exposuremode-e.md) | Exposure mode obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [ExposureMode](arkts-camera-camera-exposuremode-e.md) | Exposure mode obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -258,7 +258,7 @@ Obtains the exposure value in use.
 
 | Type | Description |
 | --- | --- |
-| number | Exposure value obtained. There is a step for EV. For example, if the step is 0.5 and this parameter is set to 1.2, the EV that takes effect is 1.0. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| number | Exposure value obtained. There is a step for EV. For example, if the step is 0.5 and this parameter is set to 1.2, the EV that takes effect is 1.0. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -286,7 +286,7 @@ Obtains the flash mode in use.
 
 | Type | Description |
 | --- | --- |
-| [FlashMode](arkts-camera-camera-flashmode-e.md) | Flash mode obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [FlashMode](arkts-camera-camera-flashmode-e.md) | Flash mode obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -314,7 +314,7 @@ Obtains the focal length of the camera device.
 
 | Type | Description |
 | --- | --- |
-| number | Focal length obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| number | Focal length obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -342,7 +342,7 @@ Obtains the focus mode in use.
 
 | Type | Description |
 | --- | --- |
-| [FocusMode](arkts-camera-camera-focusmode-e.md) | Focus mode obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [FocusMode](arkts-camera-camera-focusmode-e.md) | Focus mode obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -370,7 +370,7 @@ Obtains the focal point of the camera device.
 
 | Type | Description |
 | --- | --- |
-| [Point](arkts-camera-camera-point-i.md) | Focal point obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [Point](arkts-camera-camera-point-i.md) | Focal point obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -398,7 +398,7 @@ Obtains the metering point of the camera device.
 
 | Type | Description |
 | --- | --- |
-| [Point](arkts-camera-camera-point-i.md) | Metering point obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [Point](arkts-camera-camera-point-i.md) | Metering point obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -426,7 +426,7 @@ Obtains the zoom ratio in use.
 
 | Type | Description |
 | --- | --- |
-| number | Zoom ratio obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| number | Zoom ratio obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -454,7 +454,7 @@ Obtains the supported zoom ratio range.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Array containing the minimum and maximum zoom ratios. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| Array&lt;number&gt; | Array containing the minimum and maximum zoom ratios. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -482,7 +482,7 @@ Checks whether the camera device has flash.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the camera device has flash. **true** if it has flash, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| boolean | Check result for whether the camera device has flash. **true** if it has flash, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -516,7 +516,7 @@ Checks whether an exposure mode is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the exposure mode. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| boolean | Check result for the support of the exposure mode. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -550,7 +550,7 @@ Checks whether the flash mode is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the flash mode. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| boolean | Check result for the support of the flash mode. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -584,7 +584,7 @@ Checks whether a focus mode is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the focus mode. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| boolean | Check result for the support of the focus mode. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -618,7 +618,7 @@ Checks whether a video stabilization mode is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the video stabilization mode. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| boolean | Check result for the support of the video stabilization mode. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -680,7 +680,7 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 
 Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -707,7 +707,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to CaptureSession error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 

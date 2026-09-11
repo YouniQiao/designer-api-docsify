@@ -38,4 +38,3 @@ Defines the constructor of SelectionContainer.
 
 | Type | Description |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |  |

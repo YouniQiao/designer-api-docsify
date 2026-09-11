@@ -28,7 +28,7 @@ Unsubscribes from data changes of this distributed data object.
 
 **Deprecated since:** 9
 
-**Substitutes:** off(type: 'change', callback?: (sessionId: string, fields: Array&lt;string&gt;) =&gt; void )
+**Substitutes:** [off](arkts-arkdata-distributeddataobject-dataobject-i.md#offchange)(type: 'change', callback?: (sessionId: string, fields: Array&lt;string&gt;) =&gt; void )
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -84,7 +84,7 @@ Unsubscribes from the status change of this distributed data object.
 
 **Deprecated since:** 9
 
-**Substitutes:** off( type: 'status', callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) =&gt; void )
+**Substitutes:** [off](arkts-arkdata-distributeddataobject-dataobject-i.md#offstatus)( type: 'status', callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) =&gt; void )
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -93,7 +93,7 @@ Unsubscribes from the status change of this distributed data object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'status' | Yes | Event type. The value is 'status', which indicates the status change (online or offline) of the distributed object. |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for status changes of this distributed object. sessionId indicates the session ID of the distributed data object. networkId identifies the distributed data object. status indicates the object status, which can be online or offline. |
+| callback | (sessionId: string, networkId: string, status: 'online' &#124; 'offline' ) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for status changes of this distributed object. sessionId indicates the session ID of the distributed data object. networkId identifies the distributed data object. status indicates the object status, which can be online or offline. |
 
 **Examples**
 
@@ -132,7 +132,7 @@ Subscribes to data changes of this distributed data object.
 
 **Deprecated since:** 9
 
-**Substitutes:** on(type: 'change', callback: (sessionId: string, fields: Array&lt;string&gt;) =&gt; void )
+**Substitutes:** [on](arkts-arkdata-distributeddataobject-dataobject-i.md#onchange)(type: 'change', callback: (sessionId: string, fields: Array&lt;string&gt;) =&gt; void )
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -185,7 +185,7 @@ Subscribes to status changes of this distributed data object.
 
 **Deprecated since:** 9
 
-**Substitutes:** on( type: 'status', callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) =&gt; void )
+**Substitutes:** [on](arkts-arkdata-distributeddataobject-dataobject-i.md#onstatus)( type: 'status', callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) =&gt; void )
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -194,7 +194,7 @@ Subscribes to status changes of this distributed data object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'status' | Yes | Event type. The value is 'status', which indicates the status change (online or offline) of the distributed object. |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | Yes | Callback used to return the status change. sessionId indicates the session ID of the distributed data object. networkId identifies the device. status indicates the object status, which can be online or offline. |
+| callback | (sessionId: string, networkId: string, status: 'online' &#124; 'offline' ) =&gt; void | Yes | Callback used to return the status change. sessionId indicates the session ID of the distributed data object. networkId identifies the device. status indicates the object status, which can be online or offline. |
 
 **Examples**
 

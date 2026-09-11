@@ -19,7 +19,7 @@ leadingMargin?: Dimension | LeadingMarginPlaceholder
 
 设置文本段落缩进，当段落仅存在ImageSpan或BuilderSpan时，此属性值不生效。参数为Dimension类型时，不支持以Percentage形式设置，默认单位为vp。默认值：{"size": ["0.00px","0.00px"]}
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [LeadingMarginPlaceholder](arkts-arkui-leadingmarginplaceholder-i.md)
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [LeadingMarginPlaceholder](arkts-arkui-leadingmarginplaceholder-i.md)
 
 **起始版本：** 11
 

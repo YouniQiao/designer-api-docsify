@@ -27,7 +27,7 @@ offset?: number | GridColColumnOption
 
 非法值：按默认值处理。
 
-**类型：** number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
+**类型：** number &#124; [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **起始版本：** 9
 
@@ -55,7 +55,7 @@ order?: number | GridColColumnOption
 
 当子组件部分设置order，部分不设置order时，未设置order的子组件依次排序靠前，设置了order的子组件按照数值从小到大排列。
 
-**类型：** number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
+**类型：** number &#124; [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **起始版本：** 9
 
@@ -77,7 +77,7 @@ span?: number | GridColColumnOption
 
 非法值：按默认值处理。
 
-**类型：** number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
+**类型：** number &#124; [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **起始版本：** 9
 

@@ -14,7 +14,7 @@ function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<n
 
 Publishes a reminder. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after the
 > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md)
@@ -71,7 +71,7 @@ function publishReminder(reminderReq: ReminderRequest): Promise<number>
 
 Publishes a reminder. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after the
 > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md)

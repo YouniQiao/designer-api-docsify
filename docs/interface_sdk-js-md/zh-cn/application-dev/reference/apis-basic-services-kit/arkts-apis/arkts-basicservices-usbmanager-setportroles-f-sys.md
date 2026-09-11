@@ -18,7 +18,7 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 
 **废弃版本：** 12
 
-**替代接口：** [setPortRoleTypes](arkts-basicservices-usbmanager-setportroletypes-f-sys.md)(portId: int, powerRole: PowerRoleType, dataRole: DataRoleType)
+**替代接口：** [setPortRoleTypes](arkts-basicservices-usbmanager-setportroletypes-f-sys.md)(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType)
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -42,4 +42,4 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified.  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified.  <br>2.Incorrect parameter types. |

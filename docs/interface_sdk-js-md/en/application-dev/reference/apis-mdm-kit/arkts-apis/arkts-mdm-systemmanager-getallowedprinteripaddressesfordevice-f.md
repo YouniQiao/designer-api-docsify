@@ -26,7 +26,7 @@ Gets allowed printer IP addresses for device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| queryPolicy | [common.QueryPolicy](arkts-mdm-common-querypolicy-e.md) | No | queryPolicy indicates the policy of query. Default value: common.QueryPolicy.SELF. |
+| queryPolicy | [common.QueryPolicy](arkts-mdm-common-querypolicy-e.md) | No | queryPolicy indicates the policy of query.<br>Default value: common.QueryPolicy.SELF. |
 
 **Return value:**
 

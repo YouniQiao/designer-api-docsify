@@ -28,7 +28,7 @@ function setGlobalProxyForAccount(admin: Want, httpProxy: connection.HttpProxy, 
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | httpProxy | [connection.HttpProxy](../../apis-network-kit/arkts-apis/arkts-network-connection-httpproxy-i.md) | 是 | 网络代理配置信息。 |
-| accountId | number | 是 | 用户ID，取值范围：大于等于0。accountId可以通过@ohos.account.osAccount中的[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
+| accountId | number | 是 | 用户ID，取值范围：大于等于0。<br> accountId可以通过@ohos.account.osAccount中的[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
 
 **错误码：**
 

@@ -74,7 +74,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| indices | [Optional](arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | 是 | 需预加载的子节点的下标数组。默认值：空数组。 |
+| indices | [Optional](arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | 是 | 需预加载的子节点的下标数组。<br>默认值：空数组。 |
 
 **返回值：**
 
@@ -86,7 +86,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter invalid. Possible causes:   1. The parameter type is not Array&lt;number&gt;.   2. The parameter is an empty array.   3. The parameter contains an invalid index. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter invalid. Possible causes:<br> 1. The parameter type is not Array&lt;number&gt;. <br> 2. The parameter is an empty array. <br> 3. The parameter contains an invalid index. |
 
 ## setTabBarOpacity
 
@@ -116,7 +116,7 @@ setTabBarOpacity(opacity: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| opacity | number | 是 | 设置TabBar的不透明度，值为1.0表示完全不透明，值为0.0表示完全透明。取值范围为[0.0, 1.0]，设置的值小于0.0时，按0.0处理，设置的值大于1.0时，按1.0处理。默认值：1.0。 |
+| opacity | number | 是 | 设置TabBar的不透明度，值为1.0表示完全不透明，值为0.0表示完全透明。取值范围为[0.0, 1.0]，设置的值小于0.0时，按0.0处理，设置的值大于1.0时，按1.0处理。<br> 默认值：1.0。 |
 
 ## setTabBarTranslate
 

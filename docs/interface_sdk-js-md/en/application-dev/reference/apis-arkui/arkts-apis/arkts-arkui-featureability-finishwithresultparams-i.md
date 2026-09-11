@@ -1,5 +1,7 @@
 # FinishWithResultParams
 
+@typedef FinishWithResultParams
+
 **Since:** 5
 
 **Deprecated since:** 8

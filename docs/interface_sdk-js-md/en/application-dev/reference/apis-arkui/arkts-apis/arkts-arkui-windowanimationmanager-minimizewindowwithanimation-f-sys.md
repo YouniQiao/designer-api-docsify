@@ -111,7 +111,7 @@ Minimize the window target with animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowTarget | [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) | Yes |  |
+| windowTarget | [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) | Yes | The window target to be minimized. |
 
 **Return value:**
 

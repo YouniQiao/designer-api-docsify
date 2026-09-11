@@ -223,7 +223,7 @@ static PersistProps(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| properties | {       key: string;       defaultValue: any;     }[] | 是 |  |
+| properties | {       key: string;       defaultValue: any;     }[] | 是 | 持久化数组，其中key为属性名，defaultValue为默认值。规则同PersistProp。 |
 
 **示例**
 

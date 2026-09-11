@@ -52,7 +52,7 @@ privateKey?: string | Uint8Array
 
 私钥。**string**对应PEM格式，**Uint8Array**对应DER格式。
 
-**类型：** string \| Uint8Array
+**类型：** string &#124; Uint8Array
 
 **起始版本：** 18
 

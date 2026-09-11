@@ -39,7 +39,7 @@ addEntry(type: string, value: ValueType): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
 **示例**
 
@@ -121,7 +121,7 @@ constructor(type: string, value: ValueType)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types; <br>3.Parameter verification failed. |
 
 **示例**
 
@@ -261,7 +261,7 @@ getEntry(type: string): ValueType
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
 **示例**
 
@@ -333,7 +333,7 @@ getType(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 当前数据记录对应的具体数据类型，见[UniformDataType]{ |
+| string | 当前数据记录对应的具体数据类型，见[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。 |
 
 **示例**
 
@@ -375,7 +375,7 @@ getTypes(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | [UniformDataType]{ |
+| Array&lt;string&gt; | [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)类型的数组，表示当前统一数据对象所有数据记录对应的数据类型，元素值如'general.plain-text'、'general.hyperlink'、'general.html'等。 |
 
 **示例**
 

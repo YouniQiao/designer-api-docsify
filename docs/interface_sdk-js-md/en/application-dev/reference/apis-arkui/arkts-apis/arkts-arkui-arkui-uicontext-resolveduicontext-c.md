@@ -2,7 +2,7 @@
 
 **ResolvedUIContext** instance object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
 > 

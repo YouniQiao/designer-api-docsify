@@ -50,7 +50,7 @@ signal: AbortSignal<T> | null
 
 用于终止异步操作的对象。当signal.aborted为true时，锁请求将被丢弃；当signal.aborted为false时，请求会继续等待获取锁；当signal为null时，请求正常排队运行。默认为 null。
 
-**类型：** [AbortSignal](arkts-arkts-locks-abortsignal-c.md)&lt;T&gt; \| null
+**类型：** [AbortSignal](arkts-arkts-locks-abortsignal-c.md)&lt;T&gt; &#124; null
 
 **起始版本：** 12
 

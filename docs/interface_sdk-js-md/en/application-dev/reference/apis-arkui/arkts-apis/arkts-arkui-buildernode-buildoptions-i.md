@@ -36,7 +36,7 @@ Default value: **false**.
 localStorage?: LocalStorage
 ```
 
-LocalStorage for the current BuilderNode. Custom components mounted under this BuilderNode will share the specified LocalStorage. **NOTE：**
+LocalStorage for the current BuilderNode. Custom components mounted under this BuilderNode will share the specified LocalStorage. **NOTE:**
 
 If LocalStorage is also passed through a custom component's constructor, the constructor parameter takes precedence.
 

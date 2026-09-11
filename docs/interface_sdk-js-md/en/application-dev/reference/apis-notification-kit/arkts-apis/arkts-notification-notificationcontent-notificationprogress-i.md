@@ -2,7 +2,7 @@
 
 Describes the notification progress, which is used to display progress bar information in the live view.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The actual display effect depends on the device capabilities and the notification center UI style.
 

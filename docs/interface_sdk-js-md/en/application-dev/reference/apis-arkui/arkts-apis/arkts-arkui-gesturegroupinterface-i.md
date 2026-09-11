@@ -36,8 +36,6 @@ Return to Obtain GestureGroup.
 
 | Type | Description |
 | --- | --- |
-| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |  |
-
 ## onCancel
 
 ```TypeScript
@@ -62,4 +60,3 @@ Triggered when a tap cancellation event is received after a gesture is recognize
 
 | Type | Description |
 | --- | --- |
-| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |  |

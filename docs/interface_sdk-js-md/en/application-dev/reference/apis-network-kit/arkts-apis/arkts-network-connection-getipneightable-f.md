@@ -14,7 +14,7 @@ function getIpNeighTable(): Promise<Array<NetIpMacInfo>>
 
 Obtains information about entries in the IP neighbor table of the local device, including IPv4 and IPv6 entries. Each entry contains an IP address, a MAC address, and a network adapter name. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This interface is used to obtain the cached data of the IP neighbor table, not the data of all connections on the
 > LAN.

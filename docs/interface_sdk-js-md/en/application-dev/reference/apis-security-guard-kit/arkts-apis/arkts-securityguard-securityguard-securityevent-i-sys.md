@@ -2,6 +2,8 @@
 
 Provides the SecurityEvent type, including the event id, version info, report content.
 
+@typedef SecurityEvent
+
 **Since:** 12
 
 **System capability:** SystemCapability.Security.SecurityGuard

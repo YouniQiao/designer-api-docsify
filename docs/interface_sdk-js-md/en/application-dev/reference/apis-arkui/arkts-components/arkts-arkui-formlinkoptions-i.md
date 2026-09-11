@@ -45,7 +45,7 @@ Action type.
 - **"call"**: launch of the widget provider in the background. If this type of action is triggered, the specified  
 UIAbility (whose launch type must be [singleton](../../../application-models/uiability-launch-type.md#singleton) of the widget provider is started in the background, but not displayed in the foreground. This action type requires that the widget provider should have the [ohos.permission.KEEP_BACKGROUND_RUNNING](../../../security/AccessToken/permissions-for-all.md#ohospermissionkeep_background_running) permission.
 
-**NOTE：**
+**NOTE:**
 
 Whenever possible, avoid using the router event to refresh the widget UI.
 
@@ -109,7 +109,7 @@ params?: Object
 
 Additional parameters carried in the current action. The value is a key-value pair in JSON format. For the **"call"** action type, the **method** parameter must be set and its value type must be string.
 
-**NOTE：**
+**NOTE:**
 
 Whenever possible, avoid using **params** to transfer internal state variables of widgets.
 

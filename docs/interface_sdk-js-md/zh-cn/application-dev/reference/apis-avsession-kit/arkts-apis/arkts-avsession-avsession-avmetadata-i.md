@@ -107,7 +107,7 @@ avQueueImage?: image.PixelMap | string
 - 设置的数据类型为PixelMap时，通过getAVMetadata获取的将为PixelMap。  
 - 设置为url图片路径，获取的为url图片路径。
 
-**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| string
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) &#124; string
 
 **起始版本：** 11
 
@@ -282,7 +282,7 @@ mediaImage?: image.PixelMap | string
 - 设置的数据类型为PixelMap时，通过getAVMetadata获取的将为PixelMap。  
 - 设置为url图片路径，获取的为url图片路径。
 
-**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| string
+**类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) &#124; string
 
 **起始版本：** 10
 

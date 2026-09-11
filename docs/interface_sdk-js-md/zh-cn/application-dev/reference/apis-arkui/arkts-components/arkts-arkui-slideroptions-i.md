@@ -23,7 +23,8 @@ direction?: Axis
 
 **类型：** [Axis](../arkts-apis/arkts-arkui-axis-e.md)
 
-**默认值：** Axis.Horizontal [since 11]
+**默认值：**
+- API版本11+：Axis.Horizontal
 
 **起始版本：** 8
 
@@ -51,7 +52,8 @@ value不在[min, max]范围之内，取min或者max，靠近min取min，靠近ma
 
 **类型：** number
 
-**默认值：** 100 [since 11]
+**默认值：**
+- API版本11+：100
 
 **起始版本：** 7
 
@@ -73,7 +75,8 @@ min?: number
 
 **类型：** number
 
-**默认值：** 0 [since 11]
+**默认值：**
+- API版本11+：0
 
 **起始版本：** 7
 
@@ -97,7 +100,8 @@ true：横向Slider从右往左滑动，竖向Slider从下往上滑动；false�
 
 **类型：** boolean
 
-**默认值：** false [since 11]
+**默认值：**
+- API版本11+：false
 
 **起始版本：** 8
 
@@ -125,7 +129,8 @@ step?: number
 
 **类型：** number
 
-**默认值：** 1 - Value range: [0.01, max - min] [since 11]
+**默认值：**
+- API版本11+：1 - Value range: [0.01, max - min]
 
 **起始版本：** 7
 
@@ -147,7 +152,8 @@ style?: SliderStyle
 
 **类型：** [SliderStyle](arkts-arkui-sliderstyle-e.md)
 
-**默认值：** SliderStyle.OutSet [since 11]
+**默认值：**
+- API版本11+：SliderStyle.OutSet
 
 **起始版本：** 7
 
@@ -179,7 +185,8 @@ value?: number
 
 **类型：** number
 
-**默认值：** same as the value of min [since 11]
+**默认值：**
+- API版本11+：same as the value of min
 
 **起始版本：** 7
 

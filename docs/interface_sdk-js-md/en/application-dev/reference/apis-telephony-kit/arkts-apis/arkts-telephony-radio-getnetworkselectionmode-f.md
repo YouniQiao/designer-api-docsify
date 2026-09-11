@@ -22,7 +22,7 @@ Obtains the network selection mode of the SIM card in the specified slot. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2 |
+| slotId | number | Yes | Card slot ID.<br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetworkSelectionMode](arkts-telephony-radio-networkselectionmode-e.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -67,7 +67,7 @@ Obtains the network selection mode of the SIM card in the specified slot. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2 |
+| slotId | number | Yes | Card slot ID.<br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 

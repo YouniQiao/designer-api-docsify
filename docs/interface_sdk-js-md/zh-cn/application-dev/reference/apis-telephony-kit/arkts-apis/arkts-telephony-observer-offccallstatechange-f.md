@@ -24,7 +24,7 @@ function offCCallStateChange(callback?: Callback<CCallStateInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CCallStateInfo](arkts-telephony-observer-ccallstateinfo-i.md)&gt; | 否 | 回调函数，返回通话状态信息对象。应用可获取到CCallState。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CCallStateInfo](arkts-telephony-observer-ccallstateinfo-i.md)&gt; | 否 | 回调函数，返回通话状态信息对象。<br>应用可获取到CCallState。<br> |
 
 **错误码：**
 

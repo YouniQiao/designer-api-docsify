@@ -42,4 +42,3 @@ Sets the breakpoint configuration for container dimension analysis. Defines a se
 
 | Type | Description |
 | --- | --- |
-| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) |  |

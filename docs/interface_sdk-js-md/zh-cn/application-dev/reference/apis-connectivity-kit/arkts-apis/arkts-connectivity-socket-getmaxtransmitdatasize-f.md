@@ -24,7 +24,7 @@ function getMaxTransmitDataSize(clientSocket: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| clientSocket | number | 是 | 客户端套接字的ID。该值是调用[sppAccept](arkts-connectivity-socket-sppaccept-f.md)或[sppConnect](arkts-connectivity-socket-sppconnect-f.md)接口，通过其异步callback获取到的。 |
+| clientSocket | number | 是 | 客户端套接字的ID。<br>该值是调用[sppAccept](arkts-connectivity-socket-sppaccept-f.md)或[sppConnect](arkts-connectivity-socket-sppconnect-f.md)接口，通过其异步callback获取到的。 |
 
 **返回值：**
 

@@ -18,7 +18,7 @@ Creates an ImageCreator instance by specifying the image width, height, format, 
 
 **Deprecated since:** 11
 
-**Substitutes:** [createImageCreator](#createimagecreator-1)(size: Size, format: ImageFormat, capacity: int)
+**Substitutes:** [createImageCreator](arkts-image-image-createimagecreator-f.md)(size: Size, format: ImageFormat, capacity: number)
 
 **System capability:** SystemCapability.Multimedia.Image.ImageCreator
 

@@ -2,6 +2,8 @@
 
 Provides the ModelResult type.
 
+@typedef ModelResult
+
 **Since:** 12
 
 **System capability:** SystemCapability.Security.SecurityGuard

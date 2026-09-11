@@ -6,6 +6,8 @@ declare type ImageModifier = import('../api/arkui/ImageModifier').ImageModifier
 
 ImageModifier
 
+@typedef { import('../api/arkui/ImageModifier').ImageModifier } ImageModifier
+
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。

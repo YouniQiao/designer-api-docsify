@@ -46,8 +46,8 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [isSupportAction](arkts-mechanic-mechanicmanager-issupportaction-f-sys.md) | Check whether the specific action type is supported. |
 | [move](arkts-mechanic-mechanicmanager-move-f-sys.md) | Move a mechanical device with the specified parameters. |
 | [moveBySpeed](arkts-mechanic-mechanicmanager-movebyspeed-f-sys.md) | Move a mechanical device at the specified speed. |
-| [off](arkts-mechanic-mechanicmanager-off-f.md) | Unregister a listener for axis state changes. |
-| [on](arkts-mechanic-mechanicmanager-on-f.md) | Register a listener for axis state changes. The status of the rotation axis changes dynamically, which needs to be monitored. |
+| [off](arkts-mechanic-mechanicmanager-off-f-sys.md#offrotationaxesstatuschange) | Unregister a listener for axis state changes. |
+| [on](arkts-mechanic-mechanicmanager-on-f-sys.md#onrotationaxesstatuschange) | Register a listener for axis state changes. The status of the rotation axis changes dynamically, which needs to be monitored. |
 | [rotate](arkts-mechanic-mechanicmanager-rotate-f-sys.md) | Rotates a mechanical device to the relative angles. |
 | [rotateBySpeed](arkts-mechanic-mechanicmanager-rotatebyspeed-f-sys.md) | Rotates a mechanical device at the specified speed. |
 | [rotateToEulerAngles](arkts-mechanic-mechanicmanager-rotatetoeulerangles-f-sys.md) | Rotates a mechanical device to the absolute angles. |
@@ -64,8 +64,8 @@ import { mechanicManager } from '@kit.MechanicKit';
 
 | Name | Description |
 | --- | --- |
-| [AttachStateChangeInfo](arkts-mechanic-mechanicmanager-attachstatechangeinfo-i.md) | Callback information about the device attachment state change. |
-| [MechInfo](arkts-mechanic-mechanicmanager-mechinfo-i.md) | Mechanical device information. |
+| [AttachStateChangeInfo](arkts-mechanic-mechanicmanager-attachstatechangeinfo-i.md) | Callback information about the device attachment state change. @typedef AttachStateChangeInfo |
+| [MechInfo](arkts-mechanic-mechanicmanager-mechinfo-i.md) | Mechanical device information. @typedef MechInfo |
 | [TrackingEventInfo](arkts-mechanic-mechanicmanager-trackingeventinfo-i.md) | Tracking event callback info. |
 
 <!--Del-->
@@ -78,11 +78,11 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [EulerAngles](arkts-mechanic-mechanicmanager-eulerangles-i-sys.md) | Absolute euler angles relative to the home position. |
 | [MechEvent](arkts-mechanic-mechanicmanager-mechevent-i-sys.md) | Definition of Mechanic device event. |
 | [MoveParams](arkts-mechanic-mechanicmanager-moveparams-i-sys.md) | Parameters for moving the target. |
-| [RotationAngles](arkts-mechanic-mechanicmanager-rotationangles-i-sys.md) | The rotion angles, relative to the current position. |
-| [RotationAxesStateChangeInfo](arkts-mechanic-mechanicmanager-rotationaxesstatechangeinfo-i-sys.md) | Rotation axes state change information. |
+| [RotationAngles](arkts-mechanic-mechanicmanager-rotationangles-i-sys.md) | The rotion angles, relative to the current position. @typedef RotationAngles |
+| [RotationAxesStateChangeInfo](arkts-mechanic-mechanicmanager-rotationaxesstatechangeinfo-i-sys.md) | Rotation axes state change information. @typedef RotationAxesStateChangeInfo |
 | [RotationAxesStatus](arkts-mechanic-mechanicmanager-rotationaxesstatus-i-sys.md) | Rotation axes status |
-| [RotationLimits](arkts-mechanic-mechanicmanager-rotationlimits-i-sys.md) | Rotation angle limits relative to the reference point. |
-| [RotationSpeed](arkts-mechanic-mechanicmanager-rotationspeed-i-sys.md) | Rotational speed. A negative value indicates a clockwise rotation, and a positive value indicates a counterclockwise rotation. |
+| [RotationLimits](arkts-mechanic-mechanicmanager-rotationlimits-i-sys.md) | Rotation angle limits relative to the reference point. @typedef RotationLimits |
+| [RotationSpeed](arkts-mechanic-mechanicmanager-rotationspeed-i-sys.md) | Rotational speed. A negative value indicates a clockwise rotation, and a positive value indicates a counterclockwise rotation. @typedef RotationSpeed |
 | [SearchParams](arkts-mechanic-mechanicmanager-searchparams-i-sys.md) | Parameters for target searching. |
 | [SearchResult](arkts-mechanic-mechanicmanager-searchresult-i-sys.md) | Search result. |
 | [SpeedParams](arkts-mechanic-mechanicmanager-speedparams-i-sys.md) | Parameters for moving or turning at a speed. |

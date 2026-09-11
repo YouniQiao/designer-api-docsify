@@ -36,7 +36,7 @@ Creates an OS account sub-profile. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| osAccountLocalId | number | Yes | Local ID of the target OS account. The value range is all integers. |
+| osAccountLocalId | number | Yes | Local ID of the target OS account.<br>The value range is all integers. |
 
 **Return value:**
 
@@ -99,8 +99,8 @@ Deletes an OS account sub-profile. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| osAccountLocalId | number | Yes | Local ID of the target OS account. The value range is all integers. |
-| subProfileId | number | Yes | Sub-profile ID. The value range is all integers. |
+| osAccountLocalId | number | Yes | Local ID of the target OS account.<br>The value range is all integers. |
+| subProfileId | number | Yes | Sub-profile ID.<br>The value range is all integers. |
 
 **Return value:**
 
@@ -210,7 +210,7 @@ Obtains the foreground sub-profile ID of the specified OS account. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| osAccountLocalId | number | Yes | Local ID of an OS account. The value range is all integers. |
+| osAccountLocalId | number | Yes | Local ID of an OS account.<br>The value range is all integers. |
 
 **Return value:**
 
@@ -268,7 +268,7 @@ Obtains the local ID of the OS account of a sub-profile. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subProfileId | number | Yes | Sub-profile ID. The value should be an integer. |
+| subProfileId | number | Yes | Sub-profile ID.<br>The value should be an integer. |
 
 **Return value:**
 
@@ -327,7 +327,7 @@ Obtains the sub-profile of the OS account of the caller. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subProfileId | number | Yes | Sub-profile ID. The value should be an integer. |
+| subProfileId | number | Yes | Sub-profile ID.<br>The value should be an integer. |
 
 **Return value:**
 
@@ -387,8 +387,8 @@ Obtains the sub-profile of the specified OS account. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| osAccountLocalId | number | Yes | Local ID of an OS account. The value should be an integer. |
-| subProfileId | number | Yes | Sub-profile ID. The value should be an integer. |
+| osAccountLocalId | number | Yes | Local ID of an OS account.<br>The value should be an integer. |
+| subProfileId | number | Yes | Sub-profile ID.<br>The value should be an integer. |
 
 **Return value:**
 
@@ -499,7 +499,7 @@ Obtains the sub-profile IDs of the specified OS account. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| osAccountLocalId | number | Yes | Local ID of an OS account. The value range is all integers. |
+| osAccountLocalId | number | Yes | Local ID of an OS account.<br>The value range is all integers. |
 
 **Return value:**
 
@@ -654,8 +654,8 @@ Switches to an OS account sub-profile. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| osAccountLocalId | number | Yes | Local ID of an OS account. The value range is all integers. |
-| subProfileId | number | Yes | Sub-profile ID. The value range is all integers. |
+| osAccountLocalId | number | Yes | Local ID of an OS account.<br>The value range is all integers. |
+| subProfileId | number | Yes | Sub-profile ID.<br>The value range is all integers. |
 
 **Return value:**
 

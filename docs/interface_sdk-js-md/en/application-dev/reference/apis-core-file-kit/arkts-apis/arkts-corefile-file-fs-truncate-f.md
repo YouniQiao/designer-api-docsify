@@ -24,7 +24,7 @@ Truncates a file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string \| number | Yes | Application sandbox path or FD of the file. |
+| file | string &#124; number | Yes | Application sandbox path or FD of the file. |
 | len | number | No | File length after truncation, in bytes. The default value is **0**. |
 
 **Return value:**
@@ -73,7 +73,7 @@ Truncates a file. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string \| number | Yes | Application sandbox path or FD of the file. |
+| file | string &#124; number | Yes | Application sandbox path or FD of the file. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
@@ -116,7 +116,7 @@ Truncates a file. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string \| number | Yes | Application sandbox path or FD of the file. |
+| file | string &#124; number | Yes | Application sandbox path or FD of the file. |
 | len | number | Yes | File length after truncation, in bytes. The default value is **0**.<br>**Since:** 11 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 

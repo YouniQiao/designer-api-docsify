@@ -16,15 +16,11 @@ function switchCurrentInputMethodAndSubtype(
   ): void
 ```
 
-Switches to a specified subtype of a specified input method. This API uses an asynchronous callback to return the result.   
-> **NOTE：**
-   
-> 
-   
-> - In API versions 9 and 10, this API can only be called by system applications granted the **ohos.permission.CONNECT_IME_ABILITY** permission.
-   
-> 
-   
+Switches to a specified subtype of a specified input method. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
+> - In API versions 9 and 10, this API can only be called by system applications granted the **ohos.permission.CONNECT_IME_ABILITY** permission. <br>
+> <br>
 > - Since API version 11, this API can only be called by the current input method application.
 
 **Since:** 9
@@ -83,15 +79,11 @@ function switchCurrentInputMethodAndSubtype(
   ): Promise<boolean>
 ```
 
-Switches to a specified subtype of a specified input method. This API uses a promise to return the result.   
-> **NOTE：**
-   
-> 
-   
-> - In API versions 9 and 10, this API can only be called by system applications granted the **ohos.permission.CONNECT_IME_ABILITY** permission.
-   
-> 
-   
+Switches to a specified subtype of a specified input method. This API uses a promise to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
+> - In API versions 9 and 10, this API can only be called by system applications granted the **ohos.permission.CONNECT_IME_ABILITY** permission. <br>
+> <br>
 > - Since API version 11, this API can only be called by the current input method application.
 
 **Since:** 9

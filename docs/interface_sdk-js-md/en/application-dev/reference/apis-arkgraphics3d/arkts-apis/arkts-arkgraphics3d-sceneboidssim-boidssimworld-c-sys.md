@@ -2,7 +2,7 @@
 
 The Boids simulation world object, used to manage the lifecycle and components of the Boids simulation.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Before using the following APIs, you need to obtain the Boids simulation world instance through [getDefaultBoidsSimWorld](arkts-arkgraphics3d-sceneboidssim-boidssimplugin-c-sys.md#getdefaultboidssimworld).
 
@@ -175,7 +175,7 @@ Gets the flock behavior parameters on the specified node.
 
 | Type | Description |
 | --- | --- |
-| [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) \| null | Returns the flock behavior parameters, or null if the node does not have this component mounted. |
+| [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) &#124; null | Returns the flock behavior parameters, or null if the node does not have this component mounted. |
 
 **Examples**
 
@@ -216,7 +216,7 @@ Gets the attraction field parameters on the specified node.
 
 | Type | Description |
 | --- | --- |
-| [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) \| null | Returns the attraction field parameters, or null if the node does not have this component mounted. |
+| [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) &#124; null | Returns the attraction field parameters, or null if the node does not have this component mounted. |
 
 **Examples**
 
@@ -257,7 +257,7 @@ Gets the repulsion field parameters on the specified node.
 
 | Type | Description |
 | --- | --- |
-| [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) \| null | Returns the repulsion field parameters, or null if the node does not have this component mounted. |
+| [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) &#124; null | Returns the repulsion field parameters, or null if the node does not have this component mounted. |
 
 **Examples**
 

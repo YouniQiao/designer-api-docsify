@@ -1,10 +1,8 @@
 # PanelFlag
 
-Enumerates the state types of the input method panel.   
-> **NOTE：**
-   
-> 
-   
+Enumerates the state types of the input method panel. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > Currently, only the **SOFT_KEYBOARD** panel is supported.
 
 **Since:** 11
@@ -41,9 +39,7 @@ Floating state type.
 FLAG_CANDIDATE
 ```
 
-Candidate state type.   
-- When in the candidate state type, the input method panel is a window displaying candidates based on user input.   
-- The input method service does not proactively control the visibility of the candidate panel. You need to control the visibility on your own.
+Candidate state type. <br> <br>- When in the candidate state type, the input method panel is a window displaying candidates based on user input. <br>- The input method service does not proactively control the visibility of the candidate panel. You need to control the visibility on your own.
 
 **Since:** 11
 

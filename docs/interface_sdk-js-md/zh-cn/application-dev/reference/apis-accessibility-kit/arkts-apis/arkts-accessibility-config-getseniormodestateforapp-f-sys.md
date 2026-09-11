@@ -29,7 +29,7 @@ function getSeniorModeStateForApp(bundleName: string, appIndex?: number): Promis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 查询“长辈模式”的应用包名。 |
-| appIndex | number | 否 | 应用包的分身索引标识。取值范围：大于等于0的整数。缺省时，appIndex默认为0。 |
+| appIndex | number | 否 | 应用包的分身索引标识。<br>取值范围：大于等于0的整数。缺省时，appIndex默认为0。 |
 
 **返回值：**
 
@@ -41,10 +41,10 @@ function getSeniorModeStateForApp(bundleName: string, appIndex?: number): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.<br>The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed.<br>A non-system application calls a system API. |
 | [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) | System abnormality. |
-| [9300008](../errorcode-accessibility.md#9300008-应用分身索引不合法) | The appIndex is invalid. Possible causes:  1.The appIndex is out of the valid range.  2.The application corresponding to the appIndex does not exist. |
+| [9300008](../errorcode-accessibility.md#9300008-应用分身索引不合法) | The appIndex is invalid. Possible causes:<br>1.The appIndex is out of the valid range. <br>2.The application corresponding to the appIndex does not exist. |
 
 **示例**
 

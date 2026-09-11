@@ -2,7 +2,7 @@
 
 自定义组件基类，它是从类CustomComponent迁移过来的。
 
-**继承/实现关系：** BaseCustomComponent extends [CommonAttribute](arkts-arkui-common-attribute.md)
+**继承/实现关系：** BaseCustomComponent extends [CommonAttribute](arkts-arkui-common-comp-attribute.md)
 
 **起始版本：** 18
 
@@ -110,7 +110,7 @@ The dialog controller of the custom component.
 
 | 类型 | 说明 |
 | --- | --- |
-| [PromptActionDialogController](arkts-arkui-promptactiondialogcontroller-t.md) \| undefined | The controller of dialog, or undefined if it is not available |
+| [PromptActionDialogController](arkts-arkui-promptactiondialogcontroller-t.md) &#124; undefined | The controller of dialog, or undefined if it is not available |
 
 ## getUIContext
 
@@ -254,8 +254,8 @@ ArkUI框架会在自定义组件确定尺寸时，将该自定义组件的节点
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| selfLayoutInfo | [GeometryInfo](arkts-arkui-geometryinfo-i.md) | 是 | 计算自定义组件大小后的自身布局信息。    **说明：** 第一次布局时以自身设置的属性为准。 |
-| children | Array&lt;[Measurable](arkts-arkui-measurable-i.md)&gt; | 是 | 计算子组件大小后的子组件布局信息。   **说明：** 如果没有设置子组件的布局信息，子组件会维持上一次的布局信息，当子组件从来没有设置过尺寸时，尺寸默认为0。 |
+| selfLayoutInfo | [GeometryInfo](arkts-arkui-geometryinfo-i.md) | 是 | 计算自定义组件大小后的自身布局信息。<br>**说明：** <br>第一次布局时以自身设置的属性为准。 |
+| children | Array&lt;[Measurable](arkts-arkui-measurable-i.md)&gt; | 是 | 计算子组件大小后的子组件布局信息。<br>**说明：** <br>如果没有设置子组件的布局信息，子组件会维持上一次的布局信息，当子组件从来没有设置过尺寸时，尺寸默认为0。 |
 | constraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | 是 | 自定义组件的布局约束信息。 |
 
 **返回值：**
@@ -403,7 +403,7 @@ queryNavDestinationInfo(): NavDestinationInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) \| undefined | NavDestinationInfo** instance obtained. |
+| [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) &#124; undefined | NavDestinationInfo** instance obtained. |
 
 ## queryNavDestinationInfo
 
@@ -425,13 +425,13 @@ queryNavDestinationInfo(isInner: Optional<boolean>): NavDestinationInfo | undefi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isInner | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | true：向内查询最近的，且在栈内的NavDestinationInfo的详细信息。   false：向外查询最近的，且在栈内的NavDestinationInfo的详细信息。 |
+| isInner | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | true：向内查询最近的，且在栈内的NavDestinationInfo的详细信息。<br>false：向外查询最近的，且在栈内的NavDestinationInfo的详细信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) \| undefined | NavDestinationInfo** instance obtained. |
+| [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) &#124; undefined | NavDestinationInfo** instance obtained. |
 
 ## queryNavigationInfo
 
@@ -453,7 +453,7 @@ queryNavigationInfo(): NavigationInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavigationInfo](arkts-arkui-navigationinfo-t.md) \| undefined | NavigationInfo** instance obtained. |
+| [NavigationInfo](arkts-arkui-navigationinfo-t.md) &#124; undefined | NavigationInfo** instance obtained. |
 
 ## queryRouterPageInfo
 
@@ -475,4 +475,4 @@ queryRouterPageInfo(): RouterPageInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [RouterPageInfo](arkts-arkui-routerpageinfo-t.md) \| undefined | RouterPageInfo** instance obtained. |
+| [RouterPageInfo](arkts-arkui-routerpageinfo-t.md) &#124; undefined | RouterPageInfo** instance obtained. |

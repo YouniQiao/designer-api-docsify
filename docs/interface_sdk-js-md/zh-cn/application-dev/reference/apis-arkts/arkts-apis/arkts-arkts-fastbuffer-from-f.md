@@ -61,7 +61,7 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayBuffer | ArrayBuffer \| SharedArrayBuffer | 是 | 用于创建FastBuffer对象的底层ArrayBuffer或SharedArrayBuffer，创建的FastBuffer将与该对象共享相同的内存区域。 |
+| arrayBuffer | ArrayBuffer &#124; SharedArrayBuffer | 是 | 用于创建FastBuffer对象的底层ArrayBuffer或SharedArrayBuffer，创建的FastBuffer将与该对象共享相同的内存区域。 |
 | byteOffset | number | 否 | 字节偏移量，默认值：0。 |
 | length | number | 否 | 字节长度，默认值：（arrayBuffer.byteLength - byteOffset）。取值范围：0 &lt;= length &lt;= arrayBuffer.byteLength - byteOffset。传入null时返回长度为0的FastBuffer对象。 |
 
@@ -110,7 +110,7 @@ function from(buffer: FastBuffer | Uint8Array): FastBuffer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | 是 | 用于创建新FastBuffer对象的源数据。当入参为FastBuffer时，将复制其数据创建新对象；当入参为Uint8Array时，基于其内存创建新对象并保持内存关联。 |
+| buffer | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; Uint8Array | 是 | 用于创建新FastBuffer对象的源数据。当入参为FastBuffer时，将复制其数据创建新对象；当入参为Uint8Array时，基于其内存创建新对象并保持内存关联。 |
 
 **返回值：**
 

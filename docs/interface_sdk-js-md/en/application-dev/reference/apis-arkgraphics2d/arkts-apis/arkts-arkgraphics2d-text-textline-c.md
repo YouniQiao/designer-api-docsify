@@ -197,7 +197,7 @@ getImageBounds(): common2D.Rect
 
 Obtains the image boundaries of this text line. The image boundaries, equivalent to visual boundaries, depend on the font, font size, and characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), only "a b" is visible to users, and therefore the image boundaries do not include these spaces at the beginning and end of the line. For the strings "j" and "E", their image boundaries are different. Specifically, the width of the boundary for "j" is narrower than that for "E", and the height of the boundary for"j" is taller than that for "E".
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The figure shows the image boundaries for the string " a b ".
 > 
@@ -350,7 +350,7 @@ getTypographicBounds(): TypographicBounds
 
 Obtains the typographic boundaries of the text line. These boundaries depend on the typographic font and font size, but not on the characters themselves. For example, for the string " a b " (which has a space before "a" and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line. Similarly, the strings "j" and "E" have identical typographic boundaries, independent of the characters themselves.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The figure shows the typesetting boundaries for the string " a b ".
 > 

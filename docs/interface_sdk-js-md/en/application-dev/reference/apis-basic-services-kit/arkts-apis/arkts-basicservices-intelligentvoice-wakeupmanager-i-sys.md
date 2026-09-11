@@ -1,6 +1,6 @@
 # WakeupManager (System API)
 
-Implements wakeup management.
+Implements wakeup management. @typedef WakeupManager
 
 **Since:** 12
 

@@ -11,7 +11,7 @@
 caseFirst?: string | undefined
 ```
 
-**Type:** string \| undefined
+**Type:** string &#124; undefined
 
 ## ignorePunctuation
 
@@ -19,7 +19,7 @@ caseFirst?: string | undefined
 ignorePunctuation?: boolean | undefined
 ```
 
-**Type:** boolean \| undefined
+**Type:** boolean &#124; undefined
 
 ## localeMatcher
 
@@ -27,7 +27,7 @@ ignorePunctuation?: boolean | undefined
 localeMatcher?: string | undefined
 ```
 
-**Type:** string \| undefined
+**Type:** string &#124; undefined
 
 ## numeric
 
@@ -35,7 +35,7 @@ localeMatcher?: string | undefined
 numeric?: boolean | undefined
 ```
 
-**Type:** boolean \| undefined
+**Type:** boolean &#124; undefined
 
 ## sensitivity
 
@@ -43,7 +43,7 @@ numeric?: boolean | undefined
 sensitivity?: string | undefined
 ```
 
-**Type:** string \| undefined
+**Type:** string &#124; undefined
 
 ## usage
 
@@ -51,4 +51,4 @@ sensitivity?: string | undefined
 usage?: string | undefined
 ```
 
-**Type:** string \| undefined
+**Type:** string &#124; undefined

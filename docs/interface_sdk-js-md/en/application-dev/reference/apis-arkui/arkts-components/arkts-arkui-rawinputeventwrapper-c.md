@@ -8,7 +8,7 @@ This class encapsulates either a raw **MouseEvent**, **TouchEvent**, or **KeyEve
 
 This class is an abstract class. Developers cannot create instances on their own. The system automatically creates an instance and passes it to the callback when the input event listener is triggered.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Since the listener is executed before events are dispatched to specific components, some fields in the event will
 > not provide valid values: the trigger object [target](arkts-arkui-eventtarget-i.md), coordinates relative to the component
@@ -46,7 +46,7 @@ Obtains the key event.
 
 | Type | Description |
 | --- | --- |
-| [KeyEvent](arkts-arkui-keyevent-i.md) \| null | Key event object if it is a key event, or **null** otherwise. |
+| [KeyEvent](arkts-arkui-keyevent-i.md) &#124; null | Key event object if it is a key event, or **null** otherwise. |
 
 ## asMouseEvent
 
@@ -68,7 +68,7 @@ Obtains the mouse event.
 
 | Type | Description |
 | --- | --- |
-| [MouseEvent](arkts-arkui-mouseevent-i.md) \| null | Mouse event object if it is a mouse event, or **null** otherwise. |
+| [MouseEvent](arkts-arkui-mouseevent-i.md) &#124; null | Mouse event object if it is a mouse event, or **null** otherwise. |
 
 ## asTouchEvent
 
@@ -90,7 +90,7 @@ Obtains the touch event.
 
 | Type | Description |
 | --- | --- |
-| [TouchEvent](arkts-arkui-touchevent-i.md) \| null | Touch event object if it is a touch event, or **null** otherwise. |
+| [TouchEvent](arkts-arkui-touchevent-i.md) &#124; null | Touch event object if it is a touch event, or **null** otherwise. |
 
 ## isKeyEvent
 

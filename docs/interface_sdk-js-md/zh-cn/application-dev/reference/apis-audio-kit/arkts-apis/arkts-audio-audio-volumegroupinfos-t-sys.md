@@ -4,6 +4,9 @@
 type VolumeGroupInfos = Array<Readonly<VolumeGroupInfo>>
 ```
 
+@typedef { Array&lt;Readonly&lt;VolumeGroupInfo&gt;  
+> } VolumeGroupInfos
+
 **起始版本：** 9
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume

@@ -18,9 +18,7 @@ import { inputMethod } from '@kit.IMEKit';
 readonly enabledState?: EnabledState
 ```
 
-Optional.   
-- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension.   
-- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates whether the input method is enabled.
+Optional. <br> <br>- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension. <br>- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates whether the input method is enabled.
 
 **Type:** [EnabledState](arkts-ime-inputmethod-enabledstate-e.md)
 
@@ -34,9 +32,7 @@ Optional.
 extra?: object
 ```
 
-Extra information about the input method. This parameter is reserved and currently has no specific meaning.   
-- API version 10 and later: optional   
-- API version 9: mandatory
+Extra information about the input method. This parameter is reserved and currently has no specific meaning. <br> <br>- API version 10 and later: optional <br>- API version 9: mandatory
 
 **Type:** object
 
@@ -50,9 +46,7 @@ Extra information about the input method. This parameter is reserved and current
 readonly icon?: string
 ```
 
-Optional.   
-- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension.   
-- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates the input method icon data, which can be obtained through icon ID.
+Optional. <br> <br>- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension. <br>- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates the input method icon data, which can be obtained through icon ID.
 
 **Type:** string
 
@@ -66,9 +60,7 @@ Optional.
 readonly iconId?: number
 ```
 
-Optional.   
-- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension.   
-- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates the resource ID of the **icon** field.
+Optional. <br> <br>- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension. <br>- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates the resource ID of the **icon** field.
 
 **Type:** number
 
@@ -96,9 +88,7 @@ Mandatory. Unique identifier of an input method extension in an app. **id** and 
 readonly label?: string
 ```
 
-Optional.   
-- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension.   
-- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates the name of the input method extension displayed externally. Use the label configured for the InputMethodExtensionAbility. If no label is configured, the label of the application entry ability is automatically used. If no label is configured for the application entry ability, the label configured in **AppScope** is automatically used.
+Optional. <br> <br>- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension. <br>- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates the name of the input method extension displayed externally. Use the label configured for the InputMethodExtensionAbility. If no label is configured, the label of the application entry ability is automatically used. If no label is configured for the application entry ability, the label configured in **AppScope** is automatically used.
 
 **Type:** string
 
@@ -112,9 +102,7 @@ Optional.
 readonly labelId?: number
 ```
 
-Optional.   
-- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension.   
-- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates the resource ID of the **label** field.
+Optional. <br> <br>- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension. <br>- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates the resource ID of the **label** field.
 
 **Type:** number
 

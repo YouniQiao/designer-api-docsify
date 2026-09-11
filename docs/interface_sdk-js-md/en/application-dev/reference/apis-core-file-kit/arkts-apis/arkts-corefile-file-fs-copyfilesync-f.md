@@ -24,9 +24,9 @@ Copies a file. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string \| number | Yes | Path or FD of the file to copy. |
-| dest | string \| number | Yes | Destination path of the file or FD of the file created. |
-| mode | number | No | Whether to overwrite the file with the same name in the destination directory. The default value is **0**, which is the only value supported.   **0**: overwrite the file with the same name and truncate the part that is not overwritten. |
+| src | string &#124; number | Yes | Path or FD of the file to copy. |
+| dest | string &#124; number | Yes | Destination path of the file or FD of the file created. |
+| mode | number | No | Whether to overwrite the file with the same name in the destination directory. The default value is **0**, which is the only value supported.<br>**0**: overwrite the file with the same name and truncate the part that is not overwritten. |
 
 **Error codes:**
 

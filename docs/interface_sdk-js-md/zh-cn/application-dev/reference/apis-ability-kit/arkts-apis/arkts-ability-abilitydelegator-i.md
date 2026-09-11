@@ -674,7 +674,7 @@ executeShellCommand(cmd: string, timeoutSecs?: number): Promise<ShellCmdResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Promise对象，返回Shell命令执行结果[ShellCmdResult]{ |
+| Promise&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Promise对象，返回Shell命令执行结果[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)对象。 |
 
 **示例**
 
@@ -811,7 +811,7 @@ getAbilityState(ability: UIAbility): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 指定ability的生命周期状态。状态枚举值使用[AbilityLifecycleState]{ |
+| number | 指定ability的生命周期状态。状态枚举值使用[AbilityLifecycleState](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md)。 |
 
 **错误码：**
 
@@ -860,7 +860,7 @@ getAppContext(): Context
 
 | 类型 | 说明 |
 | --- | --- |
-| [Context](arkts-ability-context-c.md) | 应用[Context]{ |
+| [Context](arkts-ability-context-c.md) | 应用Context。 |
 
 **示例**
 
@@ -1888,7 +1888,7 @@ waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout?: number): Promise
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Promise对象，返回[AbilityStage]{ |
+| Promise&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Promise对象，返回[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)对象。 |
 
 **错误码：**
 

@@ -2,6 +2,8 @@
 
 Provides the conditions of Collector.
 
+@typedef CollectorRule
+
 **Since:** 12
 
 **System capability:** SystemCapability.Security.SecurityGuard

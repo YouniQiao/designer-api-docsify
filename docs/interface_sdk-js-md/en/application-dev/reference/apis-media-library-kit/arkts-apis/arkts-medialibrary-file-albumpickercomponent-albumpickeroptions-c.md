@@ -36,7 +36,7 @@ fontSize?: number | string
 
 Font size. For details about the value range, see fontSize.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 20
 

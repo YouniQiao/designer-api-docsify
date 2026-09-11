@@ -20,7 +20,7 @@ ca?: string | Array<string>
 
 服务端的ca证书，用于认证校验服务端的数字证书。默认为系统预置CA证书&lt;sup&gt;12+&lt;/sup&gt;。最多支持设置1000本证书。
 
-**类型：** string \| Array&lt;string&gt;
+**类型：** string &#124; Array&lt;string&gt;
 
 **起始版本：** 9
 
@@ -34,7 +34,7 @@ cert?: string | Array<string>
 
 本地客户端的数字证书。从API Version 24开始支持传入数组，最多支持设置1000本证书。
 
-**类型：** string \| Array&lt;string&gt;
+**类型：** string &#124; Array&lt;string&gt;
 
 **起始版本：** 9
 
@@ -104,7 +104,7 @@ protocols?: Protocol | Array<Protocol>
 
 TLS的协议版本，默认为"TLSv1.2"。
 
-**类型：** [Protocol](arkts-network-socket-protocol-e.md) \| Array&lt;[Protocol](arkts-network-socket-protocol-e.md)&gt;
+**类型：** [Protocol](arkts-network-socket-protocol-e.md) &#124; Array&lt;[Protocol](arkts-network-socket-protocol-e.md)&gt;
 
 **起始版本：** 9
 

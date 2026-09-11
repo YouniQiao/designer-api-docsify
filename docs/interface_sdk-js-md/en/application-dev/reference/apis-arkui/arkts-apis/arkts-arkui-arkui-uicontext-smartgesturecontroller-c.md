@@ -2,7 +2,7 @@
 
 Provides the capability to enable smart gestures, monitor them, control the selection state, and dynamically determine smart gesture behavior.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The following APIs must be called using a **SmartGestureController** instance obtained via
 > [getSmartGestureController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getsmartgesturecontroller) in **UIContext**.
@@ -60,7 +60,7 @@ enableSmartTapAndSlideGestures(enabled: boolean): void
 
 Sets whether to enable the tap and slide operations of smart gestures.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API affects only the tap and slide smart gestures, not the wrist-turn gesture.
 > 
@@ -89,7 +89,7 @@ registerMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, GestureHa
 
 Registers a smart gesture monitoring callback. Before the system processes the current smart gesture, the application can receive the default action handling of the current gesture and apply custom intervention. The callback is used for asynchronous callbacks.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API enables the application to receive the system's handling intent for the current smart gesture event
 > before it is processed by the system and apply custom intervention.
@@ -129,7 +129,7 @@ requestSelected(id: string): void
 
 Requests to set the specified component as the current smart gesture selected node. After successful selection, a selection prompt box is displayed. The style of the selection box varies by device.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The request takes effect only when all the following conditions are met: the target component can respond to
 > smart gestures, the component is visible on the screen, and the component has an

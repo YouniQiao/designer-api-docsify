@@ -46,7 +46,7 @@ columnsTemplate?: string | ItemFillPolicy
 
 装饰器类型：@Trace
 
-**类型：** string \| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md)
+**类型：** string &#124; [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md)
 
 **默认值：** '1fr'
 

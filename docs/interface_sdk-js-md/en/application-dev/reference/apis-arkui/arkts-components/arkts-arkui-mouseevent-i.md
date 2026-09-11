@@ -155,7 +155,7 @@ Unique identifier for event processing.
 
 Value range: [0, +∞)
 
-**NOTE：**
+**NOTE:**
 
 This field is used when dispatching events using the [postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postinputeventwithstrategy) API. Each time an event is dispatched, this field is increased by 100000.
 
@@ -241,7 +241,7 @@ rawDeltaX?: number
 
 Movement increment of the mouse along the X axis in a two-dimensional plane. The value is the original movement data of the mouse hardware, which is expressed in the unit of the mouse movement distance in the physical world. The reported value is determined by the hardware, not the physical or logical pixels of the screen.
 
-**NOTE：**
+**NOTE:**
 
 Before API version 26.0.0, the return value of **rawDeltaX** was not the original movement data of the mouse hardware, but the original data reduced by a factor of X, where X is the system's display size ratio. Since API version 26.0.0, the return value of **rawDeltaX** is the original movement data of the mouse hardware.
 
@@ -263,7 +263,7 @@ rawDeltaY?: number
 
 Movement increment of the mouse along the Y axis in a two-dimensional plane. The value is the original movement data of the mouse hardware, which is expressed in the unit of the mouse movement distance in the physical world. The reported value is determined by the hardware, not the physical or logical pixels of the screen.
 
-**NOTE：**
+**NOTE:**
 
 Before API version 26.0.0, the return value of **rawDeltaY** was not the original movement data of the mouse hardware, but the original data reduced by a factor of X, where X is the system's display size ratio. Since API version 26.0.0, the return value of **rawDeltaY** is the original movement data of the mouse hardware.
 

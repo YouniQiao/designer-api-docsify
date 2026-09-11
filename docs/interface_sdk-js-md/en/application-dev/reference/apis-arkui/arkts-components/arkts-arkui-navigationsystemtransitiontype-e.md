@@ -2,7 +2,7 @@
 
 Type of the system transition animation.
 
-> **NOTE：**
+> **NOTE:**
 
 > System transition animations for the title bar and content area can be configured separately.
 

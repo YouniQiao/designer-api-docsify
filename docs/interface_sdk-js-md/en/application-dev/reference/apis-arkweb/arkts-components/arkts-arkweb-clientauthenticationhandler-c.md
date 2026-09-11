@@ -1,6 +1,6 @@
 # ClientAuthenticationHandler
 
-ClientAuthenticationHandler is a class in the **Web** component that handles SSL client certificate authentication requests. When a server requests a client certificate for TLS mutual authentication, this handler is provided to the app through the `onClientAuthenticationRequest` event callback, allowing the app to select appropriate certificate credentials for response. For sample code, see [onClientAuthenticationRequest](arkts-arkweb-web-attribute.md#onclientauthenticationrequest).
+ClientAuthenticationHandler is a class in the **Web** component that handles SSL client certificate authentication requests. When a server requests a client certificate for TLS mutual authentication, this handler is provided to the app through the `onClientAuthenticationRequest` event callback, allowing the app to select appropriate certificate credentials for response. For sample code, see [onClientAuthenticationRequest](arkts-arkweb-web-comp-attribute.md#onclientauthenticationrequest).
 
 **Since:** 9
 
@@ -83,7 +83,7 @@ Instructs the **Web** component to use the specified credential and credential t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | identity | string | Yes | Unique ID of a credential. |
-| credentialTypeOrCertChainFile | [CredentialType](arkts-arkweb-credentialtype-e.md) \| string | Yes | Credential type when the type is CredentialType, or certificate chain file path when the type is string. |
+| credentialTypeOrCertChainFile | [CredentialType](arkts-arkweb-credentialtype-e.md) &#124; string | Yes | Credential type when the type is CredentialType, or certificate chain file path when the type is string. |
 
 **Error codes:**
 

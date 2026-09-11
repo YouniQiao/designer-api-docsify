@@ -2,7 +2,7 @@
 
 ZoomQuery provides APIs to query the zoom feature of a device camera, including the API to obtain the supported zoom ratio range.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This interface was first introduced in API version 12. In this version, a compatibility change was made that
 > preserved the initial version information of inner elements. As a result, you might see outer element's
@@ -91,7 +91,7 @@ Obtains the supported zoom ratio range.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Array containing the minimum and maximum zoom ratios. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
+| Array&lt;number&gt; | Array containing the minimum and maximum zoom ratios. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is thrown. If the device does not support zoom, **undefined** is returned when this API is called. |
 
 **Error codes:**
 

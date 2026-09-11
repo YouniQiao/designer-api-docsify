@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**需要权限：** ohos.permission.LOCATION
+**需要权限：** ohos.permission.LOCATION @enum { number }
 
 **系统能力：** SystemCapability.Location.Location.Core
 

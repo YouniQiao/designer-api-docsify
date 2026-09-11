@@ -2,6 +2,8 @@
 
 音频效果管理。在使用AudioEffectManager的接口前，需要使用[getEffectManager](arkts-audio-audio-audiomanager-i-sys.md#geteffectmanager)获取AudioEffectManager实例。
 
+@typedef AudioEffectManager
+
 **起始版本：** 18
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -436,7 +438,7 @@ setAudioSeparationEffectEnabled(enabled: boolean, uid: number, streamId?: number
 | --- | --- | --- | --- |
 | enabled | boolean | 是 | 音频分离效果的启用状态。true表示启用，false表示禁用。 |
 | uid | number | 是 | 表示目标应用进程ID。 |
-| streamId | number | 否 | 目标音频播放流的ID，默认值为-1。如果没有传入此参数，则根据uid控制应用级别的音频分离效果开关。播放应用可通过[AudioRenderer.getAudioStreamIdSync](arkts-audio-audio-audiorenderer-i.md#getaudiostreamidsync)获取streamId。 |
+| streamId | number | 否 | 目标音频播放流的ID，默认值为-1。<br>如果没有传入此参数，则根据uid控制应用级别的音频分离效果开关。<br>播放应用可通过[AudioRenderer.getAudioStreamIdSync](arkts-audio-audio-audiorenderer-i.md#getaudiostreamidsync)获取streamId。 |
 
 **返回值：**
 

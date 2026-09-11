@@ -19,6 +19,8 @@ layoutStyle?: RichEditorLayoutStyle
 
 Image layout style.
 
+**Atomic service API:** Since API version 12, this API is supported in atomic services.
+
 **Type:** [RichEditorLayoutStyle](arkts-arkui-richeditorlayoutstyle-i.md)
 
 **Since:** 12
@@ -53,7 +55,9 @@ Scale mode of the image.
 resizable?: ResizableOptions
 ```
 
-Resizable image options.
+Image resizing options.
+
+**Atomic service API:** Since API version 26.1.0, this API is supported in atomic services.
 
 **Type:** [ResizableOptions](arkts-arkui-resizableoptions-i.md)
 
@@ -71,7 +75,7 @@ Resizable image options.
 size: [number, number]
 ```
 
-Width and height of the image, in px. Default value: varies by the value of **objectFit**. If the value of **objectFit** is **Cover**, the image height is the component height minus the top and bottom paddings, and the image width is the component width minus the left and right paddings.
+Width and height of the image, in px. Default value depends on the **objectFit** setting. If the value of **objectFit** is **Cover**, the image height is the component height minus the top and bottom paddings, and the image width is the component width minus the left and right paddings.
 
 **Type:** [number, number]
 

@@ -19,7 +19,7 @@ Obtains the angle change between two rotation matrices. This API uses an asynchr
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md)(currentRotationMatrix: Array&lt;double&gt;, preRotationMatrix: Array&lt;double&gt;, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
+**Substitutes:** [getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md)(currentRotationMatrix: Array&lt;number&gt;, preRotationMatrix: Array&lt;number&gt;, callback: AsyncCallback&lt;Array&lt;number&gt;&gt;)
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -62,7 +62,7 @@ Obtains the angle change between two rotation matrices. This API uses a promise 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md)(currentRotationMatrix: Array&lt;double&gt;, preRotationMatrix: Array&lt;double&gt;)
+**Substitutes:** [getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md)(currentRotationMatrix: Array&lt;number&gt;, preRotationMatrix: Array&lt;number&gt;)
 
 **System capability:** SystemCapability.Sensors.Sensor
 

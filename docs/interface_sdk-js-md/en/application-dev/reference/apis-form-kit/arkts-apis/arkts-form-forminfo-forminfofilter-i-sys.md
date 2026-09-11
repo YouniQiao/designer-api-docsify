@@ -2,6 +2,8 @@
 
 The optional options used as filters to ask getFormsInfo to return formInfos from only forms that match the options.
 
+@typedef FormInfoFilter
+
 **Since:** 9
 
 **System capability:** SystemCapability.Ability.Form

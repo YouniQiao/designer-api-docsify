@@ -26,7 +26,7 @@ Registers the callback when the **policy** changes. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'netUidPolicyChange' | Yes | Event type.The value **netUidPolicyChange** indicates a policy change event. |
+| type | 'netUidPolicyChange' | Yes | Event type.<br> The value **netUidPolicyChange** indicates a policy change event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetUidPolicyInfo](arkts-network-policy-netuidpolicyinfo-i-sys.md)&gt; | Yes | Callback used to return the result. It is called when the network policy changes.<br>**Since:** 11 |
 
 **Error codes:**
@@ -61,7 +61,7 @@ Registers the callback when the **rule** changes. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'netUidRuleChange' | Yes | Event type.The value **netUidRuleChange** indicates a rule change event. |
+| type | 'netUidRuleChange' | Yes | Event type.<br> The value **netUidRuleChange** indicates a rule change event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetUidRuleInfo](arkts-network-policy-netuidruleinfo-i-sys.md)&gt; | Yes | Callback used to return the result. It is called when the rule changes.<br>**Since:** 11 |
 
 **Error codes:**
@@ -96,7 +96,7 @@ Registers the callback when the **iface** changes. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'netMeteredIfacesChange' | Yes | Event type.The value **netMeteredIfacesChange** indicates a metered **iface** change event. |
+| type | 'netMeteredIfacesChange' | Yes | Event type.<br> The value **netMeteredIfacesChange** indicates a metered **iface** change event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. It is called when the registered metered **iface** changes. |
 
 **Error codes:**
@@ -131,7 +131,7 @@ Registers the callback for network quota policy changes. This API uses an asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'netQuotaPolicyChange' | Yes | Event type.The value **netQuotaPolicyChange** indicates a network quota policy change event. |
+| type | 'netQuotaPolicyChange' | Yes | Event type.<br> The value **netQuotaPolicyChange** indicates a network quota policy change event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. It is called when the registered network quota policy changes. |
 
 **Error codes:**
@@ -166,7 +166,7 @@ Registers the callback for background network policy changes. This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'netBackgroundPolicyChange' | Yes | Event type.The value **netBackgroundPolicyChange** indicates a background network policy change event. |
+| type | 'netBackgroundPolicyChange' | Yes | Event type.<br> The value **netBackgroundPolicyChange** indicates a background network policy change event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. It is called when the registered background network policy changes. |
 
 **Error codes:**

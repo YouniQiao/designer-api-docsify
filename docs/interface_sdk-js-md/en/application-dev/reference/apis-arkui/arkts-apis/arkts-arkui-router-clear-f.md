@@ -14,7 +14,7 @@ function clear(): void
 
 Clears all historical pages in the stack and retains only the current page at the top of the stack.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in

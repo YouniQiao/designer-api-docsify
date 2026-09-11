@@ -19,7 +19,7 @@ x?: number | string
 
 Translation distance along the x-axis. For the number type, the unit is VP, and the value range is (-∞, +∞). For the string type, the value follows the format of length string type.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 7
 
@@ -37,7 +37,7 @@ y?: number | string
 
 Translation distance along the y-axis. For the number type, the unit is VP, and the value range is (-∞, +∞). For the string type, the value follows the format of length string type.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 7
 
@@ -55,7 +55,7 @@ z?: number | string
 
 Distance to translate along the z-axis. The value is a floating point number, the default value is 0.0, and the unit is px.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 7
 

@@ -19,7 +19,7 @@ Enumerates the directions of pixel rounding at the component level.
 bottom?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's bottom edge. Invalid values are rounded using the round-half-up rule.
+Rounding alignment for the component's bottom edge. <br>Invalid values are rounded using the round-half-up rule.
 
 **Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
@@ -41,7 +41,7 @@ Rounding alignment for the component's bottom edge. Invalid values are rounded u
 end?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's end edge. Invalid values are rounded using the round-half-up rule.
+Rounding alignment for the component's end edge. <br>Invalid values are rounded using the round-half-up rule.
 
 **Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
@@ -63,7 +63,7 @@ Rounding alignment for the component's end edge. Invalid values are rounded usin
 start?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's start edge. Invalid values are rounded using the round-half-up rule.
+Rounding alignment for the component's start edge. <br>Invalid values are rounded using the round-half-up rule.
 
 **Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
@@ -85,7 +85,7 @@ Rounding alignment for the component's start edge. Invalid values are rounded us
 top?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's top edge. Invalid values are rounded using the round-half-up rule.
+Rounding alignment for the component's top edge. <br>Invalid values are rounded using the round-half-up rule.
 
 **Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 

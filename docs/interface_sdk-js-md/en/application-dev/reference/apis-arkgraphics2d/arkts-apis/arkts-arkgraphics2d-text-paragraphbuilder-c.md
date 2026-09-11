@@ -338,7 +338,7 @@ popStyle(): void
 
 Restores the previous text style.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This method must be called after [pushStyle()](#pushstyle). After it is called,
 > subsequently added text will use the text style before the pop operation. If the style stack is empty, the
@@ -392,7 +392,7 @@ pushStyle(textStyle: TextStyle): void
 
 Applies a new style to the current text blob.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When you update the style of the current text blob, all text added afterward will use this new style.
 

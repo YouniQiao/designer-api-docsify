@@ -2,7 +2,7 @@
 
 An **ImageData** object stores pixel data rendered on a canvas.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > A constructor used to create an **ImageData** object. To ensure successful drawing,
 > make sure the object's area does not exceed 16000 x 16000, with its width and height
@@ -38,9 +38,9 @@ Creates an **ImageData** object with the specified width, height, and color. If 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | Width of the rectangle.Default unit: vp Invalid values **NaN** and **Infinity** are treated as **0**. |
-| height | number | Yes | Height of the rectangle.Default unit: vp Invalid values **NaN** and **Infinity** are treated as **0**. |
-| data | Uint8ClampedArray | No | A one-dimensional array of color values. The values range from 0 to 255.If the value specified is **undefined**, **data** is **undefined**.Default value: a one-dimensional array of all 0s |
+| width | number | Yes | Width of the rectangle.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as **0**. |
+| height | number | Yes | Height of the rectangle.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as **0**. |
+| data | Uint8ClampedArray | No | A one-dimensional array of color values. The values range from 0 to 255.<br> If the value specified is **undefined**, **data** is **undefined**.<br> Default value: a one-dimensional array of all 0s |
 
 ## constructor
 
@@ -64,10 +64,10 @@ Creates an **ImageData** object with the specified width, height, and color. If 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | Width of the rectangle.Default unit: vp Invalid values **NaN** and **Infinity** are treated as **0**. |
-| height | number | Yes | Height of the rectangle.Default unit: vp Invalid values **NaN** and **Infinity** are treated as **0**. |
-| data | Uint8ClampedArray | No | A one-dimensional array of color values. The values range from 0 to 255.If the value specified is **undefined**, **data** is **undefined**.Default value: a one-dimensional array of all 0s |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No | Unit mode of the **ImageData** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.Default value: **DEFAULT**. |
+| width | number | Yes | Width of the rectangle.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as **0**. |
+| height | number | Yes | Height of the rectangle.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as **0**. |
+| data | Uint8ClampedArray | No | A one-dimensional array of color values. The values range from 0 to 255.<br> If the value specified is **undefined**, **data** is **undefined**.<br> Default value: a one-dimensional array of all 0s |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No | Unit mode of the **ImageData** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br> Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.<br> Default value: **DEFAULT**. |
 
 ## data
 
@@ -117,7 +117,7 @@ Actual width of the rectangle on the canvas.
 
 The unit is px.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The px2vp
 > API can be used for unit conversion.

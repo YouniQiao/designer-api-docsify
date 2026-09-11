@@ -536,13 +536,13 @@ createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undef
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | 否 | 解码参数，控制是否生成缩略图以及生成缩略图的目标尺寸。默认表现：   - 当图像有缩略图时，解码原始缩略图，返回的PixelMap对象的宽和高与原缩略图保持一致。   - 当原图文件无缩略图时，对原图进行解码后，根据解码参数options下采样生成缩略图，生成后的缩略图PixelMap对象宽和高都限制在512像素以内。 |
+| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | 否 | 解码参数，控制是否生成缩略图以及生成缩略图的目标尺寸。<br>默认表现：<br>- 当图像有缩略图时，解码原始缩略图，返回的PixelMap对象的宽和高与原缩略图保持一致。<br>- 当原图文件无缩略图时，对原图进行解码后，根据解码参数options下采样生成缩略图，生成后的缩略图PixelMap对象宽和高都限制在512像素以内。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md) \| undefined&gt; | Promise对象，返回PixelMap。 |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md) &#124; undefined&gt; | Promise对象，返回PixelMap。 |
 
 **错误码：**
 
@@ -586,13 +586,13 @@ createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | 否 | 解码参数，控制是否生成缩略图以及生成缩略图的目标尺寸。默认表现：   - 当图像有缩略图时，解码原始缩略图，返回的PixelMap对象的宽和高与原缩略图保持一致。   - 当原图文件无缩略图时，对原图进行解码后，根据解码参数options下采样生成缩略图，生成后的缩略图PixelMap对象宽和高都限制在512像素以内。 |
+| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | 否 | 解码参数，控制是否生成缩略图以及生成缩略图的目标尺寸。<br>默认表现：<br>- 当图像有缩略图时，解码原始缩略图，返回的PixelMap对象的宽和高与原缩略图保持一致。<br>- 当原图文件无缩略图时，对原图进行解码后，根据解码参数options下采样生成缩略图，生成后的缩略图PixelMap对象宽和高都限制在512像素以内。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) \| undefined | 用于同步返回创建结果。 |
+| [PixelMap](arkts-image-image-pixelmap-i.md) &#124; undefined | 用于同步返回创建结果。 |
 
 **错误码：**
 
@@ -884,7 +884,7 @@ getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;[PropertyKey](arkts-image-image-propertykey-e.md), string \| null&gt;&gt; | Promise对象，返回图片属性值，如获取失败则返回null。 |
+| Promise&lt;Record&lt;[PropertyKey](arkts-image-image-propertykey-e.md), string &#124; null&gt;&gt; | Promise对象，返回图片属性值，如获取失败则返回null。 |
 
 **错误码：**
 
@@ -1071,7 +1071,7 @@ getImagePropertySync(key: PropertyKey): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回图片Exif中指定属性键的值（如获取失败则返回属性默认值），各个数据值作用请参考[PropertyKey]{ |
+| string | 返回图片Exif中指定属性键的值（如获取失败则返回属性默认值），各个数据值作用请参考[PropertyKey](arkts-image-image-propertykey-e.md)。 |
 
 **错误码：**
 
@@ -1106,7 +1106,7 @@ modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| records | Record&lt;[PropertyKey](arkts-image-image-propertykey-e.md), string \| null&gt; | 是 | 包含图片属性名和属性值的数组。 |
+| records | Record&lt;[PropertyKey](arkts-image-image-propertykey-e.md), string &#124; null&gt; | 是 | 包含图片属性名和属性值的数组。 |
 
 **返回值：**
 
@@ -1152,7 +1152,7 @@ modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | 是 | 包含图片属性名和属性值的键值对集合。 |
+| records | Record&lt;string, string &#124; null&gt; | 是 | 包含图片属性名和属性值的键值对集合。 |
 
 **返回值：**
 
@@ -1411,7 +1411,7 @@ readImageMetadataByType(metadataTypes?: MetadataType[], index?: number): Promise
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | metadataTypes | [MetadataType](arkts-image-image-metadatatype-e.md)[] | 否 | 元数据类型的数组。当该参数缺省时，获取全部支持的元数据。 |
-| index | number | 否 |  |
+| index | number | 否 | 图片帧序号，表示获取指定帧的元数据。默认值为0。<br>- 单帧图片场景中index取值只能为0。<br>- 动图等多帧图片场景中index的取值范围为[0, 帧数-1]。 |
 
 **返回值：**
 

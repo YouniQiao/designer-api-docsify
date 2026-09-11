@@ -2,7 +2,7 @@
 
 This module provides API for creating and displaying toasts, dialog boxes, and action menus.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This module cannot be used in the file declaration of the [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md). In
 > other words, the APIs of this module can be used only after a component instance is created; they cannot be called

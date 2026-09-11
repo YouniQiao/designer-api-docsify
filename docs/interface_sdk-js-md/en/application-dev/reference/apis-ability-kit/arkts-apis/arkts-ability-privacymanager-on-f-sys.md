@@ -18,7 +18,7 @@ Subscribes to permission usage status change events for a specified permission l
 
 Multiple callback functions are allowed to be subscribed for the same permissionList.
 
-> **NOTE：**
+> **NOTE:**
 > It is not allowed to subscribe the same callback function using two permissionLists that have an intersection.
 > That is, if two permissionLists contain the same permission name, the same callback function cannot be used for subscription.
 > This API is typically used in conjunction with [off](arkts-ability-privacymanager-off-f-sys.md).
@@ -37,7 +37,7 @@ Multiple callback functions are allowed to be subscribed for the same permission
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'activeStateChange' | Yes | Event type. The value is **'activeStateChange'**, which indicates the permission usage change. |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of subscribed permission names. An empty value indicates subscription to the usage status changes of all permissions. Passing an invalid value returns error code 12100001. Value constraint: The array length cannot exceed 1024. |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of subscribed permission names. An empty value indicates subscription to the usage status changes of all permissions. Passing an invalid value returns error code 12100001.<br>Value constraint: The array length cannot exceed 1024. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md)&gt; | Yes | Callback used to return the object of subscribing to state changes of the specified permission. |
 
 **Error codes:**

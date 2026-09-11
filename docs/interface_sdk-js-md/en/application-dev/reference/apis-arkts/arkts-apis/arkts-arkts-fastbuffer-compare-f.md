@@ -24,14 +24,14 @@ Compares buf1 to buf2
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf1 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | First buffer for comparison |
-| buf2 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | Second buffer for comparison |
+| buf1 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; Uint8Array | Yes | First buffer for comparison |
+| buf2 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; Uint8Array | Yes | Second buffer for comparison |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| -1 \| 0 \| 1 | 0 is returned if target is the same as buf 1 is returned if target should come before buf when sorted. -1 is returned if target should come after buf when sorted. |
+| -1 &#124; 0 &#124; 1 | 0 is returned if target is the same as buf 1 is returned if target should come before buf when sorted. -1 is returned if target should come after buf when sorted. |
 
 **Error codes:**
 

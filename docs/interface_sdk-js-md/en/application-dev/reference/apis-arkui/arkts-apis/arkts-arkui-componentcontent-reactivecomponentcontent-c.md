@@ -103,7 +103,7 @@ dispose(): void
 
 Immediately releases the reference relationship between this **ReactiveComponentContent** object and its [entity node](../../../ui/arkts-user-defined-node.md#basic-concepts). For details about the scenarios involving **ReactiveComponentContent** unbinding, see [Canceling the Reference to the Entity Node](../../../ui/arkts-user-defined-arktsNode-builderNode.md#canceling-the-reference-to-the-entity-node).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > After calling **dispose**, the **ReactiveComponentContent** object cancels its reference to the backend entity
 > node. If the frontend object **ReactiveComponentContent** cannot be released, memory leaks may occur. To avoid
@@ -358,7 +358,7 @@ inheritFreezeOptions(enabled: boolean): void
 
 Sets whether the current **ReactiveComponentContent** object inherits the freeze policy configured by [ComponentOptions](../arkts-components/arkts-arkui-componentoptions-i.md) from its parent component's custom components. When inheritance is disabled (set to **false**), the **ReactiveComponentContent** object's freeze policy is set to **false**, which means its associated node remains unfrozen even in an inactive state.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When **inheritFreezeOptions** is set to **true** for a **ReactiveComponentContent** object, and its parent
 > component is a custom component, **BuilderNode**, **ComponentContent**, **ReactiveBuilderNode**, or
@@ -377,7 +377,7 @@ Sets whether the current **ReactiveComponentContent** object inherits the freeze
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether the **ReactiveComponentContent** object inherits the freeze policy from its parent component's custom components. The value **true** means to inherit the freeze policy from the parent component's custom components, and **false** means the opposite. |
+| enabled | boolean | Yes | Whether the **ReactiveComponentContent** object inherits the freeze policy from its parent component's custom components.<br>The value **true** means to inherit the freeze policy from the parent component's custom components, and **false** means the opposite. |
 
 **Examples**
 
@@ -583,7 +583,7 @@ Checks whether this **ReactiveComponentContent** object has released its referen
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the reference to the backend node is released. |
+| boolean | Whether the reference to the backend node is released.<br>The value **true** means that the reference to backend node is released, and **false** means the opposite. |
 
 **Examples**
 

@@ -16,7 +16,7 @@ Adds the cross-device application trustlist for a specific distributed service f
 
 Currently, the following distributed service type is supported: [collaboration service](arkts-mdm-applicationmanager-servicetype-e.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 1. Before calling this API to set the application list allowed to use a specific distributed service, you must
 > have already disabled one-way data transmission between devices (which is used for transferring data to other
@@ -42,7 +42,7 @@ Currently, the following distributed service type is supported: [collaboration s
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | appIdentifiers | Array&lt;string&gt; | Yes | Array of [unique identifiers](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-signatureinfo-i.md) of an application. You can call the [bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfo-f.md) API to obtain the **bundleInfo.signatureInfo.appIdentifier**. The total number of applications in the array cannot exceed 200. |
 | serviceType | [ServiceType](arkts-mdm-applicationmanager-servicetype-e.md) | Yes | Distributed service type. |
-| accountId | number | Yes | Account ID. The value is an integer greater than or equal to 0. You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
+| accountId | number | Yes | Account ID. The value is an integer greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
 
 **Error codes:**
 

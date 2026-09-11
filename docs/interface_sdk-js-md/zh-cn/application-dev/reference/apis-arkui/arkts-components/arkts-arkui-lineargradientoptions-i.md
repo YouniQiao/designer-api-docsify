@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
@@ -29,9 +29,10 @@ angle?: number | string
 
 角度为字符串时，合法的取值为数字（默认单位为度，即deg）或数字后带"deg"（度）、"rad"（弧度）、"grad"（梯度）、"turn"（圈）单位，例如："90"、 "90deg"、"1.57rad"。传入非法格式的字符串时，按默认值180处理。
 
-**类型：** number \| string
+**类型：** number &#124; string
 
-**默认值：** 180 [since 18]
+**默认值：**
+- API版本18+：180
 
 **起始版本：** 7
 
@@ -71,7 +72,8 @@ direction?: GradientDirection
 
 **类型：** [GradientDirection](../arkts-apis/arkts-arkui-gradientdirection-e.md)
 
-**默认值：** GradientDirection.Bottom [since 18]
+**默认值：**
+- API版本18+：GradientDirection.Bottom
 
 **起始版本：** 7
 
@@ -97,7 +99,8 @@ false：渐变效果仅在指定范围内显示一次。
 
 **类型：** boolean
 
-**默认值：** false [since 18]
+**默认值：**
+- API版本18+：false
 
 **起始版本：** 7
 

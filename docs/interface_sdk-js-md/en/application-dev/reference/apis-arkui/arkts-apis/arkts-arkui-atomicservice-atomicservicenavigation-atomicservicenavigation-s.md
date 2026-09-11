@@ -74,7 +74,7 @@ menus?: CustomBuilder | Array<NavigationMenuItem>
 
 The layout style users defined and inserted.
 
-**Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| Array&lt;[NavigationMenuItem](../arkts-components/arkts-arkui-navigationmenuitem-i.md)&gt;
+**Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; Array&lt;[NavigationMenuItem](../arkts-components/arkts-arkui-navigationmenuitem-i.md)&gt;
 
 **Since:** 18
 

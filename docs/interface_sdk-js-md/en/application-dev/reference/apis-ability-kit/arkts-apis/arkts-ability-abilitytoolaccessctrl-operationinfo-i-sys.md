@@ -21,7 +21,7 @@ info: CliCmdInfo | Permissions
 
 Operation detail information.
 
-**Type:** [CliCmdInfo](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i-sys.md) \| [Permissions](arkts-ability-permissions-t.md)
+**Type:** [CliCmdInfo](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i-sys.md) &#124; [Permissions](arkts-ability-permissions-t.md)
 
 **Since:** 26.0.0
 

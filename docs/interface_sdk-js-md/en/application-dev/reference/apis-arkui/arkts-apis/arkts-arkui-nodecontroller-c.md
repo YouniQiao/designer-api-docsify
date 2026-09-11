@@ -2,7 +2,7 @@
 
 The **NodeController** module provides APIs for managing custom nodes, such as creating, showing, and updating custom nodes, and APIs for mounting custom nodes to a NodeContainer component.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - NodeController objects do not support JSON serialization.
 
@@ -18,7 +18,7 @@ aboutToAppear?(): void
 
 Called after the NodeContainer component bound to this **NodeController** instance is attached and about to appear.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the callback timing, see onAppear.
 
@@ -38,7 +38,7 @@ aboutToDisappear?(): void
 
 Called when the NodeContainer component bound to this **NodeController** instance is destroyed.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the callback timing, see [onDisAppear](../arkts-components/arkts-arkui-commonmethod-c.md#ondisappear).
 
@@ -82,7 +82,7 @@ Called when the NodeContainer component bound to this **NodeController** instanc
 
 This callback can also be invoked through the **rebuild()** method of **NodeController**.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > NodeContainer does not support cross-instance reuse. If
 > NodeContainer is reused across instances and
@@ -111,7 +111,7 @@ This callback can also be invoked through the **rebuild()** method of **NodeCont
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) \| null | FrameNode** object, which will be mounted to the placeholder node of the [NodeContainer]{ |
+| [FrameNode](arkts-arkui-framenode-c.md) &#124; null | FrameNode** object, which will be mounted to the placeholder node of the NodeContainer component. If a null object is returned, the child nodes of the corresponding NodeContainer component are removed. |
 
 ## onAttach
 
@@ -121,7 +121,7 @@ onAttach?(): void
 
 Called when the NodeContainer component bound to this **NodeController** instance is attached to the main node tree.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the callback timing, see onAttach.
 
@@ -163,7 +163,7 @@ onDetach?(): void
 
 Called when the NodeContainer component bound to this **NodeController** instance is detached from the main node tree.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the callback timing, see onDetach.
 
@@ -271,7 +271,7 @@ rebuild(): void
 
 Instructs the NodeContainer component bound to this **NodeController** instance to call the [makeNode](#makenode) API again to change child nodes.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Since the **rebuild** API is actively called by the application and is tied to the UI, you need to ensure that
 > the UI context is valid at the time of the call, that is, it must be consistent with the UI context of the bound

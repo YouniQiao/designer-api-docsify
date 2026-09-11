@@ -2,6 +2,8 @@
 
 Provides information about a form.
 
+@typedef FormInfo
+
 **Since:** 9
 
 **System capability:** SystemCapability.Ability.Form
@@ -66,7 +68,7 @@ Obtains the group id of the form.
 isFontScaleFollowSystem?: boolean
 ```
 
-Obtains whether the font scaling factor follows system settings. Default value:The default value is true.
+Obtains whether the font scaling factor follows system settings. <br>Default value:The default value is true.
 
 **Type:** boolean
 

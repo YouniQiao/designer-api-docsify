@@ -15,7 +15,7 @@ function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 Attests a key. This API uses an asynchronous callback to return the result.
 
 <!--RP6-->   
-> **NOTE：**
+> **NOTE:**
 > 
 > The certificate chain generated during non-anonymous certificate key attestation may contain the device
 > identifier (confirm the specific implementation with the vendor). If the device identifier is included, you can
@@ -155,7 +155,7 @@ function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksRetu
 Attests a key. This API uses a promise to return the result.
 
 <!--RP6-->   
-> **NOTE：**
+> **NOTE:**
 > 
 > The certificate chain generated during non-anonymous certificate key attestation may contain the device
 > identifier (confirm the specific implementation with the vendor). If the device identifier is included, you can

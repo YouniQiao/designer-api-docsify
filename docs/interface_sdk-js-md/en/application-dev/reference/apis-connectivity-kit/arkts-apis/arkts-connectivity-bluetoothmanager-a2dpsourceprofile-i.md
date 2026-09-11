@@ -148,7 +148,7 @@ Obtains the playing state of device. On API 10 and above, the permission require
 
 | Type | Description |
 | --- | --- |
-| [PlayingState](arkts-connectivity-bluetoothmanager-playingstate-e.md) | Returns { |
+| [PlayingState](arkts-connectivity-bluetoothmanager-playingstate-e.md) | Returns [PlayingState](arkts-connectivity-bluetoothmanager-playingstate-e.md) of the remote device. |
 
 **Error codes:**
 

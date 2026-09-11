@@ -24,7 +24,7 @@ Returns the byte length of a string when encoded using `encoding`. This is not t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | Yes | Target string. |
+| value | string &#124; [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; TypedArray &#124; DataView &#124; ArrayBuffer &#124; SharedArrayBuffer | Yes | Target string. |
 | encoding | BufferEncoding | No | Encoding format of the string. The default value is 'utf8'. |
 
 **Return value:**

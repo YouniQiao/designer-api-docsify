@@ -26,7 +26,7 @@ is random mac disabled
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` is random mac disabled; Returns `false` otherwise. |
 
 **Error codes:**
 

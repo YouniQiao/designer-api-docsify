@@ -2,10 +2,13 @@
 
 The Window module provides basic window management capabilities, such as creating and destroying the current window,
  setting properties for the current window, and managing and scheduling windows.
- This module provides the following common window-related functions:
- - [Window](arkts-arkui-window-n.md): window instance, which is the basic unit managed by the window manager.
+
+This module provides the following common window-related functions:
+
+- [Window](arkts-arkui-window-n.md): window instance, which is the basic unit managed by the window manager.
  - [WindowStage](arkts-arkui-window-windowstage-i.md): window manager that manages windows.
- > **NOTE**
+
+> **NOTE**
  >
  > - This topic describes only system APIs provided by the module. For details about its public APIs, see
  > [@ohos.window (Window)](arkts-arkui-window-n.md).
@@ -13,6 +16,7 @@ The Window module provides basic window management capabilities, such as creatin
  > - For the system capability SystemCapability.Window.SessionManager, use
  > canIUse() to check whether the device supports this system
  > capability and the corresponding APIs.
+
 
 
 ## Modules to Import

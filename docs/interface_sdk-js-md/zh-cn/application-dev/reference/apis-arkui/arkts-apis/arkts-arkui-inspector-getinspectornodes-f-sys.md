@@ -27,4 +27,3 @@ declare function getInspectorNodes(): object
 
 | 类型 | 说明 |
 | --- | --- |
-| object |  |

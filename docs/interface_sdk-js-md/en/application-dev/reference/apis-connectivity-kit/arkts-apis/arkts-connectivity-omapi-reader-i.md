@@ -79,7 +79,7 @@ Obtains the name of this reader. The name is **SIM** for a SIM reader, **SIM2** 
 
 | Type | Description |
 | --- | --- |
-| string | [Reader]{ |
+| string | [Reader](arkts-connectivity-omapi-reader-i.md) name obtained. |
 
 **Error codes:**
 

@@ -28,13 +28,13 @@ function isSupportEffectSync(effectId: string): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回对象。返回true表示设备支持该effectId，可用于[startVibration]{ |
+| boolean | 返回对象。返回true表示设备支持该effectId，可用于[startVibration](arkts-sensorservice-vibrator-startvibration-f.md)；返回false表示不支持，使用该effectId触发振动可能效果不佳或无法振动。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14600101](../errorcode-vibrator.md#14600101-操作设备失败) | Device operation failed. |
 
 **示例**

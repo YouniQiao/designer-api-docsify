@@ -14,7 +14,7 @@ function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>
 
 Obtains the traffic statistics of the specified application on the specified network within the specified period. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Currently, only cellular and Wi-Fi traffic usage can be obtained.
 

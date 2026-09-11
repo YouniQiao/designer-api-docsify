@@ -89,13 +89,13 @@ id: number | string
 
 Widget ID. Set this parameter to **0** for a new widget.
 
-**NOTE：**
+**NOTE:**
 
 Different widget hosts cannot use the same ID.
 
 If a widget host uses the same ID for two widgets, the one added later is displayed.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 12
 
@@ -148,7 +148,7 @@ the widget is displayed in the effect as you set it.
 - **SINGLE_COLOR**: single color mode, where the widget framework sets the widget background to transparent. In  
 this mode you need to set the widget style based on the best practices.
 
-**NOTE：**
+**NOTE:**
 
 If the system does not support unified rendering, the widget framework does not set the widget background to transparent in single color mode.
 

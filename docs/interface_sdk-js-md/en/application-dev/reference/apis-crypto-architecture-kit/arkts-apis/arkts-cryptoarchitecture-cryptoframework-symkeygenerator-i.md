@@ -22,7 +22,7 @@ convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void
 
 Converts specified data into a symmetric key. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
 > when the symmetric key generator is created, the binary key data passed in must match the hash length (for
@@ -49,7 +49,7 @@ If no hash algorithm is specified when the symmetric key generator is created (f
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
@@ -108,7 +108,7 @@ Converts specified data into a symmetric key. This API uses a promise to return 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
@@ -147,7 +147,7 @@ convertKeySync(key: DataBlob): SymKey
 
 Converts specified data into a symmetric key.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
 > when the symmetric key generator is created, the binary key data passed in must match the hash length (for
@@ -155,7 +155,7 @@ Converts specified data into a symmetric key.
 > created (for example, only **HMAC** is specified), any binary key data with a length of 1 to 4,096 bytes is
 > supported.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, convertKey. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, convertKey. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -179,7 +179,7 @@ Converts specified data into a symmetric key.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
@@ -208,9 +208,9 @@ function testConvertKeySync() {
 generateSymKey(callback: AsyncCallback<SymKey>): void
 ```
 
-Generates a random key using this symmetric key generator. This API uses an asynchronous callback to return the result. OpenSSL RAND_priv_bytes() is currently used to generate random keys.
+Generates a random key using this symmetric key generator. This API uses an asynchronous callback to return the result. <br>OpenSSL RAND_priv_bytes() is currently used to generate random keys.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
 > when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key)
@@ -256,7 +256,7 @@ let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
 generateSymKey(): Promise<SymKey>
 ```
 
-Generates a random key using this symmetric key generator. This API uses a promise to return the result. OpenSSL RAND_priv_bytes() is currently used to generate random keys.
+Generates a random key using this symmetric key generator. This API uses a promise to return the result. <br>OpenSSL RAND_priv_bytes() is currently used to generate random keys.
 
 **Since:** 9
 
@@ -300,9 +300,9 @@ let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
 generateSymKeySync(): SymKey
 ```
 
-Generates a random key using this symmetric key generator. This API returns the result synchronously. OpenSSL RAND_priv_bytes() is currently used to generate random keys.
+Generates a random key using this symmetric key generator. This API returns the result synchronously. <br>OpenSSL RAND_priv_bytes() is currently used to generate random keys.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
 > when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key)
@@ -310,7 +310,7 @@ Generates a random key using this symmetric key generator. This API returns the 
 
 If no hash algorithm is specified, for example, only **HMAC** is specified, random symmetric key generation is not supported. You can generate symmetric key data using [convertKeySync](#convertkeysync).
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, [generateSymKey](#generatesymkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, [generateSymKey](#generatesymkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 

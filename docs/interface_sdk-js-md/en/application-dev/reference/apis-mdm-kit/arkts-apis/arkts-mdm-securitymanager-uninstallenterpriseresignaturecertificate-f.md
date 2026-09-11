@@ -21,7 +21,7 @@ Usage scenarios:
 2. Restoring a mistakenly deleted certificate: After a mistakenly deleted certificate is re-installed via the  
 [installEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-installenterpriseresignaturecertificate-f.md) API, re-signed applications can run normally without being affected.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Certificate deletion is typically performed in scenarios such as certificate expiration or certificate leakage.
 > You are advised to implement this feature with a strong prompt to administrators, advising them to delete

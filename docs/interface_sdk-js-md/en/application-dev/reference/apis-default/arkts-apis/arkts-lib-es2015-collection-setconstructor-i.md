@@ -15,7 +15,7 @@ new <T = any>(values?: readonly T[] | null): Set<T>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | readonly T[] \| null | No |  |
+| values | readonly T[] &#124; null | No |  |
 
 **Return value:**
 

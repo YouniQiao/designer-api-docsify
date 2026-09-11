@@ -18,7 +18,7 @@ import { taskpool } from '@kit.ArkTS';
 duration?: number
 ```
 
-任务执行至当前所用的时间，默认为0，单位：ms。当返回为0时，表示任务未执行；返回为空时，表示没有任务执行。不建议修改此值。从API version 11开始，该接口支持在原子化服务中使用。
+任务执行至当前所用的时间，默认为0，单位：ms。当返回为0时，表示任务未执行；返回为空时，表示没有任务执行。不建议修改此值。<br>从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
@@ -34,7 +34,7 @@ duration?: number
 name: string
 ```
 
-任务的名字，不建议修改此值。从API version 12开始，该接口支持在原子化服务中使用。
+任务的名字，不建议修改此值。<br>从API version 12开始，该接口支持在原子化服务中使用。
 
 **类型：** string
 
@@ -50,7 +50,7 @@ name: string
 state: State
 ```
 
-任务的状态。state标识任务的当前状态，不建议修改此值。从API version 11开始，该接口支持在原子化服务中使用。
+任务的状态。state标识任务的当前状态，不建议修改此值。<br>从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** [State](arkts-arkts-taskpool-state-e.md)
 
@@ -68,7 +68,7 @@ state: State
 taskId: number
 ```
 
-任务的ID。系统默认提供全局唯一值，不建议修改此值。从API version 11开始，该接口支持在原子化服务中使用。
+任务的ID。系统默认提供全局唯一值，不建议修改此值。<br>从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 

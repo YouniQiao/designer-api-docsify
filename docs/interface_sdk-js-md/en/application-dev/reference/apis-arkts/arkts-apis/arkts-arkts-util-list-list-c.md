@@ -31,8 +31,6 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -891,7 +889,7 @@ Sorts elements in this List.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| comparator | [ListComparatorFn](arkts-arkts-listcomparatorfn-t.md)&lt;T&gt; | Yes | Callback used to return the result.There has been a compatibility change since API version 23. In API version 22 and earlier versions, the type is `(firstValue: T, secondValue: T) =&gt; number`.<br>**Since:** 23 |
+| comparator | [ListComparatorFn](arkts-arkts-listcomparatorfn-t.md)&lt;T&gt; | Yes | Callback used to return the result.<br> There has been a compatibility change since API version 23. In API version 22 and earlier versions, the type is `(firstValue: T, secondValue: T) =&gt; number`.<br>**Since:** 23 |
 
 **Error codes:**
 

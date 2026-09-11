@@ -35,7 +35,7 @@ Constructor for the smart gesture handling result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isConsumed | boolean | Yes | Whether to consume the current smart gesture.   **true**: The smart gesture is consumed. If [selectedProposal](#selectedproposal) is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used.   **false**: The smart gesture is not consumed, and the system treats it as unhandled. |
+| isConsumed | boolean | Yes | Whether to consume the current smart gesture.<br>**true**: The smart gesture is consumed. If [selectedProposal](#selectedproposal) is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used.<br>**false**: The smart gesture is not consumed, and the system treats it as unhandled. |
 
 ## isConsumed
 

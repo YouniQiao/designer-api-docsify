@@ -2,7 +2,7 @@
 
 The module provides element name information, which can be obtained through Context.getElementName.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The APIs of this module have been deprecated since API version 9. You are advised to use
 > [bundleManager-ElementName](#elementname) instead.

@@ -95,7 +95,7 @@ Get a single XMP tag from specified path.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[XMPTag](arkts-image-image-xmptag-i.md) \| null&gt; | Promise used to return the XMP tag. |
+| Promise&lt;[XMPTag](arkts-image-image-xmptag-i.md) &#124; null&gt; | Promise used to return the XMP tag. |
 
 **Error codes:**
 

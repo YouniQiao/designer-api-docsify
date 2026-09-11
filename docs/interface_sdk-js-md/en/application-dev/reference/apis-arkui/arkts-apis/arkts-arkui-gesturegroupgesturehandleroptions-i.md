@@ -19,11 +19,11 @@ gestures: GestureHandler<TapGestureHandler | LongPressGestureHandler | PanGestur
 
 Gestures to be included in a gesture group.
 
-**NOTE：**
+**NOTE:**
 
 To add both single-tap and double-tap gestures for a component, add two [TapGesture](arkts-arkui-gesture-con.md#tapgesture) instances as the [combined gestures](arkts-arkui-gesture-con.md#gesturegroup), with the double-tap gesture preceding the single-tap gesture. The gestures will not work correctly if this order is reversed.
 
-**Type:** [GestureHandler](arkts-arkui-gesturehandler-c.md)&lt;[TapGestureHandler](arkts-arkui-tapgesturehandler-c.md) \| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) \| [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) \| [SwipeGestureHandler](arkts-arkui-swipegesturehandler-c.md) \| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) \| [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) \| [GestureGroupHandler](arkts-arkui-gesturegrouphandler-c.md)&gt;[]
+**Type:** [GestureHandler](arkts-arkui-gesturehandler-c.md)&lt;[TapGestureHandler](arkts-arkui-tapgesturehandler-c.md) &#124; [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) &#124; [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) &#124; [SwipeGestureHandler](arkts-arkui-swipegesturehandler-c.md) &#124; [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) &#124; [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) &#124; [GestureGroupHandler](arkts-arkui-gesturegrouphandler-c.md)&gt;[]
 
 **Since:** 12
 

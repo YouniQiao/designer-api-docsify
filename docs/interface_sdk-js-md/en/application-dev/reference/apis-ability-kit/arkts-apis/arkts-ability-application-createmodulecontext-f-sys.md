@@ -14,7 +14,7 @@ export function createModuleContext(context: Context, bundleName: string, module
 
 Creates the context for a module. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Starting from API version 18, the context can obtain the
 > [process name](../../../reference/apis-ability-kit/js-apis-inner-application-context.md#context) of the current

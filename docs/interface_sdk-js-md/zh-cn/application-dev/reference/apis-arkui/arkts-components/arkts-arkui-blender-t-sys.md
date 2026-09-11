@@ -6,6 +6,8 @@ declare type Blender = import('../api/@ohos.graphics.uiEffect').default.Blender
 
 Blender
 
+@typedef { import('../api/@ohos.graphics.uiEffect').default.Blender } Blender
+
 **起始版本：** 13
 
 **模型约束：** 此接口仅可在Stage模型下使用。

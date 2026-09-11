@@ -152,7 +152,7 @@ Sets the prototype of a specified object o to object proto or null. Returns the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | o | any | Yes |  |
-| proto | object \| null | Yes |  |
+| proto | object &#124; null | Yes |  |
 
 **Return value:**
 

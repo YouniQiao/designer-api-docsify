@@ -500,7 +500,7 @@ getText(): Promise<string>
 
 Obtains the text information of this component. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the accessibilityLevel
 > attribute of the component is set to **no** or **no-hide-descendants**, this API cannot be used to obtain the
@@ -656,7 +656,7 @@ Inputs text to a component in a specified text input mode. This API takes effect
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Input text. Currently, English, Chinese, and special characters are supported. |
-| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | Yes | Text input mode. For details, see [InputTextMode](arkts-test-uitest-inputtextmode-i.md).    **Note：**: If **InputTextMode.addition** is set to **true**, the specified text is added to the end of the existing text in the component. Otherwise, the specified text overwrites the existing text of the component. If the input text contains Chinese characters or special characters or contains more than 200 characters, the text is copied and pasted regardless of the value of [InputTextMode](arkts-test-uitest-inputtextmode-i.md).paste. |
+| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | Yes | Text input mode. For details, see [InputTextMode](arkts-test-uitest-inputtextmode-i.md). <br> **Note:** If **InputTextMode.addition** is set to **true**, the specified text is added to the end of the existing text in the component. Otherwise, the specified text overwrites the existing text of the component. <br> If the input text contains Chinese characters or special characters or contains more than 200 characters, the text is copied and pasted regardless of the value of [InputTextMode](arkts-test-uitest-inputtextmode-i.md).paste. |
 
 **Return value:**
 
@@ -1317,7 +1317,7 @@ Scrolls to the bottom of this component. This API is applicable to components th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | number | No | Swipe speed. Value range:[200, 40000] Unit: px/s. If the value is a non-negative number that is not within the specified range or is null or undefined, the default value 600 is used. Throws error code 401 if negative. Default value: 600 |
+| speed | number | No | Swipe speed.<br>Value range:[200, 40000] <br>Unit: px/s. <br>If the value is a non-negative number that is not within the specified range or is null or undefined, the default value 600 is used. <br>Throws error code 401 if negative. <br>Default value: 600 |
 
 **Return value:**
 
@@ -1366,7 +1366,7 @@ Scrolls to the top of this component. This API is applicable to components that 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | number | No | Swipe speed. Value range:[200, 40000] Unit: px/s. If the value is a non-negative number that is not within the specified range or is null or undefined, the default value 600 is used. Throws error code 401 if negative. Default value: 600 |
+| speed | number | No | Swipe speed.<br>Value range:[200, 40000] <br>Unit: px/s. <br>If the value is a non-negative number that is not within the specified range or is null or undefined, the default value 600 is used. <br>Throws error code 401 if negative. <br>Default value: 600 |
 
 **Return value:**
 

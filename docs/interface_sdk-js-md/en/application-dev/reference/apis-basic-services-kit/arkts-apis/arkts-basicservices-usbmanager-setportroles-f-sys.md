@@ -18,7 +18,7 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 
 **Deprecated since:** 12
 
-**Substitutes:** [setPortRoleTypes](arkts-basicservices-usbmanager-setportroletypes-f-sys.md)(portId: int, powerRole: PowerRoleType, dataRole: DataRoleType)
+**Substitutes:** [setPortRoleTypes](arkts-basicservices-usbmanager-setportroletypes-f-sys.md)(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType)
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -42,4 +42,4 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1.Mandatory parameters are left unspecified.  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified.  <br>2.Incorrect parameter types. |

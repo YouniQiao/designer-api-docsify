@@ -30,7 +30,7 @@ Checks whether Wi-Fi hotspot is active on a device.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if Wi-Fi hotspot is enabled, returns `false` otherwise. |
 
 **Examples**
 

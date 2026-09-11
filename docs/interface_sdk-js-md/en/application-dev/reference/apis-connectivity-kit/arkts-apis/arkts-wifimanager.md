@@ -129,14 +129,14 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [isHotspotDualBandSupported](arkts-connectivity-wifimanager-ishotspotdualbandsupported-f-sys.md) | Check whether a device serving as a Wi-Fi hotspot supports both the 2.4 GHz and 5 GHz Wi-Fi. |
 | [isOpenSoftApAllowed](arkts-connectivity-wifimanager-isopensoftapallowed-f-sys.md) | Check whether Wi-Fi hotspot is can be operated under some situation. When the airplane mode is turned on and does not support the coexistence of softap and sta, nor does it support signal bridge, the hotspot switch cannot be operated. |
 | [isRandomMacDisabled](arkts-connectivity-wifimanager-israndommacdisabled-f-sys.md) | is random mac disabled |
-| off | Unsubscribe Wi-Fi stream change events. All callback functions will be deregistered If there is no specific callback parameter. |
-| off | Subscribe Wi-Fi device config change events. |
-| off | Unsubscribe Wi-Fi hotspot sta join events. All callback functions will be deregistered If there is no specific callback parameter. |
-| off | Unsubscribe Wi-Fi hotspot sta leave events. |
-| on | Subscribe Wi-Fi stream change events. |
-| on | Subscribe Wi-Fi device config change events. |
-| on | Subscribe Wi-Fi hotspot sta join events. |
-| on | Subscribe Wi-Fi hotspot sta leave events. |
+| [off](arkts-connectivity-wifimanager-off-f-sys.md#offstreamchange) | Unsubscribe Wi-Fi stream change events. All callback functions will be deregistered If there is no specific callback parameter. |
+| [off](arkts-connectivity-wifimanager-off-f-sys.md#offdeviceconfigchange) | Subscribe Wi-Fi device config change events. |
+| [off](arkts-connectivity-wifimanager-off-f-sys.md#offhotspotstajoin) | Unsubscribe Wi-Fi hotspot sta join events. All callback functions will be deregistered If there is no specific callback parameter. |
+| [off](arkts-connectivity-wifimanager-off-f-sys.md#offhotspotstaleave) | Unsubscribe Wi-Fi hotspot sta leave events. |
+| [on](arkts-connectivity-wifimanager-on-f-sys.md#onstreamchange) | Subscribe Wi-Fi stream change events. |
+| [on](arkts-connectivity-wifimanager-on-f-sys.md#ondeviceconfigchange) | Subscribe Wi-Fi device config change events. |
+| [on](arkts-connectivity-wifimanager-on-f-sys.md#onhotspotstajoin) | Subscribe Wi-Fi hotspot sta join events. |
+| [on](arkts-connectivity-wifimanager-on-f-sys.md#onhotspotstaleave) | Subscribe Wi-Fi hotspot sta leave events. |
 | [reassociate](arkts-connectivity-wifimanager-reassociate-f-sys.md) | Re-associate to current network. |
 | [reconnect](arkts-connectivity-wifimanager-reconnect-f-sys.md) | Re-connect to current network. |
 | [removeAllNetwork](arkts-connectivity-wifimanager-removeallnetwork-f-sys.md) | Remove all the saved Wi-Fi configurations. |
@@ -154,33 +154,33 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | Name | Description |
 | --- | --- |
 | [ConnectSettings](arkts-connectivity-wifimanager-connectsettings-i.md) | Describes the settings for Wi-Fi connection. |
-| [IpInfo](arkts-connectivity-wifimanager-ipinfo-i.md) | Wi-Fi IP information. |
-| [Ipv6Info](arkts-connectivity-wifimanager-ipv6info-i.md) | Wi-Fi IPv6 information. |
-| [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md) | Wi-Fi device configuration information. |
-| [WifiEapConfig](arkts-connectivity-wifimanager-wifieapconfig-i.md) | Wi-Fi EAP config. |
-| [WifiInfoElem](arkts-connectivity-wifimanager-wifiinfoelem-i.md) | Wi-Fi information elements. |
-| [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md) | Wi-Fi connection information. |
+| [IpInfo](arkts-connectivity-wifimanager-ipinfo-i.md) | Wi-Fi IP information. @typedef IpInfo |
+| [Ipv6Info](arkts-connectivity-wifimanager-ipv6info-i.md) | Wi-Fi IPv6 information. @typedef Ipv6Info |
+| [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md) | Wi-Fi device configuration information. @typedef WifiDeviceConfig |
+| [WifiEapConfig](arkts-connectivity-wifimanager-wifieapconfig-i.md) | Wi-Fi EAP config. @typedef WifiEapConfig |
+| [WifiInfoElem](arkts-connectivity-wifimanager-wifiinfoelem-i.md) | Wi-Fi information elements. @typedef WifiInfoElem |
+| [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md) | Wi-Fi connection information. @typedef WifiLinkedInfo |
 | [WifiP2PConfig](arkts-connectivity-wifimanager-wifip2pconfig-i.md) | P2P config. |
 | [WifiP2pDevice](arkts-connectivity-wifimanager-wifip2pdevice-i.md) | P2P device information. |
 | [WifiP2pGroupInfo](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md) | P2P group information. |
 | [WifiP2pLinkedInfo](arkts-connectivity-wifimanager-wifip2plinkedinfo-i.md) | P2P linked information. |
 | [WifiP2pServiceInfo](arkts-connectivity-wifimanager-wifip2pserviceinfo-i.md) | Represents the P2P service information. |
-| [WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i.md) | Describes the scanned Wi-Fi information. |
-| [WifiWapiConfig](arkts-connectivity-wifimanager-wifiwapiconfig-i.md) | Wi-Fi WAPI config. |
+| [WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i.md) | Describes the scanned Wi-Fi information. @typedef WifiScanInfo |
+| [WifiWapiConfig](arkts-connectivity-wifimanager-wifiwapiconfig-i.md) | Wi-Fi WAPI config. @typedef WifiWapiConfig |
 
 <!--Del-->
 ### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
-| [HotspotConfig](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md) | Wi-Fi hotspot configuration information. |
-| [IpConfig](arkts-connectivity-wifimanager-ipconfig-i-sys.md) | Wi-Fi IP configuration information. |
-| [Ipv6Config](arkts-connectivity-wifimanager-ipv6config-i-sys.md) | Wi-Fi Ipv6 configuration information. |
-| [StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md) | Wi-Fi station information. |
-| [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md) | Wi-Fi device configuration information. |
-| [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md) | Wi-Fi connection information. |
-| [WifiProxyConfig](arkts-connectivity-wifimanager-wifiproxyconfig-i-sys.md) | Wi-Fi Proxy config. |
-| [WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i-sys.md) | Describes the scanned Wi-Fi information. |
+| [HotspotConfig](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md) | Wi-Fi hotspot configuration information. @typedef HotspotConfig |
+| [IpConfig](arkts-connectivity-wifimanager-ipconfig-i-sys.md) | Wi-Fi IP configuration information. @typedef IpConfig |
+| [Ipv6Config](arkts-connectivity-wifimanager-ipv6config-i-sys.md) | Wi-Fi Ipv6 configuration information. @typedef Ipv6Config |
+| [StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md) | Wi-Fi station information. @typedef StationInfo |
+| [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md) | Wi-Fi device configuration information. @typedef WifiDeviceConfig |
+| [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md) | Wi-Fi connection information. @typedef WifiLinkedInfo |
+| [WifiProxyConfig](arkts-connectivity-wifimanager-wifiproxyconfig-i-sys.md) | Wi-Fi Proxy config. @typedef WifiProxyConfig |
+| [WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i-sys.md) | Describes the scanned Wi-Fi information. @typedef WifiScanInfo |
 <!--DelEnd-->
 
 ### Enums

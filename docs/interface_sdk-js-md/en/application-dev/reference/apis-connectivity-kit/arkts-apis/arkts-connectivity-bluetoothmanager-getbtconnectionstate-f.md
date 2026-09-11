@@ -30,7 +30,7 @@ Get the local device connection state to any profile of any remote device. On AP
 
 | Type | Description |
 | --- | --- |
-| [ProfileConnectionState](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md) | One of { |
+| [ProfileConnectionState](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md) | One of [STATE_DISCONNECTED](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#state_disconnected), [STATE_CONNECTING](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#state_connecting), [STATE_CONNECTED](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#state_connected), [STATE_DISCONNECTING](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#state_disconnecting). |
 
 **Error codes:**
 

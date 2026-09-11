@@ -50,7 +50,7 @@ getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Pa
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[Paragraph](arkts-arkui-paragraph-t.md)&gt; | 根据文本布局选项转换后得到的[Paragraph]{ |
+| Array&lt;[Paragraph](arkts-arkui-paragraph-t.md)&gt; | 根据文本布局选项转换后得到的[Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraph-c.md)对象数组，用于后续的文本布局计算。 |
 
 ## measureText
 
@@ -84,7 +84,7 @@ measureText(options: MeasureOptions): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 文本宽度。 |
+| number | 文本宽度。<br>**说明：**<br>浮点数会向上取整。<br>单位：px |
 
 ## measureTextSize
 
@@ -116,4 +116,4 @@ measureTextSize(options: MeasureOptions): SizeOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| [SizeOptions](arkts-arkui-sizeoptions-i.md) | 返回文本所占布局宽度和高度。 |
+| [SizeOptions](arkts-arkui-sizeoptions-i.md) | 返回文本所占布局宽度和高度。<br>**说明：**<br>未设置constraintWidth时，文本宽度返回值会向上取整；传参constraintWidth时，文本宽度返回值不被取整。<br>文本宽度以及高度返回值单位均为px。 |

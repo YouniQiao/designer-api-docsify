@@ -30,7 +30,7 @@ Create an ad playback controller associated with the player instance.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AVAdsController](arkts-media-media-avadscontroller-i.md) \| undefined&gt; | If success, an Controller is returned. Otherwise returns null. |
+| Promise&lt;[AVAdsController](arkts-media-media-avadscontroller-i.md) &#124; undefined&gt; | If success, an Controller is returned. Otherwise returns null. |
 
 **Error codes:**
 

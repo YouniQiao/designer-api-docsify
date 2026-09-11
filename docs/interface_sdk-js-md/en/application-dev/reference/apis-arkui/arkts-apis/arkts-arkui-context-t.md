@@ -6,6 +6,8 @@ export type Context = common.Context
 
 The base context of an ability or an application. It allows access to application-specific resources.
 
+@typedef { common.Context } Context
+
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.

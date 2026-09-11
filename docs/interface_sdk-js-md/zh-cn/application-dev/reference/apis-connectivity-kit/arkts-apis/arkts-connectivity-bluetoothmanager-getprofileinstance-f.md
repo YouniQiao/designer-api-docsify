@@ -34,7 +34,7 @@ function getProfileInstance(
 
 | 类型 | 说明 |
 | --- | --- |
-| [A2dpSourceProfile](arkts-connectivity-bluetoothmanager-a2dpsourceprofile-i.md) \| [HandsFreeAudioGatewayProfile](arkts-connectivity-bluetoothmanager-handsfreeaudiogatewayprofile-i.md) \| [HidHostProfile](arkts-connectivity-bluetoothmanager-hidhostprofile-i.md) \| [PanProfile](arkts-connectivity-bluetoothmanager-panprofile-i.md) | 对应的profile的对象实例，当前支持A2 dpSourceProfile/HandsFreeAudioGatewayProfile/HidHostProfile/PanProfile。 |
+| [A2dpSourceProfile](arkts-connectivity-bluetoothmanager-a2dpsourceprofile-i.md) &#124; [HandsFreeAudioGatewayProfile](arkts-connectivity-bluetoothmanager-handsfreeaudiogatewayprofile-i.md) &#124; [HidHostProfile](arkts-connectivity-bluetoothmanager-hidhostprofile-i.md) &#124; [PanProfile](arkts-connectivity-bluetoothmanager-panprofile-i.md) | 对应的profile的对象实例，当前支持A2 dpSourceProfile/HandsFreeAudioGatewayProfile/HidHostProfile/PanProfile。 |
 
 **错误码：**
 

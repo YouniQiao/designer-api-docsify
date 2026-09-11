@@ -52,20 +52,20 @@
 | --- | --- |
 | [ColorMetrics](arkts-arkui-colormetrics-t.md) | Defines ColorMetrics. |
 | [Degree](arkts-arkui-degree-t.md) | Defines the angle property with number in units of deg. |
-| [Dimension](arkts-arkui-dimension-t.md) | 定义具有数值和单位（vp\|px\|fp\|lpx\|%）以及资源的尺寸属性。 |
+| [Dimension](arkts-arkui-dimension-t.md) | 定义具有数值和单位（vp&#124;px&#124;fp&#124;lpx&#124;%）以及资源的尺寸属性。 |
 | [EdgeWidth](arkts-arkui-edgewidth-t.md) | Defines the border width property. |
-| [FP](arkts-arkui-fp-t.md) | 定义长度属性，单位为fp。 |
+| [FP](arkts-arkui-fp-t.md) | 定义长度属性，单位为fp。@typedef { `\&#36;{number}fp` } FP |
 | [Length](arkts-arkui-length-t.md) | 定义包含字符串、数字和资源单位的长度属性。 |
 | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Defines LengthMetrics. |
 | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | Defines length metrics unit. |
 | [LocalizedMargin](arkts-arkui-localizedmargin-t.md) | Defines the localized margin property. |
-| [LPX](arkts-arkui-lpx-t.md) | 定义长度属性，单位为lpx。 |
+| [LPX](arkts-arkui-lpx-t.md) | 定义长度属性，单位为lpx。@typedef { `\&#36;{number}lpx` } LPX |
 | [Margin](arkts-arkui-margin-t.md) | Defines the margin property. |
-| [Percentage](arkts-arkui-percentage-t.md) | 定义长度属性，单位为百分比。 |
-| [PX](arkts-arkui-px-t.md) | 定义长度属性，单位为像素（px）。 |
+| [Percentage](arkts-arkui-percentage-t.md) | 定义长度属性，单位为百分比。@typedef { `\&#36;{number}%` } Percentage |
+| [PX](arkts-arkui-px-t.md) | 定义长度属性，单位为像素（px）。@typedef { `\&#36;{number}px` } PX |
 | [Resource](arkts-arkui-resource-t.md) | 定义接口限制的数据类型。 |
 | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Defines the color which can use resource. |
 | [ResourceStr](arkts-arkui-resourcestr-t.md) | Defines the string which can use resource. |
 | [ResponsiveFillType](arkts-arkui-responsivefilltype-t.md) | 定义一个响应式item填充模式，可以在WaterFlow、Grid、List和Swiper组件中使用。 |
 | [VoidCallback](arkts-arkui-voidcallback-t.md) | 定义VoidCallback。 |
-| [VP](arkts-arkui-vp-t.md) | 定义长度属性，可以是数字或以 vp 为单位的数字。 |
+| [VP](arkts-arkui-vp-t.md) | 定义长度属性，可以是数字或以 vp 为单位的数字。@typedef { `\&#36;{number}vp` &#124; number } VP |

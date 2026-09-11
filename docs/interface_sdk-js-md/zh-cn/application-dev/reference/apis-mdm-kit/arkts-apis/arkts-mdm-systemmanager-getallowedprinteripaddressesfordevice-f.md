@@ -26,7 +26,7 @@ function getAllowedPrinterIPAddressesForDevice(queryPolicy?: common.QueryPolicy)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| queryPolicy | [common.QueryPolicy](arkts-mdm-common-querypolicy-e.md) | 否 | 查询的策略。默认值: common.QueryPolicy.SELF。 |
+| queryPolicy | [common.QueryPolicy](arkts-mdm-common-querypolicy-e.md) | 否 | 查询的策略。<br>默认值: common.QueryPolicy.SELF。 |
 
 **返回值：**
 

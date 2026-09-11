@@ -14,7 +14,7 @@ function connectAbility(request: Want, options: ConnectOptions): number
 
 Connects this ability to a ServiceAbility.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the FA model, see
 > [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).

@@ -4,7 +4,7 @@ The AppServiceExtensionContext module provides the context environment for the [
 
 AppServiceExtensionContext provides APIs to connect to and disconnect from a ServiceExtensionAbility (an ExtensionAbility for system application background services), as well as to terminate an AppServiceExtensionAbility. Note that a ServiceExtensionAbility can only be developed by system applications and supports connections from third- party applications.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
 
@@ -39,7 +39,7 @@ Connects this AppServiceExtensionAbility to a ServiceExtensionAbility. It enable
 
 | Type | Description |
 | --- | --- |
-| number | Connection ID. The client can call [disconnectServiceExtensionAbility]{ |
+| number | Connection ID. The client can call [disconnectServiceExtensionAbility](#disconnectserviceextensionability) with this ID for disconnection. |
 
 **Error codes:**
 

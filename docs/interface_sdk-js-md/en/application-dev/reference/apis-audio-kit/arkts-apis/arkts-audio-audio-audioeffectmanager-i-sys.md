@@ -1,6 +1,6 @@
 # AudioEffectManager (System API)
 
-Implements audio effect management.
+Implements audio effect management. @typedef AudioEffectManager
 
 **Since:** 18
 
@@ -283,7 +283,7 @@ Sets audio separation effect enable or disable for specific application process,
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enabled | boolean | Yes | The required effect state, true for enabled, false for disabled. |
-| uid | number | Yes | The uid of target application process to add effect. The value should be an integer. |
+| uid | number | Yes | The uid of target application process to add effect.<br>The value should be an integer. |
 | streamId | number | No | The id of target audio playback stream to add effect, the playback application can use [getAudioStreamId](arkts-audio-audio-audiorenderer-i.md#getaudiostreamid) to obtain it. |
 
 **Return value:**
@@ -338,7 +338,7 @@ Sets audio separation effect volume for specific volume type. This API uses a pr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [AudioSeparationVolumeType](arkts-audio-audio-audioseparationvolumetype-e-sys.md) | Yes | The type to set volume. |
-| volume | number | Yes | The target volume value. Value range: [0,1]. |
+| volume | number | Yes | The target volume value.<br>Value range: [0,1]. |
 
 **Return value:**
 

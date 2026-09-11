@@ -2,6 +2,8 @@
 
 Defines the options for the AreaChangeEvent.
 
+@typedef AreaChangeOptions
+
 **Since:** 26.0.0
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

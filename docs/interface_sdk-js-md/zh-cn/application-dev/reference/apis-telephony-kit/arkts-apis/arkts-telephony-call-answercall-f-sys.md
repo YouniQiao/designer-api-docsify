@@ -76,7 +76,7 @@ function answerCall(callId?: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callId | number | 否 | 呼叫Id。可以通过订阅callDetailsChange事件获得。从API version 9开始为可选参数。不填该参数则接通最近一通正在响铃的来电。 |
+| callId | number | 否 | 呼叫Id。可以通过订阅callDetailsChange事件获得。从API version 9开始为可选参数。<br>不填该参数则接通最近一通正在响铃的来电。 |
 
 **返回值：**
 

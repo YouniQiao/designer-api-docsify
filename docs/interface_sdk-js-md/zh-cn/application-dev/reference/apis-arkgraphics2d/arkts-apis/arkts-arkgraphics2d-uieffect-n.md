@@ -72,6 +72,14 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 <!--DelEnd-->
 
 <!--Del-->
+### 类型（系统接口）
+
+| 名称 | 说明 |
+| --- | --- |
+| [Blender](arkts-arkgraphics2d-uieffect-blender-t-sys.md) | 混合器类型，用于描述混合效果。 |
+<!--DelEnd-->
+
+<!--Del-->
 ### 枚举（系统接口）
 
 | 名称 | 说明 |
@@ -80,12 +88,4 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 | [WaterRippleMode](arkts-arkgraphics2d-uieffect-waterripplemode-e-sys.md) | 水波纹场景模式枚举。 |
 | [FlyMode](arkts-arkgraphics2d-uieffect-flymode-e-sys.md) | 飞入飞出形变场景模式枚举。 |
 | [PrismShapeType](arkts-arkgraphics2d-uieffect-prismshapetype-e-sys.md) | 枚举 SweepRefractionMask 的棱镜形状类型。 |
-<!--DelEnd-->
-
-<!--Del-->
-### 类型（系统接口）
-
-| 名称 | 说明 |
-| --- | --- |
-| [Blender](arkts-arkgraphics2d-uieffect-blender-t-sys.md) | 混合器类型，用于描述混合效果。 |
 <!--DelEnd-->

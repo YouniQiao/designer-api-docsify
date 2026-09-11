@@ -39,7 +39,7 @@ pointRadius?: number | Resource
 
 Radius of the circular slider when the component is of the **Switch** type. The unit is vp.
 
-**NOTE：**
+**NOTE:**
 
 Percentage values are not supported. The value specified is used only when it is greater than or equal to 0.
 
@@ -47,7 +47,7 @@ If the value is not specified or the specified one is less than 0, the radius is
 
 (Component height (in vp)/2) - (2 vp x Component height (in vp)/20 vp)
 
-**Type:** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**Type:** number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 12
 
@@ -65,7 +65,7 @@ trackBorderRadius?: number | Resource
 
 Radius of the slider track border corners when the component is of the **Switch** type. The unit is vp.
 
-**NOTE：**
+**NOTE:**
 
 This parameter cannot be set in percentage. If the value specified is less than 0, the radius is set using the default value formula. If the value specified is greater than half of the component height, the latter is used. In other cases, the value specified is used.
 
@@ -73,7 +73,7 @@ If the value is not specified or the specified one is less than 0, the radius is
 
 Default value formula: Component height (in vp)/2
 
-**Type:** number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**Type:** number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 12
 

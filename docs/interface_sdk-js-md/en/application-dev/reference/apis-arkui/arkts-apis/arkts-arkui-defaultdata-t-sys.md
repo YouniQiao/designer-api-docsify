@@ -6,6 +6,8 @@ type DefaultData<T> = object
 
 Used for ide.
 
+@typedef { object } DefaultData&lt;T&gt;
+
 **Since:** 4
 
 **Model restriction:** This API can be used only in the FA model.

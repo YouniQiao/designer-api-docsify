@@ -14,7 +14,7 @@ function startBluetoothDiscovery(): void
 
 开启蓝牙扫描，发现对端蓝牙设备。
 
-该接口支持发现传统蓝牙设备和低功耗蓝牙设备，整个蓝牙扫描过程大约持续12s。扫描结果可通过API version 10开始支持的connection.on('bluetoothDeviceFind')或者API version 18开始支持的connection.on('discoveryResult')的回调函数获取到。推荐使用connection.on('discoveryResult')，该方式可以获取到更多设备信息。若在扫描过程中，请勿重复调用该方法（可使用[connection.isBluetoothDiscovering](arkts-connectivity-connection-isbluetoothdiscovering-f.md)判断蓝牙当前是否处于扫描过程中）。调用[connection.stopBluetoothDiscovery](arkts-connectivity-connection-stopbluetoothdiscovery-f.md)可以停止该方法开启的扫描流程，扫描停止后，才能开启下一次蓝牙扫描。
+该接口支持发现传统蓝牙设备和低功耗蓝牙设备，整个蓝牙扫描过程大约持续12s。扫描结果可通过API version 10开始支持的[connection.on('bluetoothDeviceFind')](arkts-connectivity-connection-on-f.md#onbluetoothdevicefind)或者API version 18开始支持的[connection.on('discoveryResult')](arkts-connectivity-connection-on-f.md#ondiscoveryresult)的回调函数获取到。推荐使用[connection.on('discoveryResult')](arkts-connectivity-connection-on-f.md#ondiscoveryresult)，该方式可以获取到更多设备信息。若在扫描过程中，请勿重复调用该方法（可使用[connection.isBluetoothDiscovering](arkts-connectivity-connection-isbluetoothdiscovering-f.md)判断蓝牙当前是否处于扫描过程中）。调用[connection.stopBluetoothDiscovery](arkts-connectivity-connection-stopbluetoothdiscovery-f.md)可以停止该方法开启的扫描流程，扫描停止后，才能开启下一次蓝牙扫描。
 
 **起始版本：** 10
 

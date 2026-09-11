@@ -98,7 +98,7 @@ readLatestImage(): Promise<Image>
 
 Reads the latest image from the ImageReceiver instance. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called to receive data only after the [on](#onimagearrival) callback is
 > triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md) object returned by this API is no longer needed,
@@ -144,7 +144,7 @@ readNextImage(): Promise<Image>
 
 Reads the next image from the ImageReceiver instance. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called to receive data only after the [on](#onimagearrival) callback is
 > triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md) object returned by this API is no longer needed,

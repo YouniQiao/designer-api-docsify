@@ -40,7 +40,7 @@ This method unregisters the device and clears the registered callbacks and handl
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the the device is disabled; returns `false` otherwise. |
 
 **Examples**
 
@@ -73,7 +73,7 @@ The 'BLEConnectionStateChange' event is subscribed to return the connection stat
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the connection process starts; returns `false` otherwise. |
 
 **Examples**
 
@@ -104,7 +104,7 @@ Disconnects from or stops an ongoing connection to a BLE peripheral device.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the disconnection process starts; returns `false` otherwise. |
 
 **Examples**
 
@@ -171,7 +171,7 @@ Obtains the name of BLE peripheral device.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns a string representation of the name if obtained; returns { |
+| Promise&lt;string&gt; | Returns a string representation of the name if obtained; returns `null` if the name fails to be obtained or the name does not exist. |
 
 **Examples**
 
@@ -321,7 +321,7 @@ Starts discovering services.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[GattService](arkts-connectivity-bluetooth-gattservice-i.md)&gt;&gt; | Returns the list of services { |
+| Promise&lt;Array&lt;[GattService](arkts-connectivity-bluetooth-gattservice-i.md)&gt;&gt; | Returns the list of services [GattService](arkts-connectivity-bluetooth-gattservice-i.md) of the BLE peripheral device. |
 
 **Examples**
 
@@ -699,7 +699,7 @@ Set the mtu size of a BLE peripheral device.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the set mtu is successfully; returns `false` otherwise. |
 
 **Examples**
 
@@ -737,7 +737,7 @@ Enables or disables notification of a characteristic when value changed.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if notification of the characteristic is enabled or disabled; returns `false` otherwise. |
 
 **Examples**
 
@@ -786,7 +786,7 @@ Writes the characteristic of a BLE peripheral device.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the characteristic is written successfully; returns `false` otherwise. |
 
 **Examples**
 
@@ -843,7 +843,7 @@ Writes the descriptor of a BLE peripheral device.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the descriptor is written successfully; returns `false` otherwise. |
 
 **Examples**
 

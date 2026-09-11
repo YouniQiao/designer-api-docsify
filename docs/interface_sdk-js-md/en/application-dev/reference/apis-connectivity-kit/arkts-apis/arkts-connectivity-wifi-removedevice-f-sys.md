@@ -32,13 +32,13 @@ Deletes a Wi-Fi network with a specified ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | number | Yes | Indicates the ID of the Wi-Fi network, which can be obtained using the { |
+| id | number | Yes | Indicates the ID of the Wi-Fi network, which can be obtained using the addDeviceConfig or getLinkedInfo method. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the Wi-Fi network is deleted successfully, returns `false` otherwise. |
 
 **Examples**
 

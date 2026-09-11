@@ -18,7 +18,7 @@ Converts a rotation vector into a rotation matrix. This API uses an asynchronous
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(rotationVector: Array&lt;double&gt;, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
+**Substitutes:** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(rotationVector: Array&lt;number&gt;, callback: AsyncCallback&lt;Array&lt;number&gt;&gt;)
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -60,7 +60,7 @@ Converts a rotation vector into a rotation matrix. This API uses a promise to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(rotationVector: Array&lt;double&gt;)
+**Substitutes:** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(rotationVector: Array&lt;number&gt;)
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -106,7 +106,7 @@ Obtains the rotation matrix based on a gravity vector and geomagnetic vector. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(gravity: Array&lt;double&gt;, geomagnetic: Array&lt;double&gt;, callback: AsyncCallback&lt;RotationMatrixResponse&gt;)
+**Substitutes:** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(gravity: Array&lt;number&gt;, geomagnetic: Array&lt;number&gt;, callback: AsyncCallback&lt;RotationMatrixResponse&gt;)
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -147,7 +147,7 @@ Obtains the rotation matrix based on a gravity vector and geomagnetic vector. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(gravity: Array&lt;double&gt;, geomagnetic: Array&lt;double&gt;)
+**Substitutes:** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(gravity: Array&lt;number&gt;, geomagnetic: Array&lt;number&gt;)
 
 **System capability:** SystemCapability.Sensors.Sensor
 

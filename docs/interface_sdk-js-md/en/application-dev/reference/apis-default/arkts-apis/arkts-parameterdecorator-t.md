@@ -9,5 +9,5 @@ declare type ParameterDecorator = (target: Object, propertyKey: string | symbol,
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | Object | Yes |  |
-| propertyKey | string \| symbol | Yes |  |
+| propertyKey | string &#124; symbol | Yes |  |
 | parameterIndex | number | Yes |  |

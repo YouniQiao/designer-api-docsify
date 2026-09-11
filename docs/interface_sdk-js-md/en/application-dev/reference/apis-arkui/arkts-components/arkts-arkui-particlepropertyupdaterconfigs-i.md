@@ -61,7 +61,7 @@ The target property value is obtained by applying the change difference to the c
 2. The change difference may also be a negative value. For example, if the current property
 value is **0.2** and **config** is set to **[-3.0,2.0]**, then when the random change difference is **-2.0**, the target property value is 0.2 - 2.0 = -1.8.
 
-**NOTE：**
+**NOTE:**
 
 **config** sets the value range of the change difference. While the change difference does not have a maximum or minimum value limit, the target property value does. Therefore, if the target property value is greater than the maximum property value, the maximum property value will be used instead; if the target property value is less than the minimum property value, the minimum property value will be used instead. **T** represents a number.
 

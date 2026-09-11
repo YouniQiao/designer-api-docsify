@@ -2,6 +2,8 @@
 
 Indicates the system event type and parameter related to the screenlock management service.
 
+@typedef SystemEvent
+
 **Since:** 9
 
 **System capability:** SystemCapability.MiscServices.ScreenLock

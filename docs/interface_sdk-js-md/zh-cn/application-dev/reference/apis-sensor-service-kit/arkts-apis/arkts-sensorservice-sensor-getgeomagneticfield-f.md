@@ -25,7 +25,7 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 
 **废弃版本：** 9
 
-**替代接口：** [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md)(locationOptions: LocationOptions, timeMillis: long, callback: AsyncCallback&lt;GeomagneticResponse&gt;)
+**替代接口：** [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md)(locationOptions: LocationOptions, timeMillis: number, callback: AsyncCallback&lt;GeomagneticResponse&gt;)
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -74,7 +74,7 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 
 **废弃版本：** 9
 
-**替代接口：** [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md)(locationOptions: LocationOptions, timeMillis: long)
+**替代接口：** [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md)(locationOptions: LocationOptions, timeMillis: number)
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

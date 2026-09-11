@@ -39,4 +39,3 @@ Just use for generate tsbundle
 
 | Type | Description |
 | --- | --- |
-| any |  |

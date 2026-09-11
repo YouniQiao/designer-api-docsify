@@ -34,7 +34,7 @@ offAuthorizationResult(callback?: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;boolean&gt; | 否 | 监听器回调函数，用于返回用户授权结果。传入该参数：取消注册指定的监听器。不传参数：取消注册所有已注册的监听器。 |
+| callback | Callback&lt;boolean&gt; | 否 | 监听器回调函数，用于返回用户授权结果。<br>传入该参数：取消注册指定的监听器。不传参数：取消注册所有已注册的监听器。 |
 
 **示例**
 

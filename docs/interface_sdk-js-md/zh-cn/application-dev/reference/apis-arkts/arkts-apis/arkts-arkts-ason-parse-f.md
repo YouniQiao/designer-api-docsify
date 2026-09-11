@@ -32,4 +32,4 @@ function parse(text: string, reviver?: Transformer, options?: ParseOptions): ISe
 
 | 类型 | 说明 |
 | --- | --- |
-| [ISendable](arkts-arkts-ason-isendable-t.md) \| null | 返回ISendable数据或null。入参为null时，返回null。 |
+| [ISendable](arkts-arkts-ason-isendable-t.md) &#124; null | 返回ISendable数据或null。入参为null时，返回null。 |

@@ -2,6 +2,8 @@
 
 提示音参数选项。
 
+@typedef SystemToneOptions
+
 **起始版本：** 11
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core

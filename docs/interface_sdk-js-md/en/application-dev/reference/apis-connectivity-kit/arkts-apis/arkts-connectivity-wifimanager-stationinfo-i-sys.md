@@ -1,6 +1,6 @@
 # StationInfo (System API)
 
-Wi-Fi station information.
+Wi-Fi station information. @typedef StationInfo
 
 **Since:** 9
 

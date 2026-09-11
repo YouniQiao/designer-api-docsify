@@ -20,7 +20,7 @@ bind(address: NetAddress, callback: AsyncCallback<void>): void
 
 Binds the IP address and port number. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the **TLSSocket** object is upgraded from a **TCPSocket** object, you do not need to execute the **bind**
 > API.
@@ -75,7 +75,7 @@ bind(address: NetAddress): Promise<void>
 
 Binds the IP address and port number. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the **TLSSocket** object is upgraded from a **TCPSocket** object, you do not need to execute the **bind**
 > API.
@@ -828,7 +828,7 @@ getLocalAddress(): Promise<NetAddress>
 
 Obtains the local socket address of a **TLSSocket** connection. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Call this API only after the **TLSSocketServer** connection is successfully established.
 
@@ -1232,7 +1232,7 @@ getSocketFd(): Promise<number>
 
 Obtains the file descriptor of the **TLSSocket** object. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API can be called only after **bind** is successfully called.
 > 
@@ -1390,7 +1390,7 @@ Unsubscribes from **message** events of the **TLSSocket** object. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'message' | Yes | Event type.    **message**: message receiving event. |
+| type | 'message' | Yes | Event type.<br> **message**: message receiving event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | No | Callback used to return the result.<br>**Since:** 11 |
 
 **Error codes:**
@@ -1438,7 +1438,7 @@ Unsubscribes from **connect** or **close** events of the **TLSSocket** object. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' \| 'close' | Yes | Event type.   - **connect**: connection event.    - **close**: close event. |
+| type | 'connect' &#124; 'close' | Yes | Event type.<br> <br>- **connect**: connection event. <br>- **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. |
 
 **Error codes:**
@@ -1485,7 +1485,7 @@ Unsubscribes from **connect** or **close** events of the **TLSSocket** object. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' \| 'close' | Yes | Event type.   - **connect**: connection event.    - **close**: close event. |
+| type | 'connect' &#124; 'close' | Yes | Event type.<br> <br>- **connect**: connection event. <br>- **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. |
 
 **Error codes:**
@@ -1514,7 +1514,7 @@ Unsubscribes from **error** events of the **TLSSocket** object. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type.    **error**: error event. |
+| type | 'error' | Yes | Event type.<br> **error**: error event. |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. |
 
 **Error codes:**
@@ -1546,7 +1546,7 @@ on(type: 'message', callback: Callback<SocketMessageInfo>): void
 
 Subscribes to **message** events of the **TLSSocket** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **bind** is successfully called.
 
@@ -1558,7 +1558,7 @@ Subscribes to **message** events of the **TLSSocket** object. This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'message' | Yes | Event type.    **message**: message receiving event. |
+| type | 'message' | Yes | Event type.<br> **message**: message receiving event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
 
 **Error codes:**
@@ -1606,7 +1606,7 @@ on(type: 'connect' | 'close', callback: Callback<void>): void
 
 Subscribes to **connect** or **close** events of the **TLSSocket** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **bind** is successfully called.
 
@@ -1618,7 +1618,7 @@ Subscribes to **connect** or **close** events of the **TLSSocket** object. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' \| 'close' | Yes | Event type.   - **connect**: connection event.    - **close**: close event. |
+| type | 'connect' &#124; 'close' | Yes | Event type.<br> <br>- **connect**: connection event. <br>- **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -1661,7 +1661,7 @@ on(type: 'connect' | 'close', callback: Callback<void>): void
 
 Subscribes to **connect** or **close** events of the **TLSSocket** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **bind** is successfully called.
 
@@ -1673,7 +1673,7 @@ Subscribes to **connect** or **close** events of the **TLSSocket** object. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' \| 'close' | Yes | Event type.   - **connect**: connection event.    - **close**: close event. |
+| type | 'connect' &#124; 'close' | Yes | Event type.<br> <br>- **connect**: connection event. <br>- **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -1694,7 +1694,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to **error** events of the **TLSSocket** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be called only after **bind** is successfully called.
 
@@ -1706,7 +1706,7 @@ Subscribes to **error** events of the **TLSSocket** object. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type.    **error**: error event. |
+| type | 'error' | Yes | Event type.<br> **error**: error event. |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -1754,7 +1754,7 @@ Sends a message to the server after a **TLSSocket** connection is established. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string \| ArrayBuffer | Yes | Data content of the message to send.<br>**Since:** 12 |
+| data | string &#124; ArrayBuffer | Yes | Data content of the message to send.<br>**Since:** 12 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
@@ -1800,7 +1800,7 @@ Sends a message to the server after a **TLSSocket** connection is established. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string \| ArrayBuffer | Yes | Data content of the message to send.<br>**Since:** 12 |
+| data | string &#124; ArrayBuffer | Yes | Data content of the message to send.<br>**Since:** 12 |
 
 **Return value:**
 

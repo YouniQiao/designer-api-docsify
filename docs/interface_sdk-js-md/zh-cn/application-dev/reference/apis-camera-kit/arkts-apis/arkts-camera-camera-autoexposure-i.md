@@ -66,7 +66,7 @@ getExposureMode(): ExposureMode
 
 | 类型 | 说明 |
 | --- | --- |
-| [ExposureMode](arkts-camera-camera-exposuremode-e.md) | 获取当前曝光模式。接口调用失败会抛出相应错误码并返回undefined，错误码类型[CameraErrorCode]{ |
+| [ExposureMode](arkts-camera-camera-exposuremode-e.md) | 获取当前曝光模式。接口调用失败会抛出相应错误码并返回undefined，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -92,7 +92,7 @@ getExposureValue(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 获取曝光值。曝光补偿存在步长，如步长为0.5。则设置1.2时，获取到实际生效曝光补偿为1.0。 |
+| number | 获取曝光值。曝光补偿存在步长，如步长为0.5。则设置1.2时，获取到实际生效曝光补偿为1.0。<br>接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -118,7 +118,7 @@ getMeteringPoint(): Point
 
 | 类型 | 说明 |
 | --- | --- |
-| [Point](arkts-camera-camera-point-i.md) | 获取当前曝光点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [Point](arkts-camera-camera-point-i.md) | 获取当前曝光点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -190,7 +190,7 @@ setExposureBias(exposureBias: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| exposureBias | number | 是 | 曝光补偿，[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange)查询支持的范围，如果设置超过支持范围的值，自动匹配到就近临界点。曝光补偿存在步长，由于设备差异，步长也存在差异。例如步长为0.5，则设置1.2时，获取到实际生效曝光补偿为1.0。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| exposureBias | number | 是 | 曝光补偿，[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange)查询支持的范围，如果设置超过支持范围的值，自动匹配到就近临界点。<br>曝光补偿存在步长，由于设备差异，步长也存在差异。例如步长为0.5，则设置1.2时，获取到实际生效曝光补偿为1.0。<br>接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 

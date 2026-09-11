@@ -26,7 +26,7 @@ Obtains all SkillInfo objects of the calling application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flags | number | Yes | { |
+| flags | number | Yes | [SkillInfoFlag](arkts-ability-skillmanager-skillinfoflag-e.md) - Indicates the flag used to specify information contained in the SkillInfo objects that will be returned. |
 
 **Return value:**
 

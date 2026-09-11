@@ -20,7 +20,7 @@ deleted: Array<string> | Array<number>
 
 Location where data is deleted. If the primary key of the table is of the string type, it is the value of the primary key. Otherwise, it is the row number of the deleted data.
 
-**Type:** Array&lt;string&gt; \| Array&lt;number&gt;
+**Type:** Array&lt;string&gt; &#124; Array&lt;number&gt;
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ inserted: Array<string> | Array<number>
 
 Location where data is inserted. If the primary key of the table is of the string type, it is the value of the primary key. Otherwise, it is the row number of the inserted data.
 
-**Type:** Array&lt;string&gt; \| Array&lt;number&gt;
+**Type:** Array&lt;string&gt; &#124; Array&lt;number&gt;
 
 **Since:** 10
 
@@ -76,7 +76,7 @@ updated: Array<string> | Array<number>
 
 Location where data is updated. If the primary key of the table is of the string type, it is the value of the primary key. Otherwise, it is the row number of the updated data.
 
-**Type:** Array&lt;string&gt; \| Array&lt;number&gt;
+**Type:** Array&lt;string&gt; &#124; Array&lt;number&gt;
 
 **Since:** 10
 

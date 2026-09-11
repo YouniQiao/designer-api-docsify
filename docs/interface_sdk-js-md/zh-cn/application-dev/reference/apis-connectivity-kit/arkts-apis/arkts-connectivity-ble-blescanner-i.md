@@ -39,7 +39,7 @@ off(type: 'BLEDeviceFind', callback?: Callback<ScanReport>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'BLEDeviceFind' | 是 | 事件回调类型，支持的事件为'BLEDeviceFind'，表示BLE设备扫描结果上报事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScanReport](arkts-connectivity-ble-scanreport-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与on('BLEDeviceFind')中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScanReport](arkts-connectivity-ble-scanreport-i.md)&gt; | 否 | 指定取消订阅的回调函数通知。若传参，则需与[on('BLEDeviceFind')](#onbledevicefind)中的回调函数一致；若无传参，则取消订阅该type对应的所有回调函数通知。 |
 
 **错误码：**
 
@@ -128,7 +128,7 @@ startScan(filters: Array<ScanFilter>, options?: ScanOptions): Promise<void>
 
 发起BLE扫描流程。使用Promise异步回调。
 
-该接口只能扫描BLE设备。扫描结果会通过on('BLEDeviceFind')的回调函数获取到。调用[stopScan](#stopscan)可以停止该方法开启的扫描流程。
+该接口只能扫描BLE设备。扫描结果会通过[on('BLEDeviceFind')](#onbledevicefind)的回调函数获取到。调用[stopScan](#stopscan)可以停止该方法开启的扫描流程。
 
 **起始版本：** 15
 

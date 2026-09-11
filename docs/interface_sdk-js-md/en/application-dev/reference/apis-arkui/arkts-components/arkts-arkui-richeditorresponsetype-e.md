@@ -1,6 +1,6 @@
 # RichEditorResponseType
 
-Response type of the menu.
+Enumerates the response types of the menu.
 
 **Since:** 11
 
@@ -60,7 +60,7 @@ The menu is displayed when the component is selected.
 DEFAULT = 3
 ```
 
-If this menu is registered, but **RIGHT_CLICK**, **LONG_PRESS**, and **SELECT** menus are not registered, the menu will be displayed when the right mouse button is clicked, the menu is long-pressed, or the menu is selected using the mouse.
+When a menu of this type is registered while **RIGHT_CLICK**, **LONG_PRESS**, and **SELECT** menus are not registered, the menu will be displayed for those unregistered types.
 
 **Since:** 15
 

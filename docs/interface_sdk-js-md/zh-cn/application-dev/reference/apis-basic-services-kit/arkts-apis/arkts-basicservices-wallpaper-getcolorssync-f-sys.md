@@ -12,7 +12,7 @@ import { wallpaper } from '@kit.BasicServicesKit';
 function getColorsSync(wallpaperType: WallpaperType): Array<RgbaColor>
 ```
 
-获取指定类型壁纸的主要颜色信息。  
+获取指定类型壁纸的主要颜色信息。<br>   
 > **说明：**
 > 
 > 从 API version 9开始支持，从API version 23开始废弃。

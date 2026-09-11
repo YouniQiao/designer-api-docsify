@@ -30,7 +30,7 @@ PREFER_WINDOW = 1
 
 The menu is preferentially displayed in a separate window. If a separate window is not supported, the menu is displayed in the current window.
 
-**NOTE：**
+**NOTE:**
 
 Displaying the text selection menu in a separate window is not supported for window types other than the app main window, app sub-window, system modal window, and system desktop window.
 

@@ -31,8 +31,8 @@ Constructs a **ProgressMask** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Current value of the progress mask.Value range: [0.0, +∞) |
-| total | number | Yes | Maximum value of the progress mask.Value range: [0.0, +∞) |
+| value | number | Yes | Current value of the progress mask.<br> Value range: [0.0, +∞) |
+| total | number | Yes | Maximum value of the progress mask.<br> Value range: [0.0, +∞) |
 | color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the progress mask. |
 
 ## enableBreathingAnimation
@@ -55,7 +55,7 @@ Sets whether to enable the breathing animation when the progress indicator is fu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable the breathing animation.   **true**: The breathing animation is enabled.   **false**: The breathing halo animation is disabled. |
+| value | boolean | Yes | Whether to enable the breathing animation.<br>**true**: The breathing animation is enabled.<br>**false**: The breathing halo animation is disabled. |
 
 ## updateColor
 

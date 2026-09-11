@@ -6,6 +6,8 @@ export type FormExtensionContext = _FormExtensionContext.default
 
 The context of form extension. It allows access to formExtension-specific resources.
 
+@typedef { _FormExtensionContext.default }
+
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.

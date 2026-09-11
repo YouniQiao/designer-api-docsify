@@ -134,7 +134,7 @@ getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| decoderType | [DecoderType](arkts-avsession-avsession-decodertype-e.md) | 是 | 设备所支持的解码格式。设备所支持的解码格式包括：'OH_AVCODEC_MIMETYPE_VIDEO_AVC'：VIDEO AVC，'OH_AVCODEC_MIMETYPE_VIDEO_HEVC'：VIDEO HEVC，'OH_AVCODEC_MIMETYPE_AUDIO_VIVID'：AUDIO AV3A。 |
+| decoderType | [DecoderType](arkts-avsession-avsession-decodertype-e.md) | 是 | 设备所支持的解码格式。<br>设备所支持的解码格式包括：<br>'OH_AVCODEC_MIMETYPE_VIDEO_AVC'：VIDEO AVC，<br>'OH_AVCODEC_MIMETYPE_VIDEO_HEVC'：VIDEO HEVC，<br>'OH_AVCODEC_MIMETYPE_AUDIO_VIVID'：AUDIO AV3A。 |
 
 **返回值：**
 
@@ -293,7 +293,7 @@ off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | 是 |  |
-| callback | (state: AVPlaybackState) =&gt; void | 否 | 回调函数，参数state是变化后的播放状态。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | (state: AVPlaybackState) =&gt; void | 否 | 回调函数，参数state是变化后的播放状态。<br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -479,7 +479,7 @@ off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandTy
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'validCommandChange' | 是 | 取消对应的监听事件，支持事件`'validCommandChange'`。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 否 | 回调函数。参数commands是有效命令的集合。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 否 | 回调函数。参数commands是有效命令的集合。<br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -791,7 +791,7 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | 是 |  |
-| filter | Array&lt;keyof AVPlaybackState&gt; \| 'all' | 是 | 'all'表示关注播放状态所有字段变化；Array&lt;keyof AVPlaybackState&gt;表示关注Array中的字段变化。 |
+| filter | Array&lt;keyof AVPlaybackState&gt; &#124; 'all' | 是 | 'all'表示关注播放状态所有字段变化；Array&lt;keyof AVPlaybackState&gt;表示关注Array中的字段变化。 |
 | callback | (state: AVPlaybackState) =&gt; void | 是 | 回调函数，参数state是变化后的播放状态。 |
 
 **错误码：**
@@ -1592,7 +1592,7 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 | 应用程序填充的自定义数据。 |
+| data | Record&lt;string, Object&gt; | 是 | 应用程序填充的自定义数据。<br>服务端仅解析key：string为'customData'，且Object为string类型的对象。 |
 
 **返回值：**
 

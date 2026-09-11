@@ -59,7 +59,7 @@ Start device discovery.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | number | Yes | device filter when discovering, can be an union of { |
+| filter | number | Yes | device filter when discovering, can be an union of [ProtocolType](arkts-avsession-avsession-protocoltype-e.md) |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | a callback function |
 
 **Error codes:**

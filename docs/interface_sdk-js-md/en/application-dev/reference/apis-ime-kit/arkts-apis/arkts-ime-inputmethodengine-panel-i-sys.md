@@ -18,11 +18,9 @@ import { inputMethodEngine } from '@kit.IMEKit';
 off(type: 'sizeUpdate', callback?: SizeUpdateCallback): void
 ```
 
-Disables listening for the panel size change. This API uses an asynchronous callback to return the result.   
-> **NOTE：**
-   
-> 
-   
+Disables listening for the panel size change. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. When you call [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) to adjust the panel size, the system calculates the final value based on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the panel layout.
 
 **Since:** 14
@@ -54,11 +52,9 @@ panel.off('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngin
 on(type: 'sizeUpdate', callback: SizeUpdateCallback): void
 ```
 
-Listens for the panel size change. This API uses an asynchronous callback to return the result.   
-> **NOTE：**
-   
-> 
-   
+Listens for the panel size change. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. When you call [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) to adjust the panel size, the system calculates the final value based on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the panel layout.
 
 **Since:** 14
@@ -91,11 +87,9 @@ panel.on('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngine
 setShadow(radius: number, color: string, offsetX: number, offsetY: number): void
 ```
 
-Sets the shadow effect of the input method window.   
-> **NOTE：**
-   
-> 
-
+Sets the shadow effect of the input method window. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > Panels whose [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) is **SOFT_KEYBOARD** and [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) is **FLG_FIXED** are not supported.
 
 **Since:** 22
@@ -108,7 +102,7 @@ Sets the shadow effect of the input method window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | number | Yes | Radius of the shadow. The value is a floating-point number greater than or equal to 0. 0, in px. The value **0.0** means that the shadow is disabled for the window borders. |
+| radius | number | Yes | Radius of the shadow. The value is a floating-point number greater than or equal to 0.0, in px. The value **0.0** means that the shadow is disabled for the window borders. |
 | color | string | Yes | Color of the shadow. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, `#000000` or `#FF000000`. |
 | offsetX | number | Yes | Offset of the shadow along the x-axis, in pixels. The value is a floating-point number. |
 | offsetY | number | Yes | Offset of the shadow along the y-axis, in pixels. The value is a floating-point number. |

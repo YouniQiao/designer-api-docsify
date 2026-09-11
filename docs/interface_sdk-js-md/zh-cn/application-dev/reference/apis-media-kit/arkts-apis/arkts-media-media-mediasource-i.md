@@ -75,7 +75,7 @@ getTrackSelectionFilter(): TrackSelectionFilter | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md) \| undefined | 如果存在TrackSelectionFilter对象，返回TrackSelectionFilter对象。 否则, 返回TrackSelectionFilter对象。 |
+| [TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md) &#124; undefined | 如果存在TrackSelectionFilter对象，返回TrackSelectionFilter对象。 否则, 返回TrackSelectionFilter对象。 |
 
 ## setMediaResourceLoaderDelegate
 

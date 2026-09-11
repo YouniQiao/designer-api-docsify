@@ -17,7 +17,7 @@
 color?: ResourceColor
 ```
 
-设置文本装饰线颜色。默认值：Color.Black。
+设置文本装饰线颜色。<br>默认值：Color.Black。
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -35,7 +35,7 @@ color?: ResourceColor
 style?: TextDecorationStyle
 ```
 
-设置文本装饰线样式。默认值：TextDecorationStyle.SOLID。
+设置文本装饰线样式。<br>默认值：TextDecorationStyle.SOLID。
 
 **类型：** [TextDecorationStyle](../arkts-apis/arkts-arkui-textdecorationstyle-e.md)
 
@@ -53,8 +53,7 @@ style?: TextDecorationStyle
 thicknessScale?: number
 ```
 
-设置文本装饰线的粗细缩放比例。默认值：1.0 取值范围：[0, +∞)   
-**说明：** 负值按默认值处理。
+设置文本装饰线的粗细缩放比例。<br>默认值：1.0 <br>取值范围：[0, +∞) <br>**说明：** 负值按默认值处理。
 
 **类型：** number
 

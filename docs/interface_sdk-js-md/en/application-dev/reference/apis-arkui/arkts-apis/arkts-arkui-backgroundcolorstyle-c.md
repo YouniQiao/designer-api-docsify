@@ -31,7 +31,7 @@ A constructor used to create a text background style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| textBackgroundStyle | [TextBackgroundStyle](../arkts-components/arkts-arkui-textbackgroundstyle-i.md) | Yes | Options of the text background color.Default value:{color: Color.Transparent,radius: 0} |
+| textBackgroundStyle | [TextBackgroundStyle](../arkts-components/arkts-arkui-textbackgroundstyle-i.md) | Yes | Options of the text background color.<br>Default value:<br>{<br> color: Color.Transparent,<br> radius: 0<br>} |
 
 ## textBackgroundStyle
 

@@ -1,6 +1,6 @@
 # RichEditorBuilderSpanOptions
 
-Sets the offset and style of the builder.
+Sets the offset position and style of the inserted builder.
 
 **Since:** 11
 
@@ -17,7 +17,9 @@ Sets the offset and style of the builder.
 dragBackgroundColor? : ColorMetrics
 ```
 
-Background color of the builder when it is dragged independently. If no valid value is specified, the default color is used.
+Sets the background color of the backboard when a BuilderSpan is dragged individually. If this parameter is not configured or an invalid color value is passed, the default value is used.
+
+Default value: the drag backboard color that follows the system theme.
 
 **Type:** [ColorMetrics](../arkts-apis/arkts-arkui-colormetrics-t.md)
 
@@ -35,9 +37,9 @@ Background color of the builder when it is dragged independently. If no valid va
 isDragShadowNeeded?: boolean
 ```
 
-Whether to apply a shadow when the builder is dragged independently. If no valid value is specified, a shadow is applied. The value **true** means to apply a shadow, and **false** means the opposite.
+Sets whether a shadow is needed when a BuilderSpan is dragged individually. The value **true** means that a shadow is needed, and **false** means that a shadow is not needed. If this parameter is not configured or an invalid value is passed, the default value is used.
 
-Default value: **true**
+Default value: **true**.
 
 **Type:** boolean
 

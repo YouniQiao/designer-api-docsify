@@ -32,7 +32,7 @@ export function generateControllerDevicePackage(remoteUserAuthResult: RemoteUser
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[RemoteAuthPackage](arkts-ability-abilitytoolaccessctrl-remoteauthpackage-i-sys.md)[]&gt; | Promise用于返回\\${RemoteAuthPackage[]}。 |
+| Promise&lt;[RemoteAuthPackage](arkts-ability-abilitytoolaccessctrl-remoteauthpackage-i-sys.md)[]&gt; | Promise用于返回\&#36;{RemoteAuthPackage[]}。 |
 
 **错误码：**
 

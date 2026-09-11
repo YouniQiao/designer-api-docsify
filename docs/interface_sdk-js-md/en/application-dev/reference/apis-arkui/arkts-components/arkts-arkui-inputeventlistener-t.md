@@ -8,7 +8,7 @@ declare type InputEventListener = (
 
 Input event listener callback type.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - **RawInputEventWrapper** is an abstract class. Developers cannot create instances using the `new` operator.
 > 

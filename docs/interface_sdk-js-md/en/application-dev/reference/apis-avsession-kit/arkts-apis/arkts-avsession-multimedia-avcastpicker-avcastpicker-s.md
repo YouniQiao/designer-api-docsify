@@ -42,7 +42,7 @@ activeColor?: Color | number | string
 
 Assigns the color of picker component at active state.
 
-**Type:** Color \| number \| string
+**Type:** Color &#124; number &#124; string
 
 **Since:** 11
 
@@ -96,7 +96,7 @@ normalColor?: Color | number | string
 
 Assigns the color of picker component at normal state .
 
-**Type:** Color \| number \| string
+**Type:** Color &#124; number &#124; string
 
 **Since:** 11
 

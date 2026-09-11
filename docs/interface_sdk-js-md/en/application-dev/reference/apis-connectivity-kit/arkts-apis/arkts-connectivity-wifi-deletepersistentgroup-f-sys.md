@@ -36,7 +36,7 @@ Deletes the persistent P2P group with the specified network ID.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the operation is successful, returns `false` otherwise. |
 
 **Examples**
 

@@ -63,7 +63,7 @@ constructor(lineHeight: LengthMetrics, lineHeightMultiple?: number)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 是 | 文本行高设置项。LengthMetrics的value值大于0时，文本行高设置生效，否则文本行高自适应字体大小。 |
-| lineHeightMultiple | number | 否 | 文本行高的倍数值。取值范围：[0, +∞)，支持小数。   **说明：** 与lineHeight或[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md)同时设置时，仅lineHeightMultiple生效，行高为该行最高字体高度与倍数的乘积；小于0或undefined时不生效；等于0时等效于设置为1。 |
+| lineHeightMultiple | number | 否 | 文本行高的倍数值。<br>取值范围：[0, +∞)，支持小数。<br>**说明：** <br>与lineHeight或[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md)同时设置时，仅lineHeightMultiple生效，行高为该行最高字体高度与倍数的乘积；<br>小于0或undefined时不生效；<br>等于0时等效于设置为1。 |
 
 ## lineHeight
 

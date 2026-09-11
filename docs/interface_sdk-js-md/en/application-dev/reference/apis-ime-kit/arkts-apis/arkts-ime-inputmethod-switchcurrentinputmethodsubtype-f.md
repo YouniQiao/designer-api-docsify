@@ -12,19 +12,13 @@ import { inputMethod } from '@kit.IMEKit';
 function switchCurrentInputMethodSubtype(target: InputMethodSubtype, callback: AsyncCallback<boolean>): void
 ```
 
-Switches to another subtype of this input method. This API uses an asynchronous callback to return the result.   
-> **NOTE：**
-   
-> 
-   
-> - In API version 9, this API can only be called by system applications granted the **ohos.permission.CONNECT_IME_ABILITY** permission.
-   
-> 
-   
-> - In API version 10, this API can only be called by system applications and the current input method application, and the **ohos.permission.CONNECT_IME_ABILITY** permission is required.
-   
-> 
-   
+Switches to another subtype of this input method. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
+> - In API version 9, this API can only be called by system applications granted the **ohos.permission.CONNECT_IME_ABILITY** permission. <br>
+> <br>
+> - In API version 10, this API can only be called by system applications and the current input method application, and the **ohos.permission.CONNECT_IME_ABILITY** permission is required. <br>
+> <br>
 > - Since API version 11, this API can only be called by the current input method application.
 
 **Since:** 9
@@ -88,19 +82,13 @@ inputMethod.switchCurrentInputMethodSubtype({
 function switchCurrentInputMethodSubtype(target: InputMethodSubtype): Promise<boolean>
 ```
 
-Switches to another subtype of this input method. This API uses a promise to return the result.   
-> **NOTE：**
-   
-> 
-   
-> - In API version 9, this API can only be called by system applications granted the **ohos.permission.CONNECT_IME_ABILITY** permission.
-   
-> 
-   
-> - In API version 10, this API can only be called by system applications and the current input method application, and the **ohos.permission.CONNECT_IME_ABILITY** permission is required.
-   
-> 
-   
+Switches to another subtype of this input method. This API uses a promise to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
+> - In API version 9, this API can only be called by system applications granted the **ohos.permission.CONNECT_IME_ABILITY** permission. <br>
+> <br>
+> - In API version 10, this API can only be called by system applications and the current input method application, and the **ohos.permission.CONNECT_IME_ABILITY** permission is required. <br>
+> <br>
 > - Since API version 11, this API can only be called by the current input method application.
 
 **Since:** 9

@@ -4,7 +4,7 @@
 declare type LPX = `${number}lpx`
 ```
 
-定义长度属性，单位为lpx。
+定义长度属性，单位为lpx。@typedef { `\${number}lpx` } LPX
 
 **起始版本：** 23
 

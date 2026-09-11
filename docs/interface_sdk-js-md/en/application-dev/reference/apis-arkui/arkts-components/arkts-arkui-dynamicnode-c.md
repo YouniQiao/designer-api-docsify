@@ -37,8 +37,6 @@ Invoked when data is moved during drag and drop sorting. This callback is only a
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## onMove
 
 ```TypeScript
@@ -66,4 +64,3 @@ Set the move action.
 
 | Type | Description |
 | --- | --- |
-| T |  |

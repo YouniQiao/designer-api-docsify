@@ -15,7 +15,7 @@ function getLauncherAbilityInfos(bundleName: string,
 
 Obtains an array of the launcher ability information based on a given bundle name. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md)
@@ -25,7 +25,7 @@ Obtains an array of the launcher ability information based on a given bundle nam
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md)(bundleName: string, userId: int, callback: AsyncCallback&lt;Array&lt;LauncherAbilityInfo&gt;&gt;)
+**Substitutes:** [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md)(bundleName: string, userId: number, callback: AsyncCallback&lt;Array&lt;LauncherAbilityInfo&gt;&gt;)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -50,7 +50,7 @@ function getLauncherAbilityInfos(bundleName: string, userId: number): Promise<Ar
 
 Obtains an array of the launcher ability information based on a given bundle name. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md)
@@ -60,7 +60,7 @@ Obtains an array of the launcher ability information based on a given bundle nam
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md)(bundleName: string, userId: int, callback: AsyncCallback&lt;Array&lt;LauncherAbilityInfo&gt;&gt;)
+**Substitutes:** [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md)(bundleName: string, userId: number, callback: AsyncCallback&lt;Array&lt;LauncherAbilityInfo&gt;&gt;)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

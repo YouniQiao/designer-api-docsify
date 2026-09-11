@@ -279,7 +279,7 @@ getColumnType(columnIdentifier: number | string): Promise<ColumnType>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIdentifier | number \| string | 是 | 表示结果集中指定列的索引或名称，索引从0开始。 |
+| columnIdentifier | number &#124; string | 是 | 表示结果集中指定列的索引或名称，索引从0开始。 |
 
 **返回值：**
 
@@ -320,7 +320,7 @@ getColumnTypeSync(columnIdentifier: number | string): ColumnType
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIdentifier | number \| string | 是 | 表示结果集中指定列的索引或名称，索引从0开始。 |
+| columnIdentifier | number &#124; string | 是 | 表示结果集中指定列的索引或名称，索引从0开始。 |
 
 **返回值：**
 
@@ -448,7 +448,7 @@ getLong(columnIndex: number): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 以Long形式返回指定列的值。 |
+| number | 以Long形式返回指定列的值。<br>该接口支持的精度范围是：Number.MIN_SAFE_INTEGER ~ Number.MAX_SAFE_INTEGER，若超出该范围，建议对于DOUBLE类型的值使用[getDouble](#getdouble)，对于INTEGER类型的值使用[getString](#getstring)。 |
 
 **错误码：**
 
@@ -477,7 +477,7 @@ getRow(): ValuesBucket
 
 | 类型 | 说明 |
 | --- | --- |
-| [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md) | 返回指定行的值。当结果集中包含重名列时，返回值会不符合预期，建议使用[getCurrentRowData]{ |
+| [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md) | 返回指定行的值。当结果集中包含重名列时，返回值会不符合预期，建议使用[getCurrentRowData](#getcurrentrowdata)接口获取。 |
 
 **错误码：**
 
@@ -518,7 +518,7 @@ getRows(maxCount: number, position?: number): Promise<Array<ValuesBucket>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md)&gt;&gt; | 返回maxCount条数据，剩余数据不足maxCount条则返回剩余数据，返回空数组时代表已经遍历到结果集的末尾。当结果集中包含重名列时，返回值会不符合预期，建议使用[getRowsData]{ |
+| Promise&lt;Array&lt;[ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md)&gt;&gt; | 返回maxCount条数据，剩余数据不足maxCount条则返回剩余数据，返回空数组时代表已经遍历到结果集的末尾。当结果集中包含重名列时，返回值会不符合预期，建议使用[getRowsData](#getrowsdata)接口获取。 |
 
 **错误码：**
 

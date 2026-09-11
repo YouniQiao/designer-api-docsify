@@ -103,7 +103,7 @@ on(type: 'depthDataAvailable', callback: AsyncCallback<DepthData>): void
 
 Subscribes to depth data availability events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -151,7 +151,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to DepthDataOutput error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 

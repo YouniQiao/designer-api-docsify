@@ -23,7 +23,7 @@ navDestinationInfo?: observer.NavDestinationInfo
 
 NavDestination页面信息，包含当前NavDestination页面的导航状态和页面信息。当页面为NavDestination页面时，可通过此属性获取对应的NavDestination页面信息；若当前页面不是NavDestination页面，则该属性为undefined。若无对应的NavDestination页面信息，则该属性为undefined。
 
-**类型：** observer.NavDestinationInfo
+**类型：** [observer.NavDestinationInfo](../../apis-arkui/arkts-apis/arkts-arkui-observer.md)
 
 **起始版本：** 12
 
@@ -41,7 +41,7 @@ routerPageInfo?: observer.RouterPageInfo
 
 Router页面信息，包含当前Router页面的路由状态和页面信息。当页面为Router页面时，可通过此属性获取对应的Router页面信息；若当前页面不是Router页面，则该属性为undefined。若无对应的Router页面信息，则该属性为undefined。
 
-**类型：** observer.RouterPageInfo
+**类型：** [observer.RouterPageInfo](../../apis-arkui/arkts-apis/arkts-arkui-observer.md)
 
 **起始版本：** 12
 

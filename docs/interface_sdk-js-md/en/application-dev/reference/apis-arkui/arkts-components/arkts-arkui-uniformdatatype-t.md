@@ -6,6 +6,8 @@ declare type UniformDataType = import('../api/@ohos.data.uniformTypeDescriptor')
 
 Import the UniformDataType type object for ui component.
 
+@typedef { import('../api/@ohos.data.uniformTypeDescriptor').default.UniformDataType } UniformDataType
+
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.

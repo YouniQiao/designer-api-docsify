@@ -8,7 +8,7 @@ Defines the options of GridContainer.
 
 **Deprecated since:** 9
 
-**Substitutes:** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
+**Substitutes:** grid_col/GridColOptions and grid_row/GridRowOptions
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,13 +25,13 @@ columns?: number | "auto"
 
 Sets the total number of columns in the current layout.
 
-**Type:** number \| "auto"
+**Type:** number &#124; "auto"
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
+**Substitutes:** grid_col/GridColOptions and grid_row/GridRowOptions
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,13 +43,13 @@ gutter?: number | string
 
 Grid layout column spacing.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
+**Substitutes:** grid_col/GridColOptions and grid_row/GridRowOptions
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,13 +61,13 @@ margin?: number | string
 
 Spacing on both sides of the grid layout.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
+**Substitutes:** grid_col/GridColOptions and grid_row/GridRowOptions
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,6 +85,6 @@ Select the device width type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
+**Substitutes:** grid_col/GridColOptions and grid_row/GridRowOptions
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

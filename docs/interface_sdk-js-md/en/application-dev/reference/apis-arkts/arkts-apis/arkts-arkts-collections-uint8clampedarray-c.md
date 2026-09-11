@@ -2,7 +2,7 @@
 
 A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > **Decorator**: \@Sendable
@@ -63,13 +63,13 @@ Returns the element at the given index. If no element is found, **undefined** is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | The zero-based index of the desired code unit.A negative index will count back from the last item. |
+| index | number | Yes | The zero-based index of the desired code unit.<br> A negative index will count back from the last item. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number \| undefined | Element obtained. If no element is found, **undefined** is returned. |
+| number &#124; undefined | Element obtained. If no element is found, **undefined** is returned. |
 
 **Error codes:**
 
@@ -168,7 +168,7 @@ A constructor that creates an ArkTS Uint8ClampedArray from an array-like object 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; \| ArrayBuffer | Yes | Object used to construct the ArkTS Uint8ClampedArray. When the parameter type is ArrayBuffer, the number of bytes occupied by the buffer must be an integer multiple of 1. |
+| array | ArrayLike&lt;number&gt; &#124; ArrayBuffer | Yes | Object used to construct the ArkTS Uint8ClampedArray. When the parameter type is ArrayBuffer, the number of bytes occupied by the buffer must be an integer multiple of 1. |
 
 **Error codes:**
 
@@ -397,7 +397,7 @@ Returns the value of the first element that passes a test provided by a callback
 
 | Type | Description |
 | --- | --- |
-| number \| undefined | Value of the first element that passes the test. If none of the elements pass the test, **undefined** is returned. |
+| number &#124; undefined | Value of the first element that passes the test. If none of the elements pass the test, **undefined** is returned. |
 
 **Error codes:**
 
@@ -767,7 +767,7 @@ Creates an ArkTS Uint8ClampedArray with a variable number of parameters.
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | New ArkTS Uint8ClampedArray instance. Possible causes: 1. Mandatory parameters are left unspecified; |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | New ArkTS Uint8ClampedArray instance. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## reduce
 
@@ -855,7 +855,7 @@ Reversely traverses this ArkTS Uint8ClampedArray, applies a reduce function for 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | Yes | A function that is called for each element in the Uint8ClampedArray. |
-| initialValue | U | Yes | A value to use as the first argument to the first call of the callback. If no initial value is provided, the last element of the Uint8ClampedArray will be used, and the callback will start with the second-to-last element. |
+| initialValue | U | Yes | A value to use as the first argument to the first call of the callback.<br>If no initial value is provided, the last element of the Uint8ClampedArray will be used, <br>and the callback will start with the second-to-last element. |
 
 **Return value:**
 

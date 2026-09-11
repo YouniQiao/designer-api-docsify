@@ -29,7 +29,7 @@ function postDialProceed(callId: number, proceed: boolean, callback: AsyncCallba
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callId | number | 是 | 呼叫Id。 |
-| proceed | boolean | 是 | 用户选择是否发送DTMF(Dual Tone Multi Frequency，双音多频)音，默认为false。   -true：是   -false：否 |
+| proceed | boolean | 是 | 用户选择是否发送DTMF(Dual Tone Multi Frequency，双音多频)音，默认为false。<br>-true：是<br>-false：否 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调函数的方式返回继续进行通话的结果。 |
 
 **错误码：**
@@ -78,7 +78,7 @@ function postDialProceed(callId: number, proceed: boolean): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callId | number | 是 | 呼叫Id。 |
-| proceed | boolean | 是 | 用户选择是否发送DTMF音，默认为false。   -true：是   -false：否 |
+| proceed | boolean | 是 | 用户选择是否发送DTMF音，默认为false。<br>-true：是<br>-false：否 |
 
 **返回值：**
 

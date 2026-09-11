@@ -126,14 +126,14 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [isHotspotDualBandSupported](arkts-connectivity-wifimanager-ishotspotdualbandsupported-f-sys.md) | 检查当前设备的Wi-Fi热点功能是否支持双频段（同时支持2.4GHz和5GHz频段）。 |
 | [isOpenSoftApAllowed](arkts-connectivity-wifimanager-isopensoftapallowed-f-sys.md) | 检查在某些情况下是否能够操作Wi-Fi热点。当飞行模式开启时，如果系统不支持SoftAP和STA共存，也不支持信号桥接，则无法操作热点开关。 |
 | [isRandomMacDisabled](arkts-connectivity-wifimanager-israndommacdisabled-f-sys.md) | 随机MAC地址是否被禁用。 |
-| off | 取消注册Wi-Fi流变更事件。使用callback异步回调。 |
-| off | 取消注册Wi-Fi设备配置更改事件。使用callback异步回调。 |
-| off | 取消注册Wi-Fi热点的STA加入事件。使用callback异步回调。 |
-| off | 取消注册Wi-Fi热点STA离开事件。使用callback异步回调。 |
-| on | 注册Wi-Fi流变更事件，在业务退出时，要调用off(type: 'streamChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
-| on | 注册Wi-Fi设备配置更改事件，在业务退出时，要调用off(type: 'deviceConfigChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
-| on | 注册Wi-Fi热点STA加入事件，在业务退出时，要调用off(type: 'hotspotStaJoin', callback?: Callback&lt;StationInfo&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
-| on | 注册Wi-Fi热点STA离开事件，在业务退出时，要调用off(type: 'hotspotStaLeave', callback?: Callback&lt;StationInfo&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
+| [off](arkts-connectivity-wifimanager-off-f-sys.md#offstreamchange) | 取消注册Wi-Fi流变更事件。使用callback异步回调。 |
+| [off](arkts-connectivity-wifimanager-off-f-sys.md#offdeviceconfigchange) | 取消注册Wi-Fi设备配置更改事件。使用callback异步回调。 |
+| [off](arkts-connectivity-wifimanager-off-f-sys.md#offhotspotstajoin) | 取消注册Wi-Fi热点的STA加入事件。使用callback异步回调。 |
+| [off](arkts-connectivity-wifimanager-off-f-sys.md#offhotspotstaleave) | 取消注册Wi-Fi热点STA离开事件。使用callback异步回调。 |
+| [on](arkts-connectivity-wifimanager-on-f-sys.md#onstreamchange) | 注册Wi-Fi流变更事件，在业务退出时，要调用off(type: 'streamChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
+| [on](arkts-connectivity-wifimanager-on-f-sys.md#ondeviceconfigchange) | 注册Wi-Fi设备配置更改事件，在业务退出时，要调用off(type: 'deviceConfigChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
+| [on](arkts-connectivity-wifimanager-on-f-sys.md#onhotspotstajoin) | 注册Wi-Fi热点STA加入事件，在业务退出时，要调用off(type: 'hotspotStaJoin', callback?: Callback&lt;StationInfo&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
+| [on](arkts-connectivity-wifimanager-on-f-sys.md#onhotspotstaleave) | 注册Wi-Fi热点STA离开事件，在业务退出时，要调用off(type: 'hotspotStaLeave', callback?: Callback&lt;StationInfo&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
 | [reassociate](arkts-connectivity-wifimanager-reassociate-f-sys.md) | 重新关联网络。 |
 | [reconnect](arkts-connectivity-wifimanager-reconnect-f-sys.md) | 重新连接网络。 |
 | [removeAllNetwork](arkts-connectivity-wifimanager-removeallnetwork-f-sys.md) | 移除所有网络配置。 |

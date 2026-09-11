@@ -477,7 +477,7 @@ off(type: 'listening' | 'close', callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'listening' \| 'close' | 是 | 取消订阅事件类型。   - 'listening'：数据包消息事件。   - 'close'：关闭事件。 |
+| type | 'listening' &#124; 'close' | 是 | 取消订阅事件类型。<br>- 'listening'：数据包消息事件。<br>- 'close'：关闭事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **示例**
@@ -519,7 +519,7 @@ off(type: 'listening' | 'close', callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'listening' \| 'close' | 是 | 取消订阅事件类型。   - 'listening'：数据包消息事件。   - 'close'：关闭事件。 |
+| type | 'listening' &#124; 'close' | 是 | 取消订阅事件类型。<br>- 'listening'：数据包消息事件。<br>- 'close'：关闭事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **示例**
@@ -617,7 +617,7 @@ on(type: 'listening' | 'close', callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'listening' \| 'close' | 是 | 订阅的事件类型。   - 'listening'：数据包消息事件。   - 'close'：关闭事件。 |
+| type | 'listening' &#124; 'close' | 是 | 订阅的事件类型。<br>- 'listening'：数据包消息事件。<br>- 'close'：关闭事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。UDPSocket连接的某类数据包消息事件或关闭事件发生变化后触发回调函数。 |
 
 **示例**
@@ -651,7 +651,7 @@ on(type: 'listening' | 'close', callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'listening' \| 'close' | 是 | 订阅的事件类型。   - 'listening'：数据包消息事件。   - 'close'：关闭事件。 |
+| type | 'listening' &#124; 'close' | 是 | 订阅的事件类型。<br>- 'listening'：数据包消息事件。<br>- 'close'：关闭事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。UDPSocket连接的某类数据包消息事件或关闭事件发生变化后触发回调函数。 |
 
 **示例**
@@ -949,7 +949,7 @@ setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md) | 是 | UDPSocket连接的其他属性，参考[UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **错误码：**
 

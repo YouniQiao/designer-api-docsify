@@ -80,7 +80,7 @@ contentSize(): SizeResult
 
 | 类型 | 说明 |
 | --- | --- |
-| [SizeResult](arkts-arkui-sizeresult-i.md) | 滚动组件内容总大小。主轴方向内容大小为所有子组件布局后的总大小，交叉轴方向内容大小为组件自身交叉轴方向大小减去padding和border后的大小。 |
+| [SizeResult](arkts-arkui-sizeresult-i.md) | 滚动组件内容总大小。主轴方向内容大小为所有子组件布局后的总大小，交叉轴方向内容大小为组件自身交叉轴方向大小减去padding和border后的大小。<br>单位：vp |
 
 **错误码：**
 
@@ -113,7 +113,7 @@ currentOffset() : OffsetResult
 
 | 类型 | 说明 |
 | --- | --- |
-| [OffsetResult](arkts-arkui-offsetresult-i.md) | 返回当前的滚动总偏移量。xOffset表示水平滚动总偏移量，yOffset表示竖直滚动总偏移量。 |
+| [OffsetResult](arkts-arkui-offsetresult-i.md) | 返回当前的滚动总偏移量。xOffset表示水平滚动总偏移量，yOffset表示竖直滚动总偏移量。<br><br>**适用版本：** 11 |
 
 ## fling
 
@@ -135,13 +135,13 @@ fling(velocity: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| velocity | number | 是 | 惯性滚动的初始速度值。单位：vp/s   **说明：**velocity值设置为0时，本次滚动不生效且不会产生滚动动画。如果值为正数，则向顶部滚动；如果值为负数，则向底部滚动。 |
+| velocity | number | 是 | 惯性滚动的初始速度值。单位：vp/s<br>**说明：**<br>velocity值设置为0时，本次滚动不生效且不会产生滚动动画。如果值为正数，则向顶部滚动；如果值为负数，则向底部滚动。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
 
 ## getFrameNode
@@ -164,7 +164,7 @@ getFrameNode(): FrameNode | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| FrameNode \| undefined | 当Scroller已绑定到Scroll、List、Grid、WaterFlow等滚动类组件时，返回对应组件的FrameNode；如果Scroller未绑定组件，则返回undefined。 |
+| FrameNode &#124; undefined | 当Scroller已绑定到Scroll、List、Grid、WaterFlow等滚动类组件时，返回对应组件的FrameNode；如果Scroller未绑定组件，则返回undefined。 |
 
 ## getItemIndex
 
@@ -203,7 +203,7 @@ getItemIndex(x: number, y: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
 
 ## getItemRect
@@ -236,13 +236,13 @@ getItemRect(index: number): RectResult
 
 | 类型 | 说明 |
 | --- | --- |
-| [RectResult](arkts-arkui-rectresult-i.md) | 子组件的大小和相对于组件的位置。 |
+| [RectResult](arkts-arkui-rectresult-i.md) | 子组件的大小和相对于组件的位置。<br>单位：vp。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
 
 ## isAtEnd
@@ -291,7 +291,7 @@ offset() : OffsetResult | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [OffsetResult](arkts-arkui-offsetresult-i.md) \| undefined | 返回当前的滚动总偏移量。xOffset表示水平滚动总偏移量，yOffset表示竖直滚动总偏移量。当Scroller没有和组件绑定时，该接口会返回undefined。 |
+| [OffsetResult](arkts-arkui-offsetresult-i.md) &#124; undefined | 返回当前的滚动总偏移量。xOffset表示水平滚动总偏移量，yOffset表示竖直滚动总偏移量。当Scroller没有和组件绑定时，该接口会返回undefined。 |
 
 ## scrollBy
 
@@ -324,8 +324,8 @@ scrollBy(dx: Length, dy: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dx | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 水平方向滚动距离，不支持百分比形式。 取值范围：(-∞, +∞) |
-| dy | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 竖直方向滚动距离，不支持百分比形式。 取值范围：(-∞, +∞) |
+| dx | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 水平方向滚动距离，不支持百分比形式。<br>取值范围：(-∞, +∞) |
+| dy | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 竖直方向滚动距离，不支持百分比形式。<br>取值范围：(-∞, +∞) |
 
 ## scrollEdge
 
@@ -348,7 +348,7 @@ Scroll组件默认有动画，Grid、List、WaterFlow组件默认无动画。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [Edge](../arkts-apis/arkts-arkui-edge-e.md) | 是 | 滚动到的边缘位置。 |
-| options | [ScrollEdgeOptions](arkts-arkui-scrolledgeoptions-i.md) | 否 | 设置滚动到边缘位置的模式。&lt;em&gt;原子化服务API&lt;/em&gt;：该API可在原子化服务中使用，从API version 12开始。<br>**适用版本：** 12 |
+| options | [ScrollEdgeOptions](arkts-arkui-scrolledgeoptions-i.md) | 否 | 设置滚动到边缘位置的模式。<br>&lt;em&gt;原子化服务API&lt;/em&gt;：该API可在原子化服务中使用，从API version 12开始。<br>**适用版本：** 12 |
 
 ## scrollPage
 
@@ -390,7 +390,7 @@ scrollPage(value: { next: boolean; direction?: Axis })
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | { next: boolean; direction?: Axis } | 是 | next：是否向下翻页。true表示向下翻页，false表示向上翻页。direction：设置滚动方向为水平或竖直方向。 |
+| value | { next: boolean; direction?: Axis } | 是 | next：是否向下翻页。true表示向下翻页，false表示向上翻页。<br> direction：设置滚动方向为水平或竖直方向。 |
 
 ## scrollTo
 
@@ -466,7 +466,7 @@ scrollToIndex(value: number, smooth?: boolean, align?: ScrollAlign, options?: Sc
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 要滑动到的目标元素在当前容器中的索引值。    **说明：** value值设置成负值或者大于当前容器子组件的最大索引值，视为异常值，本次跳转不生效。 |
-| smooth | boolean | 否 | 设置滑动到列表项在列表中的索引值时是否有动画，true表示有动画，false表示没有动画。不传入时默认无动画。默认值：false。<br>**适用版本：** 12 |
-| align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | 否 | 指定滑动到的元素与当前容器的对齐方式，可根据期望item首部、尾部或居中显示选择对应对齐方式。默认值：List为ScrollAlign.START，Grid为ScrollAlign.AUTO，WaterFlow为ScrollAlign.START。   **说明：** 仅List、Grid、WaterFlow组件支持该参数。<br>**适用版本：** 12 |
-| options | [ScrollToIndexOptions](arkts-arkui-scrolltoindexoptions-i.md) | 否 | 设置滑动到指定Index的选项，包含extraOffset字段，用于指定滚动后的额外偏移量。不传入时无额外偏移量。&lt;br/ &gt;<br>**适用版本：** 12 |
+| value | number | 是 | 要滑动到的目标元素在当前容器中的索引值。<br>**说明：** <br>value值设置成负值或者大于当前容器子组件的最大索引值，视为异常值，本次跳转不生效。 |
+| smooth | boolean | 否 | 设置滑动到列表项在列表中的索引值时是否有动画，true表示有动画，false表示没有动画。不传入时默认无动画。<br>默认值：false。<br>**适用版本：** 12 |
+| align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | 否 | 指定滑动到的元素与当前容器的对齐方式，可根据期望item首部、尾部或居中显示选择对应对齐方式。<br>默认值：List为ScrollAlign.START，Grid为ScrollAlign.AUTO，WaterFlow为ScrollAlign.START。<br>**说明：** <br>仅List、Grid、WaterFlow组件支持该参数。<br>**适用版本：** 12 |
+| options | [ScrollToIndexOptions](arkts-arkui-scrolltoindexoptions-i.md) | 否 | 设置滑动到指定Index的选项，包含extraOffset字段，用于指定滚动后的额外偏移量。<br>不传入时无额外偏移量。&lt;br/ &gt;<br>**适用版本：** 12 |

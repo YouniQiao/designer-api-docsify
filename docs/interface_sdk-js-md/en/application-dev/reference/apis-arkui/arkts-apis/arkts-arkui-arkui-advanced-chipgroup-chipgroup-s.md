@@ -1,7 +1,7 @@
 # ChipGroup
 
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 1. When **multiple** is set to **false**, if **selectedIndexes** is not passed in, the first chip is automatically
 > selected by default. However, if the provided **selectedIndexes** includes multiple elements, the chip at the first

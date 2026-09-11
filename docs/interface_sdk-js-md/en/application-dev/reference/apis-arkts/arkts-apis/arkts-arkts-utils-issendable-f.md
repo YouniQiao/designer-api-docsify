@@ -26,7 +26,7 @@ Checks whether an ArkTS value is sendable.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object \| null \| undefined | Yes | The value to check. |
+| value | Object &#124; null &#124; undefined | Yes | The value to check. |
 
 **Return value:**
 

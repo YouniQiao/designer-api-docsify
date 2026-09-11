@@ -47,7 +47,7 @@ Sets buffer data from BufferSource
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer target |
-| data | BufferSource \| null | Yes | Buffer data |
+| data | BufferSource &#124; null | Yes | Buffer data |
 | usage | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer usage |
 
 ## bufferSubData
@@ -174,7 +174,7 @@ Reads pixels from the framebuffer
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 | format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
 | type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
-| pixels | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes | Pixel buffer |
+| pixels | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) &#124; null | Yes | Pixel buffer |
 
 ## texImage2D
 
@@ -212,7 +212,7 @@ Sets texture image 2D from pixels
 | border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
 | format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
 | type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
-| pixels | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes | Pixel data |
+| pixels | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) &#124; null | Yes | Pixel data |
 
 ## texImage2D
 
@@ -282,7 +282,7 @@ Sets texture sub image 2D from pixels
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 | format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
 | type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
-| pixels | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes | Pixel data |
+| pixels | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) &#124; null | Yes | Pixel data |
 
 ## texSubImage2D
 
@@ -336,7 +336,7 @@ Sets uniform1fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Value array |
 
 ## uniform1iv
@@ -357,7 +357,7 @@ Sets uniform1iv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Value array |
 
 ## uniform2fv
@@ -378,7 +378,7 @@ Sets uniform2fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Value array |
 
 ## uniform2iv
@@ -399,7 +399,7 @@ Sets uniform2iv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Value array |
 
 ## uniform3fv
@@ -420,7 +420,7 @@ Sets uniform3fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Value array |
 
 ## uniform3iv
@@ -441,7 +441,7 @@ Sets uniform3iv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Value array |
 
 ## uniform4fv
@@ -462,7 +462,7 @@ Sets uniform4fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Value array |
 
 ## uniform4iv
@@ -483,7 +483,7 @@ Sets uniform4iv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Value array |
 
 ## uniformMatrix2fv
@@ -504,7 +504,7 @@ Sets uniformMatrix2fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | transpose | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to transpose |
 | value | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Matrix value |
 
@@ -526,7 +526,7 @@ Sets uniformMatrix3fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | transpose | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to transpose |
 | value | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Matrix value |
 
@@ -548,6 +548,6 @@ Sets uniformMatrix4fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | transpose | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to transpose |
 | value | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Matrix value |

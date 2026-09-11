@@ -22,7 +22,7 @@ Obtains the default slot ID of the SIM card used to send SMS messages. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result.    - **0**: card slot 1.    - **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result.<br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Examples**
 
@@ -52,7 +52,7 @@ Obtains the default slot ID of the SIM card used to send SMS messages. This API 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. |
+| Promise&lt;number&gt; | Promise used to return the result.<br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Examples**
 

@@ -36,7 +36,7 @@ compare(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | Buffer \| Uint8Array | 是 | 要比较的实例对象。 |
+| target | Buffer &#124; Uint8Array | 是 | 要比较的实例对象。 |
 | targetStart | number | 否 | target实例中开始的偏移量。默认值：0。 |
 | targetEnd | number | 否 | target实例中结束的偏移量（不包含结束位置）。默认值：目标对象的字节长度。 |
 | sourceStart | number | 否 | this实例中开始的偏移量。默认值：0。 |
@@ -46,7 +46,7 @@ compare(
 
 | 类型 | 说明 |
 | --- | --- |
-| -1 \| 0 \| 1 | 比较结果。如果两个Buffer对象相同，则返回0；如果当前对象在排序时位于目标对象之后，则返回1；如果当前对象在排序时位于目标对象之前，则返回-1。 |
+| -1 &#124; 0 &#124; 1 | 比较结果。如果两个Buffer对象相同，则返回0；如果当前对象在排序时位于目标对象之后，则返回1；如果当前对象在排序时位于目标对象之前，则返回-1。 |
 
 **错误码：**
 
@@ -88,7 +88,7 @@ copy(target: Buffer | Uint8Array, targetStart?: number, sourceStart?: number, so
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | Buffer \| Uint8Array | 是 | 要复制到的Buffer或Uint8Array实例。 |
+| target | Buffer &#124; Uint8Array | 是 | 要复制到的Buffer或Uint8Array实例。 |
 | targetStart | number | 否 | `target`实例中开始写入的偏移量。取值范围：&gt;= 0且&lt;= target的字节长度。默认值：0。 |
 | sourceStart | number | 否 | `this`实例中开始复制的偏移量。默认值: 0。 |
 | sourceEnd | number | 否 | `this`实例中结束复制的偏移量（不包含结束位置）。默认值：当前对象的字节长度。 |
@@ -183,7 +183,7 @@ equals(otherBuffer: Uint8Array | Buffer): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| otherBuffer | Uint8Array \| Buffer | 是 | 比较的目标对象。 |
+| otherBuffer | Uint8Array &#124; Buffer | 是 | 比较的目标对象。 |
 
 **返回值：**
 
@@ -229,7 +229,7 @@ fill(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| Buffer \| Uint8Array \| number \| number \| number | 是 | 用于填充的值。<br>**适用版本：** 11 |
+| value | string &#124; Buffer &#124; Uint8Array &#124; number &#124; number &#124; number | 是 | 用于填充的值。<br>**适用版本：** 11 |
 | offset | number | 否 | 起始偏移量。取值范围：&gt;= 0且&lt;= Buffer.length。默认值：0。 |
 | end | number | 否 | 结束偏移量（不包含结束位置）。默认值：当前对象的字节长度。 |
 | encoding | BufferEncoding | 否 | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
@@ -274,7 +274,7 @@ includes(value: string | number | number | number | Buffer | Uint8Array, byteOff
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| number \| number \| number \| Buffer \| Uint8Array | 是 | 要搜索的内容。<br>**适用版本：** 11 |
+| value | string &#124; number &#124; number &#124; number &#124; Buffer &#124; Uint8Array | 是 | 要搜索的内容。<br>**适用版本：** 11 |
 | byteOffset | number | 否 | 字节偏移量。如果为负数，则从末尾开始计算偏移量。默认值：0。 |
 | encoding | BufferEncoding | 否 | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
 
@@ -314,7 +314,7 @@ indexOf(value: string | number | number | number | Buffer | Uint8Array, byteOffs
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| number \| number \| number \| Buffer \| Uint8Array | 是 | 要查找的内容。<br>**适用版本：** 11 |
+| value | string &#124; number &#124; number &#124; number &#124; Buffer &#124; Uint8Array | 是 | 要查找的内容。<br>**适用版本：** 11 |
 | byteOffset | number | 否 | 字节偏移量。如果为负数，则从末尾开始计算偏移量。默认值：0。 |
 | encoding | BufferEncoding | 否 | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
 
@@ -394,7 +394,7 @@ lastIndexOf(value: string | number | number | number | Buffer | Uint8Array, byte
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| number \| number \| number \| Buffer \| Uint8Array | 是 | 要搜索的内容。<br>**适用版本：** 11 |
+| value | string &#124; number &#124; number &#124; number &#124; Buffer &#124; Uint8Array | 是 | 要搜索的内容。<br>**适用版本：** 11 |
 | byteOffset | number | 否 | 字节偏移量。如果为负数，则从末尾开始计算偏移量。默认值：Buffer.length。 |
 | encoding | BufferEncoding | 否 | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
 
@@ -2778,15 +2778,19 @@ ArrayBuffer对象。
 
 **系统能力：** SystemCapability.Utils.Lang
 
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200013](../errorcode-utils.md#10200013-只读属性设置错误) | Buffer cannot be set for the buffer that has only a getter. |
+
 ## byteOffset
 
 ```TypeScript
 byteOffset: number
 ```
 
-当前Buffer所在内存池的偏移量。  
-- 当Buffer通过内存池创建时（如使用[allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md)创建Buffer，或使用buffer.from()传入字符串，且字符串长度加当前内存池偏移量小于4kb），返回相对于内存池的偏移量。  
-- 当Buffer直接分配内存时（如使用[alloc](arkts-arkts-buffer-alloc-f.md)），返回值为0。
+当前Buffer所在内存池的偏移量。<br>- 当Buffer通过内存池创建时（如使用[allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md)创建Buffer，或使用buffer.from()传入字符串，且字符串长度加当前内存池偏移量小于4kb），返回相对于内存池的偏移量。<br>- 当Buffer直接分配内存时（如使用[alloc](arkts-arkts-buffer-alloc-f.md)），返回值为0。
 
 **类型：** number
 
@@ -2795,6 +2799,12 @@ byteOffset: number
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200013](../errorcode-utils.md#10200013-只读属性设置错误) | ByteOffset cannot be set for the buffer that has only a getter. |
 
 ## length
 
@@ -2811,3 +2821,9 @@ Buffer对象的字节长度。
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [10200013](../errorcode-utils.md#10200013-只读属性设置错误) | Length cannot be set for the buffer that has only a getter. |

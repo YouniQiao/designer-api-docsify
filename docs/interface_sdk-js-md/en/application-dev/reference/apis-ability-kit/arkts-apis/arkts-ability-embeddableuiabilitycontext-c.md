@@ -4,7 +4,7 @@ EmbeddableUIAbilityContext provides the context environment for the [EmbeddableU
 
 When an EmbeddableUIAbility component is instantiated, the system automatically creates the corresponding EmbeddableUIAbilityContext.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
 

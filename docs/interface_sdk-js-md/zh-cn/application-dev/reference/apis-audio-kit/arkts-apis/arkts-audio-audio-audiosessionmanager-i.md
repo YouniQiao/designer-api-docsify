@@ -6,6 +6,8 @@
 
 > - 本Interface首批接口从API version 12开始支持。
 
+@typedef AudioSessionManager [since 12 - 24]
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -603,7 +605,7 @@ setAudioSessionBehavior(behavior: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| behavior | number | 是 | 用于设置音频会话行为。该参数可以是单个标志，也可以是多个标志的按位OR组合。当前支持的音频会话行为详见[AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md)中定义的标志。 |
+| behavior | number | 是 | 用于设置音频会话行为。<br>该参数可以是单个标志，也可以是多个标志的按位OR组合。<br>当前支持的音频会话行为详见[AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md)中定义的标志。 |
 
 **错误码：**
 
@@ -745,7 +747,7 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceType | [DeviceType](arkts-audio-audio-devicetype-e.md) | 是 | 设备类型。仅支持以下设备：EARPIECE（听筒）、SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
+| deviceType | [DeviceType](arkts-audio-audio-devicetype-e.md) | 是 | 设备类型。<br>仅支持以下设备：EARPIECE（听筒）、SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
 
 **返回值：**
 
@@ -789,7 +791,7 @@ setMediaOutputDevice(deviceType: DeviceType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceType | [DeviceType](arkts-audio-audio-devicetype-e.md) | 是 | 可用的设备类型有SPEAKER：内置扬声器DEFAULT：恢复到系统默认输出设备。   - - - - 设备类型。   仅支持以下设备：SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
+| deviceType | [DeviceType](arkts-audio-audio-devicetype-e.md) | 是 | 可用的设备类型有SPEAKER：内置扬声器DEFAULT：恢复到系统默认输出设备。   - - - - 设备类型。<br>仅支持以下设备：SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
 
 **返回值：**
 

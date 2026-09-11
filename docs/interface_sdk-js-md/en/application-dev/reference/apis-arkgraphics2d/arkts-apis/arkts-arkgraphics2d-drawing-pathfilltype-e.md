@@ -2,7 +2,7 @@
 
 Enumerates the fill types of a path.
 
-> **NOTE：**
+> **NOTE:**
 
 > 
 

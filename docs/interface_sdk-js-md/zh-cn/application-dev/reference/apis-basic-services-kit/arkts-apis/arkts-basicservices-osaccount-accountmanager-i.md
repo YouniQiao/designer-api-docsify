@@ -34,7 +34,7 @@ checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 **示例**
@@ -131,7 +131,7 @@ checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -197,7 +197,7 @@ checkOsAccountActivated(localId: number): Promise<boolean>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -257,7 +257,7 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: A
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or constraint. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -325,7 +325,7 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<bo
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or constraint. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -375,7 +375,7 @@ checkOsAccountTestable(callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 **示例**
@@ -576,7 +576,7 @@ checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -640,7 +640,7 @@ checkOsAccountVerified(localId: number): Promise<boolean>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -687,7 +687,7 @@ getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<number>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 **示例**
@@ -772,7 +772,7 @@ getCreatedOsAccountsCount(callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountCount](#getosaccountcount)(callback: AsyncCallback&lt;int&gt;)
+**替代接口：** [getOsAccountCount](#getosaccountcount)(callback: AsyncCallback&lt;number&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1205,7 +1205,7 @@ getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>)
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -1271,7 +1271,7 @@ getOsAccountConstraints(localId: number): Promise<Array<string>>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -1323,7 +1323,7 @@ getOsAccountCount(callback: AsyncCallback<number>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 **示例**
@@ -1422,7 +1422,7 @@ getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | OS account not found. |
 
@@ -1468,7 +1468,7 @@ getOsAccountLocalId(callback: AsyncCallback<number>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 **示例**
@@ -1551,7 +1551,7 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)(serialNumber: long, callback: AsyncCallback&lt;int&gt;)
+**替代接口：** [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)(serialNumber: number, callback: AsyncCallback&lt;number&gt;)
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1598,7 +1598,7 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber-1)(serialNumber: long)
+**替代接口：** [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)(serialNumber: number)
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1656,7 +1656,7 @@ getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallb
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid domainInfo. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Domain account not found. |
@@ -1713,7 +1713,7 @@ getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<number>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid domainInfo. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Domain account not found. |
@@ -1760,7 +1760,7 @@ getOsAccountLocalIdForSerialNumber(serialNumber: number, callback: AsyncCallback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid serialNumber. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | The account indicated by serialNumber does not exist. |
@@ -1817,7 +1817,7 @@ getOsAccountLocalIdForSerialNumber(serialNumber: number): Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid serialNumber. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | The account indicated by serialNumber does not exist. |
@@ -1867,7 +1867,7 @@ getOsAccountLocalIdForUid(uid: number, callback: AsyncCallback<number>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid uid. |
 
@@ -1923,7 +1923,7 @@ getOsAccountLocalIdForUid(uid: number): Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid uid. |
 
@@ -1977,7 +1977,7 @@ getOsAccountLocalIdForUidSync(uid: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid uid. |
 
 **示例**
@@ -2017,7 +2017,7 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCall
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain)(domainInfo: DomainAccountInfo, callback: AsyncCallback&lt;int&gt;)
+**替代接口：** [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain)(domainInfo: DomainAccountInfo, callback: AsyncCallback&lt;number&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2113,7 +2113,7 @@ getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalId](#getosaccountlocalid)(callback: AsyncCallback&lt;int&gt;)
+**替代接口：** [getOsAccountLocalId](#getosaccountlocalid)(callback: AsyncCallback&lt;number&gt;)
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2196,7 +2196,7 @@ getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)(uid: int, callback: AsyncCallback&lt;int&gt;)
+**替代接口：** [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)(uid: number, callback: AsyncCallback&lt;number&gt;)
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2242,7 +2242,7 @@ getOsAccountLocalIdFromUid(uid: number): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalIdForUid](#getosaccountlocalidforuid-1)(uid: int)
+**替代接口：** [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)(uid: number)
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2440,7 +2440,7 @@ getOsAccountType(callback: AsyncCallback<OsAccountType>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 **示例**
@@ -2605,7 +2605,7 @@ getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<numbe
 
 **废弃版本：** 9
 
-**替代接口：** [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)(localId: int, callback: AsyncCallback&lt;long&gt;)
+**替代接口：** [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)(localId: number, callback: AsyncCallback&lt;number&gt;)
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2653,7 +2653,7 @@ getSerialNumberByOsAccountLocalId(localId: number): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid-1)(localId: int)
+**替代接口：** [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)(localId: number)
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2709,7 +2709,7 @@ getSerialNumberForOsAccountLocalId(localId: number, callback: AsyncCallback<numb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -2766,7 +2766,7 @@ getSerialNumberForOsAccountLocalId(localId: number): Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -3098,7 +3098,7 @@ isOsAccountConstraintEnabled(constraint: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 **示例**
@@ -3399,7 +3399,7 @@ queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids)(callback: AsyncCallback&lt;Array&lt;int&gt;&gt;)
+**替代接口：** [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids)(callback: AsyncCallback&lt;Array&lt;number&gt;&gt;)
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3572,7 +3572,7 @@ queryDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 **示例**

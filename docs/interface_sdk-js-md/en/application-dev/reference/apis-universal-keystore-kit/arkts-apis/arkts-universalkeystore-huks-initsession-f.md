@@ -16,7 +16,7 @@ Initializes a session for a key operation. This API uses an asynchronous callbac
 
 The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Initializing a session for SE security level keys defined in
 > [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) requires the ohos.permission.ACCESS_SE_KEY permission.
@@ -70,7 +70,7 @@ Initializes a session for a key operation. This API uses a promise to return the
 
 The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Initializing a session for SE security level keys defined in
 > [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) requires the ohos.permission.ACCESS_SE_KEY permission.

@@ -33,7 +33,7 @@ Decomposes an HDR Pixelmap object to a Picture object which contains an SDR Pixe
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined&gt; | Promise used to return the Picture object. |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md) &#124; undefined&gt; | Promise used to return the Picture object. |
 
 **Error codes:**
 

@@ -5,9 +5,11 @@
  面板的位置和尺寸，通过[PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)指定面板类型。划词面板的创建与显示接口请参见
  [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)、
  [show](arkts-basicservices-selectionmanager-panel-i.md#show)。
- > **说明：**
+
+> **说明：**
  >
  > - 本模块仅支持PC/2in1设备。开发者可通过canIUse('SystemCapability.SelectionInput.Selection')判断当前设备是否支持该功能。
+
 
 
 ## 导入模块

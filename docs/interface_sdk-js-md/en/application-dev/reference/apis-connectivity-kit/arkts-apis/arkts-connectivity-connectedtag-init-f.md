@@ -14,7 +14,7 @@ function init(): boolean
 
 Initializes the active tag chip.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. Use
 > [initialize](arkts-connectivity-connectedtag-initialize-f.md) instead.
@@ -33,4 +33,4 @@ Initializes the active tag chip.
 
 | Type | Description |
 | --- | --- |
-| boolean | true**: The initialization is successful. |
+| boolean | true**: The initialization is successful.<br>**false**: The initialization fails. |

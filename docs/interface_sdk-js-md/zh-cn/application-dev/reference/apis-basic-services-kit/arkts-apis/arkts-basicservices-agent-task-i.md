@@ -38,14 +38,14 @@ off(event: 'progress', callback?: (progress: Progress) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | 'progress' | 是 | 取消订阅的事件类型。   - 取值为'progress'，表示任务进度。 |
+| event | 'progress' | 是 | 取消订阅的事件类型。<br>- 取值为'progress'，表示任务进度。 |
 | callback | (progress: Progress) =&gt; void | 否 | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有进度回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [21900005](../errorcode-request.md#21900005-任务模式错误) | task mode error.<br>**适用版本：** 10 |
 
 ## off
@@ -70,14 +70,14 @@ off(event: 'completed', callback?: (progress: Progress) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | 'completed' | 是 | 取消订阅的事件类型。   - 取值为'completed'，表示任务完成。 |
+| event | 'completed' | 是 | 取消订阅的事件类型。<br>- 取值为'completed'，表示任务完成。 |
 | callback | (progress: Progress) =&gt; void | 否 | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有完成回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [21900005](../errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10 |
 
 ## off
@@ -102,14 +102,14 @@ off(event: 'failed', callback?: (progress: Progress) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | 'failed' | 是 | 取消订阅的事件类型。   - 取值为'failed'，表示任务失败。 |
+| event | 'failed' | 是 | 取消订阅的事件类型。<br>- 取值为'failed'，表示任务失败。 |
 | callback | (progress: Progress) =&gt; void | 否 | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有失败回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [21900005](../errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10 |
 
 ## off
@@ -132,14 +132,14 @@ off(event: 'pause', callback?: (progress: Progress) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | 'pause' | 是 | 取消订阅的事件类型。   - 取值为'pause'，表示任务暂停。 |
+| event | 'pause' | 是 | 取消订阅的事件类型。<br>- 取值为'pause'，表示任务暂停。 |
 | callback | (progress: Progress) =&gt; void | 否 | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有暂停回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## off
 
@@ -161,14 +161,14 @@ off(event: 'resume', callback?: (progress: Progress) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | 'resume' | 是 | 取消订阅的事件类型。   - 取值为'resume'，表示任务恢复。 |
+| event | 'resume' | 是 | 取消订阅的事件类型。<br>- 取值为'resume'，表示任务恢复。 |
 | callback | (progress: Progress) =&gt; void | 否 | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有恢复回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## off
 
@@ -190,14 +190,14 @@ off(event: 'remove', callback?: (progress: Progress) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | 'remove' | 是 | 取消订阅的事件类型。   - 取值为'remove'，表示任务被移除。 |
+| event | 'remove' | 是 | 取消订阅的事件类型。<br>- 取值为'remove'，表示任务被移除。 |
 | callback | (progress: Progress) =&gt; void | 否 | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有移除回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameter types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. <br> 3. Parameter verification failed. |
 
 ## off
 
@@ -221,14 +221,14 @@ off(event: 'response', callback?: Callback<HttpResponse>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | 'response' | 是 | 取消订阅的事件类型。   - 取值为'response'，表示任务响应。 |
+| event | 'response' | 是 | 取消订阅的事件类型。<br>- 取值为'response'，表示任务响应。 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[HttpResponse](arkts-basicservices-agent-httpresponse-i.md)&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## off
 
@@ -250,14 +250,14 @@ off(event: 'faultOccur', callback?: Callback<Faults>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | 'faultOccur' | 是 | 订阅的事件类型。   - 取值为'faultOccur'，表示任务失败。 |
+| event | 'faultOccur' | 是 | 订阅的事件类型。<br>- 取值为'faultOccur'，表示任务失败。 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则默认取消订阅当前类型的所有回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## off
 
@@ -279,14 +279,14 @@ off(event: 'wait', callback?: Callback<WaitingReason>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | 'wait' | 是 | 订阅的事件类型。   - 取值为'wait'，表示任务等待。 |
+| event | 'wait' | 是 | 订阅的事件类型。<br>- 取值为'wait'，表示任务等待。 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则默认取消订阅当前类型的所有回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## on
 
@@ -310,14 +310,14 @@ on(event: 'progress', callback: (progress: Progress) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | 'progress' | 是 | 订阅的事件类型。   - 取值为'progress'，表示任务进度，任务进度有进展时触发该事件。 |
+| event | 'progress' | 是 | 订阅的事件类型。<br>- 取值为'progress'，表示任务进度，任务进度有进展时触发该事件。 |
 | callback | (progress: Progress) =&gt; void | 是 | 回调函数，发生相关的事件时触发该回调方法。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [21900005](../errorcode-request.md#21900005-任务模式错误) | task mode error.<br>**适用版本：** 10 |
 
 ## on
@@ -342,14 +342,14 @@ on(event: 'completed', callback: (progress: Progress) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | 'completed' | 是 | 订阅的事件类型。   - 取值为'completed'，表示任务完成，任务完成时触发该事件。 |
+| event | 'completed' | 是 | 订阅的事件类型。<br>- 取值为'completed'，表示任务完成，任务完成时触发该事件。 |
 | callback | (progress: Progress) =&gt; void | 是 | 回调函数，发生相关的事件时触发该回调方法。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [21900005](../errorcode-request.md#21900005-任务模式错误) | task mode error.<br>**适用版本：** 10 |
 
 ## on
@@ -374,14 +374,14 @@ on(event: 'failed', callback: (progress: Progress) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | 'failed' | 是 | 订阅的事件类型。   - 取值为'failed'，表示任务失败，任务失败时触发该事件。 |
+| event | 'failed' | 是 | 订阅的事件类型。<br>- 取值为'failed'，表示任务失败，任务失败时触发该事件。 |
 | callback | (progress: Progress) =&gt; void | 是 | 回调函数，发生相关的事件时触发该回调方法。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [21900005](../errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode.<br>**适用版本：** 10 |
 
 ## on
@@ -404,14 +404,14 @@ on(event: 'pause', callback: (progress: Progress) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | 'pause' | 是 | 订阅的事件类型。   - 取值为'pause'，表示任务已暂停，任务暂停时触发该事件。 |
+| event | 'pause' | 是 | 订阅的事件类型。<br>- 取值为'pause'，表示任务已暂停，任务暂停时触发该事件。 |
 | callback | (progress: Progress) =&gt; void | 是 | 回调函数，发生相关的事件时触发该回调方法。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## on
 
@@ -433,14 +433,14 @@ on(event: 'resume', callback: (progress: Progress) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | 'resume' | 是 | 订阅的事件类型。   - 取值为'resume'，表示任务恢复，任务恢复时触发该事件。 |
+| event | 'resume' | 是 | 订阅的事件类型。<br>- 取值为'resume'，表示任务恢复，任务恢复时触发该事件。 |
 | callback | (progress: Progress) =&gt; void | 是 | 回调函数，发生相关的事件时触发该回调方法。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## on
 
@@ -462,14 +462,14 @@ on(event: 'remove', callback: (progress: Progress) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | 'remove' | 是 | 订阅的事件类型。   - 取值为'remove'，表示任务被移除，任务移除时触发该事件。 |
+| event | 'remove' | 是 | 订阅的事件类型。<br>- 取值为'remove'，表示任务被移除，任务移除时触发该事件。 |
 | callback | (progress: Progress) =&gt; void | 是 | 回调函数，发生相关的事件时触发该回调方法。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## on
 
@@ -493,14 +493,14 @@ on(event: 'response', callback: Callback<HttpResponse>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | 'response' | 是 | 订阅的事件类型。   - 取值为'response'，表示任务响应，请求接收到响应时触发该事件。 |
+| event | 'response' | 是 | 订阅的事件类型。<br>- 取值为'response'，表示任务响应，请求接收到响应时触发该事件。 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[HttpResponse](arkts-basicservices-agent-httpresponse-i.md)&gt; | 是 | 回调函数，发生相关的事件时触发该回调方法，返回任务响应头的数据结构。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## on
 
@@ -522,14 +522,14 @@ on(event: 'faultOccur', callback: Callback<Faults>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | 'faultOccur' | 是 | 订阅的事件类型。   - 取值为'faultOccur'，表示任务失败。 |
+| event | 'faultOccur' | 是 | 订阅的事件类型。<br>- 取值为'faultOccur'，表示任务失败。 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | 是 | 发生相关的事件时触发该回调方法，返回任务失败的原因。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## on
 
@@ -551,14 +551,14 @@ on(event: 'wait', callback: Callback<WaitingReason>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | 'wait' | 是 | 订阅的事件类型。   - 取值为'wait'，表示任务等待。 |
+| event | 'wait' | 是 | 订阅的事件类型。<br>- 取值为'wait'，表示任务等待。 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | 是 | 发生相关的事件时触发该回调方法，返回任务等待的原因。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## pause
 
@@ -698,7 +698,7 @@ setMaxSpeed(speed: number): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [13400003](../errorcode-request.md#13400003-服务异常) | Task service ability error. |
 
 ## start

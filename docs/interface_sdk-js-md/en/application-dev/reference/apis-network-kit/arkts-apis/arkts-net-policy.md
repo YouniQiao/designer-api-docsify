@@ -46,16 +46,16 @@ import { policy } from '@kit.NetworkKit';
 | [isUidNetAllowed](arkts-network-policy-isuidnetallowed-f-sys.md) | Checks whether the application specified by a given UID is allowed to access a metered network. This API uses a promise to return the result. |
 | [isUidNetAllowed](arkts-network-policy-isuidnetallowed-f-sys.md) | Obtains whether the network of the specified iface can be accessed by the corresponding UID. This API uses an asynchronous callback to return the result. |
 | [isUidNetAllowed](arkts-network-policy-isuidnetallowed-f-sys.md) | Obtains whether the UID can access the network of the specified iface. This API uses a promise to return the result. |
-| off | Unsubscribes from **policy** changes. This API uses an asynchronous callback to return the result. |
-| off | Unsubscribes from **rule** changes. This API uses an asynchronous callback to return the result. |
-| off | Unsubscribes from the changes of the metering interface. This API uses an asynchronous callback to return the result. |
-| off | Unsubscribes from the changes of the metering network policy. This API uses an asynchronous callback to return the result. |
-| off | Unsubscribes from background network policy changes. This API uses an asynchronous callback to return the result. |
-| on | Registers the callback when the **policy** changes. This API uses an asynchronous callback to return the result. |
-| on | Registers the callback when the **rule** changes. This API uses an asynchronous callback to return the result. |
-| on | Registers the callback when the **iface** changes. This API uses an asynchronous callback to return the result. |
-| on | Registers the callback for network quota policy changes. This API uses an asynchronous callback to return the result. |
-| on | Registers the callback for background network policy changes. This API uses an asynchronous callback to return the result. |
+| [off](arkts-network-policy-off-f-sys.md#offnetuidpolicychange) | Unsubscribes from **policy** changes. This API uses an asynchronous callback to return the result. |
+| [off](arkts-network-policy-off-f-sys.md#offnetuidrulechange) | Unsubscribes from **rule** changes. This API uses an asynchronous callback to return the result. |
+| [off](arkts-network-policy-off-f-sys.md#offnetmeteredifaceschange) | Unsubscribes from the changes of the metering interface. This API uses an asynchronous callback to return the result. |
+| [off](arkts-network-policy-off-f-sys.md#offnetquotapolicychange) | Unsubscribes from the changes of the metering network policy. This API uses an asynchronous callback to return the result. |
+| [off](arkts-network-policy-off-f-sys.md#offnetbackgroundpolicychange) | Unsubscribes from background network policy changes. This API uses an asynchronous callback to return the result. |
+| [on](arkts-network-policy-on-f-sys.md#onnetuidpolicychange) | Registers the callback when the **policy** changes. This API uses an asynchronous callback to return the result. |
+| [on](arkts-network-policy-on-f-sys.md#onnetuidrulechange) | Registers the callback when the **rule** changes. This API uses an asynchronous callback to return the result. |
+| [on](arkts-network-policy-on-f-sys.md#onnetmeteredifaceschange) | Registers the callback when the **iface** changes. This API uses an asynchronous callback to return the result. |
+| [on](arkts-network-policy-on-f-sys.md#onnetquotapolicychange) | Registers the callback for network quota policy changes. This API uses an asynchronous callback to return the result. |
+| [on](arkts-network-policy-on-f-sys.md#onnetbackgroundpolicychange) | Registers the callback for background network policy changes. This API uses an asynchronous callback to return the result. |
 | [resetPolicies](arkts-network-policy-resetpolicies-f-sys.md) | Restores all the policies (cellular network, background network, firewall, and application-specific network policies) for the specified SIM card. This API uses an asynchronous callback to return the result. |
 | [resetPolicies](arkts-network-policy-resetpolicies-f-sys.md) | Resets the cellular network, background network policy, firewall policy, and app policy corresponding to the SIM card ID. This API uses a promise to return the result. |
 | [restoreAllPolicies](arkts-network-policy-restoreallpolicies-f-sys.md) | Reset the specified network management policy. |

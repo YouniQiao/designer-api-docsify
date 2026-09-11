@@ -12,7 +12,7 @@ import { wallpaper } from '@kit.BasicServicesKit';
 function isChangePermitted(callback: AsyncCallback<boolean>): void
 ```
 
-是否允许应用改变当前用户的壁纸。使用callback异步回调。  
+是否允许应用改变当前用户的壁纸。使用callback异步回调。<br>   
 > **说明：**
 > 
 > 从 API version 7开始支持，从API version 9开始废弃。
@@ -50,7 +50,7 @@ wallpaper.isChangePermitted((error: BusinessError, data: boolean) => {
 function isChangePermitted(): Promise<boolean>
 ```
 
-是否允许应用改变当前用户的壁纸。使用Promise异步回调。  
+是否允许应用改变当前用户的壁纸。使用Promise异步回调。<br>   
 > **说明：**
 > 
 > 从 API version 7开始支持，从API version 9开始废弃。

@@ -1,6 +1,6 @@
 # RichEditorGesture
 
-User gesture event.
+Defines a user gesture event.
 
 **Since:** 11
 
@@ -17,9 +17,7 @@ User gesture event.
 onDoubleClick?: Callback<GestureEvent>
 ```
 
-[GestureEvent](../arkts-apis/arkts-arkui-gestureevent-i.md) indicates the double-tap event.
-
-Callback event when the double-tap is complete.
+Callback for the double-click event, triggered when the user completes a double-click operation. The callback parameter is a [GestureEvent](../arkts-apis/arkts-arkui-gestureevent-i.md) object that contains gesture event information.
 
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;[GestureEvent](../arkts-apis/arkts-arkui-gestureevent-i.md)&gt;
 

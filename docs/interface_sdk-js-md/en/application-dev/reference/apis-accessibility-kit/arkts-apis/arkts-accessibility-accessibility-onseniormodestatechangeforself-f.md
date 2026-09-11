@@ -17,7 +17,7 @@ Subscribes to the "senior mode" change event of the app itself. This API uses an
 
 Unlike [accessibility.onSeniorModeStateChange](arkts-accessibility-accessibility-onseniormodestatechange-f.md), which listens for system-level senior mode state changes, this API only monitors the state of the app itself.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.

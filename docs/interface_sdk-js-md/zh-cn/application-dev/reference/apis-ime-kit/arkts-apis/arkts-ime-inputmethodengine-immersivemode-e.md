@@ -1,7 +1,6 @@
 # ImmersiveMode
 
-枚举，输入法沉浸模式。
-
+枚举，输入法沉浸模式。<br>  
 | 名称 | 值 | 说明 |  
 | ------------ | -- | ------------------ |  
 | [NONE_IMMERSIVE](arkts-ime-inputmethodengine-immersivemode-e.md) | 0 | 不使用沉浸模式。 |

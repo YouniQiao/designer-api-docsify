@@ -33,7 +33,7 @@ curve?: Curve | string | ICurve
 
 默认值：Curve.Linear
 
-**类型：** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| [ICurve](arkts-arkui-icurve-i.md)
+**类型：** [Curve](../arkts-apis/arkts-arkui-curve-e.md) &#124; string &#124; [ICurve](arkts-arkui-icurve-i.md)
 
 **默认值：** Curve.Linear
 

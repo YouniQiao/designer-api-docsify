@@ -6,6 +6,8 @@ declare type ColorMetrics = import('../api/arkui/Graphics').ColorMetrics
 
 Defines ColorMetrics.
 
+@typedef { import('../api/arkui/Graphics').ColorMetrics } ColorMetrics
+
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.

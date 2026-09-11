@@ -1,6 +1,6 @@
 # DeviceStatus (System API)
 
-Defines the device status information. It describes the current status of the companion device, including the device service ID, user name, model information, device name, online status, and list of supported service IDs.
+Defines the device status information. It describes the current status of the companion device, including the device service ID, user name, model information, device name, online status, list of supported service IDs, and device sub-profile name.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 deviceKey: DeviceKey
 ```
 
-Key device information. It uniquely identifies a device, including the device ID type, device ID, and device user ID.
+Key device information. It uniquely identifies a device, including the device ID type, device ID, and device user ID, and device sub-profile ID.
 
 **Type:** [DeviceKey](arkts-userauthentication-companiondeviceauth-devicekey-i-sys.md)
 
@@ -61,6 +61,26 @@ Device name. It is the name or alias of a device, and is displayed to the user i
 **Type:** string
 
 **Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
+
+**System API:** This is a system API.
+
+## deviceSubProfileName
+
+```TypeScript
+deviceSubProfileName?: string
+```
+
+Device sub-profile name. It corresponds to the nickname of the distributed account, serving as the display name of the foreground sub-profile on the device, and is displayed on the device selection screen. Default value: The default value is "".
+
+**Type:** string
+
+**Default:** ""
+
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

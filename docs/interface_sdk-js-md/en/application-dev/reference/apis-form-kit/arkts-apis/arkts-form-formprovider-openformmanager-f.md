@@ -24,7 +24,7 @@ Opens the Widget Manager page of the current application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Parameter that must contain the following fields:   **bundleName**: bundle name of widget.    **abilityName**: ability name of the widget.   **parameters**:   - **ohos.extra.param.key.form_dimension**: [Widget dimension](arkts-form-forminfo-formdimension-e.md).   - **ohos.extra.param.key.form_name**: Widget name.   - **ohos.extra.param.key.module_name**: module name of the widget. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Parameter that must contain the following fields:<br>**bundleName**: bundle name of widget.<br> **abilityName**: ability name of the widget.<br>**parameters**:<br>- **ohos.extra.param.key.form_dimension**: [Widget dimension](arkts-form-forminfo-formdimension-e.md).<br>- **ohos.extra.param.key.form_name**: Widget name.<br>- **ohos.extra.param.key.module_name**: module name of the widget. |
 
 **Error codes:**
 

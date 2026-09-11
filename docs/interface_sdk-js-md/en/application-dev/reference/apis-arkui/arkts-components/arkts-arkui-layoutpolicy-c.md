@@ -2,7 +2,7 @@
 
 Enumerates the layout policies for component width and height.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - **LayoutPolicy** supports three layout policies: **matchParent** (adapts to the parent component's layout),
 > **wrapContent** (adapts to content but does not exceed the parent component's size), **fixAtIdealSize**

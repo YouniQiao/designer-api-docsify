@@ -4,7 +4,7 @@ The **Router** module provides APIs to access pages through URLs. You can use th
 
 For routing management, it is recommended that you use the [Navigation](../../../ui/arkts-navigation-architecture.md) component instead as your application routing framework.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Page routing APIs can be invoked only after page rendering is complete. Do not call these APIs in **onInit** and
 > **onReady** when the page is still in the rendering phase.

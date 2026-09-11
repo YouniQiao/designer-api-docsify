@@ -14,7 +14,7 @@ function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, drag
 
 Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Since API version 11, you can use the
 > [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in
@@ -39,7 +39,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| customArray | Array&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md)&gt; | Yes | Object to be dragged. |
+| customArray | Array&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md)&gt; | Yes | Object to be dragged. |
 | dragInfo | [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | Yes | Drag information. |
 
 **Return value:**
@@ -52,7 +52,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
 
 **Examples**

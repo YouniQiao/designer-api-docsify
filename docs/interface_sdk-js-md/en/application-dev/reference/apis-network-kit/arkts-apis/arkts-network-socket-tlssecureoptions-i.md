@@ -20,7 +20,7 @@ ca?: string | Array<string>
 
 CA certificate of the server, which is used to authenticate the digital certificate of the server. The default value is the preset CA certificate&lt;sup&gt;12+&lt;/sup&gt;. A maximum of 1000 certificates can be set.
 
-**Type:** string \| Array&lt;string&gt;
+**Type:** string &#124; Array&lt;string&gt;
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ cert?: string | Array<string>
 
 Digital certificate of the local client. An array can be passed since API version 24. A maximum of 1000 certificates can be set.
 
-**Type:** string \| Array&lt;string&gt;
+**Type:** string &#124; Array&lt;string&gt;
 
 **Since:** 9
 
@@ -104,7 +104,7 @@ protocols?: Protocol | Array<Protocol>
 
 TLS protocol version. The default value is **TLSv1.2**.
 
-**Type:** [Protocol](arkts-network-socket-protocol-e.md) \| Array&lt;[Protocol](arkts-network-socket-protocol-e.md)&gt;
+**Type:** [Protocol](arkts-network-socket-protocol-e.md) &#124; Array&lt;[Protocol](arkts-network-socket-protocol-e.md)&gt;
 
 **Since:** 9
 

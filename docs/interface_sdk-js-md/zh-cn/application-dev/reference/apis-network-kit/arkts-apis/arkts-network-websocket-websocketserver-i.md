@@ -31,7 +31,7 @@ close(connection: WebSocketConnection, options?: webSocket.WebSocketCloseOptions
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | connection | [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md) | 是 | 客户端信息，包括客户端的ip地址和端口号port。 |
-| options | [webSocket.WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | 否 | 关闭WebSocket连接时，可选参数的类型和说明。   - 错误码默认：200。原因值默认：Websocket connect failed。 |
+| options | [webSocket.WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | 否 | 关闭WebSocket连接时，可选参数的类型和说明。<br>- 错误码默认：200。原因值默认：Websocket connect failed。 |
 
 **返回值：**
 
@@ -206,7 +206,7 @@ off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'messageReceive' | 是 | 事件回调类型，支持的事件为'messageReceive'，当offmessageReceive()调用完成，取消订阅接收客户端消息成功。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 否 | 从指定客户端接收到的消息，包括客户端的信息和数据。   - clientconnection：客户端信息。   - data：客户端发送的消息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 否 | 从指定客户端接收到的消息，包括客户端的信息和数据。<br>- clientconnection：客户端信息。<br>- data：客户端发送的消息。 |
 
 **示例**
 
@@ -239,7 +239,7 @@ off(type: 'close', callback?: ClientConnectionCloseCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'close' | 是 | 事件回调类型，支持的事件为'close'，当offclose()调用完成，取消订阅连接关闭事件成功。 |
-| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | 否 | 回调函数。close：close错误码；reason：错误码说明。 |
+| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | 否 | 回调函数。<br>close：close错误码；reason：错误码说明。 |
 
 **示例**
 
@@ -332,7 +332,7 @@ on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'messageReceive' | 是 | 事件回调类型，支持的事件为'messageReceive'，当onmessageReceive()调用完成，接收到客户端消息成功。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 是 | 回调函数。clientconnection:客户端信息，data:客户端发送的数据消息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 是 | 回调函数。<br>clientconnection:客户端信息，data:客户端发送的数据消息。 |
 
 **示例**
 
@@ -363,7 +363,7 @@ on(type: 'close', callback: ClientConnectionCloseCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'close' | 是 | 事件回调类型，支持的事件为'close'，当onclose()调用完成，连接关闭成功。 |
-| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | 是 | 回调函数。close：close错误码；reason：错误码说明。 |
+| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | 是 | 回调函数。<br>close：close错误码；reason：错误码说明。 |
 
 **示例**
 
@@ -430,7 +430,7 @@ send(data: string | ArrayBuffer, connection: WebSocketConnection): Promise<boole
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | string \| ArrayBuffer | 是 | 服务端发送消息的数据，同时支持string（字符串）和ArrayBuffer（二进制）类型。最大支持发送5242864字节数据(即5 * 1024   * 1024 - 16)，超过该大小会返回401错误码。 |
+| data | string &#124; ArrayBuffer | 是 | 服务端发送消息的数据，同时支持string（字符串）和ArrayBuffer（二进制）类型。最大支持发送5242864字节数据(即5 * 1024   * 1024 - 16)，超过该大小会返回401错误码。 |
 | connection | [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md) | 是 | 发送的客户端信息。 |
 
 **返回值：**

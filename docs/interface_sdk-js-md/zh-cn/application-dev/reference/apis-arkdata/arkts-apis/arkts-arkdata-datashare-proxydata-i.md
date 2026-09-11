@@ -18,7 +18,7 @@ import { dataShare } from '@kit.ArkData';
 allowList?: string[]
 ```
 
-允许订阅和读取共享配置的应用程序列表。不填则为空的字符串数组。数组最大长度为256，超过256的部分不生效。当首次发布共享配置时，如果未填写，将默认为空的允许列表。在更新共享配置时，如果未填写，共享配置的允许列表将不会被更新。一个空的允许列表表示只有发布者能够访问该共享配置。API版本26.0.0之前，数组中每个元素为应用的[appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)，单个appIdentifier最大长度128字节，超过128字节的appIdentifier不会生效。从API版本26.0.0开始，数组支持配置特殊字符串"all"（区分大小写）表示允许所有应用访问。
+允许订阅和读取共享配置的应用程序列表。不填则为空的字符串数组。数组最大长度为256，超过256的部分不生效。当首次发布共享配置时，如果未填写，将默认为空的允许列表。在更新共享配置时，如果未填写，共享配置的允许列表将不会被更新。一个空的允许列表表示只有发布者能够访问该共享配置。<br> API版本26.0.0之前，数组中每个元素为应用的[appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)，单个appIdentifier最大长度128字节，超过128字节的appIdentifier不会生效。<br>从API版本26.0.0开始，数组支持配置特殊字符串"all"（区分大小写）表示允许所有应用访问。
 
 **类型：** string[]
 
@@ -50,7 +50,7 @@ isMultiValues?: boolean
 trustProviders?: string[]
 ```
 
-可对多值类型共享多值配置进行赋值的App列表。数组最多包含256个元素，超出部分无效。数组中每个元素为某个应用的[appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)。appIdentifier最大长度为128字节，超过128字节的部分不生效。若首次发布共享配置时未设置该参数，则默认赋值列表为空。赋值列表为空表示仅发布者可以对多值类型的共享配置进行赋值。该数组支持特殊字符串"all"（区分大小写），表示允许所有应用对多值类型的共享配置进行赋值。该参数仅在isMultiValues设置为true时生效。
+可对多值类型共享多值配置进行赋值的App列表。数组最多包含256个元素，超出部分无效。数组中每个元素为某个应用的[appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)。appIdentifier最大长度为128字节，超过128字节的部分不生效。<br>若首次发布共享配置时未设置该参数，则默认赋值列表为空。赋值列表为空表示仅发布者可以对多值类型的共享配置进行赋值。该数组支持特殊字符串"all"（区分大小写），表示允许所有应用对多值类型的共享配置进行赋值。该参数仅在isMultiValues设置为true时生效。
 
 **类型：** string[]
 
@@ -82,11 +82,9 @@ uri: string
 value?: ValueType
 ```
 
-共享配置的值。不填则为空字符串。  
-**说明：**
+共享配置的值。不填则为空字符串。<br> **说明：**
 
-1. API版本26.0.0之前，字符串长度不超过4096个字节；从API版本26.0.0开始，默认允许的字符串最大长度为4096字节，可以在[DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md)中配置maxValueLength将最大长度扩展到102400字节。
-2. 当首次发布共享配置时，如果未填写，将默认设置为空字符串。在更新共享配置时，如果未填写，共享配置的值将不会被更新。
+<br>1. API版本26.0.0之前，字符串长度不超过4096个字节；从API版本26.0.0开始，默认允许的字符串最大长度为4096字节，可以在[DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md)中配置maxValueLength将最大长度扩展到102400字节。<br>2. 当首次发布共享配置时，如果未填写，将默认设置为空字符串。在更新共享配置时，如果未填写，共享配置的值将不会被更新。
 
 **类型：** [ValueType](arkts-arkdata-valuetype-t.md)
 

@@ -1,6 +1,6 @@
 # RichEditorSelection
 
-Provides information about the selected content.
+Defines information about the selected content.
 
 **Since:** 10
 
@@ -17,7 +17,7 @@ Provides information about the selected content.
 selection: [number, number]
 ```
 
-Range of the selected.
+Range of the selection.
 
 **Type:** [number, number]
 
@@ -37,7 +37,7 @@ spans: Array<RichEditorTextSpanResult | RichEditorImageSpanResult>
 
 Span information.
 
-**Type:** Array&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md) \| [RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md)&gt;
+**Type:** Array&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md) &#124; [RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md)&gt;
 
 **Since:** 10
 

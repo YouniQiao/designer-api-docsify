@@ -32,7 +32,7 @@ Update the specified Wi-Fi configuration.
 
 | Type | Description |
 | --- | --- |
-| number | Returns the network ID in the updated Wi-Fi configuration if the update is successful; returns { |
+| number | Returns the network ID in the updated Wi-Fi configuration if the update is successful; returns `-1` if the specified Wi-Fi configuration is not contained in the list. |
 
 **Error codes:**
 

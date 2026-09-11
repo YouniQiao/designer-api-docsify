@@ -26,7 +26,7 @@ function getRealTime(isNano: boolean, callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isNano | boolean | 是 | 返回结果是否为纳秒数。   - true：表示返回结果为纳秒数（ns）。    - false：表示返回结果为毫秒数（ms）。 |
+| isNano | boolean | 是 | 返回结果是否为纳秒数。<br>- true：表示返回结果为纳秒数（ns）。 <br>- false：表示返回结果为毫秒数（ms）。 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回自系统启动以来经过的时间，包括深度睡眠时间。 |
 
 **错误码：**
@@ -123,7 +123,7 @@ function getRealTime(isNano?: boolean): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isNano | boolean | 否 | 返回结果是否为纳秒数，默认值为false。   - true：表示返回结果为纳秒数（ns）。    - false：表示返回结果为毫秒数（ms）。 |
+| isNano | boolean | 否 | 返回结果是否为纳秒数，默认值为false。<br>- true：表示返回结果为纳秒数（ns）。 <br>- false：表示返回结果为毫秒数（ms）。 |
 
 **返回值：**
 

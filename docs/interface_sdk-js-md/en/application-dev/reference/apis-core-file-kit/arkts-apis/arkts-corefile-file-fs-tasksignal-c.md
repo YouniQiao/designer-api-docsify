@@ -80,7 +80,7 @@ onCancel(): Promise<string>
 ```
 
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 12 and deprecated since API version 24.
 

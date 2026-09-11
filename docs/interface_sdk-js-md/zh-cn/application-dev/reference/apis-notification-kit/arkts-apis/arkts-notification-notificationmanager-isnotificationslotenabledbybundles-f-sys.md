@@ -26,7 +26,7 @@ function isNotificationSlotEnabledByBundles(bundles: Array<BundleOption>, type: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundles | Array&lt;[BundleOption](arkts-notification-notificationmanager-bundleoption-t.md)&gt; | 是 | 应用包信息数组。最大长度为1000且不能为空。 |
+| bundles | Array&lt;[BundleOption](arkts-notification-notificationmanager-bundleoption-t.md)&gt; | 是 | 应用包信息数组。<br>最大长度为1000且不能为空。 |
 | type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | 是 | 渠道类型。所有应用共享同一个渠道类型。 |
 
 **返回值：**

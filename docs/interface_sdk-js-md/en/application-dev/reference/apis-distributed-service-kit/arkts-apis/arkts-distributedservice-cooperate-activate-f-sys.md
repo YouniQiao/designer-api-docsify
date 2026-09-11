@@ -18,7 +18,7 @@ Starts screen hopping. This API uses an asynchronous callback to return the resu
 
 **Deprecated since:** 11
 
-**Substitutes:** [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md)(targetNetworkId: string, inputDeviceId: int, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md)(targetNetworkId: string, inputDeviceId: number, callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -37,8 +37,8 @@ Starts screen hopping. This API uses an asynchronous callback to return the resu
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified.  2. Incorrect parameter types.  3. Parameter verification failed. |
-| [20900001](../errorcode-devicestatus.md#20900001-input-device-operation-failed) | Service exception. Possible causes:  1. A system error, such as null pointer, container-related exception, or IPC exception.  2. N-API invocation exception or invalid N-API status. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
+| [20900001](../errorcode-devicestatus.md#20900001-input-device-operation-failed) | Service exception. Possible causes:<br>1. A system error, such as null pointer, container-related exception, or IPC exception. <br>2. N-API invocation exception or invalid N-API status. |
 
 **Examples**
 
@@ -73,7 +73,7 @@ Starts screen hopping. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md)(targetNetworkId: string, inputDeviceId: int)
+**Substitutes:** [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md)(targetNetworkId: string, inputDeviceId: number)
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -84,7 +84,7 @@ Starts screen hopping. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | targetNetworkId | string | Yes | Descriptor of the target device for screen hopping. |
-| inputDeviceId | number | Yes |  |
+| inputDeviceId | number | Yes | Identifier of the input device for screen hopping. |
 
 **Return value:**
 
@@ -97,8 +97,8 @@ Starts screen hopping. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified.  2. Incorrect parameter types.  3. Parameter verification failed. |
-| [20900001](../errorcode-devicestatus.md#20900001-input-device-operation-failed) | Service exception. Possible causes:  1. A system error, such as null pointer, container-related exception, or IPC exception.  2. N-API invocation exception or invalid N-API status. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
+| [20900001](../errorcode-devicestatus.md#20900001-input-device-operation-failed) | Service exception. Possible causes:<br>1. A system error, such as null pointer, container-related exception, or IPC exception. <br>2. N-API invocation exception or invalid N-API status. |
 
 **Examples**
 

@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
@@ -31,11 +31,12 @@ initialIndex?: number
 
 从API version 14开始，如果在List组件创建完成后首次布局前（如List的onAttach事件中），调用Scroller滚动控制器中不带动画的scrollToIndex或scrollEdge方法，会覆盖initialIndex设置的值。
 
-设置了initialIndex后，List从initialIndex对应的子组件开始布局，在这之前的子组件未参与布局，无法计算准确大小，因此通过currentOffset接口获取到的List的滚动总偏移量通过估算得出，可能会有误差。可通过设置[childrenMainSize](arkts-arkui-list-attribute.md#childrenmainsize)确保List的滚动总偏移量的准确性。
+设置了initialIndex后，List从initialIndex对应的子组件开始布局，在这之前的子组件未参与布局，无法计算准确大小，因此通过currentOffset接口获取到的List的滚动总偏移量通过估算得出，可能会有误差。可通过设置[childrenMainSize](arkts-arkui-list-comp-attribute.md#childrenmainsize)确保List的滚动总偏移量的准确性。
 
 **类型：** number
 
-**默认值：** 0 [since 18]
+**默认值：**
+- API版本18+：0
 
 **起始版本：** 7
 
@@ -89,9 +90,10 @@ List子组件的visibility属性设置为None时不显示，但该子组件上�
 
 如果同时设置了spaceWidth和space，则spaceWidth优先生效。当spaceWidth为undefined或null时，space生效。
 
-**类型：** number \| string
+**类型：** number &#124; string
 
-**默认值：** 0 [since 18]
+**默认值：**
+- API版本18+：0
 
 **起始版本：** 7
 

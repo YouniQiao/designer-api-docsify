@@ -168,6 +168,17 @@ Callback called when the all the bundles to backup/restore are done or aborted u
 
 **System API:** This is a system API.
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13600001 | IPC error |
+| 13900005 | I/O error |
+| 13900011 | Out of memory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900042 | Unknown error |
+
 **Examples**
 
 ```TypeScript
@@ -214,13 +225,26 @@ onBundleBegin: AsyncCallback<string, void | string>
 
 Callback called when a backup/restore procedure for an bundle is started. The first return string parameter indicates the name of the bundle. The second return string parameter indicates that when BusinessError errors occur, the callback data is the name of the bundle.
 
-**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
+**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void &#124; string&gt;
 
 **Since:** 12
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| 13500001 | The application is not added to the backup or restore |
+| 13500002 | Failed to start application extension Procedure |
+| 13600001 | IPC error |
+| 13900005 | I/O error |
+| 13900011 | Out of memory |
+| 13900025 | No space left on device |
+| 13900042 | Unknown error |
 
 **Examples**
 
@@ -244,13 +268,26 @@ onBundleEnd: AsyncCallback<string, void | string>
 
 Callback called when a backup/restore procedure for an bundle ends successfully or gets aborted unexpectedly. The first return string parameter indicates the name of the bundle. The second return string parameter indicates that when BusinessError errors occur, the callback data is the name of the bundle.
 
-**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
+**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void &#124; string&gt;
 
 **Since:** 12
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| 13500003 | Backup or restore timed out |
+| 13500004 | Application extension death |
+| 13600001 | IPC error |
+| 13900005 | I/O error |
+| 13900011 | Out of memory |
+| 13900025 | No space left on device |
+| 13900042 | Unknown error |
 
 **Examples**
 
@@ -282,6 +319,17 @@ Callback called when the backup service tries to send files to the client. The F
 
 **System API:** This is a system API.
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13600001 | IPC error |
+| 13900005 | I/O error |
+| 13900011 | Out of memory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900042 | Unknown error |
+
 **Examples**
 
 ```TypeScript
@@ -306,7 +354,7 @@ onMigrateResult?: AsyncCallback<string, void | string>
 
 Callback called when the migrate result is reported. The first return string parameter indicates the name of the bundle. The second return string parameter indicates that when BusinessError errors occur, the callback data is the name of the bundle.
 
-**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
+**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void &#124; string&gt;
 
 **Since:** 26.0.0
 
@@ -315,3 +363,15 @@ Callback called when the migrate result is reported. The first return string par
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900005 | I/O error |
+| 13900011 | Out of memory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |

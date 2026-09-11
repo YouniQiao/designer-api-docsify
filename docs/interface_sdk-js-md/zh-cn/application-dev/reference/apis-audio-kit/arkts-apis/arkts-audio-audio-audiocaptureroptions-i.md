@@ -46,7 +46,7 @@ SystemCapability.Multimedia.Audio.PlaybackCapture
 
 **废弃版本：** 12
 
-**替代接口：** OH_AVScreenCapture
+**替代接口：** OH_AVScreenCapture in native interface.
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 

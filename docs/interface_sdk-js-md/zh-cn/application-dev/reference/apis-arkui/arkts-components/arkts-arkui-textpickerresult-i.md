@@ -19,7 +19,7 @@ index: number | number[]
 
 选中项在选择范围数组中的索引值，索引从0开始。（文本选择器显示多列时，index为数组类型。）
 
-**类型：** number \| number[]
+**类型：** number &#124; number[]
 
 **起始版本：** 8
 
@@ -41,7 +41,7 @@ value: string | string[]
 > 
 > value值必须在range参数定义的选项范围内，不支持包含转义字符''。
 
-**类型：** string \| string[]
+**类型：** string &#124; string[]
 
 **起始版本：** 8
 

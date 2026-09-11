@@ -168,6 +168,17 @@ onAllBundlesEnd: AsyncCallback<undefined>
 
 **系统接口：** 此接口为系统接口。
 
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13600001 | IPC error |
+| 13900005 | I/O error |
+| 13900011 | Out of memory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900042 | Unknown error |
+
 ## onBackupServiceDied
 
 ```TypeScript
@@ -192,13 +203,26 @@ onBundleBegin: AsyncCallback<string, void | string>
 
 应用备份或恢复开始时触发的回调。第一个字符串参数表示应用名称。发生BusinessError时，第二个字符串参数返回对应的应用名称。
 
-**类型：** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
+**类型：** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void &#124; string&gt;
 
 **起始版本：** 12
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| 13500001 | The application is not added to the backup or restore |
+| 13500002 | Failed to start application extension Procedure |
+| 13600001 | IPC error |
+| 13900005 | I/O error |
+| 13900011 | Out of memory |
+| 13900025 | No space left on device |
+| 13900042 | Unknown error |
 
 ## onBundleEnd
 
@@ -208,13 +232,26 @@ onBundleEnd: AsyncCallback<string, void | string>
 
 应用备份或恢复成功结束或异常中止时触发的回调。第一个字符串参数表示应用名称。发生BusinessError时，第二个字符串参数返回对应的应用名称。
 
-**类型：** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
+**类型：** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void &#124; string&gt;
 
 **起始版本：** 12
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| 13500003 | Backup or restore timed out |
+| 13500004 | Application extension death |
+| 13600001 | IPC error |
+| 13900005 | I/O error |
+| 13900011 | Out of memory |
+| 13900025 | No space left on device |
+| 13900042 | Unknown error |
 
 ## onFileReady
 
@@ -232,6 +269,17 @@ onFileReady: AsyncCallback<File>
 
 **系统接口：** 此接口为系统接口。
 
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13600001 | IPC error |
+| 13900005 | I/O error |
+| 13900011 | Out of memory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |
+| 13900042 | Unknown error |
+
 ## onMigrateResult
 
 ```TypeScript
@@ -240,7 +288,7 @@ onMigrateResult?: AsyncCallback<string, void | string>
 
 文件迁移流程结束时触发的回调。第一个字符串参数表示应用名称。发生BusinessError时，第二个字符串参数返回对应的应用名称。
 
-**类型：** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
+**类型：** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void &#124; string&gt;
 
 **起始版本：** 26.0.0
 
@@ -249,3 +297,15 @@ onMigrateResult?: AsyncCallback<string, void | string>
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| 13600001 | IPC error |
+| 13900001 | Operation not permitted |
+| 13900005 | I/O error |
+| 13900011 | Out of memory |
+| 13900020 | Invalid argument |
+| 13900025 | No space left on device |

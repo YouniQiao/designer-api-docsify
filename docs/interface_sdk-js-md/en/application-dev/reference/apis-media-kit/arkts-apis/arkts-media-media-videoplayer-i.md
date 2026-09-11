@@ -104,7 +104,7 @@ Subscribes to the video buffering update event. This API works only under online
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bufferingUpdate' | Yes | Event type, which is **'bufferingUpdate'** in this case. |
-| callback | (infoType: BufferingInfoType, value: number) =&gt; void | Yes | Callback invoked when the event is triggered.The value of [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md) is fixed at **0**. |
+| callback | (infoType: BufferingInfoType, value: number) =&gt; void | Yes | Callback invoked when the event is triggered.<br>The value of [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md) is fixed at **0**. |
 
 ## on('startRenderFrame')
 
@@ -195,7 +195,7 @@ Subscribes to video playback error events. After an error event is reported, you
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type, which is **'error'** in this case.This event is triggered when an error occurs during video playback. |
+| type | 'error' | Yes | Event type, which is **'error'** in this case.<br>This event is triggered when an error occurs during video playback. |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback invoked when the event is triggered. |
 
 ## pause
@@ -502,7 +502,7 @@ setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void
 
 Sets a surface ID. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - **SetDisplaySurface** must be called between the URL setting and the calling of **prepare**. A surface must
 > be set for video streams without audio. Otherwise, the calling of **prepare** fails.
@@ -530,7 +530,7 @@ setDisplaySurface(surfaceId: string): Promise<void>
 
 Sets a surface ID. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - **SetDisplaySurface** must be called between the URL setting and the calling of **prepare**. A surface must
 > be set for video streams without audio. Otherwise, the calling of **prepare** fails.
@@ -604,7 +604,7 @@ Sets the playback speed. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the playback speed. For details, see [PlaybackSpeed]{ |
+| Promise&lt;number&gt; | Promise used to return the playback speed. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md). |
 
 ## setVolume
 
@@ -860,7 +860,7 @@ Video URL. The video formats MP4, MPEG-TS, and MKV are supported.
 4. HLS: http://xx or https://xx
 5. File type: file://xx
 
-**NOTE：**
+**NOTE:**
 
 WebM is no longer supported since API version 11.
 

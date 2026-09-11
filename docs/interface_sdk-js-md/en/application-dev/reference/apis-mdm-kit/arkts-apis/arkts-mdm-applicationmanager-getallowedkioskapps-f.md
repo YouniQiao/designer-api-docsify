@@ -32,7 +32,7 @@ Obtains the applications allowed to run in kiosk mode.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | List of [unique identifiers]{ |
+| Array&lt;string&gt; | List of [unique identifiers](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-signatureinfo-i.md) of an application that can run in kiosk mode. |
 
 **Error codes:**
 
@@ -83,13 +83,13 @@ Obtains the applications allowed to run in kiosk mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the. EnterpriseAdminExtensionAbility and the bundle name of the application.If the device has multiple MDM applications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policies that actually take effect on the device are returned. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) &#124; null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the. EnterpriseAdminExtensionAbility and the bundle name of the application.<br>If the device has multiple MDM applications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policies that actually take effect on the device are returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | List of [unique identifiers]{ |
+| Array&lt;string&gt; | List of [unique identifiers](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-signatureinfo-i.md) of an application that can run in kiosk mode. |
 
 **Error codes:**
 

@@ -2,7 +2,7 @@
 
 Defines the callback type used in **SlideRange**.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Currently, this API takes effect only when **min** ≤ **from** ≤ **to** ≤ **max** (the values of **min** and
 > **max** do not depend on the values set, but on the actual values that take effect).

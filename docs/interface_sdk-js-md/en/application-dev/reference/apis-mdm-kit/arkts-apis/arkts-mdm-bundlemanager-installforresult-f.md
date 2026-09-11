@@ -16,7 +16,7 @@ Installs the application bundle in the specified path and returns the installati
 
 This API can be used to install only applications of the **enterprise_mdm** (MDM application) or **enterprise_normal** (common enterprise application) distribution type. You can call the [getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md) API to query the BundleInfo of an application, where **BundleInfo.appInfo.appDistributionType** indicates the distribution type.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is time-consuming. Subsequent calls to other synchronous APIs in the application main thread must wait
 > for the asynchronous return of this API.

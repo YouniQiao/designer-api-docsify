@@ -31,14 +31,12 @@ Sets the parameters for the rotation gesture. Inherits from [GestureInterface&lt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { fingers?: number; angle?: number } | No | Parameters for the rotation gesture.     - **fingers**: minimum number of fingers to trigger the rotation gesture.   Default value: **2** Value range: [2, 5]. Values less than 2 or greater than 5 are automatically adjusted to the default value. While more fingers than the minimum number can be pressed to trigger the gesture, only the first two fingers participate in gesture calculation.     - **angle**: minimum angular change required to trigger the rotation gesture; unit: deg.   Default value: **1**   **NOTE：**If the value is less than or equal to 0 or greater than 360, it will be converted to the default value. |
+| value | { fingers?: number; angle?: number } | No | Parameters for the rotation gesture.<br> - **fingers**: minimum number of fingers to trigger the rotation gesture.<br>Default value: **2** <br>Value range: [2, 5]. Values less than 2 or greater than 5 are automatically adjusted to the default value. <br>While more fingers than the minimum number can be pressed to trigger the gesture, only the first two fingers participate in gesture calculation. <br> - **angle**: minimum angular change required to trigger the rotation gesture; unit: deg.<br>Default value: **1**<br>**NOTE:**<br>If the value is less than or equal to 0 or greater than 360, it will be converted to the default value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
-
 ## [[Call]]
 
 ```TypeScript
@@ -65,8 +63,6 @@ Sets the parameters for the rotation gesture. Compared with RotationGesture)}, t
 
 | Type | Description |
 | --- | --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
-
 ## onActionCancel
 
 ```TypeScript
@@ -91,15 +87,13 @@ Triggered when a tap cancellation event is received after the rotation gesture i
 
 | Type | Description |
 | --- | --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
-
 ## onActionCancel
 
 ```TypeScript
 onActionCancel(event: Callback<GestureEvent>): RotationGestureInterface
 ```
 
-Triggered when a tap cancellation event is received after the rotation gesture is recognized. Compared with onActionCancel, this callback returns gesture event information.
+Triggered when a tap cancellation event is received after the rotation gesture is recognized. Compared with [onActionCancel](#onactioncancel), this callback returns gesture event information.
 
 **Since:** 18
 
@@ -119,8 +113,6 @@ Triggered when a tap cancellation event is received after the rotation gesture i
 
 | Type | Description |
 | --- | --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
-
 ## onActionEnd
 
 ```TypeScript
@@ -145,8 +137,6 @@ Triggered when the last finger used for the rotation gesture is lifted.
 
 | Type | Description |
 | --- | --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
-
 ## onActionStart
 
 ```TypeScript
@@ -171,8 +161,6 @@ Triggered when the rotation gesture is recognized successfully.
 
 | Type | Description |
 | --- | --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
-
 ## onActionUpdate
 
 ```TypeScript
@@ -197,4 +185,3 @@ Triggered during the movement of the rotation gesture.
 
 | Type | Description |
 | --- | --- |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |

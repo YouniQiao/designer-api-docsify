@@ -82,8 +82,6 @@ Displays the dialog box.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ShowDialogSuccessResponse](arkts-arkui-prompt-showdialogsuccessresponse-i.md)&gt; |  |
-
 **Examples**
 
 ```TypeScript

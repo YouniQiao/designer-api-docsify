@@ -16,7 +16,7 @@ Checks whether the current system provides the encryption protection feature. Th
 
 This API checks whether the current system supports the DLP encryption function, so that compatibility processing or function degradation can be performed on devices that do not support this function.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is enabled by the [MDM](../../../mdm/mdm-kit-intro.md) kit and is used for enterprise devices. For
 > other devices (such as consumer devices), this API is inapplicable. Calling it returns **false**.

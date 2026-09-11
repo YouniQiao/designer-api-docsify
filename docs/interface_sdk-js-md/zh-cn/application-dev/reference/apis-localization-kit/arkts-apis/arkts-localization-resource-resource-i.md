@@ -79,19 +79,7 @@ params?: any[]
 type?: number
 ```
 
-资源类型，取值如下：  
-- 10001: color   
-- 10002: float   
-- 10003: string   
-- 10004: plural   
-- 10005: boolean   
-- 10006: intarray   
-- 10007: integer   
-- 10008: pattern   
-- 10009: strarray   
-- 20000: media   
-- 30000: rawfile   
-- 40000: symbol
+资源类型，取值如下：<br>- 10001: color <br>- 10002: float <br>- 10003: string <br>- 10004: plural <br>- 10005: boolean <br>- 10006: intarray <br>- 10007: integer <br>- 10008: pattern <br>- 10009: strarray <br>- 20000: media <br>- 30000: rawfile <br>- 40000: symbol
 
 **类型：** number
 

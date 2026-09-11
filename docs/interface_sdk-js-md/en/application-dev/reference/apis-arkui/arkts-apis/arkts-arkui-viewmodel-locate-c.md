@@ -28,7 +28,7 @@ dir: "ltr" | "rtl"
 
 text layout direction, ltr or rtl.
 
-**Type:** "ltr" \| "rtl"
+**Type:** "ltr" &#124; "rtl"
 
 **Since:** 4
 

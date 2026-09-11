@@ -31,7 +31,7 @@ Grants tool permissions based on user authorization results. This function grant
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[TicketInfo](arkts-ability-abilitytoolaccessctrl-ticketinfo-i-sys.md)[]&gt; | Promise used to return \\${TicketInfo[]}. |
+| Promise&lt;[TicketInfo](arkts-ability-abilitytoolaccessctrl-ticketinfo-i-sys.md)[]&gt; | Promise used to return \&#36;{TicketInfo[]}. |
 
 **Error codes:**
 

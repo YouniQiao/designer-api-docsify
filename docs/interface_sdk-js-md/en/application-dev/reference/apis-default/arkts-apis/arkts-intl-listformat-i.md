@@ -23,7 +23,7 @@ Returns a string with a language-specific representation of the list.
 
 | Type | Description |
 | --- | --- |
-| string | A language-specific formatted string representing the elements of the list. |
+| string | A language-specific formatted string representing the elements of the list.  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format). |
 
 ## formatToParts
 
@@ -43,4 +43,4 @@ Returns an Array of objects representing the different components that can be us
 
 | Type | Description |
 | --- | --- |
-| { type: "element" \| "literal", value: string; | []} An Array of components which contains the formatted parts from the list. |
+| { type: "element" &#124; "literal", value: string; }[] | An Array of components which contains the formatted parts from the list.  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts). |

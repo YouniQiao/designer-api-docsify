@@ -2,7 +2,7 @@
 
 Represents the network connection object type.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > (1) When the network transitions from unavailable to available, the **netAvailable**, **netCapabilitiesChange**,
 > and **netConnectionPropertiesChange** events are triggered.
@@ -44,7 +44,7 @@ Registers a listener for **netAvailable** events. Before you call this API, make
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'netAvailable' | Yes | Event type. This field has a fixed value of **netAvailable**.    **netAvailable**: event indicating that the data network is available. |
+| type | 'netAvailable' | Yes | Event type. This field has a fixed value of **netAvailable**.<br>**netAvailable**: event indicating that the data network is available. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetHandle](arkts-network-connection-nethandle-i.md)&gt; | Yes | Callback used to return the network handle. |
 
 **Examples**
@@ -88,7 +88,7 @@ Registers a listener for **netBlockStatusChange** events. Before you call this A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'netBlockStatusChange' | Yes | Event type. This field has a fixed value of **netBlockStatusChange**.    **netBlockStatusChange**: event indicating a change in the network blocking status. |
+| type | 'netBlockStatusChange' | Yes | Event type. This field has a fixed value of **netBlockStatusChange**.<br>**netBlockStatusChange**: event indicating a change in the network blocking status. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetBlockStatusInfo](arkts-network-connection-netblockstatusinfo-i.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
 
 **Examples**
@@ -134,7 +134,7 @@ Registers a listener for **netCapabilitiesChange** events. Before you call this 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'netCapabilitiesChange' | Yes | Event type. This field has a fixed value of **netCapabilitiesChange**.    **netCapabilitiesChange**: event indicating that the network capabilities have changed. |
+| type | 'netCapabilitiesChange' | Yes | Event type. This field has a fixed value of **netCapabilitiesChange**.<br>**netCapabilitiesChange**: event indicating that the network capabilities have changed. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetCapabilityInfo](arkts-network-connection-netcapabilityinfo-i.md)&gt; | Yes | Callback used to return the network handle (**netHandle**) and capability information (**netCap**). |
 
 **Examples**
@@ -178,7 +178,7 @@ Registers a listener for **netConnectionPropertiesChange** events. Before you ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'netConnectionPropertiesChange' | Yes | Event type. This field has a fixed value of **netConnectionPropertiesChange**.    **netConnectionPropertiesChange**: event indicating that network connection properties have changed. |
+| type | 'netConnectionPropertiesChange' | Yes | Event type. This field has a fixed value of **netConnectionPropertiesChange**.<br>**netConnectionPropertiesChange**: event indicating that network connection properties have changed. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetConnectionPropertyInfo](arkts-network-connection-netconnectionpropertyinfo-i.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
 
 **Examples**
@@ -224,7 +224,7 @@ Registers a listener for **netLost** events. Before you call this API, make sure
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'netLost' | Yes | Event type. This field has a fixed value of **netLost**.    **netLost**: event indicating that the network is interrupted or normally disconnected. |
+| type | 'netLost' | Yes | Event type. This field has a fixed value of **netLost**.<br>**netLost**: event indicating that the network is interrupted or normally disconnected. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetHandle](arkts-network-connection-nethandle-i.md)&gt; | Yes | Callback used to return the result, which is a **netHandle** object. |
 
 **Examples**
@@ -270,7 +270,7 @@ Registers a listener for **netUnavailable** events. Before you call this API, ma
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'netUnavailable' | Yes | Event type. This field has a fixed value of **netUnavailable**.    **netUnavailable**: event indicating that the network is unavailable. |
+| type | 'netUnavailable' | Yes | Event type. This field has a fixed value of **netUnavailable**.<br>**netUnavailable**: event indicating that the network is unavailable. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result, which is empty. |
 
 **Examples**
@@ -306,7 +306,7 @@ register(callback: AsyncCallback<void>): void
 
 Registers a listener for network status changes. To listen for a specific type of events, call **on** to enable listening and then call **register** to register an event listener.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > After using the **register** API, you need to call **unregister** to deregister the listener.
 > **Required permission**: ohos.permission.GET_NETWORK_INFO

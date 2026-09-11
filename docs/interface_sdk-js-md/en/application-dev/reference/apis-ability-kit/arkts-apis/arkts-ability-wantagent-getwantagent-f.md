@@ -14,7 +14,7 @@ function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): 
 
 Obtains a WantAgent object. This API uses an asynchronous callback to return the result. If the creation fails, a null WantAgent object is returned.
 
-<p>**NOTE：**: Third-party applications can set only their own abilities. </p>
+<p>**NOTE:** <br>Third-party applications can set only their own abilities. </p>
 
 **Since:** 9
 
@@ -100,7 +100,7 @@ function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 
 Obtains a WantAgent object. This API uses a promise to return the result. If the creation fails, a null WantAgent object is returned.
 
-<p>**NOTE：**: Third-party applications can set only their own abilities. </p>
+<p>**NOTE:** <br>Third-party applications can set only their own abilities. </p>
 
 **Since:** 9
 

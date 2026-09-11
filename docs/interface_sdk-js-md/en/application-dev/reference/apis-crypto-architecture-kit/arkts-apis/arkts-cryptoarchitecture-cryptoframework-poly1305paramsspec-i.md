@@ -2,9 +2,9 @@
 
 Encapsulates the parameters for encryption or decryption using the ChaCha20-Poly1305 AEAD mode, which requires a nonce, AAD, and an authentication tag. It is a child class of [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) and used as a parameter in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption or decryption.
 
-Applicable to ChaCha20-Poly1305.
+<br>Applicable to ChaCha20-Poly1305.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Before passing a value to
 > [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify

@@ -4,7 +4,7 @@ Vector is a linear data structure that is implemented based on arrays. When the 
 
 - T: Type
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The APIs provided by this module are deprecated since API version 9. You are advised to use
 > [@ohos.util.ArrayList](arkts-arkts-util-arraylist-arraylist-c.md).
@@ -41,8 +41,6 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
-
 **Examples**
 
 ```TypeScript

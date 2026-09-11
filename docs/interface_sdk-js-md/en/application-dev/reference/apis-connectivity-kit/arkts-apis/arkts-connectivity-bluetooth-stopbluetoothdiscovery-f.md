@@ -28,7 +28,7 @@ Stops Bluetooth device scanning.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if scanning is stopped successfully; returns `false` otherwise. |
 
 **Examples**
 

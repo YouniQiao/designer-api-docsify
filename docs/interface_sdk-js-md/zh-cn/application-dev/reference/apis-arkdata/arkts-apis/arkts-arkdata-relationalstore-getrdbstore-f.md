@@ -33,7 +33,7 @@ getRdbStore支持多线程并发操作。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用的上下文。FA模型的应用Context定义见Context。Stage模型的应用Context定义见Context。 |
+| context | Context | 是 | 应用的上下文。<br>FA模型的应用Context定义见Context。<br>Stage模型的应用Context定义见Context。 |
 | config | [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) | 是 | 与此RDB存储相关的数据库配置。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md)&gt; | 是 | 回调函数。当获取RdbStore成功，err为undefined，data为RdbStore对象；否则为错误对象。 |
 
@@ -41,7 +41,7 @@ getRdbStore支持多线程并发操作。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
 | [14800010](../errorcode-data-rdb.md#14800010-数据库路径不合法) | Failed to open or delete the database by an invalid database path. |
 | [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
@@ -141,7 +141,7 @@ getRdbStore支持多线程并发操作。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用的上下文。FA模型的应用Context定义见Context。Stage模型的应用Context定义见Context。 |
+| context | Context | 是 | 应用的上下文。<br>FA模型的应用Context定义见Context。<br>Stage模型的应用Context定义见Context。 |
 | config | [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) | 是 | 与此RDB存储相关的数据库配置。 |
 
 **返回值：**
@@ -154,7 +154,7 @@ getRdbStore支持多线程并发操作。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
 | [14800010](../errorcode-data-rdb.md#14800010-数据库路径不合法) | Failed to open or delete the database by an invalid database path. |
 | [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |

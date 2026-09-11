@@ -24,7 +24,7 @@ function concat(list: Buffer[] | Uint8Array[], totalLength?: number): Buffer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| list | Buffer[] \| Uint8Array[] | 是 | Buffer或Uint8Array实例数组，用于拼接合并创建新的Buffer对象。 |
+| list | Buffer[] &#124; Uint8Array[] | 是 | Buffer或Uint8Array实例数组，用于拼接合并创建新的Buffer对象。 |
 | totalLength | number | 否 | 需要复制的总字节长度，默认值：0。 |
 
 **返回值：**

@@ -40,7 +40,7 @@ onGetItemMainSizeByIndex?: GetItemMainSizeByIndex
 columnsGap?: Dimension
 ```
 
-该分组的列间距，不设置该参数时默认使用瀑布流的[columnsGap](arkts-arkui-waterflow-attribute.md#columnsgap)，设置非法值时使用0vp。
+该分组的列间距，不设置该参数时默认使用瀑布流的[columnsGap](arkts-arkui-waterflow-comp-attribute.md#columnsgap)，设置非法值时使用0vp。
 
 **类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -104,7 +104,7 @@ margin?: Margin | Dimension
 
 margin设置百分比时，上下左右外边距均以瀑布流的width作为基础值。
 
-**类型：** [Margin](../arkts-apis/arkts-arkui-margin-t.md) \| [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**类型：** [Margin](../arkts-apis/arkts-arkui-margin-t.md) &#124; [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **默认值：** {top: 0, right: 0, bottom: 0, left: 0}
 
@@ -122,7 +122,7 @@ margin设置百分比时，上下左右外边距均以瀑布流的width作为基
 rowsGap?: Dimension
 ```
 
-该分组的行间距，不设置该参数时默认使用瀑布流的[rowsGap](arkts-arkui-waterflow-attribute.md#rowsgap)，设置非法值时使用0vp。
+该分组的行间距，不设置该参数时默认使用瀑布流的[rowsGap](arkts-arkui-waterflow-comp-attribute.md#rowsgap)，设置非法值时使用0vp。
 
 **类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 

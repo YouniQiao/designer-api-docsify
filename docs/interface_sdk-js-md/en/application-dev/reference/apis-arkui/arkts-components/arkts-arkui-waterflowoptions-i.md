@@ -73,7 +73,7 @@ scroller?: Scroller
 
 Controller of the scrollable component, bound to the scrollable component.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; The scroller cannot be bound to other scrollable components, such as ArcList, List, Grid, Scroll, or WaterFlow. </p>
+<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>The scroller cannot be bound to other scrollable components, such as ArcList, List, Grid, Scroll, or WaterFlow. </p>
 
 **Type:** [Scroller](arkts-arkui-scroller-c.md)
 
@@ -91,9 +91,7 @@ sections?: WaterFlowSections
 
 Water flow item sections, used to implement mixed layouts with different column counts for each section within the same **WaterFlow** component. This is applicable to scenarios where different numbers of columns are required in different areas. If this parameter is not set, the layout with the same number of columns is used.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; 
-1. When &lt;em&gt;sections&lt;/em&gt; is used, the &lt;em&gt;columnsTemplate&lt;/em&gt; and &lt;em&gt;rowsTemplate&lt;/em&gt; attributes are ignored. 
-2. When &lt;em&gt;sections&lt;/em&gt; is used, the footer cannot be set separately. The last section can function as the footer. </p>
+<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. When &lt;em&gt;sections&lt;/em&gt; is used, the &lt;em&gt;columnsTemplate&lt;/em&gt; and &lt;em&gt;rowsTemplate&lt;/em&gt; attributes are ignored. <br>2. When &lt;em&gt;sections&lt;/em&gt; is used, the footer cannot be set separately. The last section can function as the footer. </p>
 
 **Type:** [WaterFlowSections](arkts-arkui-waterflowsections-c.md)
 

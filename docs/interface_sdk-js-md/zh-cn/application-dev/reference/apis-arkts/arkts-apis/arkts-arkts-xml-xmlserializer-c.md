@@ -71,7 +71,7 @@ constructor(buffer: ArrayBuffer | DataView, encoding?: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| DataView | 是 | 用于接收写入XML信息的ArrayBuffer或DataView内存，需确保缓存区域足以容纳生成的文本内容。 |
+| buffer | ArrayBuffer &#124; DataView | 是 | 用于接收写入XML信息的ArrayBuffer或DataView内存，需确保缓存区域足以容纳生成的文本内容。 |
 | encoding | string | 否 | 编码格式，默认'utf-8'（目前仅支持'utf-8'）。 |
 
 **示例**
@@ -165,7 +165,7 @@ setCDATA(text: string): void
 
 提供在CDATA标签中添加数据的能力，适用于XML内容中包含特殊字符（如&lt;、&等）需要原样保留而不被XML解析器处理的场景。所生成的CDATA标签结构为：`<![CDATA[` + 所添加的数据 + `]]>`。
 
-&gt; **说明：**
+> **说明：**
 > 
 > 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。例如不允许在CDATA标签中添加包含"\]\]\&gt;"字符串的数据。
 

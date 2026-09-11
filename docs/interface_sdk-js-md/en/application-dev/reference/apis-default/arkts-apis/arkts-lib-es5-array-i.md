@@ -35,7 +35,7 @@ Combines two or more arrays. This method returns a new array without modifying a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | (T \| ConcatArray&lt;T&gt;)[] | Yes |  |
+| items | (T &#124; ConcatArray&lt;T&gt;)[] | Yes |  |
 
 **Return value:**
 

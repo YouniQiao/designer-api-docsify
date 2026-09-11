@@ -2,7 +2,7 @@
 
 Describes the long text notification. This API is inherited from NotificationBasicContent.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - When this notification type forms a group notification with other notifications, its display effect defaults
 > to the collapsed state, and the displayed title and body are the **title** and **text** inherited from

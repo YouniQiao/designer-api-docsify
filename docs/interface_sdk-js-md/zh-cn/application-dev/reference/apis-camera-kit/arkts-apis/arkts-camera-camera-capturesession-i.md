@@ -202,7 +202,7 @@ getActiveVideoStabilizationMode(): VideoStabilizationMode
 
 | 类型 | 说明 |
 | --- | --- |
-| [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | 视频防抖是否正在使用。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | 视频防抖是否正在使用。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -234,7 +234,7 @@ getExposureBiasRange(): Array<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;number&gt; | 获取补偿范围的数组。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| Array&lt;number&gt; | 获取补偿范围的数组。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -266,7 +266,7 @@ getExposureMode(): ExposureMode
 
 | 类型 | 说明 |
 | --- | --- |
-| [ExposureMode](arkts-camera-camera-exposuremode-e.md) | 获取当前曝光模式。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [ExposureMode](arkts-camera-camera-exposuremode-e.md) | 获取当前曝光模式。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -298,7 +298,7 @@ getExposureValue(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 获取曝光值。曝光补偿存在步长，如步长为0.5。则设置1.2时，获取到实际生效曝光补偿为1.0。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| number | 获取曝光值。曝光补偿存在步长，如步长为0.5。则设置1.2时，获取到实际生效曝光补偿为1.0。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -330,7 +330,7 @@ getFlashMode(): FlashMode
 
 | 类型 | 说明 |
 | --- | --- |
-| [FlashMode](arkts-camera-camera-flashmode-e.md) | 获取当前设备的闪光灯模式。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [FlashMode](arkts-camera-camera-flashmode-e.md) | 获取当前设备的闪光灯模式。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -362,7 +362,7 @@ getFocalLength(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 用于获取当前焦距。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| number | 用于获取当前焦距。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -394,7 +394,7 @@ getFocusMode(): FocusMode
 
 | 类型 | 说明 |
 | --- | --- |
-| [FocusMode](arkts-camera-camera-focusmode-e.md) | 获取当前设备的焦距模式。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [FocusMode](arkts-camera-camera-focusmode-e.md) | 获取当前设备的焦距模式。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -426,7 +426,7 @@ getFocusPoint(): Point
 
 | 类型 | 说明 |
 | --- | --- |
-| [Point](arkts-camera-camera-point-i.md) | 用于获取当前焦点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [Point](arkts-camera-camera-point-i.md) | 用于获取当前焦点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -458,7 +458,7 @@ getMeteringPoint(): Point
 
 | 类型 | 说明 |
 | --- | --- |
-| [Point](arkts-camera-camera-point-i.md) | 获取当前曝光点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [Point](arkts-camera-camera-point-i.md) | 获取当前曝光点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -490,7 +490,7 @@ getZoomRatio(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 获取当前的变焦比结果。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| number | 获取当前的变焦比结果。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -522,7 +522,7 @@ getZoomRatioRange(): Array<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;number&gt; | 用于获取可变焦距比范围，返回的数组包括其最小值和最大值。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| Array&lt;number&gt; | 用于获取可变焦距比范围，返回的数组包括其最小值和最大值。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -554,7 +554,7 @@ hasFlash(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 设备支持闪光灯。true表示支持，false表示不支持。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| boolean | 设备支持闪光灯。true表示支持，false表示不支持。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -592,7 +592,7 @@ isExposureModeSupported(aeMode: ExposureMode): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 获取是否支持曝光模式。true表示支持，false表示不支持。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| boolean | 获取是否支持曝光模式。true表示支持，false表示不支持。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -630,7 +630,7 @@ isFlashModeSupported(flashMode: FlashMode): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 检测闪光灯模式是否支持。true表示支持，false表示不支持。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| boolean | 检测闪光灯模式是否支持。true表示支持，false表示不支持。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -668,7 +668,7 @@ isFocusModeSupported(afMode: FocusMode): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 检测对焦模式是否支持。true表示支持，false表示不支持。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| boolean | 检测对焦模式是否支持。true表示支持，false表示不支持。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -706,7 +706,7 @@ isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回视频防抖模式是否支持。true表示支持，false表示不支持。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| boolean | 返回视频防抖模式是否支持。true表示支持，false表示不支持。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 

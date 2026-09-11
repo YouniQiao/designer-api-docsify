@@ -94,7 +94,7 @@ userId?: number
 
 ID of the user to which the intent belongs.
 
-**NOTE：**
+**NOTE:**
 
 If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
 

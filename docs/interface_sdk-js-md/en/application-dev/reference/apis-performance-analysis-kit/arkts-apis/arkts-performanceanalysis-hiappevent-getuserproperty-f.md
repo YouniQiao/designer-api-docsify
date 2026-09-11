@@ -24,7 +24,7 @@ Obtains the value set through **setUserProperty**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Key of a user property. The value is string that contains a maximum of 256 characters, including digits (0 to 9), letters (a to z)(A to Z), underscore (_), and dollar sign (\\$). It must not start with a digit. |
+| name | string | Yes | Key of a user property. The value is string that contains a maximum of 256 characters, including digits (0 to 9), letters (a to z)(A to Z), underscore (_), and dollar sign (\&#36;). It must not start with a digit. |
 
 **Return value:**
 
@@ -36,7 +36,7 @@ Obtains the value set through **setUserProperty**.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 **Examples**
 

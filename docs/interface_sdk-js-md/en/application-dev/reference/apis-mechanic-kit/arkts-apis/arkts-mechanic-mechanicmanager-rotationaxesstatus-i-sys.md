@@ -2,6 +2,8 @@
 
 Rotation axes status
 
+@typedef RotationAxesStatus
+
 **Since:** 20
 
 **System capability:** SystemCapability.Mechanic.Core

@@ -80,7 +80,7 @@ decapsulateSync(priKey: PriKey, wrappedKey: Uint8Array): Uint8Array
 
 密钥解封装操作。使用接收方的私钥，由接收方执行，从密文中解封装出共享密钥。
 
-**说明：** 建议优先使用异步API，[decapsulate](#decapsulate)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：** <br>建议优先使用异步API，[decapsulate](#decapsulate)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 26.0.0
 
@@ -155,7 +155,7 @@ encapsulate(pubKey: PubKey, ikme: Uint8Array | null): Promise<KemEncapResult>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pubKey | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | 是 | 接收方的公钥。 |
-| ikme | Uint8Array \| null | 是 | 随机数种子，用于替代算法内部的随机数。对于ML-KEM算法，随机数种子是32字节。建议传null。 |
+| ikme | Uint8Array &#124; null | 是 | 随机数种子，用于替代算法内部的随机数。对于ML-KEM算法，随机数种子是32字节。建议传null。 |
 
 **返回值：**
 
@@ -202,7 +202,7 @@ encapsulateSync(pubKey: PubKey, ikme: Uint8Array | null): KemEncapResult
 
 密钥封装操作。使用接收方的公钥，由发送方执行，生成并封装一个共享密钥。
 
-**说明：** 建议优先使用异步API，[encapsulate](#encapsulate)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：** <br>建议优先使用异步API，[encapsulate](#encapsulate)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 26.0.0
 
@@ -217,7 +217,7 @@ encapsulateSync(pubKey: PubKey, ikme: Uint8Array | null): KemEncapResult
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pubKey | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | 是 | 接收方的公钥。 |
-| ikme | Uint8Array \| null | 是 | 随机数种子，用于替代算法内部的随机数。对于ML-KEM算法，随机数种子是32字节。建议传null。 |
+| ikme | Uint8Array &#124; null | 是 | 随机数种子，用于替代算法内部的随机数。对于ML-KEM算法，随机数种子是32字节。建议传null。 |
 
 **返回值：**
 

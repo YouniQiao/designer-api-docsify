@@ -21,7 +21,7 @@ value: ResourceStr
 
 Text string of the badge content.
 
-**NOTE：**
+**NOTE:**
 
 The ResourceStr type is supported since API version 20.
 

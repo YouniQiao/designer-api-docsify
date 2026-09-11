@@ -31,7 +31,7 @@ Sets the execution function of the custom drop animation. This parameter is vali
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| customDropAnimation | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Custom drop animation in this callback.   **NOTE：** 1. This API is valid only in the **onDrop** callback.  2. Before using this API, set **useCustomDropAnimation** to **true**. Otherwise, this API does not take effect.  3. Do not implement logic unrelated to the animation in the animation callback to avoid affecting performance. |
+| customDropAnimation | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Custom drop animation in this callback.<br> **NOTE:**<br>1. This API is valid only in the **onDrop** callback.<br> 2. Before using this API, set **useCustomDropAnimation** to **true**. Otherwise, this API does not take effect.<br> 3. Do not implement logic unrelated to the animation in the animation callback to avoid affecting performance. |
 
 ## getData
 
@@ -170,7 +170,7 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 
 | Type | Description |
 | --- | --- |
-| number | X-coordinate of the drag point relative to the upper left corner of the global screen. |
+| number | X-coordinate of the drag point relative to the upper left corner of the global screen.<br>Unit: vp. Value range: (-∞, +∞) |
 
 ## getGlobalDisplayY
 
@@ -192,7 +192,7 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 
 | Type | Description |
 | --- | --- |
-| number | Y-coordinate of the drag point relative to the upper left corner of the global screen. |
+| number | Y-coordinate of the drag point relative to the upper left corner of the global screen.<br>Unit: vp. Value range: (-∞, +∞) |
 
 ## getModifierKeyState
 
@@ -214,7 +214,7 @@ Obtains the pressed status of modifier keys.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | Yes | Obtains the pressed status of modifier keys. For details about the error message, see the following error codes. The following modifier keys are supported: 'Ctrl' \| 'Alt' \| 'Shift'.   **NOTE：**This API is not supported in stylus scenarios. |
+| keys | Array&lt;string&gt; | Yes | Obtains the pressed status of modifier keys. For details about the error message, see the following error codes. The following modifier keys are supported: 'Ctrl' &#124; 'Alt' &#124; 'Shift'.<br>**NOTE:**<br>This API is not supported in stylus scenarios. |
 
 **Return value:**
 
@@ -412,7 +412,7 @@ getX(): number
 
 Obtains the x-coordinate of the drag point relative to the upper left corner of the window, in vp.
 
-> **NOTE：**
+> **NOTE:**
 
 **Since:** 7
 
@@ -426,7 +426,7 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 
 | Type | Description |
 | --- | --- |
-| number | X-coordinate of the drag point relative to the upper left corner of the window. |
+| number | X-coordinate of the drag point relative to the upper left corner of the window.<br>Unit: vp. |
 
 ## getY
 
@@ -436,7 +436,7 @@ getY(): number
 
 Obtains the y-coordinate of the drag point relative to the upper left corner of the window, in vp.
 
-> **NOTE：**
+> **NOTE:**
 
 **Since:** 7
 
@@ -450,7 +450,7 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 
 | Type | Description |
 | --- | --- |
-| number | Y-coordinate of the drag point relative to the upper left corner of the window. |
+| number | Y-coordinate of the drag point relative to the upper left corner of the window.<br>Unit: vp. |
 
 ## isRemote
 
@@ -583,7 +583,7 @@ autoHideComponentUniqueIds?: number | number[]
 
 Set the uniqueId or uniqueId array of components that need to be automatically hidden during dragging. This property takes effect only in onDragStart. After the drag starts successfully, the system hides the target components before the drag preview window is shown. Developers need to restore component visibility in onDragEnd or onDrop based on service requirements.
 
-**Type:** number \| number[]
+**Type:** number &#124; number[]
 
 **Since:** 26.0.0
 

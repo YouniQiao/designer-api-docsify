@@ -2,7 +2,7 @@
 
 UIServiceProxy functions as a proxy to send data from the UIServiceExtensionAbility client to the server.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
 
@@ -18,7 +18,7 @@ sendData(data: Record<string, Object>): void
 
 Sends data to the UIServiceExtensionAbility server.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).

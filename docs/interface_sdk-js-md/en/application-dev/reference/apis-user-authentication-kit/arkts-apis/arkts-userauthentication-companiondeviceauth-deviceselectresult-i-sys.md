@@ -20,7 +20,7 @@ import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 deviceKeys: DeviceKey[]
 ```
 
-Device information list. It contains the device service identifier information selected by the user. Each **DeviceKey** contains the device ID type, device ID, and device user ID. The system will perform subsequent operations such as adding a template or performing authentication based on this information.
+Device information list. It contains the device service identifier information selected by the user. Each **DeviceKey** contains the device ID type, device ID, device user ID, and device sub-profile ID. The system will perform subsequent operations such as adding a template or performing authentication based on this information.
 
 **Type:** [DeviceKey](arkts-userauthentication-companiondeviceauth-devicekey-i-sys.md)[]
 

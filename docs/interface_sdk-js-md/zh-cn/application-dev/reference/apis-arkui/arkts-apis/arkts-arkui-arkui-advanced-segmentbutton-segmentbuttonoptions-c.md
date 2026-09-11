@@ -66,7 +66,7 @@ constructor(options: TabSegmentButtonOptions | CapsuleSegmentButtonOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TabSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-tabsegmentbuttonoptions-i.md) \| [CapsuleSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-capsulesegmentbuttonoptions-i.md) | 是 | 页签类或者胶囊类分段按钮信息。 |
+| options | [TabSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-tabsegmentbuttonoptions-i.md) &#124; [CapsuleSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-capsulesegmentbuttonoptions-i.md) | 是 | 页签类或者胶囊类分段按钮信息。 |
 
 ## tab
 
@@ -230,7 +230,7 @@ buttonPadding: Padding | Dimension
 
 单位：vp
 
-**类型：** Padding \| [Dimension](arkts-arkui-dimension-t.md)
+**类型：** Padding &#124; [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 11
 
@@ -582,7 +582,7 @@ textPadding: Padding | Dimension
 
 单位：vp
 
-**类型：** Padding \| [Dimension](arkts-arkui-dimension-t.md)
+**类型：** Padding &#124; [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 11
 
@@ -600,7 +600,7 @@ type: "tab" | "capsule"
 
 类型为页签类分段按钮。
 
-**类型：** "tab" \| "capsule"
+**类型：** "tab" &#124; "capsule"
 
 **起始版本：** 11
 

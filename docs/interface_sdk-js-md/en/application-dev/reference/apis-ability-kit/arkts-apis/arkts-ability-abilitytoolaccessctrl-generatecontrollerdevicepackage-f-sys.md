@@ -32,7 +32,7 @@ Generates an authorization package for the controller device. This function gene
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[RemoteAuthPackage](arkts-ability-abilitytoolaccessctrl-remoteauthpackage-i-sys.md)[]&gt; | Promise used to return \\${RemoteAuthPackage[]}. |
+| Promise&lt;[RemoteAuthPackage](arkts-ability-abilitytoolaccessctrl-remoteauthpackage-i-sys.md)[]&gt; | Promise used to return \&#36;{RemoteAuthPackage[]}. |
 
 **Error codes:**
 

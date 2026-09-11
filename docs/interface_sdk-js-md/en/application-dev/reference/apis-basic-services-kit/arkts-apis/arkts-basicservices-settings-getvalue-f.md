@@ -78,7 +78,7 @@ Obtains the value of a specified character string in the database.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;object&gt; | Returns the value of the character string in the domain if any is found; returns { |
+| Promise&lt;object&gt; | Returns the value of the character string in the domain if any is found; returns `null` otherwise. |
 
 **Examples**
 
@@ -158,7 +158,7 @@ Get value from settingsdata
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the value of the character string in the domain if any is found; returns { |
+| Promise&lt;string&gt; | Returns the value of the character string in the domain if any is found; returns `null` otherwise. |
 
 **Examples**
 
@@ -200,7 +200,7 @@ Get value from settingsdata [USER_SECURE] domain need ohos.permission.MANAGE_SEC
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the value of the character string in the domain if any is found; returns { |
+| Promise&lt;string&gt; | Returns the value of the character string in the domain if any is found; returns `null` otherwise. |
 
 **Examples**
 

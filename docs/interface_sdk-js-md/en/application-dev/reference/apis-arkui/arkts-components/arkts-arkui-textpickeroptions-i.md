@@ -21,7 +21,7 @@ Custom widths for each column.
 
 Default value: Each column has equal width, calculated by dividing the total component width by the number of columns.
 
-**NOTE：**
+**NOTE:**
 
 1. Text truncation occurs when content exceeds column width.
 2. Invalid values are treated as the default value.
@@ -48,7 +48,7 @@ range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascade
 
 Data selection range of the picker. This parameter cannot be set to an empty array. If it is set to an empty array, no value is displayed. If it is dynamically changed to an empty array, the current valid value remains displayed.
 
-**NOTE：**
+**NOTE:**
 
 1. Single-column pickers: string[], Resource,
 or [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[]
@@ -58,7 +58,7 @@ or [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[]
 (../../../quick-start/resource-categories-and-access.md#resource-group-directories).
 5. The type and number of columns in the range cannot be dynamically modified.
 
-**Type:** string[] \| string[][] \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[] \| [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)[]
+**Type:** string[] &#124; string[][] &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[] &#124; [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)[]
 
 **Since:** 8
 
@@ -76,14 +76,14 @@ Index of the selected item in the data list. The index is zero-based.
 
 Default value: **0**
 
-**NOTE：**
+**NOTE:**
 
 1. Single-column pickers: number
 2. Multi-column pickers: number[]
 3. Since API version 10, this parameter supports two-way binding through  
 [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
 
-**Type:** number \| number[]
+**Type:** number &#124; number[]
 
 **Default:** 0
 
@@ -103,7 +103,7 @@ Value of the selected item. The priority of this parameter is lower than that of
 
 Default value: value of the first item in the data list.
 
-**NOTE：**
+**NOTE:**
 
 1. Since API version 10, this parameter supports two-way binding through  
 [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
@@ -113,9 +113,10 @@ It does not work when the picker contains images or mixed content.
 4. Single-column pickers: [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 5. Multi-column pickers: [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)[]
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)[]
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)[]
 
-**Default:** value of the first item [since 8 - 9]
+**Default:**
+- API versions 8 to 9: value of the first item
 
 **Since:** 8
 

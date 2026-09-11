@@ -1,6 +1,6 @@
 # EnrollIntelligentVoiceEngine (System API)
 
-Implements enroll intelligent voice engine.
+Implements enroll intelligent voice engine. @typedef EnrollIntelligentVoiceEngine
 
 **Since:** 10
 

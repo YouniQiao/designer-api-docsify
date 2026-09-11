@@ -6,6 +6,8 @@ declare type VoidCallback = () => void
 
 Defines VoidCallback.
 
+@typedef { function } VoidCallback
+
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.

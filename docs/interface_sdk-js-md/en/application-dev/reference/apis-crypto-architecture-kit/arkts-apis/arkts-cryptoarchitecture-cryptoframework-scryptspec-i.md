@@ -2,7 +2,7 @@
 
 Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md). It is a parameter for scrypt key derivation function (KDF).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > **passphrase** specifies the original password. If **passphrase** is of the string type, pass in the data used for
 > key derivation rather than a string of the HexString or Base64 type. In addition, the string must be in UTF-8
@@ -92,7 +92,7 @@ passphrase: string | Uint8Array
 
 Original password entered by the user.
 
-**Type:** string \| Uint8Array
+**Type:** string &#124; Uint8Array
 
 **Since:** 18
 

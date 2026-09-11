@@ -106,7 +106,7 @@ readLatestImage(callback: AsyncCallback<Image>): void
 
 > **注意**：
 > 
-> 此接口需要在on回调触发后调用，才能正常的接收到数
+> 此接口需要在[on](#onimagearrival)回调触发后调用，才能正常的接收到数
 > 据。且此接口返回的[Image](arkts-image-image-image-i.md)对象使用完毕后需要调用
 > [release](arkts-image-image-image-i.md#release)方法释放，释放后才可以继续接收新的数据。
 
@@ -130,7 +130,7 @@ readLatestImage(): Promise<Image>
 
 > **注意**：
 > 
-> 此接口需要在on回调触发后调用，才能正常的接收到数
+> 此接口需要在[on](#onimagearrival)回调触发后调用，才能正常的接收到数
 > 据。且此接口返回的[Image](arkts-image-image-image-i.md)对象使用完毕后需要调用
 > [release](arkts-image-image-image-i.md#release)方法释放，释放后才可以继续接收新的数据。
 
@@ -154,7 +154,7 @@ readNextImage(callback: AsyncCallback<Image>): void
 
 > **注意**：
 > 
-> 此接口需要在on回调触发后调用，才能正常的接收到数
+> 此接口需要在[on](#onimagearrival)回调触发后调用，才能正常的接收到数
 > 据。且此接口返回的[Image](arkts-image-image-image-i.md)对象使用完毕后需要调用
 > [release](arkts-image-image-image-i.md#release)方法释放，释放后才可以继续接收新的数据。
 
@@ -178,7 +178,7 @@ readNextImage(): Promise<Image>
 
 > **注意**：
 > 
-> 此接口需要在on回调触发后调用，才能正常的接收到数
+> 此接口需要在[on](#onimagearrival)回调触发后调用，才能正常的接收到数
 > 据。且此接口返回的[Image](arkts-image-image-image-i.md)对象使用完毕后需要调用
 > [release](arkts-image-image-image-i.md#release)方法释放，释放后才可以继续接收新的数据。
 
@@ -256,7 +256,7 @@ setMemoryName(name: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | 要设置的内存名称。最大长度为256。 |
+| name | string | 是 | 要设置的内存名称。<br>最大长度为256。 |
 
 **错误码：**
 

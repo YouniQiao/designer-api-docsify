@@ -19,7 +19,7 @@ controller: WebController | WebviewController
 
 控制器，通过controller可以控制Web组件各种行为，包括页面导航、生命周期状态、JavaScript交互等。从API version 9开始，WebController不再维护，建议使用[WebviewController](arkts-arkweb-webviewcontroller-t.md)替代。
 
-**类型：** [WebController](arkts-arkweb-webcontroller-c.md) \| [WebviewController](arkts-arkweb-webviewcontroller-t.md)
+**类型：** [WebController](arkts-arkweb-webcontroller-c.md) &#124; [WebviewController](arkts-arkweb-webviewcontroller-t.md)
 
 **起始版本：** 8
 
@@ -105,7 +105,7 @@ src: string | Resource
 
 src不能通过状态变量（例如：@State）动态更改地址，如需更改，请通过[loadUrl()](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl)重新加载。
 
-**类型：** string \| Resource
+**类型：** string &#124; Resource
 
 **起始版本：** 8
 

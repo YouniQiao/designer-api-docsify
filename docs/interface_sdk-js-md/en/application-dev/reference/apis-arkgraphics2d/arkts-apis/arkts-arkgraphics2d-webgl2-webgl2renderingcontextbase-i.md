@@ -67,7 +67,7 @@ Binds buffer base
 | --- | --- | --- | --- |
 | target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Target |
 | index | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Index |
-| buffer | [webgl.WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes | Buffer |
+| buffer | [webgl.WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) &#124; null | Yes | Buffer |
 
 ## bindBufferRange
 
@@ -95,7 +95,7 @@ Binds buffer range
 | --- | --- | --- | --- |
 | target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Target |
 | index | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Index |
-| buffer | [webgl.WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes | Buffer |
+| buffer | [webgl.WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) &#124; null | Yes | Buffer |
 | offset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Offset |
 | size | [webgl.GLsizeiptr](arkts-arkgraphics2d-glsizeiptr-t.md) | Yes | Size |
 
@@ -118,7 +118,7 @@ Binds a sampler
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | unit | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Texture unit |
-| sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | Yes | [Sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-sampler-i.md) |
+| sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) &#124; null | Yes | [Sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-sampler-i.md) |
 
 ## bindTransformFeedback
 
@@ -139,7 +139,7 @@ Binds a transform feedback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Target |
-| tf | [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) \| null | Yes | Transform feedback |
+| tf | [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) &#124; null | Yes | Transform feedback |
 
 ## bindVertexArray
 
@@ -159,7 +159,7 @@ Binds a vertex array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) \| null | Yes | Vertex array |
+| array | [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) &#124; null | Yes | Vertex array |
 
 ## blitFramebuffer
 
@@ -581,7 +581,7 @@ Creates a query
 
 | Type | Description |
 | --- | --- |
-| [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) \| null | The created query |
+| [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) &#124; null | The created query |
 
 ## createSampler
 
@@ -601,7 +601,7 @@ Creates a sampler
 
 | Type | Description |
 | --- | --- |
-| [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | The created sampler |
+| [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) &#124; null | The created sampler |
 
 ## createTransformFeedback
 
@@ -621,7 +621,7 @@ Creates a transform feedback object
 
 | Type | Description |
 | --- | --- |
-| [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) \| null | The created transform feedback |
+| [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) &#124; null | The created transform feedback |
 
 ## createVertexArray
 
@@ -641,7 +641,7 @@ Creates a vertex array object
 
 | Type | Description |
 | --- | --- |
-| [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) \| null | The created vertex array object |
+| [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) &#124; null | The created vertex array object |
 
 ## deleteQuery
 
@@ -661,7 +661,7 @@ Deletes a query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) \| null | Yes | Query to delete |
+| query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) &#124; null | Yes | Query to delete |
 
 ## deleteSampler
 
@@ -681,7 +681,7 @@ Deletes a sampler
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | Yes | Sampler to delete |
+| sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) &#124; null | Yes | Sampler to delete |
 
 ## deleteSync
 
@@ -701,7 +701,7 @@ Deletes a sync object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sync | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) \| null | Yes | Sync object to delete |
+| sync | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) &#124; null | Yes | Sync object to delete |
 
 ## deleteTransformFeedback
 
@@ -721,7 +721,7 @@ Deletes a transform feedback object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tf | [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) \| null | Yes | Transform feedback to delete |
+| tf | [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) &#124; null | Yes | Transform feedback to delete |
 
 ## deleteVertexArray
 
@@ -741,7 +741,7 @@ Deletes a vertex array object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| vertexArray | [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) \| null | Yes | Vertex array to delete |
+| vertexArray | [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) &#124; null | Yes | Vertex array to delete |
 
 ## drawArraysInstanced
 
@@ -912,7 +912,7 @@ Creates a sync object
 
 | Type | Description |
 | --- | --- |
-| [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) \| null | The created sync object |
+| [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) &#124; null | The created sync object |
 
 ## framebufferTextureLayer
 
@@ -940,7 +940,7 @@ Attaches a texture layer to a framebuffer
 | --- | --- | --- | --- |
 | target | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Framebuffer target |
 | attachment | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Attachment point |
-| texture | [webgl.WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes | Texture |
+| texture | [webgl.WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) &#124; null | Yes | Texture |
 | level | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
 | layer | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Layer |
 
@@ -969,7 +969,7 @@ Gets active uniform block name
 
 | Type | Description |
 | --- | --- |
-| string \| null | Uniform block name |
+| string &#124; null | Uniform block name |
 
 ## getActiveUniformBlockParameter
 
@@ -1168,7 +1168,7 @@ Gets a query
 
 | Type | Description |
 | --- | --- |
-| [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) \| null | The query |
+| [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) &#124; null | The query |
 
 ## getQueryParameter
 
@@ -1276,7 +1276,7 @@ Gets transform feedback varying
 
 | Type | Description |
 | --- | --- |
-| [webgl.WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) \| null | Active info |
+| [webgl.WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) &#124; null | Active info |
 
 ## getUniformBlockIndex
 
@@ -1330,7 +1330,7 @@ Gets uniform indices
 
 | Type | Description |
 | --- | --- |
-| [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md)[] \| null | Uniform indices |
+| [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md)[] &#124; null | Uniform indices |
 
 ## invalidateFramebuffer
 
@@ -1403,7 +1403,7 @@ Returns whether a query is valid
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) \| null | Yes | Query |
+| query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) &#124; null | Yes | Query |
 
 **Return value:**
 
@@ -1429,7 +1429,7 @@ Returns whether a sampler is valid
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | Yes | [Sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-sampler-i.md) |
+| sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) &#124; null | Yes | [Sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-sampler-i.md) |
 
 **Return value:**
 
@@ -1455,7 +1455,7 @@ Returns whether a sync object is valid
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sync | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) \| null | Yes | Sync object |
+| sync | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) &#124; null | Yes | Sync object |
 
 **Return value:**
 
@@ -1481,7 +1481,7 @@ Returns whether a transform feedback is valid
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tf | [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) \| null | Yes | Transform feedback |
+| tf | [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) &#124; null | Yes | Transform feedback |
 
 **Return value:**
 
@@ -1507,7 +1507,7 @@ Returns whether a vertex array is valid
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| vertexArray | [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) \| null | Yes | Vertex array |
+| vertexArray | [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) &#124; null | Yes | Vertex array |
 
 **Return value:**
 
@@ -1755,7 +1755,7 @@ Sets texture image 3D from ArrayBufferView
 | border | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
 | format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
 | type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Type |
-| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes | Source data |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) &#124; null | Yes | Source data |
 
 ## texImage3D
 
@@ -1986,7 +1986,7 @@ Sets texture sub image 3D from ArrayBufferView
 | depth | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Depth |
 | format | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
 | type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Type |
-| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes | Source data |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) &#124; null | Yes | Source data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
 
 ## transformFeedbackVaryings
@@ -2029,7 +2029,7 @@ Sets uniform1ui value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | v0 | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Value |
 
 ## uniform1uiv
@@ -2055,7 +2055,7 @@ Sets uniform1uiv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | data | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
 | srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
@@ -2078,7 +2078,7 @@ Sets uniform2ui value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | v0 | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | X value |
 | v1 | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Y value |
 
@@ -2105,7 +2105,7 @@ Sets uniform2uiv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | data | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
 | srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
@@ -2128,7 +2128,7 @@ Sets uniform3ui value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | v0 | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | X value |
 | v1 | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Y value |
 | v2 | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Z value |
@@ -2156,7 +2156,7 @@ Sets uniform3uiv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | data | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
 | srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
@@ -2185,7 +2185,7 @@ Sets uniform4ui value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | v0 | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | X value |
 | v1 | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Y value |
 | v2 | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Z value |
@@ -2214,7 +2214,7 @@ Sets uniform4uiv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | data | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
 | srcLength | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source length |
@@ -2269,7 +2269,7 @@ Sets uniformMatrix2x3fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | transpose | [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Transpose |
 | data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
@@ -2299,7 +2299,7 @@ Sets uniformMatrix2x4fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | transpose | [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Transpose |
 | data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
@@ -2329,7 +2329,7 @@ Sets uniformMatrix3x2fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | transpose | [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Transpose |
 | data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
@@ -2359,7 +2359,7 @@ Sets uniformMatrix3x4fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | transpose | [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Transpose |
 | data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
@@ -2389,7 +2389,7 @@ Sets uniformMatrix4x2fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | transpose | [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Transpose |
 | data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |
@@ -2419,7 +2419,7 @@ Sets uniformMatrix4x3fv value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
+| location | [webgl.WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) &#124; null | Yes | Uniform location |
 | transpose | [webgl.GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Transpose |
 | data | [webgl.Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Data |
 | srcOffset | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | No | Source offset |

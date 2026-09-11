@@ -14,7 +14,7 @@ function getRectangleById(id: string): ComponentInfo
 
 Obtains a **ComponentInfo** object based on the component ID and synchronously returns the geometric properties of the component.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Since API version 10, you can use the
 > [getComponentUtils](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentutils) API in

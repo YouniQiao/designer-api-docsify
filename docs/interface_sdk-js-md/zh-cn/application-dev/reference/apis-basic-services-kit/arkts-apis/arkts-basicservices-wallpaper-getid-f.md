@@ -12,7 +12,7 @@ import { wallpaper } from '@kit.BasicServicesKit';
 function getId(wallpaperType: WallpaperType, callback: AsyncCallback<number>): void
 ```
 
-获取指定类型壁纸的ID。使用callback异步回调。  
+获取指定类型壁纸的ID。使用callback异步回调。<br>   
 > **说明：**
 > 
 > 从 API version 7开始支持，从API version 9开始废弃。
@@ -51,7 +51,7 @@ wallpaper.getId(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessError,
 function getId(wallpaperType: WallpaperType): Promise<number>
 ```
 
-获取指定类型壁纸的ID。使用Promise异步回调。  
+获取指定类型壁纸的ID。使用Promise异步回调。<br>   
 > **说明：**
 > 
 > 从 API version 7开始支持，从API version 9开始废弃。

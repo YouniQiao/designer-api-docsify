@@ -15,7 +15,7 @@
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | bigint \| boolean \| number \| string | Yes |  |
+| value | bigint &#124; boolean &#124; number &#124; string | Yes |  |
 
 **Return value:**
 

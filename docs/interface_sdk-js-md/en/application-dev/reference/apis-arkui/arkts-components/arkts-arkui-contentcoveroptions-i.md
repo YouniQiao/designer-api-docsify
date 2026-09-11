@@ -45,7 +45,7 @@ System transition mode of the modal.
 
 Default value: **ModalTransition.DEFAULT**.
 
-**NOTE：**
+**NOTE:**
 
 This property has no effect when it is set together with **transition**.
 
@@ -69,7 +69,7 @@ onWillDismiss?: Callback<DismissContentCoverAction>
 
 Callback invoked to prevent a user attempt to dismiss the modal.
 
-**NOTE：**
+**NOTE:**
 
 After this callback is registered, touching the back button does not immediately dismiss the modal. You can use the **reason** parameter to determine the type of operation that triggers the dismiss and decide whether to dismiss the modal based on the reason. Nesting **onWillDismiss** callbacks is not allowed.
 

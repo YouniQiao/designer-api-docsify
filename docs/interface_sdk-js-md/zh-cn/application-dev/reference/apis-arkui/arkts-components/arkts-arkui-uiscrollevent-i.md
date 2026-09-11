@@ -21,7 +21,7 @@ UIScrollEvent继承于[UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonev
 setOnDidScroll(callback: ScrollOnScrollCallback | undefined): void
 ```
 
-[onDidScroll](arkts-arkui-scroll-attribute.md#ondidscroll)事件的回调。
+[onDidScroll](arkts-arkui-scroll-comp-attribute.md#ondidscroll)事件的回调。
 
 方法入参为undefined时，会重置事件回调。
 
@@ -37,7 +37,7 @@ setOnDidScroll(callback: ScrollOnScrollCallback | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) \| undefined | 是 | onDidScroll事件的回调函数。 |
+| callback | [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) &#124; undefined | 是 | onDidScroll事件的回调函数。 |
 
 ## setOnWillScroll
 
@@ -45,7 +45,7 @@ setOnDidScroll(callback: ScrollOnScrollCallback | undefined): void
 setOnWillScroll(callback: ScrollOnWillScrollCallback | undefined): void
 ```
 
-[onWillScroll](arkts-arkui-scroll-attribute.md#onwillscroll)事件的回调。
+[onWillScroll](arkts-arkui-scroll-comp-attribute.md#onwillscroll)事件的回调。
 
 方法入参为undefined时，会重置事件回调。
 
@@ -61,4 +61,4 @@ setOnWillScroll(callback: ScrollOnWillScrollCallback | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md) \| undefined | 是 | onWillScroll事件的回调函数。 |
+| callback | [ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md) &#124; undefined | 是 | onWillScroll事件的回调函数。 |

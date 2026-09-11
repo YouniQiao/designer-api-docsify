@@ -200,7 +200,8 @@ alignment?: DialogAlignment
 
 **类型：** [DialogAlignment](../arkts-apis/arkts-arkui-dialogalignment-e.md)
 
-**默认值：** DialogAlignment.Default [since 11]
+**默认值：**
+- API版本11+：DialogAlignment.Default
 
 **起始版本：** 10
 
@@ -370,15 +371,16 @@ canLoop?: boolean
 defaultPickerItemHeight?: number | string
 ```
 
-设置选择器中选项的高度。number类型取值范围：[0, +∞)，默认值：选中项56vp，非选中项36vp。设置该参数后，选中项与非选中项的高度均为所设置的值。string类型仅支持number类型取值的字符串形式，例如"56"。
+设置选择器中选项的高度。number类型取值范围：0, +∞)，默认值：选中项56vp，非选中项36vp。设置该参数后，选中项与非选中项的高度均为所设置的值。string类型仅支持number类型取值的字符串形式，例如"56"。
 
 > **说明：**
 > 
 > 当defaultPickerItemHeight的值为负数时，使用默认值。
 
-**类型：** number \| string
+**类型：** number &#124; string
 
-**默认值：** 56 vp (selected) and 36 vp (unselected) [since 11]
+**默认值：**
+- API版本11+：56 vp (selected) and 36 vp (unselected)
 
 **起始版本：** 8
 
@@ -394,7 +396,7 @@ defaultTextStyle?: TextPickerTextStyle
 
 设置关闭滑动过程中文本样式变化动效时的各个选项的文本样式，仅当disableTextStyleAnimation为true时生效。
 
-默认值：与Text组件默认值相同。
+默认值：与[Text组件默认值相同。
 
 **类型：** [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)
 
@@ -446,20 +448,13 @@ disappearTextStyle?: PickerTextStyle
 
 > 默认值：
 > 
-> 
-{   
-> 
-color: '#ff182431',   
-> 
-font: {   
-> 
-size: '14fp',   
-> 
-weight: FontWeight.Regular   
-> 
-}   
-> 
-}
+> <br>{
+> <br>color: '#ff182431',
+> <br>font: {
+> <br>size: '14fp',
+> <br>weight: FontWeight.Regular
+> <br>}
+> <br>}
 
 **类型：** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
@@ -564,7 +559,8 @@ maskRect?: Rectangle
 
 **类型：** [Rectangle](arkts-arkui-rectangle-i.md)
 
-**默认值：** { x: 0, y: 0, width: '100%', height: '100%' } [since 11]
+**默认值：**
+- API版本11+：{ x: 0, y: 0, width: '100%', height: '100%' }
 
 **起始版本：** 10
 
@@ -586,7 +582,8 @@ offset?: Offset
 
 **类型：** [Offset](../arkts-apis/arkts-arkui-offset-t.md)
 
-**默认值：** { dx: 0 , dy: 0 } [since 11]
+**默认值：**
+- API版本11+：{ dx: 0 , dy: 0 }
 
 **起始版本：** 10
 
@@ -647,14 +644,10 @@ selectedBackgroundStyle?: PickerBackgroundStyle
 
 > 默认值：
 > 
-> 
-{   
-> 
-color: \$r('sys.color.comp_background_tertiary'),   
-> 
-borderRadius: \$r('sys.float.corner_radius_level12')   
-> 
-}
+> <br>{
+> <br>color: \$r('sys.color.comp_background_tertiary'),
+> <br>borderRadius: \$r('sys.float.corner_radius_level12')
+> <br>}
 
 **类型：** [PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)
 
@@ -678,20 +671,13 @@ selectedTextStyle?: PickerTextStyle
 
 > 默认值：
 > 
-> 
-{   
-> 
-color: '#ff007dff',   
-> 
-font: {   
-> 
-size: '20fp',   
-> 
-weight: FontWeight.Medium   
-> 
-}   
-> 
-}
+> <br>{
+> <br>color: '#ff007dff',
+> <br>font: {
+> <br>size: '20fp',
+> <br>weight: FontWeight.Medium
+> <br>}
+> <br>}
 
 **类型：** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
@@ -713,7 +699,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM
 
-**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
+**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 12
 
@@ -733,20 +719,13 @@ textStyle?: PickerTextStyle
 
 > 默认值：
 > 
-> 
-{   
-> 
-color: '#ff182431',   
-> 
-font: {   
-> 
-size: '16fp',   
-> 
-weight: FontWeight.Regular   
-> 
-}   
-> 
-}
+> <br>{
+> <br>color: '#ff182431',
+> <br>font: {
+> <br>size: '16fp',
+> <br>weight: FontWeight.Regular
+> <br>}
+> <br>}
 
 **类型：** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 

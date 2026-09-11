@@ -2,6 +2,8 @@
 
 Sendable PixelMap instance.
 
+@typedef PixelMap
+
 **继承/实现关系：** PixelMap extends [ISendable](arkts-image-sendableimage-isendable-t.md)
 
 **起始版本：** 12
@@ -543,7 +545,7 @@ Marshalling PixelMap and write into MessageSequence.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | 是 | rpc.MessageSequence parameter. |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | 是 | [rpc.MessageSequence parameter.](../../apis-ipc-kit/arkts-apis/arkts-rpc.md) |
 
 **错误码：**
 
@@ -1250,7 +1252,7 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | 是 | rpc.MessageSequence parameter. |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | 是 | [rpc.MessageSequence parameter.](../../apis-ipc-kit/arkts-apis/arkts-rpc.md) |
 
 **返回值：**
 

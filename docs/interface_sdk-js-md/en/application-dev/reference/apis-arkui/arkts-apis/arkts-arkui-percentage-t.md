@@ -6,6 +6,8 @@ declare type Percentage = `${number}%`
 
 Defines the length property with number in units of Percentage.
 
+@typedef { `\${number}%` } Percentage
+
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.

@@ -2,6 +2,8 @@
 
 Axis aligned boundary box used to determine whether two objects in space are overlapping.
 
+@typedef Aabb
+
 **Since:** 12
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

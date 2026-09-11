@@ -15,7 +15,7 @@
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pattern | RegExp \| string | Yes |  |
+| pattern | RegExp &#124; string | Yes |  |
 | flags | string | No |  |
 
 **Return value:**
@@ -32,7 +32,7 @@ new (pattern: RegExp | string, flags?: string): RegExp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pattern | RegExp \| string | Yes |  |
+| pattern | RegExp &#124; string | Yes |  |
 | flags | string | No |  |
 
 **Return value:**

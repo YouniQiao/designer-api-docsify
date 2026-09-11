@@ -6,7 +6,7 @@
 
 **废弃版本：** 20
 
-**替代接口：** [editMenuOptions](arkts-arkweb-web-attribute.md#editmenuoptions)
+**替代接口：** [editMenuOptions](arkts-arkweb-web-comp-attribute.md#editmenuoptions)
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

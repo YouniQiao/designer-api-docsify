@@ -24,7 +24,7 @@ function isFeatureSupported(featureId: number): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| featureId | number | 是 | 特性ID值。枚举值如下：   - 0x0001: 基础结构模式特性。   - 0x0002: 5 GHz带宽特性。   - 0x0004: GAS/ANQP特性。   - 0x0008: Wifi-Direct特性。   - 0x0010: Soft AP特性。   - 0x0040: Wi-Fi AWare组网特性。   - 0x8000: AP STA共存特性。   - 0x8000000: WPA3-Personal SAE特性。   - 0x10000000: WPA3-Enterprise Suite-B。   - 0x20000000: 增强开放特性。 |
+| featureId | number | 是 | 特性ID值。枚举值如下：<br>- 0x0001: 基础结构模式特性。<br>- 0x0002: 5 GHz带宽特性。<br>- 0x0004: GAS/ANQP特性。<br>- 0x0008: Wifi-Direct特性。<br>- 0x0010: Soft AP特性。<br>- 0x0040: Wi-Fi AWare组网特性。<br>- 0x8000: AP STA共存特性。<br>- 0x8000000: WPA3-Personal SAE特性。<br>- 0x10000000: WPA3-Enterprise Suite-B。<br>- 0x20000000: 增强开放特性。 |
 
 **返回值：**
 

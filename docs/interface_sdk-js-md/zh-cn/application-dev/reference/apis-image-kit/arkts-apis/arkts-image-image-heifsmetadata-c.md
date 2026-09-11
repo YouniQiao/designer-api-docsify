@@ -76,7 +76,7 @@ getAllProperties(): Promise<Record<string, string | null>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise对象，返回元数据拥有的所有属性的值。 |
+| Promise&lt;Record&lt;string, string &#124; null&gt;&gt; | Promise对象，返回元数据拥有的所有属性的值。 |
 
 ## getBlob
 
@@ -124,7 +124,7 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise对象，返回元数据要获取的属性的值，如果获取失败则返回错误码。 |
+| Promise&lt;Record&lt;string, string &#124; null&gt;&gt; | Promise对象，返回元数据要获取的属性的值，如果获取失败则返回错误码。 |
 
 **错误码：**
 
@@ -184,7 +184,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | 是 | 用户要修改HeifsMetadata对象的属性和值的键值对集合。 |
+| records | Record&lt;string, string &#124; null&gt; | 是 | 用户要修改HeifsMetadata对象的属性和值的键值对集合。 |
 
 **返回值：**
 

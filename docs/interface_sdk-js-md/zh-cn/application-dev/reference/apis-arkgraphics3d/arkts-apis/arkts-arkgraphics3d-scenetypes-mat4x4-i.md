@@ -2,6 +2,8 @@
 
 4x4矩阵类型，可用于坐标变换。
 
+@typedef Mat4x4
+
 **起始版本：** 23
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

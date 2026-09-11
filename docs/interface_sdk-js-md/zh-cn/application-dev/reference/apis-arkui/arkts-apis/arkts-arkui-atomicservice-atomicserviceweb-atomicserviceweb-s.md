@@ -130,7 +130,7 @@ nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt
 
 设置嵌套滚动选项。nestedScroll为NestedScrollOptions（向前、向后两个方向）类型时，scrollForward、scrollBackward默认滚动选项为NestedScrollMode.SELF_FIRST。nestedScroll为NestedScrollOptionsExt（上下左右四个方向）类型时，scrollUp、scrollDown、scrollLeft、scrollRight默认滚动选项为NestedScrollMode.SELF_FIRST。
 
-**类型：** [NestedScrollOptions](../arkts-components/arkts-arkui-nestedscrolloptions-i.md) \| [NestedScrollOptionsExt](../../apis-arkweb/arkts-components/arkts-arkweb-nestedscrolloptionsext-i.md)
+**类型：** [NestedScrollOptions](../arkts-components/arkts-arkui-nestedscrolloptions-i.md) &#124; [NestedScrollOptionsExt](../../apis-arkweb/arkts-components/arkts-arkweb-nestedscrolloptionsext-i.md)
 
 **起始版本：** 15
 

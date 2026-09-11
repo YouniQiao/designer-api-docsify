@@ -1238,7 +1238,7 @@ isReleased(): boolean
 
 Checks whether this PixelMap object is released. If released, any attempt to access the internal data of this object will fail.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied
 > by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
@@ -1688,7 +1688,7 @@ release(callback: AsyncCallback<void>): void
 
 Releases this PixelMap instance. After the release, any attempt to access the internal data of this object will fail. This API uses an asynchronous callback to return the result. Images occupy a large amount of memory. When you finish using a PixelMap instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied
 > by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
@@ -1715,7 +1715,7 @@ release(): Promise<void>
 
 Releases this PixelMap instance. After the release, any attempt to access the internal data of this object will fail. This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using a PixelMap instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied
 > by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
@@ -2633,7 +2633,7 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#wr
 readonly isEditable: boolean
 ```
 
-Whether the image pixels are editable. **true** if editable, **false** otherwise. The value **false** provides better image rendering and transmission performance.This API can be used in atomic services since API version 11.This API can be used in ArkTS widgets since API version 12.
+Whether the image pixels are editable. **true** if editable, **false** otherwise. The value **false** provides better image rendering and transmission performance.<br> This API can be used in atomic services since API version 11.<br> This API can be used in ArkTS widgets since API version 12.
 
 **Type:** boolean
 

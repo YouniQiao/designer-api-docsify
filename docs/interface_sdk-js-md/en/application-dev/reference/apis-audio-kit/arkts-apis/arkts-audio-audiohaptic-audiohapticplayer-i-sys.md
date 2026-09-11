@@ -57,7 +57,7 @@ Check whether the device supports haptics intensity adjustment.
 
 | Type | Description |
 | --- | --- |
-| boolean | { |
+| boolean | `true` means supported. |
 
 **Error codes:**
 
@@ -83,7 +83,7 @@ Check whether the device supports haptics intensity ramp effect.
 
 | Type | Description |
 | --- | --- |
-| boolean | { |
+| boolean | `true` means supported. |
 
 **Error codes:**
 

@@ -4,7 +4,7 @@
 
 **起始版本：** 15
 
-**系统能力：** SystemCapability.MiscServices.Pasteboard
+**系统能力：** SystemCapability.MiscServices.Pasteboard @class ProgressSignal
 
 ## 导入模块
 

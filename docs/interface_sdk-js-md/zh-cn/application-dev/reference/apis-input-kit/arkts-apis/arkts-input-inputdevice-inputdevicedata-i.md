@@ -76,7 +76,7 @@ id: number
 isLocal?: boolean
 ```
 
-输入设备是否为本地设备。true表示是本地设备，false表示是非本地设备。当该字段不存在时，默认值为false。
+输入设备是否为本地设备。<br>true表示是本地设备，false表示是非本地设备。当该字段不存在时，默认值为false。
 
 **类型：** boolean
 
@@ -90,7 +90,7 @@ isLocal?: boolean
 isVirtual?: boolean
 ```
 
-输入设备是否为虚拟设备。true表示是虚拟设备，false表示是非虚拟设备。当该字段不存在时，默认值为false。
+输入设备是否为虚拟设备。<br>true表示是虚拟设备，false表示是非虚拟设备。当该字段不存在时，默认值为false。
 
 **类型：** boolean
 

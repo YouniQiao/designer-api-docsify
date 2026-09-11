@@ -152,3 +152,10 @@ get name(): string
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |

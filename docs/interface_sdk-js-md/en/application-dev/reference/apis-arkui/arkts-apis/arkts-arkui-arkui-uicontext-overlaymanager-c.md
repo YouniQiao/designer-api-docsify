@@ -2,7 +2,7 @@
 
 Provides the capability to draw overlays.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The initial APIs of this class are supported since API version 12.
 > 
@@ -51,7 +51,7 @@ Adds a specified **ComponentContent** node to the **OverlayManager**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes | Content to add to the target node on the **OverlayManager**.   **NOTE：**By default, the new node is centered on the page and stacked according to its stacking level. |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes | Content to add to the target node on the **OverlayManager**.<br> **NOTE:**<br> By default, the new node is centered on the page and stacked according to its stacking level. |
 | index | number | No |  |
 
 ## addComponentContentWithOrder
@@ -76,7 +76,7 @@ This API allows you to define the stacking order of the nodes when they are crea
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes | Content to add to the target node on the **OverlayManager**.    **NOTE：**By default, the new node is centered on the page and stacked according to its stacking level. |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes | Content to add to the target node on the **OverlayManager**.<br>**NOTE:**<br> By default, the new node is centered on the page and stacked according to its stacking level. |
 | levelOrder | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | No |  |
 
 ## hideAllComponentContents
@@ -137,7 +137,7 @@ Opens an overlay with the specified ComponentContent and options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes | Content to add to the new node on the OverlayManager. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: By default, the new node is centered on the page and stacked according to its stacking level. </p> |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes | Content to add to the new node on the OverlayManager. <p>&lt;strong&gt;NOTE&lt;/strong&gt;:<br>By default, the new node is centered on the page and stacked according to its stacking level. </p> |
 | options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | No |  |
 
 **Return value:**

@@ -34,7 +34,7 @@ Unsubscribes from asynchronous registration of the started UIExtensionAbility th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'asyncReceiverRegister' | Yes | Event type. The value is fixed at **'asyncReceiverRegister'**. |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | No | Callback. If this parameter is left empty, it means unsubscribing from all callbacks triggered after UIExtensionAbility's asynchronous registration.If this parameter is not empty, it means unsubscribing from callbacks corresponding to **type**.<br>**Since:** 18 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | No | Callback. If this parameter is left empty, it means unsubscribing from all callbacks triggered after UIExtensionAbility's asynchronous registration.<br> If this parameter is not empty, it means unsubscribing from callbacks corresponding to **type**.<br>**Since:** 18 |
 
 ## off('syncReceiverRegister')
 
@@ -57,7 +57,7 @@ Unsubscribes from synchronous registration of the started UIExtensionAbility thr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'syncReceiverRegister' | Yes | Event type. The value is fixed at **'syncReceiverRegister'**. |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | No | Callback. If this parameter is left empty, it means unsubscribing from all callbacks triggered after UIExtensionAbility's synchronous registration.If this parameter is not empty, it means unsubscribing from callbacks corresponding to **type**.<br>**Since:** 18 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | No | Callback. If this parameter is left empty, it means unsubscribing from all callbacks triggered after UIExtensionAbility's synchronous registration.<br> If this parameter is not empty, it means unsubscribing from callbacks corresponding to **type**.<br>**Since:** 18 |
 
 ## on('asyncReceiverRegister')
 

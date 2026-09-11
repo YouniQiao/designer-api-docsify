@@ -28,4 +28,4 @@ Enables a Wi-Fi hotspot.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if this method is called successfully; returns `false` otherwise. |

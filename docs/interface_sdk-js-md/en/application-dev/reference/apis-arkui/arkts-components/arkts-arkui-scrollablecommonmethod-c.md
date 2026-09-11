@@ -35,14 +35,12 @@ Set the scroll bar auto adjust the margin to avoid the padding, safeAreaPadding,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean \| undefined | Yes | Whether to enable automatic adjustment of scroll bar margin. Default value: false. |
+| enable | boolean &#124; undefined | Yes | Whether to enable automatic adjustment of scroll bar margin.<br>Default value: false. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## backToTop
 
 ```TypeScript
@@ -63,14 +61,12 @@ Sets whether to enable the back-to-top feature for a scrollable component when t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| backToTop | boolean | Yes | Whether to enable the back-to-top feature for a scrollable component when the status bar is touched. Default value: &lt;em&gt;false&lt;/em&gt; |
+| backToTop | boolean | Yes | Whether to enable the back-to-top feature for a scrollable component when the status bar is touched.<br>Default value: &lt;em&gt;false&lt;/em&gt; |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## clipContent
 
 ```TypeScript
@@ -91,14 +87,12 @@ Sets the content clipping area for this scrollable component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| clip | [ContentClipMode](arkts-arkui-contentclipmode-e.md) \| [RectShape](arkts-arkui-rectshape-t.md) | Yes | A value from enum ContentClipMode or a customized clip rect. |
+| clip | [ContentClipMode](arkts-arkui-contentclipmode-e.md) &#124; [RectShape](arkts-arkui-rectshape-t.md) | Yes | A value from enum ContentClipMode or a customized clip rect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## contentEndOffset
 
 ```TypeScript
@@ -119,14 +113,12 @@ Sets the offset from the end of the content to the boundary of the scrollable di
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Offset from the end of the content to the boundary of the scrollable display area. Default value: &lt;em&gt;0&lt;/em&gt; Unit: vp |
+| offset | number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Offset from the end of the content to the boundary of the scrollable display area.<br>Default value: &lt;em&gt;0&lt;/em&gt; <br>Unit: vp |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## contentStartOffset
 
 ```TypeScript
@@ -147,14 +139,12 @@ Sets the offset from the start of the content to the boundary of the scrollable 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Offset from the start of the content to the boundary of the scrollable display area. Default value: &lt;em&gt;0&lt;/em&gt; Unit: vp |
+| offset | number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Offset from the start of the content to the boundary of the scrollable display area.<br>Default value: &lt;em&gt;0&lt;/em&gt; <br>Unit: vp |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## digitalCrownSensitivity
 
 ```TypeScript
@@ -203,15 +193,13 @@ Sets the effect used when the scroll boundary is reached.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| edgeEffect | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported. Default value: &lt;em&gt;EdgeEffect.None&lt;/em&gt; for the &lt;em&gt;Grid&lt;/em&gt;, &lt;em&gt;Scroll&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; components and &lt;em&gt;EdgeEffect.Spring&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt; component |
-| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself. The value &lt;em&gt;{ alwaysEnabled: true }&lt;/em&gt; means to enable the scroll effect, and &lt;em&gt;{ alwaysEnabled: false }&lt;/em&gt; means the opposite. Default value:&lt;em&gt;{ alwaysEnabled: false }&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow &lt;/em&gt; components, and &lt;em&gt;{ alwaysEnabled: true }&lt;/em&gt; for the &lt;em&gt;Scroll&lt;/em&gt; component |
+| edgeEffect | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported.<br>Default value: &lt;em&gt;EdgeEffect.None&lt;/em&gt; for the &lt;em&gt;Grid&lt;/em&gt;, &lt;em&gt;Scroll&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; components and &lt;em&gt;EdgeEffect.Spring&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt; component |
+| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself. The value &lt;em&gt;{ alwaysEnabled: true }&lt;/em&gt; means to enable the scroll effect, and &lt;em&gt;{ alwaysEnabled: false }&lt;/em&gt; means the opposite.<br>Default value:<br>&lt;em&gt;{ alwaysEnabled: false }&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow &lt;/em&gt; components, and &lt;em&gt;{ alwaysEnabled: true }&lt;/em&gt; for the &lt;em&gt;Scroll&lt;/em&gt; component |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## enableScrollInteraction
 
 ```TypeScript
@@ -232,14 +220,12 @@ Sets whether to support scroll gestures.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to support scroll gestures.Default value: &lt;em&gt;true&lt;/em&gt; |
+| value | boolean | Yes | Whether to support scroll gestures.<br>Default value: &lt;em&gt;true&lt;/em&gt; |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## enableScrollWithMouse
 
 ```TypeScript
@@ -260,14 +246,12 @@ Enable left mouse button press-and-drag scrolling.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean \| undefined | Yes | Enable left mouse button press-and-drag scrolling. Default value: false. |
+| enabled | boolean &#124; undefined | Yes | Enable left mouse button press-and-drag scrolling.<br>Default value: false. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## fadingEdge
 
 ```TypeScript
@@ -295,8 +279,6 @@ Called when setting whether to enable fading Edge effect.
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## flingSpeedLimit
 
 ```TypeScript
@@ -317,14 +299,12 @@ Sets the maximum initial velocity at the start of the fling animation that occur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speedLimit | number | Yes | Maximum initial velocity at the start of the fling animation. Default value: &lt;em&gt;9000&lt;/em&gt; Unit: vp/s Value range: (0, +∞). If this parameter is set to a value less than or equal to 0, the default value is used. |
+| speedLimit | number | Yes | Maximum initial velocity at the start of the fling animation.<br>Default value: &lt;em&gt;9000&lt;/em&gt; <br>Unit: vp/s <br>Value range: (0, +∞). If this parameter is set to a value less than or equal to 0, the default value is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## friction
 
 ```TypeScript
@@ -345,14 +325,12 @@ Sets the friction coefficient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Friction coefficient. |
+| value | number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Friction coefficient. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## nestedScroll
 
 ```TypeScript
@@ -379,8 +357,6 @@ Sets the nested scrolling options.
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## onDidScroll
 
 ```TypeScript
@@ -409,8 +385,6 @@ Triggered when the scrollable component scrolls.
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## onDidStopDragging
 
 ```TypeScript
@@ -439,8 +413,6 @@ Called when the scrollable did end dragging.
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## onDidStopFling
 
 ```TypeScript
@@ -469,8 +441,6 @@ Called when the scrollable did end fling.
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## onReachEnd
 
 ```TypeScript
@@ -497,8 +467,6 @@ Triggered when the scrollable component reaches the end position.
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## onReachStart
 
 ```TypeScript
@@ -525,8 +493,6 @@ Triggered when the scrollable component reaches the start position.
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## onScroll
 
 ```TypeScript
@@ -557,8 +523,6 @@ Triggered when the scrollable component scrolls.
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## onScrollStart
 
 ```TypeScript
@@ -585,8 +549,6 @@ Triggered when the scrollable component starts scrolling initiated by the user's
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## onScrollStop
 
 ```TypeScript
@@ -613,8 +575,6 @@ Triggered when scrolling stops after the user's finger leaves the screen.
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## onWillScroll
 
 ```TypeScript
@@ -641,8 +601,6 @@ Called when the scrollable will scroll.
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## onWillStartDragging
 
 ```TypeScript
@@ -671,8 +629,6 @@ Called when the scrollable will start dragging.
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## onWillStartFling
 
 ```TypeScript
@@ -701,8 +657,6 @@ Called when the scrollable will start fling.
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## onWillStopDragging
 
 ```TypeScript
@@ -731,8 +685,6 @@ Called when the scrollable will end dragging.
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## scrollBar
 
 ```TypeScript
@@ -753,14 +705,12 @@ Sets the scrollbar state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.Default value: &lt;em&gt;BarState.Auto&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt;, &lt;em &gt;Grid&lt;/em&gt;, and &lt;em&gt;Scroll&lt;/em&gt; components and &lt;em&gt;BarState.Off&lt;/em&gt; for the &lt;em&gt;WaterFlow&lt;/em&gt; component |
+| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.<br>Default value: &lt;em&gt;BarState.Auto&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt;, &lt;em &gt;Grid&lt;/em&gt;, and &lt;em&gt;Scroll&lt;/em&gt; components and &lt;em&gt;BarState.Off&lt;/em&gt; for the &lt;em&gt;WaterFlow&lt;/em&gt; component |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## scrollBarColor
 
 ```TypeScript
@@ -781,14 +731,12 @@ Sets the scrollbar color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Color](../arkts-apis/arkts-arkui-color-e.md) \| number \| string | Yes | Scrollbar color.Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'# ffffff'&lt;/em&gt;. |
+| color | [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; number &#124; string | Yes | Scrollbar color.<br>Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) <br>A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'# ffffff'&lt;/em&gt;. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## scrollBarColor
 
 ```TypeScript
@@ -809,14 +757,12 @@ Sets the scrollbar color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Color](../arkts-apis/arkts-arkui-color-e.md) \| number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Scrollbar color.Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'#ffffff'&lt;/em&gt;. |
+| color | [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Scrollbar color.<br>Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) <br>A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'#ffffff'&lt;/em&gt;. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## scrollBarHeight
 
 ```TypeScript
@@ -837,14 +783,12 @@ Sets the scrollbar track height.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| undefined | Yes | Scrollbar track height. The value must be greater than or equal to 0, If set to undefined or a value less than 0, the default value is used. If set to 0, the scrollbar is not displayed. Default value: adaptive to the height of the scrollable component. |
+| height | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) &#124; undefined | Yes | Scrollbar track height.<br>The value must be greater than or equal to 0, If set to undefined or a value less than 0, the default value is used. If set to 0, the scrollbar is not displayed. <br> Default value: adaptive to the height of the scrollable component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## scrollBarMargin
 
 ```TypeScript
@@ -871,8 +815,6 @@ Margin of the scrollbar.
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## scrollBarWidth
 
 ```TypeScript
@@ -893,14 +835,12 @@ Sets the scrollbar width.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string | Yes | Scrollbar width.Default value: &lt;em&gt;4&lt;/em&gt; Unit: vp If this parameter is set to a value less than or equal to 0, the default value is used. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
+| value | number &#124; string | Yes | Scrollbar width.<br>Default value: &lt;em&gt;4&lt;/em&gt; <br>Unit: vp <br>If this parameter is set to a value less than or equal to 0, the default value is used. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## scrollBarWidth
 
 ```TypeScript
@@ -921,10 +861,9 @@ Sets the scrollbar width.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Scrollbar width. Unit: vp Default value: &lt;em&gt;4&lt;/em&gt; If this parameter is set to a value less than 0, the default value is used. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
+| value | number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Scrollbar width.<br>Unit: vp <br>Default value: &lt;em&gt;4&lt;/em&gt; <br>If this parameter is set to a value less than 0, the default value is used. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |

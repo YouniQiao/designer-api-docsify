@@ -28,7 +28,7 @@ Starts scanning Bluetooth devices.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the scan is started successfully; returns `false` otherwise. |
 
 **Examples**
 

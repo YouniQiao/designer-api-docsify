@@ -2,6 +2,8 @@
 
 P2P linked information.
 
+@typedef WifiP2pLinkedInfo
+
 **Since:** 9
 
 **System capability:** SystemCapability.Communication.WiFi.P2P

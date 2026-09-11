@@ -6,6 +6,8 @@ export declare type PopoverDialogV2OnVisibleChange = (visible: boolean) => void
 
 Declare the callback when the visibility of PopoverDialogV2 is changed.
 
+@typedef { function } PopoverDialogV2OnVisibleChange
+
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.

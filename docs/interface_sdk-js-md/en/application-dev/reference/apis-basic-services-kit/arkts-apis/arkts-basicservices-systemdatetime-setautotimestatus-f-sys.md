@@ -26,7 +26,7 @@ Sets the status of the automatic time setting. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | boolean | Yes | Whether to enable the automatic time setting.   - **true**: Enable the automatic time setting.   - **false**: Disable the automatic time setting. |
+| status | boolean | Yes | Whether to enable the automatic time setting.<br>- **true**: Enable the automatic time setting.<br>- **false**: Disable the automatic time setting. |
 
 **Return value:**
 

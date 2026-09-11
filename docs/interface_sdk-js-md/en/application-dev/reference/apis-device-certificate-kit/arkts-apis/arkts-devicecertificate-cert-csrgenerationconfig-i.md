@@ -2,7 +2,7 @@
 
 Configuration parameters for generating a CSR, including the subject name, digest algorithm, attribute, and output format.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - subject is an X500DistinguishedName object.
 > 

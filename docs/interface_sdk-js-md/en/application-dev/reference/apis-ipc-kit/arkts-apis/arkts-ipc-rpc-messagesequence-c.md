@@ -455,7 +455,7 @@ Reads data of the ArrayBuffer type from this **MessageSequence**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typeCode | [TypeCode](arkts-ipc-rpc-typecode-e.md) | Yes | TypedArray type of the ArrayBuffer data.The underlying read mode is determined based on the enum value of **TypeCode** passed by the service. |
+| typeCode | [TypeCode](arkts-ipc-rpc-typecode-e.md) | Yes | TypedArray type of the ArrayBuffer data.<br>The underlying read mode is determined based on the enum value of **TypeCode** passed by the service. |
 
 **Return value:**
 
@@ -1816,7 +1816,7 @@ Reads raw data from this **MessageSequence** object.
 
 **Deprecated since:** 11
 
-**Substitutes:** [readRawDataBuffer](#readrawdatabuffer)(size: int)
+**Substitutes:** [readRawDataBuffer](#readrawdatabuffer)(size: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2575,7 +2575,7 @@ Writes data of the ArrayBuffer type to this **MessageSequence** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buf | ArrayBuffer | Yes | Data to write. |
-| typeCode | [TypeCode](arkts-ipc-rpc-typecode-e.md) | Yes | TypedArray type of the ArrayBuffer data.The underlying write mode is determined based on the enum value of **TypeCode** passed by the service. |
+| typeCode | [TypeCode](arkts-ipc-rpc-typecode-e.md) | Yes | TypedArray type of the ArrayBuffer data.<br>The underlying write mode is determined based on the enum value of **TypeCode** passed by the service. |
 
 **Error codes:**
 
@@ -3527,7 +3527,7 @@ writeRawData(rawData: number[], size: number): void
 
 Writes raw data to this **MessageSequence** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API cannot be called for multiple times in one parcel communication.
 > 
@@ -3538,7 +3538,7 @@ Writes raw data to this **MessageSequence** object.
 
 **Deprecated since:** 11
 
-**Substitutes:** [writeRawDataBuffer](#writerawdatabuffer)(rawData: ArrayBuffer, size: int)
+**Substitutes:** [writeRawDataBuffer](#writerawdatabuffer)(rawData: ArrayBuffer, size: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -3582,7 +3582,7 @@ writeRawDataBuffer(rawData: ArrayBuffer, size: number): void
 
 Writes raw data to this **MessageSequence** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API cannot be called for multiple times in one parcel communication.
 > 

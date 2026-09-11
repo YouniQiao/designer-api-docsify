@@ -8,7 +8,7 @@ Provides APIs to manage data in a KV store, for example, adding or deleting data
 
 **Substitutes:** SingleKVStore
 
-**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+**System capability:** SystemCapability.DistributedDataManager.KVStore.Core @version 1
 
 ## Modules to Import
 
@@ -564,7 +564,7 @@ Adds a KV pair of the specified type to this KV store. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md). |
-| value | Uint8Array \| string \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, number, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md). |
+| value | Uint8Array &#124; string &#124; number &#124; boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, number, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
@@ -607,7 +607,7 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md). |
-| value | Uint8Array \| string \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, number, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md). |
+| value | Uint8Array &#124; string &#124; number &#124; boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, number, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md). |
 
 **Return value:**
 

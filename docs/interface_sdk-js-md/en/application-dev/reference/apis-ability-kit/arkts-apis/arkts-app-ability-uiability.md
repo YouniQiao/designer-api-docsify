@@ -6,11 +6,13 @@ UIAbility is an application component that has the UI. It inherits from
  callbacks such as component creation, destruction, and foreground/background switching. It also provides the
  [background communication capability](../../../reference/apis-ability-kit/js-apis-app-ability-uiAbility.md#background-communication-capability)
  .
- > **NOTE**
+
+> **NOTE**
  >
  > For details about the inheritance relationship of each ability, see
  > [Inheritance Relationship](../../../reference/apis-ability-kit/js-apis-app-ability-ability.md#ability-inheritance-relationship)
  > .
+
 
 
 ## Modules to Import

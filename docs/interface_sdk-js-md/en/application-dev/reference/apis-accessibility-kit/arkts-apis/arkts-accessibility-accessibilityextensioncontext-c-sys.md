@@ -61,7 +61,7 @@ Adds a virtual accessibility node tree. This API uses a promise to return the re
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality.Possible causes:  1.Internal operation failed.  2.Failed to obtain the required service or client object (null pointer).  3.IPC communication failed.  4.Failed to obtain the accessibility service proxy.  5.Timed out while waiting for the result of an asynchronous operation. |
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality.Possible causes:<br>1.Internal operation failed. <br>2.Failed to obtain the required service or client object (null pointer). <br>3.IPC communication failed. <br>4.Failed to obtain the accessibility service proxy. <br>5.Timed out while waiting for the result of an asynchronous operation. |
 
 **Examples**
 
@@ -596,7 +596,7 @@ notifyDisconnect(): void
 
 Notifies the accessibility service that the accessibility extension service can be closed.
 
-This function must be used together with the pre-disconnection registration API on('preDisconnect'). If the pre-disconnection registration function has not been called, calling this function directly has no effect.
+This function must be used together with the pre-disconnection registration API [on('preDisconnect')](#onpredisconnect). If the pre-disconnection registration function has not been called, calling this function directly has no effect.
 
 **Since:** 20
 
@@ -676,7 +676,7 @@ Unregisters the pre-disconnect callback registered with the accessibility servic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'preDisconnect' | Yes | Event name, which is fixed to 'preDisconnect', indicating that the accessibility extension service is about to be closed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback for the event that the accessibility extension service is about to be closed. It must be the same as the callback in on('preDisconnect'). If this parameter is not specified, all registered events are unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback for the event that the accessibility extension service is about to be closed. It must be the same as the callback in [on('preDisconnect')](#onpredisconnect). If this parameter is not specified, all registered events are unregistered. |
 
 **Error codes:**
 
@@ -840,7 +840,7 @@ Deletes the added accessibility virtual node tree. This API uses a promise to re
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality.Possible causes:  1.Internal operation failed.  2.Failed to obtain the required service or client object (null pointer).  3.IPC communication failed.  4.Failed to obtain the accessibility service proxy.  5.Timed out while waiting for the result of an asynchronous operation. |
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality.Possible causes:<br>1.Internal operation failed. <br>2.Failed to obtain the required service or client object (null pointer). <br>3.IPC communication failed. <br>4.Failed to obtain the accessibility service proxy. <br>5.Timed out while waiting for the result of an asynchronous operation. |
 
 **Examples**
 
@@ -1059,7 +1059,7 @@ Modifies the accessibility node property. This API uses a promise to return the 
 | --- | --- | --- | --- |
 | elementId | number | Yes | ID of the accessibility node to modify. |
 | windowId | number | Yes | ID of the window of the accessibility node to modify. |
-| node | [AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md) | Yes | Property values of the accessibility node to modify. The modifiable properties include: accessibilityText, accessibilityGroup, accessibilityLevel, checkable, checked, selected, clickable, enabled, customComponentType. |
+| node | [AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md) | Yes | Property values of the accessibility node to modify. The modifiable properties include:<br>accessibilityText, accessibilityGroup, accessibilityLevel, checkable, checked, selected, clickable, enabled, customComponentType. |
 
 **Return value:**
 
@@ -1073,7 +1073,7 @@ Modifies the accessibility node property. This API uses a promise to return the 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality.Possible causes:  1.Internal operation failed.  2.Failed to obtain the required service or client object (null pointer).  3.IPC communication failed.  4.Failed to obtain the accessibility service proxy.  5.Timed out while waiting for the result of an asynchronous operation. |
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality.Possible causes:<br>1.Internal operation failed. <br>2.Failed to obtain the required service or client object (null pointer). <br>3.IPC communication failed. <br>4.Failed to obtain the accessibility service proxy. <br>5.Timed out while waiting for the result of an asynchronous operation. |
 
 **Examples**
 

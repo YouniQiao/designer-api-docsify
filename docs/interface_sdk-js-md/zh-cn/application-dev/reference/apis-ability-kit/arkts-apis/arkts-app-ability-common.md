@@ -38,7 +38,7 @@ import { common } from '@kit.AbilityKit';
 | [EmbeddableUIAbilityContext](arkts-ability-common-embeddableuiabilitycontext-t.md) | [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)组件上下文，继承自Context。 |
 | [EventHub](arkts-ability-common-eventhub-t.md) | EventHub是系统提供的基于发布-订阅模式实现的事件通信机制。 |
 | [ExtensionContext](arkts-ability-common-extensioncontext-t.md) | [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)组件上下文，继承自Context。 |
-| [FormEditExtensionContext](arkts-ability-common-formeditextensioncontext-t.md) | The context of form edit extension. It allows access to formEditExtension-specific resources. |
+| [FormEditExtensionContext](arkts-ability-common-formeditextensioncontext-t.md) | The context of form edit extension. It allows access to formEditExtension-specific resources. @typedef { _FormEditExtensionContext.default } |
 | [FormExtensionContext](arkts-ability-common-formextensioncontext-t.md) | The context of form extension. It allows access to formExtension-specific resources. |
 | [LiveFormExtensionContext](arkts-ability-common-liveformextensioncontext-t.md) | The context of live form extension. It allows access to liveFormExtension-specific resources. |
 | [PacMap](arkts-ability-common-pacmap-t.md) | 存储基础数据类型的容器。 |

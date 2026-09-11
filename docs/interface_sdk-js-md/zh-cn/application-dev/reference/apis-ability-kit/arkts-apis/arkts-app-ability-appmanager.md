@@ -64,11 +64,11 @@ import { appManager } from '@kit.AbilityKit';
 | [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md) | 终止account进程。使用Promise异步回调。 |
 | [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md) | 终止account进程。使用Promise异步回调。 |
 | [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md) | 终止account进程。使用callback异步回调。 |
-| off | 注销应用启动和退出的监听器。 |
-| off | 取消注册监听Ability首帧绘制完成事件观察者对象。 |
-| on | 注册应用程序的状态监听器，并通过设置过滤条件来筛选所需监听的应用生命周期变化事件。 |
-| on | 注册应用启动和退出的监听器，可用于系统应用监听所有应用的启动和退出。 |
-| on | 注册监听Ability首帧绘制完成事件观察者对象，可用于系统应用监听Ability首帧绘制事件。 |
+| [off](arkts-ability-appmanager-off-f-sys.md#offappforegroundstate) | 注销应用启动和退出的监听器。 |
+| [off](arkts-ability-appmanager-off-f-sys.md#offabilityfirstframestate) | 取消注册监听Ability首帧绘制完成事件观察者对象。 |
+| [on](arkts-ability-appmanager-on-f-sys.md#onapplicationstate) | 注册应用程序的状态监听器，并通过设置过滤条件来筛选所需监听的应用生命周期变化事件。 |
+| [on](arkts-ability-appmanager-on-f-sys.md#onappforegroundstate) | 注册应用启动和退出的监听器，可用于系统应用监听所有应用的启动和退出。 |
+| [on](arkts-ability-appmanager-on-f-sys.md#onabilityfirstframestate) | 注册监听Ability首帧绘制完成事件观察者对象，可用于系统应用监听Ability首帧绘制事件。 |
 | [preloadApplication](arkts-ability-appmanager-preloadapplication-f-sys.md) | 预加载应用进程。接口返回成功并不代表预加载成功，具体结果以目标应用进程是否创建成功为准。使用Promise异步回调。 |
 | [setKeepAliveForAppServiceExtension](arkts-ability-appmanager-setkeepaliveforappserviceextension-f-sys.md) | 为AppServiceExtensionAbility设置保活或取消保活。使用Promise异步回调。该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。 |
 | [setKeepAliveForBundle](arkts-ability-appmanager-setkeepaliveforbundle-f-sys.md) | 为指定用户下的应用设置或取消保活。使用Promise异步回调。从API version 18开始，该接口仅在2in1和Wearable设备上生效。对于API version 18之前版本，该接口仅在2in1设备上生效。其他情况下调用该接口将返回错误码801。 |

@@ -2,7 +2,8 @@
 
 **WindowExtensionAbility** inherits from **ExtensionAbility**. The content in a WindowExtensionAbility object can be
  displayed as an ability component in other application windows.
- > **NOTE**
+
+> **NOTE**
  >
  > - This is deprecated since API version 21. You are advised to use
  > [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instead. For details about how
@@ -11,6 +12,7 @@
  > - The APIs provided by this module are system APIs.
  >
  > - The APIs of this module can be used only in the stage model.
+
 
 
 ## Modules to Import

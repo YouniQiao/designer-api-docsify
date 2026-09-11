@@ -2,6 +2,8 @@
 
 Information about a running form.
 
+@typedef FormProviderFilter
+
 **起始版本：** 10
 
 **系统能力：** SystemCapability.Ability.Form

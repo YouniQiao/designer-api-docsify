@@ -14,7 +14,7 @@ function createKdf(algName: string): Kdf
 
 Creates a key derivation function instance.
 
-For details about the supported specifications, see [Key Derivation Function Specifications](../../../security/CryptoArchitectureKit/crypto-key-derivation-overview.md).
+<br>For details about the supported specifications, see [Key Derivation Function Specifications](../../../security/CryptoArchitectureKit/crypto-key-derivation-overview.md).
 
 **Since:** 11
 
@@ -28,7 +28,7 @@ For details about the supported specifications, see [Key Derivation Function Spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algName | string | Yes | Key derivation algorithm (including the hash function for the HMAC). Currently, PBKDF2, HKDF, SCRYPT, and X963KDF are supported. For example, **PBKDF2\|SHA256**, **HKDF\|SHA256**, **SCRYPT**, and **X963KDF\|SHA256**.For details about the supported specifications, see [Key Derivation Function Specifications](../../../security/CryptoArchitectureKit/crypto-key-derivation-overview.md). |
+| algName | string | Yes | Key derivation algorithm (including the hash function for the HMAC). Currently, PBKDF2, HKDF, SCRYPT, and X963KDF are supported. For example, **PBKDF2&#124;SHA256**, **HKDF&#124;SHA256**, **SCRYPT**, and **X963KDF&#124;SHA256**.<br>For details about the supported specifications, see [Key Derivation Function Specifications](../../../security/CryptoArchitectureKit/crypto-key-derivation-overview.md). |
 
 **Return value:**
 
@@ -40,7 +40,7 @@ For details about the supported specifications, see [Key Derivation Function Spe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 

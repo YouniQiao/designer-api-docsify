@@ -19,7 +19,7 @@ controller: WebController | WebviewController
 
 Controller used to control various behaviors of the Web component, including page navigation, lifecycle state, JavaScript interaction, etc. Since API version 9, WebController is no longer maintained. It is recommended to use [WebviewController](arkts-arkweb-webviewcontroller-t.md) instead.
 
-**Type:** [WebController](arkts-arkweb-webcontroller-c.md) \| [WebviewController](arkts-arkweb-webviewcontroller-t.md)
+**Type:** [WebController](arkts-arkweb-webcontroller-c.md) &#124; [WebviewController](arkts-arkweb-webviewcontroller-t.md)
 
 **Since:** 8
 
@@ -105,7 +105,7 @@ Web page resource address. If a local resource file is accessed, use the resourc
 
 src cannot be dynamically changed through a state variable (for example, @State). To change the address, reload the page through [loadUrl()](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl).
 
-**Type:** string \| Resource
+**Type:** string &#124; Resource
 
 **Since:** 8
 

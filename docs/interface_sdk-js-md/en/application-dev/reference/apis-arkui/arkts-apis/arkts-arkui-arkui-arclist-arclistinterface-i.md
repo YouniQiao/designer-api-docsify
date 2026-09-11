@@ -36,4 +36,3 @@ Creates an **ArcList** component instance with specified configuration options.
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |

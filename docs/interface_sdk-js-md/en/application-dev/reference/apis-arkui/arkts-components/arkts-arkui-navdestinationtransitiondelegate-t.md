@@ -20,10 +20,10 @@ Defines the delegate function for custom transition animations of the **NavDesti
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | operation | [NavigationOperation](arkts-arkui-navigationoperation-e.md) | Yes | Type of navigation operation for the current page transition. |
-| isEnter | boolean | Yes | Whether the current page is an entry page.   **true**: The current page is an entry page.   **false**: The current page is not an entry page. |
+| isEnter | boolean | Yes | Whether the current page is an entry page.<br>**true**: The current page is an entry page.<br>**false**: The current page is not an entry page. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[NavDestinationTransition](arkts-arkui-navdestinationtransition-i.md)&gt; \| undefined | Array of custom animations for the **NavDestination** page. If **undefined** is returned, the default system animation is used. |
+| Array&lt;[NavDestinationTransition](arkts-arkui-navdestinationtransition-i.md)&gt; &#124; undefined | Array of custom animations for the **NavDestination** page. If **undefined** is returned, the default system animation is used. |

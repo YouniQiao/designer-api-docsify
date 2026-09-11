@@ -6,6 +6,8 @@ declare type Dimension = PX | VP | FP | LPX | Percentage | Resource
 
 定义具有数值和单位（vp|px|fp|lpx|%）以及资源的尺寸属性。
 
+@typedef { PX | VP | FP | LPX | Percentage | Resource } Dimension
+
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。

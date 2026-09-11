@@ -2,6 +2,8 @@
 
 表示Agent的服务提供商。
 
+@typedef AgentProvider
+
 **起始版本：** 24
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core

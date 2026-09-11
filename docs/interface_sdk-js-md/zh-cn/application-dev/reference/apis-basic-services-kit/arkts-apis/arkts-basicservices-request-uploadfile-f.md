@@ -37,7 +37,7 @@ function uploadFile(context: BaseContext, config: UploadConfig, callback: AsyncC
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [13400002](../errorcode-request.md#13400002-文件路径异常) | File path not supported or invalid. |
 
 **示例**
@@ -106,7 +106,7 @@ function uploadFile(context: BaseContext, config: UploadConfig): Promise<UploadT
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [13400002](../errorcode-request.md#13400002-文件路径异常) | File path not supported or invalid. |
 
 **示例**

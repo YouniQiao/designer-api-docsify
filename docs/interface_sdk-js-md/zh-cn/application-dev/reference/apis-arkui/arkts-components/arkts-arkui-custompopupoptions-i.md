@@ -70,8 +70,9 @@ arrowHeight?: Dimension
 
 **类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
-**默认值：** 8.0_vp. [since 11 - 11] @default 8.0_vp. <p><strong>NOTE</strong>: 
-This parameter cannot be set in percentage. </p>
+**默认值：**
+- API版本11：8.0_vp.
+- 8.0_vp. <p><strong>NOTE</strong>: <br>This parameter cannot be set in percentage. </p>
 
 **起始版本：** 11
 
@@ -149,8 +150,9 @@ arrowWidth?: Dimension
 
 **类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
-**默认值：** 16.0_vp. [since 11 - 11] @default 16.0_vp. <p><strong>NOTE</strong>: 
-This parameter cannot be set in percentage. </p> [since 12]
+**默认值：**
+- API版本11：16.0_vp.
+- API版本12+：16.0_vp. <p><strong>NOTE</strong>: <br>This parameter cannot be set in percentage. </p>
 
 **起始版本：** 11
 
@@ -178,7 +180,8 @@ true：自动关闭气泡；false：气泡不会自动关闭。
 
 **类型：** boolean
 
-**默认值：** true [since 11]
+**默认值：**
+- API版本11+：true
 
 **起始版本：** 8
 
@@ -383,7 +386,8 @@ true：显示箭头；false：不显示箭头。
 
 **类型：** boolean
 
-**默认值：** true [since 11]
+**默认值：**
+- API版本11+：true
 
 **起始版本：** 8
 
@@ -433,7 +437,9 @@ true：气泡可以获焦；false：气泡不会获焦。
 
 **类型：** boolean
 
-**默认值：** true [since 11 - 11] @default false [since 12]
+**默认值：**
+- API版本11：true
+- API版本12+：false
 
 **起始版本：** 11
 
@@ -517,7 +523,7 @@ mask?: boolean | { color: ResourceColor }
 
 设置气泡是否有遮罩层及遮罩颜色。如果设置为false，则没有遮罩层；如果设置为true，则设置有遮罩层并且颜色为透明色；如果设置为Color，则为遮罩层的颜色。默认值：true
 
-**类型：** boolean \| { color: ResourceColor }
+**类型：** boolean &#124; { color: ResourceColor }
 
 **起始版本：** 10
 
@@ -539,7 +545,7 @@ maskColor?: Color | string | Resource | number
 
 从 API version 10 开始废弃，建议使用`mask`替代。
 
-**类型：** [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| number
+**类型：** [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; number
 
 **起始版本：** 8
 
@@ -567,7 +573,8 @@ offset?: Position
 
 **类型：** Position
 
-**默认值：** { x: 0, y: 0 } [since 11]
+**默认值：**
+- API版本11+：{ x: 0, y: 0 }
 
 **起始版本：** 10
 
@@ -592,7 +599,7 @@ onWillDismiss?: boolean | Callback<DismissPopupAction>
 
 在onWillDismiss回调中，不能再做onWillDismiss拦截。
 
-**类型：** boolean \| [Callback](arkts-arkui-callback-i.md)&lt;[DismissPopupAction](arkts-arkui-dismisspopupaction-i.md)&gt;
+**类型：** boolean &#124; [Callback](arkts-arkui-callback-i.md)&lt;[DismissPopupAction](arkts-arkui-dismisspopupaction-i.md)&gt;
 
 **默认值：** true
 
@@ -687,9 +694,11 @@ API version 10，默认值：'#4d4d4d'
 
 API version 11及以后，默认值：透明色TRANSPARENT加模糊背景填充效果[COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)
 
-**类型：** [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| number
+**类型：** [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; number
 
-**默认值：** '#4d4d4d' [since 10 - 10] @default TRANSPARENT plus COMPONENT_ULTRA_THICK [since 11]
+**默认值：**
+- API版本10：'#4d4d4d'
+- API版本11+：TRANSPARENT plus COMPONENT_ULTRA_THICK
 
 **起始版本：** 8
 
@@ -731,7 +740,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 默认值：ShadowStyle.OUTER_DEFAULT_MD
 
-**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
+**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **默认值：** ShadowStyle.OUTER_DEFAULT_MD.
 
@@ -757,7 +766,8 @@ true：气泡会显示在创建的子窗里；false：气泡会显示在对应�
 
 **类型：** boolean
 
-**默认值：** false [since 11]
+**默认值：**
+- API版本11+：false
 
 **起始版本：** 9
 

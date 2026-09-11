@@ -354,7 +354,7 @@ install(hapFilePaths: Array<string>, installParam: InstallParam, callback: Async
 | [17700054](../errorcode-bundle.md#17700054-权限校验失败导致应用安装失败) | Failed to install the HAP because the HAP requests wrong permissions.<br>**适用版本：** 11+ |
 | [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because the device has been controlled.<br>**适用版本：** 12+ |
 | [17700066](../errorcode-bundle.md#17700066-安装失败native软件包安装失败) | Failed to install the HAP because installing the native package failed.<br>**适用版本：** 12+ |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
+| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
 | [17700077](../errorcode-bundle.md#17700077-安装应用失败但安装对应的预置应用成功) | Failed to install the HAP and restore to preinstalled bundle.<br>**适用版本：** 17+ |
 | [17700076](../errorcode-bundle.md#17700076-签名证书profile文件中的类型被限制不允许安装到当前设备中导致安装失败) | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**适用版本：** 18+ |
 
@@ -449,7 +449,7 @@ install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 | [17700054](../errorcode-bundle.md#17700054-权限校验失败导致应用安装失败) | Failed to install the HAP because the HAP requests wrong permissions.<br>**适用版本：** 11+ |
 | [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because the device has been controlled.<br>**适用版本：** 12+ |
 | [17700066](../errorcode-bundle.md#17700066-安装失败native软件包安装失败) | Failed to install the HAP because installing the native package failed.<br>**适用版本：** 12+ |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
+| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
 | [17700077](../errorcode-bundle.md#17700077-安装应用失败但安装对应的预置应用成功) | Failed to install the HAP and restore to preinstalled bundle.<br>**适用版本：** 17+ |
 | [17700076](../errorcode-bundle.md#17700076-签名证书profile文件中的类型被限制不允许安装到当前设备中导致安装失败) | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**适用版本：** 18+ |
 
@@ -546,7 +546,7 @@ install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 | [17700054](../errorcode-bundle.md#17700054-权限校验失败导致应用安装失败) | Failed to install the HAP because the HAP requests wrong permissions.<br>**适用版本：** 11+ |
 | [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because the device has been controlled.<br>**适用版本：** 12+ |
 | [17700066](../errorcode-bundle.md#17700066-安装失败native软件包安装失败) | Failed to install the HAP because installing the native package failed.<br>**适用版本：** 12+ |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
+| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
 | [17700077](../errorcode-bundle.md#17700077-安装应用失败但安装对应的预置应用成功) | Failed to install the HAP and restore to preinstalled bundle.<br>**适用版本：** 17+ |
 | [17700076](../errorcode-bundle.md#17700076-签名证书profile文件中的类型被限制不允许安装到当前设备中导致安装失败) | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**适用版本：** 18+ |
 
@@ -626,7 +626,7 @@ installPlugin(hostBundleName: string, pluginFilePaths: Array<string>, pluginPara
 | [17700017](../errorcode-bundle.md#17700017-新安装的应用版本号低于已安装的版本号导致应用安装失败) | Failed to install the plugin since the version of the plugin to install is too early. |
 | [17700048](../errorcode-bundle.md#17700048-代码签名校验失败) | Failed to install the plugin because the code signature verification is failed. |
 | [17700052](../errorcode-bundle.md#17700052-非开发者模式下不允许安装调试自分发插件或调试应用) | Failed to install the plugin because debug bundle cannot be installed under non-developer mode. |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the plugin because a plugin with the same bundle name but different signature information exists on the device. |
+| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the plugin because a plugin with the same<br>bundle name but different signature information exists on the device. |
 | [17700087](../errorcode-bundle.md#17700087-当前设备不支持安装插件) | Failed to install the plugin because the current device does not support plugin. |
 | [17700088](../errorcode-bundle.md#17700088-应用缺少安装插件的权限) | Failed to install the plugin because the host application lacks ohos.permission.kernel.SUPPORT_PLUGIN. |
 | [17700089](../errorcode-bundle.md#17700089-插件的-plugindistributionids-解析失败) | Failed to install the plugin because the plugin id fails to be parsed. |
@@ -706,7 +706,7 @@ installPreexistingApp(bundleName: string, userId?: number): Promise<void>
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The userId is invalid. |
 | [17700071](../errorcode-bundle.md#17700071-不允许企业应用安装) | It is not allowed to install the enterprise bundle. |
-| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because this application is prohibited from being installed on this device or by specified users.<br>**适用版本：** 14+ |
+| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because this application is prohibited<br>from being installed on this device or by specified users.<br>**适用版本：** 14+ |
 
 **示例**
 
@@ -767,8 +767,8 @@ recover(bundleName: string, installParam: InstallParam, callback: AsyncCallback<
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
-| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because this application is prohibited from being installed on this device or by specified users.<br>**适用版本：** 14+ |
+| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
+| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because this application is prohibited<br>from being installed on this device or by specified users.<br>**适用版本：** 14+ |
 
 **示例**
 
@@ -832,8 +832,8 @@ recover(bundleName: string, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
-| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because this application is prohibited from being installed on this device or by specified users.<br>**适用版本：** 14+ |
+| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
+| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because this application is prohibited<br>from being installed on this device or by specified users.<br>**适用版本：** 14+ |
 
 **示例**
 
@@ -899,8 +899,8 @@ recover(bundleName: string, installParam?: InstallParam): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
-| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because this application is prohibited from being installed on this device or by specified users.<br>**适用版本：** 14+ |
+| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
+| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) | Failed to install the HAP because this application is prohibited<br>from being installed on this device or by specified users.<br>**适用版本：** 14+ |
 
 **示例**
 
@@ -1505,7 +1505,7 @@ uninstallUpdates(bundleName: string, installParam?: InstallParam): Promise<void>
 | [17700057](../errorcode-bundle.md#17700057-指定的应用不是预置应用) | Failed to uninstall updates because the HAP is not pre-installed. |
 | [17700060](../errorcode-bundle.md#17700060-指定的应用不允许被卸载) | The specified application cannot be uninstalled.<br>**适用版本：** 13+ |
 | [17700067](../errorcode-bundle.md#17700067-卸载应用失败native软件包卸载失败) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**适用版本：** 13+ |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
+| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**适用版本：** 13+ |
 
 **示例**
 

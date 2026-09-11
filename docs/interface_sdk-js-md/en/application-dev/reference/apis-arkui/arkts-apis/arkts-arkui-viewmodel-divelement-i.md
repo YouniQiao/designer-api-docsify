@@ -28,8 +28,6 @@ Returns the offset of the current scrolling. The return value type is Object.
 
 | Type | Description |
 | --- | --- |
-| [ScrollOffset](arkts-arkui-viewmodel-scrolloffset-i.md) |  |
-
 ## scrollBy
 
 ```TypeScript

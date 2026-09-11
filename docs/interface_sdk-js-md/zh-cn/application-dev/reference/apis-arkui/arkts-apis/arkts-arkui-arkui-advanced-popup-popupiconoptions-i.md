@@ -22,7 +22,7 @@ borderRadius?: Length | BorderRadiuses
 
 默认值：`\$r('sys.float.ohos_id_corner_radius_default_s')`
 
-**类型：** [Length](arkts-arkui-length-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
+**类型：** [Length](arkts-arkui-length-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
 **起始版本：** 11
 

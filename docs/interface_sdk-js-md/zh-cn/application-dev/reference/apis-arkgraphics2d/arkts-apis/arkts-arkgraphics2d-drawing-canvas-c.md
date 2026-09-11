@@ -48,7 +48,7 @@ attachBrush(brush: Brush): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## attachPen
 
@@ -76,7 +76,7 @@ attachPen(pen: Pen): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## clear
 
@@ -100,7 +100,7 @@ clear(color: common2D.Color): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## clear
 
@@ -118,7 +118,7 @@ clear(color: common2D.Color | number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | 是 | 颜色，可以用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB。 |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) &#124; number | 是 | 颜色，可以用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB。 |
 
 ## clipPath
 
@@ -144,7 +144,7 @@ clipPath(path: Path, clipOp?: ClipOp, doAntiAlias?: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## clipRect
 
@@ -170,7 +170,7 @@ clipRect(rect: common2D.Rect, clipOp?: ClipOp, doAntiAlias?: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## clipRegion
 
@@ -195,7 +195,7 @@ clipRegion(region: Region, clipOp?: ClipOp): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## clipRoundRect
 
@@ -221,7 +221,7 @@ clipRoundRect(roundRect: RoundRect, clipOp?: ClipOp, doAntiAlias?: boolean): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## concatMatrix
 
@@ -245,7 +245,7 @@ concatMatrix(matrix: Matrix): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## constructor
 
@@ -271,7 +271,7 @@ constructor(pixelmap: image.PixelMap)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## detachBrush
 
@@ -321,7 +321,7 @@ drawArc(arc: common2D.Rect, startAngle: number, sweepAngle: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawArcWithCenter
 
@@ -366,7 +366,7 @@ drawBackground(brush: Brush): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawCircle
 
@@ -392,7 +392,7 @@ drawCircle(x: number, y: number, radius: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawColor
 
@@ -417,7 +417,7 @@ drawColor(color: common2D.Color, blendMode?: BlendMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawColor
 
@@ -445,7 +445,7 @@ drawColor(alpha: number, red: number, green: number, blue: number, blendMode?: B
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawColor
 
@@ -470,7 +470,7 @@ drawColor(color: number, blendMode?: BlendMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawGlyphs
 
@@ -492,10 +492,10 @@ drawGlyphs(glyphIds: Array<number>, glyphIdOffset: number, positions: Array<comm
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | glyphIds | Array&lt;number&gt; | 是 | 字形ID的数组。数组成员取值限定为整数，输入浮点数则仅保留整数部分。 |
-| glyphIdOffset | number | 是 | 在绘制字形ID数组之前要跳过的元素的数量。 取值限定为整数，输入浮点数则仅保留整数部分。如果glyphCount为n，跳过长度为m，则有效glyphIds数组的范围为[glyphIds[m], glyphIds[m+n])。如果glyphIds数组长度小于“glyphIdOffset + glyphCount”则抛出错误码25900001。如果glyphIdOffset小于0则抛出错误码25900001。 |
+| glyphIdOffset | number | 是 | 在绘制字形ID数组之前要跳过的元素的数量。 取值限定为整数，输入浮点数则仅保留整数部分。<br>如果glyphCount为n，跳过长度为m，则有效glyphIds数组的范围为[glyphIds[m], glyphIds[m+n])。<br>如果glyphIds数组长度小于“glyphIdOffset + glyphCount”则抛出错误码25900001。<br>如果glyphIdOffset小于0则抛出错误码25900001。 |
 | positions | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 是 | 每个字形对应的绘制位置坐标数组。如果glyphCount为n，跳过长度为m，则有效positions数组范围为[positions[m], positions[m+n])。 |
-| positionOffset | number | 是 | 在绘制位置数组之前要跳过的元素的数量。取值限定为整数，输入浮点数则仅保留整数部分。如果glyphCount为n，跳过长度为m，则有效positions数组的范围为[positions[m], positions[m+n])。如果positions数组长度小于“positionOffset + glyphCount”则抛出错误码25900001。如果positionOffset小于0则抛出错误码25900001。 |
-| glyphCount | number | 是 | 要绘制的字形的数目。数目小于或等于0，则不绘制任何内容，并抛出错误码25900001。如果glyphCount与glyphIdOffset的和，或者glyphCount与positionOffset的和大于0x7FFFFFFF，则该计算结果按0x7FFFFFFF处理。 |
+| positionOffset | number | 是 | 在绘制位置数组之前要跳过的元素的数量。取值限定为整数，输入浮点数则仅保留整数部分。<br>如果glyphCount为n，跳过长度为m，则有效positions数组的范围为[positions[m], positions[m+n])。<br>如果positions数组长度小于“positionOffset + glyphCount”则抛出错误码25900001。<br>如果positionOffset小于0则抛出错误码25900001。 |
+| glyphCount | number | 是 | 要绘制的字形的数目。数目小于或等于0，则不绘制任何内容，并抛出错误码25900001。<br>如果glyphCount与glyphIdOffset的和，或者glyphCount与positionOffset的和大于0x7FFFFFFF，则该计算结果按0x7FFFFFFF处理。 |
 | font | [Font](arkts-arkgraphics2d-drawing-font-c.md) | 是 | 用于绘图的字体。 |
 
 **错误码：**
@@ -529,7 +529,7 @@ drawImage(pixelmap: image.PixelMap, left: number, top: number, samplingOptions?:
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawImageLattice
 
@@ -559,7 +559,7 @@ drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.R
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawImageNine
 
@@ -589,7 +589,7 @@ drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawImageRect
 
@@ -615,7 +615,7 @@ drawImageRect(pixelmap: image.PixelMap, dstRect: common2D.Rect, samplingOptions?
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawImageRectWithSrc
 
@@ -644,7 +644,7 @@ drawImageRectWithSrc(pixelmap: image.PixelMap, srcRect: common2D.Rect, dstRect: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawLine
 
@@ -671,7 +671,7 @@ drawLine(x0: number, y0: number, x1: number, y1: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawNestedRoundRect
 
@@ -696,7 +696,7 @@ drawNestedRoundRect(outer: RoundRect, inner: RoundRect): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawOval
 
@@ -720,7 +720,7 @@ drawOval(oval: common2D.Rect): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawPath
 
@@ -744,7 +744,7 @@ drawPath(path: Path): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawPixelMapMesh
 
@@ -768,14 +768,14 @@ drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: number, meshHeight: number
 | meshHeight | number | 是 | 网格中的行数，大于0的整数。 |
 | vertices | Array&lt;number&gt; | 是 | 顶点数组，指定网格的绘制位置，该参数为浮点数组，单位为物理像素px。大小必须为((meshWidth+1) * (meshHeight+1) + vertOffset) * 2。 |
 | vertOffset | number | 是 | 绘图前要跳过的vert元素数，大于等于0的整数。 |
-| colors | Array&lt;number&gt; \| null | 是 | 颜色数组，在每个顶点指定一种颜色，每个颜色值用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB，可为null，大小必须为(meshWidth+1) * (meshHeight+1) + colorOffset。<br>**适用版本：** 20 |
+| colors | Array&lt;number&gt; &#124; null | 是 | 颜色数组，在每个顶点指定一种颜色，每个颜色值用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB，可为null，大小必须为(meshWidth+1) * (meshHeight+1) + colorOffset。<br>**适用版本：** 20 |
 | colorOffset | number | 是 | 绘制前要跳过的颜色元素数，大于等于0的整数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawPoint
 
@@ -800,7 +800,7 @@ drawPoint(x: number, y: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawPoints
 
@@ -825,7 +825,7 @@ drawPoints(points: Array<common2D.Point>, mode?: PointMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawRecordCmd
 
@@ -869,7 +869,7 @@ drawRect(rect: common2D.Rect): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawRect
 
@@ -896,7 +896,7 @@ drawRect(left: number, top: number, right: number, bottom: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawRegion
 
@@ -920,7 +920,7 @@ drawRegion(region: Region): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawRoundRect
 
@@ -944,7 +944,7 @@ drawRoundRect(roundRect: RoundRect): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawShadow
 
@@ -975,7 +975,7 @@ drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Poin
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawShadow
 
@@ -998,15 +998,15 @@ drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Poin
 | planeParams | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | 是 | 表示一个三维向量，用于计算遮挡物相对于画布在z轴上的偏移量，偏移量的值由该向量的x坐标与y坐标计算得出。 |
 | devLightPos | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | 是 | 光线相对于画布的位置。 |
 | lightRadius | number | 是 | 圆形灯半径，该参数为浮点数。单位为物理像素px。 |
-| ambientColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | 是 | 环境阴影颜色，可以用16进制ARGB格式的32位无符号整数表示。 |
-| spotColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | 是 | 点阴影颜色，可以用16进制ARGB格式的32位无符号整数表示。 |
+| ambientColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) &#124; number | 是 | 环境阴影颜色，可以用16进制ARGB格式的32位无符号整数表示。 |
+| spotColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) &#124; number | 是 | 点阴影颜色，可以用16进制ARGB格式的32位无符号整数表示。 |
 | flag | [ShadowFlag](arkts-arkgraphics2d-drawing-shadowflag-e.md) | 是 | 阴影标志，用于控制阴影的绘制方式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawSingleCharacter
 
@@ -1033,7 +1033,7 @@ drawSingleCharacter(text: string, font: Font, x: number, y: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## drawSingleCharacterWithFeatures
 
@@ -1087,7 +1087,7 @@ drawTextBlob(blob: TextBlob, x: number, y: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## drawVertices
 
@@ -1110,10 +1110,10 @@ drawVertices(vertexMode: VertexMode, vertexCount: number, positions: Array<commo
 | vertexMode | [VertexMode](arkts-arkgraphics2d-drawing-vertexmode-e.md) | 是 | 绘制顶点的连接方式。 |
 | vertexCount | number | 是 | 顶点数组元素的数量，值为大于等于3的整数，输入浮点数则仅保留整数部分。 |
 | positions | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; | 是 | 描述顶点位置的数组，不能为空，其长度必须等于vertexCount。 |
-| texs | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; \| null | 是 | 描述顶点对应纹理空间坐标的数组。其可以为空，表明纹理空间失效；若不为空，其长度必须等于vertexCount。 |
-| colors | Array&lt;number&gt; \| null | 是 | 描述顶点对应颜色的数组，用于在三角形中进行插值，每个颜色值用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB。其可以为空，表明不使用顶点颜色插值，颜色效果取决于当前画布绑定的画刷或画笔所设置的颜色；若不为空其长度必须等于vertexCount。 |
+| texs | Array&lt;[common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)&gt; &#124; null | 是 | 描述顶点对应纹理空间坐标的数组。其可以为空，表明纹理空间失效；若不为空，其长度必须等于vertexCount。 |
+| colors | Array&lt;number&gt; &#124; null | 是 | 描述顶点对应颜色的数组，用于在三角形中进行插值，每个颜色值用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB。其可以为空，表明不使用顶点颜色插值，颜色效果取决于当前画布绑定的画刷或画笔所设置的颜色；若不为空其长度必须等于vertexCount。 |
 | indexCount | number | 是 | 索引的数量。其值可以为0，且indices数组长度为0时可以画图；若不为0，则值必须为大于等于3的整数，输入浮点数则仅保留整数部分。 |
-| indices | Array&lt;number&gt; \| null | 是 | 描述顶点对应索引的数组。其可以为空，此时将忽略indexCount的合理传值（大于等于3的整数或等于0）；若不为空其长度必须等于indexCount。 |
+| indices | Array&lt;number&gt; &#124; null | 是 | 描述顶点对应索引的数组。其可以为空，此时将忽略indexCount的合理传值（大于等于3的整数或等于0）；若不为空其长度必须等于indexCount。 |
 | mode | [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md) | 是 | 颜色混合模式。 |
 
 **错误码：**
@@ -1358,7 +1358,7 @@ restoreToCount(count: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## rotate
 
@@ -1384,7 +1384,7 @@ rotate(degrees: number, sx: number, sy: number) : void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## save
 
@@ -1420,8 +1420,8 @@ saveLayer(rect?: common2D.Rect | null, brush?: Brush | null): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) \| null | 否 | 矩形对象，用于限制图层大小，默认为当前画布大小。 |
-| brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) \| null | 否 | 画刷对象，绘制位图时会应用画刷对象的透明度、颜色滤波器效果和混合模式，默认不设置额外效果。 |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) &#124; null | 否 | 矩形对象，用于限制图层大小，默认为当前画布大小。 |
+| brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) &#124; null | 否 | 画刷对象，绘制位图时会应用画刷对象的透明度、颜色滤波器效果和混合模式，默认不设置额外效果。 |
 
 **返回值：**
 
@@ -1458,7 +1458,7 @@ scale(sx: number, sy: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## setMatrix
 
@@ -1482,7 +1482,7 @@ setMatrix(matrix: Matrix): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## skew
 
@@ -1507,7 +1507,7 @@ skew(sx: number, sy: number) : void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## translate
 
@@ -1532,4 +1532,4 @@ translate(dx: number, dy: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |

@@ -33,7 +33,7 @@ Monitor registration key(synchronous method) [USER_SECURE] domain need ohos.perm
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the operation is successful; returns `false` otherwise. |
 
 **Examples**
 

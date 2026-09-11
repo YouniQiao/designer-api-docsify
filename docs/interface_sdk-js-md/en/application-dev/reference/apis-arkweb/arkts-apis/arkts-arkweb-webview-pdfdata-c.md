@@ -4,7 +4,7 @@ PdfData is a class used by the Web component to encapsulate the PDF data stream 
 
 PdfData is applicable to scenarios such as saving web page content offline and generating web page PDF reports. Before using it, load the Web component and ensure that the web page content has been rendered, and then call createPdf to generate the PDF data stream.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - When a PDF file is generated on a web page, a data stream is returned, which is encapsulated by the **PdfData**
 > class.

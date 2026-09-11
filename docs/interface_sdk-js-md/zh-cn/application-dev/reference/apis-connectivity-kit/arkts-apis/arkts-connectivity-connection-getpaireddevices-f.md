@@ -31,7 +31,7 @@ function getPairedDevices(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 已配对蓝牙设备的地址集合。基于信息安全考虑，此处获取的设备地址为虚拟MAC地址。已配对的地址不会变更。若该设备重启蓝牙开关，重新获取到的虚拟地址会立即变更。若取消配对，蓝牙子系统会根据该地址的实际使用情况，决策后续变更时机；若其他应用正在使用该地址，则不会立刻变更。若要持久化保存该地址，可使用[access.addPersistentDeviceId]{ |
+| Array&lt;string&gt; | 已配对蓝牙设备的地址集合。基于信息安全考虑，此处获取的设备地址为虚拟MAC地址。已配对的地址不会变更。若该设备重启蓝牙开关，重新获取到的虚拟地址会立即变更。若取消配对，蓝牙子系统会根据该地址的实际使用情况，决策后续变更时机；若其他应用正在使用该地址，则不会立刻变更。若要持久化保存该地址，可使用[access.addPersistentDeviceId](arkts-connectivity-access-addpersistentdeviceid-f.md)方法。 |
 
 **错误码：**
 

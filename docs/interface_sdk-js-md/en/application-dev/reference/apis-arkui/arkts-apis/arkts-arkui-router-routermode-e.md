@@ -16,7 +16,7 @@ Multi-instance mode. It is the default routing mode.
 
 The target page is added to the top of the page stack, regardless of whether a page with the same URL exists in the stack.
 
-**NOTE：**
+**NOTE:**
 
 If no routing mode is used, the navigation will be carried out according to the default multi-instance mode.
 

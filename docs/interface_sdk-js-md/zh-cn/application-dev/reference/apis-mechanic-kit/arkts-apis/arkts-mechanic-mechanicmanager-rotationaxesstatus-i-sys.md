@@ -2,6 +2,8 @@
 
 Rotation axes status
 
+@typedef RotationAxesStatus
+
 **起始版本：** 20
 
 **系统能力：** SystemCapability.Mechanic.Core

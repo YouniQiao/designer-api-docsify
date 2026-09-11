@@ -40,7 +40,7 @@ Creates a [PerfTest](arkts-test-test-perftest-perftest-c.md) object and returns 
 
 | Type | Description |
 | --- | --- |
-| [PerfTest](arkts-test-test-perftest-perftest-c.md) | { |
+| [PerfTest](arkts-test-test-perftest-perftest-c.md) | [PerfTest](arkts-test-test-perftest-perftest-c.md) object constructed, which can be used to execute test tasks, collect performance data, and obtain measurement results. |
 
 **Error codes:**
 
@@ -208,8 +208,6 @@ Runs a performance test, iteratively executes test code segments based on the co
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |

@@ -84,7 +84,7 @@ primaryTitleModifier?: TextModifier
 
 Text modifier for primary title.
 
-**Type:** TextModifier
+**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **Since:** 18
 
@@ -124,7 +124,7 @@ secondaryTitleModifier?: TextModifier
 
 Text modifier for secondary title.
 
-**Type:** TextModifier
+**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **Since:** 18
 

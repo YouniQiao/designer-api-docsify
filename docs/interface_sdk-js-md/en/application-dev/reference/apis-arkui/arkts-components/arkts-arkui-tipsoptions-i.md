@@ -67,7 +67,7 @@ Default value: **8**.
 
 Unit: vp.
 
-**NOTE：**
+**NOTE:**
 
 Percentage values are not supported.
 
@@ -115,7 +115,7 @@ Default value: **16**.
 
 Unit: vp.
 
-**NOTE：**
+**NOTE:**
 
 Percentage values are not supported.
 
@@ -187,7 +187,7 @@ Default value: **true**.
 
 **true**: yes. **false**: no.
 
-**NOTE：**
+**NOTE:**
 
 If the available space on the screen is insufficient, the tooltip will cover part of the component and the arrow will not be displayed.
 
@@ -213,7 +213,7 @@ Anchor type of the tooltip.
 
 Default value: **TipsAnchorType.TARGET**.
 
-**NOTE：**
+**NOTE:**
 
 If the anchor type of the tooltip is **TipsAnchorType.CURSOR**, the tooltip does not display an arrow.
 

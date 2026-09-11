@@ -92,8 +92,6 @@ get vertices(): Vec3[]
 
 模型的顶点数组。
 
-@return { Vec3[] }
-
 **类型：** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[]
 
 **起始版本：** 18

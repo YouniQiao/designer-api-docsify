@@ -27,4 +27,3 @@ Get inspector node infos.
 
 | Type | Description |
 | --- | --- |
-| object |  |

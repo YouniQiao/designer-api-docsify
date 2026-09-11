@@ -21,9 +21,9 @@ triggerSelect(index: number, value: string): void
 
 下拉菜单选中某一项的回调函数。
 
-**说明：**
+<br>**说明：**
 
-index会赋值给事件onSelect回调中的索引参数； value会返回给Select组件显示，同时会赋值给事件onSelect回调中的文本参数。
+<br>index会赋值给事件[onSelect](arkts-arkui-select-comp-attribute.md#onselect)回调中的索引参数； value会返回给Select组件显示，同时会赋值给事件[onSelect](arkts-arkui-select-comp-attribute.md#onselect)回调中的文本参数。
 
 **起始版本：** 12
 

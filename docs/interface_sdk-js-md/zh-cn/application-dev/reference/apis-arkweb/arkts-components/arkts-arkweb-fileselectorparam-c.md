@@ -6,7 +6,7 @@ FileSelectorParam是ArkWeb组件中的文件选择器参数类，用于获取Web
 
 在Web组件中需要自定义处理文件上传请求的场景下使用。注册`onShowFileSelector`回调以拦截文件选择请求；从回调事件的`fileSelector`属性获取FileSelectorParam实例；读取参数后构建对应的系统文件选择器（如DocumentViewPicker、PhotoViewPicker等）；通过FileSelectorResult返回选择结果至Web组件。
 
-示例代码参考[onShowFileSelector](arkts-arkweb-web-attribute.md#onshowfileselector)。
+示例代码参考[onShowFileSelector](arkts-arkweb-web-comp-attribute.md#onshowfileselector)。
 
 **起始版本：** 9
 
@@ -85,7 +85,7 @@ getDefaultPath(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回默认起始路径。 |
+| string | 返回默认起始路径。<br>当前端startIn设置为公共目录`downloads`、`pictures`时，要注意应分别转化为OpenHarmony系统下的`download`和`images`，请参考[获取并使用公共目录](../../../file-management/request-dir-permission.md)。 |
 
 ## getDescriptions
 
@@ -197,7 +197,7 @@ isAcceptAllOptionExcluded(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回是否排除“所有文件类型”选项。 |
+| boolean | 返回是否排除“所有文件类型”选项。<br>true表示排除（不包含“所有文件类型”选项），false表示包含（开发者应确保文件选择器中包含“所有文件类型”选项）。 |
 
 ## isCapture
 
@@ -217,4 +217,4 @@ isCapture(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回是否调用多媒体能力。 |
+| boolean | 返回是否调用多媒体能力。<br>true表示需要调用摄像头或麦克风等多媒体设备来获取文件（如拍照或录音），false表示仅从存储设备中选择已有文件。对应HTML input标签的capture属性。 |

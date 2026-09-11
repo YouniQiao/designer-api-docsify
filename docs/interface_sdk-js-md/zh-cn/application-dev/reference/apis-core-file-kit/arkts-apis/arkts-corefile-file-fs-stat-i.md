@@ -258,6 +258,13 @@ readonly atime: number
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
 ## atimeNs
 
 ```TypeScript
@@ -274,6 +281,12 @@ readonly atimeNs?:bigint
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900042 | Internal error |
+
 ## ctime
 
 ```TypeScript
@@ -287,6 +300,13 @@ readonly ctime: number
 **起始版本：** 9
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
 
 ## ctimeNs
 
@@ -302,6 +322,12 @@ readonly ctimeNs?:bigint
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900042 | Internal error |
+
 ## gid
 
 ```TypeScript
@@ -315,6 +341,13 @@ readonly gid: number
 **起始版本：** 9
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
 
 ## ino
 
@@ -330,6 +363,13 @@ readonly ino: bigint
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
 ## location
 
 ```TypeScript
@@ -343,6 +383,12 @@ readonly location: LocationType
 **起始版本：** 11
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900042 | Unknown error |
 
 ## mode
 
@@ -380,6 +426,13 @@ readonly mode: number
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
 ## mtime
 
 ```TypeScript
@@ -396,6 +449,13 @@ readonly mtime: number
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
 ## mtimeNs
 
 ```TypeScript
@@ -409,6 +469,12 @@ readonly mtimeNs?:bigint
 **起始版本：** 15
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900042 | Internal error |
 
 ## size
 
@@ -426,6 +492,13 @@ readonly size: number
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |
+
 ## uid
 
 ```TypeScript
@@ -439,3 +512,10 @@ readonly uid: number
 **起始版本：** 9
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| 13900005 | I/O error |
+| 13900042 | Unknown error |

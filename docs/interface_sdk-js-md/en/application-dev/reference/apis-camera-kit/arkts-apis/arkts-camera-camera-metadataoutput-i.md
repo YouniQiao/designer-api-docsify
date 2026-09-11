@@ -73,7 +73,7 @@ lockMetadataObjectTracking(point: Point): void
 
 Locks a metadata object (such as a cat or dog face) for tracking.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This function tracks the object pointed to by **point**. If such object does not exist, this function does
 > not take effect.
@@ -152,7 +152,7 @@ on(type: 'metadataObjectsAvailable', callback: AsyncCallback<Array<MetadataObjec
 
 Subscribes to events indicating available metadata objects. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -166,7 +166,7 @@ Subscribes to events indicating available metadata objects. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'metadataObjectsAvailable' | Yes | Event type. The value is fixed at **'metadataObjectsAvailable'**. The event can be listened for when a metadataOutput instance is created. This event is triggered and the corresponding metadata is returned when valid metadata is detected. If the input field is incorrect, no valid listening will be created. |
+| type | 'metadataObjectsAvailable' | Yes | Event type. The value is fixed at **'metadataObjectsAvailable'**. The event can be listened for when a metadataOutput instance is created.<br>This event is triggered and the corresponding metadata is returned when valid metadata is detected. If the input field is incorrect, no valid listening will be created. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MetadataObject](arkts-camera-camera-metadataobject-i.md)&gt;&gt; | Yes | Callback used to return the metadata. |
 
 ## on('error')
@@ -177,7 +177,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to metadata error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 

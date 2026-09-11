@@ -6,6 +6,8 @@ declare type DrawingCanvas = import('../api/@ohos.graphics.drawing').default.Can
 
 Defines a canvas object for drawing content on the **XComponent** component.
 
+@typedef { import('../api/@ohos.graphics.drawing').default.Canvas } DrawingCanvas
+
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.

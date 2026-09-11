@@ -2,7 +2,7 @@
 
 Implements a layout manager object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > After the text content is changed, you must wait for the layout to be completed before you can obtain the most up-
 > to-date layout information.
@@ -36,14 +36,14 @@ Obtains the position of the character nearest to the specified coordinate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X coordinate relative to the component.Unit: px |
-| y | number | Yes | Y coordinate relative to the component.Unit: px |
+| x | number | Yes | X coordinate relative to the component.<br>Unit: px |
+| y | number | Yes | Y coordinate relative to the component.<br>Unit: px |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) \| undefined | Character position. Returns **undefined** when [LayoutManager]{ |
+| [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) &#124; undefined | Character position. Returns **undefined** when [LayoutManager](arkts-arkui-layoutmanager-i.md) is not bound to a component. |
 
 ## getCharacterPositionAtCoordinate
 
@@ -66,15 +66,15 @@ Obtains the position of the character nearest to the specified coordinate based 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X coordinate relative to the component.Unit: px |
-| y | number | Yes | Y coordinate relative to the component.Unit: px |
+| x | number | Yes | X coordinate relative to the component.<br>Unit: px |
+| y | number | Yes | Y coordinate relative to the component.<br>Unit: px |
 | encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | No | Encoding type used for the character position. The default value is **TextEncoding.TEXT_ENCODING_UTF8**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) \| undefined | Character position. Returns **undefined** when [LayoutManager]{ |
+| [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) &#124; undefined | Character position. Returns **undefined** when [LayoutManager](arkts-arkui-layoutmanager-i.md) is not bound to a component. |
 
 ## getCharacterRangeForGlyphRange
 
@@ -102,7 +102,7 @@ Obtains the character range and the actual glyph range based on the specified gl
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; \| undefined | Contains two elements: the first is the character range, and the second is the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; &#124; undefined | Contains two elements: the first is the character range, and the second is the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager](arkts-arkui-layoutmanager-i.md) is not bound to a component. |
 
 ## getCharacterRangeForGlyphRange
 
@@ -131,7 +131,7 @@ Obtains the character range and the actual glyph range based on the specified gl
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; \| undefined | Contains two elements: the first is the character range, and the second is the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; &#124; undefined | Contains two elements: the first is the character range, and the second is the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager](arkts-arkui-layoutmanager-i.md) is not bound to a component. |
 
 ## getGlyphPositionAtCoordinate
 
@@ -153,8 +153,8 @@ Obtains the position of a glyph close to a given coordinate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X coordinate relative to the component.Unit: px |
-| y | number | Yes | Y coordinate relative to the component.Unit: px |
+| x | number | Yes | X coordinate relative to the component.<br>Unit: px |
+| y | number | Yes | Y coordinate relative to the component.<br>Unit: px |
 
 **Return value:**
 
@@ -188,7 +188,7 @@ Obtains the glyph range and the actual character range based on the specified ch
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; \| undefined | Contains two elements: the first is the glyph range, and the second is the actual character range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; &#124; undefined | Contains two elements: the first is the glyph range, and the second is the actual character range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager](arkts-arkui-layoutmanager-i.md) is not bound to a component. |
 
 ## getGlyphRangeForCharacterRange
 
@@ -217,7 +217,7 @@ Obtains the glyph range and the actual character range based on the specified ch
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; \| undefined | Contains two elements: the first is the glyph range, and the second is the actual character range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; &#124; undefined | Contains two elements: the first is the glyph range, and the second is the actual character range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager](arkts-arkui-layoutmanager-i.md) is not bound to a component. |
 
 ## getLineCount
 
@@ -267,7 +267,7 @@ Obtains the information about the specified line, including line metrics, text s
 
 | Type | Description |
 | --- | --- |
-| [LineMetrics](arkts-arkui-linemetrics-t.md) | Information about the specified line, including line metrics, text style information, and font properties. |
+| [LineMetrics](arkts-arkui-linemetrics-t.md) | Information about the specified line, including line metrics, text style information, and font properties.<br>Returns an invalid value if the line number is less than 0 or exceeds the actual number of lines. |
 
 ## getRectsForRange
 

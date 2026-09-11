@@ -46,10 +46,10 @@ static subscribeAccelerometer(options: subscribeAccelerometerOptions): void
 
 Subscribes to data changes of the acceleration sensor. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Except for lite wearables, You are advised to use
-> ACCELEROMETER
+> [ACCELEROMETER](arkts-sensorservice-sensor-on-f.md)
 > instead. since API Version 8.
 
 **Since:** 3
@@ -78,10 +78,10 @@ static subscribeBarometer(options: SubscribeBarometerOptions): void
 
 Subscribes to data changes of the barometer sensor. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Except for lite wearables, You are advised to use
-> BAROMETER
+> [BAROMETER](arkts-sensorservice-sensor-on-f.md)
 > instead. since API Version 8.
 
 **Since:** 3
@@ -108,10 +108,10 @@ static subscribeCompass(options: SubscribeCompassOptions): void
 
 Subscribes to data changes of the compass sensor. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Except for lite wearables, You are advised to use
-> ORIENTATION
+> [ORIENTATION](arkts-sensorservice-sensor-on-f.md)
 > since API Version 8.
 
 **Since:** 3
@@ -140,10 +140,10 @@ Subscribes to data changes of the device orientation sensor.
 
 If this API is called multiple times for the same application, the last call takes effect. However, this API cannot be called multiple times in one click event.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Except for lite wearables, You are advised to use
-> ORIENTATION
+> [ORIENTATION](arkts-sensorservice-sensor-on-f.md)
 > instead. since API Version 8.
 
 **Since:** 6
@@ -172,10 +172,10 @@ Subscribes to data changes of the gyroscope sensor.
 
 If this API is called multiple times for the same application, the last call takes effect. However, this API cannot be called multiple times in one click event.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Except for lite wearables, You are advised to use
-> GYROSCOPE
+> [GYROSCOPE](arkts-sensorservice-sensor-on-f.md)
 > instead. since API Version 8.
 
 **Since:** 6
@@ -204,10 +204,10 @@ static subscribeHeartRate(options: SubscribeHeartRateOptions): void
 
 Subscribes to data changes of the heart rate sensor. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Except for lite wearables, You are advised to use
-> HEART_RATE
+> [HEART_RATE](arkts-sensorservice-sensor-on-f.md)
 > instead. since API Version 8.
 
 **Since:** 3
@@ -236,10 +236,10 @@ static subscribeLight(options: SubscribeLightOptions): void
 
 Subscribes to data changes of the ambient light sensor. If this API is called multiple times, the last call takes effect.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Except for lite wearables, You are advised to use
-> AMBIENT_LIGHT
+> [AMBIENT_LIGHT](arkts-sensorservice-sensor-on-f.md)
 > since API Version 8.
 
 **Since:** 3
@@ -266,10 +266,10 @@ static subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void
 
 Subscribes to wearing status changes of a wearable device. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Except for lite wearables, You are advised to use
-> WEAR_DETECTION
+> [WEAR_DETECTION](arkts-sensorservice-sensor-on-f.md)
 > instead. since API Version 8.
 
 **Since:** 3
@@ -296,10 +296,10 @@ static subscribeProximity(options: SubscribeProximityOptions): void
 
 Subscribes to data changes of the proximity sensor. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Except for lite wearables, You are advised to use
-> PROXIMITY
+> [PROXIMITY](arkts-sensorservice-sensor-on-f.md)
 > instead. since API Version 8.
 
 **Since:** 3
@@ -326,10 +326,10 @@ static subscribeStepCounter(options: SubscribeStepCounterOptions): void
 
 Subscribes to data changes of the step counter sensor. If this API is called multiple times for the same application, the last call takes effect.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Except for lite wearables, You are advised to use
-> PEDOMETER
+> [PEDOMETER](arkts-sensorservice-sensor-on-f.md)
 > instead. since API Version 8.
 
 **Since:** 3
@@ -358,10 +358,10 @@ static unsubscribeAccelerometer(): void
 
 Unsubscribes from data changes of the acceleration sensor.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Except for lite wearables, You are advised to use
-> ACCELEROMETER
+> [ACCELEROMETER](arkts-sensorservice-sensor-off-f.md)
 > instead. since API Version 8.
 
 **Since:** 3
@@ -384,10 +384,10 @@ static unsubscribeBarometer(): void
 
 Unsubscribes from data changes of the barometer sensor.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Except for lite wearables, You are advised to use
-> BAROMETER
+> [BAROMETER](arkts-sensorservice-sensor-off-f.md)
 > instead. since API Version 8.
 
 **Since:** 3
@@ -408,10 +408,10 @@ static unsubscribeCompass(): void
 
 Unsubscribes from data changes of the compass sensor.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Except for lite wearables, You are advised to use
-> ORIENTATION
+> [ORIENTATION](arkts-sensorservice-sensor-off-f.md)
 > instead.
 
 **Since:** 3
@@ -432,10 +432,10 @@ static unsubscribeDeviceOrientation(): void
 
 Unsubscribes from data changes of the device orientation sensor.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Except for lite wearables, You are advised to use
-> ORIENTATION
+> [ORIENTATION](arkts-sensorservice-sensor-off-f.md)
 > instead. since API Version 8.
 
 **Since:** 6
@@ -456,10 +456,10 @@ static unsubscribeGyroscope(): void
 
 Unsubscribes from data changes of the gyroscope sensor.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Except for lite wearables, You are advised to use
-> GYROSCOPE
+> [GYROSCOPE](arkts-sensorservice-sensor-off-f.md)
 > instead. since API Version 8.
 
 **Since:** 6
@@ -482,10 +482,10 @@ static unsubscribeHeartRate(): void
 
 Unsubscribes from data changes of the heart rate sensor.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Except for lite wearables, You are advised to use
-> HEART_RATE
+> [HEART_RATE](arkts-sensorservice-sensor-off-f.md)
 > instead. since API Version 8.
 
 **Since:** 3
@@ -508,10 +508,10 @@ static unsubscribeLight(): void
 
 Unsubscribes from data changes of the ambient light sensor.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Except for lite wearables, You are advised to use
-> AMBIENT_LIGHT
+> [AMBIENT_LIGHT](arkts-sensorservice-sensor-off-f.md)
 > instead. since API Version 8.
 
 **Since:** 3
@@ -532,10 +532,10 @@ static unsubscribeOnBodyState(): void
 
 Unsubscribes from wearing status changes of a wearable device.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Except for lite wearables, You are advised to use
-> WEAR_DETECTION
+> [WEAR_DETECTION](arkts-sensorservice-sensor-off-f.md)
 > instead. since API Version 8.
 
 **Since:** 3
@@ -556,10 +556,10 @@ static unsubscribeProximity(): void
 
 Unsubscribes from data changes of the proximity sensor.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Except for lite wearables, You are advised to use
-> PROXIMITY
+> [PROXIMITY](arkts-sensorservice-sensor-off-f.md)
 > instead. since API Version 8.
 
 **Since:** 3
@@ -580,10 +580,10 @@ static unsubscribeStepCounter(): void
 
 Unsubscribes from data changes of the step counter sensor.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Except for lite wearables, You are advised to use
-> PEDOMETER
+> [PEDOMETER](arkts-sensorservice-sensor-off-f.md)
 > instead. since API Version 8.
 
 **Since:** 3

@@ -88,7 +88,7 @@ freezeUINode(id: string, isFrozen: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | string | 是 | 组件的id。 |
-| isFrozen | boolean | 是 | 是否设置冻结。true表示设置冻结，false表示设置不冻结。默认值为false。 |
+| isFrozen | boolean | 是 | 是否设置冻结。<br>true表示设置冻结，false表示设置不冻结。<br>默认值为false。 |
 
 **错误码：**
 
@@ -117,7 +117,7 @@ freezeUINode(uniqueId: number, isFrozen: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uniqueId | number | 是 | 组件的uniqueId。 |
-| isFrozen | boolean | 是 | 是否设置冻结。true表示设置冻结，false表示设置不冻结。默认值为false。 |
+| isFrozen | boolean | 是 | 是否设置冻结。<br>true表示设置冻结，false表示设置不冻结。<br>默认值为false。 |
 
 **错误码：**
 
@@ -151,7 +151,7 @@ getLuminanceSampler(target: TargetInfo): LuminanceSampler | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [LuminanceSampler](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md) \| undefined | the luminance sampler or undefined. |
+| [LuminanceSampler](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md) &#124; undefined | the luminance sampler or undefined. |
 
 **示例**
 
@@ -178,7 +178,7 @@ recycleInvisibleImageMemory(enabled: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | 使能开关项：true开启，false关闭；默认不开启，由系统应用按需开启。默认值：false 默认值：false 默认值：false 默认值：false 配置为异常undefined时，恢复为默认值false |
+| enabled | boolean | 是 | 使能开关项：true开启，false关闭；默认不开启，由系统应用按需开启。<br>默认值：false <br>默认值：false <br>默认值：false <br>默认值：false <br>配置为异常undefined时，恢复为默认值false |
 
 **示例**
 

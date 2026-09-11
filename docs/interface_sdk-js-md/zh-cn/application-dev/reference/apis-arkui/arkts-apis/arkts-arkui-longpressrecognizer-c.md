@@ -33,7 +33,7 @@ getAllowableMovement(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 长按手势识别器识别的手势的最大移动距离，单位为px。 |
+| number | 长按手势识别器识别的手势的最大移动距离，单位为px。<br>取值范围：(0, +∞) |
 
 ## getDuration
 
@@ -55,7 +55,7 @@ getDuration(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回预设长按手势识别器触发长按最短时间阈值，单位为ms。 |
+| number | 返回预设长按手势识别器触发长按最短时间阈值，单位为ms。<br>取值范围：[0, +∞) |
 
 ## isRepeat
 

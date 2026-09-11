@@ -6,6 +6,8 @@ export type UpgradeTaskCallback = (eventInfo: EventInfo) => void
 
 Represents an event callback.
 
+@typedef UpgradeTaskCallback [since 9 - 22] @typedef { function } UpgradeTaskCallback [since 23]
+
 **Since:** 9
 
 **System capability:** SystemCapability.Update.UpdateService

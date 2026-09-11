@@ -4,7 +4,7 @@
 declare type OnHoverCallback = (status: boolean, event: HoverEvent) => void
 ```
 
-Represents the callback invoked on mouse hover.
+Defines the callback triggered on hover.
 
 **Since:** 14
 
@@ -18,5 +18,5 @@ Represents the callback invoked on mouse hover.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | boolean | Yes | Whether the mouse pointer is hovering over the component. The value **true** means that the mouse pointer enters the component, and **false** means that the mouse pointer leaves the component. |
-| event | [HoverEvent](arkts-arkui-hoverevent-i.md) | Yes | Hover event. |
+| status | boolean | Yes | Whether the mouse hovers over the component. The value **true** indicates that the mouse hovers over the component, and **false** indicates that the mouse leaves the component. |
+| event | [HoverEvent](arkts-arkui-hoverevent-i.md) | Yes | Mouse hover event object, which contains the detailed information about the hover event (such as the mouse position). |

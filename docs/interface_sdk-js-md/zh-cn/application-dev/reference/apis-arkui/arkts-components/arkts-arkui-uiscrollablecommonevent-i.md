@@ -37,7 +37,7 @@ setOnReachEnd(callback: Callback<void> | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | 是 | onReachEnd事件的回调函数。 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; &#124; undefined | 是 | onReachEnd事件的回调函数。 |
 
 ## setOnReachStart
 
@@ -61,7 +61,7 @@ setOnReachStart(callback: Callback<void> | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | 是 | onReachStart事件的回调函数。 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; &#124; undefined | 是 | onReachStart事件的回调函数。 |
 
 ## setOnScrollFrameBegin
 
@@ -85,7 +85,7 @@ setOnScrollFrameBegin(callback: OnScrollFrameBeginCallback | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) \| undefined | 是 | onScrollFrameBegin事件的回调函数。 |
+| callback | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) &#124; undefined | 是 | onScrollFrameBegin事件的回调函数。 |
 
 ## setOnScrollStart
 
@@ -109,7 +109,7 @@ setOnScrollStart(callback: Callback<void> | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | 是 | onScrollStart事件的回调函数。 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; &#124; undefined | 是 | onScrollStart事件的回调函数。 |
 
 ## setOnScrollStop
 
@@ -133,4 +133,4 @@ setOnScrollStop(callback: Callback<void> | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | 是 | onScrollStop事件的回调函数。 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; &#124; undefined | 是 | onScrollStop事件的回调函数。 |

@@ -17,7 +17,7 @@ Returns a new unique Symbol value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| description | string \| number | No |  |
+| description | string &#124; number | No |  |
 
 **Return value:**
 

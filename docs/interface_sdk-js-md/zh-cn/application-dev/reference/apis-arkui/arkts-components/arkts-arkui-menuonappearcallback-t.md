@@ -19,4 +19,4 @@ declare type MenuOnAppearCallback = (start: number, end: number) => void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | start | number | 是 | 选中内容的起始位置。 |
-| end | number | 是 | 选中内容的终止位置。 |
+| end | number | 是 | 选中内容的终止位置，选中范围为[start, end)，结束位置对应的内容不包含在内。 |

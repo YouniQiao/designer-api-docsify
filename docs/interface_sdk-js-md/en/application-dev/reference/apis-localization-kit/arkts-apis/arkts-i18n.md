@@ -9,7 +9,7 @@ are defined as follows:
 - Skeleton string: a string that consists of  
 [Unicode date field symbols](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table) and does not support custom text.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The APIs of this module are based on the [CLDR](https://cldr.unicode.org) internationalization database. The
 > processing results of the APIs may be adjusted as the CLDR standard evolves. For example, the return value of the

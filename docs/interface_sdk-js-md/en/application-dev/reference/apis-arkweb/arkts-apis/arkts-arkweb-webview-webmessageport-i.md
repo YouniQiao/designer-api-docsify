@@ -52,7 +52,7 @@ Registers a callback on the application message port to receive messages of the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100006](../errorcode-webview.md#17100006-message-port-callback-cannot-be-registered) | Failed to register a message event for the port. |
 
 ## onMessageEventExt
@@ -79,7 +79,7 @@ Registers a callback on the application message port to receive messages of the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100006](../errorcode-webview.md#17100006-message-port-callback-cannot-be-registered) | Failed to register a message event for the port. |
 
 ## postMessageEvent
@@ -88,7 +88,7 @@ Registers a callback on the application message port to receive messages of the 
 postMessageEvent(message: WebMessage): void
 ```
 
-Sends a message of the [WebMessage](arkts-arkweb-webview-webmessage-t.md) type to the HTML5 side. The onMessageEvent API must be invoked first. Otherwise, the message fails to be sent. For details about the sample code, see [postMessage](arkts-arkweb-webview-webviewcontroller-c.md#postmessage).
+Sends a message of the [WebMessage](arkts-arkweb-webview-webmessage-t.md) type to the HTML5 side. The [onMessageEvent](#onmessageevent) API must be invoked first. Otherwise, the message fails to be sent. For details about the sample code, see [postMessage](arkts-arkweb-webview-webviewcontroller-c.md#postmessage).
 
 **Since:** 9
 
@@ -106,7 +106,7 @@ Sends a message of the [WebMessage](arkts-arkweb-webview-webmessage-t.md) type t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100010](../errorcode-webview.md#17100010-failure-to-send-messages-through-a-port) | Failed to post messages through the port. |
 
 ## postMessageEventExt
@@ -115,7 +115,7 @@ Sends a message of the [WebMessage](arkts-arkweb-webview-webmessage-t.md) type t
 postMessageEventExt(message: WebMessageExt): void
 ```
 
-Sends a message of the [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) type to the HTML5 side. You must call onMessageEventExt first. Otherwise, the message fails to be sent. For the complete sample code, see onMessageEventExt.
+Sends a message of the [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) type to the HTML5 side. You must call [onMessageEventExt](#onmessageeventext) first. Otherwise, the message fails to be sent. For the complete sample code, see [onMessageEventExt](#onmessageeventext).
 
 **Since:** 10
 
@@ -133,7 +133,7 @@ Sends a message of the [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100010](../errorcode-webview.md#17100010-failure-to-send-messages-through-a-port) | Failed to post messages through the port. |
 
 ## isExtentionType

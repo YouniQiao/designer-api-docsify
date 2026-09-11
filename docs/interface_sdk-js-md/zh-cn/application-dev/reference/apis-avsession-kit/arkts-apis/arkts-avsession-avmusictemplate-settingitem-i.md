@@ -92,7 +92,7 @@ settingValue?: string | boolean | SettingContent[] | WantAgent
 - 当settingType为SettingType.LIST时，该值为SettingContent数组。  
 - 当settingType为SettingType.JUMP时，该值为string类型。
 
-**类型：** string \| boolean \| [SettingContent](arkts-avsession-avmusictemplate-settingcontent-i.md)[] \| [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
+**类型：** string &#124; boolean &#124; [SettingContent](arkts-avsession-avmusictemplate-settingcontent-i.md)[] &#124; [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **起始版本：** 23
 

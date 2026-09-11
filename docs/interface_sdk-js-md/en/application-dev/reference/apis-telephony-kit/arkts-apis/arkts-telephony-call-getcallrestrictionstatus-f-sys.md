@@ -26,7 +26,7 @@ Obtains the call restriction status. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2. |
+| slotId | number | Yes | Card slot ID.<br>- **0**: card slot 1. <br>- **1**: card slot 2. |
 | type | [CallRestrictionType](arkts-telephony-call-callrestrictiontype-e-sys.md) | Yes | Call restriction type. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RestrictionStatus](arkts-telephony-call-restrictionstatus-e-sys.md)&gt; | Yes | Callback used to return the result. |
 
@@ -77,7 +77,7 @@ Obtains the call restriction status. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2. |
+| slotId | number | Yes | Card slot ID.<br>- **0**: card slot 1. <br>- **1**: card slot 2. |
 | type | [CallRestrictionType](arkts-telephony-call-callrestrictiontype-e-sys.md) | Yes | Call restriction type. |
 
 **Return value:**

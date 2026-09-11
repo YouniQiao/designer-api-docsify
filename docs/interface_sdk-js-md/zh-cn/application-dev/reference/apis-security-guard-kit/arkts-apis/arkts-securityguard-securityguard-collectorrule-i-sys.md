@@ -2,6 +2,8 @@
 
 安全事件采集规则。
 
+@typedef CollectorRule
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.Security.SecurityGuard

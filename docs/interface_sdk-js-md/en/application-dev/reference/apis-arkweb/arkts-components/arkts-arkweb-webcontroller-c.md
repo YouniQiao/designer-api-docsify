@@ -195,7 +195,7 @@ Obtains the cookie management object of the **Web** component.
 
 | Type | Description |
 | --- | --- |
-| [WebCookie](arkts-arkweb-webcookie-c.md) | Cookie management object of the **Web** component. For details, see [WebCookie]{ |
+| [WebCookie](arkts-arkweb-webcookie-c.md) | Cookie management object of the **Web** component. For details, see WebCookie. |
 
 ## getHitTest
 
@@ -269,7 +269,7 @@ The object injected through **registerJavaScriptProxy** is still valid on a new 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | { url: string \| Resource, headers?: Array&lt;[Header](arkts-arkweb-header-i.md)&gt; } | Yes | The options with the URL and other information. |
+| options | { url: string &#124; Resource, headers?: Array&lt;[Header](arkts-arkweb-header-i.md)&gt; } | Yes | The options with the URL and other information. |
 
 ## onActive
 

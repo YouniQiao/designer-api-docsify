@@ -36,13 +36,13 @@ addContinuousEvent(time: number, duration: number, options?: ContinuousParam): V
 
 | 类型 | 说明 |
 | --- | --- |
-| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) | 返回已添加连续振动事件的VibratorPatternBuilder对象。可用于继续链式调用addContinuousEvent或addTransientEvent添加更多振动事件，最终通过[build]{ |
+| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) | 返回已添加连续振动事件的VibratorPatternBuilder对象。可用于继续链式调用addContinuousEvent或addTransientEvent添加更多振动事件，最终通过[build](#build)生成VibratorPattern对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -103,13 +103,13 @@ addTransientEvent(time: number, options?: TransientParam): VibratorPatternBuilde
 
 | 类型 | 说明 |
 | --- | --- |
-| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) | 返回已添加短振事件的VibratorPatternBuilder对象。可用于继续链式调用addContinuousEvent或addTransientEvent添加更多振动事件，最终通过[build]{ |
+| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) | 返回已添加短振事件的VibratorPatternBuilder对象。可用于继续链式调用addContinuousEvent或addTransientEvent添加更多振动事件，最终通过[build](#build)生成VibratorPattern对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;   2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -149,7 +149,7 @@ build(): VibratorPattern
 
 | 类型 | 说明 |
 | --- | --- |
-| [VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md) | 振动序列对象。包含振动序列的起始时间和振动事件数组，可作为[VibrateFromPattern]{ |
+| [VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md) | 振动序列对象。包含振动序列的起始时间和振动事件数组，可作为[VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md)的pattern参数传入[startVibration](arkts-sensorservice-vibrator-startvibration-f.md)接口触发振动。 |
 
 **示例**
 

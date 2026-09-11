@@ -49,8 +49,6 @@ each(itemGenerator: (repeatItem: RepeatItem<T>) => void): RepeatAttribute<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
-
 ## key
 
 ```TypeScript
@@ -77,14 +75,12 @@ key(keyGenerator: (item: T, index: number) => string): RepeatAttribute<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyGenerator | (item: T, index: number) =&gt; string | 是 | 键值生成函数。item：`arr`数组中的数据项，可选。缺省时默认忽略该参数，请勿在闭包函数的实现中使用该参数，否则会编译报错。index：`arr`数组中的数据项索引，可选。缺省时默认忽略该参数，请勿在闭包函数的实现中使用该参数，否则会编译报错。 |
+| keyGenerator | (item: T, index: number) =&gt; string | 是 | 键值生成函数。<br>item：`arr`数组中的数据项，可选。缺省时默认忽略该参数，请勿在闭包函数的实现中使用该参数，否则会编译报错。<br>index：`arr`数组中的数据项索引，可选。缺省时默认忽略该参数，请勿在闭包函数的实现中使用该参数，否则会编译报错。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
-
 ## template
 
 ```TypeScript
@@ -119,8 +115,6 @@ template(type: string, itemBuilder: RepeatItemBuilder<T>, templateOptions?: Temp
 
 | 类型 | 说明 |
 | --- | --- |
-| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
-
 ## templateId
 
 ```TypeScript
@@ -151,8 +145,6 @@ templateId(typedFunc: TemplateTypedFunc<T>): RepeatAttribute<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
-
 ## virtualScroll
 
 ```TypeScript
@@ -183,4 +175,3 @@ virtualScroll(virtualScrollOptions?: VirtualScrollOptions): RepeatAttribute<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |

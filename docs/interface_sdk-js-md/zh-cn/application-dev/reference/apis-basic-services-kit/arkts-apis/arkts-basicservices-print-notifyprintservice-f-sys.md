@@ -28,7 +28,7 @@ function notifyPrintService(jobId: string, type: 'spooler_closed_for_cancelled' 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | jobId | string | 是 | 表示打印任务ID。 |
-| type | 'spooler_closed_for_cancelled' \| 'spooler_closed_for_started' | 是 | 表示spooler关闭信息。 |
+| type | 'spooler_closed_for_cancelled' &#124; 'spooler_closed_for_started' | 是 | 表示spooler关闭信息。 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步将spooler关闭信息通知打印服务之后的回调。 |
 
 **错误码：**
@@ -78,7 +78,7 @@ function notifyPrintService(jobId: string,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | jobId | string | 是 | 表示打印任务ID。 |
-| type | 'spooler_closed_for_cancelled' \| 'spooler_closed_for_started' | 是 | 表示spooler关闭信息。 |
+| type | 'spooler_closed_for_cancelled' &#124; 'spooler_closed_for_started' | 是 | 表示spooler关闭信息。 |
 
 **返回值：**
 

@@ -2,7 +2,7 @@
 
 Defines a touch target consisting of an input tool type, touch position, and size.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - When the parent component has [clip](arkts-arkui-commonmethod-c.md#clip) set to **true**, child component
 > interaction is affected by the parent component's response region. Children outside the parent component's response
@@ -40,7 +40,7 @@ Height of the touch target.
 
 Default value: **LengthMetrics.percent(1)**
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| string
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) &#124; string
 
 **Default:** LengthMetrics.percent(1)
 
@@ -84,7 +84,7 @@ Width of the touch target.
 
 Default value: **LengthMetrics.percent(1)**
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| string
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) &#124; string
 
 **Default:** LengthMetrics.percent(1)
 

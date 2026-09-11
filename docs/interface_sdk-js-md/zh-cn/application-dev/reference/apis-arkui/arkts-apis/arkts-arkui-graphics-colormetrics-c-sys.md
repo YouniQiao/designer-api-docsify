@@ -214,4 +214,4 @@ isHDR(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | ColorMetrics是否呈现了HDR色彩。当色彩是通过createHDRColorWith系列方法（如[createHDRColorWithLinearExposure]{ |
+| boolean | ColorMetrics是否呈现了HDR色彩。当色彩是通过createHDRColorWith系列方法（如[createHDRColorWithLinearExposure](#createhdrcolorwithlinearexposure)）创建，或任意RGB分量值大于1.0时，将返回true；否则返回false，表示ColorMetrics未呈现HDR色彩。 |

@@ -18,7 +18,7 @@ Sets the prototype of a specified object o to object proto or null.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | object | Yes |  |
-| proto | object \| null | Yes |  |
+| proto | object &#124; null | Yes |  |
 
 **Return value:**
 

@@ -330,7 +330,7 @@ readonly itemMaxFontScale?: number | Resource
 
 该成员只读，不支持更改。
 
-**类型：** number \| [Resource](arkts-arkui-resource-t.md)
+**类型：** number &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 18
 
@@ -358,7 +358,7 @@ readonly itemMinFontScale?: number | Resource
 
 该成员只读，不支持更改。
 
-**类型：** number \| [Resource](arkts-arkui-resource-t.md)
+**类型：** number &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 18
 

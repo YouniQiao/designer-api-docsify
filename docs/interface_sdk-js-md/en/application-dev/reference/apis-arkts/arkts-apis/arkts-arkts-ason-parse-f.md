@@ -32,4 +32,4 @@ Converts a JavaScript Object Notation (JSON) string into an ArkTS Value.
 
 | Type | Description |
 | --- | --- |
-| [ISendable](arkts-arkts-ason-isendable-t.md) \| null | Return an ArkTS Value. |
+| [ISendable](arkts-arkts-ason-isendable-t.md) &#124; null | Return an ArkTS Value. |

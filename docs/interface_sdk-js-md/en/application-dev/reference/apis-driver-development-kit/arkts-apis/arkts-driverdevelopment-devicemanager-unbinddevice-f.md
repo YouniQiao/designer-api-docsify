@@ -18,7 +18,7 @@ Unbinds a peripheral device.
 
 **Deprecated since:** 19
 
-**Substitutes:** [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md)(deviceId: long)
+**Substitutes:** [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md)(deviceId: number)
 
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -72,7 +72,7 @@ Unbinds a peripheral device. This API uses a promise to return the result.
 
 **Deprecated since:** 19
 
-**Substitutes:** [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md)(deviceId: long)
+**Substitutes:** [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md)(deviceId: number)
 
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 

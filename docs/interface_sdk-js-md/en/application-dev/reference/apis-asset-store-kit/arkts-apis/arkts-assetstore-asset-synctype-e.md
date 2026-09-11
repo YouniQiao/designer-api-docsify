@@ -28,7 +28,7 @@ THIS_DEVICE = 1 << 0
 
 Asset sync is allowed only on the local device, for example, in data restore on the local device.
 
-**Note：**: This field is reserved for future use and is not supported currently.
+**Note:** This field is reserved for future use and is not supported currently.
 
 **Since:** 11
 
@@ -58,7 +58,7 @@ TRUSTED_ACCOUNT = 1 << 2
 
 Asset sync is allowed only between the devices that are logged in with trusted accounts, for example, in cloud sync scenarios.
 
-**Note：**: This field is reserved for future use and is not supported currently.
+**Note:** This field is reserved for future use and is not supported currently.
 
 **Since:** 12
 

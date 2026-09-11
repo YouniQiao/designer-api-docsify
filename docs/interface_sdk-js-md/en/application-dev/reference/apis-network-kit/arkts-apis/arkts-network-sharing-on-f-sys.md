@@ -26,7 +26,7 @@ Registers the network sharing status change event. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sharingStateChange' | Yes | Event type.The value **sharingStateChange** indicates a network sharing status change event. |
+| type | 'sharingStateChange' | Yes | Event type.<br> The value **sharingStateChange** indicates a network sharing status change event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback invoked when the network sharing state changes. |
 
 **Error codes:**
@@ -68,7 +68,7 @@ Subscribes to network sharing state changes of a specified NIC. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'interfaceSharingStateChange' | Yes | Event type.The value **interfaceSharingStateChange** indicates a network sharing status change event of the NIC. |
+| type | 'interfaceSharingStateChange' | Yes | Event type.<br> The value **interfaceSharingStateChange** indicates a network sharing status change event of the NIC. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterfaceSharingStateInfo](arkts-network-sharing-interfacesharingstateinfo-i-sys.md)&gt; | Yes | Callback used to return the result. It is called when the network sharing state of a specified NIC changes.<br>**Since:** 11 |
 
 **Error codes:**
@@ -110,7 +110,7 @@ Subscribes to upstream network changes. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sharingUpstreamChange' | Yes | Event type.The value **sharingUpstreamChange** indicates an upstream network change event. |
+| type | 'sharingUpstreamChange' | Yes | Event type.<br> The value **sharingUpstreamChange** indicates an upstream network change event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetHandle](arkts-network-sharing-nethandle-t.md)&gt; | Yes | Callback invoked when the upstream network changes. |
 
 **Error codes:**

@@ -6,7 +6,7 @@ export type PathPreference = 'auto' | 'primaryCellular' | 'secondaryCellular'
 
 Enumerates the types of networks specified in an HTTP request.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > It is recommended that this parameter be used in scenarios such as network concurrency.
 

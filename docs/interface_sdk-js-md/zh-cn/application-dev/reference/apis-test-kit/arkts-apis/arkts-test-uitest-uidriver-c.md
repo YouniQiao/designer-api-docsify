@@ -547,7 +547,7 @@ UiDriver对象采取如下操作：通过key值找到对应键并点击。使用
 
 **废弃版本：** 9
 
-**替代接口：** [triggerKey](arkts-test-uitest-driver-c.md#triggerkey)(keyCode: int)
+**替代接口：** [triggerKey](arkts-test-uitest-driver-c.md#triggerkey)(keyCode: number)
 
 **系统能力：** SystemCapability.Test.UiTest
 

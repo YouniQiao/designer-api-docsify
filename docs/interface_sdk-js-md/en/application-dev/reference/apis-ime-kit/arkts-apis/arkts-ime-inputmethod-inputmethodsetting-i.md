@@ -195,15 +195,11 @@ let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting
 getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProperty>>): void
 ```
 
-Obtains a list of activated or deactivated input methods. This API uses an asynchronous callback to return the result.   
-> **NOTE：**
-   
-> 
-   
-> An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed.
-   
-> 
-   
+Obtains a list of activated or deactivated input methods. This API uses an asynchronous callback to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
+> An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed. <br>
+> <br>
 > The list of activated input methods includes the default input method and enabled input methods. The list of deactivated input methods includes all installed input methods except the enabled ones.
 
 **Since:** 9
@@ -245,15 +241,11 @@ inputMethod.getSetting().getInputMethods(true, (err: BusinessError, data: Array<
 getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>
 ```
 
-Obtains a list of activated or deactivated input methods. This API uses a promise to return the result.   
-> **NOTE：**
-   
-> 
-   
-> An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed.
-   
-> 
-   
+Obtains a list of activated or deactivated input methods. This API uses a promise to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
+> An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed. <br>
+> <br>
 > The list of activated input methods includes the default input method and enabled input methods. The list of deactivated input methods includes all installed input methods except the enabled ones.
 
 **Since:** 9
@@ -298,15 +290,11 @@ inputMethod.getSetting().getInputMethods(true).then((data: Array<inputMethod.Inp
 getInputMethodsSync(enable: boolean): Array<InputMethodProperty>
 ```
 
-Obtains a list of activated or deactivated input methods. This API returns the result synchronously.   
-> **NOTE：**
-   
-> 
-   
-> An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed.
-   
-> 
-   
+Obtains a list of activated or deactivated input methods. This API returns the result synchronously. <br> <br>   
+> **NOTE:**<br>
+> <br>
+> An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed. <br>
+> <br>
 > The list of activated input methods includes the default input method and enabled input methods. The list of deactivated input methods includes all installed input methods except the enabled ones.
 
 **Since:** 11

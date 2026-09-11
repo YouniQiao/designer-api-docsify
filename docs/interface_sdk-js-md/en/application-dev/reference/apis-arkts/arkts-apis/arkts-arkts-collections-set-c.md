@@ -2,7 +2,7 @@
 
 A non-linear data structure.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > This section uses the following to identify the use of generics:
@@ -120,7 +120,7 @@ A constructor used to create an ArkTS set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | readonly T[] \| null | No | Array or iterator object. The default value is **null**, indicating that an empty set is created. |
+| values | readonly T[] &#124; null | No | Array or iterator object. The default value is **null**, indicating that an empty set is created. |
 
 **Error codes:**
 

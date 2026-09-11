@@ -247,7 +247,7 @@ static getSimplifiedLanguage(language?: string): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 不传入language时，会根据系统语言和地区判断是否存在系统支持的方言，若存在则返回方言的简化表示；若不存在，则返回系统语言的简化表示。 |
+| string | 不传入language时，会根据系统语言和地区判断是否存在系统支持的方言，若存在则返回方言的简化表示；若不存在，则返回系统语言的简化表示。<br>传入language时，返回language的简化表示。 |
 
 **错误码：**
 
@@ -622,7 +622,7 @@ static isSuggested(language: string, region?: string): boolean
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | language | string | 是 | [合法的语言ID](../../../internationalization/i18n-locale-culture.md#实现原理)，例如zh。 |
-| region | string | 否 | [合法的国家地区码](../../../internationalization/i18n-locale-culture.md#实现原理)，例如CN。默认值：SIM卡国家地区。 |
+| region | string | 否 | [合法的国家地区码](../../../internationalization/i18n-locale-culture.md#实现原理)，例如CN。<br>默认值：SIM卡国家地区。 |
 
 **返回值：**
 

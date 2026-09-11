@@ -27,7 +27,7 @@ Obtains the **UIScrollEvent** object associated with the **Scroll** node for con
 
 | Type | Description |
 | --- | --- |
-| [UIScrollEvent](../arkts-components/arkts-arkui-uiscrollevent-i.md) \| undefined | UIScrollEvent** object for the **Scroll** node, or **undefined** if it fails to be obtained. |
+| [UIScrollEvent](../arkts-components/arkts-arkui-uiscrollevent-i.md) &#124; undefined | UIScrollEvent** object for the **Scroll** node, or **undefined** if it fails to be obtained. |
 
 **Examples**
 
@@ -62,7 +62,7 @@ Obtains the **UIListEvent** object associated with the **List** node for configu
 
 | Type | Description |
 | --- | --- |
-| [UIListEvent](../arkts-components/arkts-arkui-uilistevent-i.md) \| undefined | UIListEvent** object for the **List** node, or **undefined** if it fails to be obtained. |
+| [UIListEvent](../arkts-components/arkts-arkui-uilistevent-i.md) &#124; undefined | UIListEvent** object for the **List** node, or **undefined** if it fails to be obtained. |
 
 **Examples**
 
@@ -97,7 +97,7 @@ Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-ar
 
 | Type | Description |
 | --- | --- |
-| [UIWaterFlowEvent](../arkts-components/arkts-arkui-uiwaterflowevent-i.md) \| undefined | UIWaterFlowEvent** object for the **WaterFlow** node, or **undefined** if it fails to be obtained. |
+| [UIWaterFlowEvent](../arkts-components/arkts-arkui-uiwaterflowevent-i.md) &#124; undefined | UIWaterFlowEvent** object for the **WaterFlow** node, or **undefined** if it fails to be obtained. |
 
 **Examples**
 
@@ -132,7 +132,7 @@ Obtains the **UIGridEvent** object associated with the **Grid** node for configu
 
 | Type | Description |
 | --- | --- |
-| [UIGridEvent](../arkts-components/arkts-arkui-uigridevent-i.md) \| undefined | UIGridEvent** object for the **Grid** node, or **undefined** if it fails to be obtained. |
+| [UIGridEvent](../arkts-components/arkts-arkui-uigridevent-i.md) &#124; undefined | UIGridEvent** object for the **Grid** node, or **undefined** if it fails to be obtained. |
 
 **Examples**
 

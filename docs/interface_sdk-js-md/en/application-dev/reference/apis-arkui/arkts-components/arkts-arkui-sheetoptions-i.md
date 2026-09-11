@@ -63,7 +63,7 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 Defines the sheet's border color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md)
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; EdgeColors &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md)
 
 **Since:** 12
 
@@ -81,7 +81,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 Defines the sheet's border style.
 
-**Type:** [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) \| EdgeStyles
+**Type:** [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) &#124; EdgeStyles
 
 **Since:** 12
 
@@ -99,7 +99,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 Defines the sheet's border width.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **Since:** 12
 
@@ -135,7 +135,7 @@ detents?: [(SheetSize | Length), (SheetSize | Length)?, (SheetSize | Length)?]
 
 Defines sheet detents
 
-**Type:** [(SheetSize \| Length), (SheetSize \| Length)?, (SheetSize \| Length)?]
+**Type:** [(SheetSize &#124; Length), (SheetSize &#124; Length)?, (SheetSize &#124; Length)?]
 
 **Since:** 11
 
@@ -153,7 +153,7 @@ detentSelection?: SheetSize | Length
 
 Select a detent from detents property
 
-**Type:** [SheetSize](arkts-arkui-sheetsize-e.md) \| [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** [SheetSize](arkts-arkui-sheetsize-e.md) &#124; [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** detents[0]
 
@@ -273,7 +273,7 @@ height?: SheetSize | Length
 
 Defines sheet height
 
-**Type:** [SheetSize](arkts-arkui-sheetsize-e.md) \| [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** [SheetSize](arkts-arkui-sheetsize-e.md) &#124; [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** SheetSize.LARGE
 
@@ -557,7 +557,7 @@ radius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
 Defines sheet radius
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **Since:** 15
 
@@ -638,7 +638,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Defines the sheet's shadow.
 
-**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
+**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **Since:** 12
 
@@ -656,7 +656,7 @@ showClose?: boolean | Resource
 
 Defines whether the close icon is displayed
 
-**Type:** boolean \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**Type:** boolean &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Default:** true
 
@@ -714,7 +714,7 @@ title?: SheetTitleOptions | CustomBuilder
 
 Defines the sheet title
 
-**Type:** [SheetTitleOptions](arkts-arkui-sheettitleoptions-i.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**Type:** [SheetTitleOptions](arkts-arkui-sheettitleoptions-i.md) &#124; [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 11
 

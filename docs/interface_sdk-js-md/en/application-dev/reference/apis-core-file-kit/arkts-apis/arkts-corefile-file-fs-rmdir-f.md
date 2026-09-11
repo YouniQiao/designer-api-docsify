@@ -14,7 +14,7 @@ declare function rmdir(path: string): Promise<void>
 
 Removes a directory and all its subdirectories and files. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be used to remove a single file. However, you are advised to use **unlink()** instead.
 
@@ -62,7 +62,7 @@ declare function rmdir(path: string, callback: AsyncCallback<void>): void
 
 Removes a directory and all its subdirectories and files. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can be used to remove a single file. However, you are advised to use **unlink()** instead.
 

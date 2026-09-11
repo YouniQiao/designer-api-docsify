@@ -30,7 +30,7 @@ Clones a node in the current scene. Cross-scene node cloning is not supported.
 
 | Type | Description |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Returns the cloned node. If the operation fails, null is returned. |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) &#124; null | Returns the cloned node. If the operation fails, null is returned. |
 
 **Examples**
 
@@ -155,7 +155,7 @@ Obtains the component instance from a node based on the component name.
 
 | Type | Description |
 | --- | --- |
-| [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) \| null | SceneComponent object corresponding to the given name, or null if not found. |
+| [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) &#124; null | SceneComponent object corresponding to the given name, or null if not found. |
 
 **Examples**
 
@@ -197,7 +197,7 @@ Obtains the rendering context associated with the current graphics object.
 
 | Type | Description |
 | --- | --- |
-| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) \| null | Rendering context associated with the current object, or null if no rendering context is associated. |
+| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) &#124; null | Rendering context associated with the current object, or null if no rendering context is associated. @static |
 
 **Examples**
 
@@ -238,7 +238,7 @@ Obtains a node by path.
 
 | Type | Description |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Returns the instance of the requested node. Returns null if not found or if the type of the found node does not match the passed parameter. |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) &#124; null | Returns the instance of the requested node. Returns null if not found or if the type of the found node does not match the passed parameter. |
 
 **Examples**
 
@@ -310,7 +310,7 @@ Generally used for importing nodes from other scenes.
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the imported node, which can be customized and has no special requirements. |
 | node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node to be imported. |
-| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Yes | Parent node of the imported node in the new scene. |
+| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) &#124; null | Yes | Parent node of the imported node in the new scene. |
 
 **Return value:**
 
@@ -360,7 +360,7 @@ Imports another scene into the current one.
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the root node of the imported scene, which can be customized and has no special requirements. |
 | scene | [Scene](arkts-arkgraphics3d-scene-c.md) | Yes | Scene to import. |
-| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Yes | Parent node of the imported scene in the new scene. |
+| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) &#124; null | Yes | Parent node of the imported scene in the new scene. |
 
 **Return value:**
 
@@ -408,7 +408,7 @@ Loads a resource by path. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; | Promise used to return the Scene object created. |
+| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; | Promise used to return the Scene object created. @static |
 
 **Examples**
 
@@ -508,8 +508,6 @@ get animations(): Animation[]
 
 Animation objects in the 3D scene.
 
-@return { Animation[] } @readonly
-
 **Type:** [Animation](arkts-arkgraphics3d-sceneresources-animation-i.md)[]
 
 **Since:** 12
@@ -523,8 +521,6 @@ get environment(): Environment
 ```
 
 Environment object.
-
-@return { Environment }
 
 **Type:** [Environment](arkts-arkgraphics3d-sceneresources-environment-i.md)
 
@@ -565,8 +561,6 @@ get root(): Node | null
 ```
 
 Root node of the 3D scene tree.
-
-@return { Node | null } @readonly
 
 **Type:** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 

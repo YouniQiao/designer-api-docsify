@@ -35,7 +35,7 @@ A maximum of 100 contacts can be imported at a time. Importing contact portraits
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Returns the array of contacts creation results. Valid contact ID (which can be obtained by [getId]{ |
+| Promise&lt;Array&lt;number&gt;&gt; | Returns the array of contacts creation results. Valid contact ID (which can be obtained by getId) indicates that the creation was successful. [INVALID_CONTACT_ID](arkts-contacts-contact-contact-c.md#invalid_contact_id) indicates the creation failed. -2 indicates that the user has not selected this contact. |
 
 **Error codes:**
 

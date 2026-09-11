@@ -31,8 +31,8 @@ Binds a device. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. The value is a string of 1 to 255 characters. |
-| bindParam | { [key: string]: Object; } | Yes | Authentication parameters. You can determine the key-value pair to be passed in. By default, the following keys are carried:    **bindType**: binding type, which is mandatory. The value **1** means PIN authentication.    **targetPkgName**: bundle name of the target to bind.    **appName**: application that attempts to bind the target.    **appOperation**: reason for the application to bind the target.    **customDescription**: detailed description of the operation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{deviceId: string;}&gt; | Yes |  |
+| bindParam | { [key: string]: Object; } | Yes | Authentication parameters. You can determine the key-value pair to be passed in. By default, the following keys are carried:<br>**bindType**: binding type, which is mandatory. <br>The value **1** means PIN authentication. <br>**targetPkgName**: bundle name of the target to bind. <br>**appName**: application that attempts to bind the target. <br>**appOperation**: reason for the application to bind the target. <br>**customDescription**: detailed description of the operation. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{deviceId: string;}&gt; | Yes | Callback used to return the authentication result. |
 
 **Error codes:**
 
@@ -504,7 +504,7 @@ Unsubscribes from the device state changes. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceStateChange' | Yes | Event type. The value **'deviceStateChange'** indicates device state changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | No | Callback to unregister. |
 
 **Error codes:**
 
@@ -559,7 +559,7 @@ Unsubscribes from the **'discoverSuccess'** event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoverSuccess' | Yes | Event type, which has a fixed value of **'discoverSuccess'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ device: DeviceBasicInfo; }&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ device: DeviceBasicInfo; }&gt; | No | Callback to unregister. |
 
 **Error codes:**
 
@@ -613,7 +613,7 @@ Unsubscribes from the device name changes. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceNameChange' | Yes | Event type, which has a fixed value of **deviceNameChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | No | Callback to unregister. |
 
 **Error codes:**
 
@@ -662,7 +662,7 @@ Unsubscribes from the **'discoverFailure'** event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoverFailure' | Yes | Event type, which has a fixed value of **'discoverFailure'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: number; }&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: number; }&gt; | No | Callback to unregister. |
 
 **Error codes:**
 
@@ -711,7 +711,7 @@ Unsubscribes from the dead events of the **DeviceManager** service. This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceDie' | Yes | Event type, which has a fixed value of **'serviceDie'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{}&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{}&gt; | No | Callback to unregister. |
 
 **Error codes:**
 
@@ -756,7 +756,7 @@ Subscribes to the device state changes. The application (identified by the bundl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceStateChange' | Yes | Event type. The value **'deviceStateChange'** indicates device state changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | Yes | Callback used to return the device information and state. |
 
 **Error codes:**
 
@@ -811,7 +811,7 @@ Subscribes to the **'discoverSuccess'** event. The application will be notified 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoverSuccess' | Yes | Event type, which has a fixed value of **'discoverSuccess'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ device: DeviceBasicInfo; }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ device: DeviceBasicInfo; }&gt; | Yes | Callback invoked when a device is successfully discovered. |
 
 **Error codes:**
 
@@ -865,7 +865,7 @@ Subscribes to device name changes. The application will be notified when the nam
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceNameChange' | Yes | Event type, which has a fixed value of **deviceNameChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | Yes | Callback used to return the device name change. |
 
 **Error codes:**
 
@@ -914,7 +914,7 @@ Subscribes to the **'discoverFailure'** event. The application will be notified 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoverFailure' | Yes | Event type, which has a fixed value of **'discoverFailure'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: number; }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: number; }&gt; | Yes | Callback invoked when a device fails to be discovered. |
 
 **Error codes:**
 
@@ -963,7 +963,7 @@ Subscribes to the dead events of the **DeviceManager** service. The application 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceDie' | Yes | Event type, which has a fixed value of **'serviceDie'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{}&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{}&gt; | Yes | Callback invoked when the **DeviceManager** service is terminated unexpectedly. |
 
 **Error codes:**
 
@@ -1007,8 +1007,8 @@ Starts to discover devices nearby. The discovery process takes 2 minutes. A maxi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| discoverParam | { [key: string]: Object; } | Yes | Identifier of the device to discover. It specifies the type of the target to discover.    **discoverTargetType**: The default discovery target is device. The value is **1**. |
-| filterOptions | { [key: string]: Object; } | No | Options for filtering the devices to discover. The default value is **undefined**, which means to discover offline devices. The options include the following:    - **availableStatus(0-1)**: status of the device to discover. The value **0** means the device is untrusted.    - **0**: The device is offline. The client needs to call **bindTarget** to bind the device.    - **1**: The device is online and can be connected.    **discoverDistance(0-100)**: distance of the device to discover, in cm. This parameter is not used in Wi-Fi scenarios.    **authenticationStatus(0-1)**: authentication status of the device to discover.    - **0**: The device is not authenticated.    The value **1** means the device has been authenticated.    - **authorizationType(0-2)**: authorization type of the device to discover.    - **0**: The device is authenticated by a temporarily agreed session key.    - **1**: The device is authenticated by a key of the same account.    - **2**: The device is authenticated by a credential key of different accounts. |
+| discoverParam | { [key: string]: Object; } | Yes | Identifier of the device to discover. It specifies the type of the target to discover.<br>**discoverTargetType**: The default discovery target is device. The value is **1**. |
+| filterOptions | { [key: string]: Object; } | No | Options for filtering the devices to discover. The default value is **undefined**, which means to discover offline devices. The options include the following:<br>- **availableStatus(0-1)**: status of the device to discover. The value **0** means the device is untrusted. <br>- **0**: The device is offline. The client needs to call **bindTarget** to bind the device. <br>- **1**: The device is online and can be connected. <br>**discoverDistance(0-100)**: distance of the device to discover, in cm. This parameter is not used in Wi-Fi scenarios. <br>**authenticationStatus(0-1)**: authentication status of the device to discover. <br>- **0**: The device is not authenticated. <br>The value **1** means the device has been authenticated. <br>- **authorizationType(0-2)**: authorization type of the device to discover. <br>- **0**: The device is authenticated by a temporarily agreed session key. <br>- **1**: The device is authenticated by a key of the same account. <br>- **2**: The device is authenticated by a credential key of different accounts. |
 
 **Error codes:**
 

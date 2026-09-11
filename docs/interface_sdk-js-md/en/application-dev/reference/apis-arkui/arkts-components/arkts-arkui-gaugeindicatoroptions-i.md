@@ -19,7 +19,7 @@ icon?: ResourceStr
 
 Image path of the icon.
 
-**NOTE：**
+**NOTE:**
 
 If this parameter is not set, the default style is used, which is a triangle pointer.
 
@@ -51,7 +51,7 @@ Default value: **8**
 
 Unit: vp
 
-**NOTE：**
+**NOTE:**
 
 For the default triangle style indicator, the distance is the amount of space between the triangle and the outer edge of the ring.
 

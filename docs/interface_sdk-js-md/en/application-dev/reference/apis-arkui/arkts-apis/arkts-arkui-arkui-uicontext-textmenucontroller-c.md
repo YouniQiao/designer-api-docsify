@@ -2,7 +2,7 @@
 
 Provides the capability to control text menus.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - In the following non-static API examples, you must first use
 > [getTextMenuController()](arkts-arkui-arkui-uicontext-uicontext-c.md#gettextmenucontroller) in **UIContext** to obtain a
@@ -29,7 +29,7 @@ static disableMenuItems(items: Array<TextMenuItemId>): void
 
 Disables specified system service menu items in the text selection menu.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API takes effect globally for the entire application process after being called.
 > 
@@ -90,7 +90,7 @@ static disableSystemServiceMenuItems(disable: boolean): void
 
 Disables all system service menu items in the text selection menu.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API takes effect globally for the entire application process after being called.
 > 
@@ -156,4 +156,4 @@ Sets menu options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TextMenuOptions](arkts-arkui-textmenuoptions-i.md) | Yes | Menu options. Default value: {showMode: TextMenuShowMode.DEFAULT}. |
+| options | [TextMenuOptions](arkts-arkui-textmenuoptions-i.md) | Yes | Menu options.<br>Default value: {showMode: TextMenuShowMode.DEFAULT}. |

@@ -14,7 +14,7 @@ function uploadFile(context: BaseContext, config: UploadConfig, callback: AsyncC
 
 Uploads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use on('complete'|'fail') to obtain the upload success or error information.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -39,7 +39,7 @@ Uploads a file. This API uses an asynchronous callback to return the result. HTT
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [13400002](../errorcode-request.md#13400002-file-path-error) | File path not supported or invalid. |
 
 **Examples**
@@ -80,7 +80,7 @@ function uploadFile(context: BaseContext, config: UploadConfig): Promise<UploadT
 
 Uploads a file. This API uses a promise to return the result. HTTP is supported. You can use on('complete'|'fail') to obtain the upload success or error information.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -110,7 +110,7 @@ Uploads a file. This API uses a promise to return the result. HTTP is supported.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:   1. Missing mandatory parameters.   2. Incorrect parameter type.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [13400002](../errorcode-request.md#13400002-file-path-error) | File path not supported or invalid. |
 
 **Examples**

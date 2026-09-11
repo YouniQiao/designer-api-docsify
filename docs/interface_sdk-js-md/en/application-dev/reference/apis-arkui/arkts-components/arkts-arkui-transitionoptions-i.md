@@ -2,7 +2,7 @@
 
 Defines the transition effect by setting parameters in the struct.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 1. When set to a value of the **TransitionOptions** type, the **transition** attribute must work with
 > [animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto). The animation duration,
@@ -36,7 +36,7 @@ Opacity of the component during transition, which is the value of the start poin
 
 Value range: [0, 1]
 
-**NOTE：**
+**NOTE:**
 
 If the value specified is less than 0, the value **0** is used. If the value specified is greater than 1, the value **1** is used.
 
@@ -90,7 +90,7 @@ Scaling of the component during transition, which is the value of the start poin
 point of the page.  
 - If the center point is (0, 0), it refers to the upper left corner of the component.
 
-**NOTE：**
+**NOTE:**
 
 If **centerX** or **centerY** is set to an invalid string (for example, **"illegalString"**), the default value **"0"** is used.
 
@@ -138,7 +138,7 @@ Transition type.
 
 Default value: **TransitionType.All**
 
-**NOTE：**
+**NOTE:**
 
 If **type** is not specified, the default value **TransitionType.All** is used, which means that the transition effect works for both component addition and deletion.
 

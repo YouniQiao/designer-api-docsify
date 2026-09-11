@@ -4,7 +4,7 @@ PhotoPickerComponent({ pickerOptions?: PickerOptions, onSelect?: (uri: string) =
 
 Allows the application to access images or videos in the user directory without any permission.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the **PhotoPickerComponent** is used with the **Tabs** component, the swipe gestures of the **Tabs** component
 > conflict with those of the photo browser page.

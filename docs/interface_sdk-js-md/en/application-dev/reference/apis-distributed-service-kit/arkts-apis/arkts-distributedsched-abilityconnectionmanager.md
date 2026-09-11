@@ -46,10 +46,10 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 | [createStream](arkts-distributedservice-abilityconnectionmanager-createstream-f-sys.md) | Creating a Stream. |
 | [destroyStream](arkts-distributedservice-abilityconnectionmanager-destroystream-f-sys.md) | Destroy the Stream. |
 | [getSurfaceId](arkts-distributedservice-abilityconnectionmanager-getsurfaceid-f-sys.md) | Obtains the transmission surface. |
-| off | Unregisters receiveImage event. |
-| off | Unregisters collaborateEvent event. |
-| on | Registers receiveImage event. |
-| on | Registers collaborateEvent event. |
+| [off](arkts-distributedservice-abilityconnectionmanager-off-f-sys.md#offreceiveimage) | Unregisters receiveImage event. |
+| [off](arkts-distributedservice-abilityconnectionmanager-off-f-sys.md#offcollaborateevent) | Unregisters collaborateEvent event. |
+| [on](arkts-distributedservice-abilityconnectionmanager-on-f-sys.md#onreceiveimage) | Registers receiveImage event. |
+| [on](arkts-distributedservice-abilityconnectionmanager-on-f-sys.md#oncollaborateevent) | Registers collaborateEvent event. |
 | [sendImage](arkts-distributedservice-abilityconnectionmanager-sendimage-f-sys.md) | Send image data. |
 | [setSurfaceId](arkts-distributedservice-abilityconnectionmanager-setsurfaceid-f-sys.md) | Sets the transmission surface. |
 | [startStream](arkts-distributedservice-abilityconnectionmanager-startstream-f-sys.md) | Start Streaming |

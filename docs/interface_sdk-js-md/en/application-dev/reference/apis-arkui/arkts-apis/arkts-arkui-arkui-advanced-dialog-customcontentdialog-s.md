@@ -146,7 +146,7 @@ theme?: Theme | CustomTheme
 
 Custom Theme.
 
-**Type:** [Theme](arkts-arkui-arkui-theme-theme-i.md) \| [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
+**Type:** [Theme](arkts-arkui-arkui-theme-theme-i.md) &#124; [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
 
 **Since:** 12
 

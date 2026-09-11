@@ -2,7 +2,7 @@
 
 FlashQuery provides APIs to query the flash status and mode of a camera device.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This interface was first introduced in API version 12. In this version, a compatibility change was made that
 > preserved the initial version information of inner elements. As a result, you might see outer element's
@@ -35,7 +35,7 @@ Checks whether the camera device has flash.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the camera has flash. **true** if it has, **false** otherwise. |
+| boolean | Whether the camera has flash. **true** if it has, **false** otherwise. <br>If **false** is returned, [isFlashModeSupported](#isflashmodesupported), [setFlashMode](arkts-camera-camera-flash-i.md#setflashmode), and [getFlashMode](arkts-camera-camera-flash-i.md#getflashmode) do not take effect. <br>If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -67,7 +67,7 @@ Checks whether a flash mode is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the flash mode. **true** if supported, **false** otherwise. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
+| boolean | Check result for the support of the flash mode. **true** if supported, **false** otherwise. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is thrown. |
 
 **Error codes:**
 

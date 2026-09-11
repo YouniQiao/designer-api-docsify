@@ -34,7 +34,7 @@ data: string | ArrayBuffer
 
 发送的数据。
 
-**类型：** string \| ArrayBuffer
+**类型：** string &#124; ArrayBuffer
 
 **起始版本：** 7
 

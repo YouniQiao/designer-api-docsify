@@ -96,7 +96,7 @@ kill(signal: number | string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| signal | number \| string | 是 | number 或 string，表示发送的信号。 |
+| signal | number &#124; string | 是 | number 或 string，表示发送的信号。 |
 
 ## wait
 

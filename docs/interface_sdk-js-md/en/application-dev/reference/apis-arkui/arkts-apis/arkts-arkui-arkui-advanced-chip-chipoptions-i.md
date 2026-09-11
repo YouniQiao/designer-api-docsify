@@ -2,7 +2,7 @@
 
 Defines the type and style parameters of the chip.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 1. When **suffixSymbol** is provided with an argument, **suffixIcon** and **allowClose** will not take effect. If
 > **suffixSymbol** is not provided, but **suffixIcon** is, **allowClose** still will not take effect. When neither
@@ -407,7 +407,7 @@ maxFontScale?: number | Resource
 
 Maximum font scale factor for the text and icon of the chip. Value range: [1, +∞).
 
-**Type:** number \| [Resource](arkts-arkui-resource-t.md)
+**Type:** number &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 23
 
@@ -425,7 +425,7 @@ minFontScale?: number | Resource
 
 Minimum font scale factor for the text and icon of the chip. Value range: [0, 1].
 
-**Type:** number \| [Resource](arkts-arkui-resource-t.md)
+**Type:** number &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 23
 
@@ -548,7 +548,7 @@ The SizeOptions type parameter does not support percentage values. If an invalid
 
 Note: [Aging-friendly design implementation](../../../ui/arkui-support-for-aging-adaptation.md) does not take effect when size specifies specific width and height, except when size is set to { height: 0, width: 0 }.
 
-**Type:** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) \| [SizeOptions](arkts-arkui-sizeoptions-i.md)
+**Type:** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) &#124; [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **Since:** 11
 

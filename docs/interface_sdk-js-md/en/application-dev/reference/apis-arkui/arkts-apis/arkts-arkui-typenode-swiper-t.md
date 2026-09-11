@@ -14,4 +14,4 @@ Represents a FrameNode of the **Swiper** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;SwiperInterface, [SwiperAttribute](../arkts-components/arkts-arkui-swiper-attribute.md)&gt;
+**Type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;SwiperInterface, [SwiperAttribute](../arkts-components/arkts-arkui-swiper-comp-attribute.md)&gt;

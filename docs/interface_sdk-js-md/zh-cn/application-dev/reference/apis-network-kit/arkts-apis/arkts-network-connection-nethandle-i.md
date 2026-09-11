@@ -30,7 +30,7 @@ bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| socketParam | [TCPSocket](arkts-network-connection-tcpsocket-t.md) \| [UDPSocket](arkts-network-connection-udpsocket-t.md) | 是 | 待绑定的TCPSocket或UDPSocket对象。 |
+| socketParam | [TCPSocket](arkts-network-connection-tcpsocket-t.md) &#124; [UDPSocket](arkts-network-connection-udpsocket-t.md) | 是 | 待绑定的TCPSocket或UDPSocket对象。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当TCPSocket或UDPSocket成功绑定到当前网络，error为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -120,7 +120,7 @@ bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| socketParam | [TCPSocket](arkts-network-connection-tcpsocket-t.md) \| [UDPSocket](arkts-network-connection-udpsocket-t.md) | 是 | 待绑定的TCPSocket或UDPSocket对象。 |
+| socketParam | [TCPSocket](arkts-network-connection-tcpsocket-t.md) &#124; [UDPSocket](arkts-network-connection-udpsocket-t.md) | 是 | 待绑定的TCPSocket或UDPSocket对象。 |
 
 **返回值：**
 

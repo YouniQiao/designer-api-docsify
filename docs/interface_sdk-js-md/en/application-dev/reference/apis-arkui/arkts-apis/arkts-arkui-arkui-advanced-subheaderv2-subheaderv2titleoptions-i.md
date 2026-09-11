@@ -60,7 +60,7 @@ Text attributes of the primary title, such as the font color, font size, and fon
 
 Default value: **undefined**
 
-**Type:** TextModifier
+**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **Since:** 18
 
@@ -100,7 +100,7 @@ Text attributes of the secondary title, such as the font color, font size, and f
 
 Default value: **undefined**
 
-**Type:** TextModifier
+**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **Since:** 18
 

@@ -50,7 +50,7 @@ static abs(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -108,7 +108,7 @@ static acos(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -167,7 +167,7 @@ static acosh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -200,7 +200,7 @@ add(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -232,8 +232,8 @@ static add(x: Value, y: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
-| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| x | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -291,7 +291,7 @@ static asin(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -350,7 +350,7 @@ static asinh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
@@ -409,7 +409,7 @@ static atan(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -442,8 +442,8 @@ static atan2(y: Value, x: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} y坐标值，用于计算y/x的反正切值并确定象限。 |
-| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} x坐标值，用于计算y/x的反正切值并确定象限。 |
+| y | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} y坐标值，用于计算y/x的反正切值并确定象限。 |
+| x | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} x坐标值，用于计算y/x的反正切值并确定象限。 |
 
 **返回值：**
 
@@ -502,7 +502,7 @@ static atanh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
@@ -555,7 +555,7 @@ static cbrt(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -607,7 +607,7 @@ static ceil(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -639,8 +639,8 @@ clamp(min: Value, max: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| min | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
-| max | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| min | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
+| max | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -673,9 +673,9 @@ static clamp(n: Value, min: Value, max: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
-| min | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
-| max | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
+| min | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
+| max | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -708,7 +708,7 @@ comparedTo(n: Value): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -740,7 +740,7 @@ Decimal的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **错误码：**
 
@@ -786,7 +786,7 @@ static cos(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
@@ -838,7 +838,7 @@ static cosh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
@@ -890,7 +890,7 @@ div(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -922,8 +922,8 @@ static div(x: Value, y: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
-| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| x | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -955,7 +955,7 @@ dividedToIntegerBy(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -987,7 +987,7 @@ equals(n: Value): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -1045,7 +1045,7 @@ static exp(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -1098,7 +1098,7 @@ static floor(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -1130,7 +1130,7 @@ greaterThan(n: Value): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -1162,7 +1162,7 @@ greaterThanOrEqualTo(n: Value): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -1194,7 +1194,7 @@ static hypot(...n: Value[]): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | 是 | {double \| string \| Decimal} Decimal |
+| n | [Value](arkts-arkts-value-t.md)[] | 是 | {double &#124; string &#124; Decimal} Decimal |
 
 **返回值：**
 
@@ -1346,7 +1346,7 @@ lessThan(n: Value): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -1378,7 +1378,7 @@ lessThanOrEqualTo(n: Value): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -1436,7 +1436,7 @@ static ln(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -1469,7 +1469,7 @@ log(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -1502,8 +1502,8 @@ static log(n: Value, base: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
-| base | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
+| base | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -1536,7 +1536,7 @@ static log10(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -1569,7 +1569,7 @@ static log2(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -1602,7 +1602,7 @@ static max(...n: Value[]): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md)[] | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -1634,7 +1634,7 @@ static min(...n: Value[]): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md)[] | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -1666,7 +1666,7 @@ mod(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -1698,8 +1698,8 @@ static mod(x: Value, y: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
-| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| x | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -1731,7 +1731,7 @@ mul(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -1763,8 +1763,8 @@ static mul(x: Value, y: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
-| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| x | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -1816,7 +1816,7 @@ pow(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -1849,8 +1849,8 @@ static pow(base: Value, exponent: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| base | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} 幂运算的底数的值。 |
-| exponent | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} 幂运算的指数值。 |
+| base | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} 幂运算的底数的值。 |
+| exponent | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} 幂运算的指数值。 |
 
 **返回值：**
 
@@ -1903,7 +1903,7 @@ precision(includeZeros: boolean | number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| includeZeros | boolean \| number | 是 | 是否计算整数部分尾随零。true或1表示计算，false或0表示不计算。 |
+| includeZeros | boolean &#124; number | 是 | 是否计算整数部分尾随零。true或1表示计算，false或0表示不计算。 |
 
 **返回值：**
 
@@ -1961,7 +1961,7 @@ static random(significantDigits: number): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| significantDigits | number | 是 | {number} 随机值保留的有效数字。取值范围为[0, 1e9]的整数。[since 12 - 17] |
+| significantDigits | number | 是 | 随机值保留的有效数字。取值范围为[0, 1e9]的整数。<br>**适用版本：** 18 |
 
 **返回值：**
 
@@ -1994,7 +1994,7 @@ static round(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -2054,7 +2054,7 @@ static sign(n: Value): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -2107,7 +2107,7 @@ static sin(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
@@ -2159,7 +2159,7 @@ static sinh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -2211,7 +2211,7 @@ static sqrt(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -2243,7 +2243,7 @@ sub(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -2275,8 +2275,8 @@ static sub(x: Value, y: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
-| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| x | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -2310,7 +2310,7 @@ static sum(...n: Value[]): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md)[] | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -2362,7 +2362,7 @@ static tan(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
@@ -2414,7 +2414,7 @@ static tanh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
@@ -2511,7 +2511,7 @@ toBinary(significantDigits: number, rounding: Rounding): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits &#124; rounding` is out of range. |
 
 ## toDecimalPlaces
 
@@ -2596,7 +2596,7 @@ toDecimalPlaces(decimalPlaces: number, rounding: Rounding): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces &#124; rounding` is out of range. |
 
 ## toExponential
 
@@ -2681,7 +2681,7 @@ toExponential(decimalPlaces: number, rounding: Rounding): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces &#124; rounding` is out of range. |
 
 ## toFixed
 
@@ -2766,7 +2766,7 @@ toFixed(decimalPlaces: number, rounding: Rounding): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces &#124; rounding` is out of range. |
 
 ## toFraction
 
@@ -2806,7 +2806,7 @@ toFraction(maxDenominator: Value): Decimal[]
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| maxDenominator | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| maxDenominator | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -2903,7 +2903,7 @@ toHexadecimal(significantDigits: number, rounding: Rounding): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits &#124; rounding` is out of range. |
 
 ## toNearest
 
@@ -2923,7 +2923,7 @@ toNearest(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -2955,7 +2955,7 @@ toNearest(n: Value, rounding: Rounding): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 | rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 | 转换时使用的舍入模式。取值范围为0到8的整数。 |
 
 **返回值：**
@@ -3029,7 +3029,7 @@ toOctal(significantDigits: number): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| significantDigits | number | 是 | {double \| string \| Decimal} |
+| significantDigits | number | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 
@@ -3061,7 +3061,7 @@ toOctal(significantDigits: number, rounding: Rounding): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| significantDigits | number | 是 | {double \| string \| Decimal} |
+| significantDigits | number | 是 | {double &#124; string &#124; Decimal} |
 | rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 | 转换时使用的舍入模式。取值范围为0到8的整数。 |
 
 **返回值：**
@@ -3074,7 +3074,7 @@ toOctal(significantDigits: number, rounding: Rounding): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits &#124; rounding` is out of range. |
 
 ## toPrecision
 
@@ -3159,7 +3159,7 @@ toPrecision(significantDigits: number, rounding: Rounding): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits &#124; rounding` is out of range. |
 
 ## toSignificantDigits
 
@@ -3244,7 +3244,7 @@ toSignificantDigits(significantDigits: number, rounding: Rounding): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits &#124; rounding` is out of range. |
 
 ## toString
 
@@ -3304,7 +3304,7 @@ static trunc(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} |
 
 **返回值：**
 

@@ -37,7 +37,7 @@ Overall delay of the animation, in milliseconds. By default, the animation is pl
 
 Default value: **0**.
 
-**NOTE：**
+**NOTE:**
 
 A value greater than 0 means to begin the animation after the specified amount of time has elapsed.
 
@@ -65,7 +65,7 @@ Expected frame rate range of the animation.
 
 Default value: {min:0, max:0, expected:0} (following the application's frame rate)
 
-**NOTE：**
+**NOTE:**
 
 After a valid expected frame rate is set, the system collects the configured frame rate and divides the frequency on the rendering pipeline. The actual frame rate may be different from the expected one configured. It is limited by the system capability and screen refresh rate.
 
@@ -93,7 +93,7 @@ Default value: **1**.
 
 Value range: [–1, +∞).
 
-**NOTE：**
+**NOTE:**
 
 - Floating-point values will be rounded down to integers. For example, if the value set is 1.2, **1** will be used.
 

@@ -90,7 +90,7 @@ pageSize?: PrintPageSize | PrintPageType
 
 Page size of the file to print.
 
-**Type:** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md) \| [PrintPageType](arkts-basicservices-print-printpagetype-e.md)
+**Type:** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md) &#124; [PrintPageType](arkts-basicservices-print-printpagetype-e.md)
 
 **Since:** 11
 

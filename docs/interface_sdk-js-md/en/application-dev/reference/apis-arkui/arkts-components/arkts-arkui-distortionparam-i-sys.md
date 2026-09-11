@@ -2,7 +2,7 @@
 
 Defines the spatial distortion parameters.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The coordinates of the four corners of the component can be set as follows: top-left corner: { x:0, y:0 }, top-right
 > corner: { x:1, y:0 }, bottom-left corner: { x:0, y:1 }, bottom-right corner: { x:1, y:1 }.

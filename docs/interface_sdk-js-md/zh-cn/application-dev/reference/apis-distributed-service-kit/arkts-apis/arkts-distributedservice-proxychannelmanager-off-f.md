@@ -12,7 +12,7 @@ import { proxyChannelManager } from '@kit.DistributedServiceKit';
 function off(type: 'receiveData', channelId: number, callback?: Callback<DataInfo>): void
 ```
 
-取消订阅数据接收事件，不再通过回调接收数据。适用于手机侧应用不再需要接收穿戴设备侧应用数据的场景，例如用户切换到其他功能模块等。必须在[openProxyChannel](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md)成功打开代理通道后才能取消订阅。此方法必须与on('receiveData')配对使用，用于取消之前通过on('receiveData')注册的数据接收回调。
+取消订阅数据接收事件，不再通过回调接收数据。适用于手机侧应用不再需要接收穿戴设备侧应用数据的场景，例如用户切换到其他功能模块等。必须在[openProxyChannel](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md)成功打开代理通道后才能取消订阅。此方法必须与[on('receiveData')](arkts-distributedservice-proxychannelmanager-on-f.md#onreceivedata)配对使用，用于取消之前通过on('receiveData')注册的数据接收回调。
 
 **起始版本：** 20
 
@@ -74,7 +74,7 @@ struct Index {
 function off(type: 'channelStateChange', channelId: number, callback?: Callback<ChannelStateInfo>): void
 ```
 
-取消订阅通道状态事件。适用于手机侧应用不再需要监听代理通道连接状态变化的场景，例如用户退出相关业务页面、完成数据传输流程后等。必须在[openProxyChannel](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md)成功打开代理通道后才能取消订阅。此方法必须与on('channelStateChange')配对使用，用于取消之前通过on('channelStateChange')注册的通道状态回调。
+取消订阅通道状态事件。适用于手机侧应用不再需要监听代理通道连接状态变化的场景，例如用户退出相关业务页面、完成数据传输流程后等。必须在[openProxyChannel](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md)成功打开代理通道后才能取消订阅。此方法必须与[on('channelStateChange')](arkts-distributedservice-proxychannelmanager-on-f.md#onchannelstatechange)配对使用，用于取消之前通过on('channelStateChange')注册的通道状态回调。
 
 **起始版本：** 20
 

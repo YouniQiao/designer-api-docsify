@@ -12,9 +12,7 @@ import { power } from '@kit.BasicServicesKit';
 function refreshActivity(reason: string): void
 ```
 
-刷新设备活动状态（如：重设屏幕超时灭屏时间等）。
-
-此接口仅在设备活动状态下生效。
+刷新设备活动状态（如：重设屏幕超时灭屏时间等）。<br><br>此接口仅在设备活动状态下生效。
 
 **起始版本：** 20
 

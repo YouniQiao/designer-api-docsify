@@ -33,7 +33,7 @@ Set or reset the callback which is triggered when the Scroll did scroll.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) \| undefined | Yes | callback function, triggered when the Scroll did scroll. |
+| callback | [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) &#124; undefined | Yes | callback function, triggered when the Scroll did scroll. |
 
 ## setOnWillScroll
 
@@ -55,4 +55,4 @@ Set or reset the callback which is triggered when the Scroll will scroll.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md) \| undefined | Yes | callback function, triggered when the Scroll will scroll. |
+| callback | [ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md) &#124; undefined | Yes | callback function, triggered when the Scroll will scroll. |

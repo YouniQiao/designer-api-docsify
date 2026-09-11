@@ -64,7 +64,7 @@ primaryTitleModifier?: TextModifier
 
 默认值：undefined
 
-**类型：** TextModifier
+**类型：** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **起始版本：** 18
 
@@ -104,7 +104,7 @@ secondaryTitleModifier?: TextModifier
 
 默认值：undefined
 
-**类型：** TextModifier
+**类型：** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **起始版本：** 18
 

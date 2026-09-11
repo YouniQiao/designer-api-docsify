@@ -1,6 +1,6 @@
 # WakeupHapInfo (System API)
 
-Describes wakeup hap information.
+Describes wakeup hap information. @typedef WakeupHapInfo
 
 **Since:** 10
 

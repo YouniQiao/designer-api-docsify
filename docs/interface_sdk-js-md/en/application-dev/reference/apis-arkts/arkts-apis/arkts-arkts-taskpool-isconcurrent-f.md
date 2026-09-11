@@ -30,7 +30,7 @@ Checks whether a function is a concurrent function.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the function is a concurrent function, that is, a function decorated with [ |
+| boolean | Check result. The value **true** is returned if the function is a concurrent function, that is, a function decorated with [@Concurrent](../../../arkts-utils/taskpool-introduction.md#concurrent-decorator); otherwise, **false** is returned. |
 
 **Examples**
 

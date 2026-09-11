@@ -35,13 +35,13 @@ function getUserAuthInstance(authParam: AuthParam, widgetParam: WidgetParam): Us
 
 | 类型 | 说明 |
 | --- | --- |
-| [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) | 支持用户界面的认证器对象。获取实例后，需调用[on('result')]{ |
+| [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) | 支持用户界面的认证器对象。获取实例后，需调用[on('result')](arkts-userauthentication-userauth-userauthinstance-i.md#onresult)订阅认证结果，再调用[start](arkts-userauthentication-userauth-userauthinstance-i.md#start)启动认证。认证完成后，可通过回调获取认证结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified.  2. Incorrect parameter types.  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 | [12500005](../errorcode-useriam.md#12500005-认证类型不支持) | The authentication type is not supported. |
 | [12500006](../errorcode-useriam.md#12500006-认证信任等级不支持) | The authentication trust level is not supported. |

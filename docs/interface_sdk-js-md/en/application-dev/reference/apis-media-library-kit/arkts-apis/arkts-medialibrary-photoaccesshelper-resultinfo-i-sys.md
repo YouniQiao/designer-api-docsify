@@ -40,7 +40,7 @@ readonly result: Array<string|null>
 
 result info of batch operations.
 
-**Type:** Array&lt;string \| null&gt;
+**Type:** Array&lt;string &#124; null&gt;
 
 **Since:** 26.0.0
 

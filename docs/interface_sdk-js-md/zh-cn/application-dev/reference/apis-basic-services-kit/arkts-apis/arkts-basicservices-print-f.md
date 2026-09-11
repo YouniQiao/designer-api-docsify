@@ -12,7 +12,7 @@ import { print } from '@kit.BasicServicesKit';
 function print(files: Array<string>, callback: AsyncCallback<PrintTask>): void
 ```
 
-打印接口，传入文件进行打印，使用callback异步回调。拉起系统打印预览界面，需要使用[print](arkts-basicservices-print-f.md)接口，传入context。
+打印接口，传入文件进行打印，使用callback异步回调。拉起系统打印预览界面，需要使用[print](#print-3)接口，传入context。
 
 **起始版本：** 10
 
@@ -62,7 +62,7 @@ print.print([fileUri.getUriFromPath(filePath)], (error: BusinessError, printTask
 function print(files: Array<string>): Promise<PrintTask>
 ```
 
-打印接口，传入文件进行打印，使用Promise异步回调。拉起系统打印预览界面，需要使用[print](arkts-basicservices-print-f.md)接口，传入context。
+打印接口，传入文件进行打印，使用Promise异步回调。拉起系统打印预览界面，需要使用[print](#print-3)接口，传入context。
 
 **起始版本：** 10
 
@@ -80,7 +80,7 @@ function print(files: Array<string>): Promise<PrintTask>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; | Promise对象，返回[PrintTask]{ |
+| Promise&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; | Promise对象，返回[PrintTask](arkts-basicservices-print-printtask-i.md)。 |
 
 **错误码：**
 
@@ -201,7 +201,7 @@ function print(files: Array<string>, context: Context): Promise<PrintTask>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; | Promise对象，返回[PrintTask]{ |
+| Promise&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; | Promise对象，返回[PrintTask](arkts-basicservices-print-printtask-i.md)。 |
 
 **错误码：**
 
@@ -276,7 +276,7 @@ function print(jobName: string, printAdapter: PrintDocumentAdapter, printAttribu
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; | Promise对象，返回[PrintTask]{ |
+| Promise&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; | Promise对象，返回[PrintTask](arkts-basicservices-print-printtask-i.md)。 |
 
 **错误码：**
 

@@ -26,7 +26,7 @@ function stringify(value: Object | null | undefined): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Object \| null \| undefined | 是 | ArkTS对象数据。<br>**适用版本：** 18 |
+| value | Object &#124; null &#124; undefined | 是 | ArkTS对象数据。<br>**适用版本：** 18 |
 
 **返回值：**
 

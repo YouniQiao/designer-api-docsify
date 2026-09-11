@@ -6,6 +6,8 @@ type FavoriteMediaEntityEvent = (actionType: MediaFavoriteType, mediaEntity: Med
 
 The favorite media entity event.
 
+@typedef { function } FavoriteMediaEntityEvent
+
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.

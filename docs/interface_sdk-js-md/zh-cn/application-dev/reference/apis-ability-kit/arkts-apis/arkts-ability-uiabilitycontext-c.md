@@ -82,7 +82,7 @@ connectAppServiceExtensionAbility(want: Want, callback: ConnectOptions): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回连接id，[disconnectAppServiceExtensionAbility]{ |
+| number | 返回连接id，[disconnectAppServiceExtensionAbility](#disconnectappserviceextensionability)根据该连接id断开连接。 |
 
 **错误码：**
 
@@ -172,7 +172,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回连接id，调用方可以通过[disconnectServiceExtensionAbility]{ |
+| number | 返回连接id，调用方可以通过[disconnectServiceExtensionAbility](#disconnectserviceextensionability)传入该连接id来断开连接。 |
 
 **错误码：**
 
@@ -266,7 +266,7 @@ connectUIServiceExtensionAbility(want: Want, callback: UIServiceExtensionConnect
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[UIServiceProxy](arkts-ability-uiserviceproxy-i.md)&gt; | Promise对象，包含connectUIServiceExtensionAbility执行后返回的[UIServiceProxy]{ |
+| Promise&lt;[UIServiceProxy](arkts-ability-uiserviceproxy-i.md)&gt; | Promise对象，包含connectUIServiceExtensionAbility执行后返回的[UIServiceProxy](arkts-ability-uiserviceproxy-i.md)对象。 |
 
 **错误码：**
 
@@ -800,7 +800,7 @@ export default class EntryAbility extends UIAbility {
 moveAbilityToBackground(): Promise<void>
 ```
 
-将处于前台的UIAbility移动到后台。使用Promise异步回调。仅支持在主线程调用。<!--RP1--><!--RP1End-->从API version 12开始，该接口仅在Phone、Wearable和TV设备中可正常调用，在其他设备上返回16000061错误码。从API version 13开始，该接口仅在Phone、Tablet、Wearable和TV设备中可正常调用，在其他设备上返回16000061错误码。
+将处于前台的UIAbility移动到后台。使用Promise异步回调。仅支持在主线程调用。<br><!--RP1--><!--RP1End-->从API version 12开始，该接口仅在Phone、Wearable和TV设备中可正常调用，在其他设备上返回16000061错误码。从API version 13开始，该接口仅在Phone、Tablet、Wearable和TV设备中可正常调用，在其他设备上返回16000061错误码。
 
 **起始版本：** 12
 
@@ -1514,6 +1514,49 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+## setAbilityInstanceInfo
+
+```TypeScript
+setAbilityInstanceInfo(label: string, icon: image.PixelMap, groupId: string): Promise<void>
+```
+
+设置当前UIAbility实例的图标和标签信息。图标与标签信息可在任务中心和快捷栏的界面中显示。使用Promise异步回调。该接口仅在PC/2in1设备中可正常调用，在其他设备中返回801错误码。
+
+**起始版本：** 26.1.0
+
+**需要权限：** ohos.permission.SET_ABILITY_INSTANCE_INFO
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| label | string | 是 | 新的图标标签。标签长度不超过1024字节，且不可为空字符串。 |
+| icon | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 新的图标。建议图标大小为512px*512px。 |
+| groupId | string | 是 | 应用内UIAbility在快捷栏上的图标聚合标签。长度不超过64个字符。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，包含接口执行结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Window operations encountered failures. |
+
+**示例**
+
+参见 [setAbilityInstanceInfo](#setabilityinstanceinfo)
+
 ## setColorMode
 
 ```TypeScript
@@ -1548,7 +1591,7 @@ setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorMode | [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-e.md) | 是 | 设置颜色模式，包括:     - COLOR_MODE_DARK：深色模式     - COLOR_MODE_LIGHT：浅色模式     - COLOR_MODE_NOT_SET：不设置（跟随系统或应用） |
+| colorMode | [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-e.md) | 是 | 设置颜色模式，包括:<br> - COLOR_MODE_DARK：深色模式 <br> - COLOR_MODE_LIGHT：浅色模式 <br> - COLOR_MODE_NOT_SET：不设置（跟随系统或应用） |
 
 **错误码：**
 
@@ -3168,7 +3211,7 @@ startSelfUIAbilityInCurrentProcess(want: Want, specifiedFlag: string, options?: 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的必要信息。只支持[显式启动](../../../application-models/explicit-implicit-want-mappings.md#显式want匹配原理)，不支持[隐式启动](../../../application-models/explicit-implicit-want-mappings.md#隐式want匹配原理)。 |
-| specifiedFlag | string | 是 | UIAbility的ID。此ID不得与任何已运行的ID重复   - 开发者自定义的UIAbility标识。该标识不能与已启动的UIAbility标识相同，否则将返回错误。    **说明：**当通过该接口拉起启动模式为 [specified](../../../application-models/uiability-launch-type.md#specified启动模式)的UIAbility时，将不会触发[onAcceptWant](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onacceptwant)回调。 |
+| specifiedFlag | string | 是 | UIAbility的ID。此ID不得与任何已运行的ID重复   - 开发者自定义的UIAbility标识。该标识不能与已启动的UIAbility标识相同，否则将返回错误。 <br>**说明：**<br>当通过该接口拉起启动模式为 [specified](../../../application-models/uiability-launch-type.md#specified启动模式)的UIAbility时，将不会触发[onAcceptWant](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onacceptwant)回调。 |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数。 |
 
 **返回值：**

@@ -18,9 +18,7 @@ import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
 flag?: PanelFlag
 ```
 
-State type of the input method panel.   
-- The default value is **FLAG_FIXED**.   
-- Currently, this parameter is used to describe the state type of the soft keyboard.
+State type of the input method panel. <br> <br>- The default value is **FLAG_FIXED**. <br>- Currently, this parameter is used to describe the state type of the soft keyboard.
 
 **Type:** [PanelFlag](arkts-ime-inputmethod-panel-panelflag-e.md)
 

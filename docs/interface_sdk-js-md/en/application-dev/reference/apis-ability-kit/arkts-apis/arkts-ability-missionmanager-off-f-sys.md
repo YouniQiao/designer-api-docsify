@@ -259,7 +259,7 @@ Deregisters a mission status listener. This API uses an asynchronous callback to
 
 **Deprecated since:** 10
 
-**Substitutes:** [off](#offmission)(type: 'mission', listenerId: long, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** off(type: 'mission', listenerId: number, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -381,7 +381,7 @@ Unregisters a mission status listener. This API uses a promise to return the res
 
 **Deprecated since:** 10
 
-**Substitutes:** [off](#offmission)(type: 'mission', listenerId: long)
+**Substitutes:** off(type: 'mission', listenerId: number)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

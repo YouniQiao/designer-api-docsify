@@ -19,8 +19,7 @@ You need a custom class to implement the **ContentModifier** API. Inherits from 
 triggerSelect(index: number, value: string): void
 ```
 
-Invoked when a drop-down menu option is selected.   
-**NOTE：**The value of **index** will be assigned to the **index** parameter in the onSelect callback; the value of **value** will be returned to the **Select** component for display and will also be assigned to the **value** parameter in the onSelect callback.
+Invoked when a drop-down menu option is selected. <br>**NOTE:**<br>The value of **index** will be assigned to the **index** parameter in the [onSelect](arkts-arkui-select-comp-attribute.md#onselect) callback; the value of **value** will be returned to the **Select** component for display and will also be assigned to the **value** parameter in the [onSelect](arkts-arkui-select-comp-attribute.md#onselect) callback.
 
 **Since:** 12
 
@@ -45,7 +44,7 @@ icon?: ResourceStr
 
 Icon of the drop-down menu option.
 
-**NOTE：**
+**NOTE:**
 
 The string type can be used to load network images and local images.
 
@@ -125,7 +124,7 @@ value: ResourceStr
 
 Text content of the drop-down menu option.
 
-**NOTE：**
+**NOTE:**
 
 If the length of the text exceeds the width of the menu item text area, the text will be truncated.
 

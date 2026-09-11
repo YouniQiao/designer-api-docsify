@@ -26,7 +26,7 @@ function setSimLabelIndex(simId: number, simLabelIndex: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| simId | number | 是 | 表示来自SIM账户信息的卡的SIM ID。取值范围:[1,500] |
+| simId | number | 是 | 表示来自SIM账户信息的卡的SIM ID。<br>取值范围:[1,500] |
 | simLabelIndex | number | 是 | 表示卡的SIM标签索引。 |
 
 **返回值：**

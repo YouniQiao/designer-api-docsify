@@ -2,6 +2,8 @@
 
 Describe the GET_REPORT data is received from remote host.
 
+@typedef GetReportData
+
 **Since:** 23
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core

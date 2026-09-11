@@ -36,4 +36,4 @@ EffectComponent组件上不生效材质中的[materialColor](arkts-arkui-uimater
 
 | 类型 | 说明 |
 | --- | --- |
-| [uiMaterial.ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | 经过转换后适用于[EffectComponent]{ |
+| [uiMaterial.ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | 经过转换后适用于EffectComponent的沉浸式材质。转换后的材质不生效[materialColor](arkts-arkui-uimaterial-immersiveoptions-i.md)、[applyShadow](arkts-arkui-uimaterial-immersiveoptions-i.md)、[interactive](arkts-arkui-uimaterial-immersiveoptions-i.md)、[lightEffect](arkts-arkui-uimaterial-immersiveoptions-i.md)属性。 |

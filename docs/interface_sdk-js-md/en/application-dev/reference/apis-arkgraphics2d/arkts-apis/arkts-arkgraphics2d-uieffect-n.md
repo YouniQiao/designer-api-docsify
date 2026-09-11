@@ -72,6 +72,14 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 <!--DelEnd-->
 
 <!--Del-->
+### Types(System API)
+
+| Name | Description |
+| --- | --- |
+| [Blender](arkts-arkgraphics2d-uieffect-blender-t-sys.md) | Blender type, used to describe the blending effect. |
+<!--DelEnd-->
+
+<!--Del-->
 ### Enums(System API)
 
 | Name | Description |
@@ -80,12 +88,4 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 | [WaterRippleMode](arkts-arkgraphics2d-uieffect-waterripplemode-e-sys.md) | Water ripple scene mode enumeration. |
 | [FlyMode](arkts-arkgraphics2d-uieffect-flymode-e-sys.md) | Fly-in or fly-out deformation scene mode enumeration. |
 | [PrismShapeType](arkts-arkgraphics2d-uieffect-prismshapetype-e-sys.md) | Enumerates the prism shape types for SweepRefractionMask. |
-<!--DelEnd-->
-
-<!--Del-->
-### Types(System API)
-
-| Name | Description |
-| --- | --- |
-| [Blender](arkts-arkgraphics2d-uieffect-blender-t-sys.md) | Blender type, used to describe the blending effect. |
 <!--DelEnd-->

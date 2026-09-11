@@ -585,7 +585,7 @@ properties: WindowProxyProperties
 
 Information about the component (**EmbeddedComponent** or **UIExtensionComponent**).
 
-Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate). Instead, when possible, obtain the value after receiving the on('windowSizeChange') callback.
+Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate). Instead, when possible, obtain the value after receiving the [on('windowSizeChange')](#onwindowsizechange) callback.
 
 **Type:** [WindowProxyProperties](arkts-arkui-uiextension-windowproxyproperties-i.md)
 

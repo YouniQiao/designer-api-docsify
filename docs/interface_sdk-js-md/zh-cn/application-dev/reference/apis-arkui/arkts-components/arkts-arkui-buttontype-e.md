@@ -12,9 +12,9 @@
 > - 当按钮类型为Circle时，若同时设置了宽和高，则borderRadius不生效，且按钮半径为宽高中较小值的一半；若只设置宽、高中的一个，则borderRadius不生效，且按钮半径为所设宽或所设高值的一半；若不设置宽高，则
 > borderRadius为按钮半径；若borderRadius的值为负，则borderRadius的值按照0处理。
 > 
-> - 按钮文本通过[fontSize](arkts-arkui-button-attribute.md#fontsize)、[fontColor](arkts-arkui-button-attribute.md#fontcolor)、
-> [fontStyle](arkts-arkui-button-attribute.md#fontstyle)、[fontFamily](arkts-arkui-button-attribute.md#fontfamily)、
-> [fontWeight](arkts-arkui-button-attribute.md#fontweight)进行设置。
+> - 按钮文本通过[fontSize](arkts-arkui-button-comp-attribute.md#fontsize)、[fontColor](arkts-arkui-button-comp-attribute.md#fontcolor)、
+> [fontStyle](arkts-arkui-button-comp-attribute.md#fontstyle)、[fontFamily](arkts-arkui-button-comp-attribute.md#fontfamily)、
+> [fontWeight](arkts-arkui-button-comp-attribute.md#fontweight)进行设置。
 > 
 > - 设置颜色渐变需先设置backgroundColor为透明色。
 > 

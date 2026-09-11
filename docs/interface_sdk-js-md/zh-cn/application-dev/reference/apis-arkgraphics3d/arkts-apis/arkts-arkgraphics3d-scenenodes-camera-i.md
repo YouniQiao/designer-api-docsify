@@ -239,7 +239,7 @@ clearColor: Color | null
 
 将渲染目标（render target）清空后的特定颜色。
 
-**类型：** [Color](arkts-arkgraphics3d-scenetypes-color-i.md) \| null
+**类型：** [Color](arkts-arkgraphics3d-scenetypes-color-i.md) &#124; null
 
 **起始版本：** 12
 
@@ -339,7 +339,7 @@ postProcess: PostProcessSettings | null
 
 后处理设置。
 
-**类型：** [PostProcessSettings](arkts-arkgraphics3d-scenepostprocesssettings-postprocesssettings-i.md) \| null
+**类型：** [PostProcessSettings](arkts-arkgraphics3d-scenepostprocesssettings-postprocesssettings-i.md) &#124; null
 
 **起始版本：** 12
 

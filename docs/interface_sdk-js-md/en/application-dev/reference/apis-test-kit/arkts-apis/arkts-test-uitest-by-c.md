@@ -405,7 +405,7 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | txt | string | Yes | Component text, used to match the target component. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md). Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md). <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 

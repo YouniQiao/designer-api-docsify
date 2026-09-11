@@ -36,8 +36,8 @@ function activateCooperate(targetNetworkId: string, inputDeviceId: number, callb
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified.  2. Incorrect parameter types.  3. Parameter verification failed. |
-| [20900001](../errorcode-devicestatus.md#20900001-操作输入设备失败) | Service exception. Possible causes:  1. A system error, such as null pointer, container-related exception, or IPC exception.  2. N-API invocation exception or invalid N-API status. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
+| [20900001](../errorcode-devicestatus.md#20900001-操作输入设备失败) | Service exception. Possible causes:<br>1. A system error, such as null pointer, container-related exception, or IPC exception. <br>2. N-API invocation exception or invalid N-API status. |
 
 **示例**
 
@@ -81,7 +81,7 @@ function activateCooperate(targetNetworkId: string, inputDeviceId: number): Prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | targetNetworkId | string | 是 | 键鼠穿越目标设备描述符。 |
-| inputDeviceId | number | 是 |  |
+| inputDeviceId | number | 是 | Identifier of the input device for screen hopping. |
 
 **返回值：**
 
@@ -95,8 +95,8 @@ function activateCooperate(targetNetworkId: string, inputDeviceId: number): Prom
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified.  2. Incorrect parameter types.  3. Parameter verification failed. |
-| [20900001](../errorcode-devicestatus.md#20900001-操作输入设备失败) | Service exception. Possible causes:  1. A system error, such as null pointer, container-related exception, or IPC exception.  2. N-API invocation exception or invalid N-API status. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
+| [20900001](../errorcode-devicestatus.md#20900001-操作输入设备失败) | Service exception. Possible causes:<br>1. A system error, such as null pointer, container-related exception, or IPC exception. <br>2. N-API invocation exception or invalid N-API status. |
 
 **示例**
 

@@ -2,7 +2,7 @@
 
 Provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > In the following API examples, you must first use [getDragController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) in
 > **UIContext** to obtain a **DragController** instance, and then call the APIs using the obtained instance.
@@ -40,4 +40,4 @@ Interrupt the pending follow-hand morph drop animation and trigger the finish se
 
 | Type | Description |
 | --- | --- |
-| boolean | Interruption result. |
+| boolean | Interruption result.<br>Returns **true** if the interruption is successful, and **false** if there is no pending follow-hand morph drop animation to interrupt. |

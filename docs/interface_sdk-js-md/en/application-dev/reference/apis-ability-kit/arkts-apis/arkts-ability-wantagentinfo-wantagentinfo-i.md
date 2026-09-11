@@ -14,7 +14,7 @@ actionFlags?: Array<abilityWantAgent.WantAgentFlags>
 
 Array of flags for using the WantAgent object.
 
-**Type:** Array&lt;abilityWantAgent.WantAgentFlags&gt;
+**Type:** Array&lt;[abilityWantAgent.WantAgentFlags](../../apis-ability-kit/arkts-apis/arkts-app-ability-wantagent.md)&gt;
 
 **Since:** 11
 
@@ -30,7 +30,7 @@ actionType?: abilityWantAgent.OperationType
 
 Operation type.
 
-**Type:** abilityWantAgent.OperationType
+**Type:** [abilityWantAgent.OperationType](../../apis-ability-kit/arkts-apis/arkts-app-ability-wantagent.md)
 
 **Since:** 11
 

@@ -14,7 +14,7 @@ function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.U
 
 Shows a full-screen ad.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 1. To ensure that ads can be displayed correctly, this API must be used together with the ad request API.
 > 

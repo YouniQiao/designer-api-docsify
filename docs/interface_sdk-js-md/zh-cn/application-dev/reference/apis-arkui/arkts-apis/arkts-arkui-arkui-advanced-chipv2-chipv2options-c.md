@@ -469,7 +469,7 @@ ChipV2组件文本与图标的最大字体缩放倍数。
 
 值为undefined时，按默认值处理。
 
-**类型：** number \| [Resource](arkts-arkui-resource-t.md)
+**类型：** number &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 26.0.0
 
@@ -497,7 +497,7 @@ ChipV2组件文本与图标的最小字体缩放倍数。
 
 值为undefined时，按默认值处理。
 
-**类型：** number \| [Resource](arkts-arkui-resource-t.md)
+**类型：** number &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 26.0.0
 
@@ -607,7 +607,7 @@ SizeT&lt;LengthMetrics&gt;类型参数不支持百分比设置，异常值按默
 
 **说明：**[适老化](../../../ui/arkui-support-for-aging-adaptation.md)在size指定具体宽高时不生效，size设置为{ height: 0, width: 0 }除外。
 
-**类型：** [ChipV2Size](arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) \| [SizeT](arkts-arkui-graphics-sizet-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt;
+**类型：** [ChipV2Size](arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) &#124; [SizeT](arkts-arkui-graphics-sizet-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt;
 
 **起始版本：** 26.0.0
 

@@ -241,7 +241,7 @@ Saves the user data of a local ability generated during runtime. After the migra
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the data is successfully saved; returns `false` otherwise. |
 
 ## onShow
 
@@ -275,4 +275,4 @@ Asks a user whether to start the migration.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the user allows the migration; returns `false` otherwise. |

@@ -69,7 +69,7 @@ string格式支持number格式取值的字符串形式："0.75"，"1.0"，"1.25"
 
 异常值：按默认值处理。
 
-**类型：** number \| string \| [PlaybackSpeed](arkts-arkui-playbackspeed-e.md)
+**类型：** number &#124; string &#124; [PlaybackSpeed](arkts-arkui-playbackspeed-e.md)
 
 **起始版本：** 7
 
@@ -126,7 +126,7 @@ string格式可用于加载本地图片和网络图片，
 - 支持网络图片地址。  
 - 支持相对路径引用本地图片，例如：previewUri: “common/test.jpg”。当使用相对路径引用本地图片时，不支持跨包/跨模块调用。  
 - 支持file://路径前缀的字符串，即应用沙箱URI（见[uriOrPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor)）：file://&lt;bundleName  
-&gt; /&lt;sandboxPath&gt;。用于读取应用沙箱路径内的资源。需要保证目录包路径下的文件有可读权限。
+> /&lt;sandboxPath&gt;。用于读取应用沙箱路径内的资源。需要保证目录包路径下的文件有可读权限。
 
 Resource格式可以跨包/跨模块访问资源文件。
 
@@ -137,7 +137,7 @@ Resource格式可以跨包/跨模块访问资源文件。
 
 异常值：按默认值处理。
 
-**类型：** string \| [PixelMap](arkts-arkui-pixelmap-t.md) \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**类型：** string &#124; [PixelMap](arkts-arkui-pixelmap-t.md) &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 7
 
@@ -163,7 +163,7 @@ string格式可用于加载网络视频和本地视频，常用于加载网络�
 
 - 支持网络视频地址，网络视频地址支持的格式见[流媒体支持的格式](../../../media/media/streaming-media-playback-development-guide.md#流媒体支持的格式)。  
 - 支持file://路径前缀的字符串，即应用沙箱URI（见[uriOrPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor)）：file://&lt;bundleName  
-&gt; /&lt;sandboxPath&gt;。用于读取应用沙箱路径内的资源。需要保证目录包路径下的文件有可读权限。
+> /&lt;sandboxPath&gt;。用于读取应用沙箱路径内的资源。需要保证目录包路径下的文件有可读权限。
 
 默认值：空字符串
 
@@ -173,7 +173,7 @@ string格式可用于加载网络视频和本地视频，常用于加载网络�
 
 视频支持的格式是：mp4、mkv、TS。
 
-**类型：** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**类型：** string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **起始版本：** 7
 

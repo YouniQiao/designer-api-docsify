@@ -2,7 +2,7 @@
 
 Provides the capability of displaying and hiding of the magnifier. The magnifier enlarges the component content for you to view the component details.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - In the following API examples, you must first use [getMagnifier()](arkts-arkui-arkui-uicontext-uicontext-c.md#getmagnifier) in **UIContext**
 > to obtain a **Magnifier** instance, and then call the APIs using the obtained instance.
@@ -31,7 +31,7 @@ bind(id: string): void
 
 Binds the magnifier to the component with the specified ID.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Obtain the Magnifier instance by using the getMagnifier() method in UIContext.
 
@@ -57,7 +57,7 @@ show(x: number, y: number): void
 
 Sets the position of the component content displayed by the magnifier relative to the upper left corner of the component. After the setting is successful, the magnifier displays the content centered at the coordinate point.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When the content of the component bound to the magnifier changes, the magnifier does not automatically update the
 > displayed content. You need to call the **show** API to update the displayed content of the magnifier.

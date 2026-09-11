@@ -36,7 +36,7 @@ locationScenario: UserActivityScenario | PowerConsumptionScenario
 
 表示定位的场景信息。取值范围见[UserActivityScenario](arkts-location-geolocationmanager-useractivityscenario-e.md)和[PowerConsumptionScenario](arkts-location-geolocationmanager-powerconsumptionscenario-e.md)的定义。
 
-**类型：** [UserActivityScenario](arkts-location-geolocationmanager-useractivityscenario-e.md) \| [PowerConsumptionScenario](arkts-location-geolocationmanager-powerconsumptionscenario-e.md)
+**类型：** [UserActivityScenario](arkts-location-geolocationmanager-useractivityscenario-e.md) &#124; [PowerConsumptionScenario](arkts-location-geolocationmanager-powerconsumptionscenario-e.md)
 
 **起始版本：** 12
 

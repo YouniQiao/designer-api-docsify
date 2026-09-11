@@ -113,7 +113,7 @@ Obtains the UID of a WantAgent.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns the UID of the { |
+| Promise&lt;number&gt; | Returns the UID of the [WantAgent](arkts-ability-wantagent-depr-t.md#wantagent) if any; returns `-1` otherwise. |
 
 **Examples**
 

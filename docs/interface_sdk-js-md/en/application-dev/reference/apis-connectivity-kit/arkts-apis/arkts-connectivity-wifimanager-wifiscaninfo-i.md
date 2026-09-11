@@ -1,6 +1,6 @@
 # WifiScanInfo
 
-Describes the scanned Wi-Fi information.
+Describes the scanned Wi-Fi information. @typedef WifiScanInfo
 
 **Since:** 12
 

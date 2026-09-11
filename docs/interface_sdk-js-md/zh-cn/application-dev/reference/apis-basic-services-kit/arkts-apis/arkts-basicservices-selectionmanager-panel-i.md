@@ -107,7 +107,7 @@ try {
 off(type: 'destroyed', callback?: Callback<void>): void
 ```
 
-取消订阅划词面板销毁事件，与on('destroyed')搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。
+取消订阅划词面板销毁事件，与[on('destroyed')](#ondestroyed)搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -137,7 +137,7 @@ try {
 off(type: 'hidden', callback?: Callback<void>): void
 ```
 
-取消订阅划词面板隐藏事件，与on('hidden')搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。
+取消订阅划词面板隐藏事件，与[on('hidden')](#onhidden)搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -167,7 +167,7 @@ try {
 on(type: 'destroyed', callback: Callback<void>): void
 ```
 
-订阅划词面板销毁事件，与off('destroyed')搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。
+订阅划词面板销毁事件，与[off('destroyed')](#offdestroyed)搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -199,7 +199,7 @@ try {
 on(type: 'hidden', callback: Callback<void>): void
 ```
 
-订阅划词面板隐藏事件，与off('hidden')搭配使用。面板调用[hide](#hide)隐藏或失焦自动隐藏时触发该事件。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。
+订阅划词面板隐藏事件，与[off('hidden')](#offhidden)搭配使用。面板调用[hide](#hide)隐藏或失焦自动隐藏时触发该事件。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。
 
 **起始版本：** 24
 

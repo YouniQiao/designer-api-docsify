@@ -51,14 +51,12 @@ enableAnalyzer(enable: boolean): CanvasAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 组件支持AI分析，需要组件内容支持主体识别、文字识别或对象查找。设置为true时，组件可进行AI分析，设置为false时，组件不可进行AI分析。异常值null和undefined按默认值处理。默认值：false |
+| enable | boolean | 是 | 组件支持AI分析，需要组件内容支持主体识别、文字识别或对象查找。<br>设置为true时，组件可进行AI分析，设置为false时，组件不可进行AI分析。<br>异常值null和undefined按默认值处理。<br>默认值：false |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |  |
-
 ## onReady
 
 ```TypeScript
@@ -67,7 +65,7 @@ onReady(event: VoidCallback): CanvasAttribute
 
 Canvas组件初始化完成或者发生大小变化时的事件回调，支持attributeModifier动态设置属性方法。
 
-当该事件被触发时画布被清空，该事件之后Canvas组件宽高确定且可获取，可使用Canvas相关API进行绘制。当Canvas组件仅发生位置变化时，只触发onAreaChange事件，不触发onReady事件。onAreaChange事件在onReady事件后触发。
+当该事件被触发时画布被清空，该事件之后Canvas组件宽高确定且可获取，可使用Canvas相关API进行绘制。当Canvas组件仅发生位置变化时，只触发[onAreaChange](../arkts-components/arkts-arkui-commonmethod-c.md#onareachange)事件，不触发onReady事件。[onAreaChange](../arkts-components/arkts-arkui-commonmethod-c.md#onareachange)事件在onReady事件后触发。
 
 **起始版本：** 8
 
@@ -87,8 +85,6 @@ Canvas组件初始化完成或者发生大小变化时的事件回调，支持at
 
 | 类型 | 说明 |
 | --- | --- |
-| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |  |
-
 ## onReady
 
 ```TypeScript
@@ -97,7 +93,7 @@ onReady(event: Callback<DrawingRenderingContext | undefined> | undefined): Canva
 
 Canvas组件初始化完成或者发生大小变化时的事件回调，支持attributeModifier动态设置属性方法。
 
-当该事件被触发时画布被清空，该事件之后Canvas组件宽高确定且可获取，可使用Canvas相关API进行绘制。当Canvas组件仅发生位置变化时，只触发onAreaChange事件，不触发onReady事件。onAreaChange事件在onReady事件后触发。
+当该事件被触发时画布被清空，该事件之后Canvas组件宽高确定且可获取，可使用Canvas相关API进行绘制。当Canvas组件仅发生位置变化时，只触发[onAreaChange](../arkts-components/arkts-arkui-commonmethod-c.md#onareachange)事件，不触发onReady事件。[onAreaChange](../arkts-components/arkts-arkui-commonmethod-c.md#onareachange)事件在onReady事件后触发。
 
 **起始版本：** 23
 
@@ -113,10 +109,9 @@ Canvas组件初始化完成或者发生大小变化时的事件回调，支持at
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) \| undefined&gt; \| undefined | 是 | Canvas组件初始化完成或者发生大小变化时的回调事件。关于Callback&lt;DrawingRenderingContext \|undefined&gt;类型的入参： 1. 只有使用[CanvasParams](arkts-arkui-canvasparams-i.md)创建的Canvas组件在该回调中返回DrawingRenderingContext对象，否则返回undefined。 2. 该回调返回的DrawingRenderingContext对象不允许作为参数创建Canvas组件，否则会导致应用崩溃。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) &#124; undefined&gt; &#124; undefined | 是 | Canvas组件初始化完成或者发生大小变化时的回调事件。<br>关于Callback&lt;DrawingRenderingContext &#124;undefined&gt;类型的入参：<br>1. 只有使用[CanvasParams](arkts-arkui-canvasparams-i.md)创建的Canvas组件在该回调中返回DrawingRenderingContext对象，否则返回undefined。<br>2. 该回调返回的DrawingRenderingContext对象不允许作为参数创建Canvas组件，否则会导致应用崩溃。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |  |

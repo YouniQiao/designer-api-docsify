@@ -30,8 +30,6 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -275,7 +273,7 @@ equal(obj: Object): boolean
 
 Checks whether the elements of this LightWeightSet are the same as those of **obj**.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 8 and deprecated since API version 12. There is no substitute API.
 

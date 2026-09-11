@@ -2,6 +2,8 @@
 
 Indicates rectangle, unit is vp.
 
+@typedef Rect
+
 **Since:** 20
 
 **System capability:** SystemCapability.Ability.Form

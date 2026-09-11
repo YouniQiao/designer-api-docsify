@@ -75,11 +75,7 @@ onDidAppear?: () => void
 
 Event callback when the dialog box appears.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: 
-1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange/onScrollStop) &gt; onWillDisappear &gt; onDidDisappear. 
-2. You can set the callback event for changing the dialog box display effect in onDidAppear. The settings take effect next time the dialog box appears. 
-3. If the user closes the dialog box immediately after it appears, onWillDisappearis invoked before onDidAppear. 
-4. If the dialog box is closed before its entrance animation is finished, this callback is not invoked. </p>
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange/onScrollStop) &gt; onWillDisappear &gt; onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in onDidAppear. The settings take effect next time the dialog box appears. <br>3. If the user closes the dialog box immediately after it appears, onWillDisappearis invoked before onDidAppear. <br>4. If the dialog box is closed before its entrance animation is finished, this callback is not invoked. </p>
 
 **Since:** 12
 
@@ -97,7 +93,7 @@ onDidDisappear?: () => void
 
 Event callback when the dialog box disappears.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange/onScrollStop) &gt; onWillDisappear &gt; onDidDisappear. </p>
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The normal timing sequence is as follows: <br>onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange/onScrollStop) &gt; onWillDisappear &gt; onDidDisappear. </p>
 
 **Since:** 12
 
@@ -115,11 +111,7 @@ onWillAppear?: () => void
 
 Event callback when the dialog box is about to appear.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: 
-1. The normal timing sequence is as follows: 
-onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange/onScrollStop) &gt; onWillDisappear &gt; onDidDisappear. 
-2. You can set the callback event for changing the dialog box display effect in onWillAppear. 
-the settings take effect next time the dialog box appears. </p>
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: <br>onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange/onScrollStop) &gt; onWillDisappear &gt; onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in onWillAppear. <br>the settings take effect next time the dialog box appears. </p>
 
 **Since:** 12
 
@@ -137,9 +129,7 @@ onWillDisappear?: () => void
 
 Event callback when the dialog box is about to disappear.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: 
-1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange/onScrollStop) &gt; onWillDisappear &gt; onDidDisappear. 
-2. If the user closes the dialog box immediately after it appears, onWillDisappear is invoked before onDidAppear. </p>
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange/onScrollStop) &gt; onWillDisappear &gt; onDidDisappear. <br>2. If the user closes the dialog box immediately after it appears, onWillDisappear is invoked before onDidAppear. </p>
 
 **Since:** 12
 
@@ -157,7 +147,7 @@ acceptButtonStyle?: PickerDialogButtonStyle
 
 Style of accept button.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: In the acceptButtonStyle and cancelButtonStyle configurations, only one primary field can be set to true at most. If both the primary fields are set to true, neither will take effect. </p>
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>In the acceptButtonStyle and cancelButtonStyle configurations, <br>only one primary field can be set to true at most. <br>If both the primary fields are set to true, neither will take effect. </p>
 
 **Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -179,7 +169,8 @@ Alignment mode of the dialog box in the vertical direction.
 
 **Type:** [DialogAlignment](../arkts-apis/arkts-arkui-dialogalignment-e.md)
 
-**Default:** DialogAlignment.Default [since 11]
+**Default:**
+- API version 11+: DialogAlignment.Default
 
 **Since:** 10
 
@@ -273,7 +264,7 @@ cancelButtonStyle?: PickerDialogButtonStyle
 
 Style of cancel button.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: In the acceptButtonStyle and cancelButtonStyle configurations, only one primary field can be set to true at most. If both the primary fields are set to true, neither will take effect. </p>
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>In the acceptButtonStyle and cancelButtonStyle configurations, <br>only one primary field can be set to true at most. <br>If both the primary fields are set to true, neither will take effect. </p>
 
 **Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -315,9 +306,10 @@ defaultPickerItemHeight?: number | string
 
 Height of the picker item.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
-**Default:** 56 vp (selected) and 36 vp (unselected) [since 11]
+**Default:**
+- API version 11+: 56 vp (selected) and 36 vp (unselected)
 
 **Since:** 8
 
@@ -333,7 +325,7 @@ defaultTextStyle?: TextPickerTextStyle
 
 Style of the text items when the text style change animation during the scrolling process is disabled.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: It is effective only when disableTextStyleAnimation is true. </p>
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It is effective only when disableTextStyleAnimation is true. </p>
 
 **Type:** [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)
 
@@ -395,7 +387,7 @@ enableHapticFeedback?: boolean
 
 Whether to enable haptic feedback. true (default): Haptic feedback is enabled. false: Haptic feedback is disabled.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: To enable haptic feedback, you must declare the ohos.permission.VIBRATE permission under requestPermissions in the module.json5 file of the project. "requestPermissions": [{"name": "ohos.permission.VIBRATE"}]. </p>
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>To enable haptic feedback, you must declare the ohos.permission.VIBRATE permission <br>under requestPermissions in the module.json5 file of the project. <br>"requestPermissions": [{"name": "ohos.permission.VIBRATE"}]. </p>
 
 **Type:** boolean
 
@@ -463,7 +455,8 @@ Mask area of the dialog box. Events outside the mask area are transparently tran
 
 **Type:** [Rectangle](arkts-arkui-rectangle-i.md)
 
-**Default:** { x: 0, y: 0, width: '100%', height: '100%' } [since 11]
+**Default:**
+- API version 11+: { x: 0, y: 0, width: '100%', height: '100%' }
 
 **Since:** 10
 
@@ -483,7 +476,8 @@ Offset of the dialog box based on the alignment settings.
 
 **Type:** [Offset](../arkts-apis/arkts-arkui-offset-t.md)
 
-**Default:** { dx: 0 , dy: 0 } [since 11]
+**Default:**
+- API version 11+: { dx: 0 , dy: 0 }
 
 **Since:** 10
 
@@ -501,7 +495,7 @@ onEnterSelectedArea?: Callback<TextPickerResult>
 
 Represents the callback triggered during the scrolling of the text picker when an item enters the divider area. Compared to the onChange event, this event is triggered earlier, specifically when the scroll distance of the current column exceeds half the height of the selected item, which indicates that the item has entered the divider area.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: In scenarios where the picker contains linked columns, the use of this callback is not recommended. The reason is that it identifies nodes where items enter the divider area during scrolling. However, items that change in response to the scrolling do not themselves scroll. As a result, he callback's return values will only reflect changes for the currently scrolling column, while other non-scrolling columns will remain unchanged. </p>
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>In scenarios where the picker contains linked columns, <br>the use of this callback is not recommended. <br>The reason is that it identifies nodes where items enter the divider area during scrolling. <br>However, items that change in response to the scrolling do not themselves scroll. As a result, <br>he callback's return values will only reflect changes for the currently scrolling column, <br>while other non-scrolling columns will remain unchanged. </p>
 
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
@@ -579,7 +573,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Shadow of the dialog box. Default value on 2-in-1 devices: ShadowStyle.OUTER_FLOATING_MD when the dialog box is focused and ShadowStyle.OUTER_FLOATING_SM otherwise.
 
-**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
+**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **Since:** 12
 

@@ -30,7 +30,7 @@ function createShareServiceStub(instance: ShareCenter): Promise<rpc.RemoteObject
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise对象，返回[ShareCenter]{ |
+| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise对象，返回[ShareCenter](arkts-arkdata-cloudextension-sharecenter-i-sys.md)的[RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)对象。 |
 
 **示例**
 

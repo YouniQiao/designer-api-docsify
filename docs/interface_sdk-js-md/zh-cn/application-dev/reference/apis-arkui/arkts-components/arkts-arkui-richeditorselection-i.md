@@ -17,7 +17,7 @@
 selection: [number, number]
 ```
 
-选中范围。
+选中范围，取值范围为[起始位置, 结束位置)，结束位置对应的内容不包含在内。
 
 **类型：** [number, number]
 
@@ -37,7 +37,7 @@ spans: Array<RichEditorTextSpanResult | RichEditorImageSpanResult>
 
 span信息。
 
-**类型：** Array&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md) \| [RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md)&gt;
+**类型：** Array&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md) &#124; [RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md)&gt;
 
 **起始版本：** 10
 

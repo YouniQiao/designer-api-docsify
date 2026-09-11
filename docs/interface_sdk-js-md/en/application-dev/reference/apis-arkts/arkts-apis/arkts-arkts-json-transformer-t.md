@@ -28,4 +28,4 @@ When used as a parameter of JSON.stringify, the function is used to transfer and
 
 | Type | Description |
 | --- | --- |
-| Object \| undefined \| null | Return an Object, undefined or null value |
+| Object &#124; undefined &#124; null | Return an Object, undefined or null value |

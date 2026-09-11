@@ -24,4 +24,4 @@ type PublishFormCrossBundleControlCallback = (info: PublishFormCrossBundleInfo) 
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 跨应用加卡管控结果。 |
+| boolean | 跨应用加卡管控结果。<br>- true：表示管控通过。<br>- false：表示管控未通过。 |

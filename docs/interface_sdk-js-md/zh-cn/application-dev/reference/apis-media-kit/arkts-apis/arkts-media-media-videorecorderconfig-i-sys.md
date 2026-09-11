@@ -86,7 +86,7 @@ rotation?: number
 url: string
 ```
 
-视频输出URL：fd://xx&nbsp;(fd&nbsp;number)
+视频输出URL：fd://xx&nbsp;(fd&nbsp;number)<br>
 
 **类型：** string
 

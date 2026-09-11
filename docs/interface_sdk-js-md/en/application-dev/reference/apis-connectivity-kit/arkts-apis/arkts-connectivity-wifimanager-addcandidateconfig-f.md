@@ -32,7 +32,7 @@ Add a specified candidate hotspot configuration and returns the networkId. This 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns { |
+| Promise&lt;number&gt; | Returns `networkId` if the configuration is added; returns `-1` otherwise. |
 
 **Error codes:**
 

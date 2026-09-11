@@ -6,6 +6,8 @@ declare type LengthMetrics = import('../api/arkui/Graphics').LengthMetrics
 
 Defines LengthMetrics.
 
+@typedef { import('../api/arkui/Graphics').LengthMetrics } LengthMetrics
+
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.

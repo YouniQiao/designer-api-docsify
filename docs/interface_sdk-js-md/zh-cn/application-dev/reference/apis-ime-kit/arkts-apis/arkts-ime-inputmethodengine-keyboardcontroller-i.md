@@ -1,6 +1,6 @@
 # KeyboardController
 
-下列API均需使用on('inputStart')获取到KeyboardController实例后，通过实例调用。
+下列API均需使用[on('inputStart')](arkts-ime-inputmethodengine-inputmethodability-i.md#oninputstart)获取到KeyboardController实例后，通过实例调用。
 
 **起始版本：** 8
 
@@ -168,11 +168,9 @@ keyboardController.hide().then(() => {
 hideKeyboard(callback: AsyncCallback<void>): void
 ```
 
-隐藏输入法。使用callback异步回调。  
-> **说明：**
-   
-> 
-   
+隐藏输入法。使用callback异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
 > 从 API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
@@ -209,11 +207,9 @@ keyboardController.hideKeyboard((err: BusinessError) => {
 hideKeyboard(): Promise<void>
 ```
 
-隐藏输入法。使用promise异步回调。  
-> **说明：**
-   
-> 
-   
+隐藏输入法。使用promise异步回调。<br> <br>   
+> **说明：** <br>
+> <br>
 > 从 API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8

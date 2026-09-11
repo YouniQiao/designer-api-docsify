@@ -2,7 +2,7 @@
 
 Grid element arrangement direction.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Grid elements can be arranged only in the **Row** or **RowReverse** direction, but not in the **Column** or
 > **ColumnReverse** direction.

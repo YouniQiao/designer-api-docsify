@@ -6,6 +6,8 @@ export type AgentExtensionContext = _AgentExtensionContext
 
 agent service ability的上下文。
 
+@typedef { _AgentExtensionContext }
+
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。

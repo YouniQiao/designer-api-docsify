@@ -33,4 +33,4 @@ Obtains the minimum distance required for the pinch gesture to be recognized.
 
 | Type | Description |
 | --- | --- |
-| number | Minimum distance required for the pinch gesture to be recognized, in vp. |
+| number | Minimum distance required for the pinch gesture to be recognized, in vp.<br>Value range: [0, +∞) |

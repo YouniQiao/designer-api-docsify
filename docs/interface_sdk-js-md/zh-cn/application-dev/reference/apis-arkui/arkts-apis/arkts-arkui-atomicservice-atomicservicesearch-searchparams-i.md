@@ -318,7 +318,7 @@ letterSpacing?: number | string | Resource
 
 设置文本字符间距。正数拉开字符距离，负数则拉近字符距离。浮点数默认值为0.0，单位为物理像素px。若输入类型非number且无法解析为数字，则使用默认值。
 
-**类型：** number \| string \| [Resource](arkts-arkui-resource-t.md)
+**类型：** number &#124; string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 18
 
@@ -334,7 +334,7 @@ maxFontSize?: number | string | Resource
 
 设置文本最大显示字号。需要配合minFontSize以及布局大小限制使用，单独设置不生效。默认值为`undefined`。取值为number类型时，单位：fp。
 
-**类型：** number \| string \| [Resource](arkts-arkui-resource-t.md)
+**类型：** number &#124; string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 18
 
@@ -366,7 +366,7 @@ minFontSize?: number | string | Resource
 
 设置文本最小显示字号。需要配合maxFontSize以及布局大小限制使用，单独设置不生效。默认值为`undefined`。取值为number类型时，单位：fp。
 
-**类型：** number \| string \| [Resource](arkts-arkui-resource-t.md)
+**类型：** number &#124; string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 18
 
@@ -462,7 +462,7 @@ onSubmit?: Callback<string> | SearchSubmitCallback
 
 点击搜索图标、搜索按钮或者按下软键盘搜索按钮时触发该回调。string为当前搜索框中输入的文本内容。默认值为`undefined`。
 
-**类型：** Callback&lt;string&gt; \| [SearchSubmitCallback](../arkts-components/arkts-arkui-searchsubmitcallback-t.md)
+**类型：** Callback&lt;string&gt; &#124; [SearchSubmitCallback](../arkts-components/arkts-arkui-searchsubmitcallback-t.md)
 
 **起始版本：** 18
 
@@ -582,7 +582,7 @@ searchIcon?: IconOptions | SymbolGlyphModifier
 
 深色模式默认值：`{size: '16vp', color: '#99ffffff', src: ' '}`。
 
-**类型：** IconOptions \| [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
+**类型：** IconOptions &#124; [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **起始版本：** 18
 

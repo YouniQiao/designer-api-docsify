@@ -2,7 +2,7 @@
 
 The **usbManager** module provides USB device management functions, including USB device list query, bulk data transfer, control transfer, and permission control on the host side as well as USB interface management, and function switch and query on the device side.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Perform the following steps when using the APIs with the [usbManager.USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) parameter:
 > **Before use**:

@@ -2,7 +2,7 @@
 
 Sets the target component for focus movement based on key presses. If it is not specified, the default focus movement logic applies.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Directly using **focusControl** can lead to the issue of
 > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the

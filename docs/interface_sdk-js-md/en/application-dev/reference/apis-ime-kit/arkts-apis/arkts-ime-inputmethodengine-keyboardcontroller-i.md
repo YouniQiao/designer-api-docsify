@@ -1,6 +1,6 @@
 # KeyboardController
 
-You must first use on('inputStart') to obtain a **KeyboardController** instance, and then use this instance to call the following APIs.
+You must first use [on('inputStart')](arkts-ime-inputmethodengine-inputmethodability-i.md#oninputstart) to obtain a **KeyboardController** instance, and then use this instance to call the following APIs.
 
 **Since:** 8
 

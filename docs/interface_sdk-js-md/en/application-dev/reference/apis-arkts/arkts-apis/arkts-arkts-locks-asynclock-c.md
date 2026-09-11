@@ -120,7 +120,7 @@ Perform an operation with the acquired lock. The method acquires the lock first,
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;T \| U&gt; | Promise that will be resolved after the callback gets executed or rejected in case timeout exceeded. |
+| Promise&lt;T &#124; U&gt; | Promise that will be resolved after the callback gets executed or rejected in case timeout exceeded. |
 
 **Error codes:**
 

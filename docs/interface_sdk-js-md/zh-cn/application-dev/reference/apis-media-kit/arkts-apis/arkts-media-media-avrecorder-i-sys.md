@@ -50,7 +50,7 @@ getInputMetaSurface(type: MetaSourceType): Promise<string>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called from Non-System applications. Return by promise. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
@@ -95,7 +95,7 @@ avRecorder.isWatermarkSupported().then((isWatermarkSupported: boolean) => {
 setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>
 ```
 
-给AVRecorder设置水印图像。使用Promise异步回调。
+给AVRecorder设置水印图像。使用Promise异步回调。<br>
 
 当且仅当[prepare](arkts-media-media-avrecorder-i.md#prepare)事件成功触发后，且在[start](arkts-media-media-avrecorder-i.md#start)之前，才能调用setWatermark方法。
 
@@ -109,7 +109,7 @@ setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| watermark | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 图像PixelMap数据。当前支持规格:   - 当前仅支持pixelformat为RGBA8888。   - 原图像为8K时-&gt;水印图像限制范围3072x288，原图像为4K时-&gt;水印图像限制范围1536x144。 |
+| watermark | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 图像PixelMap数据。<br>当前支持规格:<br>- 当前仅支持pixelformat为RGBA8888。<br>- 原图像为8K时-&gt;水印图像限制范围3072x288，原图像为4K时-&gt;水印图像限制范围1536x144。 |
 | config | [WatermarkConfig](arkts-media-media-watermarkconfig-i-sys.md) | 是 | 水印的相关配置参数。 |
 
 **返回值：**

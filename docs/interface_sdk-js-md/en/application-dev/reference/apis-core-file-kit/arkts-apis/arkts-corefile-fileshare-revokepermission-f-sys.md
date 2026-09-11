@@ -104,7 +104,7 @@ Revoke persistence permissions for the URI.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types; 3.Invalid policy size. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types; 3.Invalid policy size. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 13900001 | Operation not permitted. |
 | 13900011 | Out of memory |

@@ -38,7 +38,7 @@ constructor(node: FrameNode, pageCount: number)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 响应翻页动作的目标节点。 |
-| pageCount | number | 是 | 翻页数量。取值范围：[0, +∞)，小于0时按0处理。单位为页。 |
+| pageCount | number | 是 | 翻页数量。<br>取值范围：[0, +∞)，小于0时按0处理。<br>单位为页。 |
 
 ## pageCount
 

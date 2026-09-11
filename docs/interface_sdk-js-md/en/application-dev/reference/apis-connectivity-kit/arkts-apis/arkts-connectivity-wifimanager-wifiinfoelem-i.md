@@ -1,6 +1,6 @@
 # WifiInfoElem
 
-Wi-Fi information elements.
+Wi-Fi information elements. @typedef WifiInfoElem
 
 **Since:** 9
 

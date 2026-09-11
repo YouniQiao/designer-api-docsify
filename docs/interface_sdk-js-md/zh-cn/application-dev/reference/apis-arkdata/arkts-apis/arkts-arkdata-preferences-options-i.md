@@ -26,7 +26,7 @@ dataGroupId?: string | null | undefined
 
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
-**类型：** string \| null \| undefined
+**类型：** string &#124; null &#124; undefined
 
 **起始版本：** 10
 
@@ -64,7 +64,7 @@ storageType?: StorageType | null | undefined
 
 **原子化服务API：** 从API version 18开始，该参数支持在原子化服务中使用。
 
-**类型：** [StorageType](arkts-arkdata-preferences-storagetype-e.md) \| null \| undefined
+**类型：** [StorageType](arkts-arkdata-preferences-storagetype-e.md) &#124; null &#124; undefined
 
 **起始版本：** 18
 

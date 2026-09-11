@@ -1,6 +1,6 @@
 # EnrollCallbackInfo (System API)
 
-Describes enroll callback information.
+Describes enroll callback information. @typedef EnrollCallbackInfo
 
 **Since:** 10
 

@@ -149,10 +149,10 @@ import { notificationManager } from '@kit.NotificationKit';
 | [isSmartReminderEnabled](arkts-notification-notificationmanager-issmartreminderenabled-f-sys.md) | 获取设备是否与其他设备协同智能提醒。使用Promise异步回调。 |
 | [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md) | 查询是否支持免打扰功能。使用callback异步回调。 |
 | [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md) | 查询是否支持免打扰功能。使用Promise异步回调。 |
-| [off](arkts-notification-notificationmanager-off-f-sys.md) | 取消通知监听回调。 |
+| [off](arkts-notification-notificationmanager-off-f-sys.md#offchecknotification) | 取消通知监听回调。 |
 | [offBadgeNumberQuery](arkts-notification-notificationmanager-offbadgenumberquery-f-sys.md) | 取消应用角标数量查询回调。 |
-| [on](arkts-notification-notificationmanager-on-f-sys.md) | 注册通知监听回调。通知服务将通知信息回调给校验程序，校验程序返回校验结果决定该通知是否发布，如营销类通知发布频率控制等。 |
-| [on](arkts-notification-notificationmanager-on-f-sys.md) | 注册通知监听回调。通知服务将通知信息回调给校验程序，校验程序返回校验结果决定该通知是否发布，如营销类通知发布频率控制等。使用Promise异步回调。 |
+| [on](arkts-notification-notificationmanager-on-f-sys.md#onchecknotification) | 注册通知监听回调。通知服务将通知信息回调给校验程序，校验程序返回校验结果决定该通知是否发布，如营销类通知发布频率控制等。 |
+| [on](arkts-notification-notificationmanager-on-f-sys.md#onchecknotification) | 注册通知监听回调。通知服务将通知信息回调给校验程序，校验程序返回校验结果决定该通知是否发布，如营销类通知发布频率控制等。使用Promise异步回调。 |
 | [onBadgeNumberQuery](arkts-notification-notificationmanager-onbadgenumberquery-f-sys.md) | 注册应用角标数量查询回调。 |
 | [publish](arkts-notification-notificationmanager-publish-f-sys.md) | 发布通知给指定的用户。使用callback异步回调。 |
 | [publish](arkts-notification-notificationmanager-publish-f-sys.md) | 发布通知给指定的用户。使用Promise异步回调。 |

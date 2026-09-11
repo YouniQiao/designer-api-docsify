@@ -26,7 +26,7 @@ function offAudioZoneSessionChange(userId: number, callback?: Callback<AVSession
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userId | number | 是 | 用户id，归属某个音区用户userId 所归属的音区 |
+| userId | number | 是 | 用户id，归属某个音区<br>用户userId 所归属的音区 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i.md)&gt; | 否 | 返回对应音区的会话列表 |
 
 **错误码：**

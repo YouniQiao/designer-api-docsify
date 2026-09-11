@@ -24,7 +24,7 @@ Subscribes to display changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'add' \| 'remove' \| 'change' | Yes | Event type.   - **add**, indicating the display addition event. Example: event that a display is connected.   - **remove**, indicating the display removal event. Example: event that a display is disconnected.   - **change**, indicating the display change event. Example: event that the display orientation is changed. |
+| type | 'add' &#124; 'remove' &#124; 'change' | Yes | Event type.<br>- **add**, indicating the display addition event. Example: event that a display is connected.<br>- **remove**, indicating the display removal event. Example: event that a display is disconnected.<br>- **change**, indicating the display change event. Example: event that the display orientation is changed. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback used to return the ID of the display, which is an integer. |
 
 **Error codes:**
@@ -64,7 +64,7 @@ Subscribes to display changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'add' \| 'remove' \| 'change' | Yes | Event type.   - **add**, indicating the display addition event. Example: event that a display is connected.   - **remove**, indicating the display removal event. Example: event that a display is disconnected.   - **change**, indicating the display change event. Example: event that the display orientation is changed. |
+| type | 'add' &#124; 'remove' &#124; 'change' | Yes | Event type.<br>- **add**, indicating the display addition event. Example: event that a display is connected.<br>- **remove**, indicating the display removal event. Example: event that a display is disconnected.<br>- **change**, indicating the display change event. Example: event that the display orientation is changed. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback used to return the ID of the display, which is an integer. |
 
 **Error codes:**
@@ -96,7 +96,7 @@ Subscribes to display changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'add' \| 'remove' \| 'change' | Yes | Event type.   - **add**, indicating the display addition event. Example: event that a display is connected.   - **remove**, indicating the display removal event. Example: event that a display is disconnected.   - **change**, indicating the display change event. Example: event that the display orientation is changed. |
+| type | 'add' &#124; 'remove' &#124; 'change' | Yes | Event type.<br>- **add**, indicating the display addition event. Example: event that a display is connected.<br>- **remove**, indicating the display removal event. Example: event that a display is disconnected.<br>- **change**, indicating the display change event. Example: event that the display orientation is changed. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback used to return the ID of the display, which is an integer. |
 
 **Error codes:**
@@ -118,11 +118,11 @@ function on(type: 'foldStatusChange', callback: Callback<FoldStatus>): void
 
 Subscribes to fold status change events of the foldable device.
 
-To subscribe to display mode change events of foldable devices, use display.on('foldDisplayModeChange').
+To subscribe to display mode change events of foldable devices, use [display.on('foldDisplayModeChange')](#onfolddisplaymodechange).
 
 The two are different. In terms of timing, the fold status changes first, and the bottom layer matches the display mode status based on the fold status.
 
-To check whether the content is displayed on the inner or outer screen of the foldable device, use display.on('foldDisplayModeChange').
+To check whether the content is displayed on the inner or outer screen of the foldable device, use [display.on('foldDisplayModeChange')](#onfolddisplaymodechange).
 
 **Since:** 10
 
@@ -141,7 +141,7 @@ To check whether the content is displayed on the inner or outer screen of the fo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 **Examples**
@@ -229,7 +229,7 @@ Subscribes to events indicating the status of the device's screen content is bei
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 **Examples**
@@ -252,7 +252,7 @@ function on(type: 'foldDisplayModeChange', callback: Callback<FoldDisplayMode>):
 
 Subscribes to display mode change events of the foldable device.
 
-To subscribe to fold status change events of foldable devices, use display.on('foldStatusChange').
+To subscribe to fold status change events of foldable devices, use [display.on('foldStatusChange')](#onfoldstatuschange).
 
 The two are different. In terms of timing, the fold status changes first, and the bottom layer matches the display mode status based on the fold status.
 
@@ -273,7 +273,7 @@ The two are different. In terms of timing, the fold status changes first, and th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 **Examples**

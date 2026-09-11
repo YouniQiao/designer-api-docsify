@@ -26,7 +26,7 @@ import { videoProcessingEngine } from '@kit.ImageKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ImageProcessor](arkts-image-videoprocessingengine-imageprocessor-i.md) | 提供ImageProcessor类型，包括图像处理功能。 |
+| [ImageProcessor](arkts-image-videoprocessingengine-imageprocessor-i.md) | 提供ImageProcessor类型，包括图像处理功能。@typedef ImageProcessor |
 
 ### 枚举
 

@@ -70,9 +70,7 @@ accessibilityLevel?: string
 
 **类型：** string
 
-**默认值：** auto .The options are as follows:
-"auto":The value is converted to "yes" or "no" based on the component."yes": the current component is selectable for the accessibility service."no": The current component is not selectable for the accessibility service."no-hide-descendants":The current component and all its child components are not selectable
- for the accessibility service.
+**默认值：** auto .The options are as follows:<br>"auto":The value is converted to "yes" or "no" based on the component."yes": the current component is selectable for the accessibility service."no": The current component is not selectable for the accessibility service."no-hide-descendants":The current component and all its child components are not selectable<br> for the accessibility service.
 
 **起始版本：** 26.0.0
 

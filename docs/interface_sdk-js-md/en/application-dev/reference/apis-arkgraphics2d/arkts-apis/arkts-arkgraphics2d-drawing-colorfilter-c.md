@@ -2,7 +2,7 @@
 
 Defines a color filter.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This module uses the physical pixel unit, px.
 > 
@@ -48,7 +48,7 @@ Creates a **ColorFilter** object with a given color and blend mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createBlendModeColorFilter
 
@@ -66,7 +66,7 @@ Creates a **ColorFilter** object with a given color and blend mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
+| color | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) &#124; number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
 | mode | [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md) | Yes | Blend mode. |
 
 **Return value:**
@@ -79,7 +79,7 @@ Creates a **ColorFilter** object with a given color and blend mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createComposeColorFilter
 
@@ -110,7 +110,7 @@ Creates a **ColorFilter** object by combining another two color filters.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## createLightingColorFilter
 
@@ -128,8 +128,8 @@ Creates a lighting color filter. It multiplies the RGB channel values by one col
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mutColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | Yes | Color used for multiplication. The value is in the ARGB format, and each color channel is an integer ranging from 0 to 255. If the value is of the number type, it must be an unsigned integer in the hexadecimal ARGB format. |
-| addColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) \| number | Yes | Color used for addition. The value is in the ARGB format, and each color channel is an integer ranging from 0 to 255. If the value is of the number type, it must be an unsigned integer in the hexadecimal ARGB format. |
+| mutColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) &#124; number | Yes | Color used for multiplication. The value is in the ARGB format, and each color channel is an integer ranging from 0 to 255. If the value is of the number type, it must be an unsigned integer in the hexadecimal ARGB format. |
+| addColor | [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) &#124; number | Yes | Color used for addition. The value is in the ARGB format, and each color channel is an integer ranging from 0 to 255. If the value is of the number type, it must be an unsigned integer in the hexadecimal ARGB format. |
 
 **Return value:**
 
@@ -201,7 +201,7 @@ Creates a color filter object with a 4*5 color matrix.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createSRGBGammaToLinear
 

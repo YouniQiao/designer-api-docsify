@@ -22,7 +22,7 @@ Event callback to take the place of the preset copy menu option.
 
 It is effective only when the **controller** parameter is set and the preset menu is available.
 
-**NOTE：**
+**NOTE:**
 
 **event** indicates the returned information.
 
@@ -50,7 +50,7 @@ Event callback to take the place of the preset cut menu option.
 
 It is effective only when the **controller** parameter is set and the preset menu is available.
 
-**NOTE：**
+**NOTE:**
 
 **event** indicates the returned information.
 
@@ -78,7 +78,7 @@ Event callback to take the place of the preset paste menu option.
 
 It is effective only when the **controller** parameter is set and the preset menu is available.
 
-**NOTE：**
+**NOTE:**
 
 **event** indicates the returned information.
 
@@ -106,7 +106,7 @@ Event callback to take the place of the preset select-all menu option.
 
 It is effective only when the **controller** parameter is set and the preset menu is available.
 
-**NOTE：**
+**NOTE:**
 
 **event** indicates the returned information.
 

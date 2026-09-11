@@ -23,7 +23,7 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 | Name | Description |
 | --- | --- |
 | [domain](arkts-performanceanalysis-hiappevent-domain-n.md) | Provides domain name constants. |
-| [event](arkts-performanceanalysis-hiappevent-event-n.md) | Provides event name constants, including system event name constants and application event name constants. The application event name constants are optional custom event names reserved when you call Write for application event logging. |
+| [event](arkts-performanceanalysis-hiappevent-event-n.md) | Provides event name constants, including system event name constants and application event name constants.<br>The application event name constants are optional custom event names reserved when you call Write for application event logging. |
 | [param](arkts-performanceanalysis-hiappevent-param-n.md) | Provides parameter name constants. |
 
 ### Functions
@@ -79,14 +79,14 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 | [AddressSanitizerPolicy](arkts-performanceanalysis-hiappevent-addresssanitizerpolicy-i.md) | Defines the address sanitizer event configuration policy. |
 | [EventPolicy](arkts-performanceanalysis-hiappevent-eventpolicy-i.md) | Defines the system event configuration policy, which is set by calling [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md). |
 
-### Enums
-
-| Name | Description |
-| --- | --- |
-| [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md) | Enumerates event types. |
-
 ### Types
 
 | Name | Description |
 | --- | --- |
 | [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md) | Enumerates the types of custom event parameter values. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md) | Enumerates event types. |

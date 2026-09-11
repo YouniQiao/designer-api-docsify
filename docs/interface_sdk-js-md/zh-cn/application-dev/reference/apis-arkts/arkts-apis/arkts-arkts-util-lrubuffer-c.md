@@ -278,7 +278,7 @@ get(key: K): V | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| V \| undefined | key 对应的值。如果未找到匹配项，则返回 **undefined**。 |
+| V &#124; undefined | key 对应的值。如果未找到匹配项，则返回 **undefined**。 |
 
 **示例**
 
@@ -613,7 +613,7 @@ remove(key: K): V | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| V \| undefined | 包含被移除键值对的 **Optional** 对象。如果 key 不存在，则返回空的 **Optional**对象；如果 **key** 传入 **null**，则抛出错误。 |
+| V &#124; undefined | 包含被移除键值对的 **Optional** 对象。如果 key 不存在，则返回空的 **Optional**对象；如果 **key** 传入 **null**，则抛出错误。 |
 
 **示例**
 

@@ -18,7 +18,7 @@ Data transfer.
 
 Use scenario: upload and download in non-hosting mode, for example, uploading or downloading data in the background of a browser.
 
-**NOTE：**
+**NOTE:**
 
 1. During data transfer, the application needs to update the progress.
 If the progress is not updated for more than 10 minutes, the continuous task of the **DATA_TRANSFER** type will be canceled.
@@ -133,7 +133,7 @@ Computing tasks.
 
 Use scenario: antivirus software.
 
-**NOTE：**: This capability is available only to PCs/2-in-1 devices, or non-PCs/2-in-1 devices that have obtained the ACL permission [ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system).
+**NOTE:** This capability is available only to PCs/2-in-1 devices, or non-PCs/2-in-1 devices that have obtained the ACL permission [ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system).
 
 **Since:** 21
 
@@ -165,7 +165,7 @@ Special scenarios (available only for smartphones, tablets, PCs/2-in-1 devices).
 
 Use scenarios: An application exports media files in the background or uses a third-party component to cast content in the background. The scenario must match that of the subtype.
 
-**NOTE：**
+**NOTE:**
 
 1. If an application needs to run in the background for a long time,
 it can request user authorization through the [requestAuthFromUser](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md#requestauthfromuser) API and check the authorization result via [checkSpecialScenarioAuth](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md#checkspecialscenarioauth).

@@ -24,7 +24,7 @@ Queries the frequency range of IR signals supported by the device.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[InfraredFrequency](arkts-input-infraredemitter-infraredfrequency-i.md)&gt; | Frequency range of IR signals, including multiple groups of maximum and minimum frequencies. |
+| Array&lt;[InfraredFrequency](arkts-input-infraredemitter-infraredfrequency-i.md)&gt; | Frequency range of IR signals, including multiple groups of maximum and minimum frequencies.<br>Since API version 23, one group of maximum and minimum frequencies, both of which are **0** Hz, are returned. |
 
 **Error codes:**
 

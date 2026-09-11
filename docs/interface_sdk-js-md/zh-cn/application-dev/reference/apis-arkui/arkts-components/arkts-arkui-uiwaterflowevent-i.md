@@ -40,7 +40,7 @@ setOnDidScroll(callback: OnScrollCallback | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnScrollCallback](arkts-arkui-onscrollcallback-t.md) \| undefined | 是 | onDidScroll事件的回调函数。 |
+| callback | [OnScrollCallback](arkts-arkui-onscrollcallback-t.md) &#124; undefined | 是 | onDidScroll事件的回调函数。 |
 
 ## setOnScrollIndex
 
@@ -48,7 +48,7 @@ setOnDidScroll(callback: OnScrollCallback | undefined): void
 setOnScrollIndex(callback: OnWaterFlowScrollIndexCallback | undefined): void
 ```
 
-设置[onScrollIndex](arkts-arkui-waterflow-attribute.md#onscrollindex)事件的回调。
+设置[onScrollIndex](arkts-arkui-waterflow-comp-attribute.md#onscrollindex)事件的回调。
 
 方法入参为undefined时，会重置事件回调。
 
@@ -64,7 +64,7 @@ setOnScrollIndex(callback: OnWaterFlowScrollIndexCallback | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnWaterFlowScrollIndexCallback](arkts-arkui-onwaterflowscrollindexcallback-t.md) \| undefined | 是 | onScrollIndex事件的回调函数。 |
+| callback | [OnWaterFlowScrollIndexCallback](arkts-arkui-onwaterflowscrollindexcallback-t.md) &#124; undefined | 是 | onScrollIndex事件的回调函数。 |
 
 ## setOnWillScroll
 
@@ -88,4 +88,4 @@ setOnWillScroll(callback: OnWillScrollCallback | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnWillScrollCallback](arkts-arkui-onwillscrollcallback-t.md) \| undefined | 是 | onWillScroll事件的回调函数。 |
+| callback | [OnWillScrollCallback](arkts-arkui-onwillscrollcallback-t.md) &#124; undefined | 是 | onWillScroll事件的回调函数。 |

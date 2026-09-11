@@ -14,7 +14,7 @@ function getCpuUsage() : number
 
 Obtains the CPU usage of a process.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API involves cross-process communication and takes a long time. To avoid performance problems, you are
 > advised not to call this API in the main thread.

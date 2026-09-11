@@ -4,9 +4,10 @@ Defines the paragraph style options.
 
 Inherits [RichEditorRange](arkts-arkui-richeditorrange-i.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
-> Applicable scope of the API: spans involved in the specified range.
+> Scope of the API: the paragraphs covered by the specified range, that is, the paragraph where the range starts, the
+> paragraph where the range ends, and all paragraphs in between.
 
 **Inheritance/Implementation:** RichEditorParagraphStyleOptions extends [RichEditorRange](arkts-arkui-richeditorrange-i.md)
 

@@ -4,7 +4,7 @@ The **SystemParameter** module provides system services with easy access to key-
 
 For details about the system parameter design principles and definitions, see [Parameter Management](../../../../device-dev/subsystems/subsys-boot-init-sysparam.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The APIs of this module are no longer maintained since API version 9. You are advised to use
 > [@ohos.systemParameterEnhance](arkts-systemparameterenhance.md) instead.

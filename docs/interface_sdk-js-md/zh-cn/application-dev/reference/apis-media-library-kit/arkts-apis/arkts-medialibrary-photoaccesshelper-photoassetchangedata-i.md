@@ -20,7 +20,7 @@ assetAfterChange: PhotoAssetChangeInfo | null
 
 变更后的媒体资产（图片/视频）数据。如果是删除资产，assetAfterChange为null。
 
-**类型：** [PhotoAssetChangeInfo](arkts-medialibrary-photoaccesshelper-photoassetchangeinfo-i.md) \| null
+**类型：** [PhotoAssetChangeInfo](arkts-medialibrary-photoaccesshelper-photoassetchangeinfo-i.md) &#124; null
 
 **起始版本：** 20
 
@@ -34,7 +34,7 @@ assetBeforeChange: PhotoAssetChangeInfo | null
 
 变更前的媒体资产（图片/视频）数据。如果是新增资产，assetBeforeChange为null。
 
-**类型：** [PhotoAssetChangeInfo](arkts-medialibrary-photoaccesshelper-photoassetchangeinfo-i.md) \| null
+**类型：** [PhotoAssetChangeInfo](arkts-medialibrary-photoaccesshelper-photoassetchangeinfo-i.md) &#124; null
 
 **起始版本：** 20
 

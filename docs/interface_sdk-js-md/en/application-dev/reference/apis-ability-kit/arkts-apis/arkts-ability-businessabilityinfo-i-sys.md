@@ -2,6 +2,8 @@
 
 Contains basic business ability information.
 
+@typedef BusinessAbilityInfo
+
 **Since:** 10
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

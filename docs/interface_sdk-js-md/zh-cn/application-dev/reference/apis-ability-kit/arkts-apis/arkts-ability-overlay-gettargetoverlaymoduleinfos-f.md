@@ -80,7 +80,7 @@ function getTargetOverlayModuleInfos(targetModuleName: string): Promise<Array<Ov
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md)&gt;&gt; | Promise对象，返回&lt;Array&lt;[OverlayModuleInfo]{ |
+| Promise&lt;Array&lt;[OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md)&gt;&gt; | Promise对象，返回&lt;Array<[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)>&gt;。 |
 
 **错误码：**
 

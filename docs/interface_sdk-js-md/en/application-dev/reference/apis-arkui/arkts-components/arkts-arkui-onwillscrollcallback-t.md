@@ -27,4 +27,4 @@ Called before scroll to allow developer to control real offset the Scrollable ca
 
 | Type | Description |
 | --- | --- |
-| void \| [ScrollResult](arkts-arkui-scrollresult-c.md) | the remain offset for the scrollable, same as scrollOffset when no ScrollResult is returned. |
+| void &#124; [ScrollResult](arkts-arkui-scrollresult-c.md) | the remain offset for the scrollable, same as scrollOffset when no ScrollResult is returned. |

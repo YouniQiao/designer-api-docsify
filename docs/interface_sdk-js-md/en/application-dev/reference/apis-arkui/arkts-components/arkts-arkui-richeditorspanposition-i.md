@@ -1,6 +1,6 @@
 # RichEditorSpanPosition
 
-Provides the span position information.
+Defines span position information.
 
 **Since:** 10
 

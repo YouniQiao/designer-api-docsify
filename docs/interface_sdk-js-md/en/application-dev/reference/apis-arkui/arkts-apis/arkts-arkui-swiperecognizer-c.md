@@ -55,4 +55,4 @@ Obtains the minimum velocity required for the swipe gesture to be recognized.
 
 | Type | Description |
 | --- | --- |
-| number | Minimum velocity required for the swipe gesture to be recognized, in vp/s. |
+| number | Minimum velocity required for the swipe gesture to be recognized, in vp/s.<br>Value range: [0, +∞) |

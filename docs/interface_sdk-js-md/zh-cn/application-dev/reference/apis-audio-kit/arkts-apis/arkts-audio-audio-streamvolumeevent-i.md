@@ -2,6 +2,8 @@
 
 音频流音量变化时，应用接收到的事件。
 
+@typedef StreamVolumeEvent
+
 **起始版本：** 20
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume

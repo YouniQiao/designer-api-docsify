@@ -1105,7 +1105,7 @@ if (dataShareHelper != undefined) {
 off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 ```
 
-Unsubscribes from the data change of the specified URI. This API corresponds to the on API.
+Unsubscribes from the data change of the specified URI. This API corresponds to the [on](#ondatachange) API.
 
 **Since:** 9
 
@@ -1150,7 +1150,7 @@ if (dataShareHelper != undefined) {
 off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCallback<ChangeInfo>): void
 ```
 
-Unsubscribes from the data change of the specified URI. This API corresponds to the on API.
+Unsubscribes from the data change of the specified URI. This API corresponds to the [on](#on) API.
 
 **Since:** 12
 
@@ -1167,7 +1167,7 @@ Unsubscribes from the data change of the specified URI. This API corresponds to 
 | event | 'dataChange' | Yes | Event/callback type. The value is **'dataChange'**, which indicates the data change. |
 | type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | Yes | Subscription type. |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md)&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. If this parameter is specified, the callback must be the one registered in on('datachange'). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md)&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. If this parameter is specified, the callback must be the one registered in [on('datachange')](#on). |
 
 **Error codes:**
 

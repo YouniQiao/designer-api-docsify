@@ -91,7 +91,7 @@ NOTE: There is no guarantee that the callback will be triggered before OOM.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the registration succeeds; returns `false` if not called on the main thread or if the callback is already registered. @static |
 
 ## setMultithreadingDetectionEnabled
 

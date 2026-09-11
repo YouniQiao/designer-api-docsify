@@ -28,7 +28,7 @@ Unsubscribes from the state changes of the accessibility application. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'accessibilityStateChange' | Yes | Event type, which is set to **'accessibilityStateChange'** in this API. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in accessibility.on('accessibilityStateChange'). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type.<br>**Since:** 20 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in [accessibility.on('accessibilityStateChange')](arkts-accessibility-accessibility-on-f.md#onaccessibilitystatechange). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type.<br>**Since:** 20 |
 
 **Error codes:**
 
@@ -86,7 +86,7 @@ Unsubscribes from the state changes of touch guide mode. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'touchGuideStateChange' | Yes | Event type, which is set to **'touchGuideStateChange'** in this API. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in accessibility.on('touchGuideStateChange'). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in [accessibility.on('touchGuideStateChange')](arkts-accessibility-accessibility-on-f.md#ontouchguidestatechange). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 
@@ -144,7 +144,7 @@ Unsubscribes from the state changes of screen reader mode. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'screenReaderStateChange' | Yes | Event type, which is set to **'screenReaderStateChange'** in this API. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in accessibility.on('screenReaderStateChange'). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in [accessibility.on('screenReaderStateChange')](arkts-accessibility-accessibility-on-f.md#onscreenreaderstatechange). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 
@@ -202,7 +202,7 @@ Unsubscribes from the single-tap/double-tap operation mode change event in touch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'touchModeChange' | Yes | Event type, which is set to **'touchModeChange'** in this API. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback used to unregister. The value must be the same as the value of callback in accessibility.on('touchModeChange'). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback used to unregister. The value must be the same as the value of callback in [accessibility.on('touchModeChange')](arkts-accessibility-accessibility-on-f.md#ontouchmodechange). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 

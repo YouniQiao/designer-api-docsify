@@ -71,7 +71,7 @@ Compresses or packs an image into a file and uses a promise to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bufferInfo | [BinaryBufferInfo](arkts-image-image-binarybufferinfo-i.md) | Yes | image buffer info. |
-| fd | number | Yes | ID of a file descriptor The value must be a positive integer. |
+| fd | number | Yes | ID of a file descriptor<br>The value must be a positive integer. |
 | options | [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md) | No | Options for tiff image packing. |
 
 **Return value:**
@@ -152,7 +152,7 @@ packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBu
 
 Compresses or re-encodes an image. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the
 > PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is
@@ -184,7 +184,7 @@ packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>
 
 Compresses or re-encodes an image. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the
 > PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is
@@ -294,7 +294,7 @@ packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>
 
 Compresses or re-encodes an image. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If error code 401 is returned, the parameters are abnormal. The possible cause is that the PixelMap object is
 > released in advance. You need to check the code and ensure that the PixelMap object is released after this API
@@ -448,7 +448,7 @@ packToFile(source: PixelMap, fd: number, options: PackingOption, callback: Async
 
 Encodes the PixelMap into a file based on the specified encoding parameters. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap
 > object is released in advance. You need to check the code and ensure that the PixelMap object is released after
@@ -489,7 +489,7 @@ packToFile(source: PixelMap, fd: number, options: PackingOption): Promise<void>
 
 Encodes the PixelMap into a file based on the specified encoding parameters. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap
 > object is released in advance. You need to check the code and ensure that the PixelMap object is released after

@@ -2,7 +2,7 @@
 
 **SegmentButton** is a versatile component that organizes related options into visually grouped buttons. It supports three variants: tab-style, capsule-style single-select, and capsule-style multi-select.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The **SegmentButton** component does not support [universal attributes](ts-component-general-attributes.md). The component occupies the maximum available width within its content area and distributes this width evenly among its items. It adapts its height automatically to the content (text and images), the minimum height being 28 vp.
 > 
@@ -58,7 +58,7 @@ Value range: [1, 2]
 
 Values less than 1 are treated as 1, and values greater than 2 are treated as 2.
 
-**Type:** number \| [Resource](arkts-arkui-resource-t.md)
+**Type:** number &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 14
 
@@ -116,7 +116,7 @@ selectedIndexes: number[]
 
 Indexes of selected items of the **SegmentButton**. The index is zero-based and increments by 1.
 
-**NOTE：**
+**NOTE:**
 
 **selectedIndexes** is decorated with [@Link](../../../ui/state-management/arkts-link.md) to implement parent- child two-way synchronization. If no items are selected, an empty array **[]** can be passed in.
 

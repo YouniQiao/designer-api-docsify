@@ -1,14 +1,16 @@
 # @ohos.app.form.FormExtensionAbility(FormExtensionAbility)
 
 FormExtensionAbility为卡片扩展模块，提供卡片创建、销毁、刷新等生命周期回调。适用于需要在应用中实现卡片功能的场景，帮助开发者快速构建卡片数据更新机制，提升用户与应用的交互体验。
- > **说明：**
+
+> **说明：**
  >
  > FormExtensionAbility创建后10秒内无操作将会被清理。
 
 ## 约束限制
 
-为保障系统安全性和稳定性，防止 FormExtensionAbility 滥用系统资源，系统对其能力进行管控， 不支持以下模块的引用：  
- - [@ohos.ability.particleAbility (ParticleAbility模块)](../../apis-ability-kit/arkts-apis/arkts-ability-particleability.md)  
+为保障系统安全性和稳定性，防止 FormExtensionAbility 滥用系统资源，系统对其能力进行管控， 不支持以下模块的引用：
+
+- [@ohos.ability.particleAbility (ParticleAbility模块)](../../apis-ability-kit/arkts-apis/arkts-ability-particleability.md)  
  - [@ohos.multimedia.audio (音频管理)](../../apis-audio-kit/arkts-apis/arkts-multimedia-audio.md)  
  - [@ohos.multimedia.camera (相机管理)](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md)  
  - [@ohos.multimedia.media (媒体服务)](../../apis-media-kit/arkts-apis/arkts-multimedia-media.md)  

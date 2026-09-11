@@ -34,7 +34,7 @@ action: Action
 altKey: boolean
 ```
 
-当前altKey是否处于按下状态。 true表示处于按下状态，false表示处于抬起状态。
+当前altKey是否处于按下状态。 <br>true表示处于按下状态，false表示处于抬起状态。
 
 **类型：** boolean
 
@@ -76,7 +76,7 @@ button: Button
 capsLock: boolean
 ```
 
-当前capsLock是否处于使能状态。 true表示使能状态，false表示处于未使能状态。
+当前capsLock是否处于使能状态。 <br>true表示使能状态，false表示处于未使能状态。
 
 **类型：** boolean
 
@@ -90,7 +90,7 @@ capsLock: boolean
 ctrlKey: boolean
 ```
 
-当前ctrlKey是否处于按下状态。 true表示处于按下状态，false表示处于抬起状态。
+当前ctrlKey是否处于按下状态。 <br>true表示处于按下状态，false表示处于抬起状态。
 
 **类型：** boolean
 
@@ -104,7 +104,7 @@ ctrlKey: boolean
 fnKey: boolean
 ```
 
-当前fnKey是否处于按下状态。 true表示处于按下状态，false表示处于抬起状态。
+当前fnKey是否处于按下状态。 <br>true表示处于按下状态，false表示处于抬起状态。
 
 **类型：** boolean
 
@@ -146,7 +146,7 @@ globalY?: number
 logoKey: boolean
 ```
 
-当前logoKey是否处于按下状态。 true表示处于按下状态，false表示处于抬起状态。
+当前logoKey是否处于按下状态。 <br>true表示处于按下状态，false表示处于抬起状态。
 
 **类型：** boolean
 
@@ -160,7 +160,7 @@ logoKey: boolean
 numLock: boolean
 ```
 
-当前numLock是否处于使能状态。 true表示使能状态，false表示处于未使能状态。
+当前numLock是否处于使能状态。 <br>true表示使能状态，false表示处于未使能状态。
 
 **类型：** boolean
 
@@ -258,7 +258,7 @@ screenY: number
 scrollLock: boolean
 ```
 
-当前scrollLock是否处于使能状态。 true表示使能状态，false表示处于未使能状态。
+当前scrollLock是否处于使能状态。 <br>true表示使能状态，false表示处于未使能状态。
 
 **类型：** boolean
 
@@ -272,7 +272,7 @@ scrollLock: boolean
 shiftKey: boolean
 ```
 
-当前shiftKey是否处于按下状态。 true表示处于按下状态，false表示处于抬起状态。
+当前shiftKey是否处于按下状态。 <br>true表示处于按下状态，false表示处于抬起状态。
 
 **类型：** boolean
 

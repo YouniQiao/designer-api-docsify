@@ -21,7 +21,7 @@ count: number
 
 Number of notifications.
 
-**NOTE：**
+**NOTE:**
 
 If the value is less than or equal to 0 and less than the value of **maxCount**, no badge is displayed.
 

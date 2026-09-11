@@ -2,6 +2,8 @@
 
 This module defines the result information of monitoring install, update and uninstall.
 
+@typedef BundleChangedInfo
+
 **Since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

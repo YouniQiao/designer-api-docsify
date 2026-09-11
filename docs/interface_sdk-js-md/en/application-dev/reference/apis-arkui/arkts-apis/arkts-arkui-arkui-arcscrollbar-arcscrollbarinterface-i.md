@@ -2,7 +2,7 @@
 
 The **ArcScrollBar** component is designed to be used together with scrollable components such as ArcList, List, Grid, Scroll, and WaterFlow.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This component is supported since API version 18. Updates will be marked with a superscript to indicate their
 > earliest API version.
@@ -53,4 +53,3 @@ A constructor used to create an **ArcScrollBar** instance.
 
 | Type | Description |
 | --- | --- |
-| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md) |  |

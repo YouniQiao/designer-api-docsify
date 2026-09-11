@@ -34,4 +34,4 @@ Set the current Wi-Fi power mode.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the Wi-Fi is active; returns `false` otherwise. |

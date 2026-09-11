@@ -26,7 +26,7 @@ function getCurrentInputMethodSubtype(userId?: number): InputMethodSubtype
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userId | number | 否 | 用户ID。取值范围为有效用户的ID。如果不提供：   - 如果调用者不是用户0的应用，该值默认为调用者的用户ID。   - 如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
+| userId | number | 否 | 用户ID。取值范围为有效用户的ID。如果不提供：<br>- 如果调用者不是用户0的应用，该值默认为调用者的用户ID。<br>- 如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
 
 **返回值：**
 

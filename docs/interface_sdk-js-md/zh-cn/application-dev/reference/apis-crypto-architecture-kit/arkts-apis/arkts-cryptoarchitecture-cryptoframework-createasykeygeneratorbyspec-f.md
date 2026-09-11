@@ -26,7 +26,7 @@ function createAsyKeyGeneratorBySpec(asyKeySpec: AsyKeySpec): AsyKeyGeneratorByS
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| asyKeySpec | [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md) | 是 | 密钥参数。非对称密钥生成器根据指定的这些参数生成公/私钥。支持的规格详见[非对称密钥生成和转换规格](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md)。 |
+| asyKeySpec | [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md) | 是 | 密钥参数。非对称密钥生成器根据指定的这些参数生成公/私钥。<br>支持的规格详见[非对称密钥生成和转换规格](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md)。 |
 
 **返回值：**
 
@@ -38,7 +38,7 @@ function createAsyKeyGeneratorBySpec(asyKeySpec: AsyKeySpec): AsyKeyGeneratorByS
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | This operation is not supported. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 

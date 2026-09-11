@@ -26,7 +26,7 @@ function updateDataTransferProgress(context: Context, progressInfo: DataTransfer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用运行的上下文。   **说明：** Stage模型中，仅支持UIAbility申请。 |
+| context | Context | 是 | 应用运行的上下文。<br> **说明：** Stage模型中，仅支持UIAbility申请。 |
 | progressInfo | [DataTransferProgress](arkts-backgroundtasks-backgroundtaskmanager-datatransferprogress-i.md) | 是 | 长时任务通知进度信息。 |
 
 **错误码：**

@@ -14,7 +14,7 @@ function requestOverflow(formId: string, overflowInfo: formInfo.OverflowInfo): P
 
 Requests an animation. This API takes effect only for [scene-based widgets](../../../form/arkts-ui-widget-configuration.md#sceneanimationparams-field). This API uses a promise to return the result.
 
-> **NOTE：**&gt;
+> **NOTE:**&gt;
 
 **Since:** 20
 

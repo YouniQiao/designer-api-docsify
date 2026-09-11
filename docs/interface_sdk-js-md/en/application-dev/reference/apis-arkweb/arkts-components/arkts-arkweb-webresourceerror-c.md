@@ -1,6 +1,6 @@
 # WebResourceError
 
-WebResourceError is a class that provides error information when resource loading fails in the **Web** component. The error object is provided to the app through the `onErrorReceive` and `onHttpErrorReceive` event callbacks, encapsulating error details for debugging and error handling. It is typically used together with WebResourceRequest to determine which resource failed to load. For sample code, see [onErrorReceive event](arkts-arkweb-web-attribute.md#onerrorreceive).
+WebResourceError is a class that provides error information when resource loading fails in the **Web** component. The error object is provided to the app through the `onErrorReceive` and `onHttpErrorReceive` event callbacks, encapsulating error details for debugging and error handling. It is typically used together with WebResourceRequest to determine which resource failed to load. For sample code, see [onErrorReceive event](arkts-arkweb-web-comp-attribute.md#onerrorreceive).
 
 **Since:** 8
 
@@ -61,7 +61,7 @@ Obtains the error code of the resource loading. It is used to determine the spec
 
 | Type | Description |
 | --- | --- |
-| number | Error code for loading the resource. For details about the error codes, see [WebNetErrorList]{ |
+| number | Error code for loading the resource. For details about the error codes, see [WebNetErrorList](../arkts-apis/arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) or HTTP status codes. |
 
 ## getErrorInfo
 

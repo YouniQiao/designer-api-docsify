@@ -17,7 +17,7 @@ Adds a value to the value at the given position in the array, returning the orig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |  |
+| typedArray | Int8Array &#124; Uint8Array &#124; Int16Array &#124; Uint16Array &#124; Int32Array &#124; Uint32Array | Yes |  |
 | index | number | Yes |  |
 | value | number | Yes |  |
 
@@ -37,7 +37,7 @@ Stores the bitwise AND of a value with the value at the given position in the ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |  |
+| typedArray | Int8Array &#124; Uint8Array &#124; Int16Array &#124; Uint16Array &#124; Int32Array &#124; Uint32Array | Yes |  |
 | index | number | Yes |  |
 | value | number | Yes |  |
 
@@ -57,7 +57,7 @@ Replaces the value at the given position in the array if the original value equa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |  |
+| typedArray | Int8Array &#124; Uint8Array &#124; Int16Array &#124; Uint16Array &#124; Int32Array &#124; Uint32Array | Yes |  |
 | index | number | Yes |  |
 | expectedValue | number | Yes |  |
 | replacementValue | number | Yes |  |
@@ -78,7 +78,7 @@ Replaces the value at the given position in the array, returning the original va
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |  |
+| typedArray | Int8Array &#124; Uint8Array &#124; Int16Array &#124; Uint16Array &#124; Int32Array &#124; Uint32Array | Yes |  |
 | index | number | Yes |  |
 | value | number | Yes |  |
 
@@ -116,7 +116,7 @@ Returns the value at the given position in the array. Until this atomic operatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |  |
+| typedArray | Int8Array &#124; Uint8Array &#124; Int16Array &#124; Uint16Array &#124; Int32Array &#124; Uint32Array | Yes |  |
 | index | number | Yes |  |
 
 **Return value:**
@@ -155,7 +155,7 @@ Stores the bitwise OR of a value with the value at the given position in the arr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |  |
+| typedArray | Int8Array &#124; Uint8Array &#124; Int16Array &#124; Uint16Array &#124; Int32Array &#124; Uint32Array | Yes |  |
 | index | number | Yes |  |
 | value | number | Yes |  |
 
@@ -175,7 +175,7 @@ Stores a value at the given position in the array, returning the new value. Unti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |  |
+| typedArray | Int8Array &#124; Uint8Array &#124; Int16Array &#124; Uint16Array &#124; Int32Array &#124; Uint32Array | Yes |  |
 | index | number | Yes |  |
 | value | number | Yes |  |
 
@@ -195,7 +195,7 @@ Subtracts a value from the value at the given position in the array, returning t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |  |
+| typedArray | Int8Array &#124; Uint8Array &#124; Int16Array &#124; Uint16Array &#124; Int32Array &#124; Uint32Array | Yes |  |
 | index | number | Yes |  |
 | value | number | Yes |  |
 
@@ -236,7 +236,7 @@ Stores the bitwise XOR of a value with the value at the given position in the ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typedArray | Int8Array \| Uint8Array \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array | Yes |  |
+| typedArray | Int8Array &#124; Uint8Array &#124; Int16Array &#124; Uint16Array &#124; Int32Array &#124; Uint32Array | Yes |  |
 | index | number | Yes |  |
 | value | number | Yes |  |
 

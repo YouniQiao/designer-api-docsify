@@ -6,6 +6,8 @@ export type OperationValueType = number | number | string | boolean
 
 Indicates possible value types
 
+@typedef { long | double | string | boolean }
+
 **Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.

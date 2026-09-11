@@ -27,7 +27,7 @@ function setAbilityEnabled(info: AbilityInfo, appIndex: number, isEnabled: boole
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | info | [AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md) | 是 | 需要被设置的组件。 |
-| appIndex | number | 是 | 表示分身应用的索引。appIndex为0时，表示设置主应用组件的禁用或使能状态。appIndex大于0时，表示设置指定分身应用组件的禁用或使能状态。 |
+| appIndex | number | 是 | 表示分身应用的索引。<br> appIndex为0时，表示设置主应用组件的禁用或使能状态。appIndex大于0时，表示设置指定分身应用组件的禁用或使能状态。 |
 | isEnabled | boolean | 是 | 值为true表示使能，值为false表示禁用。 |
 
 **返回值：**

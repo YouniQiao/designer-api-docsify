@@ -39,7 +39,7 @@ data: string | object
 
 返回数据类型由responseType确定，详见表 responseType与success中data关系。
 
-**类型：** string \| object
+**类型：** string &#124; object
 
 **起始版本：** 3
 

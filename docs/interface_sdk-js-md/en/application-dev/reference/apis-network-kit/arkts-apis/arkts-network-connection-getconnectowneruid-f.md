@@ -14,7 +14,7 @@ function getConnectOwnerUid(protocol: ProtocolType, local: NetAddress, remote: N
 
 Queries the UID of the application that initiates a specified network connection. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API can be called only in VPN applications.
 > 

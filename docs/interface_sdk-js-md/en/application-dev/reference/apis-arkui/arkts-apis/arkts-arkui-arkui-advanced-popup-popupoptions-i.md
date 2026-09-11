@@ -78,7 +78,7 @@ icon?: PopupIconOptions
 
 Icon of the popup.
 
-**NOTE：**
+**NOTE:**
 
 The icon is not displayed when **width** and **height** are set to an invalid value or **0**.
 
@@ -102,7 +102,7 @@ maxWidth?: Dimension
 
 Maximum width of the popup. This API allows the popup to display with a custom width.
 
-**NOTE：**
+**NOTE:**
 
 1. When using resource references, ensure that the parameter type matches the attribute method type.
 2. **maxWidth** accepts numeric values (both floating-point and integer values), such as **\$r('app.float.maxWidth')** and **\$r('app.integer.maxWidth')**.
@@ -128,7 +128,7 @@ message: PopupTextOptions
 
 Message of the popup.
 
-**NOTE：**
+**NOTE:**
 
 **fontWeight** is not available for messages.
 
@@ -158,7 +158,7 @@ Whether to show the close button.
 
 Default value: **true**
 
-**Type:** boolean \| [Resource](arkts-arkui-resource-t.md)
+**Type:** boolean &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 11
 

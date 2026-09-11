@@ -8,6 +8,7 @@ WebNativeMessagingExtensionAbility是ArkWeb提供的Web原生消息通信扩展�
  道读写、权限校验及Ability生命周期。
 
 
+
 ## 导入模块
 
 ```TypeScript

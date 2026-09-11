@@ -1,6 +1,6 @@
 # IpInfo
 
-Wi-Fi IP information.
+Wi-Fi IP information. @typedef IpInfo
 
 **Since:** 9
 

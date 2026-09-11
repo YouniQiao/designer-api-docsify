@@ -338,7 +338,7 @@ getOsTypeByNetworkId(networkId: string): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | Returns the device operating system type. Possible return: |
+| number | Returns the device operating system type. Possible return:   1. 10: Operating system based on OpenHarmony 2. 11: Operating system not based on OpenHarmony 3. -1: Unknown |
 
 **错误码：**
 
@@ -387,7 +387,7 @@ off(type: 'replyResult', callback?: Callback<{ param: string; }>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'replyResult' | 是 | 取消注册的设备管理器 UI 状态回调，固定为replyResult。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | 否 | 指示要取消注册的设备管理器 UI 状态，返回UI状态。 |
 
 **错误码：**
 
@@ -433,7 +433,7 @@ on(type: 'replyResult', callback: Callback<{ param: string; }>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'replyResult' | 是 | 注册的设备管理器 UI 状态回调，以便在状态改变时通知应用，固定为replyResult。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | 是 | 指示要注册的设备管理器 UI 状态回调，返回UI状态。 |
 
 **错误码：**
 
@@ -548,7 +548,7 @@ replyUiAction(action: number, actionResult: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| action | number | 是 | 用户操作动作。   - 0：允许授权。   - 1：取消授权。   - 2：授权框用户操作超时。   - 3：取消pin码框展示。   - 4：取消pin码输入框展示。   - 5：pin码输入框确定操作。 |
+| action | number | 是 | 用户操作动作。<br>- 0：允许授权。<br>- 1：取消授权。<br>- 2：授权框用户操作超时。<br>- 3：取消pin码框展示。<br>- 4：取消pin码输入框展示。<br>- 5：pin码输入框确定操作。 |
 | actionResult | string | 是 | 表示用户操作结果，长度范围1~255字符。 |
 
 **错误码：**

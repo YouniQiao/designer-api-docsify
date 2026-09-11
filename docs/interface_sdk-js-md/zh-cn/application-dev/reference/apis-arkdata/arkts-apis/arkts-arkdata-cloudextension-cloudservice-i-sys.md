@@ -39,7 +39,7 @@ connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteOb
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise对象，返回[AssetLoader]{ |
+| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise对象，返回[AssetLoader](arkts-arkdata-cloudextension-assetloader-i-sys.md)的[RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)对象。 |
 
 **示例**
 
@@ -85,7 +85,7 @@ connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise对象，返回[CloudDB]{ |
+| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise对象，返回[CloudDB](arkts-arkdata-cloudextension-clouddb-i-sys.md)的[RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)对象。 |
 
 **示例**
 
@@ -131,7 +131,7 @@ connectShareCenter(userId: number, bundleName: string): Promise<rpc.RemoteObject
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise对象，返回[ShareCenter]{ |
+| Promise&lt;[rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)&gt; | Promise对象，返回[ShareCenter](arkts-arkdata-cloudextension-sharecenter-i-sys.md)的[RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)对象。 |
 
 **示例**
 
@@ -170,7 +170,7 @@ getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;string, [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)&gt;&gt; | Promise对象，返回以bundleName为键、[AppBriefInfo]{ |
+| Promise&lt;Record&lt;string, [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)&gt;&gt; | Promise对象，返回以bundleName为键、[AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)为值的键值对。 |
 
 **示例**
 

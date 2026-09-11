@@ -1,6 +1,6 @@
 # Ipv6Config (System API)
 
-Wi-Fi Ipv6 configuration information.
+Wi-Fi Ipv6 configuration information. @typedef Ipv6Config
 
 **Since:** 20
 

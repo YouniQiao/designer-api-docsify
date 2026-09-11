@@ -30,8 +30,6 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |  |
-
 **Error codes:**
 
 | Error Code ID | Error Message |

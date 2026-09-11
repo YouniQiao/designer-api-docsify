@@ -34,7 +34,7 @@ Preloads a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uie
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the ID of the preloaded [UIExtensionAbility]{ |
+| Promise&lt;number&gt; | Promise used to return the ID of the preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance for further clearing or management. |
 
 **Error codes:**
 

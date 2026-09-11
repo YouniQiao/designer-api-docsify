@@ -102,7 +102,7 @@ Obtains a WantAgent object.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[WantAgent](arkts-ability-wantagent-depr-t.md)&gt; | Returns the created { |
+| Promise&lt;[WantAgent](arkts-ability-wantagent-depr-t.md)&gt; | Returns the created [WantAgent](arkts-ability-wantagent-depr-t.md#wantagent) object. |
 
 **Examples**
 

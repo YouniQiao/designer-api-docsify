@@ -18,7 +18,7 @@ Push
 
 Navigates to the specified page in the application.
 
-**NOTE：**
+**NOTE:**
 
 This API is supported since API version 7 and deprecated since API version 13. You are advised to use pushPath instead.
 
@@ -40,7 +40,7 @@ Back
 
 Returns to the specified page. If the specified page does not exist in the stack, no response is returned. If no page is specified, the previous page is returned to.
 
-**NOTE：**
+**NOTE:**
 
 This API is supported since API version 7 and deprecated since API version 13. You are advised to use pop instead.
 
@@ -62,7 +62,7 @@ Replace
 
 Replaces the current page with another one in the application and destroys the current page.
 
-**NOTE：**
+**NOTE:**
 
 This API is supported since API version 7 and deprecated since API version 13. You are advised to use replacePath instead.
 

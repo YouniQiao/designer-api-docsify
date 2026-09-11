@@ -6,6 +6,8 @@ type ReportDialogCommandEvent = (type: DialogControlType, buttonInfo: DialogInfo
 
 The report dialog command event.
 
+@typedef { function } ReportDialogCommandEvent
+
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.

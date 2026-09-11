@@ -32,7 +32,7 @@ Converts a SendableContext object to an ApplicationContext object.
 
 | Type | Description |
 | --- | --- |
-| [common.ApplicationContext](arkts-ability-common-applicationcontext-t.md) | [ApplicationContext]{ |
+| [common.ApplicationContext](arkts-ability-common-applicationcontext-t.md) | [ApplicationContext](arkts-ability-applicationcontext-c.md) object. |
 
 **Error codes:**
 

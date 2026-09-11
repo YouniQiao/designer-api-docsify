@@ -20,7 +20,7 @@ getCertIssuer(): DataBlob
 
 Obtains the issuer name of the revoked certificate.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The obtained issuer name of this revoked certificate contains a string terminator.
 
@@ -42,7 +42,7 @@ Obtains the issuer name of the revoked certificate.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -126,8 +126,8 @@ Obtains the issuer name of the revoked certificate based on the encoding type.
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
-| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes:  1. The value of encodingType is not in the EncodingType enumeration range. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes:<br>1. The value of encodingType is not in the EncodingType enumeration range. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -205,7 +205,7 @@ Obtains the distinguished name (DN) of the issuer of the revoked certificate.
 | Error Code ID | Error Message |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -275,9 +275,9 @@ Obtains the serialized data of this revoked certificate entry. This API uses an 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -358,9 +358,9 @@ Obtains the serialized data of this revoked certificate entry. This API uses a p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -440,7 +440,7 @@ Obtains the CRL entry extensions in DER format.
 | Error Code ID | Error Message |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -520,7 +520,7 @@ Obtains the CRL entry extension object.
 | Error Code ID | Error Message |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -658,7 +658,7 @@ Obtains the certificate's revocation date.
 | Error Code ID | Error Message |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -735,7 +735,7 @@ Obtains the serial number of this revoked certificate.
 | Error Code ID | Error Message |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -812,7 +812,7 @@ Checks whether this CRL entry has extensions.
 | Error Code ID | Error Message |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -889,7 +889,7 @@ Obtains the hash value of the data in DER format.
 | Error Code ID | Error Message |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
@@ -960,7 +960,7 @@ Converts the object data into a string.
 | Error Code ID | Error Message |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**

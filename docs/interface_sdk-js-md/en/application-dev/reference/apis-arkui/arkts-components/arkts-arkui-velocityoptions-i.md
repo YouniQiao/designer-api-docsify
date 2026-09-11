@@ -3,7 +3,7 @@
 Defines velocity options.
 
 *   
-> **NOTE：**
+> **NOTE:**
 
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.

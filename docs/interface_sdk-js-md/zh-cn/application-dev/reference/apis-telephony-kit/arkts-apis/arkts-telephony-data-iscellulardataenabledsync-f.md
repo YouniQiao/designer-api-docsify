@@ -24,7 +24,7 @@ function isCellularDataEnabledSync(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 用来返回检查蜂窝数据业务是否启用。 |
+| boolean | 用来返回检查蜂窝数据业务是否启用。<br>true：蜂窝数据业务已启用。<br>false：蜂窝数据业务已禁用。 |
 
 **错误码：**
 

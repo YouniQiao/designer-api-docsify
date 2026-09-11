@@ -59,7 +59,7 @@ animationOptions?: AnimateParam | null
 
 默认值：null
 
-**类型：** [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) \| null
+**类型：** [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) &#124; null
 
 **起始版本：** 12
 

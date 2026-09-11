@@ -14,7 +14,7 @@ function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void
 
 Obtains the default HTTP proxy configuration of the network. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - If the global proxy is set, the global proxy configuration is returned.
 > 
@@ -63,7 +63,7 @@ function getDefaultHttpProxy(): Promise<HttpProxy>
 
 Obtains the default HTTP proxy configuration of the network. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - If the global proxy is set, the global proxy configuration is returned.
 > 

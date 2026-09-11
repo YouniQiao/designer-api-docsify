@@ -8,11 +8,15 @@
  接口，该替代接口支持更丰富的振动效果（包括指定时长振动[VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md)、预置效果振动
  [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md)、自定义文件振动
  [VibrateFromFile](arkts-sensorservice-vibrator-vibratefromfile-i.md)等），适用于更多设备类型。
- > **说明：**
- > - 模块维护策略：
+
+> **说明：**
+
+> - 模块维护策略：
  >  >   - 对于Lite Wearable设备类型，该模块长期维护，正常使用。
  >  >   - 对于支持该模块的其他设备类型，该模块从API version 8开始不再维护，推荐使用新接口[@ohos.vibrator (振动)](arkts-vibrator.md)。
- > - 该功能使用需要对应硬件支持，仅支持真机调试。可通过系统设备信息或相关接口查询设备是否支持振动功能。
+
+> - 该功能使用需要对应硬件支持，仅支持真机调试。可通过系统设备信息或相关接口查询设备是否支持振动功能。
+
 
 
 ## 导入模块

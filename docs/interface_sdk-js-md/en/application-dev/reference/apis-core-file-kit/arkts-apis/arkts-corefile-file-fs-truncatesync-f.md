@@ -24,7 +24,7 @@ Truncates the file content. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string \| number | Yes | Application sandbox path or FD of the file. |
+| file | string &#124; number | Yes | Application sandbox path or FD of the file. |
 | len | number | No | File length after truncation, in bytes. The default value is **0**. |
 
 **Error codes:**

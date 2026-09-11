@@ -67,8 +67,8 @@ import { display } from '@kit.ArkUI';
 | [addVirtualScreenBlocklist](arkts-arkui-display-addvirtualscreenblocklist-f-sys.md) | Adds windows to the list of windows that are not allowed to be displayed during casting. This API takes effect only for the main window of an application or system windows. This API uses a promise to return the result. |
 | [addVirtualScreenSurface](arkts-arkui-display-addvirtualscreensurface-f-sys.md) | Add surface for the virtual screen. |
 | [hasPrivateWindow](arkts-arkui-display-hasprivatewindow-f-sys.md) | Checks whether there is a visible privacy window on a display. The window privacy mode can be set by calling setWindowPrivacyMode(). The content in the privacy window cannot be captured or recorded. |
-| off | Unsubscribes from privacy mode changes of this display. |
-| on | Subscribes to privacy mode changes of this display. When there is a privacy window in the foreground of the display, the display is in privacy mode, and the content in the privacy window cannot be captured or recorded. |
+| [off](arkts-arkui-display-off-f-sys.md#offprivatemodechange) | Unsubscribes from privacy mode changes of this display. |
+| [on](arkts-arkui-display-on-f-sys.md#onprivatemodechange) | Subscribes to privacy mode changes of this display. When there is a privacy window in the foreground of the display, the display is in privacy mode, and the content in the privacy window cannot be captured or recorded. |
 | [removeVirtualScreenBlocklist](arkts-arkui-display-removevirtualscreenblocklist-f-sys.md) | Removes windows from the list of windows that are not allowed to be displayed during casting. This API takes effect only for the main window of an application or system windows. This API uses a promise to return the result. |
 | [removeVirtualScreenSurface](arkts-arkui-display-removevirtualscreensurface-f-sys.md) | Remove surface for the virtual screen. |
 | [setFoldDisplayMode](arkts-arkui-display-setfolddisplaymode-f-sys.md) | Sets the display mode of the foldable device. |

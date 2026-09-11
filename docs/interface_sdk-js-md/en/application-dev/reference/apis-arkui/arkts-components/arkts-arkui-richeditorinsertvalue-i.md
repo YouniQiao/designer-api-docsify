@@ -1,6 +1,6 @@
 # RichEditorInsertValue
 
-Information about the text to be inserted.
+Defines information about the text to be inserted.
 
 **Since:** 10
 
@@ -53,7 +53,11 @@ Content of the text to be inserted.
 previewText?: string
 ```
 
-Content of the preview text to be inserted.
+Preview text content to be inserted.
+
+Default value: empty string.
+
+**Atomic service API:** Since API version 12, this API is supported in atomic services.
 
 **Type:** string
 

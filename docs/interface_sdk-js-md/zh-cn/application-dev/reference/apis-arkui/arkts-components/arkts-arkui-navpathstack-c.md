@@ -44,7 +44,7 @@ clear(animated?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| animated | boolean | 否 | 是否支持转场动画。true：支持转场动画；false：不支持转场动画。默认值：true<br>**适用版本：** 11 |
+| animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>默认值：true<br>**适用版本：** 11 |
 
 ## constructor
 
@@ -82,7 +82,7 @@ disableAnimation(value: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否关闭转场动画，默认值：false true：关闭转场动画。false：不关闭转场动画。 |
+| value | boolean | 是 | 是否关闭转场动画，<br>默认值：false<br>true：关闭转场动画。<br>false：不关闭转场动画。 |
 
 ## getAllPathName
 
@@ -160,7 +160,7 @@ getParamByIndex(index: number): unknown | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| unknown \| undefined | unknown**: parameter information of the corresponding navigation destination page. **unknown** can represent a user-defined type. |
+| unknown &#124; undefined | unknown**: parameter information of the corresponding navigation destination page. **unknown** can represent a user-defined type.<br>**undefined**: an invalid index is provided. |
 
 ## getParamByName
 
@@ -212,7 +212,7 @@ getParent(): NavPathStack | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavPathStack](arkts-arkui-navpathstack-c.md) \| null | Navigation path stack of the outer **Navigation** component in which the current **Navigation** component is nested. If there is no outer **Navigation** component., **null** is returned. |
+| [NavPathStack](arkts-arkui-navpathstack-c.md) &#124; null | Navigation path stack of the outer **Navigation** component in which the current **Navigation** component is nested. If there is no outer **Navigation** component., **null** is returned. |
 
 ## getPathStack
 
@@ -257,7 +257,7 @@ moveIndexToTop(index: number, animated?: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | index | number | 是 | NavDestination页面的位置索引。索引值从0开始。 |
-| animated | boolean | 否 | 是否支持转场动画。true：支持转场动画；false：不支持转场动画。默认值：true<br>**适用版本：** 11 |
+| animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>默认值：true<br>**适用版本：** 11 |
 
 ## moveToTop
 
@@ -280,7 +280,7 @@ moveToTop(name: string, animated?: boolean): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | NavDestination页面名称。 |
-| animated | boolean | 否 | 是否支持转场动画。true：支持转场动画；false：不支持转场动画。默认值：true<br>**适用版本：** 11 |
+| animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>默认值：true<br>**适用版本：** 11 |
 
 **返回值：**
 
@@ -328,13 +328,13 @@ pop(animated?: boolean): NavPathInfo | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| animated | boolean | 否 | 是否支持转场动画。true：支持转场动画；false：不支持转场动画。默认值：true<br>**适用版本：** 11 |
+| animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>默认值：true<br>**适用版本：** 11 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavPathInfo](arkts-arkui-navpathinfo-c.md) \| undefined | NavPathInfo**: information about the navigation destination page at the top of the stack. |
+| [NavPathInfo](arkts-arkui-navpathinfo-c.md) &#124; undefined | NavPathInfo**: information about the navigation destination page at the top of the stack.<br>**undefined**: the routing stack is empty. |
 
 ## pop
 
@@ -377,13 +377,13 @@ pop(result: Object, animated?: boolean): NavPathInfo | undefined
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | result | Object | 是 | 页面自定义处理结果。不支持boolean类型。 |
-| animated | boolean | 否 | 是否支持转场动画。true：支持转场动画；false：不支持转场动画。默认值：true |
+| animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>默认值：true |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavPathInfo](arkts-arkui-navpathinfo-c.md) \| undefined | NavPathInfo**: information about the navigation destination page at the top of the stack. |
+| [NavPathInfo](arkts-arkui-navpathinfo-c.md) &#124; undefined | NavPathInfo**: information about the navigation destination page at the top of the stack.<br>**undefined**: the routing stack is empty. |
 
 ## popToIndex
 
@@ -406,7 +406,7 @@ popToIndex(index: number, animated?: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | index | number | 是 | NavDestination页面的位置索引。索引值从0开始。 |
-| animated | boolean | 否 | 是否支持转场动画。true：支持转场动画；false：不支持转场动画。默认值：true<br>**适用版本：** 11 |
+| animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>默认值：true<br>**适用版本：** 11 |
 
 ## popToIndex
 
@@ -430,7 +430,7 @@ popToIndex(index: number, result: Object, animated?: boolean): void
 | --- | --- | --- | --- |
 | index | number | 是 | NavDestination页面的位置索引。索引值从0开始。 |
 | result | Object | 是 | 页面自定义处理结果。不支持boolean类型。 |
-| animated | boolean | 否 | 是否支持转场动画。true：支持转场动画；false：不支持转场动画。默认值：true |
+| animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>默认值：true |
 
 ## popToName
 
@@ -453,7 +453,7 @@ popToName(name: string, animated?: boolean): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | NavDestination页面名称。 |
-| animated | boolean | 否 | 是否支持转场动画。true：支持转场动画；false：不支持转场动画。默认值：true<br>**适用版本：** 11 |
+| animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>默认值：true<br>**适用版本：** 11 |
 
 **返回值：**
 
@@ -483,7 +483,7 @@ popToName(name: string, result: Object, animated?: boolean): number
 | --- | --- | --- | --- |
 | name | string | 是 | NavDestination页面名称。 |
 | result | Object | 是 | 页面自定义处理结果。不支持boolean类型。 |
-| animated | boolean | 否 | 是否支持转场动画。true：支持转场动画；false：不支持转场动画。默认值：true |
+| animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>默认值：true |
 
 **返回值：**
 
@@ -512,7 +512,7 @@ pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
-| animated | boolean | 否 | 是否支持转场动画。true：支持转场动画；false：不支持转场动画。默认值：true |
+| animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>默认值：true |
 
 **返回值：**
 
@@ -589,7 +589,7 @@ pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<
 | --- | --- | --- | --- |
 | name | string | 是 | NavDestination页面名称。 |
 | param | Object | 是 | 开发者设置的NavDestination页面详细参数。 |
-| animated | boolean | 否 | 是否支持转场动画。true：支持转场动画；false：不支持转场动画。默认值：true |
+| animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>默认值：true |
 
 **返回值：**
 
@@ -629,7 +629,7 @@ pushDestinationByName(name: string, param: Object, onPop: import('../api/@ohos.b
 | name | string | 是 | NavDestination页面名称。 |
 | param | Object | 是 | 开发者设置的NavDestination页面详细参数。 |
 | onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | 是 | Callback回调，用于页面出栈时处理返回结果。仅[pop](#pop-1)、[popToName](#poptoname-1)、[popToIndex](#poptoindex-1)中设置result参数后触发。 |
-| animated | boolean | 否 | 是否支持转场动画。true：支持转场动画；false：不支持转场动画。默认值：true |
+| animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>默认值：true |
 
 **返回值：**
 
@@ -667,7 +667,7 @@ pushPath(info: NavPathInfo, animated?: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
-| animated | boolean | 否 | 是否支持转场动画。true：支持转场动画；false：不支持转场动画。传入参数非法时，按true处理。<br>**适用版本：** 11 |
+| animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>传入参数非法时，按true处理。<br>**适用版本：** 11 |
 
 ## pushPath
 
@@ -714,7 +714,7 @@ pushPathByName(name: string, param: unknown, animated?: boolean): void
 | --- | --- | --- | --- |
 | name | string | 是 | NavDestination页面名称。 |
 | param | unknown | 是 | 开发者设置的NavDestination页面详细参数，unknown可以是用户自定义的类型。 |
-| animated | boolean | 否 | 是否支持转场动画。true：支持转场动画；false：不支持转场动画。默认值：true<br>**适用版本：** 11 |
+| animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>默认值：true<br>**适用版本：** 11 |
 
 ## pushPathByName
 
@@ -739,7 +739,7 @@ pushPathByName(name: string, param: Object, onPop: import('../api/@ohos.base').C
 | name | string | 是 | NavDestination页面名称。 |
 | param | Object | 是 | 开发者设置的NavDestination页面详细参数。 |
 | onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | 是 | Callback回调，用于页面出栈时触发该回调处理返回结果。仅[pop](#pop-1)、[popToName](#poptoname-1)、[popToIndex](#poptoindex-1)中设置result参数后触发。 |
-| animated | boolean | 否 | 是否支持转场动画。true：支持转场动画；false：不支持转场动画。默认值：true |
+| animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>默认值：true |
 
 ## removeByIndexes
 
@@ -823,7 +823,7 @@ removeByNavDestinationId(navDestinationId: string): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回是否成功删除该页面， |
+| boolean | 返回是否成功删除该页面，<br>true：删除成功。<br>false：删除失败。 |
 
 ## replaceDestination
 
@@ -884,7 +884,7 @@ replacePath(info: NavPathInfo, animated?: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 | 新栈顶页面参数信息。 |
-| animated | boolean | 否 | 是否支持转场动画。true：支持转场动画；false：不支持转场动画。默认值：true |
+| animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>默认值：true |
 
 ## replacePath
 
@@ -931,7 +931,7 @@ replacePathByName(name: string, param: Object, animated?: boolean): void
 | --- | --- | --- | --- |
 | name | string | 是 | NavDestination页面名称。 |
 | param | Object | 是 | 开发者设置的NavDestination页面详细参数。 |
-| animated | boolean | 否 | 是否支持转场动画。true：支持转场动画；false：不支持转场动画。默认值：true |
+| animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>默认值：true |
 
 ## setInterception
 
@@ -985,8 +985,8 @@ setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pathStack | Array&lt;[NavPathInfo](arkts-arkui-navpathinfo-c.md)&gt; | 是 | 设置当前路由栈中的路由页面信息数组。设置后，将当前路由栈更新为指定内容，并实现路由转场。开发者可在原有栈的基础上批量添加或删除页面。   **说明：**数组长度无限制。 |
-| animated | boolean | 否 | 是否开启转场动画。true：开启转场动画；false：不开启转场动画。默认值：true |
+| pathStack | Array&lt;[NavPathInfo](arkts-arkui-navpathinfo-c.md)&gt; | 是 | 设置当前路由栈中的路由页面信息数组。设置后，将当前路由栈更新为指定内容，并实现路由转场。开发者可在原有栈的基础上批量添加或删除页面。<br>**说明：**<br>数组长度无限制。 |
+| animated | boolean | 否 | 是否开启转场动画。<br>true：开启转场动画；false：不开启转场动画。<br> 默认值：true |
 
 ## size
 
@@ -1008,4 +1008,4 @@ size(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | Stack size. |
+| number | Stack size.<br>Value range: [0, +∞) |

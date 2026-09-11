@@ -33,8 +33,8 @@ advancedBlendMode(effect: BlendMode | Blender, type?: BlendApplyType): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| effect | [BlendMode](arkts-arkui-blendmode-e.md) \| [Blender](arkts-arkui-blender-t-sys.md) | 是 | 入参类型为BlendMode时表示混合模式，默认不进行混合操作。默认值：BlendMode.NONE，即不应用特殊混合效果，组件内容按默认方式绘制。入参类型为Blender时表示混合器类型，用于描述混合效果。需要使用uiEffect模块中的方法创建Blender实例。例如：[uiEffect.createBrightnessBlender](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-uieffect-createbrightnessblender-f-sys.md)。使用自定义object作为入参不会生效。 |
-| type | [BlendApplyType](arkts-arkui-blendapplytype-e.md) | 否 | 混合效果blendMode实现方式是否离屏。默认值：BlendApplyType.FAST    **说明：** 1. 设置为BlendApplyType.FAST，不离屏。 2. 设置为BlendApplyType.OFFSCREEN，会创建当前组件大小的离屏画布，再将当前组件（含子组件）的内容绘制到离屏画布上，再用指定的混合效果（BlendMode或Blender）与下方画布已有内容进行混合。 3. 不离屏情况下对文字类组件中emoji表情不生效。 4. 相比BlendApplyType.OFFSCREEN，设置为BlendApplyType.OFFSCREEN_WITH_BACKGROUND，系统在创建与当前组件大小一致的离屏画布时，会先复制一份带有背景的画布作为初始化底色（BlendApplyType.OFFSCREEN类型的画布初始为透明背景），随后在此基础上进行混合操作。两者在其他功能特性上保持一致。 |
+| effect | [BlendMode](arkts-arkui-blendmode-e.md) &#124; [Blender](arkts-arkui-blender-t-sys.md) | 是 | 入参类型为BlendMode时表示混合模式，默认不进行混合操作。默认值：BlendMode.NONE，即不应用特殊混合效果，组件内容按默认方式绘制。<br>入参类型为Blender时表示混合器类型，用于描述混合效果。<br>需要使用uiEffect模块中的方法创建Blender实例。例如：[uiEffect.createBrightnessBlender](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-uieffect-createbrightnessblender-f-sys.md)。使用自定义object作为入参不会生效。 |
+| type | [BlendApplyType](arkts-arkui-blendapplytype-e.md) | 否 | 混合效果blendMode实现方式是否离屏。<br>默认值：BlendApplyType.FAST <br>**说明：** <br>1. 设置为BlendApplyType.FAST，不离屏。<br>2. 设置为BlendApplyType.OFFSCREEN，会创建当前组件大小的离屏画布，再将当前组件（含子组件）的内容绘制到离屏画布上，再用指定的混合效果（BlendMode或Blender）与下方画布已有内容进行混合。<br>3. 不离屏情况下对文字类组件中emoji表情不生效。<br>4. 相比BlendApplyType.OFFSCREEN，设置为BlendApplyType.OFFSCREEN_WITH_BACKGROUND，系统在创建与当前组件大小一致的离屏画布时，会先复制一份带有背景的画布作为初始化底色（BlendApplyType.OFFSCREEN类型的画布初始为透明背景），随后在此基础上进行混合操作。两者在其他功能特性上保持一致。 |
 
 **返回值：**
 
@@ -85,7 +85,7 @@ edgeLight(params: EdgeLightParams | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | [EdgeLightParams](arkts-arkui-edgelightparams-i-sys.md) \| undefined | 是 | 定义边缘流光效果的位置、长度、强度、颜色和厚度。当params的值为undefined时，移除边缘流光效果。 |
+| params | [EdgeLightParams](arkts-arkui-edgelightparams-i-sys.md) &#124; undefined | 是 | 定义边缘流光效果的位置、长度、强度、颜色和厚度。<br>当params的值为undefined时，移除边缘流光效果。 |
 
 **返回值：**
 
@@ -126,7 +126,7 @@ excludeFromRenderGroup(exclude: boolean | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| exclude | boolean \| undefined | 是 | 设置当前组件及其子组件是否从祖先组件的节点组中剔除。true表示当前组件及其子组件从祖先组件的节点组中剔除，不属于祖先组件的节点组；false表示当前组件及其子组件归属于祖先组件的节点组。当exclude的值为undefined时，按false处理。   **说明：** 需搭配祖先组件设置节点组renderGroup属性使用，单独使用无效果。 |
+| exclude | boolean &#124; undefined | 是 | 设置当前组件及其子组件是否从祖先组件的节点组中剔除。<br>true表示当前组件及其子组件从祖先组件的节点组中剔除，不属于祖先组件的节点组；false表示当前组件及其子组件归属于祖先组件的节点组。<br>当exclude的值为undefined时，按false处理。<br>**说明：** <br>需搭配祖先组件设置节点组renderGroup属性使用，单独使用无效果。 |
 
 **返回值：**
 
@@ -164,14 +164,12 @@ spatialEffect(params: SpatialEffectParams | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | [SpatialEffectParams](arkts-arkui-spatialeffectparams-i-sys.md) \| undefined | 是 | 空间效果参数。 |
+| params | [SpatialEffectParams](arkts-arkui-spatialeffectparams-i-sys.md) &#124; undefined | 是 | 空间效果参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
-
 ## useUnionEffect
 
 ```TypeScript
@@ -194,7 +192,7 @@ useUnionEffect(value: boolean | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean \| undefined | 是 | 表示是否使用祖先组件UnionEffectContainer的融合效果。取值为true时，当前组件使用祖先组件UnionEffectContainer的融合效果，在祖先组件UnionEffectContainer计算形状时会作为UnionEffectContainer的一部分；若当前组件不存在祖先UnionEffectContainer，则设置useUnionEffect为true不产生融合效果。取值为false时，当前组件不使用祖先组件UnionEffectContainer的融合效果。设置为undefined时恢复为不使用祖先组件UnionEffectContainer的融合效果。 |
+| value | boolean &#124; undefined | 是 | 表示是否使用祖先组件UnionEffectContainer的融合效果。<br>取值为true时，当前组件使用祖先组件UnionEffectContainer的融合效果，在祖先组件UnionEffectContainer计算形状时会作为UnionEffectContainer的一部分；若当前组件不存在祖先UnionEffectContainer，则设置useUnionEffect为true不产生融合效果。<br>取值为false时，当前组件不使用祖先组件UnionEffectContainer的融合效果。<br>设置为undefined时恢复为不使用祖先组件UnionEffectContainer的融合效果。 |
 
 **返回值：**
 
@@ -224,8 +222,8 @@ useUnionEffect(value: boolean | undefined, options?: GravityCenterOptions): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean \| undefined | 是 | 是否使用祖先组件UnionEffectContainer的融合效果。取值为true时，当前组件使用祖先组件UnionEffectContainer的融合效果，在祖先组件UnionEffectContainer计算形状时会作为UnionEffectContainer的一部分；若当前组件不存在祖先UnionEffectContainer，则取值为true不产生融合效果。取值为false时，当前组件不使用祖先组件UnionEffectContainer的融合效果。设置为undefined时，恢复为不使用祖先组件UnionEffectContainer的融合效果。 |
-| options | [GravityCenterOptions](arkts-arkui-gravitycenteroptions-i-sys.md) | 否 | 引力中心参数。未设置时，不启用引力中心功能。   **说明：** 此参数必须与[unionMode](arkts-arkui-unioneffectcontainer-attribute.md#unionmode)一起使用，且unionMode须为UnionMode.GRAVITY_UNION，同时value须为true时才生效，单独设置或不满足前提条件时不生效。 |
+| value | boolean &#124; undefined | 是 | 是否使用祖先组件UnionEffectContainer的融合效果。<br>取值为true时，当前组件使用祖先组件UnionEffectContainer的融合效果，在祖先组件UnionEffectContainer计算形状时会作为UnionEffectContainer的一部分；若当前组件不存在祖先UnionEffectContainer，则取值为true不产生融合效果。<br>取值为false时，当前组件不使用祖先组件UnionEffectContainer的融合效果。<br>设置为undefined时，恢复为不使用祖先组件UnionEffectContainer的融合效果。 |
+| options | [GravityCenterOptions](arkts-arkui-gravitycenteroptions-i-sys.md) | 否 | 引力中心参数。<br>未设置时，不启用引力中心功能。<br>**说明：** <br>此参数必须与[unionMode](arkts-arkui-unioneffectcontainer-comp-attribute.md#unionmode)一起使用，且unionMode须为UnionMode.GRAVITY_UNION，同时value须为true时才生效，单独设置或不满足前提条件时不生效。 |
 
 **返回值：**
 

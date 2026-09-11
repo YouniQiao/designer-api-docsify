@@ -2,6 +2,8 @@
 
 Describes the scene node parameters, which are used to provide the name and path in the scene node tree.
 
+@typedef SceneNodeParameters
+
 **Since:** 12
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

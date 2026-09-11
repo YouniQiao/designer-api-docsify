@@ -61,7 +61,7 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayBuffer | ArrayBuffer \| SharedArrayBuffer | 是 | 用于创建Buffer的ArrayBuffer或SharedArrayBuffer对象。 |
+| arrayBuffer | ArrayBuffer &#124; SharedArrayBuffer | 是 | 用于创建Buffer的ArrayBuffer或SharedArrayBuffer对象。 |
 | byteOffset | number | 否 | 字节偏移量。指定从arrayBuffer起始位置偏移的字节数，创建的Buffer从该偏移位置开始。默认值：0。 |
 | length | number | 否 | 字节长度， 默认值:（arrayBuffer.byteLength - byteOffset）。在传入null时字节长度为0。 |
 
@@ -106,7 +106,7 @@ function from(buffer: Buffer | Uint8Array): Buffer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | Buffer \| Uint8Array | 是 | 用于创建新Buffer的Buffer或Uint8Array对象。 |
+| buffer | Buffer &#124; Uint8Array | 是 | 用于创建新Buffer的Buffer或Uint8Array对象。 |
 
 **返回值：**
 
@@ -151,7 +151,7 @@ function from(object: Object, offsetOrEncoding: number | string, length: number)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | object | Object | 是 | 支持Symbol.toPrimitive或valueOf()的对象，valueOf()或Symbol.toPrimitive的返回值支持string和ArrayBuffer等类型。 |
-| offsetOrEncoding | number \| string | 是 | 字节偏移量或编码格式。当object的valueOf()返回值为ArrayBuffer时，作为字节偏移量；其他情况下作为编码格式。 |
+| offsetOrEncoding | number &#124; string | 是 | 字节偏移量或编码格式。当object的valueOf()返回值为ArrayBuffer时，作为字节偏移量；其他情况下作为编码格式。 |
 | length | number | 是 | 字节长度（此入参仅在object的valueOf()返回值为ArrayBuffer时生效，取值范围：0 &lt;= length &lt;= ArrayBuffer.byteLength，超出范围时报错: 10200001）。其他情况下可填任意number类型值，该参数不会对结果产生影响。 |
 
 **返回值：**

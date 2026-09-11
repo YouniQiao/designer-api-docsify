@@ -42,7 +42,7 @@ Converts asymmetric key data to a key pair object. This API uses an asynchronous
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
@@ -115,15 +115,15 @@ Converts data into an asymmetric key pair. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
-| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) &#124; null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) &#124; null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the key pair obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
@@ -186,7 +186,7 @@ Converts asymmetric key data to a key pair object. This API uses a promise to re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
@@ -259,8 +259,8 @@ Converts data into an asymmetric key pair. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
-| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) &#124; null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) &#124; null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
 
 **Return value:**
 
@@ -272,7 +272,7 @@ Converts data into an asymmetric key pair. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
@@ -310,7 +310,7 @@ convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair
 
 Converts data into an asymmetric key pair. This API returns the result synchronously.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, convertKey. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, convertKey. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -322,8 +322,8 @@ Converts data into an asymmetric key pair. This API returns the result synchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Public key material. If no public key needs to be converted, set this parameter to **null**. Before API version 10, only **DataBlob** is supported. Since API version 10, **null** can be passed in. |
-| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Private key material. If no private key needs to be converted, set this parameter to **null**. Before API version 10, only **DataBlob** is supported. Since API version 10, **null** can be passed in. |
+| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) &#124; null | Yes | Public key material. If no public key needs to be converted, set this parameter to **null**. Before API version 10, only **DataBlob** is supported. Since API version 10, **null** can be passed in. |
+| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) &#124; null | Yes | Private key material. If no private key needs to be converted, set this parameter to **null**. Before API version 10, only **DataBlob** is supported. Since API version 10, **null** can be passed in. |
 
 **Return value:**
 
@@ -335,7 +335,7 @@ Converts data into an asymmetric key pair. This API returns the result synchrono
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
@@ -376,7 +376,7 @@ convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>
 
 Converts data into an asymmetric key pair. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by
 > the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM
@@ -398,8 +398,8 @@ Converts data into an asymmetric key pair. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | string \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. |
-| priKey | string \| null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**.Note: The public key and private key materials cannot be both null or empty strings. |
+| pubKey | string &#124; null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. |
+| priKey | string &#124; null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**.<br>Note: The public key and private key materials cannot be both null or empty strings. |
 
 **Return value:**
 
@@ -411,7 +411,7 @@ Converts data into an asymmetric key pair. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
@@ -464,7 +464,7 @@ convertPemKey(pubKey: string | null, priKey: string | null, password: string): P
 
 Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by
 > the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM
@@ -487,8 +487,8 @@ Converts data into an asymmetric key pair. Encrypted private keys are supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | string \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. |
-| priKey | string \| null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**.Note: The public key and private key materials cannot be both null or empty strings. |
+| pubKey | string &#124; null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. |
+| priKey | string &#124; null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**.<br>Note: The public key and private key materials cannot be both null or empty strings. |
 | password | string | Yes | Password used to decrypt the private key. |
 
 **Return value:**
@@ -501,7 +501,7 @@ Converts data into an asymmetric key pair. Encrypted private keys are supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
@@ -549,13 +549,13 @@ convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair
 
 Converts data into an asymmetric key pair. This API returns the result synchronously.
 
-> **NOTE：**
+> **NOTE:**
 > The precautions for using **convertPemKeySync** are the same as those for **convertPemKey**. For details, see
 > the description of
 > [convertPemKey](#convertpemkey)
 > .
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -567,8 +567,8 @@ Converts data into an asymmetric key pair. This API returns the result synchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | string \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. |
-| priKey | string \| null | Yes | Private key material. If no private key needs to be converted, set this parameter to **null**.Note: The public key and private key materials cannot be both null or empty strings. |
+| pubKey | string &#124; null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. |
+| priKey | string &#124; null | Yes | Private key material. If no private key needs to be converted, set this parameter to **null**.<br>Note: The public key and private key materials cannot be both null or empty strings. |
 
 **Return value:**
 
@@ -580,7 +580,7 @@ Converts data into an asymmetric key pair. This API returns the result synchrono
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
@@ -636,12 +636,12 @@ convertPemKeySync(pubKey: string | null, priKey: string | null, password: string
 
 Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key.
 
-> **NOTE：**
+> **NOTE:**
 > The precautions for using **convertPemKeySync** are the same as those for
 > [convertPemKey](#convertpemkey-1)
 > .
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 18
 
@@ -653,8 +653,8 @@ Converts data into an asymmetric key pair. Encrypted private keys are supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | string \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. |
-| priKey | string \| null | Yes | Private key material. If no private key needs to be converted, set this parameter to **null**. Note: **pubKey** and **priKey** cannot be **null** at the same time. |
+| pubKey | string &#124; null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. |
+| priKey | string &#124; null | Yes | Private key material. If no private key needs to be converted, set this parameter to **null**.<br>Note: **pubKey** and **priKey** cannot be **null** at the same time. |
 | password | string | Yes | Password used to decrypt the private key. |
 
 **Return value:**
@@ -667,7 +667,7 @@ Converts data into an asymmetric key pair. Encrypted private keys are supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
@@ -781,7 +781,7 @@ Generates a random key pair using this asymmetric key generator. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
@@ -808,7 +808,7 @@ generateKeyPairSync(): KeyPair
 
 Generates a random key pair using this asymmetric key generator. This API returns the result synchronously.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, generateKeyPair. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, generateKeyPair. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -826,7 +826,7 @@ Generates a random key pair using this asymmetric key generator. This API return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 

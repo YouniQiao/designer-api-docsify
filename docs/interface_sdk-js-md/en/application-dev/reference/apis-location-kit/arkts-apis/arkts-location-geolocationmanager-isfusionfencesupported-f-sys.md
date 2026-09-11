@@ -26,7 +26,7 @@ Check whether the fusion fence service is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if fusion fence service is available, returns `false` otherwise. |
 
 **Error codes:**
 

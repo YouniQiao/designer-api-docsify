@@ -23,13 +23,13 @@ Array of shadow colors for data segments.
 
 Default value: same as the value of **valueColors**
 
-**NOTE：**
+**NOTE:**
 
 If the number of the set shadow colors is less than that of the data segments, the number of the displayed shadow colors is the same as the former.
 
 If the number of the set shadow colors is greater than that of the data segments, the number of the displayed shadow colors is the same as the latter.
 
-**Type:** Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md)&gt;
+**Type:** Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [LinearGradient](arkts-arkui-lineargradient-c.md)&gt;
 
 **Default:** Consistent with valueColors
 

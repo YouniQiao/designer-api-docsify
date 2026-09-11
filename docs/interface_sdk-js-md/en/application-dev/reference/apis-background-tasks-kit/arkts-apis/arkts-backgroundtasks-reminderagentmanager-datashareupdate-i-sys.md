@@ -24,7 +24,7 @@ equalTo: Record<string, number | string | boolean>
 
 Filter criteria. Currently, only **equalTo** is supported.
 
-**Type:** Record&lt;string, number \| string \| boolean&gt;
+**Type:** Record&lt;string, number &#124; string &#124; boolean&gt;
 
 **Since:** 11
 

@@ -36,7 +36,7 @@ value?: string | ValueType[]
 
 过滤值，默认为undefined。
 
-**类型：** string \| [ValueType](../../apis-arkdata/arkts-apis/arkts-arkdata-valuetype-t.md)[]
+**类型：** string &#124; [ValueType](../../apis-arkdata/arkts-apis/arkts-arkdata-valuetype-t.md)[]
 
 **起始版本：** 15
 

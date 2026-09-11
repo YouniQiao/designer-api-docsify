@@ -38,7 +38,7 @@ Queries whether the USB is disabled.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if USB is disabled; |
+| boolean | Returns **true** if USB is disabled;<br>returns **false** otherwise. |
 
 **Error codes:**
 

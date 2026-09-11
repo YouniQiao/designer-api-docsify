@@ -1,6 +1,6 @@
 # EnrollIntelligentVoiceEngineDescriptor (System API)
 
-Describes enroll intelligent voice engine.
+Describes enroll intelligent voice engine. @typedef EnrollIntelligentVoiceEngineDescriptor
 
 **Since:** 10
 

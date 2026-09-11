@@ -53,26 +53,26 @@ import { avSession } from '@kit.AVSessionKit';
 | [getHistoricalSessionDescriptors](arkts-avsession-avsession-gethistoricalsessiondescriptors-f-sys.md) | Get history avsession records. These sessions have been destroyed. |
 | [getSessionDescriptors](arkts-avsession-avsession-getsessiondescriptors-f-sys.md) | Get session descriptors of the system based on different session category. |
 | [getSessionDescriptorsForAudioZone](arkts-avsession-avsession-getsessiondescriptorsforaudiozone-f-sys.md) | Get session descriptors for a unique audio zone across different session category. |
-| off | Unregister session create callback |
-| off | Unregister session destroy callback |
-| off | Unregister top session changed callback |
-| off | Unregister Session service death callback, notifying the application to clean up resources. |
-| off | Unregister distributed session changed callback |
-| off | Unregister device discovery callback |
-| off | Unregister device offline callback |
-| off | UnRegister log event callback. |
-| off | Unregisters a system callback for the device connection phase. |
+| [off](arkts-avsession-avsession-off-f-sys.md#offsessioncreate) | Unregister session create callback |
+| [off](arkts-avsession-avsession-off-f-sys.md#offsessiondestroy) | Unregister session destroy callback |
+| [off](arkts-avsession-avsession-off-f-sys.md#offtopsessionchange) | Unregister top session changed callback |
+| [off](arkts-avsession-avsession-off-f-sys.md#offsessionservicedie) | Unregister Session service death callback, notifying the application to clean up resources. |
+| [off](arkts-avsession-avsession-off-f-sys.md#offdistributedsessionchange) | Unregister distributed session changed callback |
+| [off](arkts-avsession-avsession-off-f-sys.md#offdeviceavailable) | Unregister device discovery callback |
+| [off](arkts-avsession-avsession-off-f-sys.md#offdeviceoffline) | Unregister device offline callback |
+| [off](arkts-avsession-avsession-off-f-sys.md#offdevicelogevent) | UnRegister log event callback. |
+| [off](arkts-avsession-avsession-off-f-sys.md#offdevicestatechanged) | Unregisters a system callback for the device connection phase. |
 | [offActiveSessionChanged](arkts-avsession-avsession-offactivesessionchanged-f-sys.md) | Unregister active session changed callback. |
 | [offSystemCommonEvent](arkts-avsession-avsession-offsystemcommonevent-f-sys.md) | Unregister system common event callback |
-| on | Register session create callback |
-| on | Register session destroy callback |
-| on | Register top session changed callback |
-| on | Register Session service death callback, notifying the application to clean up resources. |
-| on | Register distributed session changed callback |
-| on | Register device discovery callback |
-| on | Register device offline callback |
-| on | Register log event callback. |
-| on | Registers a system callback for the device connection phase. The callback includes information such as error codes, connection status, radar errors, and user behavior codes. |
+| [on](arkts-avsession-avsession-on-f-sys.md#onsessioncreate) | Register session create callback |
+| [on](arkts-avsession-avsession-on-f-sys.md#onsessiondestroy) | Register session destroy callback |
+| [on](arkts-avsession-avsession-on-f-sys.md#ontopsessionchange) | Register top session changed callback |
+| [on](arkts-avsession-avsession-on-f-sys.md#onsessionservicedie) | Register Session service death callback, notifying the application to clean up resources. |
+| [on](arkts-avsession-avsession-on-f-sys.md#ondistributedsessionchange) | Register distributed session changed callback |
+| [on](arkts-avsession-avsession-on-f-sys.md#ondeviceavailable) | Register device discovery callback |
+| [on](arkts-avsession-avsession-on-f-sys.md#ondeviceoffline) | Register device offline callback |
+| [on](arkts-avsession-avsession-on-f-sys.md#ondevicelogevent) | Register log event callback. |
+| [on](arkts-avsession-avsession-on-f-sys.md#ondevicestatechanged) | Registers a system callback for the device connection phase. The callback includes information such as error codes, connection status, radar errors, and user behavior codes. |
 | [onActiveSessionChanged](arkts-avsession-avsession-onactivesessionchanged-f-sys.md) | Register active session changed callback. |
 | [onSystemCommonEvent](arkts-avsession-avsession-onsystemcommonevent-f-sys.md) | Register system common event callback |
 | [sendSystemAVKeyEvent](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md) | Send system media key event.The system automatically selects the recipient. |

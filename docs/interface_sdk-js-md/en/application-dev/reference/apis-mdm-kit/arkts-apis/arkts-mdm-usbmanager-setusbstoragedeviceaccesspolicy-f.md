@@ -14,7 +14,7 @@ function setUsbStorageDeviceAccessPolicy(admin: Want, usbPolicy: UsbPolicy): voi
 
 Sets the USB storage device (baseClass = 0x08) access policy.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Before calling the API, read and write operations on the USB storage device should be suspended to ensure
 > operational stability and data integrity. Otherwise, unexpected exceptions may occur.

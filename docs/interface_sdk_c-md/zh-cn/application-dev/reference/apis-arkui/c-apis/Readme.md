@@ -215,6 +215,7 @@
     - [ArkUI_NodeContent*](capi-arkui-nativemodule-arkui-nodecontent8h.md)
     - [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)
     - [ArkUI_DrawContext](capi-arkui-nativemodule-arkui-drawcontext.md)
+    - [ArkUI_Context](capi-arkui-nativemodule-arkui-context.md)
     - [ArkUI_Context*](capi-arkui-nativemodule-arkui-context8h.md)
     - [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)
     - [ArkUI_DrawableDescriptor](capi-arkui-nativemodule-arkui-drawabledescriptor.md)

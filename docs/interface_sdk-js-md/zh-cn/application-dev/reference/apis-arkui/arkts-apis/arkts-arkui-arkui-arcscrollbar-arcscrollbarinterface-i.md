@@ -45,4 +45,3 @@ ArcScrollBar的构造函数。
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md) |  |

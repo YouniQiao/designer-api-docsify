@@ -2,6 +2,8 @@
 
 Describes the settings for vignette effects.
 
+@typedef VignetteSettings
+
 **Since:** 22
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

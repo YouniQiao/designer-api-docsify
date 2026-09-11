@@ -575,7 +575,7 @@ getLineMetrics(lineNumber: number): LineMetrics | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [LineMetrics](arkts-arkgraphics2d-text-linemetrics-i.md) \| undefined | 如果指定的行号有效且度量信息存在，则返回一个包含该行度量数据的LineMetrics对象；如果行号无效或无法获取度量信息，则返回undefined。 |
+| [LineMetrics](arkts-arkgraphics2d-text-linemetrics-i.md) &#124; undefined | 如果指定的行号有效且度量信息存在，则返回一个包含该行度量数据的LineMetrics对象；如果行号无效或无法获取度量信息，则返回undefined。 |
 
 **示例**
 
@@ -765,7 +765,7 @@ getParagraphStyle(): ParagraphStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | 段落的样式配置。 |
+| [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | 段落的样式配置。<br>其中`textStyle.color`、`textStyle.textShadows.color`、`textStyle.backgroundRect.color`、`textStyle.decoration.color`属性：返回32位无符号整型颜色数值。示例：返回值`4278190080`，对应纯黑色十六进制颜色值`0xFF000000`，等价于[common2D.Color](arkts-arkgraphics2d-common2d-color-i.md)对象参数：alpha=255、red=0、green=0、blue=0，示例中提供numberToRGBA转换方法作为参考。 |
 
 **示例**
 

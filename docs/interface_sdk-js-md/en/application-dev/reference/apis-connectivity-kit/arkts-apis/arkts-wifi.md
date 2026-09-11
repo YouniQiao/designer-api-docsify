@@ -91,12 +91,12 @@ import { wifi } from '@kit.ConnectivityKit';
 | [getSupportedFeatures](arkts-connectivity-wifi-getsupportedfeatures-f-sys.md) | Obtains the features supported by this device. |
 | [isHotspotActive](arkts-connectivity-wifi-ishotspotactive-f-sys.md) | Checks whether Wi-Fi hotspot is active on a device. |
 | [isHotspotDualBandSupported](arkts-connectivity-wifi-ishotspotdualbandsupported-f-sys.md) | Checks whether a device serving as a Wi-Fi hotspot supports both the 2.4 GHz and 5 GHz Wi-Fi. |
-| off | Unsubscribe Wi-Fi stream change events. |
-| off | Unsubscribe Wi-Fi hotspot sta join events. |
-| off | Unsubscribe Wi-Fi hotspot sta leave events. |
-| on | Subscribe Wi-Fi stream change events. |
-| on | Subscribe Wi-Fi hotspot sta join events. |
-| on | Subscribe Wi-Fi hotspot sta leave events. |
+| [off](arkts-connectivity-wifi-off-f-sys.md#offstreamchange) | Unsubscribe Wi-Fi stream change events. |
+| [off](arkts-connectivity-wifi-off-f-sys.md#offhotspotstajoin) | Unsubscribe Wi-Fi hotspot sta join events. |
+| [off](arkts-connectivity-wifi-off-f-sys.md#offhotspotstaleave) | Unsubscribe Wi-Fi hotspot sta leave events. |
+| [on](arkts-connectivity-wifi-on-f-sys.md#onstreamchange) | Subscribe Wi-Fi stream change events. |
+| [on](arkts-connectivity-wifi-on-f-sys.md#onhotspotstajoin) | Subscribe Wi-Fi hotspot sta join events. |
+| [on](arkts-connectivity-wifi-on-f-sys.md#onhotspotstaleave) | Subscribe Wi-Fi hotspot sta leave events. |
 | [reassociate](arkts-connectivity-wifi-reassociate-f-sys.md) | Re-associate to current network. |
 | [reconnect](arkts-connectivity-wifi-reconnect-f-sys.md) | Re-connects to current network. |
 | [removeAllNetwork](arkts-connectivity-wifi-removeallnetwork-f-sys.md) | Removes all the saved Wi-Fi configurations. |
@@ -116,7 +116,7 @@ import { wifi } from '@kit.ConnectivityKit';
 | [WifiP2PConfig](arkts-connectivity-wifi-wifip2pconfig-i.md) | P2P config. @interface WifiP2PConfig |
 | [WifiP2pDevice](arkts-connectivity-wifi-wifip2pdevice-i.md) | P2P device information. |
 | [WifiP2pGroupInfo](arkts-connectivity-wifi-wifip2pgroupinfo-i.md) | P2P group information. @interface WifiP2pGroupInfo |
-| [WifiP2pLinkedInfo](arkts-connectivity-wifi-wifip2plinkedinfo-i.md) | P2P linked information. |
+| [WifiP2pLinkedInfo](arkts-connectivity-wifi-wifip2plinkedinfo-i.md) | P2P linked information. @typedef WifiP2pLinkedInfo |
 | [WifiScanInfo](arkts-connectivity-wifi-wifiscaninfo-i.md) | Describes the scanned Wi-Fi information. |
 
 <!--Del-->

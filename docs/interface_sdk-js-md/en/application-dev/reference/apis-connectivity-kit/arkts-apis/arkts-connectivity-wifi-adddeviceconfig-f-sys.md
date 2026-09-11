@@ -38,7 +38,7 @@ Adds Wi-Fi connection configuration to the device.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns { |
+| Promise&lt;number&gt; | Returns `networkId` if the configuration is added; returns `-1` otherwise. |
 
 **Examples**
 

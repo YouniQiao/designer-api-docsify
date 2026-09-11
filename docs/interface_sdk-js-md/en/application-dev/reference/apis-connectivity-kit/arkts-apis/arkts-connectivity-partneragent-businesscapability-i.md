@@ -2,6 +2,8 @@
 
 Describes the business capabilities of the application.
 
+@typedef BusinessCapability
+
 **Since:** 23
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core

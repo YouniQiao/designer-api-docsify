@@ -60,7 +60,7 @@ function acquireShareData(missionId: number): Promise<Record<string, Object>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;{ [key: string]: Object | > } The promise returned by the function.<br>**适用版本：** 10 |
+| Promise&lt;{ [key: string]: Object }&gt; | The promise returned by the function.<br>**适用版本：** 10 |
 | Promise&lt;Record&lt;string, Object&gt;&gt; | Promise used to return the API call result and the shared data. You can perform error handling or other custom processing.<br>**适用版本：** 11 |
 
 **错误码：**

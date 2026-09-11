@@ -6,11 +6,13 @@
 > 
 > 从API version 10开始支持，从API version 12开始废弃，建议使用录屏接口AVScreenCapture替代。
 
+@typedef CaptureFilterOptions
+
 **起始版本：** 10
 
 **废弃版本：** 12
 
-**替代接口：** OH_AVScreenCapture
+**替代接口：** OH_AVScreenCapture in native interface.
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
@@ -34,6 +36,6 @@ Filter by stream usages. But not allow to capture voice streams.
 
 **废弃版本：** 12
 
-**替代接口：** OH_AVScreenCapture
+**替代接口：** OH_AVScreenCapture in native interface.
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture

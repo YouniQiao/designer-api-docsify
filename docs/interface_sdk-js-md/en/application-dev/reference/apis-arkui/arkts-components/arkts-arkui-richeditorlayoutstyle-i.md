@@ -1,6 +1,6 @@
 # RichEditorLayoutStyle
 
-Image layout information.
+Defines image layout information.
 
 **Since:** 11
 
@@ -17,11 +17,13 @@ Image layout information.
 borderRadius?: Dimension | BorderRadiuses
 ```
 
-Radius of the rounded corners of the component.
+Border radius type, used to describe the border radius of a component.
 
-If of the **Dimension** type, this parameter cannot be set in percentage.
+Default value: the border radius is 0.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)
+When the parameter is of the Dimension type, setting it in Percentage form is not supported.
+
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)
 
 **Since:** 11
 
@@ -37,11 +39,13 @@ If of the **Dimension** type, this parameter cannot be set in percentage.
 margin?: Dimension | Margin
 ```
 
-Margins in different directions of the component.
+Margin type, used to describe the margins of a component in different directions.
 
-When the parameter is of the **Dimension** type, the four margins take effect.
+Default value: the margins in all four directions are 0.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [Margin](../arkts-apis/arkts-arkui-margin-t.md)
+When the parameter is of the Dimension type, the margins in all four directions take effect simultaneously.
+
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [Margin](../arkts-apis/arkts-arkui-margin-t.md)
 
 **Since:** 11
 

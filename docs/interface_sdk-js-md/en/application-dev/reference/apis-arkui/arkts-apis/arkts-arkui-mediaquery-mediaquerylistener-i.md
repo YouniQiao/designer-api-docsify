@@ -64,7 +64,7 @@ on(type: 'change', callback: Callback<MediaQueryResult>): void
 
 Registers a media query listener. The callback is triggered when the media attributes change.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The **on** or **off** function cannot be called in the registered callback.
 

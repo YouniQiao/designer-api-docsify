@@ -46,7 +46,7 @@ constructor(options?: RectShapeOptions | RoundRectShapeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RectShapeOptions](arkts-arkui-arkui-shape-rectshapeoptions-i.md) \| [RoundRectShapeOptions](arkts-arkui-arkui-shape-roundrectshapeoptions-i.md) | 否 | 矩形形状参数。不传入时使用默认尺寸，默认宽度0vp，默认高度0vp，圆角半径默认值0vp。 |
+| options | [RectShapeOptions](arkts-arkui-arkui-shape-rectshapeoptions-i.md) &#124; [RoundRectShapeOptions](arkts-arkui-arkui-shape-roundrectshapeoptions-i.md) | 否 | 矩形形状参数。不传入时使用默认尺寸，默认宽度0vp，默认高度0vp，圆角半径默认值0vp。 |
 
 ## radius
 
@@ -70,7 +70,7 @@ radius(radius: number | string | Array<number | string>): RectShape
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| radius | number \| string \| Array&lt;number \| string&gt; | 是 | 矩形形状的圆角半径。仅接受数组的前四个元素，分别为矩形左上、右上、左下、右下的圆角半径。类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。单位：vp 取值为异常值时按照0vp处理。 |
+| radius | number &#124; string &#124; Array&lt;number &#124; string&gt; | 是 | 矩形形状的圆角半径。仅接受数组的前四个元素，分别为矩形左上、右上、左下、右下的圆角半径。<br> 类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。<br>单位：vp <br>取值为异常值时按照0vp处理。 |
 
 **返回值：**
 
@@ -100,7 +100,7 @@ radiusHeight(rHeight: number | string): RectShape
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rHeight | number \| string | 是 | 矩形形状圆角半径的高度。类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。单位：vp 取值为异常值时按照0vp处理。 |
+| rHeight | number &#124; string | 是 | 矩形形状圆角半径的高度。<br> 类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。<br>单位：vp <br>取值为异常值时按照0vp处理。 |
 
 **返回值：**
 
@@ -130,7 +130,7 @@ radiusWidth(rWidth: number | string): RectShape
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rWidth | number \| string | 是 | 矩形形状圆角半径的宽度。类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。单位：vp 取值为异常值时按照0vp处理。 |
+| rWidth | number &#124; string | 是 | 矩形形状圆角半径的宽度。<br> 类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。<br>单位：vp <br>取值为异常值时按照0vp处理。 |
 
 **返回值：**
 

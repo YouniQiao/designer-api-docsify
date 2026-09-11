@@ -36,7 +36,7 @@ Cancel AI image generation task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | number | Yes | The session id for cancel an AI image generation task. Value: range: [0, +∞] |
+| sessionId | number | Yes | The session id for cancel an AI image generation task.<br>Value: range: [0, +∞] |
 
 ## getModelSupportStyles
 
@@ -80,7 +80,7 @@ User use complaint menu to complain the result of an AI-generated image task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | number | Yes | The session id of AI image generation task. Value: range: [0, +∞] |
+| sessionId | number | Yes | The session id of AI image generation task.<br>Value: range: [0, +∞] |
 | request | [GenerateImageTaskParams](arkts-arkui-imagegeneration-generateimagetaskparams-i-sys.md) | Yes | The origin request for AI-generated image task. |
 | result | [GenerateImageTaskResult](arkts-arkui-imagegeneration-generateimagetaskresult-i-sys.md) | Yes | The result for AI-generated image task. |
 
@@ -105,6 +105,6 @@ Request AI image generation task to get the generated image.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | number | Yes | The session id for requesting an AI image generation task. Value: range:[0, +∞] |
+| sessionId | number | Yes | The session id for requesting an AI image generation task.<br>Value: range:[0, +∞] |
 | params | [GenerateImageTaskParams](arkts-arkui-imagegeneration-generateimagetaskparams-i-sys.md) | Yes | Parameters for requesting an AI image generation task. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GenerateImageTaskPartialResult](arkts-arkui-imagegeneration-generateimagetaskpartialresult-i-sys.md)&gt; | Yes | the callback used to return the GenerateImageTaskPartialResult. |

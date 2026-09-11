@@ -2,7 +2,7 @@
 
 Response type of the menu.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The system follows the priority order below when determining the menu type to display during text interactions: &gt;
 
@@ -64,7 +64,7 @@ The menu is displayed when the component is selected.
 DEFAULT = 3
 ```
 
-When this type is registered but **RIGHT_CLICK**, **LONG_PRESS**, or **SELECT** types are not registered, this type will be triggered and displayed for right-click, long press, mouse selection, and [selection](arkts-arkui-text-attribute.md#selection) API calls.
+When this type is registered but **RIGHT_CLICK**, **LONG_PRESS**, or **SELECT** types are not registered, this type will be triggered and displayed for right-click, long press, mouse selection, and [selection](arkts-arkui-text-comp-attribute.md#selection) API calls.
 
 **Since:** 15
 

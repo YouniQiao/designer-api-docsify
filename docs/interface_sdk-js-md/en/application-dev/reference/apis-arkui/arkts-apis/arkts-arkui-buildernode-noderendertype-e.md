@@ -2,7 +2,7 @@
 
 Enumerates the node rendering types.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Currently, the **RENDER_TYPE_TEXTURE** type takes effect only for the
 > [XComponentNode](arkts-arkui-xcomponentnode-c.md) and the [BuilderNode](arkts-arkui-buildernode-c.md) holding a

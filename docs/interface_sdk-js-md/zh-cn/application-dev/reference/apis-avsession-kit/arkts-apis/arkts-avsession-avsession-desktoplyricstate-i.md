@@ -2,6 +2,8 @@
 
 桌面歌词状态。
 
+@typedef DesktopLyricState
+
 **起始版本：** 23
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core

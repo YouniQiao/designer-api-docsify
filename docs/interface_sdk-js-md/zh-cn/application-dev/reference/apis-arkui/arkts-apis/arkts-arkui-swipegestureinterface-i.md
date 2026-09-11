@@ -31,14 +31,12 @@
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | { fingers?: number; direction?: SwipeDirection; speed?: number } | 否 | 设置快滑事件参数。    - fingers：触发快滑的最少手指数。   默认值：1 取值范围：[1, 10]     - direction：触发快滑手势的滑动方向。   默认值：SwipeDirection.All     - speed：识别快滑的最小速度。   默认值：100VP/s 取值范围：(0, +∞)    **说明：** 当滑动速度的值小于等于0时，会被转化为默认值。 |
+| value | { fingers?: number; direction?: SwipeDirection; speed?: number } | 否 | 设置快滑事件参数。<br> - fingers：触发快滑的最少手指数。<br>默认值：1 <br>取值范围：[1, 10] <br> - direction：触发快滑手势的滑动方向。<br>默认值：SwipeDirection.All <br> - speed：识别快滑的最小速度。<br>默认值：100VP/s <br>取值范围：(0, +∞) <br>**说明：** <br>当滑动速度的值小于等于0时，会被转化为默认值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) |  |
-
 ## [[Call]]
 
 ```TypeScript
@@ -65,8 +63,6 @@
 
 | 类型 | 说明 |
 | --- | --- |
-| [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) |  |
-
 ## onAction
 
 ```TypeScript
@@ -91,4 +87,3 @@ Swipe手势识别成功时触发回调。
 
 | 类型 | 说明 |
 | --- | --- |
-| [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) |  |

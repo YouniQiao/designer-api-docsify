@@ -25,7 +25,7 @@ Border radius of the linear progress indicator.
 
 Value range: [0, strokeWidth/2] Default value: **strokeWidth/2**
 
-**Type:** [PX](../arkts-apis/arkts-arkui-px-t.md) \| [VP](../arkts-apis/arkts-arkui-vp-t.md) \| [LPX](../arkts-apis/arkts-arkui-lpx-t.md) \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**Type:** [PX](../arkts-apis/arkts-arkui-px-t.md) &#124; [VP](../arkts-apis/arkts-arkui-vp-t.md) &#124; [LPX](../arkts-apis/arkts-arkui-lpx-t.md) &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Default:** strokeWidth / 2
 

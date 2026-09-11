@@ -6,7 +6,7 @@ export declare const InsightIntentPage: ((intentInfo: PageIntentDecoratorInfo) =
 
 Decorates a page in the application as an intent, enabling AI systems to swiftly navigate to that page. For details on the parameters supported by this decorator, see [PageIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-pageintentdecoratorinfo-i.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This decorator is only applicable to struct pages.
 

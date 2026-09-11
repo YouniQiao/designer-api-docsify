@@ -39,7 +39,7 @@ Adds data of a specified data type and content to the current data record. You c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
 **Examples**
 
@@ -121,7 +121,7 @@ If **value** is of the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-ap
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types;  3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types; <br>3.Parameter verification failed. |
 
 **Examples**
 
@@ -261,7 +261,7 @@ Obtains data of the specified type from the data record.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types; <br>3. Parameter verification failed. |
 
 **Examples**
 
@@ -333,7 +333,7 @@ Obtains the type of this **UnfiedRecord**. The data obtained by [getRecords](ark
 
 | Type | Description |
 | --- | --- |
-| string | Data type obtained. For details, see [UniformDataType]{ |
+| string | Data type obtained. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md). |
 
 **Examples**
 
@@ -375,7 +375,7 @@ Obtains all the data types in the data record. This API can be called using the 
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Array of [UniformDataType]{ |
+| Array&lt;string&gt; | Array of [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)s obtained. |
 
 **Examples**
 

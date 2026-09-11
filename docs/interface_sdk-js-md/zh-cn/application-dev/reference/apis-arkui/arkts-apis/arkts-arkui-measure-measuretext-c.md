@@ -54,7 +54,7 @@ static measureText(options: MeasureOptions): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 文本宽度。 |
+| number | 文本宽度。<br>单位：px |
 
 **示例**
 
@@ -123,7 +123,7 @@ static measureTextSize(options: MeasureOptions): SizeOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| [SizeOptions](arkts-arkui-sizeoptions-i.md) | 返回文本所占布局宽度和高度。 |
+| [SizeOptions](arkts-arkui-sizeoptions-i.md) | 返回文本所占布局宽度和高度。<br>**说明：**<br>文本宽度以及高度返回值单位均为px。 |
 
 **示例**
 

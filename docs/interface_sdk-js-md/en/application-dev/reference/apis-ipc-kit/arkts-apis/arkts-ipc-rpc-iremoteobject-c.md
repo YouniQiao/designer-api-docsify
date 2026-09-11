@@ -24,7 +24,7 @@ Adds a callback for receiving death notifications of the remote object.
 
 **Deprecated since:** 9
 
-**Substitutes:** registerDeathRecipient(recipient: DeathRecipient, flags: int)
+**Substitutes:** registerDeathRecipient(recipient: DeathRecipient, flags: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -202,7 +202,7 @@ Removes the callback used to receive death notifications of the remote object.
 
 **Deprecated since:** 9
 
-**Substitutes:** unregisterDeathRecipient(recipient: DeathRecipient, flags: int)
+**Substitutes:** unregisterDeathRecipient(recipient: DeathRecipient, flags: number)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -303,7 +303,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** sendMessageRequest(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
+**Substitutes:** sendMessageRequest(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -339,7 +339,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** sendMessageRequest(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
+**Substitutes:** sendMessageRequest(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -376,7 +376,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** sendMessageRequest(code: int, data: MessageSequence, reply: MessageSequence,
+**Substitutes:** sendMessageRequest(code: number, data: MessageSequence, reply: MessageSequence,
      *     options: MessageOption, callback: AsyncCallback&lt;RequestResult&gt;)
 
 **System capability:** SystemCapability.Communication.IPC.Core

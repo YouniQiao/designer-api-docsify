@@ -2,6 +2,8 @@
 
 Parameters for target searching.
 
+@typedef SearchParams
+
 **起始版本：** 21
 
 **系统能力：** SystemCapability.Mechanic.Core

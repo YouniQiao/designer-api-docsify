@@ -2,7 +2,7 @@
 
 Defines a **TLSSocketConnection** object, that is, the connection between the TLSSocket client and the server. Before calling TLSSocketConnection APIs, you need to obtain a **TLSSocketConnection** object.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The TLSSocket client can call related APIs through the **TLSSocketConnection** object only after a connection is
 > successfully established between the TLSSocket client and the server.
@@ -300,7 +300,7 @@ getLocalAddress(): Promise<NetAddress>
 
 Obtains the local socket address of a **TLSSocketConnection** connection. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Call this API only after the **TLSSocketServer** connection is successfully established.
 
@@ -860,7 +860,7 @@ getSocketFd(): Promise<number>
 
 Obtains the file descriptor of a TLSSocketConnection connection. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Call this API only after the **TLSSocketServer** connection is successfully established.
 > 
@@ -945,7 +945,7 @@ Unsubscribes from **message** events of the **TLSSocketConnection** object. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'message' | Yes | Event type.    **message**: message receiving event. |
+| type | 'message' | Yes | Event type.<br> **message**: message receiving event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | No | Callback used to return the result. If the operation is successful, the TLS socket connection information is returned. If the operation fails, an error message is returned.<br>**Since:** 11 |
 
 **Error codes:**
@@ -1021,7 +1021,7 @@ Unsubscribes from **close** events of the **TLSSocketConnection** object. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'close' | Yes | Event type.    **close**: close event. |
+| type | 'close' | Yes | Event type.<br> **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
@@ -1089,7 +1089,7 @@ Unsubscribes from **error** events of the **TLSSocketConnection** object. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type.    **error**: error event. |
+| type | 'error' | Yes | Event type.<br> **error**: error event. |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
@@ -1157,7 +1157,7 @@ Subscribes to **message** events of the **TLSSocketConnection** object. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'message' | Yes | Event type.    **message**: message receiving event. |
+| type | 'message' | Yes | Event type.<br> **message**: message receiving event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the TLS socket connection information is returned. If the operation fails, an error message is returned.<br>**Since:** 11 |
 
 **Error codes:**
@@ -1229,7 +1229,7 @@ Subscribes to **close** events of the **TLSSocketConnection** object. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'close' | Yes | Event type.    **close**: close event. |
+| type | 'close' | Yes | Event type.<br> **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
@@ -1292,7 +1292,7 @@ Subscribes to **error** events of the **TLSSocketConnection** object. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type.    **error**: error event. |
+| type | 'error' | Yes | Event type.<br> **error**: error event. |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
@@ -1356,7 +1356,7 @@ Sends a message to the client after a **TLSSocketServer** connection is establis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string \| ArrayBuffer | Yes | Parameters for sending data over a TLS socket server connection.<br>**Since:** 12 |
+| data | string &#124; ArrayBuffer | Yes | Parameters for sending data over a TLS socket server connection.<br>**Since:** 12 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
@@ -1429,7 +1429,7 @@ Sends a message to the server after a **TLSSocketServer** connection is establis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string \| ArrayBuffer | Yes | Parameters for sending data over a TLS socket server connection.<br>**Since:** 12 |
+| data | string &#124; ArrayBuffer | Yes | Parameters for sending data over a TLS socket server connection.<br>**Since:** 12 |
 
 **Return value:**
 

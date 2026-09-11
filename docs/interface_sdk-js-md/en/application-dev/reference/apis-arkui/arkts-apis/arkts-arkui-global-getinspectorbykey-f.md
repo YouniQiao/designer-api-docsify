@@ -31,4 +31,3 @@ Obtains all attributes of the component with the specified ID.
 
 | Type | Description |
 | --- | --- |
-| string |  |

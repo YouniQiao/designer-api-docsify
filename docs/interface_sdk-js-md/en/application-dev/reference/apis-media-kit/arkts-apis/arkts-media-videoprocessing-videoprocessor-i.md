@@ -30,7 +30,7 @@ Gets the current status of video processor features.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[VideoProcessorStatus](arkts-media-videoprocessing-videoprocessorstatus-i.md) \| undefined&gt; | Promise used to return VideoProcessorStatus or undefined. |
+| Promise&lt;[VideoProcessorStatus](arkts-media-videoprocessing-videoprocessorstatus-i.md) &#124; undefined&gt; | Promise used to return VideoProcessorStatus or undefined. |
 
 **Error codes:**
 

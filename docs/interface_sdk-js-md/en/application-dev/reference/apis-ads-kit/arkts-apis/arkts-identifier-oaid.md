@@ -2,7 +2,7 @@
 
 This module provides the capability of obtaining and resetting the Open Anonymous Device Identifier (OAID).
 
-> **NOTE：**
+> **NOTE:**
 
 > To use the API for obtaining the OAID, you need to
 > [request user authorization](../../../security/AccessToken/request-user-authorization.md) (the permission is

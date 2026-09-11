@@ -176,7 +176,7 @@ Provides type definitions for <b>NativeNode</b> APIs.
 | [ArkUI_GestureCollectInterceptInfo* OH_ArkUI_NodeEvent_GetGestureCollectInterceptInfo(ArkUI_NodeEvent* nodeEvent)](#oh_arkui_nodeevent_getgesturecollectinterceptinfo) | - | Obtains the <b>ArkUI_GestureCollectInterceptInfo</b> object from a specified <b>ArkUI_NodeEvent</b> object. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_SetChildMountPolicy(ArkUI_NodeHandle node, OH_ArkUI_NodeMountPolicy policy)](#oh_arkui_nativemodule_setchildmountpolicy) | - | Set the subnode mounting policy of the target node. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_GetChildMountPolicy(ArkUI_NodeHandle node, OH_ArkUI_NodeMountPolicy* policy)](#oh_arkui_nativemodule_getchildmountpolicy) | - | Get the current child mount policy of the specified node. |
-| [ArkUI_ErrorCode OH_ArkUI_NodeUtils_SetUiDvsyncSwitch(ArkUI_ContextHandle context, bool enable)](#oh_arkui_nodeutils_setuidvsyncswitch) | - | Set UI Dvsync switch. Calling this function on a non-UI thread will abort. |
+| [ArkUI_ErrorCode OH_ArkUI_NodeUtils_SetUiDvsyncSwitch(ArkUI_ContextHandle context, bool enable)](#oh_arkui_nodeutils_setuidvsyncswitch) | - | Sets the UI Dvsync switch.When enabled, the system responds to Vsync requests more promptly and executes rendering tasks more frequently.It is typically enabled at the start of an animation in a self-rendering framework and disabled when the animationends, to ensure smoother animation effects while preventing frequent Vsync requests from affecting otherfunctionalities. Calling this function on a non-UI thread will cause the application to exit. |
 
 ## Enum type description
 
@@ -4218,7 +4218,7 @@ ArkUI_ErrorCode OH_ArkUI_NodeUtils_SetUiDvsyncSwitch(ArkUI_ContextHandle context
 
 **Description**
 
-Set UI Dvsync switch. Calling this function on a non-UI thread will abort.
+Sets the UI Dvsync switch.When enabled, the system responds to Vsync requests more promptly and executes rendering tasks more frequently.It is typically enabled at the start of an animation in a self-rendering framework and disabled when the animationends, to ensure smoother animation effects while preventing frequent Vsync requests from affecting otherfunctionalities. Calling this function on a non-UI thread will cause the application to exit.
 
 **Since**: 26.1.0
 
@@ -4226,13 +4226,13 @@ Set UI Dvsync switch. Calling this function on a non-UI thread will abort.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_ContextHandle context | [in] Pointer to ArkUI_ContextHandle. |
-| bool enable | [in] whether enable Dvsync. |
+| ArkUI_ContextHandle context | [in] Pointer to an ArkUI_ContextHandle. |
+| bool enable | [in] Whether to enable Dvsync. The value true enables Dvsync, and false disables Dvsync. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Error code.           <ul><li>{@link ARKUI_ERROR_CODE_NO_ERROR} Success.           </li><li>{@link ARKUI_ERROR_CODE_CAPI_INIT_ERROR} if CAPI init error.           </li><li>{@link ARKUI_ERROR_CODE_PARAM_INVALID} Function parameter exception.</li></ul> |
+| ArkUI_ErrorCode | Returns the result.      <ul><li>{@link ARKUI_ERROR_CODE_NO_ERROR} The operation is successful.      </li><li>{@link RKUI_ERROR_CODE_CAPI_INIT_ERROR} Failed to initialize the CAPI.      </li><li>{@link ARKUI_ERROR_CODE_PARAM_INVALID} The function parameter is invalid.</li></ul> |
 
 

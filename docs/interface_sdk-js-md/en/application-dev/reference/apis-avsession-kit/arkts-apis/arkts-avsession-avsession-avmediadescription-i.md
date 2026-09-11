@@ -270,7 +270,7 @@ mediaImage?: image.PixelMap | string
 
 The image of this media asset displayed in the media center. It can be a PixelMap or a URI formatted string,
 
-**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| string
+**Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) &#124; string
 
 **Since:** 10
 

@@ -6,6 +6,8 @@ export type LiveFormExtensionContext = _LiveFormExtensionContext.default
 
 The context of live form extension. It allows access to liveFormExtension-specific resources.
 
+@typedef { _LiveFormExtensionContext.default }
+
 **Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.

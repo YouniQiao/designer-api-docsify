@@ -14,7 +14,7 @@ function setAppHttpProxy(httpProxy: HttpProxy): void
 
 Sets the application-level HTTP proxy configuration.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > If you want to use the proxy information configured by this API, set **usingProxy** in
 > [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) to **true** to enable proxy forwarding. This

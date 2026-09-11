@@ -2,7 +2,7 @@
 
 Defines a pen, which is used to describe the style and color to outline a shape.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This module uses the physical pixel unit, px.
 > 
@@ -53,7 +53,7 @@ Copies a **Pen** object to create a new one.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## getAlpha
 
@@ -174,7 +174,7 @@ Obtains the source path outline drawn using this pen and represents it using a d
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## getHexColor
 
@@ -300,7 +300,7 @@ Sets an alpha value for this pen.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setAntiAlias
 
@@ -324,7 +324,7 @@ Enables anti-aliasing for this pen. Anti-aliasing makes the edges of the content
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## setBlendMode
 
@@ -348,7 +348,7 @@ Sets a blend mode for this pen.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setCapStyle
 
@@ -372,7 +372,7 @@ Sets the cap style for this pen. If this API is not called, the default cap styl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setColor
 
@@ -396,7 +396,7 @@ Sets a color for this pen.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setColor
 
@@ -423,7 +423,7 @@ Sets a color for this pen. This API provides better performance than [setColor](
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## setColor
 
@@ -460,7 +460,7 @@ Sets the color and standard color gamut for this pen. The difference between thi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | color4f | [common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md) | Yes | Color in the ARGB format. The value of each color channel is a floating point number ranging from 0.0 to 1.0. Values above 1.0 default to **1.0**, and values below 0.0 default to **0.0**. |
-| colorSpace | [colorSpaceManager.ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) \| null | Yes | Standard color gamut object. **null** indicates SRGB. |
+| colorSpace | [colorSpaceManager.ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) &#124; null | Yes | Standard color gamut object. **null** indicates SRGB. |
 
 ## setColorFilter
 
@@ -478,13 +478,13 @@ Sets a color filter for this pen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [ColorFilter](arkts-arkgraphics2d-drawing-colorfilter-c.md) \| null | Yes | Defines a color filter. If **null** is passed in, the color filter is cleared.<br>**Since:** 20 |
+| filter | [ColorFilter](arkts-arkgraphics2d-drawing-colorfilter-c.md) &#124; null | Yes | Defines a color filter. If **null** is passed in, the color filter is cleared.<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## setDither
 
@@ -508,7 +508,7 @@ Enables dithering for this pen. Dithering make the drawn color more realistic.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## setImageFilter
 
@@ -526,13 +526,13 @@ Sets an image filter for this pen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | Yes | Image filter. If **null** is passed in, the image filter effect of the pen will be cleared. |
+| filter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) &#124; null | Yes | Image filter. If **null** is passed in, the image filter effect of the pen will be cleared. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## setJoinStyle
 
@@ -556,7 +556,7 @@ Sets the join style for this pen. If this API is not called, the default join st
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setMaskFilter
 
@@ -574,13 +574,13 @@ Adds a mask filter for this pen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) \| null | Yes | Mask filter. If **null** is passed in, the mask filter is cleared.<br>**Since:** 20 |
+| filter | [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) &#124; null | Yes | Mask filter. If **null** is passed in, the mask filter is cleared.<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## setMiterLimit
 
@@ -604,7 +604,7 @@ Sets the maximum ratio allowed between the sharp corner length of a polyline and
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## setPathEffect
 
@@ -622,13 +622,13 @@ Sets the path effect for this pen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| null | Yes | Implements a path effect. If **null** is passed in, the path filter is cleared.<br>**Since:** 20 |
+| effect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) &#124; null | Yes | Implements a path effect. If **null** is passed in, the path filter is cleared.<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## setShaderEffect
 
@@ -646,13 +646,13 @@ Sets the shader effect for this pen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| null | Yes | ShaderEffect** object. If **null** is passed in, the shader effect will be cleared.<br>**Since:** 20 |
+| shaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) &#124; null | Yes | ShaderEffect** object. If **null** is passed in, the shader effect will be cleared.<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## setShadowLayer
 
@@ -670,13 +670,13 @@ Sets a shadow layer for this pen. The shadow layer effect takes effect only when
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shadowLayer | [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| null | Yes | Implements a shadow layer. If **null** is passed in, the shadow layer is cleared.<br>**Since:** 20 |
+| shadowLayer | [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) &#124; null | Yes | Implements a shadow layer. If **null** is passed in, the shadow layer is cleared.<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## setStrokeWidth
 
@@ -700,4 +700,4 @@ Sets the stroke width for this pen. The value **0** is treated as an unusually t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |

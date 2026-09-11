@@ -64,7 +64,7 @@ enableReverseBypass(reverse: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
 ## getBypassRules
 
@@ -130,7 +130,7 @@ insertBypassRule(bypassRule: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
 ## insertDirectRule
 
@@ -157,13 +157,13 @@ insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 否 | 与schemeFilter匹配的URL会直接与服务器相连。默认值：MATCH_ALL_SCHEMES。传入undefined或null会抛出异常错误码401。 |
+| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 否 | 与schemeFilter匹配的URL会直接与服务器相连。<br>默认值：MATCH_ALL_SCHEMES。<br>传入undefined或null会抛出异常错误码401。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
 ## insertProxyRule
 
@@ -202,13 +202,13 @@ host是带括号的IPv6字面量、IPv4字面量或由点分隔的一个或多�
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | proxyRule | string | 是 | URL要使用的代理。 |
-| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 否 | 与schemeFilter匹配的URL会使用代理。默认值：MATCH_ALL_SCHEMES。传入undefined或null会抛出异常错误码401。 |
+| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 否 | 与schemeFilter匹配的URL会使用代理。<br>默认值：MATCH_ALL_SCHEMES。<br>传入undefined或null会抛出异常错误码401。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
 ## isReverseBypassEnabled
 
@@ -228,4 +228,4 @@ isReverseBypassEnabled(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | [enableReverseBypass]{ |
+| boolean | [enableReverseBypass](#enablereversebypass)的参数值。参数值为false，表示与[insertBypassRule](#insertbypassrule)中的bypassRule匹配的URL会绕过代理，参数值为true时，表示与[insertBypassRule](#insertbypassrule)中的bypassRule匹配的URL会使用代理。 |

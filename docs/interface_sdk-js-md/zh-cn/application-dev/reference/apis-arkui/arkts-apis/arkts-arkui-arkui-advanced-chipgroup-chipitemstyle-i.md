@@ -129,7 +129,7 @@ Chip尺寸，使用时需要从Chip组件引入ChipSize类型。
 
 为undefined时，使用默认值。
 
-**类型：** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) \| [SizeOptions](arkts-arkui-sizeoptions-i.md)
+**类型：** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) &#124; [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **起始版本：** 12
 

@@ -23,7 +23,7 @@ Minimum recognition distance, in vp.
 
 Default value: **5**
 
-**NOTE：**
+**NOTE:**
 
 If the value is less than or equal to 0, it will be converted to the default value.
 

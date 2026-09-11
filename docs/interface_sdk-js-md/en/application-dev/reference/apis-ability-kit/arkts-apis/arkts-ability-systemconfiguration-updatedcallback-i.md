@@ -2,6 +2,8 @@
 
 System configuration updated callback.
 
+@typedef UpdatedCallback
+
 **Since:** 24
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

@@ -72,7 +72,7 @@ static createBlurImageFilter(sigmaX: number, sigmaY: number,
 | sigmaX | number | 是 | 表示沿x轴方向上高斯模糊的标准差，必须大于0，该参数为浮点数。单位为物理像素px。 |
 | sigmaY | number | 是 | 表示沿y轴方向上高斯模糊的标准差，必须大于0，该参数为浮点数。单位为物理像素px。 |
 | tileMode | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | 是 | 表示在边缘处应用的平铺模式。 |
-| imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 | 要与当前图像滤波器叠加的输入滤波器，默认为null，表示直接将当前图像滤波器作用于原始图像。 |
+| imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) &#124; null | 否 | 要与当前图像滤波器叠加的输入滤波器，默认为null，表示直接将当前图像滤波器作用于原始图像。 |
 
 **返回值：**
 
@@ -84,7 +84,7 @@ static createBlurImageFilter(sigmaX: number, sigmaY: number,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createComposeImageFilter
 
@@ -128,7 +128,7 @@ static createFromColorFilter(colorFilter: ColorFilter, imageFilter?: ImageFilter
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | colorFilter | [ColorFilter](arkts-arkgraphics2d-drawing-colorfilter-c.md) | 是 | 表示颜色滤波器。 |
-| imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 | 要与当前图像滤波器叠加的输入滤波器，默认为null，表示直接将当前图像滤波器作用于原始图像。<br>**适用版本：** 20 |
+| imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) &#124; null | 否 | 要与当前图像滤波器叠加的输入滤波器，默认为null，表示直接将当前图像滤波器作用于原始图像。<br>**适用版本：** 20 |
 
 **返回值：**
 
@@ -140,7 +140,7 @@ static createFromColorFilter(colorFilter: ColorFilter, imageFilter?: ImageFilter
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## createFromImage
 
@@ -159,8 +159,8 @@ static createFromImage(pixelmap: image.PixelMap, srcRect?: common2D.Rect | null,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 图像对象。 |
-| srcRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) \| null | 否 | 可选参数，默认为null。此滤波器要使用的图像的像素区域，如果为null，则使用pixelmap全部区域。 |
-| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) \| null | 否 | 可选参数，默认为null。要进行渲染的区域，如果为null，则和srcRect保持一致。 |
+| srcRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) &#124; null | 否 | 可选参数，默认为null。此滤波器要使用的图像的像素区域，如果为null，则使用pixelmap全部区域。 |
+| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) &#124; null | 否 | 可选参数，默认为null。要进行渲染的区域，如果为null，则和srcRect保持一致。 |
 
 **返回值：**
 
@@ -210,7 +210,7 @@ static createOffsetImageFilter(dx: number, dy: number, input?: ImageFilter | nul
 | --- | --- | --- | --- |
 | dx | number | 是 | 水平方向的平移距离，该参数为浮点数。单位为物理像素px。 |
 | dy | number | 是 | 竖直方向的平移距离，该参数为浮点数。单位为物理像素px。 |
-| input | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | 否 | 需要进行平移的滤波器。默认为null，如果为null，则将无滤波效果的绘制结果进行平移。 |
+| input | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) &#124; null | 否 | 需要进行平移的滤波器。默认为null，如果为null，则将无滤波效果的绘制结果进行平移。 |
 
 **返回值：**
 

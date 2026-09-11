@@ -1,6 +1,6 @@
 # WakeupSourceFile (System API)
 
-Describes wakeup source file information.
+Describes wakeup source file information. @typedef WakeupSourceFile
 
 **Since:** 12
 

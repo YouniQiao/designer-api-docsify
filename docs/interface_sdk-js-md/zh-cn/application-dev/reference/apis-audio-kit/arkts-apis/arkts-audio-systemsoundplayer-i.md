@@ -4,6 +4,8 @@
 
 SystemSoundPlayer需要和[@ohos.multimedia.systemSoundManager](arkts-multimedia-systemsoundmanager.md)配合使用，才能完成管理系统音效的功能。
 
+@typedef SystemSoundPlayer
+
 **起始版本：** 23
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core

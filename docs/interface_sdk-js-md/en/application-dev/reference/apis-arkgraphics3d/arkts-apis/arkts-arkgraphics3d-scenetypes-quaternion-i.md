@@ -2,6 +2,8 @@
 
 A mathematical notation for representing spatial rotations of elements in 3D space. Compared with Euler angles, a quaternion has advantages in numerical stability and avoiding the gimbal lock problem.
 
+@typedef Quaternion
+
 **Since:** 12
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

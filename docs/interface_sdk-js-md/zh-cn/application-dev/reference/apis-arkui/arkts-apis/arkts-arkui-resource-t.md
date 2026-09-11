@@ -6,6 +6,8 @@ declare type Resource = import('../api/global/resource').Resource
 
 定义接口限制的数据类型。
 
+@typedef { import('../api/global/resource').Resource } Resource
+
 **起始版本：** 11
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。

@@ -2,6 +2,8 @@
 
 Defines optional capabilities supported by an agent.
 
+@typedef AgentCapabilities
+
 **Since:** 24
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core

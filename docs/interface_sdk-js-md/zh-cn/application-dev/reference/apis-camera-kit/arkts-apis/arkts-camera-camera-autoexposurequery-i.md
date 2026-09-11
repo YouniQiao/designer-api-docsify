@@ -2,7 +2,7 @@
 
 针对设备的自动曝光特性提供了一系列查询功能。   
 > 
-> - 本模块接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素
+> - 本模块接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素@since版本号大于内层元素的情况，不影响接口使用。
 
 **起始版本：** 12
 
@@ -32,7 +32,7 @@ getExposureBiasRange(): Array<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;number&gt; | 获取补偿范围的数组。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| Array&lt;number&gt; | 获取补偿范围的数组。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -98,7 +98,7 @@ isExposureModeSupported(aeMode: ExposureMode): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 获取是否支持曝光模式，true为支持，false为不支持。接口调用失败会抛出相应错误码并返回undefined，错误码类型[CameraErrorCode]{ |
+| boolean | 获取是否支持曝光模式，true为支持，false为不支持。接口调用失败会抛出相应错误码并返回undefined，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 

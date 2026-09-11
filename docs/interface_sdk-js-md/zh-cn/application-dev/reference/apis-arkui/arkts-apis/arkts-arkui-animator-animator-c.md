@@ -51,7 +51,7 @@ static create(options: AnimatorOptions): AnimatorResult
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 **示例**
 
@@ -96,7 +96,7 @@ static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | 是 | 定义动画选项。AnimatorOptions适用于需要完整自定义所有动画参数的场景；SimpleAnimatorOptions适用于仅需指定起点和终点的简易动画场景，其余参数使用默认值。 |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) &#124; [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | 是 | 定义动画选项。AnimatorOptions适用于需要完整自定义所有动画参数的场景；SimpleAnimatorOptions适用于仅需指定起点和终点的简易动画场景，其余参数使用默认值。 |
 
 **返回值：**
 
@@ -108,7 +108,7 @@ static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 **示例**
 

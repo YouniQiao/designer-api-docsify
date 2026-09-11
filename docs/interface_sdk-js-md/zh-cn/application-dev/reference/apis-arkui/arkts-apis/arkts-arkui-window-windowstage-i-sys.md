@@ -84,7 +84,7 @@ setImageForRecent(imageResource: number | image.PixelMap, value: ImageFit): Prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| imageResource | number \| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 应用自定义的图片资源，可传入资源id或PixelMap位图。传入资源id时，图片资源需放在resources/base/media目录下，通过\\$r资源访问方式获取对应图片的资源id，这里以获取startIcon图片的资源id为例给出示意：\\$r("app.media.startIcon").id。 |
+| imageResource | number &#124; [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 应用自定义的图片资源，可传入资源id或PixelMap位图。传入资源id时，图片资源需放在resources/base/media目录下，通过\&#36;r资源访问方式获取对应图片的资源id，这里以获取startIcon图片的资源id为例给出示意：\&#36;r("app.media.startIcon").id。 |
 | value | ImageFit | 是 | 应用自定义图片的填充方式。 |
 
 **返回值：**
@@ -154,7 +154,7 @@ setImageForRecent(imgResourceId: number, value: ImageFit): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| imgResourceId | number | 是 | 应用自定义图片的资源id，图片资源需放在resources/base/media目录下，通过`\\$r`资源访问方式获取对应图片的资源id，这里以获取startIcon图片的资源id为例给出示意：`\\$r("app.media.startIcon").id`。 |
+| imgResourceId | number | 是 | 应用自定义图片的资源id，图片资源需放在resources/base/media目录下，通过`\&#36;r`资源访问方式获取对应图片的资源id，这里以获取startIcon图片的资源id为例给出示意：`\&#36;r("app.media.startIcon").id`。 |
 | value | ImageFit | 是 | 应用自定义图片的填充方式。 |
 
 **返回值：**

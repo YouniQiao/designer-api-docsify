@@ -8,7 +8,7 @@ Creates a **KVManager** object to obtain KV store information. Before calling an
 
 **Substitutes:** KVManager
 
-**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+**System capability:** SystemCapability.DistributedDataManager.KVStore.Core @version 1
 
 ## Modules to Import
 

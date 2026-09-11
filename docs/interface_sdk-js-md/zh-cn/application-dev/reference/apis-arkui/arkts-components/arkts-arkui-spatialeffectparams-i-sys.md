@@ -29,7 +29,7 @@
 occlusionWeight?: number
 ```
 
-空间效果的遮挡权重。取值范围:[0, 1]。默认值:0。
+空间效果的遮挡权重。<br>取值范围:[0, 1]。默认值:0。
 
 **类型：** number
 
@@ -51,7 +51,7 @@ position: SpatialPosition | number
 
 由角点或深度值定义的空间位置。
 
-**类型：** [SpatialPosition](arkts-arkui-spatialposition-i-sys.md) \| number
+**类型：** [SpatialPosition](arkts-arkui-spatialposition-i-sys.md) &#124; number
 
 **起始版本：** 26.0.0
 

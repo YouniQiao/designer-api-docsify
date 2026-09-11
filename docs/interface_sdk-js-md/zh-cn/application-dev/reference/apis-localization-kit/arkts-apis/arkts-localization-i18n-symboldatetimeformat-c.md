@@ -75,7 +75,7 @@ public format(date?: Date | number): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | Date \| number | 否 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。默认值：系统时间。 |
+| date | Date &#124; number | 否 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。<br>默认值：系统时间。 |
 
 **返回值：**
 
@@ -116,8 +116,8 @@ public formatRange(startDate: Date | number | bigint, endDate: Date | number | b
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startDate | Date \| number \| bigint | 是 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。 |
-| endDate | Date \| number \| bigint | 是 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。 |
+| startDate | Date &#124; number &#124; bigint | 是 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。 |
+| endDate | Date &#124; number &#124; bigint | 是 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。 |
 
 **返回值：**
 
@@ -161,8 +161,8 @@ public formatRangeToParts(startDate: Date | number | bigint, endDate: Date | num
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startDate | Date \| number \| bigint | 是 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。 |
-| endDate | Date \| number \| bigint | 是 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。 |
+| startDate | Date &#124; number &#124; bigint | 是 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。 |
+| endDate | Date &#124; number &#124; bigint | 是 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。 |
 
 **返回值：**
 
@@ -205,7 +205,7 @@ public formatToParts(date?: Date | number): Intl.DateTimeFormatPart[]
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | Date \| number | 否 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。默认值：系统时间。 |
+| date | Date &#124; number | 否 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。<br>默认值：系统时间。 |
 
 **返回值：**
 
@@ -247,7 +247,7 @@ public parse(text: string, lenientMode: boolean): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 待解析的本地化时间日期字符串。 |
-| lenientMode | boolean | 是 | 是否采用宽松模式，true表示采用宽松模式，false表示不采用宽松模式。宽松模式下，能够处理不符合常规逻辑的时间日期值，如"5月32日"会自动转换成"6月1日"进行解析。 |
+| lenientMode | boolean | 是 | 是否采用宽松模式，true表示采用宽松模式，false表示不采用宽松模式。<br>宽松模式下，能够处理不符合常规逻辑的时间日期值，如"5月32日"会自动转换成"6月1日"进行解析。 |
 
 **返回值：**
 

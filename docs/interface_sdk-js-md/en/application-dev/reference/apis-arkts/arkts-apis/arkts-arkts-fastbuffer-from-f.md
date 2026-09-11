@@ -61,7 +61,7 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayBuffer | ArrayBuffer \| SharedArrayBuffer | Yes | The ArrayBuffer or SharedArrayBuffer to create a view from |
+| arrayBuffer | ArrayBuffer &#124; SharedArrayBuffer | Yes | The ArrayBuffer or SharedArrayBuffer to create a view from |
 | byteOffset | number | No | byteOffset [byteOffset = 0] Index of first byte to expose |
 | length | number | No | length [length = arrayBuffer.byteLength - byteOffset] Number of bytes to expose |
 
@@ -108,7 +108,7 @@ Copies the passed buffer data onto a new FastBuffer instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | The buffer to copy data from |
+| buffer | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; Uint8Array | Yes | The buffer to copy data from |
 
 **Return value:**
 

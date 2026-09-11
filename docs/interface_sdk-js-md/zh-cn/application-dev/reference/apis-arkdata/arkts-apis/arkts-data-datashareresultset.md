@@ -5,8 +5,9 @@
 ## 使用说明
 
 需要通过调用  
- [query](arkts-arkdata-datashare-datasharehelper-i-sys.md#query)接口获取DataShareResultSet对象。  
- ```ts
+ [query](arkts-arkdata-datashare-datasharehelper-i-sys.md#query)接口获取DataShareResultSet对象。
+
+```ts
  import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
  import { DataShareResultSet, dataShare, dataSharePredicates } from '@kit.ArkData';
  import { BusinessError } from '@kit.BasicServicesKit';
@@ -52,7 +53,7 @@ import { DataShareResultSet, DataType } from '@kit.ArkData';
 
 | 名称 | 说明 |
 | --- | --- |
-| [DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md) | 提供通过查询数据库生成的结果集的相关访问方法。列或键名称作为字符串数组返回，其中字符串的顺序与结果集中的列或键的顺序相同。 |
+| [DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md) | 提供通过查询数据库生成的结果集的相关访问方法。<br> <br>列或键名称作为字符串数组返回，其中字符串的顺序与结果集中的列或键的顺序相同。 |
 <!--DelEnd-->
 
 <!--Del-->

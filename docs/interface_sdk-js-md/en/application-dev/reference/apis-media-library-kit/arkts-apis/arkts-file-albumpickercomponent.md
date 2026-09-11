@@ -2,12 +2,15 @@
 
 The **AlbumPickerComponent** embedded in the UI of an application allows the application to access the albums in the
  user directory without any permission.
- Note that **AlbumPickerComponent** does not support nesting. Additionally, prevent overlaying components with the
+
+Note that **AlbumPickerComponent** does not support nesting. Additionally, prevent overlaying components with the
  **overlay** attribute or of higher levels on top it, as this will prevent it from receiving gesture events.
- This component must be used together with [PhotoPickerComponent](arkts-medialibrary-file-photopickercomponent-photopickercomponent-s.md). When a user
+
+This component must be used together with [PhotoPickerComponent](arkts-medialibrary-file-photopickercomponent-photopickercomponent-s.md). When a user
  selects an album by using the **AlbumPickerComponent**, the **PhotoPickerComponent** is instructed to update the
  images and videos in the album.
- > **NOTE**
+
+> **NOTE**
  >
  > - This component does not support [same-layer rendering](../../../web/web-same-layer.md).
 

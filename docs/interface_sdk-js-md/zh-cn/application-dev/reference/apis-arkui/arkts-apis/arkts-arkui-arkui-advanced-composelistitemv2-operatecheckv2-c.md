@@ -34,7 +34,7 @@ OperateCheckV2的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [OperateCheckV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2options-i.md) | 否 | 列表项右侧元素为Switch、CheckBox、Radio属性配置。默认不设置或设置为undefined时，按各属性的默认效果创建对象。 |
+| options | [OperateCheckV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2options-i.md) | 否 | 列表项右侧元素为Switch、CheckBox、Radio属性配置。<br>默认不设置或设置为undefined时，按各属性的默认效果创建对象。 |
 
 ## onChange
 

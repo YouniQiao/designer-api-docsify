@@ -14,7 +14,7 @@ function onBatteryChange(callback: Callback<BatteryInfo>): void
 
 订阅远端设备电量状态变化事件。
 
-只有支持蓝牙标准协议定义的电量服务（UUID：0000180F-0000-1000-8000-00805F9B34FB）的BLE远端设备才支持上报电量信息，不可与connection.on('batteryChange')混用。调用此接口会立即上报已连接电量服务设备的最新有效电量信息，后续仅当远端设备电量信息发生变化时上报电量信息。
+只有支持蓝牙标准协议定义的电量服务（UUID：0000180F-0000-1000-8000-00805F9B34FB）的BLE远端设备才支持上报电量信息，不可与[connection.on('batteryChange')](arkts-connectivity-connection-on-f.md#onbatterychange)混用。调用此接口会立即上报已连接电量服务设备的最新有效电量信息，后续仅当远端设备电量信息发生变化时上报电量信息。
 
 **起始版本：** 26.0.0
 

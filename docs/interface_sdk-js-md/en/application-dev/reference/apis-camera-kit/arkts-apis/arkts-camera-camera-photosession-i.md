@@ -237,7 +237,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to **PhotoSession** error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -262,7 +262,7 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 
 Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -287,7 +287,7 @@ on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): vo
 
 Subscribes to smooth zoom state change events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -339,7 +339,7 @@ on(type: 'autoDeviceSwitchStatusChange', callback: AsyncCallback<AutoDeviceSwitc
 
 Subscribes to automatic camera switch status change events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -364,7 +364,7 @@ on(type: 'systemPressureLevelChange', callback: AsyncCallback<SystemPressureLeve
 
 Subscribes to system pressure level change events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 

@@ -2,7 +2,7 @@
 
 Defines the divider style of the list or list item group.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer element
@@ -29,7 +29,8 @@ Color of the divider. Anonymous Object Rectification.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
-**Default:** 0x08000000 [since 18]
+**Default:**
+- API version 18+: 0x08000000
 
 **Since:** 7
 
@@ -47,11 +48,12 @@ endMargin?: Length
 
 Distance between the divider and the end edge of the list. Anonymous Object Rectification.
 
-<p>&lt;strong&gt;Default value&lt;/strong&gt;: **0**Unit: vp &lt;strong&gt;NOTE&lt;/strong&gt; If this parameter is set to a negative number or a percentage, the default value will be used. If &lt;strong&gt;endMargin&lt;/strong&gt; and &lt;strong&gt;startMargin&lt;/strong&gt; add up to a value that exceeds the column width, they will be set to &lt;strong&gt;0&lt;/strong&gt;. </p>
+<p>&lt;strong&gt;Default value&lt;/strong&gt;: **0**<br>Unit: vp <br>&lt;strong&gt;NOTE&lt;/strong&gt; <br>If this parameter is set to a negative number or a percentage, the default value will be used. <br>If &lt;strong&gt;endMargin&lt;/strong&gt; and &lt;strong&gt;startMargin&lt;/strong&gt; add up to a value that exceeds the column width, they will be set to &lt;strong&gt;0&lt;/strong&gt;. </p>
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
-**Default:** 0vp [since 18]
+**Default:**
+- API version 18+: 0vp
 
 **Since:** 7
 
@@ -69,11 +71,12 @@ startMargin?: Length
 
 Distance between the divider and the start edge of the list. Anonymous Object Rectification.
 
-<p>&lt;strong&gt;Default value&lt;/strong&gt;: **0**Unit: vp &lt;strong&gt;NOTE&lt;/strong&gt; If this parameter is set to a negative number or a percentage, the default value will be used. If &lt;strong&gt;endMargin&lt;/strong&gt; and &lt;strong&gt;startMargin&lt;/strong&gt; add up to a value that exceeds the column width, they will be set to &lt;strong&gt;0&lt;/strong&gt;. </p>
+<p>&lt;strong&gt;Default value&lt;/strong&gt;: **0**<br>Unit: vp <br>&lt;strong&gt;NOTE&lt;/strong&gt; <br>If this parameter is set to a negative number or a percentage, the default value will be used. <br>If &lt;strong&gt;endMargin&lt;/strong&gt; and &lt;strong&gt;startMargin&lt;/strong&gt; add up to a value that exceeds the column width, they will be set to &lt;strong&gt;0&lt;/strong&gt;. </p>
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
-**Default:** 0vp [since 18]
+**Default:**
+- API version 18+: 0vp
 
 **Since:** 7
 
@@ -89,9 +92,9 @@ Distance between the divider and the start edge of the list. Anonymous Object Re
 strokeWidth: Length
 ```
 
-Width of the divider. Unit: vp Anonymous Object Rectification.
+Width of the divider. <br>Unit: vp Anonymous Object Rectification.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; If this parameter is set to a negative number, a percentage, or a value greater than or equal to the length of the list content area, the value &lt;strong&gt;0&lt;/strong&gt; will be used. </p>
+<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>If this parameter is set to a negative number, a percentage, or a value greater than or equal to the length of the list content area, the value &lt;strong&gt;0&lt;/strong&gt; will be used. </p>
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

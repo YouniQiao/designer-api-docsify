@@ -2,7 +2,7 @@
 
 Describes the notification timing information.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The actual display effect depends on the device capabilities and the notification center UI style.
 

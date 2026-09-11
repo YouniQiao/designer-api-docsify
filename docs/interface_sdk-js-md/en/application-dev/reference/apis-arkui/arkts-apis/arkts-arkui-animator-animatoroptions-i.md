@@ -68,7 +68,7 @@ Animation playback mode.
 
 Default value: **'normal'**
 
-**Type:** "normal" \| "reverse" \| "alternate" \| "alternate-reverse"
+**Type:** "normal" &#124; "reverse" &#124; "alternate" &#124; "alternate-reverse"
 
 **Since:** 6
 
@@ -150,7 +150,7 @@ State of the animated target after the animation is executed.
 
 **'both'**: The animation follows the **'forwards'** and **'backwards'** rules.
 
-**Type:** "none" \| "forwards" \| "backwards" \| "both"
+**Type:** "none" &#124; "forwards" &#124; "backwards" &#124; "both"
 
 **Since:** 6
 

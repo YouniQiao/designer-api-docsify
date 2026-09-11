@@ -18,5 +18,5 @@ type ValueType = null | number | number | string | boolean | Uint8Array | Asset 
 | string | 表示值类型为字符串。 |
 | boolean | 表示值类型为布尔值。 |
 | Uint8Array | 表示值类型为Uint8类型的数组。 |
-| [Asset](arkts-arkdata-commontype-asset-i.md) | 表示值类型为附件[Asset]{ |
-| [Assets](arkts-arkdata-commontype-assets-t.md) | 表示值类型为附件数组[Assets]{ |
+| [Asset](arkts-arkdata-commontype-asset-i.md) | 表示值类型为附件[Asset](arkts-arkdata-commontype-asset-i.md)。 |
+| [Assets](arkts-arkdata-commontype-assets-t.md) | 表示值类型为附件数组[Assets](arkts-arkdata-commontype-assets-t.md)。 |

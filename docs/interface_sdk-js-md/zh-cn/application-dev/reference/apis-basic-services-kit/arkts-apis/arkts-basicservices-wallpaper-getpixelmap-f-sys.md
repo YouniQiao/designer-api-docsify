@@ -12,7 +12,7 @@ import { wallpaper } from '@kit.BasicServicesKit';
 function getPixelMap(wallpaperType: WallpaperType, callback: AsyncCallback<image.PixelMap>): void
 ```
 
-获取壁纸图片的像素图。使用callback异步回调。  
+获取壁纸图片的像素图。使用callback异步回调。<br>   
 > **说明：**
 > 
 > 从 API version 7开始支持，从API version 9开始废弃。
@@ -56,7 +56,7 @@ wallpaper.getPixelMap(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: Business
 function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>
 ```
 
-获取壁纸图片的像素图。使用Promise异步回调。  
+获取壁纸图片的像素图。使用Promise异步回调。<br>   
 > **说明：**
 > 
 > 从 API version 7开始支持，从API version 9开始废弃。

@@ -2,7 +2,7 @@
 
 Enumerates encryption and decryption parameters, which can be set by using [setCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#setcipherspec) and obtained by using [getCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#getcipherspec).
 
-Currently, only RSA and SM2 are supported. For details, see Asymmetric Key Encryption and Decryption Algorithm Specifications.
+<br>Currently, only RSA and SM2 are supported. For details, see Asymmetric Key Encryption and Decryption Algorithm Specifications.
 
 **Since:** 10
 

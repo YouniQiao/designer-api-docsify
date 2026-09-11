@@ -1,6 +1,6 @@
 # RichEditorTextSpan
 
-Provides the text span information.
+Defines text span information.
 
 **Since:** 10
 

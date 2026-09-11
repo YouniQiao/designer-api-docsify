@@ -26,10 +26,10 @@ import { vpn } from '@kit.NetworkKit';
 | [getConnectedVpnAppInfo](arkts-network-vpn-getconnectedvpnappinfo-f-sys.md) | Get the connected VPN App Info. |
 | [getSysVpnConfig](arkts-network-vpn-getsysvpnconfig-f-sys.md) | Get the configuration of system VPN network by the specified vpnId. |
 | [getSysVpnConfigList](arkts-network-vpn-getsysvpnconfiglist-f-sys.md) | Get all system VPN network configuration. |
-| off | Unsubscribes from vpn connect state changes. |
-| off | Unsubscribes from vpn connect state changes. |
-| on | Subscribes to vpn connect state changes. |
-| on | Subscribes to vpn connect state changes. |
+| [off](arkts-network-vpn-off-f-sys.md#offconnect) | Unsubscribes from vpn connect state changes. |
+| [off](arkts-network-vpn-off-f-sys.md#offconnectmulti) | Unsubscribes from vpn connect state changes. |
+| [on](arkts-network-vpn-on-f-sys.md#onconnect) | Subscribes to vpn connect state changes. |
+| [on](arkts-network-vpn-on-f-sys.md#onconnectmulti) | Subscribes to vpn connect state changes. |
 <!--DelEnd-->
 
 <!--Del-->

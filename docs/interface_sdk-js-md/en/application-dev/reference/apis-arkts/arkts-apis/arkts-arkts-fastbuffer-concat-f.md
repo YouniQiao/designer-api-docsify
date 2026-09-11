@@ -24,7 +24,7 @@ Returns a new `FastBuffer` which is the result of concatenating all the `FastBuf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| list | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md)[] \| Uint8Array[] | Yes | Array of FastBuffer or Uint8Array instances to concatenate |
+| list | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md)[] &#124; Uint8Array[] | Yes | Array of FastBuffer or Uint8Array instances to concatenate |
 | totalLength | number | No | Total length of the FastBuffer instances when concatenated |
 
 **Return value:**

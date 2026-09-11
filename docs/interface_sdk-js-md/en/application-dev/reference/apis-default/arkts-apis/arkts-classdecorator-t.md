@@ -14,4 +14,4 @@ declare type ClassDecorator = <TFunction extends Function>(target: TFunction) =>
 
 | Type | Description |
 | --- | --- |
-| TFunction \| void | - |
+| TFunction &#124; void | - |

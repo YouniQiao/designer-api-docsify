@@ -24,7 +24,7 @@ function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCall
 
 **废弃版本：** 9
 
-**替代接口：** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(rotationVector: Array&lt;double&gt;, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
+**替代接口：** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(rotationVector: Array&lt;number&gt;, callback: AsyncCallback&lt;Array&lt;number&gt;&gt;)
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -71,7 +71,7 @@ function createRotationMatrix(rotationVector: Array<number>): Promise<Array<numb
 
 **废弃版本：** 9
 
-**替代接口：** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(rotationVector: Array&lt;double&gt;)
+**替代接口：** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(rotationVector: Array&lt;number&gt;)
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -123,7 +123,7 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 
 **废弃版本：** 9
 
-**替代接口：** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(gravity: Array&lt;double&gt;, geomagnetic: Array&lt;double&gt;, callback: AsyncCallback&lt;RotationMatrixResponse&gt;)
+**替代接口：** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(gravity: Array&lt;number&gt;, geomagnetic: Array&lt;number&gt;, callback: AsyncCallback&lt;RotationMatrixResponse&gt;)
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -169,7 +169,7 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 
 **废弃版本：** 9
 
-**替代接口：** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(gravity: Array&lt;double&gt;, geomagnetic: Array&lt;double&gt;)
+**替代接口：** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(gravity: Array&lt;number&gt;, geomagnetic: Array&lt;number&gt;)
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

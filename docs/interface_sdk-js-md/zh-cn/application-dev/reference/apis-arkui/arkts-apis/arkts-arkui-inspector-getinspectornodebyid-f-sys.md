@@ -33,4 +33,3 @@ declare function getInspectorNodeById(id: number): object
 
 | 类型 | 说明 |
 | --- | --- |
-| object |  |

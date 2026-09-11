@@ -37,7 +37,7 @@ Compares two strings based on the specified collation rules.
 
 | Type | Description |
 | --- | --- |
-| number | Comparison result. |
+| number | Comparison result.   - If the value is a negative number, the first string comes before the second string.   - If the value is **0**, the first and second strings are in the same sequence.   - If the value is a positive number, the first string is comes after the second string. |
 
 **Examples**
 
@@ -91,7 +91,7 @@ Creates a **Collator** object based on the specified locale and options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
+| locale | string &#124; Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
 | options | [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) | No | Options for creating a **Collator** object. |
 
 **Examples**

@@ -18,7 +18,7 @@ function getKeyItemProperties(
 
 Obtains key properties. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Getting properties of SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)
 > requires the ohos.permission.ACCESS_SE_KEY permission.
@@ -87,7 +87,7 @@ function getKeyItemProperties(keyAlias: string, options: HuksOptions): Promise<H
 
 Obtains key properties. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Getting properties of SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)
 > requires the ohos.permission.ACCESS_SE_KEY permission.

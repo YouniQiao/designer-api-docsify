@@ -6,6 +6,8 @@
 
 异步返回值的类型由开发者自定义，回调将返回对应类型的信息。
 
+@typedef AsyncCallback [since 6 - 11] @typedef AsyncCallback&lt;T, E = void&gt; [since 12]
+
 **起始版本：** 6
 
 **系统能力：** SystemCapability.Base

@@ -57,7 +57,7 @@ range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascade
 > 4. Resource类型只支持[strarray.json](../../../quick-start/resource-categories-and-access.md#资源组目录)。
 > 5. range的类型及列数不可以动态修改。
 
-**类型：** string[] \| string[][] \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[] \| [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)[]
+**类型：** string[] &#124; string[][] &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[] &#124; [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)[]
 
 **起始版本：** 8
 
@@ -83,7 +83,7 @@ selected?: number | number[]
 > 4. 从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 > 5. 未设置该属性或设置的值无效时，使用默认值。
 
-**类型：** number \| number[]
+**类型：** number &#124; number[]
 
 **默认值：** 0
 
@@ -113,9 +113,10 @@ value?: ResourceStr | ResourceStr[]
 > 6. 多列联动数据选择器使用[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)[]类型，数组长度与层级数一致。
 > 7. 当selected和value均未设置，或selected值无效时，使用默认值。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)[]
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)[]
 
-**默认值：** value of the first item [since 8 - 9]
+**默认值：**
+- API版本8-9：value of the first item
 
 **起始版本：** 8
 

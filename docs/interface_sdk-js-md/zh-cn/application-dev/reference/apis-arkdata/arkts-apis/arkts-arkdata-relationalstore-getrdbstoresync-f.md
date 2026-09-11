@@ -35,7 +35,7 @@ getRdbStoreSync支持多线程并发操作。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用的上下文。FA模型的应用Context定义见Context。Stage模型的应用Context定义见Context。 |
+| context | Context | 是 | 应用的上下文。<br>FA模型的应用Context定义见Context。<br>Stage模型的应用Context定义见Context。 |
 | config | [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) | 是 | 与此RDB存储相关的数据库配置。 |
 
 **返回值：**

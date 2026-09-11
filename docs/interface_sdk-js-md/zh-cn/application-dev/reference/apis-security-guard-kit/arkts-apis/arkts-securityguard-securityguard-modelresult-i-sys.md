@@ -2,6 +2,8 @@
 
 安全模型结果。
 
+@typedef ModelResult
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.Security.SecurityGuard

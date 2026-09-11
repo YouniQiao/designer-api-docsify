@@ -30,7 +30,7 @@ Create a MediaSource object from the given directory.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[MediaSource](arkts-media-media-mediasource-i.md) \| undefined&gt; | If success, a MediaSource is returned. Otherwise returns null. |
+| Promise&lt;[MediaSource](arkts-media-media-mediasource-i.md) &#124; undefined&gt; | If success, a MediaSource is returned. Otherwise returns null. |
 
 **Error codes:**
 

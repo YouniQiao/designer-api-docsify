@@ -2,6 +2,8 @@
 
 Defines the popup button
 
+@typedef PopupV2Button
+
 **Since:** 26.0.0
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -36,7 +38,7 @@ buttonTextModifier?: TextModifier
 
 The button text attributes of Popup.
 
-**Type:** TextModifier
+**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
 
 **Since:** 26.0.0
 

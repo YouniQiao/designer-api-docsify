@@ -33,7 +33,7 @@ function registerTypeDescriptors(typeDescriptors: Array<TypeDescriptor>): Promis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| typeDescriptors | Array&lt;[TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md)&gt; | 是 | 注册的标准化数据类型描述符列表。TypeDescriptor用于描述自定义数据类型的属性，包括类型标识、所属类型、文件扩展名、MIME类型等。列表不可为空，其中元素个数不超过50。单个应用注册的标准化数据类型描述符数量总计不超过200。    **TypeDescriptor格式要求：**  1.typeId不可为空字符串，长度不超过127，且仅包含字母、数字、中划线（-）和点号（.）。  2.belongingToTypes中元素个数不超过50。每项不可为空字符串，长度不超过127。  3.description/referenceURL/iconFile每项长度不超过255。 4.filenameExtensions中元素个数不超过50。每项不可为空字符串，长度不超过127且首字符必须为点号。  5.mimeTypes中元素个数不超过50。每项不可为空字符串，长度不超过127。    **TypeDescriptor内容要求：**  1.typeId必须唯一，不能与已注册类型的typeId重复。 2.typeId必须以当前应用的包名开头。 3.belongingToTypes中的标准化数据类型ID必须为预置数据类型或本次注册的其他标准化数据类型的typeId。  4.标准化数据类型之间不能存在循环依赖关系。 |
+| typeDescriptors | Array&lt;[TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md)&gt; | 是 | 注册的标准化数据类型描述符列表。TypeDescriptor用于描述自定义数据类型的属性，包括类型标识、所属类型、文件扩展名、MIME类型等。列表不可为空，其中元素个数不超过50。单个应用注册的标准化数据类型描述符数量总计不超过200。<br> **TypeDescriptor格式要求：**<br> 1.typeId不可为空字符串，长度不超过127，且仅包含字母、数字、中划线（-）和点号（.）。<br> 2.belongingToTypes中元素个数不超过50。每项不可为空字符串，长度不超过127。<br> 3.description/referenceURL/iconFile每项长度不超过255。<br>4.filenameExtensions中元素个数不超过50。每项不可为空字符串，长度不超过127且首字符必须为点号。<br> 5.mimeTypes中元素个数不超过50。每项不可为空字符串，长度不超过127。<br> **TypeDescriptor内容要求：**<br> 1.typeId必须唯一，不能与已注册类型的typeId重复。<br>2.typeId必须以当前应用的包名开头。<br>3.belongingToTypes中的标准化数据类型ID必须为预置数据类型或本次注册的其他标准化数据类型的typeId。<br> 4.标准化数据类型之间不能存在循环依赖关系。 |
 
 **返回值：**
 

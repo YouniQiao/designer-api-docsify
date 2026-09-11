@@ -24,7 +24,7 @@ function byteLength(value: string | FastBuffer | TypedArray | DataView | ArrayBu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | 是 | 指定用于计算字节长度的内容。 |
+| value | string &#124; [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) &#124; TypedArray &#124; DataView &#124; ArrayBuffer &#124; SharedArrayBuffer | 是 | 指定用于计算字节长度的内容。 |
 | encoding | BufferEncoding | 否 | 编码格式（当`value`为string时，才有意义）。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
 
 **返回值：**

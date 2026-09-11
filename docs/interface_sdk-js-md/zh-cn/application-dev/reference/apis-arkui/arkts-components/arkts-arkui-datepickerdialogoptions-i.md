@@ -219,7 +219,8 @@ alignment?: DialogAlignment
 
 **类型：** [DialogAlignment](../arkts-apis/arkts-arkui-dialogalignment-e.md)
 
-**默认值：** DialogAlignment.Default [since 11]
+**默认值：**
+- API版本11+：DialogAlignment.Default
 
 **起始版本：** 10
 
@@ -395,9 +396,7 @@ dateTimeOptions?: DateTimeOptions
 
 **类型：** [DateTimeOptions](arkts-arkui-datetimeoptions-t.md)
 
-**默认值：** hour: In the 24-hour format, it defaults to 2-digit, which means a leading zero is used; 
-In the 12-hour format, it defaults to numeric, which means no leading zero is used. 
-minute: defaults to 2-digit, which means a leading zero is used.
+**默认值：** hour: In the 24-hour format, it defaults to 2-digit, which means a leading zero is used; <br>In the 12-hour format, it defaults to numeric, which means no leading zero is used. <br>minute: defaults to 2-digit, which means a leading zero is used.
 
 **起始版本：** 12
 
@@ -417,24 +416,18 @@ disappearTextStyle?: PickerTextStyle
 
 > 默认值：
 > 
-> 
-{   
-> 
-color: '#ff182431',   
-> 
-font: {   
-> 
-size: '14fp',   
-> 
-weight: FontWeight.Regular   
-> 
-}   
-> 
-}
+> <br>{
+> <br>color: '#ff182431',
+> <br>font: {
+> <br>size: '14fp',
+> <br>weight: FontWeight.Regular
+> <br>}
+> <br>}
 
 **类型：** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
-**默认值：** { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } } [since 11]
+**默认值：**
+- API版本11+：{ color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } }
 
 **起始版本：** 10
 
@@ -542,7 +535,8 @@ lunar?: boolean
 
 **类型：** boolean
 
-**默认值：** false [since 11]
+**默认值：**
+- API版本11+：false
 
 **起始版本：** 8
 
@@ -569,7 +563,8 @@ lunarSwitch?: boolean
 
 **类型：** boolean
 
-**默认值：** false [since 11]
+**默认值：**
+- API版本11+：false
 
 **起始版本：** 10
 
@@ -588,16 +583,11 @@ lunarSwitchStyle?: LunarSwitchStyle
 设置农历开关的颜色样式。仅当lunarSwitch为true时生效。
 
 > 默认值：
-> 
-{   
-> 
-selectedColor: `\$r('sys.color.ohos_id_color_text_primary_actived')`,   
-> 
-unselectedColor: `\$r('sys.color.ohos_id_color_switch_outline_off')`,   
-> 
-strokeColor: Color.White   
-> 
-}
+> <br>{
+> <br>selectedColor: `\$r('sys.color.ohos_id_color_text_primary_actived')`,
+> <br>unselectedColor: `\$r('sys.color.ohos_id_color_switch_outline_off')`,
+> <br>strokeColor: Color.White
+> <br>}
 
 **类型：** [LunarSwitchStyle](arkts-arkui-lunarswitchstyle-i.md)
 
@@ -623,7 +613,8 @@ maskRect?: Rectangle
 
 **类型：** [Rectangle](arkts-arkui-rectangle-i.md)
 
-**默认值：** { x: 0, y: 0, width: '100%', height: '100%' } [since 11]
+**默认值：**
+- API版本11+：{ x: 0, y: 0, width: '100%', height: '100%' }
 
 **起始版本：** 10
 
@@ -645,7 +636,8 @@ offset?: Offset
 
 **类型：** [Offset](../arkts-apis/arkts-arkui-offset-t.md)
 
-**默认值：** { dx: 0 , dy: 0 } [since 11]
+**默认值：**
+- API版本11+：{ dx: 0 , dy: 0 }
 
 **起始版本：** 10
 
@@ -709,24 +701,18 @@ selectedTextStyle?: PickerTextStyle
 
 > 默认值：
 > 
-> 
-{   
-> 
-color: '#ff007dff',   
-> 
-font: {   
-> 
-size: '20fp',   
-> 
-weight: FontWeight.Medium   
-> 
-}   
-> 
-}
+> <br>{
+> <br>color: '#ff007dff',
+> <br>font: {
+> <br>size: '20fp',
+> <br>weight: FontWeight.Medium
+> <br>}
+> <br>}
 
 **类型：** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
-**默认值：** { color: '#ff007dff', font: { size: '20vp', weight: FontWeight.Medium } [since 11]
+**默认值：**
+- API版本11+：{ color: '#ff007dff', font: { size: '20vp', weight: FontWeight.Medium }
 
 **起始版本：** 10
 
@@ -746,7 +732,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
 
-**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
+**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 12
 
@@ -776,7 +762,8 @@ showTime?: boolean
 
 **类型：** boolean
 
-**默认值：** false [since 11]
+**默认值：**
+- API版本11+：false
 
 **起始版本：** 10
 
@@ -825,24 +812,18 @@ textStyle?: PickerTextStyle
 
 > 默认值：
 > 
-> 
-{   
-> 
-color: '#ff182431',   
-> 
-font: {   
-> 
-size: '16fp',   
-> 
-weight: FontWeight.Regular   
-> 
-}   
-> 
-}
+> <br>{
+> <br>color: '#ff182431',
+> <br>font: {
+> <br>size: '16fp',
+> <br>weight: FontWeight.Regular
+> <br>}
+> <br>}
 
 **类型：** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
-**默认值：** { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } } [since 11]
+**默认值：**
+- API版本11+：{ color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } }
 
 **起始版本：** 10
 
@@ -871,7 +852,8 @@ useMilitaryTime?: boolean
 
 **类型：** boolean
 
-**默认值：** false [since 11]
+**默认值：**
+- API版本11+：false
 
 **起始版本：** 10
 

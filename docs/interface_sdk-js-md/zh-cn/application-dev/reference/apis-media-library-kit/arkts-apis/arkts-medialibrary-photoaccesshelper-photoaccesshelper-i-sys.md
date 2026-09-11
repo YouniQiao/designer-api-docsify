@@ -44,9 +44,9 @@ Start medialibrary database backup and wait for returning with backup infomation
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. The betaIssueId parameter is invalid, such as null, undefined or empty string.  2. The betaScenario parameter is invalid, such as null, undefined or empty string.  3. The same betaIssueId task is processing. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. The betaIssueId parameter is invalid, such as null, undefined or empty string. <br>2. The betaScenario parameter is invalid, such as null, undefined or empty string. <br>3. The same betaIssueId task is processing. |
 | [23800201](../errorcode-medialibrary.md#23800201-不支持的操作类型) | Unsupported operation type, this api only works on beta device. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
 ## batchGetPhotoAssetParams
 
@@ -80,7 +80,7 @@ batchGetPhotoAssetParams(assets: PhotoAsset[], members: string[]): PhotoAssetPar
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: The attribute to be queried does not exist in assets. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails.<br>Possible causes: The attribute to be queried does not exist in assets. |
 | [23800104](../errorcode-medialibrary.md#23800104-传入参数校验不通过) | The provided member must be a property name of PhotoKey. |
 
 **示例**
@@ -177,8 +177,8 @@ cancelAnalysisTool(config: ToolCancelConfig): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. Invalid task id.  2. The length of **param** in **ToolCancelConfig** exceeds 16KB. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. Possible causes:  1. IPC timeout;  2. System exception. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Invalid task id. <br>2. The length of **param** in **ToolCancelConfig** exceeds 16KB. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. Possible causes:<br>1. IPC timeout; <br>2. System exception. |
 
 **示例**
 
@@ -237,7 +237,7 @@ cancelPhotoUriPermission(tokenId: number, uri: string, photoPermissionType: Phot
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| 13900020 | Invalid argument. Possible causes:  1. Incorrect uri format;  2. The value of photoPermissionType or hideSensitiveType is out of range. |
+| 13900020 | Invalid argument. Possible causes:<br>1. Incorrect uri format; <br>2. The value of photoPermissionType or hideSensitiveType is out of range. |
 | 14000011 | Internal system error |
 
 **示例**
@@ -290,7 +290,7 @@ canPerformDeepOptimizeSpace(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。**true**表示可以调用[startDeepOptimizeSpace()]{ |
+| Promise&lt;boolean&gt; | Promise对象。**true**表示可以调用[startDeepOptimizeSpace()](#startdeepoptimizespace)。**false**表示[startDeepOptimizeSpace()](#startdeepoptimizespace) 不可以调用。 |
 
 **错误码：**
 
@@ -298,7 +298,7 @@ canPerformDeepOptimizeSpace(): Promise<boolean>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -353,8 +353,8 @@ cloneAssetsByPath(assets: string[], target: Album, option?: BatchOperationOption
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. Asset to be cloned has been delete or hidden;  2. Asset to be cloned is cloud pictures, which can not be cloned;  3. The Target Album does not exist.  4. Insufficient system space.  5. Automatic renaming is not supported.  6. The clone task is interrupted. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Asset to be cloned has been delete or hidden; <br>2. Asset to be cloned is cloud pictures, which can not be cloned; <br>3. The Target Album does not exist. <br>4. Insufficient system space. <br>5. Automatic renaming is not supported. <br>6. The clone task is interrupted. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -412,8 +412,8 @@ cloneToAlbum(assets: PhotoAsset[], target: Album, option?: BatchOperationOptions
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. Asset to be cloned has been deleted or hidden;  2. Asset to be cloned is cloud pictures, which can not be cloned;  3. The Target Album does not exist.  4. Insufficient system space.  5. Automatic renaming is not supported.  6. The clone task is interrupted. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Asset to be cloned has been deleted or hidden; <br>2. Asset to be cloned is cloud pictures, which can not be cloned; <br>3. The Target Album does not exist. <br>4. Insufficient system space. <br>5. Automatic renaming is not supported. <br>6. The clone task is interrupted. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -482,8 +482,8 @@ cloneToDir(assets: string[], target: string, option?: BatchOperationOptions): Pr
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. Asset to be cloned has been deleted or hidden;  2. Asset to be cloned is cloud pictures, which can not be cloned;  3. The Target Album does not exist.  4. Insufficient system space.  5. Automatic renaming is not supported.  6. The clone task is interrupted. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Asset to be cloned has been deleted or hidden; <br>2. Asset to be cloned is cloud pictures, which can not be cloned; <br>3. The Target Album does not exist. <br>4. Insufficient system space. <br>5. Automatic renaming is not supported. <br>6. The clone task is interrupted. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -544,7 +544,7 @@ convertAssetToCompatibleAsset(assets: Array<PhotoAsset>): Promise<Array<PhotoAss
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. Invalid Array&lt;PhotoAsset&gt;. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Invalid Array&lt;PhotoAsset&gt;. |
 
 **示例**
 
@@ -606,8 +606,8 @@ convertToAsset(path: string): Promise<PhotoAsset>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. Converted an image after filtering into an asset object;  2. File to be converted is not exist;  3. Only images in the public directory of filemanager can be converted. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Converted an image after filtering into an asset object; <br>2. File to be converted is not exist; <br>3. Only images in the public directory of filemanager can be converted. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -666,7 +666,7 @@ createAlbum(name: string, callback: AsyncCallback<Album>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
 | 13900015 | The file name already exists. |
 | 13900020 | Invalid argument |
@@ -736,7 +736,7 @@ createAlbum(name: string): Promise<Album>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
 | 13900015 | The file name already exists. |
 | 13900020 | Invalid argument |
@@ -798,7 +798,7 @@ API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
 | 13900020 | Invalid argument |
 | 14000001 | Invalid display name |
@@ -866,7 +866,7 @@ API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
 | 13900020 | Invalid argument |
 | 14000001 | Invalid display name |
@@ -934,7 +934,7 @@ API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
 | 13900020 | Invalid argument |
 | 14000001 | Invalid display name |
@@ -1000,7 +1000,7 @@ API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
 | 13900020 | Invalid argument |
 | 14000001 | Invalid display name |
@@ -1057,7 +1057,7 @@ createAssetsForApp(bundleName: string, appName: string, tokenId: number, photoCr
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | 对象，返回给接口调用方的媒体库文件uri列表。Uri已对tokenId对应的应用授权，支持应用写入数据。如果生成uri异常，则返回批量创建错误码。 |
+| Promise&lt;Array&lt;string&gt;&gt; | 对象，返回给接口调用方的媒体库文件uri列表。Uri已对tokenId对应的应用授权，支持应用写入数据。如果生成uri异常，则返回批量创建错误码。<br>返回-3006表不允许出现非法字符；返回-2004表示图片类型和后缀不符；返回-203表示文件操作异常。 |
 
 **错误码：**
 
@@ -1065,7 +1065,7 @@ createAssetsForApp(bundleName: string, appName: string, tokenId: number, photoCr
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| 13900020 | Invalid argument. Possible causes:  1. The photoCreationConfigs is empty;  2. Incorrect photoCreationConfigs format. |
+| 13900020 | Invalid argument. Possible causes:<br>1. The photoCreationConfigs is empty; <br>2. Incorrect photoCreationConfigs format. |
 | 14000011 | Internal system error |
 
 **示例**
@@ -1132,7 +1132,7 @@ createAssetsForAppWithAlbum(source: PhotoCreationSource, albumUri: string, isAut
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回接口调用方的媒体库文件uri列表。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回接口调用方的媒体库文件uri列表。<br>uri已对appId对应的应用授权，支持应用写入数据。如果生成uri异常，则返回批量创建错误码。<br>返回-3006表示不允许出现非法字符；返回-2004表示图片类型和后缀不符；返回-203表示文件操作异常。 |
 
 **错误码：**
 
@@ -1140,7 +1140,7 @@ createAssetsForAppWithAlbum(source: PhotoCreationSource, albumUri: string, isAut
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **示例**
@@ -1222,7 +1222,7 @@ createAssetsForAppWithMode(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回给接口调用方的媒体库文件uri列表。Uri已对appId对应的应用授权，支持应用写入数据。如果生成uri异常，则返回批量创建错误码。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回给接口调用方的媒体库文件uri列表。Uri已对appId对应的应用授权，支持应用写入数据。如果生成uri异常，则返回批量创建错误码。<br>返回-3006表不允许出现非法字符；返回-2004表示图片类型和后缀不符；返回-203表示文件操作异常。 |
 
 **错误码：**
 
@@ -1230,7 +1230,7 @@ createAssetsForAppWithMode(
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **示例**
@@ -1312,8 +1312,8 @@ createAssetsWithAlbum(
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario-specific parameters are incorrect. Possible causes are as follows:  1. The input parameter creationSettings is null or undefined.  2. The array length of creationSettings is bigger than 500. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario-specific parameters are incorrect. Possible causes are as follows:<br>1. The input parameter creationSettings is null or undefined. <br>2. The array length of creationSettings is bigger than 500. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -1379,7 +1379,7 @@ deleteAlbums(albums: Array<Album>, callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
@@ -1450,7 +1450,7 @@ deleteAlbums(albums: Array<Album>): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
@@ -1515,7 +1515,7 @@ deleteAssets(uriList: Array<string>, callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
 | 13900020 | Invalid argument |
 | 14000002 | The uri format is incorrect or does not exist. |
@@ -1592,7 +1592,7 @@ deleteAssets(uriList: Array<string>): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
 | 13900020 | Invalid argument |
 | 14000002 | The uri format is incorrect or does not exist. |
@@ -1664,7 +1664,7 @@ getAlbumIdByBundleName(bundleName: string): Promise<number>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The bundleName is invalid, such as null, undefined and empty. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -1720,7 +1720,7 @@ getAlbumsByIds(albumIds: Array<number>): Promise<Map<number, Album>>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
 **示例**
@@ -1778,7 +1778,7 @@ getAssetCompatibleCapability(bundleName: string): Promise<AssetCompatibleCapabil
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The bundleName is invalid, such as null, undefined and empty. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -1817,7 +1817,7 @@ getAssetCompatibleUris(bundleName: string, assets: Array<PhotoAsset>, compatible
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用捆绑包名称 |
 | assets | Array&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | 是 | 资产的数组 |
-| compatibleFlag | number | 否 | 兼容配置掩码标志取值范围为全体整数。 |
+| compatibleFlag | number | 否 | 兼容配置掩码标志<br>取值范围为全体整数。 |
 
 **返回值：**
 
@@ -1830,8 +1830,8 @@ getAssetCompatibleUris(bundleName: string, assets: Array<PhotoAsset>, compatible
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. The bundleName is invalid;  2. The compatibleFlag is invalid; |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. The bundleName is invalid; <br>2. The compatibleFlag is invalid; |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -1897,7 +1897,7 @@ getClonedAlbumUris(oldUris: Array<string>): Promise<Map<string, string>>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: The size of input parameter exceeds 100 or is 0. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -1958,7 +1958,7 @@ getClonedAssetUris(oldUris: Array<string>): Promise<Map<string, string>>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: The size of input parameter exceeds 100 or is 0. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -2002,13 +2002,13 @@ getDataAnalysisProgress(analysisType?: AnalysisType): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| analysisType | [AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md) | 否 | 需要获取的智慧分析类型，默认为空值。该参数在API version 12-21为必选参数，从API version 22开始及以后为可选。<br>**适用版本：** 23 |
+| analysisType | [AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md) | 否 | 需要获取的智慧分析类型，默认为空值。<br>该参数在API version 12-21为必选参数，从API version 22开始及以后为可选。<br>**适用版本：** 23 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回一个json格式的字符串。表示资产分析的进度。 |
+| Promise&lt;string&gt; | Promise对象，返回一个json格式的字符串。表示资产分析的进度。<br>参数为空时返回整体的进度，参数不为空时返回analysisType对应的进度。 |
 
 **错误码：**
 
@@ -2016,7 +2016,7 @@ getDataAnalysisProgress(analysisType?: AnalysisType): Promise<string>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Incorrect parameter types;  2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Incorrect parameter types; <br>2. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **示例**
@@ -2045,7 +2045,7 @@ getDeepOptimizeSpace(): Promise<number>
 
 获取可以深度优化存储空间的大小，单位为字节（byte）。使用Promise异步回调。
 
- Unit:Byte{s}.
+<br> Unit:Byte{s}.
 
 - 此接口耗时较长，建议先调用[canPerformDeepOptimizeSpace](#canperformdeepoptimizespace)确认当前系统状态是否允许执行。  
 - 仅在返回true时调用此接口。
@@ -2072,7 +2072,7 @@ getDeepOptimizeSpace(): Promise<number>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -2122,7 +2122,7 @@ getHiddenAlbums(mode: HiddenPhotosDisplayMode, options: FetchOptions, callback: 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
 **示例**
@@ -2192,7 +2192,7 @@ getHiddenAlbums(mode: HiddenPhotosDisplayMode, callback: AsyncCallback<FetchResu
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
 **示例**
@@ -2292,7 +2292,7 @@ getHiddenAlbums(mode: HiddenPhotosDisplayMode, options?: FetchOptions): Promise<
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
 **示例**
@@ -2428,7 +2428,7 @@ getPhotoAlbumOrder(orderStyle: number, options?: FetchOptions): Promise<FetchRes
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| orderStyle | number | 是 | 选择相册的排序风格。0：Phone风格。1：PC风格。 |
+| orderStyle | number | 是 | 选择相册的排序风格。<br>0：Phone风格。1：PC风格。 |
 | options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 否 | 检索选项，不填时默认根据相册类型检索。 |
 
 **返回值：**
@@ -2444,7 +2444,7 @@ getPhotoAlbumOrder(orderStyle: number, options?: FetchOptions): Promise<FetchRes
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: The input parameter is not within the valid range. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -2512,7 +2512,7 @@ getPhotoAlbums(options?: FetchOptions):Promise<FetchResult<Album>>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -2563,7 +2563,7 @@ getPhotoAssets(assetsData: ValuesBucket[]): Promise<PhotoAsset[]>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assetsData | [ValuesBucket](arkts-medialibrary-photoaccesshelper-valuesbucket-t-sys.md)[] | 是 | 资产记录的数组。数组中的每个元素包含资产的列名称及其对应的值。数组的大小不能超过500个。数组中的每个元素必须包含以下资产列信息：file_id、data、display_name、media_type、subtype。 |
+| assetsData | [ValuesBucket](arkts-medialibrary-photoaccesshelper-valuesbucket-t-sys.md)[] | 是 | 资产记录的数组。<br>数组中的每个元素包含资产的列名称及其对应的值。<br>数组的大小不能超过500个。<br>数组中的每个元素必须包含以下资产列信息：file_id、data、display_name、media_type、subtype。 |
 
 **返回值：**
 
@@ -2576,8 +2576,8 @@ getPhotoAssets(assetsData: ValuesBucket[]): Promise<PhotoAsset[]>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. Invalid value type in ValuesBucket;  2. Missing required column in ValuesBucket;  3. Array size exceeds 500. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Invalid value type in ValuesBucket; <br>2. Missing required column in ValuesBucket; <br>3. Array size exceeds 500. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -2636,7 +2636,7 @@ getPhotoIndex(photoUri: string, albumUri: string, options: FetchOptions, callbac
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
@@ -2718,7 +2718,7 @@ getPhotoIndex(photoUri: string, albumUri: string, options: FetchOptions): Promis
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900012 | Permission denied |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
@@ -2797,7 +2797,7 @@ getPreferredCompatibleMode(bundleName: string): Promise<PreferredCompatibleMode>
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The bundleName is invalid, such as null, undefined and empty. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -2858,7 +2858,7 @@ getSharedPhotoAssets(options: FetchOptions): Array<SharedPhotoAsset>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **示例**
@@ -2927,7 +2927,7 @@ grantPhotoUriPermission(
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| 13900020 | Invalid argument. Possible causes:  1. Incorrect uri format;  2. The value of photoPermissionType or hideSensitiveType is out of range. |
+| 13900020 | Invalid argument. Possible causes:<br>1. Incorrect uri format; <br>2. The value of photoPermissionType or hideSensitiveType is out of range. |
 | 14000011 | Internal system error |
 
 **示例**
@@ -3001,7 +3001,7 @@ grantPhotoUrisPermission(
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| 13900020 | Invalid argument. Possible causes:  1. Incorrect uri format;  2. The value of photoPermissionType or hideSensitiveType is out of range. |
+| 13900020 | Invalid argument. Possible causes:<br>1. Incorrect uri format; <br>2. The value of photoPermissionType or hideSensitiveType is out of range. |
 | 14000011 | Internal system error |
 
 **示例**
@@ -3073,8 +3073,8 @@ invokeAnalysisTool(config: ToolInvokeConfig, callback: Callback<AnalysisToolResu
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. Unsupported tool type;  2. The length of **param** in **ToolInvokeConfig** exceeds 16KB. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. Possible causes:  1. IPC timeout;  2. System exception. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Unsupported tool type; <br>2. The length of **param** in **ToolInvokeConfig** exceeds 16KB. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. Possible causes:<br>1. IPC timeout; <br>2. System exception. |
 
 **示例**
 
@@ -3135,7 +3135,7 @@ isCompatibleDuplicateSupported(bundleName: string): Promise<boolean>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. The IPC request timed out.  2. system running error |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. The IPC request timed out. <br>2. system running error |
 
 **示例**
 
@@ -3175,7 +3175,7 @@ isMediaDataReady(mediaDataKey: string): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mediaDataKey | string | 是 | 查询的媒体数据类型。当前支持配置的取值为"date_added_year"，表示查询资产的添加时间（年月日）数据是否准备完成。 |
+| mediaDataKey | string | 是 | 查询的媒体数据类型。<br>当前支持配置的取值为"date_added_year"，表示查询资产的添加时间（年月日）数据是否准备完成。 |
 
 **返回值：**
 
@@ -3190,7 +3190,7 @@ isMediaDataReady(mediaDataKey: string): Promise<boolean>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails, unsupported media data type. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -3253,8 +3253,8 @@ modifyAlbumDefaultCoverOrder(coverOrderInfos: DefaultCoverOrderInfo[],
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. Only the system album can be set without lpath. Otherwise, the setting is not supported;  2. The orderKey and orderSubKey are not in the specified range;  3. The order type must be either descending or ascending. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Only the system album can be set without lpath. Otherwise, the setting is not supported; <br>2. The orderKey and orderSubKey are not in the specified range; <br>3. The order type must be either descending or ascending. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
 
 **示例**
 
@@ -3323,8 +3323,8 @@ modifyHiddenAlbumDefaultCoverOrder(coverOrderInfos: DefaultCoverOrderInfo[],
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. Only the system album can be set without lpath. Otherwise, the setting is not supported;  2. The orderKey and orderSubKey are not in the specified range;  3. The order type must be either descending or ascending. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Only the system album can be set without lpath. Otherwise, the setting is not supported; <br>2. The orderKey and orderSubKey are not in the specified range; <br>3. The order type must be either descending or ascending. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
 
 **示例**
 
@@ -3390,8 +3390,8 @@ moveAssetsByPath(assets: string[], target: Album, option?: BatchOperationOptions
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. Moving to the target Album is not supported;  2. Assets to be Moved does not exist;  3. Automatic renaming is not supported.  4. The task is interrupted. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Moving to the target Album is not supported; <br>2. Assets to be Moved does not exist; <br>3. Automatic renaming is not supported. <br>4. The task is interrupted. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
 
 **示例**
 
@@ -3435,7 +3435,7 @@ moveAssetsToDir(assets: string[], target: string, option?: BatchOperationOptions
 | --- | --- | --- | --- |
 | assets | string[] | 是 | 媒体库沙箱资产uri |
 | target | string | 是 | 文管公共目录 |
-| option | [BatchOperationOptions](arkts-medialibrary-photoaccesshelper-batchoperationoptions-i-sys.md) | 否 | 批量操作的选项批量操作的选项 |
+| option | [BatchOperationOptions](arkts-medialibrary-photoaccesshelper-batchoperationoptions-i-sys.md) | 否 | 批量操作的选项<br>批量操作的选项 |
 
 **返回值：**
 
@@ -3449,8 +3449,8 @@ moveAssetsToDir(assets: string[], target: string, option?: BatchOperationOptions
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. Moving to the target directory is not supported;  2. Assets to be Moved does not exist;  3. Automatic renaming is not supported.  4. The task is interrupted. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Moving to the target directory is not supported; <br>2. Assets to be Moved does not exist; <br>3. Automatic renaming is not supported. <br>4. The task is interrupted. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -3499,7 +3499,7 @@ off(type: 'hiddenPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hiddenPhotoChange' | 是 | 取消监听隐藏资产，取值为'hiddenPhotoChange'。取消监听后，有隐藏资产发生变化时，不再通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 取消on('hiddenPhotoChange')注册时指定的callback监听；不填时，则取消对'hiddenPhotoChange'的所有监听。   **注意：** 取消注册的callback后，有隐藏资产发生变化时，不会进入此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 取消[on('hiddenPhotoChange')](#onhiddenphotochange)注册时指定的callback监听；不填时，则取消对'hiddenPhotoChange'的所有监听。<br>**注意：** <br>取消注册的callback后，有隐藏资产发生变化时，不会进入此回调。 |
 
 **错误码：**
 
@@ -3507,7 +3507,7 @@ off(type: 'hiddenPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 **示例**
@@ -3562,7 +3562,7 @@ off(type: 'trashedPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'trashedPhotoChange' | 是 | 取消监听回收站资产，取值为'trashedPhotoChange'。取消监听后，有回收站资产发生变化时，不再通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 取消on('trashedPhotoChange')注册时指定的callback监听；不填时，则取消对'trashedPhotoChange'的所有监听。   **注意：** 取消注册的callback后，有回收站资产发生变化时，不会进入此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 取消[on('trashedPhotoChange')](#ontrashedphotochange)注册时指定的callback监听；不填时，则取消对'trashedPhotoChange'的所有监听。<br>**注意：** <br>取消注册的callback后，有回收站资产发生变化时，不会进入此回调。 |
 
 **错误码：**
 
@@ -3570,7 +3570,7 @@ off(type: 'trashedPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): voi
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 **示例**
@@ -3625,7 +3625,7 @@ off(type: 'hiddenAlbumChange', callback?: Callback<AlbumChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hiddenAlbumChange' | 是 | 取消监听隐藏相册，取值为'hiddenAlbumChange'。取消监听后，有隐藏相册发生变化时，不再通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 取消on('hiddenAlbumChange')注册时指定的callback监听；不填时，则取消对'hiddenAlbumChange'的所有监听。   **注意：** 取消注册的callback后，有隐藏相册发生变化时，不会进入此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 取消[on('hiddenAlbumChange')](#onhiddenalbumchange)注册时指定的callback监听；不填时，则取消对'hiddenAlbumChange'的所有监听。<br>**注意：** <br>取消注册的callback后，有隐藏相册发生变化时，不会进入此回调。 |
 
 **错误码：**
 
@@ -3633,7 +3633,7 @@ off(type: 'hiddenAlbumChange', callback?: Callback<AlbumChangeInfos>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 **示例**
@@ -3688,7 +3688,7 @@ off(type: 'trashedAlbumChange', callback?: Callback<AlbumChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'trashedAlbumChange' | 是 | 取消监听回收站相册，取值为'trashedAlbumChange'。取消监听后，有回收站相册发生变化时，不再通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 取消on('trashedAlbumChange')注册时指定的callback监听；不填时，则取消对'trashedAlbumChange'的所有监听。   **注意：** 取消注册的callback后，有回收站相册发生变化时，不会进入此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 取消[on('trashedAlbumChange')](#ontrashedalbumchange)注册时指定的callback监听；不填时，则取消对'trashedAlbumChange'的所有监听。<br>**注意：** <br>取消注册的callback后，有回收站相册发生变化时，不会进入此回调。 |
 
 **错误码：**
 
@@ -3696,7 +3696,7 @@ off(type: 'trashedAlbumChange', callback?: Callback<AlbumChangeInfos>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 **示例**
@@ -3752,7 +3752,7 @@ offAnalysisAlbumChange(callback?: Callback<AlbumChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 回调函数，返回变更的智慧分析相册信息，填入时取消[onAnalysisAlbumChange](#onanalysisalbumchange)注册时指定的callback监听；不填时，则取消[onAnalysisAlbumChange](#onanalysisalbumchange)注册的所有监听。   **注意：** 取消注册的callback后，有智慧相册发生变化时，不会进入此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 回调函数，返回变更的智慧分析相册信息，填入时取消[onAnalysisAlbumChange](#onanalysisalbumchange)注册时指定的callback监听；不填时，则取消[onAnalysisAlbumChange](#onanalysisalbumchange)注册的所有监听。<br>**注意：** <br>取消注册的callback后，有智慧相册发生变化时，不会进入此回调。 |
 
 **错误码：**
 
@@ -3760,7 +3760,7 @@ offAnalysisAlbumChange(callback?: Callback<AlbumChangeInfos>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 **示例**
@@ -3816,7 +3816,7 @@ offAnalysisPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 回调函数，返回含对应智慧分析相册变更的媒体资产信息，填入时取消[onAnalysisPhotoChange](#onanalysisphotochange)注册时指定的callback监听；不填时，则取消对[onAnalysisPhotoChange](#onanalysisphotochange)的所有监听。   **注意：** 取消注册的callback后，智慧分析相册的资产变更时，不再进入此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 回调函数，返回含对应智慧分析相册变更的媒体资产信息，填入时取消[onAnalysisPhotoChange](#onanalysisphotochange)注册时指定的callback监听；不填时，则取消对[onAnalysisPhotoChange](#onanalysisphotochange)的所有监听。<br>**注意：** <br>取消注册的callback后，智慧分析相册的资产变更时，不再进入此回调。 |
 
 **错误码：**
 
@@ -3824,7 +3824,7 @@ offAnalysisPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 **示例**
@@ -3886,7 +3886,7 @@ offShareAlbumChange(callback?: Callback<AlbumChangeInfos>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## offSharePhotoChange
@@ -3917,7 +3917,7 @@ offSharePhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## on('hiddenPhotoChange')
@@ -3941,7 +3941,7 @@ on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hiddenPhotoChange' | 是 | 注册监听隐藏资产，取值为'hiddenPhotoChange'。注册完成后，有隐藏资产发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的隐藏媒体资产信息[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md).    **注意：** 该接口可以注册多个不同的callback监听，off('hiddenPhotoChange')既可以关闭所有监听，也可以关闭指定callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的隐藏媒体资产信息[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md). <br>**注意：** <br>该接口可以注册多个不同的callback监听，[off('hiddenPhotoChange')](#offhiddenphotochange)既可以关闭所有监听，也可以关闭指定callback监听。 |
 
 **错误码：**
 
@@ -3949,7 +3949,7 @@ on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 **示例**
@@ -4001,7 +4001,7 @@ on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'trashedPhotoChange' | 是 | 注册监听回收站资产，取值为'trashedPhotoChange'。注册完成后，有回收站资产发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的回收站媒体资产信息[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md).    **注意：** 该接口可以注册多个不同的callback监听，off('trashedPhotoChange')既可以关闭所有监听，也可以关闭指定callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的回收站媒体资产信息[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md). <br>**注意：** <br>该接口可以注册多个不同的callback监听，[off('trashedPhotoChange')](#offtrashedphotochange)既可以关闭所有监听，也可以关闭指定callback监听。 |
 
 **错误码：**
 
@@ -4009,7 +4009,7 @@ on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 **示例**
@@ -4061,7 +4061,7 @@ on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hiddenAlbumChange' | 是 | 注册监听隐藏相册，取值为'hiddenAlbumChange'。注册完成后，有隐藏相册发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的隐藏相册信息[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。   **注意：** 该接口可以注册多个不同的callback监听，off('hiddenAlbumChange')既可以关闭所有监听，也可以关闭指定callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的隐藏相册信息[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。<br>**注意：** <br>该接口可以注册多个不同的callback监听，[off('hiddenAlbumChange')](#offhiddenalbumchange)既可以关闭所有监听，也可以关闭指定callback监听。 |
 
 **错误码：**
 
@@ -4069,7 +4069,7 @@ on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 **示例**
@@ -4121,7 +4121,7 @@ on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'trashedAlbumChange' | 是 | 注册监听回收站相册，取值为'trashedAlbumChange'。注册完成后，有回收站相册发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的相册信息[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。   **注意：** 该接口可以注册多个不同的callback监听，off('trashedAlbumChange')既可以关闭所有监听，也可以关闭指定callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的相册信息[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。<br>**注意：** <br>该接口可以注册多个不同的callback监听，[off('trashedAlbumChange')](#offtrashedalbumchange)既可以关闭所有监听，也可以关闭指定callback监听。 |
 
 **错误码：**
 
@@ -4129,7 +4129,7 @@ on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 **示例**
@@ -4182,7 +4182,7 @@ onAnalysisAlbumChange(callback: Callback<AlbumChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 回调函数，返回变更的智慧分析相册信息[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。   **注意：** 该接口可以注册多个不同的callback监听，[offAnalysisAlbumChange](#offanalysisalbumchange)既可以关闭所有监听，也可以关闭指定callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 回调函数，返回变更的智慧分析相册信息[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。<br>**注意：** <br>该接口可以注册多个不同的callback监听，[offAnalysisAlbumChange](#offanalysisalbumchange)既可以关闭所有监听，也可以关闭指定callback监听。 |
 
 **错误码：**
 
@@ -4190,7 +4190,7 @@ onAnalysisAlbumChange(callback: Callback<AlbumChangeInfos>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 **示例**
@@ -4243,7 +4243,7 @@ onAnalysisPhotoChange(callback: Callback<PhotoAssetChangeInfos>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 回调函数，返回含对应智慧分析相册变更的媒体资产信息[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)。   **注意：** 该接口可以注册多个不同的callback监听，[offAnalysisPhotoChange](#offanalysisphotochange)既可以关闭所有监听，也可以关闭指定callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 回调函数，返回含对应智慧分析相册变更的媒体资产信息[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)。<br>**注意：** <br>该接口可以注册多个不同的callback监听，[offAnalysisPhotoChange](#offanalysisphotochange)既可以关闭所有监听，也可以关闭指定callback监听。 |
 
 **错误码：**
 
@@ -4251,7 +4251,7 @@ onAnalysisPhotoChange(callback: Callback<PhotoAssetChangeInfos>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 **示例**
@@ -4310,7 +4310,7 @@ onShareAlbumChange(callback: Callback<AlbumChangeInfos>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## onSharePhotoChange
@@ -4341,7 +4341,7 @@ onSharePhotoChange(callback: Callback<PhotoAssetChangeInfos>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## query
@@ -4378,8 +4378,8 @@ query(sql: string): Promise<ResultSet>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: The SQL statement is abnormal. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails.<br>Possible causes: The SQL statement is abnormal. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs.<br>Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -4436,9 +4436,9 @@ Release medialibrary database backup resources incluses closing backup database 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. The betaIssueId parameter is invalid, such as null, undefined or empty string.  2. The daFd parameter is invalid, such as out of range 0~1023. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. The betaIssueId parameter is invalid, such as null, undefined or empty string. <br>2. The daFd parameter is invalid, such as out of range 0~1023. |
 | [23800201](../errorcode-medialibrary.md#23800201-不支持的操作类型) | Unsupported operation type, this api only works on beta device. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:  1. The database is corrupted.  2. The file system is abnormal.  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
 ## removeFormInfo
 
@@ -4469,7 +4469,7 @@ removeFormInfo(info: FormInfo, callback: AsyncCallback<void>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
 **示例**
@@ -4531,7 +4531,7 @@ removeFormInfo(info: FormInfo): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
 **示例**
@@ -4591,7 +4591,7 @@ removeGalleryFormInfo(info: GalleryFormInfo): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
 **示例**
@@ -4643,7 +4643,7 @@ saveFormInfo(info: FormInfo, callback: AsyncCallback<void>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
 **示例**
@@ -4714,7 +4714,7 @@ saveFormInfo(info: FormInfo): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
 **示例**
@@ -4783,7 +4783,7 @@ saveGalleryFormInfo(info: GalleryFormInfo): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
 **示例**
@@ -4861,7 +4861,7 @@ setAssetCompatibleCapability(bundleName: string, capability: AssetCompatibleCapa
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The bundleName or capability is invalid. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -4901,7 +4901,7 @@ setPhotoAlbumOrder(orderStyle: number, albumOrders: Array<AlbumOrder>): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| orderStyle | number | 是 | 选择相册的排序风格。0：Phone风格。1：PC风格。 |
+| orderStyle | number | 是 | 选择相册的排序风格。<br>0：Phone风格。1：PC风格。 |
 | albumOrders | Array&lt;[AlbumOrder](arkts-medialibrary-photoaccesshelper-albumorder-i-sys.md)&gt; | 是 | 待设置的相册排序结果数组。 |
 
 **返回值：**
@@ -4916,8 +4916,8 @@ setPhotoAlbumOrder(orderStyle: number, albumOrders: Array<AlbumOrder>): Promise<
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: 1.The input parameter is not within the valid range. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails.<br>Possible causes: 1.The input parameter is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -4989,7 +4989,7 @@ setPreferredCompatibleMode(bundleName: string, compatibleMode: PreferredCompatib
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The bundleName is invalid, such as null, undefined and empty. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -5035,7 +5035,7 @@ startAssetAnalysis(type: AnalysisType, assetUris?: Array<string>): Promise<numbe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | [AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md) | 是 | 需要启动的智慧分析类型，仅支持ANALYSIS_SEARCH_INDEX。 |
-| assetUris | Array&lt;string&gt; | 否 | 资产uri的数组。   - 填写：仅分析指定资产。   - 不填：全量分析。 |
+| assetUris | Array&lt;string&gt; | 否 | 资产uri的数组。<br>- 填写：仅分析指定资产。<br>- 不填：全量分析。 |
 
 **返回值：**
 
@@ -5049,7 +5049,7 @@ startAssetAnalysis(type: AnalysisType, assetUris?: Array<string>): Promise<numbe
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 
 **示例**
 
@@ -5108,8 +5108,8 @@ startAssetAnalysisAsync(config: AnalysisConfig, callback: Callback<AnalysisResul
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. Unsupported or invalid types of config;  2. The types or uris array size of config exceed max value. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Unsupported or invalid types of config; <br>2. The types or uris array size of config exceed max value. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -5175,8 +5175,8 @@ startDeepOptimizeSpace(callback?: Callback<DeepOptimizeSpaceProgress>): Promise<
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800201](../errorcode-medialibrary.md#23800201-不支持的操作类型) | Unsupported operation type, Possible causes:  1. Restarted repeatedly;  2. system is busy. Please try again later; |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800201](../errorcode-medialibrary.md#23800201-不支持的操作类型) | Unsupported operation type, Possible causes:<br>1. Restarted repeatedly; <br>2. system is busy. Please try again later; |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -5230,7 +5230,7 @@ startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, c
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **示例**
@@ -5295,7 +5295,7 @@ startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, c
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: The predicates invalid. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -5357,8 +5357,8 @@ stopAssetAnalysis(config: AnalysisConfig): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:  1. Unsupported or invalid AnalysisType of config;  2. The types or uris array size of config exceed max value. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Unsupported or invalid AnalysisType of config; <br>2. The types or uris array size of config exceed max value. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -5411,7 +5411,7 @@ stopDeepOptimizeSpace(): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:  1. Database corrupted;  2. The file system is abnormal;  3. The IPC request timed out. |
+| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 **示例**
 
@@ -5456,7 +5456,7 @@ stopThumbnailCreationTask(taskId: number): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 **示例**
@@ -5510,7 +5510,7 @@ updateGalleryFormInfo(info: GalleryFormInfo): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
 **示例**

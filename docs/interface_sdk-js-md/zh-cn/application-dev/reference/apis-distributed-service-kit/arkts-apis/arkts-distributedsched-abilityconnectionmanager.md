@@ -46,10 +46,10 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 | [createStream](arkts-distributedservice-abilityconnectionmanager-createstream-f-sys.md) | 应用连接成功后，设备A或设备B可创建传输流，发送图片和视频流，使用Promise异步回调。 |
 | [destroyStream](arkts-distributedservice-abilityconnectionmanager-destroystream-f-sys.md) | 发送图片和视频流等业务结束后，创建传输流的应用应及时销毁传输流，否则会增加系统功耗。需与createStream()方法配对使用，在业务结束后必须调用此方法销毁传输流以释放资源。 |
 | [getSurfaceId](arkts-distributedservice-abilityconnectionmanager-getsurfaceid-f-sys.md) | 获取指定传输流绑定的Surface的唯一标识符。Surface ID可用于将Surface与组件关联，实现音视频数据的显示。 |
-| off | 取消receiveImage事件的回调监听。 |
-| off | 取消collaborateEvent事件的回调监听。 |
-| on | 注册receiveImage事件的回调监听。 |
-| on | 注册collaborateEvent事件的回调监听。 |
+| [off](arkts-distributedservice-abilityconnectionmanager-off-f-sys.md#offreceiveimage) | 取消receiveImage事件的回调监听。 |
+| [off](arkts-distributedservice-abilityconnectionmanager-off-f-sys.md#offcollaborateevent) | 取消collaborateEvent事件的回调监听。 |
+| [on](arkts-distributedservice-abilityconnectionmanager-on-f-sys.md#onreceiveimage) | 注册receiveImage事件的回调监听。 |
+| [on](arkts-distributedservice-abilityconnectionmanager-on-f-sys.md#oncollaborateevent) | 注册collaborateEvent事件的回调监听。 |
 | [sendImage](arkts-distributedservice-abilityconnectionmanager-sendimage-f-sys.md) | 应用连接成功并创建传输流后，设备A或设备B可向对端设备发送图片。图片会根据指定的压缩质量进行编码后，通过传输流通道发送至对端设备。发送成功后，对端设备可通过注册的回调接收图片，使用Promise异步回调。业务结束后应及时销毁传输流，否则会增加系统功耗，使用场景包括跨设备视频通话中发送视频帧、远程协作时发送截图、跨设备图片共享等需要向对端发送图片数据的场景。 |
 | [setSurfaceId](arkts-distributedservice-abilityconnectionmanager-setsurfaceid-f-sys.md) | 设置传输流与Surface的绑定关系。Surface用于承载音视频数据的显示或采集，绑定后传输流的音视频数据将直接渲染到Surface上或从Surface采集数据。 |
 | [startStream](arkts-distributedservice-abilityconnectionmanager-startstream-f-sys.md) | 启动指定传输流，使传输流开始发送或接收视频数据。启动前需确保传输流已完成Surface绑定，否则无法正常启动。需与stopStream()方法配对使用，使用完毕后应调用stopStream()停止传输流，最后调用destroyStream()销毁传输流以释放资源。 |

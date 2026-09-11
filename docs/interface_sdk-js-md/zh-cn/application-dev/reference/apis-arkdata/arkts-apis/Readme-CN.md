@@ -185,7 +185,7 @@
   - [DataShareResultSet(系统接口)](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DataType(系统接口)](arkts-arkdata-data-datashareresultset-datatype-e-sys.md)<!--DelEnd-->
-- [@ohos.data.distributedData](arkts-data-distributeddata.md)
+- [@ohos.data.distributedData(分布式数据管理)](arkts-data-distributeddata.md)
   - [distributedData](arkts-arkdata-distributeddata-n.md)
     - [Constants](arkts-arkdata-distributeddata-constants-n.md)
       - [常量](arkts-arkdata-constants-con.md)

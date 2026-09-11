@@ -19,7 +19,7 @@ defaultValue: number | string | boolean | Object
 
 在PersistentStorage和AppStorage中未查询到时，则使用默认值进行初始化。从API version 12开始，defaultValue可以为null或undefined。
 
-**类型：** number \| string \| boolean \| Object
+**类型：** number &#124; string &#124; boolean &#124; Object
 
 **起始版本：** 10
 

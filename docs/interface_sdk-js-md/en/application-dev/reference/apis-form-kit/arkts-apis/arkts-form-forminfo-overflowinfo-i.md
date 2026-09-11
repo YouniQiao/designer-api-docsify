@@ -2,6 +2,8 @@
 
 Provides OverflowInfo about funInteraction or sceneAnimation form
 
+@typedef { OverflowInfo }
+
 **Since:** 20
 
 **System capability:** SystemCapability.Ability.Form

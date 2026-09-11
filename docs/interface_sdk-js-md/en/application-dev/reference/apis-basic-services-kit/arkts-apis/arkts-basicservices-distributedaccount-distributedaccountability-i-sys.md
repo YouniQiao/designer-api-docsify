@@ -157,7 +157,7 @@ Sets the distributed account information about an OS account. This API uses an a
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid distributedInfo. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account identified by localId or by distributedInfo not found. |
@@ -222,7 +222,7 @@ Sets the distributed account information about an OS account. This API uses a pr
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.   2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid distributedInfo. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account identified by localId or by distributedInfo not found. |

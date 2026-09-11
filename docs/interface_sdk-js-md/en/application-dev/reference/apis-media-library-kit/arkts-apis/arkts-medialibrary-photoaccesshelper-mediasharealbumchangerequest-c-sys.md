@@ -115,7 +115,7 @@ Creates a MediaShareAlbumChangeRequest instance of creating share album.
 
 | Type | Description |
 | --- | --- |
-| [MediaShareAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediasharealbumchangerequest-c-sys.md) \| null | Returns a MediaAlbumChangeRequest instance. if the operation fails, returns null. |
+| [MediaShareAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediasharealbumchangerequest-c-sys.md) &#124; null | Returns a MediaAlbumChangeRequest instance. if the operation fails, returns null. |
 
 **Error codes:**
 
@@ -123,7 +123,7 @@ Creates a MediaShareAlbumChangeRequest instance of creating share album.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: 1. The context is null. 2. The album name must meet the following requirements: The total length of the album name must be between 1 and 255 characters. It must not contain any invalid characters, which are: . \ / : * ? " ' ` &lt; &gt; \| { } [ ] It is case-insensitive. 3. The lpath does not meet the uniqueness requirement. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: 1. The context is null. 2. The album name must meet the following requirements: The total length of the album name must be between 1 and 255 characters. It must not contain any invalid characters, which are: . \ / : * ? " ' ` &lt; &gt; &#124; { } [ ] It is case-insensitive. 3. The lpath does not meet the uniqueness requirement. |
 
 ## deleteMemberShareAlbum
 
@@ -163,7 +163,7 @@ Delete member share album.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:  1. The context is null.  2. The albums are not share album.  3. The operator must be the member of the share album when deleting the local share album. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:<br>1. The context is null. <br>2. The albums are not share album. <br>3. The operator must be the member of the share album when deleting the local share album. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: 1. The database is corrupted. 2. The file system is abnormal. 3. The IPC request timed out. |
 
 ## deleteShareAlbum
@@ -204,7 +204,7 @@ Delete share album.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:  1. The context is null.  2. The albums are not share album.  3. The operator must be the owner of the share album when deleting the album. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:<br>1. The context is null. <br>2. The albums are not share album. <br>3. The operator must be the owner of the share album when deleting the album. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: 1. The database is corrupted. 2. The file system is abnormal. 3. The IPC request timed out. |
 
 ## deleteShareAssets
@@ -245,7 +245,7 @@ Delete assets of share album.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:  1. The context is null.  2. The albums are not share album.  3. Asset uri array size is empty or bigger than 500.  4. When a deleted photo belongs to a shared album, only the album owner or the person who shared the photo can delete it. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:<br>1. The context is null. <br>2. The albums are not share album. <br>3. Asset uri array size is empty or bigger than 500. <br>4. When a deleted photo belongs to a shared album, only the album owner or the person who shared the photo can delete it. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: 1. The database is corrupted. 2. The file system is abnormal. 3. The IPC request timed out. |
 
 ## deleteShareMember
@@ -279,7 +279,7 @@ delete share member.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:  1. The albums are not share album. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:<br>1. The albums are not share album. |
 
 ## getShareAlbumMemberInfo
 
@@ -320,8 +320,8 @@ Get the member information of share album.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:  1. The context is null.  2. The albums are not share album. |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error.It is recommended to retry and check the logs. Possible causes:1. Database corrupted.2. The file system is abnormal.3. The IPC request timed out. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:<br>1. The context is null. <br>2. The albums are not share album. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error.It is recommended to retry and check the logs.<br>Possible causes:1. Database corrupted.2. The file system is abnormal.3. The IPC request timed out. |
 
 ## setShareAlbumName
 
@@ -354,7 +354,7 @@ set the name of share album.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:  1. The albums are not share album.  2. The album name must meet the following requirements: The total length of the album name must be between 1 and 255 characters. It must not contain any invalid characters, which are: . \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: <br>1. The albums are not share album. <br>2. The album name must meet the following requirements: The total length of the album name must be between 1 and 255 characters. It must not contain any invalid characters, which are: . \ / : * ? " ' ` &lt; &gt; &#124; { } [ ] |
 
 ## updateShareMemberStatus
 

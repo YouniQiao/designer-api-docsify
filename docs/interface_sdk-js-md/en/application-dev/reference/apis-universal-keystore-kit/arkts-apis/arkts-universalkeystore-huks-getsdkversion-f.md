@@ -14,7 +14,7 @@ function getSdkVersion(options: HuksOptions): string
 
 Obtains the SDK version of the current system.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is supported since API version 8 and deprecated since API version 11.
 

@@ -107,7 +107,7 @@ Creates a DepthDataOutput instance. This API returns the result synchronously.
 
 | 类型 | 说明 |
 | --- | --- |
-| [DepthDataOutput](arkts-camera-camera-depthdataoutput-i-sys.md) | DepthDataOutput instance. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| [DepthDataOutput](arkts-camera-camera-depthdataoutput-i-sys.md) | DepthDataOutput instance. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **错误码：**
 

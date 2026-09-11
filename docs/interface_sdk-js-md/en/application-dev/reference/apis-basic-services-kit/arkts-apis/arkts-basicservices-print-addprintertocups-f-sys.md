@@ -28,9 +28,9 @@ Add a printer to cups.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerUri | string | Yes | Indicates the printer uri. Printer URI in the process of connecting. |
-| printerName | string | Yes | Indicates the printer name. Printer name in the process of connecting. |
-| printerMake | string | Yes | Indicates the printer make. Printer make in the process of connecting. |
+| printerUri | string | Yes | Indicates the printer uri.<br>Printer URI in the process of connecting. |
+| printerName | string | Yes | Indicates the printer name.<br>Printer name in the process of connecting. |
+| printerMake | string | Yes | Indicates the printer make.<br>Printer make in the process of connecting. |
 
 **Return value:**
 

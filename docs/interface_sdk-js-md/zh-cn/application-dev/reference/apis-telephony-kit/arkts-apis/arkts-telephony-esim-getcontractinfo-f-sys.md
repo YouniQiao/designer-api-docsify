@@ -26,7 +26,7 @@ function getContractInfo(slotId: number, requestData: ContractRequestData) : Pro
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
+| slotId | number | 是 | 卡槽ID。<br>- 0：卡槽1。<br>- 1：卡槽2。 |
 | requestData | [ContractRequestData](arkts-telephony-esim-contractrequestdata-i-sys.md) | 是 | 用来加密的信息。 |
 
 **返回值：**

@@ -328,7 +328,7 @@ isBooleanObject(value: Object): boolean
 
 判断入参是否为 Boolean 类型。
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
 
@@ -369,7 +369,7 @@ isBoxedPrimitive(value: Object): boolean
 
 判断入参是否为 Boolean、Number、String 或 Symbol 类型。
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
 
@@ -990,7 +990,7 @@ isNumberObject(value: Object): boolean
 
 判断入参是否为 Number 类型。
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
 
@@ -1247,7 +1247,7 @@ isStringObject(value: Object): boolean
 
 判断入参是否为字符串对象。
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
 
@@ -1288,7 +1288,7 @@ isSymbolObject(value: Object): boolean
 
 判断入参是否为 symbol 对象。
 
-> **NOTE：**
+> **NOTE:**
 > 
 > 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
 

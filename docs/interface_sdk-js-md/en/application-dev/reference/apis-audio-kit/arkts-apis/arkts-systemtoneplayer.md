@@ -2,12 +2,15 @@
 
 The module provides APIs for playing and configuring SMS tones and notification tones and obtaining related
  information.
- This module must work with
+
+This module must work with
  [@ohos.multimedia.systemSoundManager](arkts-multimedia-systemsoundmanager.md) to manage
  system tones.
- > **NOTE**
+
+> **NOTE**
  >
  > - The APIs provided by this module are system APIs.
+
 
 
 ## Summary

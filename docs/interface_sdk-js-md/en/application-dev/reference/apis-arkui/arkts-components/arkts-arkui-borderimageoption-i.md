@@ -41,7 +41,7 @@ outset?: Length | EdgeWidths | LocalizedEdgeWidths
 
 Amount by which the border image is extended beyond the border box.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **Default:** 0
 
@@ -81,7 +81,7 @@ slice?: Length | EdgeWidths | LocalizedEdgeWidths
 
 Slice width of the upper left corner, upper right corner, lower left corner, and lower right corner of the border image.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **Default:** 0
 
@@ -101,9 +101,9 @@ source?: string | Resource | LinearGradient
 
 Source or gradient color of the border image. When the type is string, this parameter sets the border image source. For details about how to reference image resources, see Loading Image Resources.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: The border image source applies only to container components, such as Row, Column, and Flex. </p>
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The border image source applies only to container components, such as Row, Column, and Flex. </p>
 
-**Type:** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [LinearGradient](arkts-arkui-lineargradient-i.md)
+**Type:** string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; [LinearGradient](arkts-arkui-lineargradient-i.md)
 
 **Since:** 11
 
@@ -121,7 +121,7 @@ width?: Length | EdgeWidths | LocalizedEdgeWidths
 
 Width of the border image.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **Default:** 0
 

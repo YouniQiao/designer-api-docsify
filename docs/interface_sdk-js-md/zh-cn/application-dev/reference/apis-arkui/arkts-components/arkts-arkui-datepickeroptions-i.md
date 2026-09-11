@@ -58,7 +58,8 @@ end?: Date
 
 **类型：** Date
 
-**默认值：** Date('2100-12-31') [since 11]
+**默认值：**
+- API版本11+：Date('2100-12-31')
 
 **起始版本：** 8
 
@@ -82,8 +83,7 @@ mode?: DatePickerMode
 
 **类型：** [DatePickerMode](arkts-arkui-datepickermode-e.md)
 
-**默认值：** DatePickerMode.DATE - which means to display three columns: year, month, and day. 
-Decimal values are rounded off.
+**默认值：** DatePickerMode.DATE - which means to display three columns: year, month, and day. <br>Decimal values are rounded off.
 
 **起始版本：** 18
 
@@ -110,7 +110,8 @@ selected?: Date
 
 **类型：** Date
 
-**默认值：** current system date [since 11]
+**默认值：**
+- API版本11+：current system date
 
 **起始版本：** 8
 
@@ -136,7 +137,8 @@ start?: Date
 
 **类型：** Date
 
-**默认值：** Date('1970-1-1') [since 11]
+**默认值：**
+- API版本11+：Date('1970-1-1')
 
 **起始版本：** 8
 

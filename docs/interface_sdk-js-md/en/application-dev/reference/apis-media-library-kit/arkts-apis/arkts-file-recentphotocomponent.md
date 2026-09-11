@@ -3,9 +3,11 @@
 The RecentPhotoComponent embedded in the UI of an application allows the application to access the recent image or
  video in the user directory without the required permission. This component grants the application only the read
  permission.
- Note that **RecentPhotoComponent** does not support nesting. Additionally, prevent overlaying components with the
+
+Note that **RecentPhotoComponent** does not support nesting. Additionally, prevent overlaying components with the
  **overlay** attribute or of higher levels on top it, as this will prevent it from receiving gesture events.
- > **NOTE**
+
+> **NOTE**
  >
  > - This component does not support [same-layer rendering](../../../web/web-same-layer.md).
 

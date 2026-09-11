@@ -46,7 +46,7 @@ The AI enhancement generates an additional image. Together with the original ima
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the request ID, which can be used in [cancelRequest]{ |
+| Promise&lt;string&gt; | Promise used to return the request ID, which can be used in [cancelRequest](arkts-medialibrary-photoaccesshelper-mediaassetmanager-c.md#cancelrequest) to cancel a request. |
 
 **Error codes:**
 

@@ -64,7 +64,7 @@ Default value: **8**
 
 Unit: vp
 
-**NOTE：**
+**NOTE:**
 
 Percentage values are not supported.
 
@@ -96,7 +96,7 @@ When the popup is displayed on either edge of the screen, it automatically adjus
 
 Unit: vp
 
-**NOTE：**
+**NOTE:**
 
 1. If **arrowOffset** is not set, the distance between the popup arrow and the four corners must be no less than the corner radius.
 2. If **arrowPointPosition** is set, **arrowOffset** does not take effect.
@@ -142,7 +142,7 @@ Default value: **16**
 
 Unit: vp
 
-**NOTE：**
+**NOTE:**
 
 Percentage values are not supported.
 
@@ -270,7 +270,7 @@ borderLinearGradient?: PopupBorderLinearGradient
 
 Linear gradient color of the inner outline of the popup.
 
-**NOTE：**
+**NOTE:**
 
 1. If **borderLinearGradient** is not set or set to **null** or **undefined**, the linear gradient color of the inner outline does not take effect.
 2. When **borderLinearGradient** is set, the default value of **direction** is **GradientDirection.Bottom**.
@@ -297,7 +297,7 @@ Default value: **1**
 
 Unit: vp
 
-**NOTE：**
+**NOTE:**
 
 1. Percentage values are not supported. If a percentage value is set, the value **0** is used.
 2. If no inner outline is set, this parameter must be used together with **borderLinearGradient**.
@@ -345,7 +345,7 @@ Whether to display the arrow.
 
 Default value: **true**
 
-**NOTE：**
+**NOTE:**
 
 If the available space on the screen is insufficient, the popup will cover part of the component and the arrow will not be displayed.
 
@@ -371,7 +371,7 @@ Whether the popup responds when the device is in hover mode (semi-folded state),
 
 Default value: **false** (**true** for 2-in-1 devices by default). If this parameter is not set or set to an invalid value, the default value is used.
 
-**NOTE：**
+**NOTE:**
 
 1. If the popup position is within the crease area in hover mode, it will not respond in hover mode.
 2. This parameter is supported on 2-in-1 devices since API version 20.
@@ -467,7 +467,7 @@ Whether to apply a mask with the specified color to the popup.
 
 Default value: **true**
 
-**Type:** boolean \| { color: ResourceColor }
+**Type:** boolean &#124; { color: ResourceColor }
 
 **Since:** 10
 
@@ -523,13 +523,14 @@ Default value: **{x:0, y:0}**
 
 Unit: vp
 
-**NOTE：**
+**NOTE:**
 
 Percentage values are not supported.
 
 **Type:** Position
 
-**Default:** { x: 0, y: 0 } [since 11]
+**Default:**
+- API version 11+: { x: 0, y: 0 }
 
 **Since:** 10
 
@@ -550,11 +551,11 @@ Interactive dismissal behavior. The default value is **true**, meaning that the 
 1. For the boolean type, if this parameter is set to **false**, the popup ignores clicks, swipes, back button, route navigation, and **Esc** key events, and can only be dismissed by setting the **show** parameter to **false**; if this parameter is set to **true**, the popup responds to dismissal events.
 2. If this parameter is set to a function, the dismissal event is intercepted and the callback function is executed. For swipes, back button, route navigation, and the **Esc** key, the value of **reason** returned in the callback function is **PRESS_BACK**. For clicks, the value is **TOUCH_OUTSIDE**.
 
-**NOTE：**
+**NOTE:**
 
 No more **onWillDismiss** callback is allowed in an **onWillDismiss** callback.
 
-**Type:** boolean \| [Callback](arkts-arkui-callback-i.md)&lt;[DismissPopupAction](arkts-arkui-dismisspopupaction-i.md)&gt;
+**Type:** boolean &#124; [Callback](arkts-arkui-callback-i.md)&lt;[DismissPopupAction](arkts-arkui-dismisspopupaction-i.md)&gt;
 
 **Since:** 12
 
@@ -572,7 +573,7 @@ outlineLinearGradient?: PopupBorderLinearGradient
 
 Linear gradient color of the outer outline of the popup.
 
-**NOTE：**
+**NOTE:**
 
 1. If **outlineLinearGradient** is not set or set to **null** or **undefined**, the linear gradient color of the outer outline does not take effect.
 2. When **outlineLinearGradient** is set, the default value of **direction** is **GradientDirection.Bottom**.
@@ -599,7 +600,7 @@ Default value: **1**
 
 Unit: vp
 
-**NOTE：**
+**NOTE:**
 
 1. Percentage values are not supported. If a percentage value is set, the value **0** is used.
 2. If the outer outline is not set, this parameter must be used together with **outlineLinearGradient**.
@@ -645,7 +646,7 @@ placementOnTop?: boolean
 
 Whether to display the popup above the component. The default value is **false**. **true**: The popup is displayed above the bound component; **false**: The popup is displayed below the bound component.
 
-**NOTE：**
+**NOTE:**
 
 This parameter is supported since API version 7 and deprecated since API version 10. You are advised to use **placement** instead.
 
@@ -669,7 +670,7 @@ Color of the popup. To remove the background blur, set **backgroundBlurStyle** t
 
 Default value: TRANSPARENT plus [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)
 
-**Type:** [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| number
+**Type:** [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; number
 
 **Since:** 11
 
@@ -857,7 +858,7 @@ Popup shadow.
 
 Default value: **ShadowStyle.OUTER_DEFAULT_MD**
 
-**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
+**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **Default:** ShadowStyle.OUTER_DEFAULT_MD.
 
@@ -883,7 +884,8 @@ Default value: **false**
 
 **Type:** boolean
 
-**Default:** false [since 11]
+**Default:**
+- API version 11+: false
 
 **Since:** 9
 
@@ -939,7 +941,7 @@ transition?: TransitionEffect
 
 Transition animations for the entrance and exit of the popup.
 
-**NOTE：**
+**NOTE:**
 
 1. If this parameter is not set, the default entrance and exit animations are used.
 2. Touching the back button during the entrance animation interrupts it and starts the exit animation. The final effect is one obtained after the curves of the entrance and exit animations are combined.

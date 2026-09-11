@@ -40,7 +40,7 @@ function openCustomDialog(options: CustomDialogOptions): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [CustomDialogOptions](arkts-arkui-promptaction-customdialogoptions-i.md) | 是 | 自定义弹窗的内容。   **说明：** 如果BaseDialogOptions中的[isModal](arkts-arkui-promptaction-basedialogoptions-i.md)与[showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md)同时设置为true，则只生效showInSubWindow = true，此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
+| options | [CustomDialogOptions](arkts-arkui-promptaction-customdialogoptions-i.md) | 是 | 自定义弹窗的内容。<br>**说明：** 如果BaseDialogOptions中的[isModal](arkts-arkui-promptaction-basedialogoptions-i.md)与[showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md)同时设置为true，则只生效showInSubWindow = true，此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
 
 **返回值：**
 
@@ -52,7 +52,7 @@ function openCustomDialog(options: CustomDialogOptions): Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 **示例**

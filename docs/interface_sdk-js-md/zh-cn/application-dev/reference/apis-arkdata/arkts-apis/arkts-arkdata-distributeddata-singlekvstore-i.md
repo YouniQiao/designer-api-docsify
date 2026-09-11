@@ -10,7 +10,7 @@
 
 **替代接口：** SingleKVStore
 
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core @version 1
 
 ## 导入模块
 
@@ -123,7 +123,7 @@ get(key: string, callback: AsyncCallback<Uint8Array | string | boolean | number>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要查询数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array \| string \| boolean \| number&gt; | 是 | 回调函数。返回获取查询的值。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array &#124; string &#124; boolean &#124; number&gt; | 是 | 回调函数。返回获取查询的值。 |
 
 **示例**
 
@@ -173,7 +173,7 @@ get(key: string): Promise<Uint8Array | string | boolean | number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Uint8Array \| string \| boolean \| number&gt; | Promise对象。返回获取查询的值。 |
+| Promise&lt;Uint8Array &#124; string &#124; boolean &#124; number&gt; | Promise对象。返回获取查询的值。 |
 
 **示例**
 

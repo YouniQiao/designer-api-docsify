@@ -8,12 +8,15 @@ LightWeightMap stores key-value (KV) pairs. Each key must be unique and have onl
  memory.
  **Recommended use case**: Use LightWeightMap when you need to store and access KV pairs.
  This topic uses the following to identify the use of generics:
- - K: Key<br>
+
+- K: Key<br>
  - V: Value
- > **NOTE**
+
+> **NOTE**
  >
  > - Container classes, implemented in static languages, have restrictions on storage locations and properties, and do
  > not support custom properties or methods.
+
 
 
 ## Modules to Import

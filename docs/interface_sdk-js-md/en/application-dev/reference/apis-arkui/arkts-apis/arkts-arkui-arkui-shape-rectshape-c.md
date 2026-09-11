@@ -38,7 +38,7 @@ A constructor used to create a **RectShape** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RectShapeOptions](arkts-arkui-arkui-shape-rectshapeoptions-i.md) \| [RoundRectShapeOptions](arkts-arkui-arkui-shape-roundrectshapeoptions-i.md) | No | Rectangle parameters. |
+| options | [RectShapeOptions](arkts-arkui-arkui-shape-rectshapeoptions-i.md) &#124; [RoundRectShapeOptions](arkts-arkui-arkui-shape-roundrectshapeoptions-i.md) | No | Rectangle parameters. |
 
 ## radius
 
@@ -62,7 +62,7 @@ Sets the radius of the rectangle border corners.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | number \| string \| Array&lt;number \| string&gt; | Yes | Radius of the rectangle border corners. When an array is provided, it should contain exactly four elements, corresponding to the radius of the upper left, upper right, lower left, and lower right corners of the rectangle, respectively. If more than four elements are contained, only the first four are accepted.When the parameter type is number, the valid value range is [0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md) type specification.Unit: vp.If the value is invalid, 0 vp is used. |
+| radius | number &#124; string &#124; Array&lt;number &#124; string&gt; | Yes | Radius of the rectangle border corners. When an array is provided, it should contain exactly four elements, corresponding to the radius of the upper left, upper right, lower left, and lower right corners of the rectangle, respectively. If more than four elements are contained, only the first four are accepted.<br> When the parameter type is number, the valid value range is [0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md) type specification.<br>Unit: vp.<br>If the value is invalid, 0 vp is used. |
 
 **Return value:**
 
@@ -92,7 +92,7 @@ Sets the radius height of the rectangle border corners.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rHeight | number \| string | Yes | Radius height of the rectangle border corners.When the parameter type is number, the valid value range is [0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md) type specification.Unit: vp.If the value is invalid, 0 vp is used. |
+| rHeight | number &#124; string | Yes | Radius height of the rectangle border corners.<br> When the parameter type is number, the valid value range is [0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md) type specification.<br>Unit: vp.<br>If the value is invalid, 0 vp is used. |
 
 **Return value:**
 
@@ -122,7 +122,7 @@ Sets the radius width of the rectangle border corners.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rWidth | number \| string | Yes | Radius width of the rectangle border corners.When the parameter type is number, the valid value range is [0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md) type specification.Unit: vp.If the value is invalid, 0 vp is used. |
+| rWidth | number &#124; string | Yes | Radius width of the rectangle border corners.<br> When the parameter type is number, the valid value range is [0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md) type specification.<br>Unit: vp.<br>If the value is invalid, 0 vp is used. |
 
 **Return value:**
 

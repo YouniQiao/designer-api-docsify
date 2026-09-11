@@ -16,7 +16,7 @@ Obtains SIM card account information. This API uses an asynchronous callback to 
 
 **Required permission**: ohos.permission.GET_TELEPHONY_STATE
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The **GET_TELEPHONY_STATE** permission is required to obtain the ICCID and phone number. Such information is
 > sensitive and not open to third-party applications. When this API is called, the returned ICCID and phone number
@@ -32,7 +32,7 @@ Obtains SIM card account information. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2 |
+| slotId | number | Yes | Card slot ID.<br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt; | Yes | Callback used to return the result, which is the account information of the SIM card in the specified slot. |
 
 **Error codes:**
@@ -70,7 +70,7 @@ Obtains SIM card account information. This API uses a promise to return the resu
 
 **Required permission**: ohos.permission.GET_TELEPHONY_STATE
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The **GET_TELEPHONY_STATE** permission is required to obtain the ICCID and phone number. Such information is
 > sensitive and not open to third-party applications. When this API is called, the returned ICCID and phone number
@@ -86,7 +86,7 @@ Obtains SIM card account information. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Card slot ID.    - **0**: card slot 1.    - **1**: card slot 2 |
+| slotId | number | Yes | Card slot ID.<br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 

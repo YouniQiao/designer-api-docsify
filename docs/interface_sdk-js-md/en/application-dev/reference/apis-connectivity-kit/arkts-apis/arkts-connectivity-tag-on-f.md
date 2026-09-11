@@ -12,7 +12,7 @@ import { tag } from '@kit.ConnectivityKit';
 function on(type: 'readerMode', elementName: ElementName, discTech: number[], callback: AsyncCallback<TagInfo>): void
 ```
 
-Subscribes to the NFC tag read event to implement dispatch of the tag to a foreground application preferentially. The device enters the reader mode and disables card emulation. You can set the supported NFC tag technologies in **discTech**. The [TagInfo](arkts-connectivity-tag-taginfo-i.md) read is returned through a callback. This API must be used with tag.off in pairs. If the NFC reader mode is enabled by **tag.on**, tag.off must be called when the application page exits the foreground or is destroyed. This API uses an asynchronous callback to return the result. This API and tag.on are mutually exclusive.
+Subscribes to the NFC tag read event to implement dispatch of the tag to a foreground application preferentially. The device enters the reader mode and disables card emulation. You can set the supported NFC tag technologies in **discTech**. The [TagInfo](arkts-connectivity-tag-taginfo-i.md) read is returned through a callback. This API must be used with [tag.off](arkts-connectivity-tag-off-f.md#offreadermode) in pairs. If the NFC reader mode is enabled by **tag.on**, [tag.off](arkts-connectivity-tag-off-f.md#offreadermode) must be called when the application page exits the foreground or is destroyed. This API uses an asynchronous callback to return the result. This API and tag.on are mutually exclusive.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ Subscribes to the NFC tag read event to implement dispatch of the tag to a foreg
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [3100202](../errorcode-nfc.md#3100202-application-status-error) | The element state is invalid. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service.<br>**Applicable version:** 12 and later |
@@ -60,7 +60,7 @@ Subscribes to the NFC tag read event so that the tag can be preferentially dispa
 - You can set the supported NFC tag technologies in **discTech** and set the interval for detecting whether a card  
 is present. The callback returns [TagInfo](arkts-connectivity-tag-taginfo-i.md) read.  
 - This API must be used with  
-tag.off in pairs. If the NFC reader mode is enabled by **tag.on**, tag.off must be called when the application page exits the foreground or is destroyed.  
+[tag.off](arkts-connectivity-tag-off-f.md#offreadermodewithinterval) in pairs. If the NFC reader mode is enabled by **tag.on**, [tag.off](arkts-connectivity-tag-off-f.md#offreadermodewithinterval) must be called when the application page exits the foreground or is destroyed.  
 - This API and  
 tag.on are mutually exclusive.
 

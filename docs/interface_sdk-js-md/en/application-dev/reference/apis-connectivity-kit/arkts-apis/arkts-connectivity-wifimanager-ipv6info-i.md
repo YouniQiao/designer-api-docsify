@@ -1,6 +1,6 @@
 # Ipv6Info
 
-Wi-Fi IPv6 information.
+Wi-Fi IPv6 information. @typedef Ipv6Info
 
 **Since:** 10
 

@@ -50,6 +50,26 @@ deviceIdType: number
 
 **系统接口：** 此接口为系统接口。
 
+## deviceSubProfileId
+
+```TypeScript
+deviceSubProfileId?: number
+```
+
+设备子身份资料ID。设备上的子身份资料标识，为非负整数，用于区分同一设备同一用户下的不同子身份资料。取值限定为整数。默认值：默认值为-1。
+
+**类型：** number
+
+**默认值：** -1
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
+
+**系统接口：** 此接口为系统接口。
+
 ## deviceUserId
 
 ```TypeScript

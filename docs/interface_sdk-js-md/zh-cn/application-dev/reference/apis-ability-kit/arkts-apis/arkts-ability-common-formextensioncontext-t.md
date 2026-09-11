@@ -6,6 +6,8 @@ export type FormExtensionContext = _FormExtensionContext.default
 
 The context of form extension. It allows access to formExtension-specific resources.
 
+@typedef { _FormExtensionContext.default }
+
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。

@@ -14,7 +14,7 @@ function getConnectOwnerUidSync(protocol: ProtocolType, local: NetAddress, remot
 
 Queries the UID of the application that initiates a specified network connection. This API returns the result synchronously.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API can be called only in VPN applications.
 > 

@@ -24,7 +24,7 @@ function createHidDeviceProfile(): HidDeviceProfile
 
 | 类型 | 说明 |
 | --- | --- |
-| [HidDeviceProfile](arkts-connectivity-hid-hiddeviceprofile-i.md) | 返回HID Device实例。该类继承于[BaseProfile]{ |
+| [HidDeviceProfile](arkts-connectivity-hid-hiddeviceprofile-i.md) | 返回HID Device实例。该类继承于[BaseProfile](arkts-connectivity-hid-baseprofile-t.md)，因此可以使用其父类中的方法。和该实例角色相对应的是HID Host角色。 |
 
 **错误码：**
 

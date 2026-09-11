@@ -1,6 +1,6 @@
 # WifiLinkedInfo
 
-Wi-Fi connection information.
+Wi-Fi connection information. @typedef WifiLinkedInfo
 
 **Since:** 12
 

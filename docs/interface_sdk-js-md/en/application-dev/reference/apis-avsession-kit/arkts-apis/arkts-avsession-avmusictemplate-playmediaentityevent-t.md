@@ -6,6 +6,8 @@ type PlayMediaEntityEvent = (mediaEntity: MediaEntity) => Promise<void>
 
 The play media entity event.
 
+@typedef { function } PlayMediaEntityEvent
+
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.

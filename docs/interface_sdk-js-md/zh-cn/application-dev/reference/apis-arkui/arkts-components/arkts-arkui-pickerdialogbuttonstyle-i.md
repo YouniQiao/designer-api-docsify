@@ -39,7 +39,7 @@ borderRadius?: Length | BorderRadiuses
 
 Describes the button border radius.
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)
 
 **起始版本：** 12
 
@@ -75,7 +75,7 @@ fontFamily?: Resource | string
 
 Describes the button font family.
 
-**类型：** [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| string
+**类型：** [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; string
 
 **起始版本：** 12
 
@@ -129,7 +129,7 @@ fontWeight?: FontWeight | number | string
 
 Describes the button font weight.
 
-**类型：** [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| number \| string
+**类型：** [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; number &#124; string
 
 **起始版本：** 12
 

@@ -60,7 +60,7 @@ string类型：单位为fp | vp | px | lpx且数值部分大于等于0的字符�
 
 值为undefined时，按默认值处理。
 
-**类型：** string \| number
+**类型：** string &#124; number
 
 **起始版本：** 12
 

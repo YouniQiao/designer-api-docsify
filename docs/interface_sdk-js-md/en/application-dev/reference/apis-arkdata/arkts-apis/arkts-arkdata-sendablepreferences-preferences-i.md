@@ -109,7 +109,7 @@ Deletes a KV pair from this **Preferences** instance. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 **Examples**
@@ -149,7 +149,7 @@ Deletes a KV pair from this **Preferences** instance. This API returns the resul
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 **Examples**
@@ -248,13 +248,13 @@ Obtains the value of a key from this **Preferences** instance. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)&gt; | Promise used to return the value obtained. |
+| Promise&lt;[lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)&gt; | Promise used to return the value obtained.  This instance inherits from [ISendable](../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads) by reference. For details, see [Using Sendable Objects](../../../arkts-utils/sendable-guide.md). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 **Examples**
@@ -290,7 +290,7 @@ Obtains all KV pairs from this **Preferences** instance. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)&gt; | Promise used to return the KV pairs obtained. |
+| Promise&lt;[lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)&gt; | Promise used to return the KV pairs obtained.  This object inherits from [ISendable](../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads) by reference. For details, see [Using Sendable Objects](../../../arkts-utils/sendable-guide.md). |
 
 **Error codes:**
 
@@ -332,7 +332,7 @@ Obtains all KV pairs from this **Preferences** instance. This API returns the re
 
 | Type | Description |
 | --- | --- |
-| [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md) | All KV pairs obtained. |
+| [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md) | All KV pairs obtained.  This object inherits from [ISendable](../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads) by reference. For details, see [Using Sendable Objects](../../../arkts-utils/sendable-guide.md). |
 
 **Error codes:**
 
@@ -376,13 +376,13 @@ Obtains the value of a key from this **Preferences** instance. This API returns 
 
 | Type | Description |
 | --- | --- |
-| [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md) | Value obtained. |
+| [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md) | Value obtained.  This instance inherits from [ISendable](../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads) by reference. For details, see [Using Sendable Objects](../../../arkts-utils/sendable-guide.md). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 **Examples**
@@ -422,7 +422,7 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 **Examples**
@@ -472,7 +472,7 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 **Examples**
@@ -511,7 +511,7 @@ Unsubscribes from data changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 **Examples**
@@ -557,7 +557,7 @@ Unsubscribes from inter-process data changes. This API is provided for applicati
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 **Examples**
@@ -604,7 +604,7 @@ Unsubscribes from changes of specific data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 **Examples**
@@ -653,7 +653,7 @@ Subscribes to data changes. The registered callback will be invoked to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 **Examples**
@@ -698,7 +698,7 @@ Subscribes to data changes between processes. When multiple processes hold the s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 | [15500019](../errorcode-preferences.md#15500019-failed-to-obtain-the-subscription-service) | Failed to obtain the subscription service. |
 
@@ -745,7 +745,7 @@ Subscribes to changes of specific data. The registered callback will be invoked 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 **Examples**
@@ -799,7 +799,7 @@ Writes data to this **Preferences** instance. This API uses a promise to return 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 **Examples**
@@ -840,7 +840,7 @@ Writes data to this **Preferences** instance. This API returns the result synchr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 **Examples**

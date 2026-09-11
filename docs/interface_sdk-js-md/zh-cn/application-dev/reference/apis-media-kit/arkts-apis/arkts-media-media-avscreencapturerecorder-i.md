@@ -121,7 +121,7 @@ init(config: AVScreenCaptureRecordConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3. Parameter verification failed. Return by promise. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3. Parameter verification failed. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
@@ -403,7 +403,7 @@ setPickerMode(pickerMode: PickerMode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pickerMode | [PickerMode](arkts-media-media-pickermode-e.md) | 是 | 选择Picker模式。定义了在Picker中显示的内容类型：   - SCREEN_ONLY：仅显示屏幕列表。   - WINDOW_ONLY：仅显示窗口列表。   - SCREEN_AND_WINDOW：同时显示屏幕列表和窗口列表（默认值）。 |
+| pickerMode | [PickerMode](arkts-media-media-pickermode-e.md) | 是 | 选择Picker模式。<br>定义了在Picker中显示的内容类型：<br>- SCREEN_ONLY：仅显示屏幕列表。<br>- WINDOW_ONLY：仅显示窗口列表。<br>- SCREEN_AND_WINDOW：同时显示屏幕列表和窗口列表（默认值）。 |
 
 **返回值：**
 

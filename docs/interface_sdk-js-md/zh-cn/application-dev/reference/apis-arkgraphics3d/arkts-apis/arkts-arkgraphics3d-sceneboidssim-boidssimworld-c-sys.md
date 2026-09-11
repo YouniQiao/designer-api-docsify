@@ -174,7 +174,7 @@ getBoidsSimComponent(node: Node): BoidsSimParameters | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) \| null | 返回群组行为参数，若节点未挂载该组件则返回null。 |
+| [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) &#124; null | 返回群组行为参数，若节点未挂载该组件则返回null。 |
 
 **示例**
 
@@ -215,7 +215,7 @@ getBoidsSimGravityComponent(node: Node): BoidsSimGravityParameters | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) \| null | 返回引力场参数，若节点未挂载该组件则返回null。 |
+| [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) &#124; null | 返回引力场参数，若节点未挂载该组件则返回null。 |
 
 **示例**
 
@@ -256,7 +256,7 @@ getBoidsSimRepulsionComponent(node: Node): BoidsSimRepulsionParameters | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) \| null | 返回斥力场参数，若节点未挂载该组件则返回null。 |
+| [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) &#124; null | 返回斥力场参数，若节点未挂载该组件则返回null。 |
 
 **示例**
 

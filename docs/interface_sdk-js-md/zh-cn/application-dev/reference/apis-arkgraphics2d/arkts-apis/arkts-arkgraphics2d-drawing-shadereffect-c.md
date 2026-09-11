@@ -48,7 +48,7 @@ static createColorShader(color: number): ShaderEffect
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
 ## createComposeShader
 
@@ -107,8 +107,8 @@ static createConicalGradient(startPt: common2D.Point, startRadius: number, endPt
 | endRadius | number | 是 | 表示渐变的结束圆的半径，小于0时无效。该参数为浮点数。单位为物理像素px。 |
 | colors | Array&lt;number&gt; | 是 | 表示在起始圆和结束圆之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
 | mode | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | 是 | 着色器效果平铺模式。 |
-| pos | Array&lt;number&gt; \| null | 否 | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致，数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1之间并且逐下标递增，表示colors中每个对应颜色的相对位置。默认为null，表示颜色均匀分布在起始圆和结束圆之间。 |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
+| pos | Array&lt;number&gt; &#124; null | 否 | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致，数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1之间并且逐下标递增，表示colors中每个对应颜色的相对位置。默认为null，表示颜色均匀分布在起始圆和结束圆之间。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) &#124; null | 否 | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
 
 **返回值：**
 
@@ -120,7 +120,7 @@ static createConicalGradient(startPt: common2D.Point, startRadius: number, endPt
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createImageShader
 
@@ -143,7 +143,7 @@ static createImageShader(pixelmap: image.PixelMap, tileX: TileMode, tileY: TileM
 | tileX | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | 是 | 水平方向的平铺模式。 |
 | tileY | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | 是 | 竖直方向的平铺模式。 |
 | samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | 是 | 图片采样参数，用于指定图像采样时的过滤模式。 |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) &#124; null | 否 | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
 
 **返回值：**
 
@@ -178,8 +178,8 @@ static createLinearGradient(startPt: common2D.Point, endPt: common2D.Point, colo
 | endPt | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md) | 是 | 表示渐变的终点。 |
 | colors | Array&lt;number&gt; | 是 | 表示在两个点之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
 | mode | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | 是 | 着色器效果平铺模式。 |
-| pos | Array&lt;number&gt; \| null | 否 | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致，数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1之间并且逐下标递增，表示colors中每个对应颜色的相对位置。默认为null，表示颜色均匀分布在起点和终点之间。 |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
+| pos | Array&lt;number&gt; &#124; null | 否 | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致，数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1之间并且逐下标递增，表示colors中每个对应颜色的相对位置。默认为null，表示颜色均匀分布在起点和终点之间。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) &#124; null | 否 | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
 
 **返回值：**
 
@@ -191,7 +191,7 @@ static createLinearGradient(startPt: common2D.Point, endPt: common2D.Point, colo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createRadialGradient
 
@@ -214,8 +214,8 @@ static createRadialGradient(centerPt: common2D.Point, radius: number, colors: Ar
 | radius | number | 是 | 表示渐变的半径，小于等于0时无效，该参数为浮点数。单位为物理像素px。 |
 | colors | Array&lt;number&gt; | 是 | 表示在圆心和圆边界之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
 | mode | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | 是 | 着色器效果平铺模式。 |
-| pos | Array&lt;number&gt; \| null | 否 | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致，数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1之间并且逐下标递增，表示colors中每个对应颜色的相对位置。默认为null，表示颜色均匀分布在圆心和圆边界之间。 |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
+| pos | Array&lt;number&gt; &#124; null | 否 | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致，数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1之间并且逐下标递增，表示colors中每个对应颜色的相对位置。默认为null，表示颜色均匀分布在圆心和圆边界之间。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) &#124; null | 否 | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
 
 **返回值：**
 
@@ -227,7 +227,7 @@ static createRadialGradient(centerPt: common2D.Point, radius: number, colors: Ar
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createSweepGradient
 
@@ -252,8 +252,8 @@ static createSweepGradient(centerPt: common2D.Point, colors: Array<number>,
 | mode | [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md) | 是 | 着色器效果平铺模式。 |
 | startAngle | number | 是 | 表示扇形渐变的起始角度，单位为度。0度时为x轴正方向，正数往顺时针方向偏移，负数往逆时针方向偏移。该参数为浮点数。 |
 | endAngle | number | 是 | 表示扇形渐变的结束角度，单位为度。0度时为x轴正方向，正数往顺时针方向偏移，负数往逆时针方向偏移。小于起始角度时无效。该参数为浮点数。 |
-| pos | Array&lt;number&gt; \| null | 否 | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致，数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1之间并且逐下标递增，表示colors中每个对应颜色的相对位置。默认为null，表示颜色均匀分布在起始角度和结束角度之间。 |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
+| pos | Array&lt;number&gt; &#124; null | 否 | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致，数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1之间并且逐下标递增，表示colors中每个对应颜色的相对位置。默认为null，表示颜色均匀分布在起始角度和结束角度之间。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) &#124; null | 否 | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
 
 **返回值：**
 
@@ -265,4 +265,4 @@ static createSweepGradient(centerPt: common2D.Point, colors: Array<number>,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |

@@ -34,7 +34,7 @@ value: boolean | number | bigint | Uint8Array
 
 Value of the tag.
 
-**Type:** boolean \| number \| bigint \| Uint8Array
+**Type:** boolean &#124; number &#124; bigint &#124; Uint8Array
 
 **Since:** 22
 

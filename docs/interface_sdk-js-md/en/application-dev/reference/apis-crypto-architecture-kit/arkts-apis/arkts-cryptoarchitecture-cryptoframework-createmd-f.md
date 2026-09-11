@@ -14,7 +14,7 @@ function createMd(algName: string): Md
 
 Creates an **Md** instance.
 
-For details about the supported specifications, see [Supported Algorithms and Specifications](../../../security/CryptoArchitectureKit/crypto-generate-message-digest-overview.md#supported-algorithms-and-specifications).
+<br>For details about the supported specifications, see [Supported Algorithms and Specifications](../../../security/CryptoArchitectureKit/crypto-generate-message-digest-overview.md#supported-algorithms-and-specifications).
 
 **Since:** 9
 
@@ -44,7 +44,7 @@ For details about the supported specifications, see [Supported Algorithms and Sp
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
 **Examples**

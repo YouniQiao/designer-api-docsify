@@ -51,7 +51,7 @@ Enables preview bandwidth compression.
 
 Before enabling this feature, you can call [isBandwidthCompressionSupported](#isbandwidthcompressionsupported) to check whether the device supports preview bandwidth compression.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This function must be called prior to
 > [Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig). Otherwise, the
@@ -150,7 +150,7 @@ natural orientation. For example, the rear camera sensor of a bar-type phone is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayRotation | number | No | Screen rotation angle of the display. It is obtained by calling [display.getDefaultDisplaySync](../../apis-arkui/arkts-apis/arkts-arkui-display-getdefaultdisplaysync-f.md). Since API version 23, the input parameter **displayRotation** is optional. If no parameter is passed, the system obtains the **displayRotation** value to calculate rotation angle of a video. The value ranges from 0 to 360, in degrees.<br>**Since:** 23 |
+| displayRotation | number | No | Screen rotation angle of the display. It is obtained by calling [display.getDefaultDisplaySync](../../apis-arkui/arkts-apis/arkts-arkui-display-getdefaultdisplaysync-f.md). <br> Since API version 23, the input parameter **displayRotation** is optional. If no parameter is passed, the system obtains the **displayRotation** value to calculate rotation angle of a video. <br> The value ranges from 0 to 360, in degrees.<br>**Since:** 23 |
 
 **Return value:**
 
@@ -298,7 +298,7 @@ on(type: 'frameStart', callback: AsyncCallback<void>): void
 
 Subscribes to preview frame start events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -323,7 +323,7 @@ on(type: 'frameEnd', callback: AsyncCallback<void>): void
 
 Subscribes to preview frame end events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -348,7 +348,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to PreviewOutput error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -375,7 +375,7 @@ Sets a frame rate range for preview streams. The range must be within the suppor
 
 which can be obtained by calling [getSupportedFrameRates](#getsupportedframerates).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md) or
 > [VideoSession](arkts-camera-camera-videosession-i.md) mode.

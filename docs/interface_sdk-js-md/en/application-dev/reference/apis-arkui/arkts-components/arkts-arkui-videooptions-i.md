@@ -53,7 +53,7 @@ currentProgressRate?: number | string | PlaybackSpeed
 
 Video playback speed.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The value of the number type can only be **0.75**, **1.0**, **1.25**, **1.75**, or **2.0**. Values **0.5**,
 > **1.5**, **3**, **0.25**, and **0.125** are supported since API version 22.
@@ -66,7 +66,7 @@ Default value: 1.0 | PlaybackSpeed.Speed_Forward_1_00_X
 
 If an invalid value is passed, the default value will be used.
 
-**Type:** number \| string \| [PlaybackSpeed](arkts-arkui-playbackspeed-e.md)
+**Type:** number &#124; string &#124; [PlaybackSpeed](arkts-arkui-playbackspeed-e.md)
 
 **Since:** 7
 
@@ -136,7 +136,7 @@ The default value is an empty string.
 
 If an invalid value is passed, the default value will be used.
 
-**Type:** string \| [PixelMap](arkts-arkui-pixelmap-t.md) \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**Type:** string &#124; [PixelMap](arkts-arkui-pixelmap-t.md) &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 7
 
@@ -169,11 +169,11 @@ The default value is an empty string.
 
 If an invalid value is passed, the default value will be used.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The supported video formats are MP4, MKV, and TS.
 
-**Type:** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md)
+**Type:** string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
 **Since:** 7
 

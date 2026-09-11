@@ -112,7 +112,7 @@ seek(targetTime: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| targetTime | number | 是 | 播放跳转到的时间点，从媒体开始播放时计算。单位：秒。 |
+| targetTime | number | 是 | 播放跳转到的时间点，从媒体开始播放时计算。<br>单位：秒。 |
 
 ## setMuted
 
@@ -132,7 +132,7 @@ setMuted(muted: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| muted | boolean | 是 | 是否静音。true表示静音，false表示未静音。 |
+| muted | boolean | 是 | 是否静音。<br>true表示静音，false表示未静音。 |
 
 ## setPlaybackRate
 
@@ -152,7 +152,7 @@ setPlaybackRate(playbackRate: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| playbackRate | number | 是 | 播放速率。取值范围：[0, 10.0]，其中1表示原速播放。超出取值范围时，按边界值自动修正。 |
+| playbackRate | number | 是 | 播放速率。<br>取值范围：[0, 10.0]，其中1表示原速播放。超出取值范围时，按边界值自动修正。 |
 
 ## setVolume
 
@@ -172,7 +172,7 @@ setVolume(volume: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volume | number | 是 | 播放器的音量。取值范围：[0, 1.0]，其中0表示静音，1.0表示最大音量。超出取值范围时，按边界值自动修正。 |
+| volume | number | 是 | 播放器的音量。<br>取值范围：[0, 1.0]，其中0表示静音，1.0表示最大音量。超出取值范围时，按边界值自动修正。 |
 
 ## suspendPlayer
 
@@ -210,7 +210,7 @@ updateRect(x: number, y: number, width: number, height: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | surface相对于Web组件的x坐标信息。单位：px。 |
-| y | number | 是 | surface相对于Web组件的y坐标信息。单位：px。 |
-| width | number | 是 | surface的宽度。单位：px。 |
-| height | number | 是 | surface的高度。单位：px。 |
+| x | number | 是 | surface相对于Web组件的x坐标信息。<br>单位：px。 |
+| y | number | 是 | surface相对于Web组件的y坐标信息。<br>单位：px。 |
+| width | number | 是 | surface的宽度。<br>单位：px。 |
+| height | number | 是 | surface的高度。<br>单位：px。 |

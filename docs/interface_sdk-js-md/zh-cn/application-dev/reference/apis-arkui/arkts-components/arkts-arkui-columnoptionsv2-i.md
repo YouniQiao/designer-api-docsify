@@ -19,7 +19,7 @@ space?: SpaceType
 
 设置纵向布局元素垂直方向间距。
 
-space为负数或者[justifyContent](arkts-arkui-column-attribute.md#justifycontent)设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时，space不生效。
+space为负数或者[justifyContent](arkts-arkui-column-comp-attribute.md#justifycontent)设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时，space不生效。
 
 取值范围：[0, +∞)
 

@@ -67,8 +67,8 @@ import { display } from '@kit.ArkUI';
 | [addVirtualScreenBlocklist](arkts-arkui-display-addvirtualscreenblocklist-f-sys.md) | 将窗口添加到禁止投屏显示的名单中，被添加的窗口无法在投屏时显示。仅对应用主窗或系统窗口生效。使用Promise异步回调。 |
 | [addVirtualScreenSurface](arkts-arkui-display-addvirtualscreensurface-f-sys.md) | 为虚拟屏幕添加surface。 |
 | [hasPrivateWindow](arkts-arkui-display-hasprivatewindow-f-sys.md) | 查询指定display对象上是否有可见的隐私窗口。可通过[setWindowPrivacyMode()](../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowprivacymode9)接口设置隐私窗口。隐私窗口内容将无法被截屏或录屏。 |
-| off | 关闭屏幕隐私模式变化的监听。当屏幕前台有隐私窗口，则屏幕处于隐私模式，屏幕中的隐私窗口内容无法被截屏或录屏。 |
-| on | 开启屏幕隐私模式变化的监听。当屏幕前台有隐私窗口，则屏幕处于隐私模式，屏幕中的隐私窗口内容无法被截屏或录屏。 |
+| [off](arkts-arkui-display-off-f-sys.md#offprivatemodechange) | 关闭屏幕隐私模式变化的监听。当屏幕前台有隐私窗口，则屏幕处于隐私模式，屏幕中的隐私窗口内容无法被截屏或录屏。 |
+| [on](arkts-arkui-display-on-f-sys.md#onprivatemodechange) | 开启屏幕隐私模式变化的监听。当屏幕前台有隐私窗口，则屏幕处于隐私模式，屏幕中的隐私窗口内容无法被截屏或录屏。 |
 | [removeVirtualScreenBlocklist](arkts-arkui-display-removevirtualscreenblocklist-f-sys.md) | 将窗口从禁止投屏显示的名单中移除，被移除的窗口可以在投屏时显示。仅对应用主窗或系统窗口生效。使用Promise异步回调。 |
 | [removeVirtualScreenSurface](arkts-arkui-display-removevirtualscreensurface-f-sys.md) | 删除虚拟屏的surface。 |
 | [setFoldDisplayMode](arkts-arkui-display-setfolddisplaymode-f-sys.md) | 更改可折叠设备的显示模式。 |

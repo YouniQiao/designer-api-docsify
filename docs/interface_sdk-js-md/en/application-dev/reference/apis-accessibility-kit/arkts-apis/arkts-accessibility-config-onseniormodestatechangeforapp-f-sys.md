@@ -14,7 +14,7 @@ function onSeniorModeStateChangeForApp(callback: Callback<AppSeniorModeInfo>): v
 
 Listens for senior mode state change events of all apps. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The callback parameter for registration should use a named function instead of an anonymous function, otherwise
 > a new underlying object will be created each time it is called, causing memory leaks.
@@ -44,8 +44,8 @@ Listens for senior mode state change events of all apps. This API uses an asynch
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.<br>The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed.<br>A non-system application calls a system API. |
 
 **Examples**
 

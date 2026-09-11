@@ -2,7 +2,7 @@
 
 A utility class that provides only static methods to convert data structs defined in other modules and [common2D](arkts-graphics-common2d.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The initial APIs of this class are supported since API version 15.
 > 
@@ -37,7 +37,7 @@ Converts a color value of the **ResourceColor** type to a **common2D.Color** obj
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceColor | ResourceColor | Yes | Color value of the **ResourceColor** type. (All four types of inputs are supported. The following provides 13 example inputs.) The fourth type of [Resource](../../apis-arkui/arkts-apis/arkts-arkui-resource-t.md) supports only the construction method **\\$r('belonging.type.name')**. Ensure that the resource has been defined in the **main/resources/base/element** directory. (The types **color**, **string**, and **integer** are available for the belonging **app**, whereas only the type **color** is available for the belonging **sys**.) |
+| resourceColor | ResourceColor | Yes | Color value of the **ResourceColor** type. (All four types of inputs are supported. The following provides 13 example inputs.) The fourth type of [Resource](../../apis-arkui/arkts-apis/arkts-arkui-resource-t.md) supports only the construction method **\&#36;r('belonging.type.name')**. Ensure that the resource has been defined in the **main/resources/base/element** directory. (The types **color**, **string**, and **integer** are available for the belonging **app**, whereas only the type **color** is available for the belonging **sys**.) |
 
 **Return value:**
 
@@ -49,4 +49,4 @@ Converts a color value of the **ResourceColor** type to a **common2D.Color** obj
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;  2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |

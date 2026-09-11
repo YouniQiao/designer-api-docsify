@@ -14,7 +14,7 @@ function disableBluetooth(): void
 
 关闭蓝牙。
 
-调用该接口时，系统弹出关闭蓝牙的对话框，由用户确认是否需要关闭蓝牙。如果应用想要感知用户操作对话框的行为，建议使用[access.disableBluetoothAsync](arkts-connectivity-access-disablebluetoothasync-f.md)。蓝牙开关状态结果可通过access.on('stateChange')的回调函数获取到。建议蓝牙开关状态是[STATE_ON](arkts-connectivity-access-bluetoothstate-e.md)时，才调用该接口关闭蓝牙（可使用[access.getState](arkts-connectivity-access-getstate-f.md)判断当前蓝牙开关状态）。
+调用该接口时，系统弹出关闭蓝牙的对话框，由用户确认是否需要关闭蓝牙。如果应用想要感知用户操作对话框的行为，建议使用[access.disableBluetoothAsync](arkts-connectivity-access-disablebluetoothasync-f.md)。蓝牙开关状态结果可通过[access.on('stateChange')](arkts-connectivity-access-on-f.md#onstatechange)的回调函数获取到。建议蓝牙开关状态是[STATE_ON](arkts-connectivity-access-bluetoothstate-e.md)时，才调用该接口关闭蓝牙（可使用[access.getState](arkts-connectivity-access-getstate-f.md)判断当前蓝牙开关状态）。
 
 **起始版本：** 10
 

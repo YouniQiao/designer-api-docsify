@@ -4,7 +4,7 @@
 declare type PX = `${number}px`
 ```
 
-定义长度属性，单位为像素（px）。
+定义长度属性，单位为像素（px）。@typedef { `\${number}px` } PX
 
 **起始版本：** 23
 

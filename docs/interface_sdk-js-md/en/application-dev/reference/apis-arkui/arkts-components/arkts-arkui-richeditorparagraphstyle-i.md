@@ -1,6 +1,6 @@
 # RichEditorParagraphStyle
 
-Describes the paragraph style.
+Defines the paragraph style.
 
 **Since:** 11
 
@@ -17,9 +17,11 @@ Describes the paragraph style.
 leadingMargin?: Dimension | LeadingMarginPlaceholder
 ```
 
-Indent of the paragraph. It has no effect if the paragraph starts with an image or builder span. If of the **Dimension** type, this parameter cannot be set in percentage. Default value: **{"size":["0.00px","0.00px"]}**
+Paragraph indentation. When a paragraph contains only ImageSpan or BuilderSpan, this attribute does not take effect. When the parameter is of the Dimension type, setting it in percentage form is not supported, and the default unit is vp. Default value: {"size":["0.00px","0.00px"]}
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [LeadingMarginPlaceholder](arkts-arkui-leadingmarginplaceholder-i.md)
+**Atomic service API:** Since API version 12, this API is supported in atomic services.
+
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [LeadingMarginPlaceholder](arkts-arkui-leadingmarginplaceholder-i.md)
 
 **Since:** 11
 
@@ -57,11 +59,15 @@ This parameter takes effect when **wordBreak** is not set to **breakAll**. Hyphe
 paragraphSpacing?: number
 ```
 
-Spacing between paragraphs.
+Paragraph spacing.
 
 Unit: fp
 
-Default value: **0**
+Value range: [0, +∞). If a negative value is passed in, the default value is used.
+
+The default paragraph spacing is 0.
+
+**Atomic service API:** Since API version 19, this API is supported in atomic services.
 
 **Type:** number
 
@@ -79,7 +85,13 @@ Default value: **0**
 shaderStyle?: ShaderStyle
 ```
 
-Set shader style.
+Text shader effect.
+
+Default value: undefined, which means no shader effect is set.
+
+When this API is set together with strokeWidth in [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md), this API does not take effect, and shaderStyle has a higher priority than fontColor in [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md).
+
+**Atomic service API:** Since API version 26.0.0, this API is supported in atomic services.
 
 **Type:** [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md)
 
@@ -97,7 +109,7 @@ Set shader style.
 textAlign?: TextAlign
 ```
 
-Horizontal alignment mode of the text.
+Horizontal alignment of the text paragraph.
 
 Default value: **TextAlign.START**
 
@@ -117,9 +129,9 @@ Default value: **TextAlign.START**
 textDirection?: TextDirection
 ```
 
-Sets the text direction.
+Text direction.
 
-Default value: TextDirection.DEFAULT
+Default value: **TextDirection.DEFAULT**
 
 **Type:** [TextDirection](../arkts-apis/arkts-arkui-textdirection-e.md)
 
@@ -137,7 +149,7 @@ Default value: TextDirection.DEFAULT
 textVerticalAlign?: TextVerticalAlign
 ```
 
-Vertical alignment of text paragraphs.
+Vertical alignment mode of text paragraphs.
 
 Default value: **TextVerticalAlign.BASELINE**.
 
@@ -157,9 +169,11 @@ Default value: **TextVerticalAlign.BASELINE**.
 wordBreak?: WordBreak
 ```
 
-Word break rule.
+Line break rule.
 
-Default value: **WordBreak.BREAK_WORD**
+Default value: WordBreak.BREAK_WORD.
+
+**Atomic service API:** Since API version 12, this API is supported in atomic services.
 
 **Type:** [WordBreak](../arkts-apis/arkts-arkui-wordbreak-e.md)
 

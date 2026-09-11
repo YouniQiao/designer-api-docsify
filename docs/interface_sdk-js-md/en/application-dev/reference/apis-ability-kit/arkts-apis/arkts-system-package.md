@@ -6,6 +6,7 @@
  > [@ohos.bundle.bundleManager](arkts-bundle-bundlemanager.md) instead.
 
 
+
 ## Modules to Import
 
 ```TypeScript
@@ -18,11 +19,11 @@ import { Package, CheckPackageHasInstalledOptions, CheckPackageHasInstalledRespo
 
 | Name | Description |
 | --- | --- |
-| [Package](arkts-ability-system-package-package-c.md) | > **NOTE：** >  > This API has been supported since API version 3 and deprecated since API version 9. |
+| [Package](arkts-ability-system-package-package-c.md) |  |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [CheckPackageHasInstalledOptions](arkts-ability-system-package-checkpackagehasinstalledoptions-i.md) | > **NOTE：** >  > This API has been supported since API version 3 and deprecated since API version 9. |
-| [CheckPackageHasInstalledResponse](arkts-ability-system-package-checkpackagehasinstalledresponse-i.md) | > **NOTE：** >  > This API has been supported since API version 3 and deprecated since API version 9. |
+| [CheckPackageHasInstalledOptions](arkts-ability-system-package-checkpackagehasinstalledoptions-i.md) |  |
+| [CheckPackageHasInstalledResponse](arkts-ability-system-package-checkpackagehasinstalledresponse-i.md) |  |

@@ -1,7 +1,9 @@
 # @ohos.accessibility.GesturePoint(手势触摸点)
 
 GesturePoint表示手势触摸点，是构成手势路径GesturePath的基本单元。
- 本模块用于创建手势路径的触摸点信息，供辅助功能注入手势使用。
+
+本模块用于创建手势路径的触摸点信息，供辅助功能注入手势使用。
+
 
 
 ## 导入模块

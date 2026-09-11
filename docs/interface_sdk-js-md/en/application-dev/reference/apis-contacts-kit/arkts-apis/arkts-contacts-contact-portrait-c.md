@@ -2,7 +2,7 @@
 
 Defines a contact's portrait.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Since API version 22, contact portraits can be set in URI or [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 > format. (Currently, contact avatars cannot be set through the [addContactViaUI](arkts-contacts-contact-addcontactviaui-f.md) or

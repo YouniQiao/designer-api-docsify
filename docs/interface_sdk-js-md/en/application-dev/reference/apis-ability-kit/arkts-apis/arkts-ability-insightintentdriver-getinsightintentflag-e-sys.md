@@ -2,7 +2,7 @@
 
 Enumerates the flags of intent information ([InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)). It is used in [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md), [getInsightIntentInfoByBundleName](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md), and [getInsightIntentInfoByIntentName](arkts-ability-insightintentdriver-getinsightintentinfobyintentname-f-sys.md).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - For intents developed using a configuration file, the full and brief information queried through the preceding
 > APIs are the same.
@@ -29,10 +29,8 @@ Enumerates the flags of intent information ([InsightIntentInfo](arkts-ability-in
 > | subIntentInfo | Yes| Yes|
 > | parameters | Yes| Yes|
 > | entities | No| No|
-> | developType&lt;sup&gt;23+&lt;/sup
-&gt; | Yes| Yes|
-> | subIntentInfoForConfiguration&lt;sup&gt;23+&lt;/sup
-&gt; | No| No|
+> | developType&lt;sup&gt;23+&lt;/sup&gt; | Yes| Yes|
+> | subIntentInfoForConfiguration&lt;sup&gt;23+&lt;/sup&gt; | No| No|
 
 **Since:** 20
 

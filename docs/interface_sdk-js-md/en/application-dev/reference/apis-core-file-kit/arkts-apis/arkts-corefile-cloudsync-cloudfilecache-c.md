@@ -60,13 +60,13 @@ Deletes a cache file. This API returns the result synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13600001 | IPC error. Possible causes:  1.IPC failed or timed out. 2.Failed to load the service. |
+| 13600001 | IPC error. Possible causes:<br>1.IPC failed or timed out. 2.Failed to load the service. |
 | 13900002 | No such file or directory. |
 | 13900010 | Try again. |
 | 13900012 | Permission denied by the file system |
-| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 13900020 | Invalid argument. Possible causes:<br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 14000002 | Invalid URI. |
-| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 22400005 | Inner error. Possible causes:<br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 **Examples**
 
@@ -159,7 +159,7 @@ Removes the specified callback from the device-cloud file cache progress.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 **Examples**
@@ -188,7 +188,7 @@ try {
 off(event: 'batchDownload', callback?: Callback<MultiDownloadProgress>): void
 ```
 
-Removes the listener added via the on API for file batch downloads.
+Removes the listener added via the [on](#on-1) API for file batch downloads.
 
 **Since:** 20
 
@@ -205,8 +205,8 @@ Removes the listener added via the on API for file batch downloads.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 13900020 | Invalid argument. Possible causes:<br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 22400005 | Inner error. Possible causes:<br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 **Examples**
 
@@ -250,7 +250,7 @@ Registers a listener for the download progress of a file from the Drive Kit.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 **Examples**
@@ -294,8 +294,8 @@ Registers a listener for the batch download of a file from the Drive Kit.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 13900020 | Invalid argument. Possible causes:<br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 22400005 | Inner error. Possible causes:<br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 **Examples**
 
@@ -348,7 +348,7 @@ Starts downloading a file from the Drive Kit to the local device. This API uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error. |
 | 13900002 | No such file or directory. |
 | 13900025 | No space left on device. |
@@ -403,7 +403,7 @@ Starts downloading a file from the Drive Kit to the local device. This API uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error. |
 | 13900002 | No such file or directory. |
 | 13900025 | No space left on device. |
@@ -459,11 +459,11 @@ Different batch download tasks can be distinguished by the task ID returned.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13600001 | IPC error. Possible causes:  1.IPC failed or timed out. 2.Failed to load the service. |
-| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 13600001 | IPC error. Possible causes:<br>1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900020 | Invalid argument. Possible causes:<br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 14000002 | Invalid uri. |
 | 22400004 | Exceed the maximum limit. |
-| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 22400005 | Inner error. Possible causes:<br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 **Examples**
 
@@ -507,7 +507,7 @@ When **stop()** is called, the current file download process terminates, and dow
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file to download. |
-| needClean | boolean | No | Whether to delete the downloaded files. The default value **false** means not to delete the downloaded files; the value **true** means the opposite.This parameter is available since API version 12.<br>**Since:** 12 |
+| needClean | boolean | No | Whether to delete the downloaded files. The default value **false** means not to delete the downloaded files; the value **true** means the opposite.<br>This parameter is available since API version 12.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -519,7 +519,7 @@ When **stop()** is called, the current file download process terminates, and dow
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
@@ -566,7 +566,7 @@ When **stop()** is called, the current file download process terminates, and dow
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;  2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
@@ -621,9 +621,9 @@ When **stopBatch()** is called, the batch download terminates. The **needClean**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13600001 | IPC error. Possible causes:  1.IPC failed or timed out. 2.Failed to load the service. |
-| 13900020 | Invalid argument. Possible causes:  1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 22400005 | Inner error. Possible causes:  1.Failed to access the database or execute the SQL statement.  2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 13600001 | IPC error. Possible causes:<br>1.IPC failed or timed out. 2.Failed to load the service. |
+| 13900020 | Invalid argument. Possible causes:<br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 22400005 | Inner error. Possible causes:<br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 **Examples**
 

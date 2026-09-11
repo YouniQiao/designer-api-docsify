@@ -2,6 +2,8 @@
 
 Search result.
 
+@typedef SearchResult
+
 **Since:** 21
 
 **System capability:** SystemCapability.Mechanic.Core

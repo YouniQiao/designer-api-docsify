@@ -15,14 +15,23 @@
 
 ## storage.get
 
-get(options: GetStorageOptions): void通过索引读取缓存中存储的值。  
- **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite  
- **参数：**  
- | 参数名 | 类型 | 必填 | 说明 |  
+get(options: GetStorageOptions): void
+
+通过索引读取缓存中存储的值。
+
+**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |  
  | ------- | -------------------- | ---- | ---------- |  
 | options | [GetStorageOptions](arkts-arkdata-system-storage-getstorageoptions-i.md) | 是 | 接口配置信息。 |
- **示例：**ArkTS示例：  
- ```js
+
+**示例：**
+
+ArkTS示例：
+
+```js
  export default {
  storageGet() {
  storage.get({
@@ -39,8 +48,11 @@ get(options: GetStorageOptions): void通过索引读取缓存中存储的值。
  });
  }
  }
- ```JS示例：  
- ```xml
+ ```
+
+JS示例：
+
+```xml
  <!-- xxx.hml -->
  &lt;div class="container"&gt;
  &lt;text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};"&gt;
@@ -48,8 +60,9 @@ get(options: GetStorageOptions): void通过索引读取缓存中存储的值。
  &lt;/text&gt;
  &lt;input type="button" value="Get Data" style="width: 240px; height: 50px; margin: 5px;" onclick="storageGet"&gt;&lt;/input&gt;
  &lt;/div&gt;
- ```  
- ```css
+ ```
+
+```css
  /* xxx.css *\/
  .container {
  display: flex;
@@ -72,11 +85,13 @@ get(options: GetStorageOptions): void通过索引读取缓存中存储的值。
  width: 200px;
  height: 100px;
  }
- ```  
- ```js
+ ```
+
+```js
  // xxx.js
  import storage from '@system.storage';
- export default {
+
+export default {
  data: {
  fontSize: '30px',
  fontColor: '#FF1AFF00',
@@ -97,14 +112,23 @@ get(options: GetStorageOptions): void通过索引读取缓存中存储的值。
 
 ## storage.set
 
-set(options: SetStorageOptions): void修改缓存中索引对应的值。  
- **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite  
- **参数：**  
- | 参数名 | 类型 | 必填 | 说明 |  
+set(options: SetStorageOptions): void
+
+修改缓存中索引对应的值。
+
+**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |  
  | ------- | ------------------- | ---- | ---------- |  
 | options | [SetStorageOptions](arkts-arkdata-system-storage-setstorageoptions-i.md) | 是 | 接口配置信息。 |
- **示例：**ArkTS示例：  
- ```js
+
+**示例：**
+
+ArkTS示例：
+
+```js
  export default {
  storageSet() {
  storage.set({
@@ -119,8 +143,11 @@ set(options: SetStorageOptions): void修改缓存中索引对应的值。
  });
  }
  }
- ```JS示例：  
- ```xml
+ ```
+
+JS示例：
+
+```xml
  <!-- xxx.hml -->
  &lt;div class="container"&gt;
  &lt;text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};"&gt;
@@ -128,8 +155,9 @@ set(options: SetStorageOptions): void修改缓存中索引对应的值。
  &lt;/text&gt;
  &lt;input type="button" value="Set Data" style="width: 240px; height: 50px; margin: 5px;" onclick="storageSet"&gt;&lt;/input&gt;
  &lt;/div&gt;
- ```  
- ```css
+ ```
+
+```css
  /* xxx.css *\/
  .container {
  display: flex;
@@ -152,11 +180,13 @@ set(options: SetStorageOptions): void修改缓存中索引对应的值。
  width: 200px;
  height: 100px;
  }
- ```  
- ```js
+ ```
+
+```js
  // xxx.js
  import storage from '@system.storage';
- export default {
+
+export default {
  data: {
  fontSize: '30px',
  fontColor: '#FF1AFF00',
@@ -178,14 +208,23 @@ set(options: SetStorageOptions): void修改缓存中索引对应的值。
 
 ## storage.clear
 
-clear(options?: ClearStorageOptions): void清空缓存中存储的键值对。  
- **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite  
- **参数：**  
- | 参数名 | 类型 | 必填 | 说明 |  
+clear(options?: ClearStorageOptions): void
+
+清空缓存中存储的键值对。
+
+**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |  
  | ------- | ------------------------------------------- | ---- | -------------- |  
 | options | [ClearStorageOptions](arkts-arkdata-system-storage-clearstorageoptions-i.md) | 否 | 接口配置信息。 |
- **示例：**ArkTS示例：  
- ```js
+
+**示例：**
+
+ArkTS示例：
+
+```js
  export default {
  storageClear() {
  storage.clear({
@@ -198,8 +237,11 @@ clear(options?: ClearStorageOptions): void清空缓存中存储的键值对。
  });
  }
  }
- ```JS示例：  
- ```xml
+ ```
+
+JS示例：
+
+```xml
  <!-- xxx.hml -->
  &lt;div class="container"&gt;
  &lt;text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};"&gt;
@@ -207,8 +249,9 @@ clear(options?: ClearStorageOptions): void清空缓存中存储的键值对。
  &lt;/text&gt;
  &lt;input type="button" value="Clear Data" style="width: 240px; height: 50px; margin: 5px;" onclick="storageClear"&gt;&lt;/input&gt;
  &lt;/div&gt;
- ```  
- ```css
+ ```
+
+```css
  /* xxx.css *\/
  .container {
  display: flex;
@@ -231,11 +274,13 @@ clear(options?: ClearStorageOptions): void清空缓存中存储的键值对。
  width: 200px;
  height: 100px;
  }
- ```  
- ```js
+ ```
+
+```js
  // xxx.js
  import storage from '@system.storage';
- export default {
+
+export default {
  data: {
  fontSize: '30px',
  fontColor: '#FF1AFF00',
@@ -259,14 +304,23 @@ get(options: GetStorageOptions): void
 
 ## storage.delete
 
-delete(options: DeleteStorageOptions): void删除缓存中索引对应的键值对。  
- **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite  
- **参数：**  
- | 参数名 | 类型 | 必填 | 说明 |  
+delete(options: DeleteStorageOptions): void
+
+删除缓存中索引对应的键值对。
+
+**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |  
  | ------- | --------------------------------------------- | ---- | -------------- |  
 | options | [DeleteStorageOptions](arkts-arkdata-system-storage-deletestorageoptions-i.md) | 是 | 接口配置信息。 |
- **示例：**ArkTS示例：  
- ```js
+
+**示例：**
+
+ArkTS示例：
+
+```js
  export default {
  storageDelete() {
  storage.delete({
@@ -280,8 +334,11 @@ delete(options: DeleteStorageOptions): void删除缓存中索引对应的键值�
  });
  }
  }
- ```JS示例：  
- ```xml
+ ```
+
+JS示例：
+
+```xml
  <!-- xxx.hml -->
  &lt;div class="container"&gt;
  &lt;text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};"&gt;
@@ -289,8 +346,9 @@ delete(options: DeleteStorageOptions): void删除缓存中索引对应的键值�
  &lt;/text&gt;
  &lt;input type="button" value="Delete Data" style="width: 240px; height: 50px; margin: 5px;" onclick="storageDelete"&gt;&lt;/input&gt;
  &lt;/div&gt;
- ```  
- ```css
+ ```
+
+```css
  /* xxx.css *\/
  .container {
  display: flex;
@@ -313,11 +371,13 @@ delete(options: DeleteStorageOptions): void删除缓存中索引对应的键值�
  width: 200px;
  height: 100px;
  }
- ```  
- ```js
+ ```
+
+```js
  // xxx.js
  import storage from '@system.storage';
- export default {
+
+export default {
  data: {
  fontSize: '30px',
  fontColor: '#FF1AFF00',

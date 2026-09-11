@@ -2,7 +2,7 @@
 
 **FoldSplitContainer** is a layout container designed to manage regions for two-panel and three-panel arrangements on a foldable device across various states, including the expanded state, the semi-folded state, and the folded state.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > By default, a two-panel layout is used when the window width is less than or equal to 600 vp.
 > When the window width exceeds 600 vp, an extended area is supported alongside the top-bottom split layout.
@@ -47,7 +47,7 @@ animationOptions?: AnimateParam | null
 
 Animation settings. The value **null** indicates that the animation is disabled.
 
-**Type:** [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) \| null
+**Type:** [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) &#124; null
 
 **Since:** 12
 

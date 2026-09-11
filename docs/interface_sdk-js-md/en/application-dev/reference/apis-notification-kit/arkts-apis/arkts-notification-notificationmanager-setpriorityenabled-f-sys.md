@@ -26,7 +26,7 @@ Sets the enabling status of the priority notification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable the priority notification.    - **true**: The priority notification is enabled.    - **false**: The priority notification is disabled. |
+| enable | boolean | Yes | Whether to enable the priority notification.<br> - **true**: The priority notification is enabled.<br> - **false**: The priority notification is disabled. |
 
 **Return value:**
 

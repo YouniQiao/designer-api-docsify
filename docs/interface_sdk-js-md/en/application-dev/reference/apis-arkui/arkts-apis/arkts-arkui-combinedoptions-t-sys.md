@@ -8,6 +8,8 @@ type CombinedOptions<T extends ViewModel, Data> = object &
 
 Used for ide.
 
+@typedef { object & Options&lt;T, Data&gt; & ThisType&lt;T & ViewModel & Data&gt; } CombinedOptions&lt;T extends ViewModel, Data&gt;
+
 **Since:** 4
 
 **Model restriction:** This API can be used only in the FA model.

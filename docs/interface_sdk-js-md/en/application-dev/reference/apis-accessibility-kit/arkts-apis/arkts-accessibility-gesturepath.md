@@ -1,7 +1,9 @@
 # @ohos.accessibility.GesturePath(Gesture Path)
 
 GesturePath represents gesture path information.
- This module is used to create gesture path information for accessibility gesture injection.
+
+This module is used to create gesture path information for accessibility gesture injection.
+
 
 
 ## Modules to Import

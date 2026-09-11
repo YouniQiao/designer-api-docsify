@@ -6,6 +6,7 @@ The module defines the application information. An application can obtain its ow
  [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md).
 
 
+
 ## 汇总
 
 ### 接口

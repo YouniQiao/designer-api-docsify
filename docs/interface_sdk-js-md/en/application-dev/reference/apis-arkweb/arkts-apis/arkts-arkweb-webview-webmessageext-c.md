@@ -18,7 +18,7 @@ import { webview } from '@kit.ArkWeb';
 getArray(): Array<string | number | boolean>
 ```
 
-Obtains array-type data of the data object. For details about the sample code, see onMessageEventExt.
+Obtains array-type data of the data object. For details about the sample code, see [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onmessageeventext).
 
 **Since:** 10
 
@@ -30,7 +30,7 @@ Obtains array-type data of the data object. For details about the sample code, s
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string \| number \| boolean&gt; | Data of the array type. |
+| Array&lt;string &#124; number &#124; boolean&gt; | Data of the array type. |
 
 **Error codes:**
 
@@ -44,7 +44,7 @@ Obtains array-type data of the data object. For details about the sample code, s
 getArrayBuffer(): ArrayBuffer
 ```
 
-Obtains raw binary data of the data object. For details about the sample code, see onMessageEventExt.
+Obtains raw binary data of the data object. For details about the sample code, see [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onmessageeventext).
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ Obtains raw binary data of the data object. For details about the sample code, s
 getBoolean(): boolean
 ```
 
-Obtains Boolean-type data of the data object. For details about the sample code, see onMessageEventExt.
+Obtains Boolean-type data of the data object. For details about the sample code, see [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onmessageeventext).
 
 **Since:** 10
 
@@ -96,7 +96,7 @@ Obtains Boolean-type data of the data object. For details about the sample code,
 getError(): Error
 ```
 
-Obtains the error-object-type data of the data object. For details about the sample code, see onMessageEventExt.
+Obtains the error-object-type data of the data object. For details about the sample code, see [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onmessageeventext).
 
 **Since:** 10
 
@@ -122,7 +122,7 @@ Obtains the error-object-type data of the data object. For details about the sam
 getNumber(): number
 ```
 
-Obtains number-type data of the data object. For details about the sample code, see onMessageEventExt.
+Obtains number-type data of the data object. For details about the sample code, see [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onmessageeventext).
 
 **Since:** 10
 
@@ -148,7 +148,7 @@ Obtains number-type data of the data object. For details about the sample code, 
 getString(): string
 ```
 
-Obtains string-type data of the data object. For details about the sample code, see onMessageEventExt.
+Obtains string-type data of the data object. For details about the sample code, see [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onmessageeventext).
 
 **Since:** 10
 
@@ -174,7 +174,7 @@ Obtains string-type data of the data object. For details about the sample code, 
 getType(): WebMessageType
 ```
 
-Obtains the type of the data object. For details about the sample code, see onMessageEventExt.
+Obtains the type of the data object. For details about the sample code, see [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onmessageeventext).
 
 **Since:** 10
 
@@ -186,7 +186,7 @@ Obtains the type of the data object. For details about the sample code, see onMe
 
 | Type | Description |
 | --- | --- |
-| [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | Data types supported by the [webMessagePort]{ |
+| [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | Data types supported by the [webMessagePort](arkts-arkweb-webview-webmessageport-i.md) API. |
 
 ## setArray
 
@@ -194,7 +194,7 @@ Obtains the type of the data object. For details about the sample code, see onMe
 setArray(message: Array<string | number | boolean>): void
 ```
 
-Sets the array-type data for the data object. For details about the sample code, see onMessageEventExt.
+Sets the array-type data for the data object. For details about the sample code, see [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onmessageeventext).
 
 **Since:** 10
 
@@ -206,13 +206,13 @@ Sets the array-type data for the data object. For details about the sample code,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | Array&lt;string \| number \| boolean&gt; | Yes | Data of the array type. |
+| message | Array&lt;string &#124; number &#124; boolean&gt; | Yes | Data of the array type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## setArrayBuffer
@@ -221,7 +221,7 @@ Sets the array-type data for the data object. For details about the sample code,
 setArrayBuffer(message: ArrayBuffer): void
 ```
 
-Sets the raw binary data for the data object. For details about the sample code, see onMessageEventExt.
+Sets the raw binary data for the data object. For details about the sample code, see [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onmessageeventext).
 
 **Since:** 10
 
@@ -239,7 +239,7 @@ Sets the raw binary data for the data object. For details about the sample code,
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## setBoolean
@@ -248,7 +248,7 @@ Sets the raw binary data for the data object. For details about the sample code,
 setBoolean(message: boolean): void
 ```
 
-Sets the Boolean-type data for the data object. For details about the sample code, see onMessageEventExt.
+Sets the Boolean-type data for the data object. For details about the sample code, see [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onmessageeventext).
 
 **Since:** 10
 
@@ -266,7 +266,7 @@ Sets the Boolean-type data for the data object. For details about the sample cod
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## setError
@@ -275,7 +275,7 @@ Sets the Boolean-type data for the data object. For details about the sample cod
 setError(message: Error): void
 ```
 
-Sets the error-object-type data for the data object. For details about the sample code, see onMessageEventExt.
+Sets the error-object-type data for the data object. For details about the sample code, see [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onmessageeventext).
 
 **Since:** 10
 
@@ -293,7 +293,7 @@ Sets the error-object-type data for the data object. For details about the sampl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## setNumber
@@ -302,7 +302,7 @@ Sets the error-object-type data for the data object. For details about the sampl
 setNumber(message: number): void
 ```
 
-Sets the number-type data of the data object. For details about the sample code, see onMessageEventExt.
+Sets the number-type data of the data object. For details about the sample code, see [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onmessageeventext).
 
 **Since:** 10
 
@@ -320,7 +320,7 @@ Sets the number-type data of the data object. For details about the sample code,
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## setString
@@ -329,7 +329,7 @@ Sets the number-type data of the data object. For details about the sample code,
 setString(message: string): void
 ```
 
-Sets the string-type data of the data object. For details about the sample code, see onMessageEventExt.
+Sets the string-type data of the data object. For details about the sample code, see [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onmessageeventext).
 
 **Since:** 10
 
@@ -347,7 +347,7 @@ Sets the string-type data of the data object. For details about the sample code,
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## setType
@@ -356,7 +356,7 @@ Sets the string-type data of the data object. For details about the sample code,
 setType(type: WebMessageType): void
 ```
 
-Sets the type for the data object. For details about the sample code, see onMessageEventExt.
+Sets the type for the data object. For details about the sample code, see [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onmessageeventext).
 
 **Since:** 10
 
@@ -374,5 +374,5 @@ Sets the type for the data object. For details about the sample code, see onMess
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |

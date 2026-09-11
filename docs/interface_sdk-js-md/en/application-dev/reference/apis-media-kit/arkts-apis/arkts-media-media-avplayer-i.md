@@ -39,7 +39,7 @@ Add a new playback source to the player's playlist.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | [MediaSource](arkts-media-media-mediasource-i.md) | Yes | Playback source to be added to the playlist. |
-| id | string | No | Indicates the ID of a media source in the playlist. The newly added media source is inserted before the specified media source. Default value:if empty, it means adding to the end of the list |
+| id | string | No | Indicates the ID of a media source in the playlist. The newly added media source is inserted before the specified media source.<br>Default value:if empty, it means adding to the end of the list |
 
 **Return value:**
 
@@ -296,7 +296,7 @@ Return the current mediasource.
 
 | Type | Description |
 | --- | --- |
-| [MediaSource](arkts-media-media-mediasource-i.md) \| undefined | current mediasource if the operation is successful; returns undefined otherwise. |
+| [MediaSource](arkts-media-media-mediasource-i.md) &#124; undefined | current mediasource if the operation is successful; returns undefined otherwise. |
 
 **Error codes:**
 
@@ -375,7 +375,7 @@ getLoadedTimeRanges(): Promise<Array<Range>>
 
 Obtains the list of loaded time ranges. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - For local media resources, the time range is from 0 to the entire media duration.
 > 
@@ -391,7 +391,7 @@ Obtains the list of loaded time ranges. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[Range](arkts-media-media-range-i.md)&gt;&gt; | Promise used to return the list of loaded time ranges on the player. |
+| Promise&lt;Array&lt;[Range](arkts-media-media-range-i.md)&gt;&gt; | Promise used to return the list of loaded time ranges on the player.<br>The time range is represented by the **[start, end]** position on the playback timeline, in milliseconds. |
 
 ## getMediaKeySystemInfos
 
@@ -399,7 +399,7 @@ Obtains the list of loaded time ranges. This API uses a promise to return the re
 getMediaKeySystemInfos(): Array<drm.MediaKeySystemInfo>
 ```
 
-Obtains the media key system information of the media asset that is being played. This API can be called only after the on('mediaKeySystemInfoUpdate') event is successfully triggered.
+Obtains the media key system information of the media asset that is being played. This API can be called only after the [on('mediaKeySystemInfoUpdate')](#onmediakeysysteminfoupdate) event is successfully triggered.
 
 **Since:** 11
 
@@ -433,7 +433,7 @@ Return the array of mediasources in the playlist.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[MediaSource](arkts-media-media-mediasource-i.md) \| undefined&gt; | array of mediasources in the playlist. |
+| Array&lt;[MediaSource](arkts-media-media-mediasource-i.md) &#124; undefined&gt; | array of mediasources in the playlist. |
 
 **Error codes:**
 
@@ -529,7 +529,7 @@ getSeekableTimeRanges(): Promise<Array<Range>>
 
 Obtains the list of seekable time ranges. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - For local media resources and media resources that support segment-based requests, the time range is from 0
 > to the entire media duration.
@@ -546,7 +546,7 @@ Obtains the list of seekable time ranges. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[Range](arkts-media-media-range-i.md)&gt;&gt; | Promise used to return the list of seekable time ranges on the player. |
+| Promise&lt;Array&lt;[Range](arkts-media-media-range-i.md)&gt;&gt; | Promise used to return the list of seekable time ranges on the player.<br>The time range is represented by the **[start, end]** position on the playback timeline, in milliseconds. |
 
 ## getSelectedTracks
 
@@ -775,7 +775,7 @@ Unsubscribes from the event that checks whether the seek operation takes effect.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'seekDone' | Yes | Event type, which is **'seekDone'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Callback invoked when the event is triggered. It reports the time position requested by the user.For video playback, [SeekMode](arkts-media-media-seekmode-e.md) may cause the actual position to be different from that requested by the user. The exact position can be obtained from the **currentTime** property. The time in this callback only means that the requested seek operation is complete. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **seekDone** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Callback invoked when the event is triggered. It reports the time position requested by the user.<br>For video playback, [SeekMode](arkts-media-media-seekmode-e.md) may cause the actual position to be different from that requested by the user. The exact position can be obtained from the **currentTime** property. The time in this callback only means that the requested seek operation is complete. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **seekDone** event will be unregistered.<br>**Since:** 12 |
 
 ## off('speedDone')
 
@@ -1033,7 +1033,7 @@ Unsubscribes from audio stream output device changes and reasons. This API uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## off('subtitleUpdate')
 
@@ -1198,7 +1198,7 @@ Unregisters listener to detect when changes occur in the playback content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback invoked when the event is triggered. Default value:If this parameter is not specified, all callback functions for the event are unsubscribed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback invoked when the event is triggered.<br>Default value:If this parameter is not specified, all callback functions for the event are unsubscribed. |
 
 ## offTimedMetaData
 
@@ -1220,7 +1220,7 @@ Unregister listener to detect time-based metadata, Currently, only the #EXT-X-DA
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVTimedMetaData](arkts-media-media-avtimedmetadata-i.md)&gt; | No | Callback invoked when the event is triggered. Default value:If this parameter is not specified, all callback functions for the event are unsubscribed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVTimedMetaData](arkts-media-media-avtimedmetadata-i.md)&gt; | No | Callback invoked when the event is triggered.<br>Default value:If this parameter is not specified, all callback functions for the event are unsubscribed. |
 
 ## on('mediaKeySystemInfoUpdate')
 
@@ -1325,7 +1325,7 @@ Subscribes to the event to check whether the seek operation takes effect.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'seekDone' | Yes | Event type, which is **'seekDone'** in this case. This event is triggered each time **seek()** is called, except in SEEK_CONTINUOUS mode. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback invoked when the event is triggered. It reports the time position requested by the user.For video playback, [SeekMode](arkts-media-media-seekmode-e.md) may cause the actual position to be different from that requested by the user. The exact position can be obtained from the **currentTime** property. The time in this callback only means that the requested seek operation is complete. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback invoked when the event is triggered. It reports the time position requested by the user.<br>For video playback, [SeekMode](arkts-media-media-seekmode-e.md) may cause the actual position to be different from that requested by the user. The exact position can be obtained from the **currentTime** property. The time in this callback only means that the requested seek operation is complete. |
 
 ## on('speedDone')
 
@@ -1398,7 +1398,7 @@ on(type: 'timeUpdate', callback: Callback<number>): void
 
 Subscribes to playback position changes. It is used to refresh the current position of the progress bar. By default, this event is reported every 100 ms. However, it is reported immediately upon a successful seek operation.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The **'timeUpdate'** event is not supported in live streaming scenarios.
 > 
@@ -1428,7 +1428,7 @@ on(type: 'durationUpdate', callback: Callback<number>): void
 
 Subscribes to media asset duration changes. It is used to refresh the length of the progress bar. By default, this event is reported once in the prepared state. However, it can be repeatedly reported for special streams that trigger duration changes.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The **durationUpdate** event is not supported in live streaming scenarios.
 
@@ -1625,7 +1625,7 @@ When subscribing to this event, you are advised to implement the player behavior
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## on('subtitleUpdate')
 
@@ -2121,7 +2121,7 @@ seek(timeMs: number, mode?: SeekMode): void
 
 Seeks to the specified playback position. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the seek operation takes effect by subscribing to the on('seekDone') event.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Since API version 24, **seek** is supported in live streaming scenarios.
 
@@ -2137,7 +2137,7 @@ Seeks to the specified playback position. This API can be called only when the A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeMs | number | Yes | Position to seek to, in ms. The value range is [0, [duration](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md)].When the seek mode is [SEEK_CONTINUOUS](arkts-media-media-seekmode-e.md), you can set this parameter to **-1** to end the **SEEK_CONTINUOUS** mode. |
+| timeMs | number | Yes | Position to seek to, in ms. The value range is [0, [duration](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md)].<br>When the seek mode is [SEEK_CONTINUOUS](arkts-media-media-seekmode-e.md), you can set this parameter to **-1** to end the **SEEK_CONTINUOUS** mode. |
 | mode | [SeekMode](arkts-media-media-seekmode-e.md) | No | Seek mode based on the video I frame. The default value is **SEEK_PREV_SYNC**. **Set this parameter only for video playback. |
 
 ## seekToDefaultPosition
@@ -2181,7 +2181,7 @@ Selects a track when the AVPlayer plays multimedia resources with multiple audio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | number | Yes | Index of the track. You can call [getTrackDescription](#gettrackdescription) to obtain all track information [MediaDescription](arkts-media-media-mediadescription-i.md) of the current resource. |
-| mode | [SwitchMode](arkts-media-media-switchmode-e.md) | No | Video track mode. The default mode is **SMOOTH**. This parameter takes effect only for DASH/HLS network stream video track switching.HLS network stream video is supported since API version 24.<br>**Since:** 26.0.0 |
+| mode | [SwitchMode](arkts-media-media-switchmode-e.md) | No | Video track mode. The default mode is **SMOOTH**. This parameter takes effect only for DASH/HLS network stream video track switching.<br>HLS network stream video is supported since API version 24.<br>**Since:** 26.0.0 |
 
 **Return value:**
 
@@ -2222,7 +2222,7 @@ Sets the bitrate for the streaming media. This API is valid only for HLS/DASH st
 setDecryptionConfig(mediaKeySession: drm.MediaKeySession, secureVideoPath: boolean): void
 ```
 
-Sets the decryption configuration. When receiving an on('mediaKeySystemInfoUpdate') event, create the related configuration and set the decryption configuration based on the information in the reported event. Otherwise, the playback fails.
+Sets the decryption configuration. When receiving an [on('mediaKeySystemInfoUpdate')](#onmediakeysysteminfoupdate) event, create the related configuration and set the decryption configuration based on the information in the reported event. Otherwise, the playback fails.
 
 **Since:** 11
 
@@ -2241,7 +2241,7 @@ Sets the decryption configuration. When receiving an on('mediaKeySystemInfoUpdat
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## setLoudnessGain
 
@@ -2251,7 +2251,7 @@ setLoudnessGain(loudnessGain: number): Promise<void>
 
 Sets the loudness gain of the AVPlayer. After this API is called, the loudness gain takes effect immediately. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API can be called when the AVPlayer is in the prepared, playing, paused, completed, or stopped state.
 > 
@@ -2297,8 +2297,8 @@ This API can be called only when the AVPlayer is in the prepared, playing, pause
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mediaType | [MediaType](arkts-media-media-mediatype-e.md) | Yes | Media type.For API version 12 to 19, only **MEDIA_TYPE_AUD** is supported.Since API version 20, **MEDIA_TYPE_VID** is supported. |
-| muted | boolean | Yes | For API version 12 to 19, only audio playback strategies are supported. This parameter specifies whether to mute or unmute the audio. **true** to mute, **false** otherwise.Since API version 20, video playback strategies are also supported. This parameter specifies whether to disable or enable the video image. **true** to disable, false otherwise. |
+| mediaType | [MediaType](arkts-media-media-mediatype-e.md) | Yes | Media type.<br>For API version 12 to 19, only **MEDIA_TYPE_AUD** is supported.<br>Since API version 20, **MEDIA_TYPE_VID** is supported. |
+| muted | boolean | Yes | For API version 12 to 19, only audio playback strategies are supported. This parameter specifies whether to mute or unmute the audio. **true** to mute, **false** otherwise.<br>Since API version 20, video playback strategies are also supported. This parameter specifies whether to disable or enable the video image. **true** to disable, false otherwise. |
 
 **Return value:**
 
@@ -2344,7 +2344,7 @@ Sets a source of streaming media that can be pre-downloaded, downloads the media
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 
 ## setPlaybackRange
@@ -2367,7 +2367,7 @@ Sets the playback range and seeks to the start position of the range based on th
 | --- | --- | --- | --- |
 | startTimeMs | number | Yes | Start position of the range, in ms. The value range is [0, duration). If **-1** is passed in, the system starts playing from position 0. |
 | endTimeMs | number | Yes | End position of the range, in ms. The value range is (startTimeMs, duration]. If **-1** is passed in, the system plays the content until it reaches the final part of the asset. |
-| mode | [SeekMode](arkts-media-media-seekmode-e.md) | No | Seek mode, which can be **SeekMode.SEEK_PREV_SYNC** or **SeekMode.SEEK_CLOSEST**.The default value is **SeekMode.SEEK_PREV_SYNC**. |
+| mode | [SeekMode](arkts-media-media-seekmode-e.md) | No | Seek mode, which can be **SeekMode.SEEK_PREV_SYNC** or **SeekMode.SEEK_CLOSEST**.<br>The default value is **SeekMode.SEEK_PREV_SYNC**. |
 
 **Return value:**
 
@@ -2390,7 +2390,7 @@ setPlaybackRate(rate: number): void
 
 Set playback rate. Sets the playback rate. This API can be called only when the AVPlayer is in the prepared, playing, paused, or Supported states: prepared/playing/paused/completed. completed state. The value range is [0.125, 8.0], on API 24 and below, the range is [0.125, 4.0]. You can check whether the setting takes effect through the [playbackRateDone](#onplaybackratedone) event.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is not supported in live mode.
 
@@ -2454,7 +2454,7 @@ setSpeed(speed: PlaybackSpeed): void
 
 Sets the playback speed. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the speed setting takes effect by subscribing to the on('speedDone') event.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This method is not supported in live streaming scenarios.
 
@@ -2750,7 +2750,7 @@ A user is obtaining an audio and video file from a remote server and wants to pl
 
 If the media file to play is in MP4/M4A format, ensure that the **moov** field (specifying the media information) is before the **mdat** field (specifying the media data) or the fields before the **moov** field is less than 10 MB. Otherwise, the parsing fails and the media file cannot be played.
 
-**NOTE：**
+**NOTE:**
 
 WebM is no longer supported since API version 11.
 
@@ -2810,7 +2810,7 @@ Video 3 (address offset: 151, byte length: 150)
 
 To play an independent media file, use **src=fd://xx**.
 
-**NOTE：**
+**NOTE:**
 
 WebM is no longer supported since API version 11.
 
@@ -2866,7 +2866,7 @@ This setting is not supported in live mode.
 playlistLoopMode?: PlaylistLoopMode
 ```
 
-Set the loop mode when playing the media source playlist. Default value:PLAYLIST_LOOP_MODE_ALL, which means loops all items in the playlist.
+Set the loop mode when playing the media source playlist. <br>Default value:PLAYLIST_LOOP_MODE_ALL, which means loops all items in the playlist.
 
 **Type:** [PlaylistLoopMode](arkts-media-media-playlistloopmode-e.md)
 
@@ -2956,7 +2956,7 @@ Supported audio formats: M4A, AAC, MP3, OGG, WAV, FLAC, AMR, and APE.
 3. HTTPS: https://xx
 4. HLS: http://xx or https://xx
 
-**NOTE：**
+**NOTE:**
 
 - To set the playback URL, you need to declare the  
 [ohos.permission.INTERNET](../../../security/AccessToken/permissions-for-all.md#ohospermissioninternet) permission. The related error code is [201 Permission Denied](../../errorcode-universal.md#201-permission-denied).  

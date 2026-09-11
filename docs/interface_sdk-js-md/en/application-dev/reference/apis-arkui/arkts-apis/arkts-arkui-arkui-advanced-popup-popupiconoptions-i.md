@@ -22,7 +22,7 @@ Rounded corner of the icon.
 
 Default value: **\$r('sys.float.ohos_id_corner_radius_default_s')**
 
-**Type:** [Length](arkts-arkui-length-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
+**Type:** [Length](arkts-arkui-length-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
 **Since:** 11
 

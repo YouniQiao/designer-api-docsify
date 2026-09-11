@@ -23,7 +23,7 @@ Creates an SMS instance based on the protocol data unit (PDU) and specified SMS 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pdu | Array&lt;number&gt; | Yes | Protocol data unit, which is obtained from the received SMS message. |
-| specification | string | Yes | SMS protocol type.    - **3gpp**: GSM/UMTS/LTE SMS    - **3gpp2**: CDMA SMS |
+| specification | string | Yes | SMS protocol type.<br>- **3gpp**: GSM/UMTS/LTE SMS <br>- **3gpp2**: CDMA SMS |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ShortMessage](arkts-telephony-sms-shortmessage-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -68,7 +68,7 @@ Creates an SMS instance based on the protocol data unit (PDU) and specified SMS 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pdu | Array&lt;number&gt; | Yes | Protocol data unit, which is obtained from the received SMS message. |
-| specification | string | Yes | SMS protocol type.    - **3gpp**: GSM/UMTS/LTE SMS    - **3gpp2**: CDMA SMS |
+| specification | string | Yes | SMS protocol type.<br>- **3gpp**: GSM/UMTS/LTE SMS <br>- **3gpp2**: CDMA SMS |
 
 **Return value:**
 

@@ -2,7 +2,7 @@
 
 Smart gesture click action handling. When dynamically customizing smart gesture behavior through the [registerMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#registermonitor) API, setting the return value [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)'s **selectedProposal** to an object of this type triggers a click operation on the target component.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This action handling follows the "select first, then click" processing semantics.
 > 

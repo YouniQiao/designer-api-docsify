@@ -6,6 +6,8 @@ declare type Resource = import('../api/global/resource').Resource
 
 Defines the data type of the interface restriction.
 
+@typedef { import('../api/global/resource').Resource } Resource
+
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.

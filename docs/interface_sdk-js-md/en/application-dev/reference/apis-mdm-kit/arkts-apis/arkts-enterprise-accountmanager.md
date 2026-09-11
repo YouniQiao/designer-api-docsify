@@ -2,7 +2,7 @@
 
 This module provides device account management capabilities, including forbidding the creation of local accounts.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The APIs of this module can be called only by a device administrator application that is enabled. For details, see
 > [MDM Kit Development](../../../mdm/mdm-kit-guide.md).

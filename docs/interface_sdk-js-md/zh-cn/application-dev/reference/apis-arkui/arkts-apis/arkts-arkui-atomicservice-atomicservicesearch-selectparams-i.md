@@ -50,7 +50,7 @@ divider?: Optional<DividerOptions> | null
 
 1.设置DividerOptions，则按设置的样式显示分割线。默认值：{strokeWidth: '1px', color: '#33182431'}。当设置了menuItemContentModifier属性时，本属性不生效。2.设置为null时，不显示分割线。3.strokeWidth设置过宽时，会覆盖文字。分割线会从每一个Item底部开始，同时向上向下画分割线。4.startMargin和endMargin的默认值与不设置divider属性时的分割线样式保持一致。startMargin和endMargin的和与optionWidth的值相等时，不显示分割线。 startMargin和endMargin的和超过optionWidth的值时，按照默认样式显示分割线。
 
-**类型：** [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[DividerOptions](../arkts-components/arkts-arkui-divideroptions-i.md)&gt; \| null
+**类型：** [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[DividerOptions](../arkts-components/arkts-arkui-divideroptions-i.md)&gt; &#124; null
 
 **起始版本：** 18
 
@@ -242,7 +242,7 @@ optionWidth?: Dimension | OptionWidthMode
 
 设置下拉菜单项的宽度，不支持设置百分比。单位：vp。OptionWidthMode为枚举类型，决定下拉菜单是否继承下拉按钮宽度。当设置为异常值或小于最小宽度56vp时，属性不生效，菜单项宽度设为默认值，即菜单默认宽度为2栅格。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) \| [OptionWidthMode](arkts-arkui-optionwidthmode-e.md)
+**类型：** [Dimension](arkts-arkui-dimension-t.md) &#124; [OptionWidthMode](arkts-arkui-optionwidthmode-e.md)
 
 **起始版本：** 18
 

@@ -463,7 +463,7 @@ For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/ar
 | FocalLengthIn35mmFilm | Focal length in 35 mm film.|
 | ExposureBiasValue | Exposure compensation.|
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and
 > [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md).USER_COMMENT. The two fields need to be passed to
@@ -581,7 +581,7 @@ For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/ar
 | FocalLengthIn35mmFilm | Focal length in 35 mm film.|
 | ExposureBiasValue | Exposure compensation.|
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and
 > [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md).USER_COMMENT. The two fields need to be passed to
@@ -818,7 +818,7 @@ open(mode: string, callback: AsyncCallback<number>): void
 
 Opens this file asset. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The write operations are mutually exclusive. After a write operation is complete, you must call **close** to
 > close the file.
@@ -870,7 +870,7 @@ open(mode: string): Promise<number>
 
 Opens this file asset. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The write operations are mutually exclusive. After a write operation is complete, you must call **close** to
 > close the file.
@@ -1111,7 +1111,7 @@ setUserComment(userComment: string, callback: AsyncCallback<void>): void
 
 Sets user comment information of an image or video. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can only be used to set user comment information of an image or video.
 
@@ -1139,7 +1139,7 @@ Sets user comment information of an image or video. This API uses an asynchronou
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 
 **Examples**
 
@@ -1180,7 +1180,7 @@ setUserComment(userComment: string): Promise<void>
 
 Sets user comment information of an image or video. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API can only be used to set user comment information of an image or video.
 
@@ -1213,7 +1213,7 @@ Sets user comment information of an image or video. This API uses a promise to r
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 
 **Examples**
 

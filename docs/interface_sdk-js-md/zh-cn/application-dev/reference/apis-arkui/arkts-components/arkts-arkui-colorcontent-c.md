@@ -17,7 +17,7 @@
 static readonly ORIGIN: ColorContent
 ```
 
-重置[fillColor](arkts-arkui-image-attribute.md#fillcolor)接口，效果上与不设置[fillColor](arkts-arkui-image-attribute.md#fillcolor)一致。
+重置[fillColor](arkts-arkui-image-comp-attribute.md#fillcolor)接口，效果上与不设置[fillColor](arkts-arkui-image-comp-attribute.md#fillcolor)一致。
 
 **类型：** [ColorContent](arkts-arkui-colorcontent-c.md)
 

@@ -18,7 +18,7 @@ Converts a rotation vector into a quaternion. This API uses an asynchronous call
 
 **Deprecated since:** 9
 
-**Substitutes:** [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md)(rotationVector: Array&lt;double&gt;, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
+**Substitutes:** [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md)(rotationVector: Array&lt;number&gt;, callback: AsyncCallback&lt;Array&lt;number&gt;&gt;)
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -60,7 +60,7 @@ Converts a rotation vector into a quaternion. This API uses a promise to return 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md)(rotationVector: Array&lt;double&gt;)
+**Substitutes:** [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md)(rotationVector: Array&lt;number&gt;)
 
 **System capability:** SystemCapability.Sensors.Sensor
 

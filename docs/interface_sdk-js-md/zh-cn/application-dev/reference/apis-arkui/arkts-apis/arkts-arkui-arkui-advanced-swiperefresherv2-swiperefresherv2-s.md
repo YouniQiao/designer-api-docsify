@@ -43,8 +43,7 @@ import { SwipeRefresherV2 } from '@kit.ArkUI';
 content?: string
 ```
 
-内容加载时显示的文本。默认值：空字符串。  
-**说明：**如果文本大于列宽时，文本被截断。
+内容加载时显示的文本。<br>默认值：空字符串。<br>**说明：**如果文本大于列宽时，文本被截断。
 
 **类型：** string
 
@@ -62,7 +61,7 @@ content?: string
 isLoading: boolean
 ```
 
-当前内容是否正在加载。true：内容正在加载。false：内容未在加载。
+当前内容是否正在加载。<br> true：内容正在加载。<br> false：内容未在加载。
 
 **类型：** boolean
 

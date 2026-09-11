@@ -107,7 +107,7 @@ try {
 off(type: 'destroyed', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the word selection panel destruction event. This API is used together with on('destroyed'). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md).
+Unsubscribes from the word selection panel destruction event. This API is used together with [on('destroyed')](#ondestroyed). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md).
 
 **Since:** 24
 
@@ -137,7 +137,7 @@ try {
 off(type: 'hidden', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the word selection panel hiding event. This API is used together with on('hidden'). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md).
+Unsubscribes from the word selection panel hiding event. This API is used together with [on('hidden')](#onhidden). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md).
 
 **Since:** 24
 
@@ -167,7 +167,7 @@ try {
 on(type: 'destroyed', callback: Callback<void>): void
 ```
 
-Subscribes to the word selection panel destruction event. This API is used together with off('destroyed'). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md).
+Subscribes to the word selection panel destruction event. This API is used together with [off('destroyed')](#offdestroyed). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md).
 
 **Since:** 24
 
@@ -199,7 +199,7 @@ try {
 on(type: 'hidden', callback: Callback<void>): void
 ```
 
-Subscribes to the word selection panel hiding event. This API is used together with off('hidden'). This event is triggered when the panel is hidden by calling [hide](#hide) or automatically hidden when it loses focus. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md).
+Subscribes to the word selection panel hiding event. This API is used together with [off('hidden')](#offhidden). This event is triggered when the panel is hidden by calling [hide](#hide) or automatically hidden when it loses focus. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md).
 
 **Since:** 24
 

@@ -18,7 +18,7 @@ function setDate(date: Date, callback: AsyncCallback<void>): void
 
 **废弃版本：** 10
 
-**替代接口：** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md)(time: long, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md)(time: number, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.SET_TIME
 
@@ -39,7 +39,7 @@ function setDate(date: Date, callback: AsyncCallback<void>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameter types.   3. Parameter verification failed; |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. <br> 3. Parameter verification failed; |
 
 **示例**
 
@@ -74,7 +74,7 @@ function setDate(date: Date): Promise<void>
 
 **废弃版本：** 10
 
-**替代接口：** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md)(time: long, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md)(time: number, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.SET_TIME
 
@@ -100,7 +100,7 @@ function setDate(date: Date): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameter types.   3. Parameter verification failed; |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. <br> 3. Parameter verification failed; |
 
 **示例**
 

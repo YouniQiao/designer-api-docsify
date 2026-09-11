@@ -30,8 +30,8 @@ beginRecording(width: number, height: number): Canvas
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | number | 是 | 录制画布的宽度。单位: px 取值范围:大于0的整数。宽度值必须大于0。 |
-| height | number | 是 | 录制画布的高度。单位: px 取值范围:大于0的整数。高度值必须大于0。 |
+| width | number | 是 | 录制画布的宽度。<br>单位: px <br>取值范围:大于0的整数。<br>宽度值必须大于0。 |
+| height | number | 是 | 录制画布的高度。<br>单位: px <br>取值范围:大于0的整数。<br>高度值必须大于0。 |
 
 **返回值：**
 

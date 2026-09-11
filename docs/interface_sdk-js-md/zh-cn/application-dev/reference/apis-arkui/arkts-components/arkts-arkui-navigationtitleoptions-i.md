@@ -176,8 +176,8 @@ paddingEnd?: LengthMetrics
 
 仅支持以下任一场景：
 
-1. 使用非自定义菜单，即[菜单value](arkts-arkui-navigation-attribute.md#menus)为Array&lt;NavigationMenuItem&gt;；
-2. 没有右上角菜单，且使用非自定义标题，即[标题value](arkts-arkui-navigation-attribute.md#title)类型为ResourceStr或NavigationCommonTitle。
+1. 使用非自定义菜单，即[菜单value](arkts-arkui-navigation-comp-attribute.md#menus)为Array&lt;NavigationMenuItem&gt;；
+2. 没有右上角菜单，且使用非自定义标题，即[标题value](arkts-arkui-navigation-comp-attribute.md#title)类型为ResourceStr或NavigationCommonTitle。
 
 默认值：
 
@@ -205,8 +205,8 @@ paddingStart?: LengthMetrics
 
 仅支持以下任一场景：
 
-1. 显示返回图标，即[hideBackButton](arkts-arkui-navigation-attribute.md#hidebackbutton)为false；
-2. 使用非自定义标题，即[标题value](arkts-arkui-navigation-attribute.md#title)类型为ResourceStr或NavigationCommonTitle。
+1. 显示返回图标，即[hideBackButton](arkts-arkui-navigation-comp-attribute.md#hidebackbutton)为false；
+2. 使用非自定义标题，即[标题value](arkts-arkui-navigation-comp-attribute.md#title)类型为ResourceStr或NavigationCommonTitle。
 
 默认值：
 

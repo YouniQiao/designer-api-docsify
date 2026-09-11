@@ -2,7 +2,7 @@
 
 How the color property is updated.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer element
@@ -34,7 +34,7 @@ the **config** type is [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particl
 3. **ParticleUpdater.CURVE**: The property changes with the animation curve.
 In this case, the **config** type is [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.CURVE].
 
-**NOTE：**
+**NOTE:**
 
 When **type** is set to **ParticleUpdater.RANDOM** or **ParticleUpdater.CURVE**, the color configuration in **updater** has higher priority than that in **range**. During the animation period specified by updater, the color changes based on the color configuration in updater. Before the animation period specified by updater, the color changes based on the color configuration in range.
 

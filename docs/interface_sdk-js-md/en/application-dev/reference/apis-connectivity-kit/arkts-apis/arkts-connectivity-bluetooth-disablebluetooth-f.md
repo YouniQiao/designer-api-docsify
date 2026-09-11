@@ -28,7 +28,7 @@ Disables Bluetooth on a device.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if Bluetooth is being disabled; returns `false` if an error occurs. |
 
 **Examples**
 

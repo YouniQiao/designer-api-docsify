@@ -2,7 +2,7 @@
 
 Provides the capability to set cursor styles.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The initial APIs of this class are supported since API version 12.
 > 
@@ -46,7 +46,7 @@ setCursor(value: PointerStyle): void
 
 Sets the cursor style.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API does not take effect immediately. The cursor style will be updated in the next rendering frame.
 
@@ -72,7 +72,7 @@ setCustomCursor(value: image.PixelMap, focusX?: number, focusY?: number): void
 
 Sets the custom cursor style.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API does not take effect immediately. The cursor style will be updated in the next rendering frame.
 
@@ -89,5 +89,5 @@ Sets the custom cursor style.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Pixel map of the custom mouse cursor style. |
-| focusX | number | No | X coordinate of the custom cursor's hotspot. The hotspot refers to the actual location where the click occurs.Default value: **0**Unit: px Value range: [0, +∞) |
-| focusY | number | No | Y coordinate of the custom cursor's hotspot.Default value: **0**Unit: px Value range: [0, +∞) |
+| focusX | number | No | X coordinate of the custom cursor's hotspot. The hotspot refers to the actual location where the click occurs.<br>Default value: **0**<br>Unit: px<br>Value range: [0, +∞) |
+| focusY | number | No | Y coordinate of the custom cursor's hotspot.<br>Default value: **0**<br>Unit: px<br>Value range: [0, +∞) |

@@ -1,4 +1,4 @@
-# @ohos.driver.deviceManager
+# @ohos.driver.deviceManager(Peripheral Management)
 
 The **deviceManager** module provides APIs for managing peripheral devices, including querying the peripheral device list and binding or unbinding a peripheral device.
 

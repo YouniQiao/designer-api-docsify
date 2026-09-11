@@ -18,7 +18,7 @@ In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 ar
 
 [LogType](arkts-mdm-networkmanager-logtype-e.md) is supported since API version 23.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - After a rule with [Action](arkts-mdm-networkmanager-action-e.md) set to **ALLOW** is added, a rule with **Action** set
 > to **DENY** is added by default to discard or intercept all network data packets that do not meet the **ALLOW**

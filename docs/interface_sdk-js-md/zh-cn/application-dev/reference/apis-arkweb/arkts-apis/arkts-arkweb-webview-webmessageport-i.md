@@ -52,7 +52,7 @@ onMessageEvent(callback: (result: WebMessage) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100006](../errorcode-webview.md#17100006-无法注册message-port回调) | Failed to register a message event for the port. |
 
 ## onMessageEventExt
@@ -79,7 +79,7 @@ onMessageEventExt(callback: (result: WebMessageExt) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100006](../errorcode-webview.md#17100006-无法注册message-port回调) | Failed to register a message event for the port. |
 
 ## postMessageEvent
@@ -88,7 +88,7 @@ onMessageEventExt(callback: (result: WebMessageExt) => void): void
 postMessageEvent(message: WebMessage): void
 ```
 
-发送[WebMessage](arkts-arkweb-webview-webmessage-t.md)类型消息给HTML5侧，必须先调用onMessageEvent，否则会发送失败。完整示例代码参考[postMessage](arkts-arkweb-webview-webviewcontroller-c.md#postmessage)。
+发送[WebMessage](arkts-arkweb-webview-webmessage-t.md)类型消息给HTML5侧，必须先调用[onMessageEvent](#onmessageevent)，否则会发送失败。完整示例代码参考[postMessage](arkts-arkweb-webview-webviewcontroller-c.md#postmessage)。
 
 **起始版本：** 9
 
@@ -106,7 +106,7 @@ postMessageEvent(message: WebMessage): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100010](../errorcode-webview.md#17100010-无法使用该端口发送消息) | Failed to post messages through the port. |
 
 ## postMessageEventExt
@@ -115,7 +115,7 @@ postMessageEvent(message: WebMessage): void
 postMessageEventExt(message: WebMessageExt): void
 ```
 
-发送[WebMessageType](arkts-arkweb-webview-webmessagetype-e.md)类型消息给HTML5侧，必须先调用onMessageEventExt，否则会发送失败。完整示例代码参考onMessageEventExt。
+发送[WebMessageType](arkts-arkweb-webview-webmessagetype-e.md)类型消息给HTML5侧，必须先调用[onMessageEventExt](#onmessageeventext)，否则会发送失败。完整示例代码参考[onMessageEventExt](#onmessageeventext)。
 
 **起始版本：** 10
 
@@ -133,7 +133,7 @@ postMessageEventExt(message: WebMessageExt): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.  2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100010](../errorcode-webview.md#17100010-无法使用该端口发送消息) | Failed to post messages through the port. |
 
 ## isExtentionType
@@ -142,7 +142,7 @@ postMessageEventExt(message: WebMessageExt): void
 isExtentionType?: boolean
 ```
 
-创建WebMessagePort时是否指定使用扩展增强接口，[postMessageEventExt](#postmessageeventext)、onMessageEventExt。
+创建WebMessagePort时是否指定使用扩展增强接口，[postMessageEventExt](#postmessageeventext)、[onMessageEventExt](#onmessageeventext)。
 
 true表示使用扩展增强接口，false表示不使用扩展增强接口。
 

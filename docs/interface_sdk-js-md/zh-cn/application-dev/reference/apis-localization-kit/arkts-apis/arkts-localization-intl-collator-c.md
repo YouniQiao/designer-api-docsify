@@ -37,7 +37,7 @@ compare(first: string, second: string): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 比较结果。 |
+| number | 比较结果。<br>- number为负数时，表示first排序在second之前。<br>- number为0时，表示first与second排序相同。<br>- number为正数，表示first排序在second之后。 |
 
 **示例**
 
@@ -91,8 +91,8 @@ constructor(locale: string | Array<string>, options?: CollatorOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
-| options | [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) | 否 | 创建排序对象时可设置的配置项。默认值：所有属性都取默认值时的配置项。 |
+| locale | string &#124; Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
+| options | [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) | 否 | 创建排序对象时可设置的配置项。<br>默认值：所有属性都取默认值时的配置项。 |
 
 **示例**
 

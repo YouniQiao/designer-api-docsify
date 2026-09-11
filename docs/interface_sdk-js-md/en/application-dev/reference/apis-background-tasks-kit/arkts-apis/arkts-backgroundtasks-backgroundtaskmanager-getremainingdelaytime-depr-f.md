@@ -17,7 +17,7 @@ Obtains the remaining duration before the application is suspended. This API use
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-f.md)(requestId: int, callback: AsyncCallback&lt;int&gt;)
+**Substitutes:** [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-f.md)(requestId: number, callback: AsyncCallback&lt;number&gt;)
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
@@ -57,7 +57,7 @@ Obtains the remaining duration before the application is suspended. This API use
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-f.md)(requestId: int)
+**Substitutes:** [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-f.md)(requestId: number)
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 

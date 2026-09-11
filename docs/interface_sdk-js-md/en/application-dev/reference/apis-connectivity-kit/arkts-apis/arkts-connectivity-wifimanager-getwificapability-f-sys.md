@@ -34,7 +34,7 @@ Get Wi-Fi capability
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` the specified is enable Returns `false` otherwise. |
 
 **Error codes:**
 

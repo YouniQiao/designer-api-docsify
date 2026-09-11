@@ -32,7 +32,7 @@ function createController(sessionId: string): Promise<AVSessionController>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md)&gt; | Promise对象。返回会话控制器实例，可查看会话ID， |
+| Promise&lt;[AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md)&gt; | Promise对象。返回会话控制器实例，可查看会话ID，<br>并完成对会话发送命令及事件，获取元数据、播放状态信息等操作。 |
 
 **错误码：**
 

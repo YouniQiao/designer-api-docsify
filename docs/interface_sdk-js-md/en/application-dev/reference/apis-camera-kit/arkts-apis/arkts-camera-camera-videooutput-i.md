@@ -140,7 +140,7 @@ natural orientation. For example, the rear camera sensor of a bar-type phone is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDegree | number | No | Device rotation angle, measured in degrees, within the range of [0, 360]. Since API version 23, the input parameter **deviceDegree** is optional. If no parameter is passed, the system obtains the **deviceDegree** value to calculate the video rotation angle.<br>**Since:** 23 |
+| deviceDegree | number | No | Device rotation angle, measured in degrees, within the range of [0, 360].<br> Since API version 23, the input parameter **deviceDegree** is optional. If no parameter is passed, the system obtains the **deviceDegree** value to calculate the video rotation angle.<br>**Since:** 23 |
 
 **Return value:**
 
@@ -189,7 +189,7 @@ off(type: 'frameStart', callback?: AsyncCallback<void>): void
 
 Unsubscribes from video recording start events.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -256,7 +256,7 @@ on(type: 'frameStart', callback: AsyncCallback<void>): void
 
 Subscribes to video recording start events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -302,7 +302,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to VideoOutput error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -329,7 +329,7 @@ Sets a frame rate range for video streams. The range must be within the supporte
 
 which can be obtained by calling [getSupportedFrameRates](#getsupportedframerates).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md) or
 > [VideoSession](arkts-camera-camera-videosession-i.md) mode.

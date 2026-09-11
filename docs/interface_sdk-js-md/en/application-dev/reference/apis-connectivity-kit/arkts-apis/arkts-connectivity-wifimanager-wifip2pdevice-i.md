@@ -2,6 +2,8 @@
 
 P2P device information.
 
+@typedef WifiP2pDevice
+
 **Since:** 9
 
 **System capability:** SystemCapability.Communication.WiFi.P2P

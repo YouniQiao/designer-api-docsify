@@ -18,7 +18,7 @@ function unbindDevice(deviceId: number, callback: AsyncCallback<number>): void
 
 **废弃版本：** 19
 
-**替代接口：** [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md)(deviceId: long)
+**替代接口：** [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md)(deviceId: number)
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -72,7 +72,7 @@ function unbindDevice(deviceId: number): Promise<number>
 
 **废弃版本：** 19
 
-**替代接口：** [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md)(deviceId: long)
+**替代接口：** [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md)(deviceId: number)
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 

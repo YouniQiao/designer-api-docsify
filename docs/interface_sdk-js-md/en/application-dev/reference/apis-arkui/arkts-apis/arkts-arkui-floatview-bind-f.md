@@ -15,7 +15,7 @@ function bind(floatViewController: FloatViewController, floatingBallController: 
 
 Binds the float view and floating ball. You need to create the [float view controller](arkts-arkui-floatview-floatviewcontroller-i.md) and [floating ball controller](arkts-arkui-floatingball-floatingballcontroller-i.md) first, and neither of them has been started. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - After the binding is successful, calling [start()](arkts-arkui-floatview-floatviewcontroller-i.md#start) or
 > [startFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#startfloatingball) will

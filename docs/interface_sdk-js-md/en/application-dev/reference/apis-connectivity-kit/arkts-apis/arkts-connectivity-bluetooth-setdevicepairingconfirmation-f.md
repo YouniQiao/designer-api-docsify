@@ -35,7 +35,7 @@ Sets the confirmation of pairing with a certain device.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the pairing confirmation is set; returns `false` otherwise. |
 
 **Examples**
 

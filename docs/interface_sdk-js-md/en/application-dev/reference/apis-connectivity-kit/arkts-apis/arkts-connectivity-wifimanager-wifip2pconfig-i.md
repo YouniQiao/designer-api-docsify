@@ -2,6 +2,8 @@
 
 P2P config.
 
+@typedef WifiP2PConfig
+
 **Since:** 9
 
 **System capability:** SystemCapability.Communication.WiFi.P2P

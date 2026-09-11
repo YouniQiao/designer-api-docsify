@@ -2,7 +2,7 @@
 
 Defines the cause of a task failure.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > In API version 12 or earlier, only serial connection to the IP addresses associated with the specified domain
 > name is supported, and the connection time for a single IP address is not controllable. If the first IP address

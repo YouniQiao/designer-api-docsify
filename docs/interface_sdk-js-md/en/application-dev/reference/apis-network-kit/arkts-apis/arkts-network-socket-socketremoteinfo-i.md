@@ -39,7 +39,7 @@ Network protocol type.
 
 The default value is **IPv4**.
 
-**Type:** 'IPv4' \| 'IPv6'
+**Type:** 'IPv4' &#124; 'IPv6'
 
 **Since:** 7
 

@@ -6,6 +6,8 @@ declare type LengthMetricsUnit = import('../api/arkui/Graphics').LengthMetricsUn
 
 Defines length metrics unit.
 
+@typedef { import('../api/arkui/Graphics').LengthMetricsUnit } LengthMetricsUnit
+
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.

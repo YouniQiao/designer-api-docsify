@@ -2,7 +2,7 @@
 
 The editable title bar is a title bar that comes with button icons, typically **Cancel** on the left and **Confirm** on the right, on a multi-select or editing page.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This component can be used only in the stage model.
 > 
@@ -77,8 +77,7 @@ Default value:
 
 **Type:** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
 
-**Default:** {start: LengthMetrics.resource($r('sys.float.margin_left')), 
- end: LengthMetrics.resource($r('sys.float.margin_right'))}
+**Default:** {start: LengthMetrics.resource($r('sys.float.margin_left')), <br> end: LengthMetrics.resource($r('sys.float.margin_right'))}
 
 **Since:** 12
 
@@ -122,7 +121,7 @@ Whether the save button on the right is required.
 
 Default value: **true**, indicating that the save button on the right is required.
 
-**NOTE：**
+**NOTE:**
 
 If not decorated by @Require, this parameter is not subject to mandatory validation during construction.
 
@@ -220,7 +219,7 @@ backgroundColor: '#00000000'
 
 }
 
-**NOTE：**
+**NOTE:**
 
 If not decorated by @Require, this parameter is not subject to mandatory validation during construction.
 

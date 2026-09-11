@@ -607,7 +607,7 @@ Initializes a compression stream with the specified compression level, compressi
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 | level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | For details, see [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md). |
 | method | [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md) | Yes | For details, see [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md). |
-| windowBits | number | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:Zlib: [1, 15]Gzip: (15, +∞)Raw Deflate: [-15, -1] |
+| windowBits | number | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:<br>Zlib: [1, 15]<br>Gzip: (15, +∞)<br>Raw Deflate: [-15, -1] |
 | memLevel | [MemLevel](arkts-basicservices-zlib-memlevel-e.md) | Yes | For details, see [MemLevel](arkts-basicservices-zlib-memlevel-e.md). |
 | strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | Yes | For details, see [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md). |
 
@@ -1544,7 +1544,7 @@ Initializes the internal stream state for decompression before using the **infla
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
-| windowBits | number | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:Zlib: [1, 15]Gzip: (15, +∞)Raw Deflate: [-15, -1] |
+| windowBits | number | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:<br>Zlib: [1, 15]<br>Gzip: (15, +∞)<br>Raw Deflate: [-15, -1] |
 | window | ArrayBuffer | Yes | Preset window buffer. |
 
 **Return value:**
@@ -1952,7 +1952,7 @@ Initializes a decompression stream with the specified **windowBits**. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
-| windowBits | number | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:Zlib: [1, 15]Gzip: (15, +∞)Raw Deflate: [-15, -1] |
+| windowBits | number | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:<br>Zlib: [1, 15]<br>Gzip: (15, +∞)<br>Raw Deflate: [-15, -1] |
 
 **Return value:**
 
@@ -2194,7 +2194,7 @@ Resets the status of the specified decompression stream and updates the window s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
-| windowBits | number | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:Zlib: [1, 15]Gzip: (15, +∞)Raw Deflate: [-15, -1] |
+| windowBits | number | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:<br>Zlib: [1, 15]<br>Gzip: (15, +∞)<br>Raw Deflate: [-15, -1] |
 
 **Return value:**
 

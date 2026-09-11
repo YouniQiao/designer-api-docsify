@@ -2,6 +2,8 @@
 
 轴对齐边界盒，主要用于判断空间中的物体是否重叠。
 
+@typedef Aabb
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

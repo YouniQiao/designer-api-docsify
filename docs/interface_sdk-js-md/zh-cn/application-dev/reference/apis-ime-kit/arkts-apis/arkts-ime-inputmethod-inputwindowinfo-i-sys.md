@@ -18,7 +18,7 @@ import { inputMethod } from '@kit.IMEKit';
 userId?: number
 ```
 
-显示输入法窗口的用户ID。该属性仅系统应用可以使用。
+显示输入法窗口的用户ID。<br> <br>该属性仅系统应用可以使用。
 
 **类型：** number
 

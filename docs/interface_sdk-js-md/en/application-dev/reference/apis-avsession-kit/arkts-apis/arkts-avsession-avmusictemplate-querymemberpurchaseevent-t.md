@@ -6,6 +6,8 @@ type QueryMemberPurchaseEvent = (memberPurchaseType: MemberPurchaseType) => Prom
 
 The query member purchase event.
 
+@typedef { function } QueryMemberPurchaseEvent
+
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.

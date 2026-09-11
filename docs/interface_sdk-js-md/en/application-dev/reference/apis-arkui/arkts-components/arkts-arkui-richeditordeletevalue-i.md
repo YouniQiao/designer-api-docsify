@@ -1,6 +1,6 @@
 # RichEditorDeleteValue
 
-Provides information about the delete operation and the deleted content.
+Defines information about the deletion operation and the content to be deleted.
 
 **Since:** 10
 
@@ -35,7 +35,7 @@ Direction of the delete operation.
 length: number
 ```
 
-Length of the deleted content.
+Length of the content to be deleted.
 
 **Type:** number
 
@@ -53,7 +53,7 @@ Length of the deleted content.
 offset: number
 ```
 
-Offset of the deleted content.
+Offset of the content to be deleted.
 
 **Type:** number
 
@@ -71,9 +71,9 @@ Offset of the deleted content.
 richEditorDeleteSpans: Array<RichEditorTextSpanResult | RichEditorImageSpanResult>
 ```
 
-Information about the deleted text or image span.
+Information about the text or image spans to be deleted.
 
-**Type:** Array&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md) \| [RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md)&gt;
+**Type:** Array&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md) &#124; [RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md)&gt;
 
 **Since:** 10
 

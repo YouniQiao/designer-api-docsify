@@ -4,6 +4,7 @@ A DataAbilityHelper object is obtained through
  [acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md).
 
 
+
 ## Summary
 
 ### Interfaces

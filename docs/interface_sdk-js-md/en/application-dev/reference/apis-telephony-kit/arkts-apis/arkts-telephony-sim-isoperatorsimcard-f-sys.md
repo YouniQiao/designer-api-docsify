@@ -31,7 +31,7 @@ Indicates whether the SIM card in a specified slot is a specified operator.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the SIM card is specified operator; return `false` otherwise. |
 
 **Error codes:**
 

@@ -26,7 +26,7 @@ import { videoProcessingEngine } from '@kit.ImageKit';
 
 | Name | Description |
 | --- | --- |
-| [ImageProcessor](arkts-image-videoprocessingengine-imageprocessor-i.md) | Provides the ImageProcessor type, including the processing function. |
+| [ImageProcessor](arkts-image-videoprocessingengine-imageprocessor-i.md) | Provides the ImageProcessor type, including the processing function. @typedef ImageProcessor |
 
 ### Enums
 

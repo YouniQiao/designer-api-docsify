@@ -27,7 +27,7 @@ Sets the status of a device after it is successfully connected. Device status de
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceType | string | Yes | Device type. Currently, only **headset**, **liteWearable**, **wearable**, **glasses**, and **current** are supported. |
-| status | number | Yes | Device status.   - Bit 0: whether the device is in use. The value **0** indicates that the device is available; **1** indicates that the device is in use.   - Bit 1: whether the device user is the owner. The value **0** indicates that the user is not the owner; **1** indicates the opposite.   - Bit 2: whether the device is in the Do Not Disturb mode. The value **0** indicates that the device is not in the Do Not Disturb mode; **1** indicates the opposite. |
+| status | number | Yes | Device status.<br>- Bit 0: whether the device is in use. The value **0** indicates that the device is available; **1** indicates that the device is in use.<br>- Bit 1: whether the device user is the owner. The value **0** indicates that the user is not the owner; **1** indicates the opposite.<br>- Bit 2: whether the device is in the Do Not Disturb mode. The value **0** indicates that the device is not in the Do Not Disturb mode; **1** indicates the opposite. |
 
 **Return value:**
 

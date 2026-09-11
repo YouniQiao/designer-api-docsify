@@ -34,7 +34,7 @@ Registers an application state observer, which allows you to filter for specific
 
 | Type | Description |
 | --- | --- |
-| number | ID of the observer registered. You can pass this ID to [off]{ |
+| number | ID of the observer registered. You can pass this ID to off to unregister the observer. |
 
 **Error codes:**
 

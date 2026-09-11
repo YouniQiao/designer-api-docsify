@@ -48,7 +48,7 @@ enableMetered?: boolean
 
 Whether download is allowed on a metered connection. The value **true** means the download is allowed, and **false** means the opposite. The default value is **false**.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > In general cases, a mobile data connection is metered, while a Wi-Fi connection is not.
 

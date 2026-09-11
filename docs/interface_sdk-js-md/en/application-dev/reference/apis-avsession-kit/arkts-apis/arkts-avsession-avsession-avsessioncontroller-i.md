@@ -544,7 +544,7 @@ Get custom media packets provided by the corresponding session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{[key: string]: Object}&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{[key: string]: Object}&gt; | Yes | The triggered asyncCallback when (getExtras). |
 
 **Error codes:**
 
@@ -575,7 +575,7 @@ Get custom media packets provided by the corresponding session
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;{[key: string]: Object | > } the parameters of extras |
+| Promise&lt;{[key: string]: Object}&gt; | the parameters of extras |
 
 **Error codes:**
 
@@ -1650,7 +1650,7 @@ Register metadata changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'metadataChange' | Yes |  |
-| filter | Array&lt;keyof AVMetadata&gt; \| 'all' | Yes | The properties of [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) that you cared about |
+| filter | Array&lt;keyof AVMetadata&gt; &#124; 'all' | Yes | The properties of [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) that you cared about |
 | callback | (data: AVMetadata) =&gt; void | Yes | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
@@ -1680,7 +1680,7 @@ Register playback state changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | Yes |  |
-| filter | Array&lt;keyof AVPlaybackState&gt; \| 'all' | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) that you cared about |
+| filter | Array&lt;keyof AVPlaybackState&gt; &#124; 'all' | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) that you cared about |
 | callback | (state: AVPlaybackState) =&gt; void | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **Error codes:**
@@ -1710,7 +1710,7 @@ Register call metadata changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callMetadataChange' | Yes | 'callMetadataChange' |
-| filter | Array&lt;keyof CallMetadata&gt; \| 'all' | Yes | The properties of [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) that you cared about |
+| filter | Array&lt;keyof CallMetadata&gt; &#124; 'all' | Yes | The properties of [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) that you cared about |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
@@ -1740,7 +1740,7 @@ Register call state changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callStateChange' | Yes | 'callStateChange' |
-| filter | Array&lt;keyof AVCallState&gt; \| 'all' | Yes | The properties of [AVCallState](arkts-avsession-avsession-avcallstate-i.md) that you cared about |
+| filter | Array&lt;keyof AVCallState&gt; &#124; 'all' | Yes | The properties of [AVCallState](arkts-avsession-avsession-avcallstate-i.md) that you cared about |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
 
 **Error codes:**

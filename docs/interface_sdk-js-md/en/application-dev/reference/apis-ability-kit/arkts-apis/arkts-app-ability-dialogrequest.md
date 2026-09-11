@@ -4,7 +4,7 @@ The dialogRequest module provides APIs related to modal dialog box processing, i
 
 A modal dialog box is a system-level dialog box that blocks interactions such as mouse clicks, keyboard input, and touch events on the underlying page. The page can only be interacted with after the modal dialog box is closed.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - The APIs provided by this module are used in ServiceExtensionAbilities. For a ServiceExtensionAbility that
 > implements modal dialog boxes, you can use the APIs to obtain the request information and request callback and
@@ -27,7 +27,7 @@ import { dialogRequest } from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [getRequestCallback](arkts-ability-dialogrequest-getrequestcallback-f.md) | Obtains the request callback from Want. |
-| [getRequestInfo](arkts-ability-dialogrequest-getrequestinfo-f.md) | > **NOTE：** >  > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, > the request information can be obtained from Want. If this API is used in other scenarios, no return value is > obtained. |
+| [getRequestInfo](arkts-ability-dialogrequest-getrequestinfo-f.md) |  |
 
 ### Interfaces
 

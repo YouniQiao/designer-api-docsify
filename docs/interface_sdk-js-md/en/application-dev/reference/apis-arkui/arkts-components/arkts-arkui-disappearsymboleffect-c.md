@@ -35,7 +35,7 @@ A constructor used to create an **AppearSymbolEffect** instance, which comes wit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.Default value: **EffectScope.LAYER |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.<br>Default value: **EffectScope.LAYER |
 
 ## scope
 

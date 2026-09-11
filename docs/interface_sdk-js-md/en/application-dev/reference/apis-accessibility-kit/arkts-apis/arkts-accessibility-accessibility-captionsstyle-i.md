@@ -27,7 +27,7 @@ string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats.
 
 Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 8
 
@@ -51,7 +51,7 @@ string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats.
 
 Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 8
 
@@ -129,7 +129,7 @@ string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats.
 
 Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
 
-**Type:** number \| string
+**Type:** number &#124; string
 
 **Since:** 8
 

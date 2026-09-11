@@ -24,7 +24,7 @@ Check whether the POI service is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if POI service is available, returns `false` otherwise. |
 
 **Examples**
 

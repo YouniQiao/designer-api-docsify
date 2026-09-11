@@ -36,4 +36,3 @@ Creates an **ArcSwiper** component.
 
 | Type | Description |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |

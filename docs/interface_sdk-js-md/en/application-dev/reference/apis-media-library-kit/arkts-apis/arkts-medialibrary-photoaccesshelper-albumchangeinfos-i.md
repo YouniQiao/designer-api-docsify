@@ -20,7 +20,7 @@ albumChangeDatas: AlbumChangeData[] | null
 
 Array of changed albums. If all albums need to be queried again, **albumChangeDatas** is null.
 
-**Type:** [AlbumChangeData](arkts-medialibrary-photoaccesshelper-albumchangedata-i.md)[] \| null
+**Type:** [AlbumChangeData](arkts-medialibrary-photoaccesshelper-albumchangedata-i.md)[] &#124; null
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ isForRecheck: boolean
 
 Whether the application should query all media assets again. **true** if the application should query all assets again, **false** otherwise.
 
-**NOTE：**
+**NOTE:**
 
 In scenarios involving bulk asset operations or abnormal notifications, **isForRecheck** will be **true**. In this case, the application should query all assets again.
 

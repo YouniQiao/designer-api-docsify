@@ -75,7 +75,7 @@ Binds to or updates the specified styled string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | Styled string.   **NOTE：**The child class [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) of **StyledString** can also serve as the argument. |
+| value | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | Styled string.<br>**NOTE:**<br>The child class [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) of **StyledString** can also serve as the argument. |
 
 ## setTextSelection
 
@@ -86,12 +86,12 @@ setTextSelection(selectionStart: number | undefined, selectionEnd: number | unde
 
 Sets the text selection area, which will be highlighted.
 
-> **NOTE：**
+> **NOTE:**
 > 
-> If [copyOption](arkts-arkui-text-attribute.md#copyoption) is set to **CopyOptions.None**, the setting of
+> If [copyOption](arkts-arkui-text-comp-attribute.md#copyoption) is set to **CopyOptions.None**, the setting of
 > **setTextSelection** does not take effect.
 > 
-> If [textOverflow](arkts-arkui-text-attribute.md#textoverflow) is set to **TextOverflow.MARQUEE**, the setting of
+> If [textOverflow](arkts-arkui-text-comp-attribute.md#textoverflow) is set to **TextOverflow.MARQUEE**, the setting of
 > **setTextSelection** does not take effect.
 > 
 > If the value of **selectionStart** is greater than or equal to that of **selectionEnd**, no text will be
@@ -120,6 +120,6 @@ Sets the text selection area, which will be highlighted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionStart | number \| undefined | Yes | Start position of the text selection range.Value range: [0, +∞). Negative values and **undefined** are treated as **0**. |
-| selectionEnd | number \| undefined | Yes | End position of the text selection range.Value range: [0, +∞). Negative values and **undefined** are treated as **0**. |
-| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No | Configuration options for text selection.Default value: **MenuPolicy.DEFAULT** in **SelectionOptions |
+| selectionStart | number &#124; undefined | Yes | Start position of the text selection range.<br>Value range: [0, +∞). Negative values and **undefined** are treated as **0**. |
+| selectionEnd | number &#124; undefined | Yes | End position of the text selection range.<br>Value range: [0, +∞). Negative values and **undefined** are treated as **0**. |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No | Configuration options for text selection.<br>Default value: **MenuPolicy.DEFAULT** in **SelectionOptions |

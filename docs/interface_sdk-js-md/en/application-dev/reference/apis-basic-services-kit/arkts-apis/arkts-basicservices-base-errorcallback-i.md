@@ -4,6 +4,8 @@ Defines a common callback that carries an error parameter. It is used to return 
 
 The information returned by the callback is an error parameter of the [BusinessError](arkts-basicservices-base-businesserror-i.md) type.
 
+@typedef ErrorCallback [since 6 - 10] @typedef ErrorCallback&lt;T extends Error = BusinessError&gt; [since 11]
+
 **Since:** 6
 
 **System capability:** SystemCapability.Base

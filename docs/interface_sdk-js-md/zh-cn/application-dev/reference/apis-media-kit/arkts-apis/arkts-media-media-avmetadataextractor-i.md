@@ -139,13 +139,13 @@ fetchFrameByTimeWithTimeout(timeUs: number, options: AVImageQueryOptions, param:
 | timeUs | number | 是 | 需要获取的缩略图在视频中的时间点，单位为微秒（μs）。 |
 | options | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | 是 | 需要获取的缩略图时间点与视频帧的对应关系。 |
 | param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | 是 | 需要获取的缩略图的格式参数。 |
-| timeoutMs | number | 是 | 获取缩略图的最大等待时间，时间范围为(0, 20000]，单位为毫秒（ms）。在指定的超时时间内未获取缩略图则返回错误码5400104。 |
+| timeoutMs | number | 是 | 获取缩略图的最大等待时间，时间范围为(0, 20000]，单位为毫秒（ms）。<br>在指定的超时时间内未获取缩略图则返回错误码5400104。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| undefined&gt; | Promise对象，返回视频缩略图对象。 |
+| Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) &#124; undefined&gt; | Promise对象，返回视频缩略图对象。 |
 
 **错误码：**
 
@@ -182,10 +182,10 @@ fetchFramesByTimes(timesUs: number[], queryOption: AVImageQueryOptions, param: P
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| timesUs | number[] | 是 | 需要获取的所有缩略图在视频中的时间点集合。时间单位为微秒（μs），数组长度取值范围为(0, 4096]。 |
+| timesUs | number[] | 是 | 需要获取的所有缩略图在视频中的时间点集合。<br>时间单位为微秒（μs），数组长度取值范围为(0, 4096]。 |
 | queryOption | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | 是 | 需要获取的缩略图时间点与视频帧的对应关系。 |
 | param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | 是 | 需要获取的缩略图的格式参数。 |
-| callback | [OnFrameFetched](arkts-media-media-onframefetched-t.md) | 是 | 需要返回的缩略图信息及可能的异常类型。异常类型请参考具体返回的错误码信息。 |
+| callback | [OnFrameFetched](arkts-media-media-onframefetched-t.md) | 是 | 需要返回的缩略图信息及可能的异常类型。<br>异常类型请参考具体返回的错误码信息。 |
 
 **错误码：**
 
@@ -225,11 +225,11 @@ fetchFramesByTimesWithTimeout(timesUs: number[], queryOption: AVImageQueryOption
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| timesUs | number[] | 是 | 需要获取的所有缩略图在视频中的时间点集合。时间单位为微秒（μs），数组长度取值范围为(0, 4096]。 |
+| timesUs | number[] | 是 | 需要获取的所有缩略图在视频中的时间点集合。<br>时间单位为微秒（μs），数组长度取值范围为(0, 4096]。 |
 | queryOption | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | 是 | 需要获取的缩略图时间点与视频帧的对应关系。 |
 | param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | 是 | 需要获取的缩略图的格式参数。 |
-| timeoutMs | number | 是 | 获取每一帧缩略图的最大等待时间，时间范围为(0, 20000]，单位为毫秒（ms）。对于每一帧缩略图，在指定的超时时间内未获取缩略图则返回错误码5400104。 |
-| callback | [OnFrameFetched](arkts-media-media-onframefetched-t.md) | 是 | 需要返回的缩略图信息及可能的异常类型。异常类型请参考具体返回的错误码信息。 |
+| timeoutMs | number | 是 | 获取每一帧缩略图的最大等待时间，时间范围为(0, 20000]，单位为毫秒（ms）。<br>对于每一帧缩略图，在指定的超时时间内未获取缩略图则返回错误码5400104。 |
+| callback | [OnFrameFetched](arkts-media-media-onframefetched-t.md) | 是 | 需要返回的缩略图信息及可能的异常类型。<br>异常类型请参考具体返回的错误码信息。 |
 
 **错误码：**
 
@@ -312,13 +312,13 @@ fetchMetadataWithTimeout(timeoutMs: number): Promise<AVMetadata | undefined>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| timeoutMs | number | 是 | 获取媒体元数据的最大等待时间，时间范围为(0, 20000]，单位为毫秒（ms）。在给定的超时时间内未返回元数据则返回错误码5400104。 |
+| timeoutMs | number | 是 | 获取媒体元数据的最大等待时间，时间范围为(0, 20000]，单位为毫秒（ms）。<br>在给定的超时时间内未返回元数据则返回错误码5400104。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AVMetadata](arkts-media-media-avmetadata-i.md) \| undefined&gt; | Promise对象，异步返回音视频元数据对象（AVMetadata）。 |
+| Promise&lt;[AVMetadata](arkts-media-media-avmetadata-i.md) &#124; undefined&gt; | Promise对象，异步返回音视频元数据对象（AVMetadata）。 |
 
 **错误码：**
 
@@ -394,7 +394,7 @@ setUrlSource(url: string, headers?: Record<string, string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | 媒体资源URL。 1. 支持的视频格式包括：mp4、mpeg-ts、mkv。 2. 支持的音频格式包括：m4a、aac、mp3、ogg、wav、flac、amr。   **支持路径示例**： 1. http网络播放：`http://xx`。 2. https网络播放：`https://xx`。   **说明：** 不支持设置HLS/Dash、直播资源。 |
+| url | string | 是 | 媒体资源URL。<br>1. 支持的视频格式包括：mp4、mpeg-ts、mkv。<br>2. 支持的音频格式包括：m4a、aac、mp3、ogg、wav、flac、amr。<br>**支持路径示例**：<br>1. http网络播放：`http://xx`。<br>2. https网络播放：`https://xx`。<br>**说明：** 不支持设置HLS/Dash、直播资源。 |
 | headers | Record&lt;string, string&gt; | 否 | 支持访问网络资源HttpHeader自定义。默认为空。 |
 
 ## dataSrc

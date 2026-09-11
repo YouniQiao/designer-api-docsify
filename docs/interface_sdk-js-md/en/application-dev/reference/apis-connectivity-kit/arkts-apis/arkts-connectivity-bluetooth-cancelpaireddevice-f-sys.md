@@ -36,7 +36,7 @@ Remove a paired remote device.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the cancel process is started; returns `false` otherwise. |
 
 **Examples**
 

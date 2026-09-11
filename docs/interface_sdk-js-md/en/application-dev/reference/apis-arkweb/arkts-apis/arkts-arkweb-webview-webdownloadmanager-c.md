@@ -22,7 +22,7 @@ static resumeDownload(webDownloadItem: WebDownloadItem): void
 
 Resumes a failed download task. You need to obtain the deserialized object through the [WebDownloadItem.deserialize](arkts-arkweb-webview-webdownloaditem-c.md#deserialize) method. This applies only to previously failed download tasks.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Before calling this API, if the Web component has not been created and the initializeWebEngine method has not
 > been executed to complete web kernel initialization, you must call the initializeWebEngine method for
@@ -57,7 +57,7 @@ static setDownloadDelegate(delegate: WebDownloadDelegate): void
 
 Sets the delegate used to receive download progress triggered by WebDownloadManager.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Before calling this API, if the Web component has not been created and the
 > [initializeWebEngine](arkts-arkweb-webview-webviewcontroller-c.md#initializewebengine) method has not been executed, you

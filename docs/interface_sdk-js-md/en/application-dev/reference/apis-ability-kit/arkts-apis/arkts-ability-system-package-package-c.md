@@ -1,7 +1,7 @@
 # Package
 
 
-> **NOTE：**
+> **NOTE:**
 > 
 > This API has been supported since API version 3 and deprecated since API version 9.
 

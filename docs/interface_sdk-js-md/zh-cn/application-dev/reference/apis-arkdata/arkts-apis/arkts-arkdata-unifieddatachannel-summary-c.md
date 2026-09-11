@@ -12,6 +12,26 @@
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
+## filenameExtensions
+
+```TypeScript
+get filenameExtensions(): Array<string>
+```
+
+统一数据中文件记录的文件扩展名。
+
+扩展名是唯一的，包括前导句点，并使用小写ASCII字母。例如，文件**myphoto.png**的扩展名是**.png**。如果没有有效的文件扩展名，则返回空数组。
+
+**类型：** Array&lt;string&gt;
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
 ## overview
 
 ```TypeScript

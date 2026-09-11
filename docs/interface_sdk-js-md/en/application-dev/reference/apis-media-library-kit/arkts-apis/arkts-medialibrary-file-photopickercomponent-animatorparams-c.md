@@ -20,7 +20,7 @@ curve?: Curve | ICurve | string
 
 Animation curve.
 
-**Type:** Curve \| ICurve \| string
+**Type:** Curve &#124; ICurve &#124; string
 
 **Since:** 12
 

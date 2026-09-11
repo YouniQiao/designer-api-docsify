@@ -2,7 +2,7 @@
 
 The module provides APIs for you to install, uninstall, and recover bundles on devices.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The APIs provided by this module are system APIs.
 

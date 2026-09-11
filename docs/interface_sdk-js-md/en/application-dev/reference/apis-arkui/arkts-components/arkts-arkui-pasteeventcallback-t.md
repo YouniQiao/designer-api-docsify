@@ -4,7 +4,7 @@
 declare type PasteEventCallback = (event?: PasteEvent) => void
 ```
 
-Represents the callback invoked when the paste is about to be completed.
+Represents the callback invoked when a paste operation is about to complete.
 
 **Since:** 12
 
@@ -18,4 +18,4 @@ Represents the callback invoked when the paste is about to be completed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [PasteEvent](arkts-arkui-pasteevent-i.md) | No | User paste event. |
+| event | [PasteEvent](arkts-arkui-pasteevent-i.md) | No | Defines the user paste event. When omitted, paste event information is not received. |

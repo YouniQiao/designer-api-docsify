@@ -20,7 +20,7 @@ import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 deviceKeys: DeviceKey[]
 ```
 
-设备信息列表。包含用户选择的设备业务标识信息，每个DeviceKey包含设备ID类型、设备ID和设备用户ID。系统会根据这些信息执行后续的添加模板或认证操作。
+设备信息列表。包含用户选择的设备业务标识信息，每个DeviceKey包含设备ID类型、设备ID、设备用户ID和设备子身份资料ID。系统会根据这些信息执行后续的添加模板或认证操作。
 
 **类型：** [DeviceKey](arkts-userauthentication-companiondeviceauth-devicekey-i-sys.md)[]
 

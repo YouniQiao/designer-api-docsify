@@ -164,7 +164,7 @@ Exif属性中除"JPEGInterchangeFormat"/"JPEGInterchangeFormatLength"/"GIFLoopCo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | 是 | 包含图片属性名和属性值的键值对集合。 |
+| records | Record&lt;string, string &#124; null&gt; | 是 | 包含图片属性名和属性值的键值对集合。 |
 
 **返回值：**
 

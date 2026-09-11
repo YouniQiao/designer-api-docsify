@@ -158,7 +158,7 @@ Resource：显示对应的图标。
 
 默认值：true
 
-**类型：** boolean \| [Resource](arkts-arkui-resource-t.md)
+**类型：** boolean &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 11
 

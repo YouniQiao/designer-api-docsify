@@ -1,6 +1,6 @@
 # RichEditorTextSpanResult
 
-Provides the text span information.
+Defines text span information.
 
 **Since:** 10
 
@@ -36,6 +36,10 @@ paragraphStyle?: RichEditorParagraphStyle
 ```
 
 Paragraph style.
+
+If omitted, the system default paragraph style is used.
+
+**Atomic service API:** Since API version 12, this API is supported in atomic services.
 
 **Type:** [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md)
 
@@ -127,7 +131,11 @@ urlStyle?: RichEditorUrlStyle
 
 URL information.
 
-Default value: **undefined**
+Default value: undefined.
+
+Pass this parameter when a hyperlink style needs to be set for the text.
+
+**Atomic service API:** Since API version 19, this API is supported in atomic services.
 
 **Type:** [RichEditorUrlStyle](arkts-arkui-richeditorurlstyle-i.md)
 
@@ -163,7 +171,11 @@ Content of the text span or symbol ID.
 valueResource?: Resource
 ```
 
-Content of the **SymbolSpan** component.
+SymbolSpan resource content.
+
+Default value: undefined.
+
+**Atomic service API:** Since API version 12, this API is supported in atomic services.
 
 **Type:** [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 

@@ -38,7 +38,7 @@ function offIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParam
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to<br> limited device capabilities. |
 | [35100001](../errorcode-spatialAwareness.md#35100001-服务异常) | Service exception. |
 | [35100003](../errorcode-spatialAwareness.md#35100003-取消订阅失败) | Unsubscription failed. |
 | [35100004](../errorcode-spatialAwareness.md#35100004-无效参数) | Parameter invalid. |

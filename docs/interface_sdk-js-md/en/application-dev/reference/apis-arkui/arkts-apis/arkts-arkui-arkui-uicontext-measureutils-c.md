@@ -2,7 +2,7 @@
 
 Provides APIs for measuring text metrics, such as text height and width.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - In the following API examples, you must first use [getMeasureUtils()](arkts-arkui-arkui-uicontext-uicontext-c.md#getmeasureutils) in
 > **UIContext** to obtain a **MeasureUtils** instance, and then call the APIs using the obtained instance.
@@ -58,7 +58,7 @@ Converts a styled string into an array of corresponding [Paragraph](../../apis-a
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[Paragraph](arkts-arkui-paragraph-t.md)&gt; | Array of [Paragraph]{ |
+| Array&lt;[Paragraph](arkts-arkui-paragraph-t.md)&gt; | Array of [Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraph-c.md) objects. |
 
 ## measureText
 
@@ -68,7 +68,7 @@ measureText(options: MeasureOptions): number
 
 Measures the single-line display width of the specified text. For multi-line text (separated by newline characters **\n**), this API returns the width of the longest line.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > **measureText** always measures single-line text width. Layout constraints in **options** (**constraintWidth**,
 > **maxLines**, and more) do not affect results. For layout-constrained width measurement, use
@@ -92,7 +92,7 @@ Measures the single-line display width of the specified text. For multi-line tex
 
 | Type | Description |
 | --- | --- |
-| number | Text width. |
+| number | Text width.<br>**NOTE:**<br>Floating-point results are rounded up. <br>Unit: px. |
 
 ## measureTextSize
 
@@ -102,7 +102,7 @@ measureTextSize(options: MeasureOptions): SizeOptions
 
 Measures the width and height of the given single-line text.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > When calling this MPI, do not use ApplicationContext.setFontSizeScale to set the font size scaling ratio. To
 > ensure the correctness of the time sequence, you are advised to monitor the font scaling changes by yourself to
@@ -126,4 +126,4 @@ Measures the width and height of the given single-line text.
 
 | Type | Description |
 | --- | --- |
-| [SizeOptions](arkts-arkui-sizeoptions-i.md) | Width and height of the text. |
+| [SizeOptions](arkts-arkui-sizeoptions-i.md) | Width and height of the text.<br>**NOTE:**<br>If **constraintWidth** is not specified, the floating-point value of the text width will be rounded up. <br>The return values for text width and height are both in px. |

@@ -17,7 +17,7 @@ Publishes a common event to a specific user. This API uses an asynchronous callb
 
 **Deprecated since:** 9
 
-**Substitutes:** [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md)(event: string, userId: int, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md)(event: string, userId: number, callback: AsyncCallback&lt;void&gt;)
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -70,7 +70,7 @@ Publishes a common event with given properties to a specific user. This API uses
 
 **Deprecated since:** 9
 
-**Substitutes:** [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md)( event: string, userId: int, options: CommonEventPublishData, callback: AsyncCallback&lt;void&gt; )
+**Substitutes:** [publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md)( event: string, userId: number, options: CommonEventPublishData, callback: AsyncCallback&lt;void&gt; )
 
 **System capability:** SystemCapability.Notification.CommonEvent
 

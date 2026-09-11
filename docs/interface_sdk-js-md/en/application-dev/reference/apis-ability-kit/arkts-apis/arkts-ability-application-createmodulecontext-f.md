@@ -14,7 +14,7 @@ export function createModuleContext(context: Context, moduleName: string): Promi
 
 Creates the context for a module. The [resourceManager.Configuration](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-configuration-c.md) in the created module context inherits from the input context, making it convenient for you to access [application resources across HAP/HSP packages](../../../quick-start/resource-categories-and-access.md#cross-haphsp-resources). This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Creating a module context involves resource querying and initialization, which can be time-consuming. In
 > scenarios where application fluidity is critical, avoid frequently or repeatedly calling the

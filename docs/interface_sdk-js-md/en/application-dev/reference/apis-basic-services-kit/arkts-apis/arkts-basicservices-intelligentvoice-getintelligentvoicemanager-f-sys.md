@@ -26,7 +26,7 @@ Obtains an [IntelligentVoiceManager](arkts-basicservices-intelligentvoice-intell
 
 | Type | Description |
 | --- | --- |
-| [IntelligentVoiceManager](arkts-basicservices-intelligentvoice-intelligentvoicemanager-i-sys.md) | this { |
+| [IntelligentVoiceManager](arkts-basicservices-intelligentvoice-intelligentvoicemanager-i-sys.md) | this [IntelligentVoiceManager](arkts-basicservices-intelligentvoice-intelligentvoicemanager-i-sys.md) object. |
 
 **Error codes:**
 

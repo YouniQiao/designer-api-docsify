@@ -296,7 +296,7 @@ Permissions on the file or directory.
 mtime: number
 ```
 
-Time when the file or directory was last modified. Unit: ms.
+Time when the file or directory was last modified. <br>Unit: ms.
 
 **Type:** number
 
@@ -340,7 +340,7 @@ Relative path of the file or directory.
 size: number
 ```
 
-Size of the file or directory. Unit: Byte.
+Size of the file or directory. <br>Unit: Byte.
 
 **Type:** number
 

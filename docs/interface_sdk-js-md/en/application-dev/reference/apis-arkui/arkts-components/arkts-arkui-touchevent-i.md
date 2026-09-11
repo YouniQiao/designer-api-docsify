@@ -43,7 +43,7 @@ preventDefault: () => void
 
 Blocks the default event.
 
-**NOTE：**
+**NOTE:**
 
 This API is only supported by the Hyperlink component. Using it with unsupported components throws an exception. Asynchronous calls and **Modifier** API integration are not yet supported.
 
@@ -101,7 +101,7 @@ Unique identifier for event processing.
 
 Value range: [0, +∞)
 
-**NOTE：**
+**NOTE:**
 
 This field is used when dispatching events using the [postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postinputeventwithstrategy) API. Each time an event is dispatched, this field is increased by 100000.
 

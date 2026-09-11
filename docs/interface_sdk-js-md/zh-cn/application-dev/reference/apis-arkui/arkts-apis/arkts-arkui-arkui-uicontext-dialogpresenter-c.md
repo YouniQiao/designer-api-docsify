@@ -41,7 +41,7 @@ dismiss(target: number | ComponentContent<Object>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | number \| [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;Object&gt; | 是 | 要关闭的弹出框ID或组件内容。 |
+| target | number &#124; [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;Object&gt; | 是 | 要关闭的弹出框ID或组件内容。 |
 
 **返回值：**
 
@@ -76,7 +76,7 @@ present(options?: dialog.DialogStyleOptions): Promise<DialogResult>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [dialog.DialogStyleOptions](arkts-arkui-dialog-dialogstyleoptions-i.md) | 否 | 固定样式弹出框的配置选项，用于配置弹出框的标题、副标题、消息、按钮及工作表项等内容。弹出框样式（背景、对齐、蒙层、避让等）继承自[dialog.DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md)。   **说明：** dialog.DialogBaseOptions中的isModal与showInSubWindow不能同时设置为true。 |
+| options | [dialog.DialogStyleOptions](arkts-arkui-dialog-dialogstyleoptions-i.md) | 否 | 固定样式弹出框的配置选项，用于配置弹出框的标题、副标题、消息、按钮及工作表项等内容。弹出框样式（背景、对齐、蒙层、避让等）继承自[dialog.DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md)。<br>**说明：** dialog.DialogBaseOptions中的isModal与showInSubWindow不能同时设置为true。 |
 
 **返回值：**
 
@@ -111,7 +111,7 @@ present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;Object&gt; | 是 | 自定义弹出框内容，支持三种类型：CustomBuilder（自定义内容的生成器函数）、CustomBuilderWithId（支持传入ID的生成器函数）、ComponentContent（支持状态驱动更新的组件内容）。 |
+| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) &#124; [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;Object&gt; | 是 | 自定义弹出框内容，支持三种类型：CustomBuilder（自定义内容的生成器函数）、CustomBuilderWithId（支持传入ID的生成器函数）、ComponentContent（支持状态驱动更新的组件内容）。 |
 | options | [dialog.DialogCustomOptions](arkts-arkui-dialog-dialogcustomoptions-i.md) | 否 | 自定义弹出框的配置选项，用于配置弹出框的背景、对齐、蒙层、避让等样式，继承自dialog.DialogBaseOptions。 |
 
 **返回值：**

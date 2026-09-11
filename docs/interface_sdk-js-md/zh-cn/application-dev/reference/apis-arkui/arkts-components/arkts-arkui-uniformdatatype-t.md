@@ -6,6 +6,8 @@ declare type UniformDataType = import('../api/@ohos.data.uniformTypeDescriptor')
 
 标准化数据类型。
 
+@typedef { import('../api/@ohos.data.uniformTypeDescriptor').default.UniformDataType } UniformDataType
+
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。

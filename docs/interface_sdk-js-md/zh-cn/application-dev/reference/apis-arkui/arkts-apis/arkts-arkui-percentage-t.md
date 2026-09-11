@@ -4,7 +4,7 @@
 declare type Percentage = `${number}%`
 ```
 
-定义长度属性，单位为百分比。
+定义长度属性，单位为百分比。@typedef { `\${number}%` } Percentage
 
 **起始版本：** 23
 

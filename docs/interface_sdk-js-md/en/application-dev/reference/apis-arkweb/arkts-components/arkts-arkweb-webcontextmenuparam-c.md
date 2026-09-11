@@ -6,7 +6,7 @@ When customizing the context menu of a Web component, use WebContextMenuParam to
 
 When customizing the long press or right-click menu of a Web component (such as replacing the default menu, providing differentiated menu items based on element types, or previewing images), use WebContextMenuParam in the **onContextMenuShow** event callback to obtain context information.
 
-For sample code, see [onContextMenuShow](arkts-arkweb-web-attribute.md#oncontextmenushow).
+For sample code, see [onContextMenuShow](arkts-arkweb-web-comp-attribute.md#oncontextmenushow).
 
 **Since:** 9
 
@@ -87,7 +87,7 @@ Obtains the edit state flag of the web element. This is used to finely control t
 
 | Type | Description |
 | --- | --- |
-| number | Obtains the editable flag of the web element. See [ContextMenuEditStateFlags]{ |
+| number | Obtains the editable flag of the web element. See [ContextMenuEditStateFlags](arkts-arkweb-contextmenueditstateflags-e.md). |
 
 ## getInputFieldType
 
@@ -117,7 +117,7 @@ getLinkUrl(): string
 
 Obtains the URL link address that has passed the security check. This can be used to provide operations such as "Open Link", "Share Link", and "Copy Link" when building a custom menu.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Compared with getUnfilteredLinkUrl(), this method performs a security check on the URL. Compared with
 > getSourceUrl(), this method obtains the link URL at the long press position, whereas getSourceUrl() obtains the
@@ -143,7 +143,7 @@ getMediaType(): ContextMenuMediaType
 
 Obtains the media type of the web element.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Since API version 22, [getContextMenuMediaType](#getcontextmenumediatype) provides
 > richer media type identification capabilities.
@@ -176,7 +176,7 @@ Obtains the height of a preview image.
 
 | Type | Description |
 | --- | --- |
-| number | Height of a preview image. |
+| number | Height of a preview image.<br>Unit: px (physical pixel) |
 
 ## getPreviewWidth
 
@@ -194,7 +194,7 @@ Obtains the width of a preview image.
 
 | Type | Description |
 | --- | --- |
-| number | Width of a preview image. |
+| number | Width of a preview image.<br>Unit: px (physical pixel) |
 
 ## getSelectionText
 
@@ -314,7 +314,7 @@ X coordinate of the context menu, which is the horizontal distance relative to t
 
 | Type | Description |
 | --- | --- |
-| number | Non-negative integer if successful; -1 otherwise. |
+| number | Non-negative integer if successful; -1 otherwise.<br>Unit: px (physical pixel). |
 
 ## y
 
@@ -334,4 +334,4 @@ Y coordinate of the context menu, which is the vertical distance relative to the
 
 | Type | Description |
 | --- | --- |
-| number | Non-negative integer when obtained successfully, and -1 otherwise. |
+| number | Non-negative integer when obtained successfully, and -1 otherwise.<br>Unit: px (physical pixel). |

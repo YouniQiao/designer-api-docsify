@@ -16,7 +16,7 @@ Registers a custom font with the font manager.
 
 This API is asynchronous and does not support concurrent calls.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Since API version 10, you can use the
 > [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in

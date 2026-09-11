@@ -25,7 +25,7 @@ angle: number | string
 
 旋转角度。单位为度（°）。取值为正时相对于旋转轴方向顺时针转动，取值为负时相对于旋转轴方向逆时针转动。取值可为string类型，格式为数字加角度单位后缀，如'90deg'。
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **起始版本：** 7
 
@@ -45,7 +45,7 @@ centerX?: number | string
 
 单位：vp
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **起始版本：** 7
 
@@ -65,7 +65,7 @@ centerY?: number | string
 
 单位：vp
 
-**类型：** number \| string
+**类型：** number &#124; string
 
 **起始版本：** 7
 

@@ -65,8 +65,8 @@ constructor(locale: string | Array<string>, options?: RelativeTimeFormatInputOpt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
-| options | [RelativeTimeFormatInputOptions](arkts-localization-intl-relativetimeformatinputoptions-i.md) | 否 | 创建相对时间格式化对象时的配置项。默认值：所有属性都取默认值时的配置项。 |
+| locale | string &#124; Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
+| options | [RelativeTimeFormatInputOptions](arkts-localization-intl-relativetimeformatinputoptions-i.md) | 否 | 创建相对时间格式化对象时的配置项。<br>默认值：所有属性都取默认值时的配置项。 |
 
 **示例**
 
@@ -104,7 +104,7 @@ format(value: number, unit: string): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 相对时间格式化的数值。 |
-| unit | string | 是 | 相对时间格式化的单位，取值包括："year", "quarter", "month", "week", "day", "hour", "minute", "second"。 |
+| unit | string | 是 | 相对时间格式化的单位，<br>取值包括："year", "quarter", "month", "week", "day", "hour", "minute", "second"。 |
 
 **返回值：**
 
@@ -146,7 +146,7 @@ formatToParts(value: number, unit: string): Array<object>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 相对时间格式化的数值。 |
-| unit | string | 是 | 相对时间格式化的单位，取值包括："year", "quarter", "month", "week", "day", "hour", "minute", "second"。 |
+| unit | string | 是 | 相对时间格式化的单位，<br>取值包括："year", "quarter", "month", "week", "day", "hour", "minute", "second"。 |
 
 **返回值：**
 

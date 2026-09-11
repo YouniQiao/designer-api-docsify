@@ -33,7 +33,7 @@ Creates a global audio loopback instance, which provides low-latency in-ear moni
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AudioLoopback](arkts-audio-audio-audioloopback-i.md) \| null&gt; | Promise used to return the audio loopback instance, or null when an error happens. |
+| Promise&lt;[AudioLoopback](arkts-audio-audio-audioloopback-i.md) &#124; null&gt; | Promise used to return the audio loopback instance, or null when an error happens. |
 
 **Error codes:**
 

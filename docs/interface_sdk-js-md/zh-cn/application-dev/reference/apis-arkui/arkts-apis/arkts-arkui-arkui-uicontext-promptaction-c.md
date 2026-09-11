@@ -55,7 +55,7 @@ closeCustomDialog<T extends Object>(dialogContent: ComponentContent<T>): Promise
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | Dialog content error. The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) | Dialog content not found. The ComponentContent cannot be found. |
 
@@ -85,7 +85,7 @@ closeCustomDialog(dialogId: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## closeMenu
@@ -120,7 +120,7 @@ closeMenu<T extends Object>(content: ComponentContent<T>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) | The ComponentContent cannot be found. |
 
@@ -156,7 +156,7 @@ closePopup<T extends Object>(content: ComponentContent<T>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) | The ComponentContent cannot be found. |
 
@@ -186,7 +186,7 @@ closeToast(toastId: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [103401](../errorcode-promptAction.md#103401-无法找到对应的文本提示框) | Cannot find the toast. |
 
@@ -257,7 +257,7 @@ openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?:
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | dialogContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | 是 | 自定义弹窗中显示的组件内容。 |
-| options | [promptAction.BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md) | 否 | 弹窗样式。   **说明：** 如果BaseDialogOptions中的[isModal](arkts-arkui-promptaction-basedialogoptions-i.md)与[showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md)同时设置为true，则只生效showInSubWindow = true，此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
+| options | [promptAction.BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md) | 否 | 弹窗样式。<br> **说明：** 如果BaseDialogOptions中的[isModal](arkts-arkui-promptaction-basedialogoptions-i.md)与[showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md)同时设置为true，则只生效showInSubWindow = true，此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
 
 **返回值：**
 
@@ -269,7 +269,7 @@ openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?:
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | Dialog content error. The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) | Dialog content already exist. The ComponentContent has already been opened. |
 
@@ -293,7 +293,7 @@ openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [promptAction.CustomDialogOptions](arkts-arkui-promptaction-customdialogoptions-i.md) | 是 | 自定义弹窗的内容。   **说明：** 如果BaseDialogOptions中的[isModal](arkts-arkui-promptaction-basedialogoptions-i.md)与[showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md)同时设置为true，则只生效showInSubWindow = true，此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
+| options | [promptAction.CustomDialogOptions](arkts-arkui-promptaction-customdialogoptions-i.md) | 是 | 自定义弹窗的内容。<br> **说明：** 如果BaseDialogOptions中的[isModal](arkts-arkui-promptaction-basedialogoptions-i.md)与[showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md)同时设置为true，则只生效showInSubWindow = true，此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
 
 **返回值：**
 
@@ -305,7 +305,7 @@ openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## openCustomDialogWithController
@@ -333,7 +333,7 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
 | --- | --- | --- | --- |
 | dialogContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | 是 | 自定义弹窗中显示的组件内容。 |
 | controller | [promptAction.DialogController](arkts-arkui-promptaction-dialogcontroller-c.md) | 是 | 自定义弹窗的控制器。 |
-| options | [promptAction.BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md) | 否 | 自定义弹窗的样式。    **说明：** 如果BaseDialogOptions中的[isModal](arkts-arkui-promptaction-basedialogoptions-i.md)与[showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md)同时设置为true，则只生效showInSubWindow = true，此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
+| options | [promptAction.BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md) | 否 | 自定义弹窗的样式。 <br> **说明：** 如果BaseDialogOptions中的[isModal](arkts-arkui-promptaction-basedialogoptions-i.md)与[showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md)同时设置为true，则只生效showInSubWindow = true，此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
 
 **返回值：**
 
@@ -345,7 +345,7 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | Dialog content error. The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) | Dialog content already exist. The ComponentContent has already been opened. |
 
@@ -381,7 +381,7 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | 是 | menu弹窗中显示的组件内容。 |
 | target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 | 需要绑定组件的信息。 |
-| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | 否 | menu弹窗样式。   **说明：**title属性不生效。preview参数仅支持设置MenuPreviewMode类型。 |
+| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | 否 | menu弹窗样式。<br> **说明：**<br> title属性不生效。<br> preview参数仅支持设置MenuPreviewMode类型。 |
 
 **返回值：**
 
@@ -393,7 +393,7 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) | The ComponentContent already exists. |
 | [103304](../errorcode-promptAction.md#103304-指定的targetid不存在) | The targetId does not exist. |
@@ -441,7 +441,7 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) | The ComponentContent already exists. |
 | [103304](../errorcode-promptAction.md#103304-指定的targetid不存在) | The targetId does not exist. |
@@ -467,7 +467,7 @@ openToast(options: promptAction.ShowToastOptions): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | promptAction.ShowToastOptions | 是 | Toast选项。 |
+| options | [promptAction.ShowToastOptions](arkts-arkui-promptaction-showtoastoptions-i.md) | 是 | Toast选项。 |
 
 **返回值：**
 
@@ -479,7 +479,7 @@ openToast(options: promptAction.ShowToastOptions): Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## presentCustomDialog
@@ -505,9 +505,9 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: p
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) | 是 | 自定义弹窗的内容。 |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) | 是 | 自定义弹窗的内容。 |
 | controller | [promptAction.DialogController](arkts-arkui-promptaction-dialogcontroller-c.md) | 否 | 自定义弹窗的控制器。<br>**适用版本：** 26.0.0 |
-| options | promptAction.DialogOptions | 否 | 自定义弹窗的样式。   **说明：** 如果BaseDialogOptions中的[isModal](arkts-arkui-promptaction-basedialogoptions-i.md)与[showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md)同时设置为true，则只生效showInSubWindow = true，此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。<br>**适用版本：** 26.0.0 |
+| options | [promptAction.DialogOptions](arkts-arkui-promptaction-dialogoptions-i.md) | 否 | 自定义弹窗的样式。<br> **说明：** 如果BaseDialogOptions中的[isModal](arkts-arkui-promptaction-basedialogoptions-i.md)与[showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md)同时设置为true，则只生效showInSubWindow = true，此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。<br>**适用版本：** 26.0.0 |
 
 **返回值：**
 
@@ -519,7 +519,7 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: p
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## showActionMenu
@@ -542,14 +542,14 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.A
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | promptAction.ActionMenuOptions | 是 | 操作菜单选项。 |
-| callback | promptAction.ActionMenuSuccessResponse | 是 | 回调函数，返回菜单的响应结果。 |
+| options | [promptAction.ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md) | 是 | 操作菜单选项。 |
+| callback | [promptAction.ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md) | 是 | 回调函数，返回菜单的响应结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## showActionMenu
@@ -572,14 +572,14 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | promptAction.ActionMenuOptions | 是 | 操作菜单选项。用于配置操作菜单的显示内容和样式，包括title、buttons等属性。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | 是 | 菜单响应结果。 |
+| options | [promptAction.ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md) | 是 | 操作菜单选项。用于配置操作菜单的显示内容和样式，包括title、buttons等属性。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[promptAction.ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md)&gt; | 是 | 菜单响应结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## showActionMenu
@@ -602,19 +602,19 @@ showActionMenu(options: promptAction.ActionMenuOptions): Promise<promptAction.Ac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | promptAction.ActionMenuOptions | 是 | 操作菜单选项。 |
+| options | [promptAction.ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md) | 是 | 操作菜单选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;promptAction.ActionMenuSuccessResponse&gt; | callback - Promise对象，返回菜单的响应结果。 |
+| Promise&lt;[promptAction.ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md)&gt; | callback - Promise对象，返回菜单的响应结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## showDialog
@@ -637,14 +637,14 @@ showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | promptAction.ShowDialogOptions | 是 | 页面显示对话框信息描述。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | 是 | 回调函数。弹出对话框成功，err为undefined，data为获取到的对话框响应结果，否则为错误对象。 |
+| options | [promptAction.ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | 是 | 页面显示对话框信息描述。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[promptAction.ShowDialogSuccessResponse](arkts-arkui-promptaction-showdialogsuccessresponse-i.md)&gt; | 是 | 回调函数。弹出对话框成功，err为undefined，data为获取到的对话框响应结果，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## showDialog
@@ -667,19 +667,19 @@ showDialog(options: promptAction.ShowDialogOptions): Promise<promptAction.ShowDi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | promptAction.ShowDialogOptions | 是 | 对话框选项。 |
+| options | [promptAction.ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | 是 | 对话框选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;promptAction.ShowDialogSuccessResponse&gt; | Promise对象，返回对话框的响应结果。 |
+| Promise&lt;[promptAction.ShowDialogSuccessResponse](arkts-arkui-promptaction-showdialogsuccessresponse-i.md)&gt; | Promise对象，返回对话框的响应结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## showToast
@@ -702,13 +702,13 @@ showToast(options: promptAction.ShowToastOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | promptAction.ShowToastOptions | 是 | Toast选项。 |
+| options | [promptAction.ShowToastOptions](arkts-arkui-promptaction-showtoastoptions-i.md) | 是 | Toast选项。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 ## updateCustomDialog
@@ -744,7 +744,7 @@ updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | Dialog content error. The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) | Dialog content not found. The ComponentContent cannot be found. |
 
@@ -776,8 +776,8 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | 是 | menu弹窗中显示的组件内容。 |
-| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | 是 | menu弹窗样式。   **说明：**  1. 不支持更新showInSubWindow、preview、previewAnimationOptions、transition、onAppear、aboutToAppear、onDisappear、 aboutToDisappear、onWillAppear、onDidAppear、onWillDisappear和onDidDisappear。  2. 支持mask通过设置[MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md)实现更新蒙层样式， 不支持mask通过设置boolean实现蒙层从无到有或者从有到无的更新。 |
-| partialUpdate | boolean | 否 | menu弹窗更新方式，默认值为false。   **说明：**  1. true为增量更新，保留当前值，更新options中的指定属性。   2. false为全量更新，除options中的指定属性，其他属性恢复默认值。 |
+| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | 是 | menu弹窗样式。<br> **说明：** <br> 1. 不支持更新showInSubWindow、preview、previewAnimationOptions、transition、onAppear、aboutToAppear、onDisappear、 aboutToDisappear、onWillAppear、onDidAppear、onWillDisappear和onDidDisappear。<br> 2. 支持mask通过设置[MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md)实现更新蒙层样式， 不支持mask通过设置boolean实现蒙层从无到有或者从有到无的更新。 |
+| partialUpdate | boolean | 否 | menu弹窗更新方式，默认值为false。<br> **说明：** <br> 1. true为增量更新，保留当前值，更新options中的指定属性。 <br> 2. false为全量更新，除options中的指定属性，其他属性恢复默认值。 |
 
 **返回值：**
 
@@ -789,7 +789,7 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) | The ComponentContent cannot be found. |
 
@@ -818,8 +818,8 @@ updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommon
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | 是 | popup弹窗中显示的组件内容。 |
-| options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | 是 | popup弹窗样式。   **说明：** 不支持更新showInSubWindow、focusable、onStateChange、onWillDismiss、transition。 |
-| partialUpdate | boolean | 否 | popup弹窗更新方式，默认值为false。   **说明：** true：增量更新，此时更新options中的指定属性，其它属性保留当前值。options中传入的属性为异常值或undefined时，不会对该属性进行更新。false：全量更新，此时更新options中的指定属性，并且其他属性恢复默认值。 |
+| options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | 是 | popup弹窗样式。<br> **说明：** <br>不支持更新showInSubWindow、focusable、onStateChange、onWillDismiss、transition。 |
+| partialUpdate | boolean | 否 | popup弹窗更新方式，默认值为false。<br> **说明：** <br> true：增量更新，此时更新options中的指定属性，其它属性保留当前值。options中传入的属性为异常值或undefined时，不会对该属性进行更新。false：全量更新，此时更新options中的指定属性，并且其他属性恢复默认值。 |
 
 **返回值：**
 
@@ -831,6 +831,6 @@ updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommon
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) | The ComponentContent cannot be found. |

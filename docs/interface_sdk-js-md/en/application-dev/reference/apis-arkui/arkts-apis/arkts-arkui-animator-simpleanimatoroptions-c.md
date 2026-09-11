@@ -78,7 +78,7 @@ Sets the playback delay for this animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| delay | number | Yes | Playback delay, in milliseconds. The value **0** indicates no delay. If the value specified is a negative number, the animation starts playing ahead of its scheduled time. If the amount of time by which the playback is advanced exceeds the total duration of the animation, the animation immediately skips to its end state.Default value: **0 |
+| delay | number | Yes | Playback delay, in milliseconds. The value **0** indicates no delay. If the value specified is a negative number, the animation starts playing ahead of its scheduled time. If the amount of time by which the playback is advanced exceeds the total duration of the animation, the animation immediately skips to its end state.<br>Default value: **0 |
 
 **Return value:**
 
@@ -129,7 +129,7 @@ Sets the playback direction for this animator animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | [PlayMode](arkts-arkui-playmode-e.md) | Yes | Playback direction.Default value: **PlayMode.Normal |
+| direction | [PlayMode](arkts-arkui-playmode-e.md) | Yes | Playback direction.<br>Default value: **PlayMode.Normal |
 
 **Return value:**
 
@@ -180,7 +180,7 @@ Sets the animation duration.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| duration | number | Yes | Animation duration, in milliseconds.Default value: **1000 |
+| duration | number | Yes | Animation duration, in milliseconds.<br>Default value: **1000 |
 
 **Return value:**
 
@@ -231,7 +231,7 @@ Sets the interpolation curve for this animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| curve | string | Yes | Interpolation curve. For details, see [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md).Default value: **"ease" |
+| curve | string | Yes | Interpolation curve. For details, see [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md).<br> Default value: **"ease" |
 
 **Return value:**
 
@@ -282,7 +282,7 @@ Sets the fill mode for this animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillMode | [FillMode](arkts-arkui-fillmode-e.md) | Yes | Fill mode, which affects how the animation behaves during the delay period and after it ends.Default value: **FillMode.Forwards |
+| fillMode | [FillMode](arkts-arkui-fillmode-e.md) | Yes | Fill mode, which affects how the animation behaves during the delay period and after it ends.<br>Default value: **FillMode.Forwards |
 
 **Return value:**
 
@@ -333,7 +333,7 @@ Sets the number of times that this animation is played.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iterations | number | Yes | Number of times that the animation is played. The value **0** means the animation is not played, and **-1** means the animation is played for an unlimited number of times.Default value: **1 |
+| iterations | number | Yes | Number of times that the animation is played. The value **0** means the animation is not played, and **-1** means the animation is played for an unlimited number of times.<br>Default value: **1 |
 
 **Return value:**
 

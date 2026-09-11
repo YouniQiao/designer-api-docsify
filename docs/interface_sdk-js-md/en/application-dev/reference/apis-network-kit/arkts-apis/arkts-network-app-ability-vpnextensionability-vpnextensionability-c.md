@@ -22,7 +22,7 @@ onCreate(want: Want): void
 
 Represents the callback triggered when the extended VPN is initialized.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > You are advised to call [onDestroy](#ondestroy) to listen to the destruction of the
 > extended VPN and clear resources in a timely manner.

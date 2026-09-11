@@ -2,6 +2,8 @@
 
 Application-related information for the agent.
 
+@typedef AgentAppInfo
+
 **Since:** 24
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core

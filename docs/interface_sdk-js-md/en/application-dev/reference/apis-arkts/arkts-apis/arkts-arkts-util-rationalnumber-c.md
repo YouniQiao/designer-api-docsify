@@ -143,7 +143,7 @@ static createRationalFromString(rationalString: string): RationalNumber
 
 Creates a **RationalNumber** object based on the given string.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The **rationalString** parameter must be a string. If a decimal string is passed in, the function is not
 > intercepted, but the error message "createRationalFromString: The type of Parameter must be integer string" is
@@ -256,7 +256,7 @@ static getCommonFactor(number1: number, number2: number): number
 
 Obtains the greatest common divisor of two specified integers.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The **number1** and **number2** parameters must be integers. If a decimal number is passed in, the function is
 > not intercepted, but the error message "getCommonFactor: The type of Parameter must be integer" is displayed.
@@ -486,7 +486,7 @@ static parseRationalNumber(numerator: number, denominator: number): RationalNumb
 
 Creates a **RationalNumber** instance with a given numerator and denominator.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The **numerator** and **denominator** parameters must be integers. If a decimal number is passed in, the
 > function is not intercepted, but the error message "parseRationalNumber: The type of Parameter must be integer"

@@ -2,7 +2,7 @@
 
 FocusQuery provides APIs to check whether a focus mode is supported.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This interface was first introduced in API version 12. In this version, a compatibility change was made that
 > preserved the initial version information of inner elements. As a result, you might see outer element's
@@ -35,7 +35,7 @@ Checks whether the focus assist is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the focus assist. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| boolean | Check result for the support of the focus assist. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -86,7 +86,7 @@ Checks whether a focus drive type is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the focus drive type. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| boolean | Check result for the support of the focus drive type. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -138,7 +138,7 @@ Checks whether a focus range type is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the focus range type. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| boolean | Check result for the support of the focus range type. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 

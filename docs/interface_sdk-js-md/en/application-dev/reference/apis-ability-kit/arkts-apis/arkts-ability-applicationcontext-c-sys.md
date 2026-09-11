@@ -2,7 +2,7 @@
 
 ApplicationContext inherits from Context and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > The APIs of this module can be used only in the stage model.
 
@@ -217,7 +217,7 @@ registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallb
 
 Registers a listener to monitor the ability lifecycle of the application. This API uses an asynchronous callback to return the result.
 
-<p>**NOTE：**: It can be called only by the main thread. </p>
+<p>**NOTE:** <br>It can be called only by the main thread. </p>
 
 **Since:** 9
 
@@ -241,7 +241,7 @@ Registers a listener to monitor the ability lifecycle of the application. This A
 
 | Type | Description |
 | --- | --- |
-| number | ID of the callback registered. This ID is used to unregister the corresponding callback in [ApplicationContext.unregisterAbilityLifecycleCallback]{ |
+| number | ID of the callback registered. This ID is used to unregister the corresponding callback in [ApplicationContext.unregisterAbilityLifecycleCallback](#unregisterabilitylifecyclecallback) |
 
 **Examples**
 
@@ -331,7 +331,7 @@ Register environment callback.
 
 | Type | Description |
 | --- | --- |
-| number | ID of the callback registered. This ID is used to unregister the corresponding callback in [ApplicationContext.unregisterEnvironmentCallback]{ |
+| number | ID of the callback registered. This ID is used to unregister the corresponding callback in [ApplicationContext.unregisterEnvironmentCallback](#unregisterenvironmentcallback) |
 
 **Examples**
 
@@ -374,7 +374,7 @@ unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<v
 
 Unregisters the listener that monitors the ability lifecycle of the application. This API uses an asynchronous callback to return the result.
 
-<p>**NOTE：**: It can be called only by the main thread. </p>
+<p>**NOTE:** <br>It can be called only by the main thread. </p>
 
 **Since:** 9
 
@@ -431,7 +431,7 @@ unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 
 Unregisters a listener for the lifecycle of a UIAbility within the application. This API uses a promise to return the result. It can be called only on the main thread.
 
-<p>**NOTE：**: It can be called only by the main thread. </p>
+<p>**NOTE:** <br>It can be called only by the main thread. </p>
 
 **Since:** 9
 

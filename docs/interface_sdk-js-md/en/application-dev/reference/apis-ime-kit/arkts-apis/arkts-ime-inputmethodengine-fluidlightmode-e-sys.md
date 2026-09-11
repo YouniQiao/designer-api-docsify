@@ -1,7 +1,6 @@
 # FluidLightMode (System API)
 
-Enumerates the fluid light modes of the input method.
-
+Enumerates the fluid light modes of the input method.<br> <br>  
 | Name | Value| Description |  
 | ------------ | -- | ------------------ |  
 | NONE | 0 | The fluid light mode is not used.|

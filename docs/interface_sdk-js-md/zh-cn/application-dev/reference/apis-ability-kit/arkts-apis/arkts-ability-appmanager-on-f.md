@@ -31,7 +31,7 @@ function on(type: 'applicationState', observer: ApplicationStateObserver): numbe
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 已注册监听器ID，调用方可以通过[off('applicationState')]{ |
+| number | 已注册监听器ID，调用方可以通过off('applicationState')传入该监听器ID来注销监听器。 |
 
 **错误码：**
 
@@ -108,7 +108,7 @@ function on(type: 'applicationState', observer: ApplicationStateObserver, bundle
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 已注册监听器ID，调用方可以通过[off('applicationState')]{ |
+| number | 已注册监听器ID，调用方可以通过off('applicationState')传入该监听器ID来注销监听器。 |
 
 **错误码：**
 

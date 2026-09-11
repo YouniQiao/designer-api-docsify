@@ -32,7 +32,7 @@ environmentImage?: Image | null
 
 环境图片，默认为undefined。
 
-**类型：** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) \| null
+**类型：** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) &#124; null
 
 **起始版本：** 12
 
@@ -120,7 +120,7 @@ radianceImage?: Image | null
 
 辐射图片，默认为undefined。
 
-**类型：** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) \| null
+**类型：** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) &#124; null
 
 **起始版本：** 12
 

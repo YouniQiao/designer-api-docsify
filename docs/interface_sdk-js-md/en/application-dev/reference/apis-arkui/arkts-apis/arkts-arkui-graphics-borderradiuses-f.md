@@ -20,7 +20,7 @@ Generates a **borderRadiuses** object with the specified radius for all border c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| all | number | Yes | Radius of border corners. Unit: vp. Value range: [0, +∞). |
+| all | number | Yes | Radius of border corners.<br>Unit: vp. <br>Value range: [0, +∞). |
 
 **Return value:**
 

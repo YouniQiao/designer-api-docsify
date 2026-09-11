@@ -17,7 +17,7 @@ function off(type: 'BundleStatusChange', callback: AsyncCallback<string>): void
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> off
+> [off](arkts-ability-bundlemonitor-off-f-sys.md)
 > 替代。
 
 **起始版本：** 8
@@ -51,7 +51,7 @@ function off(type: 'BundleStatusChange'): Promise<string>
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> off
+> [off](arkts-ability-bundlemonitor-off-f-sys.md)
 > 替代。
 
 **起始版本：** 8

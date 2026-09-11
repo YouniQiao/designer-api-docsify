@@ -75,7 +75,7 @@ outset?: Length | EdgeWidths | LocalizedEdgeWidths
 
 从右至左显示语言模式下为设置边框图片左边框向外延伸的距离。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **默认值：** 0
 
@@ -149,7 +149,7 @@ slice?: Length | EdgeWidths | LocalizedEdgeWidths
 
 从右至左显示语言模式下为设置图片左侧被切割的宽。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **默认值：** 0
 
@@ -175,7 +175,7 @@ source?: string | Resource | LinearGradient
 
 边框图源仅适用于容器组件，如Row、Column、Flex，在非容器组件上使用会失效。
 
-**类型：** string \| [Resource](../arkts-apis/arkts-arkui-resource-t.md) \| [LinearGradient](arkts-arkui-lineargradient-i.md)
+**类型：** string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; [LinearGradient](arkts-arkui-lineargradient-i.md)
 
 **起始版本：** 11
 
@@ -225,7 +225,7 @@ width?: Length | EdgeWidths | LocalizedEdgeWidths
 
 从右至左显示语言模式下为设置图片边框左边框的宽。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **默认值：** 0
 

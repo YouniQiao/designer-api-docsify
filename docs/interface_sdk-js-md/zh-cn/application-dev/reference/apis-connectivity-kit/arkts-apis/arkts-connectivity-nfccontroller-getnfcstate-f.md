@@ -24,7 +24,7 @@ function getNfcState(): NfcState
 
 | 类型 | 说明 |
 | --- | --- |
-| [NfcState](arkts-connectivity-nfccontroller-nfcstate-e.md) | NFC状态值，详细请见[NfcState]{ |
+| [NfcState](arkts-connectivity-nfccontroller-nfcstate-e.md) | NFC状态值，详细请见[NfcState](arkts-connectivity-nfccontroller-nfcstate-e.md)枚举值。 |
 
 **示例**
 

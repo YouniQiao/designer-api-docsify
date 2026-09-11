@@ -20,7 +20,7 @@ context: UIAbilityContext | UIContext
 
 The context of the navigation operation.
 
-**类型：** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext
+**类型：** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) &#124; UIContext
 
 **起始版本：** 12
 
@@ -38,7 +38,7 @@ from: NavDestinationInfo | NavBar
 
 From navigation content info.
 
-**类型：** [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) \| NavBar
+**类型：** [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) &#124; NavBar
 
 **起始版本：** 12
 
@@ -74,7 +74,7 @@ to: NavDestinationInfo | NavBar
 
 To navigation content info.
 
-**类型：** [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) \| NavBar
+**类型：** [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) &#124; NavBar
 
 **起始版本：** 12
 

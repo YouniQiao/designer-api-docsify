@@ -6,7 +6,7 @@
 const audioBalance: Config<number>
 ```
 
-Indicates the configuration for left and right channel volume balance. **-1.0** indicates output from the left channel only; **0.0** indicates balanced output from both channels; **1.0** indicates output from the right channel only. Intermediate values represent a linear ratio of the left and right channel volumes. The value ranges from -1. 0 to 1.0. The default value is **0.0**.
+Indicates the configuration for left and right channel volume balance. **-1.0** indicates output from the left channel only; **0.0** indicates balanced output from both channels; **1.0** indicates output from the right channel only. Intermediate values represent a linear ratio of the left and right channel volumes. The value ranges from -1.0 to 1.0. The default value is **0.0**.
 
 **Type:** [Config](arkts-accessibility-config-config-i-sys.md)&lt;number&gt;
 

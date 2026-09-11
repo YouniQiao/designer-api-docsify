@@ -518,7 +518,7 @@ Synchronously returns the top proportion colors and their corresponding percenta
 
 | Type | Description |
 | --- | --- |
-| Map&lt;[Color](arkts-arkgraphics2d-effectkit-color-i.md) \| null, number \| null&gt; | Map of the top colorCount color values and their corresponding percentages by proportion in the image. The percentage value range is [0, 1]. |
+| Map&lt;[Color](arkts-arkgraphics2d-effectkit-color-i.md) &#124; null, number &#124; null&gt; | Map of the top colorCount color values and their corresponding percentages by proportion in the image. The percentage value range is [0, 1].   - If the number of colors obtained is less than the value of colorCount, the map size is the actual   number obtained.   - If the colors fail to be obtained or the number of colors obtained is less than 1, Map() is returned. |
 
 **Error codes:**
 

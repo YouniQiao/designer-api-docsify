@@ -34,7 +34,7 @@ Sets the Bluetooth friendly name of a device.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if the Bluetooth name is set successfully; returns `false` otherwise. |
 
 **Examples**
 

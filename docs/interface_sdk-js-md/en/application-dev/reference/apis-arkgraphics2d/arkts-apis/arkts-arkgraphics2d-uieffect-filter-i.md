@@ -80,7 +80,7 @@ The brightening effect requires the HDR rendering pipeline to be enabled to take
 
 The maximum supported brightness boost multiple is calculated as the device's current maximum brightness divided by its SDR reference white luminance.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > Using the HDR brightening effect incurs certain performance and power consumption overhead.
 > It is recommended to use it in scenarios where HDR images or videos already exist.

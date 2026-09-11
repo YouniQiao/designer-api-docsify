@@ -9,7 +9,7 @@ The actual window size limits applied are determined by the intersection of the 
 3. Window size limits configured by the application in [abilities in the module.json5 file](../../../quick-start/module-configuration-file.md#abilities).
 4. Default system limits (which vary depending on the product and window type).
 
-> **NOTE：**
+> **NOTE:**
 > 
 > For the **maxWidth**, **maxHeight**, **minWidth**, and **minHeight** properties:
 > 

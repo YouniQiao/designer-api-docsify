@@ -18,7 +18,7 @@ Sets restrictions on specified user behaviors.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setUserRestrictionForAccount](#setuserrestrictionforaccount-1)(admin: Want, settingsItem: SettingsForAccount, accountId: int, restricted: boolean)
+**Substitutes:** [setUserRestrictionForAccount](arkts-mdm-restrictions-setuserrestrictionforaccount-f.md)(admin: Want, settingsItem: SettingsForAccount, accountId: number, restricted: boolean)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 
@@ -31,8 +31,8 @@ Sets restrictions on specified user behaviors.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| settingsItem | string | Yes | User behavior.    - **modifyWallpaper**: Modify the wallpaper, including the lock screen wallpaper and home screen wallpaper. |
-| accountId | number | Yes | User ID, which must be greater than or equal to 0. The value should be an integer.    **accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
+| settingsItem | string | Yes | User behavior.<br>- **modifyWallpaper**: Modify the wallpaper, including the lock screen wallpaper and home screen wallpaper. |
+| accountId | number | Yes | User ID, which must be greater than or equal to 0. <br>The value should be an integer. <br>**accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 | restricted | boolean | Yes | Whether to disable the action. The value **true** means to disable the action, and **false** means the opposite. |
 
 **Error codes:**
@@ -89,7 +89,7 @@ Restricts a specified user from modifying specified setting items.
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | settingsItem | [SettingsForAccount](arkts-mdm-restrictions-settingsforaccount-e.md) | Yes | User setting items to be restricted from modification. |
-| accountId | number | Yes | User ID, which must be greater than or equal to 0. The value should be an integer.    **accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
+| accountId | number | Yes | User ID, which must be greater than or equal to 0. <br>The value should be an integer. <br>**accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 | restricted | boolean | Yes | The value **true** means to disable the action, and **false** means the opposite. |
 
 **Error codes:**

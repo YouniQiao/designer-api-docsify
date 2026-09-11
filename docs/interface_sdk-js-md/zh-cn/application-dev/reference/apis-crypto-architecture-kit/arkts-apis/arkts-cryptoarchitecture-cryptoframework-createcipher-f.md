@@ -14,7 +14,7 @@ function createCipher(transformation: string): Cipher
 
 创建加解密实例。
 
-支持的规格详见[加解密算法规格](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。
+<br>支持的规格详见[加解密算法规格](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。
 
 > **说明：**
 > 
@@ -37,7 +37,7 @@ function createCipher(transformation: string): Cipher
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transformation | string | 是 | 待生成Cipher的算法名称（含密钥长度）、加密模式以及填充方法的组合。支持的规格详见[对称密钥加解密算法规格](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)和[非对称密钥加解密算法规格](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。 |
+| transformation | string | 是 | 待生成Cipher的算法名称（含密钥长度）、加密模式以及填充方法的组合。<br>支持的规格详见[对称密钥加解密算法规格](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)和[非对称密钥加解密算法规格](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。 |
 
 **返回值：**
 
@@ -49,7 +49,7 @@ function createCipher(transformation: string): Cipher
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | This operation is not supported. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 

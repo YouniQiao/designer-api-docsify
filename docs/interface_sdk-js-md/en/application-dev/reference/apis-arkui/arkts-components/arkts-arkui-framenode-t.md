@@ -6,6 +6,8 @@ declare type FrameNode = import('../api/arkui/FrameNode').FrameNode
 
 Import the frame node type object for Canvas.
 
+@typedef { import('../api/arkui/FrameNode').FrameNode } FrameNode
+
 **Since:** 13
 
 **Model restriction:** This API can be used only in the stage model.

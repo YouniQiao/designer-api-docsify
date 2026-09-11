@@ -32,7 +32,7 @@ Starts NearLink advertising. This API uses a promise to return the result. This 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the advertising ID. The advertising ID is a unique ID randomly allocated. The value range is [0, 255]. Similar to [advertising.stopAdvertising]{ |
+| Promise&lt;number&gt; | Promise used to return the advertising ID. The advertising ID is a unique ID randomly allocated. The value range is [0, 255]. Similar to [advertising.stopAdvertising](arkts-connectivity-advertising-stopadvertising-f.md) and [AdvertisingStateChangeInfo](arkts-connectivity-advertising-advertisingstatechangeinfo-i.md).advertisingId, this ID can be used to distinguish the current advertising instance. |
 
 **Error codes:**
 

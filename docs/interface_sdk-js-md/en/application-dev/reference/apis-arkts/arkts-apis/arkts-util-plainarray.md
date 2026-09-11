@@ -7,11 +7,14 @@ PlainArray stores key-value (KV) pairs. Each key must be unique, be of the numbe
  structure. However, the keys of PlainArray can only be of the number type.
  **Recommended use case**: Use PlainArray when you need to store KV pairs whose keys are of the **number** type.
  This topic uses the following to identify the use of generics:
- - T: Type
- > **NOTE**
+
+- T: Type
+
+> **NOTE**
  >
  > Container classes, implemented in static languages, have restrictions on storage locations and properties, and do
  > not support custom properties or methods.
+
 
 
 ## Modules to Import

@@ -24,4 +24,4 @@ declare type StyledStringMarshallCallback = (marshallableVal: StyledStringMarsha
 
 | 类型 | 说明 |
 | --- | --- |
-| ArrayBuffer | [StyledStringMarshallingValue]{ |
+| ArrayBuffer | [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)序列化后的数据。 |

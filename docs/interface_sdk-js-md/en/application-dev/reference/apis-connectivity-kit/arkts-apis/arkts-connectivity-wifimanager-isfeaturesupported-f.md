@@ -30,7 +30,7 @@ Check whether the device supports a specified feature.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` if this device supports the specified feature, returns `false` otherwise. |
 
 **Error codes:**
 

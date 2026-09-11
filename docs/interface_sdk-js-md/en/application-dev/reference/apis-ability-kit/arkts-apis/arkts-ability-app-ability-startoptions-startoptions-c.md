@@ -42,7 +42,7 @@ Display ID, which is an integer greater than or equal to -1.
 - The value **0** means the primary screen.  
 - A positive integer means a specific screen with that ID.
 
-**NOTE：**
+**NOTE:**
 
 Starting from API version 14, the default value is **-1**, indicating the current screen.
 

@@ -1,6 +1,6 @@
 # WakeupIntelligentVoiceEngineCallbackInfo (System API)
 
-Describes wakeup intelligent voice engine callback information.
+Describes wakeup intelligent voice engine callback information. @typedef WakeupIntelligentVoiceEngineCallbackInfo
 
 **Since:** 10
 

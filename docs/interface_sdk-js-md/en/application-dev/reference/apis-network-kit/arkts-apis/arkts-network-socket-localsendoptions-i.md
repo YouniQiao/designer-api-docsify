@@ -20,7 +20,7 @@ data: string | ArrayBuffer
 
 Data to be transmitted.
 
-**Type:** string \| ArrayBuffer
+**Type:** string &#124; ArrayBuffer
 
 **Since:** 11
 

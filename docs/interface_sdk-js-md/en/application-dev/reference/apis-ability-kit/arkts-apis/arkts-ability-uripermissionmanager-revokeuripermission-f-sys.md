@@ -14,7 +14,7 @@ function revokeUriPermission(uri: string, targetBundleName: string, callback: As
 
 Revokes the URI permission from an application. This API uses an asynchronous callback to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API can be used to revoke the URI permission of another application obtained by this application or URI
 > permission granted by this application.
@@ -79,7 +79,7 @@ function revokeUriPermission(uri: string, targetBundleName: string): Promise<num
 
 Revokes the URI permission from an application. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API can be used to revoke the URI permission of another application obtained by this application or URI
 > permission granted by this application.
@@ -149,7 +149,7 @@ function revokeUriPermission(uri: string, targetBundleName: string, appCloneInde
 
 Revokes the URI permission from an application. This API uses a promise to return the result.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - This API can be used to revoke the URI permission of another application obtained by this application or URI
 > permission granted by this application.

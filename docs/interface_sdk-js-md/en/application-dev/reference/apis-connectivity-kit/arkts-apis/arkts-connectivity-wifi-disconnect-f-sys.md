@@ -30,7 +30,7 @@ Disconnect Wi-Fi network.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Returns `true` for disconnecting network success, returns `false` otherwise. |
 
 **Examples**
 

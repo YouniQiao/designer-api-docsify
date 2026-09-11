@@ -6,11 +6,14 @@ Queue follows the principle of First In First Out (FIFO). It supports insertion 
  insertion at one end and removal at the other end.
  **Recommended use case**: Use Queue in FIFO scenarios.
  This topic uses the following to identify the use of generics:<br>
- - T: Type
- > **NOTE**
+
+- T: Type
+
+> **NOTE**
  >
  > - Container classes, implemented in static languages, have restrictions on storage locations and properties, and do
  > not support custom properties or methods.
+
 
 
 ## Modules to Import

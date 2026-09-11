@@ -2,7 +2,7 @@
 
 Defines the style of the custom dialog box.
 
-> **NOTE：**
+> **NOTE:**
 > 
 > - Pressing the Back or ESC key closes the dialog box.
 > 

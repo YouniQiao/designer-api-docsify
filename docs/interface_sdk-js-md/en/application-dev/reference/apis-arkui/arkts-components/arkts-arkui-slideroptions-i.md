@@ -23,7 +23,8 @@ Default value: **Axis.Horizontal**
 
 **Type:** [Axis](../arkts-apis/arkts-arkui-axis-e.md)
 
-**Default:** Axis.Horizontal [since 11]
+**Default:**
+- API version 11+: Axis.Horizontal
 
 **Since:** 8
 
@@ -43,7 +44,7 @@ Maximum value.
 
 Default value: **100**
 
-**NOTE：**
+**NOTE:**
 
 If the value of **min** is greater than or equal to the value of **max**, the **min** value defaults to **0**, and the **max** value defaults to **100**.
 
@@ -51,7 +52,8 @@ If the value is not within the [min, max] range, the value of **min** or **max**
 
 **Type:** number
 
-**Default:** 100 [since 11]
+**Default:**
+- API version 11+: 100
 
 **Since:** 7
 
@@ -73,7 +75,8 @@ Default value: **0**
 
 **Type:** number
 
-**Default:** 0 [since 11]
+**Default:**
+- API version 11+: 0
 
 **Since:** 7
 
@@ -97,7 +100,8 @@ Default value: **false**
 
 **Type:** boolean
 
-**Default:** false [since 11]
+**Default:**
+- API version 11+: false
 
 **Since:** 8
 
@@ -119,13 +123,14 @@ Default value: **1**
 
 Value range: [0.01, max - min]
 
-**NOTE：**
+**NOTE:**
 
 If this parameter is set to a value less than 0 or greater than the value of **max**, the default value is used.
 
 **Type:** number
 
-**Default:** 1 - Value range: [0.01, max - min] [since 11]
+**Default:**
+- API version 11+: 1 - Value range: [0.01, max - min]
 
 **Since:** 7
 
@@ -147,7 +152,8 @@ Default value: **SliderStyle.OutSet**
 
 **Type:** [SliderStyle](arkts-arkui-sliderstyle-e.md)
 
-**Default:** SliderStyle.OutSet [since 11]
+**Default:**
+- API version 11+: SliderStyle.OutSet
 
 **Since:** 7
 
@@ -179,7 +185,8 @@ The \$\$ operator enables two-way synchronization between the TS variable and th
 
 **Type:** number
 
-**Default:** same as the value of min [since 11]
+**Default:**
+- API version 11+: same as the value of min
 
 **Since:** 7
 

@@ -72,7 +72,7 @@ Get the list of all SIM card account information.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt;&gt; | Returns the array of { |
+| Promise&lt;Array&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt;&gt; | Returns the array of [IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md). The ICCID and phone number will be null if has no ohos.permission.GET_TELEPHONY_STATE. |
 
 **错误码：**
 

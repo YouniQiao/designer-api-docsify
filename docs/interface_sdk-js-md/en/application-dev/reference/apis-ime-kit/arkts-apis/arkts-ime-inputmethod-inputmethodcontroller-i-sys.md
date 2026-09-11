@@ -18,11 +18,9 @@ import { inputMethod } from '@kit.IMEKit';
 hideSoftKeyboard(displayId: number): Promise<void>
 ```
 
-Hides the soft keyboard on a specified screen. This API uses a promise to return the result.   
-> **NOTE：**
-   
-> 
-   
+Hides the soft keyboard on a specified screen. This API uses a promise to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to hide the soft keyboard only when the edit box is focused.
 
 **Since:** 23
@@ -75,11 +73,9 @@ inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
 showSoftKeyboard(displayId: number): Promise<void>
 ```
 
-Shows the soft keyboard on a specified screen. This API uses a promise to return the result.   
-> **NOTE：**
-   
-> 
-   
+Shows the soft keyboard on a specified screen. This API uses a promise to return the result. <br> <br>   
+> **NOTE:**<br>
+> <br>
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to show the soft keyboard only when the edit box is focused.
 
 **Since:** 23

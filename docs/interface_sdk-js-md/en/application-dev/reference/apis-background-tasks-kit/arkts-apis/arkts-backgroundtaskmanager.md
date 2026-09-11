@@ -1,4 +1,4 @@
-# @ohos.backgroundTaskManager
+# @ohos.backgroundTaskManager(Background Task Management)
 
 The **BackgroundTaskManager** module provides APIs to manage background tasks.
 
