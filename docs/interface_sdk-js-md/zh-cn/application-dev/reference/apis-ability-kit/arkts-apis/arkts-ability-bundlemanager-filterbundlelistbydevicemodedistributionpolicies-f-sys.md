@@ -23,7 +23,7 @@ function filterBundleListByDeviceModeDistributionPolicies(
 
 **起始版本：** 26.1.0
 
-**需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+**需要权限：** ohos.permission.SWITCH_MULTI_MODE_BUNDLE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

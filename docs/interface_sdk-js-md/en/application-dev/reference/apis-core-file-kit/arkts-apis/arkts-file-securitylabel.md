@@ -1,4 +1,4 @@
-# @ohos.file.securityLabel
+# @ohos.file.securityLabel(Data Label)
 
 The **securityLabel** module provides APIs for managing data security levels of files, including obtaining and setting file security levels.
 

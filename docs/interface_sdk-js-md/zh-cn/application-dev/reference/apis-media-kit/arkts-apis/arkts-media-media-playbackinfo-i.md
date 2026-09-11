@@ -1,6 +1,6 @@
 # PlaybackInfo
 
-Provides player statistic info.
+提供播放统计数据信息。
 
 **起始版本：** 12
 
@@ -18,7 +18,7 @@ import { media } from '@kit.MediaKit';
 [key:string]: Object
 ```
 
-key:value pair, key see @PlaybackInfoKey.
+键值对，键请看 @PlaybackInfoKey.
 
 **类型：** Object
 

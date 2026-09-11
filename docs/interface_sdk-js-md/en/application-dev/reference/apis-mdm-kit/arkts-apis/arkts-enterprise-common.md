@@ -33,6 +33,7 @@ import { common } from '@kit.MDMKit';
 | Name | Description |
 | --- | --- |
 | [ManagedPolicy](arkts-mdm-common-managedpolicy-e.md) | Enumerates enterprise device management policies. |
+| [QueryPolicy](arkts-mdm-common-querypolicy-e.md) | The policy of query enterprise device management policy. |
 | [Result](arkts-mdm-common-result-e.md) | Enumerates application installation results. |
 | [StartupScene](arkts-mdm-common-startupscene-e.md) | Startup wizard completion scenario. When the initial switch to a sub-user (only on PCs), OTA upgrade, and first- time startup wizard are complete, the device system calls the [onStartupGuideCompleted](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onstartupguidecompleted) API to notify the device administrator application. |
 

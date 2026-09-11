@@ -1,4 +1,4 @@
-# @ohos.document
+# @ohos.document(File Operation)
 
 document
 

@@ -1,4 +1,4 @@
-# @ohos.font(Custom Font Registration)
+# @ohos.font(注册自定义字体)
 
 本模块提供注册自定义字体。
 

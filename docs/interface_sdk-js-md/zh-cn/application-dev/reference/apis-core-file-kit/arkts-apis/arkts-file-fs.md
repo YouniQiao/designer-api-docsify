@@ -1,4 +1,4 @@
-# @ohos.file.fs(@ohos.file.fs (文件管理))
+# @ohos.file.fs(文件管理)
 
 本模块是Core File Kit的核心模块，提供基础文件操作API，用于对应用沙箱内的文件和目录进行创建、打开、读写、拷贝、移动、删除、查询属性等操作。
 
@@ -181,8 +181,8 @@ import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResul
 | [Stat](arkts-corefile-file-fs-stat-i.md) | 文件具体信息，包含文件大小、权限模式、访问时间、修改时间等属性。在调用Stat的方法前，需要先通过[stat()](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiostat)方法（同步或异步）构建一个Stat实例。 |
 | [Stream](arkts-corefile-file-fs-stream-i.md) | 文件流，提供流式读写文件数据的能力，使用完毕后需调用close关闭。在调用Stream的方法前，需要先通过[fileIo.createStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatestream)方法或者[fileIo.fdopenStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiofdopenstream)（同步或异步）来构建一个Stream实例。 |
 | [Watcher](arkts-corefile-file-fs-watcher-i.md) | 文件目录变化监听对象。由createWatcher接口获得。 |
-| [WatchEvent](arkts-corefile-file-fs-watchevent-i.md) | 事件类 |
-| [WatchEventListener](arkts-corefile-file-fs-watcheventlistener-i.md) | 事件监听类，当监听的文件或目录发生变动事件时触发回调。 |
+| [WatchEvent](arkts-corefile-file-fs-watchevent-i.md) | 事件接口 |
+| [WatchEventListener](arkts-corefile-file-fs-watcheventlistener-i.md) | 事件监听接口，当监听的文件或目录发生变动事件时触发回调。 |
 | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 可选项类型，支持write接口使用，WriteOptions继承自[Options](arkts-corefile-file-fs-options-i.md)。 |
 | [WriteStreamOptions](arkts-corefile-file-fs-writestreamoptions-i.md) | 可选项类型，支持 createWriteStream 接口使用。 |
 

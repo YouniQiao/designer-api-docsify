@@ -31,6 +31,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 | [bulkTransfer](arkts-basicservices-usbmanager-bulktransfer-f.md) | Performs bulk transfer. This API uses a promise to return the result. |
 | [cancelAccessoryRight](arkts-basicservices-usbmanager-cancelaccessoryright-f.md) | Cancels the permission of the current application to access USB accessories. You need to call [usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md) to obtain the accessory list and use [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) as a parameter. |
 | [claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) | Claims a USB device interface. |
+| [claimInterfaceExclusive](arkts-basicservices-usbmanager-claiminterfaceexclusive-f.md) | Claims a USB device interface exclusively. When this API is called, the system checks whether the specified USB interface has been claimed by another process to avoid conflicts during declaration. If **force** is set to **true**, the operating system first releases the interface from the kernel driver and then grants control to the calling app. After the interface is claimed exclusively, other processes can still claim the same interface by calling [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md). You can use the **onConflict** callback to receive such conflict notifications. |
 | [closeAccessory](arkts-basicservices-usbmanager-closeaccessory-f.md) | Closes the accessory file descriptor. You need to call [usbManager.openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md) to obtain the accessory list and use [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) as a parameter. |
 | [closePipe](arkts-basicservices-usbmanager-closepipe-f.md) | Closes a USB device pipe. |
 | [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) | Connects to the USB device based on the device information returned by **getDevices()**. If the USB service is abnormal, **undefined** may be returned. Check whether the return value of the API is empty. |
@@ -80,6 +81,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
+| [InterfaceConflictInfo](arkts-basicservices-usbmanager-interfaceconflictinfo-i.md) | Describes the conflict information when the USB interface that has been exclusively claimed is claimed by another process in non-exclusive mode by calling [usbManager.claimInterfaceExclusive](arkts-basicservices-usbmanager-claiminterfaceexclusive-f.md). |
 | [SubmitTransferCallback](arkts-basicservices-usbmanager-submittransfercallback-i.md) | Transfers USB data packets in an asynchronous manner. |
 | [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | Describes the USB accessory information. |
 | [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) | Describes the USB accessory handle. |

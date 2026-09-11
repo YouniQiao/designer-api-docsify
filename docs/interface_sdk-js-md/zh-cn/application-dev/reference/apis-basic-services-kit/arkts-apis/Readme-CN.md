@@ -872,6 +872,7 @@
   - [bulkTransfer](arkts-basicservices-usbmanager-bulktransfer-f.md)
   - [cancelAccessoryRight](arkts-basicservices-usbmanager-cancelaccessoryright-f.md)
   - [claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)
+  - [claimInterfaceExclusive](arkts-basicservices-usbmanager-claiminterfaceexclusive-f.md)
   - [closeAccessory](arkts-basicservices-usbmanager-closeaccessory-f.md)
   - [closePipe](arkts-basicservices-usbmanager-closepipe-f.md)
   - [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md)
@@ -921,6 +922,7 @@
   <!--Del-->
   - [usbFunctionsToString(系统接口)](arkts-basicservices-usbmanager-usbfunctionstostring-f-sys.md)<!--DelEnd-->
   - [usbSubmitTransfer](arkts-basicservices-usbmanager-usbsubmittransfer-f.md)
+  - [InterfaceConflictInfo](arkts-basicservices-usbmanager-interfaceconflictinfo-i.md)
   - [SubmitTransferCallback](arkts-basicservices-usbmanager-submittransfercallback-i.md)
   - [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md)
   - [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md)

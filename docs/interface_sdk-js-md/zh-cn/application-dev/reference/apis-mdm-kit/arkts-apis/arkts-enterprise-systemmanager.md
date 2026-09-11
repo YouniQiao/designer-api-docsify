@@ -24,13 +24,13 @@ import { systemManager } from '@kit.MDMKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [addAllowedPrinterIPAddressesForAccount](arkts-mdm-systemmanager-addallowedprinteripaddressesforaccount-f.md) | Adds allowed printer IP addresses for current account. The policy takes effect only for current account. |
-| [addAllowedPrinterIPAddressesForDevice](arkts-mdm-systemmanager-addallowedprinteripaddressesfordevice-f.md) | Adds allowed printer IP addresses for device. The policy takes effect for all accounts. |
+| [addAllowedPrinterIPAddressesForAccount](arkts-mdm-systemmanager-addallowedprinteripaddressesforaccount-f.md) | 添加当前用户下打印机IP地址白名单 |
+| [addAllowedPrinterIPAddressesForDevice](arkts-mdm-systemmanager-addallowedprinteripaddressesfordevice-f.md) | 添加打印机IP地址白名单 |
 | [addDisallowedNearLinkProtocols](arkts-mdm-systemmanager-adddisallowednearlinkprotocols-f.md) | 为指定用户添加禁用的星闪协议名单。NearLink Kit（星闪服务）提供一种低功耗、高速率的短距离通信服务，支持星闪设备之间的连接、数据交互。本接口对键盘、手写笔等系统服务和系统应用不生效。 |
 | [addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md) | 添加按键事件处理策略。系统触发按键事件时，若匹配下发的按键事件策略，将通过[EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent)回调通知MDM应用，并携带匹配策略的按键事件信息。 |
 | [finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md) | 删除本MDM应用在当前用户下收集到的设备日志。 |
-| [getAllowedPrinterIPAddressesForAccount](arkts-mdm-systemmanager-getallowedprinteripaddressesforaccount-f.md) | Gets allowed printer IP addresses for current account. |
-| [getAllowedPrinterIPAddressesForDevice](arkts-mdm-systemmanager-getallowedprinteripaddressesfordevice-f.md) | Gets allowed printer IP addresses for device. |
+| [getAllowedPrinterIPAddressesForAccount](arkts-mdm-systemmanager-getallowedprinteripaddressesforaccount-f.md) | 查询用户级打印机IP地址白名单 |
+| [getAllowedPrinterIPAddressesForDevice](arkts-mdm-systemmanager-getallowedprinteripaddressesfordevice-f.md) | 查询打印机IP地址白名单 |
 | [getAutoUnlockAfterReboot](arkts-mdm-systemmanager-getautounlockafterreboot-f.md) | 获取设备是否重启自动解锁。适用于需要验证设备重启解锁策略是否正确配置的场景，帮助企业管理员确认设备自动解锁功能状态。 |
 | [getAutoUnlockAfterReboot](arkts-mdm-systemmanager-getautounlockafterreboot-f.md) | 获取设备是否重启自动解锁。适用于需要验证设备重启解锁策略是否正确配置的场景，帮助企业管理员确认设备自动解锁功能状态。 |
 | [getDisallowedNearLinkProtocols](arkts-mdm-systemmanager-getdisallowednearlinkprotocols-f.md) | 获取指定用户下禁用的星闪协议名单。适用于需要查询用户当前星闪协议访问限制的场景，帮助企业管理员验证策略是否正确下发，或在进行策略调整前获取当前配置。 |
@@ -45,8 +45,8 @@ import { systemManager } from '@kit.MDMKit';
 | [isActivationLockDisabled](arkts-mdm-systemmanager-isactivationlockdisabled-f.md) | 获取设备激活锁禁用状态。适用于需要验证设备激活锁功能状态的场景，帮助企业管理员确认设备的安全配置，特别是在设备转让或回收时需要了解激活锁状态。 |
 | [isOtaUpdateNonceEnable](arkts-mdm-systemmanager-isotaupdatenonceenable-f.md) | 查询OTA更新Nonce是否启用。适用于需要验证设备OTA更新安全配置的场景，帮助企业管理员确认Nonce校验功能状态，保障系统更新安全性。 |
 | [notifyUpdatePackages](arkts-mdm-systemmanager-notifyupdatepackages-f.md) | 通知系统更新包信息。内网升级场景下，需要先调用该接口通知系统更新包，再调用[systemManager.setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md)设置升级策略。使用Promise异步回调。 |
-| [removeAllowedPrinterIPAddressesForAccount](arkts-mdm-systemmanager-removeallowedprinteripaddressesforaccount-f.md) | Removes allowed printer IP addresses for current account. The policy takes effect only for current account. |
-| [removeAllowedPrinterIPAddressesForDevice](arkts-mdm-systemmanager-removeallowedprinteripaddressesfordevice-f.md) | Removes allowed printer IP addresses for device. The policy takes effect for all accounts. |
+| [removeAllowedPrinterIPAddressesForAccount](arkts-mdm-systemmanager-removeallowedprinteripaddressesforaccount-f.md) | 从用户级白名单中移除打印机IP地址 |
+| [removeAllowedPrinterIPAddressesForDevice](arkts-mdm-systemmanager-removeallowedprinteripaddressesfordevice-f.md) | 白名单中移除打印机IP地址 |
 | [removeDisallowedNearLinkProtocols](arkts-mdm-systemmanager-removedisallowednearlinkprotocols-f.md) | 为指定用户移除禁用的星闪协议名单。移除成功后，指定用户可以重新使用移除列表中的星闪协议进行通信，恢复相应的协议连接能力。使用场景：在企业设备管理场景下，管理员可通过此接口移除之前设置的星闪协议禁用策略，允许用户恢复使用星闪协议进行设备间通信。适用于需要恢复特定用户星闪通信能力的场景，帮助企业管理员灵活调整用户设备的星闪协议访问权限，满足不同业务场景的通信需求。 |
 | [removeKeyEventPolicies](arkts-mdm-systemmanager-removekeyeventpolicies-f.md) | 删除按键事件处理策略。删除成功后，系统将恢复对指定按键事件的默认处理行为。适用于需要恢复按键默认行为的场景，帮助企业管理员灵活调整设备按键响应策略，满足不同业务场景的需求。 |
 | [setActivationLockDisabled](arkts-mdm-systemmanager-setactivationlockdisabled-f.md) | 禁用/启用设备激活锁。设备激活锁被禁用后，将无法使用查找设备功能。该功能只适用于特定设备 |

@@ -1,4 +1,4 @@
-# @ohos.file.statvfs
+# @ohos.file.statvfs(File System Space Statistics)
 
 This module provides APIs for obtaining file system information, including the total size and free size of a file system, in bytes.
 

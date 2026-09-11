@@ -1,4 +1,4 @@
-# @ohos.file.environment
+# @ohos.file.environment(Directory Environment Capability)
 
 The **Environment** module provides ArkTS APIs for obtaining the root directories of the storage and user files.
 

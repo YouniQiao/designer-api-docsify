@@ -1,4 +1,4 @@
-# @ohos.file.environment
+# @ohos.file.environment(目录环境能力)
 
 该模块提供环境目录能力，获取内存存储根目录、公共文件根目录的ArkTS接口。
 

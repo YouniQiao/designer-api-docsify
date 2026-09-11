@@ -1,4 +1,4 @@
-# @ohos.document
+# @ohos.document(文件交互)
 
 document
 

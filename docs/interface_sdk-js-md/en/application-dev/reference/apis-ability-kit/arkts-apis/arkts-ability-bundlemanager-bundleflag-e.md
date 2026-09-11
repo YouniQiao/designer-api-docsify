@@ -183,6 +183,18 @@ Used to obtain the bundle information with the skills. It must be used together 
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
+## GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY
+
+```TypeScript
+GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY = 0x00001000
+```
+
+Used to obtain the bundle information of the application that has only a home screen icon.
+
+**Since:** 26.2.0
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
 ## GET_BUNDLE_INFO_WITH_ENTRY_MODULE
 
 ```TypeScript

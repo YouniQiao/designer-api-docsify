@@ -5,7 +5,7 @@
   <!--Del-->
   - [BackupExtensionAbility(系统接口)](arkts-corefile-application-backupextensionability-backupextensionability-c-sys.md)<!--DelEnd-->
   - [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md)
-- [@ohos.document](arkts-document.md)
+- [@ohos.document(文件交互)](arkts-document.md)
   - [document](arkts-corefile-document-depr-n.md)
   - [choose](arkts-corefile-document-choose-f.md)
   - [show](arkts-corefile-document-show-f.md)
@@ -153,7 +153,7 @@
   - [TransferState(系统接口)](arkts-corefile-cloudsyncmanager-transferstate-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [TransferStopReason(系统接口)](arkts-corefile-cloudsyncmanager-transferstopreason-e-sys.md)<!--DelEnd-->
-- [@ohos.file.environment](arkts-file-environment.md)
+- [@ohos.file.environment(目录环境能力)](arkts-file-environment.md)
   <!--Del-->
   - [getExternalStorageDir(系统接口)](arkts-corefile-environment-getexternalstoragedir-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -208,7 +208,7 @@
 - [@ohos.file.fileuri(文件URI)](arkts-file-fileuri.md)
   - [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md)
   - [FileUri](arkts-corefile-fileuri-fileuri-c.md)
-- [@ohos.file.fs(@ohos.file.fs (文件管理))](arkts-file-fs.md)
+- [@ohos.file.fs(文件管理)](arkts-file-fs.md)
   - [fileIo](arkts-corefile-fileio-n.md)
     - [OpenMode](arkts-corefile-fileio-openmode-n.md)
       - [常量](arkts-corefile-openmode-con.md)
@@ -316,7 +316,7 @@
   - [LocationType](arkts-corefile-file-fs-locationtype-e.md)
   - [MappingMode](arkts-corefile-file-fs-mappingmode-e.md)
   - [WhenceType](arkts-corefile-file-fs-whencetype-e.md)
-- [@ohos.file.hash(@ohos.file.hash (文件哈希处理))](arkts-file-hash.md)
+- [@ohos.file.hash(文件哈希处理)](arkts-file-hash.md)
   - [createHash](arkts-corefile-hash-createhash-f.md)
   - [hash](arkts-corefile-hash-f.md)
   - [HashStream](arkts-corefile-hash-hashstream-c.md)
@@ -352,13 +352,13 @@
   - [remove(系统接口)](arkts-corefile-recent-remove-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FileInfo(系统接口)](arkts-corefile-recent-fileinfo-i-sys.md)<!--DelEnd-->
-- [@ohos.file.securityLabel(@ohos.file.securityLabel (数据标签))](arkts-file-securitylabel.md)
+- [@ohos.file.securityLabel(数据标签)](arkts-file-securitylabel.md)
   - [getSecurityLabel](arkts-corefile-securitylabel-getsecuritylabel-f.md)
   - [getSecurityLabelSync](arkts-corefile-securitylabel-getsecuritylabelsync-f.md)
   - [setSecurityLabel](arkts-corefile-securitylabel-setsecuritylabel-f.md)
   - [setSecurityLabelSync](arkts-corefile-securitylabel-setsecuritylabelsync-f.md)
   - [DataLevel](arkts-corefile-securitylabel-datalevel-t.md)
-- [@ohos.file.statvfs(@ohos.file.statvfs (文件系统空间统计))](arkts-file-statvfs.md)
+- [@ohos.file.statvfs(文件系统空间统计)](arkts-file-statvfs.md)
   - [getFreeSize](arkts-corefile-statfs-getfreesize-f.md)
   - [getFreeSizeSync](arkts-corefile-statfs-getfreesizesync-f.md)
   - [getTotalSize](arkts-corefile-statfs-gettotalsize-f.md)
@@ -429,7 +429,7 @@
   - [unmount(系统接口)](arkts-corefile-volumemanager-unmount-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [Volume(系统接口)](arkts-corefile-volumemanager-volume-i-sys.md)<!--DelEnd-->
-- [@ohos.fileio(@ohos.fileio (文件管理))](arkts-fileio.md)
+- [@ohos.fileio(文件管理)](arkts-fileio.md)
   - [fileIO](arkts-corefile-fileio-depr-n.md)
   - [access](arkts-corefile-fileio-access-f.md)
   - [accessSync](arkts-corefile-fileio-accesssync-f.md)
@@ -523,7 +523,7 @@
   - [OperationMode](arkts-corefile-fileshare-operationmode-e.md)
   - [PolicyErrorCode](arkts-corefile-fileshare-policyerrorcode-e.md)
   - [PolicyType](arkts-corefile-fileshare-policytype-e.md)
-- [@ohos.statfs(@ohos.statfs (statfs))](arkts-statfs.md)
+- [@ohos.statfs(statfs)](arkts-statfs.md)
   - [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md)
   - [getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md)
 - [@system.file](arkts-system-file.md)

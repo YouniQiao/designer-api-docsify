@@ -40,6 +40,7 @@
 | [int32_t OH_ArkUI_PostIdleCallback(ArkUI_ContextHandle uiContext, void* userData, void (\*callback)(uint64_t nanoTimeLeft, uint32_t frameCount, void* userData))](#oh_arkui_postidlecallback) | 注册一个回调函数，在下一帧渲染结束后如果距离下一帧到来剩余时间大于1ms时，该回调函数将被执行；如果剩余时间小于1ms时，回调函数将被顺延至当某个下一帧的剩余时间大于1ms时再执行。如果当前没有下一帧，将自动请求下一帧。 |
 | [ArkUI_ErrorCode OH_ArkUI_InitModuleForArkTSEnv(napi_env env)](#oh_arkui_initmoduleforarktsenv) | 初始化指定上下文环境的ArkUI相关接口。该函数禁止在非UI线程中调用，否则程序将主动abort。 |
 | [void OH_ArkUI_NotifyArkTSEnvDestroy(napi_env env)](#oh_arkui_notifyarktsenvdestroy) | 通知指定的上下文环境已销毁。该函数禁止在非UI线程中调用，否则程序将主动abort。 |
+| [ArkUI_ErrorCode OH_ArkUI_EnableEventPassthrough(ArkUI_ContextHandle uiContext, bool enabled, ArkUI_RawInputEventType type)](#oh_arkui_enableeventpassthrough) | 启用或禁用事件透传。事件透传表示在事件分发过程中，事件直接传递给组件而不进行重采样。 |
 
 ## 函数说明
 
@@ -609,5 +610,31 @@ void OH_ArkUI_NotifyArkTSEnvDestroy(napi_env env)
 | 参数项 | 描述 |
 | -- | -- |
 | napi_env env | Node-API的环境指针。 |
+
+### OH_ArkUI_EnableEventPassthrough()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_EnableEventPassthrough(ArkUI_ContextHandle uiContext, bool enabled, ArkUI_RawInputEventType type)
+```
+
+**描述：**
+
+启用或禁用事件透传。事件透传表示在事件分发过程中，事件直接传递给组件而不进行重采样。
+
+**起始版本：** 26.0.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| ArkUI_ContextHandle uiContext | 用于绑定实例的 UIContext 对象。 |
+| bool enabled | 是否启用事件透传。<b>true</b>：启用；<b>false</b>：禁用（默认值）。 |
+| ArkUI_RawInputEventType type | 用于启用或禁用事件透传的原始输入事件类型 {@link ArkUI_RawInputEventType}。 |
+
+**返回：**
+
+| 类型 | 说明 |
+| -- | -- |
+| ArkUI_ErrorCode | 错误码。          <br>{@link ARKUI_ERROR_CODE_NO_ERROR} 成功。          <br>{@link ARKUI_ERROR_CODE_PARAM_INVALID} uiContext对象无效 。 |
 
 

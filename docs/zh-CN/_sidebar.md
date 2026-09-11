@@ -13,7 +13,7 @@
 - [Avcodec Kit (62)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-avcodec-kit/c-apis/capi-core.md)
 - [Avsession Kit (223)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-avsession-kit/arkts-apis/arkts-app-ability-mediacontrolextensionability.md)
 - [Background Tasks Kit (203)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-background-tasks-kit/arkts-apis/arkts-backgroundtaskmanager.md)
-- [Basic Services Kit (865)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-account-appaccount.md)
+- [Basic Services Kit (867)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-account-appaccount.md)
 - [Calendar Kit (19)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-calendar-kit/arkts-apis/arkts-calendarmanager.md)
 - [Camera Kit (298)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-camera-kit/arkts-apis/arkts-multimedia-camera.md)
 - [Connectivity Kit (886)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-connectivity-kit/arkts-apis/arkts-bluetooth.md)

@@ -12,7 +12,7 @@ import { systemManager } from '@kit.MDMKit';
 function removeAllowedPrinterIPAddressesForDevice(ipAddresses: Array<string>): void
 ```
 
-Removes allowed printer IP addresses for device. The policy takes effect for all accounts.
+白名单中移除打印机IP地址
 
 **起始版本：** 26.1.0
 
@@ -26,7 +26,7 @@ Removes allowed printer IP addresses for device. The policy takes effect for all
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ipAddresses | Array&lt;string&gt; | 是 | ipAddresses indicate the IP address list of printer to be removed. Each IP address must be in IPv4 format or IPV6 format. |
+| ipAddresses | Array&lt;string&gt; | 是 | 打印机IP地址。 |
 
 **错误码：**
 

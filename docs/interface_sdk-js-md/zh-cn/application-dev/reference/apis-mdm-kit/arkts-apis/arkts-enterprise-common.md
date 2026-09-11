@@ -33,7 +33,7 @@ import { common } from '@kit.MDMKit';
 | 名称 | 说明 |
 | --- | --- |
 | [ManagedPolicy](arkts-mdm-common-managedpolicy-e.md) | 企业设备管控策略。 |
-| [QueryPolicy](arkts-mdm-common-querypolicy-e.md) | The policy of query enterprise device management policy. |
+| [QueryPolicy](arkts-mdm-common-querypolicy-e.md) | 查询企业设备管理策略 |
 | [Result](arkts-mdm-common-result-e.md) | 应用安装结果码。 |
 | [StartupScene](arkts-mdm-common-startupscene-e.md) | 开机向导完成场景。端侧系统在首次切换子用户完成（仅限PC）、OTA升级完成、首次开机完成开机向导时会通过[onStartupGuideCompleted](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onstartupguidecompleted)回调接口通知设备管理应用。 |
 

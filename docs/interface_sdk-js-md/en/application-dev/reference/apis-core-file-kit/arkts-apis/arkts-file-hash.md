@@ -1,4 +1,4 @@
-# @ohos.file.hash
+# @ohos.file.hash(File Hash Processing)
 
 The **FileHash** module implements hash processing on files.
 

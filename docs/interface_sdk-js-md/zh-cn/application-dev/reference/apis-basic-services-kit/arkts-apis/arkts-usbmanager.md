@@ -37,6 +37,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 | [bulkTransfer](arkts-basicservices-usbmanager-bulktransfer-f.md) | 批量传输。调用成功后完成批量数据传输，返回实际传输或接收到的数据块大小。使用Promise异步回调。与usbSubmitTransfer相比，bulkTransfer适合简单的批量传输场景，通过独立参数直接传递数据和端点，使用Promise异步返回结果；usbSubmitTransfer适合需要更灵活控制的场景，通过UsbDataTransferParams对象封装参数，支持异步callback回调，并可通过usbCancelTransfer取消传输请求。 |
 | [cancelAccessoryRight](arkts-basicservices-usbmanager-cancelaccessoryright-f.md) | 取消当前应用访问USB配件的权限。与requestAccessoryRight()方法配合使用，用于取消此前通过requestAccessoryRight()申请的配件访问权限。 |
 | [claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) | 声明对USB设备某个接口的控制权。调用成功后应用获得该接口的独占控制权可以进行数据传输等操作，其他程序无法访问该接口。使用完后需调用[releaseInterface](arkts-basicservices-usbmanager-releaseinterface-f.md)释放该接口的控制权。 |
+| [claimInterfaceExclusive](arkts-basicservices-usbmanager-claiminterfaceexclusive-f.md) | 独占方式声明USB设备接口。本接口在调用时检查指定的USB接口是否已被其他进程占用，避免声明时发生冲突。设置**force**为**true**时，操作系统会先从内核驱动程序中释放该接口，再将控制权授予调用方应用。独占声明成功后，其他进程仍可通过[usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)声明同一接口；可使用**onConflict**回调接收此类冲突通知。 |
 | [closeAccessory](arkts-basicservices-usbmanager-closeaccessory-f.md) | 关闭配件文件描述符。 |
 | [closePipe](arkts-basicservices-usbmanager-closepipe-f.md) | 关闭设备连接通道。 |
 | [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) | 根据getDevices()返回的设备信息打开USB设备，调用成功后建立设备连接通道，可以进行后续的数据传输和设备控制操作。使用完后需要调用[usbManager.closePipe](arkts-basicservices-usbmanager-closepipe-f.md)关闭设备连接通道。如果USB服务异常，会返回`undefined`，注意需要对接口返回值做判空处理。 |
@@ -86,6 +87,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 
 | 名称 | 说明 |
 | --- | --- |
+| [InterfaceConflictInfo](arkts-basicservices-usbmanager-interfaceconflictinfo-i.md) | 描述当已独占声明的USB接口被其他进程以非独占方式声明时的冲突信息，通过调用[usbManager.claimInterfaceExclusive](arkts-basicservices-usbmanager-claiminterfaceexclusive-f.md)独占声明接口后使用。 |
 | [SubmitTransferCallback](arkts-basicservices-usbmanager-submittransfercallback-i.md) | USB异步传输回调。 |
 | [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | USB配件信息。 |
 | [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) | USB配件句柄，包含配件文件描述符，用于通过CoreFileKit提供的read/write接口和配件进行通信。 |

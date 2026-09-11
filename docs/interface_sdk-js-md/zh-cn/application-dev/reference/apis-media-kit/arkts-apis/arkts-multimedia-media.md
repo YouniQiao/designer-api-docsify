@@ -71,7 +71,7 @@ import { media } from '@kit.MediaKit';
 | [AVMetadata](arkts-media-media-avmetadata-i.md) | 音视频元数据，包含各个元数据字段。 |
 | [AVMetadataExtractor](arkts-media-media-avmetadataextractor-i.md) | 元数据获取类，用于从媒体资源中获取元数据、缩略图。在调用AVMetadataExtractor的方法前，需要先通过[media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md)构建一个AVMetadataExtractor实例。 |
 | [AVMetricsEvent](arkts-media-media-avmetricsevent-i.md) | 描述一个指标事件的信息。 |
-| [AVPlayer](arkts-media-media-avplayer-i.md) | 播放管理类，用于管理和播放媒体资源。在调用AVPlayer的方法前，需要先通过[createAVPlayer()](arkts-media-media-createavplayer-f.md)构建一个AVPlayer实例。 |
+| [AVPlayer](arkts-media-media-avplayer-i.md) | 播放管理类，用于管理和播放媒体资源。支持音视频播放、播放控制（播放、暂停、停止、跳转、倍速等）、状态管理和事件监听。在调用AVPlayer的方法前，需要先通过[createAVPlayer()](arkts-media-media-createavplayer-f.md)构建一个AVPlayer实例。 |
 | [AVRecorder](arkts-media-media-avrecorder-i.md) | AVRecorder是音视频录制管理类，用于音视频录制的全流程管理，支持音频录制、视频录制及音视频混合录制，可灵活配置编码参数、添加水印、设置元数据、监听录制状态和错误事件等。适用于录制音视频并保存到文件的场景，包括需要在音频流打断期间保持录制连续性、实时监控音频振幅等场景。在调用AVRecorder的方法前，需要先调用[createAVRecorder](arkts-media-media-createavrecorder-f.md)接口构建一个AVRecorder实例。典型录制流程：[createAVRecorder](arkts-media-media-createavrecorder-f.md) → [prepare](arkts-media-media-avrecorder-i.md#prepare) → [getInputSurface](arkts-media-media-avrecorder-i.md#getinputsurface)（纯视频/音视频录制时） → [start](arkts-media-media-avrecorder-i.md#start) → [pause](arkts-media-media-avrecorder-i.md#pause)/[resume](arkts-media-media-avrecorder-i.md#resume) → [stop](arkts-media-media-avrecorder-i.md#stop) → [release](arkts-media-media-avrecorder-i.md#release)。 |
 | [AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md) | 表示音视频录制的参数设置。通过audioSourceType和videoSourceType区分纯音频录制、纯视频录制或音视频录制。纯音频录制时，仅需要设置audioSourceType；纯视频录制时，仅需要设置videoSourceType；音视频录制时，audioSourceType和videoSourceType均需要设置。 |
 | [AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md) | 音视频录制配置参数。 |
@@ -91,8 +91,8 @@ import { media } from '@kit.MediaKit';
 | [MediaStream](arkts-media-media-mediastream-i.md) | 媒体流。AVPlayer用来访问媒体数据，目前只支持直播流。 |
 | [OutputSize](arkts-media-media-outputsize-i.md) | 用于获取视频缩略图时，来定义输出图像大小。 |
 | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | 获取视频缩略图时，输出缩略图的格式参数。 |
-| [PlaybackInfo](arkts-media-media-playbackinfo-i.md) | Provides player statistic info. |
-| [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md) | 播放器首选播放设置。 |
+| [PlaybackInfo](arkts-media-media-playbackinfo-i.md) | 提供播放统计数据信息。 |
+| [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md) | 播放策略，播放器首选播放设置。 |
 | [Range](arkts-media-media-range-i.md) | 包含上下限的范围。 |
 | [SeiMessage](arkts-media-media-seimessage-i.md) | 描述 SEI 消息的信息。 |
 | [SubtitleInfo](arkts-media-media-subtitleinfo-i.md) | 提供字幕信息。当订阅了字幕更新事件时，关于外部字幕的信息会通过回调返回。可以同步到AVPlayer#timeUpdate事件报告的时间 |
@@ -108,13 +108,13 @@ import { media } from '@kit.MediaKit';
 | --- | --- |
 | [AVMetadata](arkts-media-media-avmetadata-i-sys.md) | 音视频元数据，包含各个元数据字段。 |
 | [AVMetadataExtractor](arkts-media-media-avmetadataextractor-i-sys.md) | 元数据获取类，用于从媒体资源中获取元数据、缩略图。在调用AVMetadataExtractor的方法前，需要先通过[media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md)构建一个AVMetadataExtractor实例。 |
-| [AVPlayer](arkts-media-media-avplayer-i-sys.md) | 播放管理类，用于管理和播放媒体资源。在调用AVPlayer的方法前，需要先通过[createAVPlayer()](arkts-media-media-createavplayer-f.md)构建一个AVPlayer实例。 |
+| [AVPlayer](arkts-media-media-avplayer-i-sys.md) | 播放管理类，用于管理和播放媒体资源。支持音视频播放、播放控制（播放、暂停、停止、跳转、倍速等）、状态管理和事件监听。在调用AVPlayer的方法前，需要先通过[createAVPlayer()](arkts-media-media-createavplayer-f.md)构建一个AVPlayer实例。 |
 | [AVRecorder](arkts-media-media-avrecorder-i-sys.md) | AVRecorder是音视频录制管理类，用于音视频录制的全流程管理，支持音频录制、视频录制及音视频混合录制，可灵活配置编码参数、添加水印、设置元数据、监听录制状态和错误事件等。适用于录制音视频并保存到文件的场景，包括需要在音频流打断期间保持录制连续性、实时监控音频振幅等场景。在调用AVRecorder的方法前，需要先调用[createAVRecorder](arkts-media-media-createavrecorder-f.md)接口构建一个AVRecorder实例。典型录制流程：[createAVRecorder](arkts-media-media-createavrecorder-f.md) → [prepare](arkts-media-media-avrecorder-i.md#prepare) → [getInputSurface](arkts-media-media-avrecorder-i.md#getinputsurface)（纯视频/音视频录制时） → [start](arkts-media-media-avrecorder-i.md#start) → [pause](arkts-media-media-avrecorder-i.md#pause)/[resume](arkts-media-media-avrecorder-i.md#resume) → [stop](arkts-media-media-avrecorder-i.md#stop) → [release](arkts-media-media-avrecorder-i.md#release)。 |
 | [AVRecorderConfig](arkts-media-media-avrecorderconfig-i-sys.md) | 表示音视频录制的参数设置。通过audioSourceType和videoSourceType区分纯音频录制、纯视频录制或音视频录制。纯音频录制时，仅需要设置audioSourceType；纯视频录制时，仅需要设置videoSourceType；音视频录制时，audioSourceType和videoSourceType均需要设置。 |
 | [AVRecorderProfile](arkts-media-media-avrecorderprofile-i-sys.md) | 音视频录制配置参数。 |
 | [AVScreenCaptureStrategy](arkts-media-media-avscreencapturestrategy-i-sys.md) | 录屏策略。 |
 | [PixelMapParams](arkts-media-media-pixelmapparams-i-sys.md) | 获取视频缩略图时，输出缩略图的格式参数。 |
-| [PlaybackStrategy](arkts-media-media-playbackstrategy-i-sys.md) | 播放器首选播放设置。 |
+| [PlaybackStrategy](arkts-media-media-playbackstrategy-i-sys.md) | 播放策略，播放器首选播放设置。 |
 | [ScreenCaptureMonitor](arkts-media-media-screencapturemonitor-i-sys.md) | 录屏状态监控类，用于查询和监听系统录屏的录屏状态。在调用ScreenCaptureMonitor方法前，需要先通过[getScreenCaptureMonitor()](arkts-media-media-getscreencapturemonitor-f-sys.md)构建一个[ScreenCaptureMonitor](arkts-media-media-screencapturemonitor-i-sys.md)实例。 |
 | [VideoRecorder](arkts-media-media-videorecorder-i-sys.md) |  |
 | [VideoRecorderConfig](arkts-media-media-videorecorderconfig-i-sys.md) | 表示视频录制的参数设置。 |

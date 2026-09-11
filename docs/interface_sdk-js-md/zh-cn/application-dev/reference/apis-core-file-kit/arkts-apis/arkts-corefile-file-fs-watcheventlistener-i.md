@@ -1,6 +1,6 @@
 # WatchEventListener
 
-事件监听类，当监听的文件或目录发生变动事件时触发回调。
+事件监听接口，当监听的文件或目录发生变动事件时触发回调。
 
 **起始版本：** 10
 
@@ -28,4 +28,4 @@ import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResul
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [WatchEvent](arkts-corefile-file-fs-watchevent-i.md) | 是 | 回调的事件类。 |
+| event | [WatchEvent](arkts-corefile-file-fs-watchevent-i.md) | 是 | 回调的事件接口。 |

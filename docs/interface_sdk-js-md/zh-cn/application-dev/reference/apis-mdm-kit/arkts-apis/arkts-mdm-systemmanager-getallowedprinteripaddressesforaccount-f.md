@@ -12,7 +12,7 @@ import { systemManager } from '@kit.MDMKit';
 function getAllowedPrinterIPAddressesForAccount(queryPolicy?: common.QueryPolicy): Array<string>
 ```
 
-Gets allowed printer IP addresses for current account.
+查询用户级打印机IP地址白名单
 
 **起始版本：** 26.1.0
 
@@ -26,13 +26,13 @@ Gets allowed printer IP addresses for current account.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| queryPolicy | [common.QueryPolicy](arkts-mdm-common-querypolicy-e.md) | 否 | queryPolicy indicates the policy of query. Default value: common.QueryPolicy.SELF. |
+| queryPolicy | [common.QueryPolicy](arkts-mdm-common-querypolicy-e.md) | 否 | 查询的策略。默认值: common.QueryPolicy.SELF。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | Returns the IP address list of printer. |
+| Array&lt;string&gt; | 打印机IP地址 |
 
 **错误码：**
 

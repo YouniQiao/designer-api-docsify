@@ -1,4 +1,4 @@
-# OpenMode
+# OpenMode(File Management)
 
 Mode Indicates the open flags.
 

@@ -6,22 +6,6 @@ Enumerates the bundle flags, which indicate the type of bundle information to ob
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-## GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY
-
-```TypeScript
-GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY = 0x00001000
-```
-
-Used to obtain the bundle information of the application that has only a home screen icon. It is valid only in the [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md) API.
-
-**System API**: This flag can be used only in system APIs.
-
-**Since:** 12
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
-**System API:** This is a system API.
-
 ## GET_BUNDLE_INFO_OF_ANY_USER
 
 ```TypeScript

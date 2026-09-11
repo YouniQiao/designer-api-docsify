@@ -46,7 +46,7 @@ constructor(path: string)
 delete(): void
 ```
 
-删除AtomicFile类，会删除原始文件和临时文件。
+删除AtomicFile对应的原始文件和临时文件。
 
 **起始版本：** 15
 

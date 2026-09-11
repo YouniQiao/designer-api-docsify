@@ -121,3 +121,31 @@ TOTAL_STALLING_TIME  = 'total_stalling_time'
 **起始版本：** 23
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+## LIP_ASYNC_COUNT
+
+```TypeScript
+LIP_ASYNC_COUNT  = 'lip_async_count'
+```
+
+累计唇部异步计数。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+## TOTAL_LIP_ASYNC_TIME
+
+```TypeScript
+TOTAL_LIP_ASYNC_TIME  = 'total_lip_async_time'
+```
+
+播放期间总唇部异步持续时间，单位为毫秒。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer

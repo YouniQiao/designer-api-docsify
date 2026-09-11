@@ -1,4 +1,4 @@
-# @ohos.measure(Text Measurement)
+# @ohos.measure(文本计算)
 
 The **measure** module provides APIs for measuring text metrics, such as text height and width.
  > **NOTE**

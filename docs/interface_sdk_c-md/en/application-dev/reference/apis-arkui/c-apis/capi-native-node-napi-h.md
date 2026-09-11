@@ -628,13 +628,13 @@ Enables or disables event passthrough. Event passthrough indicates that an event
 | Parameter | Description |
 | -- | -- |
 | ArkUI_ContextHandle uiContext | UIContext object used to bind the instance. |
-| bool enabled | Whether to enable event passthrough. true: enable ; false (default value): disable. |
+| bool enabled | Whether to enable event passthrough. <b>true</b>: enable; <b>false</b>: disable (default value). |
 | ArkUI_RawInputEventType type | Raw input event type {@link ArkUI_RawInputEventType} for enabling or disabling event passthrough. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code. \n          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful. \n          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the UIContext object is invalid. |
+| ArkUI_ErrorCode | Result code.      <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.      <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the UIContext object is invalid. |
 
 

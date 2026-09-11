@@ -1,4 +1,4 @@
-# @ohos.file.securityLabel(@ohos.file.securityLabel (数据标签))
+# @ohos.file.securityLabel(数据标签)
 
 该模块提供文件数据安全等级的相关功能：向应用程序提供查询、设置文件数据安全等级的ArkTS接口。该功能可以帮助应用实现对不同安全等级文件的分级管理和访问控制，解决数据安全管控的需求，提升应用的数据安全合规性。
 

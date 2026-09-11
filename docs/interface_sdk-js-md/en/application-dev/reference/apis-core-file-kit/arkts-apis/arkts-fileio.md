@@ -1,4 +1,4 @@
-# @ohos.fileio
+# @ohos.fileio(File Management)
 
 fileio
 

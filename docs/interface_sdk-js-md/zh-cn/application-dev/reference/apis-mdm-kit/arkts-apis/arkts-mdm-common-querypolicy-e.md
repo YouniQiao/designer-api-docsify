@@ -1,6 +1,6 @@
 # QueryPolicy
 
-The policy of query enterprise device management policy.
+查询企业设备管理策略
 
 **起始版本：** 26.1.0
 
@@ -12,7 +12,7 @@ The policy of query enterprise device management policy.
 SELF = 0
 ```
 
-Query the policy set by self.
+自己设置的策略。
 
 **起始版本：** 26.1.0
 
@@ -26,7 +26,7 @@ Query the policy set by self.
 ALL = 1
 ```
 
-Query the policy set by all administrators.
+所有管理员设置的策略。
 
 **起始版本：** 26.1.0
 

@@ -1,4 +1,4 @@
-# OpenMode(@ohos.file.fs (文件管理))
+# OpenMode(文件管理)
 
 open接口flags参数常量，用于指定文件打开模式（如只读、只写、读写、创建等）。
 

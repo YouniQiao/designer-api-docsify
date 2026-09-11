@@ -1,4 +1,4 @@
-# @ohos.statfs
+# @ohos.statfs(statfs)
 
 The **statfs** module provides APIs for obtaining file system information, including the total size and free size of a file system, in bytes.
 

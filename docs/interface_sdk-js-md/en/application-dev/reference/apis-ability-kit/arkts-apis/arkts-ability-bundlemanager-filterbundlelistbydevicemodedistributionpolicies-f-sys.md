@@ -24,7 +24,7 @@ Filters the bundle list by device mode distribution policies. This API uses a pr
 
 **Since:** 26.1.0
 
-**Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+**Required permissions:** ohos.permission.SWITCH_MULTI_MODE_BUNDLE
 
 **Model restriction:** This API can be used only in the stage model.
 

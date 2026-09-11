@@ -182,6 +182,18 @@ GET_BUNDLE_INFO_WITH_SKILL = 0x00000800
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
+## GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY
+
+```TypeScript
+GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY = 0x00001000
+```
+
+用于获取仅包含有桌面图标的应用的bundleInfo。
+
+**起始版本：** 26.2.0
+
+**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
+
 ## GET_BUNDLE_INFO_WITH_ENTRY_MODULE
 
 ```TypeScript
