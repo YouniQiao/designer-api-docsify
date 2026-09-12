@@ -34,6 +34,7 @@ import { distributedBundleManager } from '@kit.AbilityKit';
 | [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) | Obtains information about the remote abilities that match the given element names and locale. This API uses an asynchronous callback to return the result. |
 | [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) | Obtains information about the remote abilities that match the given element names and locale. This API uses a promise to return the result. |
 | [getRemoteBundleVersionCode](arkts-ability-distributedbundlemanager-getremotebundleversioncode-f-sys.md) | Obtains the version information of an app with a specified bundle name on a specified remote device. This API uses a promise to return the result. |
+| [getRemoteMetadata](arkts-ability-distributedbundlemanager-getremotemetadata-f-sys.md) | Obtains the metadata of an app with a specified bundle name on a specified remote device. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->

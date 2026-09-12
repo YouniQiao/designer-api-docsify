@@ -1,4 +1,4 @@
-# @ohos.application.DistributedExtensionContext(Distributed Extension Context)
+# @ohos.application.DistributedExtensionContext(分布式协同扩展能力实现)
 
 ## 导入模块
 

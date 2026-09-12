@@ -95,6 +95,7 @@ import { window } from '@kit.ArkUI';
 | [Size](arkts-arkui-window-size-i.md) | Describes the window size, in px. |
 | [SizeInVP](arkts-arkui-window-sizeinvp-i.md) | Describes the window size, in vp. |
 | [WindowInfo](arkts-arkui-window-windowinfo-i.md) | Describes the window information. |
+| [WindowFocusState](arkts-arkui-window-windowfocusstate-i.md) | Describes the focus state change information of the window. |
 | [WindowDensityInfo](arkts-arkui-window-windowdensityinfo-i.md) | Describes the information about the display density of the screen where the window is located and the window's custom display density. It is a scale factor independent of pixel units, that is, a factor for scaling display size. |
 | [WindowProperties](arkts-arkui-window-windowproperties-i.md) | Describes the window properties. |
 | [DecorButtonStyle](arkts-arkui-window-decorbuttonstyle-i.md) | Describes the button style of the system decoration bar. |
@@ -171,6 +172,7 @@ import { window } from '@kit.ArkUI';
 | [WindowTransitionType](arkts-arkui-window-windowtransitiontype-e.md) | Enumerates the types of window transition animations. |
 | [AnimationType](arkts-arkui-window-animationtype-e.md) | Enumerates the types of window animations. |
 | [WindowAnchor](arkts-arkui-window-windowanchor-e.md) | Enumerates the window anchor points. |
+| [FocusChangeReason](arkts-arkui-window-focuschangereason-e.md) | Enumerates the reasons for the window focus state change. |
 | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Enumerates the color spaces. |
 | [RectChangeReason](arkts-arkui-window-rectchangereason-e.md) | Enumerates the reasons for window rectangle (position and size) changes. |
 | [OcclusionState](arkts-arkui-window-occlusionstate-e.md) | Enumerates the window visibility states. |

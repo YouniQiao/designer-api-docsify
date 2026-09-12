@@ -19,8 +19,6 @@ leadingMargin?: Dimension | LeadingMarginPlaceholder
 
 Paragraph indentation. When a paragraph contains only ImageSpan or BuilderSpan, this attribute does not take effect. When the parameter is of the Dimension type, setting it in percentage form is not supported, and the default unit is vp. Default value: {"size":["0.00px","0.00px"]}
 
-**Atomic service API:** Since API version 12, this API is supported in atomic services.
-
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [LeadingMarginPlaceholder](arkts-arkui-leadingmarginplaceholder-i.md)
 
 **Since:** 11
@@ -67,8 +65,6 @@ Value range: [0, +∞). If a negative value is passed in, the default value is u
 
 The default paragraph spacing is 0.
 
-**Atomic service API:** Since API version 19, this API is supported in atomic services.
-
 **Type:** number
 
 **Since:** 19
@@ -90,8 +86,6 @@ Text shader effect.
 Default value: undefined, which means no shader effect is set.
 
 When this API is set together with strokeWidth in [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md), this API does not take effect, and shaderStyle has a higher priority than fontColor in [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md).
-
-**Atomic service API:** Since API version 26.0.0, this API is supported in atomic services.
 
 **Type:** [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md)
 
@@ -172,8 +166,6 @@ wordBreak?: WordBreak
 Line break rule.
 
 Default value: WordBreak.BREAK_WORD.
-
-**Atomic service API:** Since API version 12, this API is supported in atomic services.
 
 **Type:** [WordBreak](../arkts-apis/arkts-arkui-wordbreak-e.md)
 

@@ -19,8 +19,6 @@ layoutStyle?: RichEditorLayoutStyle
 
 Image layout style. Default value: {"borderRadius":"","margin":""}
 
-**Atomic service API:** Since API version 12, this API is supported in atomic services.
-
 **Type:** [RichEditorLayoutStyle](arkts-arkui-richeditorlayoutstyle-i.md)
 
 **Since:** 11
@@ -41,8 +39,6 @@ Image scaling type.
 
 Default value: ImageFit.Cover.
 
-**Atomic service API:** Since API version 11, this API is supported in atomic services.
-
 **Type:** [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md)
 
 **Since:** 10
@@ -61,8 +57,6 @@ resizable?: ResizableOptions
 
 Image resizing options.
 
-**Atomic service API:** Since API version 26.1.0, this API is supported in atomic services.
-
 **Type:** [ResizableOptions](arkts-arkui-resizableoptions-i.md)
 
 **Since:** 26.1.0
@@ -80,8 +74,6 @@ size?: [Dimension, Dimension]
 ```
 
 Width and height of the image, in vp by default. Default value: related to the value of objectFit. Different objectFit values have different default sizes. When objectFit is set to Cover, the image height is the component height minus the top and bottom padding of the component, and the image width is the component width minus the left and right padding of the component. Setting the size in percentage is not supported.
-
-**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** [Dimension, Dimension]
 
@@ -102,8 +94,6 @@ verticalAlign?: ImageSpanAlignment
 Vertical alignment mode of the image.
 
 Default value: ImageSpanAlignment.BOTTOM
-
-**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** [ImageSpanAlignment](../arkts-apis/arkts-arkui-imagespanalignment-e.md)
 

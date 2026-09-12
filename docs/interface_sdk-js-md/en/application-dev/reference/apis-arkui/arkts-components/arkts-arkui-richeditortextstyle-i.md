@@ -47,8 +47,6 @@ Text color.
 
 Default value: \$r('sys.color.font_primary'). When [shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md) is also set, shaderStyle takes precedence over fontColor.
 
-**Atomic service API:** Since API version 11, this API is supported in atomic services.
-
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 10
@@ -66,8 +64,6 @@ fontFamily?: ResourceStr
 ```
 
 Sets the font list. Currently, the 'HarmonyOS Sans' font and [registered custom fonts](../arkts-apis/arkts-font.md) are supported. Default font: 'HarmonyOS Sans'.
-
-**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -119,8 +115,6 @@ fontSize?: Length | number
 
 Sets the font size. When Length is of the number type, the unit fp is used. Value range of the number type: (0, +∞). If the value is set to 0 or a negative value, the default value is used. The default font size is 16fp. Percentage strings are not supported.
 
-**Atomic service API:** Since API version 11, this API is supported in atomic services.
-
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; number
 
 **Since:** 10
@@ -165,8 +159,6 @@ For the string type, only the string form of the number type value is supported,
 
 Default value: FontWeight.Normal.
 
-**Atomic service API:** Since API version 11, this API is supported in atomic services.
-
 **Type:** number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; string
 
 **Since:** 10
@@ -207,8 +199,6 @@ letterSpacing?: number | string
 
 Sets the character spacing of the text. The default unit is fp. Default value: 0. When the value is negative, the text is compressed.
 
-**Atomic service API:** Since API version 12, this API is supported in atomic services.
-
 **Type:** number &#124; string
 
 **Since:** 12
@@ -230,8 +220,6 @@ Sets the line height of the text.
 Default value: if not set, the line height adapts to the font size.
 
 Value range of the number type: (0, +∞). If the value is not greater than 0, the line height is not limited and adapts to the font size. For the number type, the unit is fp. Percentage strings are not supported. When the lineHeight value is smaller than the actual rendered height of the text at the current font size, the [fallbackLineSpacing](arkts-arkui-richeditor-comp-attribute.md#fallbacklinespacing) attribute takes effect.
-
-**Atomic service API:** Since API version 12, this API is supported in atomic services.
 
 **Type:** number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
@@ -275,8 +263,6 @@ Text stroke join style.
 
 Default value: StrokeJoinStyle.MITER_JOIN.
 
-**Atomic service API:** Since API version 26.0.0, this API is supported in atomic services.
-
 **Type:** [StrokeJoinStyle](../arkts-apis/arkts-arkui-strokejoinstyle-e.md)
 
 **Since:** 26.0.0
@@ -304,8 +290,6 @@ Unit: follows LengthMetrics when the type is LengthMetrics, and is vp when the t
 Value range: (-∞, +∞)
 
 When set together with [shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md), shaderStyle does not take effect.
-
-**Atomic service API:** Since API version 23, this API is supported in atomic services.
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) &#124; number
 
@@ -360,8 +344,6 @@ This API supports an array as the input parameter to implement multiple text sha
 **Note:**
 
 Only the shadow blur radius, color, and offset can be set. Smart color picking is not supported.
-
-**Atomic service API:** Since API version 12, this API is supported in atomic services.
 
 **Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) &#124; Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt;
 

@@ -227,8 +227,6 @@ Corner style of the text stroke.
 
 Default value: StrokeJoinStyle.MITER_JOIN.
 
-**Atomic service API:** Since API version 26.0.0, this API is supported in atomic services.
-
 **Type:** [StrokeJoinStyle](../arkts-apis/arkts-arkui-strokejoinstyle-e.md)
 
 **Since:** 26.0.0

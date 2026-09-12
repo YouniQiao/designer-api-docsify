@@ -37,8 +37,6 @@ offset?: number
 
 Position to add the builder. Value range: [0, total content length]. If omitted or if the value is less than 0 or greater than the total content length, it is added to the end of all content.
 
-**Atomic service API:** Since API version 12, this API is supported in atomic services.
-
 **Type:** number
 
 **Since:** 11

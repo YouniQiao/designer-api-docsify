@@ -24,7 +24,7 @@ function getPointerSpeedSync(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回鼠标移动速度，范围1-20。 |
+| number | 返回鼠标移动速度，范围[1, 20]。 |
 
 **错误码：**
 

@@ -57,8 +57,6 @@ Preview text content to be inserted.
 
 Default value: empty string.
 
-**Atomic service API:** Since API version 12, this API is supported in atomic services.
-
 **Type:** string
 
 **Since:** 12

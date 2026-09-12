@@ -34,6 +34,7 @@ import { distributedBundleManager } from '@kit.AbilityKit';
 | [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) | 获取由elementName和locale指定的远程设备上的应用的AbilityInfo数组信息。使用callback异步回调。 |
 | [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) | 获取由elementName和locale指定的远程设备上的应用的AbilityInfo数组信息。使用Promise异步回调。 |
 | [getRemoteBundleVersionCode](arkts-ability-distributedbundlemanager-getremotebundleversioncode-f-sys.md) | 获取指定远程设备上指定包名的应用版本信息。使用Promise异步回调。 |
+| [getRemoteMetadata](arkts-ability-distributedbundlemanager-getremotemetadata-f-sys.md) | 获取指定远程设备上指定包名的应用元数据信息。使用Promise异步回调。 |
 <!--DelEnd-->
 
 <!--Del-->

@@ -1330,6 +1330,7 @@
     <!--Del-->
     - [WindowCreateParams(system api)](arkts-arkui-window-windowcreateparams-i-sys.md)<!--DelEnd-->
     - [WindowDensityInfo](arkts-arkui-window-windowdensityinfo-i.md)
+    - [WindowFocusState](arkts-arkui-window-windowfocusstate-i.md)
     - [WindowInfo](arkts-arkui-window-windowinfo-i.md)
     - [WindowInfoOptions](arkts-arkui-window-windowinfooptions-i.md)
     - [WindowLayoutInfo](arkts-arkui-window-windowlayoutinfo-i.md)
@@ -1352,6 +1353,7 @@
     - [ColorSpace](arkts-arkui-window-colorspace-e.md)
     <!--Del-->
     - [ExtensionWindowAttribute(system api)](arkts-arkui-window-extensionwindowattribute-e-sys.md)<!--DelEnd-->
+    - [FocusChangeReason](arkts-arkui-window-focuschangereason-e.md)
     - [GlobalWindowMode](arkts-arkui-window-globalwindowmode-e.md)
     - [MaximizePresentation](arkts-arkui-window-maximizepresentation-e.md)
     - [ModalityType](arkts-arkui-window-modalitytype-e.md)

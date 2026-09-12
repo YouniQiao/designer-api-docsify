@@ -19,8 +19,6 @@ layoutStyle?: RichEditorLayoutStyle
 
 Image layout style.
 
-**Atomic service API:** Since API version 12, this API is supported in atomic services.
-
 **Type:** [RichEditorLayoutStyle](arkts-arkui-richeditorlayoutstyle-i.md)
 
 **Since:** 12
@@ -56,8 +54,6 @@ resizable?: ResizableOptions
 ```
 
 Image resizing options.
-
-**Atomic service API:** Since API version 26.1.0, this API is supported in atomic services.
 
 **Type:** [ResizableOptions](arkts-arkui-resizableoptions-i.md)
 

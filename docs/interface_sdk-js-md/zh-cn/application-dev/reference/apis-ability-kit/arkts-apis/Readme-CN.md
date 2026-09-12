@@ -1274,6 +1274,8 @@
   <!--Del-->
   - [getRemoteBundleVersionCode(系统接口)](arkts-ability-distributedbundlemanager-getremotebundleversioncode-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [getRemoteMetadata(系统接口)](arkts-ability-distributedbundlemanager-getremotemetadata-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [RemoteAbilityInfo(系统接口)](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)<!--DelEnd-->
 <!--Del-->
 - [@ohos.bundle.freeInstall](arkts-bundle-freeinstall.md)<!--DelEnd-->
@@ -1977,6 +1979,8 @@
     - [ParameterItem](arkts-ability-shortcutinfo-parameteritem-i.md)
     - [ShortcutInfo](arkts-ability-shortcutinfo-i.md)
     - [ShortcutWant](arkts-ability-shortcutinfo-shortcutwant-i.md)
+    <!--Del-->
+    - [ShortcutWant(系统接口)](arkts-ability-shortcutinfo-shortcutwant-i-sys.md)<!--DelEnd-->
   - [Skill](arkts-skill.md)
     - [Skill](arkts-ability-skill-i.md)
     - [SkillUri](arkts-ability-skill-skilluri-i.md)

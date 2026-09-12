@@ -39,8 +39,6 @@ Paragraph style.
 
 If omitted, the system default paragraph style is used.
 
-**Atomic service API:** Since API version 12, this API is supported in atomic services.
-
 **Type:** [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md)
 
 **Since:** 12
@@ -135,8 +133,6 @@ Default value: undefined.
 
 Pass this parameter when a hyperlink style needs to be set for the text.
 
-**Atomic service API:** Since API version 19, this API is supported in atomic services.
-
 **Type:** [RichEditorUrlStyle](arkts-arkui-richeditorurlstyle-i.md)
 
 **Since:** 19
@@ -174,8 +170,6 @@ valueResource?: Resource
 SymbolSpan resource content.
 
 Default value: undefined.
-
-**Atomic service API:** Since API version 12, this API is supported in atomic services.
 
 **Type:** [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 

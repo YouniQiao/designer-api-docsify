@@ -1345,6 +1345,8 @@
   <!--Del-->
   - [getRemoteBundleVersionCode(system api)](arkts-ability-distributedbundlemanager-getremotebundleversioncode-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [getRemoteMetadata(system api)](arkts-ability-distributedbundlemanager-getremotemetadata-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [RemoteAbilityInfo(system api)](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)<!--DelEnd-->
 <!--Del-->
 - [@ohos.bundle.freeInstall](arkts-bundle-freeinstall.md)<!--DelEnd-->
@@ -2074,6 +2076,8 @@
     - [ParameterItem](arkts-ability-shortcutinfo-parameteritem-i.md)
     - [ShortcutInfo](arkts-ability-shortcutinfo-i.md)
     - [ShortcutWant](arkts-ability-shortcutinfo-shortcutwant-i.md)
+    <!--Del-->
+    - [ShortcutWant(system api)](arkts-ability-shortcutinfo-shortcutwant-i-sys.md)<!--DelEnd-->
   - [Skill](arkts-skill.md)
     - [Skill](arkts-ability-skill-i.md)
     - [SkillUri](arkts-ability-skill-skilluri-i.md)

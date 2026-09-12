@@ -19,8 +19,6 @@ gesture?: RichEditorGesture
 
 Behavior trigger callback. Pass this parameter when the tap or long-press interaction behavior of a text span needs to be customized. If omitted, only the system default behavior is used.
 
-**Atomic service API:** Since API version 12, this API is supported in atomic services.
-
 **Type:** [RichEditorGesture](arkts-arkui-richeditorgesture-i.md)
 
 **Since:** 11
@@ -59,8 +57,6 @@ paragraphStyle?: RichEditorParagraphStyle
 
 Paragraph style. Pass this parameter when paragraph-level layout properties such as text alignment, indentation, and line breaking rules need to be set. If not passed, the system default paragraph style (left-aligned, no indentation, word-based line breaking) is used.
 
-**Atomic service API:** Since API version 12, this API is supported in atomic services.
-
 **Type:** [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md)
 
 **Since:** 11
@@ -78,8 +74,6 @@ style?: RichEditorTextStyle
 ```
 
 Text style information. Pass this parameter when custom styles such as text color, font size, and font weight need to be set. If omitted, the system default text information is used.
-
-**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)
 

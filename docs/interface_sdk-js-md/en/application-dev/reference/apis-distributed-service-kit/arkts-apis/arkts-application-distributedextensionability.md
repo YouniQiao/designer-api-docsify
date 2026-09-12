@@ -1,4 +1,4 @@
-# @ohos.application.DistributedExtensionAbility
+# @ohos.application.DistributedExtensionAbility(Distributed Extension Ability)
 
 ## Modules to Import
 

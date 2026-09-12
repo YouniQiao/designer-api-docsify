@@ -1,8 +1,8 @@
 # ArkTS API<!--arkts-distributedservicekit-->
 
-- [@ohos.application.DistributedExtensionAbility](arkts-application-distributedextensionability.md)
+- [@ohos.application.DistributedExtensionAbility(分布式协同扩展能力)](arkts-application-distributedextensionability.md)
   - [DistributedExtensionAbility](arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md)
-- [@ohos.application.DistributedExtensionContext(Distributed Extension Context)](arkts-application-distributedextensioncontext.md)
+- [@ohos.application.DistributedExtensionContext(分布式协同扩展能力实现)](arkts-application-distributedextensioncontext.md)
   - [DistributedExtensionContext](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md)
 <!--Del-->
 - [@ohos.cooperate](arkts-cooperate.md)<!--DelEnd-->
@@ -109,7 +109,7 @@
   - [DistributedHardwareErrorCode(系统接口)](arkts-distributedservice-hardwaremanager-distributedhardwareerrorcode-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DistributedHardwareType(系统接口)](arkts-distributedservice-hardwaremanager-distributedhardwaretype-e-sys.md)<!--DelEnd-->
-- [@ohos.distributedsched.abilityConnectionManager](arkts-distributedsched-abilityconnectionmanager.md)
+- [@ohos.distributedsched.abilityConnectionManager(应用协同接口管理)](arkts-distributedsched-abilityconnectionmanager.md)
   - [acceptConnect](arkts-distributedservice-abilityconnectionmanager-acceptconnect-f.md)
   - [connect](arkts-distributedservice-abilityconnectionmanager-connect-f.md)
   - [createAbilityConnectionSession](arkts-distributedservice-abilityconnectionmanager-createabilityconnectionsession-f.md)

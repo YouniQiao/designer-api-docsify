@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-distributedservicekit-->
 
-- [@ohos.application.DistributedExtensionAbility](arkts-application-distributedextensionability.md)
+- [@ohos.application.DistributedExtensionAbility(Distributed Extension Ability)](arkts-application-distributedextensionability.md)
   - [DistributedExtensionAbility](arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md)
 - [@ohos.application.DistributedExtensionContext(Distributed Extension Context)](arkts-application-distributedextensioncontext.md)
   - [DistributedExtensionContext](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md)
@@ -109,7 +109,7 @@
   - [DistributedHardwareErrorCode(system api)](arkts-distributedservice-hardwaremanager-distributedhardwareerrorcode-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DistributedHardwareType(system api)](arkts-distributedservice-hardwaremanager-distributedhardwaretype-e-sys.md)<!--DelEnd-->
-- [@ohos.distributedsched.abilityConnectionManager](arkts-distributedsched-abilityconnectionmanager.md)
+- [@ohos.distributedsched.abilityConnectionManager(Ability Connection Manager)](arkts-distributedsched-abilityconnectionmanager.md)
   - [acceptConnect](arkts-distributedservice-abilityconnectionmanager-acceptconnect-f.md)
   - [connect](arkts-distributedservice-abilityconnectionmanager-connect-f.md)
   - [createAbilityConnectionSession](arkts-distributedservice-abilityconnectionmanager-createabilityconnectionsession-f.md)
