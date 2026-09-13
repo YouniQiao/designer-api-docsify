@@ -390,7 +390,7 @@ label字段的功能类似于id，可以单独使用，也可与id结合共同�
 largeIcon?: image.PixelMap
 ```
 
-通知大图标，默认为空。图标像素的总字节数不超过192KB（图标像素的总字节数通过[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取），超出后设置不生效。未设置`largeIcon`时，通知将不展示大图标。建议图标像素长宽为128*128。实际显示效果依赖于设备能力和通知中心UI样式。
+通知右侧图标，默认为空。当`content`使用[NotificationPictureContent](arkts-notification-notificationcontent-notificationpicturecontent-i.md)时，该参数设置不生效。图标像素的总字节数不超过192KB（图标像素的总字节数通过[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取），超出后设置不生效。实际显示效果依赖于设备能力和通知中心UI样式<!--RP1--><!--RP1End-->。
 
 **类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
@@ -434,9 +434,7 @@ notificationSlotType?: notificationManager.SlotType
 overlayIcon?: image.PixelMap
 ```
 
-通知重叠图标，默认为空。图标像素的总字节数不超过192KB（图标像素的总字节数通过[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取），超出后设置不生效。未设置`overlayIcon`时，通知将不展示重叠图标。
-
-此接口只在[notificationSlotType](arkts-notification-notificationrequest-notificationrequest-i.md)类型设置为SOCIAL_COMMUNICATION时生效。建议图标像素长宽为128*128。实际显示效果依赖于设备能力和通知中心UI样式。
+通知重叠图标，替换通知左侧图标，默认为空。此接口只在[notificationSlotType](arkts-notification-notificationrequest-notificationrequest-i.md)类型设置为SOCIAL_COMMUNICATION时生效。图标像素的总字节数不超过192KB（图标像素的总字节数通过[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取），超出后设置不生效。建议图标像素长宽为128*128。实际显示效果依赖于设备能力和通知中心UI样式<!--RP3--><!--RP3End-->。
 
 **类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
@@ -514,7 +512,7 @@ slotType?: notification.SlotType
 smallIcon?: image.PixelMap
 ```
 
-通知小图标，默认为空。图标像素的总字节数不超过192KB（图标像素的总字节数通过[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取），超出后设置不生效。未设置`smallIcon`时，通知将展示应用默认图标。建议图标像素长宽为128*128。实际显示效果依赖于设备能力和通知中心UI样式。
+通知左侧图标，默认为空。系统自动生成，无需开发者配置。图标像素的总字节数不超过192KB（图标像素的总字节数通过[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取），超出后设置不生效。建议图标像素长宽为128*128。实际显示效果依赖于设备能力和通知中心UI样式<!--RP4--><!--RP4End-->。
 
 **类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 

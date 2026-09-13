@@ -14,7 +14,7 @@ Describes the picture-attached notification. This API is inherited from Notifica
 > - When a user taps a group notification to view the notification details, the display effect of this
 > notification changes to the expanded state.
 > 
-> - The actual display effect depends on the device capabilities and the notification center UI style.
+> - The actual display effect depends on the device capabilities and the notification center UI style<!--RP1--><!--RP1End-->.
 
 **Inheritance/Implementation:** NotificationPictureContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
@@ -56,7 +56,7 @@ Title when the notification is expanded. It cannot be an empty string. The size 
 picture: image.PixelMap
 ```
 
-Picture content displayed after the notification is expanded. The total bytes of the image pixels (obtained through getPixelBytesNumber) cannot exceed 2 MB.
+Right icon displayed after notification expansion. The total bytes of the image pixels (obtained through getPixelBytesNumber) cannot exceed 2 MB.
 
 **Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
