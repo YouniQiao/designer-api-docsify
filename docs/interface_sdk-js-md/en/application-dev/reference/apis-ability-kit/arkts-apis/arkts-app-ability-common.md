@@ -1,4 +1,4 @@
-# @ohos.app.ability.common
+# @ohos.app.ability.common(Ability Common Module)
 
 You can use this module to reference the ability public module class.
 

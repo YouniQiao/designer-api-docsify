@@ -1,4 +1,4 @@
-# @ohos.ability.wantConstant
+# @ohos.ability.wantConstant(wantConstant)
 
 The module provides the actions, entities, and flags used in Want objects.
 

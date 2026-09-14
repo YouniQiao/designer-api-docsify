@@ -1,4 +1,4 @@
-# @ohos.app.ability.EnvironmentCallback
+# @ohos.app.ability.EnvironmentCallback(System Environment Change Listener)
 
 ## Modules to Import
 

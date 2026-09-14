@@ -1,4 +1,4 @@
-# @ohos.app.ability.insightIntent
+# @ohos.app.ability.insightIntent(意图框架基础定义)
 
 本模块提供[意图框架](../../../application-models/insight-intent-overview.md)基础定义。
 

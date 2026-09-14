@@ -1,4 +1,4 @@
-# triggerInfo
+# triggerInfo(TriggerInfo)
 
 ## 汇总
 

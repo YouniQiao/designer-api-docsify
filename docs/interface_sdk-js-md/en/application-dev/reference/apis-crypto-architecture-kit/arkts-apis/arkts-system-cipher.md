@@ -1,4 +1,4 @@
-# @system.cipher
+# @system.cipher(Cipher Algorithm)
 
 ## Modules to Import
 

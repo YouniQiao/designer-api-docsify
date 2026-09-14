@@ -1,4 +1,4 @@
-# @ohos.application.Want
+# @ohos.application.Want(Want)
 
 ## Modules to Import
 

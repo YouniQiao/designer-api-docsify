@@ -1,4 +1,4 @@
-# @ohos.app.ability.InsightIntentExecutor
+# @ohos.app.ability.InsightIntentExecutor(Base Class for Intent Execution)
 
 ## Modules to Import
 

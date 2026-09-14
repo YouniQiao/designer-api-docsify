@@ -1,4 +1,4 @@
-# @ohos.security.cryptoFramework
+# @ohos.security.cryptoFramework(加解密算法库框架)
 
 提供统一的密码算法库加解密接口，以屏蔽底层硬件和算法库。
 

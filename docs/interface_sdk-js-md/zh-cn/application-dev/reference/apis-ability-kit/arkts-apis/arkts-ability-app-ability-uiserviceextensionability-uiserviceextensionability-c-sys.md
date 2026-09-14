@@ -57,7 +57,7 @@ class UIServiceExt extends UIServiceExtensionAbility {
 onCreate(want: Want): void
 ```
 
-[UIServiceExtensionContext](../../apis-default/arkts-apis/arkts-uiserviceextensioncontext-c-sys.md)生命周期创建接口，执行初始化业务逻辑操作。
+[UIServiceExtensionContext](arkts-ability-uiserviceextensioncontext-c-sys.md)生命周期创建接口，执行初始化业务逻辑操作。
 
 **起始版本：** 14
 
@@ -297,7 +297,7 @@ context: UIServiceExtensionContext
 
 UIServiceExtension的上下文环境，继承自[ExtensionContext](arkts-ability-app-ability-extensionability-extensionability-c.md)。
 
-**类型：** [UIServiceExtensionContext](../../apis-default/arkts-apis/arkts-uiserviceextensioncontext-c-sys.md)
+**类型：** [UIServiceExtensionContext](arkts-ability-uiserviceextensioncontext-c-sys.md)
 
 **起始版本：** 14
 

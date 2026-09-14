@@ -1,4 +1,4 @@
-# @ohos.app.ability.UIExtensionContentSession
+# @ohos.app.ability.UIExtensionContentSession(UI Operation Class with UI Extension Capability)
 
 UIExtensionContentSession is the UI operation class for the
  [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md). It provides control over page

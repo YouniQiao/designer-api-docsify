@@ -1,4 +1,4 @@
-# @ohos.app.ability.EmbeddedUIExtensionAbility
+# @ohos.app.ability.EmbeddedUIExtensionAbility(ExtensionAbility for Cross-Process UI Embedding)
 
 ## Modules to Import
 

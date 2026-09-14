@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-devicecertificatekit-->
 
-- [@ohos.security.cert](arkts-security-cert.md)
+- [@ohos.security.cert(证书算法库框架)](arkts-security-cert.md)
   - [buildX509CertChain](arkts-devicecertificate-cert-buildx509certchain-f.md)
   - [createCertChainValidator](arkts-devicecertificate-cert-createcertchainvalidator-f.md)
   - [createCertCRLCollection](arkts-devicecertificate-cert-createcertcrlcollection-f.md)

@@ -1,4 +1,4 @@
-# @ohos.app.ability.ActionExtensionAbility
+# @ohos.app.ability.ActionExtensionAbility(ExtensionAbility for Custom Actions)
 
 ## Modules to Import
 

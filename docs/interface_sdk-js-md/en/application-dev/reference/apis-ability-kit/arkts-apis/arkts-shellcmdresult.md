@@ -1,4 +1,4 @@
-# shellCmdResult
+# shellCmdResult(ShellCmdResult)
 
 ## Summary
 

@@ -190,3 +190,19 @@ MODE_NEARLINK = 14
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+
+## MODE_USB_CONNECTION
+
+```TypeScript
+MODE_USB_CONNECTION = 16
+```
+
+USB业务。
+
+使用场景举例：通过USB设备进行音频播放。
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

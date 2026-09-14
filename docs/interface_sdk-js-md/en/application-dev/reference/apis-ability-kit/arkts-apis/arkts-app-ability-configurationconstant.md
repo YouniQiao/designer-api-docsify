@@ -1,4 +1,4 @@
-# @ohos.app.ability.ConfigurationConstant
+# @ohos.app.ability.ConfigurationConstant(Constants Related to Environment Variables)
 
 The ConfigurationConstant module provides preset enumerated values related to [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) operations.
 

@@ -1,4 +1,4 @@
-# @ohos.app.ability.ConfigurationConstant
+# @ohos.app.ability.ConfigurationConstant(环境变量相关的常量定义)
 
 ConfigurationConstant模块提供了[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)操作相关的系统预置枚举。
 

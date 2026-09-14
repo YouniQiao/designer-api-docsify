@@ -1,4 +1,4 @@
-# @ohos.app.ability.InsightIntentDecorator
+# @ohos.app.ability.InsightIntentDecorator(意图装饰器定义)
 
 ## 导入模块
 

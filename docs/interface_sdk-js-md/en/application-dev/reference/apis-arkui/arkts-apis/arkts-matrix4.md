@@ -1,4 +1,4 @@
-# @ohos.matrix4
+# @ohos.matrix4(Matrix Transformation)
 
 Provides matrix transformation capabilities for components, including translation, rotation, and scaling. For details, see Transformation.
 

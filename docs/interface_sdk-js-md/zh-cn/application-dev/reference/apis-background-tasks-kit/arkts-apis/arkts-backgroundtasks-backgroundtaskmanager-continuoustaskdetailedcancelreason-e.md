@@ -161,3 +161,17 @@ SYSTEM_CANCEL_USER_UNAUTHORIZED = 14
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+
+## SYSTEM_CANCEL_NOT_USE_USB
+
+```TypeScript
+SYSTEM_CANCEL_NOT_USE_USB = 16
+```
+
+申请USB类型长时任务，但是未检测到USB设备。
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

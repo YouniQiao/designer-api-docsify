@@ -1,4 +1,4 @@
-# @ohos.app.ability.EmbeddableUIAbility
+# @ohos.app.ability.EmbeddableUIAbility(可嵌入式UIAbility组件)
 
 ## 导入模块
 

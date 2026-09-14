@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-testkit-->
 
-- [@ohos.app.ability.abilityDelegatorRegistry](arkts-app-ability-abilitydelegatorregistry.md)
+- [@ohos.app.ability.abilityDelegatorRegistry(AbilityDelegatorRegistry)](arkts-app-ability-abilitydelegatorregistry.md)
   - [getAbilityDelegator](arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md)
   - [getArguments](arkts-test-abilitydelegatorregistry-getarguments-f.md)
   - [AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md)
@@ -10,7 +10,7 @@
   - [InteropAbilityMonitor](arkts-test-abilitydelegatorregistry-interopabilitymonitor-t.md)
   - [ShellCmdResult](arkts-test-abilitydelegatorregistry-shellcmdresult-t.md)
   - [AbilityLifecycleState](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md)
-- [@ohos.application.abilityDelegatorRegistry](arkts-application-abilitydelegatorregistry.md)
+- [@ohos.application.abilityDelegatorRegistry(AbilityDelegatorRegistry)](arkts-application-abilitydelegatorregistry.md)
   - [getAbilityDelegator](arkts-test-abilitydelegatorregistry-getabilitydelegator-depr-f.md)
   - [getArguments](arkts-test-abilitydelegatorregistry-getarguments-depr-f.md)
   - [AbilityLifecycleState](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-depr-e.md)

@@ -1,4 +1,4 @@
-# @ohos.application.Configuration
+# @ohos.application.Configuration(Configuration)
 
 ## Modules to Import
 

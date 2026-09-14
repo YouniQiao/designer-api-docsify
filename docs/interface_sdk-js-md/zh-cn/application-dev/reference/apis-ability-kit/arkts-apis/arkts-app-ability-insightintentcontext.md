@@ -1,4 +1,4 @@
-# @ohos.app.ability.InsightIntentContext
+# @ohos.app.ability.InsightIntentContext(意图执行上下文)
 
 ## 导入模块
 

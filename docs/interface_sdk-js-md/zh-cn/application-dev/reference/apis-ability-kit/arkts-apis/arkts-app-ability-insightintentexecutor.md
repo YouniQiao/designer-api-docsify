@@ -1,4 +1,4 @@
-# @ohos.app.ability.InsightIntentExecutor
+# @ohos.app.ability.InsightIntentExecutor(意图执行基类)
 
 ## 导入模块
 

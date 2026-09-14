@@ -1,4 +1,4 @@
-# @ohos.application.Want
+# @ohos.application.Want(Want)
 
 ## 导入模块
 

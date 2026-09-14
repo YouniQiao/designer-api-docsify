@@ -1,4 +1,4 @@
-# @ohos.app.ability.AbilityLifecycleCallback
+# @ohos.app.ability.AbilityLifecycleCallback(UIAbility Lifecycle Callback Listener)
 
 The lifecycle of a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) dynamically changes from creation to
  destruction.

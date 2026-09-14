@@ -1,4 +1,4 @@
-# @ohos.app.ability.ShareExtensionAbility
+# @ohos.app.ability.ShareExtensionAbility(ExtensionAbility for Share Detail Page Integration)
 
 ## Modules to Import
 

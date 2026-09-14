@@ -1,4 +1,4 @@
-# @ohos.app.ability.ShareExtensionAbility
+# @ohos.app.ability.ShareExtensionAbility(支持分享详情页接入的ExtensionAbility组件)
 
 ## 导入模块
 

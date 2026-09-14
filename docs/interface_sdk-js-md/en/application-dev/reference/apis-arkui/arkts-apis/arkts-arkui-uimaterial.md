@@ -1,4 +1,4 @@
-# @ohos.arkui.uiMaterial
+# @ohos.arkui.uiMaterial(System Material)
 
 This module provides APIs for system materials. Different system materials correspond to different UI effects, including the background color (backgroundColor), border color (borderColor), border width (borderWidth), and shadow (shadow).
 

@@ -1,4 +1,4 @@
-# @ohos.app.ability.Configuration
+# @ohos.app.ability.Configuration(环境变量)
 
 ## 导入模块
 

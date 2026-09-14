@@ -67,8 +67,8 @@ function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 | [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
-| 2303601 | Invalid socket FD. |
-| 2303602 | Socket is not connected. |
+| [2303601](../errorcode-net-socket.md#2303601-socket文件描述符无效) | Invalid socket FD. |
+| [2303602](../errorcode-net-socket.md#2303602-套接字未连接) | Socket is not connected. |
 
 **示例**
 

@@ -1,10 +1,12 @@
-# SheetTitleBarBackgroundBlurOptions
+# SheetTitleBarBackgroundBlurOptions (System API)
 
 Custom options for title bar background blur. All sub-properties are optional; unset properties use system default values.
 
 **Since:** 26.1.0
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -25,9 +27,9 @@ Blur style. Set to GRADIENT to enable gradient blur effect. Default value: **She
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
 
 ## effectiveDistance
 
@@ -43,9 +45,9 @@ Sliding distance required for the blur effect to transition from fully hidden to
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
 
 ## maskColor
 
@@ -61,9 +63,9 @@ Base color of the gradient mask. This color serves as the maximum color at the t
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
 
 ## maskExtraHeight
 
@@ -79,6 +81,6 @@ Extra height of the gradient mask. Additional mask coverage height beyond the ti
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.

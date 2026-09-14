@@ -1,4 +1,4 @@
-# wantAgentInfo
+# wantAgentInfo(WantAgentInfo)
 
 The module defines the information required for triggering the WantAgent.
 

@@ -1,4 +1,4 @@
-# @ohos.app.ability.Configuration
+# @ohos.app.ability.Configuration(Environment Variables)
 
 ## Modules to Import
 

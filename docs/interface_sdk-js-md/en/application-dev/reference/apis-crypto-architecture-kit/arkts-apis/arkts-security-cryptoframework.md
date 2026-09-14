@@ -1,4 +1,4 @@
-# @ohos.security.cryptoFramework
+# @ohos.security.cryptoFramework(Crypto Framework)
 
 The **cryptoFramework** module provides APIs for cryptographic operations, shielding the underlying hardware and algorithm library.
 

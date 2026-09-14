@@ -47,9 +47,9 @@ addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| 2301022 | Invalid argument. |
-| 2301088 | Not a socket. |
-| 2301098 | Address in use. |
+| [2301022](../errorcode-net-socket.md#2301022-参数无效) | Invalid argument. |
+| [2301088](../errorcode-net-socket.md#2301088-非套接字的套接字操作) | Not a socket. |
+| [2301098](../errorcode-net-socket.md#2301098-网络地址已被使用) | Address in use. |
 
 **示例**
 
@@ -108,8 +108,8 @@ addMembership(multicastAddress: NetAddress): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| 2301088 | Not a socket. |
-| 2301098 | Address in use. |
+| [2301088](../errorcode-net-socket.md#2301088-非套接字的套接字操作) | Not a socket. |
+| [2301098](../errorcode-net-socket.md#2301098-网络地址已被使用) | Address in use. |
 
 **示例**
 
@@ -163,8 +163,8 @@ dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): voi
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| 2301088 | Not a socket. |
-| 2301098 | Address in use. |
+| [2301088](../errorcode-net-socket.md#2301088-非套接字的套接字操作) | Not a socket. |
+| [2301098](../errorcode-net-socket.md#2301098-网络地址已被使用) | Address in use. |
 
 **示例**
 
@@ -225,8 +225,8 @@ dropMembership(multicastAddress: NetAddress): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| 2301088 | Not a socket. |
-| 2301098 | Address in use. |
+| [2301088](../errorcode-net-socket.md#2301088-非套接字的套接字操作) | Not a socket. |
+| [2301098](../errorcode-net-socket.md#2301098-网络地址已被使用) | Address in use. |
 
 **示例**
 
@@ -278,7 +278,7 @@ getLoopbackMode(callback: AsyncCallback<boolean>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| 2301088 | Not a socket. |
+| [2301088](../errorcode-net-socket.md#2301088-非套接字的套接字操作) | Not a socket. |
 
 **示例**
 
@@ -328,7 +328,7 @@ getLoopbackMode(): Promise<boolean>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| 2301088 | Not a socket. |
+| [2301088](../errorcode-net-socket.md#2301088-非套接字的套接字操作) | Not a socket. |
 
 **示例**
 
@@ -378,7 +378,7 @@ getMulticastTTL(callback: AsyncCallback<number>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| 2301088 | Not a socket. |
+| [2301088](../errorcode-net-socket.md#2301088-非套接字的套接字操作) | Not a socket. |
 
 **示例**
 
@@ -430,7 +430,7 @@ getMulticastTTL(): Promise<number>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| 2301088 | Not a socket. |
+| [2301088](../errorcode-net-socket.md#2301088-非套接字的套接字操作) | Not a socket. |
 
 **示例**
 
@@ -540,7 +540,7 @@ setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| 2301088 | Not a socket. |
+| [2301088](../errorcode-net-socket.md#2301088-非套接字的套接字操作) | Not a socket. |
 
 **示例**
 
@@ -596,7 +596,7 @@ setLoopbackMode(flag: boolean): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| 2301088 | Not a socket. |
+| [2301088](../errorcode-net-socket.md#2301088-非套接字的套接字操作) | Not a socket. |
 
 **示例**
 
@@ -647,8 +647,8 @@ setMulticastTTL(ttl: number, callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| 2301022 | Invalid argument. |
-| 2301088 | Not a socket. |
+| [2301022](../errorcode-net-socket.md#2301022-参数无效) | Invalid argument. |
+| [2301088](../errorcode-net-socket.md#2301088-非套接字的套接字操作) | Not a socket. |
 
 **示例**
 
@@ -707,8 +707,8 @@ setMulticastTTL(ttl: number): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| 2301022 | Invalid argument. |
-| 2301088 | Not a socket. |
+| [2301022](../errorcode-net-socket.md#2301022-参数无效) | Invalid argument. |
+| [2301088](../errorcode-net-socket.md#2301088-非套接字的套接字操作) | Not a socket. |
 
 **示例**
 

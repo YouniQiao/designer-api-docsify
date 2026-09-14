@@ -12,4 +12,4 @@ AVCapability模块提供用于编解码能力查询的函数。
 
 | 名称 | 描述 |
 | -- | -- |
-| [native_avcapability.h](capi-native-avcapability-h.md) | 声明用于编解码能力查询到的Native API。 |
+| [native_avcapability.h](capi-native-avcapability-h.md) | 声明用于编解码能力查询的Native API。 |

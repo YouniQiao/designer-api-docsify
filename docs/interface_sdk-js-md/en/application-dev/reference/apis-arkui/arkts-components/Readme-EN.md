@@ -314,7 +314,8 @@
   - [SheetOptions](arkts-arkui-sheetoptions-i.md)
   <!--Del-->
   - [SheetOptions(system api)](arkts-arkui-sheetoptions-i-sys.md)<!--DelEnd-->
-  - [SheetTitleBarBackgroundBlurOptions](arkts-arkui-sheettitlebarbackgroundbluroptions-i.md)
+  <!--Del-->
+  - [SheetTitleBarBackgroundBlurOptions(system api)](arkts-arkui-sheettitlebarbackgroundbluroptions-i-sys.md)<!--DelEnd-->
   - [SheetTitleOptions](arkts-arkui-sheettitleoptions-i.md)
   - [SizeResult](arkts-arkui-sizeresult-i.md)
   - [SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md)

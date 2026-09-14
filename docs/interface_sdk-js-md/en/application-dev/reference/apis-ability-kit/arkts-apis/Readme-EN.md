@@ -57,7 +57,7 @@
   - [DataType](arkts-ability-screenlockfilemanager-datatype-e.md)
   - [KeyStatus](arkts-ability-screenlockfilemanager-keystatus-e.md)
   - [ReleaseStatus](arkts-ability-screenlockfilemanager-releasestatus-e.md)
-- [@ohos.ability.wantConstant](arkts-ability-wantconstant.md)
+- [@ohos.ability.wantConstant(wantConstant)](arkts-ability-wantconstant.md)
   - [Action](arkts-ability-wantconstant-action-depr-e.md)
   - [Entity](arkts-ability-wantconstant-entity-depr-e.md)
   - [Flags](arkts-ability-wantconstant-flags-depr-e.md)
@@ -151,7 +151,7 @@
   <!--Del-->
   - [WindowMode(system api)](arkts-ability-abilityconstant-windowmode-e-sys.md)<!--DelEnd-->
   - [Constants](arkts-ability-abilityconstant-con.md)
-- [@ohos.app.ability.AbilityLifecycleCallback](arkts-app-ability-abilitylifecyclecallback.md)
+- [@ohos.app.ability.AbilityLifecycleCallback(UIAbility Lifecycle Callback Listener)](arkts-app-ability-abilitylifecyclecallback.md)
   - [AbilityLifecycleCallback](arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md)
 - [@ohos.app.ability.abilityManager](arkts-app-ability-abilitymanager.md)
   <!--Del-->
@@ -212,11 +212,11 @@
   - [AbilityState](arkts-ability-abilitymanager-abilitystate-e.md)
   <!--Del-->
   - [UserStatus(system api)](arkts-ability-abilitymanager-userstatus-e-sys.md)<!--DelEnd-->
-- [@ohos.app.ability.AbilityStage](arkts-app-ability-abilitystage.md)
+- [@ohos.app.ability.AbilityStage(AbilityStage Component Manager)](arkts-app-ability-abilitystage.md)
   - [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)
-- [@ohos.app.ability.ActionExtensionAbility](arkts-app-ability-actionextensionability.md)
+- [@ohos.app.ability.ActionExtensionAbility(ExtensionAbility for Custom Actions)](arkts-app-ability-actionextensionability.md)
   - [ActionExtensionAbility](arkts-ability-app-ability-actionextensionability-actionextensionability-c.md)
-- [@ohos.app.ability.application](arkts-app-ability-application.md)
+- [@ohos.app.ability.application(Application Utility Class)](arkts-app-ability-application.md)
   <!--Del-->
   - [createBundleContext(system api)](arkts-ability-application-createbundlecontext-f-sys.md)<!--DelEnd-->
   - [createModuleContext](arkts-ability-application-createmodulecontext-f.md)
@@ -398,7 +398,7 @@
   - [StartMode](arkts-ability-childprocessmanager-startmode-e.md)
 - [@ohos.app.ability.ChildProcessOptions](arkts-app-ability-childprocessoptions.md)
   - [ChildProcessOptions](arkts-ability-app-ability-childprocessoptions-childprocessoptions-i.md)
-- [@ohos.app.ability.common](arkts-app-ability-common.md)
+- [@ohos.app.ability.common(Ability Common Module)](arkts-app-ability-common.md)
   - [AbilityResult](arkts-ability-common-abilityresult-t.md)
   - [AbilityStageContext](arkts-ability-common-abilitystagecontext-t.md)
   - [AbilityStartCallback](arkts-ability-common-abilitystartcallback-t.md)
@@ -463,13 +463,13 @@
 - [@ohos.app.ability.CompletionHandlerForAtomicService](arkts-app-ability-completionhandlerforatomicservice.md)
   - [CompletionHandlerForAtomicService](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md)
   - [FailureCode](arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md)
-- [@ohos.app.ability.Configuration](arkts-app-ability-configuration.md)
+- [@ohos.app.ability.Configuration(Environment Variables)](arkts-app-ability-configuration.md)
   - [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
-- [@ohos.app.ability.ConfigurationConstant](arkts-app-ability-configurationconstant.md)
+- [@ohos.app.ability.ConfigurationConstant(Constants Related to Environment Variables)](arkts-app-ability-configurationconstant.md)
   - [ColorMode](arkts-ability-configurationconstant-colormode-e.md)
   - [Direction](arkts-ability-configurationconstant-direction-e.md)
   - [ScreenDensity](arkts-ability-configurationconstant-screendensity-e.md)
-- [@ohos.app.ability.contextConstant](arkts-app-ability-contextconstant.md)
+- [@ohos.app.ability.contextConstant(Context-related Constants)](arkts-app-ability-contextconstant.md)
   - [AreaMode](arkts-ability-contextconstant-areamode-e.md)
   - [ContextType](arkts-ability-contextconstant-contexttype-e.md)
   <!--Del-->
@@ -505,11 +505,11 @@
   - [DialogAbilityInfo(system api)](arkts-ability-dialogsession-dialogabilityinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DialogSessionInfo(system api)](arkts-ability-dialogsession-dialogsessioninfo-i-sys.md)<!--DelEnd-->
-- [@ohos.app.ability.EmbeddableUIAbility](arkts-app-ability-embeddableuiability.md)
+- [@ohos.app.ability.EmbeddableUIAbility(Embeddable UIAbility)](arkts-app-ability-embeddableuiability.md)
   - [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)
-- [@ohos.app.ability.EmbeddedUIExtensionAbility](arkts-app-ability-embeddeduiextensionability.md)
+- [@ohos.app.ability.EmbeddedUIExtensionAbility(ExtensionAbility for Cross-Process UI Embedding)](arkts-app-ability-embeddeduiextensionability.md)
   - [EmbeddedUIExtensionAbility](arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md)
-- [@ohos.app.ability.EnvironmentCallback](arkts-app-ability-environmentcallback.md)
+- [@ohos.app.ability.EnvironmentCallback(System Environment Change Listener)](arkts-app-ability-environmentcallback.md)
   - [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md)
 - [@ohos.app.ability.errorManager(Error Management Module)](arkts-app-ability-errormanager.md)
   - [off](arkts-ability-errormanager-off-f.md)
@@ -536,7 +536,7 @@
   - [HyperSnapErrorInfo](arkts-ability-hypersnapmanager-hypersnaperrorinfo-i.md)
   - [HyperSnapErrorCode](arkts-ability-hypersnapmanager-hypersnaperrorcode-e.md)
   - [HyperSnapErrorType](arkts-ability-hypersnapmanager-hypersnaperrortype-e.md)
-- [@ohos.app.ability.insightIntent](arkts-app-ability-insightintent.md)
+- [@ohos.app.ability.insightIntent(Basic Definitions of InsightIntent Framework)](arkts-app-ability-insightintent.md)
   - [AppIntentEntity](arkts-ability-insightintent-appintententity-c.md)
   - [ExecuteResult](arkts-ability-insightintent-executeresult-i.md)
   <!--Del-->
@@ -557,9 +557,9 @@
   - [ExecuteMode(system api)](arkts-ability-insightintent-executemode-e-sys.md)<!--DelEnd-->
   - [QueryType](arkts-ability-insightintent-querytype-e.md)
   - [ReturnMode](arkts-ability-insightintent-returnmode-e.md)
-- [@ohos.app.ability.InsightIntentContext](arkts-app-ability-insightintentcontext.md)
+- [@ohos.app.ability.InsightIntentContext(Intent Execution Context)](arkts-app-ability-insightintentcontext.md)
   - [InsightIntentContext](arkts-ability-app-ability-insightintentcontext-insightintentcontext-c.md)
-- [@ohos.app.ability.InsightIntentDecorator](arkts-app-ability-insightintentdecorator.md)
+- [@ohos.app.ability.InsightIntentDecorator(Intent Decorator)](arkts-app-ability-insightintentdecorator.md)
   - [@InsightIntentEntity](arkts-ability-app-ability-insightintentdecorator-insightintententity-d.md)
   - [@InsightIntentEntry](arkts-ability-app-ability-insightintentdecorator-insightintententry-d.md)
   - [@InsightIntentForm](arkts-ability-app-ability-insightintentdecorator-insightintentform-d.md)
@@ -577,7 +577,7 @@
   - [PageIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-pageintentdecoratorinfo-i.md)
   - [LinkParamCategory](arkts-ability-app-ability-insightintentdecorator-linkparamcategory-e.md)
 <!--Del-->
-- [@ohos.app.ability.insightIntentDriver](arkts-app-ability-insightintentdriver.md)<!--DelEnd-->
+- [@ohos.app.ability.insightIntentDriver(Intent Call Execution)](arkts-app-ability-insightintentdriver.md)<!--DelEnd-->
   <!--Del-->
   - [execute(system api)](arkts-ability-insightintentdriver-execute-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -626,11 +626,11 @@
   - [GetInsightIntentFlag(system api)](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [InsightIntentType(system api)](arkts-ability-insightintentdriver-insightintenttype-e-sys.md)<!--DelEnd-->
-- [@ohos.app.ability.InsightIntentEntryExecutor](arkts-app-ability-insightintententryexecutor.md)
+- [@ohos.app.ability.InsightIntentEntryExecutor(Base Class for @InsightIntentEntry Intent Execution)](arkts-app-ability-insightintententryexecutor.md)
   - [InsightIntentEntryExecutor](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md)
-- [@ohos.app.ability.InsightIntentExecutor](arkts-app-ability-insightintentexecutor.md)
+- [@ohos.app.ability.InsightIntentExecutor(Base Class for Intent Execution)](arkts-app-ability-insightintentexecutor.md)
   - [InsightIntentExecutor](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md)
-- [@ohos.app.ability.insightIntentProvider](arkts-app-ability-insightintentprovider.md)
+- [@ohos.app.ability.insightIntentProvider(Intent Provider Management)](arkts-app-ability-insightintentprovider.md)
   - [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md)
   - [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md)
 - [@ohos.app.ability.InteropAbilityLifecycleCallback](arkts-app-ability-interopabilitylifecyclecallback.md)
@@ -693,7 +693,7 @@
   - [ApplicationQuickFixInfo(system api)](arkts-ability-quickfixmanager-applicationquickfixinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [HapModuleQuickFixInfo(system api)](arkts-ability-quickfixmanager-hapmodulequickfixinfo-i-sys.md)<!--DelEnd-->
-- [@ohos.app.ability.scriptManager](arkts-app-ability-scriptmanager.md)
+- [@ohos.app.ability.scriptManager(Script Management)](arkts-app-ability-scriptmanager.md)
   - [completeArkTSScriptInApp](arkts-ability-scriptmanager-completearktsscriptinapp-f.md)
   - [ArkTSScriptInfo](arkts-ability-scriptmanager-arktsscriptinfo-i.md)
   - [ExecuteResult](arkts-ability-scriptmanager-executeresult-i.md)
@@ -709,13 +709,13 @@
 - [@ohos.app.ability.ServiceExtensionAbility](arkts-app-ability-serviceextensionability.md)<!--DelEnd-->
   <!--Del-->
   - [ServiceExtensionAbility(system api)](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md)<!--DelEnd-->
-- [@ohos.app.ability.ShareExtensionAbility](arkts-app-ability-shareextensionability.md)
+- [@ohos.app.ability.ShareExtensionAbility(ExtensionAbility for Share Detail Page Integration)](arkts-app-ability-shareextensionability.md)
   - [ShareExtensionAbility](arkts-ability-app-ability-shareextensionability-shareextensionability-c.md)
 - [@ohos.app.ability.StartOptions](arkts-app-ability-startoptions.md)
   - [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)
   <!--Del-->
   - [StartOptions(system api)](arkts-ability-app-ability-startoptions-startoptions-c-sys.md)<!--DelEnd-->
-- [@ohos.app.ability.systemConfiguration](arkts-app-ability-systemconfiguration.md)
+- [@ohos.app.ability.systemConfiguration(System Environment Module)](arkts-app-ability-systemconfiguration.md)
   - [UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md)
   - [OnColorModeUpdatedFn](arkts-ability-systemconfiguration-oncolormodeupdatedfn-t.md)
   - [OnFontIdUpdatedFn](arkts-ability-systemconfiguration-onfontidupdatedfn-t.md)
@@ -733,9 +733,9 @@
   - [Caller](arkts-ability-app-ability-uiability-caller-i.md)
   - [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md)
   - [OnRemoteStateChangeCallback](arkts-ability-app-ability-uiability-onremotestatechangecallback-i.md)
-- [@ohos.app.ability.UIExtensionAbility](arkts-app-ability-uiextensionability.md)
+- [@ohos.app.ability.UIExtensionAbility(ExtensionAbility with UI)](arkts-app-ability-uiextensionability.md)
   - [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
-- [@ohos.app.ability.UIExtensionContentSession](arkts-app-ability-uiextensioncontentsession.md)
+- [@ohos.app.ability.UIExtensionContentSession(UI Operation Class with UI Extension Capability)](arkts-app-ability-uiextensioncontentsession.md)
   - [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md)
   <!--Del-->
   - [UIExtensionContentSession(system api)](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md)<!--DelEnd-->
@@ -760,9 +760,9 @@
   - [OnErrorFn(system api)](arkts-ability-onerrorfn-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [OnResultFn(system api)](arkts-ability-onresultfn-t-sys.md)<!--DelEnd-->
-- [@ohos.app.ability.Want](arkts-app-ability-want.md)
+- [@ohos.app.ability.Want(Want)](arkts-app-ability-want.md)
   - [Want](arkts-ability-app-ability-want-want-c.md)
-- [@ohos.app.ability.wantAgent](arkts-app-ability-wantagent.md)
+- [@ohos.app.ability.wantAgent(WantAgent Module)](arkts-app-ability-wantagent.md)
   - [wantAgent](arkts-ability-wantagent-n.md)
     - [cancel](arkts-ability-wantagent-cancel-f.md)
     <!--Del-->
@@ -791,7 +791,7 @@
     - [OperationType(system api)](arkts-ability-wantagent-operationtype-e-sys.md)<!--DelEnd-->
     - [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md)
   - [WantAgent](arkts-ability-wantagent-t.md)
-- [@ohos.app.ability.wantConstant](arkts-app-ability-wantconstant.md)
+- [@ohos.app.ability.wantConstant(Want Constants)](arkts-app-ability-wantconstant.md)
   - [Action](arkts-ability-wantconstant-action-e.md)
   - [Flags](arkts-ability-wantconstant-flags-e.md)
   - [Params](arkts-ability-wantconstant-params-e.md)
@@ -830,7 +830,7 @@
   - [registerAgentCard(system api)](arkts-ability-agentmanager-registeragentcard-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [updateAgentCard(system api)](arkts-ability-agentmanager-updateagentcard-f-sys.md)<!--DelEnd-->
-- [@ohos.app.agent.AgentUIExtensionAbility](arkts-app-agent-agentuiextensionability.md)
+- [@ohos.app.agent.AgentUIExtensionAbility(UI-based Agent Extension Component)](arkts-app-agent-agentuiextensionability.md)
   - [AgentUIExtensionAbility](arkts-ability-app-agent-agentuiextensionability-agentuiextensionability-c.md)
 - [@ohos.app.appstartup.StartupConfig](arkts-app-appstartup-startupconfig.md)
   - [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md)
@@ -923,9 +923,9 @@
   - [registerApplicationStateObserver(system api)](arkts-ability-appmanager-registerapplicationstateobserver-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [unregisterApplicationStateObserver(system api)](arkts-ability-appmanager-unregisterapplicationstateobserver-depr-f-sys.md)<!--DelEnd-->
-- [@ohos.application.Configuration](arkts-application-configuration.md)
+- [@ohos.application.Configuration(Configuration)](arkts-application-configuration.md)
   - [Configuration](arkts-ability-application-configuration-configuration-depr-i.md)
-- [@ohos.application.ConfigurationConstant](arkts-application-configurationconstant.md)
+- [@ohos.application.ConfigurationConstant(ConfigurationConstant)](arkts-application-configurationconstant.md)
   - [ColorMode](arkts-ability-configurationconstant-colormode-depr-e.md)
 <!--Del-->
 - [@ohos.application.missionManager](arkts-application-missionmanager.md)<!--DelEnd-->
@@ -958,7 +958,7 @@
   - [grantUriPermissionByKeyAsCaller(system api)](arkts-ability-uripermissionmanager-granturipermissionbykeyascaller-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [revokeUriPermission(system api)](arkts-ability-uripermissionmanager-revokeuripermission-f-sys.md)<!--DelEnd-->
-- [@ohos.application.Want](arkts-application-want.md)
+- [@ohos.application.Want(Want)](arkts-application-want.md)
   - [Want](arkts-ability-application-want-want-depr-c.md)
 - [@ohos.bundle](arkts-bundle.md)
   <!--Del-->
@@ -1596,7 +1596,7 @@
   - [PermissionUsageFlag(system api)](arkts-ability-privacymanager-permissionusageflag-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [PermissionUsedType(system api)](arkts-ability-privacymanager-permissionusedtype-e-sys.md)<!--DelEnd-->
-- [@ohos.wantAgent](arkts-wantagent.md)
+- [@ohos.wantAgent(WantAgent Module)](arkts-wantagent.md)
   - [wantAgent](arkts-ability-wantagent-depr-n.md)
     - [cancel](arkts-ability-wantagent-cancel-depr-f.md)
     - [equal](arkts-ability-wantagent-equal-depr-f.md)
@@ -1639,21 +1639,21 @@
     - [DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md)
   - [startAbilityParameter](arkts-startabilityparameter.md)
     - [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md)
-  - [want](arkts-want.md)
+  - [want(Want)](arkts-want.md)
     - [Want](arkts-ability-want-want-i.md)
 - app<!--arkts-abilitykit-app-->
   - [appVersionInfo](arkts-appversioninfo.md)
     - [AppVersionInfo](arkts-ability-appversioninfo-appversioninfo-depr-i.md)
-  - [context](arkts-context.md)
+  - [context(Context Base Class of the FA Model)](arkts-context.md)
     - [Context](arkts-ability-context-context-depr-i.md)
     - [PermissionOptions](arkts-ability-context-permissionoptions-depr-i.md)
     - [PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)
   - [processInfo](arkts-processinfo.md)
     - [ProcessInfo](arkts-ability-processinfo-processinfo-depr-i.md)
 - application<!--arkts-abilitykit-application-->
-  - [AbilityDelegator](arkts-abilitydelegator.md)
+  - [AbilityDelegator(AbilityDelegator)](arkts-abilitydelegator.md)
     - [AbilityDelegator](arkts-ability-abilitydelegator-i.md)
-  - [abilityDelegatorArgs](arkts-abilitydelegatorargs.md)
+  - [abilityDelegatorArgs(AbilityDelegatorArgs)](arkts-abilitydelegatorargs.md)
     - [AbilityDelegatorArgs](arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md)
   <!--Del-->
   - [AbilityFirstFrameStateData](arkts-abilityfirstframestatedata.md)<!--DelEnd-->
@@ -1667,13 +1667,13 @@
   - [AbilityForegroundStateObserver](arkts-abilityforegroundstateobserver.md)<!--DelEnd-->
     <!--Del-->
     - [AbilityForegroundStateObserver(system api)](arkts-ability-abilityforegroundstateobserver-c-sys.md)<!--DelEnd-->
-  - [AbilityMonitor](arkts-abilitymonitor.md)
+  - [AbilityMonitor(AbilityMonitor)](arkts-abilitymonitor.md)
     - [AbilityMonitor](arkts-ability-abilitymonitor-i.md)
   - [AbilityRunningInfo](arkts-abilityrunninginfo.md)
     - [AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md)
-  - [AbilityStageContext](arkts-abilitystagecontext.md)
+  - [AbilityStageContext(AbilityStageContext)](arkts-abilitystagecontext.md)
     - [AbilityStageContext](arkts-ability-abilitystagecontext-c.md)
-  - [AbilityStageMonitor](arkts-abilitystagemonitor.md)
+  - [AbilityStageMonitor(AbilityStageMonitor)](arkts-abilitystagemonitor.md)
     - [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md)
   - [AbilityStartCallback](arkts-abilitystartcallback.md)
     - [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md)
@@ -1701,7 +1701,7 @@
   - [AppForegroundStateObserver](arkts-appforegroundstateobserver.md)<!--DelEnd-->
     <!--Del-->
     - [AppForegroundStateObserver(system api)](arkts-ability-appforegroundstateobserver-c-sys.md)<!--DelEnd-->
-  - [ApplicationContext](arkts-applicationcontext.md)
+  - [ApplicationContext(Application Context)](arkts-applicationcontext.md)
     - [ApplicationContext](arkts-ability-applicationcontext-c.md)
     <!--Del-->
     - [ApplicationContext(system api)](arkts-ability-applicationcontext-c-sys.md)<!--DelEnd-->
@@ -1710,7 +1710,7 @@
     - [ProcessData](arkts-ability-processdata-t.md)
   - [AppServiceExtensionContext](arkts-appserviceextensioncontext.md)
     - [AppServiceExtensionContext](arkts-ability-appserviceextensioncontext-c.md)
-  - [AppStateData](arkts-appstatedata.md)
+  - [AppStateData(AppStateData)](arkts-appstatedata.md)
     - [AppStateData](arkts-ability-appstatedata-c.md)
   <!--Del-->
   - [AutoFillExtensionContext](arkts-autofillextensioncontext.md)<!--DelEnd-->
@@ -1754,7 +1754,7 @@
   - [AutoStartupInfo](arkts-autostartupinfo.md)<!--DelEnd-->
     <!--Del-->
     - [AutoStartupInfo(system api)](arkts-ability-autostartupinfo-i-sys.md)<!--DelEnd-->
-  - [BaseContext](arkts-basecontext.md)
+  - [BaseContext(BaseContext)](arkts-basecontext.md)
     - [BaseContext](arkts-ability-basecontext-c.md)
   <!--Del-->
   - [BusinessAbilityInfo](arkts-businessabilityinfo.md)<!--DelEnd-->
@@ -1768,7 +1768,7 @@
     - [CliToolEvent(system api)](arkts-ability-clitoolevent-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [ToolEventType(system api)](arkts-ability-clitoolevent-tooleventtype-e-sys.md)<!--DelEnd-->
-  - [Context](arkts-context.md)
+  - [Context(Context Base Class of the Stage Model)](arkts-context.md)
     - [Context](arkts-ability-context-c.md)
     <!--Del-->
     - [Context(system api)](arkts-ability-context-c-sys.md)<!--DelEnd-->
@@ -1794,13 +1794,13 @@
   - [CustomData](arkts-customdata.md)<!--DelEnd-->
     <!--Del-->
     - [CustomData(system api)](arkts-ability-customdata-i-sys.md)<!--DelEnd-->
-  - [EmbeddableUIAbilityContext](arkts-embeddableuiabilitycontext.md)
+  - [EmbeddableUIAbilityContext(EmbeddableUIAbilityContext)](arkts-embeddableuiabilitycontext.md)
     - [EmbeddableUIAbilityContext](arkts-ability-embeddableuiabilitycontext-c.md)
   - [ErrorObserver](arkts-errorobserver.md)
     - [ErrorObserver](arkts-ability-errorobserver-c.md)
-  - [EventHub](arkts-eventhub.md)
+  - [EventHub(EventHub)](arkts-eventhub.md)
     - [EventHub](arkts-ability-eventhub-c.md)
-  - [ExtensionContext](arkts-extensioncontext.md)
+  - [ExtensionContext(ExtensionContext)](arkts-extensioncontext.md)
     - [ExtensionContext](arkts-ability-extensioncontext-c.md)
   <!--Del-->
   - [ExtensionRunningInfo](arkts-extensionrunninginfo.md)<!--DelEnd-->
@@ -1881,7 +1881,7 @@
   - [ServiceExtensionContext](arkts-serviceextensioncontext.md)<!--DelEnd-->
     <!--Del-->
     - [ServiceExtensionContext(system api)](arkts-ability-serviceextensioncontext-c-sys.md)<!--DelEnd-->
-  - [shellCmdResult](arkts-shellcmdresult.md)
+  - [shellCmdResult(ShellCmdResult)](arkts-shellcmdresult.md)
     - [ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)
   <!--Del-->
   - [ToolEventCallback](arkts-tooleventcallback.md)<!--DelEnd-->
@@ -1901,21 +1901,21 @@
     - [UIAbilityContext](arkts-ability-uiabilitycontext-c.md)
     <!--Del-->
     - [UIAbilityContext(system api)](arkts-ability-uiabilitycontext-c-sys.md)<!--DelEnd-->
-  - [UIExtensionContext](arkts-uiextensioncontext.md)
+  - [UIExtensionContext(UIExtensionContext)](arkts-uiextensioncontext.md)
     - [UIExtensionContext](arkts-ability-uiextensioncontext-c.md)
     <!--Del-->
     - [UIExtensionContext(system api)](arkts-ability-uiextensioncontext-c-sys.md)<!--DelEnd-->
-  - [UIServiceExtensionConnectCallback](arkts-uiserviceextensionconnectcallback.md)
+  - [UIServiceExtensionConnectCallback(UIServiceExtensionConnectCallback)](arkts-uiserviceextensionconnectcallback.md)
     - [UIServiceExtensionConnectCallback](arkts-ability-uiserviceextensionconnectcallback-i.md)
   <!--Del-->
-  - [UIServiceExtensionContext](arkts-uiserviceextensioncontext.md)<!--DelEnd-->
+  - [UIServiceExtensionContext(UIServiceExtensionContext)](arkts-uiserviceextensioncontext.md)<!--DelEnd-->
     <!--Del-->
     - [UIServiceExtensionContext(system api)](arkts-ability-uiserviceextensioncontext-c-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [UIServiceHostProxy](arkts-uiservicehostproxy.md)<!--DelEnd-->
+  - [UIServiceHostProxy(UIServiceHostProxy)](arkts-uiservicehostproxy.md)<!--DelEnd-->
     <!--Del-->
     - [UIServiceHostProxy(system api)](arkts-ability-uiservicehostproxy-i-sys.md)<!--DelEnd-->
-  - [UIServiceProxy](arkts-uiserviceproxy.md)
+  - [UIServiceProxy(UIServiceProxy)](arkts-uiserviceproxy.md)
     - [UIServiceProxy](arkts-ability-uiserviceproxy-i.md)
   - [ViewData](arkts-viewdata.md)
     - [ViewData](arkts-ability-viewdata-i.md)
@@ -2093,11 +2093,11 @@
   - [PermissionRequestResult](arkts-permissionrequestresult.md)
     - [PermissionRequestResult](arkts-ability-permissionrequestresult-c.md)
 - wantAgent<!--arkts-abilitykit-wantagent-->
-  - [triggerInfo](arkts-triggerinfo.md)
+  - [triggerInfo(TriggerInfo)](arkts-triggerinfo.md)
     - [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i.md)
     <!--Del-->
     - [TriggerInfo(system api)](arkts-ability-triggerinfo-triggerinfo-i-sys.md)<!--DelEnd-->
-  - [wantAgentInfo](arkts-wantagentinfo.md)
+  - [wantAgentInfo(WantAgentInfo)](arkts-wantagentinfo.md)
     <!--Del-->
     - [LocalWantAgentInfo(system api)](arkts-ability-wantagentinfo-localwantagentinfo-i-sys.md)<!--DelEnd-->
     - [WantAgentInfo](arkts-ability-wantagentinfo-wantagentinfo-i.md)

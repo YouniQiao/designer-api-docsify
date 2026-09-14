@@ -1,4 +1,4 @@
-# @ohos.animator
+# @ohos.animator(Animator)
 
 ## Modules to Import
 

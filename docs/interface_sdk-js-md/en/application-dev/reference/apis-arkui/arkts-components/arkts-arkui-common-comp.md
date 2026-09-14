@@ -153,7 +153,7 @@ Constructor
 | [sharedTransitionOptions](arkts-arkui-sharedtransitionoptions-i.md) | Parameters of the shared element transition animation. |
 | [SheetDismiss](arkts-arkui-sheetdismiss-i.md) | Component sheet dismiss |
 | [SheetOptions](arkts-arkui-sheetoptions-i.md) | Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindoptions-i.md). |
-| [SheetTitleBarBackgroundBlurOptions](arkts-arkui-sheettitlebarbackgroundbluroptions-i.md) | Custom options for title bar background blur. All sub-properties are optional; unset properties use system default values. |
+| [SheetTitleBarBackgroundBlurOptions](arkts-arkui-sheettitlebarbackgroundbluroptions-i-sys.md) | Custom options for title bar background blur. All sub-properties are optional; unset properties use system default values. |
 | [SheetTitleOptions](arkts-arkui-sheettitleoptions-i.md) | Component sheet title options |
 | [SizeResult](arkts-arkui-sizeresult-i.md) |  |
 | [SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md) | Smart gesture response behavior configuration object. |

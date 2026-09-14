@@ -1,4 +1,4 @@
-# @ohos.app.ability.scriptManager
+# @ohos.app.ability.scriptManager(Script Management)
 
 Namespace for managing and organizing script information.
 

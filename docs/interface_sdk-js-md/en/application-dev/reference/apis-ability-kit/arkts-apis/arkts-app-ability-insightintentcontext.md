@@ -1,4 +1,4 @@
-# @ohos.app.ability.InsightIntentContext
+# @ohos.app.ability.InsightIntentContext(Intent Execution Context)
 
 ## Modules to Import
 

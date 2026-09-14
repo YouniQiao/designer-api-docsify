@@ -211,3 +211,17 @@ A continuous task of the special scenario type is requested, but the user is not
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+
+## SYSTEM_SUSPEND_USB_NOT_USED
+
+```TypeScript
+SYSTEM_SUSPEND_USB_NOT_USED = 20
+```
+
+A continuous task of the **USB_CONNECTION** type is requested, but USB device is not in use.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

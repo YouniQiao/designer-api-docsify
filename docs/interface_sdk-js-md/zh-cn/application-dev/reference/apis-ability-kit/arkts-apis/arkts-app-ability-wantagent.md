@@ -1,4 +1,4 @@
-# @ohos.app.ability.wantAgent
+# @ohos.app.ability.wantAgent(WantAgent模块)
 
 WantAgent模块封装了[Want](arkts-ability-app-ability-want-want-c.md)对象，允许应用程序在未来的某个时间点触发WantAgent实例执行指定操作（如启动Ability、发送公共事件等）。
 

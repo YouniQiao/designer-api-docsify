@@ -473,7 +473,7 @@ send(options: LocalSendOptions): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| 2301011 | Operation would block. |
+| [2301011](../errorcode-net-socket.md#2301011-操作将阻塞) | Operation would block. |
 
 **示例**
 

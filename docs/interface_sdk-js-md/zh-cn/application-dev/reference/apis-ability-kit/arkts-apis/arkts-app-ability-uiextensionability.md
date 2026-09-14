@@ -1,4 +1,4 @@
-# @ohos.app.ability.UIExtensionAbility
+# @ohos.app.ability.UIExtensionAbility(带界面的ExtensionAbility组件)
 
 ## 导入模块
 

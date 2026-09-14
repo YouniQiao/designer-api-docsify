@@ -1,4 +1,4 @@
-# @ohos.app.ability.contextConstant
+# @ohos.app.ability.contextConstant(Context-related Constants)
 
 The ContextConstant module defines context-related enums, including the file encryption partition level and process mode of the UIAbility after it is started.
 

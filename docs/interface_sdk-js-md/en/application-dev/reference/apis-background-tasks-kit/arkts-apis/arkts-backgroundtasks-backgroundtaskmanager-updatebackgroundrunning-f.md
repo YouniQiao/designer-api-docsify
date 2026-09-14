@@ -132,6 +132,7 @@ a failure message is returned.
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
 | [9800006](../errorcode-backgroundTaskMgr.md#9800006-notification-verification-failure-for-a-continuous-task) | Notification verification failed for a continuous task. |
 | [9800007](../errorcode-backgroundTaskMgr.md#9800007-continuous-task-storage-failure) | Continuous task storage failed. |
+| 9800008 | The requested continuous task is not supported on this device type.<br>**Applicable version:** 26.2.0 and later |
 
 **Examples**
 

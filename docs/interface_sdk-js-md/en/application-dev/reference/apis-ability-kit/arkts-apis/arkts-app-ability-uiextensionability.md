@@ -1,4 +1,4 @@
-# @ohos.app.ability.UIExtensionAbility
+# @ohos.app.ability.UIExtensionAbility(ExtensionAbility with UI)
 
 ## Modules to Import
 

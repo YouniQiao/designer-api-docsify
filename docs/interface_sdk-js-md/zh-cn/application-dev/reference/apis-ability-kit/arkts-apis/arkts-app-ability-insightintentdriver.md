@@ -1,4 +1,4 @@
-# @ohos.app.ability.insightIntentDriver
+# @ohos.app.ability.insightIntentDriver(执行意图调用)
 
 本模块提供执行意图调用的能力，系统根据用户交互等信息执行意图调用。
 

@@ -1,4 +1,4 @@
-# @system.cipher
+# @system.cipher(加密算法)
 
 ## 导入模块
 

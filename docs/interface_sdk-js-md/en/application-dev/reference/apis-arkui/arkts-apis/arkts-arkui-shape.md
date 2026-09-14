@@ -1,4 +1,4 @@
-# @ohos.arkui.shape
+# @ohos.arkui.shape(Shape)
 
 ## Modules to Import
 

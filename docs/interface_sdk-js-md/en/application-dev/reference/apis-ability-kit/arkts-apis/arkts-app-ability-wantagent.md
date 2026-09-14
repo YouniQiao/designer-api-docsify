@@ -1,4 +1,4 @@
-# @ohos.app.ability.wantAgent
+# @ohos.app.ability.wantAgent(WantAgent Module)
 
 The WantAgent module encapsulates a [Want](arkts-ability-app-ability-want-want-c.md) object, enabling an application to
  trigger a WantAgent object to perform specified operations (such as starting an ability or publishing a common event)

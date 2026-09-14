@@ -1,4 +1,4 @@
-# @ohos.app.ability.ActionExtensionAbility
+# @ohos.app.ability.ActionExtensionAbility(支持业务操作自定义的ExtensionAbility组件)
 
 ## 导入模块
 

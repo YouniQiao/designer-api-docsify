@@ -14,7 +14,7 @@
   - [WindowAnimationFinishedCallback(system api)](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [WindowAnimationTarget(system api)](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md)<!--DelEnd-->
-- [@ohos.animator](arkts-animator.md)
+- [@ohos.animator(Animator)](arkts-animator.md)
   - [Animator](arkts-arkui-animator-animator-c.md)
   - [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md)
   - [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md)
@@ -645,7 +645,7 @@
   - [BasicPrefetcher](arkts-arkui-arkui-prefetcher-basicprefetcher-c.md)
   - [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md)
   - [IPrefetcher](arkts-arkui-arkui-prefetcher-iprefetcher-i.md)
-- [@ohos.arkui.shape](arkts-arkui-shape.md)
+- [@ohos.arkui.shape(Shape)](arkts-arkui-shape.md)
   - [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)
   - [CircleShape](arkts-arkui-arkui-shape-circleshape-c.md)
   - [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
@@ -782,7 +782,7 @@
   - [WindowProxyProperties](arkts-arkui-uiextension-windowproxyproperties-i.md)
   - [EventFlag](arkts-arkui-uiextension-eventflag-e.md)
   - [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md)
-- [@ohos.arkui.uiMaterial](arkts-arkui-uimaterial.md)
+- [@ohos.arkui.uiMaterial(System Material)](arkts-arkui-uimaterial.md)
   <!--Del-->
   - [convertToECMaterial(system api)](arkts-arkui-uimaterial-converttoecmaterial-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -865,7 +865,7 @@
   - [TitlePosition](arkts-arkui-atomicservice-interstitialdialogaction-titleposition-e.md)
 - [@ohos.atomicservice.NavPushPathHelper(Defines provides a push method for the target page in the routing table.)](arkts-atomicservice-navpushpathhelper.md)
   - [NavPushPathHelper](arkts-arkui-atomicservice-navpushpathhelper-navpushpathhelper-c.md)
-- [@ohos.curves](arkts-curves.md)
+- [@ohos.curves(Interpolation Calculation)](arkts-curves.md)
   - [cubicBezier](arkts-arkui-curves-cubicbezier-f.md)
   - [cubicBezierCurve](arkts-arkui-curves-cubicbeziercurve-f.md)
   - [customCurve](arkts-arkui-curves-customcurve-f.md)
@@ -975,7 +975,7 @@
   - [UIFontFallbackGroupInfo](arkts-arkui-font-uifontfallbackgroupinfo-i.md)
   - [UIFontFallbackInfo](arkts-arkui-font-uifontfallbackinfo-i.md)
   - [UIFontGenericInfo](arkts-arkui-font-uifontgenericinfo-i.md)
-- [@ohos.matrix4](arkts-matrix4.md)
+- [@ohos.matrix4(Matrix Transformation)](arkts-matrix4.md)
   - [combine](arkts-arkui-matrix4-combine-f.md)
   - [copy](arkts-arkui-matrix4-copy-f.md)
   - [identity](arkts-arkui-matrix4-identity-f.md)
@@ -1257,6 +1257,7 @@
     - [setWatermarkImageForAppWindows](arkts-arkui-window-setwatermarkimageforappwindows-f.md)
     <!--Del-->
     - [setWindowLayoutMode(system api)](arkts-arkui-window-setwindowlayoutmode-f-sys.md)<!--DelEnd-->
+    - [setWindowPosition](arkts-arkui-window-setwindowposition-f.md)
     - [shiftAppWindowFocus](arkts-arkui-window-shiftappwindowfocus-f.md)
     - [shiftAppWindowPointerEvent](arkts-arkui-window-shiftappwindowpointerevent-f.md)
     - [shiftAppWindowTouchEvent](arkts-arkui-window-shiftappwindowtouchevent-f.md)
@@ -1335,6 +1336,7 @@
     - [WindowInfoOptions](arkts-arkui-window-windowinfooptions-i.md)
     - [WindowLayoutInfo](arkts-arkui-window-windowlayoutinfo-i.md)
     - [WindowLimits](arkts-arkui-window-windowlimits-i.md)
+    - [WindowPositionParams](arkts-arkui-window-windowpositionparams-i.md)
     - [WindowProperties](arkts-arkui-window-windowproperties-i.md)
     - [WindowSnapshotAnimationConfig](arkts-arkui-window-windowsnapshotanimationconfig-i.md)
     - [WindowSnapshotConfiguration](arkts-arkui-window-windowsnapshotconfiguration-i.md)
@@ -1374,6 +1376,7 @@
     - [WindowLayoutMode(system api)](arkts-arkui-window-windowlayoutmode-e-sys.md)<!--DelEnd-->
     <!--Del-->
     - [WindowMode(system api)](arkts-arkui-window-windowmode-e-sys.md)<!--DelEnd-->
+    - [WindowPosition](arkts-arkui-window-windowposition-e.md)
     - [WindowPostureMode](arkts-arkui-window-windowposturemode-e.md)
     - [WindowStageEventType](arkts-arkui-window-windowstageeventtype-e.md)
     - [WindowStageLifecycleEventType](arkts-arkui-window-windowstagelifecycleeventtype-e.md)

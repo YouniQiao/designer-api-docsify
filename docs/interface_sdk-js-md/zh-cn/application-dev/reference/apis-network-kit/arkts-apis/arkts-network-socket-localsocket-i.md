@@ -48,8 +48,8 @@ bind(address: LocalAddress): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 | [2301013](../errorcode-net-socket.md#2301013-权限不足) | Insufficient permissions. |
-| 2301022 | Invalid argument. |
-| 2301098 | Address already in use. |
+| [2301022](../errorcode-net-socket.md#2301022-参数无效) | Invalid argument. |
+| [2301098](../errorcode-net-socket.md#2301098-网络地址已被使用) | Address already in use. |
 
 **示例**
 
@@ -146,9 +146,9 @@ connect(options: LocalConnectOptions): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 | [2301013](../errorcode-net-socket.md#2301013-权限不足) | Insufficient permissions. |
-| 2301022 | Invalid argument. |
-| 2301111 | Connection refused. |
-| 2301099 | Cannot assign requested address. |
+| [2301022](../errorcode-net-socket.md#2301022-参数无效) | Invalid argument. |
+| [2301111](../errorcode-net-socket.md#2301111-连接被拒绝) | Connection refused. |
+| [2301099](../errorcode-net-socket.md#2301099-不能分配请求的地址) | Cannot assign requested address. |
 
 **示例**
 
@@ -757,7 +757,7 @@ send(options: LocalSendOptions): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| 2301011 | Operation would block. |
+| [2301011](../errorcode-net-socket.md#2301011-操作将阻塞) | Operation would block. |
 
 **示例**
 

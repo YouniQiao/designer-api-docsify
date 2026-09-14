@@ -1,4 +1,4 @@
-# @ohos.app.ability.EnvironmentCallback
+# @ohos.app.ability.EnvironmentCallback(系统环境变化监听器)
 
 ## 导入模块
 

@@ -1,4 +1,4 @@
-# @ohos.app.ability.EmbeddableUIAbility
+# @ohos.app.ability.EmbeddableUIAbility(Embeddable UIAbility)
 
 ## Modules to Import
 

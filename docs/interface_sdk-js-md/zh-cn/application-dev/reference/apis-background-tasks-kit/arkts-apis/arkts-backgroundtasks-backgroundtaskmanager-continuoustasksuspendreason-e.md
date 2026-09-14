@@ -211,3 +211,17 @@ SYSTEM_SUSPEND_USER_UNAUTHORIZED = 19
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+
+## SYSTEM_SUSPEND_USB_NOT_USED
+
+```TypeScript
+SYSTEM_SUSPEND_USB_NOT_USED = 20
+```
+
+申请USB类型长时任务，但是未检测到USB设备。
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

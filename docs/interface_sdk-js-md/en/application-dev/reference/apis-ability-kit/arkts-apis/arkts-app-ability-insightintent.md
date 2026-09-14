@@ -1,4 +1,4 @@
-# @ohos.app.ability.insightIntent
+# @ohos.app.ability.insightIntent(Basic Definitions of InsightIntent Framework)
 
 This module provides basic definitions of the [InsightIntent framework](../../../application-models/insight-intent-overview.md).
 

@@ -47,6 +47,7 @@ import { window } from '@kit.ArkUI';
 | [setWatermarkImageForAppWindows](arkts-arkui-window-setwatermarkimageforappwindows-f.md) | Sets a watermark image for windows in the current application process. This API uses a promise to return the result. This API must be called after [loadContent()](arkts-arkui-window-window-i.md#loadcontent) or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent) takes effect. |
 | [getAllMainWindowInfo](arkts-arkui-window-getallmainwindowinfo-f.md) | Obtains the information about all main windows. This API uses a promise to return the result. |
 | [getMainWindowSnapshot](arkts-arkui-window-getmainwindowsnapshot-f.md) | Obtains the screenshots of one or more main windows specified by **windowId**. This API uses a promise to return the result. |
+| [setWindowPosition](arkts-arkui-window-setwindowposition-f.md) | Adjusts the position of one or more main windows in the current application process. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)
@@ -108,6 +109,7 @@ import { window } from '@kit.ArkUI';
 | [UIEnvWindowAvoidAreaInfoVP](arkts-arkui-window-uienvwindowavoidareainfovp-i.md) | Describes [environment variable](../../../ui/arkts-env-system-property.md) data types for window avoidance areas of different types. All types of window avoidance areas are measured in vp. |
 | [MainWindowInfo](arkts-arkui-window-mainwindowinfo-i.md) | Describes the main window information. |
 | [WindowSnapshotConfiguration](arkts-arkui-window-windowsnapshotconfiguration-i.md) | Describes the configuration of the main window screenshot. |
+| [WindowPositionParams](arkts-arkui-window-windowpositionparams-i.md) | Describes the position of a main window to adjust its z-order. |
 | [OrientationResult](arkts-arkui-window-orientationresult-i.md) | Result of setting preferred orientation |
 | [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) | Describes the window information obtained during window rotation changes. |
 | [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) | Describes the information returned by the application during window rotation changes. The system uses the information to adjust the size of the current window rectangle. If the returned information is about the rotation change of the main window, the system does not change the size of the main window. |
@@ -176,6 +178,7 @@ import { window } from '@kit.ArkUI';
 | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Enumerates the color spaces. |
 | [RectChangeReason](arkts-arkui-window-rectchangereason-e.md) | Enumerates the reasons for window rectangle (position and size) changes. |
 | [OcclusionState](arkts-arkui-window-occlusionstate-e.md) | Enumerates the window visibility states. |
+| [WindowPosition](arkts-arkui-window-windowposition-e.md) | Enumerates the target z-order to which the z-order of a main window can be adjusted. |
 | [Orientation](arkts-arkui-window-orientation-e.md) | Enumerates the window orientations. <!--Del-->For details of the differences between different enumerated values, see [What is the difference between orientation values 8 to 10 or 12 and values 13 to 16 (API version 9)](../../../faqs/faqs-window-manager.md#what-is-the-difference-between-orientation-values-8-to-10-or-12-and-values-13-to-16-api-version-9).<!--DelEnd--> |
 | [OrientationExecutionResult](arkts-arkui-window-orientationexecutionresult-e.md) | Type of execution result of setting preferred orientation |
 | [RotationChangeType](arkts-arkui-window-rotationchangetype-e.md) | Enumerates the types of window rotation events. |

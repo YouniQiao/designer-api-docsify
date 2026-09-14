@@ -1,4 +1,4 @@
-# @ohos.app.ability.AbilityStage
+# @ohos.app.ability.AbilityStage(AbilityStage Component Manager)
 
 ## Modules to Import
 

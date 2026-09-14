@@ -1,4 +1,4 @@
-# abilityDelegatorArgs
+# abilityDelegatorArgs(AbilityDelegatorArgs)
 
 ## Summary
 

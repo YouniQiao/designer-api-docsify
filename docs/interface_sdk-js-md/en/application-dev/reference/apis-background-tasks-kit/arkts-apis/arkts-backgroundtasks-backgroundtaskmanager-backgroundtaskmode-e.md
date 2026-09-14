@@ -193,3 +193,19 @@ Use scenario: An application transitions into the background during the process 
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+
+## MODE_USB_CONNECTION
+
+```TypeScript
+MODE_USB_CONNECTION = 16
+```
+
+USB.
+
+Use scenario: An application transitions into the background during the process of audio play using USB.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

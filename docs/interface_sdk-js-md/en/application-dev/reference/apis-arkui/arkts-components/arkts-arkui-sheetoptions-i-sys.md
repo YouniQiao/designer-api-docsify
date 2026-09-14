@@ -33,6 +33,24 @@ Options for blur snapshot optimization of the sheet. When this property is set, 
 
 **System API:** This is a system API.
 
+## closeButtonMaterial
+
+```TypeScript
+closeButtonMaterial?: SystemUiMaterial
+```
+
+System material effect of the close button. Default value: **undefined**, indicating that no material is set.
+
+**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
 ## edgeLightMode
 
 ```TypeScript
@@ -66,6 +84,24 @@ Default value: 0 vp for both the x-axis and y-axis
 **Type:** Position
 
 **Since:** 14
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## titleBarBackgroundBlur
+
+```TypeScript
+titleBarBackgroundBlur?: SheetTitleBarBackgroundBlurOptions
+```
+
+Background blur effect of the title bar. Supports customizing blur parameters via options.
+
+**Type:** [SheetTitleBarBackgroundBlurOptions](arkts-arkui-sheettitlebarbackgroundbluroptions-i-sys.md)
+
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

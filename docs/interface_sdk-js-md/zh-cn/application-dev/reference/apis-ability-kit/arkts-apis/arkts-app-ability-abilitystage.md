@@ -1,4 +1,4 @@
-# @ohos.app.ability.AbilityStage
+# @ohos.app.ability.AbilityStage(AbilityStage组件管理器)
 
 ## 导入模块
 

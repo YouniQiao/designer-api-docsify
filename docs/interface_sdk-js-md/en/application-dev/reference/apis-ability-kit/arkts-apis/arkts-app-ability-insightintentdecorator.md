@@ -1,4 +1,4 @@
-# @ohos.app.ability.InsightIntentDecorator
+# @ohos.app.ability.InsightIntentDecorator(Intent Decorator)
 
 The InsightIntentDecorator module provides several types of intent decorators for decorating classes or methods. You
  can [use these decorators to develop intents](../../../application-models/insight-intent-decorator-development.md),

@@ -1,4 +1,4 @@
-# @ohos.app.ability.insightIntentDriver
+# @ohos.app.ability.insightIntentDriver(Intent Call Execution)
 
 The module provides APIs for executing intent calls. The system executes intent calls based on user interaction and more.
 

@@ -109,24 +109,6 @@ Defines the sheet's border width.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## closeButtonMaterial
-
-```TypeScript
-closeButtonMaterial?: SystemUiMaterial
-```
-
-System material effect of the close button. Default value: **undefined**, indicating that no material is set.
-
-**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
-
-**Since:** 26.1.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## detents
 
 ```TypeScript
@@ -721,24 +703,6 @@ Defines the sheet title
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## titleBarBackgroundBlur
-
-```TypeScript
-titleBarBackgroundBlur?: SheetTitleBarBackgroundBlurOptions
-```
-
-Background blur effect of the title bar. Supports customizing blur parameters via options.
-
-**Type:** [SheetTitleBarBackgroundBlurOptions](arkts-arkui-sheettitlebarbackgroundbluroptions-i.md)
-
-**Since:** 26.1.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

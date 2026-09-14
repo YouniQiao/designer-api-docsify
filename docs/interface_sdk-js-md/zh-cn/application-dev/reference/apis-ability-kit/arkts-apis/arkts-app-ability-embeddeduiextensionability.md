@@ -1,4 +1,4 @@
-# @ohos.app.ability.EmbeddedUIExtensionAbility
+# @ohos.app.ability.EmbeddedUIExtensionAbility(支持跨进程界面嵌入的ExtensionAbility组件)
 
 ## 导入模块
 

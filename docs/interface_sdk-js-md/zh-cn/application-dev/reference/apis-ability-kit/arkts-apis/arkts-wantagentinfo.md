@@ -1,4 +1,4 @@
-# wantAgentInfo
+# wantAgentInfo(WantAgentInfo)
 
 定义触发WantAgent所需要的信息。
 

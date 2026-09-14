@@ -1,4 +1,4 @@
-# @ohos.app.agent.AgentUIExtensionAbility
+# @ohos.app.agent.AgentUIExtensionAbility(UI-based Agent Extension Component)
 
 ## Modules to Import
 

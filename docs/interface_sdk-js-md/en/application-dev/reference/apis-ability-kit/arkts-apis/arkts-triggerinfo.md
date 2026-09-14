@@ -1,4 +1,4 @@
-# triggerInfo
+# triggerInfo(TriggerInfo)
 
 ## Summary
 

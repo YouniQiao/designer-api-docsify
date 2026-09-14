@@ -1,4 +1,4 @@
-# @ohos.app.ability.systemConfiguration
+# @ohos.app.ability.systemConfiguration(System Environment Module)
 
 The class of a system configuration.
 

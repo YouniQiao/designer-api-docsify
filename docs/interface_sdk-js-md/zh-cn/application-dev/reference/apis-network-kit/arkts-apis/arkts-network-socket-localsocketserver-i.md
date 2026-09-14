@@ -327,8 +327,8 @@ listen(address: LocalAddress): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 | [2303109](../errorcode-net-socket.md#2303109-错误文件编号) | Bad file number. |
 | [2301013](../errorcode-net-socket.md#2301013-权限不足) | Insufficient permissions. |
-| 2301022 | Invalid argument. |
-| 2301098 | Address already in use. |
+| [2301022](../errorcode-net-socket.md#2301022-参数无效) | Invalid argument. |
+| [2301098](../errorcode-net-socket.md#2301098-网络地址已被使用) | Address already in use. |
 
 **示例**
 

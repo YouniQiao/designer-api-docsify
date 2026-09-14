@@ -1,4 +1,4 @@
-# @ohos.app.ability.application
+# @ohos.app.ability.application(Application Utility Class)
 
 You can use this module to create a [Context](../../../application-models/application-context-stage.md).
 

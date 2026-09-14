@@ -1,4 +1,4 @@
-# @ohos.security.cert
+# @ohos.security.cert(Certificate Framework)
 
 The certificate algorithm library framework provides certificate-related APIs. The **certFramework** module depends on the basic algorithm capabilities of the Crypto framework. For details, see [cryptoFramework](../../apis-crypto-architecture-kit/arkts-apis/arkts-security-cryptoframework.md).
 
