@@ -4,7 +4,7 @@ UIServiceExtensionContext模块是[UIServiceExtension](arkts-ability-app-ability
 
 UIServiceExtensionContext模块提供访问[UIServiceExtension](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)特定资源以及具有的能力，包括启动、停止、绑定、解绑Ability。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本模块接口需要在主线程中使用，不要在Worker、TaskPool等子线程中使用。
 
@@ -24,7 +24,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 连接到[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)，返回连接id。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -219,7 +219,7 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 启动Ability。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -312,7 +312,7 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
 
 按目标ability的类型启动[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)或[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)。仅支持处于前台的应用调用。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 

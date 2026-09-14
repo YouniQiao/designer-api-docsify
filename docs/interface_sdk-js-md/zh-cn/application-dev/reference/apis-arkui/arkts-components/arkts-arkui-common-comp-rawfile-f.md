@@ -1,17 +1,12 @@
 # $rawfile
 
-## 导入模块
-
-```TypeScript
-```
-
 ## $rawfile
 
 ```TypeScript
 declare function $rawfile(value: string): Resource
 ```
 
-global \$rawfile function
+global &#36;rawfile function
 
 **起始版本：** 11
 
@@ -31,3 +26,4 @@ global \$rawfile function
 
 | 类型 | 说明 |
 | --- | --- |
+| [Resource](../arkts-apis/arkts-arkui-resource-t.md) |  |

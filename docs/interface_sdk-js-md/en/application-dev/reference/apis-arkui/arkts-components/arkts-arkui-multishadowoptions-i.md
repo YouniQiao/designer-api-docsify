@@ -6,11 +6,6 @@ Defines shadow style properties.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## offsetX
 
 ```TypeScript
@@ -75,7 +70,7 @@ A value less than or equal to 0 is handled as the default value.
 
 **Type:** number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
-**Default:**
+**Default:** 
 - API version 10: 5
 - API version 11+: 20
 

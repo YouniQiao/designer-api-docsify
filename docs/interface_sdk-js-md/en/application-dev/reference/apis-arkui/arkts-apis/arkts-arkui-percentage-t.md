@@ -6,7 +6,7 @@ declare type Percentage = `${number}%`
 
 Defines the length property with number in units of Percentage.
 
-@typedef { `\${number}%` } Percentage
+@typedef { `&#36;{number}%` } Percentage
 
 **Since:** 23
 

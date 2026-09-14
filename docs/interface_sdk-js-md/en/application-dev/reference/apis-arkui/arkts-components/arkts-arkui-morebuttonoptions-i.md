@@ -6,11 +6,6 @@ Defines the options for the more button menu.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## backgroundBlurStyle
 
 ```TypeScript
@@ -37,7 +32,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 Options for the title bar background blur style.
 
-**NOTE:**
+**NOTE:** 
 
 This parameter is only effective when **backgroundBlurStyle** is set.
 
@@ -61,7 +56,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 Title bar background properties, including blur radius, brightness, saturation, and color.
 
-**NOTE:**
+**NOTE:** 
 
 Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
 

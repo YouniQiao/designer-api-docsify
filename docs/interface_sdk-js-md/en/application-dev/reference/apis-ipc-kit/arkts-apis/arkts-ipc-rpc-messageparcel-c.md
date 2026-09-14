@@ -116,7 +116,7 @@ Creates a **MessageParcel** object. This method is a static method.
 
 | Type | Description |
 | --- | --- |
-| [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | MessageParcel** object created. |
+| [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | **MessageParcel** object created. |
 
 **Examples**
 
@@ -199,7 +199,7 @@ Obtains the capacity of this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number | MessageParcel** capacity obtained, in bytes. |
+| number | **MessageParcel** capacity obtained, in bytes. |
 
 **Examples**
 
@@ -273,7 +273,7 @@ Obtains the readable capacity of this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number | MessageParcel** object readable capacity, in bytes. |
+| number | **MessageParcel** object readable capacity, in bytes. |
 
 **Examples**
 
@@ -386,7 +386,7 @@ Obtains the writable capacity of this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number | MessageParcel** writable capacity obtained, in bytes. |
+| number | **MessageParcel** writable capacity obtained, in bytes. |
 
 **Examples**
 
@@ -739,7 +739,7 @@ Reads the single character value from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| number | Char** value read. |
+| number | **Char** value read. |
 
 **Examples**
 
@@ -1598,7 +1598,7 @@ Reads the **IRemoteObject** array from this **MessageParcel** object and writes 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| objects | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes | IRemoteObject** array to read. |
+| objects | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes | **IRemoteObject** array to read. |
 
 **Examples**
 
@@ -1650,7 +1650,7 @@ Reads the **IRemoteObject** array from this **MessageParcel** object.
 
 | Type | Description |
 | --- | --- |
-| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | IRemoteObject** object array obtained. |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | **IRemoteObject** object array obtained. |
 
 **Examples**
 
@@ -1768,7 +1768,7 @@ Reads the **Sequenceable** array from this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sequenceableArray | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md)[] | Yes | Sequenceable** array to read. |
+| sequenceableArray | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md)[] | Yes | **Sequenceable** array to read. |
 
 **Examples**
 
@@ -2493,7 +2493,7 @@ Writes a single character value to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | number | Yes | Char** value to write. |
+| val | number | Yes | **Char** value to write. |
 
 **Return value:**
 
@@ -3155,7 +3155,7 @@ Writes an **IRemoteObject** array to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| objectArray | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes | IRemoteObject** array to write. |
+| objectArray | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes | **IRemoteObject** array to write. |
 
 **Return value:**
 
@@ -3210,7 +3210,7 @@ Writes a **Sequenceable** object to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md) | Yes | Sequenceable** object to write. |
+| val | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md) | Yes | **Sequenceable** object to write. |
 
 **Return value:**
 
@@ -3273,7 +3273,7 @@ Writes a **Sequenceable** array to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sequenceableArray | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md)[] | Yes | Sequenceable** array to write. |
+| sequenceableArray | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md)[] | Yes | **Sequenceable** array to write. |
 
 **Return value:**
 

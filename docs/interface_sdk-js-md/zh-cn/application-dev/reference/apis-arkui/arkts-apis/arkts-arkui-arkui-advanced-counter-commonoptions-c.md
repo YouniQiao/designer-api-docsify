@@ -80,7 +80,7 @@ focusable?: boolean
 
 设置Counter是否可获焦。
 
-**说明：**
+**说明：** 
 
 该属性对列表型和紧凑型Counter生效，对数值内联型和日期内联型Counter不生效。
 

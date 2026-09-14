@@ -72,7 +72,7 @@ function addDisallowedBluetoothProtocols(admin: Want, accountId: number, protoco
 
 Adds disallowed Bluetooth protocols. After the setting, specified users cannot use the disallowed Bluetooth protocols based on the specified transfer policy.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. This API is used to disable the GATT or SPP protocol, which does not take effect for system services and
 > system applications.

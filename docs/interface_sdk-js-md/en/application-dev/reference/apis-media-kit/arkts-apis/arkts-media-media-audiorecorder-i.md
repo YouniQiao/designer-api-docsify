@@ -6,7 +6,7 @@ AudioRecorder is a class for audio recording management. It provides APIs to rec
 
 **Deprecated since:** 9
 
-**Substitutes:** [media](arkts-multimedia-media.md)
+**Substitutes:** [media](arkts-media-multimedia-media.md)
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 

@@ -19,8 +19,3 @@ Determines whether an array includes a certain element, returning true or false 
 | --- | --- | --- | --- |
 | searchElement | number | Yes |  |
 | fromIndex | number | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

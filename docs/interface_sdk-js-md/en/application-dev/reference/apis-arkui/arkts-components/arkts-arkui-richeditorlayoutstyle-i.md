@@ -6,11 +6,6 @@ Defines image layout information.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## borderRadius
 
 ```TypeScript

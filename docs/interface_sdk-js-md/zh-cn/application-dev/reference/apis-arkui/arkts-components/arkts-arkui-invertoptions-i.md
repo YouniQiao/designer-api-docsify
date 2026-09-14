@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## high
 
 ```TypeScript
@@ -81,7 +76,7 @@ thresholdRange: number
 
 取值范围：[0, 1]。设置小于0的值时，按值为0处理；设置大于1的值时，按值为1处理。
 
-**说明：**
+**说明：** 
 
 灰度阈值上下偏移thresholdRange构成阈值区间，背景颜色灰度值在区间内取值由high线性渐变到low。
 

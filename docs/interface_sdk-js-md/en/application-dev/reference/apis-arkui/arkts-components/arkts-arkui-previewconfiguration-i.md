@@ -6,11 +6,6 @@ Configures the style of the preview image during custom drag operations.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## delayCreating
 
 ```TypeScript
@@ -41,7 +36,7 @@ onlyForLifting?: boolean
 
 Whether the custom preview image is used only for lifting.
 
-**NOTE:**
+**NOTE:** 
 
 The default value is **false**. **true**: The custom preview image is used only for lifting. **false**: The custom preview image is used for both lifting and dragging. When the value is set to **true**, the preview image is used only during the lifting phase of a long press. For the preview image used during the dragging phase: The [dragPreview](arkts-arkui-commonmethod-c.md#dragpreview) attribute is ignored, and the system prioritizes the image returned in [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart); if no image is returned in **onDragStart**, the component's snapshot is used.
 

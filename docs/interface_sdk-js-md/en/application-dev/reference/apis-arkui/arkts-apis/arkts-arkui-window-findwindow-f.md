@@ -24,7 +24,7 @@ Finds a window based on the name.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Window name. When searching for a child window or system window, use the window name in [Configuration](arkts-arkui-window-configuration-i.md). When searching for the main window, use getWindowName to obtain the window name of the current instance. |
+| name | string | Yes | Window name. When searching for a child window or system window, use the window name in [Configuration](arkts-arkui-window-configuration-i.md). When searching for the main window, use [getWindowName](arkts-arkui-arkui-uicontext-uicontext-c.md#getwindowname) to obtain the window name of the current instance. |
 
 **Return value:**
 

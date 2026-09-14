@@ -20,7 +20,7 @@ bind(address: NetAddress, callback: AsyncCallback<void>): void
 
 绑定IP地址和端口，端口可以指定为0由系统随机分配或由用户指定为其它非0端口。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > bind方法如果因为端口冲突而执行失败，则会由系统随机分配端口号。
 > 
@@ -38,7 +38,7 @@ bind(address: NetAddress, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| address | NetAddress | 是 | 本端地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
+| address | [NetAddress](arkts-network-socket-p.md) | 是 | 本端地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败返回错误、错误信息。 |
 
 **错误码：**
@@ -76,7 +76,7 @@ bind(address: NetAddress): Promise<void>
 
 绑定IP地址和端口，端口可以指定为0由系统随机分配或由用户指定为其它非0端口。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > bind方法如果因为端口冲突而执行失败，则会由系统随机分配端口号。
 > 
@@ -94,7 +94,7 @@ bind(address: NetAddress): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| address | NetAddress | 是 | 本端地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
+| address | [NetAddress](arkts-network-socket-p.md) | 是 | 本端地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
 
 **返回值：**
 
@@ -219,7 +219,7 @@ connect(options: TCPConnectOptions, callback: AsyncCallback<void>): void
 
 连接到指定的IP地址和端口。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 在没有执行tcp.bind的情况下，也可以直接调用该接口完成与TCP服务端的连接
 
@@ -318,7 +318,7 @@ connect(options: TCPConnectOptions): Promise<void>
 
 连接到指定的IP地址和端口。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 在没有执行tcp.bind的情况下，也可以直接调用该接口完成与TCP服务端的连接。
 
@@ -418,7 +418,7 @@ getLocalAddress(): Promise<NetAddress>
 
 获取TCPSocket的本地Socket地址。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > bind方法调用成功后，才可调用此方法。
 
@@ -430,7 +430,7 @@ getLocalAddress(): Promise<NetAddress>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | 以Promise形式返回获取本地socket地址的结果。 |
+| Promise&lt;[NetAddress](arkts-network-socket-p.md)&gt; | 以Promise形式返回获取本地socket地址的结果。 |
 
 **错误码：**
 
@@ -471,7 +471,7 @@ getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 
 获取对端Socket地址。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > connect方法调用成功后，才可调用此方法。
 
@@ -485,7 +485,7 @@ getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | 是 | 回调函数。成功时返回对端Socket地址，失败时返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetAddress](arkts-network-socket-p.md)&gt; | 是 | 回调函数。成功时返回对端Socket地址，失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -528,7 +528,7 @@ getRemoteAddress(): Promise<NetAddress>
 
 获取对端Socket地址。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > connect方法调用成功后，才可调用此方法。
 
@@ -542,7 +542,7 @@ getRemoteAddress(): Promise<NetAddress>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | 以Promise形式返回获取对端socket地址的结果。 |
+| Promise&lt;[NetAddress](arkts-network-socket-p.md)&gt; | 以Promise形式返回获取对端socket地址的结果。 |
 
 **错误码：**
 
@@ -585,7 +585,7 @@ getSocketFd(callback: AsyncCallback<number>): void
 
 获取TCPSocket的文件描述符。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - bind或connect方法调用成功后，才可调用此方法。
 > 
@@ -637,7 +637,7 @@ getSocketFd(): Promise<number>
 
 获取TCPSocket的文件描述符。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - bind或connect方法调用成功后，才可调用此方法。
 > 
@@ -688,7 +688,7 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 
 获取TCPSocket状态。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > bind或connect方法调用成功后，才可调用此方法。
 
@@ -745,7 +745,7 @@ getState(): Promise<SocketStateBase>
 
 获取TCPSocket状态。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > bind或connect方法调用成功后，才可调用此方法。
 
@@ -1072,7 +1072,7 @@ send(options: TCPSendOptions, callback: AsyncCallback<void>): void
 
 通过TCPSocket连接发送数据。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > connect方法调用成功后，才可调用此方法。该接口为耗时操作，请在Worker线程或taskpool线程调用该接口。
 
@@ -1134,7 +1134,7 @@ send(options: TCPSendOptions): Promise<void>
 
 通过TCPSocket连接发送数据。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > connect方法调用成功后，才可调用此方法。该接口为耗时操作，请在Worker线程或taskpool线程调用该接口。
 
@@ -1199,7 +1199,7 @@ setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 
 设置TCPSocket连接的其他属性。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > bind或connect方法调用成功后，才可调用此方法。
 
@@ -1275,7 +1275,7 @@ setExtraOptions(options: TCPExtraOptions): Promise<void>
 
 设置TCPSocket连接的其他属性。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > bind或connect方法调用成功后，才可调用此方法。
 

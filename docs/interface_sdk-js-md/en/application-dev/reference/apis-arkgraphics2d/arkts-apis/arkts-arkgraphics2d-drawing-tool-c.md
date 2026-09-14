@@ -1,8 +1,8 @@
 # Tool
 
-A utility class that provides only static methods to convert data structs defined in other modules and [common2D](arkts-graphics-common2d.md).
+A utility class that provides only static methods to convert data structs defined in other modules and [common2D](arkts-arkgraphics2d-graphics-common2d.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The initial APIs of this class are supported since API version 15.
 > 
@@ -37,13 +37,13 @@ Converts a color value of the **ResourceColor** type to a **common2D.Color** obj
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceColor | ResourceColor | Yes | Color value of the **ResourceColor** type. (All four types of inputs are supported. The following provides 13 example inputs.) The fourth type of [Resource](../../apis-arkui/arkts-apis/arkts-arkui-resource-t.md) supports only the construction method **\&#36;r('belonging.type.name')**. Ensure that the resource has been defined in the **main/resources/base/element** directory. (The types **color**, **string**, and **integer** are available for the belonging **app**, whereas only the type **color** is available for the belonging **sys**.) |
+| resourceColor | ResourceColor | Yes | Color value of the **ResourceColor** type. (All four types of inputs are supported. The following provides 13 example inputs.) The fourth type of [Resource](../../apis-arkui/arkts-apis/arkts-arkui-resource-t.md) supports only the construction method **&#36;r('belonging.type.name')**. Ensure that the resource has been defined in the **main/resources/base/element** directory. (The types **color**, **string**, and **integer** are available for the belonging **app**, whereas only the type **color** is available for the belonging **sys**.) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | Common2D.Color** object. If the conversion fails, a null pointer is returned. |
+| [common2D.Color](arkts-arkgraphics2d-common2d-color-i.md) | **Common2D.Color** object. If the conversion fails, a null pointer is returned. |
 
 **Error codes:**
 

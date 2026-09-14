@@ -68,7 +68,7 @@ compressHeadPunctuation?: boolean
 
 设置文本排版时是否使能行首标点压缩。true表示使能行首标点压缩，false表示不使能行首标点压缩，默认值为false。
 
-**说明：**
+**说明：** 
 
 1. 需要字体文件支持[FontFeature](arkts-arkgraphics2d-text-fontfeature-i.md)中的"ss08"特性，否则无法压缩。
 2. 在行首标点压缩范围内的标点才在本特性作用范围内。

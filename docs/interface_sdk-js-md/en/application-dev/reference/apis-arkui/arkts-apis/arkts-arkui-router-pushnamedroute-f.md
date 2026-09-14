@@ -14,7 +14,7 @@ function pushNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<voi
 
 Navigates to a page using the named route. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
@@ -93,7 +93,7 @@ function pushNamedRoute(options: NamedRouterOptions): Promise<void>
 
 Navigates to a page using the named route. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
@@ -179,7 +179,7 @@ function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode, callback:
 
 Navigates to a page using the named route. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
@@ -259,7 +259,7 @@ function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promise<
 
 Navigates to a page using the named route. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in

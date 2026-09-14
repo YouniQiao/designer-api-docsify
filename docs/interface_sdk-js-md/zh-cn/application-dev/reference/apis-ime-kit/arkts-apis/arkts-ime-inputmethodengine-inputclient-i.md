@@ -1539,7 +1539,7 @@ sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 ```
 
 发送扩展编辑操作。使用callback异步回调。<br> <br>使用场景：输入法应用需要触发编辑框的扩展编辑功能。例如：用户点击键盘上的剪切按钮时发送CUT操作；用户点击复制按钮时发送COPY操作；用户点击粘贴按钮时发送PASTE操作；用户点击全选按钮时发送SELECT_ALL操作；自定义<br> <br>工具栏中集成编辑快捷操作。<br> <br>   
-> **说明：**<br>
+> **说明：** <br>
 > <br>
 > 输入法应用调用该接口向编辑框发送扩展编辑操作，编辑框监听相应事件<br>
 > [on('handleExtendAction')](arkts-ime-inputmethod-inputmethodcontroller-i.md#onhandleextendaction) <br>
@@ -1589,7 +1589,7 @@ sendExtendAction(action: ExtendAction): Promise<void>
 ```
 
 发送扩展编辑操作。使用promise异步回调。<br> <br>   
-> **说明：**<br>
+> **说明：** <br>
 > <br>
 > 输入法应用调用该接口向编辑框发送扩展编辑操作，编辑框监听相应事件<br>
 > [on('handleExtendAction')](arkts-ime-inputmethod-inputmethodcontroller-i.md#onhandleextendaction) <br>
@@ -1791,7 +1791,7 @@ sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 ```
 
 发送私有数据至需要与输入法应用通信的系统其他部分。使用promise异步回调。<br> <br>   
-> **说明：**<br>
+> **说明：** <br>
 > <br>
 > - 私有数据通道是系统预置输入法应用与系统特定组件（如文本框、桌面应用等）的通信机制，常用于设备级厂商在特定设备上实现自定义的输入法功能。<br>
 > <br>

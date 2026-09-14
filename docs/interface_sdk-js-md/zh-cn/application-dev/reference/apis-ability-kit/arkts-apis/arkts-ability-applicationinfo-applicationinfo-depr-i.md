@@ -2,7 +2,7 @@
 
 应用程序信息，未做特殊说明的属性，均通过[bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md)获取。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始，该模块不再维护，建议使用[bundleManager-ApplicationInfo](#applicationinfo)替代。
 
@@ -40,7 +40,7 @@ readonly accessTokenId: number
 readonly codePath: string
 ```
 
-应用程序的安装目录。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)访问资源。
+应用程序的安装目录。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager.md)访问资源。
 
 **类型：** string
 
@@ -138,7 +138,7 @@ readonly entityType: string
 readonly entryDir: string
 ```
 
-应用程序的文件保存路径。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)访问资源。
+应用程序的文件保存路径。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager.md)访问资源。
 
 **类型：** string
 
@@ -278,7 +278,7 @@ readonly moduleInfos: Array<ModuleInfo>
 readonly moduleSourceDirs: Array<string>
 ```
 
-应用程序的资源存放的相对路径。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)访问资源。
+应用程序的资源存放的相对路径。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager.md)访问资源。
 
 **类型：** Array&lt;string&gt;
 

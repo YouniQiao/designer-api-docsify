@@ -719,7 +719,7 @@ function once(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>): 
 
 获取一次计步器传感器数据。计步传感器数据上报有一定延迟，延迟时间由具体的实现产品决定。适用于仅需一次性获取当前步数的场景。调用后，callback仅触发一次，自动取消订阅。
 
-> **说明：**
+> **说明：** 
 > 
 > 计步器传感器数据仅在设备重启时清零，不会每天清零，重启前上报的步数数据为累加值。
 
@@ -996,7 +996,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<
 
 监听加速度传感器的数据变化一次。适用于仅需一次性获取当前加速度数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ACCELEROMETER]
 > [once_SensorId.ACCELEROMETER](arkts-sensorservice-sensor-once-f.md)
@@ -1040,7 +1040,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callba
 
 监听未校准加速度传感器的数据变化一次。适用于仅需一次性获取当前未校准加速度数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ACCELEROMETER_UNCALIBRATED]
 > [once_SensorId.ACCELEROMETER_UNCALIBRATED](#once-1)
@@ -1087,7 +1087,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<
 
 监听环境光传感器数据变化一次。适用于仅需一次性获取当前环境光数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.AMBIENT_LIGHT]
 > [once_SensorId.AMBIENT_LIGHT](#once-2)
@@ -1127,7 +1127,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Cal
 
 监听环境温度传感器数据变化一次。适用于仅需一次性获取当前环境温度数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.AMBIENT_LIGHT]
 > [once_SensorId.AMBIENT_LIGHT](#once-2)
@@ -1167,7 +1167,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<Baro
 
 监听气压计传感器数据变化一次。适用于仅需一次性获取当前气压数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.BAROMETER]
 > [once_SensorId.BAROMETER](#once-4)
@@ -1207,7 +1207,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<Gravit
 
 监听重力传感器的数据变化一次。适用于仅需一次性获取当前重力数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GRAVITY]
 > [once_SensorId.GRAVITY](#once-5)
@@ -1249,7 +1249,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<Gyro
 
 监听陀螺仪传感器的数据变化一次。适用于仅需一次性获取当前陀螺仪数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GYROSCOPE]
 > [once_SensorId.GYROSCOPE](#once-6)
@@ -1293,7 +1293,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: 
 
 监听未校准陀螺仪传感器的数据变化一次。适用于仅需一次性获取当前未校准陀螺仪数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GYROSCOPE_UNCALIBRATED]
 > [once_SensorId.GYROSCOPE_UNCALIBRATED](#once-7)
@@ -1340,7 +1340,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallRespo
 
 监听霍尔传感器数据变化一次。适用于仅需一次性获取当前霍尔数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HALL]
 > [once_SensorId.HALL](#once-8)
@@ -1380,7 +1380,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<Hea
 
 监听心率传感器数据变化一次。适用于仅需一次性获取当前心率数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HEART_RATE]
 > [once_SensorId.HEART_RATE](#once-9)
@@ -1422,7 +1422,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<Humid
 
 监听湿度传感器数据变化一次。适用于仅需一次性获取当前湿度数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HUMIDITY]
 > [once_SensorId.HUMIDITY](#once-10)
@@ -1462,7 +1462,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Cal
 
 监听线性加速度传感器数据变化一次。适用于仅需一次性获取当前线性加速度数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.LINEAR_ACCELEROMETER]
 > [once_SensorId.LINEAR_ACCELEROMETER](#once-11)
@@ -1494,7 +1494,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback
 
 监听磁场传感器数据变化一次。适用于仅需一次性获取当前磁场数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.MAGNETIC_FIELD]
 > [once_SensorId.MAGNETIC_FIELD](#once-12)
@@ -1536,7 +1536,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callb
 
 监听未校准磁场传感器数据变化一次。适用于仅需一次性获取当前未校准磁场数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.MAGNETIC_FIELD_UNCALIBRATED]
 > [once_SensorId.MAGNETIC_FIELD_UNCALIBRATED](#once-13)
@@ -1581,7 +1581,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<Or
 
 监听方向传感器数据变化一次。适用于仅需一次性获取当前方向数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ORIENTATION]
 > [once_SensorId.ORIENTATION](#once-14)
@@ -1623,7 +1623,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<Pedo
 
 监听计步器传感器数据变化一次。适用于仅需一次性获取当前计步数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PEDOMETER]
 > [once_SensorId.PEDOMETER](#once-15)
@@ -1665,7 +1665,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Cal
 
 监听计步检测传感器数据变化一次。适用于仅需一次性获取当前计步检测数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PEDOMETER_DETECTION]
 > [once_SensorId.PEDOMETER_DETECTION](#once-16)
@@ -1707,7 +1707,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<Prox
 
 监听接近光传感器数据变化一次。适用于仅需一次性获取当前接近光数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PROXIMITY]
 > [once_SensorId.PROXIMITY](#once-17)
@@ -1748,7 +1748,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callbac
 
 监听旋转矢量传感器数据变化一次。适用于仅需一次性获取当前旋转矢量数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ROTATION_VECTOR]
 > [once_SensorId.ROTATION_VECTOR](#once-18)
@@ -1791,7 +1791,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Call
 
 监听有效运动传感器的数据变化一次。适用于仅需一次性获取当前有效运动数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.SIGNIFICANT_MOTION]
 > [once_SensorId.SIGNIFICANT_MOTION](#once-19)
@@ -1831,7 +1831,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback
 
 监听所佩戴的检测传感器的数据变化一次。适用于仅需一次性获取当前佩戴检测数据的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.WEAR_DETECTION]
 > [once_SensorId.WEAR_DETECTION](#once-20)

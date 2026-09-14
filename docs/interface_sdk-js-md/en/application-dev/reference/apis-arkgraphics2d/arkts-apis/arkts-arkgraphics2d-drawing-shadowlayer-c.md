@@ -2,7 +2,7 @@
 
 Implements a shadow layer.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The initial APIs of this class are supported since API version 12.
 > 
@@ -46,7 +46,7 @@ Creates a **ShadowLayer** object.
 
 | Type | Description |
 | --- | --- |
-| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) | ShadowLayer** object created. |
+| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) | **ShadowLayer** object created. |
 
 **Error codes:**
 
@@ -79,7 +79,7 @@ Creates a **ShadowLayer** object.
 
 | Type | Description |
 | --- | --- |
-| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) | ShadowLayer** object created. |
+| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) | **ShadowLayer** object created. |
 
 **Error codes:**
 

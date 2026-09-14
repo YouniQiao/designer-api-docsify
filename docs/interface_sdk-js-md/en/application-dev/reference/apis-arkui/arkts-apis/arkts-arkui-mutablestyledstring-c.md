@@ -15,11 +15,6 @@ Inherits from the [StyledString](arkts-arkui-styledstring-c.md) class.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## appendStyledString
 
 ```TypeScript
@@ -81,7 +76,7 @@ Inserts a string.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | start | number | Yes | Subscript of the position where the string will be inserted. |
-| other | string | Yes | String to insert.<br>**NOTE:**<br>The string specified here uses the style of the character at the **start** - 1 position or, if that character does not have style set, the style of the character at the **start** position. |
+| other | string | Yes | String to insert.<br>**NOTE:** <br>The string specified here uses the style of the character at the **start** - 1 position or, if that character does not have style set, the style of the character at the **start** position. |
 
 **Error codes:**
 
@@ -238,7 +233,7 @@ Replaces the string in the specified range of this styled string.
 | --- | --- | --- | --- |
 | start | number | Yes | Subscript of the target range. |
 | length | number | Yes | Length of the target range. |
-| other | string | Yes | String to replace the content in the target range.<br>**NOTE:**<br>The string specified here uses the style of the character at the **start** position. |
+| other | string | Yes | String to replace the content in the target range.<br>**NOTE:** <br>The string specified here uses the style of the character at the **start** position. |
 
 **Error codes:**
 
@@ -266,7 +261,7 @@ Replaces the style in the specified range of this styled string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| spanStyle | [SpanStyle](arkts-arkui-spanstyle-i.md) | Yes | Style object.<br>**NOTE:**<br>By default, the original style is removed and replaced with the new style.<br>If **styledKey** of **SpanStyle** is **IMAGE** or **CUSTOM_SPAN**, this API takes effect only when an image or custom span with the length of 1 is at the **start** position. |
+| spanStyle | [SpanStyle](arkts-arkui-spanstyle-i.md) | Yes | Style object.<br>**NOTE:** <br>By default, the original style is removed and replaced with the new style.<br>If **styledKey** of **SpanStyle** is **IMAGE** or **CUSTOM_SPAN**, this API takes effect only when an image or custom span with the length of 1 is at the **start** position. |
 
 **Error codes:**
 

@@ -14,7 +14,7 @@ function getPowerModel(): Promise<PowerModel>
 
 获取功率模式，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。
 
@@ -43,7 +43,7 @@ function getPowerModel(callback: AsyncCallback<PowerModel>): void
 
 获取功率模式。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。
 

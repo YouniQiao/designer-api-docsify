@@ -6,11 +6,6 @@ Defines the options for initializing the **RichEditor** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## controller
 
 ```TypeScript

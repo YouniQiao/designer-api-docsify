@@ -2,7 +2,7 @@
 
 Describes the attributes used for text rendering, such as size and typeface.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This module uses the physical pixel unit, px.
 > 
@@ -630,7 +630,7 @@ measureText(text: string, encoding: TextEncoding): number
 
 Measures the text width.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is used to measure the text width of the original string. To measure the text width after typesetting,
 > call [measure.measureText](../../../reference/apis-arkui/arkts-apis-uicontext-measureutils.md#measuretext12).

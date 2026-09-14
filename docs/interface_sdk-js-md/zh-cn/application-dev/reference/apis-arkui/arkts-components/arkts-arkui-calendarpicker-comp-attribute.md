@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## edgeAlign
 
 ```TypeScript
@@ -113,7 +108,7 @@ onChange(callback: Optional<Callback<Date>>)
 
 选择日期时触发该事件。不能通过双向绑定的状态变量触发。与[onChange](#onchange)相比，callback参数新增了对undefined类型的支持。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 

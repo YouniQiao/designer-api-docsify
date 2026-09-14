@@ -16,7 +16,7 @@ function on(type: 'userAgeGroupDetected', callback: Callback<UserClassification>
 
 订阅成功后，可以获取用户年龄群组的分类结果，应用可根据此结果做相应的内容推荐。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口仅在部分Phone中支持使用，当Phone设备不支持时返回801错误码。
 

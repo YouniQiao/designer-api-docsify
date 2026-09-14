@@ -36,7 +36,7 @@ Adds a long vibration event as a **VibratorPattern** object.
 
 | Type | Description |
 | --- | --- |
-| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) | VibratorPatternBuilder** object representing a long vibration event. |
+| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) | **VibratorPatternBuilder** object representing a long vibration event. |
 
 **Error codes:**
 
@@ -103,7 +103,7 @@ Adds a short vibration event as a **VibratorPattern** object.
 
 | Type | Description |
 | --- | --- |
-| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) | VibratorPatternBuilder** object representing a short vibration event. |
+| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) | **VibratorPatternBuilder** object representing a short vibration event. |
 
 **Error codes:**
 
@@ -149,7 +149,7 @@ Constructor used to create a **VibratorPattern** object, which determines the vi
 
 | Type | Description |
 | --- | --- |
-| [VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md) | VibratorPattern** object. |
+| [VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md) | **VibratorPattern** object. |
 
 **Examples**
 

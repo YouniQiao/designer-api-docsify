@@ -4,7 +4,7 @@ EnterpriseAdminExtensionContext是[EnterpriseAdminExtensionAbility](arkts-mdm-en
 
 每个EnterpriseAdminExtensionAbility组件实例化时，系统都会自动创建对应的EnterpriseAdminExtensionContext。开发者可以通过EnterpriseAdminExtensionContext获取应用的沙箱路径、启动其他的组件。该上下文环境只能在当前EnterpriseAdminExtensionAbility中使用，不能传递到其他组件中使用。
 
-> **说明：**
+> **说明：** 
 > 
 > 本模块接口仅可在Stage模型下使用。
 > 
@@ -24,7 +24,7 @@ startAbilityByAdmin(admin: Want, want: Want): Promise<void>
 
 在[EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md)组件中直接启动另外一个组件（页面没有弹窗提醒），目前支持[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)，[AppServiceExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md)。调用成功后，目标组件将被启动并进入运行状态。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 仅支持启动三方应用组件，不支持系统应用组件。
 > 

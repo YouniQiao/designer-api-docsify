@@ -10,11 +10,6 @@ In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## allowScale
 
 ```TypeScript
@@ -35,7 +30,7 @@ Sets whether to allow text to scale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to allow text to scale.<br>**true**: yes; **false**: no<br>Default value: **false**<br>**NOTE:**<br>This parameter is effective only when [fontSize](#fontsize) is in fp units. |
+| value | boolean | Yes | Whether to allow text to scale.<br>**true**: yes; **false**: no<br>Default value: **false**<br>**NOTE:** <br>This parameter is effective only when [fontSize](#fontsize) is in fp units. |
 
 ## fontColor
 
@@ -123,7 +118,7 @@ Sets the font weight. If the value is too large, the text may be clipped dependi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; string | Yes | Font weight. For the number type, the value range is [100, 900], at an interval of 100. The default value is **400**. A larger value indicates a heavier font weight. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.<br>Default value: **FontWeight.Normal |
+| value | number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; string | Yes | Font weight. For the number type, the value range is [100, 900], at an interval of 100. The default value is **400**. A larger value indicates a heavier font weight. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.<br>Default value: **FontWeight.Normal** |
 
 ## marqueeUpdateStrategy
 
@@ -145,7 +140,7 @@ Sets the scrolling strategy for the marquee after its attributes are updated. (T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [MarqueeUpdateStrategy](../arkts-apis/arkts-arkui-marqueeupdatestrategy-e.md) | Yes | Scrolling strategy for the marquee after its attributes are updated.<br> Default value: **MarqueeUpdateStrategy.DEFAULT |
+| value | [MarqueeUpdateStrategy](../arkts-apis/arkts-arkui-marqueeupdatestrategy-e.md) | Yes | Scrolling strategy for the marquee after its attributes are updated.<br> Default value: **MarqueeUpdateStrategy.DEFAULT** |
 
 ## onBounce
 

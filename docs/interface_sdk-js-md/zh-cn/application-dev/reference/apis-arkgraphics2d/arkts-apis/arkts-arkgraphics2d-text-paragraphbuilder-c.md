@@ -338,7 +338,7 @@ popStyle(): void
 
 弹出当前文本样式。
 
-> **说明：**
+> **说明：** 
 > 
 > 必须在调用[pushStyle()](#pushstyle)之后才能调用此方法。调用后，后续添加的文本将使用弹出前的文本样式。如果样式栈为空，将使用
 > [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)中的textStyle作为默认样式。
@@ -391,7 +391,7 @@ pushStyle(textStyle: TextStyle): void
 
 更新当前文本块的样式。
 
-> **说明：**
+> **说明：** 
 > 
 > 更新当前文本块的样式，之后添加文字均采用该样式。
 

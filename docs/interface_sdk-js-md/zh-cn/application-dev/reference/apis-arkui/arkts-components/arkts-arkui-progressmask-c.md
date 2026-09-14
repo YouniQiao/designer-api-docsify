@@ -6,11 +6,6 @@ ProgressMask用于设置遮罩的进度、最大值和颜色。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

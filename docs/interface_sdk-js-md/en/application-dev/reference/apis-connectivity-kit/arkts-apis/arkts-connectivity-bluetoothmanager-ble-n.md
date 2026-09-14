@@ -6,7 +6,7 @@ Provides methods to operate or manage Bluetooth.
 
 **Deprecated since:** 10
 
-**Substitutes:** [ble/ble](arkts-bluetooth-ble.md)
+**Substitutes:** [ble/ble](arkts-connectivity-bluetooth-ble.md)
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

@@ -27,10 +27,6 @@ Sets the property of target, equivalent to `target[propertyKey] = value` when `r
 | value | P extends keyof T ? T[P] : any | Yes |  |
 | receiver | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 
 ## set
 
@@ -46,8 +42,3 @@ function set(target: object, propertyKey: PropertyKey, value: any, receiver?: an
 | propertyKey | [PropertyKey](arkts-propertykey-t.md) | Yes |  |
 | value | any | Yes |  |
 | receiver | any | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

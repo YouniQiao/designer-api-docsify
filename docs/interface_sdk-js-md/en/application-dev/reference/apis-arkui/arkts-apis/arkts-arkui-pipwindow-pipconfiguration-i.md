@@ -202,7 +202,7 @@ ID of the **Navigation** component. If no value is passed, the page does not nee
 
 1. When the UIAbility uses Navigation to manage pages,
 set the ID of the **Navigation** component for the PiP controller. This ensures that the original page can be restored from the PiP window.
-2. When the UIAbility uses [Router](arkts-router.md) to manage pages,
+2. When the UIAbility uses [Router](arkts-arkui-router.md) to manage pages,
 you do not need to set the ID of the **Navigation** component for the PiP controller.
 3. If the UIAbility has only one page, you do not need to set the navigation ID.
 The original page can be restored from the PiP window.

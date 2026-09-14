@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## children
 
 ```TypeScript
@@ -37,7 +32,7 @@ text: string | Resource
 
 文本信息。
 
-> **说明：**当文本长度大于列宽时，文本被截断。
+> **说明：** 当文本长度大于列宽时，文本被截断。
 
 **类型：** string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 

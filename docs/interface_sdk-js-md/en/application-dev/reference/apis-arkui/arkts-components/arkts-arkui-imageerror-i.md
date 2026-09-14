@@ -8,11 +8,6 @@ This event is not triggered if the parameter type of the component is [AnimatedD
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## componentHeight
 
 ```TypeScript

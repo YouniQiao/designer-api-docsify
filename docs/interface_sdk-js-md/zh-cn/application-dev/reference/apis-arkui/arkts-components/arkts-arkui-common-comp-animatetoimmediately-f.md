@@ -1,10 +1,5 @@
 # animateToImmediately
 
-## 导入模块
-
-```TypeScript
-```
-
 ## animateToImmediately
 
 ```TypeScript

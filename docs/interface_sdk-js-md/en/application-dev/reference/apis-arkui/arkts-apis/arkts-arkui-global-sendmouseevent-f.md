@@ -31,3 +31,4 @@ Send mouse event.
 
 | Type | Description |
 | --- | --- |
+| boolean |  |

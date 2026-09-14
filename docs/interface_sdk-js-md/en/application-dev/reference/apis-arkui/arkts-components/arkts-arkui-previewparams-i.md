@@ -6,11 +6,6 @@ Define Preview property
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## colorMode
 
 ```TypeScript

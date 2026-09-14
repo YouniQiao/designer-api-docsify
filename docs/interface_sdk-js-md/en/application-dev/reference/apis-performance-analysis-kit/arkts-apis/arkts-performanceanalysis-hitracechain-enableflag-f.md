@@ -22,7 +22,7 @@ Enables the trace flag specified in HiTraceId. This API returns the result synch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | HiTraceId** instance for which the trace flag is enabled. |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | **HiTraceId** instance for which the trace flag is enabled. |
 | flag | [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md) | Yes | Specified trace flag. |
 
 **Examples**

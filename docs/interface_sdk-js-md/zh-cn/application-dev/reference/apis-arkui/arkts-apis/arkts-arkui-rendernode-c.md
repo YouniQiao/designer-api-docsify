@@ -2,7 +2,7 @@
 
 提供自绘制渲染节点RenderNode，支持开发者通过C API进行开发，完成自定义绘制需求。RenderNode还支持渲染节点树管理（添加、删除、查询子节点）、背景色与不透明度等视觉属性设置、变换（缩放、旋转、平移、变换矩阵）、阴影、边框、遮罩与裁剪、模糊效果等能力，适用于在Stage模型下进行自定义渲染与节点树管理的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > - 不建议对BuilderNode中的RenderNode进行修改操作。BuilderNode中持有的FrameNode仅用于将该
 > BuilderNode作为子节点挂载到其他FrameNode上，对该FrameNode或对应的RenderNode进行属性设置与子节点操作可能会产生未定义行为，包括但不限于显示异常、事件异常、稳定性问题等。
@@ -300,7 +300,7 @@ draw(context: DrawContext): void
 
 该接口的[DrawContext](arkts-arkui-graphics-drawcontext-c.md)中的Canvas是用于记录指令的临时Canvas，并非节点的真实Canvas。使用请参见[调整自定义绘制Canvas的变换矩阵](../../../ui/arkts-user-defined-arktsNode-renderNode.md#调整自定义绘制canvas的变换矩阵)。
 
-> **说明：**
+> **说明：** 
 > 
 > RenderNode初始化时，会调用两次draw方法。第一次调用是在首次创建FrameNode时触发Render流程，第二次调用是在首次设置modifier时触发绘制。后续绘制流程皆由modifier触发。
 
@@ -1369,7 +1369,7 @@ get backgroundColor(): number
 
 **类型：** number
 
-**默认值：**
+**默认值：** 
 - API版本11：0X00000000
 
 **起始版本：** 11
@@ -1794,7 +1794,7 @@ get clipToFrame(): boolean
 
 **类型：** boolean
 
-**默认值：**
+**默认值：** 
 - API版本11：true
 
 **起始版本：** 11
@@ -2119,7 +2119,7 @@ get frame(): Frame
 
 **类型：** [Frame](arkts-arkui-graphics-frame-i.md)
 
-**默认值：**
+**默认值：** 
 - API版本11：Frame { x: 0, y: 0, width: 0, height: 0 }
 
 **起始版本：** 11
@@ -2485,7 +2485,7 @@ get opacity(): number
 
 **类型：** number
 
-**默认值：**
+**默认值：** 
 - API版本11：1
 
 **起始版本：** 11
@@ -2570,7 +2570,7 @@ get pivot(): Pivot
 
 **类型：** [Pivot](arkts-arkui-pivot-t.md)
 
-**默认值：**
+**默认值：** 
 - API版本11：Pivot { x: 0.5, y: 0.5 }
 
 **起始版本：** 11
@@ -2653,7 +2653,7 @@ get position(): Position
 
 **类型：** [Position](arkts-arkui-position-t.md)
 
-**默认值：**
+**默认值：** 
 - API版本11：Position { x: 0, y: 0 }
 
 **起始版本：** 11
@@ -2736,7 +2736,7 @@ get rotation(): Rotation
 
 **类型：** [Rotation](arkts-arkui-rotation-t.md)
 
-**默认值：**
+**默认值：** 
 - API版本11：Rotation { x: 0, y: 0, z: 0 }
 
 **起始版本：** 11
@@ -2819,7 +2819,7 @@ get scale(): Scale
 
 **类型：** [Scale](arkts-arkui-scale-t.md)
 
-**默认值：**
+**默认值：** 
 - API版本11：Scale { x: 1, y: 1 }
 
 **起始版本：** 11
@@ -2905,7 +2905,7 @@ get shadowAlpha(): number
 
 **类型：** number
 
-**默认值：**
+**默认值：** 
 - API版本11：0
 
 **起始版本：** 11
@@ -2989,7 +2989,7 @@ get shadowColor(): number
 
 **类型：** number
 
-**默认值：**
+**默认值：** 
 - API版本11：0X00000000
 
 **起始版本：** 11
@@ -3074,7 +3074,7 @@ get shadowElevation(): number
 
 **类型：** number
 
-**默认值：**
+**默认值：** 
 - API版本11：0
 
 **起始版本：** 11
@@ -3159,7 +3159,7 @@ get shadowOffset(): Offset
 
 **类型：** [Offset](arkts-arkui-offset-t.md)
 
-**默认值：**
+**默认值：** 
 - API版本11：Offset { x: 0, y: 0 }
 
 **起始版本：** 11
@@ -3250,7 +3250,7 @@ get shadowRadius(): number
 
 **类型：** number
 
-**默认值：**
+**默认值：** 
 - API版本11：0
 
 **起始版本：** 11
@@ -3558,7 +3558,7 @@ get size(): Size
 
 **类型：** Size
 
-**默认值：**
+**默认值：** 
 - API版本11：Size { width: 0, height: 0 }
 
 **起始版本：** 11
@@ -3654,7 +3654,7 @@ get transform(): Matrix4
 
 **类型：** [Matrix4](arkts-arkui-matrix4-t.md)
 
-**默认值：**
+**默认值：** 
 - API版本11：Matrix4 [ 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 ]
 
 **起始版本：** 11
@@ -3737,7 +3737,7 @@ get translation(): Translation
 
 **类型：** [Translation](arkts-arkui-translation-t.md)
 
-**默认值：**
+**默认值：** 
 - API版本11：Translation { x: 0, y: 0 }
 
 **起始版本：** 11

@@ -35,6 +35,8 @@ Obtains the context of 2D canvas drawing. Only parameters related to 2D canvas d
 
 | Type | Description |
 | --- | --- |
+| [CanvasRenderingContext2D](arkts-arkui-viewmodel-canvasrenderingcontext2d-i.md) |  |
+
 ## getContext("webgl")
 
 ```TypeScript
@@ -60,6 +62,8 @@ Obtains the context of webgl canvas drawing. Only parameters related to webgl ca
 
 | Type | Description |
 | --- | --- |
+| [WebGLRenderingContext](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-webgl-webglrenderingcontext-i.md) |  |
+
 ## getContext("webgl2")
 
 ```TypeScript
@@ -85,6 +89,8 @@ Obtains the context of webgl2 canvas drawing. Only parameters related to webgl2 
 
 | Type | Description |
 | --- | --- |
+| [WebGL2RenderingContext](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-webgl2-webgl2renderingcontext-i.md) |  |
+
 ## toDataURL
 
 ```TypeScript
@@ -110,3 +116,4 @@ Creates a data URI that contains the image display.
 
 | Type | Description |
 | --- | --- |
+| string |  |

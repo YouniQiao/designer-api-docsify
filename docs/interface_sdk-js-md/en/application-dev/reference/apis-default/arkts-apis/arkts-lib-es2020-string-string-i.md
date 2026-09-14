@@ -18,8 +18,3 @@ Matches a string with a regular expression, and returns an iterable of matches c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | regexp | RegExp | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

@@ -8,11 +8,6 @@ Custom AI session configuration object, used to define the lifecycle callbacks o
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onCreateAISession
 
 ```TypeScript

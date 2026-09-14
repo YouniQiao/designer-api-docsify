@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## borderRadius
 
 ```TypeScript
@@ -23,7 +18,7 @@ borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
 > 单位：默认为vp，可通过LengthMetrics或LocalizedBorderRadiuses类型指定单位。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)类型的value参数同时作用于四个圆角半径大小，
 > unit参数用于设置单位。
@@ -54,7 +49,7 @@ color?: ResourceColor
 > 
 > 'sys.color.comp_background_tertiary'
 
-> **说明：**未设置该属性时，使用默认值。
+> **说明：** 未设置该属性时，使用默认值。
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

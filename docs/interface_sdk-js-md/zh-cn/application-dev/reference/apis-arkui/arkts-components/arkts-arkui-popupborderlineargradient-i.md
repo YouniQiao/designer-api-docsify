@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## colors
 
 ```TypeScript
@@ -21,7 +16,7 @@ colors: Array<[ResourceColor, number]>
 
 指定渐变色颜色和其对应的百分比位置的数组，设置非法颜色直接跳过。
 
-**说明：**
+**说明：** 
 
 颜色设置方式可参考：[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)，非[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)范围内的颜色值即为非法颜色。
 
@@ -51,7 +46,7 @@ direction?: GradientDirection
 
 默认值：GradientDirection.Bottom
 
-**说明：**
+**说明：** 
 
 当线性渐变的方向设置为GradientDirection.None时，显示默认值。
 

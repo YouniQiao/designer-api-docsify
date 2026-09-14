@@ -78,7 +78,7 @@ User authentication parameters. The parameters include the **challenge** value, 
 iconColor?: ResourceColor
 ```
 
-Icon color. Multiple formats are supported, such as color values and resource references. By default, the system accent color is used. You can customize the color based on the application theme, for example, using **Color.Blue** or **\$r('app.color.primary')**.
+Icon color. Multiple formats are supported, such as color values and resource references. By default, the system accent color is used. You can customize the color based on the application theme, for example, using **Color.Blue** or **&#36;r('app.color.primary')**.
 
 **Type:** [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md)
 

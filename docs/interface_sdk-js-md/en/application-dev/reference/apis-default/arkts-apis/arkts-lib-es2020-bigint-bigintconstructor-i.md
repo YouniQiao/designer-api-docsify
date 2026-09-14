@@ -17,10 +17,6 @@
 | --- | --- | --- | --- |
 | value | bigint &#124; boolean &#124; number &#124; string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## asIntN
 
 ```TypeScript
@@ -36,10 +32,6 @@ Interprets the low bits of a BigInt as a 2's-complement signed integer. All high
 | bits | number | Yes |  |
 | int | bigint | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## asUintN
 
 ```TypeScript
@@ -55,10 +47,6 @@ Interprets the low bits of a BigInt as an unsigned integer. All higher bits are 
 | bits | number | Yes |  |
 | int | bigint | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## prototype
 
 ```TypeScript

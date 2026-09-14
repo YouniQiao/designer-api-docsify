@@ -1,7 +1,7 @@
 # ApplicationStateObserver
 
 应用状态监听器，可以作为入参传入 on('applicationState') 方法，监听应用的生命周期变化。   
-> **说明：**
+> **说明：** 
 > 
 > 本模块首批接口从API version 14开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 

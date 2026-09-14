@@ -20,7 +20,7 @@ bind(address: NetAddress, callback: AsyncCallback<void>): void
 
 绑定IP地址和端口。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 如果TLSSocket对象是通过TCPSocket对象升级创建的，可以不用执行bind方法。
 
@@ -34,7 +34,7 @@ bind(address: NetAddress, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| address | NetAddress | 是 | 本端地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
+| address | [NetAddress](arkts-network-socket-p.md) | 是 | 本端地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。成功返回TLSSocket绑定本机的IP地址和端口的结果。失败返回错误码、错误信息。 |
 
 **错误码：**
@@ -74,7 +74,7 @@ bind(address: NetAddress): Promise<void>
 
 绑定IP地址和端口。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 如果TLSSocket对象是通过TCPSocket对象升级创建的，可以不用执行bind方法。
 
@@ -88,7 +88,7 @@ bind(address: NetAddress): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| address | NetAddress | 是 | 本端地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
+| address | [NetAddress](arkts-network-socket-p.md) | 是 | 本端地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
 
 **返回值：**
 
@@ -826,7 +826,7 @@ getLocalAddress(): Promise<NetAddress>
 
 获取TLSSocket的本地Socket地址。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 在TLSSocketServer通信连接成功之后，才可调用此方法。
 
@@ -838,7 +838,7 @@ getLocalAddress(): Promise<NetAddress>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | 以Promise形式返回获取本地socket地址的结果。 |
+| Promise&lt;[NetAddress](arkts-network-socket-p.md)&gt; | 以Promise形式返回获取本地socket地址的结果。 |
 
 **错误码：**
 
@@ -960,7 +960,7 @@ getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | 是 | 回调函数。成功返回对端的socket地址，失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetAddress](arkts-network-socket-p.md)&gt; | 是 | 回调函数。成功返回对端的socket地址，失败返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -1001,7 +1001,7 @@ getRemoteAddress(): Promise<NetAddress>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | 以Promise形式返回获取对端socket地址的结果。失败返回错误码，错误信息。 |
+| Promise&lt;[NetAddress](arkts-network-socket-p.md)&gt; | 以Promise形式返回获取对端socket地址的结果。失败返回错误码，错误信息。 |
 
 **错误码：**
 
@@ -1230,7 +1230,7 @@ getSocketFd(): Promise<number>
 
 获取TLSSocket的文件描述符。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - bind方法调用成功后，才可调用此方法。
 > 
@@ -1543,7 +1543,7 @@ on(type: 'message', callback: Callback<SocketMessageInfo>): void
 
 订阅TLSSocket连接的接收消息事件。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > bind方法调用成功后，才可调用此方法。
 
@@ -1603,7 +1603,7 @@ on(type: 'connect' | 'close', callback: Callback<void>): void
 
 订阅TLSSocket的连接事件或关闭事件。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > bind方法调用成功后，才可调用此方法。
 
@@ -1658,7 +1658,7 @@ on(type: 'connect' | 'close', callback: Callback<void>): void
 
 订阅TLSSocket的连接事件或关闭事件。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > bind方法调用成功后，才可调用此方法。
 
@@ -1691,7 +1691,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 订阅TLSSocket连接的error事件。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > bind方法调用成功后，才可调用此方法。
 

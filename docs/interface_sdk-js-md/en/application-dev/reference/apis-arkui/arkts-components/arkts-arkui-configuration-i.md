@@ -8,11 +8,6 @@ Defines the data type of the interface restriction.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## colorMode
 
 ```TypeScript

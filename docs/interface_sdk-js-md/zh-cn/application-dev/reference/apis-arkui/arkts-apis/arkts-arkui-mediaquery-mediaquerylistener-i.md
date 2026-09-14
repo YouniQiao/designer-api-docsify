@@ -64,7 +64,7 @@ on(type: 'change', callback: Callback<MediaQueryResult>): void
 
 通过句柄向对应的查询条件注册回调，当媒体属性发生变更时会触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 注册的回调中不允许进一步调用on或off。
 

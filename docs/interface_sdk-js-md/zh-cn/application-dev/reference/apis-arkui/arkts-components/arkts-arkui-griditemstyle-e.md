@@ -2,7 +2,7 @@
 
 GridItem样式枚举，用于定义GridItem的交互态样式。
 
-> **说明：**
+> **说明：** 
 > 
 > GridItem焦点态样式设置：Grid组件需要设置4vp规格以上的内边距，用于显示GridItem的焦点框。
 

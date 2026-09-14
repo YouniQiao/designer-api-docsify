@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## mode
 
 ```TypeScript
@@ -63,7 +58,7 @@ modifier?: ImageModifier
 
 默认值：空，拖拽背板不设置背板图样式。
 
-**说明：**
+**说明：** 
 
 1.若节点已设置背景模糊或材质效果，直接用作拖拽预览会导致截图包含这些效果，与拖拽modifier属性冲突。建议使用[dragPreview](arkts-arkui-commonmethod-c.md#dragpreview)自定义不包含背景模糊和材质效果的预览。
 
@@ -87,7 +82,7 @@ numberBadge?: boolean | number
 
 控制数量角标是否显示，或强制设置显示的数量。当设置数量角标时取值范围为[0，2&lt;sup&gt;31&lt;/sup&gt;-1]，超过取值范围时会按默认状态处理。当设置为浮点数时，只显示整数部分。
 
-**说明：**
+**说明：** 
 
 在多选拖拽场景，需通过该接口设置拖拽对象的数量。
 

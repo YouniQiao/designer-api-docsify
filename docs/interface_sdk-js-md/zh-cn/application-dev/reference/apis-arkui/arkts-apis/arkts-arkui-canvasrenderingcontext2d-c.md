@@ -2,7 +2,7 @@
 
 CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制，绘制对象可以是形状、文本、图片等。
 
-> **说明：**
+> **说明：** 
 > 
 > * 建议使用时将CanvasRenderingContext2D对象与Canvas组件封装到同一个自定义组件中，保证两者一一对应且生命周期保持一致。
 > 
@@ -21,11 +21,6 @@ CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上�
 **起始版本：** 8
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## constructor
 
@@ -128,7 +123,7 @@ static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, o
 
 从一个DrawingRenderingContext对象中获取一个CanvasRenderingContext2D对象，该CanvasRenderingContext2D对象与入参的DrawingRenderingContext对象绑定了相同的Canvas组件。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从该接口获取的CanvasRenderingContext2D对象不允许作为参数创建[Canvas](arkts-arkui-canvas-con.md)组件，否则会导致应用崩溃。
 > 
@@ -348,7 +343,7 @@ on(type: 'onAttach', callback: Callback<void>): void
 
 订阅CanvasRenderingContext2D与Canvas组件发生绑定的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > CanvasRenderingContext2D对象在同一时间只能与一个Canvas组件绑定。
 > 当CanvasRenderingContext2D对象和Canvas组件发生绑定时，会触发'onAttach'回调，
@@ -389,7 +384,7 @@ on(type: 'onDetach', callback: Callback<void>): void
 
 订阅CanvasRenderingContext2D与Canvas组件解除绑定的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 当CanvasRenderingContext2D对象和Canvas组件解除绑定时，会触发'onDetach'回调，
 > 表示应停止绘制行为。
@@ -430,7 +425,7 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 未执行完重复调用该方法会触发错误回调。示例代码同stopImageAnalyzer。
 
-> **说明：**
+> **说明：** 
 > 
 > 分析类型不支持动态修改。
 > 
@@ -474,7 +469,7 @@ stopImageAnalyzer(): void
 
 停止AI分析功能，AI分析展示的内容将被销毁。
 
-> **说明：**
+> **说明：** 
 > 
 > 在startImageAnalyzer方法未返回结果时调用本方法，会触发其错误回调。
 > 

@@ -284,13 +284,13 @@ Events created using this API can be obtained and modified by the system calenda
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Event](arkts-calendar-calendarmanager-event-i.md) | Yes | Event** object. |
+| event | [Event](arkts-calendar-calendarmanager-event-i.md) | Yes | **Event** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the event ID. The event ID is the unique identifier of an event and is the auto-increment primary key of the database. If the event creation fails, no value is returned; if the value is less than **0**, the event creation is canceled; if the value is greater than **0**, the event creation is successful. The return value cannot be **0 |
+| Promise&lt;number&gt; | Promise used to return the event ID. The event ID is the unique identifier of an event and is the auto-increment primary key of the database. If the event creation fails, no value is returned; if the value is less than **0**, the event creation is canceled; if the value is greater than **0**, the event creation is successful. The return value cannot be **0** |
 
 **Examples**
 

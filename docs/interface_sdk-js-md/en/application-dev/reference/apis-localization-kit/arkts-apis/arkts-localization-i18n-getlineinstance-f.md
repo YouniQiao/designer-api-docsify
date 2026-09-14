@@ -30,7 +30,7 @@ Obtains a **BreakIterator** object. The **BreakIterator** object maintains an in
 
 | Type | Description |
 | --- | --- |
-| [BreakIterator](arkts-localization-i18n-breakiterator-c.md) | BreakIterator** object. |
+| [BreakIterator](arkts-localization-i18n-breakiterator-c.md) | **BreakIterator** object. |
 
 **Examples**
 

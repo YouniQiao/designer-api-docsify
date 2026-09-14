@@ -22,7 +22,7 @@ name: ResourceStr
 
 默认值：空字符串。
 
-**说明：**如果文本大于列宽时，文本被截断。
+**说明：** 如果文本大于列宽时，文本被截断。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -44,7 +44,7 @@ options: Array<ResourceStr>
 
 默认值：空数组。
 
-**说明：**文本超长显示省略号。
+**说明：** 文本超长显示省略号。
 
 **类型：** Array&lt;[ResourceStr](arkts-arkui-resourcestr-t.md)&gt;
 

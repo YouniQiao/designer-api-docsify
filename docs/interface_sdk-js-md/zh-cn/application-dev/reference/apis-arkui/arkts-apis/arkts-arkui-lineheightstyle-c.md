@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript
@@ -41,7 +36,7 @@ constructor(lineHeight: LengthMetrics, lineHeightMultiple?: number)
 
 文本行高及倍数的构造函数。
 
-> **说明：**
+> **说明：** 
 > 
 > - lineHeightMultiple与lineHeight或[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md)同时设置时，仅lineHeightMultiple生效，行高为该行最高字体高度
 > 与倍数的乘积。

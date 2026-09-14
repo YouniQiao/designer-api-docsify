@@ -6,11 +6,6 @@ Defines the callback function triggered when the PDF page is scrolled to the bot
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## url
 
 ```TypeScript

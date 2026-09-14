@@ -2,7 +2,7 @@
 
 一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md)实现。
 
-> **说明：**
+> **说明：** 
 > 
 > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
 > **装饰器类型：** \@Sendable
@@ -27,7 +27,7 @@ import { collections } from '@kit.ArkTS';
 
 返回一个迭代器，迭代器的每一项都是一个数字。
 
-> **说明：**
+> **说明：** 
 > 
 > 本接口不支持在.ets文件中使用（和本文中其他迭代器方法不同，其他迭代器方法没有此限制）。
 

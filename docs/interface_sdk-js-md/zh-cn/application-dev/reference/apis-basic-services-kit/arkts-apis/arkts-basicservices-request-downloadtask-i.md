@@ -20,7 +20,7 @@ delete(callback: AsyncCallback<boolean>): void
 
 移除下载的任务，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
@@ -77,7 +77,7 @@ delete(): Promise<boolean>
 
 移除下载的任务，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
@@ -131,7 +131,7 @@ getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 
 查询下载的任务，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
@@ -188,7 +188,7 @@ getTaskInfo(): Promise<DownloadInfo>
 
 查询下载任务的信息，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
@@ -243,7 +243,7 @@ getTaskMimeType(callback: AsyncCallback<string>): void
 
 查询下载任务的 MimeType（HTTP中表示资源的媒体类型），使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
@@ -300,7 +300,7 @@ getTaskMimeType(): Promise<string>
 
 查询下载的任务的MimeType(HTTP中表示资源的媒体类型)，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
@@ -610,7 +610,7 @@ on(type: 'progress', callback: (receivedSize: number, totalSize: number) => void
 
 订阅下载任务进度事件，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 应用处于后台时，为满足功耗性能要求，不支持调用此接口进行回调。
 
@@ -829,7 +829,7 @@ pause(callback: AsyncCallback<void>): void
 
 暂停下载正在运行中的任务，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
 > [suspend](#suspend)替代。
@@ -876,7 +876,7 @@ pause(): Promise<void>
 
 暂停下载正在运行中的任务，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用[suspend](#suspend)替代。
 
@@ -920,7 +920,7 @@ query(callback: AsyncCallback<DownloadInfo>): void
 
 查询下载任务，返回下载任务的信息，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
 > [getTaskInfo](#gettaskinfo)替代。
@@ -967,7 +967,7 @@ query(): Promise<DownloadInfo>
 
 查询下载任务，返回下载任务的信息，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃,建议使用[getTaskInfo](#gettaskinfo)替代。
 
@@ -1011,7 +1011,7 @@ queryMimeType(callback: AsyncCallback<string>): void
 
 查询下载的任务的MimeType，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
 > [getTaskMimeType](#gettaskmimetype)替代。
@@ -1058,7 +1058,7 @@ queryMimeType(): Promise<string>
 
 查询下载任务的MimeType，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用[getTaskMimeType](#gettaskmimetype)替代。
 
@@ -1102,7 +1102,7 @@ remove(callback: AsyncCallback<boolean>): void
 
 移除下载的任务，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
 > [delete](arkts-basicservices-request-uploadtask-i.md#delete)替代。
@@ -1149,7 +1149,7 @@ remove(): Promise<boolean>
 
 移除下载的任务，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用[delete](arkts-basicservices-request-uploadtask-i.md#delete)替代。
 
@@ -1193,7 +1193,7 @@ restore(callback: AsyncCallback<boolean>): void
 
 重新启动被暂停的下载任务，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
@@ -1250,7 +1250,7 @@ restore(): Promise<boolean>
 
 重新启动被暂停的下载任务，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
@@ -1305,7 +1305,7 @@ resume(callback: AsyncCallback<void>): void
 
 重新启动被暂停的下载任务，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
 > [restore](#restore)替代。
@@ -1352,7 +1352,7 @@ resume(): Promise<void>
 
 重新启动被暂停的下载任务，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用[restore](#restore)替代。
 
@@ -1396,7 +1396,7 @@ suspend(callback: AsyncCallback<boolean>): void
 
 暂停下载正在运行中的任务，已暂停的任务可被[restore](#restore)恢复，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
@@ -1453,7 +1453,7 @@ suspend(): Promise<boolean>
 
 暂停下载正在运行中的任务，已暂停的任务可被[restore](#restore)恢复，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 

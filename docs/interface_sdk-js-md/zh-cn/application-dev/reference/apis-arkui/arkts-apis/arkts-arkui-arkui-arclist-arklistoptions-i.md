@@ -38,7 +38,7 @@ initialIndex?: number
 
 默认值：0
 
-**说明：**
+**说明：** 
 
 设置为负数或超过了当前ArcList最后一个item的索引值时视为无效取值，无效取值按默认值显示。
 
@@ -58,7 +58,7 @@ scroller?: Scroller
 
 可滚动组件的控制器。与ArcList绑定后，可以通过它控制ArcList的滚动。不设置时不绑定滚动控制器。
 
-**说明：**
+**说明：** 
 
 不允许和其他滚动类组件，如：List、Grid、Scroll和WaterFlow绑定同一个滚动控制对象。
 

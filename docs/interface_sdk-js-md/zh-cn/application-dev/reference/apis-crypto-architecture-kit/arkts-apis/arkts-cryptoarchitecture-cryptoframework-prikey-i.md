@@ -135,7 +135,7 @@ getEncodedDer(format: string): DataBlob
 
 支持根据指定的密钥格式（如采用哪个规范），获取满足ASN.1语法、DER编码的私钥数据。
 
-> **说明：**
+> **说明：** 
 > 
 > 本接口和[Key.getEncoded()](arkts-cryptoarchitecture-cryptoframework-key-i.md#getencoded)的区别是：
 > 1. 本接口可以指定获取密钥数据的格式。

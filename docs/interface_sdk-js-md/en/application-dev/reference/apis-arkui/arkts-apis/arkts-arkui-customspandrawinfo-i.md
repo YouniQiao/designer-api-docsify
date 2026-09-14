@@ -6,11 +6,6 @@ Defines the CustomSpanDrawInfo interface.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## baseline
 
 ```TypeScript

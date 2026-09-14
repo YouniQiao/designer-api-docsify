@@ -6,11 +6,6 @@ Defines the title bar options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## backgroundBlurStyle
 
 ```TypeScript
@@ -37,7 +32,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 Options for the title bar background blur style.
 
-**NOTE:**
+**NOTE:** 
 
 This parameter is only effective when **backgroundBlurStyle** is set.
 
@@ -79,7 +74,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 Title bar background properties, including blur radius, brightness, saturation, and color.
 
-**NOTE:**
+**NOTE:** 
 
 Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
 
@@ -186,7 +181,7 @@ the [title value](arkts-arkui-navigation-comp-attribute.md#title) type is **Reso
 
 Default value:
 
-LengthMetrics.resource(`\$r('sys.float.margin_right')`)
+LengthMetrics.resource(`&#36;r('sys.float.margin_right')`)
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
@@ -215,7 +210,7 @@ Only supported in one of the following scenarios:
 
 Default value:
 
-LengthMetrics.resource(**\$r('sys.float.margin_left')**)
+LengthMetrics.resource(**&#36;r('sys.float.margin_left')**)
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 

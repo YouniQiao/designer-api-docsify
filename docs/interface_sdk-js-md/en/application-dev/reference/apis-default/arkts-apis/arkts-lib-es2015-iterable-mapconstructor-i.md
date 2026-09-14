@@ -11,10 +11,6 @@
 new(): Map<any, any>
 ```
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -26,8 +22,3 @@ new <K, V>(iterable?: Iterable<readonly [K, V]> | null): Map<K, V>
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | iterable | Iterable&lt;readonly [K, V]&gt; &#124; null | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

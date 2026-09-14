@@ -20,7 +20,7 @@ backgroundColor?: ColorMetrics
 
 ChipV2背景颜色。
 
-默认值：\$r('sys.color.ohos_id_color_button_normal')
+默认值：&#36;r('sys.color.ohos_id_color_button_normal')
 
 值为undefined时，按默认值处理。
 
@@ -62,7 +62,7 @@ fontColor?: ColorMetrics
 
 ChipV2文字颜色。
 
-默认值：\$r('sys.color.ohos_id_color_text_primary')
+默认值：&#36;r('sys.color.ohos_id_color_text_primary')
 
 值为undefined时，按默认值处理。
 
@@ -84,7 +84,7 @@ selectedBackgroundColor?: ColorMetrics
 
 ChipV2选中时的背景颜色。设置后，当ChipV2被选中时，背景会填充此颜色，替代未选中状态下的backgroundColor。
 
-默认值：\$r('sys.color.ohos_id_color_emphasize')
+默认值：&#36;r('sys.color.ohos_id_color_emphasize')
 
 值为undefined时，按默认值处理。
 
@@ -126,7 +126,7 @@ selectedFontColor?: ColorMetrics
 
 ChipV2选中时的文字颜色。设置后，当ChipV2被选中时，label文本会显示此颜色，替代未选中状态下的fontColor。
 
-默认值：\$r('sys.color.ohos_id_color_text_primary_contrary')
+默认值：&#36;r('sys.color.ohos_id_color_text_primary_contrary')
 
 值为undefined时，按默认值处理。
 

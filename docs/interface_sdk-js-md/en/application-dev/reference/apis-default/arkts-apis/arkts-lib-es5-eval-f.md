@@ -18,8 +18,3 @@ Evaluates JavaScript code and executes it.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | x | string | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

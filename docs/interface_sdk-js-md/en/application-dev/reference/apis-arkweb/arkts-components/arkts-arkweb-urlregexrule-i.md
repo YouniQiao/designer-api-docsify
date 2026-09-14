@@ -6,11 +6,6 @@ Defines the URL regular expression rule.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## rule
 
 ```TypeScript

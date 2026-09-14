@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## annulusRegion
 
 ```TypeScript
@@ -72,7 +67,7 @@ particle: EmitterParticleOptions<PARTICLE>
 
 -lifetime表示单个粒子的生命周期，默认值1000（即1000ms，1s），lifetime&gt;=-1，当lifetime为-1表示粒子生命周期无限大。当lifetime&lt;-1，取默认值。
 
-**说明：**如果不需要动画一直播放，建议不要将生命周期设置为-1，可能对性能造成较大影响。
+**说明：** 如果不需要动画一直播放，建议不要将生命周期设置为-1，可能对性能造成较大影响。
 
 lifetimeRange表示粒子生命周期取值范围，设置lifetimeRange后粒子的生命周期为[lifetime-lifetimeRange, lifetime+lifetimeRange]中间的一个随机整数。lifetimeRange默认值为0，取值范围为[0, +∞）。设置为负值时取默认值。
 

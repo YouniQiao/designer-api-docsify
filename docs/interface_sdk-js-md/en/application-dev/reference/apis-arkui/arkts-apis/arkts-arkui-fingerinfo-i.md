@@ -6,11 +6,6 @@ Defines the finger information type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## getCurrentLocalPosition
 
 ```TypeScript
@@ -175,7 +170,7 @@ id: number
 
 Index of the finger, determined by the number of fingers pressed. The first pressed finger is assigned 0, with the index incrementing by one for each subsequent finger.
 
-**NOTE:**
+**NOTE:** 
 
 Indexes for other input sources (mouse: 1001, stylus: 102, mouse wheel: 0, two-finger trackpad slide: 0) are also converted to finger indexes.
 

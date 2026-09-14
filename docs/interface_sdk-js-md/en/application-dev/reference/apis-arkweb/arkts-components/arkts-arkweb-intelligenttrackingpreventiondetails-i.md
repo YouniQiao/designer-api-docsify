@@ -6,11 +6,6 @@ Provides detailed information about intelligent tracking prevention, including t
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## host
 
 ```TypeScript

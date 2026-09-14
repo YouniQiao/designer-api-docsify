@@ -10,11 +10,6 @@ In addition to the universal events, the following events are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## canLoop
 
 ```TypeScript
@@ -35,7 +30,7 @@ Sets whether to enable loop scrolling.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable loop scrolling.<br>- **true**: Enable loop scrolling.<br>- **false**: Disable loop scrolling.<br>Default value: **true |
+| value | boolean | Yes | Whether to enable loop scrolling.<br>- **true**: Enable loop scrolling.<br>- **false**: Disable loop scrolling.<br>Default value: **true** |
 
 ## canLoop
 
@@ -77,7 +72,7 @@ Sets the height of the picker items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; string | Yes | Height of the picker items.<br>Value range:<br>Number type: [0, +∞), in vp.<br>String type: numeric string only, for example, **"56"**.<br>Default value: selected item 56 vp, unselected item 36 vp.<br>**NOTE:**<br>The set value applies to both selected and unselected items. |
+| value | number &#124; string | Yes | Height of the picker items.<br>Value range:<br>Number type: [0, +∞), in vp.<br>String type: numeric string only, for example, **"56"**.<br>Default value: selected item 56 vp, unselected item 36 vp.<br>**NOTE:** <br>The set value applies to both selected and unselected items. |
 
 ## defaultPickerItemHeight
 
@@ -99,7 +94,7 @@ Sets the height of the picker items. Compared with [defaultPickerItemHeight](#de
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | [Optional](arkts-arkui-optional-t.md)&lt;number &#124; string&gt; | Yes | Height of the picker items.<br>Value range:<br>Number type: [0, +∞), in vp.<br>String type: numeric string only, for example, **"56"**.<br>Default value: selected item 56 vp, unselected item 36 vp.<br>**NOTE:**<br>1. The set value applies to both selected and unselected items. <br>2. If **height** is set to **undefined**, the previous value is retained. |
+| height | [Optional](arkts-arkui-optional-t.md)&lt;number &#124; string&gt; | Yes | Height of the picker items.<br>Value range:<br>Number type: [0, +∞), in vp.<br>String type: numeric string only, for example, **"56"**.<br>Default value: selected item 56 vp, unselected item 36 vp.<br>**NOTE:** <br>1. The set value applies to both selected and unselected items. <br>2. If **height** is set to **undefined**, the previous value is retained. |
 
 ## defaultTextStyle
 
@@ -143,7 +138,7 @@ Sets the sensitivity to the digital crown rotation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | Yes | Sensitivity to the digital crown rotation.<br>Default value: **CrownSensitivity.MEDIUM |
+| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | Yes | Sensitivity to the digital crown rotation.<br>Default value: **CrownSensitivity.MEDIUM** |
 
 ## disableTextStyleAnimation
 
@@ -165,7 +160,7 @@ Sets whether to disable the animation effect of text style changes during scroll
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| disabled | boolean | Yes | Whether to disable the animation effect of text style changes during scrolling.<br>- **true**: Disable the animation effect of text style changes.<br>- **false**: Do not disable the animation effect of text style changes.<br>Default value: **false**<br>**NOTE:**<br>When this API is used with **true**, there are no text style changes, including the font size, weight, and color, during scrolling, and all text is displayed in the style set by [defaultTextStyle](#defaulttextstyle). If [defaultTextStyle](#defaulttextstyle) is not set, the default style of the Text component is used. |
+| disabled | boolean | Yes | Whether to disable the animation effect of text style changes during scrolling.<br>- **true**: Disable the animation effect of text style changes.<br>- **false**: Do not disable the animation effect of text style changes.<br>Default value: **false**<br>**NOTE:** <br>When this API is used with **true**, there are no text style changes, including the font size, weight, and color, during scrolling, and all text is displayed in the style set by [defaultTextStyle](#defaulttextstyle). If [defaultTextStyle](#defaulttextstyle) is not set, the default style of the Text component is used. |
 
 ## disappearTextStyle
 
@@ -323,7 +318,7 @@ Sets the height of the fade effect applied to the top and bottom edges of the co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Height of the fade effect.<br>Default value: **36vp**<br>Value range: [0, +∞). Percentages are supported.<br>**NOTE:**<br>1. If the value is set to a percentage, **100%** equals half the height of the text picker.<br>2. A value of **0** disables the fade effect.<br>3. Values exceeding half the height of the text picker revert to the default value.<br>4. If the value is **undefined** or negative, the default value is used. |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Height of the fade effect.<br>Default value: **36vp**<br>Value range: [0, +∞). Percentages are supported.<br>**NOTE:** <br>1. If the value is set to a percentage, **100%** equals half the height of the text picker.<br>2. A value of **0** disables the fade effect.<br>3. Values exceeding half the height of the text picker revert to the default value.<br>4. If the value is **undefined** or negative, the default value is used. |
 
 ## gradientHeight
 
@@ -345,7 +340,7 @@ Sets the height of the fade effect applied to the top and bottom edges of the co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt; | Yes | Height of the fade effect.<br>Default value: **36vp**<br>Value range: 0, +∞). Percentages are supported.<br>**NOTE:**<br>1. If the value is set to a percentage, **100%** equals half the height of the text picker.<br>2. A value of **0** disables the fade effect.<br>3. Values exceeding half the height of the text picker revert to the default value.<br>4. If the value is **undefined** or negative, the default value is used. |
+| height | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt; | Yes | Height of the fade effect.<br>Default value: **36vp**<br>Value range: 0, +∞). Percentages are supported.<br>**NOTE:** <br>1. If the value is set to a percentage, **100%** equals half the height of the text picker.<br>2. A value of **0** disables the fade effect.<br>3. Values exceeding half the height of the text picker revert to the default value.<br>4. If the value is **undefined** or negative, the default value is used. |
 
 ## onAccept
 
@@ -445,7 +440,7 @@ onEnterSelectedArea(callback: TextPickerEnterSelectedAreaCallback)
 
 Triggered when an option enters the selection zone during text picker scrolling (when the scroll distance exceeds half the selected item's height).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This event is triggered earlier than the [onChange]
 > [onChange](#onchange)
@@ -482,7 +477,7 @@ Triggered when the scrolling in the text picker stops.
 
 If the scrolling is initiated by a gesture, this event is triggered when the finger is lifted from the screen and the scrolling stops.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 20.
 
@@ -510,7 +505,7 @@ Triggered when the scrolling in the text picker stops. Compared with [onScrollSt
 
 If the scrolling is initiated by a gesture, this event is triggered when the finger is lifted from the screen and the scrolling stops.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 20.
 
@@ -548,7 +543,7 @@ Sets the background style of selected items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)&gt; | Yes | Background color and corner radius for selected items. Applies to all columns in multi-column mode.<br>Default value:<br>{ <br>color: \&#36;r('sys.color.comp_background_tertiary'),<br>borderRadius: \&#36;r('sys.float.corner_radius_level12')<br>} |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)&gt; | Yes | Background color and corner radius for selected items. Applies to all columns in multi-column mode.<br>Default value:<br>{ <br>color: &#36;r('sys.color.comp_background_tertiary'),<br>borderRadius: &#36;r('sys.float.corner_radius_level12')<br>} |
 
 ## selectedIndex
 

@@ -10,11 +10,6 @@ UIGridEvent继承于[UIScrollableCommonEvent](arkts-arkui-uiscrollablecommoneven
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## setOnDidScroll
 
 ```TypeScript

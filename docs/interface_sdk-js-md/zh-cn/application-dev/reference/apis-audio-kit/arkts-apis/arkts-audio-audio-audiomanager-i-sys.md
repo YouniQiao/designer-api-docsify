@@ -196,7 +196,7 @@ on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
 ```
 
 
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 8 开始支持，从 API version 9 开始废弃，建议使用AudioVolumeManager中的
 > [on('volumeChange')](arkts-audio-audio-audiovolumemanager-i.md#onvolumechange)替代。
@@ -238,7 +238,7 @@ on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
 
 监听铃声模式变化事件（当[铃声模式](arkts-audio-audio-audioringmode-e.md)发生改变时触发）。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 8 开始支持，从 API version 9 开始废弃，建议使用AudioVolumeGroupManager中的
 > [on('ringerModeChange')](arkts-audio-audio-audiovolumegroupmanager-i.md#onringermodechange)替代。

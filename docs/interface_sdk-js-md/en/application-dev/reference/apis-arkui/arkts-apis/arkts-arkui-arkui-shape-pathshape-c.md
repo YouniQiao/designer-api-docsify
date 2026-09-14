@@ -44,7 +44,7 @@ Sets the path drawing commands.
 
 | Type | Description |
 | --- | --- |
-| [PathShape](arkts-arkui-arkui-shape-pathshape-c.md) | PathShape** object. |
+| [PathShape](arkts-arkui-arkui-shape-pathshape-c.md) | **PathShape** object. |
 
 ## constructor
 

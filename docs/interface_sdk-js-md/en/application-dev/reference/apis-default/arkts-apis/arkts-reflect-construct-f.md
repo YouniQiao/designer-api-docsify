@@ -25,10 +25,6 @@ Constructs the target with the elements of specified array as the arguments and 
 | argumentsList | Readonly&lt;A&gt; | Yes |  |
 | newTarget | new (...args: any) =&gt; any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 
 ## construct
 
@@ -43,8 +39,3 @@ function construct(target: Function, argumentsList: ArrayLike<any>, newTarget?: 
 | target | Function | Yes |  |
 | argumentsList | ArrayLike&lt;any&gt; | Yes |  |
 | newTarget | Function | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

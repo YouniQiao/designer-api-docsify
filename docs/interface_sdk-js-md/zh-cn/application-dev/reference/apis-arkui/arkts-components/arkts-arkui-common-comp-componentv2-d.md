@@ -8,7 +8,7 @@ declare const ComponentV2: ClassDecorator & ((options: ComponentOptions) => Clas
 
 开发指南参考：[\@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2)。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API版本26.0.0开始，\@ComponentV2的[ComponentOptions](arkts-arkui-componentoptions-i.md)参数支持
 > 可选属性`reusePool`和`poolAccepts`，用于配置全局复用池，

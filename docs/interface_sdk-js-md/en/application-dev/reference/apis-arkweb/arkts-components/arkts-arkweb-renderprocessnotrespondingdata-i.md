@@ -6,11 +6,6 @@ Provides detailed information about the unresponsive rendering process. It is su
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## jsStack
 
 ```TypeScript

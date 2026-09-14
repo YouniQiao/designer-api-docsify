@@ -31,7 +31,7 @@ Creates a **RandomAccessFile** instance based on a file path or file object.
 
 | Type | Description |
 | --- | --- |
-| [RandomAccessFile](arkts-corefile-file-fs-randomaccessfile-i.md) | RandomAccessFile** instance created. |
+| [RandomAccessFile](arkts-corefile-file-fs-randomaccessfile-i.md) | **RandomAccessFile** instance created. |
 
 **Error codes:**
 

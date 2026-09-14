@@ -14,7 +14,7 @@ function getInstalledBundleStorageStats(admin: Want, bundleNames: Array<string>,
 
 Obtains the storage usage of installed applications of a specified user on a device. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. Only the storage usage of installed applications can be obtained.
 > 

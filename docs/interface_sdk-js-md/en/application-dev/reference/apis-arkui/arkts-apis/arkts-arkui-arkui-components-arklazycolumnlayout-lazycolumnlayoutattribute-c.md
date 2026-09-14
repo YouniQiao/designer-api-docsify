@@ -42,6 +42,8 @@ Sets the horizontal alignment of the row content.
 
 | Type | Description |
 | --- | --- |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+
 ## footer
 
 ```TypeScript
@@ -68,6 +70,8 @@ Sets the footer of the lazy column layout.
 
 | Type | Description |
 | --- | --- |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+
 ## header
 
 ```TypeScript
@@ -94,6 +98,8 @@ Sets the header of the lazy column layout.
 
 | Type | Description |
 | --- | --- |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+
 ## onVisibleIndexesChange
 
 ```TypeScript
@@ -120,6 +126,8 @@ Triggered when the index of child components in the visible area changes.
 
 | Type | Description |
 | --- | --- |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+
 ## space
 
 ```TypeScript
@@ -146,6 +154,8 @@ The spacing between rows.
 
 | Type | Description |
 | --- | --- |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+
 ## sticky
 
 ```TypeScript
@@ -172,3 +182,4 @@ Sets sticky style for header and footer.
 
 | Type | Description |
 | --- | --- |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |

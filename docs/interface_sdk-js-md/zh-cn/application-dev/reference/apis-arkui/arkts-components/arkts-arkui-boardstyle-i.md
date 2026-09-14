@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## borderRadius
 
 ```TypeScript
@@ -27,7 +22,7 @@ borderRadius?: Length
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
-**默认值：**
+**默认值：** 
 - API版本11+：8.0vp
 
 **起始版本：** 10

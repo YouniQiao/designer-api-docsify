@@ -14,7 +14,7 @@ function getConnectOwnerUidSync(protocol: ProtocolType, local: NetAddress, remot
 
 用于查询发起指定网络连接的应用UID。使用同步方式返回。
 
-> **说明：**
+> **说明：** 
 > 
 > - 该接口仅限在VPN应用中调用。
 > 

@@ -31,11 +31,6 @@ Defines the method of a security component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## accessibilityDefaultFocus
 
 ```TypeScript
@@ -252,7 +247,7 @@ Sets the background color of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Background color of the security component.<br>Default value: \&#36;r('sys.color.icon_emphasize'). <br>If the alpha value of the upper eight bits of the security component's background color is less than **0x1a** (for example, **0x1800ff00**), the system will forcibly adjust this alpha value to **0xff**. This ensures the security component remains sufficiently visible and prevents users from inadvertently triggering authorization due to an overly transparent component. |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Background color of the security component.<br>Default value: &#36;r('sys.color.icon_emphasize'). <br>If the alpha value of the upper eight bits of the security component's background color is less than **0x1a** (for example, **0x1800ff00**), the system will forcibly adjust this alpha value to **0xff**. This ensures the security component remains sufficiently visible and prevents users from inadvertently triggering authorization due to an overly transparent component. |
 
 **Return value:**
 
@@ -567,7 +562,7 @@ Sets the font color of the text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Font color of the text on the security component.<br>Default value: \&#36;r('sys.color.font_on_primary'). |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Font color of the text on the security component.<br>Default value: &#36;r('sys.color.font_on_primary'). |
 
 **Return value:**
 
@@ -623,7 +618,7 @@ Sets the font size of the text for the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | Font size of the text on the security component.<br>When the unit is not explicitly specified, the unit is fp. <br>Default value: \&#36;r('sys.float.ohos_id_text_size_button1')<br>Percentage strings are not supported.<br>This attribute does not take effect when it is set to an invalid value.<br> Note: When the security component text is not fully displayed, clicking it does not perform authorization. The **fontSize** setting determines whether the text can be fully displayed and thereby affects the authorization behavior of the security component. |
+| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | Font size of the text on the security component.<br>When the unit is not explicitly specified, the unit is fp. <br>Default value: &#36;r('sys.float.ohos_id_text_size_button1')<br>Percentage strings are not supported.<br>This attribute does not take effect when it is set to an invalid value.<br> Note: When the security component text is not fully displayed, clicking it does not perform authorization. The **fontSize** setting determines whether the text can be fully displayed and thereby affects the authorization behavior of the security component. |
 
 **Return value:**
 
@@ -765,7 +760,7 @@ Sets the icon color of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Icon color of the security component.<br>Default value: \&#36;r('sys.color.icon_on_primary'). |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Icon color of the security component.<br>Default value: &#36;r('sys.color.icon_on_primary'). |
 
 **Return value:**
 
@@ -907,7 +902,7 @@ This API can be used in conjunction with [minFontScale](#minfontscale). **maxFon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number &#124; [Resource](arkts-arkui-resource-t.md) | Yes | Maximum font scale factor for the text.<br>The value must be greater than or equal to 1. <br> **NOTE:**<br>If the set value is less than 1, the value **1** is used. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
+| scale | number &#124; [Resource](arkts-arkui-resource-t.md) | Yes | Maximum font scale factor for the text.<br>The value must be greater than or equal to 1. <br> **NOTE:** <br>If the set value is less than 1, the value **1** is used. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
 
 **Return value:**
 
@@ -943,7 +938,7 @@ Sets the maximum font size for text display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxSize | number &#124; string &#124; [Resource](arkts-arkui-resource-t.md) | Yes | Maximum display font size of the text.<br>The value must be greater than 0. <br>When the unit is not explicitly specified, the unit is fp. <br>**NOTE:**<br>When the set value is less than or equal to 0, the adaptive font size does not take effect. When an invalid value is set, this attribute does not take effect. |
+| maxSize | number &#124; string &#124; [Resource](arkts-arkui-resource-t.md) | Yes | Maximum display font size of the text.<br>The value must be greater than 0. <br>When the unit is not explicitly specified, the unit is fp. <br>**NOTE:** <br>When the set value is less than or equal to 0, the adaptive font size does not take effect. When an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 
@@ -971,7 +966,7 @@ Sets the maximum number of lines for text. By default, text wraps automatically.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| line | number &#124; [Resource](arkts-arkui-resource-t.md) | Yes | Maximum number of lines for the text.<br>The number type accepts values in [1, +∞). The Resource type is supported since API version 20. The parameter of the Resource type supports only integers in the range [1, +∞). <br>**NOTE:**<br>A value less than 1 is handled as the default value **1000000**.<br>**Since:** 20 |
+| line | number &#124; [Resource](arkts-arkui-resource-t.md) | Yes | Maximum number of lines for the text.<br>The number type accepts values in [1, +∞). The Resource type is supported since API version 20. The parameter of the Resource type supports only integers in the range [1, +∞). <br>**NOTE:** <br>A value less than 1 is handled as the default value **1000000**.<br>**Since:** 20 |
 
 **Return value:**
 
@@ -1001,7 +996,7 @@ This API can be used in conjunction with [maxFontScale](#maxfontscale). **minFon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number &#124; [Resource](arkts-arkui-resource-t.md) | Yes | Minimum font scale factor for the text.<br>Value range: [0,1]. <br>**NOTE:**<br>If the set value is less than 0, the value **0** is used, meaning scaling down to any factor is allowed. If the set value is greater than 1, the value **1** is used, meaning font scaling is not allowed. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
+| scale | number &#124; [Resource](arkts-arkui-resource-t.md) | Yes | Minimum font scale factor for the text.<br>Value range: [0,1]. <br>**NOTE:** <br>If the set value is less than 0, the value **0** is used, meaning scaling down to any factor is allowed. If the set value is greater than 1, the value **1** is used, meaning font scaling is not allowed. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
 
 **Return value:**
 

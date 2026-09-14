@@ -42,3 +42,4 @@ Called when visible indexes change.
 
 | Type | Description |
 | --- | --- |
+| [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) |  |

@@ -97,7 +97,7 @@ createCaptureSession(): CaptureSession
 
 创建CaptureSession实例，同步返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 10开始支持，从API version 11开始废弃。
 
@@ -196,7 +196,7 @@ createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 
 创建拍照输出对象，同步返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 10开始支持，从API version 11开始废弃。
 > 
@@ -567,7 +567,7 @@ getSupportedFullOutputCapability(camera: CameraDevice, mode: SceneMode): CameraO
 
 查询指定相机在指定模式下支持的完整输出能力，包括未压缩图（YUV）、HEIF和HDR等能力。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用YUV，HEIF或HDR等能力前，需要先显式调用此方法确保获取完整输出能力。
 
@@ -600,7 +600,7 @@ getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability
 
 查询相机设备支持的输出能力，同步返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 10开始支持，从API version 11开始废弃。
 
@@ -862,7 +862,7 @@ on(type: 'cameraStatus', callback: AsyncCallback<CameraStatusInfo>): void
 
 相机设备状态回调，通过注册回调函数获取相机的状态变化。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -887,7 +887,7 @@ on(type: 'foldStatusChange', callback: AsyncCallback<FoldStatusInfo>): void
 
 注册折叠设备折叠状态变化的监听。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -912,7 +912,7 @@ on(type: 'torchStatusChange', callback: AsyncCallback<TorchStatusInfo>): void
 
 手电筒状态变化回调，通过注册回调函数获取手电筒状态变化。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 

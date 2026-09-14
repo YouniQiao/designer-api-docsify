@@ -6,11 +6,6 @@ Defines the options of the preview menu.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## hapticFeedbackMode
 
 ```TypeScript
@@ -21,7 +16,7 @@ Vibration effect when the menu pops up. It takes effect when an ImageSpan or Bui
 
 Default value: HapticFeedbackMode.DISABLED, which means no vibration when the menu pops up.
 
-**Note:**It takes effect only when the application has the ohos.permission.VIBRATE permission, the user has enabled haptic feedback, and the system hardware supports it.
+**Note:** It takes effect only when the application has the ohos.permission.VIBRATE permission, the user has enabled haptic feedback, and the system hardware supports it.
 
 **Type:** [HapticFeedbackMode](arkts-arkui-hapticfeedbackmode-e.md)
 

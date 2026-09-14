@@ -10,8 +10,3 @@
 ```TypeScript
 new (): Float64Array
 ```
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

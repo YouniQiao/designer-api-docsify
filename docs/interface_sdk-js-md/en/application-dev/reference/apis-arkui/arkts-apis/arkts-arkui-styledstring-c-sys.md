@@ -6,11 +6,6 @@ StyledString
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## marshalling
 
 ```TypeScript
@@ -38,7 +33,7 @@ Marshals a styled string by defining a callback to marshal [StyledStringMarshall
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | Buffer information after marshalling.<br>**NOTE:**<br>Currently, text and images are supported. |
+| ArrayBuffer | Buffer information after marshalling.<br>**NOTE:** <br>Currently, text and images are supported. |
 
 ## marshalling
 
@@ -66,7 +61,7 @@ Marshals a styled string.
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | Buffer information after marshalling.<br>**NOTE:**<br>Currently, text and images are supported. |
+| ArrayBuffer | Buffer information after marshalling.<br>**NOTE:** <br>Currently, text and images are supported. |
 
 ## unmarshalling
 

@@ -6,11 +6,6 @@ Defines a common transition animation for page transitions.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

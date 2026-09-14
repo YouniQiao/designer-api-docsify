@@ -10,11 +10,6 @@ Inherited from [TimePickerOptions](arkts-arkui-timepickeroptions-i.md).
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onAccept
 
 ```TypeScript
@@ -77,7 +72,7 @@ onDidAppear?: () => void
 
 Event callback after the dialog box appears.
 
-**NOTE:**
+**NOTE:** 
 
 1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt;
 onWillDisappear &gt; onDidDisappear.
@@ -103,7 +98,7 @@ onDidDisappear?: () => void
 
 Event callback after the dialog box disappears.
 
-**NOTE:**
+**NOTE:** 
 
 1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt;
 onWillDisappear &gt; onDidDisappear.
@@ -124,7 +119,7 @@ onWillAppear?: () => void
 
 Event callback when the dialog box is about to appear.
 
-**NOTE:**
+**NOTE:** 
 
 1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt;
 onWillDisappear &gt; onDidDisappear.
@@ -147,7 +142,7 @@ onWillDisappear?: () => void
 
 Event callback when the dialog box is about to disappear.
 
-**NOTE:**
+**NOTE:** 
 
 1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt;
 onWillDisappear &gt; onDidDisappear.
@@ -170,7 +165,7 @@ acceptButtonStyle?: PickerDialogButtonStyle
 
 Style of the accept button.
 
-**NOTE:**
+**NOTE:** 
 
 1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**.
 If both are set to **true**, the **primary** field will remain at the default value of **false**.
@@ -217,7 +212,7 @@ Background blur style of the dialog box.
 
 Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
-**NOTE:**
+**NOTE:** 
 
 Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
@@ -261,7 +256,7 @@ Backplane color of the dialog box.
 
 Default value: **Color.Transparent**
 
-**NOTE:**
+**NOTE:** 
 
 When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to **BlurStyle.NONE**; otherwise, the color display may not meet the expected effect.
 
@@ -303,7 +298,7 @@ cancelButtonStyle?: PickerDialogButtonStyle
 
 Style of the cancel button.
 
-**NOTE:**
+**NOTE:** 
 
 1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**.
 If both are set to **true**, the **primary** field will remain at the default value of **false**. If both are set to **true**, the **primary** field will remain at the default value of false.
@@ -404,7 +399,7 @@ Whether to enable haptic feedback.
 
 Default value: **true**.
 
-**NOTE:**
+**NOTE:** 
 
 1. Whether this parameter takes effect after being set to **true** depends on hardware support.
 2. To enable haptic feedback, you must declare the following permission under **requestPermissions** in  
@@ -517,7 +512,7 @@ onEnterSelectedArea?: Callback<TimePickerResult>
 
 Represents the callback triggered during the scrolling of the text picker when an item enters the divider area. Compared to the **onChange** event, this event is triggered earlier, specifically when the scroll distance of the current column exceeds half the height of the selected item, which indicates that the item has entered the divider area.
 
-**NOTE:**
+**NOTE:** 
 
 When **enableCascade** is set to **true**, using this callback is not recommended due to the interdependent relationship between the AM/PM and hour columns. This callback indicates the moment an option enters the divider area during scrolling, and only the value of the currently scrolled column will change. The values of other non- scrolled columns will remain unchanged.
 
@@ -559,7 +554,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Shadow of the dialog box.
 
-**NOTE:**
+**NOTE:** 
 
 Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise
 

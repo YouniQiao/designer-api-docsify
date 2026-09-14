@@ -20,7 +20,7 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the dialog box. <br>Default value: **BlurStyle.COMPONENT_ULTRA_THICK** <br>**NOTE:**<br>Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
+Background blur style of the dialog box. <br>Default value: **BlurStyle.COMPONENT_ULTRA_THICK** <br>**NOTE:** <br>Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
 **Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
@@ -40,7 +40,7 @@ Background blur style of the dialog box. <br>Default value: **BlurStyle.COMPONEN
 backgroundColor?: ResourceColor
 ```
 
-Background color of the dialog box.<br>Default value: **Color.Transparent**. <br>**NOTE:**<br>The background color will be visually combined with the blur effect when both properties are set. If the resulting effect does not match your design requirements, you can disable the blur effect entirely by explicitly setting the **backgroundBlurStyle** property to **BlurStyle.NONE**.
+Background color of the dialog box.<br>Default value: **Color.Transparent**. <br>**NOTE:** <br>The background color will be visually combined with the blur effect when both properties are set. If the resulting effect does not match your design requirements, you can disable the blur effect entirely by explicitly setting the **backgroundBlurStyle** property to **BlurStyle.NONE**.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -130,7 +130,7 @@ Background corner radius of the dialog box.<br>You can set separate radii for th
 height?: Dimension
 ```
 
-Height of the dialog box. <br>**NOTE:**<br>- Default maximum value: 0.9 x (Window height – Safe area) <br>- When this parameter is set to a percentage, the reference height of the dialog box is the height of the window where the dialog box is located minus the safe area. You can decrease or increase the height as needed.
+Height of the dialog box. <br>**NOTE:** <br>- Default maximum value: 0.9 x (Window height – Safe area) <br>- When this parameter is set to a percentage, the reference height of the dialog box is the height of the window where the dialog box is located minus the safe area. You can decrease or increase the height as needed.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -166,7 +166,7 @@ Shadow of the dialog box. <br>Default value on 2-in-1 devices: **ShadowStyle.OUT
 width?: Dimension
 ```
 
-Width of the dialog box. <br>**NOTE:**<br>- Default maximum value: 400vp <br>- Percentage-based configuration: The reference width of the dialog box is adjusted based on the width of the window where the dialog box is located.
+Width of the dialog box. <br>**NOTE:** <br>- Default maximum value: 400vp <br>- Percentage-based configuration: The reference width of the dialog box is adjusted based on the width of the window where the dialog box is located.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 

@@ -6,7 +6,7 @@ export declare const InsightIntentEntry: ((intentInfo: EntryIntentDecoratorInfo)
 
 使用该装饰器装饰一个继承自[InsightIntentEntryExecutor](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md)的类，实现意图操作并配置意图依赖的Ability组件，便于AI入口拉起依赖的Ability组件时，执行对应的意图操作。该装饰器支持的参数参见[EntryIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-entryintentdecoratorinfo-i.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > 如果使用该装饰器接入标准意图，必须实现标准意图Json Schema中定义的所有必选参数且类型匹配。
 > 如果创建自定义意图，必须实现parameters字段中定义的所有必选参数且类型匹配。

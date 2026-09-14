@@ -17,10 +17,6 @@
 | --- | --- | --- | --- |
 | value | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -33,10 +29,6 @@ new(value?: any): Number
 | --- | --- | --- | --- |
 | value | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## MAX_VALUE
 
 ```TypeScript

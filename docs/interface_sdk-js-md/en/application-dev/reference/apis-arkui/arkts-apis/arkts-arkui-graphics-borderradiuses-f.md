@@ -26,7 +26,7 @@ Generates a **borderRadiuses** object with the specified radius for all border c
 
 | Type | Description |
 | --- | --- |
-| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) | borderRadiuses** object whose border corners all have the specified radius. |
+| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) | **borderRadiuses** object whose border corners all have the specified radius. |
 
 **Examples**
 

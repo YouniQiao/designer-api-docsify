@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript
@@ -240,7 +235,7 @@ readonly length: number
 
 属性字符串字符的长度。
 
-**说明：**
+**说明：** 
 
 属性字符串中的ImageAttachment和CustomSpan长度都计为1。
 

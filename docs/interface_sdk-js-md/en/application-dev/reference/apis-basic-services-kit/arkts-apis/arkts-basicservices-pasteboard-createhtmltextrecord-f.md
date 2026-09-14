@@ -32,7 +32,7 @@ Creates a **PasteDataRecord** object of the HTML text type.
 
 | Type | Description |
 | --- | --- |
-| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | PasteDataRecord** object of the HTML text type. |
+| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | **PasteDataRecord** object of the HTML text type. |
 
 **Examples**
 

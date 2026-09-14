@@ -16,7 +16,7 @@ function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolea
 
 **使用场景**：在需要进行USB数据传输时，需要先声明接口控制权以独占访问该接口。例如，在USB存储设备读写、USB摄像头数据采集、USB串口通信等场景中，都需要先声明接口控制权。
 
-> **说明：**
+> **说明：** 
 > 
 > 在USB编程中，claim interface是一个常见操作，指的是应用请求操作系统将某个USB接口从内核驱动中释放并交由用户空间程序控制。
 

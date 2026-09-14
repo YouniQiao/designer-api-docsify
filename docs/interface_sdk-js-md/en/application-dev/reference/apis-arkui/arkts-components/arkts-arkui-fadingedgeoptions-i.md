@@ -6,11 +6,6 @@ Defines the fadingEdge options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## fadingEdgeLength
 
 ```TypeScript

@@ -30,10 +30,6 @@ has(value: T): boolean
 | --- | --- | --- | --- |
 | value | T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## size
 
 ```TypeScript

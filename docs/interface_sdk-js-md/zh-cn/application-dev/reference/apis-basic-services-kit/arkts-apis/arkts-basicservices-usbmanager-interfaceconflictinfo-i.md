@@ -2,7 +2,7 @@
 
 描述当已独占声明的USB接口被其他进程以非独占方式声明时的冲突信息，通过调用[usbManager.claimInterfaceExclusive](arkts-basicservices-usbmanager-claiminterfaceexclusive-f.md)独占声明接口后使用。
 
-> **说明：**
+> **说明：** 
 > 
 > 此回调在其他进程调用非互斥的
 > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)

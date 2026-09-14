@@ -140,7 +140,7 @@ insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 
 插入一条直连规则，指明符合schemeFilter条件的URL将直接连接到服务器。
 
-> **说明：**
+> **说明：** 
 > 
 > - 与[insertBypassRule](#insertbypassrule)和
 > [bypassHostnamesWithoutPeriod](#bypasshostnameswithoutperiod)均可实现URL直连，区别在于匹配维度：本方法通过

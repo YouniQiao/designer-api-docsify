@@ -30,6 +30,8 @@ Puts the **Blob** data into an **ArrayBuffer** object. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
+| Promise&lt;ArrayBuffer&gt; |  |
+
 **Examples**
 
 ```TypeScript
@@ -106,6 +108,8 @@ Creates and returns a **Blob** object that contains specified data from this **B
 
 | Type | Description |
 | --- | --- |
+| [Blob](arkts-arkts-buffer-blob-c.md) |  |
+
 **Examples**
 
 ```TypeScript
@@ -135,6 +139,8 @@ Decodes data using UTF-8 and returns a string. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
+| Promise&lt;string&gt; |  |
+
 **Examples**
 
 ```TypeScript

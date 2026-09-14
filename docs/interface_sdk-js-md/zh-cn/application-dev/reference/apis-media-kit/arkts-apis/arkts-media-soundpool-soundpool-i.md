@@ -2,7 +2,7 @@
 
 音频池提供了系统声音的加载、播放、音量设置、循环设置、停止播放和资源卸载等功能，在调用SoundPool的接口前，需要先通过[createSoundPool](arkts-media-media-createsoundpool-f.md)创建实例。
 
-> **说明：**
+> **说明：** 
 > 
 > - 在使用SoundPool实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。
 > 
@@ -39,7 +39,7 @@ load(uri: string, callback: AsyncCallback<number>): void
 
 该方法不支持加载rawfile目录资源，需要通过[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load)或者[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load)实现。
 
-> **说明：**
+> **说明：** 
 > 
 > - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。
 > 
@@ -76,7 +76,7 @@ load(uri: string): Promise<number>
 
 该方法不支持加载rawfile目录资源，需要通过[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load)或者[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load)实现。
 
-> **说明：**
+> **说明：** 
 > 
 > - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。
 > 
@@ -116,7 +116,7 @@ load(fd: number, offset: number, length: number, callback: AsyncCallback<number>
 
 通过callback异步回调获取资源ID，入参可手动传入资源信息或通过读取应用内置资源自动获取。
 
-> **说明：**
+> **说明：** 
 > 
 > - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。
 > 
@@ -153,7 +153,7 @@ load(fd: number, offset: number, length: number): Promise<number>
 
 通过Promise异步回调获取资源ID，入参可手动传入资源信息或通过读取应用内置资源自动获取。
 
-> **说明：**
+> **说明：** 
 > 
 > - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。
 > 

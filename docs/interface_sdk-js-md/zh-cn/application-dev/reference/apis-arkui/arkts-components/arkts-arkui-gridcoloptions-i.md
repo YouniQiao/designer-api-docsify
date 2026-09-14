@@ -10,11 +10,6 @@ API version 20之后，`span`的继承规则见[GridColColumnOption](arkts-arkui
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## offset
 
 ```TypeScript
@@ -49,7 +44,7 @@ order?: number | GridColColumnOption
 
 非法值：按默认值处理。
 
-**说明：**
+**说明：** 
 
 当子组件不设置order或者设置相同的order，子组件按照代码顺序展示。
 

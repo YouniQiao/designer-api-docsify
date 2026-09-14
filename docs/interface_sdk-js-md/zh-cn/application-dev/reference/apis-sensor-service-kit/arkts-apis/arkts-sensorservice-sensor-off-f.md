@@ -3123,7 +3123,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback?: Callback<
 
 取消订阅加速度传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ACCELEROMETER]
 > [off_SensorId.ACCELEROMETER](#off-4)
@@ -3170,7 +3170,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED,
 
 取消订阅未校准加速度传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ACCELEROMETER_UNCALIBRATED]
 > [off_SensorId.ACCELEROMETER_UNCALIBRATED](#off-6)
@@ -3219,7 +3219,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback<
 
 取消订阅环境光传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.AMBIENT_LIGHT]
 > [off_SensorId.AMBIENT_LIGHT](#off-8)
@@ -3261,7 +3261,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback?: Cal
 
 取消订阅环境温度传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.AMBIENT_TEMPERATURE]
 > [off_SensorId.AMBIENT_TEMPERATURE](#off-10)
@@ -3303,7 +3303,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback<Baro
 
 取消订阅气压计传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.BAROMETER]
 > [off_SensorId.BAROMETER](#off-12)
@@ -3345,7 +3345,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback?: Callback<Gravit
 
 取消订阅重力传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GRAVITY]
 > [off_SensorId.GRAVITY](#off-14)
@@ -3389,7 +3389,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback?: Callback<Gyro
 
 取消订阅陀螺仪传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GYROSCOPE]
 > [off_SensorId.GYROSCOPE](#off-16)
@@ -3435,7 +3435,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback?: 
 
 取消订阅未校准陀螺仪传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GYROSCOPE_UNCALIBRATED]
 > [off_SensorId.GYROSCOPE_UNCALIBRATED](#off-18)
@@ -3481,7 +3481,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_HALL, callback?: Callback<HallRespo
 
 取消订阅霍尔传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HALL]
 > [off_SensorId.HALL](#off-20)
@@ -3523,7 +3523,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback?: Callback<Hea
 
 取消订阅心率传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HEART_RATE]
 > [off_SensorId.HEART_RATE](#off-22)
@@ -3567,7 +3567,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback?: Callback<Humid
 
 取消订阅湿度传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HUMIDITY]
 > [off_SensorId.HUMIDITY](#off-24)
@@ -3609,7 +3609,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback?: Cal
 
 取消订阅线性加速度传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.LINEAR_ACCELEROMETER]
 > [off_SensorId.LINEAR_ACCELEROMETER](#off-26)
@@ -3655,7 +3655,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback?: Callback
 
 取消订阅磁场传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.MAGNETIC_FIELD]
 > [off_SensorId.MAGNETIC_FIELD](#off-28)
@@ -3699,7 +3699,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callba
 
 取消订阅未校准磁场传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.MAGNETIC_FIELD_UNCALIBRATED]
 > [off_SensorId.MAGNETIC_FIELD_UNCALIBRATED](#off-30)
@@ -3746,7 +3746,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback<Or
 
 取消订阅方向传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ORIENTATION]
 > [off_SensorId.ORIENTATION](#off-32)
@@ -3790,7 +3790,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback?: Callback<Pedo
 
 取消订阅计步传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PEDOMETER]
 > [off_SensorId.PEDOMETER](#off-34)
@@ -3834,7 +3834,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback?: Cal
 
 取消订阅计步检测传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PEDOMETER_DETECTION]
 > [off_SensorId.PEDOMETER_DETECTION](#off-36)
@@ -3878,7 +3878,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback?: Callback<Prox
 
 取消订阅接近光传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PROXIMITY]
 > [off_SensorId.PROXIMITY](#off-38)
@@ -3920,7 +3920,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback?: Callbac
 
 取消订阅旋转矢量传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ROTATION_VECTOR]
 > [off_SensorId.ROTATION_VECTOR](#off-40)
@@ -3965,7 +3965,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback?: Call
 
 取消订阅有效运动传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.SIGNIFICANT_MOTION]
 > [off_SensorId.SIGNIFICANT_MOTION](#off-42)
@@ -4007,7 +4007,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback
 
 取消订阅佩戴检测传感器数据。off取消订阅必须与on订阅成对出现。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.WEAR_DETECTION]
 > [off_SensorId.WEAR_DETECTION](#off-44)

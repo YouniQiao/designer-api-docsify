@@ -25,3 +25,4 @@ Attaches a callback that is invoked when the Promise is settled (fulfilled or re
 
 | Type | Description |
 | --- | --- |
+| Promise&lt;T&gt; | A Promise for the completion of the callback. |

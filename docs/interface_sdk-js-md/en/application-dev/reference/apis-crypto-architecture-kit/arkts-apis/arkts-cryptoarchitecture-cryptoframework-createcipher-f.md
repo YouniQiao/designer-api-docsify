@@ -16,7 +16,7 @@ Creates a **Cipher** instance.
 
 <br>For details about the supported specifications, seeEncryption and Decryption Algorithm Specifications.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. In symmetric encryption and decryption, PKCS #5 and PKCS #7 share the same implementation, with padding
 > length and block size remaining consistent. In 3DES, padding is applied in 8-byte blocks; in AES, padding

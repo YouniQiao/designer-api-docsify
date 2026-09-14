@@ -21,7 +21,7 @@ Binds a [TextController](../arkts-components/arkts-arkui-textcontroller-c.md) in
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node for controller binding. |
-| controller | [TextController](../arkts-components/arkts-arkui-textcontroller-c.md) | Yes | TextController** instance to bind. |
+| controller | [TextController](../arkts-components/arkts-arkui-textcontroller-c.md) | Yes | **TextController** instance to bind. |
 | nodeType | 'Text' | Yes | Node type. Set to **'Text'**. |
 
 **Error codes:**
@@ -100,7 +100,7 @@ Binds a [SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node for controller binding. |
-| controller | [SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md) | Yes | SwiperController** instance. |
+| controller | [SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md) | Yes | **SwiperController** instance. |
 | nodeType | 'Swiper' | Yes | Node type. Set to **'Swiper'**. |
 
 **Error codes:**

@@ -28,7 +28,7 @@ Flushes all suspended commands from the specified **RemoteProxy** to the corresp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes | RemoteProxy** specified. |
+| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes | **RemoteProxy** specified. |
 
 **Error codes:**
 
@@ -83,7 +83,7 @@ Flushes all suspended commands from the specified **RemoteProxy** to the corresp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes | RemoteProxy** specified. |
+| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes | **RemoteProxy** specified. |
 
 **Return value:**
 

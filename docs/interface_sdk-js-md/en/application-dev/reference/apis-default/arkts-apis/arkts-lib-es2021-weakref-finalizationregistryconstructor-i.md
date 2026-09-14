@@ -19,10 +19,6 @@ Creates a finalization registry with an associated cleanup callback
 | --- | --- | --- | --- |
 | cleanupCallback | (heldValue: T) =&gt; void | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## prototype
 
 ```TypeScript

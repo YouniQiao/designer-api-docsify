@@ -1,10 +1,5 @@
 # animateTo
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## animateTo
 
 ```TypeScript
@@ -13,7 +8,7 @@ declare function animateTo(value: AnimateParam, event: () => void): void
 
 Defines an explicit animation. When an animation is required, call this API explicitly to modify state and produce an animation effect.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Since API version 10, you can use
 > [animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto) in

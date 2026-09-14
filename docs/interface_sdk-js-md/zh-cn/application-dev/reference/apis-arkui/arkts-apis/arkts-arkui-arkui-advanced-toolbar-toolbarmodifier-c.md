@@ -32,7 +32,7 @@ backgroundColor(backgroundColor: ResourceColor): ToolBarModifier
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| backgroundColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 工具栏背景色。<br>默认背景色为\&#36;r('sys.color.ohos_id_color_toolbar_bg')。 |
+| backgroundColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 工具栏背景色。<br>默认背景色为&#36;r('sys.color.ohos_id_color_toolbar_bg')。 |
 
 **返回值：**
 

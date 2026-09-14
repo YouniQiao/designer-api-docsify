@@ -24,3 +24,4 @@ Defining syscap function.
 
 | Type | Description |
 | --- | --- |
+| boolean |  |

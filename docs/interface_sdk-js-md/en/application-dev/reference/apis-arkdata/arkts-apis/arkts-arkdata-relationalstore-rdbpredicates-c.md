@@ -28,7 +28,7 @@ Creates an **RdbPredicates** object to add the AND condition.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 ## beginsWith
 
@@ -53,7 +53,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -77,7 +77,7 @@ Creates an **RdbPredicates** object to add a left parenthesis.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 ## between
 
@@ -103,7 +103,7 @@ Creates an **RdbPredicates** object to search for the records that are within th
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -158,7 +158,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -182,7 +182,7 @@ Creates an **RdbPredicates** object to filter out duplicate records.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object that can filter out duplicate records. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object that can filter out duplicate records. |
 
 ## endsWith
 
@@ -207,7 +207,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -231,7 +231,7 @@ Creates an **RdbPredicates** object to add a right parenthesis.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 ## equalTo
 
@@ -256,7 +256,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -287,7 +287,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -318,7 +318,7 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -349,7 +349,7 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -410,7 +410,7 @@ Filters for group data that meets the conditions.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -426,7 +426,7 @@ in(field: string, value: Array<ValueType>): RdbPredicates
 
 Creates an **RdbPredicates** object to search for the records that are in the given range in the specified column.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The **value** array cannot be empty; otherwise, this condition becomes invalid. As a result, the operation (
 > such as full query, update, or deletion) is performed on all data. Before calling this API, check whether the
@@ -447,7 +447,7 @@ Creates an **RdbPredicates** object to search for the records that are in the gi
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -471,7 +471,7 @@ Creates an **RdbPredicates** object to specify all remote devices on the network
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 ## inDevices
 
@@ -481,7 +481,7 @@ inDevices(devices: Array<string>): RdbPredicates
 
 Creates an **RdbPredicates** object to specify the remote devices to connect on the network during distributed database sync.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **devices** can be obtained by using [deviceManager.getAvailableDeviceListSync]
 > [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync).
@@ -502,7 +502,7 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -532,7 +532,7 @@ Creates a **RdbPredicates** object to specify the index column.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -562,7 +562,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -592,7 +592,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -623,7 +623,7 @@ Creates an **RdbPredicates** object to search for the records that are less than
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -654,7 +654,7 @@ Creates an **RdbPredicates** object to search for the records that are less than
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -685,7 +685,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -747,7 +747,7 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -778,7 +778,7 @@ Creates an **RdbPredicates** object to search for the records that do not contai
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -809,7 +809,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -840,7 +840,7 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -871,7 +871,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -925,7 +925,7 @@ Creates an **RdbPredicates** object to add the OR condition.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 ## orderByAsc
 
@@ -949,7 +949,7 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -979,7 +979,7 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 

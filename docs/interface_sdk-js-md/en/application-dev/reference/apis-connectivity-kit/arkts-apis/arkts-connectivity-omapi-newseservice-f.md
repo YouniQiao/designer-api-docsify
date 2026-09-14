@@ -16,7 +16,7 @@ Creates an **SEService** instance for connecting to all available SEs in the sys
 
 The returned **SEService** instance is available only when **true** is returned by the specified callback or [isConnected](arkts-connectivity-omapi-seservice-i.md#isconnected).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 10 and deprecated since API version 12. Use
 > [createService](arkts-connectivity-omapi-createservice-f.md) instead.
@@ -40,7 +40,7 @@ The returned **SEService** instance is available only when **true** is returned 
 
 | Type | Description |
 | --- | --- |
-| [SEService](arkts-connectivity-omapi-seservice-i.md) | SEService** instance created. |
+| [SEService](arkts-connectivity-omapi-seservice-i.md) | **SEService** instance created. |
 
 **Error codes:**
 

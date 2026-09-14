@@ -30,7 +30,7 @@ Obtains **TagInfo** from **Want**, which is initialized by the NFC service and c
 
 | Type | Description |
 | --- | --- |
-| [TagInfo](arkts-connectivity-tag-taginfo-i.md) | TagInfo** object obtained. |
+| [TagInfo](arkts-connectivity-tag-taginfo-i.md) | **TagInfo** object obtained. |
 
 **Error codes:**
 

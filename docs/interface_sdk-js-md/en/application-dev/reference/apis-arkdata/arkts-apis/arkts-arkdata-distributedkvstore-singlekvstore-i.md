@@ -183,7 +183,7 @@ Closes the **KVStoreResultSet** object returned by [SingleKvStore.getResultSet](
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resultSet | [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md) | Yes | KVStoreResultSet** object to close. |
+| resultSet | [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md) | Yes | **KVStoreResultSet** object to close. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -240,7 +240,7 @@ Closes the **KVStoreResultSet** object returned by [SingleKvStore.getResultSet](
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resultSet | [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md) | Yes | KVStoreResultSet** object to close. |
+| resultSet | [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md) | Yes | **KVStoreResultSet** object to close. |
 
 **Return value:**
 
@@ -1297,7 +1297,7 @@ Obtains the KV pairs that match the specified **Query** object. This API uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | **Query** object to match. |
 
 **Return value:**
 
@@ -1531,7 +1531,7 @@ Obtains a **KVStoreResultSet** object that matches the specified **Query** objec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | **Query** object to match. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Yes | Callback used to return the **KVStoreResultSet** object obtained. |
 
 **Error codes:**
@@ -1604,7 +1604,7 @@ Obtains a **KVStoreResultSet** object that matches the specified **Query** objec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | **Query** object to match. |
 
 **Return value:**
 
@@ -1675,7 +1675,7 @@ Obtains the number of results that match the specified **Query** object. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | **Query** object to match. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of results obtained. |
 
 **Error codes:**
@@ -1747,7 +1747,7 @@ Obtains the number of results that match the specified **Query** object. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | **Query** object to match. |
 
 **Return value:**
 
@@ -2406,7 +2406,7 @@ removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 
 Deletes data of a device. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **deviceId** is **networkId** in
 > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md), which can be
@@ -2484,7 +2484,7 @@ removeDeviceData(deviceId: string): Promise<void>
 
 Deletes data of a device. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **deviceId** is **networkId** in
 > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md), which can be
@@ -2798,7 +2798,7 @@ setSyncParam(defaultAllowedDelayMs: number, callback: AsyncCallback<void>): void
 
 Sets the default delay for cross-device data sync. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > After the default delay is set, calling [sync](arkts-arkdata-distributedkvstore-syncmode-e.md) will not trigger the cross-
 > device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
@@ -2850,7 +2850,7 @@ setSyncParam(defaultAllowedDelayMs: number): Promise<void>
 
 Sets the default delay for cross-device data sync. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > After the default delay is set, calling [sync](arkts-arkdata-distributedkvstore-syncmode-e.md) will not trigger the cross-
 > device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
@@ -3130,7 +3130,7 @@ sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 
 Starts cross-device data sync manually. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../database/data-sync-of-kv-store.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **deviceIds** is **networkId** in
 > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md), which can be
@@ -3225,7 +3225,7 @@ sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: number): void
 
 Starts cross-device data sync manually. This API returns the result synchronously. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../database/data-sync-of-kv-store.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **deviceIds** is **networkId** in
 > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md), which can be
@@ -3246,7 +3246,7 @@ Starts cross-device data sync manually. This API returns the result synchronousl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceIds | string[] | Yes | List of **networkId**s of the devices in the same networking environment to be synchronized. |
-| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | **Query** object to match. |
 | mode | [SyncMode](arkts-arkdata-distributedkvstore-syncmode-e.md) | Yes | Sync mode. |
 | delayMs | number | No | Delay time allowed, in ms. The default value is **0**. If **delayMs** is set, data sync will be executed **delayMs** after **sync()** is called. If **delayMs** is not set, the delay set in [setSyncParam](#setsyncparam) is used. |
 

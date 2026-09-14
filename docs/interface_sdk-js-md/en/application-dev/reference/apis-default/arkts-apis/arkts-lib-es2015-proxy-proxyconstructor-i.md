@@ -20,10 +20,6 @@ Creates a Proxy object. The Proxy object allows you to create an object that can
 | target | T | Yes |  |
 | handler | [ProxyHandler](arkts-lib-es2015-proxy-proxyhandler-i.md)&lt;T&gt; | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## revocable
 
 ```TypeScript
@@ -38,8 +34,3 @@ Creates a revocable Proxy object.
 | --- | --- | --- | --- |
 | target | T | Yes |  |
 | handler | [ProxyHandler](arkts-lib-es2015-proxy-proxyhandler-i.md)&lt;T&gt; | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

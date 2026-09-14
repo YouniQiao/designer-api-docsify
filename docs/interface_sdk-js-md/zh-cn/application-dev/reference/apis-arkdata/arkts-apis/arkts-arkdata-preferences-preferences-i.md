@@ -243,7 +243,7 @@ flush(callback: AsyncCallback<void>): void
 
 将缓存的Preferences实例中的数据异步存储到用户首选项的持久化文件中，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当数据未修改或修改后的数据与缓存数据一致时，不会刷新持久化文件。
 > 
@@ -291,7 +291,7 @@ flush(): Promise<void>
 
 将缓存的Preferences实例中的数据异步存储到用户首选项的持久化文件中，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当数据未修改或修改后的数据与缓存数据一致时，不会刷新持久化文件。
 > 
@@ -337,7 +337,7 @@ flushSync(): void
 
 将缓存的Preferences实例中的数据存储到用户首选项的持久化文件中。
 
-> **说明：**
+> **说明：** 
 > 
 > 当数据未修改或修改后的数据与缓存数据一致时，不会刷新持久化文件。
 
@@ -940,7 +940,7 @@ on(type: 'change', callback: Callback<string>): void
 > **选取建议：** 单进程应用推荐使用on('change')或on('dataChange')；多进程数据同步时使用on('multiProcessChange')；需要精确知道特定Key变化并获取新值时使用on('
 > dataChange')。
 > 
-> **说明：**
+> **说明：** 
 > 
 > 当调用[removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md)或
 > [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md)后，订阅的数据变更会主动取消订阅，在重新
@@ -995,7 +995,7 @@ on(type: 'multiProcessChange', callback: Callback<string>): void
 
 本接口提供给申请了[dataGroupId](arkts-arkdata-preferences-options-i.md)的应用进行使用，未申请的应用不推荐使用（监听不到数据变更），多进程操作可能会损坏持久化文件，导致数据丢失。
 
-> **说明：**
+> **说明：** 
 > 
 > 同一持久化文件在当前进程对多进程数据变更订阅的最大数量为50次，超过最大限制后订阅会失败。建议在触发callback回调后及时取消订阅。
 > 
@@ -1051,7 +1051,7 @@ on(type: 'dataChange', keys: Array<string>, callback: Callback<Record<string, Va
 
 精确订阅数据变更，只有被订阅的Key值发生变更后，在执行[flush](#flush)方法后，触发callback回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当调用[removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md)或
 > [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md)后，订阅的数据变更会主动取消订阅，在重新
@@ -1110,7 +1110,7 @@ put(key: string, value: ValueType, callback: AsyncCallback<void>): void
 
 将数据写入缓存的Preferences实例中，可通过[flush](#flush)将Preferences实例持久化，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当value中包含非UTF-8格式的字符串时，请使用Uint8Array类型存储，否则会造成持久化文件出现格式错误造成文件损坏。
 > 
@@ -1159,7 +1159,7 @@ put(key: string, value: ValueType): Promise<void>
 
 将数据写入缓存的Preferences实例中，可通过[flush](#flush)将Preferences实例持久化，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当value中包含非UTF-8格式的字符串时，请使用Uint8Array类型存储，否则会造成持久化文件出现格式错误造成文件损坏。
 > 
@@ -1212,7 +1212,7 @@ putSync(key: string, value: ValueType): void
 
 将数据写入缓存的Preferences实例中，可通过[flush](#flush)将Preferences实例持久化，此为同步接口。
 
-> **说明：**
+> **说明：** 
 > 
 > 当value中包含非UTF-8格式的字符串时，请使用Uint8Array类型存储，否则会造成持久化文件出现格式错误造成文件损坏。
 > 

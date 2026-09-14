@@ -2,11 +2,6 @@
 
 **继承/实现关系：** OffscreenCanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
 
-## 导入模块
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

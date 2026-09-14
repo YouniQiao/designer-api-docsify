@@ -10,11 +10,6 @@ UIWaterFlowEvent继承于[UIScrollableCommonEvent](arkts-arkui-uiscrollablecommo
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## setOnDidScroll
 
 ```TypeScript
@@ -23,7 +18,7 @@ setOnDidScroll(callback: OnScrollCallback | undefined): void
 
 设置onDidScroll事件的回调。
 
-> **说明：**
+> **说明：** 
 > 
 > setOnWillScroll用于设置每帧滚动开始前的回调，setOnDidScroll用于设置每帧滚动完成后的回调。两者可同时使用，setOnWillScroll的回调先于setOnDidScroll触发。
 > 方法入参为undefined时，会重置事件回调。

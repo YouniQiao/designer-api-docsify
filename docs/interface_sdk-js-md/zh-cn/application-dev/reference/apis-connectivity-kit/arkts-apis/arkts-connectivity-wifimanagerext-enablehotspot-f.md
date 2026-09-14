@@ -14,7 +14,7 @@ function enableHotspot(): void
 
 启用Wi-Fi热点。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 10开始废弃。
 

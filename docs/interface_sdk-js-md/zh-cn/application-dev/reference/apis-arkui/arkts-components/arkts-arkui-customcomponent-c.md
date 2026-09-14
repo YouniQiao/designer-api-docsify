@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## aboutToReuse
 
 ```TypeScript
@@ -23,7 +18,7 @@ aboutToReuse?(params: Record<string, Object | undefined | null>): void
 
 当一个可复用的自定义组件从复用缓存中重新加入到节点树时，触发aboutToReuse生命周期回调，并将组件的构造参数传递给该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > * [避免对@Link/@ObjectLink/@Prop等自动更新的状态变量，在aboutToReuse()中重复赋值](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-component_reuse#避免对linkobjectlinkprop等自动更新的状态变量在abouttoreuse中重复赋值)。
 > 

@@ -14,7 +14,7 @@ function restartSelfAtomicService(context: Context): void
 
 重启当前原子化服务。
 
-> **说明：**
+> **说明：** 
 > 
 > - 当前仅支持以独立窗口方式拉起原子化服务。
 > 
@@ -35,7 +35,7 @@ function restartSelfAtomicService(context: Context): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | 是 | 当前Ability的上下文。<br>**说明：**当前仅支持[UIAbilityContext](arkts-ability-uiabilitycontext-c.md)。&lt;/br&gt; |
+| context | [Context](arkts-ability-context-c.md) | 是 | 当前Ability的上下文。<br>**说明：** 当前仅支持[UIAbilityContext](arkts-ability-uiabilitycontext-c.md)。&lt;/br&gt; |
 
 **错误码：**
 

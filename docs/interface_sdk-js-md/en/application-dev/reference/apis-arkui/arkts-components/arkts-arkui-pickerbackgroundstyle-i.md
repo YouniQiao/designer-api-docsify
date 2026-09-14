@@ -6,11 +6,6 @@ Defines the background style configuration for selected picker items.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## borderRadius
 
 ```TypeScript
@@ -21,7 +16,7 @@ Border radius of the selected item.
 
 Default value: **{ value:24, unit:LengthUnit.VP }**, meaning 24 vp for all corners.
 
-**NOTE:**
+**NOTE:** 
 
 1. [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md): uniform radius with a customizable unit
 2. [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md): per-corner radius values (vp units only)

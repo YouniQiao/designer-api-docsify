@@ -14,7 +14,7 @@ function getDefaultNet(callback: AsyncCallback<NetHandle>): void
 
 获取系统默认使用的网络句柄，包含网络ID。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 系统默认使用的网络，该网络的capabilities必须具备[NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md)且不是VPN类型的网络。
 > 
@@ -74,7 +74,7 @@ function getDefaultNet(): Promise<NetHandle>
 
 获取系统默认使用的网络句柄，包含网络ID。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 系统默认使用的网络，该网络的capabilities必须具备[NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md)且不是VPN类型的网络。
 > 

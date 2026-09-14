@@ -8,11 +8,6 @@ In addition to the [universal events](arkts-arkui-commonmethod-c.md), the follow
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## alignContent
 
 ```TypeScript
@@ -21,7 +16,7 @@ alignContent(value: Alignment)
 
 设置子组件在容器内的对齐方式，调用后子组件按照指定的对齐方式在容器内排列。该属性与align同时设置时，后设置的属性生效。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -49,7 +44,7 @@ autoHalfFold(value: boolean)
 
 典型使用场景：当用户在系统设置中关闭自动旋转功能后，希望在折叠屏设备半折叠状态下仍然能够根据折叠状态自动调整应用布局方向。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -75,7 +70,7 @@ enableAnimation(value: boolean)
 
 设置是否使用默认动效，调用后启用或禁用FolderStack的默认悬停动画效果。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -103,7 +98,7 @@ onFolderStateChange(callback: OnFoldStatusChangeCallback)
 
 典型使用场景：根据折叠状态调整应用布局，例如在展开状态下显示双栏布局，在半折叠状态下调整上半屏和下半屏的内容分布。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
@@ -131,7 +126,7 @@ onHoverStatusChange(handler: OnHoverStatusChangeCallback)
 
 典型使用场景：根据悬停状态调整应用布局和交互逻辑，例如在悬停模式下优化上半屏和下半屏的内容展示。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 

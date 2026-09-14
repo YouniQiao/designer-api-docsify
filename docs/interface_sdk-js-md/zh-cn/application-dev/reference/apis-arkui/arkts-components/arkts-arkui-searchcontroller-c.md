@@ -14,11 +14,6 @@ controller: SearchController = new SearchController();
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## caretPosition
 
 ```TypeScript
@@ -61,7 +56,7 @@ setTextSelection(selectionStart: number, selectionEnd: number, options?: Selecti
 
 组件在获焦状态下，调用该接口设置文本选择区域并高亮显示，且只有在selectionStart小于selectionEnd时，文字才会被选取并高亮显示。
 
-> **说明：**
+> **说明：** 
 > 
 > - 如果selectionStart或selectionEnd被赋值为undefined时，当作0处理。
 > 

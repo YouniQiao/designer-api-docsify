@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## onStateChange
 
 ```TypeScript
@@ -21,7 +16,7 @@ onStateChange?: PopupStateChangeCallback
 
 气泡状态变化事件回调。
 
-**说明：**
+**说明：** 
 
 不支持通过[updatePopup](../arkts-apis/arkts-arkui-arkui-uicontext-promptaction-c.md#updatepopup)进行更新。
 
@@ -69,7 +64,7 @@ Popup箭头在气泡处的偏移。
 
 单位：vp
 
-**说明：**
+**说明：** 
 
 1. 没设置arrowOffset的情况下，气泡箭头与四个角的距离不能小于圆角半径。
 2. 只有arrowPointPosition不设置或者设置为null、undefined时，arrowOffset属性才生效。
@@ -233,7 +228,7 @@ borderLinearGradient?: PopupBorderLinearGradient
 
 设置Popup组件内描边线性渐变的颜色。
 
-**说明：**
+**说明：** 
 
 1. borderLinearGradient不设置或者设置为null、undefined时，内描边没有线性渐变效果。
 2. borderLinearGradient设置时，direction默认值是：GradientDirection.Bottom。
@@ -260,7 +255,7 @@ borderWidth?: Dimension
 
 单位：vp
 
-**说明：**
+**说明：** 
 
 1. 不支持设置百分比，设置百分比时按0处理。
 2. 在没有设置Popup组件内描边的情况下，该接口需要和borderLinearGradient配合使用。
@@ -286,7 +281,7 @@ colorMode?: AnchoredColorMode
 
 默认值：AnchoredColorMode.FOLLOW_TARGET
 
-**说明：**
+**说明：** 
 
 1. 仅当绑定组件使用了[WithTheme](../arkts-apis/arkts-arkui-withtheme-con.md)标签时，该属性才会生效。
 2. 该属性仅影响组件的默认样式，以及开发者设置的涉及深浅色资源的属性。
@@ -338,7 +333,7 @@ Popup组件是否响应悬停态（半折叠状态）变化，即在悬停态下
 
 默认值：false，2in1设备默认为true。未设置或者值为非法值时，生效默认值。
 
-**说明：**
+**说明：** 
 
 1. 如果Popup的弹出位置在悬停态折痕区域，Popup组件不会响应悬停态。
 2. 2in1设备从API version 20开始生效。
@@ -368,7 +363,7 @@ true：气泡可以获焦；false：气泡不会获焦。
 
 默认值：false
 
-**说明：**
+**说明：** 
 
 不支持通过[updatePopup](../arkts-apis/arkts-arkui-arkui-uicontext-promptaction-c.md#updatepopup)进行更新。
 
@@ -454,7 +449,7 @@ offset?: Position
 
 设置Popup组件相对于placement设置的显示位置的偏移。
 
-**说明：**
+**说明：** 
 
 不支持设置百分比。
 
@@ -485,7 +480,7 @@ onWillDismiss?: boolean | Callback<DismissPopupAction>
 1. 当为boolean类型时，如果设置为false，则不响应点击、侧滑（左滑/右滑）、三键back、路由跳转或键盘ESC退出事件，仅当设置“气泡显示状态”参数show值为false时才退出；如果设置为true，则正常响应退出事件；
 2. 如果设置为函数类型，则拦截退出事件且执行回调函数。侧滑（左滑/右滑）、三键back、路由跳转或键盘ESC在回调函数中返回的reason为PRESS_BACK，点击为TOUCH_OUTSIDE。
 
-**说明：**
+**说明：** 
 
 1. 在onWillDismiss回调中，不能再做onWillDismiss拦截。
 2. 不支持通过[updatePopup](../arkts-apis/arkts-arkui-arkui-uicontext-promptaction-c.md#updatepopup)进行更新。
@@ -508,7 +503,7 @@ outlineLinearGradient?: PopupBorderLinearGradient
 
 设置Popup组件外描边线性渐变的颜色。
 
-**说明：**
+**说明：** 
 
 1. outlineLinearGradient不设置或者设置为null、undefined时，外描边没有线性渐变效果。
 2. outlineLinearGradient设置时，direction默认值是：GradientDirection.Bottom。
@@ -535,7 +530,7 @@ outlineWidth?: Dimension
 
 单位：vp
 
-**说明：**
+**说明：** 
 
 1. 不支持设置百分比，设置百分比时按0处理。
 2. 在没有设置Popup组件外描边的情况下，该接口需要和outlineLinearGradient配合使用。
@@ -643,7 +638,7 @@ true：气泡会显示在创建的子窗里；false：气泡会显示在对应�
 
 默认值：false
 
-**说明：**
+**说明：** 
 
 不支持通过[updatePopup](../arkts-apis/arkts-arkui-arkui-uicontext-promptaction-c.md#updatepopup)进行更新。
 
@@ -669,7 +664,7 @@ systemMaterial?: SystemUiMaterial
 
 默认值：undefined，会清除由该接口设置的材质效果。
 
-**说明：**
+**说明：** 
 
 不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影[shadow](arkts-arkui-commonmethod-c.md#shadow)，不建议与上述接口一起使用。
 
@@ -713,7 +708,7 @@ transition?: TransitionEffect
 
 自定义设置Popup气泡显示和退出的动画效果。
 
-**说明：**
+**说明：** 
 
 1. 如果不设置，则使用默认的显示/退出动效。
 2. 显示动效中按back键，打断显示动效，执行退出动效，动画效果为显示动效与退出动效的曲线叠加后的效果。

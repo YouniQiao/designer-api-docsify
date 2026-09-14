@@ -10,11 +10,6 @@ Inherited from [DatePickerOptions](arkts-arkui-datepickeroptions-i.md).
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onAccept
 
 ```TypeScript
@@ -23,7 +18,7 @@ onAccept?: (value: DatePickerResult) => void
 
 Callback invoked when the OK button in the dialog box is clicked.
 
-**NOTE:**
+**NOTE:** 
 
 This API is supported since API version 8 and deprecated since API version 10. You are advised to use **onDateAccept** instead.
 
@@ -63,7 +58,7 @@ onChange?: (value: DatePickerResult) => void
 
 Callback invoked when the selected item in the picker changes.
 
-**NOTE:**
+**NOTE:** 
 
 This API is supported since API version 8 and deprecated since API version 10. You are advised to use **onDateChange** instead.
 
@@ -89,7 +84,7 @@ onDidAppear?: VoidCallback
 
 Event callback after the dialog box appears.
 
-**NOTE:**
+**NOTE:** 
 
 1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt;
 onWillDisappear &gt; onDidDisappear.
@@ -115,7 +110,7 @@ onDidDisappear?: VoidCallback
 
 Event callback after the dialog box disappears.
 
-**NOTE:**
+**NOTE:** 
 
 1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt;
 onWillDisappear &gt; onDidDisappear.
@@ -136,7 +131,7 @@ onWillAppear?: VoidCallback
 
 Event callback when the dialog box is about to appear.
 
-**NOTE:**
+**NOTE:** 
 
 1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt;
 onWillDisappear &gt; onDidDisappear.
@@ -159,7 +154,7 @@ onWillDisappear?: VoidCallback
 
 Event callback when the dialog box is about to disappear.
 
-**NOTE:**
+**NOTE:** 
 
 1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt;
 onWillDisappear &gt; onDidDisappear.
@@ -181,7 +176,7 @@ acceptButtonStyle?: PickerDialogButtonStyle
 
 Style of the accept button.
 
-**NOTE:**
+**NOTE:** 
 
 1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**。
 If both are set to **true**, the **primary** field will remain at the default value of **false**.
@@ -210,7 +205,7 @@ Default value: **DialogAlignment.Default**
 
 **Type:** [DialogAlignment](../arkts-apis/arkts-arkui-dialogalignment-e.md)
 
-**Default:**
+**Default:** 
 - API version 11+: DialogAlignment.Default
 
 **Since:** 10
@@ -231,7 +226,7 @@ Background blur style of the dialog box.
 
 Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
-**NOTE:**
+**NOTE:** 
 
 Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
@@ -275,7 +270,7 @@ Backplane color of the dialog box.
 
 Default value: **Color.Transparent**
 
-**NOTE:**
+**NOTE:** 
 
 When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to **BlurStyle.NONE**; otherwise, the color display may not meet the expected effect.
 
@@ -317,7 +312,7 @@ cancelButtonStyle?: PickerDialogButtonStyle
 
 Style of the cancel button.
 
-**NOTE:**
+**NOTE:** 
 
 1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**.
 If both are set to **true**, the **primary** field will remain at the default value of **false**.
@@ -344,7 +339,7 @@ Whether to enable cyclic scrolling.
 
 Default value: **true**
 
-**NOTE:**
+**NOTE:** 
 
 **true**: Cyclic scrolling is enabled, where the year values increment or decrement with month cycling, and month values increment or decrement with day cycling.
 
@@ -400,7 +395,7 @@ Default value: { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Re
 
 **Type:** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
-**Default:**
+**Default:** 
 - API version 11+: { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } }
 
 **Since:** 10
@@ -424,7 +419,7 @@ Whether to enable haptic feedback.
 
 Default value: **true**
 
-**NOTE:**
+**NOTE:** 
 
 1. Whether this parameter takes effect after being set to **true** depends on hardware support.
 2. To enable haptic feedback, you must declare the following permission under **requestPermissions** in **module**
@@ -504,13 +499,13 @@ Whether to display dates in lunar calendar format.
 
 Default value: **false**
 
-**NOTE:**
+**NOTE:** 
 
 This attribute takes effect only in Simplified Chinese and Traditional Chinese locales; it has no effect in other locales.
 
 **Type:** boolean
 
-**Default:**
+**Default:** 
 - API version 11+: false
 
 **Since:** 8
@@ -532,13 +527,13 @@ Whether to display the lunar calendar switch.
 
 Default value: **false**
 
-**NOTE:**
+**NOTE:** 
 
 After being enabled, this attribute takes effect only in Simplified Chinese and Traditional Chinese; it has no effect in other locales. Therefore, you are advised to set this attribute to **false** in other locales.
 
 **Type:** boolean
 
-**Default:**
+**Default:** 
 - API version 11+: false
 
 **Since:** 10
@@ -559,9 +554,9 @@ Style of the lunar calendar switch.
 
 Default value: {
 
-selectedColor: `\$r('sys.color.ohos_id_color_text_primary_actived')`,
+selectedColor: `&#36;r('sys.color.ohos_id_color_text_primary_actived')`,
 
-unselectedColor: `\$r('sys.color.ohos_id_color_switch_outline_off')`,
+unselectedColor: `&#36;r('sys.color.ohos_id_color_switch_outline_off')`,
 
 strokeColor: Color.White
 
@@ -591,7 +586,7 @@ Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
 
 **Type:** [Rectangle](arkts-arkui-rectangle-i.md)
 
-**Default:**
+**Default:** 
 - API version 11+: { x: 0, y: 0, width: '100%', height: '100%' }
 
 **Since:** 10
@@ -614,7 +609,7 @@ Default value: **{ dx: 0 , dy: 0 }**
 
 **Type:** [Offset](../arkts-apis/arkts-arkui-offset-t.md)
 
-**Default:**
+**Default:** 
 - API version 11+: { dx: 0 , dy: 0 }
 
 **Since:** 10
@@ -633,7 +628,7 @@ onDateAccept?: Callback<Date>
 
 Callback invoked when the OK button in the dialog box is clicked.
 
-**NOTE:**
+**NOTE:** 
 
 When **showTime** is set to **true**, the hour and minute in the value returned by the callback are the hour and minute selected in the picker. Otherwise, the hour and minute are the hour and minute of the system time.
 
@@ -655,7 +650,7 @@ onDateChange?: Callback<Date>
 
 Callback triggered when date selection changes through scrolling in the dialog box.
 
-**NOTE:**
+**NOTE:** 
 
 When **showTime** is set to **true**, the hour and minute in the value returned by the callback are the hour and minute selected in the picker. Otherwise, the hour and minute are the hour and minute of the system time.
 
@@ -681,7 +676,7 @@ Default value: { color: '#ff007dff', font: { size: '20vp', weight: FontWeight.Me
 
 **Type:** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
-**Default:**
+**Default:** 
 - API version 11+: { color: '#ff007dff', font: { size: '20vp', weight: FontWeight.Medium }
 
 **Since:** 10
@@ -725,7 +720,7 @@ Whether to display the time picker in the dialog box.
 
 Default value: **false**
 
-**NOTE:**
+**NOTE:** 
 
 1. When showTime is true, clicking the date in the dialog box header toggles between date-only and date+time views.
 2. When showTime is true, the mode parameter is ignored, meaning the date picker always shows year, month,
@@ -733,7 +728,7 @@ and day columns.
 
 **Type:** boolean
 
-**Default:**
+**Default:** 
 - API version 11+: false
 
 **Since:** 10
@@ -774,7 +769,7 @@ Default value: { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Re
 
 **Type:** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
-**Default:**
+**Default:** 
 - API version 11+: { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } }
 
 **Since:** 10
@@ -798,13 +793,13 @@ Whether the time picker in the dialog box is in 24-hour format. This parameter h
 
 Default value: **false**
 
-**NOTE:**
+**NOTE:** 
 
 When 12-hour format is used in the time picker, the AM/PM indicator does not automatically update when the hour value changes.
 
 **Type:** boolean
 
-**Default:**
+**Default:** 
 - API version 11+: false
 
 **Since:** 10

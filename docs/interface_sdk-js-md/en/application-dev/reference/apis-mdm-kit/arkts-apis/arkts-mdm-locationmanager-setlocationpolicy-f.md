@@ -14,7 +14,7 @@ function setLocationPolicy(admin: Want, policy: LocationPolicy): void
 
 Sets a location service policy. This API can be used in enterprise management and control scenarios. For example, you can disable the location service in confidential areas to protect information security, or forcibly enable the location service in logistics and distribution applications to track device locations.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Disabled: Set this option when privacy protection or power saving is required.
 > 

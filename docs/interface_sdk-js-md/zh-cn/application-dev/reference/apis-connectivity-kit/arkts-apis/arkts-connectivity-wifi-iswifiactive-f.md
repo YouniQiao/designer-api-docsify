@@ -14,7 +14,7 @@ function isWifiActive(): boolean
 
 查询Wi-Fi是否已使能。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃。
 

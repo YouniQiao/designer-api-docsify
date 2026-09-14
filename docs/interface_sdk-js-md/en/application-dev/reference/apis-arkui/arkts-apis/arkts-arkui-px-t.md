@@ -6,7 +6,7 @@ declare type PX = `${number}px`
 
 Defines the length property with number in units of px.
 
-@typedef { `\${number}px` } PX
+@typedef { `&#36;{number}px` } PX
 
 **Since:** 23
 

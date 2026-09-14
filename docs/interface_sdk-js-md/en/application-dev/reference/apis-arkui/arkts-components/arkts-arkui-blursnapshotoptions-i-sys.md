@@ -8,11 +8,6 @@ Defines the options for blur snapshot optimization. Setting this object enables 
 
 **System API:** This is a system API.
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## enableFreeze
 
 ```TypeScript

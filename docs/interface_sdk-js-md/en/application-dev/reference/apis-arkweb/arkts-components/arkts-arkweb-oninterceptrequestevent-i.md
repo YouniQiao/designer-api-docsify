@@ -6,11 +6,6 @@ Defines the callback information triggered before the **Web** component loads a 
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## request
 
 ```TypeScript

@@ -8,11 +8,6 @@ You must customize this class to implement the ContentModifier interface. For de
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## name
 
 ```TypeScript

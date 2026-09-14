@@ -40,7 +40,7 @@ constraintWidth?: number | string | Resource
 
 设置被计算文本布局宽度。
 
-**说明：**
+**说明：** 
 
 默认单位为vp，不支持设置百分比字符串。若不设置，则文本SizeOptions宽度为单行布局所占最大宽度值，若设置则为设置值。
 
@@ -80,7 +80,7 @@ fontSize?: number | string | Resource
 
 默认值：16
 
-**说明：**
+**说明：** 
 
 不支持设置百分比字符串。
 
@@ -298,7 +298,7 @@ wordBreak?: WordBreak
 
 默认值：WordBreak.BREAK_WORD
 
-**说明：**
+**说明：** 
 
 WordBreak.BREAK_ALL与{overflow: TextOverflow.Ellipsis}，`maxLines`组合使用可实现英文单词按字母截断，超出部分以省略号显示。
 

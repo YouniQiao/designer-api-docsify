@@ -14,7 +14,7 @@ function off(type: 'cellInfoChange', callback?: Callback<Array<CellInformation>>
 
 取消订阅小区信息变化事件，使用callback方式作为异步方法。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 

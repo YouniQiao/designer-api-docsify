@@ -33,3 +33,4 @@ Sends an event to the component with the specified ID.
 
 | 类型 | 说明 |
 | --- | --- |
+| boolean |  |

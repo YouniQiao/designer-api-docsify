@@ -30,7 +30,7 @@ EMBEDDED = 1
 
 设置半模态面板在当前页面内的顶层显示。
 
-**说明：**
+**说明：** 
 
 目前只支持挂载在Page或者NavDestination节点上，若有NavDestination优先挂载在NavDestination上。只支持在这两种页面内顶层显示。
 

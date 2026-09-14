@@ -22,7 +22,7 @@ addResource(type: ResourceType, proxy: PhotoProxy): void
 
 Adds resources using **PhotoProxy** data.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For the same asset change request, this API cannot be repeatedly called after resources are successfully added.
 
@@ -141,7 +141,7 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 
 | Type | Description |
 | --- | --- |
-| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) | MediaAssetChangeRequest** created. |
+| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) | **MediaAssetChangeRequest** created. |
 
 **Error codes:**
 
@@ -181,7 +181,7 @@ static deleteAssetsPermanentlyWithUri(context: Context, assetUris: string[]): Pr
 
 Permanently deletes images or videos in batches by URI. The deleted images or videos are not stored in the recycle bin. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Assets that exist only on the local device, on the cloud, or on both the local device and the cloud can be
 > permanently deleted. The deleted assets are not stored in the recycle bin.
@@ -243,7 +243,7 @@ static deleteCloudAssetsWithUri(context: Context, assetUris: string[]): Promise<
 
 Deletes cloud media assets to the trash in batches. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - If the assets are only on the local device, no changes are made.
 > 
@@ -303,7 +303,7 @@ static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>)
 
 Permanently deletes images or videos in batches. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
 > operation.
@@ -369,7 +369,7 @@ static deleteLocalAssetsPermanentlyWithUri(context: Context, assetUris: Array<st
 
 Permanently deletes images or video assets in batches by URI. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
 > operation.
@@ -442,7 +442,7 @@ static deleteLocalAssetsWithUri(context: Context, assetUris: string[]): Promise<
 
 Deletes local media assets to the trash in batches. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - If the assets are only on the local device, they are moved directly to the trash.
 > 
@@ -1107,7 +1107,7 @@ Sets the watermark type supported by photos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watermarkType | [WatermarkType](arkts-medialibrary-photoaccesshelper-watermarktype-e-sys.md) | Yes | Watermark type to set.<br>**NOTE:**<br>**WatermarkType.DEFAULT** cannot be passed. |
+| watermarkType | [WatermarkType](arkts-medialibrary-photoaccesshelper-watermarktype-e-sys.md) | Yes | Watermark type to set.<br>**NOTE:** <br>**WatermarkType.DEFAULT** cannot be passed. |
 
 **Error codes:**
 

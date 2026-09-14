@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## color
 
 ```TypeScript
@@ -21,7 +16,7 @@ color?: Color | string | Resource | ColoringStrategy
 
 默认为黑色。
 
-**说明：**
+**说明：** 
 
 从API version 11开始，该接口支持使用ColoringStrategy实现智能取色，智能取色功能不支持在ArkTS卡片、textShadow中使用。
 
@@ -49,7 +44,7 @@ fill?: boolean
 
 默认值：false。
 
-**说明：**
+**说明：** 
 
 textShadow中该字段不生效。
 
@@ -77,7 +72,7 @@ offsetX?: number | Resource
 
 单位：px
 
-**说明：**
+**说明：** 
 
 如需使用vp单位的数值可用vp2px进行转换。
 
@@ -105,7 +100,7 @@ offsetY?: number | Resource
 
 单位：px
 
-**说明：**
+**说明：** 
 
 如需使用vp单位的数值可用vp2px进行转换。
 
@@ -133,7 +128,7 @@ radius: number | Resource
 
 单位：px
 
-**说明：**
+**说明：** 
 
 API版本26.0.0之前，设置小于0的值时，按值为0处理。从API版本26.0.0开始，设置的值即为最终取值，当设置负数值时阴影消失。
 

@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## contentModifier
 
 ```TypeScript
@@ -103,7 +98,7 @@ fontFamily(value: ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 字体列表。默认字体'HarmonyOS Sans'。<br>应用当前支持'HarmonyOS Sans'字体和[注册自定义字体](../arkts-apis/arkts-font.md)。<br>卡片当前仅支持'HarmonyOS Sans'字体。 |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 字体列表。默认字体'HarmonyOS Sans'。<br>应用当前支持'HarmonyOS Sans'字体和[注册自定义字体](../arkts-apis/arkts-arkui-font.md)。<br>卡片当前仅支持'HarmonyOS Sans'字体。 |
 
 ## fontFeature
 

@@ -10,11 +10,6 @@ Inherited from [DatePickerOptions](arkts-arkui-datepickeroptions-i.md).
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## distortionMode
 
 ```TypeScript

@@ -2,7 +2,7 @@
 
 自定义弹窗的样式。
 
-> **说明：**
+> **说明：** 
 > 
 > - 按下返回键和ESC键时会让弹窗退出。
 > 
@@ -23,11 +23,6 @@
 **起始版本：** 7
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## distortionMode
 

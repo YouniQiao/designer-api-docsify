@@ -103,7 +103,7 @@ dispose(): void
 
 立即释放当前ReactiveComponentContent对象对[实体节点](../../../ui/arkts-user-defined-node.md#基本概念)的引用关系。关于ReactiveComponentContent的解绑场景请参见[解除实体节点引用关系](../../../ui/arkts-user-defined-arktsNode-builderNode.md#解除实体节点引用关系)。
 
-> **说明：**
+> **说明：** 
 > 
 > ReactiveComponentContent对象调用dispose接口后，会与后端实体节点解除引用关系。调用dispose后再次调用该对象的其他接口可能会出现crash或返回默认值，建议在操作节点前通过
 > [isDisposed](#isdisposed)接口检查其有效性。若前端ReactiveComponentContent对象无法释放，容易导致内存泄漏。建议开发者在
@@ -357,7 +357,7 @@ inheritFreezeOptions(enabled: boolean): void
 
 设置当前ReactiveComponentContent对象是否继承父组件中自定义组件的冻结策略[ComponentOptions](../arkts-components/arkts-arkui-componentoptions-i.md)。冻结策略用于控制组件在不活跃状态下是否暂停状态刷新。如果设置继承状态为false，则ReactiveComponentContent对象的冻结策略为false。适用于多页面导航（Navigation）等需要对不活跃组件进行冻结管理的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > ReactiveComponentContent设置inheritFreezeOptions为true，且父组件为自定义组件、BuilderNode、ComponentContent、ReactiveBuilderNode或
 > ReactiveComponentContent时，会继承父组件的冻结策略。当子组件为自定义组件时，ReactiveComponentContent的冻结策略不会传递给该子组件。

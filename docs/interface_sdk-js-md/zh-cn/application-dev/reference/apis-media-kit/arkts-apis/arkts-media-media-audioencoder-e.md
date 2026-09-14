@@ -1,7 +1,7 @@
 # AudioEncoder
 
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 8开始废弃，建议使用[CodecMimeType](arkts-media-media-codecmimetype-e.md)替代。
 

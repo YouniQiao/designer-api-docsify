@@ -2,7 +2,7 @@
 
 Optional enhanced configuration for the hue-preserving brightening and darkening blender, passed in as the options parameter of createColorfulBrightnessBlender. In addition to the regular BrightnessBlenderParam, it can be further fine-tuned for the brightening or darkening direction, color enhancement strength, input color influence, contrast against the background, and the HDR switch. If not passed, each item uses its default value.
 
-**Since:** 26.1.0
+**Since:** 26.2.0
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -26,11 +26,11 @@ Foreground darken weight, which controls the direction and strength of brighteni
 
 **Default:** 1
 
-**Since:** 26.1.0
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 26.1.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.2.0.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -48,11 +48,11 @@ Whether to actively enable HDR. When set to true, HDR is actively enabled and th
 
 **Default:** false
 
-**Since:** 26.1.0
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 26.1.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.2.0.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -70,11 +70,11 @@ Luma difference threshold to ensure readability, used to constrain the luma diff
 
 **Default:** 0
 
-**Since:** 26.1.0
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 26.1.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.2.0.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -92,11 +92,11 @@ Input color influence, which controls the degree to which the input color partic
 
 **Default:** 1
 
-**Since:** 26.1.0
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 26.1.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.2.0.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -114,11 +114,11 @@ Color enhancement strength, which controls the degree of saturation enhancement 
 
 **Default:** 0
 
-**Since:** 26.1.0
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 26.1.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.2.0.
 
 **System capability:** SystemCapability.Graphics.Drawing
 

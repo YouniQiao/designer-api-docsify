@@ -30,7 +30,7 @@ Obtains the **TypeDescriptor** object based on the uniform data type ID.
 
 | Type | Description |
 | --- | --- |
-| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | TypeDescriptor** object obtained. If the uniform data type does not exist, **null** is returned. |
+| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | **TypeDescriptor** object obtained. If the uniform data type does not exist, **null** is returned. |
 
 **Error codes:**
 

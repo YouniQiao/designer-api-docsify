@@ -6,11 +6,6 @@ Configures preview menu options, supporting the vibration effect when the menu p
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## hapticFeedbackMode
 
 ```TypeScript

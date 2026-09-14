@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## backgroundBlurStyle
 
 ```TypeScript
@@ -37,7 +32,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 标题栏背景模糊选项。
 
-**说明：**
+**说明：** 
 
 只在设置了backgroundBlurStyle时生效。
 
@@ -79,7 +74,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 设置标题栏背景属性包括：模糊半径，亮度，饱和度，颜色等。
 
-**说明：**
+**说明：** 
 
 不建议与backgroundBlurStyleOptions同时使用。
 
@@ -181,7 +176,7 @@ paddingEnd?: LengthMetrics
 
 默认值：
 
-LengthMetrics.resource(`\$r('sys.float.margin_right')`)
+LengthMetrics.resource(`&#36;r('sys.float.margin_right')`)
 
 **类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
@@ -210,7 +205,7 @@ paddingStart?: LengthMetrics
 
 默认值：
 
-LengthMetrics.resource(`\$r('sys.float.margin_left')`)。
+LengthMetrics.resource(`&#36;r('sys.float.margin_left')`)。
 
 **类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 

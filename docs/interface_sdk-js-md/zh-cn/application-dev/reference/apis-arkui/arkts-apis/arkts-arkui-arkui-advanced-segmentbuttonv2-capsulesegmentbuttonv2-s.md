@@ -124,7 +124,7 @@ readonly buttonBackgroundColor?: ColorMetrics
 
 配置分段按钮背板颜色。
 
-默认值：`\$r('sys.color.segment_button_v2_tab_button_background')`
+默认值：`&#36;r('sys.color.segment_button_v2_tab_button_background')`
 
 值为undefined时，按默认值处理。
 
@@ -172,7 +172,7 @@ readonly buttonBorderRadius?: LengthMetrics
 
 取值范围：[0, +∞)
 
-默认值：`\$r('sys.float.segment_button_v2_background_corner_radius')`
+默认值：`&#36;r('sys.float.segment_button_v2_background_corner_radius')`
 
 超出取值范围按默认值处理。
 
@@ -198,7 +198,7 @@ readonly buttonMinHeight?: LengthMetrics
 
 取值范围：[0, +∞)
 
-默认值：只有纯文本或者纯图标选项时：`\$r('sys.float.segment_button_v2_singleline_background_height')`；有图文混合的选项时：`\$r('sys.float.segment_button_v2_doubleline_background_height')`
+默认值：只有纯文本或者纯图标选项时：`&#36;r('sys.float.segment_button_v2_singleline_background_height')`；有图文混合的选项时：`&#36;r('sys.float.segment_button_v2_doubleline_background_height')`
 
 超出取值范围按默认值处理。
 
@@ -224,7 +224,7 @@ readonly buttonPadding?: LengthMetrics
 
 取值范围：[0, +∞)
 
-默认值：`\$r('sys.float.padding_level1')`
+默认值：`&#36;r('sys.float.padding_level1')`
 
 超出取值范围按默认值处理。
 
@@ -274,7 +274,7 @@ readonly itemBorderRadius?: LengthMetrics
 
 取值范围：[0, +∞)
 
-默认值：`\$r('sys.float.segment_button_v2_selected_corner_radius')`
+默认值：`&#36;r('sys.float.segment_button_v2_selected_corner_radius')`
 
 超出取值范围按默认值处理。
 
@@ -298,11 +298,11 @@ readonly itemFontColor?: ColorMetrics
 
 配置分段按钮非选中选项的字体颜色。
 
-默认值：`\$r('sys.color.font_secondary')`
+默认值：`&#36;r('sys.color.font_secondary')`
 
 值为undefined时，按默认值处理。
 
-**说明：**
+**说明：** 
 
 items设置textModifier/fontColor属性值时，itemFontColor不生效。
 
@@ -332,7 +332,7 @@ readonly itemFontSize?: LengthMetrics
 
 默认值：`14fp`
 
-**说明：**
+**说明：** 
 
 不支持设置百分比类型，异常值按默认值处理。
 
@@ -362,7 +362,7 @@ readonly itemFontWeight?: FontWeight
 
 超出取值范围按默认值处理。
 
-**说明：**
+**说明：** 
 
 items设置textModifier/fontWeight属性值时，itemFontWeight不生效。
 
@@ -386,11 +386,11 @@ readonly itemIconFillColor?: ColorMetrics
 
 配置分段按钮非选中的选项图标颜色。
 
-默认值：`\$r('sys.color.font_secondary')`
+默认值：`&#36;r('sys.color.font_secondary')`
 
 值为undefined时，按默认值处理。
 
-**说明：**
+**说明：** 
 
 items设置iconModifier/fillColor属性值时，itemIconFillColor不生效。
 
@@ -422,7 +422,7 @@ readonly itemIconSize?: SizeT<LengthMetrics>
 
 超出取值范围按默认值处理。
 
-**说明：**
+**说明：** 
 
 items设置iconModifier/width、height属性值时，itemIconSize不生效。
 
@@ -450,7 +450,7 @@ readonly itemMaxFontScale?: number | Resource
 
 默认值：1
 
-**说明：**
+**说明：** 
 
 设置的值小于 1 时，按值为 1 处理，设置的值大于 2，按值为 2 处理，异常值默认不生效。
 
@@ -478,7 +478,7 @@ readonly itemMinFontScale?: number | Resource
 
 默认值：0
 
-**说明：**
+**说明：** 
 
 设置的最小字体缩放值小于 0 时，按值为 0 处理，设置的最小字体缩放值大于 1 时，按值为 1 处理，异常值默认不生效。
 
@@ -506,7 +506,7 @@ readonly itemMinHeight?: LengthMetrics
 
 默认值：
 
-只有纯文本或者纯图标选项时：`\$r('sys.float.segment_button_v2_singleline_selected_height')`；有图文混合的选项时：`\$r('sys.float.segment_button_v2_doubleline_selected_height')`
+只有纯文本或者纯图标选项时：`&#36;r('sys.float.segment_button_v2_singleline_selected_height')`；有图文混合的选项时：`&#36;r('sys.float.segment_button_v2_doubleline_selected_height')`
 
 超出取值范围按默认值处理。
 
@@ -530,7 +530,7 @@ readonly itemPadding?: LocalizedPadding
 
 配置分段按钮选项内边距。
 
-默认值：`{ top: LengthMetrics.resource(\$r('sys.float.padding_level2')), bottom: LengthMetrics.resource(\$r('sys.float.padding_level2')), start: LengthMetrics.resource(\$r('sys.float.padding_level4')), end: LengthMetrics.resource(\$r('sys.float.padding_level4')) }`
+默认值：`{ top: LengthMetrics.resource(&#36;r('sys.float.padding_level2')), bottom: LengthMetrics.resource(&#36;r('sys.float.padding_level2')), start: LengthMetrics.resource(&#36;r('sys.float.padding_level4')), end: LengthMetrics.resource(&#36;r('sys.float.padding_level4')) }`
 
 值为undefined时，按默认值处理。
 
@@ -578,7 +578,7 @@ readonly itemSelectedBackgroundColor?: ColorMetrics
 
 配置分段按钮选中的选项背景颜色。
 
-默认值：`\$r('sys.color.segment_button_v2_tab_selected_item_background')`
+默认值：`&#36;r('sys.color.segment_button_v2_tab_selected_item_background')`
 
 值为undefined时，按默认值处理。
 
@@ -602,11 +602,11 @@ readonly itemSelectedFontColor?: ColorMetrics
 
 配置分段按钮非选中选项的字体颜色。
 
-默认值：`\$r('sys.color.font_secondary')`
+默认值：`&#36;r('sys.color.font_secondary')`
 
 值为undefined时，按默认值处理。
 
-**说明：**
+**说明：** 
 
 items设置textModifier/fontColor属性值时，itemFontColor不生效。
 
@@ -636,7 +636,7 @@ readonly itemSelectedFontSize?: LengthMetrics
 
 默认值：`14fp`
 
-**说明：**
+**说明：** 
 
 不支持设置百分比类型，异常值按默认值处理。
 
@@ -666,7 +666,7 @@ readonly itemSelectedFontWeight?: FontWeight
 
 超出取值范围按默认值处理。
 
-**说明：**
+**说明：** 
 
 items设置textModifier/fontWeight属性值时，itemSelectedFontWeight不生效。
 
@@ -690,11 +690,11 @@ readonly itemSelectedIconFillColor?: ColorMetrics
 
 配置分段按钮选中的选项图标颜色。
 
-默认值：`\$r('sys.color.font_primary')`
+默认值：`&#36;r('sys.color.font_primary')`
 
 值为undefined时，按默认值处理。
 
-**说明：**
+**说明：** 
 
 items设置iconModifier/fillColor属性值时，itemSelectedIconFillColor不生效。
 
@@ -720,11 +720,11 @@ readonly itemSelectedSymbolFontColor?: ColorMetrics
 
 配置分段按钮选中选项的HM Symbol类型图标颜色。
 
-默认值：`\$r('sys.color.font_primary')`
+默认值：`&#36;r('sys.color.font_primary')`
 
 值为undefined时，按默认值处理。
 
-**说明：**
+**说明：** 
 
 items设置symbolModifier/fontColor属性值时，itemSelectedSymbolFontColor不生效。
 
@@ -778,7 +778,7 @@ readonly itemSpace?: LengthMetrics
 
 默认值：`LengthMetrics.vp(0)`
 
-**说明：**
+**说明：** 
 
 不支持设置百分比类型，异常值按默认值处理。
 
@@ -802,11 +802,11 @@ readonly itemSymbolFontColor?: ColorMetrics
 
 配置分段按钮非选中选项HM Symbol类型图标的颜色。
 
-默认值：`\$r('sys.color.font_secondary')`
+默认值：`&#36;r('sys.color.font_secondary')`
 
 值为undefined时，按默认值处理。
 
-**说明：**
+**说明：** 
 
 items设置symbolModifier/fontColor属性值时，itemSymbolFontColor不生效。
 
@@ -836,7 +836,7 @@ readonly itemSymbolFontSize?: LengthMetrics
 
 默认值：`20fp`
 
-**说明：**
+**说明：** 
 
 不支持设置百分比类型，异常值按默认值处理。
 

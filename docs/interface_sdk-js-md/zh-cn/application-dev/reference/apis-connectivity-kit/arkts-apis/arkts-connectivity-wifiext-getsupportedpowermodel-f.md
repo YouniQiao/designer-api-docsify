@@ -14,7 +14,7 @@ function getSupportedPowerModel(): Promise<Array<PowerModel>>
 
 获取支持的功率模式。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。
 
@@ -43,7 +43,7 @@ function getSupportedPowerModel(callback: AsyncCallback<Array<PowerModel>>): voi
 
 获取支持的功率模式。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。
 

@@ -10,11 +10,6 @@ In addition to the universal events, the following events are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## edgeAlign
 
 ```TypeScript
@@ -36,7 +31,7 @@ Sets how the picker is aligned with the entry component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | alignType | [CalendarAlign](arkts-arkui-calendaralign-e.md) | Yes | Alignment type.<br>Default value: **CalendarAlign.END**. |
-| offset | Offset | No | Offset of the picker relative to the entry component after alignment based on the specified alignment type.<br>Default value: **{dx: 0, dy: 0} |
+| offset | Offset | No | Offset of the picker relative to the entry component after alignment based on the specified alignment type.<br>Default value: **{dx: 0, dy: 0}** |
 
 ## edgeAlign
 
@@ -59,7 +54,7 @@ Sets how the picker is aligned with the entry component. Compared with [edgeAlig
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | alignType | [Optional](arkts-arkui-optional-t.md)&lt;[CalendarAlign](arkts-arkui-calendaralign-e.md)&gt; | Yes | Alignment type.<br>Default value: **CalendarAlign.END**.<br>If the value of **alignType** is **undefined**, the default value is used. |
-| offset | Offset | No | Offset of the picker relative to the entry component after alignment based on the specified alignment type.<br>Default value: **{dx: 0, dy: 0} |
+| offset | Offset | No | Offset of the picker relative to the entry component after alignment based on the specified alignment type.<br>Default value: **{dx: 0, dy: 0}** |
 
 ## markToday
 
@@ -113,7 +108,7 @@ onChange(callback: Optional<Callback<Date>>)
 
 Triggered when a date is selected. This event cannot be triggered by two-way bound state variables. Compared with [onChange](#onchange), this API supports the **undefined** type for the **callback** parameter.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 20.
 

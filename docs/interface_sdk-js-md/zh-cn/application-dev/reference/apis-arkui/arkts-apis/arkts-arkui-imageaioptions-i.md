@@ -2,7 +2,7 @@
 
 图像AI分析选项。
 
-> **说明：**
+> **说明：** 
 > 
 > 该特性中的参数types优先级高于[ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md)中的参数types，两者同时设置时以该特性设置的值为准。
 > 
@@ -11,11 +11,6 @@
 **起始版本：** 12
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## aiController
 

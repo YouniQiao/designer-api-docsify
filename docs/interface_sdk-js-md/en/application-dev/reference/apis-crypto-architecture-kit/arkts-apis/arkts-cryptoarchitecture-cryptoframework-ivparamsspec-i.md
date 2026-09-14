@@ -4,7 +4,7 @@ Encapsulates the parameters for encryption or decryption using a block cipher mo
 
 <br>This is applicable to block cipher modes that require an IV, such as CBC, CTR, OFB, and CFB.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Before passing a value to
 > [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify

@@ -10,11 +10,6 @@ In addition to universal events and [scrollable component common events](../../.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## alignItems
 
 ```TypeScript
@@ -35,7 +30,7 @@ Sets the alignment mode of grid items in the grid. For details about the usage, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignment | [Optional](arkts-arkui-optional-t.md)&lt;[GridItemAlignment](arkts-arkui-griditemalignment-e.md)&gt; | Yes | Alignment mode of grid items in the grid.<br>Default value: **GridItemAlignment.DEFAULT |
+| alignment | [Optional](arkts-arkui-optional-t.md)&lt;[GridItemAlignment](arkts-arkui-griditemalignment-e.md)&gt; | Yes | Alignment mode of grid items in the grid.<br>Default value: **GridItemAlignment.DEFAULT** |
 
 ## cachedCount
 
@@ -84,7 +79,7 @@ The number of the grid items to be cached before and after the currently display
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | count | number | Yes | Number of grid items to be cached (preloaded).<br>Default value: the number of rows visible on the screen for vertical scrolling, or the number of columns visible on the screen for horizontal scrolling. The maximum value is 16.<br>Value range: [0, +∞).<br>Values less than 0 are treated as **1**. <br>When the count value is updated using the state variable, the **Grid** component does not trigger a layout update. The number of cached nodes is updated only during the next layout. |
-| show | boolean | Yes | Whether to display the preloaded nodes. If this parameter is set to **true**, the preloaded **GridItem** is displayed. If this parameter is set to **false**, the preloaded **GridItem** is not displayed.<br> Default value: **false |
+| show | boolean | Yes | Whether to display the preloaded nodes. If this parameter is set to **true**, the preloaded **GridItem** is displayed. If this parameter is set to **false**, the preloaded **GridItem** is not displayed.<br> Default value: **false** |
 
 ## cellLength
 
@@ -208,8 +203,8 @@ Sets the effect used when the scroll boundary is reached.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported.<br>Default value: **EdgeEffect.None |
-| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself. The value **{ alwaysEnabled: true }** means to enable the scroll effect, and **{ alwaysEnabled: false }** means the opposite.<br>Default value: **{ alwaysEnabled: false }<br>**Since:** 11 |
+| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported.<br>Default value: **EdgeEffect.None** |
+| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself. The value **{ alwaysEnabled: true }** means to enable the scroll effect, and **{ alwaysEnabled: false }** means the opposite.<br>Default value: **{ alwaysEnabled: false }**<br>**Since:** 11 |
 
 ## editMode
 
@@ -229,7 +224,7 @@ Sets whether to enable edit mode. In edit mode, the user can drag the grid items
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable edit mode. If this parameter is set to **true**, the **Grid** component is in edit mode. If this parameter is set to **false**, the **Grid** component is not in edit mode.<br>Default value: **false |
+| value | boolean | Yes | Whether to enable edit mode. If this parameter is set to **true**, the **Grid** component is in edit mode. If this parameter is set to **false**, the **Grid** component is not in edit mode.<br>Default value: **false** |
 
 ## editModeOptions
 
@@ -283,7 +278,7 @@ enableScrollInteraction(value: boolean)
 
 Sets whether to support the scrolling gesture.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The component cannot be scrolled through mouse press-and-drag operations.
 
@@ -299,7 +294,7 @@ Sets whether to support the scrolling gesture.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to support scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the [Scroller](arkts-arkui-scroller-c.md).<br>Default value: **true |
+| value | boolean | Yes | Whether to support scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the [Scroller](arkts-arkui-scroller-c.md).<br>Default value: **true** |
 
 ## focusWrapMode
 
@@ -321,7 +316,7 @@ Sets the focus wrap mode for cross-axis arrow keys.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [Optional](arkts-arkui-optional-t.md)&lt;[FocusWrapMode](../arkts-apis/arkts-arkui-focuswrapmode-e.md)&gt; | Yes | Focus wrap mode for cross-axis arrow keys.<br>Default value: **FocusWrapMode.DEFAULT**<br>**NOTE:**<br>Abnormal values are treated as the default value, meaning that cross- axis arrow keys cannot wrap. |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[FocusWrapMode](../arkts-apis/arkts-arkui-focuswrapmode-e.md)&gt; | Yes | Focus wrap mode for cross-axis arrow keys.<br>Default value: **FocusWrapMode.DEFAULT**<br>**NOTE:** <br>Abnormal values are treated as the default value, meaning that cross- axis arrow keys cannot wrap. |
 
 ## friction
 
@@ -363,7 +358,7 @@ Sets the main axis layout direction of the grid.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [GridDirection](arkts-arkui-griddirection-e.md) | Yes | Main axis layout direction of the grid.<br>Default value: **GridDirection.Row |
+| value | [GridDirection](arkts-arkui-griddirection-e.md) | Yes | Main axis layout direction of the grid.<br>Default value: **GridDirection.Row** |
 
 ## maxCount
 
@@ -389,7 +384,7 @@ If the value of **maxCount** is smaller than that of **minCount**, the default v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Maximum number of rows or columns that can be displayed.<br>Default value: **Infinity |
+| value | number | Yes | Maximum number of rows or columns that can be displayed.<br>Default value: **Infinity** |
 
 ## minCount
 
@@ -415,7 +410,7 @@ If the value of **minCount** is greater than that of **maxCount**, both **minCou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Minimum number of rows or columns that can be displayed.<br>Default value: **1 |
+| value | number | Yes | Minimum number of rows or columns that can be displayed.<br>Default value: **1** |
 
 ## multiSelectable
 
@@ -853,7 +848,7 @@ Sets the scrollbar state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.<br>Default value: **BarState.Auto**<br>**NOTE:**<br>In API version 9 and earlier versions, the default value is **BarState.Off**. Since API version 10, the default value is **BarState.Auto**. |
+| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.<br>Default value: **BarState.Auto**<br>**NOTE:** <br>In API version 9 and earlier versions, the default value is **BarState.Off**. Since API version 10, the default value is **BarState.Auto**. |
 
 ## scrollBarColor
 
@@ -963,7 +958,7 @@ For details about the **supportAnimation** animation effect, see [Example 5: Imp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable animation. If this parameter is set to **true**, the drag animation of **GridItem** is supported. If this parameter is set to **false**, the drag animation of **GridItem** is not supported.<br>Default value: **false |
+| value | boolean | Yes | Whether to enable animation. If this parameter is set to **true**, the drag animation of **GridItem** is supported. If this parameter is set to **false**, the drag animation of **GridItem** is not supported.<br>Default value: **false** |
 
 ## supportEmptyBranchInLazyLoading
 
@@ -1007,4 +1002,4 @@ Sets whether to synchronously load all child components in the grid.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to synchronously load all child components in the grid.<br> **true**: yes; **false**: no Default value: **true**<br> **NOTE:**<br>When this parameter is set to **false**, in the first display or **scrollToIndex** jumps without animation, if the time consumed by the frame layout exceeds 50 ms, the child components that have not been laid out in the grid are delayed to the next frame for layout. |
+| enable | boolean | Yes | Whether to synchronously load all child components in the grid.<br> **true**: yes; **false**: no Default value: **true**<br> **NOTE:** <br>When this parameter is set to **false**, in the first display or **scrollToIndex** jumps without animation, if the time consumed by the frame layout exceeds 50 ms, the child components that have not been laid out in the grid are delayed to the next frame for layout. |

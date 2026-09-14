@@ -18,8 +18,3 @@ Gets the unencoded version of an encoded Uniform Resource Identifier (URI).
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | encodedURI | string | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

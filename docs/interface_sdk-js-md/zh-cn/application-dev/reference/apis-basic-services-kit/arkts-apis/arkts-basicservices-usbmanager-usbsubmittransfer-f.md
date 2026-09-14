@@ -14,7 +14,7 @@ function usbSubmitTransfer(transfer: UsbDataTransferParams): void
 
 提交异步传输请求，调用后立即返回，实际读写操作的结果以回调的方式返回。可通过调用[usbCancelTransfer](arkts-basicservices-usbmanager-usbcanceltransfer-f.md)接口取消异步传输请求。
 
-> **说明：**
+> **说明：** 
 > 
 > 本接口为异步接口，调用后立刻返回，实际读写操作的结果以回调的方式返回。
 > 

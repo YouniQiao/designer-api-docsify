@@ -14,7 +14,7 @@ function wrapKeyItem(keyAlias: string, params: HuksOptions): Promise<HuksReturnR
 
 加密导出密钥。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 加密导出[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。
 

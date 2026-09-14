@@ -12,11 +12,6 @@ Declare navigator properties.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## active
 
 ```TypeScript
@@ -111,4 +106,4 @@ Sets the navigation type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [NavigationType](arkts-arkui-navigationtype-e.md) | Yes | Navigation type.<br>Default value: **NavigationType.Push |
+| value | [NavigationType](arkts-arkui-navigationtype-e.md) | Yes | Navigation type.<br>Default value: **NavigationType.Push** |

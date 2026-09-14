@@ -51,7 +51,7 @@ Enables preview bandwidth compression.
 
 Before enabling this feature, you can call [isBandwidthCompressionSupported](#isbandwidthcompressionsupported) to check whether the device supports preview bandwidth compression.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This function must be called prior to
 > [Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig). Otherwise, the
@@ -298,7 +298,7 @@ on(type: 'frameStart', callback: AsyncCallback<void>): void
 
 Subscribes to preview frame start events. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -323,7 +323,7 @@ on(type: 'frameEnd', callback: AsyncCallback<void>): void
 
 Subscribes to preview frame end events. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -348,7 +348,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to PreviewOutput error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -375,7 +375,7 @@ Sets a frame rate range for preview streams. The range must be within the suppor
 
 which can be obtained by calling [getSupportedFrameRates](#getsupportedframerates).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md) or
 > [VideoSession](arkts-camera-camera-videosession-i.md) mode.

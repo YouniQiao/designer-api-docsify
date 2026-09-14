@@ -6,7 +6,7 @@ declare type Degree = `${number}deg`
 
 Defines the angle property with number in units of deg.
 
-@typedef { `\${number}deg` } Degree
+@typedef { `&#36;{number}deg` } Degree
 
 **Since:** 11
 

@@ -6,11 +6,6 @@ SslErrorHandler is a class in the Web component for handling SSL certificate ver
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

@@ -20,7 +20,7 @@ close(): Promise<void>
 
 LocalSocketServer停止监听并释放通过[listen](#listen)方法绑定的监听端口。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 该方法不会关闭已有连接。如需关闭，请调用[LocalSocketConnection](arkts-network-socket-localsocketconnection-i.md)的
 > [close](arkts-network-socket-localsocket-i.md#close)方法。
@@ -79,7 +79,7 @@ getExtraOptions(): Promise<ExtraOptionsBase>
 
 获取LocalSocketServer中连接的套接字的属性。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 
@@ -135,7 +135,7 @@ getLocalAddress(): Promise<string>
 
 获取LocalSocketServer中本地Socket地址。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 
@@ -194,7 +194,7 @@ getSocketFd(): Promise<number>
 
 获取LocalSocketServer监听端口绑定的文件描述符。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - [listen](#listen)方法调用成功后，才可调用此方法。
 > 
@@ -249,7 +249,7 @@ getState(): Promise<SocketStateBase>
 
 获取LocalSocketServer状态。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 
@@ -300,7 +300,7 @@ listen(address: LocalAddress): Promise<void>
 
 绑定本地套接字文件，监听并接受与此套接字建立的LocalSocket连接。该接口使用多线程并发处理客户端的数据。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 服务端使用该方法完成bind，listen，accept操作，传入套接字文件路径，调用此接口后会自动生成本地套接字文件。
 
@@ -443,7 +443,7 @@ on(type: 'connect', callback: Callback<LocalSocketConnection>): void
 
 订阅LocalSocketServer的连接事件。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 
@@ -485,7 +485,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 订阅LocalSocketServer连接的error事件。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 
@@ -525,7 +525,7 @@ setExtraOptions(options: ExtraOptionsBase): Promise<void>
 
 设置LocalSocketServer连接的套接字属性。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 

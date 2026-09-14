@@ -362,7 +362,7 @@ LAUNCH_REASON_MESSAGE = 'ohos.params.launchReasonMessage'
 ABILITY_UNIFIED_DATA_KEY = 'ohos.param.ability.udKey'
 ```
 
-表示基于[UDMF](../../apis-arkdata/arkts-apis/arkts-data-unifieddatachannel.md)进行文件分享时使用的唯一标识。该字段只允许系统应用设置，三方应用可以读取。
+表示基于[UDMF](../../apis-arkdata/arkts-apis/arkts-arkdata-data-unifieddatachannel.md)进行文件分享时使用的唯一标识。该字段只允许系统应用设置，三方应用可以读取。
 
 当Want中存在URI授权Flag字段（即[FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md)或[FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md)），且同时存在PARAMS_STREAM字段时，该字段将不生效。
 

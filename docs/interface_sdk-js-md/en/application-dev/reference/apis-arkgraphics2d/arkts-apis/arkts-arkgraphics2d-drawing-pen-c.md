@@ -2,7 +2,7 @@
 
 Defines a pen, which is used to describe the style and color to outline a shape.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This module uses the physical pixel unit, px.
 > 
@@ -47,7 +47,7 @@ Copies a **Pen** object to create a new one.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pen | [Pen](arkts-arkgraphics2d-drawing-pen-c.md) | Yes | Pen** object to copy. |
+| pen | [Pen](arkts-arkgraphics2d-drawing-pen-c.md) | Yes | **Pen** object to copy. |
 
 **Error codes:**
 
@@ -646,7 +646,7 @@ Sets the shader effect for this pen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) &#124; null | Yes | ShaderEffect** object. If **null** is passed in, the shader effect will be cleared.<br>**Since:** 20 |
+| shaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) &#124; null | Yes | **ShaderEffect** object. If **null** is passed in, the shader effect will be cleared.<br>**Since:** 20 |
 
 **Error codes:**
 

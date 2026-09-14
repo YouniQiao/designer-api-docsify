@@ -41,7 +41,7 @@ Currently, only RDB store supports this predicate.
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | **DataSharePredicates** object created. |
 
 **Examples**
 
@@ -79,7 +79,7 @@ Currently, only RDB store supports this predicate.
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | **DataSharePredicates** object created. |
 
 **Examples**
 
@@ -110,7 +110,7 @@ Currently, only RDB store supports this predicate.
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | **DataSharePredicates** object created. |
 
 **Examples**
 
@@ -148,7 +148,7 @@ Currently, only RDB store supports this predicate.
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | **DataSharePredicates** object created. |
 
 **Examples**
 
@@ -186,7 +186,7 @@ Currently, only RDB store supports this predicate.
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | **DataSharePredicates** object created. |
 
 **Examples**
 
@@ -223,7 +223,7 @@ Currently, only RDB store supports this predicate.
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | **DataSharePredicates** object created. |
 
 **Examples**
 
@@ -260,7 +260,7 @@ Currently, only RDB store supports this predicate.
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | **DataSharePredicates** object created. |
 
 **Examples**
 
@@ -297,7 +297,7 @@ Currently, only the KVDB supports this **DataSharePredicates** object.
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | **DataSharePredicates** object created. |
 
 **Examples**
 
@@ -334,7 +334,7 @@ Currently, both the RDB store and KV store support this predicate.
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | **DataSharePredicates** object created. |
 
 **Examples**
 
@@ -371,7 +371,7 @@ Currently, both the RDB store and KV store support this predicate.
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | **DataSharePredicates** object created. |
 
 **Examples**
 
@@ -408,7 +408,7 @@ Currently, only the KVDB supports this **DataSharePredicates** object.
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | **DataSharePredicates** object created. |
 
 **Examples**
 
@@ -446,7 +446,7 @@ Currently, both the RDB store and KV store support this predicate.
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | **DataSharePredicates** object created. |
 
 **Examples**
 

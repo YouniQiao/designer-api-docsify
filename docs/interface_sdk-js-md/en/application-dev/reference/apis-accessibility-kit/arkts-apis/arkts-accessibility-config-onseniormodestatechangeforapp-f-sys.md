@@ -14,7 +14,7 @@ function onSeniorModeStateChangeForApp(callback: Callback<AppSeniorModeInfo>): v
 
 Listens for senior mode state change events of all apps. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The callback parameter for registration should use a named function instead of an anonymous function, otherwise
 > a new underlying object will be created each time it is called, causing memory leaks.

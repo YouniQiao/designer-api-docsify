@@ -6,11 +6,6 @@ Configures the line spacing of text and whether it applies only between lines.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onlyBetweenLines
 
 ```TypeScript

@@ -22,11 +22,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## accessibilityDefaultFocus
 
 ```TypeScript
@@ -243,7 +238,7 @@ backgroundColor(value: ResourceColor): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 安全控件的背景颜色。<br>默认值：\&#36;r('sys.color.icon_emphasize')。<br>安全控件按钮背景色高八位的α值低于**0x1a**（例如**0x1800ff00**）时，会被系统强制调整为**0xff**。以确保安全控件具有足够的可见性，防止因控件过度透明导致用户在不知情的情况下触发授权。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 安全控件的背景颜色。<br>默认值：&#36;r('sys.color.icon_emphasize')。<br>安全控件按钮背景色高八位的α值低于**0x1a**（例如**0x1800ff00**）时，会被系统强制调整为**0xff**。以确保安全控件具有足够的可见性，防止因控件过度透明导致用户在不知情的情况下触发授权。 |
 
 **返回值：**
 
@@ -558,7 +553,7 @@ fontColor(value: ResourceColor): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 安全控件上文字的颜色。<br>默认值：\&#36;r('sys.color.font_on_primary')。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 安全控件上文字的颜色。<br>默认值：&#36;r('sys.color.font_on_primary')。 |
 
 **返回值：**
 
@@ -614,7 +609,7 @@ fontSize(value: Dimension): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) | 是 | 安全控件上文字的尺寸。<br>未显式指定单位时，单位为fp。<br>默认值：\&#36;r('sys.float.ohos_id_text_size_button1')。<br>该参数不支持百分比字符串。<br>设置异常值时该属性不生效。<br>**说明：** 安全控件文本未完全显示时，点击不授权。fontSize的设置会影响文本是否能完整显示，进而影响安全控件的授权行为。 |
+| value | [Dimension](arkts-arkui-dimension-t.md) | 是 | 安全控件上文字的尺寸。<br>未显式指定单位时，单位为fp。<br>默认值：&#36;r('sys.float.ohos_id_text_size_button1')。<br>该参数不支持百分比字符串。<br>设置异常值时该属性不生效。<br>**说明：** 安全控件文本未完全显示时，点击不授权。fontSize的设置会影响文本是否能完整显示，进而影响安全控件的授权行为。 |
 
 **返回值：**
 
@@ -764,7 +759,7 @@ iconColor(value: ResourceColor): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 安全控件上图标的颜色。<br>默认值：\&#36;r('sys.color.icon_on_primary')。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 安全控件上图标的颜色。<br>默认值：&#36;r('sys.color.icon_on_primary')。 |
 
 **返回值：**
 
@@ -940,7 +935,7 @@ maxFontSize(maxSize: number | string | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| maxSize | number &#124; string &#124; [Resource](arkts-arkui-resource-t.md) | 是 | 文本最大显示字号。<br>取值应&gt;0。<br>未显式指定单位时，单位为fp。<br>**说明：**<br>设置的值小于或等于0时，自适应字号不生效；设置异常值时该属性不生效。 |
+| maxSize | number &#124; string &#124; [Resource](arkts-arkui-resource-t.md) | 是 | 文本最大显示字号。<br>取值应&gt;0。<br>未显式指定单位时，单位为fp。<br>**说明：** <br>设置的值小于或等于0时，自适应字号不生效；设置异常值时该属性不生效。 |
 
 **返回值：**
 

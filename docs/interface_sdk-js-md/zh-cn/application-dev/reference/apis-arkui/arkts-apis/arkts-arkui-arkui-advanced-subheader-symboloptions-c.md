@@ -22,9 +22,9 @@ effectStrategy?: SymbolEffectStrategy
 
 默认值：SymbolEffectStrategy.NONE
 
-**说明：**
+**说明：** 
 
-\$r('sys.symbol.ohos_*')中引用的资源仅ohos_wifi支持层级动效模式。
+&#36;r('sys.symbol.ohos_*')中引用的资源仅ohos_wifi支持层级动效模式。
 
 **类型：** [SymbolEffectStrategy](../arkts-components/arkts-arkui-symboleffectstrategy-e.md)
 
@@ -114,9 +114,9 @@ renderingStrategy?: SymbolRenderingStrategy
 
 默认值：SymbolRenderingStrategy.SINGLE
 
-**说明：**
+**说明：** 
 
-\$r('sys.symbol.ohos_*')中引用的资源仅ohos_trash_circle、ohos_folder_badge_plus、ohos_lungs支持分层与多色模式。
+&#36;r('sys.symbol.ohos_*')中引用的资源仅ohos_trash_circle、ohos_folder_badge_plus、ohos_lungs支持分层与多色模式。
 
 **类型：** [SymbolRenderingStrategy](../arkts-components/arkts-arkui-symbolrenderingstrategy-e.md)
 

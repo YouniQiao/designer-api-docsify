@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## onAccept
 
 ```TypeScript
@@ -23,7 +18,7 @@ onAccept?: (value: DatePickerResult) => void
 
 点击弹窗中的“确定”按钮时触发该回调。回调参数value为当前选中的日期，包含年、月、日信息。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 10开始废弃。建议使用onDateAccept。
 
@@ -63,7 +58,7 @@ onChange?: (value: DatePickerResult) => void
 
 滑动弹窗中的滑动选择器使当前选中项改变时触发该回调。回调参数value为当前选中的日期，包含年、月、日信息。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 10开始废弃。建议使用onDateChange。
 
@@ -89,7 +84,7 @@ onDidAppear?: VoidCallback
 
 弹窗弹出后的事件回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onDateAccept/onCancel/onDateChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 > 
@@ -115,7 +110,7 @@ onDidDisappear?: VoidCallback
 
 弹窗消失后的事件回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onDateAccept/onCancel/onDateChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 > 
@@ -139,7 +134,7 @@ onWillAppear?: VoidCallback
 
 弹窗显示动效前的事件回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onDateAccept/onCancel/onDateChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 > 
@@ -165,7 +160,7 @@ onWillDisappear?: VoidCallback
 
 弹窗退出动效前的事件回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onDateAccept/onCancel/onDateChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 > 
@@ -189,7 +184,7 @@ acceptButtonStyle?: PickerDialogButtonStyle
 
 设置确认按钮显示样式、重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。当需要自定义确认按钮外观或行为时传入此参数。不传入时使用系统默认按钮样式。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
 > 保持默认值false。
@@ -219,7 +214,7 @@ alignment?: DialogAlignment
 
 **类型：** [DialogAlignment](../arkts-apis/arkts-arkui-dialogalignment-e.md)
 
-**默认值：**
+**默认值：** 
 - API版本11+：DialogAlignment.Default
 
 **起始版本：** 10
@@ -240,7 +235,7 @@ backgroundBlurStyle?: BlurStyle
 
 > 默认值：BlurStyle.COMPONENT_ULTRA_THICK
 
-> **说明：**
+> **说明：** 
 > 
 > 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，
 > 否则显示的颜色将不符合预期效果。
@@ -265,7 +260,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 背景模糊效果参数，用于自定义弹窗背景模糊的显示样式，支持配置颜色模式、自适应颜色、缩放比例等属性，实现不同的背景模糊视觉效果。默认值请参考BackgroundBlurStyleOptions类型说明。
 
-> **说明：**
+> **说明：** 
 > 
 > 未设置时沿用backgroundBlurStyle的默认效果（BlurStyle.COMPONENT_ULTRA_THICK）。
 
@@ -289,7 +284,7 @@ backgroundColor?: ResourceColor
 
 > 默认值：Color.Transparent
 
-> **说明：**
+> **说明：** 
 > 
 > 当设置了backgroundColor为非透明色时，backgroundBlurStyle需要设置为BlurStyle.NONE，否则显示的颜色将不符合预期效果。
 
@@ -313,7 +308,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 背景效果参数，用于自定义弹窗背景的显示效果，支持配置模糊半径、饱和度、亮度、颜色等属性，实现不同的背景视觉效果。默认值请参考BackgroundEffectOptions类型说明。
 
-> **说明：**
+> **说明：** 
 > 
 > 未设置时不生效，此时弹窗背景模糊效果由backgroundBlurStyle决定；设置后将覆盖backgroundBlurStyle的效果。从API版本26.0.0开始，
 > 设置systemMaterial后backgroundEffect与backgroundBlurStyle均不生效。
@@ -336,7 +331,7 @@ cancelButtonStyle?: PickerDialogButtonStyle
 
 设置取消按钮显示样式、重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。当需要自定义取消按钮外观或行为时传入此参数。不传入时使用系统默认按钮样式。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
 > 保持默认值false。
@@ -426,7 +421,7 @@ disappearTextStyle?: PickerTextStyle
 
 **类型：** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
-**默认值：**
+**默认值：** 
 - API版本11+：{ color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } }
 
 **起始版本：** 10
@@ -450,7 +445,7 @@ enableHapticFeedback?: boolean
 
 > 默认值：true
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 设置为true后，其生效情况取决于系统的硬件是否支持。
 > 2. 开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限，配置如下：
@@ -529,13 +524,13 @@ lunar?: boolean
 
 > 默认值：false
 
-> **说明：**
+> **说明：** 
 > 
 > 仅在简体中文和繁体中文语言环境下生效，其他语言环境下设置该属性无效果。
 
 **类型：** boolean
 
-**默认值：**
+**默认值：** 
 - API版本11+：false
 
 **起始版本：** 8
@@ -557,13 +552,13 @@ lunarSwitch?: boolean
 
 > 默认值：false
 
-> **说明：**
+> **说明：** 
 > 
 > 开关打开后，仅在简体中文和繁体中文环境下生效，在其他语言环境农历不生效，因此建议在其他语言环境设置为不展示开关。
 
 **类型：** boolean
 
-**默认值：**
+**默认值：** 
 - API版本11+：false
 
 **起始版本：** 10
@@ -584,8 +579,8 @@ lunarSwitchStyle?: LunarSwitchStyle
 
 > 默认值：
 > <br>{
-> <br>selectedColor: `\$r('sys.color.ohos_id_color_text_primary_actived')`,
-> <br>unselectedColor: `\$r('sys.color.ohos_id_color_switch_outline_off')`,
+> <br>selectedColor: `&#36;r('sys.color.ohos_id_color_text_primary_actived')`,
+> <br>unselectedColor: `&#36;r('sys.color.ohos_id_color_switch_outline_off')`,
 > <br>strokeColor: Color.White
 > <br>}
 
@@ -613,7 +608,7 @@ maskRect?: Rectangle
 
 **类型：** [Rectangle](arkts-arkui-rectangle-i.md)
 
-**默认值：**
+**默认值：** 
 - API版本11+：{ x: 0, y: 0, width: '100%', height: '100%' }
 
 **起始版本：** 10
@@ -636,7 +631,7 @@ offset?: Offset
 
 **类型：** [Offset](../arkts-apis/arkts-arkui-offset-t.md)
 
-**默认值：**
+**默认值：** 
 - API版本11+：{ dx: 0 , dy: 0 }
 
 **起始版本：** 10
@@ -655,7 +650,7 @@ onDateAccept?: Callback<Date>
 
 点击弹窗中的“确定”按钮时触发该回调。回调签名：(value: Date) =&gt; void，其中value为用户选择的日期，包含年月日信息；当showTime为true时，还包含时和分信息。开发者可在此回调中保存用户选择的日期或执行后续业务逻辑。
 
-> **说明：**
+> **说明：** 
 > 
 > 当showTime设置为true时，value中时和分为选择器选择的时和分。否则，value中时和分为系统时间的时和分。
 
@@ -677,7 +672,7 @@ onDateChange?: Callback<Date>
 
 滑动弹窗中的日期使当前选中项改变时触发该回调。回调签名：(value: Date) =&gt; void，其中value为当前选中的日期，包含年月日信息；当showTime为true时，还包含时和分信息。此回调在用户滑动选择器过程中实时触发，与onDateAccept仅在点击确定后触发的时机不同。
 
-> **说明：**
+> **说明：** 
 > 
 > 当showTime设置为true时，value中时和分为选择器选择的时和分。否则，value中时和分为系统时间的时和分。
 
@@ -711,7 +706,7 @@ selectedTextStyle?: PickerTextStyle
 
 **类型：** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
-**默认值：**
+**默认值：** 
 - API版本11+：{ color: '#ff007dff', font: { size: '20vp', weight: FontWeight.Medium }
 
 **起始版本：** 10
@@ -755,14 +750,14 @@ showTime?: boolean
 
 > 默认值：false
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 当showTime为true时，点击弹窗的标题日期可以在"日期选择器"和"日期选择器+时间选择器"两个页面中切换。
 > 2. 当showTime为true时，mode参数不生效，此时纯日期选择页面固定显示年、月、日三列。
 
 **类型：** boolean
 
-**默认值：**
+**默认值：** 
 - API版本11+：false
 
 **起始版本：** 10
@@ -781,7 +776,7 @@ systemMaterial?: SystemUiMaterial
 
 设置弹窗的系统材质。
 
-> **说明：**
+> **说明：** 
 > 
 > - 默认值为ImmersiveOptions的style为ImmersiveStyle.ULTRA_THICK的ImmersiveMaterial对象，设置undefined时与默认值保持一致。
 > 不同的材质具有不同的效果。关于ImmersiveMaterial的详细说明，请参考[SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)类型定义。
@@ -822,7 +817,7 @@ textStyle?: PickerTextStyle
 
 **类型：** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
-**默认值：**
+**默认值：** 
 - API版本11+：{ color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } }
 
 **起始版本：** 10
@@ -846,13 +841,13 @@ useMilitaryTime?: boolean
 
 > 默认值：false
 
-> **说明：**
+> **说明：** 
 > 
 > 当展示的时间选择器为12小时制时，上午和下午的标识不会根据小时数自动切换。
 
 **类型：** boolean
 
-**默认值：**
+**默认值：** 
 - API版本11+：false
 
 **起始版本：** 10

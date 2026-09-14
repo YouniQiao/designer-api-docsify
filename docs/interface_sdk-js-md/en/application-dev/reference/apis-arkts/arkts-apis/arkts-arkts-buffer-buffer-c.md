@@ -88,7 +88,7 @@ Copies data at the specified position in this **Buffer** object to the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | Buffer &#124; Uint8Array | Yes | Buffer** or **Uint8Array** object to which data is copied. |
+| target | Buffer &#124; Uint8Array | Yes | **Buffer** or **Uint8Array** object to which data is copied. |
 | targetStart | number | No | Offset to the start position in the target object where data is copied. The default value is **0**. |
 | sourceStart | number | No | Offset to the start position in this **Buffer** object where data is copied. The default value is **0**. |
 | sourceEnd | number | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
@@ -183,7 +183,7 @@ Checks whether this **Buffer** object is the same as another **Buffer** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| otherBuffer | Uint8Array &#124; Buffer | Yes | Buffer** object to compare. |
+| otherBuffer | Uint8Array &#124; Buffer | Yes | **Buffer** object to compare. |
 
 **Return value:**
 
@@ -238,7 +238,7 @@ Fills this **Buffer** object at the specified position. By default, data is fill
 
 | Type | Description |
 | --- | --- |
-| Buffer | Buffer** object filled with the specified value. |
+| Buffer | **Buffer** object filled with the specified value. |
 
 **Error codes:**
 
@@ -1473,7 +1473,7 @@ Truncates this **Buffer** object from the specified position to create a new **B
 
 | Type | Description |
 | --- | --- |
-| Buffer | Buffer** object created. When the value of **start** or **end** is less than **0**, an empty buffer is returned. |
+| Buffer | **Buffer** object created. When the value of **start** or **end** is less than **0**, an empty buffer is returned. |
 
 **Examples**
 
@@ -1508,7 +1508,7 @@ Converts this **Buffer** object into an array of unsigned 16-bit integers and sw
 
 | Type | Description |
 | --- | --- |
-| Buffer | Buffer** object swapped. |
+| Buffer | **Buffer** object swapped. |
 
 **Error codes:**
 
@@ -1547,7 +1547,7 @@ Converts this **Buffer** object into an array of unsigned 32-bit integers and sw
 
 | Type | Description |
 | --- | --- |
-| Buffer | Buffer** object swapped. |
+| Buffer | **Buffer** object swapped. |
 
 **Error codes:**
 
@@ -1586,7 +1586,7 @@ Converts this **Buffer** object into an array of unsigned 64-bit integers and sw
 
 | Type | Description |
 | --- | --- |
-| Buffer | Buffer** object swapped. |
+| Buffer | **Buffer** object swapped. |
 
 **Error codes:**
 

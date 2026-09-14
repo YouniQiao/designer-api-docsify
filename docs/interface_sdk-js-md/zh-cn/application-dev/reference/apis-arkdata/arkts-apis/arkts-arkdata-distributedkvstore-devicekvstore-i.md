@@ -305,7 +305,7 @@ get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | nu
 
 获取与指定设备ID和Key匹配的值，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中deviceId通过调用
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -451,7 +451,7 @@ get(deviceId: string, key: string): Promise<boolean | string | number | number |
 
 获取与指定设备ID和Key匹配的值，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中deviceId通过调用
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -746,7 +746,7 @@ getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>
 
 获取与指定设备ID和Key前缀匹配的所有键值对，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中deviceId通过调用
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -828,7 +828,7 @@ getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 
 获取与指定设备ID和Key前缀匹配的所有键值对，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中deviceId通过调用
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -1063,7 +1063,7 @@ getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): vo
 
 获取与指定设备ID和Query对象匹配的键值对列表，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中deviceId通过调用
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -1150,7 +1150,7 @@ getEntries(deviceId: string, query: Query): Promise<Entry[]>
 
 获取与指定设备ID和Query对象匹配的键值对列表，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中deviceId通过调用
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -1395,7 +1395,7 @@ getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KVStor
 
 获取与指定设备ID和Key前缀匹配的KVStoreResultSet对象，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中deviceId通过调用
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -1465,7 +1465,7 @@ getResultSet(deviceId: string, keyPrefix: string): Promise<KVStoreResultSet>
 
 获取与指定设备ID和Key前缀匹配的KVStoreResultSet对象，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中deviceId通过调用
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -1692,7 +1692,7 @@ getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KVStoreResu
 
 获取与指定设备ID和Query对象匹配的KVStoreResultSet对象，使用callback异步回调。获取结果集后，在使用完毕时需调用[closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeresultset)关闭结果集释放资源。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中deviceId通过调用
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -1785,7 +1785,7 @@ getResultSet(deviceId: string, query: Query): Promise<KVStoreResultSet>
 
 获取与指定设备ID和Query对象匹配的KVStoreResultSet对象，使用Promise异步回调。获取结果集后，在使用完毕时需调用[closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeresultset)关闭结果集释放资源。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中deviceId通过调用
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -2023,7 +2023,7 @@ getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): 
 
 获取与指定设备ID和Query对象匹配的结果数，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中deviceId通过调用
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -2105,7 +2105,7 @@ getResultSize(deviceId: string, query: Query): Promise<number>
 
 获取与指定设备ID和Query对象匹配的结果数，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中deviceId通过调用
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)

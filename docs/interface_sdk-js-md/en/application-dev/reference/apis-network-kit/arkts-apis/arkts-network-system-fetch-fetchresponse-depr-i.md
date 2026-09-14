@@ -6,7 +6,7 @@
 | -------- | -------- | -------- |  
 | N/A| string | When the type in the header returned by the server is **text/\***, **application/json**, **application/javascript**, or **application/xml**, the value is the text content.|
 | text | string | Text content.|
-| [json](../../apis-arkts/arkts-apis/arkts-util-json.md) | Object | A JSON object.|
+| [json](../../apis-arkts/arkts-apis/arkts-arkts-util-json.md) | Object | A JSON object.|
 
 **Since:** 3
 

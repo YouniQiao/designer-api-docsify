@@ -6,11 +6,6 @@ Represents an indicator style object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## borderRadius
 
 ```TypeScript
@@ -121,7 +116,7 @@ Unit: vp
 
 Value range: [0, +∞)
 
-**NOTE:**
+**NOTE:** 
 
 If this parameter is set to **0**, the tab text width will be used instead.
 

@@ -86,7 +86,7 @@ public modifier?: ImageModifier
 
 Modifier for icon.
 
-**Type:** [ImageModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
+**Type:** [ImageModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
 **Since:** 26.0.0
 

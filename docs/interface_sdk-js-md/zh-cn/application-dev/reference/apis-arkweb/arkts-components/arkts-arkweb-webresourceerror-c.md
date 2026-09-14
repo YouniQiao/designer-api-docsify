@@ -6,11 +6,6 @@ WebResourceError是Web组件中提供资源加载失败错误信息的类。该�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

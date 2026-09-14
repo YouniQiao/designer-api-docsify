@@ -135,7 +135,7 @@ getEncodedDer(format: string): DataBlob
 
 Obtains the private key data that complies with the ASN.1 syntax and DER encoding based on the specified format (such as the key specifications).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The difference between [Key.getEncoded()](arkts-cryptoarchitecture-cryptoframework-key-i.md#getencoded) and this API is as follows:
 > 1. You can specify the format of the key data to be obtained in this API.
@@ -381,7 +381,7 @@ getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array
 
 Obtains the private key data based on the specified key data type. This API returns the result synchronously.
 
-<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, getKeyData. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, getKeyData. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 26.0.0
 
@@ -531,7 +531,7 @@ getPubKeySync(): PubKey
 
 Obtains a public key from a private key in synchronous mode.
 
-<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, [getPubKey](#getpubkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, [getPubKey](#getpubkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 

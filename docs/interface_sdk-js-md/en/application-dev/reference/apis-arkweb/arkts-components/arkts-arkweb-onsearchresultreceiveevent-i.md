@@ -6,11 +6,6 @@ Defines the callback information for the search result on the web page, includin
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## activeMatchOrdinal
 
 ```TypeScript

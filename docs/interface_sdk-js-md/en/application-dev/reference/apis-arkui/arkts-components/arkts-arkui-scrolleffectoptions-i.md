@@ -6,11 +6,6 @@ Defines the scroll effect options for the title bar.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## blurEffectiveEndOffset
 
 ```TypeScript

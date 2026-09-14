@@ -2,7 +2,7 @@
 
 FrameNode表示组件树的实体节点，支持节点树操作、自定义绘制与布局、位置查询、动画等能力。[NodeController](arkts-arkui-nodecontroller-c.md)可通过BuilderNode持有的FrameNode将其挂载到NodeContainer上，也可通过FrameNode获取[RenderNode](arkts-arkui-rendernode-c.md)，挂载到其他FrameNode上。适用于需要通过代码动态创建和管理组件节点树的场景，可实现声明式组件无法直接满足的灵活UI组合与自定义渲染需求。<!--RP2--><!--RP2End-->
 
-> **说明：**
+> **说明：** 
 > 
 > - 当前不支持在预览器中使用FrameNode节点。
 > 
@@ -521,7 +521,7 @@ dispose(): void
 
 立即解除当前FrameNode对象对实体FrameNode节点的引用关系。
 
-> **说明：**
+> **说明：** 
 > 
 > - FrameNode对象调用dispose后，由于不对应任何实体FrameNode节点，在调用部分查询接口([getMeasuredSize](#getmeasuredsize)、
 > [getLayoutPosition](#getlayoutposition))的时候会导致应用出现jscrash。
@@ -1510,7 +1510,7 @@ getInspectorInfo(): Object
 
 获取节点的结构信息，该信息和DevEco Studio内置<!--RP1-->ArkUI Inspector<!--RP1End-->工具里面的一致。
 
-> **说明：**
+> **说明：** 
 > 
 > getInspectorInfo接口用于获取所有节点的信息，作为调试接口使用，频繁调用会导致性能下降。
 
@@ -3473,7 +3473,7 @@ isVisible(): boolean
 
 获取节点是否可见。
 
-> **说明：**
+> **说明：** 
 > 
 > 根据组件设置的visibility属性值判断该节点是否可见。
 
@@ -3558,7 +3558,7 @@ moveTo(targetParent: FrameNode, index?: number): void
 
 将当前FrameNode移动到目标FrameNode的指定位置。当前FrameNode如果不可修改，抛出异常信息。targetParent为[typeNode](arkts-arkui-typenode-n.md)时会校验子组件类型或个数，不满足时抛出异常信息，限制情况请查看[typeNode](arkts-arkui-typenode-n.md)描述。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前仅支持以下类型的[TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)进行移动操作：[Stack](arkts-arkui-typenode-stack-t.md)、
 > [XComponent](arkts-arkui-typenode-xcomponent-t.md)。对于其他类型的节点，移动操作不会生效。
@@ -3820,7 +3820,7 @@ setCrossLanguageOptions(options: CrossLanguageOptions): void
 
 设置当前FrameNode的跨ArkTS语言访问选项。例如ArkTS语言创建的节点，设置该节点是否可通过非ArkTS语言进行属性设置，从API版本26.0.0开始支持设置是否可通过非ArkTS语言进行组件树操作。当前FrameNode如果不可修改或不可设置跨ArkTS语言访问选项，抛出异常信息。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前仅支持[Scroll](arkts-arkui-typenode-scroll-t.md)、[Swiper](arkts-arkui-typenode-swiper-t.md)、[List](arkts-arkui-typenode-list-t.md)、
 > [ListItem](arkts-arkui-typenode-listitem-t.md)、[ListItemGroup](arkts-arkui-typenode-listitemgroup-t.md)、
@@ -3943,7 +3943,7 @@ get commonAttribute(): CommonAttribute
 
 仅可以修改自定义节点的属性。
 
-> **说明：**
+> **说明：** 
 > 
 > FrameNode的效果参考对齐方式为顶部起始端的Stack容器组件。
 > 

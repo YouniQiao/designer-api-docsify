@@ -6,11 +6,6 @@ CommonMethod.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## advancedBlendMode
 
 ```TypeScript
@@ -34,7 +29,7 @@ Defines how the component's content (including the content of it child component
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | effect | [BlendMode](arkts-arkui-blendmode-e.md) &#124; [Blender](arkts-arkui-blender-t-sys.md) | Yes | Blend mode or blender type, depending on the parameter type.<br>When the parameter type is **BlendMode**, it indicates the blend mode.<br>Default value: **BlendMode.NONE**<br>When the parameter type is **Blender**, it indicates the blender type, used to describe the blending effect.<br>A **Blender** instance must be created using methods, for example, [uiEffect.createBrightnessBlender](../../../reference/apis-arkgraphics2d/js-apis-uiEffect-sys.md#uieffectcreatebrightnessblender), from the **uiEffect** module. Using a custom object as a parameter will not take effect. |
-| type | [BlendApplyType](arkts-arkui-blendapplytype-e.md) | No | Whether the blend mode is implemented offscreen.<br>Default value: **BlendApplyType.FAST**<br>**NOTE:**<br>1. When this parameter is set to **BlendApplyType.FAST**, the blend mode is not implemented offscreen.<br>2. When this parameter is set to **BlendApplyType.OFFSCREEN**, an offscreen canvas matching the size of the current component is created. The content of the current component (including its child components) is then drawn onto the offscreen canvas, and blended with the existing content on the underlying canvas using the specified blend mode.<br>3. For text components, this API does not apply to emoji expressions when not offscreen.<br>4. Compared with **BlendApplyType.OFFSCREEN**, when this parameter is set to **BlendApplyType.OFFSCREEN_WITH_BACKGROUND**, the system first copies a canvas with a background as the initial background color (the canvas for **BlendApplyType.OFFSCREEN** starts with a transparent background) when creating an offscreen canvas matching the current component's size. The blending operation is then performed on this base. The two modes are identical in all other functional aspects. |
+| type | [BlendApplyType](arkts-arkui-blendapplytype-e.md) | No | Whether the blend mode is implemented offscreen.<br>Default value: **BlendApplyType.FAST**<br>**NOTE:** <br>1. When this parameter is set to **BlendApplyType.FAST**, the blend mode is not implemented offscreen.<br>2. When this parameter is set to **BlendApplyType.OFFSCREEN**, an offscreen canvas matching the size of the current component is created. The content of the current component (including its child components) is then drawn onto the offscreen canvas, and blended with the existing content on the underlying canvas using the specified blend mode.<br>3. For text components, this API does not apply to emoji expressions when not offscreen.<br>4. Compared with **BlendApplyType.OFFSCREEN**, when this parameter is set to **BlendApplyType.OFFSCREEN_WITH_BACKGROUND**, the system first copies a canvas with a background as the initial background color (the canvas for **BlendApplyType.OFFSCREEN** starts with a transparent background) when creating an offscreen canvas matching the current component's size. The blending operation is then performed on this base. The two modes are identical in all other functional aspects. |
 
 **Return value:**
 
@@ -86,6 +81,8 @@ Sets the edge light effect for the component.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## excludeFromRenderGroup
 
 ```TypeScript
@@ -98,7 +95,7 @@ Removing the current component and its children from the render group does not a
 
 If this attribute is not set, the current component and its children are not removed from the render group of the ancestor component by default.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The drawing content of the component with **excludeFromRenderGroup** set to **true** and its children cannot the
 > component's own boundary range. Otherwise, the displayed content may be clipped. For example, if the child
@@ -186,6 +183,8 @@ Applies a spatial effect to component.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## useUnionEffect
 
 ```TypeScript

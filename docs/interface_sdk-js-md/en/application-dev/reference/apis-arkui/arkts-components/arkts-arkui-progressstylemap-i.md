@@ -6,11 +6,6 @@ Defines the mapping between progress indicators and styles.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## [ProgressType.Capsule]
 
 ```TypeScript

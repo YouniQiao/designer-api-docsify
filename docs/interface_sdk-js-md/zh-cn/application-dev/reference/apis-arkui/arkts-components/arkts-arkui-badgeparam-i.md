@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## position
 
 ```TypeScript
@@ -21,7 +16,7 @@ position?: BadgePosition | Position
 
 默认值：BadgePosition.RightTop
 
-**说明：**
+**说明：** 
 
 Position作为入参，不支持设置百分比；设置为非法值时，按(0,0)处理，(0,0)为组件左上角位置。
 

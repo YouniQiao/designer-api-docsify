@@ -1,10 +1,5 @@
 # registerVsyncCallback (System API)
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## registerVsyncCallback
 
 ```TypeScript

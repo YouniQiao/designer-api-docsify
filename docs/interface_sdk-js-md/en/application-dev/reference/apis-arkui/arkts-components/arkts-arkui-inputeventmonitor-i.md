@@ -4,7 +4,7 @@ Input event monitor identity object.
 
 This object is created and returned by the system, serving as the unique identifier of the monitor.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The object is empty and does not contain any accessible members.
 > 
@@ -20,8 +20,3 @@ This object is created and returned by the system, serving as the unique identif
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```

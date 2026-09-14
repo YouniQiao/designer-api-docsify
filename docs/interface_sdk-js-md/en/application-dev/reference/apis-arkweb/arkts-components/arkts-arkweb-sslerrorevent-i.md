@@ -6,11 +6,6 @@ Callback details triggered when an SSL error occurs during resource loading by t
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## certChainData
 
 ```TypeScript

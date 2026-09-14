@@ -77,7 +77,7 @@ Loads a moving photo in the application sandbox. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[MovingPhoto](arkts-medialibrary-photoaccesshelper-movingphoto-i.md)&gt; | Promise used to return the [MovingPhoto](arkts-file-photoaccesshelper.md) instance. |
+| Promise&lt;[MovingPhoto](arkts-medialibrary-photoaccesshelper-movingphoto-i.md)&gt; | Promise used to return the [MovingPhoto](arkts-medialibrary-file-photoaccesshelper.md) instance. |
 
 **Error codes:**
 

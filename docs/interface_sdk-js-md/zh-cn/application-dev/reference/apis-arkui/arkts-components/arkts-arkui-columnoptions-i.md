@@ -2,18 +2,13 @@
 
 设置Column组件的子组件间距属性。
 
-> **说明：**
+> **说明：** 
 > 
 > 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## space
 
@@ -33,7 +28,7 @@ space为负数或者[justifyContent](arkts-arkui-column-comp-attribute.md#justif
 
 单位：vp
 
-**说明：**
+**说明：** 
 
 space取值是大于等于0的数字，或者可以转换为非负数字的字符串。
 

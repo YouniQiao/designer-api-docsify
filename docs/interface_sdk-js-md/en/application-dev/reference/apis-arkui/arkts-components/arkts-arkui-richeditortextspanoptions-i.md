@@ -6,11 +6,6 @@ Defines the options for adding a text span.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## gesture
 
 ```TypeScript

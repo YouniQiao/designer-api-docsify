@@ -2,7 +2,7 @@
 
 Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md). It is a parameter for HKDF key derivation.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **key** is the original key material entered by the user. An empty string can be passed in for **info** and
 > **salt** based on the mode.

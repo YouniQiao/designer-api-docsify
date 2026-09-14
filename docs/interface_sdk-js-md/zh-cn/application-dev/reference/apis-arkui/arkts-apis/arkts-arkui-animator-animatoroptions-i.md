@@ -20,7 +20,7 @@ begin: number
 
 动画插值起点。
 
-**说明：**会影响[onFrame](arkts-arkui-animator-animatorresult-i.md#onframe)回调的入参值。
+**说明：** 会影响[onFrame](arkts-arkui-animator-animatorresult-i.md#onframe)回调的入参值。
 
 默认值：0
 
@@ -126,7 +126,7 @@ end: number
 
 动画插值终点。
 
-**说明：**会影响[onFrame](arkts-arkui-animator-animatorresult-i.md#onframe)回调的入参值。
+**说明：** 会影响[onFrame](arkts-arkui-animator-animatorresult-i.md#onframe)回调的入参值。
 
 默认值：1
 
@@ -172,7 +172,7 @@ iterations: number
 
 **说明：** 使用interpolating-spring曲线时，iterations固定设置为1，其他设置无效。
 
-**说明：**设置为除-1外其他负数视为无效取值，无效取值动画默认播放1次。
+**说明：** 设置为除-1外其他负数视为无效取值，无效取值动画默认播放1次。
 
 **类型：** number
 

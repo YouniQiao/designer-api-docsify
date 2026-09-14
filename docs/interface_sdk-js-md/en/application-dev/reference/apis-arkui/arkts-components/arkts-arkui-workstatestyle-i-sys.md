@@ -10,11 +10,6 @@ Work state style.
 
 **System API:** This is a system API.
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## offDayMarkColor
 
 ```TypeScript

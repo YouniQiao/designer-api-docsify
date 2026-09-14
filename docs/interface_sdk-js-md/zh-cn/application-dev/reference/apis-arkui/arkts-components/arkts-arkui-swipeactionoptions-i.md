@@ -8,11 +8,6 @@ start和end对应的@builder函数中顶层必须是单个组件（如果顶层�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## onOffsetChange
 
 ```TypeScript

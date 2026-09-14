@@ -14,7 +14,7 @@ function getFontByName(fontName: string): FontInfo
 
 根据传入的系统字体名称获取系统字体的相关信息。
 
-> **说明：**
+> **说明：** 
 > 
 > -getFontByName需要先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > getFont方法获取

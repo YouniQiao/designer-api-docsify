@@ -213,7 +213,7 @@ release resources in a timely manner.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | Yes | EventClassifyInfo** object, which is used to specify the type of the upgrade event whose listener needs to be unregistered. You must use **on** to register a listener before using this method to unregister the listener. |
+| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | Yes | **EventClassifyInfo** object, which is used to specify the type of the upgrade event whose listener needs to be unregistered. You must use **on** to register a listener before using this method to unregister the listener. |
 | taskCallback | [UpgradeTaskCallback](arkts-basicservices-update-upgradetaskcallback-t-sys.md) | No | Task callback, which is used to cancel a specified callback listener. Callback signature. In the signature, **eventInfo** is an **EventInfo** object, whose value is **void**. **eventInfo** contains the **eventId** and **taskBody** fields. Pass this parameter when a specific callback listener needs to be unregistered. If this parameter is not passed, the default value is **undefined**, indicating that all listeners for the event type are canceled. |
 
 **Error codes:**
@@ -280,7 +280,7 @@ listener when it is no longer needed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | Yes | EventClassifyInfo** object, which is used to specify the type of the upgrade event to be listened for. |
+| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | Yes | **EventClassifyInfo** object, which is used to specify the type of the upgrade event to be listened for. |
 | taskCallback | [UpgradeTaskCallback](arkts-basicservices-update-upgradetaskcallback-t-sys.md) | Yes | Task callback, which is used to receive upgrade task event notifications. Callback signature. In the signature, **eventInfo** is an **EventInfo** object, whose value is **void**. **eventInfo** contains the **eventId** (event ID) and **taskBody** (task data) fields. |
 
 **Error codes:**

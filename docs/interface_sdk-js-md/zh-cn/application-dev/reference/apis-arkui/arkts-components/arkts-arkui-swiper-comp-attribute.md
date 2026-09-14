@@ -4,7 +4,7 @@
 
 除支持通用事件外，还支持以下事件：
 
-> **说明：**
+> **说明：** 
 
 > Swiper组件通用属性clip的默认值为true。
 
@@ -13,11 +13,6 @@
 **起始版本：** 7
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## autoPlay
 
@@ -78,7 +73,7 @@ cachedCount(value: number)
 
 设置预加载子组件个数，以当前页面为基准，加载当前显示页面的前后个数。前面item删除，后面会向前补位。例如cachedCount=1时，会将当前显示页面在索引序号上相邻的前一页和后一页的子组件都预加载。如果设置为按组翻页，即displayCount的swipeByGroup参数设为true，预加载时会以组为基本单位。例如cachedCount=1，swipeByGroup=true时，会将当前组的前面一组和后面一组的子组件都预加载。
 
-> **说明：**
+> **说明：** 
 
 > - 在连续滑动场景中，一屏显示一个Swiper子组件时，通常将cachedCount值设置为1或2即可。最佳实践请参考
 > [优化Swiper组件加载慢丢帧问题-缓存数据项](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-swiper_high_performance_development_guide#section143504547145)。
@@ -109,7 +104,7 @@ cachedCount(count: number, isShown: boolean)
 
 设置预加载子组件个数。
 
-> **说明：**
+> **说明：** 
 
 > - isShown值为true，且设置的count过大时，如果前后预加载范围内可加载的节点不足，循环场景下同一个可加载节点只会布局在一侧。
 
@@ -138,7 +133,7 @@ cachedCount(count: number, options: CachedCountOptions)
 
 设置预加载子组件个数和配置选项。
 
-> **说明：**
+> **说明：** 
 
 > - 当options的independent设置为true时，预加载子组件个数按count个数计算，与
 > [displayCount](#displaycount-1)
@@ -173,7 +168,7 @@ cachedCount(count: number, options: CachedCountOptions)
 curve(value: Curve | string | ICurve)
 ```
 
-设置Swiper的动画曲线，默认为弹簧插值曲线，常用曲线参考Curve，也可以通过[插值计算](../arkts-apis/arkts-curves.md)模块提供的接口创建自定义的插值曲线对象。
+设置Swiper的动画曲线，默认为弹簧插值曲线，常用曲线参考Curve，也可以通过[插值计算](../arkts-apis/arkts-arkui-curves.md)模块提供的接口创建自定义的插值曲线对象。
 
 **起始版本：** 8
 
@@ -254,7 +249,7 @@ displayArrow(value: ArrowStyle | boolean, isHoverShow?: boolean)
 
 设置导航点箭头样式。
 
-> **说明：**
+> **说明：** 
 
 > Swiper视窗内显示所有子节点时，只显示一屏，无法翻页，左右翻页箭头均不显示。
 
@@ -271,7 +266,7 @@ displayArrow(value: ArrowStyle | boolean, isHoverShow?: boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [ArrowStyle](arkts-arkui-arrowstyle-i.md) &#124; boolean | 是 | 支持设置箭头和底板样式，异常场景使用ArrowStyle对象中的默认值。设置为false不显示箭头和底板，true显示默认的箭头和底板样式。<br>默认值：false |
-| isHoverShow | boolean | 否 | 设置鼠标悬停时是否显示箭头。<br>默认值：false<br>**说明：**<br>1. isHoverShow为false时，常驻显示箭头。<br>2. isHoverShow为true时，有导航点时鼠标悬停在导航点和箭头范围内显示箭头，无导航点时鼠标悬停在Swiper显示范围内显示箭头。<br>3. 箭头显示时，支持点击翻页。 |
+| isHoverShow | boolean | 否 | 设置鼠标悬停时是否显示箭头。<br>默认值：false<br>**说明：** <br>1. isHoverShow为false时，常驻显示箭头。<br>2. isHoverShow为true时，有导航点时鼠标悬停在导航点和箭头范围内显示箭头，无导航点时鼠标悬停在Swiper显示范围内显示箭头。<br>3. 箭头显示时，支持点击翻页。 |
 
 ## displayCount
 
@@ -287,7 +282,7 @@ displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean)
 
 使用SwiperAutoFill类型时，子元素主轴宽度会基于Swiper主轴宽度适应。通过设置一个子组件最小宽度值minSize，会根据Swiper当前宽度和minSize值自动计算并更改一页内元素显示个数。当minSize为空或者小于等于0时，Swiper显示1列。
 
-> **说明：**
+> **说明：** 
 
 > - 按组进行翻页时，判定翻页的拖拽距离阈值将调整为Swiper宽度的50%（若按子元素翻页，该阈值为子元素宽度的50%）。若最后一组的子元素数量少于displayCount，将利用占位子元素进行填充，占位子元素仅用于布局定位，
 > 不显示任何内容，其位置将直接显示Swiper的背景样式。
@@ -395,7 +390,7 @@ duration(value: number)
 
 duration需要和[curve](#curve)一起使用。
 
-curve默认曲线为[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md)，此时动画时长只受曲线自身参数影响，不再受duration的控制。不受duration控制的曲线可以查阅[插值计算](../arkts-apis/arkts-curves.md)模块，比如，[springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md)、[responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md)和interpolatingSpring类型的曲线不受duration控制。如果希望动画时长受到duration控制，需要给curve设置其他曲线。
+curve默认曲线为[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md)，此时动画时长只受曲线自身参数影响，不再受duration的控制。不受duration控制的曲线可以查阅[插值计算](../arkts-apis/arkts-arkui-curves.md)模块，比如，[springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md)、[responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md)和interpolatingSpring类型的曲线不受duration控制。如果希望动画时长受到duration控制，需要给curve设置其他曲线。
 
 **起始版本：** 7
 
@@ -439,7 +434,7 @@ index(value: number)
 
 设置当前在容器中显示的子组件的索引值。
 
-从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+从API version 10开始，该属性支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 **起始版本：** 7
 
@@ -485,7 +480,7 @@ indicator(indicator: IndicatorComponentController | DotIndicator | DigitIndicato
 
 设置外部绑定的导航点组件控制器。
 
-> **说明：**
+> **说明：** 
 
 > 设置外部绑定的导航点组件控制器后，可以和外部导航点结合使用。外部导航点支持自定义设置显示位置和大小。详细介绍可参看Indicator。
 
@@ -535,7 +530,7 @@ indicatorStyle(value?: IndicatorStyle)
 
 设置导航点样式。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 8开始支持，从API version 10开始废弃，建议使用
 > [indicator](#indicator)替代。
@@ -656,7 +651,7 @@ nestedScroll(value: SwiperNestedScrollMode)
 
 设置Swiper组件和父组件的嵌套滚动模式。当Swiper嵌套在滚动容器（如List、Scroll）中时，需要根据业务需求选择合适的嵌套滚动模式。[loop](#loop)为true时Swiper组件没有边缘，不会触发父组件嵌套滚动。
 
-> **说明：**
+> **说明：** 
 
 > 由于Swiper的抛滑动画逻辑和其它滚动类组件不同（Swiper一次只能滑动一页，抛滑时做翻页动画），当Swiper内嵌套其它滚动组件时，如果Swiper的翻页动画已经启动，将无法接受子节点上传的滚动偏移量。这时Swiper的
 > 翻页动画和子节点的边缘效果动画会同时执行。
@@ -689,7 +684,7 @@ nextMargin(value: Length, ignoreBlank?: boolean)
 
 使用nextMargin/prevMargin接口时，不要对子组件进行尺寸范围限制，否则子节点主轴将不会被拉伸到预期长度，边距失去效果。
 
-> **说明：**
+> **说明：** 
 
 > 该接口不支持在attributeModifier中调用。
 
@@ -706,7 +701,7 @@ nextMargin(value: Length, ignoreBlank?: boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 后边距。不支持设置百分比。<br>默认值：0 |
-| ignoreBlank | boolean | 否 | 非loop场景下尾页不显示nextMargin。在非loop场景下，设置为true时，尾页不显示空白的nextMargin，尾页的右边缘与Swiper视窗右边缘对齐；设置false时，尾页显示空白nextMargin，尾页的右边缘与Swiper视窗右边缘的距离为nextMargin。<br>默认值：false <br>**说明：**<br>尾页场景下，prevMargin和nextMargin的值相加作为左边边距显示前一个页面。<br>**适用版本：** 12 |
+| ignoreBlank | boolean | 否 | 非loop场景下尾页不显示nextMargin。在非loop场景下，设置为true时，尾页不显示空白的nextMargin，尾页的右边缘与Swiper视窗右边缘对齐；设置false时，尾页显示空白nextMargin，尾页的右边缘与Swiper视窗右边缘的距离为nextMargin。<br>默认值：false <br>**说明：** <br>尾页场景下，prevMargin和nextMargin的值相加作为左边边距显示前一个页面。<br>**适用版本：** 12 |
 
 ## onAnimationEnd
 
@@ -740,7 +735,7 @@ onAnimationStart(event: OnSwiperAnimationStartCallback)
 
 切换动画开始时触发该回调。
 
-> **说明：**
+> **说明：** 
 
 > - 调用此回调后，切换动画的逻辑将在渲染线程中执行，从而使处于空闲状态的主线程能够充分利用这段时间来加载子组件所需资源，减少后续在cachedCount范围内节点的预加载时间。最佳实践请参考
 > [优化Swiper组件加载慢丢帧问题-提前加载数据](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-swiper_high_performance_development_guide#section8783121513246)。
@@ -772,7 +767,7 @@ onChange(event: Callback<number>)
 
 Swiper组件结合LazyForEach使用时，不能在onChange事件里触发子页面UI的刷新。
 
-> **说明：**
+> **说明：** 
 
 > - 如果是动画引起的索引变化，回调在动画结束时触发。
 > - 与onSelected的区别：onSelected在选中状态改变时立即触发，onChange在动画结束后触发。
@@ -983,7 +978,7 @@ prevMargin(value: Length, ignoreBlank?: boolean)
 
 使用nextMargin/prevMargin接口时，不要对子组件进行尺寸范围限制，否则子节点主轴将不会被拉伸到预期长度，边距失去效果。
 
-> **说明：**
+> **说明：** 
 
 > 该接口不支持在attributeModifier中调用。
 
@@ -1000,7 +995,7 @@ prevMargin(value: Length, ignoreBlank?: boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 前边距。不支持设置百分比。<br>默认值：0 |
-| ignoreBlank | boolean | 否 | 非loop场景下首页不显示prevMargin。在非loop场景下，设置为true时，首页不显示空白的prevMargin，首页的左边缘与Swiper视窗左边缘对齐；设置false时，首页显示空白prevMargin，首页的左边缘与Swiper视窗左边缘的距离为prevMargin。<br>默认值：false <br>**说明：**<br>首页场景下，prevMargin和nextMargin的值相加作为右边边距显示后一个页面。<br>**适用版本：** 12 |
+| ignoreBlank | boolean | 否 | 非loop场景下首页不显示prevMargin。在非loop场景下，设置为true时，首页不显示空白的prevMargin，首页的左边缘与Swiper视窗左边缘对齐；设置false时，首页显示空白prevMargin，首页的左边缘与Swiper视窗左边缘的距离为prevMargin。<br>默认值：false <br>**说明：** <br>首页场景下，prevMargin和nextMargin的值相加作为右边边距显示后一个页面。<br>**适用版本：** 12 |
 
 ## vertical
 

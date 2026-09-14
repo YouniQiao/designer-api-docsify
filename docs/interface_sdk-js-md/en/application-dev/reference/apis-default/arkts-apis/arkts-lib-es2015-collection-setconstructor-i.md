@@ -17,10 +17,6 @@ new <T = any>(values?: readonly T[] | null): Set<T>
 | --- | --- | --- | --- |
 | values | readonly T[] &#124; null | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## prototype
 
 ```TypeScript

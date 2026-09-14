@@ -162,6 +162,54 @@ HEAD_SHAKE = 10
 
 **系统接口：** 此接口为系统接口。
 
+## HEAD_TURN_TO_BASE
+
+```TypeScript
+HEAD_TURN_TO_BASE = 11
+```
+
+头向底座回正
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Mechanic.Core
+
+**系统接口：** 此接口为系统接口。
+
+## BASE_TURN_TO_HEAD
+
+```TypeScript
+BASE_TURN_TO_HEAD = 12
+```
+
+底座向头回正
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Mechanic.Core
+
+**系统接口：** 此接口为系统接口。
+
+## FRONT_TO_BACK_FLIP
+
+```TypeScript
+FRONT_TO_BACK_FLIP = 13
+```
+
+云台前后方向翻转
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Mechanic.Core
+
+**系统接口：** 此接口为系统接口。
+
 ## HAPPY
 
 ```TypeScript

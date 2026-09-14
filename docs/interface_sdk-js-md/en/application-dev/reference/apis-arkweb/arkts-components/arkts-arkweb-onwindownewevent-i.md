@@ -6,11 +6,6 @@ Defines the callback triggered when the web page requests the user to create a w
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## handler
 
 ```TypeScript

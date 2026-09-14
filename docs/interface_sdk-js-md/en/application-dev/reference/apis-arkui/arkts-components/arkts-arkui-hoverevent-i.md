@@ -8,11 +8,6 @@ Inherits from [BaseEvent](arkts-arkui-baseevent-i.md).
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## stopPropagation
 
 ```TypeScript

@@ -2,7 +2,7 @@
 
 Provides the AI image analysis options.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The **types** parameter of this API has a higher priority than that of
 > [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md). This means that, if both parameters are set, the value set by
@@ -15,11 +15,6 @@ Provides the AI image analysis options.
 **Since:** 12
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## aiController
 

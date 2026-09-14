@@ -23,6 +23,8 @@ Creates a Promise that is resolved with an array of results when all of the prov
 
 | Type | Description |
 | --- | --- |
+| Promise&lt;{ -readonly [P in keyof T]: PromiseSettledResult&lt;Awaited&lt;T[P]&gt;&gt; }&gt; | A new Promise. |
+
 ## allSettled
 
 ```TypeScript
@@ -41,3 +43,4 @@ Creates a Promise that is resolved with an array of results when all of the prov
 
 | Type | Description |
 | --- | --- |
+| Promise&lt;[PromiseSettledResult](arkts-promisesettledresult-t.md)&lt;Awaited&lt;T&gt;&gt;[]&gt; | A new Promise. |

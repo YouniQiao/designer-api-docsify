@@ -22,7 +22,7 @@ Obtains an **AccountManager** instance.
 
 | Type | Description |
 | --- | --- |
-| [AccountManager](arkts-basicservices-osaccount-accountmanager-i.md) | AccountManager** instance obtained. |
+| [AccountManager](arkts-basicservices-osaccount-accountmanager-i.md) | **AccountManager** instance obtained. |
 
 **Examples**
 

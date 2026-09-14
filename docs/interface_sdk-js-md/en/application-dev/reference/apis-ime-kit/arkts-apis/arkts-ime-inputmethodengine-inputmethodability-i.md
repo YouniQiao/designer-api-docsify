@@ -19,7 +19,7 @@ createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): 
 ```
 
 Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panel and one [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md) panel can be created for a single input method. <br> <br>
 > The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such as [window.createWindow](../../../windowmanager/application-window-fa.md#setting-the-child-window-of-an-application), [bindContextMenu](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#bindcontextmenu), and CustomDialog. You are advised to adopt alternative solutions to sub-windows, such as using a dialog box or [bindMenu](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#bindmenu), or set **showInSubwindow** to **false**.
@@ -79,7 +79,7 @@ createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 ```
 
 Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses a promise to return the result. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panel and one [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md) panel can be created for a single input method. <br>
 > <br>

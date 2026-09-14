@@ -14,7 +14,7 @@ function dial(phoneNumber: string, options: DialOptions, callback: AsyncCallback
 
 拨打电话，可设置通话参数。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6 开始支持，从API version 9 开始废弃。替代接口能力仅对系统应用开放。
 
@@ -58,7 +58,7 @@ function dial(phoneNumber: string, options?: DialOptions): Promise<boolean>
 
 拨打电话，可设置通话参数。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6 开始支持，从API version 9 开始废弃。替代接口能力仅对系统应用开放。
 
@@ -109,7 +109,7 @@ function dial(phoneNumber: string, callback: AsyncCallback<boolean>): void
 
 拨打电话。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6 开始支持，从API version 9 开始废弃。替代接口能力仅对系统应用开放。
 

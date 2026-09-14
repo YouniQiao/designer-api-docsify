@@ -20,7 +20,7 @@ activatedFillColor?: ColorMetrics
 
 ChipV2激活时图标填充颜色。
 
-默认值：\$r('sys.color.chip_active_icon_color')，非SVG图片不应用默认值。
+默认值：&#36;r('sys.color.chip_active_icon_color')，非SVG图片不应用默认值。
 
 值为undefined时，按默认值处理。
 
@@ -44,7 +44,7 @@ fillColor?: ColorMetrics
 
 图标填充颜色。
 
-默认值：\$r('sys.color.chip_usually_icon_color')，非SVG图片不应用默认值。
+默认值：&#36;r('sys.color.chip_usually_icon_color')，非SVG图片不应用默认值。
 
 值为undefined时，按默认值处理。
 
@@ -70,7 +70,7 @@ modifier?: ImageModifier
 
 默认值：undefined，不应用修饰器。
 
-**类型：** [ImageModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
+**类型：** [ImageModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
 **起始版本：** 26.0.0
 
@@ -90,9 +90,9 @@ size?: SizeT<LengthMetrics>
 
 默认值：
 
-- 当ChipV2Options.size为ChipV2Size.SMALL时，默认值为：{width: \$r('sys.float.chip_small_icon_size'), height: \$r('  
+- 当ChipV2Options.size为ChipV2Size.SMALL时，默认值为：{width: &#36;r('sys.float.chip_small_icon_size'), height: &#36;r('  
 sys.float.chip_small_icon_size')}。  
-- 当ChipV2Options.size为ChipV2Size.NORMAL时，默认值为：{width: \$r('sys.float.chip_normal_icon_size'), height: \$r('  
+- 当ChipV2Options.size为ChipV2Size.NORMAL时，默认值为：{width: &#36;r('sys.float.chip_normal_icon_size'), height: &#36;r('  
 sys.float.chip_normal_icon_size')}。
 
 单位：vp

@@ -6,11 +6,6 @@ Provides the parameters of the gesture group handler.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## gestures
 
 ```TypeScript
@@ -19,7 +14,7 @@ gestures: GestureHandler<TapGestureHandler | LongPressGestureHandler | PanGestur
 
 Gestures to be included in a gesture group.
 
-**NOTE:**
+**NOTE:** 
 
 To add both single-tap and double-tap gestures for a component, add two [TapGesture](arkts-arkui-gesture-con.md#tapgesture) instances as the [combined gestures](arkts-arkui-gesture-con.md#gesturegroup), with the double-tap gesture preceding the single-tap gesture. The gestures will not work correctly if this order is reversed.
 

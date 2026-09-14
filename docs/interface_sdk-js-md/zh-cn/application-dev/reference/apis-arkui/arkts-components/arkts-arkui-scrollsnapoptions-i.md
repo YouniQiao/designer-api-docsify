@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## enableSnapToEnd
 
 ```TypeScript
@@ -65,7 +60,7 @@ snapAlign: ScrollSnapAlign
 
 **类型：** [ScrollSnapAlign](arkts-arkui-scrollsnapalign-e.md)
 
-**默认值：**
+**默认值：** 
 - API版本11+：ScrollSnapAlign.NONE
 
 **起始版本：** 10

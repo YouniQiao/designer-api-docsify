@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## divider
 
 ```TypeScript
@@ -45,7 +40,7 @@ resizeable(value: boolean)
 
 设置分割线是否可拖拽。设置为true时，用户可拖动分割线调整相邻子组件高度；设置为false时，分割线不可拖动，子组件高度固定。
 
-> **说明：**
+> **说明：** 
 > 
 > 初始化后，当动态修改margin、[border](arkts-arkui-commonmethod-c.md#border)、
 > padding通用属性导致子组件尺寸大于相邻分割线间距时，不支持拖动分割线改变子组件的高度。

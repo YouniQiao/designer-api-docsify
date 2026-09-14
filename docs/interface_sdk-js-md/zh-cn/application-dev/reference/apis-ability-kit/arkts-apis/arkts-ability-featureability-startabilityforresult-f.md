@@ -20,7 +20,7 @@ function startAbilityForResult(parameter: StartAbilityParameter, callback: Async
 - 如果被启动的Ability模式是单实例模式, 不同应用多次调用该接口启动这个Ability，当这个Ability调用  
 [terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md)接口使之终止时，只将正常结果返回给最后一个调用方, 其它调用方返回异常信息, 异常信息中resultCode为-1。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 
@@ -83,7 +83,7 @@ function startAbilityForResult(parameter: StartAbilityParameter): Promise<Abilit
 - 如果被启动的Ability模式是单实例模式, 不同应用多次调用该接口启动这个Ability，当这个Ability调用  
 [terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md)接口使之终止时，只将正常结果返回给最后一个调用方, 其它调用方返回异常信息, 异常信息中resultCode为-1。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 

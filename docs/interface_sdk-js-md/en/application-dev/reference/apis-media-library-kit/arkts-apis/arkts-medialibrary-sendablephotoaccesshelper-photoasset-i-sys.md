@@ -53,7 +53,7 @@ Obtains analysis data. This API uses a promise to return the result.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-file-sendablephotoaccesshelper.md).
+For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-medialibrary-file-sendablephotoaccesshelper.md).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -113,7 +113,7 @@ Opens the source file and returns the FD. This API uses a promise to return the 
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-file-sendablephotoaccesshelper.md).
+For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-medialibrary-file-sendablephotoaccesshelper.md).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';

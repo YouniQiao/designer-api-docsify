@@ -2,7 +2,7 @@
 
 A compound geometric path consisting of line segments, arcs, quadratic Bezier curves, and cubic Bezier curves.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This module uses the physical pixel unit, px.
 > 
@@ -119,7 +119,7 @@ Transforms the points in a path by a matrix and stores the resulting path in the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Source **Path** object. |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) &#124; null | No | Matrix** object. The default value is an identity matrix. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) &#124; null | No | **Matrix** object. The default value is an identity matrix. |
 
 **Error codes:**
 
@@ -210,7 +210,7 @@ approximate(acceptableError: number): Array<number>
 
 Converts the existing path into an approximate path consisting of consecutive line segments.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Avoid setting **acceptableError** to **0** as it heavily divides the curve path, significantly impacting
 > performance and memory usage.
@@ -580,7 +580,7 @@ Obtains a transformation matrix at a specific position along the path, which rep
 | --- | --- | --- | --- |
 | forceClosed | boolean | Yes | Whether the path is measured as a closed path. The value **true** means that the path is considered closed during measurement, and **false** means that the path is measured based on the actual closed status. |
 | distance | number | Yes | Distance from the start point. If a negative number is passed in, the value **0** is used. If a value greater than the path length is passed in, the path length is used. The value is a floating point number. |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix** object used to store the matrix obtained. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | **Matrix** object used to store the matrix obtained. |
 | flags | [PathMeasureMatrixFlags](arkts-arkgraphics2d-drawing-pathmeasurematrixflags-e.md) | Yes | Type of the matrix information obtained. |
 
 **Return value:**
@@ -611,7 +611,7 @@ Obtains the operation iterator of this path.
 
 | Type | Description |
 | --- | --- |
-| [PathIterator](arkts-arkgraphics2d-drawing-pathiterator-c.md) | Iterator** object of the path. |
+| [PathIterator](arkts-arkgraphics2d-drawing-pathiterator-c.md) | **Iterator** object of the path. |
 
 ## getPointData
 
@@ -1278,7 +1278,7 @@ Transforms the points in a path by matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix** object. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | **Matrix** object. |
 
 **Error codes:**
 

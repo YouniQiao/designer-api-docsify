@@ -38,6 +38,8 @@ autoScale(enable: Optional<boolean>): ArcListItemAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |  |
+
 ## swipeAction
 
 ```TypeScript
@@ -62,3 +64,4 @@ swipeAction(options: Optional<SwipeActionOptions>): ArcListItemAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |  |

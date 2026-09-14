@@ -8,11 +8,6 @@ In addition to the drag-and-drop sorting attribute, the following attributes are
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## each
 
 ```TypeScript
@@ -21,7 +16,7 @@ each(itemGenerator: (repeatItem: RepeatItem<T>) => void): RepeatAttribute<T>
 
 Component generator. When the return value of [.templateId()](#templateid) does not match any [.template()](#template) type (that is, the current item does not match any defined template style), the data item is processed using **.each()**.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The **each** property is mandatory. If it is omitted, runtime errors will occur.
 > 
@@ -50,6 +45,8 @@ Component generator. When the return value of [.templateId()](#templateid) does 
 
 | Type | Description |
 | --- | --- |
+| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
+
 ## key
 
 ```TypeScript
@@ -58,7 +55,7 @@ key(keyGenerator: (item: T, index: number) => string): RepeatAttribute<T>
 
 Key generator.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API cannot be called within attributeModifier.
 
@@ -82,6 +79,8 @@ Key generator.
 
 | Type | Description |
 | --- | --- |
+| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
+
 ## template
 
 ```TypeScript
@@ -90,7 +89,7 @@ template(type: string, itemBuilder: RepeatItemBuilder<T>, templateOptions?: Temp
 
 Renders the corresponding template child component based on the template type.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API cannot be called within attributeModifier.
 
@@ -114,6 +113,8 @@ Renders the corresponding template child component based on the template type.
 
 | Type | Description |
 | --- | --- |
+| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
+
 ## templateId
 
 ```TypeScript
@@ -122,7 +123,7 @@ templateId(typedFunc: TemplateTypedFunc<T>): RepeatAttribute<T>
 
 Assigns a template type for this data item.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API cannot be called within attributeModifier.
 
@@ -144,6 +145,8 @@ Assigns a template type for this data item.
 
 | Type | Description |
 | --- | --- |
+| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
+
 ## virtualScroll
 
 ```TypeScript
@@ -152,7 +155,7 @@ virtualScroll(virtualScrollOptions?: VirtualScrollOptions): RepeatAttribute<T>
 
 Enables virtual scrolling for **Repeat**.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API cannot be called within attributeModifier.
 
@@ -174,3 +177,4 @@ Enables virtual scrolling for **Repeat**.
 
 | Type | Description |
 | --- | --- |
+| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |

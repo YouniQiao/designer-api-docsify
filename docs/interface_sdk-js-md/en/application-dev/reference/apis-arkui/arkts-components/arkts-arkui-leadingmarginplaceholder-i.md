@@ -6,11 +6,6 @@ Describes the leading margin placeholder, which dictates the distance between th
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## pixelMap
 
 ```TypeScript

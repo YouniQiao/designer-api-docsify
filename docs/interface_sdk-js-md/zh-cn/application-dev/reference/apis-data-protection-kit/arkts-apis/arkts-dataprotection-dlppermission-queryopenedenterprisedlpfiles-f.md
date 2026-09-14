@@ -16,7 +16,7 @@ function queryOpenedEnterpriseDlpFiles(options?: DlpFileQueryOptions): Promise<A
 
 在需要管理或追踪当前应用已打开的企业DLP文件时调用该接口，可用于文件状态检查、资源管理等场景。
 
-> **说明：**
+> **说明：** 
 > 
 > - 该接口仅能查询调用方应用通过[generateDlpFileForEnterprise](arkts-dataprotection-dlppermission-generatedlpfileforenterprise-f.md)生成的企业DLP文件，无法查询
 > 其他应用生成的企业DLP文件。

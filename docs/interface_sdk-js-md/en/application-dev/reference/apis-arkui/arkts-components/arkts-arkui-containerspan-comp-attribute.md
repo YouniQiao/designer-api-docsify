@@ -8,11 +8,6 @@ The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-gener
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## attributeModifier
 
 ```TypeScript

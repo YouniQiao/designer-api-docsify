@@ -6,11 +6,6 @@ Defines the options of the **Video** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## controller
 
 ```TypeScript
@@ -53,7 +48,7 @@ currentProgressRate?: number | string | PlaybackSpeed
 
 Video playback speed.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The value of the number type can only be **0.75**, **1.0**, **1.25**, **1.75**, or **2.0**. Values **0.5**,
 > **1.5**, **3**, **0.25**, and **0.125** are supported since API version 22.
@@ -129,8 +124,8 @@ an image referenced using a relative path, the component cannot be called across
 The Resource type allows cross-package and cross-module access to resource files.
 
 - Resources in the **rawfile** folder are supported, which means that you can reference image files with  
-**\$rawfile**.  
-- \$r can be used to reference images in system resources or application resources.
+**&#36;rawfile**.  
+- &#36;r can be used to reference images in system resources or application resources.
 
 The default value is an empty string.
 
@@ -157,7 +152,7 @@ Video source, which can be either a local or a network video.
 The Resource type allows cross-package and cross-module access to resource files and is commonly used for accessing local videos.
 
 - Only resources in the rawfile folder are supported, which means that you can reference video files only with  
-**\$rawfile**.
+**&#36;rawfile**.
 
 The string type is used for loading local videos and, more frequently, network videos.
 
@@ -169,7 +164,7 @@ The default value is an empty string.
 
 If an invalid value is passed, the default value will be used.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The supported video formats are MP4, MKV, and TS.
 

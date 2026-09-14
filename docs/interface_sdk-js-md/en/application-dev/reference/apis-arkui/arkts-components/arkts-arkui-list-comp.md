@@ -32,7 +32,7 @@ Only the ListItem and ListItemGroup child components and custom components are s
 
 Child components can be dynamically generated using rendering control types [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md), [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), and [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md). **LazyForEach** or **Repeat** is recommended to optimize performance.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If performance lag occurs when you process a large number of child components, consider using lazy loading, list
 > item caching, dynamic preloading, component reuse, and layout optimization. For best practices, see

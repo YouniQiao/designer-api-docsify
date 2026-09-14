@@ -22,7 +22,7 @@ clear(animated?: boolean): void
 
 清除栈中所有页面。
 
-> **说明：**
+> **说明：** 
 
 > 当调用[keepBottomPage](#keepbottompage)接口并设置为true时，会保留栈底页面。
 
@@ -64,7 +64,7 @@ disableAnimation(disable: boolean): void
 
 关闭（true）或打开（false）当前MultiNavigation中所有转场动画。适用于需要提升页面切换性能或实现自定义转场效果的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 此配置会影响以下栈操作方法的动画效果：pushPath、pushPathByName、replacePath、replacePathByName、pop、popToName、
 > popToIndex、moveToTop、moveIndexToTop、clear。配置立即生效，在MultiNavigation生命周期内持续有效。
@@ -160,7 +160,7 @@ getParamByIndex(index: number): Object | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| unknown &#124; undefined | Object**: 返回对应NavDestination页面的参数信息，具体字段由pushPath或pushPathByName时传入的param决定。<br>undefined: 传入index无效时返回undefined。 |
+| unknown &#124; undefined | **Object**: 返回对应NavDestination页面的参数信息，具体字段由pushPath或pushPathByName时传入的param决定。<br>undefined: 传入index无效时返回undefined。 |
 
 ## getParamByName
 
@@ -198,7 +198,7 @@ keepBottomPage(keepBottom: boolean): void
 
 设置在调用pop和clear接口时是否保留栈底页面。
 
-> **说明：**
+> **说明：** 
 
 > MultiNavigation将主页也当作了NavDestination页面入栈，所以调用pop或clear接口时会将栈底页面也出栈。
 > 
@@ -226,7 +226,7 @@ moveIndexToTop(index: number, animated?: boolean): void
 
 将指定index的NavDestination页面移到栈顶。
 
-> **说明：**
+> **说明：** 
 
 > 根据找到的第一个名为name的页面的不同，MultiNavigation会进行不同的处理：
 
@@ -263,7 +263,7 @@ moveToTop(name: string, animated?: boolean): number
 
 将由栈底开始第一个名为name的NavDestination页面移到栈顶。
 
-> **说明：**
+> **说明：** 
 
 > 根据指定的index页面的不同，MultiNavigation会进行不同的处理：
 
@@ -306,7 +306,7 @@ pop(animated?: boolean): NavPathInfo | undefined
 
 弹出路由栈栈顶元素。
 
-> **说明：**
+> **说明：** 
 
 > 当调用[keepBottomPage](#keepbottompage)接口并设置为true时，会保留栈底页面。
 
@@ -338,7 +338,7 @@ pop(result?: Object, animated?: boolean): NavPathInfo | undefined
 
 弹出路由栈栈顶元素，并触发onPop回调传入页面处理结果。
 
-> **说明：**
+> **说明：** 
 
 > 当调用[keepBottomPage](#keepbottompage)接口并设置为true时，会保留栈底页面。
 
@@ -726,7 +726,7 @@ setPlaceholderPage(info: NavPathInfo): void
 
 设置占位页面。
 
-> **说明：**
+> **说明：** 
 
 > 占位页面为特殊页面类型，当应用设置后，在支持分栏显示的大屏设备上会和主页默认形成左右分栏的效果，即左边主页，右边占位页。
 > 

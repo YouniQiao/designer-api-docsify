@@ -32,6 +32,8 @@ static getInstance(): TreeListenerManager
 
 | 类型 | 说明 |
 | --- | --- |
+| [TreeListenerManager](arkts-arkui-arkui-advanced-treeview-treelistenermanager-c.md) | treeListenerManager instance |
+
 ## getTreeListener
 
 ```TypeScript
@@ -52,3 +54,4 @@ getTreeListener(): TreeListener
 
 | 类型 | 说明 |
 | --- | --- |
+| [TreeListener](arkts-arkui-arkui-advanced-treeview-treelistener-c.md) | treeListener object |

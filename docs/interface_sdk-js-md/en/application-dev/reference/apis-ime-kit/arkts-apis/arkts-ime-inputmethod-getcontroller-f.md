@@ -22,7 +22,7 @@ Obtains an [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i
 
 | Type | Description |
 | --- | --- |
-| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) | InputMethodController** instance. |
+| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) | **InputMethodController** instance. |
 
 **Error codes:**
 

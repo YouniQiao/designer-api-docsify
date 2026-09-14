@@ -6,11 +6,6 @@ Implements a **ScrollableBarModeOptions** object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## margin
 
 ```TypeScript

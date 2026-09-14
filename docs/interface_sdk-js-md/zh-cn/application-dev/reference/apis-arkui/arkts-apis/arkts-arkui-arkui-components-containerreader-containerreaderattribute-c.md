@@ -42,3 +42,4 @@ breakpointConfig(value?: BreakpointOptions): ContainerReaderAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) |  |

@@ -6,11 +6,6 @@ Describes the animation information of the **Swiper** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## currentOffset
 
 ```TypeScript

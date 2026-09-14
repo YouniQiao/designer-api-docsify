@@ -8,11 +8,6 @@ Linear Gradient Interface
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## angle
 
 ```TypeScript

@@ -2,7 +2,7 @@
 
 文本下载按钮，可显示具体下载进度。
 
-> **说明：**
+> **说明：** 
 > 
 > - 如果ProgressButton设置[通用属性](../arkts-components/arkts-arkui-commonmethod-c.md)或[通用事件](../arkts-components/arkts-arkui-commonmethod-c.md)，
 > 编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到ProgressButton本身。
@@ -71,7 +71,7 @@ content: ResourceStr
 
 默认值：空字符串。
 
-**说明：**最长显示组件宽度，超出部分用省略号代替。从API version 20开始，支持Resource类型。
+**说明：** 最长显示组件宽度，超出部分用省略号代替。从API version 20开始，支持Resource类型。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

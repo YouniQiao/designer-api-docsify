@@ -132,7 +132,7 @@ function execute(task: Task, priority?: Priority): Promise<Object>
 
 将创建好的任务添加到taskpool的内部任务队列中，任务不会立即执行，而是等待分发到工作线程执行。当前模式支持设置任务优先级和通过cancel取消任务。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 任务不能是任务组任务、串行队列任务或异步队列任务。
 > - 长时任务只能调用一次，非长时任务可以多次调用执行。
@@ -323,7 +323,7 @@ function execute(task: Task, configs: Configs): Promise<Object>
 
 将创建好的任务添加到taskpool的内部任务队列中，任务不会立即执行，而是等待分发到工作线程执行。当前模式支持设置任务优先级、设置超时时间和通过cancel取消任务。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 不支持执行任务组任务。
 > 
@@ -411,7 +411,7 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: 
 
 将创建好的泛型任务放入taskpool的内部任务队列，使用Promise异步回调。execute任务的类型校验与GenericsTask的构造类型相关联，参数类型和返回值类型需与new GenericsTask时指定的类型保持一致。
 
-> **说明：**
+> **说明：** 
 > 
 > - 不支持执行任务组任务。
 > 
@@ -499,7 +499,7 @@ function execute(group: TaskGroup, configs: Configs): Promise<Object[]>
 
 将创建好的任务组放入taskpool内部任务队列，任务组中的任务不会立即执行，而是等待分发到工作线程执行。任务组中任务全部执行完成后，结果数组统一返回。此模式适用于执行关联任务。使用Promise异步回调。configs配置里可以指定任务组执行的超时时间和优先级。指定的超时时间到了，但是任务组还未完成，则会抛出任务组超时的异常信息。
 
-> **说明：**
+> **说明：** 
 > 
 > - 不支持任务组重复执行。
 > 

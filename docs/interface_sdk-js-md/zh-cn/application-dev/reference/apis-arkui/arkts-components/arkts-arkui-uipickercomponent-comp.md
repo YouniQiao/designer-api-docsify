@@ -9,7 +9,7 @@ UIPickerComponent容器是用于实现用户选择操作的组件。它支持从
 ## 子组件 > > - 支持多个子组件。 > - 支持子组件类型：Text、Image、Row和SymbolGlyph。 > - 支持渲染控制类型：[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)和 > [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)。
 
 
-> **说明：**
+> **说明：** 
 > 
 > - 开发者在使用Row容器作为子组件时，Row容器中仅支持包含Text、Image、SymbolGlyph基础组件，
 > 包含其他容器组件可能会影响显示效果或滑动功能异常。

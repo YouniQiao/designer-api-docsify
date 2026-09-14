@@ -10,11 +10,6 @@ In addition to the universal events, the following events are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## canLoop
 
 ```TypeScript

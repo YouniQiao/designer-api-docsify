@@ -10,11 +10,6 @@ In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## autoCapitalizationMode
 
 ```TypeScript
@@ -57,7 +52,7 @@ Sets the scrollbar display mode for the inline style in the editing state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar display mode for the inline style in the editing state.<br>Default value: **BarState.Auto |
+| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar display mode for the inline style in the editing state.<br>Default value: **BarState.Auto** |
 
 ## cancelButton
 
@@ -79,7 +74,7 @@ Sets the style of the cancel button on the right. Only icons of the image type a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CancelButtonOptions](arkts-arkui-cancelbuttonoptions-i.md) | Yes | Options of the cancel button on the right.<br>Default value:<br>{<br> style: CancelButtonStyle.INPUT<br>}<br>Default value on wearables: **28vp<br>**Since:** 18 |
+| options | [CancelButtonOptions](arkts-arkui-cancelbuttonoptions-i.md) | Yes | Options of the cancel button on the right.<br>Default value:<br>{<br> style: CancelButtonStyle.INPUT<br>}<br>Default value on wearables: **28vp**<br>**Since:** 18 |
 
 ## cancelButton
 
@@ -121,7 +116,7 @@ Sets the color of the caret in the text box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the caret in the text box.<br>Default value: **'#007DFF' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the caret in the text box.<br>Default value: **'#007DFF'** |
 
 ## caretPosition
 
@@ -175,7 +170,7 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 Sets whether to enable leading punctuation compression.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Leading punctuation is not compressed by default.
 > 
@@ -238,7 +233,7 @@ If this attribute is set to **CopyOptions.None**, drag and drop operations are n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | Whether the input text can be copied.<br>Default value: **CopyOptions.LocalDevice |
+| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | Whether the input text can be copied.<br>Default value: **CopyOptions.LocalDevice** |
 
 ## customKeyboard
 
@@ -262,7 +257,7 @@ When setting a custom keyboard, you can bind the [onKeyPreIme](arkts-arkui-commo
 
 From API version 23, the [setCustomKeyboardContinueFeature](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#setcustomkeyboardcontinuefeature) API can be used to enable the continuation feature for custom keyboards. When switching between custom keyboards, the system changes the keyboard directly without triggering the close and open animations.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API cannot be called within attributeModifier.
 
@@ -351,7 +346,7 @@ This attribute works normally in the non-editing state. In the editing state, **
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [Optional](arkts-arkui-optional-t.md)&lt;[EllipsisMode](../arkts-apis/arkts-arkui-ellipsismode-e.md)&gt; | Yes | Ellipsis position.<br>Default value: **EllipsisMode.END |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[EllipsisMode](../arkts-apis/arkts-arkui-ellipsismode-e.md)&gt; | Yes | Ellipsis position.<br>Default value: **EllipsisMode.END** |
 
 ## enableAutoFill
 
@@ -373,7 +368,7 @@ Sets whether to enable autofill.<!--RP6--><!--RP6End-->
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable autofill.<br>**true** to enable; **false** otherwise.<br>Default value: **true |
+| value | boolean | Yes | Whether to enable autofill.<br>**true** to enable; **false** otherwise.<br>Default value: **true** |
 
 ## enableAutoFillAnimation
 
@@ -395,7 +390,7 @@ Sets whether to enable the autofill animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable the autofill animation.<br>**true** to enable; **false** otherwise.<br>Default value: **true**<br>**NOTE:**<br>When enabled, the animation takes effect only for text boxes where [InputType](arkts-arkui-inputtype-e.md) is set to **Password**, **NEW_PASSWORD**, or **NUMBER_PASSWORD**. |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable the autofill animation.<br>**true** to enable; **false** otherwise.<br>Default value: **true**<br>**NOTE:** <br>When enabled, the animation takes effect only for text boxes where [InputType](arkts-arkui-inputtype-e.md) is set to **Password**, **NEW_PASSWORD**, or **NUMBER_PASSWORD**. |
 
 ## enableAutoSpacing
 
@@ -417,7 +412,7 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable automatic spacing between Chinese and Western characters.<br>**true** to enable, **false** otherwise.<br>Default value: **false |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable automatic spacing between Chinese and Western characters.<br>**true** to enable, **false** otherwise.<br>Default value: **false** |
 
 ## enableHapticFeedback
 
@@ -441,7 +436,7 @@ To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** perm
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEnabled | boolean | Yes | Whether to enable haptic feedback.<br>**true**: Haptic feedback is enabled. **false**: Haptic feedback is disabled.<br>Default value: **true |
+| isEnabled | boolean | Yes | Whether to enable haptic feedback.<br>**true**: Haptic feedback is enabled. **false**: Haptic feedback is disabled.<br>Default value: **true** |
 
 ## enableKeyboardOnFocus
 
@@ -489,7 +484,7 @@ The preview content is defined as a temporary, uncommitted input state. Currentl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable preview text.<br>**true**: Preview text is enabled. **false**: Preview text is disabled.<br>Default value: **true |
+| enable | boolean | Yes | Whether to enable preview text.<br>**true**: Preview text is enabled. **false**: Preview text is disabled.<br>Default value: **true** |
 
 ## enableSelectedDataDetector
 
@@ -515,7 +510,7 @@ This feature is only effective when CopyOptions is set to **CopyOptions.LocalDev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean &#124; undefined | Yes | Whether to enable entity recognition for selected text.<br>**true**: Entity recognition is enabled. **false**: Entity recognition is disabled. Default value: **true |
+| enable | boolean &#124; undefined | Yes | Whether to enable entity recognition for selected text.<br>**true**: Entity recognition is enabled. **false**: Entity recognition is disabled. Default value: **true** |
 
 ## enterKeyType
 
@@ -535,7 +530,7 @@ Sets the type of the Enter key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [EnterKeyType](arkts-arkui-enterkeytype-e.md) | Yes | Type of the Enter key.<br>Default value: **EnterKeyType.Done |
+| value | [EnterKeyType](arkts-arkui-enterkeytype-e.md) | Yes | Type of the Enter key.<br>Default value: **EnterKeyType.Done** |
 
 ## fallbackLineSpacing
 
@@ -577,7 +572,7 @@ Sets the font color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color.<br>Default value on wearables: **'#dbffffff' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color.<br>Default value on wearables: **'#dbffffff' ** |
 
 ## fontFamily
 
@@ -647,7 +642,7 @@ Sets the font size.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Font size. If **fontSize** is of the number type, the unit fp is used. The default font size is 16 fp. The value cannot be a percentage.<br>Default value on wearables: **18fp |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Font size. If **fontSize** is of the number type, the unit fp is used. The default font size is 16 fp. The value cannot be a percentage.<br>Default value on wearables: **18fp** |
 
 ## fontStyle
 
@@ -667,7 +662,7 @@ Sets the font style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | Yes | Font style.<br>Default value: **FontStyle.Normal |
+| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | Yes | Font style.<br>Default value: **FontStyle.Normal** |
 
 ## fontWeight
 
@@ -709,7 +704,7 @@ Enables half leading for text, which splits the leading equally between the top 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| halfLeading | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether half leading is enabled. Half leading refers to splitting the leading in half and applying it equally to the top and bottom of the line.<br>**true**: Half leading is enabled. **false**: Half leading is not enabled.<br>Default value: **false |
+| halfLeading | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether half leading is enabled. Half leading refers to splitting the leading in half and applying it equally to the top and bottom of the line.<br>**true**: Half leading is enabled. **false**: Half leading is not enabled.<br>Default value: **false** |
 
 ## heightAdaptivePolicy
 
@@ -727,7 +722,7 @@ If this attribute is set to **TextHeightAdaptivePolicy.MIN_FONT_SIZE_FIRST**, th
 
 When the component is in the non-inline style, the three values of **TextHeightAdaptivePolicy** have the same effect, that is, the text will shrink to a font size between **minFontSize** and **maxFontSize** to allow for more content to be shown.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If the text box is in the inline style, the font size in the editing state is different from that in the non-
 > editing state.
@@ -744,7 +739,7 @@ When the component is in the non-inline style, the three values of **TextHeightA
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-textheightadaptivepolicy-e.md) | Yes | How the adaptive height is determined for the text.<br>Default value: **TextHeightAdaptivePolicy.MAX_LINES_FIRST |
+| value | [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-textheightadaptivepolicy-e.md) | Yes | How the adaptive height is determined for the text.<br>Default value: **TextHeightAdaptivePolicy.MAX_LINES_FIRST** |
 
 ## includeFontPadding
 
@@ -813,7 +808,7 @@ Sets the keyboard appearance for the text box. This setting takes effect only af
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appearance | [Optional](arkts-arkui-optional-t.md)&lt;[KeyboardAppearance](../arkts-apis/arkts-arkui-keyboardappearance-e.md)&gt; | Yes | Appearance of the keyboard.<br>Default value: **KeyboardAppearance.NONE_IMMERSIVE |
+| appearance | [Optional](arkts-arkui-optional-t.md)&lt;[KeyboardAppearance](../arkts-apis/arkts-arkui-keyboardappearance-e.md)&gt; | Yes | Appearance of the keyboard.<br>Default value: **KeyboardAppearance.NONE_IMMERSIVE** |
 
 ## letterSpacing
 
@@ -861,7 +856,7 @@ Sets the line break rule. This attribute takes effect when **wordBreak** is not 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | [LineBreakStrategy](../arkts-apis/arkts-arkui-linebreakstrategy-e.md) | Yes | Line break rule.<br>Default value: **LineBreakStrategy.GREEDY**<br>**NOTE:**<br>This attribute takes effect only when the [inline style](../../../ui/arkts-common-components-text-input.md#inline-style) is set. |
+| strategy | [LineBreakStrategy](../arkts-apis/arkts-arkui-linebreakstrategy-e.md) | Yes | Line break rule.<br>Default value: **LineBreakStrategy.GREEDY**<br>**NOTE:** <br>This attribute takes effect only when the [inline style](../../../ui/arkts-common-components-text-input.md#inline-style) is set. |
 
 ## lineHeight
 
@@ -873,7 +868,7 @@ Sets the text line height.
 
 If the value is less than or equal to **0**, the line height is unrestricted and adapts to the font size. When the value is a number, the unit is fp. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - If certain characters have significantly taller glyphs than others in the same line, layout anomalies such as
 > clipping, overlapping, or misalignment may occur. In this case, adjust component attributes such as height and
@@ -916,7 +911,7 @@ Sets the maximum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | [Optional](arkts-arkui-optional-t.md)&lt;number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Maximum font scale factor for text. The **undefined** type is supported.<br>Value range: [1, +∞)<br>**NOTE:**<br>Values less than 1 are treated as **1**. Invalid values are not applied by default.<br>After the **maxFontScale** attribute is set, the error message set by **showError** can be enlarged to a maximum of twice the original size.<br>Before use, you need to configure the [configuration.json](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) and [app.json5](../../../quick-start/app-configuration-file.md) files in the project. For details, see [Example 18: Setting the Minimum and Maximum Font Scale Factors](../../../reference/apis-arkui/arkui-ts/ts-basic-components-textinput.md#example-18-setting-the-minimum-and-maximum-font-scale-factors). |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Maximum font scale factor for text. The **undefined** type is supported.<br>Value range: [1, +∞)<br>**NOTE:** <br>Values less than 1 are treated as **1**. Invalid values are not applied by default.<br>After the **maxFontScale** attribute is set, the error message set by **showError** can be enlarged to a maximum of twice the original size.<br>Before use, you need to configure the [configuration.json](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) and [app.json5](../../../quick-start/app-configuration-file.md) files in the project. For details, see [Example 18: Setting the Minimum and Maximum Font Scale Factors](../../../reference/apis-arkui/arkui-ts/ts-basic-components-textinput.md#example-18-setting-the-minimum-and-maximum-font-scale-factors). |
 
 ## maxFontSize
 
@@ -964,7 +959,7 @@ Sets the maximum number of characters for text input.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Maximum number of characters for text input.<br>Default value: **Infinity**, indicating that there is no upper limit on the number of characters that can be entered<br>**NOTE:**<br>If this attribute is not set or set to an invalid value, the default value is used. If a decimal value is provided, only its integer part is applied. If the value exceeds 2^31-1, exceptions may occur. |
+| value | number | Yes | Maximum number of characters for text input.<br>Default value: **Infinity**, indicating that there is no upper limit on the number of characters that can be entered<br>**NOTE:** <br>If this attribute is not set or set to an invalid value, the default value is used. If a decimal value is provided, only its integer part is applied. If the value exceeds 2^31-1, exceptions may occur. |
 
 ## maxLines
 
@@ -1008,7 +1003,7 @@ Sets the minimum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | [Optional](arkts-arkui-optional-t.md)&lt;number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Minimum font scale factor for text. The **undefined** type is supported.<br>Value range: [0, 1]<br>**NOTE:**<br>A value less than 0 is handled as **0**. A value greater than 1 is handled as **1**. Invalid values are not applied by default.<br>Before use, you need to configure the [configuration.json](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) and [app.json5](../../../quick-start/app-configuration-file.md) files in the project. For details, see [Example 18: Setting the Minimum and Maximum Font Scale Factors](../../../reference/apis-arkui/arkui-ts/ts-basic-components-textinput.md#example-18-setting-the-minimum-and-maximum-font-scale-factors). |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Minimum font scale factor for text. The **undefined** type is supported.<br>Value range: [0, 1]<br>**NOTE:** <br>A value less than 0 is handled as **0**. A value greater than 1 is handled as **1**. Invalid values are not applied by default.<br>Before use, you need to configure the [configuration.json](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) and [app.json5](../../../quick-start/app-configuration-file.md) files in the project. For details, see [Example 18: Setting the Minimum and Maximum Font Scale Factors](../../../reference/apis-arkui/arkui-ts/ts-basic-components-textinput.md#example-18-setting-the-minimum-and-maximum-font-scale-factors). |
 
 ## minFontSize
 
@@ -1236,7 +1231,7 @@ onSecurityStateChange(callback: Callback<boolean>)
 
 Triggered when the password visibility state is toggled.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called in attributeModifier since API version 20.
 
@@ -1314,7 +1309,7 @@ From API version 22, the [setExtraConfig](../arkts-apis/arkts-arkui-imeclient-i.
 
 **IMEClient** is valid only during the execution of **onWillAttachIME** and cannot be called asynchronously.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API cannot be called within attributeModifier.
 
@@ -1536,7 +1531,7 @@ Sets the placeholder text color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Placeholder text color.<br>The default value follows the theme.<br>Default value on wearables: **'#99ffffff' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Placeholder text color.<br>The default value follows the theme.<br>Default value on wearables: **'#99ffffff'** |
 
 ## placeholderFont
 
@@ -1556,7 +1551,7 @@ Sets the placeholder text style, including the font size, font weight, font fami
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Font | No | Placeholder text style.<br>Default value on wearables: **18fp |
+| value | Font | No | Placeholder text style.<br>Default value on wearables: **18fp** |
 
 ## punctuationOverflow
 
@@ -1600,7 +1595,7 @@ Sets whether to select all text in the initial state. The [inline style](../../.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to select all text in the initial state.<br>**true**: Selecting all text is enabled. **false**: Selecting all text is disabled.<br>Default value: **false |
+| value | boolean | Yes | Whether to select all text in the initial state.<br>**true**: Selecting all text is enabled. **false**: Selecting all text is disabled.<br>Default value: **false** |
 
 ## selectedBackgroundColor
 
@@ -1666,7 +1661,7 @@ Sets whether to hide the system text selection menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to hide the system text selection menu.<br>**true**: The system text selection menu is hidden when a user clicks the text box cursor, long-presses the text box, double-taps the text box, triple-taps the text box, or right-clicks the text box.<br>**false**: The system text selection menu is displayed.<br>Default value: **false |
+| value | boolean | Yes | Whether to hide the system text selection menu.<br>**true**: The system text selection menu is hidden when a user clicks the text box cursor, long-presses the text box, double-taps the text box, triple-taps the text box, or right-clicks the text box.<br>**false**: The system text selection menu is displayed.<br>Default value: **false** |
 
 ## shaderStyle
 
@@ -1706,7 +1701,7 @@ The character counter is not displayed in the [inline style](../../../ui/arkts-c
 
 [Example 5: Setting a Character Counter](../../../reference/apis-arkui/arkui-ts/ts-basic-components-textinput.md#example-5-setting-a-character-counter) shows the effect of setting **showCounter**.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 12.
 
@@ -1747,7 +1742,7 @@ If the data type is **ResourceStr** and the input content does not comply with s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; undefined | No | Error message displayed when an error occurs.<br>By default, no error message is displayed.<br>On wearables, the font size is 13 fp and the alignment mode is center alignment.<br> **NOTE:**<br>The Resource type is supported since API version 12.<br>**Since:** 12 |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; undefined | No | Error message displayed when an error occurs.<br>By default, no error message is displayed.<br>On wearables, the font size is 13 fp and the alignment mode is center alignment.<br> **NOTE:** <br>The Resource type is supported since API version 12.<br>**Since:** 12 |
 
 ## showPassword
 
@@ -1773,7 +1768,7 @@ In the [password mode](../../../ui/arkts-common-components-text-input.md#passwor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| visible | boolean | Yes | Whether to show the password.<br>**true**: The password is shown. **false**: The password is not shown.<br>Default value: **false |
+| visible | boolean | Yes | Whether to show the password.<br>**true**: The password is shown. **false**: The password is not shown.<br>Default value: **false** |
 
 ## showPasswordIcon
 
@@ -1947,7 +1942,7 @@ For details about the text box types, see [type](#type).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextInputStyle](arkts-arkui-textinputstyle-e.md) &#124; [TextContentStyle](../arkts-apis/arkts-arkui-textcontentstyle-e.md) | Yes | Text input style.<br>Default value: **TextInputStyle.Default |
+| value | [TextInputStyle](arkts-arkui-textinputstyle-e.md) &#124; [TextContentStyle](../arkts-apis/arkts-arkui-textcontentstyle-e.md) | Yes | Text input style.<br>Default value: **TextInputStyle.Default** |
 
 ## textAlign
 
@@ -1975,7 +1970,7 @@ You can use the align attribute to control the vertical position of a text parag
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextAlign](../arkts-apis/arkts-arkui-textalign-e.md) | Yes | Horizontal alignment of the text.<br>Default value: **TextAlign.Start |
+| value | [TextAlign](../arkts-apis/arkts-arkui-textalign-e.md) | Yes | Horizontal alignment of the text.<br>Default value: **TextAlign.Start** |
 
 ## textDirection
 
@@ -2019,7 +2014,7 @@ Sets the indent of the first line text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Indent of the first line text.<br>Default value: **0 |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Indent of the first line text.<br>Default value: **0** |
 
 ## textOverflow
 
@@ -2045,7 +2040,7 @@ When **overflow** is set to **TextOverflow.None**, the effect is the same as **T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md) | Yes | Display mode of overflowing text.<br>Default value for the [inline style](../../../ui/arkts-common-components-text-input.md#inline-style) in the non-editing state: **TextOverflow.Ellipsis**<br>Default value for the inline style in the editing state: **TextOverflow.Clip |
+| value | [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md) | Yes | Display mode of overflowing text.<br>Default value for the [inline style](../../../ui/arkts-common-components-text-input.md#inline-style) in the non-editing state: **TextOverflow.Ellipsis**<br>Default value for the inline style in the editing state: **TextOverflow.Clip** |
 
 ## type
 
@@ -2067,7 +2062,7 @@ Different **InputType** values trigger corresponding keyboard types and enforce 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [InputType](arkts-arkui-inputtype-e.md) | Yes | Text box type.<br>Default value: **InputType.Normal |
+| value | [InputType](arkts-arkui-inputtype-e.md) | Yes | Text box type.<br>Default value: **InputType.Normal** |
 
 ## underlineColor
 
@@ -2113,4 +2108,4 @@ Sets the word break rule. This attribute takes effect when the [inline style](..
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [WordBreak](../arkts-apis/arkts-arkui-wordbreak-e.md) | Yes | Word break rule in the inline style.<br>Default value: **WordBreak.BREAK_WORD |
+| value | [WordBreak](../arkts-apis/arkts-arkui-wordbreak-e.md) | Yes | Word break rule in the inline style.<br>Default value: **WordBreak.BREAK_WORD** |

@@ -1,10 +1,5 @@
 # px2vp
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## px2vp
 
 ```TypeScript

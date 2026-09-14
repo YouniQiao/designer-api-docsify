@@ -20,10 +20,6 @@ Returns the value of the first element in the array where predicate is true, and
 | predicate | (this: void, value: T, index: number, obj: readonly T[]) =&gt; value is S | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## find
 
 ```TypeScript
@@ -37,10 +33,6 @@ find(predicate: (value: T, index: number, obj: readonly T[]) => unknown, thisArg
 | predicate | (value: T, index: number, obj: readonly T[]) =&gt; unknown | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## findIndex
 
 ```TypeScript
@@ -55,8 +47,3 @@ Returns the index of the first element in the array where predicate is true, and
 | --- | --- | --- | --- |
 | predicate | (value: T, index: number, obj: readonly T[]) =&gt; unknown | Yes |  |
 | thisArg | any | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

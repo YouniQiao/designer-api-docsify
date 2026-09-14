@@ -734,7 +734,7 @@ originalText(text: string, pattern?: MatchPattern): On
 
 指定控件的文本内容和文本匹配模式，返回On对象自身。
 
-> **说明：**
+> **说明：** 
 > 
 > 如果控件的无障碍属性
 > accessibilityLevel
@@ -870,7 +870,7 @@ text(txt: string, pattern?: MatchPattern): On
 
 指定目标控件文本属性，支持多种匹配模式，返回On对象自身。
 
-> **说明：**
+> **说明：** 
 > 
 > 如果控件的无障碍属性
 > accessibilityLevel

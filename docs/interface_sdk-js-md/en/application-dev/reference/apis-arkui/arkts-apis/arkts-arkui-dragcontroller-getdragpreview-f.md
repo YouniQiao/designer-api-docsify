@@ -14,7 +14,7 @@ function getDragPreview(): DragPreview
 
 Obtains the **DragPreview** object, which represents the preview displayed during a drag operation.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in
 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) object
@@ -36,4 +36,4 @@ Obtains the **DragPreview** object, which represents the preview displayed durin
 
 | Type | Description |
 | --- | --- |
-| [DragPreview](arkts-arkui-dragcontroller-dragpreview-c.md) | DragPreview** object. It provides the API for setting the preview style. It does not work in the **OnDrop** and **OnDragEnd** callbacks. |
+| [DragPreview](arkts-arkui-dragcontroller-dragpreview-c.md) | **DragPreview** object. It provides the API for setting the preview style. It does not work in the **OnDrop** and **OnDragEnd** callbacks. |

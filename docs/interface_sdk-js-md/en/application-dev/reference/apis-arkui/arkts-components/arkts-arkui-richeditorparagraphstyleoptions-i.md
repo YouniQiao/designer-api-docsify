@@ -4,7 +4,7 @@ Defines the paragraph style options.
 
 Inherits [RichEditorRange](arkts-arkui-richeditorrange-i.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Scope of the API: the paragraphs covered by the specified range, that is, the paragraph where the range starts, the
 > paragraph where the range ends, and all paragraphs in between.
@@ -14,11 +14,6 @@ Inherits [RichEditorRange](arkts-arkui-richeditorrange-i.md).
 **Since:** 11
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## style
 

@@ -22,7 +22,7 @@ Checks whether the current device supports NR.
 
 | Type | Description |
 | --- | --- |
-| boolean | true**: supported<br>- **false**: not supported |
+| boolean | **true**: supported<br>- **false**: not supported |
 
 **Examples**
 
@@ -54,7 +54,7 @@ Checks whether the SIM card in the specified slot supports NR.
 
 | Type | Description |
 | --- | --- |
-| boolean | true**: supported<br>- **false**: not supported |
+| boolean | **true**: supported<br>- **false**: not supported |
 
 **Examples**
 

@@ -24,7 +24,7 @@ Obtains the HiTrace ID in the TLS of the current thread.
 
 | Type | Description |
 | --- | --- |
-| [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | HiTraceId** instance. |
+| [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | **HiTraceId** instance. |
 
 **Examples**
 

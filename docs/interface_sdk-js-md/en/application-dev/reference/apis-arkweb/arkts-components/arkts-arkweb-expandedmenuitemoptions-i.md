@@ -2,7 +2,7 @@
 
 Custom menu extension item.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported from API version 12 and deprecated from API version 20. You are advised to use
 > [editMenuOptions](arkts-arkweb-web-comp-attribute.md#editmenuoptions) instead.
@@ -14,11 +14,6 @@ Custom menu extension item.
 **Substitutes:** [editMenuOptions](arkts-arkweb-web-comp-attribute.md#editmenuoptions)
 
 **System capability:** SystemCapability.Web.Webview.Core
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## action
 

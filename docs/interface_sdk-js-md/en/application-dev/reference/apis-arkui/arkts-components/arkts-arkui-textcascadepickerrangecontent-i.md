@@ -6,11 +6,6 @@ Defines the content for multi-column picker options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## children
 
 ```TypeScript

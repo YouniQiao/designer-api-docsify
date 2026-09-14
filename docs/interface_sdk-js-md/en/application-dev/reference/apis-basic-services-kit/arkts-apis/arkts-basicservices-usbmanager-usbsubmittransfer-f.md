@@ -14,7 +14,7 @@ function usbSubmitTransfer(transfer: UsbDataTransferParams): void
 
 Requests a USB data transfer.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API uses an asynchronous callback to return the result.
 > 

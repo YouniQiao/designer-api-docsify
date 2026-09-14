@@ -52,7 +52,7 @@ getExposureMode(): ExposureMode
 
 获取当前曝光模式。
 
-> **说明：**
+> **说明：** 
 > 
 > 若未通过[setExposureMode](#setexposuremode)接口进行设置，直接调用该接口查询当前曝光模式，会返回无效值。
 

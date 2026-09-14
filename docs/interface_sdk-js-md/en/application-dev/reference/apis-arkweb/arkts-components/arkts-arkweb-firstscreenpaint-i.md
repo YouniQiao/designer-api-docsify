@@ -6,11 +6,6 @@ Provides the event information when the first screen paint is detected, includin
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## firstScreenPaintTime
 
 ```TypeScript

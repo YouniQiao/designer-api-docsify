@@ -14,7 +14,7 @@ function setSync(key: string, value: string): void
 
 设置系统参数key对应的值。
 
-> **说明：**
+> **说明：** 
 > 
 > setSync和set方法都用于设置系统参数值：
 > - setSync：同步方法，直接设置系统参数并立即返回，适用于简单同步场景。

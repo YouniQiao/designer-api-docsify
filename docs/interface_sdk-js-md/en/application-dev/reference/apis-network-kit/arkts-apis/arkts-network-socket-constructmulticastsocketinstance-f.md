@@ -22,7 +22,7 @@ Creates a **MulticastSocket** object.
 
 | Type | Description |
 | --- | --- |
-| [MulticastSocket](arkts-network-socket-multicastsocket-i.md) | MulticastSocket** object. |
+| [MulticastSocket](arkts-network-socket-multicastsocket-i.md) | **MulticastSocket** object. |
 
 **Examples**
 

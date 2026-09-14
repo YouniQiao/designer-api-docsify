@@ -6,11 +6,6 @@ Defines the input method client type bound to an input component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## setExtraConfig
 
 ```TypeScript

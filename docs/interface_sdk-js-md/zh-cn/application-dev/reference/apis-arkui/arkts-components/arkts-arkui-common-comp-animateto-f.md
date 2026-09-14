@@ -1,10 +1,5 @@
 # animateTo
 
-## 导入模块
-
-```TypeScript
-```
-
 ## animateTo
 
 ```TypeScript
@@ -13,7 +8,7 @@ declare function animateTo(value: AnimateParam, event: () => void): void
 
 显式动画接口。在需要动画时，显式调用该接口改变状态以产生动画。对于改变布局类属性（如宽高）的动画，内容通常会直接跳转到最终状态，如果希望内容跟随宽高变化，可以使用[renderFit](arkts-arkui-commonmethod-c.md#renderfit)属性进行配置。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 10开始，可以通过使用[UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > animateTo来明确UI的执行上下文。

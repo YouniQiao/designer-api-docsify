@@ -22,14 +22,14 @@ Obtains the SQL statement used to query data. This API returns the result synchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates** object that matches the specified field. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | **RdbPredicates** object that matches the specified field. |
 | columns | Array&lt;string&gt; | No | Columns to be queried. If this parameter is not specified, all columns are queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SqlInfo](arkts-arkdata-relationalstore-sqlinfo-i.md) | SqlInfo** object. **sql** indicates the returned SQL statement, and **args** indicates the parameters in the executed SQL statement. |
+| [SqlInfo](arkts-arkdata-relationalstore-sqlinfo-i.md) | **SqlInfo** object. **sql** indicates the returned SQL statement, and **args** indicates the parameters in the executed SQL statement. |
 
 **Error codes:**
 

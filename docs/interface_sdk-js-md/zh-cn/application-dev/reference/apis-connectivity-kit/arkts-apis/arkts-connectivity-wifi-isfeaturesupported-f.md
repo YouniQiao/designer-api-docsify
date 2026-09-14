@@ -14,7 +14,7 @@ function isFeatureSupported(featureId: number): boolean
 
 判断设备是否支持指定featureId对应的Wi-Fi特性。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。
 

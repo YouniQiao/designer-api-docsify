@@ -13,8 +13,3 @@ Defines the grid container attribute from inheritance Column
 **Substitutes:** grid_col/GridColAttribute and grid_row/GridRowAttribute
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```

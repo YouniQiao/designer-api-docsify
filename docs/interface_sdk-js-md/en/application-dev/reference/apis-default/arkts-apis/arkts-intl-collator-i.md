@@ -18,17 +18,8 @@ compare(x: string, y: string): number
 | x | string | Yes |  |
 | y | string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## resolvedOptions
 
 ```TypeScript
 resolvedOptions(): ResolvedCollatorOptions
 ```
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

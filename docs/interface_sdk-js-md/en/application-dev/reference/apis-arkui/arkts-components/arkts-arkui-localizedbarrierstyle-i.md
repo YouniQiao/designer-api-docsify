@@ -6,11 +6,6 @@ Defines the ID, direction, and referenced components of a barrier.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## id
 
 ```TypeScript

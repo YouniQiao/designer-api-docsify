@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## buttonStyle
 
 ```TypeScript
@@ -21,7 +16,7 @@ buttonStyle?: ButtonStyleMode
 
 默认值：ButtonStyleMode.EMPHASIZED
 
-**说明：**
+**说明：** 
 
 按钮重要程度：强调按钮&gt;普通按钮&gt;文字按钮。
 
@@ -99,7 +94,7 @@ true：开启按压效果；false：关闭按压效果。
 
 默认值：true
 
-**说明：**
+**说明：** 
 
 当开启按压态显示效果，且开发者设置状态样式时，会基于状态样式设置完成后的背景色再进行颜色叠加。
 

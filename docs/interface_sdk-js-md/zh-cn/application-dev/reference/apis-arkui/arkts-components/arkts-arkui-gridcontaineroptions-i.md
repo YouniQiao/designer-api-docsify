@@ -2,7 +2,7 @@
 
 栅格栅格布局容器配置参数对象，用于设置GridContainer组件的列数、设备宽度类型、列间距和两侧间距。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。
 
@@ -13,11 +13,6 @@
 **替代接口：** grid_col/GridColOptions and grid_row/GridRowOptions
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## columns
 

@@ -14,7 +14,7 @@ function enableDeviceControl(deviceAddress: PartnerDeviceAddress): Promise<void>
 
 开启外设互通功能，使用Promise异步回调。适用于应用需要为已绑定蓝牙设备提供外设互通能力的场景。
 
-该接口仅对应用调用[BindDevice](arkts-connectivity-partneragent-binddevice-f.md)注册过的设备生效，调用后给应用提供设备互通能力[partnerAgent](arkts-fusionconnectivity-partneragent.md)。可以通过[isDeviceControlEnabled](arkts-connectivity-partneragent-isdevicecontrolenabled-f.md)判断设备的外设互通是否已开启，若已开启，重复调用不生效。可以通过[disableDeviceControl](arkts-connectivity-partneragent-disabledevicecontrol-f-sys.md)关闭外设互通功能。
+该接口仅对应用调用[BindDevice](arkts-connectivity-partneragent-binddevice-f.md)注册过的设备生效，调用后给应用提供设备互通能力[partnerAgent](arkts-connectivity-fusionconnectivity-partneragent.md)。可以通过[isDeviceControlEnabled](arkts-connectivity-partneragent-isdevicecontrolenabled-f.md)判断设备的外设互通是否已开启，若已开启，重复调用不生效。可以通过[disableDeviceControl](arkts-connectivity-partneragent-disabledevicecontrol-f-sys.md)关闭外设互通功能。
 
 **起始版本：** 23
 

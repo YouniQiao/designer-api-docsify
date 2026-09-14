@@ -8,11 +8,6 @@ Parameters of the exit or entrance animation.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## curve
 
 ```TypeScript
@@ -49,7 +44,7 @@ Unit: ms
 
 Default value: **0**
 
-**NOTE:**
+**NOTE:** 
 
 If no match is found, the default page transition effect is used (which may vary according to the device). To disable the default page transition effect, set **duration** to **0**.
 

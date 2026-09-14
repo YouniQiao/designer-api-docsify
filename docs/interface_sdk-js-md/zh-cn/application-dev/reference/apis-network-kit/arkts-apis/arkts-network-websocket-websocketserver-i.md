@@ -44,7 +44,7 @@ close(connection: WebSocketConnection, options?: webSocket.WebSocketCloseOptions
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| 2302006 | websocket connection does not exist. |
+| [2302006](../errorcode-net-webSocket.md#2302006-websocketserver连接不存在) | websocket connection does not exist. |
 
 **示例**
 
@@ -90,7 +90,7 @@ listAllConnections(): WebSocketConnection[]
 
 获取与服务端连接的所有客户端信息。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口为异步调用，返回结果需通过await关键字等待异步操作完成，以确保正确获取到所有客户端连接信息。
 
@@ -160,7 +160,7 @@ off(type: 'connect', callback?: Callback<WebSocketConnection>): void
 
 取消订阅WebSocketServer的连接事件（客户端与服务端建链成功），使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
@@ -193,7 +193,7 @@ off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void
 
 取消订阅WebSocketServer的接收到客户端消息事件，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
@@ -226,7 +226,7 @@ off(type: 'close', callback?: ClientConnectionCloseCallback): void
 
 取消订阅WebSocketServer的关闭事件，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
@@ -259,7 +259,7 @@ off(type: 'error', callback?: ErrorCallback): void
 
 取消订阅WebSocketServer的Error事件，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
@@ -416,7 +416,7 @@ send(data: string | ArrayBuffer, connection: WebSocketConnection): Promise<boole
 
 通过WebSocket连接发送数据。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > send接口必须在监听到connect事件后才可以调用。
 
@@ -444,7 +444,7 @@ send(data: string | ArrayBuffer, connection: WebSocketConnection): Promise<boole
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| 2302006 | websocket connection does not exist. |
+| [2302006](../errorcode-net-webSocket.md#2302006-websocketserver连接不存在) | websocket connection does not exist. |
 
 **示例**
 
@@ -493,7 +493,7 @@ start(config: WebSocketServerConfig): Promise<boolean>
 
 配置config参数，启动服务端service。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 在多次调用该接口时，应避免监听同一端口。
 

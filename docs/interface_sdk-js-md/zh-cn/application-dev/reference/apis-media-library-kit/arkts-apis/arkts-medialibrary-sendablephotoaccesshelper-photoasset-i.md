@@ -92,7 +92,7 @@ convertToPhotoAsset(): photoAccessHelper.PhotoAsset
 
 | 类型 | 说明 |
 | --- | --- |
-| [photoAccessHelper.PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) | 返回非Sendable类型的[PhotoAsset](arkts-file-photoaccesshelper.md)。 |
+| [photoAccessHelper.PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) | 返回非Sendable类型的[PhotoAsset](arkts-medialibrary-file-photoaccesshelper.md)。 |
 
 **错误码：**
 

@@ -8,11 +8,6 @@ Universal attributes are not supported. This component supports the attributes l
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## iconBorderRadius
 
 ```TypeScript
@@ -162,7 +157,7 @@ symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 Sets the font weight of the symbol icon for the save button.
 
 - Before calling this method, you need to call [setIcon](#seticon) to configure a symbol-  
-style icon resource (i.e., **\$r('sys.symbol.*xxx*')**).  
+style icon resource (i.e., **&#36;r('sys.symbol.*xxx*')**).  
 - If no symbol icon is configured, the font weight setting will not apply.
 
 **Since:** 26.0.0
@@ -190,7 +185,7 @@ symbolIconColor(color: Array<ResourceColor>)
 Sets the color of the symbol icon for the save button.
 
 - Before calling this method, you need to call [setIcon](#seticon) to configure a symbol-  
-style icon resource (i.e., **\$r('sys.symbol.xxx')**).  
+style icon resource (i.e., **&#36;r('sys.symbol.xxx')**).  
 - If no symbol icon is set, the color set via this method does not take effect.  
 - It is recommended that you use this API together with  
 [symbolRenderingStrategy](#symbolrenderingstrategy) to achieve different rendering effects.
@@ -220,7 +215,7 @@ symbolRenderingStrategy(strategy: SymbolRenderingStrategy)
 Sets the rendering strategy for the symbol icon of the save button.
 
 - Before calling this method, you need to call [setIcon](#seticon) to configure a symbol-  
-style icon resource (i.e., **\$r('sys.symbol.*xxx*')**).  
+style icon resource (i.e., **&#36;r('sys.symbol.*xxx*')**).  
 - The configured rendering strategy will not apply if no symbol icon is set.  
 - When this parameter is used together with [symbolIconColor](#symboliconcolor), the  
 rendering strategy determines how the color array is applied.

@@ -17,17 +17,8 @@ format(date?: Date | number): string
 | --- | --- | --- | --- |
 | date | Date &#124; number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## resolvedOptions
 
 ```TypeScript
 resolvedOptions(): ResolvedDateTimeFormatOptions
 ```
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

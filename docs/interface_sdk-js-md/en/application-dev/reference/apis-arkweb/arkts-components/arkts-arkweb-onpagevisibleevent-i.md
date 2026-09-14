@@ -6,11 +6,6 @@ Represents the callback invoked when the old page is not displayed and the new p
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## url
 
 ```TypeScript

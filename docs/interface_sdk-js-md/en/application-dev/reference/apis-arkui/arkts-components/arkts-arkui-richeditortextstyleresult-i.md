@@ -10,11 +10,6 @@ While **fontWeight** in **RichEditorTextStyle** sets the font weight,
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## decoration
 
 ```TypeScript
@@ -293,7 +288,7 @@ textShadow?: Array<ShadowOptions>
 
 Text shadow.
 
-**NOTE:**
+**NOTE:** 
 
 Only the shadow blur radius, shadow color, and shadow offset can be queried.
 

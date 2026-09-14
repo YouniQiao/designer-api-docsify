@@ -2,7 +2,7 @@
 
 提供获取组件截图的能力，包括已加载的组件的截图和没有加载的组件的截图。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本Class首批接口从API version 12开始支持。
 > 
@@ -32,7 +32,7 @@ getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
 
 传入两个组件的ID，获取范围内的组件的截图，并通过Promise返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > start对应的组件和end对应的组件必须为同一棵组件树上的组件，且start对应的组件需要为end对应的组件的祖先组件。
 

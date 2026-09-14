@@ -2,7 +2,7 @@
 
 提供控制放大镜的显示与隐藏的能力，放大镜会对组件内容进行放大显示，便于查看组件细节。适用于非文本类组件（如图片）需要查看细节的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > - 以下API需先使用UIContext中的[getMagnifier()](arkts-arkui-arkui-uicontext-uicontext-c.md#getmagnifier)方法获取Magnifier实例，再通过此实例调用对应方法。
 > 
@@ -29,7 +29,7 @@ bind(id: string): void
 
 绑定放大镜与指定id的组件。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用前需先通过UIContext中的getMagnifier()方法获取Magnifier实例。
 
@@ -55,7 +55,7 @@ show(x: number, y: number): void
 
 设置放大镜显示的组件内容相对于组件左上角的位置，设置成功后放大镜会对以该坐标点为中心的区域内容进行放大显示。
 
-> **说明：**
+> **说明：** 
 > 
 > - 使用前需先通过UIContext中的getMagnifier()方法获取Magnifier实例。
 > 

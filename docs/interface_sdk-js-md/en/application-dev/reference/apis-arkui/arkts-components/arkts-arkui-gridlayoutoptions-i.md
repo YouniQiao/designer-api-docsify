@@ -8,11 +8,6 @@ To improve the performance of **Grid** in scenarios such as jumps and column qua
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onGetIrregularSizeByIndex
 
 ```TypeScript

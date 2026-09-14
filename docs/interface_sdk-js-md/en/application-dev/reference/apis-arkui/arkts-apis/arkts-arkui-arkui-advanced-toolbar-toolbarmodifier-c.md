@@ -32,13 +32,13 @@ Sets the background color of the toolbar. By overriding this API, you can implem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| backgroundColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Toolbar background color<br>Default value: **\&#36;r('sys.color.ohos_id_color_toolbar_bg') |
+| backgroundColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Toolbar background color<br>Default value: **&#36;r('sys.color.ohos_id_color_toolbar_bg')** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md) | ToolBarModifier** object after the background color is set. |
+| [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md) | **ToolBarModifier** object after the background color is set. |
 
 ## height
 
@@ -66,7 +66,7 @@ Sets the height of the toolbar. By overriding this API, you can implement custom
 
 | Type | Description |
 | --- | --- |
-| [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md) | ToolBarModifier** object after the height is set. |
+| [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md) | **ToolBarModifier** object after the height is set. |
 
 ## padding
 
@@ -94,7 +94,7 @@ Sets the left and right padding of the toolbar. By overriding this API, you can 
 
 | Type | Description |
 | --- | --- |
-| [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md) | ToolBarModifier** object after the padding is set. |
+| [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md) | **ToolBarModifier** object after the padding is set. |
 
 ## stateEffect
 
@@ -116,10 +116,10 @@ Sets whether to display the pressed state effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stateEffect | boolean | Yes | Whether to display the pressed state effect on the toolbar.<br>The value **true** means to display the pressed state effect on the toolbar, and **false** means the opposite. <br>Default value: **true |
+| stateEffect | boolean | Yes | Whether to display the pressed state effect on the toolbar.<br>The value **true** means to display the pressed state effect on the toolbar, and **false** means the opposite. <br>Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md) | ToolBarModifier** object after the pressed state effect is set. |
+| [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md) | **ToolBarModifier** object after the pressed state effect is set. |

@@ -1,29 +1,23 @@
-# @ohos.arkui.inspector(Layout Callback)
+# inspector
 
-Used to do observer layout and draw event for component.
+Profiler tools for inspectors.
 
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-import { inspector } from '@kit.ArkUI';
-```
+@namespace Profiler
 
 ## Summary
 
-### Functions
+### Namespaces
 
 | Name | Description |
 | --- | --- |
-| [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md) | Sets the component after layout or draw criteria and returns the corresponding listening handle |
+| [Profiler](arkts-arkui-profiler-n.md) | Profiler tools for inspectors. |
 
-### Interfaces
+<!--Del-->
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | The ComponentObserver is used to listen for layout, draw and drawChildren events. |
+| [getInspectorNodeById](arkts-arkui-inspector-getinspectornodebyid-f-sys.md) | Get inspector node info by node id. |
+| [getInspectorNodes](arkts-arkui-inspector-getinspectornodes-f-sys.md) | Get inspector node infos. |
+| [setAppBgColor](arkts-arkui-inspector-setappbgcolor-f-sys.md) | Set app background color. |
+<!--DelEnd-->

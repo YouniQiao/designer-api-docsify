@@ -14,7 +14,7 @@ function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrus
 
 获取AuthInstance对象，用于执行用户身份认证。
 
-> **说明：**
+> **说明：** 
 > 
 > 每个AuthInstance只能进行一次认证，若需要再次进行认证则需重新获取AuthInstance。
 

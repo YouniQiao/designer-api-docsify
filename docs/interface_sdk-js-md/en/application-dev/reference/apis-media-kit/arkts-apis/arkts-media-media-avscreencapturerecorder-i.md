@@ -232,7 +232,7 @@ presentPicker(): Promise<void>
 
 Displays the Picker once more after the screen capture starts, allowing for dynamic updates to the recording source, such as changing the window or screen being recorded. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The ongoing capture process remains uninterrupted while updating the recording source.
 > 

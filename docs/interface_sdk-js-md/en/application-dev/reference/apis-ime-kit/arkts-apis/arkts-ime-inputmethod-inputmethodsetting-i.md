@@ -104,7 +104,7 @@ Obtains a list of all input methods. This API uses an asynchronous callback to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-bundle-manager-service-exception) | bundle manager error. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **Examples**
@@ -143,7 +143,7 @@ Obtains a list of all input methods. This API uses a promise to return the resul
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-bundle-manager-service-exception) | bundle manager error. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **Examples**
@@ -180,7 +180,7 @@ Obtains a list of all input methods. This API returns the result synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-bundle-manager-service-exception) | bundle manager error. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **Examples**
@@ -196,7 +196,7 @@ getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProper
 ```
 
 Obtains a list of activated or deactivated input methods. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed. <br>
 > <br>
@@ -218,7 +218,7 @@ Obtains a list of activated or deactivated input methods. This API uses an async
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-bundle-manager-service-exception) | bundle manager error. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **Examples**
@@ -242,7 +242,7 @@ getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>
 ```
 
 Obtains a list of activated or deactivated input methods. This API uses a promise to return the result. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed. <br>
 > <br>
@@ -269,7 +269,7 @@ Obtains a list of activated or deactivated input methods. This API uses a promis
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-bundle-manager-service-exception) | bundle manager error. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **Examples**
@@ -291,7 +291,7 @@ getInputMethodsSync(enable: boolean): Array<InputMethodProperty>
 ```
 
 Obtains a list of activated or deactivated input methods. This API returns the result synchronously. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed. <br>
 > <br>
@@ -318,7 +318,7 @@ Obtains a list of activated or deactivated input methods. This API returns the r
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-bundle-manager-service-exception) | bundle manager error. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **Examples**
@@ -386,7 +386,7 @@ Obtains all subtypes of this input method. This API uses an asynchronous callbac
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-bundle-manager-service-exception) | bundle manager error. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **Examples**
@@ -427,7 +427,7 @@ Obtains all subtypes of this input method. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-bundle-manager-service-exception) | bundle manager error. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **Examples**
@@ -542,7 +542,7 @@ Obtains all subtypes of a specified input method. This API uses an asynchronous 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-bundle-manager-service-exception) | bundle manager error. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **Examples**
@@ -598,7 +598,7 @@ Obtains all subtypes of a specified input method. This API uses a promise to ret
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-bundle-manager-service-exception) | bundle manager error. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **Examples**

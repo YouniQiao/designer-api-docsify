@@ -10,11 +10,6 @@ In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## autoCapitalizationMode
 
 ```TypeScript
@@ -57,7 +52,7 @@ Sets the scrollbar display mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar display mode.<br>Default value: **BarState.Auto |
+| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar display mode.<br>Default value: **BarState.Auto** |
 
 ## caretColor
 
@@ -77,7 +72,7 @@ Sets the color of the caret in the text box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the caret in the text box.<br>Default value: **'#007DFF' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the caret in the text box.<br>Default value: **'#007DFF'** |
 
 ## caretStyle
 
@@ -109,7 +104,7 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 Sets whether to enable leading punctuation compression.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Leading punctuation is not compressed by default.
 > 
@@ -172,7 +167,7 @@ If this attribute is set to **CopyOptions.None**, drag and drop operations are n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | Whether the input text can be copied.<br>Default value: **CopyOptions.LocalDevice |
+| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | Whether the input text can be copied.<br>Default value: **CopyOptions.LocalDevice** |
 
 ## customKeyboard
 
@@ -196,7 +191,7 @@ When setting a custom keyboard, you can bind the [onKeyPrelme](arkts-arkui-commo
 
 From API version 23, the [setCustomKeyboardContinueFeature](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#setcustomkeyboardcontinuefeature) API can be used to enable the continuation feature for custom keyboards. When switching between custom keyboards, the system changes the keyboard directly without triggering the close and open animations.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API cannot be called within attributeModifier.
 
@@ -285,7 +280,7 @@ Sets the ellipsis position. For the settings to work, [textOverflow](#textoverfl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [Optional](arkts-arkui-optional-t.md)&lt;[EllipsisMode](../arkts-apis/arkts-arkui-ellipsismode-e.md)&gt; | Yes | Ellipsis position.<br>Default value: **EllipsisMode.END |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[EllipsisMode](../arkts-apis/arkts-arkui-ellipsismode-e.md)&gt; | Yes | Ellipsis position.<br>Default value: **EllipsisMode.END** |
 
 ## enableAutoFill
 
@@ -309,7 +304,7 @@ Sets whether to enable autofill.<!--RP2--><!--RP2End-->
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable autofill.<br>**true** to enable, **false** otherwise.<br>Default value: **true |
+| value | boolean | Yes | Whether to enable autofill.<br>**true** to enable, **false** otherwise.<br>Default value: **true** |
 
 ## enableAutoSpacing
 
@@ -331,7 +326,7 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable automatic spacing between Chinese and Western characters.<br>**true** to enable, **false** otherwise.<br>Default value: **false |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable automatic spacing between Chinese and Western characters.<br>**true** to enable, **false** otherwise.<br>Default value: **false** |
 
 ## enableHapticFeedback
 
@@ -355,7 +350,7 @@ To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** perm
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEnabled | boolean | Yes | Whether to enable haptic feedback.<br>**true** to enable, **false** otherwise.<br> Default value: **true |
+| isEnabled | boolean | Yes | Whether to enable haptic feedback.<br>**true** to enable, **false** otherwise.<br> Default value: **true** |
 
 ## enableKeyboardOnFocus
 
@@ -379,7 +374,7 @@ Since API version 10, the **TextArea** component is bound to the input method by
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to pop up the soft keyboard when the **TextArea** component obtains focus in a way other than clicking.<br>**true**: The soft keyboard pops up. **false**: The soft keyboard does not pop up.<br>Default value: **true |
+| value | boolean | Yes | Whether to pop up the soft keyboard when the **TextArea** component obtains focus in a way other than clicking.<br>**true**: The soft keyboard pops up. **false**: The soft keyboard does not pop up.<br>Default value: **true** |
 
 ## enablePreviewText
 
@@ -403,7 +398,7 @@ The preview content is defined as a temporary, uncommitted input state. Currentl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable preview text.<br>**true**: Preview text is enabled. **false**: Preview text is disabled.<br>Default value: **true |
+| enable | boolean | Yes | Whether to enable preview text.<br>**true**: Preview text is enabled. **false**: Preview text is disabled.<br>Default value: **true** |
 
 ## enableSelectedDataDetector
 
@@ -429,7 +424,7 @@ This feature is only effective when CopyOptions is set to **CopyOptions.LocalDev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean &#124; undefined | Yes | Whether to enable entity recognition for selected text.<br>**true**: Entity recognition is enabled. **false**: Entity recognition is disabled. Default value: **true |
+| enable | boolean &#124; undefined | Yes | Whether to enable entity recognition for selected text.<br>**true**: Entity recognition is enabled. **false**: Entity recognition is disabled. Default value: **true** |
 
 ## enterKeyType
 
@@ -439,7 +434,7 @@ enterKeyType(value: EnterKeyType)
 
 Sets the type of the Enter key.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 12.
 
@@ -455,7 +450,7 @@ Sets the type of the Enter key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [EnterKeyType](arkts-arkui-enterkeytype-e.md) | Yes | Type of the Enter key.<br>Default value: **EnterKeyType.NEW_LINE |
+| value | [EnterKeyType](arkts-arkui-enterkeytype-e.md) | Yes | Type of the Enter key.<br>Default value: **EnterKeyType.NEW_LINE** |
 
 ## fallbackLineSpacing
 
@@ -587,7 +582,7 @@ Sets the font style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | Yes | Font style.<br>Default value: **FontStyle.Normal |
+| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | Yes | Font style.<br>Default value: **FontStyle.Normal** |
 
 ## fontWeight
 
@@ -629,7 +624,7 @@ Enables half leading for text, which splits the leading equally between the top 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| halfLeading | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether half leading is enabled. Half leading refers to splitting the leading in half and applying it equally to the top and bottom of the line.<br>**true**: Half leading is enabled. **false**: Half leading is not enabled.<br>Default value: **false |
+| halfLeading | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether half leading is enabled. Half leading refers to splitting the leading in half and applying it equally to the top and bottom of the line.<br>**true**: Half leading is enabled. **false**: Half leading is not enabled.<br>Default value: **false** |
 
 ## heightAdaptivePolicy
 
@@ -659,7 +654,7 @@ If this attribute is set to **TextHeightAdaptivePolicy.LAYOUT_CONSTRAINT_FIRST**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-textheightadaptivepolicy-e.md) | Yes | How the adaptive height is determined for the text.<br>Default value: **TextHeightAdaptivePolicy.MAX_LINES_FIRST |
+| value | [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-textheightadaptivepolicy-e.md) | Yes | How the adaptive height is determined for the text.<br>Default value: **TextHeightAdaptivePolicy.MAX_LINES_FIRST** |
 
 ## horizontalScrolling
 
@@ -669,7 +664,7 @@ horizontalScrolling(enabled: Optional<boolean>)
 
 Sets whether to enable horizontal scrolling when the text is wider than the view. If this attribute is not set, horizontal scrolling is disabled.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Horizontal scrolling is not supported in the following scenarios:
 > [inline mode](../../../ui/arkts-common-components-text-input.md#inline-mode)<!--Del-->;
@@ -757,7 +752,7 @@ Sets the keyboard appearance for the text box. This setting takes effect only af
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appearance | [Optional](arkts-arkui-optional-t.md)&lt;[KeyboardAppearance](../arkts-apis/arkts-arkui-keyboardappearance-e.md)&gt; | Yes | Appearance of the keyboard.<br>Default value: **KeyboardAppearance.NONE_IMMERSIVE |
+| appearance | [Optional](arkts-arkui-optional-t.md)&lt;[KeyboardAppearance](../arkts-apis/arkts-arkui-keyboardappearance-e.md)&gt; | Yes | Appearance of the keyboard.<br>Default value: **KeyboardAppearance.NONE_IMMERSIVE** |
 
 ## letterSpacing
 
@@ -805,7 +800,7 @@ Sets the line break rule. This attribute takes effect only when [wordBreak](#wor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | [LineBreakStrategy](../arkts-apis/arkts-arkui-linebreakstrategy-e.md) | Yes | Line break rule.<br>Default value: **LineBreakStrategy.GREEDY |
+| strategy | [LineBreakStrategy](../arkts-apis/arkts-arkui-linebreakstrategy-e.md) | Yes | Line break rule.<br>Default value: **LineBreakStrategy.GREEDY** |
 
 ## lineHeight
 
@@ -849,7 +844,7 @@ Sets the line spacing of the text. If the value specified is less than or equal 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | LengthMetrics | Yes | Line spacing. Default value: **0 |
+| value | LengthMetrics | Yes | Line spacing. Default value: **0** |
 
 ## lineSpacing
 
@@ -894,7 +889,7 @@ Sets the maximum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | [Optional](arkts-arkui-optional-t.md)&lt;number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Maximum font scale factor for text. The **undefined** type is supported.<br>Value range: [1, +∞)<br>**NOTE:**<br>Values less than 1 are treated as **1**. Abnormal values are ineffective by default.<br>Before use, the **configuration.json** file and **app.json5** file must be configured in the project. For details, see [Example 17: Setting the Minimum and Maximum Font Scale Factors](../../../reference/apis-arkui/arkui-ts/ts-basic-components-textarea.md#example-17-setting-the-minimum-and-maximum-font-scale-factors). |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Maximum font scale factor for text. The **undefined** type is supported.<br>Value range: [1, +∞)<br>**NOTE:** <br>Values less than 1 are treated as **1**. Abnormal values are ineffective by default.<br>Before use, the **configuration.json** file and **app.json5** file must be configured in the project. For details, see [Example 17: Setting the Minimum and Maximum Font Scale Factors](../../../reference/apis-arkui/arkui-ts/ts-basic-components-textarea.md#example-17-setting-the-minimum-and-maximum-font-scale-factors). |
 
 ## maxFontSize
 
@@ -1014,7 +1009,7 @@ Sets the minimum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | [Optional](arkts-arkui-optional-t.md)&lt;number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Minimum font scale factor for text. The **undefined** type is supported.<br>Value range: [0, 1]<br>**NOTE:**<br>A value less than 0 is handled as **0**. A value greater than 1 is handled as **1**. Abnormal values are ineffective by default.<br>Before use, the **configuration.json** file and **app.json5** file must be configured in the project. For details, see [Example 17: Setting the Minimum and Maximum Font Scale Factors](../../../reference/apis-arkui/arkui-ts/ts-basic-components-textarea.md#example-17-setting-the-minimum-and-maximum-font-scale-factors). |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Minimum font scale factor for text. The **undefined** type is supported.<br>Value range: [0, 1]<br>**NOTE:** <br>A value less than 0 is handled as **0**. A value greater than 1 is handled as **1**. Abnormal values are ineffective by default.<br>Before use, the **configuration.json** file and **app.json5** file must be configured in the project. For details, see [Example 17: Setting the Minimum and Maximum Font Scale Factors](../../../reference/apis-arkui/arkui-ts/ts-basic-components-textarea.md#example-17-setting-the-minimum-and-maximum-font-scale-factors). |
 
 ## minFontSize
 
@@ -1496,7 +1491,7 @@ placeholderFont(value: Font)
 
 Placeholder text style, including the font size, font weight, font family, and font style.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > You can use [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync) to register custom fonts.
 
@@ -1620,7 +1615,7 @@ Sets whether to hide the system text selection menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to hide the system text selection menu.<br>**true**: The system text selection menu does not appear under the following circumstances: clicking the text box cursor, long-pressing the text box, double-tapping the text box, triple-tapping the text box, or right-clicking the text box.<br>**false**: The system text selection menu appears under the following circumstances: clicking the text box cursor, long- pressing the text box, double-tapping the text box, triple-tapping the text box, or right-clicking the text box.<br>Default value: **false |
+| value | boolean | Yes | Whether to hide the system text selection menu.<br>**true**: The system text selection menu does not appear under the following circumstances: clicking the text box cursor, long-pressing the text box, double-tapping the text box, triple-tapping the text box, or right-clicking the text box.<br>**false**: The system text selection menu appears under the following circumstances: clicking the text box cursor, long- pressing the text box, double-tapping the text box, triple-tapping the text box, or right-clicking the text box.<br>Default value: **false** |
 
 ## shaderStyle
 
@@ -1630,7 +1625,7 @@ shaderStyle(shader: ShaderStyle | undefined)
 
 Sets the text shader style, such as linear gradient or radial gradient.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When both **shaderStyle** and [strokeWidth](#strokewidth) are set, **shaderStyle** does
 > not take effect.
@@ -1792,7 +1787,7 @@ Sets the polymorphic style of the text box. The inline input style is only avail
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextContentStyle](../arkts-apis/arkts-arkui-textcontentstyle-e.md) | Yes | Polymorphic style of the text box.<br>Default value: **TextContentStyle.DEFAULT |
+| value | [TextContentStyle](../arkts-apis/arkts-arkui-textcontentstyle-e.md) | Yes | Polymorphic style of the text box.<br>Default value: **TextContentStyle.DEFAULT** |
 
 ## textAlign
 
@@ -1822,7 +1817,7 @@ When **textAlign** is set to **TextAlign.JUSTIFY**, the text in the last line is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextAlign](../arkts-apis/arkts-arkui-textalign-e.md) | Yes | Horizontal alignment of the text.<br>Default value: **TextAlign.Start |
+| value | [TextAlign](../arkts-apis/arkts-arkui-textalign-e.md) | Yes | Horizontal alignment of the text.<br>Default value: **TextAlign.Start** |
 
 ## textDirection
 
@@ -1866,7 +1861,7 @@ Sets the indent of the first line text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Indent of the first line text.<br>Default value: **0 |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Indent of the first line text.<br>Default value: **0** |
 
 ## textOverflow
 
@@ -1882,7 +1877,7 @@ Text is clipped at the transition between words. To clip text in the middle of a
 
 If **textOverflow** is set to **TextOverflow.None**, **TextOverflow.Clip**, or **TextOverflow.Ellipsis**, this attribute must be used with [maxLines](#maxlines) for the settings to take effect. **TextOverflow.None** produces the same effect as **TextOverflow.Clip**.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The **TextArea** component does not support the **TextOverflow.MARQUEE** mode. If this attribute is set to
 > **TextOverflow.MARQUEE**, **TextOverflow.Clip** is used instead.
@@ -1899,7 +1894,7 @@ If **textOverflow** is set to **TextOverflow.None**, **TextOverflow.Clip**, or *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md) | Yes | Display mode when the text is too long.<br>Default value: **TextOverflow.Clip |
+| value | [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md) | Yes | Display mode when the text is too long.<br>Default value: **TextOverflow.Clip** |
 
 ## type
 
@@ -1945,4 +1940,4 @@ Sets the word break rule. This attribute does not take effect for the placeholde
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [WordBreak](../arkts-apis/arkts-arkui-wordbreak-e.md) | Yes | Word break rule.<br>Default value: **WordBreak.BREAK_WORD |
+| value | [WordBreak](../arkts-apis/arkts-arkui-wordbreak-e.md) | Yes | Word break rule.<br>Default value: **WordBreak.BREAK_WORD** |

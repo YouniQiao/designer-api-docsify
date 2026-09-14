@@ -209,7 +209,7 @@ Checks whether a range is within this **Scope**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Scope](arkts-arkts-util-scope-c.md) | Yes | Scope** specified. |
+| range | [Scope](arkts-arkts-util-scope-c.md) | Yes | **Scope** specified. |
 
 **Return value:**
 
@@ -333,7 +333,7 @@ Obtains the union set of this **Scope** and the given **Scope**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Scope](arkts-arkts-util-scope-c.md) | Yes | Scope** specified. |
+| range | [Scope](arkts-arkts-util-scope-c.md) | Yes | **Scope** specified. |
 
 **Return value:**
 
@@ -561,7 +561,7 @@ Obtains the intersection of this **Scope** and the given **Scope**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Scope](arkts-arkts-util-scope-c.md) | Yes | Scope** specified. |
+| range | [Scope](arkts-arkts-util-scope-c.md) | Yes | **Scope** specified. |
 
 **Return value:**
 

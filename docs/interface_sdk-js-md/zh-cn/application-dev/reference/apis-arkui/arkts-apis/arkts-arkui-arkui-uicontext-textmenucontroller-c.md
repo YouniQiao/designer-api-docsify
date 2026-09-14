@@ -2,7 +2,7 @@
 
 TextMenuController用于控制文本选择菜单的行为，支持设置菜单显示选项（如优先使用独立窗口显示）、屏蔽系统服务菜单项或指定菜单项，适用于需要自定义文本选择菜单显示方式或限制特定菜单功能的应用场景，如在特定业务场景下禁用翻译、搜索等功能。
 
-> **说明：**
+> **说明：** 
 > - setMenuOptions接口为非静态API，需先使用UIContext中的[getTextMenuController()](arkts-arkui-arkui-uicontext-uicontext-c.md#gettextmenucontroller)方法获取TextMenuController实例，再通过此实例调用对应方法。disableSystemServiceMenuItems和disableMenuItems为静态方法，可直接通过TextMenuController类调用。
 
 **起始版本：** 16
@@ -26,7 +26,7 @@ static disableMenuItems(items: Array<TextMenuItemId>): void
 
 屏蔽文本选择菜单内指定的系统服务菜单项。适用于需要按需禁用特定菜单功能的场景，例如禁用搜索和翻译菜单以简化用户界面或限制对外部服务的访问。未通过该接口设置时，默认不禁用任何菜单。
 
-> **说明：**
+> **说明：** 
 > 
 > 
 > - 此接口调用后整个应用进程都会生效。
@@ -86,7 +86,7 @@ static disableSystemServiceMenuItems(disable: boolean): void
 
 屏蔽文本选择菜单内所有系统服务菜单项。适用于需要完全自定义文本选择菜单的场景，例如企业安全应用中仅保留复制、剪切、全选、粘贴等基础功能，禁用搜索、翻译、分享等可能涉及数据外发的服务菜单。未通过该接口设置时，默认不禁用系统服务菜单项。
 
-> **说明：**
+> **说明：** 
 > 
 > 
 > - 此接口调用后整个应用进程都会生效。

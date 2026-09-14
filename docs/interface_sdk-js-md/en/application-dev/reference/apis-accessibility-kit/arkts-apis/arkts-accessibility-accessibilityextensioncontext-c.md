@@ -11,9 +11,9 @@ Before using AccessibilityExtensionContext, obtain an AccessibilityExtensionCont
 ```ts
 import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
 class EntryAbility extends AccessibilityExtensionAbility {
- onConnect(): void {
- let axContext = this.context; 
- } 
+  onConnect(): void {
+    let axContext = this.context; 
+  } 
 }
 ```
 

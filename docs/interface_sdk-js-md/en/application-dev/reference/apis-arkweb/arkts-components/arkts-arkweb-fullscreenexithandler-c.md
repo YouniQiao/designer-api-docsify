@@ -6,11 +6,6 @@ Implements the **FullScreenExitHandler** object to notify you that the **Web** c
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

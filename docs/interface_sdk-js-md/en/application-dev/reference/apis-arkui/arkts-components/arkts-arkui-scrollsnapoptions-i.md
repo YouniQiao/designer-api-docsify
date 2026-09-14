@@ -6,11 +6,6 @@ Defines a scroll snapping mode object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## enableSnapToEnd
 
 ```TypeScript
@@ -65,7 +60,7 @@ Alignment mode for the scroll snap position.
 
 **Type:** [ScrollSnapAlign](arkts-arkui-scrollsnapalign-e.md)
 
-**Default:**
+**Default:** 
 - API version 11+: ScrollSnapAlign.NONE
 
 **Since:** 10

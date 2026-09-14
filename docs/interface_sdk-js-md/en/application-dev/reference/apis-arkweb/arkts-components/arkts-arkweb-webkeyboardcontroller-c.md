@@ -6,11 +6,6 @@ WebKeyboardController is a controller class provided by ArkWeb for controlling t
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## close
 
 ```TypeScript

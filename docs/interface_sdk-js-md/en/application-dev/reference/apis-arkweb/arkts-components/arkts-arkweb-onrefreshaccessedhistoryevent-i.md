@@ -6,11 +6,6 @@ Defines the callback information triggered when navigation is complete, includin
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## isMainFrame
 
 ```TypeScript

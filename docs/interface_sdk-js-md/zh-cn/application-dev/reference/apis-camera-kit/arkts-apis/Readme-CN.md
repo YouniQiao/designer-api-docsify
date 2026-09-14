@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-camerakit-->
 
-- [@ohos.multimedia.camera(相机管理)](arkts-multimedia-camera.md)
+- [@ohos.multimedia.camera(相机管理)](arkts-camera-multimedia-camera.md)
   - [getCameraManager](arkts-camera-camera-getcameramanager-f.md)
   <!--Del-->
   - [EffectSuggestionStatus(系统接口)](arkts-camera-camera-effectsuggestionstatus-c-sys.md)<!--DelEnd-->
@@ -346,7 +346,7 @@
   - [VideoMetaType(系统接口)](arkts-camera-camera-videometatype-e-sys.md)<!--DelEnd-->
   - [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md)
   - [WhiteBalanceMode](arkts-camera-camera-whitebalancemode-e.md)
-- [@ohos.multimedia.cameraPicker(相机选择器)](arkts-multimedia-camerapicker.md)
+- [@ohos.multimedia.cameraPicker(相机选择器)](arkts-camera-multimedia-camerapicker.md)
   - [pick](arkts-camera-camerapicker-pick-f.md)
   - [PickerProfile](arkts-camera-camerapicker-pickerprofile-c.md)
   - [PickerResult](arkts-camera-camerapicker-pickerresult-c.md)

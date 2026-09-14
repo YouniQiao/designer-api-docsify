@@ -20,7 +20,7 @@ import { curves } from '@kit.ArkUI';
 progressThreshold?: number
 ```
 
-Animation progress threshold. <br>Value range: &lt;0, 1&gt;.
+Animation progress threshold. <br>Value range: [0, 1].
 
 **Type:** number
 
@@ -40,7 +40,7 @@ Animation progress threshold. <br>Value range: &lt;0, 1&gt;.
 responseDecayFactor?: number
 ```
 
-Response decay factor. Value range: &lt;0, 1&gt;.
+Response decay factor. Value range: (0, 1].
 
 **Type:** number
 

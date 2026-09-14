@@ -24,11 +24,11 @@ Default value:
 
 When **size** is set to **ChipSize.SMALL**, the default value of **end** is as follows:
 
-`LengthMetrics.resource(\$r('sys.float.chip_small_text_margin'))`
+`LengthMetrics.resource(&#36;r('sys.float.chip_small_text_margin'))`
 
 When **size** is set to **ChipSize.NORMAL**, the default value of **end** is as follows:
 
-`LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin'))`
+`LengthMetrics.resource(&#36;r('sys.float.chip_normal_text_margin'))`
 
 If the value is **undefined**, the default value is used.
 
@@ -54,11 +54,11 @@ Default value:
 
 When **size** is set to **ChipSize.SMALL**, the default value of **start** is as follows:
 
-`LengthMetrics.resource(\$r('sys.float.chip_small_text_margin'))`
+`LengthMetrics.resource(&#36;r('sys.float.chip_small_text_margin'))`
 
 When **size** is set to **ChipSize.NORMAL**, the default value of **start** is as follows:
 
-`LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin'))`
+`LengthMetrics.resource(&#36;r('sys.float.chip_normal_text_margin'))`
 
 If the value is **undefined**, the default value is used.
 

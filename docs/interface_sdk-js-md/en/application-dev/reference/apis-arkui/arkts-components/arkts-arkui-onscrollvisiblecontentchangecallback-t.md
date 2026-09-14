@@ -10,7 +10,7 @@ When the **List** component changes from having child components to being empty,
 
 If the values of **start** and **end** are both **0**, the **List** component contains only one child component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 14.
 

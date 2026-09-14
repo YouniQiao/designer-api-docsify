@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-connectivitykit-->
 
-- [@ohos.bluetooth](arkts-bluetooth.md)
+- [@ohos.bluetooth](arkts-connectivity-bluetooth.md)
   - [bluetooth](arkts-connectivity-bluetooth-n.md)
     - [BLE](arkts-connectivity-bluetooth-ble-n.md)
       - [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md)
@@ -75,7 +75,7 @@
     - [ScanDuty](arkts-connectivity-bluetooth-scanduty-e.md)
     - [ScanMode](arkts-connectivity-bluetooth-scanmode-e.md)
     - [SppType](arkts-connectivity-bluetooth-spptype-e.md)
-- [@ohos.bluetooth.a2dp](arkts-bluetooth-a2dp.md)
+- [@ohos.bluetooth.a2dp](arkts-connectivity-bluetooth-a2dp.md)
   - [createA2dpSrcProfile](arkts-connectivity-a2dp-createa2dpsrcprofile-f.md)
   - [A2dpSourceProfile](arkts-connectivity-a2dp-a2dpsourceprofile-i.md)
   <!--Del-->
@@ -90,7 +90,7 @@
   - [CodecSampleRate](arkts-connectivity-a2dp-codecsamplerate-e.md)
   - [CodecType](arkts-connectivity-a2dp-codectype-e.md)
   - [PlayingState](arkts-connectivity-a2dp-playingstate-e.md)
-- [@ohos.bluetooth.access](arkts-bluetooth-access.md)
+- [@ohos.bluetooth.access](arkts-connectivity-bluetooth-access.md)
   - [addPersistentDeviceId](arkts-connectivity-access-addpersistentdeviceid-f.md)
   - [convertUuid](arkts-connectivity-access-convertuuid-f.md)
   - [deletePersistentDeviceId](arkts-connectivity-access-deletepersistentdeviceid-f.md)
@@ -118,7 +118,7 @@
   <!--Del-->
   - [DialogType(system api)](arkts-connectivity-access-dialogtype-e-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.bluetooth.bas](arkts-bluetooth-bas.md)<!--DelEnd-->
+- [@ohos.bluetooth.bas](arkts-connectivity-bluetooth-bas.md)<!--DelEnd-->
   <!--Del-->
   - [getRemoteDeviceBatteryInfo(system api)](arkts-connectivity-bas-getremotedevicebatteryinfo-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -131,7 +131,7 @@
   - [BatteryInfo(system api)](arkts-connectivity-bas-batteryinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [BluetoothAddress(system api)](arkts-connectivity-bas-bluetoothaddress-t-sys.md)<!--DelEnd-->
-- [@ohos.bluetooth.baseProfile](arkts-bluetooth-baseprofile.md)
+- [@ohos.bluetooth.baseProfile](arkts-connectivity-bluetooth-baseprofile.md)
   - [BaseProfile](arkts-connectivity-baseprofile-baseprofile-i.md)
   <!--Del-->
   - [BaseProfile(system api)](arkts-connectivity-baseprofile-baseprofile-i-sys.md)<!--DelEnd-->
@@ -141,7 +141,7 @@
   - [ConnectionStrategy(system api)](arkts-connectivity-baseprofile-connectionstrategy-e-sys.md)<!--DelEnd-->
   - [DisconnectCause](arkts-connectivity-baseprofile-disconnectcause-e.md)
   - [PanRole](arkts-connectivity-baseprofile-panrole-e.md)
-- [@ohos.bluetooth.ble](arkts-bluetooth-ble.md)
+- [@ohos.bluetooth.ble](arkts-connectivity-bluetooth-ble.md)
   - [createBleScanner](arkts-connectivity-ble-createblescanner-f.md)
   - [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md)
   - [createGattServer](arkts-connectivity-ble-creategattserver-f.md)
@@ -210,11 +210,11 @@
   - [ScanDuty](arkts-connectivity-ble-scanduty-e.md)
   - [ScanReportMode](arkts-connectivity-ble-scanreportmode-e.md)
   - [ScanReportType](arkts-connectivity-ble-scanreporttype-e.md)
-- [@ohos.bluetooth.common](arkts-bluetooth-common.md)
+- [@ohos.bluetooth.common](arkts-connectivity-bluetooth-common.md)
   - [BluetoothAddress](arkts-connectivity-common-bluetoothaddress-i.md)
   - [BluetoothAddressType](arkts-connectivity-common-bluetoothaddresstype-e.md)
   - [BluetoothRawAddressType](arkts-connectivity-common-bluetoothrawaddresstype-e.md)
-- [@ohos.bluetooth.connection](arkts-bluetooth-connection.md)
+- [@ohos.bluetooth.connection](arkts-connectivity-bluetooth-connection.md)
   <!--Del-->
   - [cancelPairedDevice(system api)](arkts-connectivity-connection-cancelpaireddevice-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -319,7 +319,7 @@
   - [PinType(system api)](arkts-connectivity-connection-pintype-e-sys.md)<!--DelEnd-->
   - [ScanMode](arkts-connectivity-connection-scanmode-e.md)
   - [UnbondCause](arkts-connectivity-connection-unbondcause-e.md)
-- [@ohos.bluetooth.constant](arkts-bluetooth-constant.md)
+- [@ohos.bluetooth.constant](arkts-connectivity-bluetooth-constant.md)
   <!--Del-->
   - [AccessAuthorization(system api)](arkts-connectivity-constant-accessauthorization-e-sys.md)<!--DelEnd-->
   - [MajorClass](arkts-connectivity-constant-majorclass-e.md)
@@ -327,7 +327,7 @@
   - [ProfileConnectionState](arkts-connectivity-constant-profileconnectionstate-e.md)
   - [ProfileId](arkts-connectivity-constant-profileid-e.md)
   - [ProfileUuids](arkts-connectivity-constant-profileuuids-e.md)
-- [@ohos.bluetooth.hfp](arkts-bluetooth-hfp.md)
+- [@ohos.bluetooth.hfp](arkts-connectivity-bluetooth-hfp.md)
   - [createHfpAgProfile](arkts-connectivity-hfp-createhfpagprofile-f.md)
   - [createHfpHfProfile](arkts-connectivity-hfp-createhfphfprofile-f.md)
   <!--Del-->
@@ -335,7 +335,7 @@
   <!--Del-->
   - [HandsFreeHfProfile(system api)](arkts-connectivity-hfp-handsfreehfprofile-i-sys.md)<!--DelEnd-->
   - [BaseProfile](arkts-connectivity-hfp-baseprofile-t.md)
-- [@ohos.bluetooth.hid](arkts-bluetooth-hid.md)
+- [@ohos.bluetooth.hid](arkts-connectivity-bluetooth-hid.md)
   - [createHidDeviceProfile](arkts-connectivity-hid-createhiddeviceprofile-f.md)
   - [createHidHostProfile](arkts-connectivity-hid-createhidhostprofile-f.md)
   - [GetReportData](arkts-connectivity-hid-getreportdata-i.md)
@@ -354,14 +354,14 @@
   - [ReportType](arkts-connectivity-hid-reporttype-e.md)
   - [ServiceType](arkts-connectivity-hid-servicetype-e.md)
   - [Subclass](arkts-connectivity-hid-subclass-e.md)
-- [@ohos.bluetooth.map](arkts-bluetooth-map.md)
+- [@ohos.bluetooth.map](arkts-connectivity-bluetooth-map.md)
   - [createMapMseProfile](arkts-connectivity-map-createmapmseprofile-f.md)
   <!--Del-->
   - [MapMseProfile(system api)](arkts-connectivity-map-mapmseprofile-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [AccessAuthorization(system api)](arkts-connectivity-map-accessauthorization-t-sys.md)<!--DelEnd-->
   - [BaseProfile](arkts-connectivity-map-baseprofile-t.md)
-- [@ohos.bluetooth.opp](arkts-bluetooth-opp.md)
+- [@ohos.bluetooth.opp](arkts-connectivity-bluetooth-opp.md)
   <!--Del-->
   - [createOppServerProfile(system api)](arkts-connectivity-opp-createoppserverprofile-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -376,13 +376,13 @@
   - [TransferResult(system api)](arkts-connectivity-opp-transferresult-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [TransferStatus(system api)](arkts-connectivity-opp-transferstatus-e-sys.md)<!--DelEnd-->
-- [@ohos.bluetooth.pan](arkts-bluetooth-pan.md)
+- [@ohos.bluetooth.pan](arkts-connectivity-bluetooth-pan.md)
   - [createPanProfile](arkts-connectivity-pan-createpanprofile-f.md)
   - [PanProfile](arkts-connectivity-pan-panprofile-i.md)
   <!--Del-->
   - [PanProfile(system api)](arkts-connectivity-pan-panprofile-i-sys.md)<!--DelEnd-->
   - [BaseProfile](arkts-connectivity-pan-baseprofile-t.md)
-- [@ohos.bluetooth.pbap](arkts-bluetooth-pbap.md)
+- [@ohos.bluetooth.pbap](arkts-connectivity-bluetooth-pbap.md)
   - [createPbapServerProfile](arkts-connectivity-pbap-createpbapserverprofile-f.md)
   <!--Del-->
   - [PbapServerProfile(system api)](arkts-connectivity-pbap-pbapserverprofile-i-sys.md)<!--DelEnd-->
@@ -391,7 +391,7 @@
   - [BaseProfile](arkts-connectivity-pbap-baseprofile-t.md)
   <!--Del-->
   - [ShareType(system api)](arkts-connectivity-pbap-sharetype-e-sys.md)<!--DelEnd-->
-- [@ohos.bluetooth.socket](arkts-bluetooth-socket.md)
+- [@ohos.bluetooth.socket](arkts-connectivity-bluetooth-socket.md)
   - [getDeviceId](arkts-connectivity-socket-getdeviceid-f.md)
   - [getL2capPsm](arkts-connectivity-socket-getl2cappsm-f.md)
   - [getMaxReceiveDataSize](arkts-connectivity-socket-getmaxreceivedatasize-f.md)
@@ -409,7 +409,7 @@
   - [sppWriteAsync](arkts-connectivity-socket-sppwriteasync-f.md)
   - [SppOptions](arkts-connectivity-socket-sppoptions-i.md)
   - [SppType](arkts-connectivity-socket-spptype-e.md)
-- [@ohos.bluetooth.wearDetection](arkts-bluetooth-weardetection.md)
+- [@ohos.bluetooth.wearDetection](arkts-connectivity-bluetooth-weardetection.md)
   <!--Del-->
   - [disableWearDetection(system api)](arkts-connectivity-weardetection-disableweardetection-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -418,7 +418,7 @@
   - [isWearDetectionEnabled(system api)](arkts-connectivity-weardetection-isweardetectionenabled-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [isWearDetectionSupported(system api)](arkts-connectivity-weardetection-isweardetectionsupported-f-sys.md)<!--DelEnd-->
-- [@ohos.bluetoothManager](arkts-bluetoothmanager.md)
+- [@ohos.bluetoothManager](arkts-connectivity-bluetoothmanager.md)
   - [bluetoothManager](arkts-connectivity-bluetoothmanager-n.md)
     - [BLE](arkts-connectivity-bluetoothmanager-ble-n.md)
       - [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md)
@@ -499,7 +499,7 @@
     - [ScanDuty](arkts-connectivity-bluetoothmanager-scanduty-e.md)
     - [ScanMode](arkts-connectivity-bluetoothmanager-scanmode-e.md)
     - [SppType](arkts-connectivity-bluetoothmanager-spptype-e.md)
-- [@ohos.connectedTag(Active Tags)](arkts-connectedtag.md)
+- [@ohos.connectedTag(Active Tags)](arkts-connectivity-connectedtag.md)
   - [init](arkts-connectivity-connectedtag-init-f.md)
   - [initialize](arkts-connectivity-connectedtag-initialize-f.md)
   - [off](arkts-connectivity-connectedtag-off-f.md)
@@ -511,7 +511,7 @@
   - [write](arkts-connectivity-connectedtag-write-f.md)
   - [writeNdefTag](arkts-connectivity-connectedtag-writendeftag-f.md)
   - [NfcRfType](arkts-connectivity-connectedtag-nfcrftype-e.md)
-- [@ohos.FusionConnectivity.partnerAgent](arkts-fusionconnectivity-partneragent.md)
+- [@ohos.FusionConnectivity.partnerAgent](arkts-connectivity-fusionconnectivity-partneragent.md)
   - [bindDevice](arkts-connectivity-partneragent-binddevice-f.md)
   <!--Del-->
   - [disableDeviceControl(system api)](arkts-connectivity-partneragent-disabledevicecontrol-f-sys.md)<!--DelEnd-->
@@ -526,13 +526,13 @@
   - [DeviceCapability](arkts-connectivity-partneragent-devicecapability-i.md)
   - [PartnerDeviceAddress](arkts-connectivity-partneragent-partnerdeviceaddress-i.md)
   - [PartnerAgentExtensionAbilityDestroyReason](arkts-connectivity-partneragent-partneragentextensionabilitydestroyreason-e.md)
-- [@ohos.FusionConnectivity.PartnerAgentExtensionAbility](arkts-fusionconnectivity-partneragentextensionability.md)
+- [@ohos.FusionConnectivity.PartnerAgentExtensionAbility](arkts-connectivity-fusionconnectivity-partneragentextensionability.md)
   - [PartnerAgentExtensionAbility](arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md)
   - [PartnerAgentExtensionAbilityDestroyReason](arkts-connectivity-partneragentextensionabilitydestroyreason-t.md)
   - [PartnerDeviceAddress](arkts-connectivity-partnerdeviceaddress-t.md)
-- [@ohos.FusionConnectivity.PartnerAgentExtensionContext](arkts-fusionconnectivity-partneragentextensioncontext.md)
+- [@ohos.FusionConnectivity.PartnerAgentExtensionContext](arkts-connectivity-fusionconnectivity-partneragentextensioncontext.md)
   - [PartnerAgentExtensionContext](arkts-connectivity-fusionconnectivity-partneragentextensioncontext-partneragentextensioncontext-c.md)
-- [@ohos.FusionConnectivity.ranging(Ranging Module)](arkts-fusionconnectivity-ranging.md)
+- [@ohos.FusionConnectivity.ranging(Ranging Module)](arkts-connectivity-fusionconnectivity-ranging.md)
   - [getRangingCapability](arkts-connectivity-ranging-getrangingcapability-f.md)
   - [isRangingSupported](arkts-connectivity-ranging-israngingsupported-f.md)
   - [offRangingStateChange](arkts-connectivity-ranging-offrangingstatechange-f.md)
@@ -550,7 +550,7 @@
   - [RangingState](arkts-connectivity-ranging-rangingstate-e.md)
   - [RangingStoppedCause](arkts-connectivity-ranging-rangingstoppedcause-e.md)
   - [RangingTypes](arkts-connectivity-ranging-rangingtypes-e.md)
-- [@ohos.nearlink.advertising(NearLink Advertising Capability)](arkts-nearlink-advertising.md)
+- [@ohos.nearlink.advertising(NearLink Advertising Capability)](arkts-connectivity-nearlink-advertising.md)
   - [offAdvertisingStateChange](arkts-connectivity-advertising-offadvertisingstatechange-f.md)
   - [onAdvertisingStateChange](arkts-connectivity-advertising-onadvertisingstatechange-f.md)
   - [startAdvertising](arkts-connectivity-advertising-startadvertising-f.md)
@@ -563,20 +563,20 @@
   - [ServiceData](arkts-connectivity-advertising-servicedata-i.md)
   - [AdvertisingState](arkts-connectivity-advertising-advertisingstate-e.md)
   - [TxPowerMode](arkts-connectivity-advertising-txpowermode-e.md)
-- [@ohos.nearlink.cdsm(CDSM Capability)](arkts-nearlink-cdsm.md)
+- [@ohos.nearlink.cdsm(CDSM Capability)](arkts-connectivity-nearlink-cdsm.md)
   - [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md)
   - [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md)
   - [CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)
   - [CdsmMemberInfo](arkts-connectivity-cdsm-cdsmmemberinfo-i.md)
   - [CdsmConnectionState](arkts-connectivity-cdsm-cdsmconnectionstate-e.md)
-- [@ohos.nearlink.constant(NearLink Common Constants)](arkts-nearlink-constant.md)
+- [@ohos.nearlink.constant(NearLink Common Constants)](arkts-connectivity-nearlink-constant.md)
   - [AcbState](arkts-connectivity-nearlinkconstant-acbstate-e.md)
   <!--Del-->
   - [ConnectionInterval(system api)](arkts-connectivity-nearlinkconstant-connectioninterval-e-sys.md)<!--DelEnd-->
   - [ConnectionState](arkts-connectivity-nearlinkconstant-connectionstate-e.md)
   - [DeviceClass](arkts-connectivity-nearlinkconstant-deviceclass-e.md)
   - [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md)
-- [@ohos.nearlink.dataTransfer(NearLink Data Transfer Capability)](arkts-nearlink-datatransfer.md)
+- [@ohos.nearlink.dataTransfer(NearLink Data Transfer Capability)](arkts-connectivity-nearlink-datatransfer.md)
   - [connect](arkts-connectivity-datatransfer-connect-f.md)
   - [createPort](arkts-connectivity-datatransfer-createport-f.md)
   - [destroyPort](arkts-connectivity-datatransfer-destroyport-f.md)
@@ -593,7 +593,7 @@
   - [DataParams](arkts-connectivity-datatransfer-dataparams-i.md)
   - [ConnectionState](arkts-connectivity-datatransfer-connectionstate-t.md)
   - [TransferMode](arkts-connectivity-datatransfer-transfermode-e.md)
-- [@ohos.nearlink.manager(Basic NearLink Management Capability)](arkts-nearlink-manager.md)
+- [@ohos.nearlink.manager(Basic NearLink Management Capability)](arkts-connectivity-nearlink-manager.md)
   <!--Del-->
   - [disable(system api)](arkts-connectivity-manager-disable-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -613,7 +613,7 @@
   <!--Del-->
   - [ConnectionMode(system api)](arkts-connectivity-manager-connectionmode-e-sys.md)<!--DelEnd-->
   - [NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md)
-- [@ohos.nearlink.remoteDevice(NearLink Remote Device Connection Capability)](arkts-nearlink-remotedevice.md)
+- [@ohos.nearlink.remoteDevice(NearLink Remote Device Connection Capability)](arkts-connectivity-nearlink-remotedevice.md)
   - [createRemoteDevice](arkts-connectivity-remotedevice-createremotedevice-f.md)
   - [offAcbStateChange](arkts-connectivity-remotedevice-offacbstatechange-f.md)
   - [offConnectionStateChange](arkts-connectivity-remotedevice-offconnectionstatechange-f.md)
@@ -644,7 +644,7 @@
   - [ConnectionReason](arkts-connectivity-remotedevice-connectionreason-e.md)
   - [PairingReason](arkts-connectivity-remotedevice-pairingreason-e.md)
   - [PairingType](arkts-connectivity-remotedevice-pairingtype-e.md)
-- [@ohos.nearlink.scan(NearLink Scanning Capability)](arkts-nearlink-scan.md)
+- [@ohos.nearlink.scan(NearLink Scanning Capability)](arkts-connectivity-nearlink-scan.md)
   - [offDeviceFound](arkts-connectivity-scan-offdevicefound-f.md)
   - [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md)
   - [startScan](arkts-connectivity-scan-startscan-f.md)
@@ -655,7 +655,7 @@
   - [ScanMode](arkts-connectivity-scan-scanmode-e.md)
   <!--Del-->
   - [ScanMode(system api)](arkts-connectivity-scan-scanmode-e-sys.md)<!--DelEnd-->
-- [@ohos.nearlink.ssap(NearLink SSAP Connection Capability)](arkts-nearlink-ssap.md)
+- [@ohos.nearlink.ssap(NearLink SSAP Connection Capability)](arkts-connectivity-nearlink-ssap.md)
   - [createClient](arkts-connectivity-ssap-createclient-f.md)
   - [createServer](arkts-connectivity-ssap-createserver-f.md)
   - [Client](arkts-connectivity-ssap-client-i.md)
@@ -679,7 +679,7 @@
   - [Operation](arkts-connectivity-ssap-operation-e.md)
   - [PropertyDescriptorType](arkts-connectivity-ssap-propertydescriptortype-e.md)
   - [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md)
-- [@ohos.nfc.cardEmulation(Standard NFC Card Emulation)](arkts-nfc-cardemulation.md)
+- [@ohos.nfc.cardEmulation(Standard NFC Card Emulation)](arkts-connectivity-nfc-cardemulation.md)
   <!--Del-->
   - [getPaymentServices(system api)](arkts-connectivity-cardemulation-getpaymentservices-f-sys.md)<!--DelEnd-->
   - [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md)
@@ -688,7 +688,7 @@
   - [HceService](arkts-connectivity-cardemulation-hceservice-c.md)
   - [CardType](arkts-connectivity-cardemulation-cardtype-e.md)
   - [FeatureType](arkts-connectivity-cardemulation-featuretype-e.md)
-- [@ohos.nfc.controller(Standard NFC)](arkts-nfc-controller.md)
+- [@ohos.nfc.controller(Standard NFC)](arkts-connectivity-nfc-controller.md)
   - [closeNfc](arkts-connectivity-nfccontroller-closenfc-f.md)
   - [disableNfc](arkts-connectivity-nfccontroller-disablenfc-f.md)
   - [enableNfc](arkts-connectivity-nfccontroller-enablenfc-f.md)
@@ -700,7 +700,7 @@
   - [on](arkts-connectivity-nfccontroller-on-f.md)
   - [openNfc](arkts-connectivity-nfccontroller-opennfc-f.md)
   - [NfcState](arkts-connectivity-nfccontroller-nfcstate-e.md)
-- [@ohos.nfc.tag(Standard NFC Tags)](arkts-nfc-tag.md)
+- [@ohos.nfc.tag(Standard NFC Tags)](arkts-connectivity-nfc-tag.md)
   - [tag](arkts-connectivity-tag-n.md)
     - [ndef](arkts-connectivity-tag-ndef-n.md)
       - [createNdefMessage](arkts-connectivity-ndef-createndefmessage-f.md)
@@ -751,7 +751,7 @@
     - [NfcForumType](arkts-connectivity-tag-nfcforumtype-e.md)
     - [TnfType](arkts-connectivity-tag-tnftype-e.md)
     - [Constants](arkts-connectivity-tag-con.md)
-- [@ohos.secureElement(SE Management)](arkts-secureelement.md)
+- [@ohos.secureElement(SE Management)](arkts-connectivity-secureelement.md)
   - [createService](arkts-connectivity-omapi-createservice-f.md)
   - [newSEService](arkts-connectivity-omapi-newseservice-f.md)
   - [off](arkts-connectivity-omapi-off-f.md)
@@ -761,7 +761,7 @@
   - [SEService](arkts-connectivity-omapi-seservice-i.md)
   - [Session](arkts-connectivity-omapi-session-i.md)
   - [ServiceState](arkts-connectivity-omapi-servicestate-e.md)
-- [@ohos.wifi](arkts-wifi.md)
+- [@ohos.wifi](arkts-connectivity-wifi.md)
   <!--Del-->
   - [addDeviceConfig(system api)](arkts-connectivity-wifi-adddeviceconfig-f-sys.md)<!--DelEnd-->
   - [addUntrustedConfig](arkts-connectivity-wifi-adduntrustedconfig-f.md)
@@ -863,14 +863,14 @@
   <!--Del-->
   - [SuppState(system api)](arkts-connectivity-wifi-suppstate-e-sys.md)<!--DelEnd-->
   - [WifiSecurityType](arkts-connectivity-wifi-wifisecuritytype-e.md)
-- [@ohos.wifiext](arkts-wifiext.md)
+- [@ohos.wifiext](arkts-connectivity-wifiext.md)
   - [disableHotspot](arkts-connectivity-wifiext-disablehotspot-f.md)
   - [enableHotspot](arkts-connectivity-wifiext-enablehotspot-f.md)
   - [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md)
   - [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md)
   - [setPowerModel](arkts-connectivity-wifiext-setpowermodel-f.md)
   - [PowerModel](arkts-connectivity-wifiext-powermodel-e.md)
-- [@ohos.wifiManager](arkts-wifimanager.md)
+- [@ohos.wifiManager](arkts-connectivity-wifimanager.md)
   - [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md)
   - [addDeviceConfig](arkts-connectivity-wifimanager-adddeviceconfig-f.md)
   - [addDnsSdLocalP2pService](arkts-connectivity-wifimanager-adddnssdlocalp2pservice-f.md)
@@ -1050,14 +1050,14 @@
   - [WifiLinkType](arkts-connectivity-wifimanager-wifilinktype-e.md)
   - [WifiSecurityType](arkts-connectivity-wifimanager-wifisecuritytype-e.md)
   - [WifiStandard](arkts-connectivity-wifimanager-wifistandard-e.md)
-- [@ohos.wifiManagerExt](arkts-wifimanagerext.md)
+- [@ohos.wifiManagerExt](arkts-connectivity-wifimanagerext.md)
   - [disableHotspot](arkts-connectivity-wifimanagerext-disablehotspot-f.md)
   - [enableHotspot](arkts-connectivity-wifimanagerext-enablehotspot-f.md)
   - [getPowerMode](arkts-connectivity-wifimanagerext-getpowermode-f.md)
   - [getSupportedPowerMode](arkts-connectivity-wifimanagerext-getsupportedpowermode-f.md)
   - [setPowerMode](arkts-connectivity-wifimanagerext-setpowermode-f.md)
   - [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)
-- [@system.bluetooth](arkts-system-bluetooth.md)
+- [@system.bluetooth](arkts-connectivity-system-bluetooth.md)
   - [Bluetooth](arkts-connectivity-system-bluetooth-bluetooth-c.md)
   - [BLEFoundResponse](arkts-connectivity-system-bluetooth-blefoundresponse-i.md)
   - [BluetoothDevice](arkts-connectivity-system-bluetooth-bluetoothdevice-i.md)
@@ -1065,7 +1065,7 @@
   - [StopBLEScanOptions](arkts-connectivity-system-bluetooth-stopblescanoptions-i.md)
   - [SubscribeBLEFoundOptions](arkts-connectivity-system-bluetooth-subscribeblefoundoptions-i.md)
 - tag<!--arkts-connectivitykit-tag-->
-  - [nfctech(Standard NFC Technologies)](arkts-nfctech.md)
+  - [nfctech(Standard NFC Technologies)](arkts-connectivity-nfctech.md)
     - [BarcodeTag](arkts-connectivity-nfctech-barcodetag-i.md)
     - [IsoDepTag](arkts-connectivity-nfctech-isodeptag-i.md)
     - [MifareClassicTag](arkts-connectivity-nfctech-mifareclassictag-i.md)
@@ -1077,5 +1077,5 @@
     - [NfcBTag](arkts-connectivity-nfctech-nfcbtag-i.md)
     - [NfcFTag](arkts-connectivity-nfctech-nfcftag-i.md)
     - [NfcVTag](arkts-connectivity-nfctech-nfcvtag-i.md)
-  - [tagSession(Standard NFC Tag Session)](arkts-tagsession.md)
+  - [tagSession(Standard NFC Tag Session)](arkts-connectivity-tagsession.md)
     - [TagSession](arkts-connectivity-tagsession-tagsession-i.md)

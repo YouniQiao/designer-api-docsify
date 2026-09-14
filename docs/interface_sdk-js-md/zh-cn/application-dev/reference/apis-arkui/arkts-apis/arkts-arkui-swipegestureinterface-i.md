@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## [[Call]]
 
 ```TypeScript
@@ -37,6 +32,8 @@
 
 | 类型 | 说明 |
 | --- | --- |
+| [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) |  |
+
 ## [[Call]]
 
 ```TypeScript
@@ -63,6 +60,8 @@
 
 | 类型 | 说明 |
 | --- | --- |
+| [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) |  |
+
 ## onAction
 
 ```TypeScript
@@ -87,3 +86,4 @@ Swipe手势识别成功时触发回调。
 
 | 类型 | 说明 |
 | --- | --- |
+| [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) |  |

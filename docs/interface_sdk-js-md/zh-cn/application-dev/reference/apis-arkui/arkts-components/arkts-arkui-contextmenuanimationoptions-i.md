@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## hoverScale
 
 ```TypeScript
@@ -19,7 +14,7 @@ hoverScale?: AnimationRange<number>
 
 在自定义预览图（preview为CustomBuilder类型）以及长按弹出（responseType指定为LongPress）菜单的场景下，hoverScale用于为绑定组件的截图浮起动画设置两个参数：相对于预览原图的起始与结束缩放比例。hoverScale设置后，浮起动画和预览图之间会有切换过渡动效。
 
-**说明：**
+**说明：** 
 
 倍率设置参数小于等于0时，不生效。
 
@@ -51,7 +46,7 @@ hoverScaleInterruption?: boolean
 
 默认值：false
 
-**说明：**
+**说明：** 
 
 未设置hoverScale接口或设置了transition接口时，该参数不生效。长按时长不足以触发拖拽效果时抬起手，预览菜单hoverScale效果回退，预览菜单不弹出，并可触发原组件上绑定的click等手势事件。长按时长足以触发拖拽效果后抬起手，预览菜单正常弹出，并不再触发原组件上绑定的click等手势事件。
 
@@ -77,13 +72,13 @@ scale?: AnimationRange<number>
 
 默认值：[0.95, 1.1]
 
-**说明：**
+**说明：** 
 
 缩放比例需要根据实际开发场景设置，建议设置值为小于预览图宽度或布局的最大限制。
 
 **类型：** [AnimationRange](arkts-arkui-animationrange-t.md)&lt;number&gt;
 
-**默认值：**
+**默认值：** 
 - API版本11：[0.95, 1.1]
 
 **起始版本：** 11
@@ -102,7 +97,7 @@ transition?: TransitionEffect
 
 设置菜单显示和退出的过渡效果。
 
-**说明：**
+**说明：** 
 
 在菜单退出动效过程中，横竖屏切换时，菜单会避让。二级菜单不继承自定义动效。弹出过程中可以点击二级菜单，但在退出动效执行过程中不允许点击二级菜单。
 

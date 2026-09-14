@@ -26,7 +26,7 @@ Checks whether the 24-hour clock is used.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** if the 24-hour clock is used, and **false** otherwise. |
+| boolean | **true** if the 24-hour clock is used, and **false** otherwise. |
 
 **Examples**
 

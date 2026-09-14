@@ -14,7 +14,7 @@ function getConnectOwnerUid(protocol: ProtocolType, local: NetAddress, remote: N
 
 用于查询发起指定网络连接的应用UID。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 该接口仅限在VPN应用中调用。
 > 

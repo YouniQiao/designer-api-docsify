@@ -18,7 +18,7 @@ Normal
 
 The button on the right is clickable and can navigate users to the next **StepperItem** when it is clicked.
 
-**NOTE:**
+**NOTE:** 
 
 This API is supported since API version 8 and deprecated since API version 22. You are advised to use index instead.
 
@@ -40,7 +40,7 @@ Disabled
 
 The button on the right is disabled.
 
-**NOTE:**
+**NOTE:** 
 
 This API is supported since API version 8 and deprecated since API version 22. You are advised to use [indicatorInteractive](arkts-arkui-swiper-comp-attribute.md#indicatorinteractive) instead.
 
@@ -62,7 +62,7 @@ Waiting
 
 The button on the right is not displayed, and a progress bar is displayed instead.
 
-**NOTE:**
+**NOTE:** 
 
 This API is supported since API version 8 and deprecated since API version 22. You are advised to use Swiper instead.
 
@@ -84,7 +84,7 @@ Skip
 
 The button on the right reads "Skip" by default. You can define the processing logic for this state in the **onSkip** callback of the stepper.
 
-**NOTE:**
+**NOTE:** 
 
 This API is supported since API version 8 and deprecated since API version 22. You are advised to use index instead.
 

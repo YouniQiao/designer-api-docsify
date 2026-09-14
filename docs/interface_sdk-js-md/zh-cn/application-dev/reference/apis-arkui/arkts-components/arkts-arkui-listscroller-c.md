@@ -2,7 +2,7 @@
 
 List组件的滚动控制器，通过它控制List组件的滚动，仅支持一对一绑定到List组件。
 
-> **说明：**
+> **说明：** 
 > 
 > ListScroller继承自[Scroller](arkts-arkui-scroller-c.md)，具有[Scroller](arkts-arkui-scroller-c.md)的全部方法。
 
@@ -17,11 +17,6 @@ listScroller: ListScroller = new ListScroller();
 **起始版本：** 11
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## closeAllSwipeActions
 

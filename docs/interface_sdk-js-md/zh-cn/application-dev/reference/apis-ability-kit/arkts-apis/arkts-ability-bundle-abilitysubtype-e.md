@@ -1,7 +1,7 @@
 # AbilitySubType
 
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，暂无替代接口。
 

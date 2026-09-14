@@ -6,11 +6,6 @@ Defines the callback information triggered when the audio playback status on the
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## playing
 
 ```TypeScript

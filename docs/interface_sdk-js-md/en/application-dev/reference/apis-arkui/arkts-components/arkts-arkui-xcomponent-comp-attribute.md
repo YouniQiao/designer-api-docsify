@@ -10,11 +10,6 @@ Since API version 12, the universal events are supported when **type** is set to
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## enableAnalyzer
 
 ```TypeScript

@@ -89,7 +89,7 @@ commitEditedAsset(editData: string, uri: string, callback: AsyncCallback<void>):
 
 提交编辑数据以及编辑后的图片或视频。使用callback异步回调。
 
-通过uri将编辑后的文件传递给媒体库，uri是编辑后的文件在应用沙箱下的FileUri，可参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md)。
+通过uri将编辑后的文件传递给媒体库，uri是编辑后的文件在应用沙箱下的FileUri，可参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fileuri.md)。
 
 > **注意：**
 > 
@@ -164,7 +164,7 @@ commitEditedAsset(editData: string, uri: string): Promise<void>
 
 提交编辑数据以及编辑后的图片或视频。使用Promise异步回调。
 
-通过uri将编辑后的文件传递给媒体库，uri是编辑后的文件在应用沙箱下的FileUri，可参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md)。
+通过uri将编辑后的文件传递给媒体库，uri是编辑后的文件在应用沙箱下的FileUri，可参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fileuri.md)。
 
 > **注意：**
 > 
@@ -476,7 +476,7 @@ getExif(callback: AsyncCallback<string>): void
 
 读取jpg格式图片的Exif标签，并返回json格式的字符串。使用callback异步回调。
 
-此接口中获取的Exif标签信息是由 [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)模块提供。Exif标签详细信息请参考[image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md)。
+此接口中获取的Exif标签信息是由 [image](../../apis-image-kit/arkts-apis/arkts-image-multimedia-image.md)模块提供。Exif标签详细信息请参考[image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md)。
 
 > **注意：**
 > 
@@ -551,7 +551,7 @@ getExif(): Promise<string>
 
 读取jpg格式图片的Exif标签，并返回json格式的字符串。使用Promise异步回调。
 
-此接口中获取的Exif标签信息是由[image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) 模块提供。Exif标签详细信息请参考[image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
+此接口中获取的Exif标签信息是由[image](../../apis-image-kit/arkts-apis/arkts-image-multimedia-image.md) 模块提供。Exif标签详细信息请参考[image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
 
 > **注意：**
 > 
@@ -939,7 +939,7 @@ open(mode: string, callback: AsyncCallback<number>): void
 
 该接口返回的文件描述符在使用完毕后需要调用close进行释放。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 10开始支持，从API version 11开始废弃。出于安全考量，不再提供获取正式媒体文件句柄的接口。
 
@@ -1002,7 +1002,7 @@ open(mode: string): Promise<number>
 
 该接口返回的文件描述符在使用完毕后需要调用close进行释放。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 10开始支持，从API version 11开始废弃。出于安全考量，不再提供获取正式媒体文件句柄的接口。
 

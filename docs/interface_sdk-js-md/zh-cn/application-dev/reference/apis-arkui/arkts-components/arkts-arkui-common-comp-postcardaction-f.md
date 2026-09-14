@@ -1,10 +1,5 @@
 # postCardAction
 
-## 导入模块
-
-```TypeScript
-```
-
 ## postCardAction
 
 ```TypeScript

@@ -6,7 +6,7 @@ KVStoreResultSet实例不会实时刷新。使用结果集后，如果数据库�
 
 在调用KVStoreResultSet的方法前，需要先通过getKVStore构建一个SingleKVStore或者DeviceKVStore实例。
 
-> **说明：**
+> **说明：** 
 > 
 > KVStoreResultSet的游标起始位置为-1。
 

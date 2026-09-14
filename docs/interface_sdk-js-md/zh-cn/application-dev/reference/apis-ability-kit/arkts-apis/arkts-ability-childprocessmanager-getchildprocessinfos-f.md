@@ -14,7 +14,7 @@ function getChildProcessInfos(): Promise<Array<ChildProcessInformation>>
 
 获取当前应用的子进程信息。该接口使用promise返回的结果。返回的子进程包括通过创建的子进程[startChildProcess](arkts-ability-childprocessmanager-startchildprocess-f.md) (在APP_SPAWN_FORK模式)，[startArkChildProcess](arkts-ability-childprocessmanager-startarkchildprocess-f.md)，以及[startNativeChildProcess](arkts-ability-childprocessmanager-startnativechildprocess-f.md).【OH_Ability_CreateNativeChildProcess】【OH_Ability_CreateNativeChildProcessWithConfigs】【OH_Ability_StartNativeChildProcess】【OH_Ability_StartNativeChildProcessWithConfigs】
 
-> **说明：**
+> **说明：** 
 > 
 > 
 > 在返回的列表中不包含在以FORK方式启动的子进程。

@@ -112,7 +112,7 @@ Create ColorMetrics class using HDR color with linear exposure. Create an HDR co
 getBlueValue(): number
 ```
 
-Get blue value. Returns blue channel value as a floating-point number. For SDR colors, value is in range [0, 1]. For HDR colors, value can be greater than 1.0 to represent extended brightness.
+Get blue value. Returns blue channel value as a floating-point number.
 
 **Since:** 26.0.0
 
@@ -126,7 +126,7 @@ Get blue value. Returns blue channel value as a floating-point number. For SDR c
 
 | Type | Description |
 | --- | --- |
-| number | The blue value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values &gt; 1.0 indicate HDR brightness. |
+| number | The blue value. Valid range: For SDR colors: [0.0, 1.0]. Fro HDR colors: [0.0, +∞), values &gt; 1.0 indicate HDR brightness. |
 
 ## getColorSpace
 
@@ -156,7 +156,7 @@ Get color space of the ColorMetrics. Returns the color space used when creating 
 getGreenValue(): number
 ```
 
-Get green value. Returns green channel value as a floating-point number. For SDR colors, value is in range [0, 1]. For HDR colors, value can be greater than 1.0 to represent extended brightness.
+Get green value. Returns green channel value as a floating-point number.
 
 **Since:** 26.0.0
 
@@ -170,7 +170,7 @@ Get green value. Returns green channel value as a floating-point number. For SDR
 
 | Type | Description |
 | --- | --- |
-| number | The green value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values &gt; 1.0 indicate HDR brightness. |
+| number | The green value. Valid range: For SDR colors: [0.0, 1.0]. Fro HDR colors: [0.0, +∞), values &gt; 1.0 indicate HDR brightness. |
 
 ## getRedValue
 
@@ -178,7 +178,7 @@ Get green value. Returns green channel value as a floating-point number. For SDR
 getRedValue(): number
 ```
 
-Get red value. Returns red channel value as a floating-point number. For SDR colors, value is in range [0, 1]. For HDR colors, value can be greater than 1.0 to represent extended brightness.
+Get red value. Returns red channel value as a floating-point number.
 
 **Since:** 26.0.0
 
@@ -192,7 +192,7 @@ Get red value. Returns red channel value as a floating-point number. For SDR col
 
 | Type | Description |
 | --- | --- |
-| number | The red value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values &gt; 1.0 indicate HDR brightness. |
+| number | The red value. Valid range: For SDR colors: [0.0, 1.0]. Fro HDR colors: [0.0, +∞), values &gt; 1.0 indicate HDR brightness. |
 
 ## isHDR
 

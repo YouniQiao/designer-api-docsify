@@ -63,7 +63,7 @@ setImageForRecent(imageResource: number | image.PixelMap, value: ImageFit): Prom
 ```
 
 设置应用在多任务中和Dock栏悬停时显示的图片，使用Promise异步回调。   
-> **说明：**
+> **说明：** 
 > 
 > 调用该接口前，建议先通过loadContent方法或者setUIContent
 > 方法完成页面加载。如果应用窗口未完成页面加载就直接调用该接口，功能将不会生效。此时多任务中只显示应用启动页。
@@ -84,7 +84,7 @@ setImageForRecent(imageResource: number | image.PixelMap, value: ImageFit): Prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| imageResource | number &#124; [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 应用自定义的图片资源，可传入资源id或PixelMap位图。传入资源id时，图片资源需放在resources/base/media目录下，通过\&#36;r资源访问方式获取对应图片的资源id，这里以获取startIcon图片的资源id为例给出示意：\&#36;r("app.media.startIcon").id。 |
+| imageResource | number &#124; [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 应用自定义的图片资源，可传入资源id或PixelMap位图。传入资源id时，图片资源需放在resources/base/media目录下，通过&#36;r资源访问方式获取对应图片的资源id，这里以获取startIcon图片的资源id为例给出示意：&#36;r("app.media.startIcon").id。 |
 | value | ImageFit | 是 | 应用自定义图片的填充方式。 |
 
 **返回值：**
@@ -137,7 +137,7 @@ setImageForRecent(imgResourceId: number, value: ImageFit): Promise<void>
 ```
 
 设置应用在多任务中和Dock栏悬停时显示的图片，使用Promise异步回调。   
-> **说明：**
+> **说明：** 
 > 
 > 调用该接口前，建议先通过loadContent方法或者setUIContent
 > 方法完成页面加载。如果应用窗口未完成页面加载就直接调用该接口，功能将不会生效。此时多任务中只显示应用启动页。
@@ -154,7 +154,7 @@ setImageForRecent(imgResourceId: number, value: ImageFit): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| imgResourceId | number | 是 | 应用自定义图片的资源id，图片资源需放在resources/base/media目录下，通过`\&#36;r`资源访问方式获取对应图片的资源id，这里以获取startIcon图片的资源id为例给出示意：`\&#36;r("app.media.startIcon").id`。 |
+| imgResourceId | number | 是 | 应用自定义图片的资源id，图片资源需放在resources/base/media目录下，通过`&#36;r`资源访问方式获取对应图片的资源id，这里以获取startIcon图片的资源id为例给出示意：`&#36;r("app.media.startIcon").id`。 |
 | value | ImageFit | 是 | 应用自定义图片的填充方式。 |
 
 **返回值：**

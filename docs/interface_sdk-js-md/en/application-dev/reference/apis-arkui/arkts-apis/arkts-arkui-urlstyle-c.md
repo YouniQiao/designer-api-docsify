@@ -8,11 +8,6 @@ The default color, font size, and font weight are **'#ff0a59f7'**, **'16fp'**, a
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

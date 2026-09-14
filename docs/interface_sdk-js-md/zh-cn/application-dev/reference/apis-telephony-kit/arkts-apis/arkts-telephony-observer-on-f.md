@@ -489,7 +489,7 @@ function on(type: 'simStateChange', callback: Callback<SimStateData>): void
 
 订阅sim状态更改事件，使用callback方式作为异步方法。
 
-> **说明：**
+> **说明：** 
 > 
 > 此接口不包含sim卡的激活状态，具体请参见[sim.isSimActive](arkts-telephony-sim-issimactive-f.md)接口。
 

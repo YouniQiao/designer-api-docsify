@@ -6,11 +6,6 @@ Defines a range of dates.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## end
 
 ```TypeScript

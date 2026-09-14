@@ -116,7 +116,7 @@ queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 
 Queries the distributed account information. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
@@ -163,7 +163,7 @@ queryOsAccountDistributedInfo(): Promise<DistributedInfo>
 
 Queries the distributed account information. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
@@ -322,7 +322,7 @@ updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCall
 
 Updates the distributed account information. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setOsAccountDistributedInfo](#setosaccountdistributedinfo)
@@ -372,7 +372,7 @@ updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 
 Updates the distributed account information. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setOsAccountDistributedInfo](#setosaccountdistributedinfo-1)

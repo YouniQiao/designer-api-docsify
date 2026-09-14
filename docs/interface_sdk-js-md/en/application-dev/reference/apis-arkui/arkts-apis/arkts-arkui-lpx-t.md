@@ -6,7 +6,7 @@ declare type LPX = `${number}lpx`
 
 Defines the length property with number in units of lpx.
 
-@typedef { `\${number}lpx` } LPX
+@typedef { `&#36;{number}lpx` } LPX
 
 **Since:** 23
 

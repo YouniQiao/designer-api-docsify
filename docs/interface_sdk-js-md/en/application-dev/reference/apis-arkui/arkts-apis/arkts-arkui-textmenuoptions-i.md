@@ -6,11 +6,6 @@ Provides the options for customizing the context menu on selection.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## showMode
 
 ```TypeScript

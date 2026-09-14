@@ -186,7 +186,7 @@ recover(signatureData: DataBlob): Promise<DataBlob | null>
 
 对数据进行签名恢复原始数据。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 目前仅RSA支持。
 
@@ -304,7 +304,7 @@ recoverSync(signatureData: DataBlob): DataBlob | null
 
 对数据进行签名恢复原始数据。
 
-> **说明：**
+> **说明：** 
 > 
 > - 目前仅RSA支持。
 
@@ -506,7 +506,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 
 <br>必须在对[Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md)实例使用[init](#init)或[initSync](#initsync)初始化后，才能使用本函数。
 
-> **说明：**
+> **说明：** 
 > 
 > 根据数据量，可以不调用update（即[init](#init)
 > 完成后直接调用
@@ -559,7 +559,7 @@ update(data: DataBlob): Promise<void>
 
 <br>必须在对[Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md)实例使用[init()](#init)初始化后，才能使用本函数。
 
-> **说明：**
+> **说明：** 
 > 
 > 根据数据量，可以不调用update（即[init](#init)完成后直接调用
 > [verify](#verify-3)）或多次调用update。
@@ -615,7 +615,7 @@ updateSync(data: DataBlob): void
 
 <br>必须在对[Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md)实例使用[initSync()](#initsync)初始化后，才能使用本函数。
 
-> **说明：**
+> **说明：** 
 > 
 > 根据数据量，可以不调用updateSync（即[initSync](#initsync)完成后直接调用
 > [verifySync](#verifysync)）或多次调用updateSync。

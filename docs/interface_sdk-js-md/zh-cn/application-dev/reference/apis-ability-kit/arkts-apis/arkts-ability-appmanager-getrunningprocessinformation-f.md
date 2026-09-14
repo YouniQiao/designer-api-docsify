@@ -14,7 +14,7 @@ function getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 
 获取当前应用运行进程的相关信息。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 对于API version 11之前的版本，该接口需要申请权限ohos.permission.GET_RUNNING_INFO（该权限仅系统应用可申请）。
 > 
@@ -64,7 +64,7 @@ function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInfor
 
 获取当前应用运行进程的相关信息。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 对于API version 11之前的版本，该接口需要申请权限ohos.permission.GET_RUNNING_INFO（该权限仅系统应用可申请）。
 > 

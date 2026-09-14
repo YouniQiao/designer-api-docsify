@@ -2,7 +2,7 @@
 
 网络连接对象类型。
 
-> **说明：**
+> **说明：** 
 > 
 > （1）设备从无网络状态转变为有网络状态时，将触发netAvailable事件、netCapabilitiesChange事件和netConnectionPropertiesChange事件；
 > 

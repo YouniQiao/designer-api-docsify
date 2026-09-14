@@ -8,11 +8,6 @@ Scene options used by 3D scene control
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## modelType
 
 ```TypeScript

@@ -28,7 +28,7 @@ The intent execution result is returned through the [onExecuteInUIAbilityForegro
 FUNCTION = 1
 ```
 
-The intent execution result is returned after the [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md) or [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md) API in [intent provider management](arkts-app-ability-insightintentprovider.md) is called.
+The intent execution result is returned after the [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md) or [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md) API in [intent provider management](arkts-ability-app-ability-insightintentprovider.md) is called.
 
 **Since:** 23
 

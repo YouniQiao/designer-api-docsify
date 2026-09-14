@@ -16,7 +16,7 @@ build(builder: WrappedBuilder<Args>, config: BuildOptions, ...args: Args): void
 
 支持自定义组件。
 
-> **说明：**
+> **说明：** 
 > 
 > - @Builder进行创建和更新的规格参考[@Builder](../../../ui/state-management/arkts-builder.md)。
 > 
@@ -134,7 +134,7 @@ dispose(): void
 
 立即释放当前ReactiveBuilderNode对象对[实体节点](../../../ui/arkts-user-defined-node.md#基本概念)的引用关系。关于ReactiveBuilderNode的解绑场景请参见[节点解绑](../../../ui/arkts-user-defined-arktsNode-builderNode.md#解除实体节点引用关系)。
 
-> **说明：**
+> **说明：** 
 > 
 > 当ReactiveBuilderNode对象调用dispose之后，会与后端实体节点解除引用关系。若前端对象ReactiveBuilderNode无法释放，容易导致内存泄漏。建议在不再需要对该
 > ReactiveBuilderNode对象进行操作时，开发者主动调用dispose释放后端节点，以减少引用关系的复杂性，降低内存泄漏的风险。
@@ -483,7 +483,7 @@ inheritFreezeOptions(enabled: boolean): void
 
 设置当前ReactiveBuilderNode对象是否继承父组件中自定义组件的冻结策略。如果设置继承状态为false，则ReactiveBuilderNode对象的冻结策略为false。在这种情况下，节点在不活跃状态下不会被冻结。
 
-> **说明：**
+> **说明：** 
 > 
 > ReactiveBuilderNode设置inheritFreezeOptions为true，且父组件为自定义组件、BuilderNode、ComponentContent、ReactiveBuilderNode或
 > ReactiveComponentContent时，会继承父组件的冻结策略。当子组件为自定义组件时，ReactiveBuilderNode的冻结策略不会传递给子组件。
@@ -883,7 +883,7 @@ offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对�
 
 
 
-> **说明：**
+> **说明：** 
 > 
 > 传入的坐标值需要转换为px，坐标转换示例可以参考下面示例代码。
 > 
@@ -899,7 +899,7 @@ offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对�
 > 如果是开发者构造的事件，必填字段必须赋值，比如触摸事件的touches字段、轴事件的scrollStep字段，同时要保证事件的完整，比如触摸事件的[TouchType](arkts-arkui-touchtype-e.md)中DOWN和UP字段都要
 > 有，防止出现未定义行为。
 > 
-> [webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md)已经处理过坐标系变换，可以将事件直接下发。
+> [webview](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webview.md)已经处理过坐标系变换，可以将事件直接下发。
 > 
 > postTouchEvent接口需要提供手势坐标相对于接收事件的目标节点内的局部坐标，postInputEvent接口需要提供手势坐标相对于接收事件的目标节点内的窗口坐标。
 > 
@@ -942,7 +942,7 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 
 
 
-> **说明：**
+> **说明：** 
 > 
 > - 传入的坐标值单位需要转换为px，坐标转换示例可以参考下面示例代码。
 > 
@@ -958,7 +958,7 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 > - 如果event转化为对应的事件后，该事件为开发者构造的事件，必填字段必须赋值，比如触摸事件的touches字段，轴事件的scrollStep字段。要保证事件的完整，比如触摸事件的
 > [TouchType](arkts-arkui-touchtype-e.md)中必须同时包含DOWN和UP两个字段，防止出现程序异常或意外崩溃。
 > 
-> - [webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md)已经处理过坐标系变换，可以将事件直接下发。
+> - [webview](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webview.md)已经处理过坐标系变换，可以将事件直接下发。
 > 
 > - postTouchEvent接口需要提供手势坐标相对于接收事件的目标节点内的局部坐标，postInputEventWithStrategy接口需要提供手势坐标相对于接收事件的目标节点内的窗口坐标。
 > 
@@ -999,11 +999,11 @@ offsetA为builderNode相对于父组件的偏移量，可以通过FrameNode中�
 
 
 
-> **说明：**
+> **说明：** 
 > 
 > 传入的坐标值需要转换为px，如果builderNode有仿射变换，则需要再叠加仿射变换。
 > 
-> 在[webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。
+> 在[webview](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webview.md)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。
 > 
 > 同一时间戳，postTouchEvent只能调用一次。
 

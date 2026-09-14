@@ -19,10 +19,6 @@ Appends a new element with a specified value to the end of the Set.
 | --- | --- | --- | --- |
 | value | T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## clear
 
 ```TypeScript
@@ -47,6 +43,8 @@ Removes a specified value from the Set.
 
 | Type | Description |
 | --- | --- |
+| boolean | Returns true if an element in the Set existed and has been removed, or false if the element does not exist. |
+
 ## forEach
 
 ```TypeScript
@@ -78,6 +76,8 @@ has(value: T): boolean
 
 | Type | Description |
 | --- | --- |
+| boolean | a boolean indicating whether an element with the specified value exists in the Set or not. |
+
 ## size
 
 ```TypeScript

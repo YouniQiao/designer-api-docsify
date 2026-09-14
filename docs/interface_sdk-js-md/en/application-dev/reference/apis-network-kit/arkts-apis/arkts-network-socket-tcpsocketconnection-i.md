@@ -2,7 +2,7 @@
 
 Defines a **TCPSocketConnection** object, that is, the connection between the TCPSocket client and the server. Before calling TCPSocketConnection APIs, you need to obtain a **TCPSocketConnection** object.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The TCPSocket client can call related APIs through the **TCPSocketConnection** object only after a connection is
 > successfully established between the TCPSocket client and the server.
@@ -123,7 +123,7 @@ Obtains the local socket address of a **TCPSocketConnection** connection. This A
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | Promise used to return the result. |
+| Promise&lt;[NetAddress](arkts-network-socket-p.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -180,7 +180,7 @@ getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 
 Obtains the remote address of a socket connection. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called only after a connection with the client is set up.
 
@@ -194,7 +194,7 @@ Obtains the remote address of a socket connection. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetAddress](arkts-network-socket-p.md)&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -231,7 +231,7 @@ getRemoteAddress(): Promise<NetAddress>
 
 Obtains the remote address of a socket connection. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called only after a connection with the client is set up.
 
@@ -245,7 +245,7 @@ Obtains the remote address of a socket connection. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | Promise used to return the result. |
+| Promise&lt;[NetAddress](arkts-network-socket-p.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -279,7 +279,7 @@ getSocketFd(): Promise<number>
 
 Obtains the file descriptor of a TCPSocketConnection connection. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This API can be called only after a connection with the client is set up.
 > 
@@ -603,7 +603,7 @@ send(options: TCPSendOptions, callback: AsyncCallback<void>): void
 
 Sends data over a **TCPSocketConnection** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called only after a connection with the client is set up.
 
@@ -653,7 +653,7 @@ send(options: TCPSendOptions): Promise<void>
 
 Sends data over a **TCPSocketConnection** object. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called only after a connection with the client is set up.
 

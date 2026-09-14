@@ -10,8 +10,3 @@
 ```TypeScript
 [Symbol.iterator](): IterableIterator<T>
 ```
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

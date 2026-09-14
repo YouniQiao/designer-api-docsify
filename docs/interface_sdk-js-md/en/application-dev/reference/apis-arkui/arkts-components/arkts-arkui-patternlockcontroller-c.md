@@ -12,11 +12,6 @@ patternLockController: PatternLockController = new PatternLockController()
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

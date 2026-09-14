@@ -2,18 +2,13 @@
 
 线性渐变的参数。
 
-> **说明：**
+> **说明：** 
 > 
 > 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## angle
 
@@ -31,7 +26,7 @@ angle?: number | string
 
 **类型：** number &#124; string
 
-**默认值：**
+**默认值：** 
 - API版本18+：180
 
 **起始版本：** 7
@@ -72,7 +67,7 @@ direction?: GradientDirection
 
 **类型：** [GradientDirection](../arkts-apis/arkts-arkui-gradientdirection-e.md)
 
-**默认值：**
+**默认值：** 
 - API版本18+：GradientDirection.Bottom
 
 **起始版本：** 7
@@ -99,7 +94,7 @@ false：渐变效果仅在指定范围内显示一次。
 
 **类型：** boolean
 
-**默认值：**
+**默认值：** 
 - API版本18+：false
 
 **起始版本：** 7

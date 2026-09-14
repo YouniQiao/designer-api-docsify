@@ -116,7 +116,7 @@ sendResponse(responseApdu: number[]): void
 
 Sends a response to the peer card reader.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. Use
 > [transmit](#transmit) instead.
@@ -179,7 +179,7 @@ startHCE(aidList: string[]): boolean
 
 Starts HCE, including enabling this application to run in the foreground preferentially and dynamically registering the AID list.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. Use
 > [start](#start) instead.
@@ -247,7 +247,7 @@ stopHCE(): boolean
 
 Stops HCE, including exiting the current application from the foreground, releasing the dynamically registered AID list, and canceling the subscription of **hceCmd**.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. Use
 > [stop](#stop) instead.
@@ -268,7 +268,7 @@ Stops HCE, including exiting the current application from the foreground, releas
 
 | Type | Description |
 | --- | --- |
-| boolean | true** if HCE is stopped or disabled; **false** otherwise. |
+| boolean | **true** if HCE is stopped or disabled; **false** otherwise. |
 
 ## transmit
 

@@ -28,7 +28,7 @@ Marshals this **Parcelable** object into a **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataOut | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object to which the **Parcelable** object is to be marshaled. |
+| dataOut | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | **MessageSequence** object to which the **Parcelable** object is to be marshaled. |
 
 **Return value:**
 
@@ -89,7 +89,7 @@ Unmarshals this **Parcelable** object from a **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object from which the **Parcelable** object is to be unmarshaled. |
+| dataIn | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | **MessageSequence** object from which the **Parcelable** object is to be unmarshaled. |
 
 **Return value:**
 

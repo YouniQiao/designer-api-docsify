@@ -168,7 +168,7 @@ authTag为末尾的16字节；CCM模式下，authTag为末尾的12字节。其�
 
 （2）在RSA、SM2非对称加解密中，**doFinal**加密或解密本次传入的数据，使用callback异步回调函数获取加密或者解密数据。如果数据量较大，可以多次调用**doFinal**，拼接结果得到完整的明文/密文。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例的状态被清除，
 > 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称
@@ -410,7 +410,7 @@ doFinal(data: DataBlob | null): Promise<DataBlob>
 
 （2）在RSA和SM2非对称加解密中，使用**doFinal**方法加解密传入的数据，并使用Promise异步回调获取加密或解密结果。如果数据量较大，可以多次调用**doFinal**，拼接结果以获得完整的明文或密文。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例的状态被清除，
 > 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称
@@ -517,7 +517,7 @@ doFinalSync(data: DataBlob | null): DataBlob
 
 （2）在RSA和SM2非对称加解密中，使用**doFinal**方法加解密传入的数据，并使用Promise异步回调获取加密或解密结果。如果数据量较大，可以多次调用**doFinal**，拼接结果以获得完整的明文或密文。
 
-<br>关于其他注意事项，请参见[doFinal()](#dofinal-1)中的**说明：**。
+<br>关于其他注意事项，请参见[doFinal()](#dofinal-1)中的**说明：** 。
 
 <br><br>**说明：** <br>建议优先使用异步API，doFinal。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
@@ -895,7 +895,7 @@ update(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 
 <br>必须在对[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例使用[init()](#init-3)初始化后，才能使用本函数。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 在进行对称加解密操作时，如果开发者对各分组模式不够熟悉，建议每次调用**update**和**doFinal**后，都判断结果是否为null。如果结果
 > 不为null，则取出其中的数据进行拼接，以形成完整的密文或明文。这是因为选择的分组模式等各项规格可能会影响**update**和**doFinal**的
@@ -950,7 +950,7 @@ update(data: DataBlob): Promise<DataBlob>
 
 <br>必须在对[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例使用[init()](#init-3)初始化后，才能使用本函数。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 在进行对称加解密操作时，如果开发者对各分组模式不够熟悉，建议每次调用**update**和**doFinal**后，都判断结果是否为null。如果结果
 > 不为null，则取出其中的数据进行拼接，以形成完整的密文或明文。这是因为选择的分组模式等各项规格可能会影响**update**和**doFinal**的

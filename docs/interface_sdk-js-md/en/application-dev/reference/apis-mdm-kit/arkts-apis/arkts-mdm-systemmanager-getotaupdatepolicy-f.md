@@ -32,7 +32,7 @@ Checks the update policy. This API is applicable to scenarios where you need to 
 
 | Type | Description |
 | --- | --- |
-| [OtaUpdatePolicy](arkts-mdm-systemmanager-otaupdatepolicy-i.md) | OtaUpdatePolicy** object containing the update policy obtained. |
+| [OtaUpdatePolicy](arkts-mdm-systemmanager-otaupdatepolicy-i.md) | **OtaUpdatePolicy** object containing the update policy obtained. |
 
 **Error codes:**
 

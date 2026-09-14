@@ -8,7 +8,7 @@ declare const Component: ClassDecorator & ((options: ComponentOptions) => ClassD
 
 开发指南参考：[创建自定义组件](../../../ui/state-management/arkts-create-custom-components.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 11开始，\@Component可以接受一个可选的[ComponentOptions](arkts-arkui-componentoptions-i.md)类型参数。
 > 

@@ -20,7 +20,7 @@ activatedFontColor?: ResourceColor
 
 Font color when the chip is activated.
 
-Default value: **\$r('sys.color.ohos_id_color_text_primary_contrary')**
+Default value: **&#36;r('sys.color.ohos_id_color_text_primary_contrary')**
 
 If the value is **undefined**, the default value is used.
 
@@ -42,7 +42,7 @@ fontColor?: ResourceColor
 
 Font color.
 
-Default value: **\$r('sys.color.ohos_id_color_text_primary')**
+Default value: **&#36;r('sys.color.ohos_id_color_text_primary')**
 
 If the value is **undefined**, the default value is used.
 
@@ -86,7 +86,7 @@ fontSize?: Dimension
 
 Font size. This parameter cannot be set in percentage.
 
-Default value: **\$r('sys.float.ohos_id_text_size_button2')**
+Default value: **&#36;r('sys.float.ohos_id_text_size_button2')**
 
 If the value is **undefined**, the default value is used.
 
@@ -140,11 +140,11 @@ Default value:
 
 When **size** is set to **ChipSize.SMALL**, the default value is as follows:
 
-`{ start: LengthMetrics.resource(\$r('sys.float.chip_small_text_margin')), end: LengthMetrics.resource(\$r('sys.float.chip_small_text_margin')) }`
+`{ start: LengthMetrics.resource(&#36;r('sys.float.chip_small_text_margin')), end: LengthMetrics.resource(&#36;r('sys.float.chip_small_text_margin')) }`
 
 When **size** is set to **ChipSize.NORMAL**, the default value is as follows:
 
-`{ start: LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin')), end: LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin')) }`
+`{ start: LengthMetrics.resource(&#36;r('sys.float.chip_normal_text_margin')), end: LengthMetrics.resource(&#36;r('sys.float.chip_normal_text_margin')) }`
 
 If the value is **undefined**, the default value is used.
 

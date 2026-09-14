@@ -71,7 +71,7 @@ cloudSync(
 
 手动执行按条件进行端云同步，使用callback异步回调。使用该接口需要实现云同步功能。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 18开始，手动执行端云同步时，设置谓词条件时新增支持指定资产下载能力。此时，同步模式需要设置为`relationalStore.SyncMode.SYNC_MODE_CLOUD_FIRST`。
 > 
@@ -110,7 +110,7 @@ cloudSync(mode: SyncMode, predicates: RdbPredicates, progress: Callback<Progress
 
 手动执行按条件进行端云同步，使用Promise异步回调。使用该接口需要实现云同步功能。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 18开始，手动执行端云同步时，设置谓词条件时新增支持指定资产下载能力。此时，同步模式需要设置为`relationalStore.SyncMode.SYNC_MODE_CLOUD_FIRST`。
 > 
@@ -259,7 +259,7 @@ lockCloudContainer(): Promise<number>
 
 手动对应用云端数据库加锁，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 若手动加锁成功，则其他同账户设备的同应用禁止同步到云端。使用该接口需要实现云同步功能。
 
@@ -601,7 +601,7 @@ retainDeviceData(retainDevices?: Record<string, Array<string>>): Promise<void>
 
 要删除数据越多，执行所需的时间越长。
 
-> **说明：**
+> **说明：** 
 > 
 > 入参允许为空，数据库表名对应的设备id列表也允许为空，但是数据库表名和设备id不允许为空字符串。
 > 
@@ -794,7 +794,7 @@ updateDistributedInfo(info: DistributedInfo, predicates: RdbPredicates): Promise
 
 要更新数据越多，执行所需的时间越长。
 
-> **说明：**
+> **说明：** 
 > 
 > 入参info中若要传入设备id信息，则设备id必须是已与当前设备建立网络连接的设备id。
 > 

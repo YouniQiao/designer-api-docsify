@@ -79,7 +79,7 @@ deleteBackward(length: number): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** deleteBackward(length: number): Promise&lt;boolean&gt;
+**替代接口：** [deleteBackward](arkts-ime-inputmethodengine-inputclient-i.md#deletebackward)(length: number): Promise&lt;boolean&gt;
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -172,7 +172,7 @@ deleteForward(length: number): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** deleteForward(length: number): Promise&lt;boolean&gt;
+**替代接口：** [deleteForward](arkts-ime-inputmethodengine-inputclient-i.md#deleteforward)(length: number): Promise&lt;boolean&gt;
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -261,7 +261,7 @@ getBackward(length: number): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** getBackward(length: number): Promise&lt;string&gt;
+**替代接口：** [getBackward](arkts-ime-inputmethodengine-inputclient-i.md#getbackward)(length: number): Promise&lt;string&gt;
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -426,7 +426,7 @@ getForward(length: number): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** getForward(length: number): Promise&lt;string&gt;
+**替代接口：** [getForward](arkts-ime-inputmethodengine-inputclient-i.md#getforward)(length: number): Promise&lt;string&gt;
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -514,7 +514,7 @@ insertText(text: string): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** insertText(text: string): Promise&lt;boolean&gt;
+**替代接口：** [insertText](arkts-ime-inputmethodengine-inputclient-i.md#inserttext)(text: string): Promise&lt;boolean&gt;
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -606,7 +606,7 @@ sendKeyFunction(action: number): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** sendKeyFunction(action: number): Promise&lt;boolean&gt;
+**替代接口：** [sendKeyFunction](arkts-ime-inputmethodengine-inputclient-i.md#sendkeyfunction)(action: number): Promise&lt;boolean&gt;
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

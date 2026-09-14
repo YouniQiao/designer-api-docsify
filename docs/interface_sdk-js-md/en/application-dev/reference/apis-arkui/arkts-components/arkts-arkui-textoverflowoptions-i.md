@@ -2,7 +2,7 @@
 
 Defines the configuration object for text overflow behavior.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer element
@@ -11,11 +11,6 @@ Defines the configuration object for text overflow behavior.
 **Since:** 18
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## overflow
 
@@ -29,7 +24,7 @@ Default value: **TextOverflow.Clip**
 
 **Type:** [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md)
 
-**Default:**
+**Default:** 
 - API version 18+: TextOverflow.Clip
 
 **Since:** 7

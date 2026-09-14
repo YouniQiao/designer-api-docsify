@@ -6,11 +6,6 @@ Defines the configuration options of the text picker.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## columnWidths
 
 ```TypeScript
@@ -21,7 +16,7 @@ Custom widths for each column.
 
 Default value: Each column has equal width, calculated by dividing the total component width by the number of columns.
 
-**NOTE:**
+**NOTE:** 
 
 1. Text truncation occurs when content exceeds column width.
 2. Invalid values are treated as the default value.
@@ -48,7 +43,7 @@ range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascade
 
 Data selection range of the picker. This parameter cannot be set to an empty array. If it is set to an empty array, no value is displayed. If it is dynamically changed to an empty array, the current valid value remains displayed.
 
-**NOTE:**
+**NOTE:** 
 
 1. Single-column pickers: string[], Resource,
 or [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[]
@@ -76,12 +71,12 @@ Index of the selected item in the data list. The index is zero-based.
 
 Default value: **0**
 
-**NOTE:**
+**NOTE:** 
 
 1. Single-column pickers: number
 2. Multi-column pickers: number[]
 3. Since API version 10, this parameter supports two-way binding through  
-[\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** number &#124; number[]
 
@@ -103,10 +98,10 @@ Value of the selected item. The priority of this parameter is lower than that of
 
 Default value: value of the first item in the data list.
 
-**NOTE:**
+**NOTE:** 
 
 1. Since API version 10, this parameter supports two-way binding through  
-[\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
 2. The Resource type is supported since API version 20.
 3. This parameter works only when the picker contains text only.
 It does not work when the picker contains images or mixed content.
@@ -115,7 +110,7 @@ It does not work when the picker contains images or mixed content.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)[]
 
-**Default:**
+**Default:** 
 - API versions 8 to 9: value of the first item
 
 **Since:** 8

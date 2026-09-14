@@ -14,7 +14,7 @@ function cancelOverflow(formId: string): Promise<void>
 
 卡片提供方发起取消互动卡片动效请求，只针对[场景动效类型互动卡片](../../../form/arkts-ui-widget-configuration.md#sceneanimationparams标签)生效，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 该接口在省电模式场景下不可使用，会报16501000错误码。
 > 

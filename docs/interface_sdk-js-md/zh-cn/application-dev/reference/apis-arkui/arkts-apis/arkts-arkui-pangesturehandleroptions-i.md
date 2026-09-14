@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## direction
 
 ```TypeScript
@@ -43,7 +38,7 @@ distance?: number
 
 手写笔默认值：8，其余输入源默认值：5
 
-**说明：**
+**说明：** 
 
 [Tabs组件](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs)滑动与该滑动手势事件同时存在时，可将distance值设为1，使拖动更灵敏，避免造成事件错乱。
 
@@ -97,7 +92,7 @@ fingers?: number
 
 取值范围：[1, 10]
 
-**说明：**
+**说明：** 
 
 当设置的值小于1或不设置时，会被转化为默认值。
 

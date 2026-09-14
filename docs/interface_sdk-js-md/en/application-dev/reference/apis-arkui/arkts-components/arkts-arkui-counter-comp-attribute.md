@@ -10,11 +10,6 @@ In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## enableDec
 
 ```TypeScript

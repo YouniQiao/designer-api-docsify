@@ -2,7 +2,7 @@
 
 A linear data structure that is implemented on arrays and can be passed between ArkTS concurrent instances. Pass-by-reference is recommended for better transfer performance.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > This section uses the following to identify the use of generics:
@@ -227,10 +227,10 @@ Checks whether all elements in a specified ArkTS Array are contained in this Ark
 ## containsAll
 
 ```TypeScript
-containsAll(elements: BuiltinArray<T>): boolean
+containsAll(elements: readonly T[]): boolean
 ```
 
-Checks whether all elements in a specified built-in Array are contained in this ArkTS Array.
+Checks whether all elements in a specified JavaScript built-in Array are contained in this ArkTS Array.
 
 **Since:** 26.1.0
 
@@ -244,7 +244,7 @@ Checks whether all elements in a specified built-in Array are contained in this 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | [BuiltinArray](arkts-arkts-builtinarray-t.md)&lt;T&gt; | Yes | Built-in Array whose elements are to be checked. |
+| elements | readonly T[] | Yes | JavaScript built-in Array whose elements are to be checked. |
 
 **Return value:**
 
@@ -1184,10 +1184,10 @@ Retains only the elements in this ArkTS Array that are contained in the specifie
 ## retainAll
 
 ```TypeScript
-retainAll(elements: BuiltinArray<T>): boolean
+retainAll(elements: readonly T[]): boolean
 ```
 
-Retains only the elements in this ArkTS Array that are contained in the specified built-in Array.
+Retains only the elements in this ArkTS Array that are contained in the specified JavaScript built-in Array.
 
 **Since:** 26.1.0
 
@@ -1201,7 +1201,7 @@ Retains only the elements in this ArkTS Array that are contained in the specifie
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | [BuiltinArray](arkts-arkts-builtinarray-t.md)&lt;T&gt; | Yes | Built-in Array whose elements are to be retained. |
+| elements | readonly T[] | Yes | JavaScript built-in Array whose elements are to be retained. |
 
 **Return value:**
 
@@ -1460,7 +1460,7 @@ Removes elements from a specified position (start) and all elements after the sp
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Array** object that contains the removed elements. If no element is removed, an empty **Array** object is returned.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| Array&lt;T&gt; | **Array** object that contains the removed elements. If no element is removed, an empty **Array** object is returned.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 
@@ -1495,7 +1495,7 @@ Removes elements from a specified position in an array, and inserts new elements
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Array** object that contains the removed elements. If no element is removed, an empty **Array** object is returned. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| Array&lt;T&gt; | **Array** object that contains the removed elements. If no element is removed, an empty **Array** object is returned. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 

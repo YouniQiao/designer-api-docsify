@@ -1294,7 +1294,7 @@ Writes a **PasteData** object to the pasteboard. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | Yes | PasteData** object. |
+| data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | Yes | **PasteData** object. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -1340,7 +1340,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | Yes | PasteData** object. |
+| data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | Yes | **PasteData** object. |
 
 **Return value:**
 
@@ -1433,7 +1433,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | Yes | PasteData** object. |
+| data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | Yes | **PasteData** object. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -1476,7 +1476,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | Yes | PasteData** object. |
+| data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | Yes | **PasteData** object. |
 
 **Return value:**
 

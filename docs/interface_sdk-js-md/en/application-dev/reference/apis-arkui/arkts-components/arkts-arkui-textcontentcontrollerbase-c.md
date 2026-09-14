@@ -6,11 +6,6 @@ Represents the base controller for **TextInput**, **TextArea**, and **Search** c
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## addText
 
 ```TypeScript
@@ -52,7 +47,7 @@ clearPreviewText(): void
 
 Notifies the input method to clear the current preview text.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When the controller is not bound to any component or the component bound to the controller is released, this interface does not take effect.
 
@@ -74,7 +69,7 @@ Deletes the character before the text cursor in the text box bound to the basic 
 
 This API is not supported in preview display scenarios.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When the controller is not bound to any component or the component bound to the controller is released, this interface does not take effect.
 
@@ -94,7 +89,7 @@ deleteText(range?: TextRange): void
 
 Deletes text within a specified range in the editable content.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This API does not work when the text is being dragged.
 > 
@@ -123,7 +118,7 @@ getCaretOffset() : CaretOffset
 
 Obtains the position information of the caret.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - If this API is called when the caret position is updated in the current frame, it will not take effect.
 > 
@@ -227,7 +222,7 @@ scrollToVisible(range?: TextRange): void
 
 Passes the start and end indexes to the bound text box components (**TextInput**, **TextArea**, and **Search**), and scrolls the text within the range to the visible area.
 
-> **NOTE:**
+> **NOTE:** 
 > When the controller is not bound to any component or the component bound to the controller is released, this interface does not take effect.
 
 **Since:** 23
@@ -252,7 +247,7 @@ setStyledPlaceholder(styledString: StyledString): void
 
 Binds or updates the styled placeholder string.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When the controller is not bound to any component or the component bound to the controller is released, this interface does not take effect.
 

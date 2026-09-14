@@ -6,11 +6,6 @@ Defines the callback information triggered when a permission request is received
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## request
 
 ```TypeScript

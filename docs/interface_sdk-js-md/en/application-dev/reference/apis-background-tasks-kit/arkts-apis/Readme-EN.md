@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-backgroundtaskskit-->
 
-- [@ohos.backgroundTaskManager(Background Task Management)](arkts-backgroundtaskmanager.md)
+- [@ohos.backgroundTaskManager(Background Task Management)](arkts-backgroundtasks-backgroundtaskmanager.md)
   - [cancelSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-cancelsuspenddelay-depr-f.md)
   - [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-depr-f.md)
   - [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md)
@@ -10,7 +10,7 @@
   - [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-depr-e.md)
   <!--Del-->
   - [BackgroundMode(system api)](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-depr-e-sys.md)<!--DelEnd-->
-- [@ohos.bundleState(Device Usage Statistics)](arkts-bundlestate.md)
+- [@ohos.bundleState(Device Usage Statistics)](arkts-backgroundtasks-bundlestate.md)
   - [isIdleState](arkts-backgroundtasks-bundlestate-isidlestate-f.md)
   - [queryAppUsagePriorityGroup](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md)
   <!--Del-->
@@ -24,7 +24,7 @@
   - [BundleActiveState](arkts-backgroundtasks-bundlestate-bundleactivestate-i.md)
   - [BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)
   - [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md)
-- [@ohos.reminderAgent(Agent-powered Reminder)](arkts-reminderagent.md)
+- [@ohos.reminderAgent(Agent-powered Reminder)](arkts-backgroundtasks-reminderagent.md)
   - [addNotificationSlot](arkts-backgroundtasks-reminderagent-addnotificationslot-f.md)
   - [cancelAllReminders](arkts-backgroundtasks-reminderagent-cancelallreminders-f.md)
   - [cancelReminder](arkts-backgroundtasks-reminderagent-cancelreminder-f.md)
@@ -41,7 +41,7 @@
   - [WantAgent](arkts-backgroundtasks-reminderagent-wantagent-i.md)
   - [ActionButtonType](arkts-backgroundtasks-reminderagent-actionbuttontype-e.md)
   - [ReminderType](arkts-backgroundtasks-reminderagent-remindertype-e.md)
-- [@ohos.reminderAgentManager(Agent-powered Reminder)](arkts-reminderagentmanager.md)
+- [@ohos.reminderAgentManager(Agent-powered Reminder)](arkts-backgroundtasks-reminderagentmanager.md)
   - [addExcludeDate](arkts-backgroundtasks-reminderagentmanager-addexcludedate-f.md)
   - [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md)
   - [cancelAllReminders](arkts-backgroundtasks-reminderagentmanager-cancelallreminders-f.md)
@@ -81,7 +81,7 @@
   - [ReminderType](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md)
   - [RingChannel](arkts-backgroundtasks-reminderagentmanager-ringchannel-e.md)
   - [TimeZoneType](arkts-backgroundtasks-reminderagentmanager-timezonetype-e.md)
-- [@ohos.resourceschedule.backgroundLoader](arkts-resourceschedule-backgroundloader.md)
+- [@ohos.resourceschedule.backgroundLoader](arkts-backgroundtasks-resourceschedule-backgroundloader.md)
   - [finishTask](arkts-backgroundtasks-backgroundloader-finishtask-f.md)
   - [getTaskInfo](arkts-backgroundtasks-backgroundloader-gettaskinfo-f.md)
   - [registerTask](arkts-backgroundtasks-backgroundloader-registertask-f.md)
@@ -90,7 +90,7 @@
   - [TaskStopInfo](arkts-backgroundtasks-backgroundloader-taskstopinfo-i.md)
   - [StopCode](arkts-backgroundtasks-backgroundloader-stopcode-e.md)
   - [Constants](arkts-backgroundtasks-backgroundloader-con.md)
-- [@ohos.resourceschedule.backgroundProcessManager(Background Child Process Management)](arkts-resourceschedule-backgroundprocessmanager.md)
+- [@ohos.resourceschedule.backgroundProcessManager(Background Child Process Management)](arkts-backgroundtasks-resourceschedule-backgroundprocessmanager.md)
   <!--Del-->
   - [clearBackgroundApps(system api)](arkts-backgroundtasks-backgroundprocessmanager-clearbackgroundapps-f-sys.md)<!--DelEnd-->
   - [getPowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-getpowersavemode-f.md)
@@ -102,7 +102,7 @@
   - [ClearType(system api)](arkts-backgroundtasks-backgroundprocessmanager-cleartype-e-sys.md)<!--DelEnd-->
   - [PowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-powersavemode-e.md)
   - [ProcessPriority](arkts-backgroundtasks-backgroundprocessmanager-processpriority-e.md)
-- [@ohos.resourceschedule.backgroundTaskManager(Background Task Management)](arkts-resourceschedule-backgroundtaskmanager.md)
+- [@ohos.resourceschedule.backgroundTaskManager(Background Task Management)](arkts-backgroundtasks-resourceschedule-backgroundtaskmanager.md)
   <!--Del-->
   - [applyEfficiencyResources(system api)](arkts-backgroundtasks-backgroundtaskmanager-applyefficiencyresources-f-sys.md)<!--DelEnd-->
   - [cancelSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-cancelsuspenddelay-f.md)
@@ -166,7 +166,7 @@
   <!--Del-->
   - [ResourceType(system api)](arkts-backgroundtasks-backgroundtaskmanager-resourcetype-e-sys.md)<!--DelEnd-->
   - [UserAuthResult](arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md)
-- [@ohos.resourceschedule.deviceStandby](arkts-resourceschedule-devicestandby.md)
+- [@ohos.resourceschedule.deviceStandby](arkts-backgroundtasks-resourceschedule-devicestandby.md)
   <!--Del-->
   - [getExemptedApps(system api)](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -179,7 +179,7 @@
   - [ResourceRequest(system api)](arkts-backgroundtasks-devicestandby-resourcerequest-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ResourceType(system api)](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md)<!--DelEnd-->
-- [@ohos.resourceschedule.usageStatistics(Device Usage Statistics)](arkts-resourceschedule-usagestatistics.md)
+- [@ohos.resourceschedule.usageStatistics(Device Usage Statistics)](arkts-backgroundtasks-resourceschedule-usagestatistics.md)
   <!--Del-->
   - [isIdleState(system api)](arkts-backgroundtasks-usagestatistics-isidlestate-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -232,7 +232,7 @@
   - [GroupType(system api)](arkts-backgroundtasks-usagestatistics-grouptype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [IntervalType(system api)](arkts-backgroundtasks-usagestatistics-intervaltype-e-sys.md)<!--DelEnd-->
-- [@ohos.resourceschedule.workScheduler(Deferred Task Scheduling)](arkts-resourceschedule-workscheduler.md)
+- [@ohos.resourceschedule.workScheduler(Deferred Task Scheduling)](arkts-backgroundtasks-resourceschedule-workscheduler.md)
   - [getWorkStatus](arkts-backgroundtasks-workscheduler-getworkstatus-f.md)
   - [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md)
   - [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md)
@@ -252,10 +252,10 @@
   - [StorageRequest](arkts-backgroundtasks-workscheduler-storagerequest-e.md)
   <!--Del-->
   - [Constants(system api)](arkts-backgroundtasks-workscheduler-con-sys.md)<!--DelEnd-->
-- [@ohos.WorkSchedulerExtensionAbility(Deferred Task Scheduling Callbacks)](arkts-workschedulerextensionability.md)
+- [@ohos.WorkSchedulerExtensionAbility(Deferred Task Scheduling Callbacks)](arkts-backgroundtasks-workschedulerextensionability.md)
   - [WorkSchedulerExtensionAbility](arkts-backgroundtasks-workschedulerextensionability-c.md)
   - [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md)
 - application<!--arkts-backgroundtaskskit-application-->
-  - [WorkSchedulerExtensionContext(ExtensionAbility Context for Deferred Task Scheduling Callbacks)](arkts-workschedulerextensioncontext.md)
+  - [WorkSchedulerExtensionContext(ExtensionAbility Context for Deferred Task Scheduling Callbacks)](arkts-backgroundtasks-workschedulerextensioncontext.md)
     <!--Del-->
     - [WorkSchedulerExtensionContext(system api)](arkts-backgroundtasks-workschedulerextensioncontext-c-sys.md)<!--DelEnd-->

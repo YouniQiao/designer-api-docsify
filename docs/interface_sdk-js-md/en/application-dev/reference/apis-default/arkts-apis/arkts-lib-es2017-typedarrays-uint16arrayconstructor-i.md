@@ -10,8 +10,3 @@
 ```TypeScript
 new (): Uint16Array
 ```
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

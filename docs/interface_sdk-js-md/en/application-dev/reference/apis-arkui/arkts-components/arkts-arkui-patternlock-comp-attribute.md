@@ -10,11 +10,6 @@ In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## activateCircleStyle
 
 ```TypeScript
@@ -55,7 +50,7 @@ Sets the fill color of the grid dot in the activated state, which is when the do
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Fill color of the grid dot in the activated state.<br>Default value: **'#ff182431' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Fill color of the grid dot in the activated state.<br>Default value: **'#ff182431'** |
 
 ## autoReset
 
@@ -75,7 +70,7 @@ Sets whether to allow the user to reset the component status (that is, clear the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to allow the user to reset the component status (that is, clear the input) by touching the component again after the input is complete.<br>**true**: yes; **false**: no<br>Default value: **true |
+| value | boolean | Yes | Whether to allow the user to reset the component status (that is, clear the input) by touching the component again after the input is complete.<br>**true**: yes; **false**: no<br>Default value: **true** |
 
 ## backgroundColor
 
@@ -85,7 +80,7 @@ backgroundColor(value: ResourceColor)
 
 Sets the background color.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 20.
 
@@ -131,7 +126,7 @@ Invoked when a grid dot is connected during pattern password input.
 
 The callback parameter is an array of digits, where each digit represents the index of a selected grid dot, listed in the order they were connected. Grid dots are indexed row-wise from top to bottom, left to right: The first row contains indices 0, 1, 2; the second row 3, 4, 5; and the third row 6, 7, 8.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 20.
 
@@ -187,7 +182,7 @@ Sets the path color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Path color.<br>Default value: **'#33182431' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Path color.<br>Default value: **'#33182431'** |
 
 ## pathStrokeWidth
 
@@ -227,7 +222,7 @@ Sets the fill color of the grid dot in the unselected state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Fill color of the grid dot in the unselected state.<br>Default value: **'#ff182431' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Fill color of the grid dot in the unselected state.<br>Default value: **'#ff182431'** |
 
 ## selectedColor
 
@@ -247,7 +242,7 @@ Fill color of the grid dot in the selected state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Fill color of the grid dot in the selected state.<br>Default value: **'#ff182431' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Fill color of the grid dot in the selected state.<br>Default value: **'#ff182431'** |
 
 ## sideLength
 
@@ -257,7 +252,7 @@ sideLength(value: Length)
 
 Sets the width and height (same value) of the component. If this attribute is set to **0** or a negative number, the component is not displayed.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When the **PatternLock** component has the universal attribute [aspectRatio](arkts-arkui-commonmethod-c.md#aspectratio) set
 > and the ratio is not equal to 1 (the component is constrained to a rectangle), the nine‑grid pattern is still
@@ -273,7 +268,7 @@ Sets the width and height (same value) of the component. If this attribute is se
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width and height of the component. Default value: **288vp |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width and height of the component. Default value: **288vp** |
 
 ## skipUnselectedPoint
 
@@ -295,4 +290,4 @@ Sets whether unselected dots in the grid are automatically skipped when the pass
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| skipped | boolean | Yes | Whether unselected dots in the grid are automatically skipped when the password path passes over them.<br>**true** to skip the unselected dots when the password path passes over them; **false** otherwise. Default value: **false |
+| skipped | boolean | Yes | Whether unselected dots in the grid are automatically skipped when the password path passes over them.<br>**true** to skip the unselected dots when the password path passes over them; **false** otherwise. Default value: **false** |

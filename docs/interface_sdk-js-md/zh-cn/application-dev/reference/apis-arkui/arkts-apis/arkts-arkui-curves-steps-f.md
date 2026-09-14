@@ -14,7 +14,7 @@ function steps(count: number, end: boolean): string
 
 构造阶梯曲线对象，阶梯曲线将动画时间等分为指定数量的间隔，在每个间隔内属性值保持不变，在间隔边界处发生阶跃变化。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。
 

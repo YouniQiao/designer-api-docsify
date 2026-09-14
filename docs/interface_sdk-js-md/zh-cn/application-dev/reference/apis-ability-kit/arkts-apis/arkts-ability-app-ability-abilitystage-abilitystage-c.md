@@ -53,7 +53,7 @@ onAcceptWant(want: Want): string
 
 如果系统中已经有相同标识的UIAbility实例存在，则复用已有实例，否则创建新的实例。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，当[AbilityStage.onAcceptWantAsync](#onacceptwantasync)实现时，本回调函数将不会被触发。
 
@@ -144,7 +144,7 @@ onConfigurationUpdate(newConfig: Configuration): void
 
 当系统全局配置（例如系统语言、深浅色等）发生变更时，会触发该回调。配置项均定义在[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)类中。同步接口，不支持异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 该回调方法在实际触发时存在一定限制。例如如果开发者通过[setLanguage](arkts-ability-applicationcontext-c.md#setlanguage)接口
 > 设置应用的语言，即便系统语言发生变化，系统也不再触发onConfigurationUpdate回调。详见
@@ -271,7 +271,7 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 
 同步接口，不支持异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > onMemoryLevel回调运行在当前进程的主线程中，如果在该回调中做耗时的UI组件释放，会阻塞主线程任务，因此不建议在该回调中释放UI组件。
 
@@ -319,10 +319,9 @@ onNewProcessRequest(want: Want): string
 
 <!--DelEnd-->
 
-> **说明：**
+> **说明：** 
 > 
-> - 在API version 19及之前版本，仅支持在指定进程中启动UIAbility。<!--Del-->从API version 20开始，新增支持在指定进程中启动UIExtensionAbility。&lt;!--DelEnd
-> --
+> - 在API version 19及之前版本，仅支持在指定进程中启动UIAbility。<!--Del-->从API version 20开始，新增支持在指定进程中启动UIExtensionAbility。&lt;!--DelEnd &gt; --
 > 
 > 
 > - 从API version 20开始，当[AbilityStage.onNewProcessRequestAsync](#onnewprocessrequestasync)实现时，本回调函
@@ -419,7 +418,7 @@ onPrepareTermination(): AbilityConstant.PrepareTermination
 
 当应用被用户关闭时调用，可用于询问用户选择立即执行操作还是取消操作。同步接口，不支持异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 仅当应用正常退出（例如，通过doc栏/托盘关闭应用，或者应用随设备关机而退出）时会调用该接口。如果应用被强制关闭，则不会调用该接口。
 > 
@@ -462,7 +461,7 @@ onPrepareTerminationAsync(): Promise<AbilityConstant.PrepareTermination>
 
 当应用被用户关闭时调用，可用于询问用户选择立即执行操作还是取消操作。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 仅当应用正常退出（例如，通过doc栏/托盘关闭应用，或者应用随设备关机而退出）时会调用该接口。如果应用被强制关闭，则不会调用该接口。
 > 

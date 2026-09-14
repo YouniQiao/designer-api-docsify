@@ -30,7 +30,7 @@ Creates a **KVManager** instance for KV store management.
 
 | Type | Description |
 | --- | --- |
-| [KVManager](arkts-arkdata-distributedkvstore-kvmanager-i.md) | KVManager** instance created. |
+| [KVManager](arkts-arkdata-distributedkvstore-kvmanager-i.md) | **KVManager** instance created. |
 
 **Error codes:**
 

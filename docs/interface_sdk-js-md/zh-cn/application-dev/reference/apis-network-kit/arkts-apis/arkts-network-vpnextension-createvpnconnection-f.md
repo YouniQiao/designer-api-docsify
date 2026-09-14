@@ -14,7 +14,7 @@ function createVpnConnection(context: VpnExtensionContext): VpnConnection
 
 创建一个三方VPN连接对象。
 
-> **说明：**
+> **说明：** 
 > 
 > 调用createVpnConnection接口前，需要先调用startVpnExtensionAbility接口启用VPN功能。
 

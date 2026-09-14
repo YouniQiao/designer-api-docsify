@@ -6,11 +6,6 @@ Defines the callback information triggered when an apple-touch-icon URL is recei
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## precomposed
 
 ```TypeScript

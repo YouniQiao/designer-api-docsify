@@ -12,11 +12,6 @@ Priorities of the **confirm** parameters: **fontColor** and **backgroundColor**
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## confirm
 
 ```TypeScript

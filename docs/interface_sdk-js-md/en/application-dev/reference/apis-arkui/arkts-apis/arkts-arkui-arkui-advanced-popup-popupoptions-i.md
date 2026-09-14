@@ -78,7 +78,7 @@ icon?: PopupIconOptions
 
 Icon of the popup.
 
-**NOTE:**
+**NOTE:** 
 
 The icon is not displayed when **width** and **height** are set to an invalid value or **0**.
 
@@ -102,10 +102,10 @@ maxWidth?: Dimension
 
 Maximum width of the popup. This API allows the popup to display with a custom width.
 
-**NOTE:**
+**NOTE:** 
 
 1. When using resource references, ensure that the parameter type matches the attribute method type.
-2. **maxWidth** accepts numeric values (both floating-point and integer values), such as **\$r('app.float.maxWidth')** and **\$r('app.integer.maxWidth')**.
+2. **maxWidth** accepts numeric values (both floating-point and integer values), such as **&#36;r('app.float.maxWidth')** and **&#36;r('app.integer.maxWidth')**.
 3. When the type is Resource, values default to px units if no unit is explicitly specified.
 
 Default value: **400vp**
@@ -128,7 +128,7 @@ message: PopupTextOptions
 
 Message of the popup.
 
-**NOTE:**
+**NOTE:** 
 
 **fontWeight** is not available for messages.
 

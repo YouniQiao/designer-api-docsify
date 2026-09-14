@@ -14,11 +14,6 @@ Defines the stepper attribute functions
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onChange
 
 ```TypeScript
@@ -27,7 +22,7 @@ onChange(callback: (prevIndex: number, index: number) => void)
 
 Triggered when the step navigation switches by clicking [prevLabel](arkts-arkui-stepperitem-comp-attribute.md#prevlabel) of the **StepperItem** component; or when clicking [nextLabel](arkts-arkui-stepperitem-comp-attribute.md#nextlabel) of the current **StepperItem** component, provided that the current page is not the last **StepperItem** in the stepper and the ItemState attribute is **Normal**.
 
-> **NOTE:**
+> **NOTE:** 
 
 **Since:** 8
 
@@ -53,7 +48,7 @@ onFinish(callback: () => void)
 
 Triggered when [nextLabel](arkts-arkui-stepperitem-comp-attribute.md#nextlabel) of the last StepperItem in the stepper is clicked and the ItemState attribute is **Normal**.
 
-> **NOTE:**
+> **NOTE:** 
 
 **Since:** 8
 
@@ -79,7 +74,7 @@ onNext(callback: (index: number, pendingIndex: number) => void)
 
 Triggered when switching to the next step by clicking [nextLabel](arkts-arkui-stepperitem-comp-attribute.md#nextlabel) of a **StepperItem**, provided that the current page is not the last **StepperItem** in the stepper and the ItemState attribute is **Normal**.
 
-> **NOTE:**
+> **NOTE:** 
 
 **Since:** 8
 
@@ -105,7 +100,7 @@ onPrevious(callback: (index: number, pendingIndex: number) => void)
 
 Triggered when switching to the previous step by clicking [prevLabel](arkts-arkui-stepperitem-comp-attribute.md#prevlabel) of a **StepperItem**.
 
-> **NOTE:**
+> **NOTE:** 
 
 **Since:** 8
 
@@ -131,7 +126,7 @@ onSkip(callback: () => void)
 
 Triggered when [nextLabel](arkts-arkui-stepperitem-comp-attribute.md#nextlabel) is clicked and the StepperItem status is **ItemState.Skip**.
 
-> **NOTE:**
+> **NOTE:** 
 
 **Since:** 8
 

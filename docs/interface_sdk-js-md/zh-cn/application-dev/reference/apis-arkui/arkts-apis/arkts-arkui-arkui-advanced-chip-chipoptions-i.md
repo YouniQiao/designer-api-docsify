@@ -2,22 +2,22 @@
 
 ChipOptions定义Chip的样式及具体样式参数。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 当`suffixSymbol`有传入参数时，`suffixIcon`和`allowClose`不生效；当`suffixSymbol`没有传入参数而`suffixIcon`有传入参数时，`allowClose`不生效；当
 > `suffixSymbol`和`suffixIcon`都没有传入参数时，`allowClose`决定是否显示关闭图标。
 > 
 > 2. `backgroundColor`和`activatedBackgroundColor`赋值为`undefined`时，显示默认背景颜色；赋值为非法值时，背景颜色透明。
 > 
-> 3. 当prefixSymbol或suffixSymbol设置了图标时，若Chip为非激活状态，图标颜色fontColor为`[\$r('sys.color.ohos_id_color_secondary')]`，若Chip为激活状
-> 态，图标颜色fontColor为`[\$r('sys.color.ohos_id_color_text_primary_contrary')]`。此外，当size为ChipSize.SMALL时，图标的默认字体大小fontSize为
-> `\$r('sys.float.chip_small_icon_size')`；当size为ChipSize.NORMAL或自定义大小时，图标的默认字体大小fontSize为
-> `\$r('sys.float.chip_normal_icon_size')`。
+> 3. 当prefixSymbol或suffixSymbol设置了图标时，若Chip为非激活状态，图标颜色fontColor为`[&#36;r('sys.color.ohos_id_color_secondary')]`，若Chip为激活状
+> 态，图标颜色fontColor为`[&#36;r('sys.color.ohos_id_color_text_primary_contrary')]`。此外，当size为ChipSize.SMALL时，图标的默认字体大小fontSize为
+> `&#36;r('sys.float.chip_small_icon_size')`；当size为ChipSize.NORMAL或自定义大小时，图标的默认字体大小fontSize为
+> `&#36;r('sys.float.chip_normal_icon_size')`。
 > 
-> 4. 当prefixIcon和suffixIcon设置了图标时，fillColor默认值均为：`\$r('sys.color.chip_usually_icon_color')`。fillColor对颜色的解析与Image组件保持一
+> 4. 当prefixIcon和suffixIcon设置了图标时，fillColor默认值均为：`&#36;r('sys.color.chip_usually_icon_color')`。fillColor对颜色的解析与Image组件保持一
 > 致。
 > 
-> 5. 当prefixIcon和suffixIcon设置了图标时，activatedFillColor默认值均为：`\$r('sys.color.chip_active_icon_color')`。activatedFillColor
+> 5. 当prefixIcon和suffixIcon设置了图标时，activatedFillColor默认值均为：`&#36;r('sys.color.chip_active_icon_color')`。activatedFillColor
 > 对颜色的解析与Image组件保持一致。
 > 
 > 6. 从API版本26.0.0开始，当配置backgroundSystemMaterial为自动反色材质时，prefixIcon和suffixIcon的填充色以及prefixSymbol和suffixSymbol在非激活状态下的文
@@ -44,7 +44,7 @@ onClose?: () => void
 
 值为undefined时，不触发关闭图标点击事件。
 
-**说明：**仅当关闭图标显示时生效，即suffixSymbol和suffixIcon都未传入参数且allowClose为true时。
+**说明：** 仅当关闭图标显示时生效，即suffixSymbol和suffixIcon都未传入参数且allowClose为true时。
 
 **起始版本：** 11
 
@@ -166,7 +166,7 @@ activatedBackgroundColor?: ResourceColor
 
 Chip激活态的背景颜色。
 
-默认值：\$r('sys.color.ohos_id_color_emphasize')。
+默认值：&#36;r('sys.color.ohos_id_color_emphasize')。
 
 值为undefined时，按默认值处理。赋值为非法值时，背景颜色透明。
 
@@ -192,7 +192,7 @@ activatedBackgroundSystemMaterial?: uiMaterial.Material
 
 值为undefined时，不应用材质样式。
 
-**说明：**当设置activatedBackgroundSystemMaterial时，应将activatedBackgroundColor设为Color.Transparent，否则会与系统材质冲突；当activatedBackgroundSystemMaterial为undefined时，activatedBackgroundColor属性生效。
+**说明：** 当设置activatedBackgroundSystemMaterial时，应将activatedBackgroundColor设为Color.Transparent，否则会与系统材质冲突；当activatedBackgroundSystemMaterial为undefined时，activatedBackgroundColor属性生效。
 
 **类型：** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
@@ -218,7 +218,7 @@ true：关闭图标显示；false：关闭图标不显示。
 
 值为undefined时，按默认值处理。
 
-**说明：**当suffixSymbol有传入参数时，allowClose不生效；当suffixSymbol没有传入参数而suffixIcon有传入参数时，allowClose不生效；当suffixSymbol和suffixIcon都没有传入参数时，allowClose决定是否显示关闭图标。
+**说明：** 当suffixSymbol有传入参数时，allowClose不生效；当suffixSymbol没有传入参数而suffixIcon有传入参数时，allowClose不生效；当suffixSymbol和suffixIcon都没有传入参数时，allowClose决定是否显示关闭图标。
 
 **类型：** boolean
 
@@ -238,7 +238,7 @@ backgroundColor?: ResourceColor
 
 Chip背景颜色。
 
-默认值：\$r('sys.color.ohos_id_color_button_normal')。
+默认值：&#36;r('sys.color.ohos_id_color_button_normal')。
 
 值为undefined时，按默认值处理。赋值为非法值时，背景颜色透明。
 
@@ -264,7 +264,7 @@ backgroundSystemMaterial?: uiMaterial.Material
 
 值为undefined时，不应用材质样式。
 
-**说明：**当设置backgroundSystemMaterial时，应将backgroundColor设为Color.Transparent，否则会与系统材质冲突；当backgroundSystemMaterial为undefined时，backgroundColor属性生效。
+**说明：** 当设置backgroundSystemMaterial时，应将backgroundColor设为Color.Transparent，否则会与系统材质冲突；当backgroundSystemMaterial为undefined时，backgroundColor属性生效。
 
 **类型：** [uiMaterial.Material](arkts-arkui-uimaterial-material-c.md)
 
@@ -286,7 +286,7 @@ Chip背景圆角半径大小，不支持百分比，传入百分比时按默认�
 
 取值范围：[0, +∞)
 
-默认值：\$r('sys.float.ohos_id_corner_radius_button')。
+默认值：&#36;r('sys.float.ohos_id_corner_radius_button')。
 
 单位：vp
 
@@ -384,8 +384,8 @@ fontSize?: Dimension
 
 默认值：
 
-- size为ChipSize.SMALL时，文本：`\$r('sys.float.chip_small_font_size')`；图标：`\$r('sys.float.chip_small_icon_size')`  
-- 其他情况下，文本：`\$r('sys.float.chip_normal_font_size')`；图标：`\$r('sys.float.chip_normal_icon_size')`
+- size为ChipSize.SMALL时，文本：`&#36;r('sys.float.chip_small_font_size')`；图标：`&#36;r('sys.float.chip_small_icon_size')`  
+- 其他情况下，文本：`&#36;r('sys.float.chip_normal_font_size')`；图标：`&#36;r('sys.float.chip_normal_icon_size')`
 
 单位：fp
 
@@ -591,7 +591,7 @@ Chip尺寸。
 
 SizeOptions类型参数不支持百分比设置，异常值按默认值处理。
 
-**说明：**[适老化](../../../ui/arkui-support-for-aging-adaptation.md)在size指定具体宽高时不生效，size设置为{ height: 0, width: 0 }除外。
+**说明：** [适老化](../../../ui/arkui-support-for-aging-adaptation.md)在size指定具体宽高时不生效，size设置为{ height: 0, width: 0 }除外。
 
 **类型：** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) &#124; [SizeOptions](arkts-arkui-sizeoptions-i.md)
 

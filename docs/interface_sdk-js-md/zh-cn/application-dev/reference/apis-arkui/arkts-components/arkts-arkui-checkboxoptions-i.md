@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## group
 
 ```TypeScript
@@ -21,7 +16,7 @@ group?: string
 
 默认值：undefined，默认状态下配合[CheckboxGroupOptions](arkts-arkui-checkboxgroupoptions-i.md)属性group信息为undefined的节点使用。
 
-**说明：**
+**说明：** 
 
 未配合使用CheckboxGroup组件时，此值无用。
 

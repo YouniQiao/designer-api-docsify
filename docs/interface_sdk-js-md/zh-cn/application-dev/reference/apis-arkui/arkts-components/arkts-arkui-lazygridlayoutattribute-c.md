@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## columnsGap
 
 ```TypeScript
@@ -41,6 +36,8 @@ columnsGap(value: LengthMetrics): T
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## footer
 
 ```TypeScript
@@ -67,6 +64,8 @@ footer(builder: CustomBuilder | undefined): T
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## header
 
 ```TypeScript
@@ -75,7 +74,7 @@ header(builder: CustomBuilder | undefined): T
 
 设置LazyVGridLayout的头部组件。
 
-> **说明：**
+> **说明：** 
 > 
 > 头部组件位于容器顶部区域，通常用于展示标题、分组说明或其他固定在内容前方的元素。
 > 
@@ -99,6 +98,8 @@ header(builder: CustomBuilder | undefined): T
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## onVisibleIndexesChange
 
 ```TypeScript
@@ -107,7 +108,7 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T
 
 设置onVisibleIndexesChange回调函数。当LazyVGridLayout可视区域内子组件的索引值发生变化时触发回调，返回可视区域内子组件的起始索引值和结束索引值。
 
-> **说明：**
+> **说明：** 
 > 
 > 当父组件设置主轴方向尺寸时，LazyVGridLayout按照父组件可视区域进行懒加载。此时onVisibleIndexesChange回调中start返回当前可视区域起始位置子组件的索引值，end返回当前可视区域结束位置子组件的索引值。
 > 
@@ -133,6 +134,8 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## rowsGap
 
 ```TypeScript
@@ -159,6 +162,8 @@ rowsGap(value: LengthMetrics): T
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## sticky
 
 ```TypeScript
@@ -185,3 +190,4 @@ sticky(sticky: StickyStyle | undefined): T
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |

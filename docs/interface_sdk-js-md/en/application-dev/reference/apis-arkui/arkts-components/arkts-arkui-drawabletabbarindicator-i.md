@@ -6,11 +6,6 @@ Uses an image resource as the indicator.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## borderRadius
 
 ```TypeScript

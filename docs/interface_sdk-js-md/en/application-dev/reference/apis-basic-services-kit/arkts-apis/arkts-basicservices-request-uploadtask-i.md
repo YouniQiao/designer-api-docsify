@@ -20,7 +20,7 @@ delete(callback: AsyncCallback<boolean>): void
 
 Deletes the upload task. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
@@ -63,7 +63,7 @@ delete(): Promise<boolean>
 
 Deletes the upload task. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
 > code is removed from API version 12.
@@ -284,7 +284,7 @@ on(type: 'progress', callback: (uploadedSize: number, totalSize: number) => void
 
 Subscribes to upload progress events. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > To maintain a balance between power consumption and performance, this API cannot be called when the application
 > is running in the background.

@@ -6,7 +6,7 @@ LiteResultSet实例不会实时刷新。使用结果集后，如果数据库中�
 
 下列API示例中，都需先使用[queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querywithoutrowcount)、[querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount)等query类方法中任一方法获取到LiteResultSet实例，再通过此实例调用对应方法。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本class首批接口从API version 23开始支持。
 

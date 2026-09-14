@@ -8,11 +8,6 @@ Defines ScaleSymbolEffect class, which inherits from **SymbolEffect**.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript
@@ -35,8 +30,8 @@ A constructor used to create a **ScaleSymbolEffect** instance, which comes with 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.<br>Default value: **EffectScope.LAYER |
-| direction | [EffectDirection](arkts-arkui-effectdirection-e.md) | No | Effect direction.<br>Default value: **EffectDirection.DOWN |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.<br>Default value: **EffectScope.LAYER** |
+| direction | [EffectDirection](arkts-arkui-effectdirection-e.md) | No | Effect direction.<br>Default value: **EffectDirection.DOWN** |
 
 ## direction
 

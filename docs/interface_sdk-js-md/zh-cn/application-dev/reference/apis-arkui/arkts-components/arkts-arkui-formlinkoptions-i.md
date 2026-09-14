@@ -4,11 +4,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## abilityName
 
 ```TypeScript
@@ -41,7 +36,7 @@ action的类型，支持三种预定义的类型：
 
 - call：后台启动提供方应用。触发后会拉起提供方应用的指定UIAbility（仅支持launchType为[singleton](../../../application-models/uiability-launch-type.md#singleton启动模式)的UIAbility，即启动模式为单实例的UIAbility），但不会调度到前台。提供方应用需要具备后台运行权限([ohos.permission.KEEP_BACKGROUND_RUNNING](../../../security/AccessToken/permissions-for-all.md#ohospermissionkeep_background_running))。
 
-**说明：**
+**说明：** 
 
 不推荐使用router事件刷新卡片UI。
 
@@ -99,7 +94,7 @@ params?: Object
 
 当前action携带的额外参数，内容使用JSON格式的键值对形式。call 类型时需填入参数'method'，且类型需要为string类型，用于触发UIAbility中对应的方法。
 
-**说明：**
+**说明：** 
 
 不建议通过params传递卡片内部的状态变量。
 

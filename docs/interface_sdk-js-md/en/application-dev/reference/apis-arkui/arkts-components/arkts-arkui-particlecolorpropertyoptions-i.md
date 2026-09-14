@@ -6,11 +6,6 @@ Defines the particle color property updater configs which can support generics. 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## distributionType
 
 ```TypeScript
@@ -70,7 +65,7 @@ is [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdate
 
 The default value of **type** is **ParticleUpdater.NONE**.
 
-**NOTE:**
+**NOTE:** 
 
 When **type** is set to **ParticleUpdater.RANDOM** or **ParticleUpdater.CURVE**, the color configuration in **updater** has higher priority than that in **range**. During the animation time period configured in **updater**, the color configuration from **updater** is used. Outside of the animation time period configured in **updater**, the color configuration from **range** is used.
 

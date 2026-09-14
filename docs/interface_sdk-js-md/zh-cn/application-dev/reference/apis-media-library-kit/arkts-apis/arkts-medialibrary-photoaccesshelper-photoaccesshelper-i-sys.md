@@ -5093,7 +5093,7 @@ startAssetAnalysisAsync(config: AnalysisConfig, callback: Callback<AnalysisResul
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [AnalysisConfig](arkts-medialibrary-photoaccesshelper-analysisconfig-i-sys.md) | 是 | 资产分析配置，config中的uris从[PhotoAsset](arkts-file-photoaccesshelper.md)对象中获取。 |
+| config | [AnalysisConfig](arkts-medialibrary-photoaccesshelper-analysisconfig-i-sys.md) | 是 | 资产分析配置，config中的uris从[PhotoAsset](arkts-medialibrary-file-photoaccesshelper.md)对象中获取。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AnalysisResult](arkts-medialibrary-photoaccesshelper-analysisresult-i-sys.md)&gt; | 是 | 回调函数，用于返回资产分析结果信息。 |
 
 **返回值：**

@@ -34,7 +34,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| album | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | Yes | Highlights** album. |
+| album | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | Yes | **Highlights** album. |
 
 **Error codes:**
 

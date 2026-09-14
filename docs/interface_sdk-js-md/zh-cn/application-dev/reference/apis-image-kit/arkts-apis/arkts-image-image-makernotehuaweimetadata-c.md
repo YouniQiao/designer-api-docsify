@@ -684,7 +684,7 @@ xmageTop?: number
 xmageWatermarkMode?: number
 ```
 
-XMAGE水印模式。具体取值请参考[Constants](arkts-multimedia-image.md)。
+XMAGE水印模式。具体取值请参考[Constants](arkts-image-multimedia-image.md)。
 
 **类型：** number
 

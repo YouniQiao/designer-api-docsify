@@ -19,10 +19,6 @@ Creates a WeakRef instance for the given target object.
 | --- | --- | --- | --- |
 | target | T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## prototype
 
 ```TypeScript

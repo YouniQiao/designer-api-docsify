@@ -4,7 +4,7 @@
 type ArrayElementPredicateFn<ElementType> = (value: ElementType) => boolean
 ```
 
-ArkTS Array判定函数类型，被Array类的'retainAll'接口使用，用来判断数组元素是否满足测试条件。
+ArkTS Array断言函数类型，被Array类的'retainAll'接口使用，用来判断数组元素是否满足测试条件。
 
 **起始版本：** 26.1.0
 
@@ -24,4 +24,4 @@ ArkTS Array判定函数类型，被Array类的'retainAll'接口使用，用来�
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 判定函数的结果，若当前元素满足判定函数则为真，否则为假。 |
+| boolean | 断言函数的结果，若当前元素满足断言函数则为真，否则为假。 |

@@ -2,7 +2,7 @@
 
 Provides lazy loading capabilities for FrameNode data, implementing LazyForEach API functionality.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Negative input parameters are ignored and trigger no processing.
 
@@ -18,7 +18,7 @@ static attachNodeAdapter(adapter: NodeAdapter, node: FrameNode): boolean
 
 Attaches a FrameNode to a NodeAdapter. Each node can be bound to only one NodeAdapter. Attempts to re-attach to a NodeAdapter that has already been attached to will fail and return **false**.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The following components can be bound: **Column**, **Row**, **Stack**, **GridRow**, **Flex**, **Swiper**,
 > **RelativeContainer**, **List**, **ListItemGroup**, **WaterFlow**, and **Grid**.
@@ -201,7 +201,7 @@ onAttachToNode?(target: FrameNode): void
 
 Called when a FrameNode is attached to the NodeAdapter.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > In versions earlier than API version 26.0.0, this callback is triggered when the host node is attached to the
 > main tree. If you set this callback by dynamically assigning a value, you can complete the setting after calling

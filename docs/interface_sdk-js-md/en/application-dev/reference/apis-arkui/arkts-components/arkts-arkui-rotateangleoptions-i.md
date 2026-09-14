@@ -6,11 +6,6 @@ Rotation parameter option of the rotation angle on each axis.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## angleX
 
 ```TypeScript

@@ -2,7 +2,7 @@
 
 表示TIFF图片信息的枚举。
 
-> **说明：**
+> **说明：** 
 > 
 > 返回字段类型具体参考[TiffMetadata](arkts-image-image-tiffmetadata-c.md)。
 > | 名称 | 值 | 说明 |

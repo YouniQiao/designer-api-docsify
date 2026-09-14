@@ -333,7 +333,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 启动Ability。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 > 
@@ -408,7 +408,7 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 
 启动Ability。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 > 
@@ -486,7 +486,7 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 启动Ability。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 > 
@@ -812,7 +812,7 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 - 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用  
 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 > 
@@ -893,7 +893,7 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 - 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用  
 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 > 
@@ -977,7 +977,7 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 - 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用  
 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 > 

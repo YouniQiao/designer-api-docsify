@@ -53,7 +53,7 @@ Sends data to the player.
 | --- | --- | --- | --- |
 | uuid | number | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md). |
 | offset | number | Yes | Offset of the current media data relative to the start of the resource. The value cannot be less than 0. |
-| buffer | ArrayBuffer | Yes | Media data sent to the player.<br>**Note:** Do not transmit irrelevant data, as it can affect normal data parsing and playback. |
+| buffer | ArrayBuffer | Yes | Media data sent to the player.<br>**Note:**  Do not transmit irrelevant data, as it can affect normal data parsing and playback. |
 
 **Return value:**
 

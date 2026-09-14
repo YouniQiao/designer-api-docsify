@@ -17,10 +17,6 @@
 | --- | --- | --- | --- |
 | value | T | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -33,10 +29,6 @@ new(value?: any): Boolean
 | --- | --- | --- | --- |
 | value | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## prototype
 
 ```TypeScript

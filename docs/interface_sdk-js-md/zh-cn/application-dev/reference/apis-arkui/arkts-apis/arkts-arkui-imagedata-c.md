@@ -2,7 +2,7 @@
 
 ImageData对象用于存储Canvas渲染的像素数据，支持对像素进行读取、修改和操作，适用于图像处理、像素级编辑、特效滤镜等场景。通过ImageData可以精确控制图像的每个像素点，实现自定义图像处理算法，为Canvas绘图提供灵活的像素级数据访问能力。
 
-> **说明：**
+> **说明：** 
 > 
 > 创建ImageData时，宽高不超过16384px，最大面积不超过16000px*16000px，超过最大面积则无法正常绘制。
 > 当创建面积超过536870911px时，返回值的width和height均为0px，data为undefined。
@@ -10,11 +10,6 @@ ImageData对象用于存储Canvas渲染的像素数据，支持对像素进行�
 **起始版本：** 8
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## constructor
 
@@ -74,7 +69,7 @@ readonly data: Uint8ClampedArray
 ```
 
 一维数组，保存了RGBA格式的像素数据，每个像素占4字节，依次为R、G、B、A，数据值范围为0到255。   
-> **说明：**
+> **说明：** 
 > 
 > 可使用px2vp
 > 接口进行单位转换。
@@ -96,7 +91,7 @@ readonly height: number
 ```
 
 矩形区域实际像素高度。<br>单位为px。   
-> **说明：**
+> **说明：** 
 > 
 > 可使用px2vp
 > 接口进行单位转换。
@@ -119,7 +114,7 @@ readonly width: number
 
 矩形区域实际像素宽度。<br>单位为px。
 
-> **说明：**
+> **说明：** 
 > 
 > 可使用px2vp
 > 接口进行单位转换。

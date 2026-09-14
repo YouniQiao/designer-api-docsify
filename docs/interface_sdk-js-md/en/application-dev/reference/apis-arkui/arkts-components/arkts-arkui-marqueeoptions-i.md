@@ -2,7 +2,7 @@
 
 Describes the initialization options of the **Marquee** component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer element
@@ -11,11 +11,6 @@ Describes the initialization options of the **Marquee** component.
 **Since:** 18
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## delay
 
@@ -57,7 +52,7 @@ Default value: **true**.
 
 **Type:** boolean
 
-**Default:**
+**Default:** 
 - API version 18+: true
 
 **Since:** 8
@@ -78,13 +73,13 @@ Number of times the marquee will scroll. If the value is less than or equal to *
 
 Default value: **-1**
 
-**NOTE:**
+**NOTE:** 
 
 Regardless of the value, the marquee scrolls only once on an ArkTS widget.
 
 **Type:** number
 
-**Default:**
+**Default:** 
 - API version 18+: -1
 
 **Since:** 8
@@ -145,7 +140,7 @@ Whether to start scrolling.
 
 **true**: yes; **false**: no
 
-**NOTE:**
+**NOTE:** 
 
 This parameter cannot be used to restart scrolling that has been completed.
 
@@ -173,7 +168,7 @@ Unit: vp
 
 **Type:** number
 
-**Default:**
+**Default:** 
 - API version 18+: 6
 
 **Since:** 8

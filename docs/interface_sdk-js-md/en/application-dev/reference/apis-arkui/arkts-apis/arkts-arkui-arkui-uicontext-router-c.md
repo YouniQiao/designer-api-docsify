@@ -2,7 +2,7 @@
 
 Provides APIs to access pages through URLs. You can use the APIs to navigate to a specified page in an application, replace the current page with another one in the same application, and return to the previous page or a specified page.
 
-> **NOTE:**
+> **NOTE:** 
 
 > In the following API examples, you must first use
 > [getRouter()](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) in **UIContext** to
@@ -90,7 +90,7 @@ getLength(): string
 
 Obtains the number of pages in the current stack.
 
-> **NOTE:**
+> **NOTE:** 
 
 **Since:** 10
 

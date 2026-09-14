@@ -6,11 +6,6 @@ Defines the function triggered when the PDF loading is successful or fails.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## result
 
 ```TypeScript

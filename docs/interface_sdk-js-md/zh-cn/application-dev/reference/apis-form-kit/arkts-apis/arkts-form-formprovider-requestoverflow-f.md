@@ -14,7 +14,7 @@ function requestOverflow(formId: string, overflowInfo: formInfo.OverflowInfo): P
 
 卡片提供方发起互动卡片动效请求，只针对[场景动效类型互动卡片](../../../form/arkts-ui-widget-configuration.md#sceneanimationparams标签)生效，使用Promise异步回调。其中相关的方法为[cancelOverflow()](arkts-form-formprovider-canceloverflow-f.md)：取消互动卡片动效请求，用于取消已发起的动效。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 该接口在省电模式场景下不可使用，会报16501000错误码。
 > 

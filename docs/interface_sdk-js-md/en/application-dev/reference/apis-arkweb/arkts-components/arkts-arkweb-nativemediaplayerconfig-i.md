@@ -6,11 +6,6 @@ Configures the [enableNativeMediaPlayer](arkts-arkweb-web-comp-attribute.md#enab
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## enable
 
 ```TypeScript

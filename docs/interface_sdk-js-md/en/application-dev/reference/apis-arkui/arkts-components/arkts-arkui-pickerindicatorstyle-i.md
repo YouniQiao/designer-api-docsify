@@ -6,11 +6,6 @@ Sets parameters of the selected item indicator style.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## backgroundColor
 
 ```TypeScript
@@ -21,7 +16,7 @@ Background color of the selected item.
 
 Default value: 'sys.color.comp_background_tertiary'
 
-**NOTE:**
+**NOTE:** 
 
 This parameter takes effect only when **type** is set to **PickerIndicatorType.BACKGROUND**.
 
@@ -80,7 +75,7 @@ Color of the divider.
 
 Default value: 'sys.color.comp_divider'
 
-**NOTE:**
+**NOTE:** 
 
 This parameter takes effect only when **type** is set to **PickerIndicatorType.DIVIDER**.
 
@@ -110,7 +105,7 @@ Unit: same as that of **LengthMetrics**
 
 Value range: The sum of **startMargin** and **endMargin** must not exceed the width of the **UIPickerComponent** container. If the value is less than 0 or the sum of **startMargin** and **endMargin** exceeds the width of the **UIPickerComponent** container, the default value is used. Percentages are not supported.
 
-**NOTE:**
+**NOTE:** 
 
 This parameter takes effect only when **type** is set to **PickerIndicatorType.DIVIDER**.
 

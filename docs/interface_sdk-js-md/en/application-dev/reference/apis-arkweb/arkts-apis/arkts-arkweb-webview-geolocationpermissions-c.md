@@ -4,7 +4,7 @@ GeolocationPermissions is the geolocation permission management object for the W
 
 GeolocationPermissions is suitable for scenarios where proactive management of Web component geolocation permissions is required. For example, an app may want to pre-authorize trusted websites to access geolocation, avoiding authorization prompts on each visit; or an app may need to clear geolocation permission records that are no longer needed by the user. The following permissions are required for accessing geolocation: ohos.permission.LOCATION, ohos.permission.APPROXIMATELY_LOCATION, and ohos.permission.LOCATION_IN_BACKGROUND. For details about the permissions, see [Development Guide for Location Permission Application](../../../device/location/location-permission-guidelines.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - You must load the **Web** component before calling the APIs in **GeolocationPermissions**.
 

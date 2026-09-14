@@ -6,11 +6,6 @@ Defines the callback information for the first content paint on the web page, in
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## firstContentfulPaintMs
 
 ```TypeScript

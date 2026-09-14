@@ -34,7 +34,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| album | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | Yes | Highlights** album. |
+| album | [Album](arkts-medialibrary-photoaccesshelper-album-i.md) | Yes | **Highlights** album. |
 
 **Error codes:**
 
@@ -80,7 +80,7 @@ static createAnalysisAlbumRequest(
 
 Creates a change request for the **Analysis** album.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The album name must meet the following requirements:
 > 

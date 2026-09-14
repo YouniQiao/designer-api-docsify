@@ -2,7 +2,7 @@
 
 Implements a path operation iterator. You can read path operation instructions by traversing the iterator.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The initial APIs of this class are supported since API version 18.
 > 
@@ -37,7 +37,7 @@ Creates an iterator and binds it with a path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path** object bound to the iterator. |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | **Path** object bound to the iterator. |
 
 ## hasNext
 

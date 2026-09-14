@@ -4,7 +4,7 @@ This interface implements audio session management.
 
 Before calling any API in AudioSessionManager, you must use [getSessionManager](arkts-audio-audio-audiomanager-i.md#getsessionmanager) to obtain an AudioSessionManager instance.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The initial APIs of this interface are supported since API version 12.
 
@@ -556,7 +556,7 @@ selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>
 
 Selects a media input device. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This API is not suitable for VoIP call recording; that is, it does not apply to scenarios where
 > [SourceType](arkts-audio-audio-sourcetype-e.md) is **SOURCE_TYPE_VOICE_COMMUNICATION**.
@@ -602,7 +602,7 @@ setAudioSessionBehavior(behavior: number): void
 
 Sets audio session behavior parameters. (Multiple flags can be combined.)
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If this API is called while an audio session is active, you must call the
 > [activateAudioSession](#activateaudiosession) API again
@@ -661,7 +661,7 @@ setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPre
 
 Sets the preferred device category for recording with Bluetooth or NearLink. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Applications can set this category before connecting to Bluetooth or NearLink devices, and the system
 > prioritizes using the device for recording when the device is connected.
@@ -736,7 +736,7 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 
 Sets the default audio output device. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This API applies to the following scenario: When
 > [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md) is set to **VoIP**, the setting takes

@@ -30,7 +30,7 @@ Obtains the SQL statement used to insert data. This API returns the result synch
 
 | Type | Description |
 | --- | --- |
-| [SqlInfo](arkts-arkdata-relationalstore-sqlinfo-i.md) | SqlInfo** object. **sql** indicates the returned SQL statement, and **args** indicates the parameters in the executed SQL statement. |
+| [SqlInfo](arkts-arkdata-relationalstore-sqlinfo-i.md) | **SqlInfo** object. **sql** indicates the returned SQL statement, and **args** indicates the parameters in the executed SQL statement. |
 
 **Error codes:**
 

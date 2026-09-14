@@ -30,6 +30,8 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 | Type | Description |
 | --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |  |
+
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -468,7 +470,7 @@ Checks whether this LightWeightMap contains all elements of the specified **Ligh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| map | [LightWeightMap](arkts-arkts-util-lightweightmap-lightweightmap-c.md)&lt;K, V&gt; | Yes | LightWeightMap** instance to be used for comparison. |
+| map | [LightWeightMap](arkts-arkts-util-lightweightmap-lightweightmap-c.md)&lt;K, V&gt; | Yes | **LightWeightMap** instance to be used for comparison. |
 
 **Return value:**
 

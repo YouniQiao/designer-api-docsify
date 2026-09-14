@@ -31,11 +31,6 @@ Defines the method of a security component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## key
 
 ```TypeScript

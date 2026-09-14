@@ -2,7 +2,7 @@
 
 Provides capabilities to control focus, including features such as clearing, moving, and activating focus.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > In the following API examples, you must first use [getFocusController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getfocuscontroller) in
 > **UIContext** to obtain a **FocusController** instance, and then call the APIs using the obtained instance.
@@ -41,7 +41,7 @@ Sets the [focus activation state](../../../ui/arkts-common-events-focus-event.md
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isActive | boolean | Yes | Whether to enter or exit the focus activation state.<br>The value **true** means to enter the focus activation state, and **false** means to exit the focus activation state. |
-| autoInactive | boolean | No | Logic for exiting the focus activation state.<br>The value **true** means the focus activation state will be exited automatically when touch or mouse events are triggered, and **false** means the state is controlled solely by API calls.<br>Default value: **true |
+| autoInactive | boolean | No | Logic for exiting the focus activation state.<br>The value **true** means the focus activation state will be exited automatically when touch or mouse events are triggered, and **false** means the state is controlled solely by API calls.<br>Default value: **true** |
 
 ## clearFocus
 
@@ -103,7 +103,7 @@ Transfers focus to a component node by the component ID, which is effective imme
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | [Component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) of the target node. |
+| key | string | Yes | [Component ID](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-common.md) of the target node. |
 
 **Error codes:**
 
@@ -133,7 +133,7 @@ Sets whether the new page automatically obtains focus during page switching.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isAutoFocusTransfer | boolean | Yes | Whether the new page automatically obtains focus during page switching using navigation components or APIs, such as [Router](arkts-router.md), Navigation, Menu, Dialog, and Popup. The value **true** means the new page automatically obtains focus, and **false** means the opposite. Default value: **true**. |
+| isAutoFocusTransfer | boolean | Yes | Whether the new page automatically obtains focus during page switching using navigation components or APIs, such as [Router](arkts-arkui-router.md), Navigation, Menu, Dialog, and Popup. The value **true** means the new page automatically obtains focus, and **false** means the opposite. Default value: **true**. |
 
 ## setKeyProcessingMode
 

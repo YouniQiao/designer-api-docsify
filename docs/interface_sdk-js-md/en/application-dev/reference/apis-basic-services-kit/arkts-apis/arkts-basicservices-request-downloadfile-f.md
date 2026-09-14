@@ -14,7 +14,7 @@ function downloadFile(context: BaseContext, config: DownloadConfig, callback: As
 
 Downloads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use on('complete'|'pause'|'remove') to obtain the download task state, including task completion, pause, and removal. You can also use on('fail') to obtain the task download error information.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -77,7 +77,7 @@ function downloadFile(context: BaseContext, config: DownloadConfig): Promise<Dow
 
 Downloads a file. This API uses a promise to return the result. HTTP is supported. You can use on('complete'|'pause'|'remove') to obtain the download task state, including task completion, pause, and removal. You can also use on('fail') to obtain the task download error information.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)

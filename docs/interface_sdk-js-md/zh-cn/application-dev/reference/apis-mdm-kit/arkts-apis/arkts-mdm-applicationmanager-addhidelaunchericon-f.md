@@ -14,7 +14,7 @@ function addHideLauncherIcon(admin: Want, bundleNames: Array<string>): void
 
 添加隐藏桌面应用图标名单。
 
-> **说明：**
+> **说明：** 
 > 
 > 1、本接口仅支持隐藏当前用户的桌面应用图标，不支持隐藏应用卡片。
 > 

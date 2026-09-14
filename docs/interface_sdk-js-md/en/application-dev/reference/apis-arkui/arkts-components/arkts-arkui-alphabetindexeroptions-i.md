@@ -2,7 +2,7 @@
 
 Defines the options of the **AlphabetIndexer** component.
 
-> **NOTE:**
+> **NOTE:** 
 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer element
@@ -11,11 +11,6 @@ Defines the options of the **AlphabetIndexer** component.
 **Since:** 18
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## arrayValue
 
@@ -43,7 +38,7 @@ Index of the initial selected item. If the value is out of range, the default va
 
 Value range: [0, arrayValue.length-1]
 
-This parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+This parameter supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** number
 

@@ -8,11 +8,6 @@ Define cache count information.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## maxCount
 
 ```TypeScript

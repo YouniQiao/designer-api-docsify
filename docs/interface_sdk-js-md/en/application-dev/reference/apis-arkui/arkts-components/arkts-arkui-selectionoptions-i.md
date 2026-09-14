@@ -6,11 +6,6 @@ Defines the selection options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## menuPolicy
 
 ```TypeScript

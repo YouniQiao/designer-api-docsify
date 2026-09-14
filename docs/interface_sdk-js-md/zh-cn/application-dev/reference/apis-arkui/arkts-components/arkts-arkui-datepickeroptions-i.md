@@ -2,7 +2,7 @@
 
 日期选择器组件的参数说明。
 
-> **说明：**
+> **说明：** 
 > 
 > - Date的使用请参考[TimePickerOptions](arkts-arkui-timepickeroptions-i.md)。
 > 
@@ -27,18 +27,13 @@
 > - 起始日期与结束日期同时早于系统有效范围：起始日期与结束日期取系统有效范围最早日期。
 > - 起始日期与结束日期同时晚于系统有效范围：起始日期与结束日期取系统有效范围最晚日期。
 
-> **说明：**
+> **说明：** 
 > 
 > 先处理起始日期与结束日期的异常情形，再处理选中日期的异常情形。
 
 **起始版本：** 8
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## end
 
@@ -52,13 +47,13 @@ end?: Date
 
 > 取值范围：[Date('1900-01-31'), Date('2100-12-31')]
 
-> **说明：**
+> **说明：** 
 > 
 > 设置了start或end且为非默认值的场景下，canLoop不生效。
 
 **类型：** Date
 
-**默认值：**
+**默认值：** 
 - API版本11+：Date('2100-12-31')
 
 **起始版本：** 8
@@ -77,7 +72,7 @@ mode?: DatePickerMode
 
 在[DatePickerDialog](arkts-arkui-datepickerdialog-c.md)中，当[DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md)的showTime设置为true时，此参数不生效，默认显示年、月、日三列。这是为保证布局合理性，当showTime为true时会额外显示时间列。
 
-> **说明：**
+> **说明：** 
 > 
 > 上述DatePickerDialog相关限制仅适用于DatePickerDialog组件。
 
@@ -106,11 +101,11 @@ selected?: Date
 > Date对象可配置的日期范围：[Date('1900-01-31'), Date('2100-12-31')]，selected参数的有效取值范围：必须在start和end参数设置的日
 > 期范围内。
 
-> 从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+> 从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 **类型：** Date
 
-**默认值：**
+**默认值：** 
 - API版本11+：current system date
 
 **起始版本：** 8
@@ -131,13 +126,13 @@ start?: Date
 
 > 取值范围：[Date('1900-01-31'), Date('2100-12-31')]
 
-> **说明：**
+> **说明：** 
 > 
 > 设置了start或end且为非默认值的场景下，canLoop不生效。
 
 **类型：** Date
 
-**默认值：**
+**默认值：** 
 - API版本11+：Date('1970-1-1')
 
 **起始版本：** 8

@@ -2,7 +2,7 @@
 
 用于表示公共事件订阅者的信息，支持配置订阅的公共事件类型、发布者权限、发布者设备ID、用户ID、订阅优先级等参数，适用于应用需要订阅系统公共事件或自定义公共事件并精细化控制事件来源的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 订阅自定义公共事件后，任意应用都可以向订阅者发送潜在的恶意公共事件。通过本模块的publisherPermission和publisherBundleName参数，可以限制公共事件发布者的范围。
 
@@ -64,7 +64,7 @@ publisherBundleName?: string
 publisherDeviceId?: string
 ```
 
-表示设备ID，用于限制订阅者只接收来自指定设备发布的公共事件。通过[@ohos.deviceInfo](arkts-deviceinfo.md)获取udid，作为发布者的设备ID。预留能力，暂不支持。
+表示设备ID，用于限制订阅者只接收来自指定设备发布的公共事件。通过[@ohos.deviceInfo](arkts-basicservices-deviceinfo.md)获取udid，作为发布者的设备ID。预留能力，暂不支持。
 
 **类型：** string
 

@@ -30,7 +30,7 @@ Binds the IP address and port number. The port number can be customized or rando
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | NetAddress | Yes | Local address. For details, see [NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress). |
+| address | [NetAddress](arkts-network-socket-p.md) | Yes | Local address. For details, see [NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
@@ -78,7 +78,7 @@ Binds the IP address and port number. The port number can be customized or rando
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | NetAddress | Yes | Local address. For details, see [NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress). |
+| address | [NetAddress](arkts-network-socket-p.md) | Yes | Local address. For details, see [NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress). |
 
 **Return value:**
 
@@ -201,7 +201,7 @@ getLocalAddress(): Promise<NetAddress>
 
 Obtains the local socket address of a **UDPSocket** connection. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called only after **bind** is successfully called.
 
@@ -213,7 +213,7 @@ Obtains the local socket address of a **UDPSocket** connection. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | Promise used to return the result. |
+| Promise&lt;[NetAddress](arkts-network-socket-p.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -255,7 +255,7 @@ getSocketFd(): Promise<number>
 
 Obtains the UDPSocket file descriptor. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This API can be called only after
 > [bind](#bind) is successfully called.
@@ -317,7 +317,7 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 
 Obtains the status of the UDP socket connection. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called only after **bind** is successfully called.
 
@@ -374,7 +374,7 @@ getState(): Promise<SocketStateBase>
 
 Obtains the status of the UDP socket connection. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called only after **bind** is successfully called.
 
@@ -937,7 +937,7 @@ setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void
 
 Sets other properties of the **UDPSocket** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called only after **bind** is successfully called.
 
@@ -1004,7 +1004,7 @@ setExtraOptions(options: UDPExtraOptions): Promise<void>
 
 Sets other properties of the **UDPSocket** object. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called only after **bind** is successfully called.
 

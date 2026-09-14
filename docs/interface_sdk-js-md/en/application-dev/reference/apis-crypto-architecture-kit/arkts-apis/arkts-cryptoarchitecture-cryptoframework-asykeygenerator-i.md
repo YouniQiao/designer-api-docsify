@@ -310,7 +310,7 @@ convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair
 
 Converts data into an asymmetric key pair. This API returns the result synchronously.
 
-<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, convertKey. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, convertKey. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -376,7 +376,7 @@ convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>
 
 Converts data into an asymmetric key pair. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by
 > the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM
@@ -464,7 +464,7 @@ convertPemKey(pubKey: string | null, priKey: string | null, password: string): P
 
 Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by
 > the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM
@@ -549,13 +549,13 @@ convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair
 
 Converts data into an asymmetric key pair. This API returns the result synchronously.
 
-> **NOTE:**
+> **NOTE:** 
 > The precautions for using **convertPemKeySync** are the same as those for **convertPemKey**. For details, see
 > the description of
 > [convertPemKey](#convertpemkey)
 > .
 
-<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -636,12 +636,12 @@ convertPemKeySync(pubKey: string | null, priKey: string | null, password: string
 
 Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key.
 
-> **NOTE:**
+> **NOTE:** 
 > The precautions for using **convertPemKeySync** are the same as those for
 > [convertPemKey](#convertpemkey-1)
 > .
 
-<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 18
 
@@ -808,7 +808,7 @@ generateKeyPairSync(): KeyPair
 
 Generates a random key pair using this asymmetric key generator. This API returns the result synchronously.
 
-<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, generateKeyPair. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, generateKeyPair. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 

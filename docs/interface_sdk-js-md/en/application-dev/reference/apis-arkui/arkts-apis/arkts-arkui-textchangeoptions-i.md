@@ -6,11 +6,6 @@ Provides information about the text before and after a change, including the sel
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## oldContent
 
 ```TypeScript

@@ -280,7 +280,7 @@ stop(uri: string): Promise<void>
 
 Stops downloading a cloud file. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Calling **stop** will terminate the download of the current file and clear the cache file. You can use
 > **start** to start the download again.
@@ -336,7 +336,7 @@ stop(uri: string, callback: AsyncCallback<void>): void
 
 Stops downloading a cloud file. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Calling **stop** will terminate the download of the current file and clear the cache file. You can use
 > **start** to start the download again.

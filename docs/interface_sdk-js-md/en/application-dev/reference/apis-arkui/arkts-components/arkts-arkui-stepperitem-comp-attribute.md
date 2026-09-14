@@ -12,11 +12,6 @@ Defines StepperItem Component instance.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## nextLabel
 
 ```TypeScript
@@ -25,7 +20,7 @@ nextLabel(value: string)
 
 Sets the text label of the button on the right. The default value is **Start** for the last page and **Next** for the other pages.
 
-> **NOTE:**
+> **NOTE:** 
 
 **Since:** 8
 
@@ -51,7 +46,7 @@ prevLabel(value: string)
 
 Sets the text label of the button on the left, which is not displayed on the first page. When the **Stepper** contains more than one page, the default value for all pages except the first page is **Back**.
 
-> **NOTE:**
+> **NOTE:** 
 
 **Since:** 8
 
@@ -77,7 +72,7 @@ status(value?: ItemState)
 
 Sets the display status of **nextLabel** in the stepper.
 
-> **NOTE:**
+> **NOTE:** 
 
 **Since:** 8
 
@@ -93,4 +88,4 @@ Sets the display status of **nextLabel** in the stepper.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ItemState](arkts-arkui-itemstate-e.md) | No | Display status of **nextLabel** in the stepper.<br>Default value: **ItemState.Normal |
+| value | [ItemState](arkts-arkui-itemstate-e.md) | No | Display status of **nextLabel** in the stepper.<br>Default value: **ItemState.Normal** |

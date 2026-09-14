@@ -6,11 +6,6 @@ PasswordIcon object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## offIconSrc
 
 ```TypeScript

@@ -22,7 +22,7 @@ onHoverDecrease?: OnCounterV2HoverCallback
 
 使用场景：当需要在鼠标悬浮“减少按钮”时执行自定义操作（如改变按钮样式、显示提示信息等）时传入此回调。
 
-**说明：**
+**说明：** 
 
 该属性对列表型、紧凑型和数值内联型CounterV2生效。对日期内联型CounterV2不生效。
 
@@ -48,7 +48,7 @@ onHoverIncrease?: OnCounterV2HoverCallback
 
 使用场景：当需要在鼠标悬浮“增加按钮”时执行自定义操作（如改变按钮样式、显示提示信息等）时传入此回调。
 
-**说明：**
+**说明：** 
 
 该属性对列表型、紧凑型和数值内联型CounterV2生效。对日期内联型CounterV2不生效。
 
@@ -72,7 +72,7 @@ focusable?: boolean
 
 设置CounterV2是否可获焦。
 
-**说明：**
+**说明：** 
 
 该属性对列表型和紧凑型CounterV2生效。对数值内联型和日期内联型CounterV2不生效。
 
@@ -102,7 +102,7 @@ step?: number
 
 设置CounterV2的步长。
 
-**说明：**
+**说明：** 
 
 该属性对列表型、紧凑型和数值内联型CounterV2生效。对日期内联型CounterV2不生效。
 

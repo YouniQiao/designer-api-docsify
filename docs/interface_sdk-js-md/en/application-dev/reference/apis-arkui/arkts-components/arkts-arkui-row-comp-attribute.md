@@ -10,11 +10,6 @@ The [universal events](arkts-arkui-commonmethod-c.md) are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## alignItems
 
 ```TypeScript
@@ -35,7 +30,7 @@ Sets the alignment mode of child components in the vertical direction.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md) | Yes | Alignment mode of child components in the vertical direction.<br>Default value: **VerticalAlign.Center |
+| value | [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md) | Yes | Alignment mode of child components in the vertical direction.<br>Default value: **VerticalAlign.Center** |
 
 ## justifyContent
 
@@ -57,7 +52,7 @@ Sets the alignment mode of the child components in the horizontal direction.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md) | Yes | Alignment mode of child components in the horizontal direction.<br>Default value: **FlexAlign.Start |
+| value | [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md) | Yes | Alignment mode of child components in the horizontal direction.<br>Default value: **FlexAlign.Start** |
 
 ## reverse
 

@@ -26,7 +26,7 @@ Obtains an [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.m
 
 | Type | Description |
 | --- | --- |
-| [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md) | InputMethodAbility** instance. |
+| [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md) | **InputMethodAbility** instance. |
 
 **Examples**
 

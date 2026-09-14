@@ -4,7 +4,7 @@
 
 继承自[RichEditorRange](arkts-arkui-richeditorrange-i.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > 接口作用的范围：设定的区间所覆盖的段落，即区间起始位置和结束位置所在的段落及其之间的所有段落。
 
@@ -13,11 +13,6 @@
 **起始版本：** 11
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## style
 

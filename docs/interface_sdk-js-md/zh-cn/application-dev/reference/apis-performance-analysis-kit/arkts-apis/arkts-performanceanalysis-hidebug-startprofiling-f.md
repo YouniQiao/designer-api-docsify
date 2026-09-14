@@ -13,7 +13,7 @@ function startProfiling(filename: string): void
 ```
 
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8支持，从API version 9开始废弃，
 > 启动虚拟机Profiling方法跟踪，`startProfiling(filename: string)`方法的调用需要与`stopProfiling()`方法的调用一一对应，先开启后关闭，请避免重复开启或重复关闭的调用方式，

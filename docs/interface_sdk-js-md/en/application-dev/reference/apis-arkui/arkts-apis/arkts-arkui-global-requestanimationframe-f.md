@@ -26,3 +26,4 @@ Sets a vsync after which a function will be executed.
 
 | Type | Description |
 | --- | --- |
+| number |  |

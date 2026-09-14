@@ -31,3 +31,4 @@ Send touch event.
 
 | Type | Description |
 | --- | --- |
+| boolean |  |

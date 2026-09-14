@@ -12,7 +12,7 @@ Only the FlowItem child component and custom components are supported. When a cu
 
 Child components can be dynamically generated using rendering control types [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md), [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), and [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md). **LazyForEach** or **Repeat** is recommended to optimize performance.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When the **visibility** attribute of a child component of **WaterFlow** is set to **None**, this child component is
 > not displayed in the container, but its **columnsGap**, **rowsGap**, and **margin** settings are still effective.

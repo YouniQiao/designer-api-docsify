@@ -6,11 +6,6 @@ Represents a style object for the label text and font.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## font
 
 ```TypeScript
@@ -65,7 +60,7 @@ Value range: [minFontSize, +∞)
 
 **Type:** number &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
-**Default:**
+**Default:** 
 - API version 11+: 0.0fp
 
 **Since:** 10
@@ -108,7 +103,7 @@ Value range: (0, +∞)
 
 **Type:** number &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
-**Default:**
+**Default:** 
 - API version 11+: 0.0fp
 
 **Since:** 10

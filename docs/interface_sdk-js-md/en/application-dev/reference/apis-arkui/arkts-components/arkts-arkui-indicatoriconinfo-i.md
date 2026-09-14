@@ -6,11 +6,6 @@ Set the indicator item's icon for a specified index.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## icon
 
 ```TypeScript

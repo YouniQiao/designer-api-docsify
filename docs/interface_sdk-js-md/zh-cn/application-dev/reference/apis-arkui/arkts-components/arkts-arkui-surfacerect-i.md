@@ -2,7 +2,7 @@
 
 描述XComponent所持有的surface的矩形。
 
-> **说明：**
+> **说明：** 
 
 > 如果未调用[setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect)接口，且未设置
 > [border](arkts-arkui-commonmethod-c.md#border)和
@@ -16,11 +16,6 @@
 **起始版本：** 12
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## offsetX
 

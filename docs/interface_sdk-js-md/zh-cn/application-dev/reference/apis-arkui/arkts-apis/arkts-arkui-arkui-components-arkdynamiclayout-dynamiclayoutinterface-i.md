@@ -44,3 +44,4 @@ import { DynamicLayout, DynamicLayoutAttribute } from '@kit.ArkUI';
 
 | 类型 | 说明 |
 | --- | --- |
+| [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-c.md) |  |

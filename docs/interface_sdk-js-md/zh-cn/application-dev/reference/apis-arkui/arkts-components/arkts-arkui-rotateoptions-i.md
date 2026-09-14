@@ -2,7 +2,7 @@
 
 组件旋转参数。
 
-> **说明：**
+> **说明：** 
 > 
 > 当组件同时设置了[rotate](arkts-arkui-commonmethod-c.md#rotate)和
 > [scale](arkts-arkui-commonmethod-c.md#scale)属性时，centerX和centerY的取值会发生冲突，此时centerX和centerY的值以属性链中后设置的属性值为
@@ -11,11 +11,6 @@
 **起始版本：** 7
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## angle
 

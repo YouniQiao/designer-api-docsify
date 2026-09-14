@@ -248,7 +248,7 @@ readonly atime: number
 
 Time when the file was last accessed. The value is the number of seconds elapsed since 00:00:00 on January 1, 1970.
 
-**Note:** Currently, user data partitions are mounted in **noatime** mode by default, and **atime** update is disabled.
+**Note:**  Currently, user data partitions are mounted in **noatime** mode by default, and **atime** update is disabled.
 
 **Type:** number
 
@@ -273,7 +273,7 @@ readonly atimeNs?:bigint
 
 Time of the last access to the file. The value is the number of nanoseconds elapsed since 00:00:00 on January 1, 19 70.
 
-**Note:** Currently, user data partitions are mounted in **noatime** mode by default, and **atime** update is disabled.
+**Note:**  Currently, user data partitions are mounted in **noatime** mode by default, and **atime** update is disabled.
 
 **Type:** bigint
 

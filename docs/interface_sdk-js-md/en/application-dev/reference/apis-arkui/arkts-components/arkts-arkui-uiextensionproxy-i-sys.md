@@ -8,11 +8,6 @@ Implements a **UIExtensionProxy** instance for the component host to send data t
 
 **System API:** This is a system API.
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## off('asyncReceiverRegister')
 
 ```TypeScript

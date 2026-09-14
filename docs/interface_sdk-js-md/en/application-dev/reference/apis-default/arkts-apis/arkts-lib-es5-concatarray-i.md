@@ -17,10 +17,6 @@ join(separator?: string): string
 | --- | --- | --- | --- |
 | separator | string | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## slice
 
 ```TypeScript
@@ -34,10 +30,6 @@ slice(start?: number, end?: number): T[]
 | start | number | No |  |
 | end | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [n: number]
 
 ```TypeScript

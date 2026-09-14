@@ -9,7 +9,7 @@
 3. 应用在[module.json5配置文件中的abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)中配置windowLimits。
 4. 默认系统限制（基于不同产品和窗口类型，其windowLimits系统默认限制存在差异）。
 
-> **说明：**
+> **说明：** 
 > 
 > 针对maxWidth、maxHeight、minWidth、minHeight属性：
 > 

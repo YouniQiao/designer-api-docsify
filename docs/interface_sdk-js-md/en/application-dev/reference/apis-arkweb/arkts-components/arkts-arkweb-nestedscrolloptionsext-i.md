@@ -6,11 +6,6 @@ Sets the nested scrolling rules of the **Web** component, supporting scrolling o
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## scrollDown
 
 ```TypeScript

@@ -14,7 +14,7 @@ declare function moveFile(src: string, dest: string, mode?: number): Promise<voi
 
 移动文件至目标路径，支持设置冲突处理模式。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在分布式文件路径下操作。
 
@@ -69,7 +69,7 @@ declare function moveFile(src: string, dest: string, callback: AsyncCallback<voi
 
 移动文件。如果移动位置存在同名文件，将强制覆盖。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在分布式文件路径下操作。
 
@@ -118,7 +118,7 @@ declare function moveFile(src: string, dest: string, mode: number, callback: Asy
 
 移动文件至目标路径，支持设置冲突处理模式。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在分布式文件路径下操作。
 

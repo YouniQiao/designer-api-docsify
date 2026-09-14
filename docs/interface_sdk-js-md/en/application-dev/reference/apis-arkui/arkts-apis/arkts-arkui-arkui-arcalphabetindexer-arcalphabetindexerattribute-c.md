@@ -40,6 +40,8 @@ Sets whether to enable the adaptive collapse behavior for the indexer.
 
 | Type | Description |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## color
 
 ```TypeScript
@@ -64,6 +66,8 @@ Sets the text color of the index items in the normal state.
 
 | Type | Description |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## font
 
 ```TypeScript
@@ -88,6 +92,8 @@ Sets the default font style of the index items.
 
 | Type | Description |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## itemSize
 
 ```TypeScript
@@ -112,6 +118,8 @@ Sets the size of the index item area.
 
 | Type | Description |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## onSelect
 
 ```TypeScript
@@ -136,6 +144,8 @@ Triggered when an index item is selected. The return value is the index of the s
 
 | Type | Description |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## popupBackground
 
 ```TypeScript
@@ -160,6 +170,8 @@ Sets the background color of the pop-up window.
 
 | Type | Description |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## popupBackgroundBlurStyle
 
 ```TypeScript
@@ -168,7 +180,7 @@ popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribut
 
 Sets the background blur style of the pop-up window. If this API is not used, the blur is disabled by default. The corresponding value is **NONE** in **BlurStyle**.
 
-> **NOTE:**
+> **NOTE:** 
 
 > After configuring the pop-up window background blur style with **popupBackgroundBlurStyle**, avoid applying
 > background colors via [popupBackground](#popupbackground).
@@ -189,6 +201,8 @@ Sets the background blur style of the pop-up window. If this API is not used, th
 
 | Type | Description |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## popupColor
 
 ```TypeScript
@@ -213,6 +227,8 @@ Sets the text color for the pop-up window.
 
 | Type | Description |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## popupFont
 
 ```TypeScript
@@ -237,6 +253,8 @@ Sets the font style of the pop-up window.
 
 | Type | Description |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## selected
 
 ```TypeScript
@@ -261,6 +279,8 @@ Sets the index of the selected item.
 
 | Type | Description |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## selectedBackgroundColor
 
 ```TypeScript
@@ -285,6 +305,8 @@ Sets the background color of the selected item.
 
 | Type | Description |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## selectedColor
 
 ```TypeScript
@@ -309,6 +331,8 @@ Sets the text color of the selected item.
 
 | Type | Description |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## selectedFont
 
 ```TypeScript
@@ -333,6 +357,8 @@ Sets the font style of the selected item, including size, weight, style, and fon
 
 | Type | Description |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## usePopup
 
 ```TypeScript
@@ -351,9 +377,10 @@ Sets whether to display the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to display the pop-up window.<br>**true**: yes; **false**: no<br> Default value: **false |
+| enabled | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to display the pop-up window.<br>**true**: yes; **false**: no<br> Default value: **false** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |

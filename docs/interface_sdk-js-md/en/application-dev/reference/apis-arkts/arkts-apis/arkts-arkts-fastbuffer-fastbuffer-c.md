@@ -139,6 +139,8 @@ Creates and returns an iterator of [index, byte] pairs from the contents of buf.
 
 | Type | Description |
 | --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, number]&gt; |  |
+
 **Examples**
 
 ```TypeScript
@@ -352,6 +354,8 @@ Creates and returns an iterator of buf keys (indices).
 
 | Type | Description |
 | --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |  |
+
 **Examples**
 
 ```TypeScript
@@ -989,6 +993,8 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Type | Description |
 | --- | --- |
+| number |  |
+
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -1031,6 +1037,8 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Type | Description |
 | --- | --- |
+| number |  |
+
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -1288,6 +1296,8 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Type | Description |
 | --- | --- |
+| number |  |
+
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -1329,6 +1339,8 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Type | Description |
 | --- | --- |
+| number |  |
+
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -1561,6 +1573,8 @@ Decodes buf to a string according to the specified character encoding in encodin
 
 | Type | Description |
 | --- | --- |
+| string |  |
+
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -1598,6 +1612,8 @@ Creates and returns an iterator for buf values (bytes).
 
 | Type | Description |
 | --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |  |
+
 **Examples**
 
 ```TypeScript

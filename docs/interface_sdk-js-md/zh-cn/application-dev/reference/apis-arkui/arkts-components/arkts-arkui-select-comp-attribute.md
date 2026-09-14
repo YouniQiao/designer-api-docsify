@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## arrowModifier
 
 ```TypeScript
@@ -21,7 +16,7 @@ arrowModifier(modifier: Optional<SymbolGlyphModifier>)
 
 定制Select按钮下拉箭头图标样式的方法，在应用arrowModifier之后，Select按钮下拉箭头的图标样式将完全由开发者自定义。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在attributeModifier中调用。
 
@@ -211,7 +206,7 @@ font(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Font | 是 | 下拉按钮本身的文本样式。<br>API version 11及以前默认值：<br>{<br>size:  `\&#36;r('sys.float.ohos_id_text_size_button1')`,<br>weight: FontWeight.Medium<br>} <br>API version 12以后，如果设置controlSize的值为：controlSize.SMALL，size默认值是`\&#36;r('sys.float.ohos_id_text_size_button2')`，否则为`\&#36;r('sys.float.ohos_id_text_size_button1')`。 |
+| value | Font | 是 | 下拉按钮本身的文本样式。<br>API version 11及以前默认值：<br>{<br>size:  `&#36;r('sys.float.ohos_id_text_size_button1')`,<br>weight: FontWeight.Medium<br>} <br>API version 12以后，如果设置controlSize的值为：controlSize.SMALL，size默认值是`&#36;r('sys.float.ohos_id_text_size_button2')`，否则为`&#36;r('sys.float.ohos_id_text_size_button1')`。 |
 
 ## font
 
@@ -233,7 +228,7 @@ font(selectFont: Optional<Font>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| selectFont | [Optional](arkts-arkui-optional-t.md)&lt;Font&gt; | 是 | 下拉按钮本身的文本样式。<br>如果设置controlSize的值为：controlSize.SMALL，size默认值是`\&#36;r('sys.float.ohos_id_text_size_button2')`，否则为`\&#36;r('sys.float.ohos_id_text_size_button1')`。<br>当selectFont的值为undefined时，恢复为系统文本样式。 |
+| selectFont | [Optional](arkts-arkui-optional-t.md)&lt;Font&gt; | 是 | 下拉按钮本身的文本样式。<br>如果设置controlSize的值为：controlSize.SMALL，size默认值是`&#36;r('sys.float.ohos_id_text_size_button2')`，否则为`&#36;r('sys.float.ohos_id_text_size_button1')`。<br>当selectFont的值为undefined时，恢复为系统文本样式。 |
 
 ## fontColor
 
@@ -253,7 +248,7 @@ fontColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 下拉按钮本身的文本颜色。<br>默认值：`\&#36;r('sys.color.ohos_id_color_text_primary')`混合`\&#36;r('sys.color.ohos_id_alpha_content_primary')`的透明度。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 下拉按钮本身的文本颜色。<br>默认值：`&#36;r('sys.color.ohos_id_color_text_primary')`混合`&#36;r('sys.color.ohos_id_alpha_content_primary')`的透明度。 |
 
 ## fontColor
 
@@ -275,7 +270,7 @@ fontColor(resColor: Optional<ResourceColor>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 | 下拉按钮本身的文本颜色。<br>当resColor的值为undefined时，默认值：`\&#36;r('sys.color.ohos_id_color_text_primary')`混合`\&#36;r('sys.color.ohos_id_alpha_content_primary')`的透明度。<br>当value的值为undefined时，维持上次取值。 |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 | 下拉按钮本身的文本颜色。<br>当resColor的值为undefined时，默认值：`&#36;r('sys.color.ohos_id_color_text_primary')`混合`&#36;r('sys.color.ohos_id_alpha_content_primary')`的透明度。<br>当value的值为undefined时，维持上次取值。 |
 
 ## keyboardAvoidMode
 
@@ -353,7 +348,7 @@ menuBackgroundBlurStyle(value: BlurStyle)
 
 设置下拉菜单的背景模糊材质。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -423,7 +418,7 @@ menuBackgroundColor(value: ResourceColor)
 
 设置下拉菜单的背景色。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -439,7 +434,7 @@ menuBackgroundColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 下拉菜单的背景色。<br>默认值：<br>API version 11之前，默认值为\&#36;r('sys.color.ohos_id_color_card_bg')。<br>API version 11及之后，默认值为Color.Transparent。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 下拉菜单的背景色。<br>默认值：<br>API version 11之前，默认值为&#36;r('sys.color.ohos_id_color_card_bg')。<br>API version 11及之后，默认值为Color.Transparent。 |
 
 ## menuBackgroundColor
 
@@ -493,7 +488,7 @@ menuItemContentModifier(modifier: ContentModifier<MenuItemConfiguration>)
 
 定制Select下拉菜单项内容区的方法。在应用了menuItemContentModifier后，下拉菜单的内容将完全由开发者自定义，此时为Select组件设置的分割线、选项颜色及下拉菜单的字体颜色等属性将不再生效。适用于下拉菜单项需要展示图文混排、多行文本、复杂图标或内置控件等复杂布局的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在attributeModifier中调用。
 
@@ -519,7 +514,7 @@ menuItemContentModifier(modifier: Optional<ContentModifier<MenuItemConfiguration
 
 定制Select下拉菜单项内容区的方法。与[menuItemContentModifier](#menuitemcontentmodifier) &lt;sup&gt;12+&lt;/sup&gt;相比，modifier参数新增了对undefined类型的支持。在应用了menuItemContentModifier后，下拉菜单的内容将完全由开发者自定义，此时为Select组件设置的分割线、选项颜色及下拉菜单的字体颜色等属性将不再生效。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在attributeModifier中调用。
 
@@ -683,7 +678,7 @@ optionFont(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Font | 是 | 下拉菜单项的文本样式。<br>默认值：<br>{<br>size: \&#36;r('sys.float.ohos_id_text_size_body1'),<br>weight:  FontWeight.Regular<br>} |
+| value | Font | 是 | 下拉菜单项的文本样式。<br>默认值：<br>{<br>size: &#36;r('sys.float.ohos_id_text_size_body1'),<br>weight:  FontWeight.Regular<br>} |
 
 ## optionFont
 
@@ -707,7 +702,7 @@ optionFont(selectFont: Optional<Font>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| selectFont | [Optional](arkts-arkui-optional-t.md)&lt;Font&gt; | 是 | 下拉菜单项的文本样式。<br>当selectFont的值为undefined时，默认值：<br>{<br>size: \&#36;r('sys.float.ohos_id_text_size_body1'),<br>weight: FontWeight.Regular<br>} |
+| selectFont | [Optional](arkts-arkui-optional-t.md)&lt;Font&gt; | 是 | 下拉菜单项的文本样式。<br>当selectFont的值为undefined时，默认值：<br>{<br>size: &#36;r('sys.float.ohos_id_text_size_body1'),<br>weight: FontWeight.Regular<br>} |
 
 ## optionFontColor
 
@@ -727,7 +722,7 @@ optionFontColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 下拉菜单项的文本颜色。<br>默认值：\&#36;r('sys.color.ohos_id_color_text_primary') |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 下拉菜单项的文本颜色。<br>默认值：&#36;r('sys.color.ohos_id_color_text_primary') |
 
 ## optionFontColor
 
@@ -749,7 +744,7 @@ optionFontColor(resColor: Optional<ResourceColor>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 | 下拉菜单项的文本颜色。<br>当resColor的值为undefined时，默认值：\&#36;r('sys.color.ohos_id_color_text_primary') |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 | 下拉菜单项的文本颜色。<br>当resColor的值为undefined时，默认值：&#36;r('sys.color.ohos_id_color_text_primary') |
 
 ## optionHeight
 
@@ -813,7 +808,7 @@ optionTextModifier(modifier: Optional<TextModifier>)
 
 如果[optionFont](#optionfont)与optionTextModifier的Font属性同时设置，则优先使用[optionFont](#optionfont)设置下拉菜单未选中项的文本样式；[optionFont](#optionfont)中缺省的属性将设置为对应的默认值。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在attributeModifier中调用。
 
@@ -891,7 +886,7 @@ selected(value: number | Resource)
 
 设置下拉菜单初始选项的索引，第一项的索引为0。当不设置selected属性、或设置为负数、非整数、超出索引范围等异常值时，默认选中值为-1，菜单项不选中；当设置为undefined、null时，选中第一项。
 
-从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+从API version 10开始，该属性支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 从API version 18开始，该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
@@ -915,7 +910,7 @@ selected(numCount: Optional<number | Resource>)
 
 设置下拉菜单初始选项的索引，第一项的索引为0。当不设置selected属性、或设置为负数、非整数、超出索引范围等异常值时，默认选中值为-1，菜单项不选中；当设置为undefined、null时，选中第一项。
 
-该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)、[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+该属性支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)、[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **起始版本：** 18
 
@@ -949,7 +944,7 @@ selectedOptionBgColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 下拉菜单选中项的背景色。<br>默认值：`\&#36;r('sys.color.ohos_id_color_component_activated')`混合`\&#36;r('sys.color.ohos_id_alpha_highlight_bg')`的透明度。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 下拉菜单选中项的背景色。<br>默认值：`&#36;r('sys.color.ohos_id_color_component_activated')`混合`&#36;r('sys.color.ohos_id_alpha_highlight_bg')`的透明度。 |
 
 ## selectedOptionBgColor
 
@@ -971,7 +966,7 @@ selectedOptionBgColor(resColor: Optional<ResourceColor>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 | 下拉菜单选中项的背景色。<br>当resColor的值为undefined时，默认值：`\&#36;r('sys.color.ohos_id_color_component_activated')`混合`\&#36;r('sys.color.ohos_id_alpha_highlight_bg')`的透明度。 |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 | 下拉菜单选中项的背景色。<br>当resColor的值为undefined时，默认值：`&#36;r('sys.color.ohos_id_color_component_activated')`混合`&#36;r('sys.color.ohos_id_alpha_highlight_bg')`的透明度。 |
 
 ## selectedOptionFont
 
@@ -991,7 +986,7 @@ selectedOptionFont(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Font | 是 | 下拉菜单选中项的文本样式。<br>默认值：<br>{<br>size: \&#36;r('sys.float.ohos_id_text_size_body1'),<br>weight:  FontWeight.Regular<br>} |
+| value | Font | 是 | 下拉菜单选中项的文本样式。<br>默认值：<br>{<br>size: &#36;r('sys.float.ohos_id_text_size_body1'),<br>weight:  FontWeight.Regular<br>} |
 
 ## selectedOptionFont
 
@@ -1013,7 +1008,7 @@ selectedOptionFont(selectFont: Optional<Font>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| selectFont | [Optional](arkts-arkui-optional-t.md)&lt;Font&gt; | 是 | 下拉菜单选中项的文本样式。<br>当selectFont的值为undefined时，默认值：<br>{<br>size: \&#36;r('sys.float.ohos_id_text_size_body1'),<br>weight: FontWeight.Regular<br>} |
+| selectFont | [Optional](arkts-arkui-optional-t.md)&lt;Font&gt; | 是 | 下拉菜单选中项的文本样式。<br>当selectFont的值为undefined时，默认值：<br>{<br>size: &#36;r('sys.float.ohos_id_text_size_body1'),<br>weight: FontWeight.Regular<br>} |
 
 ## selectedOptionFontColor
 
@@ -1033,7 +1028,7 @@ selectedOptionFontColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 下拉菜单选中项的文本颜色。<br>默认值：\&#36;r('sys.color.ohos_id_color_text_primary_activated') |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 下拉菜单选中项的文本颜色。<br>默认值：&#36;r('sys.color.ohos_id_color_text_primary_activated') |
 
 ## selectedOptionFontColor
 
@@ -1055,7 +1050,7 @@ selectedOptionFontColor(resColor: Optional<ResourceColor>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 | 下拉菜单选中项的文本颜色。<br>当resColor的值为undefined时，默认值为\&#36;r('sys.color.ohos_id_color_text_primary_activated')。 |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 | 下拉菜单选中项的文本颜色。<br>当resColor的值为undefined时，默认值为&#36;r('sys.color.ohos_id_color_text_primary_activated')。 |
 
 ## selectedOptionTextModifier
 
@@ -1067,7 +1062,7 @@ selectedOptionTextModifier(modifier: Optional<TextModifier>)
 
 如果[selectedOptionFont](#selectedoptionfont)与selectedOptionTextModifier的Font属性同时设置，则优先使用[selectedOptionFont](#selectedoptionfont)设置下拉菜单选中项的文本样式；若未设置[selectedOptionFont](#selectedoptionfont)，则优先使用[optionFont](#optionfont)设置下拉菜单选中项的文本样式。其中[selectedOptionFont](#selectedoptionfont)或者[optionFont](#optionfont)缺省的属性将设置为对应的默认值。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在attributeModifier中调用。
 
@@ -1181,7 +1176,7 @@ textModifier(modifier: Optional<TextModifier>)
 
 定制Select按钮文本样式的方法，在应用了textModifier之后，Select按钮的文本样式将完全由开发者自定义。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在attributeModifier中调用。
 
@@ -1207,7 +1202,7 @@ value(value: ResourceStr)
 
 设置下拉按钮的文本内容。选中菜单项后，按钮文本将自动更新为选中的菜单项文本。
 
-从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
@@ -1231,7 +1226,7 @@ value(resStr: Optional<ResourceStr>)
 
 设置下拉按钮的文本内容。选中菜单项后，按钮文本将自动更新为选中的菜单项文本。与[value](#value)相比，resStr参数新增了对undefined类型的支持。
 
-该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)、[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)、[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **起始版本：** 18
 

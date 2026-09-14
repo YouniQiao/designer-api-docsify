@@ -9,8 +9,3 @@ Defines the base class for text transitions.
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```

@@ -20,7 +20,7 @@ getCertIssuer(): DataBlob
 
 Obtains the issuer name of the revoked certificate.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The obtained issuer name of this revoked certificate contains a string terminator.
 

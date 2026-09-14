@@ -1,10 +1,5 @@
 # px2fp
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## px2fp
 
 ```TypeScript

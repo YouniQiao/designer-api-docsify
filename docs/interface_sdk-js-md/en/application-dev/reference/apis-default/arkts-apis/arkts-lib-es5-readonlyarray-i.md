@@ -19,10 +19,6 @@ Combines two or more arrays.
 | --- | --- | --- | --- |
 | items | ConcatArray&lt;T&gt;[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## concat
 
 ```TypeScript
@@ -37,10 +33,6 @@ Combines two or more arrays.
 | --- | --- | --- | --- |
 | items | (T &#124; ConcatArray&lt;T&gt;)[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## every
 
 ```TypeScript
@@ -58,10 +50,6 @@ Determines whether all the members of an array satisfy the specified test.
 | predicate | (value: T, index: number, array: readonly T[]) =&gt; value is S | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## every
 
 ```TypeScript
@@ -79,10 +67,6 @@ Determines whether all the members of an array satisfy the specified test.
 | predicate | (value: T, index: number, array: readonly T[]) =&gt; unknown | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## filter
 
 ```TypeScript
@@ -98,10 +82,6 @@ Returns the elements of an array that meet the condition specified in a callback
 | predicate | (value: T, index: number, array: readonly T[]) =&gt; value is S | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## filter
 
 ```TypeScript
@@ -117,10 +97,6 @@ Returns the elements of an array that meet the condition specified in a callback
 | predicate | (value: T, index: number, array: readonly T[]) =&gt; unknown | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## forEach
 
 ```TypeScript
@@ -151,10 +127,6 @@ Returns the index of the first occurrence of a value in an array.
 | searchElement | T | Yes |  |
 | fromIndex | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## join
 
 ```TypeScript
@@ -169,10 +141,6 @@ Adds all the elements of an array separated by the specified separator string.
 | --- | --- | --- | --- |
 | separator | string | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## lastIndexOf
 
 ```TypeScript
@@ -188,10 +156,6 @@ Returns the index of the last occurrence of a specified value in an array.
 | searchElement | T | Yes |  |
 | fromIndex | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## map
 
 ```TypeScript
@@ -207,10 +171,6 @@ Calls a defined callback function on each element of an array, and returns an ar
 | callbackfn | (value: T, index: number, array: readonly T[]) =&gt; U | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduce
 
 ```TypeScript
@@ -225,10 +185,6 @@ Calls the specified callback function for all the elements in an array. The retu
 | --- | --- | --- | --- |
 | callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: readonly T[]) =&gt; T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduce
 
 ```TypeScript
@@ -242,10 +198,6 @@ reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, arr
 | callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: readonly T[]) =&gt; T | Yes |  |
 | initialValue | T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduce
 
 ```TypeScript
@@ -261,10 +213,6 @@ Calls the specified callback function for all the elements in an array. The retu
 | callbackfn | (previousValue: U, currentValue: T, currentIndex: number, array: readonly T[]) =&gt; U | Yes |  |
 | initialValue | U | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduceRight
 
 ```TypeScript
@@ -279,10 +227,6 @@ Calls the specified callback function for all the elements in an array, in desce
 | --- | --- | --- | --- |
 | callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: readonly T[]) =&gt; T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduceRight
 
 ```TypeScript
@@ -296,10 +240,6 @@ reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number
 | callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: readonly T[]) =&gt; T | Yes |  |
 | initialValue | T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduceRight
 
 ```TypeScript
@@ -315,10 +255,6 @@ Calls the specified callback function for all the elements in an array, in desce
 | callbackfn | (previousValue: U, currentValue: T, currentIndex: number, array: readonly T[]) =&gt; U | Yes |  |
 | initialValue | U | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## slice
 
 ```TypeScript
@@ -334,10 +270,6 @@ Returns a section of an array.
 | start | number | No |  |
 | end | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## some
 
 ```TypeScript
@@ -353,10 +285,6 @@ Determines whether the specified callback function returns true for any element 
 | predicate | (value: T, index: number, array: readonly T[]) =&gt; unknown | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toLocaleString
 
 ```TypeScript
@@ -365,10 +293,6 @@ toLocaleString(): string
 
 Returns a string representation of an array. The elements are converted to string using their toLocaleString methods.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toString
 
 ```TypeScript
@@ -377,10 +301,6 @@ toString(): string
 
 Returns a string representation of an array.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [n: number]
 
 ```TypeScript

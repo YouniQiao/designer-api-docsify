@@ -14,7 +14,7 @@ function getSync(id: string, options?: SnapshotOptions): image.PixelMap
 
 Obtains the snapshot of a component that has been loaded based on the provided component ID. This API synchronously waits for the snapshot to complete and returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) object.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
 > update, the re-rendered content will not be included in the obtained snapshot.

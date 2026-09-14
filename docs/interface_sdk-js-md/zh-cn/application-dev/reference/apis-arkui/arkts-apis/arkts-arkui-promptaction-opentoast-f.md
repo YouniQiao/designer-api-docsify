@@ -14,7 +14,7 @@ function openToast(options: ShowToastOptions): Promise<number>
 
 显示即时反馈并通过Promise返回其id。
 
-> **说明：**
+> **说明：** 
 > 
 > - 不支持在输入法类型窗口中使用子窗（showMode设置为TOP_MOST或者SYSTEM_TOP_MOST）的openToast，详情见输入法框架的约束与限制说明
 > [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)

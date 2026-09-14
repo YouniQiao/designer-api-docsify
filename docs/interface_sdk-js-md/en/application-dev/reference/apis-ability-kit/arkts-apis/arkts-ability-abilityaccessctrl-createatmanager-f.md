@@ -24,7 +24,7 @@ Creates a program access control management instance for scenarios such as permi
 
 | Type | Description |
 | --- | --- |
-| [AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md) | AtManager** instance obtained. |
+| [AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md) | **AtManager** instance obtained. |
 
 **Examples**
 

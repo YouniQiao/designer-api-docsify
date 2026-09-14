@@ -637,7 +637,7 @@ getIssuerAltNames(): DataArray
 
 Obtains the Issuer Alternative Names (IANs) of this X.509 certificate.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The obtained IANs contain a string terminator.
 
@@ -726,7 +726,7 @@ getIssuerName(): DataBlob
 
 Obtains the issuer name of this X.509 certificate.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The obtained X.509 certificate issuer name ends with a NUL terminator (value 0). Determine whether to remove
 > this terminator based on your business requirements.
@@ -1387,7 +1387,7 @@ getSerialNumber(): number
 
 Obtains the X.509 certificate serial number.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 10. Use
 > [X509Cert.getCertSerialNumber()](#getcertserialnumber) instead.
@@ -1776,7 +1776,7 @@ getSubjectAltNames(): DataArray
 
 Obtains the Subject Alternative Names (SANs) of this X.509 certificate.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The obtained SANs contain a string terminator.
 
@@ -1867,7 +1867,7 @@ getSubjectName(encodingType?: EncodingType): DataBlob
 
 Obtains the subject name of this X.509 certificate.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - If the encodingType parameter is not set, the obtained certificate subject name ends with a
 > NUL terminator (value 0). Determine whether to remove this terminator based on your business requirements.

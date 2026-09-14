@@ -6,11 +6,6 @@ Configures the display effect of the **TextArea** component when the text exceed
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## overflowMode
 
 ```TypeScript

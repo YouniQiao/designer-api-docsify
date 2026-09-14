@@ -395,7 +395,7 @@ static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): s
 
 设置整段文本中部分文本方向，包括RTL、LTR。
 
-> **说明：**
+> **说明：** 
 > 
 > 在强字符（指具有明确书写方向的字符）中不生效。
 

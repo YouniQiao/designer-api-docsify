@@ -2,7 +2,7 @@
 
 Provides APIs for X.509 CRL operations.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use [X509CRL()](arkts-devicecertificate-cert-x509crl-i.md)
 > instead.
@@ -29,7 +29,7 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 Obtains the serialized X.509 CRL data. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getEncoded()](arkts-devicecertificate-cert-x509crl-i.md#getencoded) instead.
@@ -111,7 +111,7 @@ getEncoded(): Promise<EncodingBlob>
 
 Obtains the serialized X.509 CRL data. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getEncoded()](arkts-devicecertificate-cert-x509crl-i.md#getencoded) instead.
@@ -190,7 +190,7 @@ getIssuerName(): DataBlob
 
 Obtains the issuer of the X.509 CRL.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getIssuerName()](arkts-devicecertificate-cert-x509crl-i.md#getissuername) instead.
@@ -272,7 +272,7 @@ getLastUpdate(): string
 
 Obtains the last update date of this X.509 CRL.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getLastUpdate()](arkts-devicecertificate-cert-x509crl-i.md#getlastupdate) instead.
@@ -354,7 +354,7 @@ getNextUpdate(): string
 
 Obtains the next update date of this CRL.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getNextUpdate()](arkts-devicecertificate-cert-x509crl-i.md#getnextupdate) instead.
@@ -436,7 +436,7 @@ getRevokedCert(serialNumber: number): X509CrlEntry
 
 Obtains the revoked certificate entry from the X.509 CRL based on the specified serial number of the certificate.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getRevokedCert()](arkts-devicecertificate-cert-x509crl-i.md#getrevokedcert) instead.
@@ -524,7 +524,7 @@ getRevokedCerts(callback: AsyncCallback<Array<X509CrlEntry>>): void
 
 Obtains all the revoked certificate entries from the X.509 CRL. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getRevokedCerts()](arkts-devicecertificate-cert-x509crl-i.md#getrevokedcerts)
@@ -606,7 +606,7 @@ getRevokedCerts(): Promise<Array<X509CrlEntry>>
 
 Obtains all the revoked certificate entries from the X.509 CRL. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getRevokedCerts()](arkts-devicecertificate-cert-x509crl-i.md#getrevokedcerts) instead.
@@ -684,7 +684,7 @@ getRevokedCertWithCert(cert: X509Cert): X509CrlEntry
 
 Obtains the revoked certificate entry from the X.509 CRL based on the specified certificate.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getRevokedCertWithCert()](arkts-devicecertificate-cert-x509crl-i.md#getrevokedcertwithcert) instead.
@@ -808,7 +808,7 @@ getSignature(): DataBlob
 
 Obtains the signature data of the X.509 CRL.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getSignature()](arkts-devicecertificate-cert-x509crl-i.md#getsignature) instead.
@@ -890,7 +890,7 @@ getSignatureAlgName(): string
 
 Obtains the signing algorithm of the X.509 CRL.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getSignatureAlgName()](arkts-devicecertificate-cert-x509crl-i.md#getsignaturealgname) instead.
@@ -972,7 +972,7 @@ getSignatureAlgOid(): string
 
 Obtains the OID of the X.509 CRL signing algorithm. OIDs are allocated by the International Organization for Standardization (ISO).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getSignatureAlgOid()](arkts-devicecertificate-cert-x509crl-i.md#getsignaturealgoid) instead.
@@ -1054,7 +1054,7 @@ getSignatureAlgParams(): DataBlob
 
 Obtains the parameters of the X.509 CRL signing algorithm.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getSignatureAlgParams()](arkts-devicecertificate-cert-x509crl-i.md#getsignaturealgparams) instead.
@@ -1137,7 +1137,7 @@ getTbsInfo(): DataBlob
 
 Obtains the DER-encoded CRL information, that is, **tbsCertList** from this CRL.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getTBSInfo()](arkts-devicecertificate-cert-x509crl-i.md#gettbsinfo) instead.
@@ -1154,7 +1154,7 @@ Obtains the DER-encoded CRL information, that is, **tbsCertList** from this CRL.
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | tbsCertList** information obtained. |
+| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | **tbsCertList** information obtained. |
 
 **Error codes:**
 
@@ -1219,7 +1219,7 @@ getType(): string
 
 Obtains the CRL type.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getType()](arkts-devicecertificate-cert-x509crl-i.md#gettype) instead.
@@ -1287,7 +1287,7 @@ getVersion(): number
 
 Obtains the version of the X.509 CRL.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.getVersion()](arkts-devicecertificate-cert-x509crl-i.md#getversion) instead.
@@ -1355,7 +1355,7 @@ isRevoked(cert: X509Cert): boolean
 
 Checks whether an X.509 certificate is revoked.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.isRevoked()](arkts-devicecertificate-cert-x509crl-i.md#isrevoked) instead.
@@ -1464,7 +1464,7 @@ verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 
 Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.verify()](arkts-devicecertificate-cert-x509crl-i.md#verify)
@@ -1625,7 +1625,7 @@ verify(key: cryptoFramework.PubKey): Promise<void>
 
 Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRL.verify()](arkts-devicecertificate-cert-x509crl-i.md#verify) instead.

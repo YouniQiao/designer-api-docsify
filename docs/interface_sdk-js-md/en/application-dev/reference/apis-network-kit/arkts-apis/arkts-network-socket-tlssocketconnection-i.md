@@ -2,7 +2,7 @@
 
 Defines a **TLSSocketConnection** object, that is, the connection between the TLSSocket client and the server. Before calling TLSSocketConnection APIs, you need to obtain a **TLSSocketConnection** object.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The TLSSocket client can call related APIs through the **TLSSocketConnection** object only after a connection is
 > successfully established between the TLSSocket client and the server.
@@ -300,7 +300,7 @@ getLocalAddress(): Promise<NetAddress>
 
 Obtains the local socket address of a **TLSSocketConnection** connection. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Call this API only after the **TLSSocketServer** connection is successfully established.
 
@@ -312,7 +312,7 @@ Obtains the local socket address of a **TLSSocketConnection** connection. This A
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | Promise used to return the result. |
+| Promise&lt;[NetAddress](arkts-network-socket-p.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -379,7 +379,7 @@ Obtains the remote address of a TLS socket server connection. This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | Yes | Callback used to return the result. If the operation is successful, the remote address is returned. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetAddress](arkts-network-socket-p.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the remote address is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -447,7 +447,7 @@ Obtains the remote address of a TLS socket server connection. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | Promise used to return the result. If the operation fails, an error message is returned. |
+| Promise&lt;[NetAddress](arkts-network-socket-p.md)&gt; | Promise used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -860,7 +860,7 @@ getSocketFd(): Promise<number>
 
 Obtains the file descriptor of a TLSSocketConnection connection. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Call this API only after the **TLSSocketServer** connection is successfully established.
 > 

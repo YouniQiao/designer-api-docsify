@@ -407,7 +407,7 @@ is in the foreground (the [lifecycle state](../../../windowmanager/window-lifecy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isVisible | boolean | Yes | true** indicates that the floating ball is visible in the application, and **false** indicates the opposite. |
+| isVisible | boolean | Yes | **true** indicates that the floating ball is visible in the application, and **false** indicates the opposite. |
 
 **Return value:**
 

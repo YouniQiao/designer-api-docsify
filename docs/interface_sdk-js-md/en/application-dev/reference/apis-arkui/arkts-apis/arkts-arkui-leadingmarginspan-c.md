@@ -6,11 +6,6 @@ Defines custom indentation for text paragraphs. Only a base class is provided; t
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## getLeadingMargin
 
 ```TypeScript

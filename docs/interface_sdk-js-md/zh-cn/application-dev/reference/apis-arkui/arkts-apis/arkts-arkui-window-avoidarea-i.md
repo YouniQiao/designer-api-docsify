@@ -6,7 +6,7 @@
 
 在避让区域内，应用窗口内容被遮挡且无法响应用户点击事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 示意图展示了leftRect、topRect、rightRect、bottomRect的含义。
 > 

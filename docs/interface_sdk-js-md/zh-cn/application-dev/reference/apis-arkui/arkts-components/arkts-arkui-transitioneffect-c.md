@@ -6,11 +6,6 @@ TransitionEffect以函数的形式指定转场效果。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## animation
 
 ```TypeScript

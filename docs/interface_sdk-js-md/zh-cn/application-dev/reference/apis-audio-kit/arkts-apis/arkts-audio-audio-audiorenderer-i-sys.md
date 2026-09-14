@@ -20,7 +20,7 @@ getTarget(): RenderTarget
 
 获取当前音频渲染器的渲染目标。
 
-> **说明：**
+> **说明：** 
 > 
 > - 若未更改过渲染目标，将返回默认值[PLAYBACK](arkts-audio-audio-rendertarget-e-sys.md)。
 > 
@@ -67,13 +67,13 @@ setTarget(target: RenderTarget): Promise<void>
 
 设置音频渲染器的渲染目标。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 此方法仅可在音频渲染器未处于运行或释放状态时调用，否则将返回错误。
 > 
 > - 将渲染目标更改为非[PLAYBACK](arkts-audio-audio-rendertarget-e-sys.md)的模式后：
 > 
-> - 该音频渲染器的音频路由与中断策略将无法使用[AudioSessionManager](arkts-multimedia-audio.md)相关接口。
+> - 该音频渲染器的音频路由与中断策略将无法使用[AudioSessionManager](arkts-audio-multimedia-audio.md)相关接口。
 > 
 > - 该音频渲染器的device type为[SYSTEM_PRIVATE](arkts-audio-audio-devicetype-e.md)。
 > 

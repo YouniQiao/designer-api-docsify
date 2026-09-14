@@ -42,7 +42,7 @@ Creates a **PointerMatrix** object and returns the object created. This API is a
 
 | Type | Description |
 | --- | --- |
-| [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | PointerMatrix** object created. |
+| [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | **PointerMatrix** object created. |
 
 **Error codes:**
 

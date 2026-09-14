@@ -6,11 +6,6 @@ This interface is used to set the options for EmbeddedComponentAttribute during 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## areaChangePlaceholder
 
 ```TypeScript

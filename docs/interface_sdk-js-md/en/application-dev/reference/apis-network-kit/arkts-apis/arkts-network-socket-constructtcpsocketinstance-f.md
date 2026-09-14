@@ -22,7 +22,7 @@ Creates a **TCPSocket** object.
 
 | Type | Description |
 | --- | --- |
-| [TCPSocket](arkts-network-socket-tcpsocket-i.md) | TCPSocket** object. |
+| [TCPSocket](arkts-network-socket-tcpsocket-i.md) | **TCPSocket** object. |
 
 **Examples**
 

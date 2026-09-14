@@ -10,7 +10,7 @@
 
 支持单个子组件。
 
-> **说明：**
+> **说明：** 
 > 
 > 可内置系统组件和自定义组件，支持渲染控制类型（[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、
 > [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)和
@@ -24,7 +24,7 @@ TabContent()
 
 创建TabContent页签和内容。
 
-> **说明：**
+> **说明：** 
 > 
 > TabContent组件仅能作为Tabs组件的子组件使用，否则会导致组件无法正常显示。
 

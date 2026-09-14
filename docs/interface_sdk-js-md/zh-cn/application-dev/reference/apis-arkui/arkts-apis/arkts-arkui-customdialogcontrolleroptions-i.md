@@ -2,7 +2,7 @@
 
 自定义弹窗的样式。
 
-> **说明：**
+> **说明：** 
 > 
 > - 按下返回键和ESC键时会让弹窗退出。
 > 
@@ -23,11 +23,6 @@
 **起始版本：** 7
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## cancel
 
@@ -89,7 +84,7 @@ backgroundBlurStyle?: BlurStyle
 
 默认值：从API版本26.0.0开始，为BlurStyle.NONE，API版本26.0.0之前，为BlurStyle.COMPONENT_ULTRA_THICK。
 
-**说明：**
+**说明：** 
 
 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
 
@@ -243,7 +238,7 @@ builder: any
 
 自定义弹窗内容构造器。
 
-**说明：**
+**说明：** 
 
 若builder构造器使用回调函数作为入参，请注意使用this绑定问题，如builder: custombuilder({ callback: ()=&gt; {...}})。
 
@@ -265,7 +260,7 @@ closeAnimation?: AnimateParam
 
 自定义设置弹窗关闭的动画效果相关参数。
 
-**说明：**
+**说明：** 
 
 tempo默认值为1，当设置小于等于0的值时按默认值处理。
 
@@ -297,7 +292,7 @@ cornerRadius?: Dimension | BorderRadiuses
 
 默认值：{ topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }
 
-**说明：**自定义弹窗默认的背板圆角半径为32vp，如果需要使用cornerRadius属性，请和borderRadius属性一起使用。
+**说明：** 自定义弹窗默认的背板圆角半径为32vp，如果需要使用cornerRadius属性，请和borderRadius属性一起使用。
 
 **类型：** [Dimension](arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
@@ -350,7 +345,7 @@ displayModeInSubWindow?: DialogDisplayMode
 
 默认值：DialogDisplayMode.SCREEN_BASED
 
-**说明：**
+**说明：** 
 
 仅当showInSubWindow设置为true时生效。
 
@@ -376,7 +371,7 @@ enableHoverMode?: boolean
 
 默认值：false，默认不响应。
 
-**说明：**
+**说明：** 
 
 PC/2in1设备弹窗默认显示在上半屏，在enableHoverMode设置为true时，可以通过设置hoverModeArea参数显示在下半屏。其他设备弹窗在enableHoverMode设置为true时默认显示在下半屏，可以通过设置hoverModeArea参数显示在上半屏。
 
@@ -402,7 +397,7 @@ focusable?: boolean
 
 默认值：true
 
-**说明：**
+**说明：** 
 
 只有弹出覆盖在当前窗口之上的弹窗才可以获取焦点。
 
@@ -446,7 +441,7 @@ height?: Dimension
 
 设置弹窗背板的高度。
 
-**说明：**
+**说明：** 
 
 - 弹窗高度默认最大值：0.9 *（窗口高度 - 安全区域）。  
 - 百分比参数方式：弹窗参考高度为（窗口高度 - 安全区域），在此基础上调小或调大。
@@ -491,7 +486,7 @@ immersiveMode?: ImmersiveMode
 
 设置页面内弹窗蒙层效果。
 
-**说明：**
+**说明：** 
 
 - 默认值：ImmersiveMode.DEFAULT  
 - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
@@ -538,7 +533,7 @@ keyboardAvoidDistance?: LengthMetrics
 
 弹窗避让键盘后，和键盘之间的距离。
 
-**说明：**
+**说明：** 
 
 - 默认值：16vp。  
 - 默认单位：vp。  
@@ -584,7 +579,7 @@ levelMode?: LevelMode
 
 设置弹窗显示层级。
 
-**说明：**
+**说明：** 
 
 - 默认值：LevelMode.OVERLAY。  
 - 当且仅当showInSubWindow属性设置为false时生效。
@@ -609,7 +604,7 @@ levelOrder?: LevelOrder
 
 设置弹窗显示的顺序。
 
-**说明：**
+**说明：** 
 
 - 默认值：LevelOrder.clamp(0)  
 - 不支持动态刷新顺序。
@@ -636,7 +631,7 @@ levelUniqueId?: number
 
 取值范围：大于等于0的数字。
 
-**说明：**
+**说明：** 
 
 - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
@@ -680,7 +675,7 @@ maskRect?: Rectangle
 
 默认值：{ x: 0, y: 0, width: '100%', height: '100%' }
 
-**说明：**
+**说明：** 
 
 showInSubWindow为true时，maskRect不生效。
 
@@ -720,7 +715,7 @@ onDidAppear?: Callback<void>
 
 弹窗弹出后的事件回调。
 
-**说明：**
+**说明：** 
 
 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
@@ -748,7 +743,7 @@ onDidDisappear?: Callback<void>
 
 弹窗消失后的事件回调。
 
-**说明：**
+**说明：** 
 
 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
@@ -770,7 +765,7 @@ onWillAppear?: Callback<void>
 
 弹窗显示动效前的事件回调。
 
-**说明：**
+**说明：** 
 
 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
@@ -794,7 +789,7 @@ onWillDisappear?: Callback<void>
 
 弹窗退出动效前的事件回调。
 
-**说明：**
+**说明：** 
 
 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
@@ -816,7 +811,7 @@ onWillDismiss?: Callback<DismissDialogAction>
 
 交互式关闭回调函数。
 
-**说明：**
+**说明：** 
 
 1.当用户执行点击遮障层关闭、侧滑（左滑/右滑）、三键back、键盘ESC关闭交互操作时，如果注册该回调函数，则不会立刻关闭弹窗。在回调函数中可以通过reason得到阻拦关闭弹窗的操作类型，从而根据原因选择是否能关闭弹窗。当前组件返回的reason中，暂不支持CLOSE_BUTTON的枚举值。
 
@@ -840,7 +835,7 @@ openAnimation?: AnimateParam
 
 自定义设置弹窗弹出的动画效果相关参数。未设置时使用系统默认弹出动画。
 
-**说明：**
+**说明：** 
 
 tempo默认值为1，当设置小于等于0的值时按默认值处理。
 
@@ -888,11 +883,11 @@ showInSubWindow?: boolean
 
 默认值：false，弹窗显示在应用内，而非独立子窗口。
 
-**说明：**showInSubWindow为true的弹窗无法触发显示另一个showInSubWindow为true的弹窗。不建议在showInSubWindow为true的弹窗中使用CalendarPicker、CalendarPickerDialog、DatePickerDialog、TextPickerDialog、TimePickerDialog、Toast组件，弹窗会影响上述组件行为。
+**说明：** showInSubWindow为true的弹窗无法触发显示另一个showInSubWindow为true的弹窗。不建议在showInSubWindow为true的弹窗中使用CalendarPicker、CalendarPickerDialog、DatePickerDialog、TextPickerDialog、TimePickerDialog、Toast组件，弹窗会影响上述组件行为。
 
 **类型：** boolean
 
-**默认值：**
+**默认值：** 
 - API版本11+：false
 
 **起始版本：** 10
@@ -911,7 +906,7 @@ systemMaterial?: SystemUiMaterial
 
 设置弹窗的系统材质。
 
-**说明：**
+**说明：** 
 
 - 默认值：[ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md)}的style为  
 ImmersiveStyle.ULTRA_THICK的[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)对象。设置undefined时与默认值保持一致。  
@@ -936,7 +931,7 @@ width?: Dimension
 
 设置弹窗背板的宽度。
 
-**说明：**
+**说明：** 
 
 - 弹窗宽度默认最大值：400vp。  
 - 百分比参数方式：弹窗参考宽度为所在窗口的宽度，在此基础上调小或调大。

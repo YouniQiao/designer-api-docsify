@@ -19,10 +19,6 @@ Return the String value whose elements are, in order, the elements in the List e
 | --- | --- | --- | --- |
 | codePoints | number[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## raw
 
 ```TypeScript
@@ -37,8 +33,3 @@ String.raw is usually used as a tag function of a Tagged Template String. When c
 | --- | --- | --- | --- |
 | template | { raw: readonly string[] &#124; ArrayLike&lt;string&gt;} | Yes |  |
 | substitutions | any[] | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

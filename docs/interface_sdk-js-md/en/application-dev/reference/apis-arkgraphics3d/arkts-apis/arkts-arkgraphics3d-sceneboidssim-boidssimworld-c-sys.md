@@ -2,7 +2,7 @@
 
 The Boids simulation world object, used to manage the lifecycle and components of the Boids simulation.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Before using the following APIs, you need to obtain the Boids simulation world instance through [getDefaultBoidsSimWorld](arkts-arkgraphics3d-sceneboidssim-boidssimplugin-c-sys.md#getdefaultboidssimworld).
 

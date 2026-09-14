@@ -2,7 +2,7 @@
 
 UIContext实例对象。
 
-> **说明：**
+> **说明：** 
 
 > - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。
 > 
@@ -35,7 +35,7 @@ addLocalInputEventMonitor(eventMask: number, listener: InputEventListener): Inpu
 
 接口名中的“Local”表示监视器只在当前UIContext内有效。并且不影响其他UIContext实例。每个UIContext都维护自己独立的监视器列表。
 
-> **说明：**
+> **说明：** 
 > &gt;性能警告：不要在回调中执行耗时操作！
 > &gt;监控对象注释：
 > 
@@ -82,7 +82,7 @@ animateTo(value: AnimateParam, event: () => void): void
 
 提供animateTo接口，用于为闭包代码中的状态变化添加过渡动画效果。
 
-> **说明：**
+> **说明：** 
 > 
 > - 不推荐在aboutToAppear、aboutToDisappear中调用动画。
 > 
@@ -92,9 +92,9 @@ animateTo(value: AnimateParam, event: () => void): void
 > - 执行aboutToDisappear
 > 时，组件即将销毁，不能在aboutToDisappear里面做动画。
 > 
-> - 在组件出现和消失时，可以通过[组件内转场](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)添加动画效果。
+> - 在组件出现和消失时，可以通过[组件内转场](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-common.md)添加动画效果。
 > 
-> - 组件内转场不支持的属性，可以参考[显式动画](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)中的
+> - 组件内转场不支持的属性，可以参考[显式动画](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-common.md)中的
 > 示例2，使用animateTo实现动画执行结束后组件消失的效
 > 果。
 > 
@@ -198,7 +198,7 @@ closeBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>): Promise
 
 关闭bindSheetContent对应的半模态页面，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用此接口关闭半模态页面时，不会触发shouldDismiss回调。
 
@@ -238,7 +238,7 @@ constructor()
 
 构造UIContext对象。
 
-> **说明：**
+> **说明：** 
 > 
 > 通过构造函数创建的UIContext对象指向不明确的UI上下文，即不指向任何UI实例。该UIContext对应实例的唯一标识ID为-1。
 
@@ -326,7 +326,7 @@ static createUIContextWithoutWindow(context: common.UIAbilityContext | common.Ex
 
 创建一个不依赖窗口的UI实例，并返回其UI上下文。该接口所创建的UI实例是单例。
 
-> **说明：**
+> **说明：** 
 > 
 > 返回的UI上下文只可用于创建[自定义节点](../../../ui/arkts-user-defined-node.md)，不能执行其他UI操作。
 
@@ -459,7 +459,7 @@ fp2px(value: number): number
 
 字体缩放比例：系统设置的字体缩放系数，对应 Configuration.fontScale。
 
-> **说明：**
+> **说明：** 
 > 
 > getUIContext需在windowStage.
 > [loadContent](arkts-arkui-window-window-i.md#loadcontent)之后调用，确保UIContext初始化完成后
@@ -547,7 +547,7 @@ getAttachedFrameNodeById(id: string): FrameNode | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 节点对应的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 |
+| id | string | 是 | 节点对应的[组件标识](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-common.md)。 |
 
 **返回值：**
 
@@ -563,7 +563,7 @@ static getCallingScopeUIContext(): UIContext | undefined
 
 获取当前[调用作用域](../../../ui/arkts-global-interface.md#基本概念)的UIContext，调用作用域不明确时返回undefined。
 
-> **说明：**
+> **说明：** 
 > 
 > 返回的UIContext对象可能指向一个已销毁的UI实例，通常在由已销毁的实例抛出异步任务时出现。建议通过[isAvailable](#isavailable)接口判断其有效性。
 
@@ -847,7 +847,7 @@ getFrameNodeById(id: string): FrameNode | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 节点对应的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 |
+| id | string | 是 | 节点对应的[组件标识](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-common.md)。 |
 
 **返回值：**
 
@@ -1113,7 +1113,7 @@ Get navigation information of the frameNode with uniqueId.
 
 | 类型 | 说明 |
 | --- | --- |
-| [observer.NavigationInfo](../../apis-arkui/arkts-apis/arkts-arkui-observer.md) &#124; undefined | The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
+| [observer.NavigationInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-observer.md) &#124; undefined | The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
 
 ## getOverlayManager
 
@@ -1299,7 +1299,7 @@ getSharedLocalStorage(): LocalStorage | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [LocalStorage](arkts-arkui-localstorage-c.md) &#124; undefined | LocalStorage** instance if it exists; **undefined** if it does not exist. |
+| [LocalStorage](arkts-arkui-localstorage-c.md) &#124; undefined | **LocalStorage** instance if it exists; **undefined** if it does not exist. |
 
 ## getSmartGestureController
 
@@ -1419,7 +1419,7 @@ getWindowId(): number | undefined
 
 获取当前应用实例所属的窗口ID。
 
-> **说明：**
+> **说明：** 
 > 
 > 若UIContext位于主应用程序进程中的[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)内，则返回主应用程
 > 序的顶层窗口ID。
@@ -1554,7 +1554,7 @@ Checks whether current font scale follows the system.
 keyframeAnimateTo(param: KeyframeAnimateParam, keyframes: Array<KeyframeState>): void
 ```
 
-产生关键帧动画。该接口的使用说明请参考[keyframeAnimateTo](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
+产生关键帧动画。该接口的使用说明请参考[keyframeAnimateTo](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-common.md)。
 
 **起始版本：** 11
 
@@ -1581,7 +1581,7 @@ lpx2px(value: number): number
 
 转换公式为：px值 = lpx值 × 实际屏幕宽度与逻辑宽度（通过[designWidth](../../../quick-start/module-configuration-file.md#pages标签)配置）的比值。
 
-> **说明：**
+> **说明：** 
 > 
 > getUIContext需在windowStage.
 > [loadContent](arkts-arkui-window-window-i.md#loadcontent)之后调用，确保UIContext初始化完成后
@@ -1613,7 +1613,7 @@ openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOpti
 
 创建并弹出以bindSheetContent作为内容的半模态页面，使用Promise异步回调。通过该接口弹出的半模态页面样式完全按照bindSheetContent中设置的样式显示。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 使用该接口时，若未传入有效的targetId，则不支持设置SheetOptions.preferType为POPUP模式、不支持设置SheetOptions.mode为EMBEDDED模式。
 > 
@@ -1714,7 +1714,7 @@ px2fp(value: number): number
 
 字体缩放比例：系统设置的字体缩放系数，对应 Configuration.fontScale。
 
-> **说明：**
+> **说明：** 
 > 
 > getUIContext需在windowStage.
 > [loadContent](arkts-arkui-window-window-i.md#loadcontent)之后调用，确保UIContext初始化完成后
@@ -1748,7 +1748,7 @@ px2lpx(value: number): number
 
 转换公式为：lpx值 = px值 ÷ 实际屏幕宽度与逻辑宽度（通过[designWidth](../../../quick-start/module-configuration-file.md#pages标签)配置）的比值。
 
-> **说明：**
+> **说明：** 
 > 
 > getUIContext需在windowStage.
 > [loadContent](arkts-arkui-window-window-i.md#loadcontent)之后调用，确保UIContext初始化完成后
@@ -1784,13 +1784,13 @@ px2vp(value: number): number
 
 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md).density。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. getUIContext需在windowStage.
 > [loadContent](arkts-arkui-window-window-i.md#loadcontent)之后调用，确保UIContext初始化完成后
 > 调用此接口，否则无法返回准确结果。
 > 
-> 2. UI实例未创建时，[像素单位](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)中的px2vp接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考
+> 2. UI实例未创建时，[像素单位](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-common.md)中的px2vp接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考
 > [像素单位转换接口替换为UIContext接口](../../../ui/arkts-global-interface.md#像素单位转换接口替换为uicontext接口)。
 
 **起始版本：** 12
@@ -1855,7 +1855,7 @@ requireDynamicSyncScene(id: string): Array<DynamicSyncScene>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 节点对应的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 |
+| id | string | 是 | 节点对应的[组件标识](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-common.md)。 |
 
 **返回值：**
 
@@ -1871,7 +1871,7 @@ static resolveUIContext(): ResolvedUIContext
 
 使用优先级策略获取带有解析策略的UIContext实例对象。
 
-> **说明：**
+> **说明：** 
 > 
 > 按照预定义的优先级顺序解析并返回UIContext实例和UIContext的解析策略。
 > 
@@ -1999,7 +1999,7 @@ setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 
 控制虚拟键盘抬起时页面的避让模式。
 
-> **说明：**
+> **说明：** 
 > 
 > KeyboardAvoidMode.RESIZE模式会压缩页面大小，页面中设置百分比宽高的组件会跟随页面压缩，而直接设置宽高的组件会按设置的固定大小布局。设置KeyboardAvoidMode的RESIZE模式时，expandSa feArea([SafeAreaType.KEYBOARD],[SafeAreaEdge.BOTTOM])不生效。
 > 
@@ -2312,7 +2312,7 @@ updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOp
 
 更新bindSheetContent对应的半模态页面的样式，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 不支持更新SheetOptions.UIContext、SheetOptions.mode、回调函数。
 
@@ -2358,13 +2358,13 @@ vp2px(value: number): number
 
 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md).density。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. getUIContext需在windowStage.
 > [loadContent](arkts-arkui-window-window-i.md#loadcontent)之后调用，确保UIContext初始化完成后
 > 调用此接口，否则无法返回准确结果。
 > 
-> 2. UI实例未创建时，[像素单位](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)中的vp2px接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考
+> 2. UI实例未创建时，[像素单位](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-common.md)中的vp2px接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考
 > [像素单位转换接口替换为UIContext接口](../../../ui/arkts-global-interface.md#像素单位转换接口替换为uicontext接口)。
 
 **起始版本：** 12

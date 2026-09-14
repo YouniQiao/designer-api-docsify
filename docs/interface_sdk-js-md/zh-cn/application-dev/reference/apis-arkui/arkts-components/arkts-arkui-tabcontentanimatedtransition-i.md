@@ -6,11 +6,6 @@ Tabs自定义切换动画相关信息。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## timeout
 
 ```TypeScript

@@ -15,13 +15,13 @@ store. This class inherits from [KVStore](arkts-arkdata-distributeddata-kvstoret
 - [DeviceKVStore&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkdata-distributeddata-devicekvstore-i.md): provides APIs to query and synchronize data in a  
 device KV store. This class inherits from [KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md), and data is distinguished by device.
 
-[@ohos.data.distributedKVStore](arkts-data-distributedkvstore.md).
+[@ohos.data.distributedKVStore](arkts-arkdata-data-distributedkvstore.md).
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [distributedKVStore](arkts-data-distributedkvstore.md)
+**Substitutes:** [distributedKVStore](arkts-arkdata-data-distributedkvstore.md)
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 

@@ -6,11 +6,6 @@ Defines the callback information for notifying the host app that a file download
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## contentDisposition
 
 ```TypeScript

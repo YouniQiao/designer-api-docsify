@@ -6,11 +6,6 @@ Provides information about the drag event.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## executeDropAnimation
 
 ```TypeScript
@@ -31,7 +26,7 @@ Sets the execution function of the custom drop animation. This parameter is vali
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| customDropAnimation | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Custom drop animation in this callback.<br> **NOTE:**<br>1. This API is valid only in the **onDrop** callback.<br> 2. Before using this API, set **useCustomDropAnimation** to **true**. Otherwise, this API does not take effect.<br> 3. Do not implement logic unrelated to the animation in the animation callback to avoid affecting performance. |
+| customDropAnimation | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Custom drop animation in this callback.<br> **NOTE:** <br>1. This API is valid only in the **onDrop** callback.<br> 2. Before using this API, set **useCustomDropAnimation** to **true**. Otherwise, this API does not take effect.<br> 3. Do not implement logic unrelated to the animation in the animation callback to avoid affecting performance. |
 
 ## getData
 
@@ -214,7 +209,7 @@ Obtains the pressed status of modifier keys.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | Yes | Obtains the pressed status of modifier keys. For details about the error message, see the following error codes. The following modifier keys are supported: 'Ctrl' &#124; 'Alt' &#124; 'Shift'.<br>**NOTE:**<br>This API is not supported in stylus scenarios. |
+| keys | Array&lt;string&gt; | Yes | Obtains the pressed status of modifier keys. For details about the error message, see the following error codes. The following modifier keys are supported: 'Ctrl' &#124; 'Alt' &#124; 'Shift'.<br>**NOTE:** <br>This API is not supported in stylus scenarios. |
 
 **Return value:**
 
@@ -412,7 +407,7 @@ getX(): number
 
 Obtains the x-coordinate of the drag point relative to the upper left corner of the window, in vp.
 
-> **NOTE:**
+> **NOTE:** 
 
 **Since:** 7
 
@@ -436,7 +431,7 @@ getY(): number
 
 Obtains the y-coordinate of the drag point relative to the upper left corner of the window, in vp.
 
-> **NOTE:**
+> **NOTE:** 
 
 **Since:** 7
 

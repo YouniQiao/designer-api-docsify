@@ -8,11 +8,6 @@ Defines the options of backgroundBlurStyle
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## inactiveColor
 
 ```TypeScript

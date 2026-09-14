@@ -1,6 +1,6 @@
 # HuksExternalPinAuthState
 
-Enumerates the Ukey PIN authentication states.
+Enumerates the UKey PIN authentication states.
 
 **Since:** 22
 
@@ -12,7 +12,7 @@ Enumerates the Ukey PIN authentication states.
 HUKS_EXT_CRYPTO_PIN_NO_AUTH = 0
 ```
 
-The Ukey PIN is not authenticated.
+The UKey PIN is not authenticated.
 
 **Since:** 22
 
@@ -24,7 +24,7 @@ The Ukey PIN is not authenticated.
 HUKS_EXT_CRYPTO_PIN_AUTH_SUCCEEDED = 1
 ```
 
-The Ukey PIN is authenticated successfully.
+The UKey PIN is authenticated successfully.
 
 **Since:** 22
 
@@ -36,7 +36,7 @@ The Ukey PIN is authenticated successfully.
 HUKS_EXT_CRYPTO_PIN_LOCKED = 2
 ```
 
-The Ukey PIN is locked.
+The UKey PIN is locked.
 
 **Since:** 22
 

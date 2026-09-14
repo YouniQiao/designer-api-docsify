@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## [[Call]]
 
 ```TypeScript
@@ -37,6 +32,8 @@
 
 | 类型 | 说明 |
 | --- | --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
+
 ## [[Call]]
 
 ```TypeScript
@@ -63,6 +60,8 @@
 
 | 类型 | 说明 |
 | --- | --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
+
 ## onActionCancel
 
 ```TypeScript
@@ -87,6 +86,8 @@ Rotation手势识别成功，接收到触摸取消事件触发的回调。该回
 
 | 类型 | 说明 |
 | --- | --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
+
 ## onActionCancel
 
 ```TypeScript
@@ -113,6 +114,8 @@ Rotation手势识别成功，接收到触摸取消事件触发的回调。与[on
 
 | 类型 | 说明 |
 | --- | --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
+
 ## onActionEnd
 
 ```TypeScript
@@ -137,6 +140,8 @@ Rotation手势识别成功，当抬起最后一根满足手势触发条件的手
 
 | 类型 | 说明 |
 | --- | --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
+
 ## onActionStart
 
 ```TypeScript
@@ -161,6 +166,8 @@ Rotation手势识别成功后触发的回调。
 
 | 类型 | 说明 |
 | --- | --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
+
 ## onActionUpdate
 
 ```TypeScript
@@ -185,3 +192,4 @@ Rotation手势移动过程中触发的回调。
 
 | 类型 | 说明 |
 | --- | --- |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |

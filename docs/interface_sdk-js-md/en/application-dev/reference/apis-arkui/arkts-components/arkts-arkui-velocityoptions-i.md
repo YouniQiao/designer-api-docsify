@@ -3,7 +3,7 @@
 Defines velocity options.
 
 *   
-> **NOTE:**
+> **NOTE:** 
 
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
@@ -13,11 +13,6 @@ Defines velocity options.
 **Since:** 18
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## angle
 

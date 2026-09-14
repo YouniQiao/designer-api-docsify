@@ -6,11 +6,6 @@ Describes the initialization options of the **Marquee** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## delay
 
 ```TypeScript

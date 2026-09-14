@@ -24,4 +24,4 @@ Defines a function used to obtain a deferred **UnifiedData** object. Currently, 
 
 | Type | Description |
 | --- | --- |
-| [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddata-c.md) | UnifiedData** object. |
+| [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddata-c.md) | **UnifiedData** object. |

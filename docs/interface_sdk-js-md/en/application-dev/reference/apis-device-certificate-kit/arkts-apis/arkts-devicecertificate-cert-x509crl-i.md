@@ -322,7 +322,7 @@ getIssuerName(): DataBlob
 
 Obtains the issuer of the X.509 CRL.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The obtained X.509 CRL issuer name contains a string terminator.
 
@@ -1362,7 +1362,7 @@ Obtains the DER-encoded CRL information, that is, **tbsCertList** from this CRL.
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | tbsCertList** information obtained. |
+| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | **tbsCertList** information obtained. |
 
 **Error codes:**
 

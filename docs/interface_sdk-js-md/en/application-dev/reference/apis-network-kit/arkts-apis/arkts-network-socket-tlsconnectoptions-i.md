@@ -20,7 +20,7 @@ address: NetAddress
 
 Gateway address.
 
-**Type:** NetAddress
+**Type:** [NetAddress](arkts-network-socket-p.md)
 
 **Since:** 9
 

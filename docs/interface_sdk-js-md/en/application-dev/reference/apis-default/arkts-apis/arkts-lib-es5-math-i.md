@@ -19,10 +19,6 @@ Returns the absolute value of a number (the value without regard to whether it i
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## acos
 
 ```TypeScript
@@ -37,10 +33,6 @@ Returns the arc cosine (or inverse cosine) of a number.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## asin
 
 ```TypeScript
@@ -55,10 +47,6 @@ Returns the arcsine of a number.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## atan
 
 ```TypeScript
@@ -73,10 +61,6 @@ Returns the arctangent of a number.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## atan2
 
 ```TypeScript
@@ -92,10 +76,6 @@ Returns the angle (in radians) from the X axis to a point.
 | y | number | Yes |  |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## ceil
 
 ```TypeScript
@@ -110,10 +90,6 @@ Returns the smallest integer greater than or equal to its numeric argument.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## cos
 
 ```TypeScript
@@ -128,10 +104,6 @@ Returns the cosine of a number.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## exp
 
 ```TypeScript
@@ -146,10 +118,6 @@ Returns e (the base of natural logarithms) raised to a power.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## floor
 
 ```TypeScript
@@ -164,10 +132,6 @@ Returns the greatest integer less than or equal to its numeric argument.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## log
 
 ```TypeScript
@@ -182,10 +146,6 @@ Returns the natural logarithm (base e) of a number.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## max
 
 ```TypeScript
@@ -200,10 +160,6 @@ Returns the larger of a set of supplied numeric expressions.
 | --- | --- | --- | --- |
 | values | number[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## min
 
 ```TypeScript
@@ -218,10 +174,6 @@ Returns the smaller of a set of supplied numeric expressions.
 | --- | --- | --- | --- |
 | values | number[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## pow
 
 ```TypeScript
@@ -237,10 +189,6 @@ Returns the value of a base expression taken to a specified power.
 | x | number | Yes |  |
 | y | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## random
 
 ```TypeScript
@@ -249,10 +197,6 @@ random(): number
 
 Returns a pseudorandom number between 0 and 1.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## round
 
 ```TypeScript
@@ -267,10 +211,6 @@ Returns a supplied numeric expression rounded to the nearest integer.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## sin
 
 ```TypeScript
@@ -285,10 +225,6 @@ Returns the sine of a number.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## sqrt
 
 ```TypeScript
@@ -303,10 +239,6 @@ Returns the square root of a number.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## tan
 
 ```TypeScript
@@ -321,10 +253,6 @@ Returns the tangent of a number.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## E
 
 ```TypeScript

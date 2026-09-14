@@ -14,7 +14,7 @@ function startChildProcess(srcEntry: string, startMode: StartMode): Promise<numb
 
 Starts an [ArkTS child process](../../../application-models/ability-terminology.md#arkts-child-process). This API uses a promise to return the result. This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 160 00061 is returned.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If the child process is created successfully, its PID is returned, and its
 > [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart) function is executed. Once the
@@ -94,7 +94,7 @@ function startChildProcess(srcEntry: string, startMode: StartMode, callback: Asy
 
 Starts an [ArkTS child process](../../../application-models/ability-terminology.md#arkts-child-process). This API uses an asynchronous callback to return the result. This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 160 00061 is returned.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If the child process is created successfully, its PID is returned, and its
 > [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart) function is executed. Once the

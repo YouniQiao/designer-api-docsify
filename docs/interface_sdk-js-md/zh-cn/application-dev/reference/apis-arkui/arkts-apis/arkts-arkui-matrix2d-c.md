@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript
@@ -154,6 +149,8 @@ rotate(rx?: number, ry?: number): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
+
 ## rotate
 
 ```TypeScript
@@ -184,6 +181,8 @@ rotate(degree: number, rx?: number, ry?: number): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
+
 ## scale
 
 ```TypeScript
@@ -211,6 +210,8 @@ scale(sx?: number, sy?: number): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
+
 ## translate
 
 ```TypeScript

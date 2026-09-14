@@ -2,7 +2,7 @@
 
 Defines a brush, which is used to describe the style and color to fill in a shape.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This module uses the physical pixel unit, px.
 > 
@@ -47,7 +47,7 @@ Copies a **Brush** object to create a new one.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) | Yes | Brush** object to copy. |
+| brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) | Yes | **Brush** object to copy. |
 
 **Error codes:**
 
@@ -429,7 +429,7 @@ Sets the shader effect for this brush.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) &#124; null | Yes | ShaderEffect** object. If **null** is passed in, the shader effect will be cleared.<br>**Since:** 20 |
+| shaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) &#124; null | Yes | **ShaderEffect** object. If **null** is passed in, the shader effect will be cleared.<br>**Since:** 20 |
 
 **Error codes:**
 

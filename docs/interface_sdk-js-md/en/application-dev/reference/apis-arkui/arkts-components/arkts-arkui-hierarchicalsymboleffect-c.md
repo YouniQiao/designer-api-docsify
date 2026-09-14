@@ -8,11 +8,6 @@ Defines HierarchicalSymbolEffect class, which inherits from **SymbolEffect**.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript
@@ -35,7 +30,7 @@ A constructor used to create a **HierarchicalSymbolEffect** instance, which come
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillStyle | [EffectFillStyle](arkts-arkui-effectfillstyle-e.md) | No | Effect fill style.<br>Default value: **EffectFillStyle.CUMULATIVE |
+| fillStyle | [EffectFillStyle](arkts-arkui-effectfillstyle-e.md) | No | Effect fill style.<br>Default value: **EffectFillStyle.CUMULATIVE** |
 
 ## fillStyle
 

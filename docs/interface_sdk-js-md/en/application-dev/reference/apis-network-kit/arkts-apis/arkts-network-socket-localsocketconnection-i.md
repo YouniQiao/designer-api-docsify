@@ -2,7 +2,7 @@
 
 Defines a local socket connection, that is, the session between the local socket client and the server. Before calling LocalSocketConnection APIs, you need to obtain a **LocalSocketConnection** object.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The LocalSocketConnection client can call related APIs through the **LocalSocketConnection** object only after a
 > connection is successfully established between the local socket client and the server.
@@ -126,7 +126,7 @@ getSocketFd(): Promise<number>
 
 Obtains the file descriptor of a LocalSocketConnection connection. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This method can be called only after a connection is set up.
 > 
@@ -452,7 +452,7 @@ send(options: LocalSendOptions): Promise<void>
 
 Sends data through a local socket connection. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be used only after the server obtains a **LocalSocketConnection** object through the **callback**
 > of the **connect** event.

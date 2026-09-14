@@ -1,10 +1,5 @@
 # getContext
 
-## 导入模块
-
-```TypeScript
-```
-
 ## getContext
 
 ```TypeScript

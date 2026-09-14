@@ -10,11 +10,6 @@ WebContextMenuResult是ArkWeb组件中用于处理上下文菜单（长按页面
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-```
-
 ## closeContextMenu
 
 ```TypeScript
@@ -23,7 +18,7 @@ closeContextMenu(): void
 
 不执行WebContextMenuResult其他接口操作时，需要调用此接口关闭菜单。
 
-> **说明：**
+> **说明：** 
 > 
 > 调用说明：
 > 
@@ -61,7 +56,7 @@ copy(): void
 
 执行复制文本操作。
 
-> **说明：**
+> **说明：** 
 > 
 > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 
@@ -79,7 +74,7 @@ copyImage(): void
 
 当WebContextMenuParam包含图片内容时，用于复制该图片到剪贴板，从API version 24开始支持对canvas图片进行复制。若需保存图片到本地文件，应使用saveImage()方法。
 
-> **说明：**
+> **说明：** 
 > 
 > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 
@@ -97,7 +92,7 @@ cut(): void
 
 执行剪切操作。
 
-> **说明：**
+> **说明：** 
 > 
 > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 
@@ -115,7 +110,7 @@ paste(): void
 
 执行粘贴操作，保留原始格式。若需粘贴纯文本并匹配目标格式，应使用pasteAndMatchStyle()方法。
 
-> **说明：**
+> **说明：** 
 > 
 > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 > 
@@ -136,7 +131,7 @@ pasteAndMatchStyle(): void
 
 执行与此上下文菜单相关的粘贴操作，粘贴的内容会匹配目标格式，以纯文本形式呈现。
 
-> **说明：**
+> **说明：** 
 > 
 > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 > 
@@ -155,7 +150,7 @@ redo(): void
 
 执行重做操作，重新执行被撤销的操作。
 
-> **说明：**
+> **说明：** 
 > 
 > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 
@@ -171,7 +166,7 @@ requestPasswordAutoFill(): void
 
 请求密码保险箱中的用户名或密码数据自动填充到当前获得焦点的输入框中。
 
-> **说明：**
+> **说明：** 
 > 
 > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 
@@ -187,7 +182,7 @@ saveImage(): void
 
 保存上下文菜单相关的图片，调用后将触发下载流程。
 
-> **说明：**
+> **说明：** 
 > 
 > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 
@@ -205,7 +200,7 @@ selectAll(): void
 
 执行全选操作。
 
-> **说明：**
+> **说明：** 
 > 
 > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 
@@ -223,7 +218,7 @@ undo(): void
 
 执行撤销操作，撤销上一次的编辑操作。
 
-> **说明：**
+> **说明：** 
 > 
 > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 

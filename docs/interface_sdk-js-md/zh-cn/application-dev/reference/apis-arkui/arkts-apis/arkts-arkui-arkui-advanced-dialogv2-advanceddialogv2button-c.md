@@ -2,7 +2,7 @@
 
 弹出框操作区按钮。
 
-> **说明：**
+> **说明：** 
 > 
 > buttonStyle和role优先级高于fontColor和background。如果buttonStyle和role设置的是默认值，那么fontColor和background可生效。
 > 

@@ -4,7 +4,7 @@
 
 <br>适用于GCM模式。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法前需
 > 要指定其algName属性（来源于父类[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)）。

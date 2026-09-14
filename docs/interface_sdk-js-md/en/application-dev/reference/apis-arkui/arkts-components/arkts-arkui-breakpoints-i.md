@@ -8,11 +8,6 @@ Sets breakpoints for the responsive grid container. For details about breakpoint
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## reference
 
 ```TypeScript

@@ -8,7 +8,7 @@ The **Gauge** component represents a gauge that displays data in a circular form
 
 This component can contain only one child component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Supported child component types: built-in and custom components, including
 > [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) but excluding

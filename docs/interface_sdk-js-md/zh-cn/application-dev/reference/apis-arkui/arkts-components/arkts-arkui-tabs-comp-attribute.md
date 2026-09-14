@@ -10,18 +10,13 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## animationCurve
 
 ```TypeScript
 animationCurve(curve: Curve | ICurve)
 ```
 
-设置Tabs翻页动画曲线。常用曲线参考Curve，也可以通过[插值计算](../arkts-apis/arkts-curves.md)模块提供的接口创建自定义的插值曲线对象。
+设置Tabs翻页动画曲线。常用曲线参考Curve，也可以通过[插值计算](../arkts-apis/arkts-arkui-curves.md)模块提供的接口创建自定义的插值曲线对象。
 
 **起始版本：** 20
 
@@ -47,7 +42,7 @@ animationDuration(value: number)
 
 animationCurve不设置时，由于滑动TabContent翻页动画曲线interpolatingSpring(-1, 1, 228, 30)时长只受曲线自身参数影响，animationDuration只能控制点击TabBar页签和调用TabsController的changeIndex接口切换TabContent的动画时长。
 
-不受animationDuration控制的曲线可以查阅[插值计算](../arkts-apis/arkts-curves.md)模块，比如[springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md)、[responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md)和[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md)类型的曲线。
+不受animationDuration控制的曲线可以查阅[插值计算](../arkts-apis/arkts-arkui-curves.md)模块，比如[springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md)、[responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md)和[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md)类型的曲线。
 
 **起始版本：** 7
 
@@ -69,7 +64,7 @@ animationMode(mode: Optional<AnimationMode>)
 
 设置点击TabBar页签或调用TabsController的changeIndex接口时切换TabContent的动画形式。
 
-> **说明：**
+> **说明：** 
 
 > 此属性不支持在[attributeModifier中调用。
 
@@ -95,7 +90,7 @@ barBackgroundBlurStyle(value: BlurStyle)
 
 设置TabBar的背景模糊材质。适用于需要为TabBar添加模糊背景效果的场景。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -156,7 +151,7 @@ barBackgroundColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | TabBar的背景颜色。<br>**说明：**<br>建议配合[fadingEdge](#fadingedge)属性一起使用，以避免页签末端显示白色渐隐效果。<br>默认值：Color.Transparent，透明 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | TabBar的背景颜色。<br>**说明：** <br>建议配合[fadingEdge](#fadingedge)属性一起使用，以避免页签末端显示白色渐隐效果。<br>默认值：Color.Transparent，透明 |
 
 ## barBackgroundEffect
 
@@ -439,7 +434,7 @@ customContentTransition(delegate: TabsCustomContentTransitionCallback)
 7. 当使用自定义动画时，参与动画的页面布局方式会改为Stack布局。如果开发者未主动设置相关页面的zIndex属性，那么所有页面的zIndex值是一样的，页面的渲染层级会按照在组件树上的顺序（即页面的index值顺序）确定。因此，开发者需要主动修改页面的zIndex属性，来控制页面的渲染层级。
 8. 此属性不支持在attributeModifier中调用。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
@@ -487,7 +482,7 @@ edgeEffect(edgeEffect: Optional<EdgeEffect>)
 
 设置边缘滑动效果。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 17开始，该接口支持在attributeModifier中调用。
 
@@ -611,7 +606,7 @@ Tab页签切换后触发的事件。
 
 4、点击TabBar页签，Tab页签切换后触发。
 
-> **说明：**
+> **说明：** 
 
 > 使用自定义页签时，在onChange事件中联动可能会导致滑动页面切换后才执行页签联动，引起自定义页签切换效果延迟。建议在
 > [onAnimationStart](#onanimationstart)中监听并刷新当前索引，以确保动效能够及时触发。具体实现可参考
@@ -675,7 +670,7 @@ onContentWillChange(handler: OnTabsContentWillChangeCallback)
 
 5、TabBar页签获焦后，通过键盘左右方向键等切换新页面时触发。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
@@ -733,7 +728,7 @@ onSelected(event: Callback<number>)
 
 4. 通过页签处点击触发。
 
-> **说明：**
+> **说明：** 
 
 > onSelected回调中不可通过[TabsOptions](arkts-arkui-tabsoptions-i.md)的index设置当前显示页的索引，不可调用TabsController.changeIndex()方法。
 
@@ -791,7 +786,7 @@ onUnselected(event: Callback<number>)
 
 4. 通过页签处点击触发。
 
-> **说明：**
+> **说明：** 
 
 > onUnselected回调中不可通过TabsOptions的index设置当前显示页的索引，不可调用TabsController.changeIndex()方法。
 

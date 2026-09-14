@@ -29,7 +29,7 @@ Creates a readable stream. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | ReadStream** instance obtained. |
+| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | **ReadStream** instance obtained. |
 
 **Error codes:**
 

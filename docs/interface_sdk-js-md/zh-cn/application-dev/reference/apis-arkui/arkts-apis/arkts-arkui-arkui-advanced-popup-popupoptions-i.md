@@ -78,7 +78,7 @@ icon?: PopupIconOptions
 
 设置Popup图标。
 
-**说明：**
+**说明：** 
 
 当width和height设置异常值或0时不显示。
 
@@ -102,10 +102,10 @@ maxWidth?: Dimension
 
 设置Popup的最大宽度，支持自定义宽度显示。
 
-**说明：**
+**说明：** 
 
 1. 在使用引用资源类型时，规定其参数类型要与属性方法本身类型一致。
-2. maxWidth是数字类型，支持float和integer，例如`\$r('app.float.maxWidth')`、`\$r('app.integer.maxWidth')`。
+2. maxWidth是数字类型，支持float和integer，例如`&#36;r('app.float.maxWidth')`、`&#36;r('app.integer.maxWidth')`。
 3. 当类型为Resource时，如果未设置单位，默认单位为px。
 
 默认值：400vp
@@ -128,7 +128,7 @@ message: PopupTextOptions
 
 设置Popup内容文本。
 
-**说明：**
+**说明：** 
 
 message不支持设置fontWeight。
 

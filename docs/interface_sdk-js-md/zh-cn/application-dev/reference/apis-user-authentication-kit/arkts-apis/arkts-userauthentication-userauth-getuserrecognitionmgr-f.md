@@ -14,7 +14,7 @@ function getUserRecognitionMgr(): UserRecognitionMgr | null
 
 获取一个[UserRecognitionMgr](arkts-userauthentication-userauth-userrecognitionmgr-i.md)实例，用于查询和订阅用户识别结果。
 
-> **说明：**
+> **说明：** 
 > 每次调用都会返回一个新的**UserRecognitionMgr**实例。需使用同一实例进行订阅和取消订阅。
 
 **起始版本：** 26.1.0

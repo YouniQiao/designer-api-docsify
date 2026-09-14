@@ -193,7 +193,7 @@ off(
 
 在无需继续监听权限变化、应用退出或切换页面等场景下，可调用该接口取消订阅。
 
-> **说明：**
+> **说明：** 
 > 当不传入callback参数时，将批量删除与permissionList相关联的所有回调函数。
 > 该接口通常与[on](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#on)配套使用，用于取消通过on创建的监听关系。
 
@@ -253,7 +253,7 @@ on(
 - 多次调用本订阅接口时，如果订阅的权限列表相同，callback不同，允许订阅成功。  
 - 多次调用本订阅接口时，如果订阅的权限列表间有相同的子集，callback相同时，订阅失败。
 
-> **说明：**
+> **说明：** 
 > 权限状态由“已授权”变更为“未授权”可能存在两种场景：
 > - 用户主动撤销：系统会终止对应应用进程。
 > - 系统主动回收：应用进程不会终止。典型场景如安全控件的单次授权，在授权周期结束后由系统自动回收。
@@ -579,7 +579,7 @@ requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>)
 
 适用于应用首次访问受保护资源前主动向用户申请user_grant权限的场景。
 
-> **说明：**
+> **说明：** 
 > 如果用户拒绝授权，将无法通过此接口再次拉起授权弹窗。开发者可引导用户前往系统设置界面手动授权，或调用
 > [requestPermissionOnSetting](#requestpermissiononsetting)拉起权限设置弹窗，引导用户完成授权。
 
@@ -647,7 +647,7 @@ verifyAccessToken(tokenID: number, permissionName: Permissions): Promise<GrantSt
 
 适用于应用访问受保护资源前进行前置权限判断的场景。
 
-> **说明：**
+> **说明：** 
 > 建议使用[checkAccessToken](#checkaccesstoken)替代。
 
 **起始版本：** 9
@@ -697,7 +697,7 @@ verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>
 
 校验应用是否已被授予指定权限。调用成功后，返回当前权限的授权状态，开发者可据此决定后续操作。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[checkAccessToken](#checkaccesstoken)替代。
 
 **起始版本：** 8

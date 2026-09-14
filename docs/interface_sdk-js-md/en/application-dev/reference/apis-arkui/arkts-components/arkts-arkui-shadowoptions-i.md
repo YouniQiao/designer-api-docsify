@@ -6,11 +6,6 @@ Provides the shadow attributes, including the blur radius, color, and offset alo
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## color
 
 ```TypeScript
@@ -21,7 +16,7 @@ Color of the shadow.
 
 The default color is black.
 
-**NOTE:**
+**NOTE:** 
 
 Since API version 11, this API supports **ColoringStrategy**, which cannot be used with ArkTS widgets or the textShadow attribute.
 
@@ -51,7 +46,7 @@ Whether to fill the inside of the component with shadow. **true**: Fill the insi
 
 Default value: **false**.
 
-**NOTE:**
+**NOTE:** 
 
 This attribute does not take effect in textShadow.
 
@@ -79,7 +74,7 @@ Default value: **0**
 
 Unit: px
 
-**NOTE:**
+**NOTE:** 
 
 To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
 
@@ -107,7 +102,7 @@ Default value: **0**
 
 Unit: px
 
-**NOTE:**
+**NOTE:** 
 
 To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
 
@@ -135,7 +130,7 @@ Value range: [0, +∞)
 
 Unit: px
 
-**NOTE:**
+**NOTE:** 
 
 A value less than 0 evaluates to the value **0**.
 

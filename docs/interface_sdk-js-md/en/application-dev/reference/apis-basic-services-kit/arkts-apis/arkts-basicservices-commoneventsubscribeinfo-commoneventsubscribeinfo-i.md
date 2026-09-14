@@ -2,7 +2,7 @@
 
 This module provides APIs for providing subscriber information. It allows you to configure parameters such as the subscribed common event type, publisher permission, publisher device ID, user ID, and subscription priority. This module is applicable to scenarios where an app needs to subscribe to system common events or custom common events and requires refined control over event sources.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > After users subscribing to custom common events, any application can send potential
 > malicious common events to subscribers. The **publisherPermission** and
@@ -67,7 +67,7 @@ Bundle name of the publisher to be subscribed to. This parameter is used to rest
 publisherDeviceId?: string
 ```
 
-Device ID, which is used to restrict the subscriber to receive only public events published by the specified device. Use [@ohos.deviceInfo](arkts-deviceinfo.md) to obtain the UDID as the device ID of the publisher. Not supported currently.
+Device ID, which is used to restrict the subscriber to receive only public events published by the specified device. Use [@ohos.deviceInfo](arkts-basicservices-deviceinfo.md) to obtain the UDID as the device ID of the publisher. Not supported currently.
 
 **Type:** string
 

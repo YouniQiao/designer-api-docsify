@@ -6,11 +6,6 @@ Defines the callback information triggered when the web page loading progress ch
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## newProgress
 
 ```TypeScript

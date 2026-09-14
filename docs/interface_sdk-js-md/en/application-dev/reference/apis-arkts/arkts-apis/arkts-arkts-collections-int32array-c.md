@@ -2,7 +2,7 @@
 
 A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > **Decorator**: \@Sendable

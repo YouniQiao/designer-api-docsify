@@ -14,7 +14,7 @@ function getSystemNetPortStates(): Promise<NetPortStatesInfo>
 
 获取系统当前监听的所有TCP、UDP端口信息，以及监听端口进程的PID、UID，支持IPv4和IPv6。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口获取系统当前监听的TCP、UDP端口信息，详细字段包括：
 > 

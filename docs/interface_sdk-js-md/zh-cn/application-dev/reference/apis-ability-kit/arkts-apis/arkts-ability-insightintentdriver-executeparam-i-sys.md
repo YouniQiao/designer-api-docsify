@@ -112,7 +112,7 @@ flags?: number
 
 意图调用时，意图调用方给意图执行方授权的uris的[flags](arkts-ability-wantconstant-flags-e.md)。
 
-**说明：**
+**说明：** 
 
 该参数仅支持FLAG_AUTH_READ_URI_PERMISSION、FLAG_AUTH_WRITE_URI_PERMISSION、FLAG_AUTH_READ_URI_PERMISSION| FLAG_AUTH_WRITE_URI_PERMISSION。
 
@@ -206,7 +206,7 @@ userId?: number
 
 目标意图所属的用户ID。
 
-**说明：**
+**说明：** 
 
 如果调用方应用的用户ID与目标意图所属的用户ID不同，则需要申请权限`ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS`。
 

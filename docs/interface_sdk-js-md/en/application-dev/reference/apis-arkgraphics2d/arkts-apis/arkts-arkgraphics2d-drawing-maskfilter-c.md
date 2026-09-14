@@ -2,7 +2,7 @@
 
 Implements a mask filter.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The initial APIs of this class are supported since API version 12.
 > 
@@ -44,7 +44,7 @@ Creates a mask filter with a blur effect.
 
 | Type | Description |
 | --- | --- |
-| [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) | Maskfilter** object created. |
+| [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) | **Maskfilter** object created. |
 
 **Error codes:**
 

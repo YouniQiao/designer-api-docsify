@@ -6,11 +6,6 @@ Provides common style configuration options for the progress indicator.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## enableSmoothEffect
 
 ```TypeScript

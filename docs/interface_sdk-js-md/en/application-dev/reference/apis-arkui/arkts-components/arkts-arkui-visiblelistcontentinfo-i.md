@@ -6,11 +6,6 @@ Describes the details of the child components in the visible area of a list.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## index
 
 ```TypeScript

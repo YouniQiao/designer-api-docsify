@@ -8,11 +8,6 @@ Defines the localized horizontal align param of relative container.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## align
 
 ```TypeScript

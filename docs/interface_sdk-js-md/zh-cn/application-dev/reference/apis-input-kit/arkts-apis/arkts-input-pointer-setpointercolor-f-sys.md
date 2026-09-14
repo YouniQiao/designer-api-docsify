@@ -14,7 +14,7 @@ function setPointerColor(color: number, callback: AsyncCallback<void>): void
 
 设置鼠标光标颜色，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 设置和调试时，需连接外部设备，如鼠标、蓝牙等。
 
@@ -78,7 +78,7 @@ function setPointerColor(color: number): Promise<void>
 
 设置鼠标光标颜色，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 设置和调试时，需连接外部设备，如鼠标、蓝牙等。
 

@@ -9,7 +9,7 @@
 ## Child Components
 
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Allowed child component types: built-in and custom components, including rendering control types (
 > [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md),

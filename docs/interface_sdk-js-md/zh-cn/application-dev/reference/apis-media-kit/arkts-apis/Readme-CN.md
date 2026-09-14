@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-mediakit-->
 
-- [@ohos.multimedia.media](arkts-multimedia-media.md)
+- [@ohos.multimedia.media](arkts-media-multimedia-media.md)
   - [createAudioPlayer](arkts-media-media-createaudioplayer-f.md)
   - [createAudioRecorder](arkts-media-media-createaudiorecorder-f.md)
   - [createAVAdsController](arkts-media-media-createavadscontroller-f.md)
@@ -162,14 +162,14 @@
   - [SwitchMode](arkts-media-media-switchmode-e.md)
   - [VideoScaleType](arkts-media-media-videoscaletype-e.md)
   - [VideoSourceType](arkts-media-media-videosourcetype-e.md)
-- [@ohos.multimedia.videoProcessing(提供视频画质处理能力。)](arkts-multimedia-videoprocessing.md)
+- [@ohos.multimedia.videoProcessing(提供视频画质处理能力。)](arkts-media-multimedia-videoprocessing.md)
   - [createVideoProcessor](arkts-media-videoprocessing-createvideoprocessor-f.md)
   - [VideoProcessor](arkts-media-videoprocessing-videoprocessor-i.md)
   - [VideoProcessorAiHdrStatus](arkts-media-videoprocessing-videoprocessoraihdrstatus-i.md)
   - [VideoProcessorStatus](arkts-media-videoprocessing-videoprocessorstatus-i.md)
   - [VideoProcessorStatusCallback](arkts-media-videoprocessing-videoprocessorstatuscallback-t.md)
 - multimedia<!--arkts-mediakit-multimedia-->
-  - [soundPool](arkts-soundpool.md)
+  - [soundPool](arkts-media-soundpool.md)
     - [ErrorInfo](arkts-media-soundpool-errorinfo-i.md)
     - [PlayParameters](arkts-media-soundpool-playparameters-i.md)
     <!--Del-->

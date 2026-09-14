@@ -17,10 +17,6 @@
 | --- | --- | --- | --- |
 | args | string[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -35,10 +31,6 @@ Creates a new function.
 | --- | --- | --- | --- |
 | args | string[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## prototype
 
 ```TypeScript

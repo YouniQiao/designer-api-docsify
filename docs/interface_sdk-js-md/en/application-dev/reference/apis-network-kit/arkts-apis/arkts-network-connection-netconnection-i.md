@@ -2,7 +2,7 @@
 
 Represents the network connection object type.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > (1) When the network transitions from unavailable to available, the **netAvailable**, **netCapabilitiesChange**,
 > and **netConnectionPropertiesChange** events are triggered.
@@ -306,7 +306,7 @@ register(callback: AsyncCallback<void>): void
 
 Registers a listener for network status changes. To listen for a specific type of events, call **on** to enable listening and then call **register** to register an event listener.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > After using the **register** API, you need to call **unregister** to deregister the listener.
 > **Required permission**: ohos.permission.GET_NETWORK_INFO

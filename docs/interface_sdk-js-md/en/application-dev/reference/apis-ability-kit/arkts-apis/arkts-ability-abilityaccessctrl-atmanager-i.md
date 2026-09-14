@@ -649,7 +649,7 @@ Verifies whether an app has been granted the specified permission. After the cal
 
 Applicable to scenarios where a pre-permission check is performed before an app accesses protected resources.
 
-> **NOTE:**
+> **NOTE:** 
 > You are advised to use [checkAccessToken](#checkaccesstoken).
 
 **Since:** 9
@@ -699,7 +699,7 @@ verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>
 
 Verifies whether an app has been granted the specified permission. After the call is successful, the authorization status of the current permission is returned, and the developer can decide on subsequent operations accordingly. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > This API is supported since API version 8 and deprecated since API version 9. It is recommended to use
 > [checkAccessToken](#checkaccesstoken) instead.
 

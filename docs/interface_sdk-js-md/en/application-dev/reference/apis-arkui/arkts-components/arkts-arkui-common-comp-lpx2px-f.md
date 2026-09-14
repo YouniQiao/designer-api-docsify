@@ -1,10 +1,5 @@
 # lpx2px
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## lpx2px
 
 ```TypeScript

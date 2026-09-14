@@ -22,7 +22,7 @@ Creates a **TLSSocketServer** object.
 
 | Type | Description |
 | --- | --- |
-| [TLSSocketServer](arkts-network-socket-tlssocketserver-i.md) | TLSSocketServer** object. |
+| [TLSSocketServer](arkts-network-socket-tlssocketserver-i.md) | **TLSSocketServer** object. |
 
 **Examples**
 

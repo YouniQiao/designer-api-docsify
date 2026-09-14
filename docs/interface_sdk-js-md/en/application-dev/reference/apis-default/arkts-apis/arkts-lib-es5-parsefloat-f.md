@@ -18,8 +18,3 @@ Converts a string to a floating-point number.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | string | string | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

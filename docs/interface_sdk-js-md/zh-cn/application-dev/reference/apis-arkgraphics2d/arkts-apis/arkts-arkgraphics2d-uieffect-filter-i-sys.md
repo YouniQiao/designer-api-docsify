@@ -571,7 +571,7 @@ haloBloom(tintColor: Color, bloomFactor: number, glowExposure: number): Filter
 
 对图像应用柔和光晕泛光效果，在明亮区域周围产生柔和的光晕。
 
-> **说明：**
+> **说明：** 
 > 
 > 建议作为前景滤镜使用。
 
@@ -954,7 +954,7 @@ spinBlur(center: common2D.Point, angle: number, samples: number): Filter
 
 对图像应用旋转模糊效果，在指定中心点周围产生旋转运动拖影。
 
-> **说明：**
+> **说明：** 
 > 
 > 建议作为前景滤镜使用。
 

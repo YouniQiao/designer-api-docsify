@@ -2,7 +2,7 @@
 
 Provides APIs to create and display toasts, dialog boxes, action menus, and custom popups.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The initial APIs of this class are supported since API version 10.
 > 
@@ -358,7 +358,7 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 
 Opens a menu with the specified content. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - If an invalid **target** is provided, the menu will not be displayed.
 > 
@@ -387,7 +387,7 @@ Opens a menu with the specified content. This API uses a promise to return the r
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content displayed in the menu. |
 | target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | Information about the target component to bind. |
-| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | No | Style of the menu.<br>**NOTE:**<br>The **title** property is not effective.<br> The **preview** parameter supports only the **MenuPreviewMode** type. |
+| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | No | Style of the menu.<br>**NOTE:** <br>The **title** property is not effective.<br> The **preview** parameter supports only the **MenuPreviewMode** type. |
 
 **Return value:**
 
@@ -413,7 +413,7 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 
 Creates and displays a popup with the specified content. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - If an invalid **target** is provided, the popup will not be displayed.
 > 
@@ -768,7 +768,7 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 
 Updates the style of the menu corresponding to the provided **content**. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Updating for the following is not supported: **showInSubWindow**, **preview**, **previewAnimationOptions**,
 > **transition**, **onAppear**, **aboutToAppear**, **onDisappear**, **aboutToDisappear**, **onWillAppear**,
@@ -791,8 +791,8 @@ Updates the style of the menu corresponding to the provided **content**. This AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content displayed in the menu. |
-| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | Yes | Style of the menu.<br>**NOTE:**<br>1. Updating for the following is not supported: **showInSubWindow**, **preview**, **previewAnimationOptions**, **transition**, **onAppear**, **aboutToAppear**, **onDisappear**, **aboutToDisappear**, **onWillAppear**, **onDidAppear**, **onWillDisappear**, and **onDidDisappear**.<br>2. The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md). However, this API does not support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by setting a boolean value. |
-| partialUpdate | boolean | No | Whether to update the menu in incremental mode. Default value: **false**.<br> **NOTE:**<br>1. **true**: incremental update, where the specified properties in **options** are updated, and other properties stay at their current value.<br>2. **false**: full update, where all properties except those specified in **options** are restored to default values. |
+| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | Yes | Style of the menu.<br>**NOTE:** <br>1. Updating for the following is not supported: **showInSubWindow**, **preview**, **previewAnimationOptions**, **transition**, **onAppear**, **aboutToAppear**, **onDisappear**, **aboutToDisappear**, **onWillAppear**, **onDidAppear**, **onWillDisappear**, and **onDidDisappear**.<br>2. The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md). However, this API does not support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by setting a boolean value. |
+| partialUpdate | boolean | No | Whether to update the menu in incremental mode. Default value: **false**.<br> **NOTE:** <br>1. **true**: incremental update, where the specified properties in **options** are updated, and other properties stay at their current value.<br>2. **false**: full update, where all properties except those specified in **options** are restored to default values. |
 
 **Return value:**
 
@@ -816,7 +816,7 @@ updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommon
 
 Updates the style of the popup corresponding to the provided **content**. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Updating the following properties is not supported: **showInSubWindow**, **focusable**, **onStateChange**, **onWillDismiss**, and **transition**.
 
@@ -833,8 +833,8 @@ Updates the style of the popup corresponding to the provided **content**. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content displayed in the popup. |
-| options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | Yes | Style of the popup.<br> **NOTE:**<br> Updating the following properties is not supported: **showInSubWindow**, **focusable**, **onStateChange**, **onWillDismiss**, and **transition**. |
-| partialUpdate | boolean | No | Whether to update the popup in incremental mode.<br> Default value: **false**<br> **NOTE:**<br> **true**: Incremental update. Only specified attributes in **options** are updated, and the other attributes retain their current values. If the attribute value passed in **options** is invalid or **undefined**, the attribute is not updated.<br> **false**: Full update. Specified attributes in **options** are updated, and the other attributes are restored to their default values. |
+| options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | Yes | Style of the popup.<br> **NOTE:** <br> Updating the following properties is not supported: **showInSubWindow**, **focusable**, **onStateChange**, **onWillDismiss**, and **transition**. |
+| partialUpdate | boolean | No | Whether to update the popup in incremental mode.<br> Default value: **false**<br> **NOTE:** <br> **true**: Incremental update. Only specified attributes in **options** are updated, and the other attributes retain their current values. If the attribute value passed in **options** is invalid or **undefined**, the attribute is not updated.<br> **false**: Full update. Specified attributes in **options** are updated, and the other attributes are restored to their default values. |
 
 **Return value:**
 

@@ -14,7 +14,7 @@ function openToast(options: ShowToastOptions): Promise<number>
 
 Shows a toast. This API uses a promise to return the toast ID.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Subwindows with **showMode** set to **TOP_MOST** or **SYSTEM_TOP_MOST** do not support **openToast** in input
 > method type windows. For details, see the constraints in the input method framework

@@ -14,7 +14,7 @@ function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void
 
 获取网络的默认代理配置信息。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 如果设置了全局代理，则返回全局代理配置信息。
 > 
@@ -62,7 +62,7 @@ function getDefaultHttpProxy(): Promise<HttpProxy>
 
 获取网络默认的代理配置信息。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 如果设置了全局代理，则返回全局代理配置信息。
 > 

@@ -19,10 +19,6 @@ Returns an array of key/values of the enumerable properties of an object
 | --- | --- | --- | --- |
 | o | { [s: string]: T } &#124; ArrayLike&lt;T&gt; | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## entries
 
 ```TypeScript
@@ -37,10 +33,6 @@ Returns an array of key/values of the enumerable properties of an object
 | --- | --- | --- | --- |
 | o | {} | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## getOwnPropertyDescriptors
 
 ```TypeScript
@@ -55,10 +47,6 @@ Returns an object containing all own property descriptors of an object
 | --- | --- | --- | --- |
 | o | T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## values
 
 ```TypeScript
@@ -73,10 +61,6 @@ Returns an array of values of the enumerable properties of an object
 | --- | --- | --- | --- |
 | o | { [s: string]: T } &#124; ArrayLike&lt;T&gt; | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## values
 
 ```TypeScript
@@ -90,8 +74,3 @@ Returns an array of values of the enumerable properties of an object
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | o | {} | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

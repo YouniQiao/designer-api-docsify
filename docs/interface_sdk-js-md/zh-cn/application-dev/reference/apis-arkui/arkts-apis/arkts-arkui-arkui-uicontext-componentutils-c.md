@@ -2,7 +2,7 @@
 
 提供获取组件绘制区域坐标、大小、平移、缩放、旋转及仿射矩阵等属性信息的能力，适用于需要查询组件绘制区域信息的场景，帮助开发者获取组件布局结果。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本Class首批接口从API version 10开始支持。
 > 
@@ -29,9 +29,9 @@ getRectangleById(id: string): componentUtils.ComponentInfo
 
 获取组件大小、位置、平移、缩放、旋转及仿射矩阵属性信息。
 
-> **说明：**
+> **说明：** 
 > 
-> 该接口需要在目标组件布局完成以后获取目标组件区域大小信息，建议在[布局回调](arkts-arkui-inspector.md)中使用该接口。如果组件动态创建但未挂载组件树，则无法通过该接口获取正常的
+> 该接口需要在目标组件布局完成以后获取目标组件区域大小信息，建议在[布局回调](arkts-arkui-arkui-inspector.md)中使用该接口。如果组件动态创建但未挂载组件树，则无法通过该接口获取正常的
 > 组件信息。因为此时组件一般未经过UI框架的测量与布局，请确保组件已挂载到组件树后再尝试获取组件信息。
 > 
 > 该接口返回的组件位置为布局位置，某些属性计算不支持，如位置设置类offset、markAnchor、[Edges](arkts-arkui-graphics-edges-i.md) 和[LocalizedEdges](arkts-arkui-localizededges-i.md)类型的position，以及图形变换类rotate、translate、scale、transform。可使用替代接口[getPositionToWindowWithTransform](arkts-arkui-framenode-c.md#getpositiontowindowwithtransform)，获取组件相对于窗口且带有绘制属性的位置偏移。

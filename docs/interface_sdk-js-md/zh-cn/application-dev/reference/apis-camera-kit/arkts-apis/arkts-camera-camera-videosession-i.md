@@ -258,7 +258,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 监听普通录像会话的错误事件，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -283,7 +283,7 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 
 监听相机聚焦的状态变化，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -308,7 +308,7 @@ on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): vo
 
 监听相机平滑变焦的状态变化，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -333,7 +333,7 @@ on(type: 'controlCenterEffectStatusChange', callback: AsyncCallback<ControlCente
 
 监听相机控制器效果激活状态变化，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -385,7 +385,7 @@ on(type: 'autoDeviceSwitchStatusChange', callback: AsyncCallback<AutoDeviceSwitc
 
 监听相机自动切换镜头状态变化，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -410,7 +410,7 @@ on(type: 'systemPressureLevelChange', callback: AsyncCallback<SystemPressureLeve
 
 监听系统压力状态变化，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -506,7 +506,7 @@ setQualityPrioritization(quality: QualityPrioritization): void
 
 设置录像质量优先级。
 
-> **说明：**
+> **说明：** 
 > 
 > - 默认为高录像质量，设置为功耗平衡将降低录像质量以减少功耗。实际功耗收益因平台而异。
 > 

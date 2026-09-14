@@ -14,7 +14,7 @@ function get(id: string, callback: AsyncCallback<image.PixelMap>, options?: Snap
 
 获取已加载的组件的截图，传入组件的组件标识，找到对应组件进行截图。通过回调返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)方法
@@ -101,7 +101,7 @@ function get(id: string, options?: SnapshotOptions): Promise<image.PixelMap>
 
 获取已加载的组件的截图，传入组件的组件标识，找到对应组件进行截图。通过Promise返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)方法

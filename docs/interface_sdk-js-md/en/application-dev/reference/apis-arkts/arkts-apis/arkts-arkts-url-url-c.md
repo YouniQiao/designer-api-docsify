@@ -108,6 +108,8 @@ Parses a URL.
 
 | Type | Description |
 | --- | --- |
+| URL |  |
+
 **Error codes:**
 
 | Error Code ID | Error Message |

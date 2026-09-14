@@ -2,7 +2,7 @@
 
 联系人的头像类。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 22开始，支持通过uri和[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)格式设置联系人头像资源(暂不支持通过
 > [addContactViaUI](arkts-contacts-contact-addcontactviaui-f.md)、

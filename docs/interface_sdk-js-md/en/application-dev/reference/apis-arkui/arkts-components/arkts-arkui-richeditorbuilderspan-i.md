@@ -2,7 +2,7 @@
 
 Defines the BuilderSpan object of **RichEditor**, providing identity recognition and lifecycle awareness capabilities.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This interface is not supported when the **RichEditor** component is constructed with
 > [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md).
@@ -10,11 +10,6 @@ Defines the BuilderSpan object of **RichEditor**, providing identity recognition
 **Since:** 26.2.0
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## accessibilitySpanOptions
 
@@ -78,7 +73,7 @@ onDetach?: Callback<BuilderSpanInfo>
 
 Callback triggered when the BuilderSpan is removed from **RichEditor**. This includes deletion scenarios such as deletion via deleteSpans API, IME keyboard deletion, cut operations, and normal Undo degradation. The callback receives a [BuilderSpanInfo](arkts-arkui-builderspaninfo-i.md) object containing the id and offset.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > In drag undo (undoStyle=KEEP_STYLE) scenarios, the onDetach callback is not triggered
 > because the BuilderSpan is being restored rather than deleted.

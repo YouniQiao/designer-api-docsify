@@ -16,7 +16,7 @@ function getAppNativeMemInfoWithCache(forceRefresh?: boolean): NativeMemInfo
 
 > **注意**：
 > 
-> 由于读取 `/proc/{pid}/smaps_rollup` 比较耗时，建议不在主线程中使用该接口。可以通过[@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md)或
+> 由于读取 `/proc/{pid}/smaps_rollup` 比较耗时，建议不在主线程中使用该接口。可以通过[@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-arkts-taskpool.md)或
 > [@ohos.worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md)开启异步线程，以避免应用卡顿。
 
 **起始版本：** 20

@@ -23,3 +23,4 @@ Prevents the addition of new properties to an object.
 
 | Type | Description |
 | --- | --- |
+| boolean | Whether the object has been made non-extensible. |

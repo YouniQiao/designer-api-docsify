@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## isSystemGesture
 
 ```TypeScript
@@ -39,7 +34,7 @@ tag?: string
 
 手势标志。
 
-**说明：**
+**说明：** 
 
 未设置事件标志tag属性时，tag不返回或返回undefined。
 
@@ -61,7 +56,7 @@ type: GestureControl.GestureType
 
 手势类型。
 
-**说明：**
+**说明：** 
 
 当手势为未暴露类型的系统内置手势事件时，type的值为-1。
 

@@ -13,8 +13,3 @@
 **替代接口：** grid_col/GridColAttribute and grid_row/GridRowAttribute
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```

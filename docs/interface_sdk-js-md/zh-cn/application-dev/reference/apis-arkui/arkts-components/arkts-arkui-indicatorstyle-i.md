@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## borderRadius
 
 ```TypeScript
@@ -121,7 +116,7 @@ width?: Length
 
 取值范围：[0, +∞)。异常值时取默认值。
 
-**说明：**
+**说明：** 
 
 宽度设置为0时，按页签文本宽度显示。
 

@@ -6,11 +6,6 @@ Defines the unique identifier for a custom menu item. It is used to identify men
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## equals
 
 ```TypeScript
@@ -65,7 +60,7 @@ Creates a **TextMenuItemId** object based on **id**.
 
 | Type | Description |
 | --- | --- |
-| [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | TextMenuItemId** object. |
+| [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | **TextMenuItemId** object. |
 
 ## address
 

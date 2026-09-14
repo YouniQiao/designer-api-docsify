@@ -14,7 +14,7 @@ function getNfcBTag(tagInfo: TagInfo): NfcBTag
 
 Obtains an **NfcBTag** object, which allows access to the tags that use the NFC-B technology.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. Use
 > [tag.getNfcB](arkts-connectivity-tag-getnfcb-f.md) instead.
@@ -37,4 +37,4 @@ Obtains an **NfcBTag** object, which allows access to the tags that use the NFC-
 
 | Type | Description |
 | --- | --- |
-| [NfcBTag](arkts-connectivity-tag-nfcbtag-t.md) | NfcBTag** object obtained. |
+| [NfcBTag](arkts-connectivity-tag-nfcbtag-t.md) | **NfcBTag** object obtained. |

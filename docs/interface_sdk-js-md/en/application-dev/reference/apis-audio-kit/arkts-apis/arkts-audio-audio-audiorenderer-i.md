@@ -4,7 +4,7 @@ This interface provides APIs for audio rendering.
 
 Before calling any API in AudioRenderer, you must use [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) to create an AudioRenderer instance.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The initial APIs of this interface are supported since API version 8.
 
@@ -398,7 +398,7 @@ getLatency(type: AudioLatencyType): number
 
 Obtains the estimated latency of the current audio route.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The estimated latency of a wireless audio device may be inaccurate. The result is for reference only.
 > 
@@ -1377,7 +1377,7 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: num
 
 Sets the independent audio session strategy and behavior parameters.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If this API is called while an audio renderer is running, you must call the
 > [start](#start) API again for

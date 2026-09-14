@@ -1,10 +1,5 @@
 # vp2px
 
-## 导入模块
-
-```TypeScript
-```
-
 ## vp2px
 
 ```TypeScript

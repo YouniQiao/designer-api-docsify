@@ -597,7 +597,7 @@ static sendData(...args: Object[]): void
 
 Sends data to the host thread and triggers the registered callback. Before calling this method, you need to construct a **Task** object.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The API should be called in the TaskPool thread.
 > 
@@ -696,7 +696,7 @@ setCloneList(cloneList: Object[] | ArrayBuffer[]): void
 
 Sets the task clone list. Before using this method, you need to construct a **Task** object.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API must be used together with the
 > [@Sendable decorator](../../../arkts-utils/arkts-sendable.md#sendable-decorator). Otherwise, an exception is
@@ -857,7 +857,7 @@ setTransferList(transfer?: ArrayBuffer[]): void
 
 Sets the task transfer list. Before using this API, you must create a **Task** instance. If this API is not called, the ArrayBuffer in the data is transferred by default.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is used to set the task transfer list in the form of **ArrayBuffer** in the task pool. The
 > **ArrayBuffer** instance does not copy the content in the task to the worker thread during transfer. Instead,
@@ -874,7 +874,7 @@ Sets the task transfer list. Before using this API, you must create a **Task** i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transfer | ArrayBuffer[] | No | ArrayBuffer** instance holding the objects to transfer. The default value is an empty array. |
+| transfer | ArrayBuffer[] | No | **ArrayBuffer** instance holding the objects to transfer. The default value is an empty array. |
 
 **Error codes:**
 

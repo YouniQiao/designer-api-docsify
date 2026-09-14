@@ -4,18 +4,13 @@
 
 设置@Preview的参数，指定预览设备的相关属性，如不同设备、不同屏幕状态等。
 
-> **说明：**
+> **说明：** 
 > 
 > PreviewParams中只支持使用与定义参数类型相匹配的入参，否则所有的@Preview的参数都将被置为默认值。
 
 **起始版本：** 9
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## colorMode
 

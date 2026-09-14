@@ -6,11 +6,6 @@ Information about the check box group.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## group
 
 ```TypeScript
@@ -19,7 +14,7 @@ group?: string
 
 Group name.
 
-**NOTE:**
+**NOTE:** 
 
 Among multiple check box groups with the same group name, only the first one takes effect.
 

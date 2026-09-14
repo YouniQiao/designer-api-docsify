@@ -6,11 +6,6 @@ Defines the navigation menu item, including the menu icon and menu information.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## action
 
 ```TypeScript

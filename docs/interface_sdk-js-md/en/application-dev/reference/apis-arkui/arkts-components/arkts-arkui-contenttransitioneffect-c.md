@@ -6,11 +6,6 @@ Defines the content transition effect.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## IDENTITY
 
 ```TypeScript

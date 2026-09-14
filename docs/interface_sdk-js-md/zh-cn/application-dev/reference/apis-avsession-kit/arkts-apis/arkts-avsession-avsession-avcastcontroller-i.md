@@ -2,7 +2,7 @@
 
 在投播建立后，调用[avSession.AVSession.getAVCastController](arkts-avsession-avsession-avsession-i.md#getavcastcontroller)后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本Interface首批接口从API version 10开始支持。
 
@@ -1614,7 +1614,7 @@ start(item: AVQueueItem, callback: AsyncCallback<void>): void
 
 启动播放某个媒体资源。结果通过callback异步回调方式返回。
 
-> **说明：**
+> **说明：** 
 > 
 > 在音视频投播场景下，当应用程序顺序调用
 > [prepare](#prepare)和start接口，且
@@ -1647,7 +1647,7 @@ start(item: AVQueueItem): Promise<void>
 
 启动播放某个媒体资源。结果通过Promise异步回调方式返回。
 
-> **说明：**
+> **说明：** 
 > 
 > 在音视频投播场景下，当应用程序顺序调用
 > [prepare](#prepare)和start接口，且

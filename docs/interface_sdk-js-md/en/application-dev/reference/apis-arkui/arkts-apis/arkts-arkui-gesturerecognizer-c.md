@@ -6,11 +6,6 @@ Gesture recognizer object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## getEventTargetInfo
 
 ```TypeScript

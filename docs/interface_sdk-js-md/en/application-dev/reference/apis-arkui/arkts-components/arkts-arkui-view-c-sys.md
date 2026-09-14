@@ -8,11 +8,6 @@ View
 
 **System API:** This is a system API.
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## create
 
 ```TypeScript
@@ -39,3 +34,4 @@ Just use for generate tsbundle
 
 | Type | Description |
 | --- | --- |
+| any |  |

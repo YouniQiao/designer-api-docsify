@@ -6,11 +6,6 @@ Defines the callback information triggered when resource loading is intercepted,
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## data
 
 ```TypeScript

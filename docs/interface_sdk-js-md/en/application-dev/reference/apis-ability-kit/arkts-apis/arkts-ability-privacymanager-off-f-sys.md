@@ -19,7 +19,7 @@ Unsubscribes from permission usage status change events for a specified permissi
 
 When unsubscribing, if no callback function is passed in, all callback functions under the permissionList are deleted in batch.
 
-> **NOTE:**
+> **NOTE:** 
 > This API is typically used in conjunction with [on](arkts-ability-privacymanager-on-f-sys.md) to cancel the listening relationship created by on.
 
 **Since:** 9

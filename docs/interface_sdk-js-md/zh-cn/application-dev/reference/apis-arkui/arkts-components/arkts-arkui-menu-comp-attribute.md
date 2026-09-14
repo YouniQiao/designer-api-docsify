@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## font
 
 ```TypeScript
@@ -65,7 +60,7 @@ fontSize(value: Length)
 
 统一设置Menu中所有文本的尺寸。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 10开始废弃，建议使用[font](#font)代替。
 
@@ -193,4 +188,4 @@ subMenuExpandSymbol(symbol: SymbolGlyphModifier)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| symbol | [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | 是 | Menu子菜单展开符号。<br>1、子菜单的展开样式为SubMenuExpandingMode.SIDE_EXPAND时，不显示展开符号。<br>2、子菜单的展开样式为SubMenuExpandingMode.EMBEDDED_EXPAND时，展开时展开符号会顺时针旋转180°。<br>默认值：`\&#36;r('sys.symbol.chevron_down').fontSize('24vp')` <br>3、子菜单的展开样式为SubMenuExpandingMode.STACK_EXPAND时，展开时展开符号会顺时针旋转90°。<br>默认值：`\&#36;r('sys.symbol.chevron_forward').fontSize('20vp').padding('2vp')` |
+| symbol | [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | 是 | Menu子菜单展开符号。<br>1、子菜单的展开样式为SubMenuExpandingMode.SIDE_EXPAND时，不显示展开符号。<br>2、子菜单的展开样式为SubMenuExpandingMode.EMBEDDED_EXPAND时，展开时展开符号会顺时针旋转180°。<br>默认值：`&#36;r('sys.symbol.chevron_down').fontSize('24vp')` <br>3、子菜单的展开样式为SubMenuExpandingMode.STACK_EXPAND时，展开时展开符号会顺时针旋转90°。<br>默认值：`&#36;r('sys.symbol.chevron_forward').fontSize('20vp').padding('2vp')` |

@@ -6,11 +6,6 @@ Provides an interface for the options for the floating bar mode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## adaptToHandedness
 
 ```TypeScript

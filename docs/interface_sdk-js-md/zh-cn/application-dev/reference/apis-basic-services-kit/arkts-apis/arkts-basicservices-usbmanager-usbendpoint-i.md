@@ -2,7 +2,7 @@
 
 USB端点，用于主机与设备之间数据传输的通信端点。通过[USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md)获取。
 
-> **说明：**
+> **说明：** 
 > 
 > 主机控制器按照Endpoint类型调度，不同类型的端点采用不同的调度策略：批量端点(bulk)采用带宽共享调度适合大量数据非实时传输；中断端点(interrupt)采用固定轮询调度适合小数据量实时传输；实时端点(
 > isochronous)采用带宽预留调度，适合音视频等实时数据流。

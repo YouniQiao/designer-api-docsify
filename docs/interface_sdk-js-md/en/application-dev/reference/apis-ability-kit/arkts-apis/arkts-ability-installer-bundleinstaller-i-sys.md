@@ -300,7 +300,7 @@ install(hapFilePaths: Array<string>, installParam: InstallParam, callback: Async
 
 Installs an application. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > To install applications of different distribution types, the appropriate permissions must be requested. For
 > details on distribution types, see the **appDistributionType** field in
@@ -398,7 +398,7 @@ install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 
 Installs an application. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > To install applications of different distribution types, the appropriate permissions must be requested. For
 > details on distribution types, see the **appDistributionType** field in
@@ -489,7 +489,7 @@ install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 
 Installs an application. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > To install applications of different distribution types, the appropriate permissions must be requested. For
 > details on distribution types, see the **appDistributionType** field in
@@ -673,7 +673,7 @@ installPreexistingApp(bundleName: string, userId?: number): Promise<void>
 
 Installs an application. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API does not support the installation of applications whose
 > [distribution type of the application signing certificate](arkts-ability-applicationinfo-i.md)

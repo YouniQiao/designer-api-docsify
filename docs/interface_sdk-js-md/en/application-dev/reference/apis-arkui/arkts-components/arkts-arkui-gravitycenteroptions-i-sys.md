@@ -8,11 +8,6 @@ Defines the parameters of the center of gravity.
 
 **System API:** This is a system API.
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## gravityCenter
 
 ```TypeScript

@@ -6,11 +6,6 @@ Input event interception result interface, used by the listener callback [InputE
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## action
 
 ```TypeScript

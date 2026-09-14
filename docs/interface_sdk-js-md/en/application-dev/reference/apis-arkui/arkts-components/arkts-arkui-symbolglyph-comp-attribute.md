@@ -10,11 +10,6 @@ The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-gener
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## effectStrategy
 
 ```TypeScript
@@ -23,7 +18,7 @@ effectStrategy(value: SymbolEffectStrategy)
 
 Sets the effect strategy of the **SymbolGlyph** component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 12.
 
@@ -41,7 +36,7 @@ Sets the effect strategy of the **SymbolGlyph** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md) | Yes | Effect strategy of the **SymbolGlyph** component.<br>Default value: **SymbolEffectStrategy.NONE |
+| value | [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md) | Yes | Effect strategy of the **SymbolGlyph** component.<br>Default value: **SymbolEffectStrategy.NONE** |
 
 ## fontColor
 
@@ -51,7 +46,7 @@ fontColor(value: Array<ResourceColor>)
 
 Sets the color of the **SymbolGlyph** component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 12.
 
@@ -105,7 +100,7 @@ Sets the size of the **SymbolGlyph** component. When using the string type, nume
 
 The display size of the symbol glyph is controlled by the **fontSize** setting. Once **width** or **height** is specified, other universal attributes will only affect the size of the component's placeholder, not the symbol glyph itself.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 12.
 
@@ -135,7 +130,7 @@ Sets the font weight of the **SymbolGlyph** component. For the number type, the 
 
 The **sys.symbol.ohos_lungs** icon does not support font weight setting.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 12.
 
@@ -153,7 +148,7 @@ The **sys.symbol.ohos_lungs** icon does not support font weight setting.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; string | Yes | Font weight of the **SymbolGlyph** component.<br>Default value: **FontWeight.Normal |
+| value | number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; string | Yes | Font weight of the **SymbolGlyph** component.<br>Default value: **FontWeight.Normal** |
 
 ## fontWeight
 
@@ -200,7 +195,7 @@ Sets the maximum font scale factor for the **SymbolGlyph** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | [Optional](arkts-arkui-optional-t.md)&lt;number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Maximum font scale factor for the **SymbolGlyph** component.<br>Value range: [1, +∞)<br>**NOTE:**<br>A value less than 1 is handled as **1**. Abnormal values are ineffective by default. |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Maximum font scale factor for the **SymbolGlyph** component.<br>Value range: [1, +∞)<br>**NOTE:** <br>A value less than 1 is handled as **1**. Abnormal values are ineffective by default. |
 
 ## minFontScale
 
@@ -222,7 +217,7 @@ Sets the minimum font scale factor for the **SymbolGlyph** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | [Optional](arkts-arkui-optional-t.md)&lt;number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Minimum font scale factor for the **SymbolGlyph** component.<br>Value range: [0, 1]<br>The value **0** results in the minimum scaling.<br>**NOTE:**<br>A value less than 0 is handled as 0. A value greater than 1 is handled as 1. Abnormal values are ineffective by default. |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)&gt; | Yes | Minimum font scale factor for the **SymbolGlyph** component.<br>Value range: [0, 1]<br>The value **0** results in the minimum scaling.<br>**NOTE:** <br>A value less than 0 is handled as 0. A value greater than 1 is handled as 1. Abnormal values are ineffective by default. |
 
 ## renderingStrategy
 
@@ -232,7 +227,7 @@ renderingStrategy(value: SymbolRenderingStrategy)
 
 Sets the rendering strategy of the **SymbolGlyph** component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 12.
 
@@ -250,7 +245,7 @@ Sets the rendering strategy of the **SymbolGlyph** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | Yes | Rendering strategy of the **SymbolGlyph** component.<br>Default value: **SymbolRenderingStrategy.SINGLE |
+| value | [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | Yes | Rendering strategy of the **SymbolGlyph** component.<br>Default value: **SymbolRenderingStrategy.SINGLE** |
 
 ## shaderStyle
 
@@ -274,7 +269,7 @@ This API supports [RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradient
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shader | Array&lt;[ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) &#124; undefined&gt; &#124; [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) | Yes | Shader effect.<br>Input types and behavior:<br> Single **ShaderStyle** object: applies the specified effect to all layers. Array of **ShaderStyle** objects: applies the specified effect to the corresponding layer. Array of **undefined**: applies the default **SymbolGlyph** color to the corresponding layer. Layers unset retain their default color.<br> Based on the input, the system applies a radial gradient ([RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md)), linear gradient ([LinearGradientStyle](../arkts-apis/arkts-arkui-lineargradientstyle-c.md)), or solid color ([ColorShaderStyle](../arkts-apis/arkts-arkui-colorshaderstyle-c.md)) to the **SymbolGlyph** component.<br>**NOTE:**<br>Unit: vp<br>Specify the center point and radius using percentages. If a non-percentage value (e.g., **10px**) is provided, it will be interpreted as 100 0%.<br>You are advised to specify the radius using percentages.<br>Percentages are relative to the icon's size. The recommended value range is [0, 1). |
+| shader | Array&lt;[ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) &#124; undefined&gt; &#124; [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) | Yes | Shader effect.<br>Input types and behavior:<br> Single **ShaderStyle** object: applies the specified effect to all layers. Array of **ShaderStyle** objects: applies the specified effect to the corresponding layer. Array of **undefined**: applies the default **SymbolGlyph** color to the corresponding layer. Layers unset retain their default color.<br> Based on the input, the system applies a radial gradient ([RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md)), linear gradient ([LinearGradientStyle](../arkts-apis/arkts-arkui-lineargradientstyle-c.md)), or solid color ([ColorShaderStyle](../arkts-apis/arkts-arkui-colorshaderstyle-c.md)) to the **SymbolGlyph** component.<br>**NOTE:** <br>Unit: vp<br>Specify the center point and radius using percentages. If a non-percentage value (e.g., **10px**) is provided, it will be interpreted as 100 0%.<br>You are advised to specify the radius using percentages.<br>Percentages are relative to the icon's size. The recommended value range is [0, 1). |
 
 ## symbolEffect
 

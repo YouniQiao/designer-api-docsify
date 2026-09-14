@@ -19,7 +19,7 @@ import { HashSet } from '@kit.ArkTS';
 ```
 
 返回一个迭代器，迭代器的每一项为HashSet中的元素。   
-> **说明：**
+> **说明：** 
 > 
 > 不建议在Symbol.iterator中使用add、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
 
@@ -185,7 +185,7 @@ entries(): IterableIterator<[T, T]>
 ```
 
 返回包含此HashSet中所有元素的新迭代器对象，每个元素以[value, value]形式返回。   
-> **说明：**
+> **说明：** 
 > 
 > 不建议在entries迭代过程中使用add、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
 
@@ -417,7 +417,7 @@ values(): IterableIterator<T>
 ```
 
 返回包含此HashSet中所有值的新迭代器对象。   
-> **说明：**
+> **说明：** 
 > 
 > 不建议在values迭代过程中使用add、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
 

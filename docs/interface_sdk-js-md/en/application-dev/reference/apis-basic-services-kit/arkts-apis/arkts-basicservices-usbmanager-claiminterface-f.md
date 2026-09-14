@@ -14,7 +14,7 @@ function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolea
 
 Claims a USB device interface.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > In USB programming, **claimInterface** is a common operation, which indicates that an application requests the
 > operating system to release a USB interface from the kernel driver and hand over the USB interface to a user

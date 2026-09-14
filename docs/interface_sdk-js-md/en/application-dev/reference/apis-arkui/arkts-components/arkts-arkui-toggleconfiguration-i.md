@@ -8,11 +8,6 @@ You need a custom class to implement the **ContentModifier** API. This API inher
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## enabled
 
 ```TypeScript

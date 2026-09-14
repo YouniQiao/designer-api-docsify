@@ -8,11 +8,6 @@ Provides detailed information about the same-layer tag, including the ID, type, 
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## height
 
 ```TypeScript

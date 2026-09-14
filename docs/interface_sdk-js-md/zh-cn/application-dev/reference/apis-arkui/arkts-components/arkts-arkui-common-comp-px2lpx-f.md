@@ -1,10 +1,5 @@
 # px2lpx
 
-## 导入模块
-
-```TypeScript
-```
-
 ## px2lpx
 
 ```TypeScript

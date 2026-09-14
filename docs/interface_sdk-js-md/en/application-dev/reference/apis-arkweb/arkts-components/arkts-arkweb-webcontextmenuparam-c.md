@@ -12,11 +12,6 @@ For sample code, see [onContextMenuShow](arkts-arkweb-web-comp-attribute.md#onco
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript
@@ -117,7 +112,7 @@ getLinkUrl(): string
 
 Obtains the URL link address that has passed the security check. This can be used to provide operations such as "Open Link", "Share Link", and "Copy Link" when building a custom menu.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Compared with getUnfilteredLinkUrl(), this method performs a security check on the URL. Compared with
 > getSourceUrl(), this method obtains the link URL at the long press position, whereas getSourceUrl() obtains the
@@ -143,7 +138,7 @@ getMediaType(): ContextMenuMediaType
 
 Obtains the media type of the web element.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Since API version 22, [getContextMenuMediaType](#getcontextmenumediatype) provides
 > richer media type identification capabilities.

@@ -6,11 +6,6 @@ Describes the text line height style.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript
@@ -41,7 +36,7 @@ constructor(lineHeight: LengthMetrics, lineHeightMultiple?: number)
 
 A constructor used to create a text line height and multiple.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When **lineHeightMultiple** is set together with **lineHeight** or [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md),
 > only **lineHeightMultiple** takes effect. The line height is the product of the highest font height in the line

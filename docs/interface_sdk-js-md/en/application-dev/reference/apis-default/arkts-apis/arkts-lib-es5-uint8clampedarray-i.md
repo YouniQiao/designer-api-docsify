@@ -23,10 +23,6 @@ Returns the this object after copying a section of the array identified by start
 | start | number | Yes |  |
 | end | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## every
 
 ```TypeScript
@@ -44,10 +40,6 @@ Determines whether all the members of an array satisfy the specified test.
 | predicate | (value: number, index: number, array: Uint8ClampedArray) =&gt; unknown | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## fill
 
 ```TypeScript
@@ -64,10 +56,6 @@ Changes all array elements from `start` to `end` index to a static `value` and r
 | start | number | No |  |
 | end | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## filter
 
 ```TypeScript
@@ -83,10 +71,6 @@ Returns the elements of an array that meet the condition specified in a callback
 | predicate | (value: number, index: number, array: Uint8ClampedArray) =&gt; any | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## find
 
 ```TypeScript
@@ -102,10 +86,6 @@ Returns the value of the first element in the array where predicate is true, and
 | predicate | (value: number, index: number, obj: Uint8ClampedArray) =&gt; boolean | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## findIndex
 
 ```TypeScript
@@ -121,10 +101,6 @@ Returns the index of the first element in the array where predicate is true, and
 | predicate | (value: number, index: number, obj: Uint8ClampedArray) =&gt; boolean | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## forEach
 
 ```TypeScript
@@ -155,10 +131,6 @@ Returns the index of the first occurrence of a value in an array.
 | searchElement | number | Yes |  |
 | fromIndex | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## join
 
 ```TypeScript
@@ -173,10 +145,6 @@ Adds all the elements of an array separated by the specified separator string.
 | --- | --- | --- | --- |
 | separator | string | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## lastIndexOf
 
 ```TypeScript
@@ -192,10 +160,6 @@ Returns the index of the last occurrence of a value in an array.
 | searchElement | number | Yes |  |
 | fromIndex | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## map
 
 ```TypeScript
@@ -211,10 +175,6 @@ Calls a defined callback function on each element of an array, and returns an ar
 | callbackfn | (value: number, index: number, array: Uint8ClampedArray) =&gt; number | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduce
 
 ```TypeScript
@@ -229,10 +189,6 @@ Calls the specified callback function for all the elements in an array. The retu
 | --- | --- | --- | --- |
 | callbackfn | (previousValue: number, currentValue: number, currentIndex: number, array: Uint8ClampedArray) =&gt; number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduce
 
 ```TypeScript
@@ -246,10 +202,6 @@ reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: n
 | callbackfn | (previousValue: number, currentValue: number, currentIndex: number, array: Uint8ClampedArray) =&gt; number | Yes |  |
 | initialValue | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduce
 
 ```TypeScript
@@ -265,10 +217,6 @@ Calls the specified callback function for all the elements in an array. The retu
 | callbackfn | (previousValue: U, currentValue: number, currentIndex: number, array: Uint8ClampedArray) =&gt; U | Yes |  |
 | initialValue | U | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduceRight
 
 ```TypeScript
@@ -283,10 +231,6 @@ Calls the specified callback function for all the elements in an array, in desce
 | --- | --- | --- | --- |
 | callbackfn | (previousValue: number, currentValue: number, currentIndex: number, array: Uint8ClampedArray) =&gt; number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduceRight
 
 ```TypeScript
@@ -300,10 +244,6 @@ reduceRight(callbackfn: (previousValue: number, currentValue: number, currentInd
 | callbackfn | (previousValue: number, currentValue: number, currentIndex: number, array: Uint8ClampedArray) =&gt; number | Yes |  |
 | initialValue | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduceRight
 
 ```TypeScript
@@ -319,10 +259,6 @@ Calls the specified callback function for all the elements in an array, in desce
 | callbackfn | (previousValue: U, currentValue: number, currentIndex: number, array: Uint8ClampedArray) =&gt; U | Yes |  |
 | initialValue | U | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reverse
 
 ```TypeScript
@@ -331,10 +267,6 @@ reverse(): Uint8ClampedArray
 
 Reverses the elements in an Array.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## set
 
 ```TypeScript
@@ -365,10 +297,6 @@ Returns a section of an array.
 | start | number | No |  |
 | end | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## some
 
 ```TypeScript
@@ -384,10 +312,6 @@ Determines whether the specified callback function returns true for any element 
 | predicate | (value: number, index: number, array: Uint8ClampedArray) =&gt; unknown | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## sort
 
 ```TypeScript
@@ -402,10 +326,6 @@ Sorts an array.
 | --- | --- | --- | --- |
 | compareFn | (a: number, b: number) =&gt; number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## subarray
 
 ```TypeScript
@@ -421,10 +341,6 @@ Gets a new Uint8ClampedArray view of the ArrayBuffer store for this array, refer
 | begin | number | No |  |
 | end | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toLocaleString
 
 ```TypeScript
@@ -433,10 +349,6 @@ toLocaleString(): string
 
 Converts a number to a string by using the current locale.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toString
 
 ```TypeScript
@@ -445,10 +357,6 @@ toString(): string
 
 Returns a string representation of an array.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## valueOf
 
 ```TypeScript
@@ -457,10 +365,6 @@ valueOf(): Uint8ClampedArray
 
 Returns the primitive value of the specified object.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [index: number]
 
 ```TypeScript

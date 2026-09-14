@@ -2,7 +2,7 @@
 
 Sets the distance between the child component and the upper and lower dividers.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Similar to [RowSplit](arkts-arkui-rowsplit-comp-attribute.md#rowsplit), the dividers of **ColumnSplit** adjust the height of adjacent child
 > components. However, this adjustment is only applied to the extent that the resulting height stays within the
@@ -14,11 +14,6 @@ Sets the distance between the child component and the upper and lower dividers.
 **Since:** 10
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## endMargin
 

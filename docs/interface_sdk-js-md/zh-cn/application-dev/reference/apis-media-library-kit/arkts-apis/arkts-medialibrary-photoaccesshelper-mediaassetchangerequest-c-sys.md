@@ -4,7 +4,7 @@ MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photo
 
 资产变更请求。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本Class首批接口从API version 11开始支持。
 
@@ -85,7 +85,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, asse
 addResourceForPicker(type: ResourceType, fileUri: string): void
 ```
 
-通过[fileUri](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md)从应用沙箱添加资源。
+通过[fileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fileuri.md)从应用沙箱添加资源。
 
 **起始版本：** 22
 
@@ -187,7 +187,7 @@ static deleteAssetsPermanentlyWithUri(context: Context, assetUris: string[]): Pr
 
 通过资产URI批量彻底删除照片或视频，不经过回收站。使用promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 对仅存在于本端设备的资产、仅存在于云端的资产、存在于本端设备和云端的资产，均可以彻底删除，不经过回收站。
 > 
@@ -247,7 +247,7 @@ static deleteCloudAssetsWithUri(context: Context, assetUris: string[]): Promise<
 
 批量删除云端状态的媒体资产（照片或视频）到回收站。使用promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 对仅存在于本端设备的资产，不做任何处理。
 > 
@@ -442,7 +442,7 @@ static deleteLocalAssetsWithUri(context: Context, assetUris: string[]): Promise<
 
 批量删除本地状态的媒体资产（照片或视频）到回收站。使用promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 对仅存在于本端设备的资产，直接删除到回收站。
 > 

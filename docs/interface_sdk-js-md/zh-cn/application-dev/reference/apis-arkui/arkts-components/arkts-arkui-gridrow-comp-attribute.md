@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## alignItems
 
 ```TypeScript
@@ -47,7 +42,7 @@ onBreakpointChange(callback: (breakpoints: string) => void)
 
 断点发生变化时触发回调。回调函数接收到的breakpoints参数表示当前断点值（取值为`"xs"`、`"sm"`、`"md"`、`"lg"`、`"xl"`、`"xxl"`），开发者可在回调中根据断点值执行相应的UI布局调整或业务逻辑处理。
 
-> **说明：**
+> **说明：** 
 > 
 > - 当[断点参照物](../../../reference/apis-arkui/arkui-ts/ts-container-gridrow.md#breakpointsreference枚举说明)设置为
 > BreakpointsReference.ComponentSize时，不要在onBreakpointChange回调中动态修改GridRow组件的padding或

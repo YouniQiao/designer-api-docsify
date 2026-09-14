@@ -1,9 +1,9 @@
 # ArkTS API<!--arkts-driverdevelopmentkit-->
 
-- [@ohos.app.ability.DriverExtensionAbility(Driver Extension Ability)](arkts-app-ability-driverextensionability.md)
+- [@ohos.app.ability.DriverExtensionAbility(Driver Extension Ability)](arkts-driverdevelopment-app-ability-driverextensionability.md)
   - [DriverExtensionAbility](arkts-driverdevelopment-app-ability-driverextensionability-driverextensionability-c.md)
   - [DriverExtensionContext](arkts-driverdevelopment-driverextensioncontext-t.md)
-- [@ohos.driver.deviceManager(Peripheral Management)](arkts-driver-devicemanager.md)
+- [@ohos.driver.deviceManager(Peripheral Management)](arkts-driverdevelopment-driver-devicemanager.md)
   - [bindDevice](arkts-driverdevelopment-devicemanager-binddevice-f.md)
   - [bindDeviceDriver](arkts-driverdevelopment-devicemanager-binddevicedriver-f.md)
   - [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md)
@@ -29,5 +29,5 @@
   - [USBInterfaceDesc(system api)](arkts-driverdevelopment-devicemanager-usbinterfacedesc-i-sys.md)<!--DelEnd-->
   - [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md)
 - application<!--arkts-driverdevelopmentkit-application-->
-  - [DriverExtensionContext(Defines the context of driver extension)](arkts-driverextensioncontext.md)
+  - [DriverExtensionContext(Defines the context of driver extension)](arkts-driverdevelopment-driverextensioncontext.md)
     - [DriverExtensionContext](arkts-driverdevelopment-driverextensioncontext-c.md)

@@ -2,7 +2,7 @@
 
 Implements a layout manager object.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > After the text content is changed, you must wait for the layout to be completed before you can obtain the most up-
 > to-date layout information.
@@ -10,11 +10,6 @@ Implements a layout manager object.
 **Since:** 12
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## getCharacterPositionAtCoordinate
 

@@ -17,7 +17,7 @@ declare function hash(path: string, algorithm: string): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [hash](arkts-file-hash.md)
+**替代接口：** [hash](arkts-corefile-file-hash.md)
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -47,7 +47,7 @@ declare function hash(path: string, algorithm: string, callback: AsyncCallback<s
 
 **废弃版本：** 9
 
-**替代接口：** [hash](arkts-file-hash.md)
+**替代接口：** [hash](arkts-corefile-file-hash.md)
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

@@ -26,7 +26,7 @@ Generates an **edgeColors** object with the specified edge color for all edges.
 
 | Type | Description |
 | --- | --- |
-| [Edges](arkts-arkui-graphics-edges-i.md)&lt;number&gt; | edgeColors** object whose edge colors are all at the specified value. |
+| [Edges](arkts-arkui-graphics-edges-i.md)&lt;number&gt; | **edgeColors** object whose edge colors are all at the specified value. |
 
 **Examples**
 

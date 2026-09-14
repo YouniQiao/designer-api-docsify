@@ -4,7 +4,7 @@ Encapsulates the parameters for encryption or decryption using the GCM AEAD mode
 
 <br>Applies to the GCM mode.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. Before passing a value to
 > [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify

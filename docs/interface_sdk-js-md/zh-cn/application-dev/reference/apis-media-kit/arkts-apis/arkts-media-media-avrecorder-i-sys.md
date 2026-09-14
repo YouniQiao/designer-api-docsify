@@ -4,10 +4,10 @@ AVRecorder是音视频录制管理类，用于音视频录制的全流程管理�
 
 音视频录制示例可参考：[音频录制开发指导](../../../media/media/using-avrecorder-for-recording.md)、[视频录制开发指导](../../../media/media/video-recording.md)。
 
-> **说明：**
+> **说明：** 
 > - 本模块首批接口从API version 6开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 > - 本Interface首批接口从API version 9开始支持。
-> - 相机视频录制功能需配合相机模块使用，相机模块接口的使用详情请参考[相机管理](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md)。
+> - 相机视频录制功能需配合相机模块使用，相机模块接口的使用详情请参考[相机管理](../../apis-camera-kit/arkts-apis/arkts-camera-multimedia-camera.md)。
 
 **起始版本：** 9
 

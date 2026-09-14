@@ -17,17 +17,8 @@ format(value: number): string
 | --- | --- | --- | --- |
 | value | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## resolvedOptions
 
 ```TypeScript
 resolvedOptions(): ResolvedNumberFormatOptions
 ```
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

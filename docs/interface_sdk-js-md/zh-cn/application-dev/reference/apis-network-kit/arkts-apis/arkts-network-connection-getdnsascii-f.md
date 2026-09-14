@@ -14,7 +14,7 @@ function getDnsAscii(host: string, flag?: ConversionProcess): string
 
 将Unicode编码形式的主机名转换为ASCII编码形式，并可通过可选的转换流程参数（conversionProcess）控制转换行为。
 
-> **说明：**
+> **说明：** 
 > 
 > conversionProcess设置为NO_CONFIGURATION时，只能转换已正式分配含义的Unicode字符所对应的域名。
 

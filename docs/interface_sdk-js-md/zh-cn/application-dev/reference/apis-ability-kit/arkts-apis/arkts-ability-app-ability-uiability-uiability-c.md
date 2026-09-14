@@ -91,7 +91,7 @@ onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateRes
 
 UIAbility生命周期回调，在多设备协同场景下，协同方应用在被拉起的过程中返回是否接受协同。
 
-> **说明：**
+> **说明：** 
 > 
 > - 该生命周期回调不支持[specified启动模式](../../../application-models/uiability-launch-type.md#specified启动模式)。
 > 
@@ -144,7 +144,7 @@ onContinue(wantParam: Record<string, Object>):
 
 当UIAbility准备跨端迁移时触发，可以保存待迁移的业务数据。
 
-> **说明：**
+> **说明：** 
 > 
 > 对于API version 18（不含18） 之前版本仅支持同步调用，从API version 18及后续版本可支持异步调用。
 
@@ -259,7 +259,7 @@ onDestroy(): void | Promise<void>
 
 使用同步回调或Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 在执行完onDestroy生命周期回调后，应用可能会退出，从而导致其中的异步函数（比如异步写入数据库）未能正确执行。在此情况下，推荐使用Promise异步回调。
 > 
@@ -514,7 +514,7 @@ onPrepareToTerminate(): boolean
 
 在UIAbility即将关闭前（例如用户通过点击应用窗口右上角的关闭按钮、或者通过Dock栏/托盘右键退出应用时），系统会触发该回调，用于在UIAbility正式关闭前执行其他操作。开发者可以在该回调中返回true阻拦此次关闭，然后在合适时机主动调用[terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateself)接口关闭。例如，询问用户是否确认关闭UIAbility，再主动销毁UIAbility。该接口仅在2in1和Tablet设备中可正常执行回调，在其他设备上不执行回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 15开始，当[UIAbility.onPrepareToTerminateAsync](#onpreparetoterminateasync)实现时，本回调函数将不执
 > 行。当
@@ -585,7 +585,7 @@ onPrepareToTerminateAsync(): Promise<boolean>
 
 开发者可以在该回调中返回true阻拦此次关闭，然后在合适时机主动调用[terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateself)接口关闭。例如，询问用户是否确认关闭UIAbility，再主动销毁UIAbility。从API version 15开始，该接口仅在2in1设备中可正常执行回调，在其他设备上不执行回调。从API version 19开始，该接口在2in1和Tablet设备中可正常执行回调，在其他设备上不执行回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 当
 > [AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)
@@ -635,9 +635,9 @@ export default class EntryAbility extends UIAbility {
 onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>): AbilityConstant.OnSaveResult
 ```
 
-该接口需要与[appRecovery](arkts-app-ability-apprecovery.md)配合使用。如果应用已使能故障恢复功能（即[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md)接口中的saveOccasion参数设置为SAVE_WHEN_ERROR），当应用出现故障时，系统将触发该回调来保存UIAbility的数据。
+该接口需要与[appRecovery](arkts-ability-app-ability-apprecovery.md)配合使用。如果应用已使能故障恢复功能（即[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md)接口中的saveOccasion参数设置为SAVE_WHEN_ERROR），当应用出现故障时，系统将触发该回调来保存UIAbility的数据。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，当
 > [onSaveStateAsync](#onsavestateasync)
@@ -684,7 +684,7 @@ export default class MyUIAbility extends UIAbility {
 onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string, Object>): Promise<AbilityConstant.OnSaveResult>
 ```
 
-该接口需要与[appRecovery](arkts-app-ability-apprecovery.md)配合使用。如果应用已使能故障恢复功能（即[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md)接口中的saveOccasion参数设置为SAVE_WHEN_ERROR），当应用出现故障时，将触发该回调来保存UIAbility的数据。使用Promise异步回调。
+该接口需要与[appRecovery](arkts-ability-app-ability-apprecovery.md)配合使用。如果应用已使能故障恢复功能（即[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md)接口中的saveOccasion参数设置为SAVE_WHEN_ERROR），当应用出现故障时，将触发该回调来保存UIAbility的数据。使用Promise异步回调。
 
 **起始版本：** 20
 
@@ -961,7 +961,7 @@ onWindowStageRestore(windowStage: window.WindowStage): void
 
 当UIAbility跨端迁移时，目标端UIAbility恢复页面栈时回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 在应用迁移启动时，无论是[冷启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability冷启动)还是
 > [热启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability热启动)，都会在执行完

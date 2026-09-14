@@ -24,7 +24,7 @@ enableMacro(enabled: boolean): void
 
 使能当前的微距能力。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用该接口前，需要先通过[isMacroSupported](arkts-camera-camera-macroquery-i.md#ismacrosupported)接口查询当前设备是否支持微距能力。
 

@@ -2,7 +2,7 @@
 
 创建并显示即时反馈、对话框、操作菜单以及自定义弹窗。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本模块首批接口从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 > 
@@ -357,7 +357,7 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 
 创建并弹出以content作为内容的Menu弹窗。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 使用该接口时，若未传入有效的target，则无法弹出menu弹窗。
 > 
@@ -381,7 +381,7 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | 是 | menu弹窗中显示的组件内容。 |
 | target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 | 需要绑定组件的信息。 |
-| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | 否 | menu弹窗样式。<br> **说明：**<br> title属性不生效。<br> preview参数仅支持设置MenuPreviewMode类型。 |
+| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | 否 | menu弹窗样式。<br> **说明：** <br> title属性不生效。<br> preview参数仅支持设置MenuPreviewMode类型。 |
 
 **返回值：**
 
@@ -407,7 +407,7 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 
 创建并弹出以content作为内容的Popup弹窗，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 使用该接口时，若未传入有效的target，则无法弹出popup弹窗。
 > 
@@ -756,7 +756,7 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 
 更新content对应的Menu弹窗的样式。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 不支持更新showInSubWindow、preview、previewAnimationOptions、transition、onAppear、aboutToAppear、onDisappear、
 > aboutToDisappear、onWillAppear、onDidAppear、onWillDisappear和onDidDisappear。
@@ -801,7 +801,7 @@ updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommon
 
 更新content对应的Popup弹窗的样式，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 不支持更新showInSubWindow、focusable、onStateChange、onWillDismiss、transition。
 

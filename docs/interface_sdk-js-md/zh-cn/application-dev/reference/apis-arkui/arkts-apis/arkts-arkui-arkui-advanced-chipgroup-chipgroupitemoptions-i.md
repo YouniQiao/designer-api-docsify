@@ -2,7 +2,7 @@
 
 ChipGroupItemOptions定义每个Chip的非通用属性。
 
-> **说明：**
+> **说明：** 
 > 
 > 当传入`suffixSymbol`参数时，`allowClose`不生效；当传入`suffixImageIcon`参数而`suffixSymbol`没有传入参数时，`allowClose`不生效；当`suffixSymbol`和
 > `suffixImageIcon`都没有传入参数时，`allowClose`决定是否显示关闭图标。`suffixIcon`已废弃，请使用`suffixImageIcon`。
@@ -93,7 +93,7 @@ false表示关闭图标不显示，true表示关闭图标显示。
 
 值为undefined时，按默认值处理。
 
-**说明：**当suffixSymbol有传入参数时，allowClose不生效；当suffixSymbol没有传入参数而suffixIcon或suffixImageIcon有传入参数时，allowClose不生效；当suffixSymbol、suffixIcon和suffixImageIcon都没有传入参数时，allowClose决定是否显示关闭图标。
+**说明：** 当suffixSymbol有传入参数时，allowClose不生效；当suffixSymbol没有传入参数而suffixIcon或suffixImageIcon有传入参数时，allowClose不生效；当suffixSymbol、suffixIcon和suffixImageIcon都没有传入参数时，allowClose决定是否显示关闭图标。
 
 **类型：** boolean
 
@@ -201,7 +201,7 @@ suffixIcon?: IconOptions
 
 值为undefined时，按默认值处理。
 
-**说明：**当suffixIcon有传入参数时，allowClose不生效。
+**说明：** 当suffixIcon有传入参数时，allowClose不生效。
 
 **说明：** 从API version 12开始支持，从API version 14开始废弃。建议使用[suffixImageIcon](arkts-arkui-arkui-advanced-chipgroup-suffiximageiconoptions-i.md)替代。
 
@@ -227,7 +227,7 @@ suffixImageIcon?: SuffixImageIconOptions
 
 后缀Image图标属性。当需要在Chip后显示图标以提供额外操作或状态提示时设置此参数。
 
-**说明：**当suffixImageIcon有传入参数时，allowClose不生效；当suffixSymbol和suffixImageIcon同时配置时，仅suffixSymbol生效，suffixImageIcon不生效。
+**说明：** 当suffixImageIcon有传入参数时，allowClose不生效；当suffixSymbol和suffixImageIcon同时配置时，仅suffixSymbol生效，suffixImageIcon不生效。
 
 默认值：不显示后缀Image图标。
 
@@ -251,7 +251,7 @@ suffixSymbol?: ChipSymbolGlyphOptions
 
 后缀SymbolGlyph图标属性。当需要在Chip后显示SymbolGlyph图标以提供额外操作或状态提示时设置此参数。
 
-**说明：**当suffixSymbol有传入参数时，allowClose不生效。suffixSymbol与suffixImageIcon为互斥属性，同一Chip项中只能配置其中一个，若同时配置仅优先级最高的生效（优先级：suffixSymbol &gt; suffixImageIcon）。
+**说明：** 当suffixSymbol有传入参数时，allowClose不生效。suffixSymbol与suffixImageIcon为互斥属性，同一Chip项中只能配置其中一个，若同时配置仅优先级最高的生效（优先级：suffixSymbol &gt; suffixImageIcon）。
 
 默认值：不显示后缀SymbolGlyph图标。
 

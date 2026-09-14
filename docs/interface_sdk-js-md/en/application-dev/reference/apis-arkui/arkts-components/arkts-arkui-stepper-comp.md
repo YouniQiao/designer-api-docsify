@@ -16,7 +16,7 @@ Stepper(value?: { index?: number })
 
 Creates a **Stepper** component.
 
-> **NOTE:**
+> **NOTE:** 
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ Creates a **Stepper** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { index?: number } | No | Index of the **StepperItem** that is currently displayed.<br>Default value: **0**<br> Since API version 10, this parameter supports two-way binding through [\&#36;\&#36;](../../../ui/state-management/arkts-two-way-sync.md). |
+| value | { index?: number } | No | Index of the **StepperItem** that is currently displayed.<br>Default value: **0**<br> Since API version 10, this parameter supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md). |
 
 ## Summary
 

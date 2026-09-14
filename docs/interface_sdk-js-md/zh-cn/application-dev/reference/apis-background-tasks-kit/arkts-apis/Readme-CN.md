@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-backgroundtaskskit-->
 
-- [@ohos.backgroundTaskManager(后台任务管理)](arkts-backgroundtaskmanager.md)
+- [@ohos.backgroundTaskManager(后台任务管理)](arkts-backgroundtasks-backgroundtaskmanager.md)
   - [cancelSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-cancelsuspenddelay-depr-f.md)
   - [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-depr-f.md)
   - [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md)
@@ -10,7 +10,7 @@
   - [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-depr-e.md)
   <!--Del-->
   - [BackgroundMode(系统接口)](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-depr-e-sys.md)<!--DelEnd-->
-- [@ohos.bundleState(设备使用信息统计)](arkts-bundlestate.md)
+- [@ohos.bundleState(设备使用信息统计)](arkts-backgroundtasks-bundlestate.md)
   - [isIdleState](arkts-backgroundtasks-bundlestate-isidlestate-f.md)
   - [queryAppUsagePriorityGroup](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md)
   <!--Del-->
@@ -24,7 +24,7 @@
   - [BundleActiveState](arkts-backgroundtasks-bundlestate-bundleactivestate-i.md)
   - [BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)
   - [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md)
-- [@ohos.reminderAgent(后台代理提醒)](arkts-reminderagent.md)
+- [@ohos.reminderAgent(后台代理提醒)](arkts-backgroundtasks-reminderagent.md)
   - [addNotificationSlot](arkts-backgroundtasks-reminderagent-addnotificationslot-f.md)
   - [cancelAllReminders](arkts-backgroundtasks-reminderagent-cancelallreminders-f.md)
   - [cancelReminder](arkts-backgroundtasks-reminderagent-cancelreminder-f.md)
@@ -41,7 +41,7 @@
   - [WantAgent](arkts-backgroundtasks-reminderagent-wantagent-i.md)
   - [ActionButtonType](arkts-backgroundtasks-reminderagent-actionbuttontype-e.md)
   - [ReminderType](arkts-backgroundtasks-reminderagent-remindertype-e.md)
-- [@ohos.reminderAgentManager(后台代理提醒)](arkts-reminderagentmanager.md)
+- [@ohos.reminderAgentManager(后台代理提醒)](arkts-backgroundtasks-reminderagentmanager.md)
   - [addExcludeDate](arkts-backgroundtasks-reminderagentmanager-addexcludedate-f.md)
   - [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md)
   - [cancelAllReminders](arkts-backgroundtasks-reminderagentmanager-cancelallreminders-f.md)
@@ -81,7 +81,7 @@
   - [ReminderType](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md)
   - [RingChannel](arkts-backgroundtasks-reminderagentmanager-ringchannel-e.md)
   - [TimeZoneType](arkts-backgroundtasks-reminderagentmanager-timezonetype-e.md)
-- [@ohos.resourceschedule.backgroundLoader](arkts-resourceschedule-backgroundloader.md)
+- [@ohos.resourceschedule.backgroundLoader](arkts-backgroundtasks-resourceschedule-backgroundloader.md)
   - [finishTask](arkts-backgroundtasks-backgroundloader-finishtask-f.md)
   - [getTaskInfo](arkts-backgroundtasks-backgroundloader-gettaskinfo-f.md)
   - [registerTask](arkts-backgroundtasks-backgroundloader-registertask-f.md)
@@ -90,7 +90,7 @@
   - [TaskStopInfo](arkts-backgroundtasks-backgroundloader-taskstopinfo-i.md)
   - [StopCode](arkts-backgroundtasks-backgroundloader-stopcode-e.md)
   - [常量](arkts-backgroundtasks-backgroundloader-con.md)
-- [@ohos.resourceschedule.backgroundProcessManager(后台子进程管控)](arkts-resourceschedule-backgroundprocessmanager.md)
+- [@ohos.resourceschedule.backgroundProcessManager(后台子进程管控)](arkts-backgroundtasks-resourceschedule-backgroundprocessmanager.md)
   - [getPowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-getpowersavemode-f.md)
   - [isPowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-ispowersavemode-f.md)
   - [resetProcessPriority](arkts-backgroundtasks-backgroundprocessmanager-resetprocesspriority-f.md)
@@ -98,7 +98,7 @@
   - [setProcessPriority](arkts-backgroundtasks-backgroundprocessmanager-setprocesspriority-f.md)
   - [PowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-powersavemode-e.md)
   - [ProcessPriority](arkts-backgroundtasks-backgroundprocessmanager-processpriority-e.md)
-- [@ohos.resourceschedule.backgroundTaskManager(后台任务管理)](arkts-resourceschedule-backgroundtaskmanager.md)
+- [@ohos.resourceschedule.backgroundTaskManager(后台任务管理)](arkts-backgroundtasks-resourceschedule-backgroundtaskmanager.md)
   <!--Del-->
   - [applyEfficiencyResources(系统接口)](arkts-backgroundtasks-backgroundtaskmanager-applyefficiencyresources-f-sys.md)<!--DelEnd-->
   - [cancelSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-cancelsuspenddelay-f.md)
@@ -162,7 +162,7 @@
   <!--Del-->
   - [ResourceType(系统接口)](arkts-backgroundtasks-backgroundtaskmanager-resourcetype-e-sys.md)<!--DelEnd-->
   - [UserAuthResult](arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md)
-- [@ohos.resourceschedule.deviceStandby(设备待机模块)](arkts-resourceschedule-devicestandby.md)
+- [@ohos.resourceschedule.deviceStandby(设备待机模块)](arkts-backgroundtasks-resourceschedule-devicestandby.md)
   <!--Del-->
   - [getExemptedApps(系统接口)](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -175,7 +175,7 @@
   - [ResourceRequest(系统接口)](arkts-backgroundtasks-devicestandby-resourcerequest-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ResourceType(系统接口)](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md)<!--DelEnd-->
-- [@ohos.resourceschedule.usageStatistics(设备使用信息统计)](arkts-resourceschedule-usagestatistics.md)
+- [@ohos.resourceschedule.usageStatistics(设备使用信息统计)](arkts-backgroundtasks-resourceschedule-usagestatistics.md)
   <!--Del-->
   - [isIdleState(系统接口)](arkts-backgroundtasks-usagestatistics-isidlestate-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -228,7 +228,7 @@
   - [GroupType(系统接口)](arkts-backgroundtasks-usagestatistics-grouptype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [IntervalType(系统接口)](arkts-backgroundtasks-usagestatistics-intervaltype-e-sys.md)<!--DelEnd-->
-- [@ohos.resourceschedule.workScheduler(延迟任务调度)](arkts-resourceschedule-workscheduler.md)
+- [@ohos.resourceschedule.workScheduler(延迟任务调度)](arkts-backgroundtasks-resourceschedule-workscheduler.md)
   - [getWorkStatus](arkts-backgroundtasks-workscheduler-getworkstatus-f.md)
   - [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md)
   - [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md)
@@ -248,10 +248,10 @@
   - [StorageRequest](arkts-backgroundtasks-workscheduler-storagerequest-e.md)
   <!--Del-->
   - [常量(系统接口)](arkts-backgroundtasks-workscheduler-con-sys.md)<!--DelEnd-->
-- [@ohos.WorkSchedulerExtensionAbility(延迟任务调度回调)](arkts-workschedulerextensionability.md)
+- [@ohos.WorkSchedulerExtensionAbility(延迟任务调度回调)](arkts-backgroundtasks-workschedulerextensionability.md)
   - [WorkSchedulerExtensionAbility](arkts-backgroundtasks-workschedulerextensionability-c.md)
   - [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md)
 - application<!--arkts-backgroundtaskskit-application-->
-  - [WorkSchedulerExtensionContext(延迟任务调度回调上下文)](arkts-workschedulerextensioncontext.md)
+  - [WorkSchedulerExtensionContext(延迟任务调度回调上下文)](arkts-backgroundtasks-workschedulerextensioncontext.md)
     <!--Del-->
     - [WorkSchedulerExtensionContext(系统接口)](arkts-backgroundtasks-workschedulerextensioncontext-c-sys.md)<!--DelEnd-->

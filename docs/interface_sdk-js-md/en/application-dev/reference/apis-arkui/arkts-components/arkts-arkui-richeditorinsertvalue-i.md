@@ -6,11 +6,6 @@ Defines information about the text to be inserted.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## insertOffset
 
 ```TypeScript

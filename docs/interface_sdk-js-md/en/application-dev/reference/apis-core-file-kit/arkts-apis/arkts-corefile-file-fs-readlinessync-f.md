@@ -29,7 +29,7 @@ Reads the text content of a file line by line. This API returns the result synch
 
 | Type | Description |
 | --- | --- |
-| [ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md) | ReaderIterator** object. |
+| [ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md) | **ReaderIterator** object. |
 
 **Error codes:**
 

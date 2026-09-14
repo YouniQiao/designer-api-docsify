@@ -16,7 +16,7 @@ Enables the age group detection function.
 
 When the function is enabled, the application can recommend content based on the age group detection result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported only on some phones. Error code **801** is returned if it is called on unsupported phones.
 

@@ -12,11 +12,6 @@ Defines the options of GridContainer.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## columns
 
 ```TypeScript

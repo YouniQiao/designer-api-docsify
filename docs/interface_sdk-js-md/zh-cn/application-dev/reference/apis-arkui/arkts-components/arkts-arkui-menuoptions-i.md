@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## showInSubWindow
 
 ```TypeScript
@@ -25,13 +20,13 @@ true：在子窗口显示菜单；false：不在子窗显示菜单。
 
 默认值：2in1设备上为true，其他设备为false。
 
-**说明：**
+**说明：** 
 
 仅对2in1设备生效。
 
 **类型：** boolean
 
-**默认值：**
+**默认值：** 
 - API版本12+：true for 2-in-1 devices
 
 **起始版本：** 11
@@ -50,7 +45,7 @@ title?: ResourceStr
 
 菜单标题。
 
-**说明：**
+**说明：** 
 
 仅在content设置为Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt; 时生效。
 

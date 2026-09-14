@@ -18,10 +18,6 @@
 | errors | Iterable&lt;any&gt; | Yes |  |
 | message | string | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -35,10 +31,6 @@ new(errors: Iterable<any>, message?: string): AggregateError
 | errors | Iterable&lt;any&gt; | Yes |  |
 | message | string | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## prototype
 
 ```TypeScript

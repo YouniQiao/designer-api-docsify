@@ -2,7 +2,7 @@
 
 Parameters of the **ScrollBar** component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The **ScrollBar** component defines the behavior style of the scrollable area, and its child nodes define the
 > behavior style of the scrollbar.
@@ -21,11 +21,6 @@ Parameters of the **ScrollBar** component.
 **Since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## direction
 

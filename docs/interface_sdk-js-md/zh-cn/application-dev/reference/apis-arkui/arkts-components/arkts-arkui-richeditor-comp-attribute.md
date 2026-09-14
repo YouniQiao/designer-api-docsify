@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## aboutToDelete
 
 ```TypeScript
@@ -75,7 +70,7 @@ barState(state: BarState)
 
 RichEditor滚动条的显示模式。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
@@ -151,7 +146,7 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 适用于行首标点符号需要与正文内容对齐的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 行首标点符号默认不压缩。
 > 
@@ -222,7 +217,7 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined,
 
 自定义键盘支持接续功能，使用[setCustomKeyboardContinueFeature](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)接口，可以设置自定义键盘之间切换时是否接续。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 23开始，该接口支持在attributeModifier中调用。
 
@@ -283,7 +278,7 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 调用[disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或[disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
@@ -365,7 +360,7 @@ enableHapticFeedback(isEnabled: boolean)
 
 设置RichEditor是否支持触感反馈。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
@@ -391,7 +386,7 @@ enableKeyboardOnFocus(isEnabled: boolean)
 
 设置RichEditor通过点击以外的方式获焦时，是否主动拉起软键盘。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
@@ -419,7 +414,7 @@ enablePreviewText(enable: boolean)
 
 开启后，组件内显示输入法输入过程中的拼音、笔画字符。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
@@ -711,7 +706,7 @@ onDidChange(callback: OnDidChangeCallback) : RichEditorAttribute
 
 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
@@ -739,7 +734,7 @@ onDidIMEInput(callback: Callback<TextRange>)
 
 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
@@ -963,7 +958,7 @@ onWillChange(callback: Callback<RichEditorChangeValue, boolean>) : RichEditorAtt
 
 使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
@@ -1015,7 +1010,7 @@ placeholder(value: ResourceStr, style?: PlaceholderStyle)
 
 设置后，组件无内容时显示提示文本，用户开始输入内容后提示文本自动消失。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
@@ -1132,7 +1127,7 @@ singleLine(isEnable: boolean | undefined)
 
 设置是否启用单行模式。未通过该接口设置时，默认不启用单行模式。
 
-> **说明：**
+> **说明：** 
 > 
 > 单行模式下换行符会显示为空格。
 

@@ -14,7 +14,7 @@ function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.U
 
 展示全屏广告。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 为了保证广告能正确展示，该接口必须和请求广告接口配套使用。
 > 

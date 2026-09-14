@@ -4,7 +4,7 @@
 
 支持[通用事件](../arkts-components/arkts-arkui-commonmethod-c.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > - 不支持隐私遮罩。
 > 
@@ -66,7 +66,7 @@ caretColor(color: Optional<ResourceColor>): SelectionContainerAttribute
 
 设置选中文本手柄颜色。未通过该接口设置时，默认手柄颜色为'#007DFF'（蓝色）。
 
-> **说明：**
+> **说明：** 
 > 
 > - 该属性在跨节点场景中用于各Text子组件选中文本手柄颜色。
 > 
@@ -100,7 +100,7 @@ copyOption(value: Optional<CopyOptions>): SelectionContainerAttribute
 
 设置组件的复制粘贴配置项。未通过该接口设置时，默认为CopyOptions.InApp。
 
-> **说明：**
+> **说明：** 
 > 
 > Text子组件已显式设置copyOption时，优先使用Text子组件的配置；未设置时，使用SelectionContainer的配置。
 
@@ -132,7 +132,7 @@ editMenuOptions(editMenu: Optional<SelectionContainerEditMenuOptions>): Selectio
 
 设置选中文本后的编辑菜单选项，包括菜单文本、图标和回调等。
 
-> **说明：**
+> **说明：** 
 > 
 > 当同时为当前场景设置了[bindSelectionMenu](#bindselectionmenu)和editMenuOptions时，优先使用
 > bindSelectionMenu，editMenuOptions不生效。bindSelectionMenu用于完全自定义菜单风格和触发条件，由开发者定义所有菜单项；editMenuOptions用于在系统默认菜单基础上添加扩
@@ -196,7 +196,7 @@ onCopy(callback: Optional<Callback<string>>): SelectionContainerAttribute
 
 长按文本内部区域弹出选择菜单后，点击选择菜单的复制按钮，触发该回调。仅支持复制文本。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](#textjoinstyle)配置决定。
 > 
@@ -230,7 +230,7 @@ onTextSelectionChange(callback: Optional<Callback<Array<string>>>): SelectionCon
 
 SelectionContainer中选中文本发生变化时触发该回调。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 回调参数数组中各项顺序与Text组件视觉顺序一致。
 > 
@@ -266,7 +266,7 @@ onWillCopy(callback: Optional<Callback<string, boolean>>): SelectionContainerAtt
 
 在进行复制操作前，触发该回调。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](#textjoinstyle)配置决定。
 > 
@@ -300,7 +300,7 @@ selectedBackgroundColor(color: Optional<ResourceColor>): SelectionContainerAttri
 
 设置选中文本底板颜色。未通过该接口设置时，默认选中文本底板颜色为'#007DFF'（蓝色），如果未设置不透明度，默认为20%不透明度。
 
-> **说明：**
+> **说明：** 
 > 
 > - 该属性在跨节点场景中用于各Text子组件选中区域的高亮颜色。
 > 
@@ -335,7 +335,7 @@ textJoinStyle(style: Optional<SelectionContainerTextJoinStyle>): SelectionContai
 
 设置SelectionContainer内聚合文本的拼接方式。未通过该接口设置时，默认为SelectionContainerTextJoinStyle.NEWLINE，表示不同文本节点之间使用换行符\n拼接。
 
-> **说明：**
+> **说明：** 
 > 
 > - 该配置会影响[onWillCopy](#onwillcopy)、
 > [onCopy](#oncopy)、

@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## contentModifier
 
 ```TypeScript
@@ -79,7 +74,7 @@ mark(value: MarkStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md) | 是 | 多选框内部图标样式。 从API version 12开始，设置了indicatorBuilder时，按照indicatorBuilder中的内容显示。<br>默认值：{<br>strokeColor : `\&#36;r('sys.color.ohos_id_color_foreground_contrary')`,<br>strokeWidth: `\&#36;r('sys.float.ohos_id_checkbox_stroke_width')`,<br>size: '20vp'<br>} |
+| value | [MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md) | 是 | 多选框内部图标样式。 从API version 12开始，设置了indicatorBuilder时，按照indicatorBuilder中的内容显示。<br>默认值：{<br>strokeColor : `&#36;r('sys.color.ohos_id_color_foreground_contrary')`,<br>strokeWidth: `&#36;r('sys.float.ohos_id_checkbox_stroke_width')`,<br>size: '20vp'<br>} |
 
 ## mark
 
@@ -101,7 +96,7 @@ mark(style: Optional<MarkStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md)&gt; | 是 | 多选框内部图标样式。 设置了indicatorBuilder时，按照indicatorBuilder中的内容显示。<br>当style的值为undefined时，默认值：{<br>strokeColor : `\&#36;r('sys.color.ohos_id_color_foreground_contrary')`,<br>strokeWidth: `\&#36;r('sys.float.ohos_id_checkbox_stroke_width')`,<br>size: '20vp'<br>} |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md)&gt; | 是 | 多选框内部图标样式。 设置了indicatorBuilder时，按照indicatorBuilder中的内容显示。<br>当style的值为undefined时，默认值：{<br>strokeColor : `&#36;r('sys.color.ohos_id_color_foreground_contrary')`,<br>strokeWidth: `&#36;r('sys.float.ohos_id_checkbox_stroke_width')`,<br>size: '20vp'<br>} |
 
 ## onChange
 
@@ -157,7 +152,7 @@ select(value: boolean)
 
 设置多选框选中状态。
 
-从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+从API version 10开始，该属性支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 从API version 18开始，该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
@@ -183,7 +178,7 @@ select(isSelected: Optional<boolean>)
 
 设置多选框选中状态。与[select](#select)相比，isSelected参数新增了对undefined类型的支持。
 
-该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)、[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+该属性支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)、[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **起始版本：** 18
 
@@ -221,7 +216,7 @@ selectedColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 多选框选中状态颜色。<br>默认值：\&#36;r('sys.color.ohos_id_color_text_primary_activated')<br>异常值按照默认值处理。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 多选框选中状态颜色。<br>默认值：&#36;r('sys.color.ohos_id_color_text_primary_activated')<br>异常值按照默认值处理。 |
 
 ## selectedColor
 
@@ -245,7 +240,7 @@ selectedColor(resColor: Optional<ResourceColor>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 | 多选框选中状态颜色。<br>当resColor的值为undefined时取默认值\&#36;r('sys.color.ohos_id_color_text_primary_activated')。<br>异常值按照默认值处理。 |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 | 多选框选中状态颜色。<br>当resColor的值为undefined时取默认值&#36;r('sys.color.ohos_id_color_text_primary_activated')。<br>异常值按照默认值处理。 |
 
 ## shape
 
@@ -315,7 +310,7 @@ unselectedColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 多选框非选中状态边框颜色。<br>默认值：\&#36;r('sys.color.ohos_id_color_switch_outline_off') |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 多选框非选中状态边框颜色。<br>默认值：&#36;r('sys.color.ohos_id_color_switch_outline_off') |
 
 ## unselectedColor
 
@@ -337,4 +332,4 @@ unselectedColor(resColor: Optional<ResourceColor>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 | 多选框非选中状态边框颜色。<br>当resColor的值为undefined时取默认值\&#36;r('sys.color.ohos_id_color_switch_outline_off') |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 | 多选框非选中状态边框颜色。<br>当resColor的值为undefined时取默认值&#36;r('sys.color.ohos_id_color_switch_outline_off') |

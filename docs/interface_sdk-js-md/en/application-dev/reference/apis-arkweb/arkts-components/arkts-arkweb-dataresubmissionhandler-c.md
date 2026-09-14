@@ -6,11 +6,6 @@ Implements the **DataResubmissionHandler** object for resubmitting or canceling 
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## cancel
 
 ```TypeScript

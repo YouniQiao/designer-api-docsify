@@ -14,7 +14,7 @@ function restartSelfAtomicService(context: Context): void
 
 Restarts the current atomic service.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Currently, atomic services can be started only in an independent window.
 > 

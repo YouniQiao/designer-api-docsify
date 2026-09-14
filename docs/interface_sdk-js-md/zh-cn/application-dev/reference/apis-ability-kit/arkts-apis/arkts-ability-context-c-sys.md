@@ -16,7 +16,7 @@ createBundleContext(bundleName: string): Context
 
 根据Bundle名称创建安装包的上下文。
 
-> **说明：**
+> **说明：** 
 > 
 > - stage模型多module的情况下可能发生资源id冲突的情况，建议使用
 > [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md)替代。
@@ -197,7 +197,7 @@ export default class EntryAbility extends UIAbility {
 createSystemHspModuleResourceManager(bundleName: string, moduleName: string): resmgr.ResourceManager
 ```
 
-该接口用于OEM厂商预置的[系统级HSP](../../../quick-start/application-package-glossary.md#系统级hsp)创建自己的[ResourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)。
+该接口用于OEM厂商预置的[系统级HSP](../../../quick-start/application-package-glossary.md#系统级hsp)创建自己的[ResourceManager](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager.md)。
 
 **起始版本：** 12
 

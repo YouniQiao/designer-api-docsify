@@ -8,11 +8,6 @@ You need a custom class to implement the **ContentModifier** API. Inherits from 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## indicator
 
 ```TypeScript
@@ -47,7 +42,7 @@ Value range: [0, stars]
 
 Values less than 0 are treated as **0**, and values greater than the value of [stars](arkts-arkui-rating-comp-attribute.md#stars) are treated as the value of **stars**.
 
-This parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+This parameter supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
 
 This parameter supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 

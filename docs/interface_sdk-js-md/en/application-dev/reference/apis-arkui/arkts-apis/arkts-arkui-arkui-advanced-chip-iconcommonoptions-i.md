@@ -2,7 +2,7 @@
 
 Defines the common icon options of the chip.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **fillColor** and **activatedFillColor** take effect only when the icon format is SVG.
 
@@ -24,7 +24,7 @@ activatedFillColor?: ResourceColor
 
 Icon fill color when the chip is activated.
 
-Default value: **\$r('sys.color.chip_active_icon_color')**
+Default value: **&#36;r('sys.color.chip_active_icon_color')**
 
 If the value is **undefined**, the default value is used.
 
@@ -46,7 +46,7 @@ fillColor?: ResourceColor
 
 Icon fill color.
 
-Default value: **\$r('sys.color.chip_usually_icon_color')**
+Default value: **&#36;r('sys.color.chip_usually_icon_color')**
 
 If the value is **undefined**, the default value is used.
 
@@ -71,9 +71,9 @@ Icon size. This parameter cannot be set in percentage.
 Default value:
 
 - When **ChipSize.SMALL** is used:  
-**{width: \$r('sys.float.chip_small_icon_size'), height: \$r('sys.float.chip_small_icon_size')}**.  
+**{width: &#36;r('sys.float.chip_small_icon_size'), height: &#36;r('sys.float.chip_small_icon_size')}**.  
 - When **ChipSize.NORMAL** is used:  
-**{width: \$r('sys.float.chip_normal_icon_size'), height: \$r('sys.float.chip_normal_icon_size')}**.
+**{width: &#36;r('sys.float.chip_normal_icon_size'), height: &#36;r('sys.float.chip_normal_icon_size')}**.
 
 Unit: vp.
 

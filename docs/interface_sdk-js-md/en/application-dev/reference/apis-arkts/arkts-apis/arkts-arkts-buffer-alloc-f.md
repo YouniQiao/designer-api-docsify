@@ -32,7 +32,7 @@ Creates and initializes a **Buffer** object of the specified length.
 
 | Type | Description |
 | --- | --- |
-| Buffer | Buffer** object created. |
+| Buffer | **Buffer** object created. |
 
 **Examples**
 

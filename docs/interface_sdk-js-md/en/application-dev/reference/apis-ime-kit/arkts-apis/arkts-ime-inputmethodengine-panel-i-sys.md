@@ -19,7 +19,7 @@ off(type: 'sizeUpdate', callback?: SizeUpdateCallback): void
 ```
 
 Disables listening for the panel size change. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. When you call [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) to adjust the panel size, the system calculates the final value based on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the panel layout.
 
@@ -53,7 +53,7 @@ on(type: 'sizeUpdate', callback: SizeUpdateCallback): void
 ```
 
 Listens for the panel size change. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. When you call [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) to adjust the panel size, the system calculates the final value based on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the panel layout.
 
@@ -88,7 +88,7 @@ setShadow(radius: number, color: string, offsetX: number, offsetY: number): void
 ```
 
 Sets the shadow effect of the input method window. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > Panels whose [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) is **SOFT_KEYBOARD** and [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) is **FLG_FIXED** are not supported.
 

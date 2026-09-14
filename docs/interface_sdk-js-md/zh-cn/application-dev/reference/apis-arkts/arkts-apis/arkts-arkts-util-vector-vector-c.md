@@ -4,7 +4,7 @@ Vector是一种线性数据结构，底层基于数组实现，解决了需要�
 
 - T：Type，类
 
-> **说明：**
+> **说明：** 
 > 
 > - 此模块提供的接口从API version 9开始废弃。建议使用
 > [@ohos.util.ArrayList](arkts-arkts-util-arraylist-arraylist-c.md)。

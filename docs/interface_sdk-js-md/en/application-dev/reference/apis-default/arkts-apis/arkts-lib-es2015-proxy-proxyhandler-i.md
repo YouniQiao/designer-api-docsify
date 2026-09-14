@@ -21,10 +21,6 @@ A trap method for a function call.
 | thisArg | any | Yes |  |
 | argArray | any[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## construct
 
 ```TypeScript
@@ -41,10 +37,6 @@ A trap for the `new` operator.
 | argArray | any[] | Yes |  |
 | newTarget | Function | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## defineProperty
 
 ```TypeScript
@@ -65,6 +57,8 @@ A trap for `Object.defineProperty()`.
 
 | Type | Description |
 | --- | --- |
+| boolean | A `Boolean` indicating whether or not the property has been defined. |
+
 ## deleteProperty
 
 ```TypeScript
@@ -84,6 +78,8 @@ A trap for the `delete` operator.
 
 | Type | Description |
 | --- | --- |
+| boolean | A `Boolean` indicating whether or not the property was deleted. |
+
 ## get
 
 ```TypeScript
@@ -100,10 +96,6 @@ A trap for getting a property value.
 | p | string &#124; symbol | Yes |  |
 | receiver | any | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## getOwnPropertyDescriptor
 
 ```TypeScript
@@ -119,10 +111,6 @@ A trap for `Object.getOwnPropertyDescriptor()`.
 | target | T | Yes |  |
 | p | string &#124; symbol | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## getPrototypeOf
 
 ```TypeScript
@@ -137,10 +125,6 @@ A trap for the `[[GetPrototypeOf]]` internal method.
 | --- | --- | --- | --- |
 | target | T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## has
 
 ```TypeScript
@@ -156,10 +140,6 @@ A trap for the `in` operator.
 | target | T | Yes |  |
 | p | string &#124; symbol | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## isExtensible
 
 ```TypeScript
@@ -174,10 +154,6 @@ A trap for `Object.isExtensible()`.
 | --- | --- | --- | --- |
 | target | T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## ownKeys
 
 ```TypeScript
@@ -192,10 +168,6 @@ A trap for `Reflect.ownKeys()`.
 | --- | --- | --- | --- |
 | target | T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## preventExtensions
 
 ```TypeScript
@@ -210,10 +182,6 @@ A trap for `Object.preventExtensions()`.
 | --- | --- | --- | --- |
 | target | T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## set
 
 ```TypeScript
@@ -235,6 +203,8 @@ A trap for setting a property value.
 
 | Type | Description |
 | --- | --- |
+| boolean | A `Boolean` indicating whether or not the property was set. |
+
 ## setPrototypeOf
 
 ```TypeScript
@@ -249,8 +219,3 @@ A trap for `Object.setPrototypeOf()`.
 | --- | --- | --- | --- |
 | target | T | Yes |  |
 | v | object &#124; null | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

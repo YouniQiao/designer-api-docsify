@@ -14,11 +14,6 @@ controller: RichEditorStyledStringController = new RichEditorStyledStringControl
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## getSelection
 
 ```TypeScript
@@ -93,7 +88,7 @@ setStyledString(styledString: StyledString): void
 
 Sets the styled string displayed in the **RichEditor** component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When this API is called, the **StyledString** of the **RichEditor** component is fully replaced and re-
 > rendered.
@@ -113,4 +108,4 @@ Sets the styled string displayed in the **RichEditor** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | Styled string. <br>**NOTE:**<br>The child class [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) of **StyledString** can also serve as the argument. |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | Styled string. <br>**NOTE:** <br>The child class [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) of **StyledString** can also serve as the argument. |

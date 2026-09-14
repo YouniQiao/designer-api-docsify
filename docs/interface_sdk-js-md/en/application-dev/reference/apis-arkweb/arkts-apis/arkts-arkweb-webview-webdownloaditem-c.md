@@ -2,7 +2,7 @@
 
 WebDownloadItem is a class in the ArkWeb framework used to represent and manage a single download task. Through the callback parameters of [WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md), an app can obtain a WebDownloadItem instance and then query and control the download task, including starting the download to a specified path, querying the download progress and status, pausing/resuming/canceling the task, and serializing failed tasks for later recovery.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - During the download process, the download progress is notified to the user through WebDownloadDelegate, and the
 > user can operate the download task through the WebDownloadItem parameter.
@@ -58,7 +58,7 @@ Deserializes the serialized byte array into a **WebDownloadItem** object.
 
 | Type | Description |
 | --- | --- |
-| [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md) | WebDownloadItem** object. |
+| [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md) | **WebDownloadItem** object. |
 
 **Error codes:**
 
@@ -414,7 +414,7 @@ start(downloadPath: string): void
 
 Starts downloading to the specified directory. The parameter specifies the disk storage path (including the file name) of the download file.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API must be used in the **onBeforeDownload** callback of **WebDownloadDelegate**. If it is not called in
 > the callback, the download task remains in the PENDING state and is downloaded to a temporary directory. After

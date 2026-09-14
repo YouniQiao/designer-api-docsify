@@ -20,10 +20,6 @@ compile(pattern: string, flags?: string): this
 | pattern | string | Yes |  |
 | flags | string | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## exec
 
 ```TypeScript
@@ -38,10 +34,6 @@ Executes a search on a string using a regular expression pattern, and returns an
 | --- | --- | --- | --- |
 | string | string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## test
 
 ```TypeScript
@@ -56,10 +48,6 @@ Returns a Boolean value that indicates whether or not a pattern exists in a sear
 | --- | --- | --- | --- |
 | string | string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## global
 
 ```TypeScript

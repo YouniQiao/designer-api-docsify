@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## autoCapitalizationMode
 
 ```TypeScript
@@ -175,7 +170,7 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 设置是否开启行首标点符号压缩。未通过该接口设置时，默认不开启行首标点符号压缩。
 
-> **说明：**
+> **说明：** 
 > 
 > - 支持压缩的标点符号，请参考[ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md)的行首压缩的标点范围。
 
@@ -257,7 +252,7 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: Ke
 
 从API version 23开始，自定义键盘可以通过[setCustomKeyboardContinueFeature](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)开启接续，在切换至其他自定义键盘时，会直接切换，不会触发键盘关闭和拉起动画。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在attributeModifier中调用。
 
@@ -736,7 +731,7 @@ heightAdaptivePolicy(value: TextHeightAdaptivePolicy)
 
 组件设置为非内联输入风格时，设置文本自适应高度(TextHeightAdaptivePolicy)的三种方式效果一样，即在minFontSize和maxFontSize的范围内缩小字体以显示更多文本。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件设置为内联输入风格，编辑态与非编辑态存在字体大小不一致情况。
 
@@ -881,7 +876,7 @@ lineHeight(value: number | string | Resource)
 
 设置值不大于0时，不限制文本行高，自适应字体大小，number类型时单位为fp。string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。
 
-> **说明：**
+> **说明：** 
 > 
 > - 特殊字符字体高度远超出同行的其他字符高度时，文本框出现截断、遮挡、内容相对位置发生变化等不符合预期的显示异常，需要开发者调整组件高度、行高等属性，修改对应的页面布局。
 > 
@@ -1242,7 +1237,7 @@ onSecurityStateChange(callback: Callback<boolean>)
 
 密码显隐状态切换时，触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
@@ -1320,7 +1315,7 @@ onWillAttachIME(callback: Callback<IMEClient>)
 
 IMEClient仅在onWillAttachIME执行期间有效，不可进行异步调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在attributeModifier中调用。
 
@@ -1370,7 +1365,7 @@ onWillCopy(callback: Callback<string, boolean>)
 
 在进行复制操作前，触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > onWillCopy和onCopy形成will/did时序模式：
 > 
@@ -1402,7 +1397,7 @@ onWillCut(callback: Callback<string, boolean>)
 
 在进行剪切操作前，触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > onWillCut和onCut形成will/did时序模式：
 > 
@@ -1434,7 +1429,7 @@ onWillDelete(callback: Callback<DeleteValue, boolean>)
 
 在将要删除时，触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > onWillDelete和onDidDelete形成will/did时序模式：
 > 
@@ -1466,7 +1461,7 @@ onWillInsert(callback: Callback<InsertValue, boolean>)
 
 在将要输入时，触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > onWillInsert和onDidInsert形成will/did时序模式：
 > 
@@ -1714,7 +1709,7 @@ shaderStyle(shader: ShaderStyle | undefined)
 
 设置文本着色器效果，如线性渐变、径向渐变效果等。
 
-> **说明：**
+> **说明：** 
 > 
 > 当同时设置shaderStyle和[strokeWidth](#strokewidth)时，shaderStyle不生效。
 > 
@@ -1750,7 +1745,7 @@ showCounter(value: boolean, options?: InputCounterOptions)
 
 [示例5（设置计数器）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-textinput.md#示例5设置计数器)展示了设置showCounter的效果。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 

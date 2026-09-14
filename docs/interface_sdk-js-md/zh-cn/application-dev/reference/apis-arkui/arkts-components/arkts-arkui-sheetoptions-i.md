@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## shouldDismiss
 
 ```TypeScript
@@ -23,7 +18,7 @@ shouldDismiss?: (sheetDismiss: SheetDismiss) => void
 
 半模态页面交互式关闭回调函数。
 
-**说明：**
+**说明：** 
 
 当用户执行下拉关闭、侧拉关闭、点击遮罩层关闭、点击关闭按钮的交互操作时，如果已注册回调函数，模态窗口将不会立即关闭。要关闭半模态，需在回调函数中调用shouldDismiss.dismiss()方法来实现。
 
@@ -83,7 +78,7 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 如果使用borderColor属性，需要和borderWidth属性一起使用；未设置borderWidth时，由于borderWidth默认值为0，边框颜色不可见。
 
-**说明：**
+**说明：** 
 
 底部弹窗时，底部边框颜色设置无效。设置systemMaterial属性时，该属性效果可能被覆盖，不建议与systemMaterial一起使用。
 
@@ -109,7 +104,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 如果使用borderStyle属性，需要和borderWidth属性一起使用；未设置borderWidth时，由于borderWidth默认值为0，边框样式不可见。
 
-**说明：**
+**说明：** 
 
 底部弹窗时，底部边框样式设置无效。
 
@@ -139,7 +134,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 当半模态页面左边框和右边框大于半模态页面宽度，半模态页面上边框和下边框大于半模态页面高度，显示可能不符合预期。
 
-**说明：**
+**说明：** 
 
 底部弹窗时，底部边框宽度设置无效。设置systemMaterial属性时，该属性效果可能被覆盖，不建议与systemMaterial一起使用。取值范围为非负数，传入负值时设置无效。
 
@@ -161,7 +156,7 @@ detents?: [(SheetSize | Length), (SheetSize | Length)?, (SheetSize | Length)?]
 
 半模态页面的切换高度挡位。不设置时默认使用height属性确定半模态高度。
 
-**说明：**
+**说明：** 
 
 底部弹窗时，当设置detents时，height属性设置无效。
 
@@ -191,7 +186,7 @@ detentSelection?: SheetSize | Length
 
 **默认值：** detents[0]。
 
-**说明：**
+**说明：** 
 
 1. 该接口取值范围为detents数组范围，若设值非detents范围，该接口无效。
 2. 当设置SheetSize.FIT_CONTENT时，该接口无效。
@@ -223,7 +218,7 @@ true：显示控制条。
 
 false：不显示控制条。
 
-**说明：**
+**说明：** 
 
 半模态面板的detents属性设置多个不同高度并且设置生效时，默认显示控制条；detents未设置多挡位时，默认不显示控制条。
 
@@ -249,7 +244,7 @@ effectEdge?: number
 
 **默认值**：默认双边生效，即[EffectEdge](arkts-arkui-effectedge-e.md).START | [EffectEdge](arkts-arkui-effectedge-e.md).END（即数值3）。
 
-**说明：**
+**说明：** 
 
 1. 仅上边缘生效：[EffectEdge](arkts-arkui-effectedge-e.md).START。
 2. 仅下边缘生效：[EffectEdge](arkts-arkui-effectedge-e.md).END。
@@ -278,7 +273,7 @@ enableFloatingDragBar?: boolean
 
 默认值：false
 
-**说明：**
+**说明：** 
 
 悬浮效果只在控制条显示的场景生效，且控制条不占位。
 
@@ -314,7 +309,7 @@ true：响应悬停态。
 
 false：不响应悬停态。
 
-**说明：**
+**说明：** 
 
 底部弹窗样式、跟手弹窗样式、侧边弹窗样式和全屏模态样式不响应悬停态。子窗模式不支持悬停态。
 
@@ -338,7 +333,7 @@ enableOutsideInteractive?: boolean
 
 半模态页面显示时，其下层页面是否允许交互。
 
-**说明：**
+**说明：** 
 
 设置为true时允许交互，不显示蒙层；设置为false时不允许交互，显示蒙层；若不进行设置，默认底部弹窗与居中弹窗不允许交互，跟手弹窗允许交互。当设置为true时，maskColor设置无效。
 
@@ -362,7 +357,7 @@ height?: SheetSize | Length
 
 半模态高度，默认是LARGE。
 
-**说明：**
+**说明：** 
 
 1. API version 14开始，底部弹窗横屏时，无状态栏则最大高度为距离屏幕顶部8vp，有状态栏则最大高度为距离状态栏8vp。
 2. 底部弹窗时，当设置detents时，该属性设置无效。
@@ -398,7 +393,7 @@ hoverModeArea?: HoverModeAreaType
 
 2in1设备默认值：HoverModeAreaType.TOP_SCREEN
 
-**说明：**
+**说明：** 
 
 侧边弹窗样式和全屏弹窗样式不支持悬停态区域设置。
 
@@ -444,9 +439,9 @@ maskColor?: ResourceColor
 
 半模态页面的背景蒙层颜色。
 
-默认值：\$r('sys.color.ohos_id_color_mask_thin')。
+默认值：&#36;r('sys.color.ohos_id_color_mask_thin')。
 
-**说明：**
+**说明：** 
 
 当enableOutsideInteractive设置为true时，maskColor设置无效。
 
@@ -492,7 +487,7 @@ mode?: SheetMode
 
 默认值：SheetMode.OVERLAY
 
-**说明：**
+**说明：** 
 
 1. 半模态显示期间mode属性不支持动态切换，两种模式的显示层级完全不同，无法做到显示期间同一个半模态从一个层级变换到另一个层级。建议在使用时明确诉求固定mode值。
 2. 设置SheetMode.EMBEDDED时不支持设置UIContext属性，两者对应的半模态显示层级效果互相冲突。
@@ -518,7 +513,7 @@ onDetentsDidChange?: Callback<number>
 
 半模态页面挡位变化回调函数。不设置时不触发回调。
 
-**说明：**
+**说明：** 
 
 该回调仅在底部弹窗场景下触发，挡位变化返回最后的高度。
 
@@ -542,7 +537,7 @@ onHeightDidChange?: Callback<number>
 
 半模态页面高度变化回调函数。不设置时不触发回调。
 
-**说明：**
+**说明：** 
 
 底部弹窗时，只有挡位变化和拖拽跟手才返回每一帧高度，拉起半模态和避让软键盘只返回最后的高度，其他弹窗只在半模态拉起返回最后高度。
 
@@ -566,7 +561,7 @@ onTypeDidChange?: Callback<SheetType>
 
 半模态页面样式变化回调函数。
 
-**说明：**
+**说明：** 
 
 样式变化时返回最后的样式。
 
@@ -588,7 +583,7 @@ onWidthDidChange?: Callback<number>
 
 半模态页面宽度变化回调函数。不设置时不触发回调。
 
-**说明：**
+**说明：** 
 
 宽度变化时返回最后的宽度。
 
@@ -612,7 +607,7 @@ onWillDismiss?: Callback<DismissSheetAction>
 
 半模态页面的交互式关闭回调函数。允许开发者注册，以获取关闭操作的类型，并决定是否关闭半模态状态。
 
-**说明：**
+**说明：** 
 
 当用户执行下拉关闭、侧拉关闭、点击遮罩层关闭、点击关闭按钮的交互操作时，若已注册回调函数，则不会立即关闭页面，而是由开发者通过回调函数[DismissSheetAction](arkts-arkui-dismisssheetaction-i.md)中的reason参数判断关闭操作的类型，进而根据具体原因自主选择是否关闭半模态页面。
 
@@ -642,7 +637,7 @@ onWillSpringBackWhenDismiss?: Callback<SpringBackAction>
 
 半模态页面交互式关闭前控制回弹函数。允许开发者注册，以控制半模态页面交互式关闭时的回弹效果。建议在[二次确认](../../../ui/arkts-sheet-page.md#二次确认能力)场景或需要自定义关闭交互反馈的场景中使用。
 
-**说明：**
+**说明：** 
 
 当用户触发执行下拉关闭操作并同时注册该回调函数与shouldDismiss或onWillDismiss时，由开发者控制下滑关闭时是否回弹。在回调函数中可以通过调用springBack来实现回弹效果。也可以通过不调用springBack来取消回弹效果。
 
@@ -672,7 +667,7 @@ placement?: Placement
 
 默认值：Placement.Bottom
 
-**说明：**
+**说明：** 
 
 1. popup样式弹窗在确保指定位置能容纳弹窗尺寸的前提下，优先依据设定的placement展示弹窗。若不可行，则遵循先垂直翻转，后尝试90°水平旋转的规则调整显示位置，以预设方向为下方为例，调整顺序依次为：下、上、右、左。
 2. 如果设置的对齐方式导致组件布局超出窗口范围，将根据该对齐方式在水平或垂直方向上进行位移，直至组件完全显示在窗口内。
@@ -728,7 +723,7 @@ preferType?: SheetType
 
 半模态页面的样式。
 
-**说明：**
+**说明：** 
 
 半模态在不同窗口所支持的显示类型：
 
@@ -760,7 +755,7 @@ radius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
 **默认值**：32vp
 
-**说明：**
+**说明：** 
 
 1. 根据设置的圆角半径值显示，如果未设置，则使用默认值。底部样式不显示半模态底部2个圆角，即使设置了底部2个圆角也不生效。
 2. 分别设置4个方向的圆角半径后，如果某个方向的圆角半径值为无效值（如负值），异常方向的圆角值重置为默认值，非异常方向的圆角值为已设置的值。如果统一设置的圆角半径值为无效值（如负值），4个方向的圆角都重置为默认值。
@@ -834,7 +829,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 **默认值**：非2in1设备默认无阴影。2in1设备默认值：ShadowStyle.OUTER_FLOATING_SM。
 
-**说明：**
+**说明：** 
 
 设置systemMaterial属性时，该属性效果可能被覆盖，不建议与systemMaterial一起使用。全屏模态样式（CONTENT_COVER）下不支持阴影，该属性设置无效。
 
@@ -864,7 +859,7 @@ true：显示关闭图标。
 
 false：不显示关闭图标。
 
-**说明：**
+**说明：** 
 
 1. Resource需要为boolean类型。
 2. 全屏模态样式（CONTENT_COVER）下不支持显示关闭按钮，该属性设置无效。
@@ -891,7 +886,7 @@ showInSubWindow?: boolean
 
 默认值：false
 
-**说明：**
+**说明：** 
 
 1. 若属性值为true，半模态可以在独立子窗口中展示，并且可以超过应用窗口范围。
 2. 若属性值为false，半模态只能在应用窗口范围内展示。
@@ -921,7 +916,7 @@ systemMaterial?: SystemUiMaterial
 
 默认值：undefined，会清除由该接口设置的材质效果。
 
-**说明：** 不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影[shadow](arkts-arkui-commonmethod-c.md#shadow)，不建议与上述接口一起使用。使用示例请参考[示例10（半模态设置系统材质）](arkts-arkui-commonmethod-c.md)。
+**说明：**  不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影[shadow](arkts-arkui-commonmethod-c.md#shadow)，不建议与上述接口一起使用。使用示例请参考[示例10（半模态设置系统材质）](arkts-arkui-commonmethod-c.md)。
 
 **类型：** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 
@@ -941,7 +936,7 @@ title?: SheetTitleOptions | CustomBuilder
 
 半模态面板的标题。
 
-**说明：**
+**说明：** 
 
 当title传入CustomBuilder时，enableFloatingDragBar属性始终为false，不支持悬浮显示控制条。
 
@@ -965,7 +960,7 @@ uiContext?: UIContext
 
 在UIContext实例对应的窗口中显示半模态。不传入时默认在当前UIContext对应的窗口中显示半模态。当需要在指定窗口中显示半模态时传入此参数。
 
-**说明：**
+**说明：** 
 
 使用[openBindSheet](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#openbindsheet)启动的半模态页面，不支持设置、更新该属性。
 

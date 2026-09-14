@@ -1,10 +1,5 @@
 # restoreDefault
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## restoreDefault
 
 ```TypeScript

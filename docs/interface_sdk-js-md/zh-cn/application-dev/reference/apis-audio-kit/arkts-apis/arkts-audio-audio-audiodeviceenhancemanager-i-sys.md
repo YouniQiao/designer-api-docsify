@@ -2,7 +2,7 @@
 
 音频设备增强管理功能，用于应用级音频设备选择及流维度音频设备选择。在使用AudioDeviceEnhanceManager的接口之前，需要先通过getDeviceEnhanceManager获取AudioDeviceEnhanceManager实例。
 
-> **说明：**
+> **说明：** 
 > 
 > 应用在使用前应先调用isEnhancedRoutingSupported，确认系统是否支持音频设备增强管理功能。
 

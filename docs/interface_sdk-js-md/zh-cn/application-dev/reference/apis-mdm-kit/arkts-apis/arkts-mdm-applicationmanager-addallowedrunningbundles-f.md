@@ -14,7 +14,7 @@ function addAllowedRunningBundles(admin: Want, appIdentifiers: Array<string>, ac
 
 添加应用至应用运行允许名单，添加至允许名单的应用允许在指定用户下运行，不在允许名单的应用不允许在指定用户下运行。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 由于MDM Kit下大多数接口仅对MDM应用开放，本接口使用时，请将MDM应用同时添加至应用运行允许名单，否则会导致MDM应用不允许运行，阻塞接口调用。接口是否仅对MDM应用开放请查看对应的模块说明。
 > 

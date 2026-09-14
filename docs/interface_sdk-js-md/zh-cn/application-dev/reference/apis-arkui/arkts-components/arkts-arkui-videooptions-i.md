@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## controller
 
 ```TypeScript
@@ -57,7 +52,7 @@ currentProgressRate?: number | string | PlaybackSpeed
 
 视频播放倍速。
 
-**说明：**
+**说明：** 
 
 number格式取值仅支持：0.75、1.0、1.25、1.75、2.0。从API version 22开始，新增支持取值0.5，1.5，3，0.25和0.125。从API version 26.0.0开始，支持取值范围：[0.125, 8]。
 
@@ -130,8 +125,8 @@ string格式可用于加载本地图片和网络图片，
 
 Resource格式可以跨包/跨模块访问资源文件。
 
-- 支持rawfile文件下的资源，即通过\$rawfile引用图片。  
-- 支持通过\$r引用系统资源或者应用资源中的图片。
+- 支持rawfile文件下的资源，即通过&#36;rawfile引用图片。  
+- 支持通过&#36;r引用系统资源或者应用资源中的图片。
 
 默认值：空字符串
 
@@ -157,7 +152,7 @@ src?: string | Resource
 
 Resource格式可以跨包/跨模块访问资源文件，常用于访问本地视频。
 
-- 仅支持rawfile文件下的资源，即通过\$rawfile引用视频文件。
+- 仅支持rawfile文件下的资源，即通过&#36;rawfile引用视频文件。
 
 string格式可用于加载网络视频和本地视频，常用于加载网络视频。
 
@@ -169,7 +164,7 @@ string格式可用于加载网络视频和本地视频，常用于加载网络�
 
 异常值：按默认值处理。
 
-**说明：**
+**说明：** 
 
 视频支持的格式是：mp4、mkv、TS。
 

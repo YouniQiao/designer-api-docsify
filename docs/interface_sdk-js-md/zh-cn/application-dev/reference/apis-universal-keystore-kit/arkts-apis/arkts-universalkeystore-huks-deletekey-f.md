@@ -14,7 +14,7 @@ function deleteKey(keyAlias: string, options: HuksOptions, callback: AsyncCallba
 
 删除密钥。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
 > [huks.deleteKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-deletekeyitem-f.md)
@@ -59,7 +59,7 @@ function deleteKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 
 删除密钥。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
 > [huks.deleteKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-deletekeyitem-f.md)替代。

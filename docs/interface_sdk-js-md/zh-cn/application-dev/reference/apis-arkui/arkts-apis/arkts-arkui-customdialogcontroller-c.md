@@ -8,7 +8,7 @@
 dialogController : CustomDialogController | null = new CustomDialogController(CustomDialogControllerOptions)
 ```
 
-> **说明：**
+> **说明：** 
 > 
 > - CustomDialogController仅在作为@CustomDialog和@Component struct成员变量，且在@Component struct内部定义时赋值才有效，具体用法可参考下方示例。
 > 
@@ -18,11 +18,6 @@ dialogController : CustomDialogController | null = new CustomDialogController(Cu
 **起始版本：** 7
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## close
 
@@ -44,7 +39,7 @@ constructor(value: CustomDialogControllerOptions)
 
 自定义弹窗的构造器。
 
-> **说明：**
+> **说明：** 
 > 
 > 自定义弹窗的所有参数，不支持动态刷新，但可以通过设置customStyle为true，并在自定义组件上设置背景色
 > backgroundColor、背景模糊
@@ -97,7 +92,7 @@ open()
 
 显示自定义弹窗内容，允许多次使用，但如果弹窗为SubWindow模式（showInSubWindow为true），则该弹窗不允许再弹出SubWindow模式的弹窗。
 
-> **说明：**
+> **说明：** 
 > 
 > 不支持在输入法类型窗口中使用子窗（showInSubwindow为true）的CustomDialog，详情见输入法框架的约束与限制说明
 > [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)

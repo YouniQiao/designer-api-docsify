@@ -2,7 +2,7 @@
 
 定义引力中心参数。
 
-> **说明：**
+> **说明：** 
 > 
 > 此参数必须与[unionMode](arkts-arkui-unioneffectcontainer-comp-attribute.md#unionmode)一起使用，且unionMode须为UnionMode.GRAVITY_UNION，
 > 同时useUnionEffect的value须为true时才生效，单独设置不生效。
@@ -12,11 +12,6 @@
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
-
-## 导入模块
-
-```TypeScript
-```
 
 ## gravityCenter
 

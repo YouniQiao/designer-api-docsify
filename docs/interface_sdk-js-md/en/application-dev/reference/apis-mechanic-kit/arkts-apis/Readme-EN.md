@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-mechanickit-->
 
-- [@ohos.distributedHardware.mechanicManager](arkts-distributedhardware-mechanicmanager.md)
+- [@ohos.distributedHardware.mechanicManager](arkts-mechanic-distributedhardware-mechanicmanager.md)
   <!--Del-->
   - [connectDevice(system api)](arkts-mechanic-mechanicmanager-connectdevice-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -12,6 +12,8 @@
   - [getCameraTrackingLayout](arkts-mechanic-mechanicmanager-getcameratrackinglayout-f.md)
   <!--Del-->
   - [getCurrentAngles(system api)](arkts-mechanic-mechanicmanager-getcurrentangles-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getDeviceAdsorbState(system api)](arkts-mechanic-mechanicmanager-getdeviceadsorbstate-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getMaxRotationSpeed(system api)](arkts-mechanic-mechanicmanager-getmaxrotationspeed-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -30,9 +32,13 @@
   - [off](arkts-mechanic-mechanicmanager-off-f.md)
   <!--Del-->
   - [off(system api)](arkts-mechanic-mechanicmanager-off-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [offBatteryLevelChange(system api)](arkts-mechanic-mechanicmanager-offbatterylevelchange-f-sys.md)<!--DelEnd-->
   - [on](arkts-mechanic-mechanicmanager-on-f.md)
   <!--Del-->
   - [on(system api)](arkts-mechanic-mechanicmanager-on-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [onBatteryLevelChange(system api)](arkts-mechanic-mechanicmanager-onbatterylevelchange-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [rotate(system api)](arkts-mechanic-mechanicmanager-rotate-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -57,6 +63,8 @@
   <!--Del-->
   - [AddressInfo(system api)](arkts-mechanic-mechanicmanager-addressinfo-i-sys.md)<!--DelEnd-->
   - [AttachStateChangeInfo](arkts-mechanic-mechanicmanager-attachstatechangeinfo-i.md)
+  <!--Del-->
+  - [BatteryLevelInfo(system api)](arkts-mechanic-mechanicmanager-batterylevelinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ConnectParam(system api)](arkts-mechanic-mechanicmanager-connectparam-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -89,6 +97,8 @@
   - [ActionType(system api)](arkts-mechanic-mechanicmanager-actiontype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [AddressType(system api)](arkts-mechanic-mechanicmanager-addresstype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AdsorbState(system api)](arkts-mechanic-mechanicmanager-adsorbstate-e-sys.md)<!--DelEnd-->
   - [AttachState](arkts-mechanic-mechanicmanager-attachstate-e.md)
   - [CameraTrackingLayout](arkts-mechanic-mechanicmanager-cameratrackinglayout-e.md)
   <!--Del-->

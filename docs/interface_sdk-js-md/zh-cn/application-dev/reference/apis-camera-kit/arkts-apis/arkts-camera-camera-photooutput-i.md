@@ -461,7 +461,7 @@ off(type: 'captureStart', callback?: AsyncCallback<number>): void
 
 注销拍照开始的监听。
 
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 10开始支持，从API version 11开始废弃。
 > 
@@ -659,7 +659,7 @@ on(type: 'photoAvailable', callback: AsyncCallback<Photo>): void
 
 注册监听拍照返回照片上报事件。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -684,7 +684,7 @@ on(type: 'photoAssetAvailable', callback: AsyncCallback<photoAccessHelper.PhotoA
 
 注册监听photoAsset上报。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -709,7 +709,7 @@ on(type: 'captureStart', callback: AsyncCallback<number>): void
 
 监听拍照开始，通过注册回调函数获取Capture ID。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 10开始支持，从API version 11开始废弃。
 > 
@@ -738,7 +738,7 @@ on(type: 'captureStartWithInfo', callback: AsyncCallback<CaptureStartInfo>): voi
 
 监听拍照开始，通过注册回调函数获取[CaptureStartInfo](arkts-camera-camera-capturestartinfo-i.md)。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -784,7 +784,7 @@ on(type: 'frameShutterEnd', callback: AsyncCallback<FrameShutterEndInfo>): void
 
 监听拍照曝光结束捕获，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -809,7 +809,7 @@ on(type: 'captureEnd', callback: AsyncCallback<CaptureEndInfo>): void
 
 监听拍照结束，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -834,7 +834,7 @@ on(type: 'captureReady', callback: AsyncCallback<void>): void
 
 监听可拍下一张，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -859,7 +859,7 @@ on(type: 'estimatedCaptureDuration', callback: AsyncCallback<number>): void
 
 监听预估的拍照时间，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -884,7 +884,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 监听拍照输出发生错误，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -909,7 +909,7 @@ onCapturePhotoAvailable(callback: Callback<CapturePhoto>): void
 
 注册监听全质量图和未压缩图。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 注册监听接口时，不支持在该接口监听的回调方法里调用
 > [offCapturePhotoAvailable](#offcapturephotoavailable)

@@ -20,7 +20,7 @@ fontColor?: ResourceColor
 
 Text font color.
 
-Default value: **\$r('sys.color.ohos_id_color_text_secondary')**
+Default value: **&#36;r('sys.color.ohos_id_color_text_secondary')**
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -40,7 +40,7 @@ fontSize?: number | string | Resource
 
 Text font size.
 
-Default value: **\$r('sys.float.ohos_id_text_size_body2')**
+Default value: **&#36;r('sys.float.ohos_id_text_size_body2')**
 
 The string value must be convertible to a number (for example, **'10'**) or include a length unit (for example, **'10px'**); percentage-based strings are not supported.
 

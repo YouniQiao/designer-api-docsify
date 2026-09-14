@@ -17,7 +17,7 @@ Subscribes to the state changes of the accessibility application. This API uses 
 
 To obtain information about accessibility applications in the system, you are advised to use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
@@ -90,7 +90,7 @@ Subscribes to the state changes of touch guide mode. This API uses an asynchrono
 
 To obtain information about accessibility applications in the system, you are advised to use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
@@ -161,7 +161,7 @@ function on(type: 'screenReaderStateChange', callback: Callback<boolean>): void
 
 Subscribes to the state changes of screen reader mode. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
@@ -229,7 +229,7 @@ function on(type: 'touchModeChange', callback: Callback<string>): void
 
 Subscribes to the single-tap/double-tap operation mode change event in touch guide mode. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.

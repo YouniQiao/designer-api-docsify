@@ -6,7 +6,7 @@ declare type ItemRestriction<T> = [T, T, T?, T?, T?]
 
 保存按钮信息的元组类型。
 
-> **说明：**
+> **说明：** 
 > 
 > 分段按钮组件仅支持2到5个按钮。
 

@@ -6,11 +6,6 @@ Defines the options of geometry transition.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## hierarchyStrategy
 
 ```TypeScript

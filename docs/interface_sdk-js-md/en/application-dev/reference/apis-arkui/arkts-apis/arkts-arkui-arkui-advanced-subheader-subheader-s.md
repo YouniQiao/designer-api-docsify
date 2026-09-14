@@ -2,7 +2,7 @@
 
 The **SubHeader** component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This component can be used only in the stage model.
 > 
@@ -57,11 +57,11 @@ Default value:
 
 `{start: LengthMetrics.resource(`
 
-`\$r('sys.float.margin_left'))`,
+`&#36;r('sys.float.margin_left'))`,
 
 `end: LengthMetrics.resource(`
 
-`\$r('sys.float.margin_right'))}`
+`&#36;r('sys.float.margin_right'))}`
 
 **Type:** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
 
@@ -247,7 +247,7 @@ Text attributes of the primary title, such as the font color, font size, and fon
 
 Default value: **undefined**, indicating that the default style is used.
 
-**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
+**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
 **Since:** 12
 
@@ -289,7 +289,7 @@ Text attributes of the secondary title, such as the font color, font size, and f
 
 Default value: **undefined**, indicating that the default style is used.
 
-**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
+**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
 **Since:** 12
 

@@ -31,7 +31,7 @@ Obtains a **Preferences** instance. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| [Preferences](arkts-arkdata-preferences-preferences-i.md) | Preferences** instance obtained. |
+| [Preferences](arkts-arkdata-preferences-preferences-i.md) | **Preferences** instance obtained. |
 
 **Error codes:**
 

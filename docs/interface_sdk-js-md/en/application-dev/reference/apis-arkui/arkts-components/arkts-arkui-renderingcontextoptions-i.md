@@ -6,11 +6,6 @@ Defines the specific configuration parameters for the rendering context.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## antialias
 
 ```TypeScript

@@ -4,7 +4,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [geoLocationManager/geoLocationManager](arkts-geolocationmanager.md)
+**替代接口：** [geoLocationManager/geoLocationManager](arkts-location-geolocationmanager.md)
 
 **系统能力：** SystemCapability.Location.Location.Lite
 
@@ -82,6 +82,8 @@ static getSupportedCoordTypes(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
+| Array&lt;string&gt; | A string array of the supported coordinate system types, for example, ['wgs84']. |
+
 ## subscribe
 
 ```TypeScript

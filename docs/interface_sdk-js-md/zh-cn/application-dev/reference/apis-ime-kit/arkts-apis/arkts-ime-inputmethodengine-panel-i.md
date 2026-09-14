@@ -19,7 +19,7 @@ adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 ```
 
 预设置输入法应用横竖屏大小。接口调用完毕表示adjust请求已提交到输入法框架，不表示执行完毕。<br> <br>   
-> **说明：**<br>
+> **说明：** <br>
 > <br>
 > 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。<br>
 > <br>
@@ -86,7 +86,7 @@ adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
 预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。<br> <br>   
-> **说明：**<br>
+> **说明：** <br>
 > <br>
 > 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。此接口兼容<br>
 > [adjustPanelRect](#adjustpanelrect)的调用方法，若入参rect <br>
@@ -522,7 +522,7 @@ off(type: 'sizeChange', callback?: SizeChangeCallback): void
 ```
 
 取消监听当前面板大小变化，使用callback异步回调。<br> <br>   
-> **说明：**<br>
+> **说明：** <br>
 > <br>
 > 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。输入法通过adjustPanelRect等接口对面板大小进行调节时，系统会根据一定规则校验计算出最终的数值（例如超出屏幕等场景<br>
 > ），输入法应用可通过该回调获取的真实面板大小，完成最终的面板布局刷新。<br>
@@ -615,7 +615,7 @@ on(type: 'sizeChange', callback: SizeChangeCallback): void
 ```
 
 监听当前面板大小变化，使用callback异步回调。<br> <br>   
-> **说明：**<br>
+> **说明：** <br>
 > <br>
 > 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。输入法通过adjustPanelRect等接口对面板大小进行调节时，系统会根据一定规则校验计算出最终的数值（例如超出屏幕等场景<br>
 > ），输入法应用可通过该回调获取的真实面板大小，完成最终的面板布局刷新。<br>
@@ -661,7 +661,7 @@ resize(width: number, height: number, callback: AsyncCallback<void>): void
 ```
 
 改变当前输入法面板的大小，使用callback异步回调。<br> <br>   
-> **说明：**<br>
+> **说明：** <br>
 > <br>
 > 面板宽度不超出屏幕宽度，面板高度不高于屏幕高度的0.7倍。<br>
 > <br>
@@ -707,7 +707,7 @@ resize(width: number, height: number): Promise<void>
 ```
 
 改变当前输入法面板的大小，使用Promise异步回调。<br> <br>   
-> **说明：**<br>
+> **说明：** <br>
 > <br>
 > 面板宽度不超出屏幕宽度，面板高度不高于屏幕高度的0.7倍。<br>
 > <br>
@@ -826,7 +826,7 @@ setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 ```
 
 设置屏幕常亮。使用Promise异步回调。<br> <br>   
-> **说明：**<br>
+> **说明：** <br>
 > <br>
 > - 当键盘拉起时设置常亮生效，键盘关闭则自动失效。<br>
 > <br>
@@ -1213,7 +1213,7 @@ updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 ```
 
 预设置输入法应用横竖屏大小。使用Promise异步回调。<br> <br>   
-> **说明：**<br>
+> **说明：** <br>
 > <br>
 > 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。<br>
 > <br>
@@ -1282,7 +1282,7 @@ updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 ```
 
 预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。使用Promise异步回调。<br> <br>   
-> **说明：**<br>
+> **说明：** <br>
 > <br>
 > 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。此接口兼容<br>
 > [adjustPanelRect](#adjustpanelrect)的调用方法，若入参rect <br>
@@ -1503,7 +1503,7 @@ updateRegion(inputRegion: Array<window.Rect>): void
 ```
 
 更新当前状态下输入法面板内的热区。<br> <br>   
-> **说明：**<br>
+> **说明：** <br>
 > <br>
 > 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。<br>
 > <br>

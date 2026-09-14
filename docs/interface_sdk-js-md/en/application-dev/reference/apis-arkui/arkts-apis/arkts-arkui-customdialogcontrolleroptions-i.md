@@ -2,7 +2,7 @@
 
 Defines the style of the custom dialog box.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Pressing the Back or ESC key closes the dialog box.
 > 
@@ -30,11 +30,6 @@ Defines the style of the custom dialog box.
 **Since:** 7
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## cancel
 
@@ -96,7 +91,7 @@ Background blur style of the dialog box.
 
 Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
-**NOTE:**
+**NOTE:** 
 
 Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
@@ -140,7 +135,7 @@ Background color of the dialog box.
 
 Default value: **Color.Transparent**
 
-**NOTE:**
+**NOTE:** 
 
 If the content builder also has the background color set, the background color set here will be overridden by the background color of the content builder.
 
@@ -252,7 +247,7 @@ builder: any
 
 Builder of the custom dialog box content.
 
-**NOTE:**
+**NOTE:** 
 
 If the builder uses a callback as the input parameter, as in **builder: custombuilder({ callback: ()=&gt; {...}})**, pay attention to the binding of **this**.
 
@@ -274,7 +269,7 @@ closeAnimation?: AnimateParam
 
 Parameters for defining the close animation of the dialog box.
 
-**NOTE:**
+**NOTE:** 
 
 **tempo**: The default value is **1**; a value less than or equal to 0 is handled as the default value.
 
@@ -379,7 +374,7 @@ Whether to respond when the device is in semi-folded mode. The value **true** me
 
 Default value: **false**, meaning not to enable the hover state.
 
-**NOTE:**
+**NOTE:** 
 
 For a PC or 2-in-1 device, the dialog box is displayed on the upper half of the screen by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the dialog box on the lower half of the screen. For other devices, the dialog box is displayed on the lower half of the screen by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the dialog box on the upper half of the screen.
 
@@ -405,7 +400,7 @@ Whether the dialog box can gain focus. **true**: The dialog box can gain focus. 
 
 Default value: **true**
 
-**NOTE:**
+**NOTE:** 
 
 Only dialog boxes that are displayed on top of the current window can gain focus.
 
@@ -449,7 +444,7 @@ height?: Dimension
 
 Height of the dialog box.
 
-**NOTE:**
+**NOTE:** 
 
 - Default maximum height of the dialog box: 0.9 x (Window height – Safe area)  
 - When this parameter is set to a percentage, the reference height of the dialog box is the height of the window  
@@ -495,7 +490,7 @@ immersiveMode?: ImmersiveMode
 
 Overlay effect for the page-level dialog box.
 
-**NOTE:**
+**NOTE:** 
 
 - Default value: **ImmersiveMode.DEFAULT**  
 - This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
@@ -546,7 +541,7 @@ keyboardAvoidDistance?: LengthMetrics
 
 Distance between the dialog box and the keyboard after keyboard avoidance is applied.
 
-**NOTE:**
+**NOTE:** 
 
 - Default value: **16vp**  
 - Default unit: vp  
@@ -592,7 +587,7 @@ levelMode?: LevelMode
 
 Display level of the dialog box.
 
-**NOTE:**
+**NOTE:** 
 
 - Default value: **LevelMode.OVERLAY.**  
 - This parameter takes effect only when **showInSubWindow** is set to **false**.
@@ -617,7 +612,7 @@ levelOrder?: LevelOrder
 
 Display order of the dialog box.
 
-**NOTE:**
+**NOTE:** 
 
 - Default value: **LevelOrder.clamp(0)**  
 - Dynamic updating is not supported.
@@ -644,7 +639,7 @@ levelUniqueId?: number
 
 Value range: a number no less than 0
 
-**NOTE:**
+**NOTE:** 
 
 - This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
@@ -688,7 +683,7 @@ Mask area of the dialog box. Events outside the mask area are transparently tran
 
 Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
 
-**NOTE:**
+**NOTE:** 
 
 **maskRect** does not take effect when **showInSubWindow** is set to **true**.
 
@@ -728,7 +723,7 @@ onDidAppear?: Callback<void>
 
 Event callback after the dialog box appears.
 
-**NOTE:**
+**NOTE:** 
 
 1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
 2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears.
@@ -753,7 +748,7 @@ onDidDisappear?: Callback<void>
 
 Event callback after the dialog box disappears.
 
-**NOTE:**
+**NOTE:** 
 
 1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
 
@@ -775,7 +770,7 @@ onWillAppear?: Callback<void>
 
 Event callback when the dialog box is about to appear.
 
-**NOTE:**
+**NOTE:** 
 
 1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
 2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
@@ -798,7 +793,7 @@ onWillDisappear?: Callback<void>
 
 Event callback when the dialog box is about to disappear.
 
-**NOTE:**
+**NOTE:** 
 
 1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
 
@@ -820,7 +815,7 @@ onWillDismiss?: Callback<DismissDialogAction>
 
 Callback for interactive closure of the dialog box.
 
-**NOTE:**
+**NOTE:** 
 
 1. If this callback is registered, the dialog box will not be dismissed immediately after the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen. The **reason** parameter in the callback is used to determine whether the dialog box can be closed. The reason returned by the component does not support the value **CLOSE_BUTTON**.
 2. In the **onWillDismiss** callback, another **onWillDismiss** callback is not allowed.
@@ -843,7 +838,7 @@ openAnimation?: AnimateParam
 
 Parameters for defining the open animation of the dialog box.
 
-**NOTE:**
+**NOTE:** 
 
 **tempo**: The default value is **1**; a value less than or equal to 0 is handled as the default value.
 
@@ -891,13 +886,13 @@ Whether to show the dialog box in a subwindow when the dialog box needs to be di
 
 Default value: **false**
 
-**NOTE:**
+**NOTE:** 
 
 A dialog box whose **showInSubWindow** attribute is **true** cannot trigger the display of another dialog box whose **showInSubWindow** attribute is also **true**. Avoid using the **CalendarPicker**, **CalendarPickerDialog**, **DatePickerDialog**, **TextPickerDialog**, **TimePickerDialog**, and **Toast** components in the dialog box where **showInSubWindow** is set to **true**, as the dialog box may affect the behavior of these components.
 
 **Type:** boolean
 
-**Default:**
+**Default:** 
 - API version 11+: false
 
 **Since:** 10
@@ -934,7 +929,7 @@ width?: Dimension
 
 Width of the dialog box.
 
-**NOTE:**
+**NOTE:** 
 
 - Default maximum width of the dialog box: 400 vp  
 - When this parameter is set to a percentage, the reference width of the dialog box is the width of the window  

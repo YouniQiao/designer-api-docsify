@@ -2,7 +2,7 @@
 
 LocalSocketConnection连接，即LocalSocket客户端与服务端的会话连接。在调用LocalSocketConnection的方法前，需要先获取LocalSocketConnection对象。
 
-> **说明：**
+> **说明：** 
 > 
 > 客户端与服务端成功建立连接后，才能通过返回的LocalSocketConnection对象调用相应的接口。
 
@@ -125,7 +125,7 @@ getSocketFd(): Promise<number>
 
 获取LocalSocketConnection连接的文件描述符。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 成功建立连接后，才可调用此方法。
 > 
@@ -448,7 +448,7 @@ send(options: LocalSendOptions): Promise<void>
 
 通过LocalSocketConnection连接对象发送数据。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 服务端与客户端建立连接后，服务端通过connect事件回调得到LocalSocketConnection连接对象后，才可使用连接对象调用此方法。
 

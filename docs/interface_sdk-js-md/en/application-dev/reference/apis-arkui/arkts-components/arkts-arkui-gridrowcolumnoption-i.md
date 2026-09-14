@@ -18,11 +18,6 @@ The width of each column is the content area size of the **GridRow** component m
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## lg
 
 ```TypeScript

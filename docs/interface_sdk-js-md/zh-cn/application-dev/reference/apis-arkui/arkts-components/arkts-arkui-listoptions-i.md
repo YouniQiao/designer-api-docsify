@@ -2,18 +2,13 @@
 
 用于设置List组件参数。
 
-> **说明：**
+> **说明：** 
 > 
 > 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## initialIndex
 
@@ -25,7 +20,7 @@ initialIndex?: number
 
 默认值：0。当stackFromEnd为true时，默认值为总item个数-1。
 
-**说明：**
+**说明：** 
 
 设置为负数或超过了当前List最后一个item的索引值时视为无效取值，无效取值按默认值显示。
 
@@ -35,7 +30,7 @@ initialIndex?: number
 
 **类型：** number
 
-**默认值：**
+**默认值：** 
 - API版本18+：0
 
 **起始版本：** 7
@@ -54,7 +49,7 @@ scroller?: Scroller
 
 可滚动组件的控制器。与List绑定后，可以通过它控制List的滚动。默认不绑定滚动控制器。
 
-**说明：**
+**说明：** 
 
 不允许和其他滚动类组件，如：ArcList、List、Grid、Scroll和WaterFlow绑定同一个滚动控制对象。
 
@@ -80,7 +75,7 @@ space?: number | string
 
 参数类型为number时单位为vp。
 
-**说明：**
+**说明：** 
 
 设置为负数或者大于等于List内容区长度时，按默认值显示。
 
@@ -92,7 +87,7 @@ List子组件的visibility属性设置为None时不显示，但该子组件上�
 
 **类型：** number &#124; string
 
-**默认值：**
+**默认值：** 
 - API版本18+：0
 
 **起始版本：** 7
@@ -115,7 +110,7 @@ spaceWidth?: Dimension
 
 参数类型为number时单位为vp。
 
-**说明：**
+**说明：** 
 
 设置为负数或者大于等于List内容区长度时，按默认值显示。
 

@@ -30,7 +30,7 @@ Creates a **RemoteDevice** instance.
 
 | Type | Description |
 | --- | --- |
-| [RemoteDevice](arkts-connectivity-remotedevice-remotedevice-i.md) | RemoteDevice** instance. |
+| [RemoteDevice](arkts-connectivity-remotedevice-remotedevice-i.md) | **RemoteDevice** instance. |
 
 **Error codes:**
 

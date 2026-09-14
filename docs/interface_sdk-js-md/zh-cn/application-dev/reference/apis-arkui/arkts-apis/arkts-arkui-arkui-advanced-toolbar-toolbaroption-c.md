@@ -110,7 +110,7 @@ activatedIconColor?: ResourceColor
 
 工具栏子项激活态的图标填充颜色。
 
-默认值为\$r('sys.color.icon_emphasize')。
+默认值为&#36;r('sys.color.icon_emphasize')。
 
 当设置了toolBarSymbolOptions属性时，该参数不生效。
 
@@ -132,7 +132,7 @@ activatedTextColor?: ResourceColor
 
 工具栏子项激活态的文本颜色。
 
-默认值为\$r('sys.color.font_emphasize')。
+默认值为&#36;r('sys.color.font_emphasize')。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -192,7 +192,7 @@ iconColor?: ResourceColor
 
 工具栏子项的图标填充颜色。
 
-默认值为\$r('sys.color.icon_primary')。
+默认值为&#36;r('sys.color.icon_primary')。
 
 当设置了toolBarSymbolOptions属性时，该参数不生效。
 
@@ -234,7 +234,7 @@ textColor?: ResourceColor
 
 工具栏子项的文本颜色。
 
-默认值为\$r('sys.color.font_primary')。
+默认值为&#36;r('sys.color.font_primary')。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 

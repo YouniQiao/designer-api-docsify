@@ -14,7 +14,7 @@ function scan(): boolean
 
 启动Wi-Fi扫描。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃。
 

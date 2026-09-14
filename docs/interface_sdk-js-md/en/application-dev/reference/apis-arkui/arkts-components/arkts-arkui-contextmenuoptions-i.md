@@ -34,11 +34,6 @@ Configures menu item information.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## aboutToAppear
 
 ```TypeScript
@@ -113,7 +108,7 @@ Display position of the menu relative to the upper left corner of the bound comp
 
 Default value: **{ x: undefined, y: undefined }**. Percentage values are not supported.
 
-**NOTE:**
+**NOTE:** 
 
 1. Offsets do not apply during menu preview state.
 2. The preset value of **placement** does not take effect.
@@ -145,7 +140,7 @@ Default value: **0**
 
 Unit: vp
 
-**NOTE:**
+**NOTE:** 
 
 The safe distance of the arrow from the four sides of the menu is the sum of the menu's corner radius and half the width of the arrow.
 
@@ -179,7 +174,7 @@ availableLayoutArea?: AvailableLayoutArea
 
 Available layout area of the preview image. The percentage of the preview image is calculated based on this setting. The preview image may be compressed or cropped due to the safe area restriction.
 
-**NOTE:**
+**NOTE:** 
 
 If this parameter is not set or is set to **undefined**, the percentage is calculated based on the window size. If this parameter is set to **AvailableLayoutArea.SAFE_AREA**, the available layout area of the preview image is the window size minus the safe margins on all sides.
 
@@ -281,7 +276,7 @@ borderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses
 
 Default value: **8vp** for 2-in-1 devices and **20vp** for other devices
 
-**NOTE:**
+**NOTE:** 
 
 The value can be in percentage.
 
@@ -333,7 +328,7 @@ Whether to display an arrow. If the size and position of the context menu are in
 
 Default value: **false**, indicating that no arrow is displayed.
 
-**NOTE:**
+**NOTE:** 
 
 When **enableArrow** is set to **true** and **placement** is not set or set to an invalid value, the arrow is displayed above the target object by default. (For details about the relationship between the default menu position and the API, see Table 3.) Otherwise, the arrow is displayed based on the position specified by **placement**. If the position is insufficient for holding the arrow, it is automatically adjusted. When **enableArrow** is **undefined**, no arrow is displayed. This API is supported in **bindContextMenu** since API version 10 and **bindMenu** since API version 12.
 
@@ -359,7 +354,7 @@ Whether to respond when the device is in hover mode (semi-folded state), that is
 
 Default value: **false** (**true** for 2-in-1 devices by default) If this parameter is not set or set to an invalid value, the default value is used.
 
-**NOTE:**
+**NOTE:** 
 
 1. If the menu display position is within the crease area in hover mode, it will not respond in hover mode.
 2. This parameter is supported on 2-in-1 devices since API version 20.
@@ -405,7 +400,7 @@ Haptic feedback mode when the menu is displayed.
 
 Default value: **HapticFeedbackMode.DISABLED**, indicating no vibration when the menu is displayed.
 
-**NOTE:**
+**NOTE:** 
 
 The haptic feedback mode is only configurable for level-1 menus.
 
@@ -433,7 +428,7 @@ keyboardAvoidMode?: MenuKeyboardAvoidMode
 
 Whether the menu avoids the soft keyboard.
 
-**NOTE:**
+**NOTE:** 
 
 If this parameter is not set or is set to **undefined**, the value **MenuKeyboardAvoidMode.NONE** will be used.
 
@@ -457,7 +452,7 @@ layoutRegionMargin?: Margin
 
 Minimum margin between the preview and menu layout for top, bottom, left, and right edges.
 
-**NOTE:**
+**NOTE:** 
 
 Only vp, px, fp, lpx, and percentage units are supported.
 
@@ -497,7 +492,7 @@ Sets whether a menu has a mask and the mask style.
 
 Default value: If a preview image is displayed for a menu, a mask is displayed by default. Otherwise, no mask is displayed.
 
-**NOTE:**
+**NOTE:** 
 
 This API does not take effect when the device is configured not to display the menu mask. For example, this API does not take effect on 2-in-1 devices.
 
@@ -539,7 +534,7 @@ minKeyboardAvoidDistance?: LengthMetrics
 
 Minimum distance for the menu to avoid the soft keyboard.
 
-**NOTE:**
+**NOTE:** 
 
 If this parameter is not set, or set to a negative value or **undefined**, the value will be treated as 8 vp. This API is valid only when **keyboardAvoidMode** is set to avoid the soft keyboard.
 
@@ -561,7 +556,7 @@ modalMode?: ModalMode
 
 Modal mode of a menu.
 
-**NOTE:**
+**NOTE:** 
 
 Default value: **ModalMode.AUTO**
 
@@ -587,7 +582,7 @@ Offset for showing the context menu, which should not cause the menu to extend b
 
 Default value: **{ x: 0, y: 0 }**. Percentage values are not supported.
 
-**NOTE:**
+**NOTE:** 
 
 When the menu is displayed relative to the parent component area, the width or height of the area is automatically counted into the offset based on the **placement** attribute of the menu.
 
@@ -599,7 +594,7 @@ If the display position of the menu is adjusted (different from the main directi
 
 **Type:** Position
 
-**Default:**
+**Default:** 
 - API version 10: -
 - API version 11+: {x:0,y:0} - Percentage values are not supported.
 
@@ -619,7 +614,7 @@ onDidAppear?: Callback<void>
 
 Callback invoked after the menu appears.
 
-**NOTE:**
+**NOTE:** 
 
 1. The normal sequence is **aboutToAppear**   
 > **onWillAppear**
@@ -651,7 +646,7 @@ onDidDisappear?: Callback<void>
 
 Callback invoked after the menu disappears.
 
-**NOTE:**
+**NOTE:** 
 
 1. The normal sequence is **aboutToAppear**   
 > **onWillAppear**
@@ -681,7 +676,7 @@ onWillAppear?: Callback<void>
 
 Callback triggered when the menu is about to appear.
 
-**NOTE:**
+**NOTE:** 
 
 1. The normal sequence is **aboutToAppear**   
 > **onWillAppear**
@@ -711,7 +706,7 @@ onWillDisappear?: Callback<void>
 
 Callback triggered when the menu is about to disappear.
 
-**NOTE:**
+**NOTE:** 
 
 1. The normal sequence is **aboutToAppear**   
 > **onWillAppear**
@@ -742,7 +737,7 @@ outlineColor?: ResourceColor | EdgeColors
 
 Outline color of the menu border.
 
-**NOTE:**
+**NOTE:** 
 
 Default value: **'#19ffffff'**
 
@@ -768,7 +763,7 @@ Outline width of the menu border.
 
 Default value: **0vp**
 
-**NOTE:**
+**NOTE:** 
 
 Percentage values are not supported. **outlineWidth** is mandatory for customizing an outline effect.
 
@@ -792,7 +787,7 @@ placement?: Placement
 
 Preferred position of the context menu. If the set position is insufficient for holding the component, it will be automatically adjusted.
 
-**NOTE:**
+**NOTE:** 
 
 1. When this parameter is used as the input parameter of [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu), its default value is **Placement.BottomLeft**.
 2. When this parameter is used as the input parameter of [bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) or [bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse), the menu is displayed at the click position.
@@ -801,7 +796,7 @@ Preferred position of the context menu. If the set position is insufficient for 
 
 **Type:** [Placement](../arkts-apis/arkts-arkui-placement-e.md)
 
-**Default:**
+**Default:** 
 - API version 10: -
 - API version 11+: Placement.BottomLeft
 
@@ -823,7 +818,7 @@ Preview displayed when the context menu is triggered by a long-press or by calli
 
 Default value: **MenuPreviewMode.NONE**, indicating no preview.
 
-**NOTE:**
+**NOTE:** 
 
 - This parameter has no effect when **responseType** is set to **ResponseType.RightClick**.  
 - If **preview** is set to **MenuPreviewMode.NONE** or is not set, the **enableArrow** parameter is effective.  
@@ -852,13 +847,13 @@ Display effect of the long-press preview.
 
 Default value: **{ scale: [0.95, 1.1], transition: undefined, hoverScale: undefined }**
 
-**NOTE:**
+**NOTE:** 
 
 If the value is less than or equal to **0**, this parameter does not take effect.
 
 **Type:** [ContextMenuAnimationOptions](arkts-arkui-contextmenuanimationoptions-i.md)
 
-**Default:**
+**Default:** 
 - API version 12+: { scale: [0.95, 1.1], transition: undefined, hoverScale: undefined }
 
 **Since:** 11
@@ -879,7 +874,7 @@ Border corner radius for the preview image.
 
 Default value: **16vp**
 
-**NOTE:**
+**NOTE:** 
 
 If the sum of the two corner radii in the horizontal direction exceeds the width of the preview image, or the sum of the two corner radii in the vertical direction exceeds the height of the preview image, the maximum allowable radius should be used.
 
@@ -907,7 +902,7 @@ Preview image scaling mode.
 
 Default value: **PreviewScaleMode.AUTO**
 
-**NOTE:**
+**NOTE:** 
 
 This parameter applies to the scenarios where the layout space is insufficient. If this parameter is not set or is set to **undefined**, the value **PreviewScaleMode.AUTO** will be used. When this parameter is set to **PreviewScaleMode.CONSTANT**, if the preview image is too large and the remaining space is insufficient for placing the menu, the menu is displayed under the preview image.
 
@@ -989,7 +984,7 @@ transition?: TransitionEffect
 
 Transition effect for the entrance and exit of the menu.
 
-**NOTE:**
+**NOTE:** 
 
 During the exit animation of the menu, if there is a switch between landscape and portrait modes, the menu will make way. Level-2 menus do not inherit custom animations. The level-2 menu can be clicked during the pop-up process, but not during the execution of the exit animation.
 

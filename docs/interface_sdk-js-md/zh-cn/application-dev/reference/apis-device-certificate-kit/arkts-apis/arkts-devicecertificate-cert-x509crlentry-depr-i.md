@@ -2,7 +2,7 @@
 
 证书吊销条目。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用[X509CRLEntry()](arkts-devicecertificate-cert-x509crlentry-i.md)替代。
 
@@ -28,7 +28,7 @@ getCertIssuer(): DataBlob
 
 表示获取被吊销的证书的颁发者名称。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用
 > [X509CRLEntry.getCertIssuer()](arkts-devicecertificate-cert-x509crlentry-i.md#getcertissuer)替代。
@@ -112,7 +112,7 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 表示获取证书吊销条目的序列化数据。使用Callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用
 > [X509CRLEntry.getEncoded()](arkts-devicecertificate-cert-x509crlentry-i.md#getencoded)替代。
@@ -202,7 +202,7 @@ getEncoded(): Promise<EncodingBlob>
 
 表示获取证书吊销条目的序列化数据。使用Promise方式返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用[X509CRLEntry.getEncoded()](arkts-devicecertificate-cert-x509crlentry-i.md#getencoded)替代。
 
@@ -289,7 +289,7 @@ getRevocationDate(): string
 
 获取证书的吊销日期。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用
 > [X509CRLEntry.getRevocationDate()](arkts-devicecertificate-cert-x509crlentry-i.md#getrevocationdate)替代。
@@ -373,7 +373,7 @@ getSerialNumber(): number
 
 表示获取被吊销的证书的序列号。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用
 > [X509CRLEntry.getSerialNumber()](arkts-devicecertificate-cert-x509crlentry-i.md#getserialnumber)替代。

@@ -94,7 +94,7 @@ readLatestImage(callback: AsyncCallback<Image>): void
 
 Reads the latest image from the ImageReceiver instance. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called to receive data only after the
 > [on](#onimagearrival) callback is triggered.
@@ -120,7 +120,7 @@ readLatestImage(): Promise<Image>
 
 Reads the latest image from the ImageReceiver instance. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called to receive data only after the
 > [on](#onimagearrival) callback is triggered.
@@ -146,7 +146,7 @@ readNextImage(callback: AsyncCallback<Image>): void
 
 Reads the next image from the ImageReceiver instance. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called to receive data only after the
 > [on](#onimagearrival) callback is triggered.
@@ -172,7 +172,7 @@ readNextImage(): Promise<Image>
 
 Reads the next image from the ImageReceiver instance. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called to receive data only after the
 > [on](#onimagearrival) callback is triggered.

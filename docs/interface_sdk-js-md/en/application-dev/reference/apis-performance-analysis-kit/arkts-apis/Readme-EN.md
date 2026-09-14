@@ -1,11 +1,11 @@
 # ArkTS API<!--arkts-performanceanalysiskit-->
 
-- [@ohos.faultLogger(FaultLogger)](arkts-faultlogger.md)
+- [@ohos.faultLogger(FaultLogger)](arkts-performanceanalysis-faultlogger.md)
   - [query](arkts-performanceanalysis-faultlogger-query-f.md)
   - [querySelfFaultLog](arkts-performanceanalysis-faultlogger-queryselffaultlog-f.md)
   - [FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)
   - [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md)
-- [@ohos.hiAppEvent(Application Event Logging)](arkts-hiappevent.md)
+- [@ohos.hiAppEvent(Application Event Logging)](arkts-performanceanalysis-hiappevent.md)
   - [hiAppEvent](arkts-performanceanalysis-hiappevent-depr-n.md)
     - [Event](arkts-performanceanalysis-hiappevent-event-depr-n.md)
       - [Constants](arkts-performanceanalysis-event-depr-con.md)
@@ -15,7 +15,7 @@
     - [write](arkts-performanceanalysis-hiappevent-write-depr-f.md)
     - [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-depr-i.md)
     - [EventType](arkts-performanceanalysis-hiappevent-eventtype-depr-e.md)
-- [@ohos.hichecker](arkts-hichecker.md)
+- [@ohos.hichecker](arkts-performanceanalysis-hichecker.md)
   - [addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md)
   - [addRule](arkts-performanceanalysis-hichecker-addrule-f.md)
   - [contains](arkts-performanceanalysis-hichecker-contains-f.md)
@@ -24,7 +24,7 @@
   - [removeCheckRule](arkts-performanceanalysis-hichecker-removecheckrule-f.md)
   - [removeRule](arkts-performanceanalysis-hichecker-removerule-f.md)
   - [Constants](arkts-performanceanalysis-hichecker-con.md)
-- [@ohos.hidebug](arkts-hidebug.md)
+- [@ohos.hidebug](arkts-performanceanalysis-hidebug.md)
   - [hidebug](arkts-performanceanalysis-hidebug-n.md)
     - [tags](arkts-performanceanalysis-hidebug-tags-n.md)
       - [Constants](arkts-performanceanalysis-tags-con.md)
@@ -82,7 +82,7 @@
     - [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md)
     - [JsRawHeapTrimLevel](arkts-performanceanalysis-hidebug-jsrawheaptrimlevel-e.md)
     - [TraceFlag](arkts-performanceanalysis-hidebug-traceflag-e.md)
-- [@ohos.hilog](arkts-hilog.md)
+- [@ohos.hilog](arkts-performanceanalysis-hilog.md)
   - [clean](arkts-performanceanalysis-hilog-clean-f.md)
   - [debug](arkts-performanceanalysis-hilog-debug-f.md)
   - [error](arkts-performanceanalysis-hilog-error-f.md)
@@ -102,7 +102,7 @@
   - [OutputType](arkts-performanceanalysis-hilog-outputtype-e.md)
   - [PreferStrategy](arkts-performanceanalysis-hilog-preferstrategy-e.md)
 <!--Del-->
-- [@ohos.hiSysEvent](arkts-hisysevent.md)<!--DelEnd-->
+- [@ohos.hiSysEvent](arkts-performanceanalysis-hisysevent.md)<!--DelEnd-->
   <!--Del-->
   - [addWatcher(system api)](arkts-performanceanalysis-hisysevent-addwatcher-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -133,7 +133,7 @@
   - [EventType(system api)](arkts-performanceanalysis-hisysevent-eventtype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [RuleType(system api)](arkts-performanceanalysis-hisysevent-ruletype-e-sys.md)<!--DelEnd-->
-- [@ohos.hiTraceChain(Distributed Tracing)](arkts-hitracechain.md)
+- [@ohos.hiTraceChain(Distributed Tracing)](arkts-performanceanalysis-hitracechain.md)
   - [begin](arkts-performanceanalysis-hitracechain-begin-f.md)
   - [clearId](arkts-performanceanalysis-hitracechain-clearid-f.md)
   - [createSpan](arkts-performanceanalysis-hitracechain-createspan-f.md)
@@ -148,7 +148,7 @@
   - [HiTraceCommunicationMode](arkts-performanceanalysis-hitracechain-hitracecommunicationmode-e.md)
   - [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md)
   - [HiTraceTracepointType](arkts-performanceanalysis-hitracechain-hitracetracepointtype-e.md)
-- [@ohos.hiTraceMeter(Performance Tracing)](arkts-hitracemeter.md)
+- [@ohos.hiTraceMeter(Performance Tracing)](arkts-performanceanalysis-hitracemeter.md)
   - [finishAsyncTrace](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md)
   - [finishSyncTrace](arkts-performanceanalysis-hitracemeter-finishsynctrace-f.md)
   - [finishTrace](arkts-performanceanalysis-hitracemeter-finishtrace-f.md)
@@ -161,11 +161,11 @@
   - [unregisterTraceListener](arkts-performanceanalysis-hitracemeter-unregistertracelistener-f.md)
   - [TraceEventListener](arkts-performanceanalysis-hitracemeter-traceeventlistener-t.md)
   - [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md)
-- [@ohos.hiviewdfx.FaultLogExtensionAbility(Delayed Fault Notification)](arkts-hiviewdfx-faultlogextensionability.md)
+- [@ohos.hiviewdfx.FaultLogExtensionAbility(Delayed Fault Notification)](arkts-performanceanalysis-hiviewdfx-faultlogextensionability.md)
   - [FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md)
-- [@ohos.hiviewdfx.FaultLogExtensionContext(Delayed Fault Notification Context)](arkts-hiviewdfx-faultlogextensioncontext.md)
+- [@ohos.hiviewdfx.FaultLogExtensionContext(Delayed Fault Notification Context)](arkts-performanceanalysis-hiviewdfx-faultlogextensioncontext.md)
   - [FaultLogExtensionContext](arkts-performanceanalysis-hiviewdfx-faultlogextensioncontext-faultlogextensioncontext-c.md)
-- [@ohos.hiviewdfx.hiAppEvent(Application Event Logging)](arkts-hiviewdfx-hiappevent.md)
+- [@ohos.hiviewdfx.hiAppEvent(Application Event Logging)](arkts-performanceanalysis-hiviewdfx-hiappevent.md)
   - [hiAppEvent](arkts-performanceanalysis-hiappevent-n.md)
     - [domain](arkts-performanceanalysis-hiappevent-domain-n.md)
       - [Constants](arkts-performanceanalysis-domain-con.md)
@@ -212,7 +212,7 @@
     - [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md)
     - [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md)
     - [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md)
-- [@ohos.hiviewdfx.hiRetrieval](arkts-hiviewdfx-hiretrieval.md)
+- [@ohos.hiviewdfx.hiRetrieval](arkts-performanceanalysis-hiviewdfx-hiretrieval.md)
   - [getCurrentConfig](arkts-performanceanalysis-hiretrieval-getcurrentconfig-f.md)
   - [getLastParticipationTimestamp](arkts-performanceanalysis-hiretrieval-getlastparticipationtimestamp-f.md)
   - [init](arkts-performanceanalysis-hiretrieval-init-f.md)
@@ -221,7 +221,7 @@
   - [quit](arkts-performanceanalysis-hiretrieval-quit-f.md)
   - [run](arkts-performanceanalysis-hiretrieval-run-f.md)
   - [HiRetrievalConfig](arkts-performanceanalysis-hiretrieval-hiretrievalconfig-i.md)
-- [@ohos.hiviewdfx.jsLeakWatcher](arkts-hiviewdfx-jsleakwatcher.md)
+- [@ohos.hiviewdfx.jsLeakWatcher](arkts-performanceanalysis-hiviewdfx-jsleakwatcher.md)
   - [check](arkts-performanceanalysis-jsleakwatcher-check-f.md)
   - [dump](arkts-performanceanalysis-jsleakwatcher-dump-f.md)
   - [enable](arkts-performanceanalysis-jsleakwatcher-enable-f.md)
@@ -230,7 +230,7 @@
   - [LeakWatcherConfig](arkts-performanceanalysis-jsleakwatcher-leakwatcherconfig-i.md)
   - [MonitorObjectType](arkts-performanceanalysis-jsleakwatcher-monitorobjecttype-e.md)
 <!--Del-->
-- [@ohos.logLibrary](arkts-loglibrary.md)<!--DelEnd-->
+- [@ohos.logLibrary](arkts-performanceanalysis-loglibrary.md)<!--DelEnd-->
   <!--Del-->
   - [copy(system api)](arkts-performanceanalysis-loglibrary-copy-f-sys.md)<!--DelEnd-->
   <!--Del-->

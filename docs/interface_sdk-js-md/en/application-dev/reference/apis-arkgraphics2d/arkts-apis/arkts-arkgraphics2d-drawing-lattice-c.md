@@ -2,7 +2,7 @@
 
 Lattice object. which is used to divide an image by lattice.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The initial APIs of this class are supported since API version 12.
 > 
@@ -50,7 +50,7 @@ Divides the image into lattices. The lattices on both even columns and even rows
 
 | Type | Description |
 | --- | --- |
-| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | Lattice** object obtained. |
+| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | **Lattice** object obtained. |
 
 **Error codes:**
 
@@ -87,7 +87,7 @@ Divides the image into lattices. The lattices on both even columns and even rows
 
 | Type | Description |
 | --- | --- |
-| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | Lattice** object obtained. |
+| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | **Lattice** object obtained. |
 
 **Error codes:**
 

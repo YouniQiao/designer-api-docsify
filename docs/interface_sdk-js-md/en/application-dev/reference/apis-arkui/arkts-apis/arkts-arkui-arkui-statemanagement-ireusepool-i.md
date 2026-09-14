@@ -129,7 +129,7 @@ Pre-creates @Reusable/@ReusableV2 decorated components and places them in this r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;[]&gt; | Yes | WrappedBuilder** that contains the @Builder decorated function to be executed *n* times. Each execution should create one or more @Reusable/@ReusableV2 decorated components. |
+| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;[]&gt; | Yes | **WrappedBuilder** that contains the @Builder decorated function to be executed *n* times. Each execution should create one or more @Reusable/@ReusableV2 decorated components. |
 | times | number | Yes | Number of times the @Builder decorated function is executed. |
 
 **Return value:**

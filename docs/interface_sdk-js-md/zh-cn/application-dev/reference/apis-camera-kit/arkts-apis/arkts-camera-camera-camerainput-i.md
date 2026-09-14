@@ -163,7 +163,7 @@ on(type: 'error', camera: CameraDevice, callback: ErrorCallback): void
 
 监听CameraInput的错误事件，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -189,7 +189,7 @@ on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDete
 
 监听CameraInput的镜头遮挡或脏污事件，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 

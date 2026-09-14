@@ -21,7 +21,7 @@ function addDisallowedUsbDevices(admin: Want, usbDevices: Array<UsbDeviceType>):
 - 设备管理员需要根据安全策略，禁止使用某些类型的USB设备  
 - 配合[removeDisallowedUsbDevices](arkts-mdm-usbmanager-removedisallowedusbdevices-f.md)接口实现USB设备类型的动态管理
 
-> **说明：**
+> **说明：** 
 > 
 > 推荐使用[addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md)接口。
 > 以下情况下，调用本接口会报策略冲突：

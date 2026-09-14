@@ -36,7 +36,7 @@ Obtains a **Normalizer** object.
 
 | Type | Description |
 | --- | --- |
-| [Normalizer](arkts-localization-i18n-normalizer-c.md) | Normalizer** object for text normalization. |
+| [Normalizer](arkts-localization-i18n-normalizer-c.md) | **Normalizer** object for text normalization. |
 
 **Error codes:**
 

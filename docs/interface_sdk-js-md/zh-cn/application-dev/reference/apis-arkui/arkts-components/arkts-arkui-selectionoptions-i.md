@@ -6,11 +6,6 @@ setTextSelection选中文字时的配置。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## menuPolicy
 
 ```TypeScript

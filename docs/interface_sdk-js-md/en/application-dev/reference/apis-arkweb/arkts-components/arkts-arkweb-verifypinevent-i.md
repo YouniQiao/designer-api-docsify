@@ -6,11 +6,6 @@ Defines the callback triggered to notify the user of PIN verification.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## handler
 
 ```TypeScript

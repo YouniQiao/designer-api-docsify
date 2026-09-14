@@ -96,8 +96,8 @@ constructor(lowerObj: ScopeType, upperObj: ScopeType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | Scope** 对象的下限。 |
-| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | Scope** 对象的上限。 |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | **Scope** 对象的下限。 |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | **Scope** 对象的上限。 |
 
 **示例**
 

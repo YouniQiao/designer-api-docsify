@@ -462,7 +462,7 @@ createAssetWithShortTermPermissionEx(creationSetting: CreationSetting): Promise<
 
 应用调用该接口后，系统会首次拉起保存确认弹框。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 用户同意保存后，接口将返回已创建并授予保存权限的URI，应用可使用该URI写入图片/视频。
 > 
@@ -503,7 +503,7 @@ createDeleteRequest(uriList: Array<string>, callback: AsyncCallback<void>): void
 
 创建一个弹出框来删除照片，删除的文件进入到回收站，使用callback方式返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 10开始支持，从API version 11开始废弃。
 
@@ -541,7 +541,7 @@ createDeleteRequest(uriList: Array<string>): Promise<void>
 
 创建一个弹出框来删除照片，删除的文件进入到回收站，使用Promise方式返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 10开始支持，从API version 11开始废弃。
 
@@ -788,7 +788,7 @@ getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 | 检索选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md)&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt;&gt; | 是 | 回调函数。当获取相册中的文件成功，err为undefined，data为获取到的图片和视频数据结果集[FetchResult](arkts-file-photoaccesshelper.md)；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md)&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt;&gt; | 是 | 回调函数。当获取相册中的文件成功，err为undefined，data为获取到的图片和视频数据结果集[FetchResult](arkts-medialibrary-file-photoaccesshelper.md)；否则为错误对象。 |
 
 **错误码：**
 
@@ -1471,7 +1471,7 @@ showAssetsCreationDialog(srcFileUris: Array<string>, photoCreationConfigs: Array
 
 弹框需显示应用名称，但无法直接获取。因此，调用此接口时，请确保[module.json5配置文件](../../../quick-start/module-configuration-file.md)中的`abilities`标签已配置`label`和`icon`项。需要注意的是，图标不受`abilities`标签中的`icon`项影响，不支持修改。
 
-> **说明：**
+> **说明：** 
 > 
 > 当传入URI为沙箱路径时，可正常保存图片/视频，但无界面预览。
 
@@ -1509,7 +1509,7 @@ showAssetsCreationDialogEx(srcFileUris: Array<string>, creationSettings: Array<C
 
 调用接口显示保存确认弹窗。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 用户同意后，返回已创建并授予保存权限的URI列表，该列表永久有效，支持写入图片/视频。用户拒绝时，返回空列表。
 > 
@@ -1553,7 +1553,7 @@ showSingleAssetCreationDialogEx(srcFileUri: string, creationSetting: CreationSet
 
 针对单个图片/视频调用接口显示保存确认弹窗。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 如果用户同意保存，将返回一个已创建并授予保存权限的URI（此URI永久生效），应用可使用这个URI写入图片或视频。如果用户拒绝保存，将返回一个空字符串。
 > 

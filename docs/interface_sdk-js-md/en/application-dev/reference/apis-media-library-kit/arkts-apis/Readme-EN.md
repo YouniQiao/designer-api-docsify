@@ -1,12 +1,12 @@
 # ArkTS API<!--arkts-medialibrarykit-->
 
-- [@ohos.file.AlbumPickerComponent(AlbumPickerComponent)](arkts-file-albumpickercomponent.md)
+- [@ohos.file.AlbumPickerComponent(AlbumPickerComponent)](arkts-medialibrary-file-albumpickercomponent.md)
   - [AlbumInfo](arkts-medialibrary-file-albumpickercomponent-albuminfo-c.md)
   - [AlbumPickerController](arkts-medialibrary-file-albumpickercomponent-albumpickercontroller-c.md)
   - [AlbumPickerOptions](arkts-medialibrary-file-albumpickercomponent-albumpickeroptions-c.md)
   - [AlbumPickerComponent](arkts-medialibrary-file-albumpickercomponent-albumpickercomponent-s.md)
   - [EmptyAreaClickCallback](arkts-medialibrary-emptyareaclickcallback-t.md)
-- [@ohos.file.photoAccessHelper(Helper functions to access image and video assets)](arkts-file-photoaccesshelper.md)
+- [@ohos.file.photoAccessHelper(Helper functions to access image and video assets)](arkts-medialibrary-file-photoaccesshelper.md)
   - [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md)
   <!--Del-->
   - [getPhotoAccessHelper(system api)](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f-sys.md)<!--DelEnd-->
@@ -326,7 +326,7 @@
   - [VideoMode](arkts-medialibrary-photoaccesshelper-videomode-e.md)
   <!--Del-->
   - [WatermarkType(system api)](arkts-medialibrary-photoaccesshelper-watermarktype-e-sys.md)<!--DelEnd-->
-- [@ohos.file.PhotoPickerComponent(PhotoPickerComponent)](arkts-file-photopickercomponent.md)
+- [@ohos.file.PhotoPickerComponent(PhotoPickerComponent)](arkts-medialibrary-file-photopickercomponent.md)
   - [AnimatorParams](arkts-medialibrary-file-photopickercomponent-animatorparams-c.md)
   - [BadgeConfig](arkts-medialibrary-file-photopickercomponent-badgeconfig-c.md)
   - [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md)
@@ -372,7 +372,7 @@
   - [SaveMode](arkts-medialibrary-file-photopickercomponent-savemode-e.md)
   - [SelectMode](arkts-medialibrary-file-photopickercomponent-selectmode-e.md)
   - [VideoPlayerState](arkts-medialibrary-file-photopickercomponent-videoplayerstate-e.md)
-- [@ohos.file.RecentPhotoComponent(RecentPhotoComponent)](arkts-file-recentphotocomponent.md)
+- [@ohos.file.RecentPhotoComponent(RecentPhotoComponent)](arkts-medialibrary-file-recentphotocomponent.md)
   - [RecentPhotoInfo](arkts-medialibrary-file-recentphotocomponent-recentphotoinfo-c.md)
   - [RecentPhotoOptions](arkts-medialibrary-file-recentphotocomponent-recentphotooptions-c.md)
   - [RecentPhotoComponent](arkts-medialibrary-file-recentphotocomponent-recentphotocomponent-s.md)
@@ -380,7 +380,7 @@
   - [RecentPhotoCheckResultCallback](arkts-medialibrary-recentphotocheckresultcallback-t.md)
   - [RecentPhotoClickCallback](arkts-medialibrary-recentphotoclickcallback-t.md)
   - [PhotoSource](arkts-medialibrary-file-recentphotocomponent-photosource-e.md)
-- [@ohos.file.sendablePhotoAccessHelper(Helper functions to access image and video assets)](arkts-file-sendablephotoaccesshelper.md)
+- [@ohos.file.sendablePhotoAccessHelper(Helper functions to access image and video assets)](arkts-medialibrary-file-sendablephotoaccesshelper.md)
   - [getPhotoAccessHelper](arkts-medialibrary-sendablephotoaccesshelper-getphotoaccesshelper-f.md)
   <!--Del-->
   - [getPhotoAccessHelper(system api)](arkts-medialibrary-sendablephotoaccesshelper-getphotoaccesshelper-f-sys.md)<!--DelEnd-->
@@ -416,7 +416,7 @@
   - [PositionType(system api)](arkts-medialibrary-sendablephotoaccesshelper-positiontype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ThumbnailVisibility(system api)](arkts-medialibrary-sendablephotoaccesshelper-thumbnailvisibility-e-sys.md)<!--DelEnd-->
-- [@ohos.multimedia.movingphotoview(A component which support applications to show moving photo data)](arkts-multimedia-movingphotoview.md)
+- [@ohos.multimedia.movingphotoview(A component which support applications to show moving photo data)](arkts-medialibrary-multimedia-movingphotoview.md)
   - [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md)
   <!--Del-->
   - [MovingPhotoViewAttribute(system api)](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c-sys.md)<!--DelEnd-->

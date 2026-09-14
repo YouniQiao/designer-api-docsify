@@ -6,11 +6,6 @@ The actual offset by which the scrollable scrolls.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## offsetRemain
 
 ```TypeScript

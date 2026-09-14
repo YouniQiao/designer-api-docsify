@@ -12,11 +12,6 @@ controller: TextController = new TextController()
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## closeSelectionMenu
 
 ```TypeScript
@@ -53,7 +48,7 @@ Obtains the **LayoutManager** object.
 
 | Type | Description |
 | --- | --- |
-| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) | LayoutManager** object. |
+| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) | **LayoutManager** object. |
 
 ## setStyledString
 
@@ -75,7 +70,7 @@ Binds to or updates the specified styled string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | Styled string.<br>**NOTE:**<br>The child class [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) of **StyledString** can also serve as the argument. |
+| value | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | Styled string.<br>**NOTE:** <br>The child class [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) of **StyledString** can also serve as the argument. |
 
 ## setTextSelection
 
@@ -86,7 +81,7 @@ setTextSelection(selectionStart: number | undefined, selectionEnd: number | unde
 
 Sets the text selection area, which will be highlighted.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If [copyOption](arkts-arkui-text-comp-attribute.md#copyoption) is set to **CopyOptions.None**, the setting of
 > **setTextSelection** does not take effect.
@@ -122,4 +117,4 @@ Sets the text selection area, which will be highlighted.
 | --- | --- | --- | --- |
 | selectionStart | number &#124; undefined | Yes | Start position of the text selection range.<br>Value range: [0, +∞). Negative values and **undefined** are treated as **0**. |
 | selectionEnd | number &#124; undefined | Yes | End position of the text selection range.<br>Value range: [0, +∞). Negative values and **undefined** are treated as **0**. |
-| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No | Configuration options for text selection.<br>Default value: **MenuPolicy.DEFAULT** in **SelectionOptions |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No | Configuration options for text selection.<br>Default value: **MenuPolicy.DEFAULT** in **SelectionOptions** |

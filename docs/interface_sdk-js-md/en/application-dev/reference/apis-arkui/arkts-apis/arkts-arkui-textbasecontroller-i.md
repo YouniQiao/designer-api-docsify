@@ -6,11 +6,6 @@ Defines a text selection controller.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## closeSelectionMenu
 
 ```TypeScript

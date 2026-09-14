@@ -26,13 +26,13 @@ Creates a **Server** object. After **start()** is called, the device can be conn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Server** object name. The value is a string of up to 255 bytes. It cannot be empty. If the length exceeds the upper limit or an empty string is passed, error code 32390206 is returned. |
+| name | string | Yes | **Server** object name. The value is a string of up to 255 bytes. It cannot be empty. If the length exceeds the upper limit or an empty string is passed, error code 32390206 is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Server](arkts-distributedservice-linkenhance-server-i.md) | Server** object created. |
+| [Server](arkts-distributedservice-linkenhance-server-i.md) | **Server** object created. |
 
 **Error codes:**
 

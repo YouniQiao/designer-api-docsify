@@ -10,11 +10,6 @@ CommonShapeMethod
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## antiAlias
 
 ```TypeScript
@@ -41,6 +36,8 @@ Indicates whether to enable anti-aliasing
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## fill
 
 ```TypeScript
@@ -67,6 +64,8 @@ Fill color.
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## fillOpacity
 
 ```TypeScript
@@ -93,6 +92,8 @@ fill Opacity
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## stroke
 
 ```TypeScript
@@ -119,6 +120,8 @@ border Color
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## strokeDashArray
 
 ```TypeScript
@@ -145,6 +148,8 @@ Sets the gap for the border.
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## strokeDashOffset
 
 ```TypeScript
@@ -171,6 +176,8 @@ Offset from the start point of the border drawing.
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## strokeLineCap
 
 ```TypeScript
@@ -197,6 +204,8 @@ Path endpoint drawing style.
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## strokeLineJoin
 
 ```TypeScript
@@ -223,6 +232,8 @@ Border corner drawing style.
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## strokeMiterLimit
 
 ```TypeScript
@@ -249,6 +260,8 @@ Limits for drawing acute angles as bevels
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## strokeOpacity
 
 ```TypeScript
@@ -275,6 +288,8 @@ Sets the opacity of the border.
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## strokeWidth
 
 ```TypeScript
@@ -301,3 +316,4 @@ Sets the width of the dividing line.
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |

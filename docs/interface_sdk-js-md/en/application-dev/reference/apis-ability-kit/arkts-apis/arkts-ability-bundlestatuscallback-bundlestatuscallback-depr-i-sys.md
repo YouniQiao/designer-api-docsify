@@ -1,7 +1,7 @@
 # BundleStatusCallback (System API)
 
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The initial APIs of this module are supported since API version 8. Newly added APIs will
 > be marked with a superscript to indicate their earliest API version.
@@ -14,7 +14,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [bundleMonitor/bundleMonitor](arkts-bundle-bundlemonitor.md)
+**Substitutes:** [bundleMonitor/bundleMonitor](arkts-ability-bundle-bundlemonitor.md)
 
 **Required permissions:** ohos.permission.LISTEN_BUNDLE_CHANGE
 

@@ -6,11 +6,6 @@ Defines the listener for changes of the styled string text content.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onDidChange
 
 ```TypeScript

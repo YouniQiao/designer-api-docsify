@@ -78,6 +78,8 @@ Dispatches the event defined for the worker.
 
 | Type | Description |
 | --- | --- |
+| boolean |  |
+
 **Examples**
 
 ```TypeScript

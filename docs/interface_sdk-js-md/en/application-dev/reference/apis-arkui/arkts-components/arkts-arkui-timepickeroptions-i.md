@@ -18,11 +18,6 @@ Obtains the current system date and time.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## end
 
 ```TypeScript
@@ -33,7 +28,7 @@ End time of the time picker.
 
 Default value: **Date(0, 0, 0, 23, 59, 59)**.
 
-**NOTE:**
+**NOTE:** 
 
 1. Only the hour and minute values take effect.
 2. If **end** is set and is not the default value, **loop** does not take effect.
@@ -80,7 +75,7 @@ Time of the selected item.
 
 Default value: current system time
 
-Since API version 10, this parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this parameter supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** Date
 
@@ -100,7 +95,7 @@ Start time of the time picker.
 
 Default value: **Date(0, 0, 0, 0, 0, 0)**
 
-**NOTE:**
+**NOTE:** 
 
 1. Only the hour and minute values take effect.
 2. If **start** is set and is not the default value, **loop** does not take effect.

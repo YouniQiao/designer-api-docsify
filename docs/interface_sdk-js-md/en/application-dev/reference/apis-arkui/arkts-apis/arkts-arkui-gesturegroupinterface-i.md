@@ -6,11 +6,6 @@ Combined gestures integrate two or more gestures into a compound gesture, suppor
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## [[Call]]
 
 ```TypeScript
@@ -36,6 +31,8 @@ Return to Obtain GestureGroup.
 
 | Type | Description |
 | --- | --- |
+| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |  |
+
 ## onCancel
 
 ```TypeScript
@@ -60,3 +57,4 @@ Triggered when a tap cancellation event is received after a gesture is recognize
 
 | Type | Description |
 | --- | --- |
+| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |  |

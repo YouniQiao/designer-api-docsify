@@ -10,11 +10,6 @@ Pane Attribute.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## backgroundMask
 
 ```TypeScript

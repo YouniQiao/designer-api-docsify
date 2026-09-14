@@ -6,11 +6,6 @@ Configuration for Web same-layer rendering. Configures Web same-layer rendering 
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## supportCssDisplayChange
 
 ```TypeScript

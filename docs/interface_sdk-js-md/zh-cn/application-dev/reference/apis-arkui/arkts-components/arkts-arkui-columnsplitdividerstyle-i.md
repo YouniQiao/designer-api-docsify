@@ -2,7 +2,7 @@
 
 设置子组件与上下分割线的距离。
 
-> **说明：**
+> **说明：** 
 > 
 > 与RowSplit相同，ColumnSplit的分割线可调整上下两侧子组件的高度，子组件的高度调整范围受其最大最小高度限制。
 > 
@@ -11,11 +11,6 @@
 **起始版本：** 10
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## endMargin
 

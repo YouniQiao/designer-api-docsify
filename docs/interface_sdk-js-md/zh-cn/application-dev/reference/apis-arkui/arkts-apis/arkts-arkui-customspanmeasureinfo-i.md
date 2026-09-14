@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## fontSize
 
 ```TypeScript
@@ -39,7 +34,7 @@ layoutPolicy?: LayoutPolicy
 
 自定义span所在父组件的宽度布局策略。
 
-**说明：**
+**说明：** 
 
 当值为null或undefined时，表示父组件没有设置宽度布局策略。
 

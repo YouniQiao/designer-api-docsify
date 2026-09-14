@@ -23,6 +23,8 @@ Removes the specified element from the WeakMap.
 
 | Type | Description |
 | --- | --- |
+| boolean | true if the element was successfully removed, or false if it was not present. |
+
 ## get
 
 ```TypeScript
@@ -39,6 +41,8 @@ get(key: K): V | undefined
 
 | Type | Description |
 | --- | --- |
+| V | a specified element. |
+
 ## has
 
 ```TypeScript
@@ -55,6 +59,8 @@ has(key: K): boolean
 
 | Type | Description |
 | --- | --- |
+| boolean | a boolean indicating whether an element with the specified key exists or not. |
+
 ## set
 
 ```TypeScript
@@ -69,8 +75,3 @@ Adds a new element with a specified key and value.
 | --- | --- | --- | --- |
 | key | K | Yes |  |
 | value | V | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

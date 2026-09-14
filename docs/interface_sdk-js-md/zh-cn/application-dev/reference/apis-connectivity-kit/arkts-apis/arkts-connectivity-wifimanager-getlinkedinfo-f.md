@@ -14,7 +14,7 @@ function getLinkedInfo(): Promise<WifiLinkedInfo>
 
 获取Wi-Fi连接信息。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 当macType是1（设备MAC地址）时，获取macAddress还需申请ohos.permission.GET_WIFI_LOCAL_MAC权限（API 8-15仅面向系统应用开放。从API 16开始，在PC/2in1设
 > 备上面向普通应用开放，在其余设备上仍仅面向系统应用开放），无该权限时，macAddress返回为空。
@@ -65,7 +65,7 @@ function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void
 
 获取Wi-Fi连接信息。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 当macType是1（设备MAC地址），获取macAddress还需申请ohos.permission.GET_WIFI_LOCAL_MAC权限（API8-15仅面向系统应用开放。从API 16开始，在PC/2in1设备上
 > 面向普通应用开放，在其余设备上仍仅面向系统应用开放），无该权限时，macAddress返回为空。

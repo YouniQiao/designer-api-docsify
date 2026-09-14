@@ -6,11 +6,6 @@ ClientAuthenticationHandler是Web组件中处理SSL客户端证书认证请求�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-```
-
 ## cancel
 
 ```TypeScript

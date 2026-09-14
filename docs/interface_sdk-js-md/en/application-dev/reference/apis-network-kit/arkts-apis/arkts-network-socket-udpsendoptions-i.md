@@ -20,7 +20,7 @@ address: NetAddress
 
 Destination address.
 
-**Type:** NetAddress
+**Type:** [NetAddress](arkts-network-socket-p.md)
 
 **Since:** 7
 

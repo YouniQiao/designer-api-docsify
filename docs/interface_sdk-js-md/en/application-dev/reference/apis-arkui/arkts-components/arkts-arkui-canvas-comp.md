@@ -55,7 +55,7 @@ Canvas(params: CanvasParams)
 
 Creates a **Canvas** component that does not cache commands using **CanvasParams**. The maximum allowed size cannot exceed 10000 px × 10000 px. If the size exceeds this limit, the **Canvas** component will fail to be created.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > * The **Canvas** component created using this API will return a DrawingRenderingContext
 > object in the input parameter of the onReady callback, which can be used for drawing on the

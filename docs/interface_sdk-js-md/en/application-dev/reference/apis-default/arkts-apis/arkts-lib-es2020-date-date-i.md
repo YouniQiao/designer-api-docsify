@@ -20,10 +20,6 @@ Converts a date to a string by using the current or specified locale.
 | locales | [Intl.LocalesArgument](arkts-intl-localesargument-t.md) | No |  |
 | options | Intl.DateTimeFormatOptions | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toLocaleString
 
 ```TypeScript
@@ -39,10 +35,6 @@ Converts a date and time to a string by using the current or specified locale.
 | locales | [Intl.LocalesArgument](arkts-intl-localesargument-t.md) | No |  |
 | options | Intl.DateTimeFormatOptions | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toLocaleTimeString
 
 ```TypeScript
@@ -57,8 +49,3 @@ Converts a time to a string by using the current or specified locale.
 | --- | --- | --- | --- |
 | locales | [Intl.LocalesArgument](arkts-intl-localesargument-t.md) | No |  |
 | options | Intl.DateTimeFormatOptions | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

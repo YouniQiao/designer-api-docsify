@@ -1,11 +1,11 @@
 # ArkTS API<!--arkts-distributedservicekit-->
 
-- [@ohos.application.DistributedExtensionAbility(分布式协同扩展能力)](arkts-application-distributedextensionability.md)
+- [@ohos.application.DistributedExtensionAbility(分布式协同扩展能力)](arkts-distributedservice-application-distributedextensionability.md)
   - [DistributedExtensionAbility](arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md)
-- [@ohos.application.DistributedExtensionContext(分布式协同扩展能力实现)](arkts-application-distributedextensioncontext.md)
+- [@ohos.application.DistributedExtensionContext(分布式协同扩展能力实现)](arkts-distributedservice-application-distributedextensioncontext.md)
   - [DistributedExtensionContext](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md)
 <!--Del-->
-- [@ohos.cooperate](arkts-cooperate.md)<!--DelEnd-->
+- [@ohos.cooperate](arkts-distributedservice-cooperate.md)<!--DelEnd-->
   <!--Del-->
   - [activate(系统接口)](arkts-distributedservice-cooperate-activate-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -42,7 +42,7 @@
   - [CooperateMsg(系统接口)](arkts-distributedservice-cooperate-cooperatemsg-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [CooperateState(系统接口)](arkts-distributedservice-cooperate-cooperatestate-e-sys.md)<!--DelEnd-->
-- [@ohos.distributedDeviceManager](arkts-distributeddevicemanager.md)
+- [@ohos.distributedDeviceManager](arkts-distributedservice-distributeddevicemanager.md)
   - [createDeviceManager](arkts-distributedservice-distributeddevicemanager-createdevicemanager-f.md)
   - [releaseDeviceManager](arkts-distributedservice-distributeddevicemanager-releasedevicemanager-f.md)
   - [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
@@ -66,7 +66,7 @@
   - [DeviceStateChange](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md)
   <!--Del-->
   - [StrategyForHeartbeat(系统接口)](arkts-distributedservice-distributeddevicemanager-strategyforheartbeat-e-sys.md)<!--DelEnd-->
-- [@ohos.distributedHardware.deviceManager](arkts-distributedhardware-devicemanager.md)
+- [@ohos.distributedHardware.deviceManager](arkts-distributedservice-distributedhardware-devicemanager.md)
   <!--Del-->
   - [createDeviceManager(系统接口)](arkts-distributedservice-devicemanager-createdevicemanager-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -96,7 +96,7 @@
   <!--Del-->
   - [SubscribeCap(系统接口)](arkts-distributedservice-devicemanager-subscribecap-e-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.distributedHardware.hardwareManager(分布式硬件管理)](arkts-distributedhardware-hardwaremanager.md)<!--DelEnd-->
+- [@ohos.distributedHardware.hardwareManager(分布式硬件管理)](arkts-distributedservice-distributedhardware-hardwaremanager.md)<!--DelEnd-->
   <!--Del-->
   - [pauseDistributedHardware(系统接口)](arkts-distributedservice-hardwaremanager-pausedistributedhardware-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -109,7 +109,7 @@
   - [DistributedHardwareErrorCode(系统接口)](arkts-distributedservice-hardwaremanager-distributedhardwareerrorcode-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DistributedHardwareType(系统接口)](arkts-distributedservice-hardwaremanager-distributedhardwaretype-e-sys.md)<!--DelEnd-->
-- [@ohos.distributedsched.abilityConnectionManager(应用协同接口管理)](arkts-distributedsched-abilityconnectionmanager.md)
+- [@ohos.distributedsched.abilityConnectionManager(应用协同接口管理)](arkts-distributedservice-distributedsched-abilityconnectionmanager.md)
   - [acceptConnect](arkts-distributedservice-abilityconnectionmanager-acceptconnect-f.md)
   - [connect](arkts-distributedservice-abilityconnectionmanager-connect-f.md)
   - [createAbilityConnectionSession](arkts-distributedservice-abilityconnectionmanager-createabilityconnectionsession-f.md)
@@ -168,13 +168,13 @@
   - [StreamRole(系统接口)](arkts-distributedservice-abilityconnectionmanager-streamrole-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [VideoPixelFormat(系统接口)](arkts-distributedservice-abilityconnectionmanager-videopixelformat-e-sys.md)<!--DelEnd-->
-- [@ohos.distributedsched.linkEnhance(增强连接)](arkts-distributedsched-linkenhance.md)
+- [@ohos.distributedsched.linkEnhance(增强连接)](arkts-distributedservice-distributedsched-linkenhance.md)
   - [createConnection](arkts-distributedservice-linkenhance-createconnection-f.md)
   - [createServer](arkts-distributedservice-linkenhance-createserver-f.md)
   - [Connection](arkts-distributedservice-linkenhance-connection-i.md)
   - [ConnectResult](arkts-distributedservice-linkenhance-connectresult-i.md)
   - [Server](arkts-distributedservice-linkenhance-server-i.md)
-- [@ohos.distributedsched.proxyChannelManager(代理通道管理)](arkts-distributedsched-proxychannelmanager.md)
+- [@ohos.distributedsched.proxyChannelManager(代理通道管理)](arkts-distributedservice-distributedsched-proxychannelmanager.md)
   - [closeProxyChannel](arkts-distributedservice-proxychannelmanager-closeproxychannel-f.md)
   - [off](arkts-distributedservice-proxychannelmanager-off-f.md)
   - [on](arkts-distributedservice-proxychannelmanager-on-f.md)
@@ -186,7 +186,7 @@
   - [ChannelState](arkts-distributedservice-proxychannelmanager-channelstate-e.md)
   - [LinkType](arkts-distributedservice-proxychannelmanager-linktype-e.md)
 <!--Del-->
-- [@ohos.distributedSoftBus.conversation(跨设备唤醒与消息传输)](arkts-distributedsoftbus-conversation.md)<!--DelEnd-->
+- [@ohos.distributedSoftBus.conversation(跨设备唤醒与消息传输)](arkts-distributedservice-distributedsoftbus-conversation.md)<!--DelEnd-->
   <!--Del-->
   - [getTrustedDevices(系统接口)](arkts-distributedservice-conversation-gettrusteddevices-f-sys.md)<!--DelEnd-->
   <!--Del-->

@@ -61,11 +61,6 @@ Navigation页面跳转前的拦截回调。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## didShow
 
 ```TypeScript

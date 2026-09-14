@@ -2,7 +2,7 @@
 
 A cylinder geometry type that inherits from GeometryDefinition.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > You must ensure that all three parameters are set correctly.
 > Invalid values may prevent cylinder creation or cause undefined behavior.

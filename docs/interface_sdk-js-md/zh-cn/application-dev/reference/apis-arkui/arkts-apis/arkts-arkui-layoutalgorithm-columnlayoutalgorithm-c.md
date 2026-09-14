@@ -2,7 +2,7 @@
 
 垂直方向线性布局算法类。
 
-> **说明：**
+> **说明：** 
 > 
 > ColumnLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为DynamicLayout组件
 > 的入参指定布局算法。

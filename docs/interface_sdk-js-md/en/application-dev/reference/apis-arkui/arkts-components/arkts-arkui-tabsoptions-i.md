@@ -6,11 +6,6 @@ Provides parameters for configuring the **Tabs** component, including tab positi
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## barModifier
 
 ```TypeScript
@@ -19,7 +14,7 @@ barModifier?: CommonModifier
 
 Universal attributes of the tab bar.
 
-**NOTE:**
+**NOTE:** 
 
 If this parameter is dynamically set to **undefined**, the current state will be preserved, and universal attributes will not be reset.
 
@@ -53,7 +48,7 @@ Default value: **BarPosition.Start**
 
 **Type:** [BarPosition](arkts-arkui-barposition-e.md)
 
-**Default:**
+**Default:** 
 - API version 11+: BarPosition.Start
 
 **Since:** 7
@@ -88,7 +83,7 @@ Index of the currently displayed tab.
 
 Default value: **0**
 
-**NOTE:**
+**NOTE:** 
 
 A value less than 0 evaluates to the default value.
 
@@ -96,13 +91,13 @@ The value ranges from 0 to the number of **TabContent** nodes minus 1.
 
 When the tab is switched by changing the index, the tab switching animation does not take effect. When **changeIndex** of **TabController** is used for tab switching, the tab switching animation is enabled by default. You can disable the animation by setting **animationDuration** to **0**.
 
-Since API version 10, this parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this parameter supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
 
 When the **Tabs** component is rebuilt, system resources are switched (for example, system font or theme changes), or component attributes change, the **Tab** component will switch to the one specified by **index**. To prevent this behavior, you are advised to use two-way binding.
 
 **Type:** number
 
-**Default:**
+**Default:** 
 - API version 11+: 0
 
 **Since:** 7

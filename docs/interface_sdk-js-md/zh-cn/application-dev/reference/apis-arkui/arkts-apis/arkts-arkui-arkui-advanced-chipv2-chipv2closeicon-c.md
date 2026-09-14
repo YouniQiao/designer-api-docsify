@@ -50,9 +50,9 @@ public fontSize?: LengthMetrics
 
 默认值：
 
-size为ChipV2Size.SMALL时，默认值：`\$r('sys.float.chip_small_font_size')`。
+size为ChipV2Size.SMALL时，默认值：`&#36;r('sys.float.chip_small_font_size')`。
 
-size不为ChipV2Size.SMALL时，默认值：`\$r('sys.float.chip_normal_font_size')`
+size不为ChipV2Size.SMALL时，默认值：`&#36;r('sys.float.chip_normal_font_size')`
 
 单位：fp
 

@@ -8,11 +8,6 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## show
 
 ```TypeScript
@@ -21,7 +16,7 @@ static show(value: ActionSheetOptions)
 
 Shows an action sheet in the given settings.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Since API version 10, you can use
 > [showActionSheet](arkts-arkui-arkui-uicontext-uicontext-c.md#showactionsheet) in

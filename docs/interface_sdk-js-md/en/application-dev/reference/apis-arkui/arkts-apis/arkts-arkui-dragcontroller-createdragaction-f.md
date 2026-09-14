@@ -14,7 +14,7 @@ function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, drag
 
 Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Since API version 11, you can use the
 > [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in
@@ -46,7 +46,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | Type | Description |
 | --- | --- |
-| [DragAction](arkts-arkui-dragcontroller-dragaction-i.md) | DragAction** object, which is used to subscribe to drag state changes and start the drag service. |
+| [DragAction](arkts-arkui-dragcontroller-dragaction-i.md) | **DragAction** object, which is used to subscribe to drag state changes and start the drag service. |
 
 **Error codes:**
 

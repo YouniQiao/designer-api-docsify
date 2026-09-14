@@ -8,11 +8,6 @@ Defines the base class **BaseSpan**, including the universal attributes of the *
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## baselineOffset
 
 ```TypeScript

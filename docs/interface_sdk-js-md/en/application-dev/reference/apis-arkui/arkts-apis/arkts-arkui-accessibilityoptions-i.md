@@ -8,11 +8,6 @@ Defines the struct of AccessibilityOptions.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## accessibilityPreferred
 
 ```TypeScript

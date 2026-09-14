@@ -8,11 +8,6 @@ Spatial effect params.
 
 **System API:** This is a system API.
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## occlusionWeight
 
 ```TypeScript

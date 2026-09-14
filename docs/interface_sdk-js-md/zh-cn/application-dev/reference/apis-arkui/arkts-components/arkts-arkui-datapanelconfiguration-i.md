@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## maxValue
 
 ```TypeScript
@@ -23,7 +18,7 @@ DataPanel显示的最大值。
 
 默认值：100。
 
-**说明：**
+**说明：** 
 
 如果小于或等于0，maxValue将被设为values数组中所有项的总和，并按比例显示。
 
@@ -47,7 +42,7 @@ values: number[]
 
 数组长度范围是[0, 9]。
 
-**说明：**
+**说明：** 
 
 如果数组长度大于9，则取前9项。
 

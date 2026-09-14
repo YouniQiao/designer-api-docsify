@@ -6,11 +6,6 @@ Tabs组件参数，设置Tabs的页签位置，当前显示页签的索引，Tab
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## barModifier
 
 ```TypeScript
@@ -19,7 +14,7 @@ barModifier?: CommonModifier
 
 设置TabBar的通用属性，用于通过CommonModifier统一管理TabBar的样式、布局等通用属性。当需要动态修改TabBar的通用属性或实现属性的状态管理时传入此参数，不传入时TabBar使用默认样式和布局，无额外通用属性设置。
 
-**说明：**
+**说明：** 
 
 动态置为undefined时会保持当前状态不变，不会重置各通用属性。
 
@@ -53,7 +48,7 @@ barPosition?: BarPosition
 
 **类型：** [BarPosition](arkts-arkui-barposition-e.md)
 
-**默认值：**
+**默认值：** 
 - API版本11+：BarPosition.Start
 
 **起始版本：** 7
@@ -88,7 +83,7 @@ index?: number
 
 默认值：0
 
-**说明：**
+**说明：** 
 
 设置为小于0的值时按默认值显示。
 
@@ -96,13 +91,13 @@ index?: number
 
 直接修改index跳页时，切换动效不生效。 使用TabController的[changeIndex](arkts-arkui-tabscontroller-c.md#changeindex)时，默认生效切换动效，可以设置[animationDuration](arkts-arkui-tabs-comp-attribute.md#animationduration)为0关闭动画。
 
-从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 Tabs重建、系统资源切换（如系统字体切换、系统深浅色切换）或者组件属性变化时，会跳转到index对应的页面。若需要在上述情况下不跳转，建议使用双向绑定。
 
 **类型：** number
 
-**默认值：**
+**默认值：** 
 - API版本11+：0
 
 **起始版本：** 7

@@ -88,7 +88,7 @@ convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, valu
 Enables conversion between window orientation, screen orientation, and screen angle.
 
 Window orientation refers to the direction of the screen where the window resides, using the Window module's definitions for portrait and landscape modes. Window orientations are represented by the digits 0, 1, 2, and 3, corresponding to portrait, reverse landscape, reverse portrait, and landscape, respectively. These definitions match those in [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) and the [Orientation](arkts-arkui-window-orientation-e.md) enum. For example, setting **Orientation** to **LANDSCAPE** indicates a landscape window orientation.   
-> **NOTE:**
+> **NOTE:** 
 > 
 > The following figure and table show the relationship between the window orientation, screen orientation, and
 > screen angle of a bar-type device.
@@ -1144,7 +1144,7 @@ getWindowStatus(): WindowStatusType
 
 Obtains the mode of this window.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, when the window is
 > maximized (covering the entire screen, with a dock bar and status bar on 2-in-1 devices, and a status bar on
@@ -2214,7 +2214,7 @@ moveWindowTo(x: number, y: number): Promise<void>
 
 Moves this window. This API uses a promise to return the result. A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [moveWindowToAsync()](#movewindowtoasync).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This API is best suited for the floating window mode (when the window mode is
 > **window.WindowStatusType.FLOATING**, which you can check using
@@ -2269,7 +2269,7 @@ moveWindowTo(x: number, y: number, callback: AsyncCallback<void>): void
 
 Moves this window. This API uses an asynchronous callback to return the result. A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [moveWindowToAsync()](#movewindowtoasync).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This API is best suited for the floating window mode (when the window mode is
 > **window.WindowStatusType.FLOATING**, which can obtained using
@@ -2321,7 +2321,7 @@ Moves this window. This API uses a promise to return the result. A value is retu
 
 This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other window modes, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)). In floating window mode, the movement behavior of different types of windows is as follows.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
 > if the title bar of the main window or a child window is moved out of the screen's visible area,
@@ -2371,7 +2371,7 @@ This API takes effect only when the window is in floating window mode (**window.
 | App subwindow/Modal window| Move relative to the screen.| Move relative to the main window.|
 | System window/Global floating window| Move relative to the screen.| Move relative to the screen.|
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
 > if the title bar of the main window or a child window is moved out of the screen's visible area,
@@ -2416,7 +2416,7 @@ Moves this window based on the coordinates. This API uses a promise to return th
 
 This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other window modes, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When the main window is in floating window mode, this API does not take effect or return an error if called
 > in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
@@ -2463,7 +2463,7 @@ Moves this window to the specified position based on the coordinates. This API u
 
 This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other window modes, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When the main window is in floating window mode, this API does not take effect or return an error if called
 > in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
@@ -2511,7 +2511,7 @@ Moves the window based on the [global coordinate system](../../../windowmanager/
 
 This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other window modes, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When the main window is in floating window mode, this API does not take effect or return an error if called
 > in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
@@ -4083,7 +4083,7 @@ Enables the listening for window status changes. When the window status changes,
 
 After the listening is enabled using this API, multiple callbacks will be received when the **maximize** or **recover** method is called. To obtain the deduplicated callback, you can use [on('windowStatusDidChange')](#onwindowstatusdidchange).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, when the window is
 > maximized (covering the entire screen, with a dock bar and status bar on 2-in-1 devices, and a status bar on
@@ -4693,7 +4693,7 @@ If the window width or height is greater than the maximum width or height limit,
 
 This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). If this API is called when the window is in other window modes, error code 1300002 is reported. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When the main window is in floating window mode, this API does not take effect or return an error if called
 > in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
@@ -4743,7 +4743,7 @@ If the window width or height is less than the minimum width or height limit, th
 
 If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When the main window is in floating window mode, this API does not take effect or return an error if called
 > in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
@@ -4790,7 +4790,7 @@ If the window width or height is greater than the maximum width or height limit,
 
 This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other scenarios, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - In non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
 > this API does not work for the main window.
@@ -4897,7 +4897,7 @@ setAspectRatio(ratio: number, callback: AsyncCallback<void>): void
 
 Sets the aspect ratio of the window content layout (excluding decorations like borders and title bars). This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When the window size is set by using other APIs such as
 > [resize](#resize) and
@@ -4940,7 +4940,7 @@ setAspectRatio(ratio: number): Promise<void>
 
 Sets the aspect ratio of the window content layout (excluding decorations like borders and title bars). This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When the window size is set by using other APIs such as
 > [resize](#resize) and
@@ -5145,7 +5145,7 @@ setContentAspectRatio(ratio: number, isPersistent?: boolean, needUpdateRect?: bo
 
 Sets the aspect ratio of the window content layout (excluding decorations like borders and title bars). This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When you adjust the window width and height using the same **ratio** parameter, the window size adapts to
 > changes in the border decoration size or visibility.
@@ -5559,7 +5559,7 @@ Full-screen mode means that the layout does not avoid the status bar or <!--RP15
 
 Non-full-screen mode means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!--RP 15End-->, and components do not overlap with them.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 6 and deprecated since API version 9. You are advised to use
 > [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
@@ -5593,7 +5593,7 @@ Full-screen mode means that the layout does not avoid the status bar or <!--RP15
 
 Non-full-screen mode means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!--RP 15End-->, and components do not overlap with them.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 6 and deprecated since API version 9. You are advised to use
 > [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
@@ -8236,7 +8236,7 @@ showWindow(callback: AsyncCallback<void>): void
 
 Shows this window. This API uses an asynchronous callback to return the result. This API takes effect only for a system window, application child window, modal window, or global floating window. For the main window of an application, this API moves it at the top when the main window is already displayed.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Before calling this API, you are advised to load the page by using
 > [loadContent](#loadcontent) or
@@ -8271,7 +8271,7 @@ showWindow(): Promise<void>
 
 Shows this window. This API uses a promise to return the result. This API takes effect only for a system window, application child window, modal window, or global floating window. For the main window of an application, this API moves it at the top when the main window is already displayed.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Before calling this API, you are advised to load the page by using
 > [loadContent](#loadcontent) or
@@ -8308,7 +8308,7 @@ Shows this window or moves an already visible application main window to the top
 
 This API can be used only for application child windows, application main windows, global floating windows, and system windows, excluding windows of the TYPE_DIALOG type and modal child windows (windows that have the modal property enabled via **setSubWindowModal**).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Before calling this API, you are advised to load the page by using
 > [loadContent](#loadcontent) or

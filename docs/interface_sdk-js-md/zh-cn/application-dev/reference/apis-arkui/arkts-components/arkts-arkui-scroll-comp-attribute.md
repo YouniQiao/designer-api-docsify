@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## edgeEffect
 
 ```TypeScript
@@ -449,7 +444,7 @@ onWillScroll(handler: ScrollOnWillScrollCallback)
 2. 通过滚动控制器API接口调用。
 3. 越界回弹。
 
-> **说明：**
+> **说明：** 
 > 
 > 滚动事件的回调函数在滚动过程中会被频繁触发，因此应避免在该回调函数中执行耗时操作，以防止应用出现卡顿和丢帧的问题。
 

@@ -6,11 +6,6 @@ ListItemGroup组件参数。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## footer
 
 ```TypeScript
@@ -19,7 +14,7 @@ footer?: CustomBuilder
 
 设置ListItemGroup尾部组件。
 
-**说明：**
+**说明：** 
 
 可以放单个子组件或不放子组件，不设置时无尾部组件。该参数的优先级低于参数footerComponent。即同时设置footer和footerComponent时，以footerComponent设置的值为准。
 
@@ -39,7 +34,7 @@ footerComponent?: ComponentContent
 
 使用ComponentContent类型参数设置ListItemGroup尾部组件。
 
-**说明：**
+**说明：** 
 
 可以放单个子组件或不放子组件，不设置时无尾部组件。该参数的优先级高于参数footer。即同时设置footer和footerComponent时，以footerComponent设置的值为准。
 
@@ -89,7 +84,7 @@ header?: CustomBuilder
 
 设置ListItemGroup头部组件。
 
-**说明：**
+**说明：** 
 
 可以放单个子组件或不放子组件，不设置时无头部组件。该参数的优先级低于参数headerComponent。即同时设置header和headerComponent时，以headerComponent设置的值为准。
 
@@ -109,7 +104,7 @@ headerComponent?: ComponentContent
 
 使用ComponentContent类型参数设置ListItemGroup头部组件。
 
-**说明：**
+**说明：** 
 
 可以放单个子组件或不放子组件，不设置时无头部组件。该参数的优先级高于参数header。即同时设置header和headerComponent时，以headerComponent设置的值为准。
 
@@ -163,7 +158,7 @@ space?: number | string
 
 单位：vp
 
-**说明：**
+**说明：** 
 
 设置为负数或者大于等于List内容区长度时，按默认值显示。如果同时设置了spaceWidth和space，则spaceWidth优先生效。当spaceWidth为undefined或null时，space生效。
 
@@ -189,7 +184,7 @@ spaceWidth?: Dimension
 
 单位：vp
 
-**说明：**
+**说明：** 
 
 设置为负数或者大于等于List内容区长度时，按默认值显示。如果同时设置了spaceWidth和space，则spaceWidth优先生效。当spaceWidth为undefined或null时，space生效。
 
@@ -221,7 +216,7 @@ style?: ListItemGroupStyle
 
 卡片样式下，为卡片内的列表选项提供了默认的focused、hover、pressed、selected和disabled样式。
 
-**说明：**
+**说明：** 
 
 当设置为ListItemGroupStyle.CARD时，List的listDirection属性值须为Axis.Vertical，如果设置为Axis.Horizontal，会导致显示混乱；List属性[alignListItem](arkts-arkui-list-comp-attribute.md#alignlistitem)默认为ListItemAlign.Center，居中对齐显示。
 

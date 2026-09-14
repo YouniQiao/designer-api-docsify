@@ -140,7 +140,7 @@ insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 
 Inserts a direct rule, specifying that URLs matching the schemeFilter condition will directly connect to the server.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Both [insertBypassRule](#insertbypassrule) and
 > [bypassHostnamesWithoutPeriod](#bypasshostnameswithoutperiod) can also implement

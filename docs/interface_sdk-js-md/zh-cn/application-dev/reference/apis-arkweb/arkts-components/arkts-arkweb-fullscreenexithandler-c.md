@@ -6,11 +6,6 @@ FullScreenExitHandler 是 Web 组件提供的全屏退出处理类，用于响�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

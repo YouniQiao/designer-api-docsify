@@ -20,8 +20,3 @@ Computes a new string in which hexadecimal escape sequences are replaced with th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | string | string | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

@@ -6,11 +6,6 @@ Provides detailed information about clicking or touching and holding a same-laye
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## embedId
 
 ```TypeScript

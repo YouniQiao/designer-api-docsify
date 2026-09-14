@@ -28,7 +28,7 @@ Creates a **DataAbilityPredicates** object to add the AND condition.
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object with the AND condition. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object with the AND condition. |
 
 **Examples**
 
@@ -63,7 +63,7 @@ This API is similar to the percent sign (%) in SQL statements.
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -87,7 +87,7 @@ Creates a **DataAbilityPredicates** object to add a left parenthesis. This API i
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object with a left parenthesis. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object with a left parenthesis. |
 
 **Examples**
 
@@ -124,7 +124,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -155,7 +155,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -179,7 +179,7 @@ Creates a **DataAbilityPredicates** object to filter out duplicate records.
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -212,7 +212,7 @@ This API is similar to the percent sign (%) in SQL statements.
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -236,7 +236,7 @@ Creates a **DataAbilityPredicates** object to add a right parenthesis. This API 
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object with a right parenthesis. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object with a right parenthesis. |
 
 **Examples**
 
@@ -274,7 +274,7 @@ This API is similar to the SQL equal to (=) operator.
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -305,7 +305,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -342,7 +342,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -373,7 +373,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -403,7 +403,7 @@ Creates a **DataAbilityPredicates** object to group the query results based on t
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -434,7 +434,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -464,7 +464,7 @@ Creates a **DataAbilityPredicates** object to specify the index column. Before c
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -533,7 +533,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -563,7 +563,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -594,7 +594,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -625,7 +625,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -658,7 +658,7 @@ This API is similar to the SQL **like** statement.
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -688,7 +688,7 @@ Creates a **DataAbilityPredicates** object to limit the number of records.
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -720,7 +720,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -753,7 +753,7 @@ This API is similar to the SQL not equal (!=) operator.
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -784,7 +784,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -814,7 +814,7 @@ Creates a **DataAbilityPredicates** object to set the start position of the quer
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -841,7 +841,7 @@ This API is similar to the SQL **or** operator.
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object with the OR condition. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object with the OR condition. |
 
 **Examples**
 
@@ -873,7 +873,7 @@ Creates a **DataAbilityPredicates** object to sort the records in the specified 
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 
@@ -904,7 +904,7 @@ Creates a **DataAbilityPredicates** object to sort the records in the specified 
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Examples**
 

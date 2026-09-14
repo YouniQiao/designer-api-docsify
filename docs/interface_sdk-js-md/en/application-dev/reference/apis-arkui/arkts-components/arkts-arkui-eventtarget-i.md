@@ -8,11 +8,6 @@ Represents the display area of the element object that triggers the event.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## area
 
 ```TypeScript

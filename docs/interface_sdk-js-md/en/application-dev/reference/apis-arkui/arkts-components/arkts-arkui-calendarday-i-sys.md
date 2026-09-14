@@ -10,11 +10,6 @@ Provides a monthly view component to display information such as date, shift bre
 
 **System API:** This is a system API.
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## day
 
 ```TypeScript

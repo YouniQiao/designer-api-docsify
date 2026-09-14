@@ -1,8 +1,8 @@
 # Tool
 
-本模块定义的工具类，仅提供静态的方法，主要完成其他模块和[common2D](arkts-graphics-common2d.md)中定义的数据结构的转换功能。
+本模块定义的工具类，仅提供静态的方法，主要完成其他模块和[common2D](arkts-arkgraphics2d-graphics-common2d.md)中定义的数据结构的转换功能。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本Class首批接口从API version 15开始支持。
 > 
@@ -36,7 +36,7 @@ static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceColor | ResourceColor | 是 | ResourceColor格式的颜色值（支持所有的4种输入，示例中提供10个示例输入）。其中第4种类型[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)只接受``\&#36;r('belonging.type.name')``构造方法，需要确保该资源在main/resources/base/element目录下已定义(app支持color、string和integer，sys只支持color)。 |
+| resourceColor | ResourceColor | 是 | ResourceColor格式的颜色值（支持所有的4种输入，示例中提供10个示例输入）。其中第4种类型[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)只接受``&#36;r('belonging.type.name')``构造方法，需要确保该资源在main/resources/base/element目录下已定义(app支持color、string和integer，sys只支持color)。 |
 
 **返回值：**
 

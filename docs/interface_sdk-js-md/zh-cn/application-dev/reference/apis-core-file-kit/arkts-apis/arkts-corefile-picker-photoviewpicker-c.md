@@ -1,6 +1,6 @@
 # PhotoViewPicker
 
-图库选择器对象，用来支撑选择图片/视频和保存图片/视频等用户场景。选择文件推荐使用[PhotoAccessHelper的PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md)。在使用前，需要先创建PhotoViewPicker实例。
+图库选择器对象，用来支撑选择图片/视频和保存图片/视频等用户场景。选择文件推荐使用[PhotoAccessHelper的PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photoaccesshelper.md)。在使用前，需要先创建PhotoViewPicker实例。
 
 **起始版本：** 9
 

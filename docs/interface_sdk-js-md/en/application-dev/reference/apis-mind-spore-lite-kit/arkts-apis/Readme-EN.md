@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-mindsporelitekit-->
 
-- [@ohos.ai.mindSporeLite](arkts-ai-mindsporelite.md)
+- [@ohos.ai.mindSporeLite](arkts-mindsporelite-ai-mindsporelite.md)
   - [getAllNNRTDeviceDescriptions](arkts-mindsporelite-mindsporelite-getallnnrtdevicedescriptions-f.md)
   - [loadModelFromBuffer](arkts-mindsporelite-mindsporelite-loadmodelfrombuffer-f.md)
   - [loadModelFromFd](arkts-mindsporelite-mindsporelite-loadmodelfromfd-f.md)

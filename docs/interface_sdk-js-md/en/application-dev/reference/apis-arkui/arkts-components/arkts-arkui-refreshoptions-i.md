@@ -31,11 +31,6 @@ Defines the options of the **Refresh** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## builder
 
 ```TypeScript
@@ -116,7 +111,7 @@ Custom text displayed at the bottom of the refreshing area. NOTE When setting th
 refreshing: boolean
 ```
 
-Whether the component is being refreshed. The value **true** means that the component is being refreshed, and **false** means the opposite. Default value: **false** This parameter supports two-way binding through \$\$.
+Whether the component is being refreshed. The value **true** means that the component is being refreshed, and **false** means the opposite. Default value: **false** This parameter supports two-way binding through &#36;&#36;.
 
 **Type:** boolean
 

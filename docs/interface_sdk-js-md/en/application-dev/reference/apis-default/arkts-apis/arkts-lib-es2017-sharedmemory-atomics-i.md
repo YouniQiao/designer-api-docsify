@@ -21,10 +21,6 @@ Adds a value to the value at the given position in the array, returning the orig
 | index | number | Yes |  |
 | value | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## and
 
 ```TypeScript
@@ -41,10 +37,6 @@ Stores the bitwise AND of a value with the value at the given position in the ar
 | index | number | Yes |  |
 | value | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## compareExchange
 
 ```TypeScript
@@ -62,10 +54,6 @@ Replaces the value at the given position in the array if the original value equa
 | expectedValue | number | Yes |  |
 | replacementValue | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## exchange
 
 ```TypeScript
@@ -82,10 +70,6 @@ Replaces the value at the given position in the array, returning the original va
 | index | number | Yes |  |
 | value | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## isLockFree
 
 ```TypeScript
@@ -100,10 +84,6 @@ Returns a value indicating whether high-performance algorithms can use atomic op
 | --- | --- | --- | --- |
 | size | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## load
 
 ```TypeScript
@@ -119,10 +99,6 @@ Returns the value at the given position in the array. Until this atomic operatio
 | typedArray | Int8Array &#124; Uint8Array &#124; Int16Array &#124; Uint16Array &#124; Int32Array &#124; Uint32Array | Yes |  |
 | index | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## notify
 
 ```TypeScript
@@ -139,10 +115,6 @@ Wakes up sleeping agents that are waiting on the given index of the array, retur
 | index | number | Yes |  |
 | count | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## or
 
 ```TypeScript
@@ -159,10 +131,6 @@ Stores the bitwise OR of a value with the value at the given position in the arr
 | index | number | Yes |  |
 | value | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## store
 
 ```TypeScript
@@ -179,10 +147,6 @@ Stores a value at the given position in the array, returning the new value. Unti
 | index | number | Yes |  |
 | value | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## sub
 
 ```TypeScript
@@ -199,10 +163,6 @@ Subtracts a value from the value at the given position in the array, returning t
 | index | number | Yes |  |
 | value | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## wait
 
 ```TypeScript
@@ -220,10 +180,6 @@ If the value at the given position in the array is equal to the provided value, 
 | value | number | Yes |  |
 | timeout | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## xor
 
 ```TypeScript
@@ -240,10 +196,6 @@ Stores the bitwise XOR of a value with the value at the given position in the ar
 | index | number | Yes |  |
 | value | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [Symbol.toStringTag]
 
 ```TypeScript

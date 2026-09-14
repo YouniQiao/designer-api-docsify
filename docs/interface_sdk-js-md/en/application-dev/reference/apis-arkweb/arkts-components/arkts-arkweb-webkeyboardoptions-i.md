@@ -6,11 +6,6 @@ Return value of the callback that intercepts the soft keyboard started from edit
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## customKeyboard
 
 ```TypeScript

@@ -14,7 +14,7 @@ function hideAlertBeforeBackPage(): void
 
 禁用页面返回询问对话框。调用此方法后，将关闭由showAlertBeforeBackPage开启的返回询问对话框，back操作将不再弹出确认对话框，直接执行页面返回。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 9开始支持，从API version 18开始废弃，建议使用
 > [hideAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#hidealertbeforebackpage)替代。hideAlertBeforeBackPage需先

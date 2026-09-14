@@ -1,10 +1,5 @@
 # mutableBuilder
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## mutableBuilder
 
 ```TypeScript
@@ -31,3 +26,4 @@ Defining mutableBuilder function.
 
 | Type | Description |
 | --- | --- |
+| [MutableBuilder](arkts-arkui-mutablebuilder-c.md)&lt;Args&gt; |  |

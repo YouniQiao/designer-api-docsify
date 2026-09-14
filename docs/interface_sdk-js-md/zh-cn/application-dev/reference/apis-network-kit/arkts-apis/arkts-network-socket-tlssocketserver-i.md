@@ -20,7 +20,7 @@ close(): Promise<void>
 
 TLSSocketServer停止监听并释放通过[listen](arkts-network-socket-tcpsocketserver-i.md#listen)方法绑定的端口。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 该方法不会关闭已有连接。如需关闭，请调用[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)的
 > [close](arkts-network-socket-tcpsocketconnection-i.md#close)方法。
@@ -91,7 +91,7 @@ getCertificate(callback: AsyncCallback<X509CertRawData>): void
 
 在TLSSocketServer通信连接成功之后，获取本地的数字证书，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 
@@ -204,7 +204,7 @@ getCertificate(): Promise<X509CertRawData>
 
 在TLSSocketServer通信连接之后，获取本地的数字证书，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 
@@ -316,7 +316,7 @@ getLocalAddress(): Promise<NetAddress>
 
 获取TLSSocketServer的本地Socket地址。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 在TLSSocketServer通信连接成功之后，才可调用此方法。
 
@@ -328,7 +328,7 @@ getLocalAddress(): Promise<NetAddress>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | 以Promise形式返回获取本地socket地址的结果。 |
+| Promise&lt;[NetAddress](arkts-network-socket-p.md)&gt; | 以Promise形式返回获取本地socket地址的结果。 |
 
 **错误码：**
 
@@ -360,7 +360,7 @@ getProtocol(callback: AsyncCallback<string>): void
 
 在TLSSocketServer通信连接成功之后，获取通信的协议版本，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 
@@ -431,7 +431,7 @@ getProtocol(): Promise<string>
 
 在TLSSocketServer通信连接成功之后，获取通信的协议版本，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 
@@ -499,7 +499,7 @@ getSocketFd(): Promise<number>
 
 获取TLSSocketServer监听端口绑定的文件描述符。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - [listen](arkts-network-socket-tcpsocketserver-i.md#listen)方法调用成功后，才可调用此方法。多次调用listen时，会获取最新监听端口绑定的文件描述符。
 > 
@@ -571,7 +571,7 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 
 在TLSSocketServer的listen成功之后，获取TLSSocketServer状态。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 
@@ -641,7 +641,7 @@ getState(): Promise<SocketStateBase>
 
 在TLSSocketServer的listen成功之后，获取TLSSocketServer状态。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 
@@ -859,7 +859,7 @@ off(type: 'connect', callback?: Callback<TLSSocketConnection>): void
 
 取消订阅TLSSocketServer的连接事件。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 > 
@@ -931,7 +931,7 @@ off(type: 'error', callback?: ErrorCallback): void
 
 取消订阅TLSSocketServer连接的error事件。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 > 
@@ -1003,7 +1003,7 @@ on(type: 'connect', callback: Callback<TLSSocketConnection>): void
 
 订阅TLSSocketServer的连接事件。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 
@@ -1068,7 +1068,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 订阅TLSSocketServer连接的error事件。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 
@@ -1133,7 +1133,7 @@ setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 
 在TLSSocketServer的listen成功之后，设置TLSSocketServer连接的其他属性。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 
@@ -1220,7 +1220,7 @@ setExtraOptions(options: TCPExtraOptions): Promise<void>
 
 在TLSSocketServer的listen成功之后，设置TLSSocketServer连接的其他属性，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 

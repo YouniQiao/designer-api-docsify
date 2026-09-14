@@ -19,7 +19,7 @@ function bulkTransfer(
 
 Performs bulk transfer. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The total size of data (including **pipe**, **endpoint**, **buffer**, and **timeout**) to be transferred in a
 > single bulk transfer must be less than 200 KB. Otherwise, the transfer fails and **-1** is returned.

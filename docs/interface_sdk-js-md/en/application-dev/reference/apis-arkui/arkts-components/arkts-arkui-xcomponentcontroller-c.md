@@ -6,11 +6,6 @@ Defines the controller of the **XComponent**. You can bind the controller to the
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript
@@ -237,7 +232,7 @@ setXComponentSurfaceConfig(config: SurfaceConfig):void
 
 Sets the options of the surface created by the **XComponent**, which determine whether the surface held by the **XComponent** is considered opaque during rendering.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API takes effect only when the type of **XComponent** is **TEXTURE** or **SURFACE**.
 
@@ -338,7 +333,7 @@ Because the image frame used for analysis is the one captured when this API is c
 
 If this API is repeatedly called before the execution is complete, an error callback is triggered.
 
-> **NOTE:**
+> **NOTE:** 
 
 > The image analysis type cannot be dynamically modified.
 > 
@@ -380,7 +375,7 @@ stopImageAnalyzer(): void
 
 Stops AI image analysis. The content displayed by the AI image analyzer will be destroyed.
 
-> **NOTE:**
+> **NOTE:** 
 
 > If this API is called when the **startImageAnalyzer** API has not yet returned any result, an error callback is
 > triggered.

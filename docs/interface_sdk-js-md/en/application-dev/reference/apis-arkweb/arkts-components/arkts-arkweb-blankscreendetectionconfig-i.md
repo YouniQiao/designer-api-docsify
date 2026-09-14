@@ -6,11 +6,6 @@ Provides the policy configuration options for blank screen detection, including 
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## contentfulNodesCountThreshold
 
 ```TypeScript
@@ -19,7 +14,7 @@ contentfulNodesCountThreshold?: number
 
 This parameter takes effect only when the contentful node detection strategy is used.
 
-The value ranges from 0 to \${maximum nodes of the detection strategy}. If the value is less than or equal to the threshold, a near-white screen is triggered.
+The value ranges from 0 to &#36;{maximum nodes of the detection strategy}. If the value is less than or equal to the threshold, a near-white screen is triggered.
 
 Default value: 0.
 
@@ -39,7 +34,7 @@ detectionMethods?: BlankScreenDetectionMethod[]
 
 Methods of the detection policy. The value is an array.
 
-**NOTE:**
+**NOTE:** 
 
 1. Duplicate values are ignored.
 

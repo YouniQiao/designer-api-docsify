@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## analyzerConfig
 
 ```TypeScript
@@ -23,7 +18,7 @@ analyzerConfig(config: ImageAnalyzerConfig)
 
 设置AI分析识别类型，包括主体识别、文字识别和对象查找等功能，支持attributeModifier动态设置属性方法。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
@@ -93,7 +88,7 @@ enableAnalyzer(enable: boolean)
 
 不支持与overlay属性同时使用，两者同时设置时overlay中[CustomBuilder](arkts-arkui-custombuilder-t.md)属性会失效。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
@@ -203,7 +198,7 @@ onError(event: VoidCallback | import('../api/@ohos.base').ErrorCallback)
 
 播放失败时触发该事件，支持attributeModifier动态设置属性方法。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 

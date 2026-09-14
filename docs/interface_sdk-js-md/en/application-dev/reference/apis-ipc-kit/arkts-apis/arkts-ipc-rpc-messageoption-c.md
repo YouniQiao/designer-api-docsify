@@ -360,7 +360,7 @@ RPC wait time, in seconds. This parameter cannot be used in IPC. The default wai
 
 **Type:** number
 
-**Default:**
+**Default:** 
 - API versions 7 to 10: 4
 - API version 11+: 8
 

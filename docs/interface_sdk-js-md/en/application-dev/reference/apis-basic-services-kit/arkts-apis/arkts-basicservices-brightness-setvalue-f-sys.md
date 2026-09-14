@@ -64,7 +64,7 @@ Sets the screen brightness. This API is used for continuous brightness adjustmen
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | Brightness value. Value range: [0, 255] |
-| continuous | boolean | Yes | Whether the brightness adjustment is continuous. The value **true** indicates that the brightness adjustment is continuous; **false** indicates the opposite. Default value: **false |
+| continuous | boolean | Yes | Whether the brightness adjustment is continuous. The value **true** indicates that the brightness adjustment is continuous; **false** indicates the opposite. Default value: **false** |
 
 **Error codes:**
 

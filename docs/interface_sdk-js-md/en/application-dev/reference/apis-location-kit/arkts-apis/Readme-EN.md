@@ -1,11 +1,11 @@
 # ArkTS API<!--arkts-locationkit-->
 
-- [@ohos.app.ability.FenceExtensionAbility](arkts-app-ability-fenceextensionability.md)
+- [@ohos.app.ability.FenceExtensionAbility](arkts-location-app-ability-fenceextensionability.md)
   - [FenceExtensionAbility](arkts-location-app-ability-fenceextensionability-fenceextensionability-c.md)
-- [@ohos.app.ability.FenceExtensionContext](arkts-app-ability-fenceextensioncontext.md)
+- [@ohos.app.ability.FenceExtensionContext](arkts-location-app-ability-fenceextensioncontext.md)
   <!--Del-->
   - [FenceExtensionContext(system api)](arkts-location-app-ability-fenceextensioncontext-fenceextensioncontext-c-sys.md)<!--DelEnd-->
-- [@ohos.geolocation](arkts-geolocation.md)
+- [@ohos.geolocation](arkts-location-geolocation.md)
   - [flushCachedGnssLocations](arkts-location-geolocation-flushcachedgnsslocations-f.md)
   - [getAddressesFromLocation](arkts-location-geolocation-getaddressesfromlocation-f.md)
   - [getAddressesFromLocationName](arkts-location-geolocation-getaddressesfromlocationname-f.md)
@@ -33,7 +33,7 @@
   - [LocationPrivacyType](arkts-location-geolocation-locationprivacytype-e.md)
   - [LocationRequestPriority](arkts-location-geolocation-locationrequestpriority-e.md)
   - [LocationRequestScenario](arkts-location-geolocation-locationrequestscenario-e.md)
-- [@ohos.geoLocationManager](arkts-geolocationmanager.md)
+- [@ohos.geoLocationManager](arkts-location-geolocationmanager.md)
   - [addBeaconFence](arkts-location-geolocationmanager-addbeaconfence-f.md)
   <!--Del-->
   - [addFusionFence(system api)](arkts-location-geolocationmanager-addfusionfence-f-sys.md)<!--DelEnd-->
@@ -195,7 +195,7 @@
   - [UserActivityScenario](arkts-location-geolocationmanager-useractivityscenario-e.md)
   <!--Del-->
   - [WifiFingerprintType(system api)](arkts-location-geolocationmanager-wififingerprinttype-e-sys.md)<!--DelEnd-->
-- [@system.geolocation](arkts-system-geolocation.md)
+- [@system.geolocation](arkts-location-system-geolocation.md)
   - [Geolocation](arkts-location-system-geolocation-geolocation-c.md)
   - [GeolocationResponse](arkts-location-system-geolocation-geolocationresponse-i.md)
   - [GetLocationOption](arkts-location-system-geolocation-getlocationoption-i.md)

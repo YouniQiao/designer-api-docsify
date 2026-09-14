@@ -65,7 +65,7 @@ hideFailureTipDialog?: boolean
 - 取值为true时，不显示“暂无可用打开方式”的弹窗。  
 - 取值为false时，显示“暂无可用打开方式”的弹窗。默认值为false。
 
-**说明：**appLinkingOnly字段为true时不会触发Deep Linking流程，该字段不会生效。
+**说明：** appLinkingOnly字段为true时不会触发Deep Linking流程，该字段不会生效。
 
 **类型：** boolean
 
@@ -87,7 +87,7 @@ parameters?: Record<string, Object>
 
 表示WantParams参数。
 
-**说明：**具体使用规则请参考[want](arkts-ability-app-ability-want-want-c.md)中的parameters属性。
+**说明：** 具体使用规则请参考[want](arkts-ability-app-ability-want-want-c.md)中的parameters属性。
 
 **类型：** Record&lt;string, Object&gt;
 

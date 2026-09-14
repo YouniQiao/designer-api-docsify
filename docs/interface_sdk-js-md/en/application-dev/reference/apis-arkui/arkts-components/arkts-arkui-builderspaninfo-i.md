@@ -2,7 +2,7 @@
 
 Defines the identity and position information of a BuilderSpan in **RichEditor**.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This interface is not supported when the **RichEditor** component is constructed with
 > [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md).
@@ -10,11 +10,6 @@ Defines the identity and position information of a BuilderSpan in **RichEditor**
 **Since:** 26.2.0
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## id
 

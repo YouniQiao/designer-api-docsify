@@ -14,7 +14,7 @@ function getScanInfos(): Promise<Array<WifiScanInfo>>
 
 获取扫描结果，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃。
 
@@ -65,7 +65,7 @@ function getScanInfos(callback: AsyncCallback<Array<WifiScanInfo>>): void
 
 获取扫描结果，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃。
 

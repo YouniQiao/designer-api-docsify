@@ -6,11 +6,6 @@ Describes the auto-fill attribute.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## minSize
 
 ```TypeScript

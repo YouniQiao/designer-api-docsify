@@ -12,11 +12,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## decoration
 
 ```TypeScript
@@ -47,7 +42,7 @@ font(value: Font)
 
 设置文本样式。包括字体大小、字体粗细、字体族和字体风格。
 
-> **说明：**
+> **说明：** 
 > 
 > fontWeight设置过大可能会在不同字体下有截断。
 
@@ -208,7 +203,7 @@ fontWeight(value: number | FontWeight | ResourceStr)
 
 设置文本的字体粗细，设置过大可能会在不同字体下有截断。未通过该接口设置时，默认字体粗细为FontWeight.Normal（正常粗细，对应数值400）。
 
-> **说明：**
+> **说明：** 
 > 
 > 当同时设置[fontVariations属性](#fontvariations)时，fontVariations属性的优先级更高。
 
@@ -234,7 +229,7 @@ fontWeight(weight: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWe
 
 设置文本的字体粗细。未通过该接口设置时，默认字体粗细为FontWeight.Normal（正常粗细，对应数值400）。
 
-> **说明：**
+> **说明：** 
 > 
 > 当同时设置fontVariations属性时，fontVariations属性的优先级更高。
 

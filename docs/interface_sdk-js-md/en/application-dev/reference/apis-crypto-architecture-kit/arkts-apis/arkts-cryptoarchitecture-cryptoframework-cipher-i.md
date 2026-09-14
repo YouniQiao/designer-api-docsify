@@ -170,7 +170,7 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 
 (2) Encrypts or decrypts the data passed in this time in RSA and SM2 asymmetric encryption or decryption. This API uses an asynchronous callback to return the encrypted or decrypted data. If a large amount of data needs to be encrypted/decrypted, call **doFinal()** multiple times and concatenate the result of each **doFinal()** to obtain the complete plaintext/ciphertext.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process
 > is complete and the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is cleared. When a new encryption and
@@ -427,7 +427,7 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 
 (2) Encrypts or decrypts the data passed in RSA and SM2 asymmetric encryption or decryption. This API uses a promise to return the encrypted or decrypted data. If a large amount of data is to be processed, call **doFinal()** multiple times and concatenate the results to obtain the complete plaintext or ciphertext.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process
 > is complete and the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is cleared. When a new encryption and
@@ -548,9 +548,9 @@ of **updateSync()** and **doFinalSync()** throughout the process will yield the 
 
 (2) Encrypts or decrypts the input data for RSA or SM2 asymmetric encryption/decryption. This API returns the encrypted or decrypted data synchronously. If a large amount of data is to be processed, call **doFinalSync()** multiple times and concatenate the results to obtain the complete plaintext or ciphertext.
 
-<br>See **NOTE:**in [doFinal()](#dofinal-1) for other precautions.
+<br>See **NOTE:** in [doFinal()](#dofinal-1) for other precautions.
 
-<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, doFinal. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, doFinal. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -845,7 +845,7 @@ Initializes a [cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) ins
 
 <br>**initSync**, **updateSync**, and **doFinalSync** must be used together. **initSync** and **doFinalSync** are mandatory, and **updateSync** is optional.
 
-<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -926,7 +926,7 @@ Updates the data to encrypt or decrypt by segment. This API uses an asynchronous
 
 <br>This API can be called only after the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is initialized by using [init()](#init-3).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar
 > with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the
@@ -991,7 +991,7 @@ Updates the data to encrypt or decrypt by segment. This API uses a promise to re
 
 <br>This API can be called only after the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is initialized by using [init()](#init-3).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar
 > with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the
@@ -1061,9 +1061,9 @@ Updates the data to encrypt or decrypt by segment.
 
 <br>This API can be called only after the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is initialized by using [initSync()](#initsync).
 
-<br>See **NOTE:**in **update()** for other precautions.
+<br>See **NOTE:** in **update()** for other precautions.
 
-<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 

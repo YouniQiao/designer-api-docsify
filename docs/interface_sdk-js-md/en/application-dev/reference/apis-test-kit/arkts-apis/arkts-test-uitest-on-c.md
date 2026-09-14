@@ -139,7 +139,7 @@ Specifies the display to which the target component belongs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | number | Yes | ID of the display to which the component belongs. The value is an integer greater than or equal to 0. <br>**Note:** If the input **displayId** does not exist, the exception **17000007** is reported. You can use [getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md) to obtain all current **display** objects and use them to obtain the corresponding display IDs. |
+| displayId | number | Yes | ID of the display to which the component belongs. The value is an integer greater than or equal to 0. <br>**Note:**  If the input **displayId** does not exist, the exception **17000007** is reported. You can use [getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md) to obtain all current **display** objects and use them to obtain the corresponding display IDs. |
 
 **Return value:**
 
@@ -182,13 +182,13 @@ Specifies the checkable attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Checkable status of the component. The value **true** indicates that the component is checkable, and **false** indicates the opposite. Default value: **true |
+| b | boolean | No | Checkable status of the component. The value **true** indicates that the component is checkable, and **false** indicates the opposite. Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object that matches the checkable attribute of the target component. |
+| [On](arkts-test-uitest-on-c.md) | **On** object that matches the checkable attribute of the target component. |
 
 **Error codes:**
 
@@ -225,13 +225,13 @@ Specifies the checked attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Checked status of the component. The value **true** indicates that the component is checked, and **false** indicates the opposite. Default value: **true |
+| b | boolean | No | Checked status of the component. The value **true** indicates that the component is checked, and **false** indicates the opposite. Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object that matches the checked attribute of the target component. |
+| [On](arkts-test-uitest-on-c.md) | **On** object that matches the checked attribute of the target component. |
 
 **Error codes:**
 
@@ -268,13 +268,13 @@ Specifies the clickable attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Clickable status of the component. The value **true** indicates that the component is clickable, and **false** indicates the opposite. Default value: **true |
+| b | boolean | No | Clickable status of the component. The value **true** indicates that the component is clickable, and **false** indicates the opposite. Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object that matches the clickable attribute of the target component. |
+| [On](arkts-test-uitest-on-c.md) | **On** object that matches the clickable attribute of the target component. |
 
 **Error codes:**
 
@@ -318,7 +318,7 @@ Specifies the description of the target component. Multiple match patterns are s
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object. |
+| [On](arkts-test-uitest-on-c.md) | **On** object. |
 
 **Error codes:**
 
@@ -355,13 +355,13 @@ Specifies the enabled attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Enabled status of the component. The value **true** indicates that the component is enabled, and **false** indicates the opposite. Default value: **true |
+| b | boolean | No | Enabled status of the component. The value **true** indicates that the component is enabled, and **false** indicates the opposite. Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object that matches the enabled attribute of the target component. |
+| [On](arkts-test-uitest-on-c.md) | **On** object that matches the enabled attribute of the target component. |
 
 **Error codes:**
 
@@ -398,13 +398,13 @@ Specifies the focused attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Focused status of the component. The value **true** indicates that the component is focused, and **false** indicates the opposite. Default value: **true |
+| b | boolean | No | Focused status of the component. The value **true** indicates that the component is focused, and **false** indicates the opposite. Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object that matches the focused attribute of the target component. |
+| [On](arkts-test-uitest-on-c.md) | **On** object that matches the focused attribute of the target component. |
 
 **Error codes:**
 
@@ -448,7 +448,7 @@ Specifies the hint text attribute of the target component.
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object that matches the **hint** attribute of the target component. |
+| [On](arkts-test-uitest-on-c.md) | **On** object that matches the **hint** attribute of the target component. |
 
 **Error codes:**
 
@@ -491,7 +491,7 @@ Specifies the ID attribute of the target component.
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object that matches the ID attribute of the target component. |
+| [On](arkts-test-uitest-on-c.md) | **On** object that matches the ID attribute of the target component. |
 
 **Error codes:**
 
@@ -535,7 +535,7 @@ Specifies the **id** attribute and match pattern of the target component.
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object that matches the ID attribute of the target component. |
+| [On](arkts-test-uitest-on-c.md) | **On** object that matches the ID attribute of the target component. |
 
 **Error codes:**
 
@@ -578,7 +578,7 @@ Specifies that the target component is located within the given application wind
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object. |
+| [On](arkts-test-uitest-on-c.md) | **On** object. |
 
 **Error codes:**
 
@@ -621,7 +621,7 @@ Specifies that the target component is located after the given attribute compone
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object. |
+| [On](arkts-test-uitest-on-c.md) | **On** object. |
 
 **Error codes:**
 
@@ -665,7 +665,7 @@ Specifies that the target component is located before the given attribute compon
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object. |
+| [On](arkts-test-uitest-on-c.md) | **On** object. |
 
 **Error codes:**
 
@@ -703,13 +703,13 @@ Specifies the long-clickable attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Long-clickable status of the component. The value **true** indicates that the component is long -clickable, and **false** indicates the opposite. Default value: **true |
+| b | boolean | No | Long-clickable status of the component. The value **true** indicates that the component is long -clickable, and **false** indicates the opposite. Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object that matches the long-clickable attribute of the target component. |
+| [On](arkts-test-uitest-on-c.md) | **On** object that matches the long-clickable attribute of the target component. |
 
 **Error codes:**
 
@@ -734,7 +734,7 @@ originalText(text: string, pattern?: MatchPattern): On
 
 Specifies the text content and text matching pattern of the component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If the accessibilityLevel
 > of a component is set to **no** or **no-hide-descendants**, this API can be used to specify the text attribute of
@@ -760,7 +760,7 @@ Specifies the text content and text matching pattern of the component.
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object that matches the text attribute of the target component. |
+| [On](arkts-test-uitest-on-c.md) | **On** object that matches the text attribute of the target component. |
 
 **Error codes:**
 
@@ -797,13 +797,13 @@ Specifies the scrollable attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Whether the specified component is scrollable. The value **true** indicates that the component is scrollable, and **false** indicates the opposite. Default value: **true |
+| b | boolean | No | Whether the specified component is scrollable. The value **true** indicates that the component is scrollable, and **false** indicates the opposite. Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object that matches the scrollable attribute of the target component. |
+| [On](arkts-test-uitest-on-c.md) | **On** object that matches the scrollable attribute of the target component. |
 
 **Error codes:**
 
@@ -840,13 +840,13 @@ Specifies the selected attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Selected status of the component. The value **true** indicates that the component is selected, and **false** indicates the opposite. Default value: **true |
+| b | boolean | No | Selected status of the component. The value **true** indicates that the component is selected, and **false** indicates the opposite. Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object that matches the selected attribute of the target component. |
+| [On](arkts-test-uitest-on-c.md) | **On** object that matches the selected attribute of the target component. |
 
 **Error codes:**
 
@@ -871,7 +871,7 @@ text(txt: string, pattern?: MatchPattern): On
 
 Specifies the text attribute of the target component. Multiple match patterns are supported.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If the accessibilityLevel
 > of a component is set to **no** or **no-hide-descendants**, this API cannot be used to specify the text attribute
@@ -897,7 +897,7 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object that matches the text attribute of the target component. |
+| [On](arkts-test-uitest-on-c.md) | **On** object that matches the text attribute of the target component. |
 
 **Error codes:**
 
@@ -940,7 +940,7 @@ Specifies the type attribute of the target component.
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object that matches the type attribute of the target component. |
+| [On](arkts-test-uitest-on-c.md) | **On** object that matches the type attribute of the target component. |
 
 **Error codes:**
 
@@ -984,7 +984,7 @@ Specifies the **type** attribute and match pattern of the target component.
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object that matches the type attribute of the target component. |
+| [On](arkts-test-uitest-on-c.md) | **On** object that matches the type attribute of the target component. |
 
 **Error codes:**
 
@@ -1027,7 +1027,7 @@ Specifies that the target component is located within the given attribute compon
 
 | Type | Description |
 | --- | --- |
-| [On](arkts-test-uitest-on-c.md) | On** object. |
+| [On](arkts-test-uitest-on-c.md) | **On** object. |
 
 **Error codes:**
 

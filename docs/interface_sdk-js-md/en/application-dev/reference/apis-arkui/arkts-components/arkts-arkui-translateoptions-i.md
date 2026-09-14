@@ -6,11 +6,6 @@ Defines the options of translate.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## x
 
 ```TypeScript

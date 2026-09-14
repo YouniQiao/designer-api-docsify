@@ -14,7 +14,7 @@ function getOAID(callback: AsyncCallback<string>): void
 
 Obtains the OAID. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The setting item of cross-app association access permission was named app tracking access permission
 > in HarmonyOS NEXT Developer Beta5 and earlier versions.
@@ -60,7 +60,7 @@ function getOAID(): Promise<string>
 
 Obtains the OAID. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The setting item of cross-app association access permission was named app tracking access permission
 > in HarmonyOS NEXT Developer Beta5 and earlier versions.

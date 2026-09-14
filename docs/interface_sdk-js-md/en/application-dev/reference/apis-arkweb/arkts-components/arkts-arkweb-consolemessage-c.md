@@ -6,11 +6,6 @@ ConsoleMessage is an object that encapsulates JavaScript console output informat
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

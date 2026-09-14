@@ -8,11 +8,6 @@ Request/response header object returned by the **Web** component. It is suitable
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## headerKey
 
 ```TypeScript

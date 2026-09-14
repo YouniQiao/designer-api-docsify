@@ -17,10 +17,6 @@
 | --- | --- | --- | --- |
 | message | string | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -33,10 +29,6 @@ new(message?: string): TypeError
 | --- | --- | --- | --- |
 | message | string | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## prototype
 
 ```TypeScript

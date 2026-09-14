@@ -6,11 +6,6 @@ Defines the custom transition animation protocol. You need to implement this pro
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onTransitionEnd
 
 ```TypeScript

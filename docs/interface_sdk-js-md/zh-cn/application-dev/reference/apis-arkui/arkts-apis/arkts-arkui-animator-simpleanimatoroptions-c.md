@@ -33,7 +33,7 @@ constructor(begin: number, end: number)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | begin | number | 是 | 动画插值起点。<br>**说明：** 会影响[onFrame](arkts-arkui-animator-animatorresult-i.md#onframe)回调的入参值，与end参数共同决定onFrame回调值的范围。 |
-| end | number | 是 | 动画插值终点。<br>**说明：**会影响[onFrame](arkts-arkui-animator-animatorresult-i.md#onframe)回调的入参值，与begin参数共同决定onFrame回调值的范围。 |
+| end | number | 是 | 动画插值终点。<br>**说明：** 会影响[onFrame](arkts-arkui-animator-animatorresult-i.md#onframe)回调的入参值，与begin参数共同决定onFrame回调值的范围。 |
 
 **示例**
 

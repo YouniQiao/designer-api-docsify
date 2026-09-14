@@ -6,11 +6,6 @@ Provides the result returned by the started **EmbeddedUIExtensionAbility**.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## code
 
 ```TypeScript

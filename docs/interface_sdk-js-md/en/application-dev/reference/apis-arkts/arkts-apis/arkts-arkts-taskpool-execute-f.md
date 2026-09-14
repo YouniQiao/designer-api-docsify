@@ -335,6 +335,8 @@ Execute a concurrent task with Configs.
 
 | Type | Description |
 | --- | --- |
+| Promise&lt;Object&gt; |  |
+
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -484,6 +486,8 @@ Execute a concurrent generics task with Configs.
 
 | Type | Description |
 | --- | --- |
+| Promise&lt;R&gt; |  |
+
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -633,6 +637,8 @@ Execute a concurrent task group with Configs.
 
 | Type | Description |
 | --- | --- |
+| Promise&lt;Object[]&gt; |  |
+
 **Error codes:**
 
 | Error Code ID | Error Message |

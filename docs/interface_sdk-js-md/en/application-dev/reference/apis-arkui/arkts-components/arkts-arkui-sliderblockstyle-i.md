@@ -6,11 +6,6 @@ Describes the style of the slider in the block direction.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## image
 
 ```TypeScript
@@ -61,7 +56,7 @@ Default value: **SliderBlockType.DEFAULT**, indicating the round slider.
 
 **Type:** [SliderBlockType](arkts-arkui-sliderblocktype-e.md)
 
-**Default:**
+**Default:** 
 - API version 11+: SliderBlockType.DEFAULT - indicating the round slider.
 
 **Since:** 10

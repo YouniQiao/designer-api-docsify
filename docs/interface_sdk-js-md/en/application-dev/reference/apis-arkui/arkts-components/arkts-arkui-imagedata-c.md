@@ -2,7 +2,7 @@
 
 An **ImageData** object stores pixel data rendered on a canvas.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > A constructor used to create an **ImageData** object. To ensure successful drawing,
 > make sure the object's area does not exceed 16000 x 16000, with its width and height
@@ -12,11 +12,6 @@ An **ImageData** object stores pixel data rendered on a canvas.
 **Since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## constructor
 
@@ -117,7 +112,7 @@ Actual width of the rectangle on the canvas.
 
 The unit is px.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The px2vp
 > API can be used for unit conversion.

@@ -6,11 +6,6 @@ Radio button information.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## group
 
 ```TypeScript

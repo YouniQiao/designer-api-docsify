@@ -10,11 +10,6 @@ In addition to universal events and [scrollable component common events](../../.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## cachedCount
 
 ```TypeScript
@@ -108,7 +103,7 @@ You can use **columnsTemplate('repeat(auto-fill,track-size)')** to automatically
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | Number of columns in the layout.<br>Default value: **'1fr' |
+| value | string | Yes | Number of columns in the layout.<br>Default value: **'1fr'** |
 
 ## columnsTemplate
 
@@ -146,7 +141,7 @@ enableScrollInteraction(value: boolean)
 
 Sets whether to support the scrolling gesture.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The component cannot be scrolled through mouse press-and-drag operations.
 
@@ -162,7 +157,7 @@ Sets whether to support the scrolling gesture.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to support scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the [Scroller](arkts-arkui-scroller-c.md).<br>Default value: **true |
+| value | boolean | Yes | Whether to support scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the [Scroller](arkts-arkui-scroller-c.md).<br>Default value: **true** |
 
 ## friction
 
@@ -204,7 +199,7 @@ Sets the size constraints of the child components during layout. For details abo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Size constraints of the child components during layout. If the value specified is less than **0**, this parameter does not take effect.<br>**NOTE:**<br>1. If both **itemConstraintSize** and the constraintSize attribute of the **FlowItem** are set, the **minWidth** (or **minHeight**) will be the larger of the two values, and the **maxWidth** (or **maxHeight**) will be the smaller of the two values. The resulting values will then be used as the **constraintSize** for the **FlowItem**.<br>2. When only **itemConstraintSize** is set, it effectively applies a uniform size constraint to all child components in the **WaterFlow**.<br>3. The **itemConstraintSize** attribute, once converted to the **constraintSize** attribute of the **FlowItem** through the two methods mentioned above, follows the same rules for taking effect as the universal attribute constraintSize. |
+| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Size constraints of the child components during layout. If the value specified is less than **0**, this parameter does not take effect.<br>**NOTE:** <br>1. If both **itemConstraintSize** and the constraintSize attribute of the **FlowItem** are set, the **minWidth** (or **minHeight**) will be the larger of the two values, and the **maxWidth** (or **maxHeight**) will be the smaller of the two values. The resulting values will then be used as the **constraintSize** for the **FlowItem**.<br>2. When only **itemConstraintSize** is set, it effectively applies a uniform size constraint to all child components in the **WaterFlow**.<br>3. The **itemConstraintSize** attribute, once converted to the **constraintSize** attribute of the **FlowItem** through the two methods mentioned above, follows the same rules for taking effect as the universal attribute constraintSize. |
 
 ## layoutDirection
 
@@ -224,7 +219,7 @@ Sets the main axis direction of the layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FlexDirection](../arkts-apis/arkts-arkui-flexdirection-e.md) | Yes | Main axis direction of the layout.<br>Default value: **FlexDirection.Column |
+| value | [FlexDirection](../arkts-apis/arkts-arkui-flexdirection-e.md) | Yes | Main axis direction of the layout.<br>Default value: **FlexDirection.Column** |
 
 ## nestedScroll
 
@@ -386,7 +381,7 @@ You can use **rowsTemplate('repeat(auto-fill,track-size)')** to automatically ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | Number of rows in the layout.<br>Default value: **'1fr' |
+| value | string | Yes | Number of rows in the layout.<br>Default value: **'1fr'** |
 
 ## supportEmptyBranchInLazyLoading
 
@@ -396,7 +391,7 @@ supportEmptyBranchInLazyLoading(supported: boolean | undefined)
 
 Defines whether the **WaterFlow** component supports the generation of empty branch nodes that do not contain any child components using the **if/else** rendering control syntax in **LazyForEach** or **Repeat**. If this attribute is not set, empty branch nodes are not supported. This attribute cannot be updated after being set. Therefore, you cannot switch between the behavior of supporting empty branches and the behavior of not supporting empty branches after setting this attribute.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When [WaterFlowSections](arkts-arkui-waterflowsections-c.md) is set using the [sections](arkts-arkui-waterflowoptions-i.md) parameter,
 > or when the [SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md) layout mode is set using the
@@ -437,4 +432,4 @@ Sets whether to synchronously load all child components in the **WaterFlow** com
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to synchronously load all child components in the **WaterFlow** component.<br> **true**: synchronous loading; false: asynchronous loading<br>Default value: **true**<br>**NOTE:**<br>When this parameter is set to **false**, in the first display or [scrollToIndex](arkts-arkui-scroller-c.md#scrolltoindex) jumps without animation, if the time consumed by the frame layout exceeds 50 ms, the child components that have not been laid out in the **WaterFlow** component are delayed to the next frame for layout. |
+| enable | boolean | Yes | Whether to synchronously load all child components in the **WaterFlow** component.<br> **true**: synchronous loading; false: asynchronous loading<br>Default value: **true**<br>**NOTE:** <br>When this parameter is set to **false**, in the first display or [scrollToIndex](arkts-arkui-scroller-c.md#scrolltoindex) jumps without animation, if the time consumed by the frame layout exceeds 50 ms, the child components that have not been laid out in the **WaterFlow** component are delayed to the next frame for layout. |

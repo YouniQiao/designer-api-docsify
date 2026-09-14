@@ -22,7 +22,7 @@ Creates a **DisplaySync** object, through which you can set the frame rate of th
 
 | Type | Description |
 | --- | --- |
-| [DisplaySync](arkts-arkgraphics2d-displaysync-displaysync-i.md) | DisplaySync** object created. |
+| [DisplaySync](arkts-arkgraphics2d-displaysync-displaysync-i.md) | **DisplaySync** object created. |
 
 **Examples**
 

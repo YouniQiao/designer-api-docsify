@@ -2,7 +2,7 @@
 
 Defines the radial gradient parameters.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer element
@@ -11,11 +11,6 @@ Defines the radial gradient parameters.
 **Since:** 18
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## center
 
@@ -91,7 +86,7 @@ Default value: **false**.
 
 **Type:** boolean
 
-**Default:**
+**Default:** 
 - API version 18+: false
 
 **Since:** 7

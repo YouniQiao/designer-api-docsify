@@ -19,10 +19,6 @@ Matches a string with this regular expression, and returns an array containing t
 | --- | --- | --- | --- |
 | string | string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [Symbol.replace]
 
 ```TypeScript
@@ -38,10 +34,6 @@ Replaces text in a string, using this regular expression.
 | string | string | Yes |  |
 | replaceValue | string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [Symbol.replace]
 
 ```TypeScript
@@ -57,10 +49,6 @@ Replaces text in a string, using this regular expression.
 | string | string | Yes |  |
 | replacer | (substring: string, ...args: any[]) =&gt; string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [Symbol.search]
 
 ```TypeScript
@@ -75,10 +63,6 @@ Finds the position beginning first substring match in a regular expression searc
 | --- | --- | --- | --- |
 | string | string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [Symbol.split]
 
 ```TypeScript
@@ -95,8 +79,3 @@ If the regular expression contains capturing parentheses, then each time this re
 | --- | --- | --- | --- |
 | string | string | Yes |  |
 | limit | number | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

@@ -6,11 +6,6 @@ A **VideoController** object can control one or more **Video** components.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript
@@ -97,7 +92,7 @@ setCurrentTime(value: number)
 
 Sets the video playback position.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > To start playback from a specific position, disable autoplay, wait for video preparation to complete, and then
 > seek to the target position.

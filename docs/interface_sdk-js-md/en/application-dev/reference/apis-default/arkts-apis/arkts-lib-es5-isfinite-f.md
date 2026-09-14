@@ -18,8 +18,3 @@ Determines whether a supplied number is finite.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | number | number | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

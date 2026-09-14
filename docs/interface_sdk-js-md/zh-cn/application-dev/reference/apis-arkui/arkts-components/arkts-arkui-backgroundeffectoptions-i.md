@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## adaptiveColor
 
 ```TypeScript
@@ -41,7 +36,7 @@ blurOptions?: BlurOptions
 
 **类型：** [BlurOptions](arkts-arkui-bluroptions-i.md)
 
-**默认值：**
+**默认值：** 
 - API版本11：{ grayScale: [0,1] }
 - API版本12+：{ grayScale: [0,0] }
 

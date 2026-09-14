@@ -31,11 +31,6 @@ RichEditorSymbolSpanStyle和RichEditorSymbolSpanStyleResult中fontWeight的转�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## decoration
 
 ```TypeScript
@@ -304,7 +299,7 @@ textShadow?: Array<ShadowOptions>
 
 文字阴影效果。
 
-**说明：**
+**说明：** 
 
 仅支持查询阴影模糊半径、颜色和偏移量。
 

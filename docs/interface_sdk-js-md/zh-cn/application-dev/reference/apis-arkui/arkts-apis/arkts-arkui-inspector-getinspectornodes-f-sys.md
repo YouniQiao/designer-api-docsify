@@ -1,10 +1,5 @@
 # getInspectorNodes（系统接口）
 
-## 导入模块
-
-```TypeScript
-```
-
 ## getInspectorNodes
 
 ```TypeScript
@@ -27,3 +22,4 @@ declare function getInspectorNodes(): object
 
 | 类型 | 说明 |
 | --- | --- |
+| object |  |

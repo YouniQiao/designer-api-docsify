@@ -1,7 +1,7 @@
 # SizeResult
 
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The custom layout does not support the LazyForEach syntax.
 > - When a custom layout is created in builder mode, only **this.builder()** is allowed in the **build()** method
@@ -17,11 +17,6 @@
 **Since:** 10
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## height
 

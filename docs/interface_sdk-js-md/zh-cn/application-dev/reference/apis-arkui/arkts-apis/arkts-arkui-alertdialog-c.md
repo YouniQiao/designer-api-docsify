@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## show
 
 ```TypeScript
@@ -21,7 +16,7 @@ static show(value: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | A
 
 定义警告弹窗并弹出。
 
-> **说明：**
+> **说明：** 
 
 showAlertDialog需先获取[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)实例后再进行调用。
 

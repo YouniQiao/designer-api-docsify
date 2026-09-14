@@ -12,11 +12,6 @@ Before API version 26.0.0, if the first placeholder in a paragraph of the styled
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

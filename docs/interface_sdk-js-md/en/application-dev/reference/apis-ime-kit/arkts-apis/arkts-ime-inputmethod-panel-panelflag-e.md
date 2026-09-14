@@ -1,7 +1,7 @@
 # PanelFlag
 
 Enumerates the state types of the input method panel. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > Currently, only the **SOFT_KEYBOARD** panel is supported.
 

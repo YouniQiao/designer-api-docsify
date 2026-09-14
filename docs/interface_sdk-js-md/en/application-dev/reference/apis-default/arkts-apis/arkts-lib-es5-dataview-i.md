@@ -20,10 +20,6 @@ Gets the Float32 value at the specified byte offset from the start of the view. 
 | byteOffset | number | Yes |  |
 | littleEndian | boolean | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## getFloat64
 
 ```TypeScript
@@ -39,10 +35,6 @@ Gets the Float64 value at the specified byte offset from the start of the view. 
 | byteOffset | number | Yes |  |
 | littleEndian | boolean | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## getInt16
 
 ```TypeScript
@@ -58,10 +50,6 @@ Gets the Int16 value at the specified byte offset from the start of the view. Th
 | byteOffset | number | Yes |  |
 | littleEndian | boolean | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## getInt32
 
 ```TypeScript
@@ -77,10 +65,6 @@ Gets the Int32 value at the specified byte offset from the start of the view. Th
 | byteOffset | number | Yes |  |
 | littleEndian | boolean | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## getInt8
 
 ```TypeScript
@@ -95,10 +79,6 @@ Gets the Int8 value at the specified byte offset from the start of the view. The
 | --- | --- | --- | --- |
 | byteOffset | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## getUint16
 
 ```TypeScript
@@ -114,10 +94,6 @@ Gets the Uint16 value at the specified byte offset from the start of the view. T
 | byteOffset | number | Yes |  |
 | littleEndian | boolean | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## getUint32
 
 ```TypeScript
@@ -133,10 +109,6 @@ Gets the Uint32 value at the specified byte offset from the start of the view. T
 | byteOffset | number | Yes |  |
 | littleEndian | boolean | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## getUint8
 
 ```TypeScript
@@ -151,10 +123,6 @@ Gets the Uint8 value at the specified byte offset from the start of the view. Th
 | --- | --- | --- | --- |
 | byteOffset | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## setFloat32
 
 ```TypeScript

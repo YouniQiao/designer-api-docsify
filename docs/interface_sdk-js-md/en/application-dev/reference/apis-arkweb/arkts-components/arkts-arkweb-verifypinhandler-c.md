@@ -6,11 +6,6 @@ VerifyPinHandler is a class in the Web component that handles PIN code verificat
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## confirm
 
 ```TypeScript

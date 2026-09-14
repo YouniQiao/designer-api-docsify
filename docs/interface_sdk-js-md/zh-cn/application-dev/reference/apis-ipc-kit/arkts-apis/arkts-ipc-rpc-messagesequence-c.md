@@ -3728,7 +3728,7 @@ writeRawData(rawData: number[], size: number): void
 
 将原始数据写入MessageSequence对象。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口是一次性接口，不允许在一次parcel通信中多次调用该接口。
 > 
@@ -3782,7 +3782,7 @@ writeRawDataBuffer(rawData: ArrayBuffer, size: number): void
 
 将原始数据写入MessageSequence对象。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口是一次性接口，不允许在一次parcel通信中多次调用该接口。
 > 

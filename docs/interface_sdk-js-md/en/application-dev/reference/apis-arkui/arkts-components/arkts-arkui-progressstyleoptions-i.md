@@ -10,11 +10,6 @@ Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoption
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## scaleCount
 
 ```TypeScript

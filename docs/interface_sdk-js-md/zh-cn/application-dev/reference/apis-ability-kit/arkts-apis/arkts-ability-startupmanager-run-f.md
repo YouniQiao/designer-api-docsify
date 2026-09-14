@@ -14,7 +14,7 @@ function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 
 执行启动框架启动任务或加载so文件。
 
-> **说明：**
+> **说明：** 
 > 
 > 本接口不支持执行feature类型HAP中的启动任务，如需要使用相关能力请调用
 > [startupManager.run](#run-1)
@@ -88,7 +88,7 @@ function run(startupTasks: Array<string>, context: common.AbilityStageContext, c
 
 执行启动框架启动任务或加载so文件。支持指定[AbilityStageContext](arkts-ability-abilitystagecontext-c.md)用于启动任务的加载，该上下文会作为启动任务init方法的入参。本接口支持feature类型HAP中的启动任务。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 本接口只支持[应用级so](../../../application-models/ability-terminology.md#应用级so)文件加载，
 > 不支持[系统级so](../../../application-models/ability-terminology.md#系统级so)文件加载。

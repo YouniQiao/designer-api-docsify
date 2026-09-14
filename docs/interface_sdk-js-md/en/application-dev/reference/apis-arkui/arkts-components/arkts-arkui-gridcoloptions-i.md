@@ -10,11 +10,6 @@ Since API version 20, inheritance of the **span** property follows rules detaile
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## offset
 
 ```TypeScript
@@ -49,7 +44,7 @@ The value must be a non-negative integer. Default value: **0**.
 
 Invalid values are treated as the default value.
 
-**NOTE:**
+**NOTE:** 
 
 If a child component shares an **order** value with another child component or does not have **order** set, it is displayed based on its code sequence number.
 

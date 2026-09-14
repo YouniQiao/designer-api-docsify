@@ -26,11 +26,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## end
 
 ```TypeScript
@@ -41,7 +36,7 @@ end?: Date
 
 默认值：结束时间为23:59:59（小时=23，分钟=59）
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 仅设置的小时和分钟生效。
 > 2. 设置了start或end且为非默认值的场景下，loop不生效。
@@ -88,7 +83,7 @@ selected?: Date
 
 默认值：当前系统时间
 
-从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 **类型：** Date
 
@@ -108,7 +103,7 @@ start?: Date
 
 默认值：起始时间为00:00:00（小时=0，分钟=0）
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 仅设置的小时和分钟生效。
 > 2. 设置了start或end且为非默认值的场景下，loop不生效。

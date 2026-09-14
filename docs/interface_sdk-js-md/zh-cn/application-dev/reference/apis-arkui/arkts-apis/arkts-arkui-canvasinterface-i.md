@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## [[Call]]
 
 ```TypeScript
@@ -39,6 +34,8 @@
 
 | 类型 | 说明 |
 | --- | --- |
+| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |  |
+
 ## [[Call]]
 
 ```TypeScript
@@ -68,6 +65,8 @@
 
 | 类型 | 说明 |
 | --- | --- |
+| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |  |
+
 ## [[Call]]
 
 ```TypeScript
@@ -76,7 +75,7 @@
 
 使用CanvasParams创建不缓存指令的Canvas组件。创建Canvas组件时，最大面积不超过10000px*10000px，超过最大面积则无法正常创建。Canvas组件未设置固定尺寸时，默认扩展至其最大可用尺寸。
 
-> **说明：**
+> **说明：** 
 > 
 > - 使用本接口创建的Canvas组件将在
 > [onReady&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-canvasattribute-c.md#onready)
@@ -104,3 +103,4 @@
 
 | 类型 | 说明 |
 | --- | --- |
+| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |  |

@@ -2,7 +2,7 @@
 
 布局管理器对象。
 
-> **说明：**
+> **说明：** 
 > 
 > 文本内容变更后，需等待布局完成才可获取到最新的布局信息。
 
@@ -19,11 +19,6 @@ let layoutManager: LayoutManager = this.controller.getLayoutManager();
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## getCharacterPositionAtCoordinate
 
 ```TypeScript
@@ -32,7 +27,7 @@ getCharacterPositionAtCoordinate(x: number, y: number): PositionWithAffinity | u
 
 获取距离指定坐标最近的字符的位置信息。
 
-> **说明：**
+> **说明：** 
 > 
 > - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字形级别的位置信息，可使用
 > [getGlyphPositionAtCoordinate](#getglyphpositionatcoordinate)方法。
@@ -99,7 +94,7 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange): Array<TextRange> | undefi
 
 根据给定的文本字形范围来获取范围内的字符范围，以及实际的字形范围。
 
-> **说明：**
+> **说明：** 
 > 
 > 文本内容变更后，需等待布局完成才可获取到最新的字符范围信息。
 > 以文本“世界Hello”为例，其字形索引与字符索引的对应关系如下：
@@ -168,7 +163,7 @@ getGlyphPositionAtCoordinate(x: number, y: number): PositionWithAffinity
 
 获取较为接近给定坐标的字形的位置信息。
 
-> **说明：**
+> **说明：** 
 > 
 > - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字符级别的位置信息，可使用
 > [getCharacterPositionAtCoordinate](#getcharacterpositionatcoordinate)方法。
@@ -204,7 +199,7 @@ getGlyphRangeForCharacterRange(charRange: TextRange): Array<TextRange> | undefin
 
 根据给定的文本字符范围来获取范围内的字形范围，以及实际的字符范围。
 
-> **说明：**
+> **说明：** 
 > 
 > 文本内容变更后，需等待布局完成才可获取到最新的字形范围信息。
 > 以文本“世界Hello”为例，其字形索引与字符索引的对应关系如下：
@@ -273,7 +268,7 @@ getLineCount(): number
 
 获取组件内容的总行数。
 
-> **说明：**
+> **说明：** 
 > 
 > 文本内容变更后，需等待布局完成才可获取到最新的总行数。
 
@@ -299,7 +294,7 @@ getLineMetrics(lineNumber: number): LineMetrics
 
 获取指定行的行信息、文本样式信息、以及字体属性信息。
 
-> **说明：**
+> **说明：** 
 > 
 > 文本内容变更后，需等待布局完成才可获取到最新的行信息。
 
@@ -331,7 +326,7 @@ getRectsForRange(range: TextRange, widthStyle: RectWidthStyle, heightStyle: Rect
 
 根据给定的矩形区域宽度样式和高度样式，获取文本中任意区间范围内的字符或占位符所占的绘制区域信息。
 
-> **说明：**
+> **说明：** 
 > 
 > 文本内容变更后，需等待布局完成才可获取到最新的绘制区域信息。
 

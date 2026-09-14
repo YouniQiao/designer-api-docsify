@@ -212,7 +212,7 @@ isHeadTrackingEnabled(): boolean
 
 获取头动跟踪是否开启，同步返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
 > [isHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean](#isheadtrackingenabled-1)
@@ -495,7 +495,7 @@ isSpatializationEnabled(): boolean
 
 获取空间音频渲染是否开启，同步返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
 > [isSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean](#isspatializationenabled-1)
@@ -714,7 +714,7 @@ off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void
 
 取消监听空间音频渲染开关状态变化事件。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
 > [off('spatializationEnabledChangeForAnyDevice')](#offspatializationenabledchangeforanydevice)
@@ -817,7 +817,7 @@ off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void
 
 取消监听头动跟踪开关状态变化事件。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
 > [off('headTrackingEnabledChangeForAnyDevice')](#offheadtrackingenabledchangeforanydevice)
@@ -1042,7 +1042,7 @@ on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void
 
 监听空间音频渲染开关状态变化事件（当空间音频渲染开关状态发生变化时触发）。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
 > [on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback&lt;AudioSpatialEnabledStateForDevice\&gt;): void](#onspatializationenabledchangeforanydevice)
@@ -1131,7 +1131,7 @@ on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void
 
 监听头动跟踪开关状态变化事件（当动跟踪开关状态发生变化时触发）。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
 > [on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback&lt;AudioSpatialEnabledStateForDevice\&gt;): void](#onheadtrackingenabledchangeforanydevice)
@@ -1394,7 +1394,7 @@ setHeadTrackingEnabled(enable: boolean, callback: AsyncCallback<void>): void
 
 根据输入指令，开启/关闭头动跟踪效果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
 > [setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\&lt;void&gt;](#setheadtrackingenabled-2)
@@ -1453,7 +1453,7 @@ setHeadTrackingEnabled(enable: boolean): Promise<void>
 
 根据输入指令，开启/关闭头动跟踪效果。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
 > [setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\&lt;void&gt;](#setheadtrackingenabled-2)
@@ -1621,7 +1621,7 @@ setSpatializationEnabled(enable: boolean, callback: AsyncCallback<void>): void
 
 根据输入指令，开启/关闭空间音频渲染效果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
 > [setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\&lt;void&gt;](#setspatializationenabled-2)
@@ -1680,7 +1680,7 @@ setSpatializationEnabled(enable: boolean): Promise<void>
 
 根据输入指令，开启/关闭空间音频渲染效果。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
 > [setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\&lt;void&gt;](#setspatializationenabled-2)

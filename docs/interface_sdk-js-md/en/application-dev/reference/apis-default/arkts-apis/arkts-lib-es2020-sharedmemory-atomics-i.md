@@ -21,10 +21,6 @@ Adds a value to the value at the given position in the array, returning the orig
 | index | number | Yes |  |
 | value | bigint | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## and
 
 ```TypeScript
@@ -41,10 +37,6 @@ Stores the bitwise AND of a value with the value at the given position in the ar
 | index | number | Yes |  |
 | value | bigint | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## compareExchange
 
 ```TypeScript
@@ -62,10 +54,6 @@ Replaces the value at the given position in the array if the original value equa
 | expectedValue | bigint | Yes |  |
 | replacementValue | bigint | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## exchange
 
 ```TypeScript
@@ -82,10 +70,6 @@ Replaces the value at the given position in the array, returning the original va
 | index | number | Yes |  |
 | value | bigint | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## load
 
 ```TypeScript
@@ -101,10 +85,6 @@ Returns the value at the given position in the array. Until this atomic operatio
 | typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) &#124; [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
 | index | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## notify
 
 ```TypeScript
@@ -121,10 +101,6 @@ Wakes up sleeping agents that are waiting on the given index of the array, retur
 | index | number | Yes |  |
 | count | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## or
 
 ```TypeScript
@@ -141,10 +117,6 @@ Stores the bitwise OR of a value with the value at the given position in the arr
 | index | number | Yes |  |
 | value | bigint | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## store
 
 ```TypeScript
@@ -161,10 +133,6 @@ Stores a value at the given position in the array, returning the new value. Unti
 | index | number | Yes |  |
 | value | bigint | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## sub
 
 ```TypeScript
@@ -181,10 +149,6 @@ Subtracts a value from the value at the given position in the array, returning t
 | index | number | Yes |  |
 | value | bigint | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## wait
 
 ```TypeScript
@@ -202,10 +166,6 @@ If the value at the given position in the array is equal to the provided value, 
 | value | bigint | Yes |  |
 | timeout | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## xor
 
 ```TypeScript
@@ -221,8 +181,3 @@ Stores the bitwise XOR of a value with the value at the given position in the ar
 | typedArray | [BigInt64Array](arkts-lib-es2020-bigint-bigint64array-i.md) &#124; [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) | Yes |  |
 | index | number | Yes |  |
 | value | bigint | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

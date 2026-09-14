@@ -26,7 +26,7 @@ createWideGamutSdrPixelMap(): Promise<PixelMap>
 
 创建SDR的PixelMap对象。当图片为带有3通道GainMap的HDR图片时，会将其基础图扩展为BT.2020色域的SDR图。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 对SDR图片源，按图片自带的色彩空间解码，输出SDR图。
 > 
@@ -145,7 +145,7 @@ modifyImageAllProperties(records: Record<string, string|null>): Promise<void>
 
 Exif属性中除"JPEGInterchangeFormat"/"JPEGInterchangeFormatLength"/"GIFLoopCount"字段外，其他均支持修改。
 
-> **说明：**
+> **说明：** 
 > 
 > - 调用该接口修改属性会改变属性字节长度，建议通过传入文件描述符来创建[image.createImageSource](arkts-image-image-createimagesource-f.md)实例或通过传入的uri创建
 > [image.createImageSource](arkts-image-image-createimagesource-f.md)实例。

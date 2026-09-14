@@ -16,7 +16,7 @@ Sets the number of FDs, number of threads, JS memory, or native memory limit of 
 
 This API is used to construct a memory leak. For details, see Subscribing to Resource Leak Events (ArkTS) and Subscribing to Resource Leak Events (C/C++).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Enable **System resource leak log** in **Developer options** and restart the device for the API to take effect.
 

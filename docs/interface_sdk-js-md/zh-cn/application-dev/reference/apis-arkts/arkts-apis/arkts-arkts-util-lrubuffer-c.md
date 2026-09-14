@@ -341,7 +341,7 @@ getCreateCount(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | createDefault()** 的返回值数量。 |
+| number | **createDefault()** 的返回值数量。 |
 
 **示例**
 

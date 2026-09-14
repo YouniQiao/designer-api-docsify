@@ -6,11 +6,6 @@ Defines the callback information triggered when the web page loading begins, inc
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## url
 
 ```TypeScript

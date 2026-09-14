@@ -20,7 +20,7 @@ bind(address: LocalAddress): Promise<void>
 
 Binds the address of a local socket file. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API explicitly binds the client to a local socket file based on the specified address.
 > 
@@ -120,7 +120,7 @@ connect(options: LocalConnectOptions): Promise<void>
 
 Connects to the specified socket file. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API allows you to connect to the TCP server without first executing **localsocket.bind**.
 
@@ -185,7 +185,7 @@ getExtraOptions(): Promise<ExtraOptionsBase>
 
 Obtains the socket properties of the **LocalSocket** object. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called only after **bind** or **connect** is successfully called.
 
@@ -245,7 +245,7 @@ getLocalAddress(): Promise<string>
 
 Obtains the local socket address of a **LocalSocket** connection. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called only after **bind** is successfully called.
 
@@ -304,7 +304,7 @@ getSocketFd(): Promise<number>
 
 Obtains the file descriptor of the **LocalSocket** object. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This API can be called only after **bind** or **connect** is successfully called.
 > 
@@ -364,7 +364,7 @@ getState(): Promise<SocketStateBase>
 
 Obtains the local socket connection status. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called only after **bind** or **connect** is successfully called.
 
@@ -734,7 +734,7 @@ send(options: LocalSendOptions): Promise<void>
 
 Sends data over a local socket connection. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called only after **connect** is successfully called.
 
@@ -804,7 +804,7 @@ setExtraOptions(options: ExtraOptionsBase): Promise<void>
 
 Sets the properties of the **LocalSocket** object. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called only after **bind** or **connect** is successfully called.
 

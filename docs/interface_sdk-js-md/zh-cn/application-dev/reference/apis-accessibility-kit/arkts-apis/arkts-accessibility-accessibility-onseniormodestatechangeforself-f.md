@@ -17,7 +17,7 @@ function onSeniorModeStateChangeForSelf(callback: Callback<boolean>): void
 
 与[accessibility.onSeniorModeStateChange](arkts-accessibility-accessibility-onseniormodestatechange-f.md)（监听系统关怀模式状态变化）对应不同作用范围，本接口仅关注应用自身状态。
 
-> **说明：**
+> **说明：** 
 > 
 > - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
 > 

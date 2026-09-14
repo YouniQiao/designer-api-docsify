@@ -8,11 +8,6 @@ Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindop
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## shouldDismiss
 
 ```TypeScript

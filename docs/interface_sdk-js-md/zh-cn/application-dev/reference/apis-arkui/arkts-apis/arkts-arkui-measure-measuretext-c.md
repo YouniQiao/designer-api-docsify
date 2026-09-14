@@ -20,7 +20,7 @@ static measureText(options: MeasureOptions): number
 
 计算指定文本作为单行文本显示时的宽度。如果文本包含多行（由换行符`\n`分隔），则返回其中最长的行的宽度。
 
-> **说明：**
+> **说明：** 
 > 
 > -measureText需要先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [getMeasureUtils](arkts-arkui-arkui-uicontext-uicontext-c.md#getmeasureutils)方法获取
@@ -90,7 +90,7 @@ static measureTextSize(options: MeasureOptions): SizeOptions
 
 计算指定文本的宽度和高度。
 
-> **说明：**
+> **说明：** 
 > 
 > -measureTextSize需要先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [getMeasureUtils](arkts-arkui-arkui-uicontext-uicontext-c.md#getmeasureutils)方法获取
@@ -123,7 +123,7 @@ static measureTextSize(options: MeasureOptions): SizeOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| [SizeOptions](arkts-arkui-sizeoptions-i.md) | 返回文本所占布局宽度和高度。<br>**说明：**<br>文本宽度以及高度返回值单位均为px。 |
+| [SizeOptions](arkts-arkui-sizeoptions-i.md) | 返回文本所占布局宽度和高度。<br>**说明：** <br>文本宽度以及高度返回值单位均为px。 |
 
 **示例**
 

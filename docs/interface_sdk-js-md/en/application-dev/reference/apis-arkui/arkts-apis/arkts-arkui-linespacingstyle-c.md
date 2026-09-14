@@ -6,11 +6,6 @@ Describes the text line spacing style.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript
@@ -33,8 +28,8 @@ A constructor used to create a text line spacing style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineSpacing | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text line spacing.<br>Default value: **0.0**<br>Value range: [0, +∞) <br>**NOTE:**If **value** of **LengthMetrics** is less than 0, the default value **0.0** is used. |
-| options | [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md) | No | Line spacing options.<br>Default value: **{ onlyBetweenLines: false } |
+| lineSpacing | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text line spacing.<br>Default value: **0.0**<br>Value range: [0, +∞) <br>**NOTE:** If **value** of **LengthMetrics** is less than 0, the default value **0.0** is used. |
+| options | [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md) | No | Line spacing options.<br>Default value: **{ onlyBetweenLines: false }** |
 
 ## lineSpacing
 

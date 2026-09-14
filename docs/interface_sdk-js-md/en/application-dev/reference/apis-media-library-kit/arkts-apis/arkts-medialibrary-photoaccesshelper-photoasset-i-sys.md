@@ -89,9 +89,9 @@ commitEditedAsset(editData: string, uri: string, callback: AsyncCallback<void>):
 
 Commits the edited image or video asset. This API uses an asynchronous callback to return the result.
 
-The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fileuri.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The commit operation overwrites the previous edited data.
 
@@ -164,9 +164,9 @@ commitEditedAsset(editData: string, uri: string): Promise<void>
 
 Commits the edited image or video asset. This API uses a promise to return the result.
 
-The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fileuri.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The commit operation overwrites the previous edited data.
 
@@ -476,9 +476,9 @@ getExif(callback: AsyncCallback<string>): void
 
 Obtains the Exif data from a JPG image and returns a JSON string. This API uses an asynchronous callback to return the result.
 
-The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
+The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-image-multimedia-image.md) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API returns a JSON string consisting of Exif tags. The complete Exif data consists of **all_exif** and
 > [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md). These two fields must be passed in via
@@ -551,9 +551,9 @@ getExif(): Promise<string>
 
 Obtains the Exif data from a JPG image and returns a JSON string. This API uses a promise to return the result.
 
-The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
+The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-image-multimedia-image.md) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API returns a JSON string consisting of Exif tags. The complete Exif data consists of **all_exif** and
 > [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md). These two fields must be passed in via
@@ -905,7 +905,7 @@ Opens this file asset. This API uses an asynchronous callback to return the resu
 
 The returned FD must be closed when it is not required.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 10 and deprecated since API version 11. For security purposes, the API
 > for obtaining the media file handle is no longer provided.
@@ -969,7 +969,7 @@ Opens this file asset. This API uses a promise to return the result.
 
 The returned FD must be closed when it is not required.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 10 and deprecated since API version 11. For security purposes, the API
 > for obtaining the media file handle is no longer provided.
@@ -1422,7 +1422,7 @@ revertToOriginal(callback: AsyncCallback<void>): void
 
 Reverts to the state of the file before being edited. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API deletes the edited data and edited image or video asset, and the deleted data cannot be restored.
 > Exercise caution when using this API.
@@ -1488,7 +1488,7 @@ revertToOriginal(): Promise<void>
 
 Reverts to the state of the file before being edited. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API deletes the edited data and edited image or video asset, and the deleted data cannot be restored.
 > Exercise caution when using this API.
@@ -1826,7 +1826,7 @@ Sets the pending state for this image or video asset. This API uses an asynchron
 
 The pending state can be removed only through **setPending(false)**. You can use **photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)** to check whether the asset state is pending. If the asset is in pending state, **true** is returned. Otherwise, **false** is returned.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **setPending** can be used only during the file creation process. Once the FD is closed, **setPending(true)**
 > cannot be used to set the pending state for the file.
@@ -1894,7 +1894,7 @@ Sets the pending state for this image or video asset. This API uses a promise to
 
 The pending state can be removed only through **setPending(false)**. You can use **photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)** to check whether the asset state is pending. If the asset is in pending state, **true** is returned. Otherwise, **false** is returned.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **setPending** can be used only during the file creation process. Once the FD is closed, **setPending(true)**
 > cannot be used to set the pending state for the file.

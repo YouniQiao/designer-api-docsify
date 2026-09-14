@@ -13,7 +13,7 @@ function getFile(wallpaperType: WallpaperType, callback: AsyncCallback<number>):
 ```
 
 获取指定类型的壁纸文件。使用callback异步回调。<br>   
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 8开始支持，从API version 9开始废弃。
 
@@ -54,7 +54,7 @@ function getFile(wallpaperType: WallpaperType): Promise<number>
 ```
 
 获取指定类型的壁纸文件。使用Promise异步回调。<br>   
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 8开始支持，从API version 9开始废弃。
 

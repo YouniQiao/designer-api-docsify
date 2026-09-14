@@ -6,11 +6,6 @@ Defines the options of BackgroundEffect
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## adaptiveColor
 
 ```TypeScript
@@ -41,7 +36,7 @@ Grayscale blur.
 
 **Type:** [BlurOptions](arkts-arkui-bluroptions-i.md)
 
-**Default:**
+**Default:** 
 - API version 11: { grayScale: [0,1] }
 - API version 12+: { grayScale: [0,0] }
 

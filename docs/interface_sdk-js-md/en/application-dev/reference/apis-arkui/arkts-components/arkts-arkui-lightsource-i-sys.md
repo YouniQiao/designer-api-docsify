@@ -8,11 +8,6 @@ Each component allows for one light source.
 
 **System API:** This is a system API.
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## color
 
 ```TypeScript

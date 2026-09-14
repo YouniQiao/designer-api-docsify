@@ -139,7 +139,7 @@ value?: ResourceStr
 
 默认值：空字符串。
 
-**说明：**文本超过列宽时会被截断。从API version 20开始，支持Resource类型。
+**说明：** 文本超过列宽时会被截断。从API version 20开始，支持Resource类型。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

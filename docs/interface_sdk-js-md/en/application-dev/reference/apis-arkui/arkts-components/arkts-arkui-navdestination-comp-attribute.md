@@ -10,11 +10,6 @@ In addition to the universal events, the following events are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## backButtonIcon
 
 ```TypeScript
@@ -23,7 +18,7 @@ backButtonIcon(value: ResourceStr | PixelMap | SymbolGlyphModifier)
 
 Sets the icon of the back button on the title bar.
 
-> **NOTE:**
+> **NOTE:** 
 
 > - This API can be called within attributeModifier since API version 12.
 > 
@@ -53,7 +48,7 @@ backButtonIcon(icon: ResourceStr | PixelMap | SymbolGlyphModifier, accessibility
 
 Sets the icon and accessibility text for the back button on the title bar.
 
-> **NOTE:**
+> **NOTE:** 
 
 > - This API cannot be called within attributeModifier.
 > 
@@ -84,7 +79,7 @@ bindToNestedScrollable(scrollInfos: Array<NestedScrollInfo>)
 
 Binds the **NavDestination** component with a nested scrollable container, which can be a List, Scroll, Grid, or WaterFlow component. This way, scrolling in the scrollable container triggers the display and hide animations of the title bar and toolbar of all **NavDestination** components that are bound to it �C scrolling up triggers the hide animation, and scrolling down triggers the show animation. A single **NavDestination** component can be bound to multiple nested scrollable containers, and a single nested scrollable container can be bound to multiple **NavDestination** components. For details, see [Example 1](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navdestination.md#example-1-linking-the-title-bar-and-toolbar-with-scrollable-components).
 
-> **NOTE:**
+> **NOTE:** 
 
 > - The connection between the scrolling actions and the animations for showing or hiding the title bar and toolbar
 > of the **NavDestination** component takes effect only when the title bar or toolbar is visible.
@@ -119,7 +114,7 @@ bindToScrollable(scrollers: Array<Scroller>)
 
 Binds the **NavDestination** component with a scrollable container, which can be a List, Scroll, Grid, or WaterFlow component. This way, scrolling in the scrollable container triggers the display and hide animations of the title bar and toolbar of all **NavDestination** components that are bound to it �C scrolling up triggers the hide animation, and scrolling down triggers the show animation. A single **NavDestination** component can be bound to multiple scrollable containers, and a single scrollable container can be bound to multiple **NavDestination** components. For details, see [Example 1](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navdestination.md#example-1-linking-the-title-bar-and-toolbar-with-scrollable-components).
 
-> **NOTE:**
+> **NOTE:** 
 
 > - The connection between the scrolling actions and the animations for showing or hiding the title bar and toolbar
 > of the **NavDestination** component takes effect only when the title bar or toolbar is visible.
@@ -154,7 +149,7 @@ customTransition(delegate: NavDestinationTransitionDelegate)
 
 Sets a custom transition animation for the **NavDestination** component.
 
-> **NOTE:**
+> **NOTE:** 
 
 > - This API cannot be called within attributeModifier.
 > 
@@ -183,7 +178,7 @@ enableNavigationIndicator(enabled: Optional<boolean>)
 
 Sets whether to show or hide the system navigation bar when entering this **NavDestination** component.
 
-> **NOTE:**
+> **NOTE:** 
 
 > This attribute is effective only if the following conditions are all met:
 
@@ -212,7 +207,7 @@ enableStatusBar(enabled: Optional<boolean>, animated?: boolean)
 
 Sets whether to show or hide the system status bar when entering this **NavDestination** component.
 
-> **NOTE:**
+> **NOTE:** 
 
 > - This attribute is effective only if the following conditions are all met:
 > 
@@ -363,7 +358,7 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafe
 
 Ignores the layout safe area by allowing the component to extend into the non-safe areas of the screen.
 
-> **NOTE:**
+> **NOTE:** 
 
 > - Prerequisites for the **ignoreLayoutSafeArea** attribute to take effect:
 > 
@@ -400,7 +395,7 @@ menus(value: Array<NavigationMenuItem> | CustomBuilder)
 
 Sets the menu items in the upper right corner of the page. If this attribute is not set, no menu item is displayed. When the value type is Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt;, the menu shows a maximum of three icons in portrait mode and a maximum of five icons in landscape mode, with excess icons (if any) placed under the automatically generated **More** icon.
 
-> **NOTE:**
+> **NOTE:** 
 
 > - This API can be called within attributeModifier since API version 14.
 > 
@@ -430,7 +425,7 @@ menus(items: Array<NavigationMenuItem> | CustomBuilder, options?: NavigationMenu
 
 Sets the menu items in the upper right corner of the page. If this attribute is not set, no menu item is displayed. Compared with [menus](#menus), this API adds menu options. When the value type is Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt;, the menu shows a maximum of three icons in portrait mode and a maximum of five icons in landscape mode, with excess icons (if any) placed under the automatically generated **More** icon.
 
-> **NOTE:**
+> **NOTE:** 
 
 > - This API cannot be called within attributeModifier.
 > 
@@ -461,7 +456,7 @@ mode(value: NavDestinationMode)
 
 Sets the mode of the **NavDestination** component. Dynamic modification is not supported.
 
-> **NOTE:**
+> **NOTE:** 
 
 > This API can be called within attributeModifier since API version 12.
 
@@ -487,7 +482,7 @@ onActive(callback: Optional<Callback<NavDestinationActiveReason>>)
 
 Triggered when the **NavDestination** component becomes active (on top of the stack and operable, with no special components blocking it). For details, see [Example 5](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navdestination.md#example-5-handling-navdestination-onactive-and-oninactive-lifecycle-events).
 
-> **NOTE:**
+> **NOTE:** 
 
 > This API can be called in attributeModifier since API version 22.
 
@@ -559,7 +554,7 @@ onInactive(callback: Optional<Callback<NavDestinationActiveReason>>)
 
 Triggered when the **NavDestination** component becomes inactive (not on top of the stack and inoperable, or on top but blocked by special components). For details, see [Example 5](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navdestination.md#example-5-handling-navdestination-onactive-and-oninactive-lifecycle-events).
 
-> **NOTE:**
+> **NOTE:** 
 
 > This API can be called in attributeModifier since API version 22.
 
@@ -585,7 +580,7 @@ onNewParam(callback: Optional<Callback<ESObject>>)
 
 Triggered when a **NavDestination** page that already exists in the stack is moved to the top using launchMode.MOVE_TO_TOP_SINGLETON or launchMode.POP_TO_SINGLETON.
 
-> **NOTE:**
+> **NOTE:** 
 
 > - This callback is not triggered by
 > replacePath or
@@ -615,7 +610,7 @@ onReady(callback: import('../api/@ohos.base').Callback<NavDestinationContext>)
 
 Triggered when the **NavDestination** component is about to build a child component.
 
-> **NOTE:**
+> **NOTE:** 
 
 > This API can be called within attributeModifier since API version 20.
 
@@ -665,7 +660,7 @@ onResult(callback: Optional<Callback<ESObject>>)
 
 Triggered when the **NavDestination** component returns.
 
-> **NOTE:**
+> **NOTE:** 
 
 > This API can be called in attributeModifier since API version 22.
 
@@ -737,7 +732,7 @@ onWillAppear(callback: Callback<void>)
 
 Called when the **NavDestination** component is about to be mounted. The routing stack can be modified in the callback, and the modification takes effect in the current frame.
 
-> **NOTE:**
+> **NOTE:** 
 
 > This API can be called within attributeModifier since API version 20.
 
@@ -763,7 +758,7 @@ onWillDisappear(callback: Callback<void>)
 
 Called when the the **NavDestination** component is about to be unmounted (or when the transition animation, if any, is about to start).
 
-> **NOTE:**
+> **NOTE:** 
 
 > This API can be called within attributeModifier since API version 20.
 
@@ -789,7 +784,7 @@ onWillHide(callback: Callback<void>)
 
 Called when the **NavDestination** component is about to be hidden.
 
-> **NOTE:**
+> **NOTE:** 
 
 > This API can be called within attributeModifier since API version 20.
 
@@ -815,7 +810,7 @@ onWillShow(callback: Callback<void>)
 
 Called when the **NavDestination** component is about to display.
 
-> **NOTE:**
+> **NOTE:** 
 
 > This API can be called within attributeModifier since API version 20.
 
@@ -841,7 +836,7 @@ preferredOrientation(orientation: Optional<Orientation>)
 
 Sets the display orientation for the **NavDestination** component. After the transition to the NavDestination, the system also switches the application's main window to the specified display orientation.
 
-> **NOTE:**
+> **NOTE:** 
 
 > - This attribute is effective only if the following conditions are all met:
 > 
@@ -878,7 +873,7 @@ recoverable(recoverable: Optional<boolean>)
 
 Sets whether the **NavDestination** component is recoverable. If set to recoverable, when the application process exits unexpectedly and restarts, the **NavDestination** component will be automatically re-created. To use this feature, ensure that the recoverable attribute is set for the **Navigation** component associated with the **NavDestination** component.
 
-> **NOTE:**
+> **NOTE:** 
 
 > This API must be used together with the recoverable API of
 > **Navigation**.
@@ -903,7 +898,7 @@ systemBarStyle(style: Optional<SystemBarStyle>)
 
 Sets the style of the system status bar when this **NavDestination** page is displayed in the **Navigation** component.
 
-> **NOTE:**
+> **NOTE:** 
 
 > - The setting takes effect only when the **NavDestination** component is used in conjunction with the
 > **Navigation** component.
@@ -958,7 +953,7 @@ title(value: string | CustomBuilder | NavDestinationCommonTitle | NavDestination
 
 Sets the page title. When the title string is too long: (1) If no subtitle is set, the string is scaled down, wrapped in two lines, and then clipped with an ellipsis (...) if it is still overlong. (2) If a subtitle is set, the subtitle is scaled down and then truncated with an ellipsis (...) if it is still overlong.
 
-> **NOTE:**
+> **NOTE:** 
 
 > This API can be called within attributeModifier since API version 12.
 
@@ -983,7 +978,7 @@ toolbarConfiguration(toolbarParam: Array<ToolbarItem> | CustomBuilder, options?:
 
 Sets the content of the toolbar. If this API is not called, the toolbar remains hidden.
 
-> **NOTE:**
+> **NOTE:** 
 
 > - This API can be called within attributeModifier since API version 20.
 > 

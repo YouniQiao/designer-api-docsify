@@ -299,7 +299,7 @@ Creates a **TimeZone** object corresponding to the specified time zone city.
 
 | Type | Description |
 | --- | --- |
-| [TimeZone](arkts-localization-i18n-timezone-c.md) | TimeZone** object corresponding to the specified time zone city ID. |
+| [TimeZone](arkts-localization-i18n-timezone-c.md) | **TimeZone** object corresponding to the specified time zone city ID. |
 
 **Examples**
 
@@ -334,7 +334,7 @@ Creates an array of **TimeZone** objects corresponding to the specified location
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[TimeZone](arkts-localization-i18n-timezone-c.md)&gt; | TimeZone** objects corresponding to the specified location. |
+| Array&lt;[TimeZone](arkts-localization-i18n-timezone-c.md)&gt; | **TimeZone** objects corresponding to the specified location. |
 
 **Error codes:**
 

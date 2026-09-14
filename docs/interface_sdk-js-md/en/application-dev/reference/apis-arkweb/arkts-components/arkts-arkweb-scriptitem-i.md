@@ -8,11 +8,6 @@ Describes the **ScriptItem** object registered with the **Web** component throug
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## script
 
 ```TypeScript

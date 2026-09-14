@@ -14,7 +14,7 @@ function on(type: 'key', keyOptions: KeyOptions, callback: Callback<KeyOptions>)
 
 订阅系统快捷键，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 支持仅订阅按键的down事件，或者同时订阅按键的down事件和up事件。
 > - 若需要仅订阅按键的up事件，会存在down事件被焦点窗口消费，而无up事件闭环的风险，需要排查设计实现是否合理。

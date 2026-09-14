@@ -8,11 +8,6 @@ Inherits from [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md) and has 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## colors
 
 ```TypeScript
@@ -23,7 +18,7 @@ Array of shadow colors for data segments.
 
 Default value: same as the value of **valueColors**
 
-**NOTE:**
+**NOTE:** 
 
 If the number of the set shadow colors is less than that of the data segments, the number of the displayed shadow colors is the same as the former.
 

@@ -20,10 +20,6 @@ Gets the BigInt64 value at the specified byte offset from the start of the view.
 | byteOffset | number | Yes |  |
 | littleEndian | boolean | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## getBigUint64
 
 ```TypeScript
@@ -39,10 +35,6 @@ Gets the BigUint64 value at the specified byte offset from the start of the view
 | byteOffset | number | Yes |  |
 | littleEndian | boolean | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## setBigInt64
 
 ```TypeScript

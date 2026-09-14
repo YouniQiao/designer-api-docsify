@@ -12,11 +12,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## mode
 
 ```TypeScript
@@ -25,7 +20,7 @@ mode(mode: NavRouteMode)
 
 Sets the route mode used for redirecting the user from the **NavRouter** component to the specified navigation destination page.
 
-> **NOTE:**
+> **NOTE:** 
 
 **Since:** 10
 
@@ -43,7 +38,7 @@ Sets the route mode used for redirecting the user from the **NavRouter** compone
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [NavRouteMode](arkts-arkui-navroutemode-e.md) | Yes | Route mode used for redirection.<br>Default value: **NavRouteMode.PUSH_WITH_RECREATE |
+| mode | [NavRouteMode](arkts-arkui-navroutemode-e.md) | Yes | Route mode used for redirection.<br>Default value: **NavRouteMode.PUSH_WITH_RECREATE** |
 
 ## onStateChange
 
@@ -53,7 +48,7 @@ onStateChange(callback: (isActivated: boolean) => void)
 
 Called when the component activation status changes. **onStateChange(true)** is called when the **NavRouter** component is activated and its **NavDestination** child component is loaded. **onStateChange(false)** is called when the **NavDestination** child component is not displayed.
 
-> **NOTE:**
+> **NOTE:** 
 
 **Since:** 9
 

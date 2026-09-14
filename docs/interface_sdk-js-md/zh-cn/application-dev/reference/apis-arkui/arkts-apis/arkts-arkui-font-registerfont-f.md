@@ -16,7 +16,7 @@ function registerFont(options: FontOptions): void
 
 该接口为异步接口，不支持并发调用。
 
-> **说明：**
+> **说明：** 
 > 
 > -registerFont需要先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > getFont方法获取

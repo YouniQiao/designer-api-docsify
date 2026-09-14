@@ -10,11 +10,6 @@ Provide an interface to set transition style when a page exits.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## [[Call]]
 
 ```TypeScript
@@ -39,6 +34,8 @@ Sets the page exit animation.
 
 | Type | Description |
 | --- | --- |
+| [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) |  |
+
 ## onExit
 
 ```TypeScript
@@ -63,3 +60,4 @@ Invoked on a per-frame basis until the exit animation is complete, with the **pr
 
 | Type | Description |
 | --- | --- |
+| [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) |  |

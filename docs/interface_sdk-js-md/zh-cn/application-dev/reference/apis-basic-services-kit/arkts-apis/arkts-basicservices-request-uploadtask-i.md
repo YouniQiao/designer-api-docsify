@@ -20,7 +20,7 @@ delete(callback: AsyncCallback<boolean>): void
 
 移除上传的任务，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
@@ -62,7 +62,7 @@ delete(): Promise<boolean>
 
 移除上传的任务，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
@@ -282,7 +282,7 @@ on(type: 'progress', callback: (uploadedSize: number, totalSize: number) => void
 
 订阅上传任务进度事件，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 应用处于后台时，为满足功耗性能要求，不支持调用此接口进行回调。
 
@@ -426,7 +426,7 @@ remove(callback: AsyncCallback<boolean>): void
 
 移除上传的任务，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
 > [delete](#delete)替代。
@@ -475,7 +475,7 @@ remove(): Promise<boolean>
 
 移除上传的任务，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用[delete](#delete)替代。
 

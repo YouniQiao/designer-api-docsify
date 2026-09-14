@@ -14,7 +14,7 @@ function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 
 Releases the claimed communication interface.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Before calling this API, call the
 > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)

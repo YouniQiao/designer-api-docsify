@@ -4,7 +4,7 @@ WebCookieManager is the cookie manager for Web components, providing global mana
 
 When browsing web pages in Privacy Mode, data such as cookies and caches are not written to local persistent storage. After the Web component in Privacy Mode is destroyed, this data is cleared and not retained.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Static methods must be used on the user interface (UI) thread.
 
@@ -164,7 +164,7 @@ static configCookie(url: string, value: string): Promise<void>
 
 Sets a single cookie value for a specified URL. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - In configCookie, you can specify a domain name in the URL so that in-page requests also carry the cookie.
 > 
@@ -220,7 +220,7 @@ static configCookie(url: string, value: string, incognito: boolean, includeHttpO
 
 Sets a single cookie value for a specified URL. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - In configCookie, you can specify a domain name in the URL so that in-page requests also carry the cookie.
 > 
@@ -274,7 +274,7 @@ static configCookie(url: string, value: string, callback: AsyncCallback<void>): 
 
 Sets a single cookie value for a specified URL. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - In configCookie, you can specify a domain name in the URL so that in-page requests also carry the cookie.
 > 
@@ -325,7 +325,7 @@ static configCookieSync(url: string, value: string, incognito?: boolean): void
 
 Sets a cookie for the specified URL.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - In configCookieSync, you can specify a domain name in the URL so that in-page requests also carry the cookie.
 > 
@@ -376,7 +376,7 @@ static configCookieSync(url: string, value: string, incognito: boolean, includeH
 
 Sets a single cookie value for a specified URL.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - In configCookieSync, you can specify a domain name in the URL so that in-page requests also carry the cookie.
 > 
@@ -633,7 +633,7 @@ static fetchCookieSync(url: string, incognito?: boolean): string
 
 Obtains the cookie value of the specified URL.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The system automatically deletes expired cookies. For data with the same key name, the new data overwrites
 > the previous data.
@@ -677,7 +677,7 @@ static fetchCookieSync(url: string, incognito?: boolean, includePartitionedCooki
 
 Obtains the cookies corresponding to a specified URL. The optional parameter incognito specifies whether to obtain cookies in Privacy Mode, and the optional parameter includePartitionedCookies specifies whether to obtain first-party partitioned cookies.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The system automatically deletes expired cookies. For data with the same key name, the new data overwrites
 > the previous data.
@@ -848,7 +848,7 @@ static saveCookieAsync(): Promise<void>
 
 Saves all cookies that can be obtained through fetchCookie and need to be persisted to the disk. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - saveCookieAsync is used to forcibly write cookies that need to be persisted to the disk. Session cookies are
 > not persisted on PC/2-in-1 and tablet devices. Even if saveCookieAsync is called, session cookies are not
@@ -880,7 +880,7 @@ static saveCookieAsync(callback: AsyncCallback<void>): void
 
 Asynchronously saves all cookies (that can be obtained through **fetchCookie** and need to be persisted) to the disk.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - saveCookieAsync is used to forcibly write cookies that need to be persisted to the disk. Session cookies are
 > not persisted on PC/2-in-1 and tablet devices. Even if saveCookieAsync is called, session cookies are not
@@ -912,7 +912,7 @@ static saveCookieSync(): void
 
 Synchronously saves all cookies (that can be obtained through **fetchCookie** and need to be persisted) to the disk.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - saveCookieSync is used to forcibly write cookies that need to be persisted to the disk. Session cookies are
 > not persisted on PC/2-in-1 and tablet devices. Even if saveCookieSync is called, session cookies are not
@@ -964,7 +964,7 @@ static setLazyInitializeWebEngine(lazy: boolean): void
 
 Sets whether to delay the initialization of the ArkWeb kernel. If this method is not called, the ArkWeb kernel is not delayed by default.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This API is a global static method. It must be called before using ArkWeb components and initializing the
 > ArkWeb kernel. Otherwise, the setting does not take effect.

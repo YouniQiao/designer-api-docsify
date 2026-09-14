@@ -241,10 +241,10 @@ Registers an observer for the main thread freeze event of the application. If th
 
 This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If the callback function runs for more than 1 second, the
-> [AppRecovery](arkts-app-ability-apprecovery.md) feature may not work. The execution duration can
+> [AppRecovery](arkts-ability-app-ability-apprecovery.md) feature may not work. The execution duration can
 > be calculated by parsing the time difference between **begin** and **Freeze callback execution completed** in
 > HiLogs. If the execution duration exceeds 1 second, you can optimize the callback logic by using methods such as
 > asynchronous processing, reducing operations that block other tasks, and optimizing the data structures to reduce

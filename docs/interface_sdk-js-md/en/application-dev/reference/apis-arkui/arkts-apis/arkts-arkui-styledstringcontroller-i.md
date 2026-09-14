@@ -6,11 +6,6 @@ Defines a styled string controller.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## getStyledString
 
 ```TypeScript
@@ -53,4 +48,4 @@ Sets the styled string displayed in the rich text component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | Styled string to set.<br>**NOTE:**<br>The child class [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) of **StyledString** can also serve as the argument. |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | Styled string to set.<br>**NOTE:** <br>The child class [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) of **StyledString** can also serve as the argument. |

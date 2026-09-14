@@ -6,11 +6,6 @@ Defines DatePickerDialog which uses show method to show DatePicker dialog.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## show
 
 ```TypeScript
@@ -19,7 +14,7 @@ static show(options?: DatePickerDialogOptions)
 
 Shows a date picker dialog box.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Since API version 10, you can use the
 > [showDatePickerDialog](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#showdatepickerdialog) API

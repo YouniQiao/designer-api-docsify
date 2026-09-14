@@ -22,7 +22,7 @@ clear(animated?: boolean): void
 
 Clears the navigation stack.
 
-> **NOTE:**
+> **NOTE:** 
 
 > If [keepBottomPage](#keepbottompage) is called with **true**, the bottom page of the
 > navigation stack is retained.
@@ -155,7 +155,7 @@ Obtains the parameter information of the navigation destination page specified b
 
 | Type | Description |
 | --- | --- |
-| unknown &#124; undefined | Object**: parameter information of the matching navigation destination page.<br>**undefined**: returned when an invalid index is provided. |
+| unknown &#124; undefined | **Object**: parameter information of the matching navigation destination page.<br>**undefined**: returned when an invalid index is provided. |
 
 ## getParamByName
 
@@ -193,7 +193,7 @@ keepBottomPage(keepBottom: boolean): void
 
 Sets whether to retain the bottom page when the **pop** or **clear** APIs is called.
 
-> **NOTE:**
+> **NOTE:** 
 
 > **MultiNavigation** treats the home page as a navigation destination page in the stack. By default, calling
 > **pop** or **clear** will also remove the bottom page.
@@ -223,7 +223,7 @@ moveIndexToTop(index: number, animated?: boolean): void
 
 Moves the navigation destination page specified by **index** to the top of the navigation stack.
 
-> **NOTE:**
+> **NOTE:** 
 
 > Depending on the type of page found, **MultiNavigation** performs different actions:
 
@@ -250,7 +250,7 @@ moveToTop(name: string, animated?: boolean): number
 
 Moves the first navigation destination page that matches **name** from the bottom of the navigation stack to the top of the stack.
 
-> **NOTE:**
+> **NOTE:** 
 
 > Depending on the type of page found, **MultiNavigation** performs different actions:
 
@@ -283,7 +283,7 @@ pop(animated?: boolean): NavPathInfo | undefined
 
 Pops the top element out of the navigation stack.
 
-> **NOTE:**
+> **NOTE:** 
 
 > If [keepBottomPage](#keepbottompage) is called with **true**, the bottom page of the
 > navigation stack is retained.
@@ -316,7 +316,7 @@ pop(result?: Object, animated?: boolean): NavPathInfo | undefined
 
 Pops the top element out of the navigation stack and invokes the **onPop** callback to pass the page processing result.
 
-> **NOTE:**
+> **NOTE:** 
 
 > If [keepBottomPage](#keepbottompage) is called with **true**, the bottom page of the
 > navigation stack is retained.
@@ -705,7 +705,7 @@ setPlaceholderPage(info: NavPathInfo): void
 
 Sets a placeholder page.
 
-> **NOTE:**
+> **NOTE:** 
 
 > The placeholder page is a special page type. When set, it forms a default split-screen effect with the home page
 > on some large-screen devices, that is, the left side is the home page, and the right side is the placeholder

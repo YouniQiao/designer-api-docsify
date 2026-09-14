@@ -19,7 +19,7 @@ function off(
 
 取消订阅时，若不传入回调函数，则批量删除permissionList下的所有回调函数。
 
-> **说明：**
+> **说明：** 
 > 该接口通常与[on](arkts-ability-privacymanager-on-f-sys.md)配套使用，用于取消通过on创建的监听关系。
 
 **起始版本：** 9

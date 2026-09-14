@@ -14,7 +14,7 @@ function resetUsbDevice(pipe: USBDevicePipe): boolean
 
 Resets a USB peripheral.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Previous configurations and APIs will be reset. Ensure that the related services have been completed before
 > calling this API.

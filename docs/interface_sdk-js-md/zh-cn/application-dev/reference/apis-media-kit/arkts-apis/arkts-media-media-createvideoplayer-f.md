@@ -14,7 +14,7 @@ function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void
 
 异步方式创建视频播放实例，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
 > [createAVPlayer](arkts-media-media-createavplayer-f.md)替代。
@@ -58,7 +58,7 @@ function createVideoPlayer(): Promise<VideoPlayer>
 
 异步方式创建视频播放实例，通过Promise获取返回值。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[createAVPlayer](arkts-media-media-createavplayer-f.md)替代。
 

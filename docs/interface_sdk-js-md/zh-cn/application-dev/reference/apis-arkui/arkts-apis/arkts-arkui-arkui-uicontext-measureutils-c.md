@@ -2,7 +2,7 @@
 
 MeasureUtils提供文本宽度、高度等相关计算能力，适用于文本自适应布局、多行文本截断、动态UI适配等场景。通过该类可精确计算文本尺寸，帮助开发者在布局前预判文本显示效果，避免文本溢出或布局错乱等问题。
 
-> **说明：**
+> **说明：** 
 > 
 > - 以下API需先使用UIContext中的[getMeasureUtils()](arkts-arkui-arkui-uicontext-uicontext-c.md#getmeasureutils)方法获取MeasureUtils实例，再通过此实例调用对应方法。
 > 
@@ -60,7 +60,7 @@ measureText(options: MeasureOptions): number
 
 计算指定文本作为单行文本显示时的宽度，如果文本包含多行（由换行符`\n`分隔），则返回其中最长的行的宽度。
 
-> **说明：**
+> **说明：** 
 > 
 > - 调用此接口时，应避免同时使用[ApplicationContext.setFontSizeScale](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#setfontsizescale)设置应用字体大小缩放比例。为了确保时序正确性，建议开发者自行监听字体缩放变化，以保证测算结果的准确性。
 > 
@@ -84,7 +84,7 @@ measureText(options: MeasureOptions): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 文本宽度。<br>**说明：**<br>浮点数会向上取整。<br>单位：px |
+| number | 文本宽度。<br>**说明：** <br>浮点数会向上取整。<br>单位：px |
 
 ## measureTextSize
 
@@ -94,7 +94,7 @@ measureTextSize(options: MeasureOptions): SizeOptions
 
 计算指定文本的宽度和高度。
 
-> **说明：**
+> **说明：** 
 > 
 > 调用此接口时，应避免同时使用[ApplicationContext.setFontSizeScale](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#setfontsizescale)设置应用字体大小缩放比例。为了确保时序正确性，建议开发者自行监听字体缩放变化，以保证测算结果的准确性。
 
@@ -116,4 +116,4 @@ measureTextSize(options: MeasureOptions): SizeOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| [SizeOptions](arkts-arkui-sizeoptions-i.md) | 返回文本所占布局宽度和高度。<br>**说明：**<br>未设置constraintWidth时，文本宽度返回值会向上取整；传参constraintWidth时，文本宽度返回值不被取整。<br>文本宽度以及高度返回值单位均为px。 |
+| [SizeOptions](arkts-arkui-sizeoptions-i.md) | 返回文本所占布局宽度和高度。<br>**说明：** <br>未设置constraintWidth时，文本宽度返回值会向上取整；传参constraintWidth时，文本宽度返回值不被取整。<br>文本宽度以及高度返回值单位均为px。 |

@@ -16,7 +16,7 @@ function createCipher(transformation: string): Cipher
 
 <br>支持的规格详见[加解密算法规格](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 在对称加解密中，PKCS #5和PKCS #7的实现方式相同，即补位长度和块大小保持一致。3DES补位为8字节，AES补位为16字节。**NoPadding**
 > 表示不进行补位。

@@ -2,7 +2,7 @@
 
 WebDownloadItem是ArkWeb框架中用于表示和管理单个下载任务的类。通过[WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md)的回调参数，应用可以获取到WebDownloadItem实例，进而对下载任务进行查询和控制，包括启动下载到指定路径、查询下载进度和状态、暂停/恢复/取消任务、序列化失败任务以便后续恢复等。
 
-> **说明：**
+> **说明：** 
 > 
 > - 在下载过程中，下载的进度会通过WebDownloadDelegate通知给使用者，使用者可以通过参数WebDownloadItem来操作下载任务。
 > 
@@ -412,7 +412,7 @@ start(downloadPath: string): void
 
 开始下载到指定目录，参数为下载文件的磁盘存储路径（包含文件名）。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口应在WebDownloadDelegate的onBeforeDownload回调中使用。若在WebDownloadDelegate的onBeforeDownload中未调用start('xxx')，则下载任务将保持在
 > PENDING状态。处于PENDING状态的下载会将文件下载到临时目录，临时文件会在WebDownloadItem.start指定目标路径后被重命名为目标路径，未下载完成的部分会在WebDownloadItem.start

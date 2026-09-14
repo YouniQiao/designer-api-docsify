@@ -10,7 +10,7 @@ The **SideBarContainer** component contains a sidebar and content area as its ch
 
 Supported
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Allowed child component types: built-in and custom components, excluding rendering control types (
 > [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md),
@@ -43,7 +43,7 @@ Creates a sidebar container.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [SideBarContainerType](arkts-arkui-sidebarcontainertype-e.md) | No | Display type of the sidebar.<br>Default value: **SideBarContainerType.Embed |
+| type | [SideBarContainerType](arkts-arkui-sidebarcontainertype-e.md) | No | Display type of the sidebar.<br>Default value: **SideBarContainerType.Embed** |
 
 ## Summary
 

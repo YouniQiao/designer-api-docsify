@@ -10,11 +10,6 @@ In addition to the universal events, the following events are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## contentModifier
 
 ```TypeScript
@@ -79,7 +74,7 @@ Sets the background color of the component when it is turned on.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color of the component when it is turned on.<br>Default value:<br>When **ToggleType** is set to **Switch**, the default value is **\&#36;r('sys.color.ohos_id_color_emphasize')**.<br>When **ToggleType** is set to **Checkbox**, the default value is **\&#36;r('sys.color.ohos_id_color_emphasize')**.<br> When **ToggleType** is set to **Button**, the default value is **\&#36;r('sys.color.ohos_id_color_emphasize')** with the opacity of **\&#36;r('sys.float.ohos_id_alpha_highlight_bg')**. |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color of the component when it is turned on.<br>Default value:<br>When **ToggleType** is set to **Switch**, the default value is **&#36;r('sys.color.ohos_id_color_emphasize')**.<br>When **ToggleType** is set to **Checkbox**, the default value is **&#36;r('sys.color.ohos_id_color_emphasize')**.<br> When **ToggleType** is set to **Button**, the default value is **&#36;r('sys.color.ohos_id_color_emphasize')** with the opacity of **&#36;r('sys.float.ohos_id_alpha_highlight_bg')**. |
 
 ## switchPointColor
 
@@ -101,7 +96,7 @@ Sets the color of the circular slider when the component is of the **Switch** ty
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the circular slider when the component is of the **Switch** type.<br> Default value: **\&#36;r('sys.color.ohos_id_color_foreground_contrary') |
+| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the circular slider when the component is of the **Switch** type.<br> Default value: **&#36;r('sys.color.ohos_id_color_foreground_contrary')** |
 
 ## switchStyle
 

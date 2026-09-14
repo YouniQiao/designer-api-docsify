@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## distance
 
 ```TypeScript
@@ -23,7 +18,7 @@ distance?: number
 
 默认值：5
 
-**说明：**
+**说明：** 
 
 当识别距离的值小于等于0时，会被转化为默认值。
 

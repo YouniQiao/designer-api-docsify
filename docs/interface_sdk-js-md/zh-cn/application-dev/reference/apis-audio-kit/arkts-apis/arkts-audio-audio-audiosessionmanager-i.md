@@ -2,7 +2,7 @@
 
 音频会话管理。在使用AudioSessionManager的接口之前，需先通过[getSessionManager](arkts-audio-audio-audiomanager-i.md#getsessionmanager)获取AudioSessionManager实例。
 
-> **说明：**
+> **说明：** 
 
 > - 本Interface首批接口从API version 12开始支持。
 
@@ -546,7 +546,7 @@ selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>
 
 设置媒体输入设备。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本接口不适用于VoIP通话录音，即[SourceType](arkts-audio-audio-sourcetype-e.md)为SOURCE_TYPE_VOICE_COMMUNICATION的
 > 场景不适用。
@@ -590,7 +590,7 @@ setAudioSessionBehavior(behavior: number): void
 
 设置音频会话行为参数，支持多种标志位的组合使用。
 
-> **说明：**
+> **说明：** 
 > 
 > 当音频会话在激活状态时调用此接口后，必须重新调用接口
 > [activateAudioSession](#activateaudiosession)使其生效。
@@ -648,7 +648,7 @@ setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPre
 
 设置在使用蓝牙或星闪进行录音时，应用程序的设备偏好分类。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 应用程序可以在蓝牙或星闪连接之前设置此分类，系统将在设备连接时优先使用蓝牙或星闪进行录音。
 > 
@@ -688,7 +688,7 @@ setCapturerMuteHint(mute: boolean): Promise<void>
 
 应用将当前音频会话内录音流的自身静音状态传递给系统音频模块。<!--RP1-->该接口不会触发录音流静音，当前仅在部分PC/2in1设备上用于优化设备功耗。<!--RP1End-->使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 该接口用于向系统音频模块上报当前音频会话内录音流的静音状态，不会改变录音流的实际静音状态。
 > 
@@ -729,7 +729,7 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 
 设置默认发声设备。使用Promise方式进行异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本接口适用于以下情况：当设置的[AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md)为VoIP场景时，激活
 > AudioSession后立即生效。若[AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md)为非VoIP场景，激活
@@ -771,7 +771,7 @@ setMediaOutputDevice(deviceType: DeviceType): Promise<void>
 
 当连接其他音频外设（如蓝牙耳机或有线耳机）时，将媒体输出设备切换为内置扬声器。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本接口仅适用于媒体播放场景，并且会作用于应用内发起的所有媒体流。
 > 

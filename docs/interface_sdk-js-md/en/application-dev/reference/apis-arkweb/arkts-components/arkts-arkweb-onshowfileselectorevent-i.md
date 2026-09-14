@@ -6,11 +6,6 @@ Defines the callback information for the file selector result, including the res
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## fileSelector
 
 ```TypeScript

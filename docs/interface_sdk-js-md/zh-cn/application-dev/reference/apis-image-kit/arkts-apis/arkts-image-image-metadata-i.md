@@ -2,7 +2,7 @@
 
 Metadata类，用于存储图像的元数据。目前支持的元数据类型可参考[MetadataType](arkts-image-image-metadatatype-e.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本Interface首批接口从API version 13开始支持。
 

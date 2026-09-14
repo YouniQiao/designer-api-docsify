@@ -20,7 +20,7 @@ addAccount(name: string, callback: AsyncCallback<void>): void
 
 Adds an application account with the given name. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [createAccount](#createaccount)
@@ -59,7 +59,7 @@ addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 
 Adds an application account name and additional information. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [createAccount](#createaccount-1)
@@ -99,7 +99,7 @@ addAccount(name: string, extraInfo?: string): Promise<void>
 
 Adds an application account name and additional information. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [createAccount](#createaccount-2)
 > instead.
@@ -150,7 +150,7 @@ addAccountImplicitly(
 
 Adds an application account implicitly based on the specified owner. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [createAccountImplicitly](#createaccountimplicitly)
@@ -396,7 +396,7 @@ authenticate(
 
 Authenticates an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [auth](#auth)
@@ -680,7 +680,7 @@ checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void
 
 Checks whether data synchronization is enabled for an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [checkDataSyncEnabled](#checkdatasyncenabled)
@@ -725,7 +725,7 @@ checkAppAccountSyncEnable(name: string): Promise<boolean>
 
 Checks whether data synchronization is enabled for an application account. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [checkDataSyncEnabled](#checkdatasyncenabled-1) instead.
@@ -985,7 +985,7 @@ checkOAuthTokenVisibility(
 
 Checks the visibility of an authorization token of the specified authentication type to an application. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [checkAuthTokenVisibility](#checkauthtokenvisibility)
@@ -1031,7 +1031,7 @@ checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): P
 
 Checks the visibility of an authorization token of the specified authentication type to an application. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [checkAuthTokenVisibility](#checkauthtokenvisibility-1)
@@ -1396,7 +1396,7 @@ deleteAccount(name: string, callback: AsyncCallback<void>): void
 
 Deletes an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [removeAccount](#removeaccount)
@@ -1435,7 +1435,7 @@ deleteAccount(name: string): Promise<void>
 
 Deletes an application account. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [removeAccount](#removeaccount-1)
@@ -1688,7 +1688,7 @@ deleteOAuthToken(name: string, owner: string, authType: string, token: string, c
 
 Deletes the authorization token of the specified authentication type for an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [deleteAuthToken](#deleteauthtoken)
@@ -1735,7 +1735,7 @@ deleteOAuthToken(name: string, owner: string, authType: string, token: string): 
 
 Deletes the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [deleteAuthToken](#deleteauthtoken-1)
@@ -1784,7 +1784,7 @@ disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>
 
 Disables access to the third-party application with the specified package name using the specified third-party application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setAppAccess](#setappaccess)
@@ -1824,7 +1824,7 @@ disableAppAccess(name: string, bundleName: string): Promise<void>
 
 Disables an application account from accessing an application. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setAppAccess](#setappaccess-1)
@@ -1871,7 +1871,7 @@ enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>)
 
 Enables an application to access an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setAppAccess](#setappaccess)
@@ -1915,7 +1915,7 @@ enableAppAccess(name: string, bundleName: string): Promise<void>
 
 Enables an application to access an application account. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setAppAccess](#setappaccess-1)
@@ -1962,7 +1962,7 @@ getAccountCredential(name: string, credentialType: string, callback: AsyncCallba
 
 Obtains the credential of an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getCredential](#getcredential)
@@ -2006,7 +2006,7 @@ getAccountCredential(name: string, credentialType: string): Promise<string>
 
 Obtains the credential of an application account. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getCredential](#getcredential-1)
@@ -2053,7 +2053,7 @@ getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void
 
 Obtains additional information of an application account. Additional information refers to other information that can be converted to the string type. It cannot contain sensitive information, such as the application account password and token. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getCustomData](#getcustomdata)
@@ -2096,7 +2096,7 @@ getAccountExtraInfo(name: string): Promise<string>
 
 Obtains additional information of an application account. Additional information refers to other information that can be converted to the string type. It cannot contain sensitive information, such as the application account password and token. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getCustomData](#getcustomdata-1) instead.
@@ -2238,7 +2238,7 @@ getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 
 Obtains information about all accessible application accounts. This API uses an asynchronous callback to return the result. This method applies to the following accounts: <br> Accounts of this application. <br> Accounts of third-party applications. To obtain such information, <br> your application must have gained authorization from the third-party applications.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getAllAccounts](#getallaccounts)
@@ -2282,7 +2282,7 @@ getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>
 
 Obtains information about all accessible application accounts. This API uses a promise to return the result. This method applies to the following accounts: <br> Accounts of this application. <br> Accounts of third-party applications. To obtain such information, <br> your application must have gained authorization from the third-party applications.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getAllAccounts](#getallaccounts) instead.
@@ -2408,7 +2408,7 @@ getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): v
 
 Obtains the application accounts that can be accessed by the invoker based on the application account owner. This API uses an asynchronous callback to return the result. This method applies to the following accounts: <br> Accounts of this application. <br> Accounts of third-party applications. To obtain such information, <br> your application must have gained authorization from the third-party applications.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getAccountsByOwner](#getaccountsbyowner)
@@ -2454,7 +2454,7 @@ getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>
 
 Obtains the application accounts that can be accessed by the invoker based on the application account owner. This API uses a promise to return the result. This method applies to the following accounts: <br> Accounts of this application. <br> Accounts of third-party applications. To obtain such information, <br> your application must have gained authorization from the third-party applications.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getAccountsByOwner](#getaccountsbyowner-1) instead.
@@ -2603,7 +2603,7 @@ getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAu
 
 Obtains all tokens visible to the invoker for an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getAllAuthTokens](#getallauthtokens)
@@ -2648,7 +2648,7 @@ getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>
 
 Obtains all tokens visible to the invoker for an application account. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getAllAuthTokens](#getallauthtokens-1) instead.
@@ -2695,7 +2695,7 @@ getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): v
 
 Obtains the associated data of an application account based on the specified key. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getCustomData](#getcustomdata)
@@ -2739,7 +2739,7 @@ getAssociatedData(name: string, key: string): Promise<string>
 
 Obtains data to be associated with an application account. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getCustomData](#getcustomdata-1) instead.
@@ -2914,7 +2914,7 @@ getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<Authenticato
 
 Obtains the authenticator callback for an authentication session. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getAuthCallback](#getauthcallback)
@@ -2969,7 +2969,7 @@ getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>
 
 Obtains the authenticator callback for an authentication session. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getAuthCallback](#getauthcallback-1) instead.
@@ -3026,7 +3026,7 @@ getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>):
 
 Obtains the authenticator information of an application. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [queryAuthenticatorInfo](#queryauthenticatorinfo)
@@ -3070,7 +3070,7 @@ getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 
 Obtains the authenticator information of an application. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [queryAuthenticatorInfo](#queryauthenticatorinfo-1) instead.
@@ -3572,7 +3572,7 @@ getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<strin
 
 Obtains the authorization list of the specified authentication type for an application account. The authorization list contains all authorized bundles. The token authorization list is set by [setOAuthTokenVisibility](#setoauthtokenvisibility). This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getAuthList](#getauthlist)
@@ -3616,7 +3616,7 @@ getOAuthList(name: string, authType: string): Promise<Array<string>>
 
 Obtains the authorization list of the specified authentication type for an application account. The authorization list contains all authorized bundles. The token authorization list is set by [setOAuthTokenVisibility](#setoauthtokenvisibility). This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getAuthList](#getauthlist-1) instead.
@@ -3662,7 +3662,7 @@ getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCall
 
 Obtains the authorization token of the specified authentication type for an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getAuthToken](#getauthtoken)
@@ -3708,7 +3708,7 @@ getOAuthToken(name: string, owner: string, authType: string): Promise<string>
 
 Obtains the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getAuthToken](#getauthtoken-1)
@@ -3756,7 +3756,7 @@ off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void
 
 Unsubscribes from account information changes.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [off('accountChange')](#offaccountchange)
@@ -3855,7 +3855,7 @@ on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInf
 
 Subscribes to account information changes of apps.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [on('accountChange')](#onaccountchange)
@@ -4250,7 +4250,7 @@ setAccountCredential(name: string, credentialType: string, credential: string, c
 
 Sets a credential for an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setCredential](#setcredential)
@@ -4295,7 +4295,7 @@ setAccountCredential(name: string, credentialType: string, credential: string): 
 
 Sets a credential for an application account. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setCredential](#setcredential-1)
@@ -4343,7 +4343,7 @@ setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<voi
 
 Sets additional information for an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setCustomData](#setcustomdata)
@@ -4387,7 +4387,7 @@ setAccountExtraInfo(name: string, extraInfo: string): Promise<void>
 
 Sets additional information for an application account. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setCustomData](#setcustomdata-1)
@@ -4537,7 +4537,7 @@ setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback
 
 Sets data synchronization for an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setDataSyncEnabled](#setdatasyncenabled)
@@ -4583,7 +4583,7 @@ setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>
 
 Sets data synchronization for an application account. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setDataSyncEnabled](#setdatasyncenabled-1)
@@ -4632,7 +4632,7 @@ setAssociatedData(name: string, key: string, value: string, callback: AsyncCallb
 
 Sets data to be associated with an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setCustomData](#setcustomdata)
@@ -4677,7 +4677,7 @@ setAssociatedData(name: string, key: string, value: string): Promise<void>
 
 Sets data to be associated with an application account. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setCustomData](#setcustomdata-1)
@@ -5356,7 +5356,7 @@ setOAuthToken(name: string, authType: string, token: string, callback: AsyncCall
 
 Sets an authorization token of the specific authentication type for an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [setAuthToken](#setauthtoken)
@@ -5401,7 +5401,7 @@ setOAuthToken(name: string, authType: string, token: string): Promise<void>
 
 Sets an authorization token of the specific authentication type for an application account. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [setAuthToken](#setauthtoken-1)
@@ -5455,7 +5455,7 @@ setOAuthTokenVisibility(
 
 Sets the visibility of an authorization token to an application. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [setAuthTokenVisibility](#setauthtokenvisibility)
@@ -5502,7 +5502,7 @@ setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVi
 
 Sets the visibility of an authorization token to an application. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [setAuthTokenVisibility](#setauthtokenvisibility-1)

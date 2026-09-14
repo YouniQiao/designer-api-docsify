@@ -22,7 +22,7 @@ API10时将启动由[setRestartWant](arkts-ability-apprecovery-setrestartwant-f.
 
 如果没有Ability处于前台，则不拉起。
 
-可以配合[errorManager](arkts-app-ability-errormanager.md)相关接口使用。两次重启的间隔应大于一分钟，一分钟之内重复调用此接口只会退出应用不会重启应用。自动重启的行为与主动重启一致。
+可以配合[errorManager](arkts-ability-app-ability-errormanager.md)相关接口使用。两次重启的间隔应大于一分钟，一分钟之内重复调用此接口只会退出应用不会重启应用。自动重启的行为与主动重启一致。
 
 **起始版本：** 9
 

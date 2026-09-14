@@ -22,7 +22,7 @@ onCopy?: (event?: EditorEventInfo) => void
 
 生效前提是一定要有controller参数，有系统默认菜单才能替换内置复制功能。
 
-**说明：**
+**说明：** 
 
 event为返回信息。
 
@@ -50,7 +50,7 @@ onCut?: (event?: EditorEventInfo) => void
 
 生效前提是一定要有controller参数，有系统默认菜单才能替换内置剪切功能。
 
-**说明：**
+**说明：** 
 
 event为返回信息。
 
@@ -78,7 +78,7 @@ onPaste?: (event?: EditorEventInfo) => void
 
 生效前提是一定要有controller参数，有系统默认菜单才能替换内置粘贴功能。
 
-**说明：**
+**说明：** 
 
 event为返回信息。
 
@@ -106,7 +106,7 @@ onSelectAll?: (event?: EditorEventInfo) => void
 
 生效前提是一定要有controller参数，有系统默认菜单才能替换内置全选功能。
 
-**说明：**
+**说明：** 
 
 event为返回信息。
 

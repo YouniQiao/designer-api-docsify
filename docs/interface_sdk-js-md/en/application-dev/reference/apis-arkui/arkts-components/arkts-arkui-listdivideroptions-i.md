@@ -2,7 +2,7 @@
 
 Defines the divider style of the list or list item group.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer element
@@ -11,11 +11,6 @@ Defines the divider style of the list or list item group.
 **Since:** 18
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## color
 
@@ -29,7 +24,7 @@ Color of the divider. Anonymous Object Rectification.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
-**Default:**
+**Default:** 
 - API version 18+: 0x08000000
 
 **Since:** 7
@@ -52,7 +47,7 @@ Distance between the divider and the end edge of the list. Anonymous Object Rect
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
-**Default:**
+**Default:** 
 - API version 18+: 0vp
 
 **Since:** 7
@@ -75,7 +70,7 @@ Distance between the divider and the start edge of the list. Anonymous Object Re
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
-**Default:**
+**Default:** 
 - API version 18+: 0vp
 
 **Since:** 7

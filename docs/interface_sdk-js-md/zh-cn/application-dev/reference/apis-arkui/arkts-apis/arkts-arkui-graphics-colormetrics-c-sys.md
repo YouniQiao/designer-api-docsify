@@ -112,7 +112,7 @@ static createHDRColorWithLogExposure(exposure: number, colorSpace: ColorSpace,
 getBlueValue(): number
 ```
 
-获取ColorMetrics颜色的B分量（蓝色）。
+获取ColorMetrics颜色的B分量，以浮点数形式返回蓝色通道值。
 
 **起始版本：** 26.0.0
 
@@ -126,7 +126,7 @@ getBlueValue(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 颜色的B分量（蓝色），值是大于等于0的浮点数。 |
+| number | 颜色的B分量（蓝色），值是大于等于0的浮点数。取值范围：对于SDR颜色，取值范围为[0.0, 1.0]。对于HDR颜色，该值可以大于1.0，以表示扩展亮度。 |
 
 ## getColorSpace
 
@@ -156,7 +156,7 @@ getColorSpace(): ColorSpace
 getGreenValue(): number
 ```
 
-获取ColorMetrics颜色的G分量（绿色）。
+获取ColorMetrics颜色的G分量，以浮点数形式返回绿色通道值。
 
 **起始版本：** 26.0.0
 
@@ -170,7 +170,7 @@ getGreenValue(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 颜色的G分量（绿色），值是大于等于0的浮点数。 |
+| number | 颜色的G分量（绿色），值是大于等于0的浮点数。取值范围：对于SDR颜色，取值范围是[0.0, 1.0]。对于HDR颜色，该值可以大于1.0，以表示扩展亮度。 |
 
 ## getRedValue
 
@@ -178,7 +178,7 @@ getGreenValue(): number
 getRedValue(): number
 ```
 
-获取ColorMetrics颜色的R分量（红色）。
+获取ColorMetrics颜色的R分量，以浮点数形式返回红色通道值。
 
 **起始版本：** 26.0.0
 
@@ -192,7 +192,7 @@ getRedValue(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 颜色的R分量（红色），值是大于等于0的浮点数。 |
+| number | 颜色的R分量（红色），值是大于等于0的浮点数。取值范围：对于SDR颜色，取值范围为[0.0, 1.0]。对于HDR颜色，该值可以大于1.0，以表示扩展亮度。 |
 
 ## isHDR
 

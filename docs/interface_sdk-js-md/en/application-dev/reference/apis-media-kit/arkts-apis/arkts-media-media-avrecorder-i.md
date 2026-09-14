@@ -4,11 +4,11 @@ AVRecorder is a class for audio and video recording management. It provides APIs
 
 For details about the audio and video recording demo, see [Audio Recording](../../../media/media/using-avrecorder-for-recording.md) and [Video Recording](../../../media/media/video-recording.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 
 > To use the camera to record videos, the camera module is required. For details about how to use the APIs
-> provided by the camera module, see [Camera Management](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md).
+> provided by the camera module, see [Camera Management](../../apis-camera-kit/arkts-apis/arkts-camera-multimedia-camera.md).
 
 **Since:** 9
 
@@ -453,7 +453,7 @@ When the application initiates multiple subscriptions to this event, the last su
 on(type: 'photoAssetAvailable', callback: Callback<photoAccessHelper.PhotoAsset>): void
 ```
 
-Subscribes to media asset callback events. When [FileGenerationMode](arkts-media-media-filegenerationmode-e.md) is used during media file creation, the [PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md) object is called back to the application after the [stop](#stop) operation is complete. This API uses an asynchronous callback to return the result.
+Subscribes to media asset callback events. When [FileGenerationMode](arkts-media-media-filegenerationmode-e.md) is used during media file creation, the [PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photoaccesshelper.md) object is called back to the application after the [stop](#stop) operation is complete. This API uses an asynchronous callback to return the result.
 
 When the application initiates multiple subscriptions to this event, the last subscription is applied.
 

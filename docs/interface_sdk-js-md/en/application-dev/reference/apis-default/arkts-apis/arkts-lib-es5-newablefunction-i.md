@@ -49,10 +49,6 @@ For a given function, creates a bound function that has the same body as the ori
 | this | T | Yes |  |
 | thisArg | any | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## bind
 
 ```TypeScript
@@ -67,10 +63,6 @@ bind<A0, A extends any[], R>(this: new (arg0: A0, ...args: A) => R, thisArg: any
 | thisArg | any | Yes |  |
 | arg0 | A0 | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## bind
 
 ```TypeScript
@@ -86,10 +78,6 @@ bind<A0, A1, A extends any[], R>(this: new (arg0: A0, arg1: A1, ...args: A) => R
 | arg0 | A0 | Yes |  |
 | arg1 | A1 | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## bind
 
 ```TypeScript
@@ -106,10 +94,6 @@ bind<A0, A1, A2, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2, ..
 | arg1 | A1 | Yes |  |
 | arg2 | A2 | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## bind
 
 ```TypeScript
@@ -127,10 +111,6 @@ bind<A0, A1, A2, A3, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2
 | arg2 | A2 | Yes |  |
 | arg3 | A3 | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## bind
 
 ```TypeScript
@@ -145,10 +125,6 @@ bind<AX, R>(this: new (...args: AX[]) => R, thisArg: any, ...args: AX[]): new (.
 | thisArg | any | Yes |  |
 | args | AX[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## call
 
 ```TypeScript

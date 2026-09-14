@@ -6,7 +6,7 @@
 
 应用需要控制AVPlayer实例数量，播放结束后应及时调用release()释放资源。建议同时持有的AVPlayer实例数量不超过合理范围，避免内存消耗过大触发系统保护机制终止应用。Audio/Video播放demo可参考：[音频播放开发指导](../../../media/media/using-avplayer-for-playback.md)、[视频播放开发指导](../../../media/media/video-playback.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本Interface首批接口从API version 9开始支持。
 

@@ -18,8 +18,3 @@ Gets the unencoded version of an encoded component of a Uniform Resource Identif
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | encodedURIComponent | string | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

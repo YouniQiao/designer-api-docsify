@@ -2,7 +2,7 @@
 
 Data provided when the error occurs.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer element
@@ -13,11 +13,6 @@ Data provided when the error occurs.
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## errcode
 

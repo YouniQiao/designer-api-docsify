@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** [router](arkts-router.md)
+**替代接口：** [router](arkts-arkui-router.md)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -172,7 +172,7 @@ static push(options: RouterOptions): void
 
 跳转到应用内的指定页面。
 
-> **说明：**
+> **说明：** 
 > 
 > 页面路由栈支持的最大Page数量为32。
 

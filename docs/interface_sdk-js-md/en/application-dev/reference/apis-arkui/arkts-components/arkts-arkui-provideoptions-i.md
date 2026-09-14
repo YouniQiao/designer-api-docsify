@@ -6,11 +6,6 @@ Defines the options of Provide PropertyDecorator.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## allowOverride
 
 ```TypeScript

@@ -2,7 +2,7 @@
 
 调用接口返回的result。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 8开始，从API version 9开始废弃，建议使用[HuksReturnResult&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-huksreturnresult-i.md)替代。
 > 

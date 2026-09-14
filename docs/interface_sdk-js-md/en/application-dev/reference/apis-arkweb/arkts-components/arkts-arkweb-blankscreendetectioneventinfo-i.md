@@ -6,11 +6,6 @@ Provides the event information when a blank screen is detected, including the UR
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## blankScreenDetails
 
 ```TypeScript

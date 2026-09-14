@@ -2,7 +2,7 @@
 
 设置对应的按键对应的走焦目的组件，缺省则遵循默认走焦规则。
 
-> **说明：**
+> **说明：** 
 > 
 > 直接使用focusControl可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用getUIContext()获取
 > [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)实例，并使用
@@ -11,11 +11,6 @@
 **起始版本：** 18
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## backward
 

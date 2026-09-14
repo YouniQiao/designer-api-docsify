@@ -1,10 +1,5 @@
 # restoreDefault
 
-## 导入模块
-
-```TypeScript
-```
-
 ## restoreDefault
 
 ```TypeScript

@@ -18,7 +18,7 @@ After the registration is successful, the callback is executed immediately. Subs
 
 Callbacks are stored in the application process. A maximum of 10 callbacks can be registered in a process.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If the callback contains time-consuming operations, the registration or deregistration will be blocked (waiting
 > for the callback execution to complete) when the callback is executed.

@@ -2,7 +2,7 @@
 
 共享元素转场动效参数。
 
-> **说明：**
+> **说明：** 
 > 
 > type为SharedTransitionEffectType.Exchange时motionPath才会生效。
 > 
@@ -13,11 +13,6 @@
 **起始版本：** 7
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## curve
 

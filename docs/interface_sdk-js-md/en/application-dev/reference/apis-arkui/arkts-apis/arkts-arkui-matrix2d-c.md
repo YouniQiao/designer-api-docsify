@@ -6,11 +6,6 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript
@@ -154,6 +149,8 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 
 | Type | Description |
 | --- | --- |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
+
 ## rotate
 
 ```TypeScript
@@ -184,6 +181,8 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 
 | Type | Description |
 | --- | --- |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
+
 ## scale
 
 ```TypeScript
@@ -211,6 +210,8 @@ Adds the scaling effect of the X and Y axes to the current matrix.
 
 | Type | Description |
 | --- | --- |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
+
 ## translate
 
 ```TypeScript

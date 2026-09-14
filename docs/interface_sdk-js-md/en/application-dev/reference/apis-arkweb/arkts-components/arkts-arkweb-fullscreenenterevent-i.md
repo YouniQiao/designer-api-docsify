@@ -6,11 +6,6 @@ Provides the callback information for the **Web** component to enter the full-sc
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## handler
 
 ```TypeScript

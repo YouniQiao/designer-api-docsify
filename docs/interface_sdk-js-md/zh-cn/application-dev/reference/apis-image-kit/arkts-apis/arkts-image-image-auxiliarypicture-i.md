@@ -6,7 +6,7 @@ AuxiliaryPicture类，用于读取或写入图像的辅助图数据以及获取�
 
 由于图片占用内存较大，所以当AuxiliaryPicture对象使用完成后，应主动调用[release](#release)方法及时释放对象。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该对象。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本Interface首批接口从API version 13开始支持。
 

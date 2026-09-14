@@ -110,7 +110,7 @@ Creates a **MessageSequence** object. This API is a static method.
 
 | Type | Description |
 | --- | --- |
-| [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | MessageSequence** object created. |
+| [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | **MessageSequence** object created. |
 
 **Examples**
 
@@ -842,7 +842,7 @@ Reads the character from this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| number | Char** value read. |
+| number | **Char** value read. |
 
 **Error codes:**
 
@@ -1687,7 +1687,7 @@ Reads the **Parcelable** object from this **MessageSequence** object to the spec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | [Parcelable](arkts-ipc-rpc-parcelable-i.md) | Yes | Parcelable** object to read. |
+| dataIn | [Parcelable](arkts-ipc-rpc-parcelable-i.md) | Yes | **Parcelable** object to read. |
 
 **Error codes:**
 
@@ -1752,7 +1752,7 @@ Reads the **Parcelable** array from this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parcelableArray | [Parcelable](arkts-ipc-rpc-parcelable-i.md)[] | Yes | Parcelable** array to read. |
+| parcelableArray | [Parcelable](arkts-ipc-rpc-parcelable-i.md)[] | Yes | **Parcelable** array to read. |
 
 **Error codes:**
 
@@ -1989,7 +1989,7 @@ Reads the **IRemoteObject** array from this **MessageSequence** object and write
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| objects | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes | IRemoteObject** array to read. |
+| objects | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes | **IRemoteObject** array to read. |
 
 **Error codes:**
 
@@ -2848,7 +2848,7 @@ Writes a character to this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | number | Yes | Char** value to write. |
+| val | number | Yes | **Char** value to write. |
 
 **Error codes:**
 
@@ -3408,7 +3408,7 @@ Writes a **Parcelable** object to this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | [Parcelable](arkts-ipc-rpc-parcelable-i.md) | Yes | Parcelable** object to write. |
+| val | [Parcelable](arkts-ipc-rpc-parcelable-i.md) | Yes | **Parcelable** object to write. |
 
 **Error codes:**
 
@@ -3470,7 +3470,7 @@ Writes the **Parcelable** array to this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parcelableArray | [Parcelable](arkts-ipc-rpc-parcelable-i.md)[] | Yes | Parcelable** array to write. |
+| parcelableArray | [Parcelable](arkts-ipc-rpc-parcelable-i.md)[] | Yes | **Parcelable** array to write. |
 
 **Error codes:**
 
@@ -3527,7 +3527,7 @@ writeRawData(rawData: number[], size: number): void
 
 Writes raw data to this **MessageSequence** object.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This API cannot be called for multiple times in one parcel communication.
 > 
@@ -3582,7 +3582,7 @@ writeRawDataBuffer(rawData: ArrayBuffer, size: number): void
 
 Writes raw data to this **MessageSequence** object.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This API cannot be called for multiple times in one parcel communication.
 > 
@@ -3702,7 +3702,7 @@ Writes an **IRemoteObject** array to this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| objectArray | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes | IRemoteObject** array to write. |
+| objectArray | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes | **IRemoteObject** array to write. |
 
 **Error codes:**
 

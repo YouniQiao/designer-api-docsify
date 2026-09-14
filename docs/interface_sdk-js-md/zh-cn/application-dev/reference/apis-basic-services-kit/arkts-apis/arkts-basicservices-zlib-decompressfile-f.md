@@ -14,7 +14,7 @@ function decompressFile(inFile: string, outFile: string, options: Options, callb
 
 解压文件，解压的结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 为了避免路径穿越，从API version 13开始，inFile和outFile传入的参数不允许包含“../”，否则会返回900001、900002错误码。
 > 
@@ -81,7 +81,7 @@ function decompressFile(inFile: string, outFile: string, callback: AsyncCallback
 
 解压文件，解压的结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 为了避免路径穿越，从API version 13开始，inFile和outFile传入的参数不允许包含“../”，否则会返回900001、900002错误码。
 > 
@@ -143,7 +143,7 @@ function decompressFile(inFile: string, outFile: string, options?: Options): Pro
 
 解压文件，解压的结果。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 为了避免路径穿越，从API version 13开始，inFile和outFile传入的参数不允许包含“../”，否则会返回900001、900002错误码。
 > 

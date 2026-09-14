@@ -91,7 +91,7 @@ Converts a Sendable PhotoAsset object to a non-Sendable PhotoAsset object.
 
 | Type | Description |
 | --- | --- |
-| [photoAccessHelper.PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) | [PhotoAsset](arkts-file-photoaccesshelper.md) of the non-Sendable type. |
+| [photoAccessHelper.PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) | [PhotoAsset](arkts-medialibrary-file-photoaccesshelper.md) of the non-Sendable type. |
 
 **Error codes:**
 
@@ -148,7 +148,7 @@ Obtains a **PhotoAsset** member parameter.
 
 | Type | Description |
 | --- | --- |
-| [photoAccessHelper.MemberType](arkts-medialibrary-photoaccesshelper-membertype-t.md) | PhotoAsset** member parameter obtained. |
+| [photoAccessHelper.MemberType](arkts-medialibrary-photoaccesshelper-membertype-t.md) | **PhotoAsset** member parameter obtained. |
 
 **Error codes:**
 

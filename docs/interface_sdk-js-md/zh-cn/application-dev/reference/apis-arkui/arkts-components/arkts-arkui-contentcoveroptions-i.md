@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## enableSafeArea
 
 ```TypeScript
@@ -47,7 +42,7 @@ modalTransition?: ModalTransition
 
 默认值：ModalTransition.DEFAULT。
 
-**说明：**
+**说明：** 
 
 与transition同时设置时，此属性不生效，仅transition生效。
 
@@ -71,7 +66,7 @@ onWillDismiss?: Callback<DismissContentCoverAction>
 
 全屏模态页面交互式关闭回调函数。
 
-**说明：**
+**说明：** 
 
 当用户通过返回键等操作触发关闭全屏模态页面时，如果注册该回调函数，则不会立刻关闭。在回调函数中可以通过reason得到拦截关闭页面的操作类型，从而根据原因选择是否关闭全屏模态页面。如需关闭，须在回调中调用DismissContentCoverAction.dismiss()方法；如不调用dismiss()，全屏模态页面将保持打开状态不会关闭。在onWillDismiss回调中，不能再做onWillDismiss拦截。
 
@@ -93,7 +88,7 @@ transition?: TransitionEffect
 
 全屏模态页面的自定义转场方式。
 
-**说明：**
+**说明：** 
 
 未设置时默认不使用自定义转场，使用modalTransition的系统转场方式，与modalTransition同时设置时，仅transition生效，modalTransition属性不生效。
 

@@ -14,7 +14,7 @@ function startArkChildProcess(srcEntry: string, args: ChildProcessArgs, options?
 
 Starts an [ArkTS child process](../../../application-models/ability-terminology.md#arkts-child-process). This API uses a promise to return the result. This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 801 is returned.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The child process started by calling this API does not inherit the resources of the parent process. If the child
 > process is created successfully, its PID is returned, and its

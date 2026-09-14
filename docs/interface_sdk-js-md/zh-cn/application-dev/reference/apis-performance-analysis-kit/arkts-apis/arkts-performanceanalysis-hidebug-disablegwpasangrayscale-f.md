@@ -14,9 +14,9 @@ function disableGwpAsanGrayscale(): void
 
 停止使能GWP-ASan。调用该接口将取消自定义配置，恢复默认参数[GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md)。
 
-> **说明：**
+> **说明：** 
 > 
-> 由于该接口涉及跨进程通信，耗时较长，为了避免引入性能问题，建议不要在主线程中直接调用该接口。可以通过[@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md)或
+> 由于该接口涉及跨进程通信，耗时较长，为了避免引入性能问题，建议不要在主线程中直接调用该接口。可以通过[@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-arkts-taskpool.md)或
 > [@ohos.worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md)开启异步线程，以避免应用卡顿。
 
 **起始版本：** 20

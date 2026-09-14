@@ -6,11 +6,6 @@ Defines the callback information triggered when a URL is loaded, including the r
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## url
 
 ```TypeScript

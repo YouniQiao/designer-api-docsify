@@ -1,17 +1,12 @@
 # $r
 
-## 导入模块
-
-```TypeScript
-```
-
 ## $r
 
 ```TypeScript
 declare function $r(value: string, ...params: any[]): Resource
 ```
 
-global \$r function
+global &#36;r function
 
 **起始版本：** 11
 
@@ -32,3 +27,4 @@ global \$r function
 
 | 类型 | 说明 |
 | --- | --- |
+| [Resource](../arkts-apis/arkts-arkui-resource-t.md) |  |

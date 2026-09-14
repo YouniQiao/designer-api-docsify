@@ -79,7 +79,7 @@ onCreate(want: Want): void
 
 在AppServiceExtensionAbility实例创建时，系统会触发该回调。应用可以在该接口中执行自己的业务逻辑初始化操作，例如注册公共事件监听等。
 
-> **说明：**
+> **说明：** 
 > 
 > 如果AppServiceExtensionAbility实例已创建，再次启动或连接该实例时不会触发onCreate()回调。
 

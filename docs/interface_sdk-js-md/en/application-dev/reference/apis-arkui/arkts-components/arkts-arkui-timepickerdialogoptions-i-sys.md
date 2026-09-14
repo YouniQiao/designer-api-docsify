@@ -10,11 +10,6 @@ Inherited from [TimePickerOptions](arkts-arkui-timepickeroptions-i.md).
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## distortionMode
 
 ```TypeScript

@@ -19,10 +19,6 @@ Appends a new object to the end of the WeakSet.
 | --- | --- | --- | --- |
 | value | T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## delete
 
 ```TypeScript
@@ -41,6 +37,8 @@ Removes the specified element from the WeakSet.
 
 | Type | Description |
 | --- | --- |
+| boolean | Returns true if the element existed and has been removed, or false if the element does not exist. |
+
 ## has
 
 ```TypeScript
@@ -57,3 +55,4 @@ has(value: T): boolean
 
 | Type | Description |
 | --- | --- |
+| boolean | a boolean indicating whether an object exists in the WeakSet or not. |

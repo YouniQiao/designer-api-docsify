@@ -6,11 +6,6 @@ Provides parameters for customizing scroll animations.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## canOverScroll
 
 ```TypeScript
@@ -61,7 +56,7 @@ duration?: number
 
 Scrolling duration.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>Scrolling duration.<br>Default value: **1000**<br>Unit: ms <br>**NOTE:**<br>A value less than 0 evaluates to the default value. </p>
+<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>Scrolling duration.<br>Default value: **1000**<br>Unit: ms <br>**NOTE:** <br>A value less than 0 evaluates to the default value. </p>
 
 **Type:** number
 

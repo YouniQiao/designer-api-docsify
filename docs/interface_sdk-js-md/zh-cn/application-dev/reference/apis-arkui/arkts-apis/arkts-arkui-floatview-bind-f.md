@@ -15,7 +15,7 @@ function bind(floatViewController: FloatViewController, floatingBallController: 
 
 绑定标准悬浮窗和闪控球。需要先创建[标准悬浮窗控制器](arkts-arkui-floatview-floatviewcontroller-i.md)和[闪控球控制器](arkts-arkui-floatingball-floatingballcontroller-i.md)，且均未启动。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 绑定成功后，调用[start()](arkts-arkui-floatview-floatviewcontroller-i.md#start)或
 > [startFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#startfloatingball)均会同时创

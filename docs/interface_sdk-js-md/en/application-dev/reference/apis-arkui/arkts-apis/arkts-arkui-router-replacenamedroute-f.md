@@ -14,7 +14,7 @@ function replaceNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<
 
 Replaces the current page with another one using the named route and destroys the current page.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
@@ -82,7 +82,7 @@ function replaceNamedRoute(options: NamedRouterOptions): Promise<void>
 
 Replaces the current page with another one using the named route and destroys the current page.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
@@ -157,7 +157,7 @@ function replaceNamedRoute(options: NamedRouterOptions, mode: RouterMode, callba
 
 Replaces the current page with another one using the named route and destroys the current page.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
@@ -226,7 +226,7 @@ function replaceNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promi
 
 Replaces the current page with another one using the named route and destroys the current page.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in

@@ -6,11 +6,6 @@ Provides the information about the custom tab switching animation.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## timeout
 
 ```TypeScript

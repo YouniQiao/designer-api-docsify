@@ -4,7 +4,7 @@ The **OffscreenCanvas** component is used to draw custom graphics.
 
 When the Canvas component or **CanvasRenderingContext2D** object is used, rendering, animation, and user interaction usually occur on the main thread of the application. Calculations related to canvas animation and rendering may affect application performance. **OffscreenCanvas** allows for rendering off the screen. This means that some tasks can be run in a separate thread to reduce the load on the main thread.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **OffscreenCanvas** cannot be used in ServiceExtensionAbility. It is recommended
 > that you use the
@@ -16,11 +16,6 @@ When the Canvas component or **CanvasRenderingContext2D** object is used, render
 **Since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## constructor
 
@@ -120,7 +115,7 @@ Creates an **ImageBitmap** object from the most recently rendered image of the o
 
 | Type | Description |
 | --- | --- |
-| [ImageBitmap](arkts-arkui-imagebitmap-c.md) | ImageBitmap** object created. |
+| [ImageBitmap](arkts-arkui-imagebitmap-c.md) | **ImageBitmap** object created. |
 
 ## height
 

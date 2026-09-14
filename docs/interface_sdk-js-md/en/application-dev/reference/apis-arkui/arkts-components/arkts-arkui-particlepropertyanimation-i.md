@@ -6,11 +6,6 @@ Defines the particle property lifecycle. @interface ParticlePropertyAnimation
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## curve
 
 ```TypeScript

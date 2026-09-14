@@ -164,7 +164,7 @@ public modifier?: TextModifier
 
 Modifier for the label text.
 
-**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
+**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
 **Since:** 26.0.0
 

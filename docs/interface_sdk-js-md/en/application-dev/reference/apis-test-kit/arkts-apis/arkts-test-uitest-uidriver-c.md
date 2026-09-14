@@ -120,7 +120,7 @@ static create(): UiDriver
 
 Creates a **UiDriver** object and returns the object created. This API is a static API.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This method is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [create&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#create) instead.
@@ -139,7 +139,7 @@ Creates a **UiDriver** object and returns the object created. This API is a stat
 
 | Type | Description |
 | --- | --- |
-| [UiDriver](arkts-test-uitest-uidriver-c.md) | UiDriver** object created. |
+| [UiDriver](arkts-test-uitest-uidriver-c.md) | **UiDriver** object created. |
 
 **Examples**
 

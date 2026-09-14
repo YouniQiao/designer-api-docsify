@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## autoCapitalizationMode
 
 ```TypeScript
@@ -109,7 +104,7 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 设置是否开启行首标点符号压缩。未通过该接口设置时，默认不开启行首标点符号压缩。
 
-> **说明：**
+> **说明：** 
 > 
 > - 行首标点符号默认不压缩。
 > 
@@ -195,7 +190,7 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: Ke
 
 从API version 23开始，自定义键盘可以通过[setCustomKeyboardContinueFeature](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)开启接续，在切换至其他自定义键盘时，会直接切换，不会触发键盘关闭和拉起动画。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在attributeModifier中调用。
 
@@ -454,7 +449,7 @@ enterKeyType(value: EnterKeyType)
 
 设置输入法回车键类型。未通过该接口设置时，默认输入法回车键类型为EnterKeyType.NEW_LINE。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -684,7 +679,7 @@ horizontalScrolling(enabled: Optional<boolean>)
 
 设置当文本宽度超过内容区宽度时是否启用水平滚动。未通过该接口设置时，禁用水平滚动。
 
-> **说明：**
+> **说明：** 
 > 
 > 以下<!--Del-->任一<!--DelEnd-->场景不支持水平滚动：[TextContentStyle](../arkts-apis/arkts-arkui-textcontentstyle-e.md)为INLINE，即文本框多态样式为内联模式<!--Del-->；启用
 > [voiceButton](#voicebutton)<!--DelEnd-->。
@@ -840,7 +835,7 @@ lineHeight(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 文本的文本行高。需要显式指定像素单位，如'10px'，也可设置百分比字符串，如'100%'。<br>**说明：**不指定像素单位时，默认单位fp，如'10'，等同于10。 |
+| value | number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 文本的文本行高。需要显式指定像素单位，如'10px'，也可设置百分比字符串，如'100%'。<br>**说明：** 不指定像素单位时，默认单位fp，如'10'，等同于10。 |
 
 ## lineSpacing
 
@@ -1192,7 +1187,7 @@ onDidInsert(callback: Callback<InsertValue>)
 
 在输入完成时，触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > onWillDelete和onDidDelete形成will/did时序模式：
 > 
@@ -1362,7 +1357,7 @@ onWillChange(callback: Callback<EditableTextChangeValue, boolean>)
 
 在文本内容将要发生变化时，触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > onWillChange与onChange均监听文本变更，区别在于：
 > 
@@ -1393,7 +1388,7 @@ onWillCopy(callback: Callback<string, boolean>)
 
 在进行复制操作前，触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > onWillCopy和onCopy形成will/did时序模式：
 > 
@@ -1425,7 +1420,7 @@ onWillCut(callback: Callback<string, boolean>)
 
 在进行剪切操作前，触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > onWillCut和onCut形成will/did时序模式：
 > 
@@ -1459,7 +1454,7 @@ onWillDelete(callback: Callback<DeleteValue, boolean>)
 
 点击清除按钮不触发onWillDelete回调。
 
-> **说明：**
+> **说明：** 
 > 
 > onWillDelete和onDidDelete形成will/did时序模式：
 > 
@@ -1491,7 +1486,7 @@ onWillInsert(callback: Callback<InsertValue, boolean>)
 
 在将要输入时，触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > onWillInsert和onDidInsert形成will/did时序模式：
 > 
@@ -1565,7 +1560,7 @@ placeholderFont(value: Font)
 
 设置placeholder文本样式，包括字体大小、字体粗细、字体族、字体风格。未通过该接口设置时，默认placeholder文本样式为：字体大小14fp，字体粗细FontWeight.Normal，字体族HarmonyOS Sans，字体风格FontStyle.Normal。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以使用[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)注册自定义字体。
 
@@ -1699,7 +1694,7 @@ shaderStyle(shader: ShaderStyle | undefined)
 
 设置文本着色器效果，如线性渐变、径向渐变效果等。
 
-> **说明：**
+> **说明：** 
 > 
 > 当同时设置shaderStyle和[strokeWidth](#strokewidth)时，shaderStyle不生效。
 > 
@@ -1946,7 +1941,7 @@ textOverflow(value: TextOverflow)
 
 当textOverflow设置为TextOverflow.None、TextOverflow.Clip、TextOverflow.Ellipsis时，需配合[maxLines](#maxlines)使用，单独设置不生效。设置TextOverflow.None与TextOverflow.Clip效果一样。
 
-> **说明：**
+> **说明：** 
 > 
 > TextArea组件不支持设置TextOverflow.MARQUEE模式，当设置为TextOverflow.MARQUEE模式时，显示为TextOverflow.Clip。
 

@@ -6,11 +6,6 @@ Provides information about the drop-down menu options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## icon
 
 ```TypeScript

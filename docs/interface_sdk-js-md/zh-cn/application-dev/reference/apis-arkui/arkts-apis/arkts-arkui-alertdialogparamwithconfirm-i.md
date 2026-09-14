@@ -10,11 +10,6 @@ confirm参数优先级：fontColor、backgroundColor &gt; style &gt; defaultFocu
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## confirm
 
 ```TypeScript

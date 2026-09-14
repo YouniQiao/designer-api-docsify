@@ -19,8 +19,3 @@ Converts a string to an integer.
 | --- | --- | --- | --- |
 | string | string | Yes |  |
 | radix | number | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

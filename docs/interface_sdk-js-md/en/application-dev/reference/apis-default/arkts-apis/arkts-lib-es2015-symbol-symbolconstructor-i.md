@@ -19,10 +19,6 @@ Returns a new unique Symbol value.
 | --- | --- | --- | --- |
 | description | string &#124; number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## for
 
 ```TypeScript
@@ -37,10 +33,6 @@ Returns a Symbol object from the global symbol registry matching the given key i
 | --- | --- | --- | --- |
 | key | string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## keyFor
 
 ```TypeScript
@@ -55,10 +47,6 @@ Returns a key from the global symbol registry matching the given Symbol if found
 | --- | --- | --- | --- |
 | sym | symbol | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## prototype
 
 ```TypeScript

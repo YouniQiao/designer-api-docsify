@@ -14,7 +14,7 @@ function getLength(): string
 
 获取当前在页面栈内的页面数量。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 8开始支持，从API version 18开始废弃，建议使用[getLength](arkts-arkui-arkui-uicontext-router-c.md#getlength)替代。
 > getLength需先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的

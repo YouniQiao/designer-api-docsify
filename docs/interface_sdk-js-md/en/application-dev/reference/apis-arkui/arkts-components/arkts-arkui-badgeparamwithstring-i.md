@@ -8,11 +8,6 @@ Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md) and has all attributes o
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## value
 
 ```TypeScript
@@ -21,7 +16,7 @@ value: ResourceStr
 
 Text string of the badge content.
 
-**NOTE:**
+**NOTE:** 
 
 The ResourceStr type is supported since API version 20.
 

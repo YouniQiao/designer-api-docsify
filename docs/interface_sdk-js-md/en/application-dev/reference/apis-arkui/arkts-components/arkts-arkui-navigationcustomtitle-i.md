@@ -6,11 +6,6 @@ Defines a custom title for the **Navigation** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## builder
 
 ```TypeScript

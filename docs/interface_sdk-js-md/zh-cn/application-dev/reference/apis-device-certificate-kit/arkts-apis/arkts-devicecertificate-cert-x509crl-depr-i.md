@@ -2,7 +2,7 @@
 
 提供用于X.509证书吊销列表操作的API。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用[X509CRL()](arkts-devicecertificate-cert-x509crl-i.md)替代。
 
@@ -28,7 +28,7 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 表示获取X.509证书吊销列表的序列化数据。使用Callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用
 > [X509CRL.getEncoded()](arkts-devicecertificate-cert-x509crl-i.md#getencoded)替代。
@@ -110,7 +110,7 @@ getEncoded(): Promise<EncodingBlob>
 
 表示获取X.509证书吊销列表的序列化数据。使用Promise方式返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用[X509CRL.getEncoded()](arkts-devicecertificate-cert-x509crl-i.md#getencoded)替代。
 
@@ -188,7 +188,7 @@ getIssuerName(): DataBlob
 
 表示获取X.509证书吊销列表颁发者名称。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用[X509CRL.getIssuerName()](arkts-devicecertificate-cert-x509crl-i.md#getissuername)替代。
 
@@ -269,7 +269,7 @@ getLastUpdate(): string
 
 表示获取X.509证书吊销列表最后一次更新日期。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用[X509CRL.getLastUpdate()](arkts-devicecertificate-cert-x509crl-i.md#getlastupdate)替代。
 
@@ -350,7 +350,7 @@ getNextUpdate(): string
 
 表示获取证书吊销列表下一次更新的日期。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用[X509CRL.getNextUpdate()](arkts-devicecertificate-cert-x509crl-i.md#getnextupdate)替代。
 
@@ -431,7 +431,7 @@ getRevokedCert(serialNumber: number): X509CrlEntry
 
 表示通过指定证书序列号获取证书吊销条目。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用[X509CRL.getRevokedCert()](arkts-devicecertificate-cert-x509crl-i.md#getrevokedcert)替代。
 
@@ -518,7 +518,7 @@ getRevokedCerts(callback: AsyncCallback<Array<X509CrlEntry>>): void
 
 表示获取证书吊销条目列表。使用Callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用
 > [X509CRL.getRevokedCerts()](arkts-devicecertificate-cert-x509crl-i.md#getrevokedcerts)替代。
@@ -599,7 +599,7 @@ getRevokedCerts(): Promise<Array<X509CrlEntry>>
 
 表示获取证书吊销条目列表。使用Promise方式返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用[X509CRL.getRevokedCerts()](arkts-devicecertificate-cert-x509crl-i.md#getrevokedcerts)替代。
 
@@ -676,7 +676,7 @@ getRevokedCertWithCert(cert: X509Cert): X509CrlEntry
 
 表示通过指定证书对象获取证书吊销条目。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用
 > [X509CRL.getRevokedCertWithCert()](arkts-devicecertificate-cert-x509crl-i.md#getrevokedcertwithcert)替代。
@@ -800,7 +800,7 @@ getSignature(): DataBlob
 
 表示获取X.509证书吊销列表的签名数据。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用
 > [X509CRL.getSignature()](arkts-devicecertificate-cert-x509crl-i.md#getsignature)替代。
@@ -882,7 +882,7 @@ getSignatureAlgName(): string
 
 表示获取X.509证书吊销列表签名的算法名称。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用
 > [X509CRL.getSignatureAlgName()](arkts-devicecertificate-cert-x509crl-i.md#getsignaturealgname)替代。
@@ -964,7 +964,7 @@ getSignatureAlgOid(): string
 
 表示获取X.509证书吊销列表签名算法的对象标识符OID（Object Identifier）。OID是由国际标准化组织（ISO）的名称注册机构分配。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用
 > [X509CRL.getSignatureAlgOid()](arkts-devicecertificate-cert-x509crl-i.md#getsignaturealgoid)替代。
@@ -1046,7 +1046,7 @@ getSignatureAlgParams(): DataBlob
 
 表示获取X.509证书吊销列表签名的算法参数。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用
 > [X509CRL.getSignatureAlgParams()](arkts-devicecertificate-cert-x509crl-i.md#getsignaturealgparams)替代。
@@ -1129,7 +1129,7 @@ getTbsInfo(): DataBlob
 
 表示获取证书吊销列表的tbsCertList信息。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用[X509CRL.getTBSInfo()](arkts-devicecertificate-cert-x509crl-i.md#gettbsinfo)替代。
 
@@ -1210,7 +1210,7 @@ getType(): string
 
 表示获取证书吊销列表类型。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用[X509CRL.getType()](arkts-devicecertificate-cert-x509crl-i.md#gettype)替代。
 
@@ -1277,7 +1277,7 @@ getVersion(): number
 
 表示获取X.509证书吊销列表的版本号。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用[X509CRL.getVersion()](arkts-devicecertificate-cert-x509crl-i.md#getversion)替代。
 
@@ -1344,7 +1344,7 @@ isRevoked(cert: X509Cert): boolean
 
 表示检查证书是否吊销。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用[X509CRL.isRevoked()](arkts-devicecertificate-cert-x509crl-i.md#isrevoked)替代。
 
@@ -1452,7 +1452,7 @@ verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 
 表示对X.509证书吊销列表进行验签。使用Callback异步回调。验签支持RSA算法。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用
 > [X509CRL.verify()](arkts-devicecertificate-cert-x509crl-i.md#verify)替代。
@@ -1612,7 +1612,7 @@ verify(key: cryptoFramework.PubKey): Promise<void>
 
 表示对X.509证书吊销列表进行验签。使用Promise方式返回结果。验签支持RSA算法。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用
 > [X509CRL.verify()](arkts-devicecertificate-cert-x509crl-i.md#verify)替代。

@@ -1,4 +1,4 @@
-# worker
+# worker(Worker Thread Management)
 
 JS cross-thread communication tool
 

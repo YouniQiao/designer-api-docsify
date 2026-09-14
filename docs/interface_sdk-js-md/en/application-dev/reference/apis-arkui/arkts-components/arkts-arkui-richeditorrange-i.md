@@ -6,11 +6,6 @@ Defines the range of the **RichEditor**.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## end
 
 ```TypeScript

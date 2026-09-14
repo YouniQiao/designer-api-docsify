@@ -31,7 +31,7 @@ Creates an object for a collection of X.509 certificates and CRLs.
 
 | Type | Description |
 | --- | --- |
-| [CertCRLCollection](arkts-devicecertificate-cert-certcrlcollection-i.md) | CertCRLCollection** object created. |
+| [CertCRLCollection](arkts-devicecertificate-cert-certcrlcollection-i.md) | **CertCRLCollection** object created. |
 
 **Error codes:**
 

@@ -21,10 +21,6 @@ Returns the this object after copying a section of the array identified by start
 | start | number | Yes |  |
 | end | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## fill
 
 ```TypeScript
@@ -41,10 +37,6 @@ Changes all array elements from `start` to `end` index to a static `value` and r
 | start | number | No |  |
 | end | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## find
 
 ```TypeScript
@@ -60,10 +52,6 @@ Returns the value of the first element in the array where predicate is true, and
 | predicate | (this: void, value: T, index: number, obj: T[]) =&gt; value is S | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## find
 
 ```TypeScript
@@ -77,10 +65,6 @@ find(predicate: (value: T, index: number, obj: T[]) => unknown, thisArg?: any): 
 | predicate | (value: T, index: number, obj: T[]) =&gt; unknown | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## findIndex
 
 ```TypeScript
@@ -95,8 +79,3 @@ Returns the index of the first element in the array where predicate is true, and
 | --- | --- | --- | --- |
 | predicate | (value: T, index: number, obj: T[]) =&gt; unknown | Yes |  |
 | thisArg | any | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

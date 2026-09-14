@@ -10,8 +10,3 @@
 ```TypeScript
 new (): Uint8ClampedArray
 ```
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

@@ -6,11 +6,6 @@ Provides the result details when a blank screen is detected, including the numbe
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## detectedContentfulNodesCount
 
 ```TypeScript

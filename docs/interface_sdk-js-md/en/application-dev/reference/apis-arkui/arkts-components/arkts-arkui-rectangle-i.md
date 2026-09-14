@@ -2,7 +2,7 @@
 
 The data type used to describe a rectangular area.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - **x** and **y** can be set to a positive or negative percentage value. For example, when **x** is set to
 > **'100%'**, the touch target is the offset from the right edge of the component by the component's width. When
@@ -27,11 +27,6 @@ The data type used to describe a rectangular area.
 **Since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## height
 

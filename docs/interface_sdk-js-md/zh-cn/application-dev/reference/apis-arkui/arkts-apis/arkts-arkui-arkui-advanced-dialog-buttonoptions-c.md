@@ -1,7 +1,7 @@
 # ButtonOptions
 
 
-> **说明：**
+> **说明：** 
 > 
 > buttonStyle和role优先级高于fontColor和background。当buttonStyle和role设置的是默认值时，fontColor和background生效。
 > 

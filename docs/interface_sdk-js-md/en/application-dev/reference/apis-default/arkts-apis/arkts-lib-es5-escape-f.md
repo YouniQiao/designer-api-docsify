@@ -20,8 +20,3 @@ Computes a new string in which certain characters have been replaced by a hexade
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | string | string | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

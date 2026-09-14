@@ -16,8 +16,3 @@ new <T>(iterable?: Iterable<T> | null): Set<T>
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | iterable | Iterable&lt;T&gt; &#124; null | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

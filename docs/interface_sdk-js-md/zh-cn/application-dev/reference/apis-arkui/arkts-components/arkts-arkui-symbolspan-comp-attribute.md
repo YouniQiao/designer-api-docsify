@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## attributeModifier
 
 ```TypeScript
@@ -49,7 +44,7 @@ NONE表示无动效，适用于静态展示场景；SCALE表示整体缩放动�
 
 不同动效策略效果可以参考[示例1（设置渲染和动效策略）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolSpan.md#示例1设置渲染和动效策略)。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -77,7 +72,7 @@ fontColor(value: Array<ResourceColor>)
 
 设置SymbolSpan组件颜色。未通过该接口设置时，默认颜色随[renderingStrategy](#renderingstrategy)变化，单色渲染策略（SINGLE）下默认为单色；多色渲染策略（MULTIPLE_COLOR）和分层渲染策略（MULTIPLE_OPACITY）下默认取图标资源预设的多色配置。具体说明请参考[SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -105,7 +100,7 @@ fontSize(value: number | string | Resource)
 
 设置SymbolSpan组件大小。设置string类型时，支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。未通过该接口设置时，默认组件大小为16fp。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -135,7 +130,7 @@ fontWeight(value: number | FontWeight | string)
 
 sys.symbol.ohos_lungs图标不支持设置fontWeight。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -192,7 +187,7 @@ renderingStrategy(value: SymbolRenderingStrategy)
 
 SINGLE表示单色渲染，适用于需要统一颜色的图标显示场景；MULTIPLE_COLOR表示多色渲染，适用于需要展示图标多层不同颜色的场景；MULTIPLE_OPACITY表示分层渲染，适用于需要展示图标层次效果的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 

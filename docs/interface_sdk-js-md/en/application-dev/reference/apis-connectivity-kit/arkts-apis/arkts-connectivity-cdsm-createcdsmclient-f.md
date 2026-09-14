@@ -32,7 +32,7 @@ Creates a CDSM client instance.
 
 | Type | Description |
 | --- | --- |
-| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) | CdsmClient** instance used to query and subscribe to the CDSM information of a remote device. |
+| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) | **CdsmClient** instance used to query and subscribe to the CDSM information of a remote device. |
 
 **Error codes:**
 

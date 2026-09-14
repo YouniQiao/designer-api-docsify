@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## icon
 
 ```TypeScript
@@ -19,7 +14,7 @@ icon?: ResourceStr
 
 图标资源路径。
 
-**说明：**
+**说明：** 
 
 不配置则使用系统默认样式，系统默认样式为三角形指针。
 
@@ -51,7 +46,7 @@ space?: Dimension
 
 单位：vp
 
-**说明：**
+**说明：** 
 
 不支持百分比。
 

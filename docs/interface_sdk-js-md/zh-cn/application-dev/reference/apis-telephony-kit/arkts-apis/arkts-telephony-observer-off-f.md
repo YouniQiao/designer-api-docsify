@@ -14,7 +14,7 @@ function off(type: 'networkStateChange', callback?: Callback<NetworkState>): voi
 
 取消订阅网络状态变化事件，使用callback方式作为异步方法。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
@@ -60,7 +60,7 @@ function off(type: 'signalInfoChange', callback?: Callback<Array<SignalInformati
 
 取消订阅信号状态变化事件，使用callback方式作为异步方法。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
@@ -108,7 +108,7 @@ function off(type: 'cellularDataConnectionStateChange', callback?: Callback<Data
 
 移除订阅蜂窝数据链路连接状态，使用callback方式作为异步方法。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
@@ -154,7 +154,7 @@ function off(type: 'cellularDataFlowChange', callback?: Callback<DataFlowType>):
 
 移除订阅蜂窝数据业务的上下行数据流状态，使用callback方式作为异步方法。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
@@ -202,7 +202,7 @@ function off(type: 'callStateChange', callback?: Callback<CallStateInfo>): void
 
 取消订阅通话状态变化事件，使用callback方式作为异步方法。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
@@ -248,7 +248,7 @@ function off(type: 'callStateChangeEx', callback?: Callback<TelCallState>): void
 
 取消订阅通话状态变化拓展事件，使用callback方式作为异步方法。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
@@ -294,7 +294,7 @@ function off(type: 'simStateChange', callback?: Callback<SimStateData>): void
 
 移除订阅sim状态更改事件，使用callback方式作为异步方法。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
@@ -340,7 +340,7 @@ function off(type: 'iccAccountInfoChange', callback?: Callback<void>): void
 
 移除订阅卡帐户变化事件，使用callback方式作为异步方法。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 

@@ -107,7 +107,7 @@ checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void
 
 Checks whether an OS account is activated. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
 > only to system applications.
@@ -169,7 +169,7 @@ checkOsAccountActivated(localId: number): Promise<boolean>
 
 Checks whether an OS account is activated. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
 > only to system applications.
@@ -234,7 +234,7 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: A
 
 Checks whether the specified constraint is enabled for an OS account. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
 > only to system applications.
@@ -298,7 +298,7 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<bo
 
 Checks whether the specified constraint is enabled for an OS account. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
 > only to system applications.
@@ -456,7 +456,7 @@ checkOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 Checks whether the current OS account is unlocked. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. You are advised to use
 > [isOsAccountUnlocked](#isosaccountunlocked) instead.
@@ -509,7 +509,7 @@ checkOsAccountVerified(): Promise<boolean>
 
 Checks whether the current OS account has been verified. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. You are advised to use
 > [isOsAccountUnlocked](#isosaccountunlocked) instead.
@@ -560,7 +560,7 @@ checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 
 Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
 > only to system applications.
@@ -620,7 +620,7 @@ checkOsAccountVerified(localId: number): Promise<boolean>
 
 Checks whether an OS account has been verified. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
 > only to system applications.
@@ -773,7 +773,7 @@ getCreatedOsAccountsCount(callback: AsyncCallback<number>): void
 
 Obtains the number of OS accounts created. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getOsAccountCount](#getosaccountcount) instead.
@@ -817,7 +817,7 @@ getCreatedOsAccountsCount(): Promise<number>
 
 Obtains the number of OS accounts created. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getOsAccountCount](#getosaccountcount) instead.
@@ -859,7 +859,7 @@ getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 
 Obtains information about the OS account to which the current process belongs. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
 > only to system applications.
@@ -915,7 +915,7 @@ getCurrentOsAccount(): Promise<OsAccountInfo>
 
 Obtains information about the OS account to which the current process belongs. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
 > only to system applications.
@@ -969,7 +969,7 @@ getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 
 Obtains the ID of a distributed virtual device. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [queryDistributedVirtualDeviceId](#querydistributedvirtualdeviceid)
@@ -1014,7 +1014,7 @@ getDistributedVirtualDeviceId(): Promise<string>
 
 Queries the ID of a distributed virtual device. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [queryDistributedVirtualDeviceId](#querydistributedvirtualdeviceid) instead.
@@ -1098,7 +1098,7 @@ getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string
 
 Obtains all constraints enabled for an OS account. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
 > only to system applications.
@@ -1145,7 +1145,7 @@ getOsAccountAllConstraints(localId: number): Promise<Array<string>>
 
 Obtains all constraints enabled for an OS account. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
 > only to system applications.
@@ -1195,7 +1195,7 @@ getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>)
 
 Obtains all constraints enabled for an OS account. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
 > only to system applications.
@@ -1257,7 +1257,7 @@ getOsAccountConstraints(localId: number): Promise<Array<string>>
 
 Obtains all constraints enabled for an OS account. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
 > only to system applications.
@@ -1557,7 +1557,7 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<
 
 Obtains the OS account ID based on the SN. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)
@@ -1604,7 +1604,7 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>
 
 Obtains the OS account ID based on the SN. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)
@@ -2023,7 +2023,7 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCall
 
 Obtains the OS account ID based on the domain account information. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain)
@@ -2070,7 +2070,7 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>
 
 Obtains the OS account ID based on the domain account information. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain-1)
@@ -2120,7 +2120,7 @@ getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void
 
 Obtains the ID of the OS account to which the current process belongs. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getOsAccountLocalId](#getosaccountlocalid)
@@ -2163,7 +2163,7 @@ getOsAccountLocalIdFromProcess(): Promise<number>
 
 Obtains the ID of the OS account to which the current process belongs. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getOsAccountLocalId](#getosaccountlocalid) instead.
@@ -2203,7 +2203,7 @@ getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void
 
 Obtains the OS account ID based on the process UID. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)
@@ -2250,7 +2250,7 @@ getOsAccountLocalIdFromUid(uid: number): Promise<number>
 
 Obtains the OS account ID based on the process UID. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getOsAccountLocalIdForUid](#getosaccountlocalidforuid) instead.
@@ -2530,7 +2530,7 @@ getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void
 
 Obtains the type of the account to which the current process belongs. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getOsAccountType](#getosaccounttype)
@@ -2573,7 +2573,7 @@ getOsAccountTypeFromProcess(): Promise<OsAccountType>
 
 Obtains the type of the account to which the current process belongs. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getOsAccountType](#getosaccounttype) instead.
@@ -2613,7 +2613,7 @@ getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<numbe
 
 Obtains the SN of an OS account based on the account ID. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)
@@ -2661,7 +2661,7 @@ getSerialNumberByOsAccountLocalId(localId: number): Promise<number>
 
 Obtains the SN of an OS account based on the account ID. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)
@@ -2819,7 +2819,7 @@ isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void
 
 Checks whether multiple OS accounts are supported. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [checkMultiOsAccountEnabled](#checkmultiosaccountenabled)
@@ -2862,7 +2862,7 @@ isMultiOsAccountEnable(): Promise<boolean>
 
 Checks whether multiple OS accounts are supported. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [checkMultiOsAccountEnabled](#checkmultiosaccountenabled) instead.
@@ -2902,7 +2902,7 @@ isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void
 
 Checks whether an OS account is activated. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
 > only to system applications.
@@ -2949,7 +2949,7 @@ isOsAccountActived(localId: number): Promise<boolean>
 
 Checks whether an OS account is activated. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
 > only to system applications.
@@ -2999,7 +2999,7 @@ isOsAccountConstraintEnable(localId: number, constraint: string, callback: Async
 
 Checks whether the specified constraint is enabled for an OS account. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
 > only to system applications.
@@ -3048,7 +3048,7 @@ isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolea
 
 Checks whether the specified constraint is enabled for an OS account. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
 > only to system applications.
@@ -3194,7 +3194,7 @@ isOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [checkOsAccountVerified](#checkosaccountverified)
@@ -3239,7 +3239,7 @@ isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 
 Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
 > only to system applications.
@@ -3284,7 +3284,7 @@ isOsAccountVerified(localId?: number): Promise<boolean>
 
 Checks whether an OS account has been verified. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
 > only to system applications.
@@ -3330,7 +3330,7 @@ isTestOsAccount(callback: AsyncCallback<boolean>): void
 
 Checks whether the current OS account is a test account. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [checkOsAccountTestable](#checkosaccounttestable)
@@ -3375,7 +3375,7 @@ isTestOsAccount(): Promise<boolean>
 
 Checks whether the current OS account is a test account. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [checkOsAccountTestable](#checkosaccounttestable) instead.
@@ -3417,7 +3417,7 @@ queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void
 
 Obtains information about all activated OS accounts. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids)
@@ -3463,7 +3463,7 @@ queryActivatedOsAccountIds(): Promise<Array<number>>
 
 Obtains information about all activated OS accounts. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids) instead.
@@ -3503,7 +3503,7 @@ queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 
 Obtains information about the OS account to which the current process belongs. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
 > only to system applications.
@@ -3545,7 +3545,7 @@ queryCurrentOsAccount(): Promise<OsAccountInfo>
 
 Obtains information about the OS account to which the current process belongs. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
 > only to system applications.

@@ -14,7 +14,7 @@ function on(type: 'wifiStateChange', callback: Callback<number>): void
 
 注册Wi-Fi状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。
 
@@ -44,7 +44,7 @@ function on(type: 'wifiConnectionChange', callback: Callback<number>): void
 
 注册Wi-Fi连接状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。
 
@@ -74,7 +74,7 @@ function on(type: 'wifiScanStateChange', callback: Callback<number>): void
 
 注册扫描状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。
 
@@ -104,7 +104,7 @@ function on(type: 'wifiRssiChange', callback: Callback<number>): void
 
 注册RSSI状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。
 
@@ -134,7 +134,7 @@ function on(type: 'hotspotStateChange', callback: Callback<number>): void
 
 注册热点状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。
 
@@ -180,7 +180,7 @@ function on(type: 'p2pStateChange', callback: Callback<number>): void
 
 注册P2P开关状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。
 
@@ -210,7 +210,7 @@ function on(type: 'p2pConnectionChange', callback: Callback<WifiP2pLinkedInfo>):
 
 注册P2P连接状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。
 
@@ -240,7 +240,7 @@ function on(type: 'p2pDeviceChange', callback: Callback<WifiP2pDevice>): void
 
 注册P2P设备状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。
 
@@ -270,7 +270,7 @@ function on(type: 'p2pPeerDeviceChange', callback: Callback<WifiP2pDevice[]>): v
 
 注册P2P对端设备状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。
 
@@ -300,7 +300,7 @@ function on(type: 'p2pPersistentGroupChange', callback: Callback<void>): void
 
 注册P2P永久组状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。
 
@@ -330,7 +330,7 @@ function on(type: 'p2pDiscoveryChange', callback: Callback<number>): void
 
 注册发现设备状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。
 

@@ -2,7 +2,7 @@
 
 PermissionRequest is an object used by the **Web** component to grant or deny permission requests. When a web page attempts to access protected system resources (such as camera, microphone, geolocation, etc.), the ArkWeb kernel sends a permission request to the app through the [onPermissionRequest](arkts-arkweb-web-comp-attribute.md#onpermissionrequest) event callback. The app then uses the PermissionRequest object to decide whether to grant these requests. This object is applicable to scenarios where the app needs to manage web page access to sensitive resources, protect user privacy, and ensure secure and controllable resource access, helping developers flexibly handle web page permission requests.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The [grant](#grant)() and [deny](#deny)() methods are mutually
 > exclusive. For the same PermissionRequest object, only one of them can be called.
@@ -22,11 +22,6 @@ PermissionRequest is an object used by the **Web** component to grant or deny pe
 **Since:** 9
 
 **System capability:** SystemCapability.Web.Webview.Core
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## constructor
 

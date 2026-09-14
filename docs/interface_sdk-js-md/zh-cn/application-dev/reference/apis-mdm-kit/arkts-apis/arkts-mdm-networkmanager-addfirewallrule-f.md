@@ -18,7 +18,7 @@ API version 21及之前版本，仅支持IPv4。从API version 22开始，支持
 
 从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > - 添加了[Action](arkts-mdm-networkmanager-action-e.md)为ALLOW规则后，将会默认添加DENY规则，不在ALLOW规则之内的网络数据包将会被丢弃或拦截。
 > 

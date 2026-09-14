@@ -38,3 +38,4 @@ Set the options.
 
 | Type | Description |
 | --- | --- |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |

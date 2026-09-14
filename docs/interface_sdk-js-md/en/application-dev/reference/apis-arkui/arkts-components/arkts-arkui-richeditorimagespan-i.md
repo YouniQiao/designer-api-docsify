@@ -6,11 +6,6 @@ Image span information.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## imageStyle
 
 ```TypeScript

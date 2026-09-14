@@ -2,7 +2,7 @@
 
 Counter组件用于精确调节数值，支持列表型、紧凑型、数值内联型和日期内联型四种样式，适用于购物数量调节、参数设置、日期选择等场景，具有灵活的样式配置和事件回调能力。
 
-> **说明：**
+> **说明：** 
 > 
 > - 如果Counter设置[通用属性](../arkts-components/arkts-arkui-commonmethod-c.md)或[通用事件](../arkts-components/arkts-arkui-commonmethod-c.md)，
 > 编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到Counter本身。

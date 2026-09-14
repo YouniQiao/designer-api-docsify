@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-localizationkit-->
 
-- [@ohos.fontManager(Font Management)](arkts-fontmanager.md)
+- [@ohos.fontManager(Font Management)](arkts-localization-fontmanager.md)
   <!--Del-->
   - [dataMigration(system api)](arkts-localization-fontmanager-datamigration-f-sys.md)<!--DelEnd-->
   - [getFontScope](arkts-localization-fontmanager-getfontscope-f.md)
@@ -18,7 +18,7 @@
   - [DataMigrationProgress(system api)](arkts-localization-fontmanager-datamigrationprogress-i-sys.md)<!--DelEnd-->
   - [FontClientObserver](arkts-localization-fontmanager-fontclientobserver-i.md)
   - [FontScope](arkts-localization-fontmanager-fontscope-e.md)
-- [@ohos.i18n](arkts-i18n.md)
+- [@ohos.i18n](arkts-localization-i18n.md)
   - [addPreferredLanguage](arkts-localization-i18n-addpreferredlanguage-f.md)
   - [getCalendar](arkts-localization-i18n-getcalendar-f.md)
   - [getChineseCalendar](arkts-localization-i18n-getchinesecalendar-f.md)
@@ -95,7 +95,7 @@
   - [TemperatureType](arkts-localization-i18n-temperaturetype-e.md)
   - [UnitUsage](arkts-localization-i18n-unitusage-e.md)
   - [WeekDay](arkts-localization-i18n-weekday-e.md)
-- [@ohos.intl](arkts-intl.md)
+- [@ohos.intl](arkts-localization-intl.md)
   - [Collator](arkts-localization-intl-collator-c.md)
   - [DateTimeFormat](arkts-localization-intl-datetimeformat-c.md)
   - [Locale](arkts-localization-intl-locale-c.md)
@@ -109,7 +109,7 @@
   - [PluralRulesOptions](arkts-localization-intl-pluralrulesoptions-i.md)
   - [RelativeTimeFormatInputOptions](arkts-localization-intl-relativetimeformatinputoptions-i.md)
   - [RelativeTimeFormatResolvedOptions](arkts-localization-intl-relativetimeformatresolvedoptions-i.md)
-- [@ohos.resourceManager(Resource Management)](arkts-resourcemanager.md)
+- [@ohos.resourceManager(Resource Management)](arkts-localization-resourcemanager.md)
   - [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md)
   - [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md)
   - [getSystemResourceManager](arkts-localization-resourcemanager-getsystemresourcemanager-f.md)
@@ -123,15 +123,15 @@
   - [DeviceType](arkts-localization-resourcemanager-devicetype-e.md)
   - [Direction](arkts-localization-resourcemanager-direction-e.md)
   - [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)
-- [@ohos.sendableResourceManager(Resource Manager)](arkts-sendableresourcemanager.md)
+- [@ohos.sendableResourceManager(Resource Manager)](arkts-localization-sendableresourcemanager.md)
   - [resourceToSendableResource](arkts-localization-sendableresourcemanager-resourcetosendableresource-f.md)
   - [sendableResourceToResource](arkts-localization-sendableresourcemanager-sendableresourcetoresource-f.md)
   - [Resource](arkts-localization-sendableresourcemanager-resource-t.md)
   - [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md)
 - global<!--arkts-localizationkit-global-->
-  - [rawFileDescriptor](arkts-rawfiledescriptor.md)
+  - [rawFileDescriptor](arkts-localization-rawfiledescriptor.md)
     - [RawFileDescriptor](arkts-localization-rawfiledescriptor-rawfiledescriptor-i.md)
-  - [resource](arkts-resource.md)
+  - [resource](arkts-localization-resource.md)
     - [Resource](arkts-localization-resource-resource-i.md)
-  - [sendableResource](arkts-sendableresource.md)
+  - [sendableResource](arkts-localization-sendableresource.md)
     - [SendableResource](arkts-localization-sendableresource-sendableresource-i.md)

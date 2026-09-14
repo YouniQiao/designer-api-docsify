@@ -16,7 +16,7 @@ Enables GWP-ASan to detect illegal behaviors in heap memory usage.
 
 This API is used to dynamically configure and enable GWP-ASan to adapt to the custom GWP-ASan detection policy. The configuration takes effect after the application is restarted.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. If the number of GWP-ASan applications configured using this API exceeds the quota during device running, this
 > API fails to be called and an error code is thrown. Use **try-catch** to capture exceptions to prevent the
@@ -25,7 +25,7 @@ This API is used to dynamically configure and enable GWP-ASan to adapt to the cu
 > 2. After the device restarts, the GWP-ASan parameters set by this API are invalid.
 > 
 > 3. This API involves cross-process communication and takes a long time. To avoid performance problems, you are
-> advised not to call this API in the main thread. You can use [@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md) or
+> advised not to call this API in the main thread. You can use [@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-arkts-taskpool.md) or
 > [@ohos.worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md) to enable asynchronous threads to avoid application frame freezing.
 
 **Since:** 20

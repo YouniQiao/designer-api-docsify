@@ -4,7 +4,7 @@
 
 继承自[CustomPopupOptions](../arkts-components/arkts-arkui-custompopupoptions-i.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > radius默认值为32vp。
 

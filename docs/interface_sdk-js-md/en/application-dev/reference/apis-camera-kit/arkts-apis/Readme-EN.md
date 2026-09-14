@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-camerakit-->
 
-- [@ohos.multimedia.camera(Camera Management)](arkts-multimedia-camera.md)
+- [@ohos.multimedia.camera(Camera Management)](arkts-camera-multimedia-camera.md)
   - [getCameraManager](arkts-camera-camera-getcameramanager-f.md)
   <!--Del-->
   - [EffectSuggestionStatus(system api)](arkts-camera-camera-effectsuggestionstatus-c-sys.md)<!--DelEnd-->
@@ -350,7 +350,7 @@
   - [VideoMetaType(system api)](arkts-camera-camera-videometatype-e-sys.md)<!--DelEnd-->
   - [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md)
   - [WhiteBalanceMode](arkts-camera-camera-whitebalancemode-e.md)
-- [@ohos.multimedia.cameraPicker(Camera Picker)](arkts-multimedia-camerapicker.md)
+- [@ohos.multimedia.cameraPicker(Camera Picker)](arkts-camera-multimedia-camerapicker.md)
   - [pick](arkts-camera-camerapicker-pick-f.md)
   - [PickerProfile](arkts-camera-camerapicker-pickerprofile-c.md)
   - [PickerResult](arkts-camera-camerapicker-pickerresult-c.md)

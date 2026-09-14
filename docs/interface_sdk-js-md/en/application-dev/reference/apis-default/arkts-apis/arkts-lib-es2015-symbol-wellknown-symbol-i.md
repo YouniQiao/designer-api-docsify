@@ -19,10 +19,6 @@ Converts a Symbol object to a symbol.
 | --- | --- | --- | --- |
 | hint | string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [Symbol.toStringTag]
 
 ```TypeScript

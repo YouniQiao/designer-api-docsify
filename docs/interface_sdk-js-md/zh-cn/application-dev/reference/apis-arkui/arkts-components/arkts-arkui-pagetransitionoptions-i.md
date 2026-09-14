@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## curve
 
 ```TypeScript
@@ -89,7 +84,7 @@ type?: RouteType
 
 默认值：RouteType.None。
 
-**说明：**
+**说明：** 
 
 当pageTransition函数中配置了多个[PageTransitionEnter或[PageTransitionExit](arkts-arkui-pagetransitionenter-comp-con.md#pagetransitionexit)时，按照RouteType匹配规则生效：系统会根据当前路由操作类型（Push或Pop）从所有配置的PageTransitionEnter/PageTransitionExit中选择最后一个匹配的组件生效；若没有匹配的组件，则使用系统默认的页面转场效果（根据设备可能会有差异）。如果存在多个匹配相同RouteType的PageTransitionEnter，则最后配置的生效；如果存在多个匹配相同RouteType的PageTransitionExit，则最后配置的生效。RouteType.None与所有路由类型均匹配。
 

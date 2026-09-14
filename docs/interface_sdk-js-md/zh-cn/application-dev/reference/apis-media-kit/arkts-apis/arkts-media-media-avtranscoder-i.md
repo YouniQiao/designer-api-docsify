@@ -4,7 +4,7 @@
 
 视频转码demo可参考：[视频转码开发指导](../../../media/media/using-avtranscoder-for-transcodering.md)
 
-> **说明：**
+> **说明：** 
 > 
 > - 本Interface首批接口从API version 12开始支持。
 
@@ -390,7 +390,7 @@ fdDst: number
 
 目标媒体文件描述，通过该属性设置数据输出。在创建AVTranscoder实例后，必须设置fdSrc和fdDst属性。
 
-**说明：**
+**说明：** 
 
 - 将资源句柄（fd）传递给AVTranscoder实例之后，请不要通过该资源句柄做其他读写操作，包括但不限于将同一个资源句柄传递给多个AVPlayer/AVMetadataExtractor/AVImageGenerator  
 /AVTranscoder。  
@@ -416,7 +416,7 @@ fdSrc: AVFileDescriptor
 
 假设一个连续存储的媒体文件，地址偏移：0，字节长度：100。其文件描述为AVFileDescriptor{ fd = 资源句柄; offset = 0; length = 100; }。
 
-**说明：**
+**说明：** 
 
 - 将资源句柄（fd）传递给AVTranscoder实例之后，请不要通过该资源句柄做其他读写操作，包括但不限于将同一个资源句柄传递给多个AVPlayer/AVMetadataExtractor/AVImageGenerator  
 /AVTranscoder。  

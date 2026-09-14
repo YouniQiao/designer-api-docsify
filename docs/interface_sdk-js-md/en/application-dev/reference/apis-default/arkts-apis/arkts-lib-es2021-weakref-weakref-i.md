@@ -13,10 +13,6 @@ deref(): T | undefined
 
 Returns the WeakRef instance's target object, or undefined if the target object has been reclaimed.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [Symbol.toStringTag]
 
 ```TypeScript

@@ -26,9 +26,9 @@ fontSize?: Dimension
 
 默认值：
 
-size为ChipSize.SMALL时，`\$r('sys.float.chip_small_font_size')`
+size为ChipSize.SMALL时，`&#36;r('sys.float.chip_small_font_size')`
 
-其他情况：`\$r('sys.float.chip_normal_font_size')`
+其他情况：`&#36;r('sys.float.chip_normal_font_size')`
 
 单位：fp
 

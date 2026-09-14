@@ -8,11 +8,6 @@ Grid布局选项。其中，irregularIndexes和onGetIrregularSizeByIndex可对�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## onGetStartIndexByIndex
 
 ```TypeScript

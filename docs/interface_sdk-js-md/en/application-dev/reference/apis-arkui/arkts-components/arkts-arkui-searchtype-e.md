@@ -64,7 +64,7 @@ EMAIL = 5
 
 Email address input mode.
 
-This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # \$ % &' * + - / = ? ^ ` { | } ~ @ (which can only appear once)
+This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # &#36; % &' * + - / = ? ^ ` { | } ~ @ (which can only appear once)
 
 **Since:** 11
 

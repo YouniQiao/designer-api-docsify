@@ -1,7 +1,7 @@
 # ChipGroup
 
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. When **multiple** is set to **false**, if **selectedIndexes** is not passed in, the first chip is automatically
 > selected by default. However, if the provided **selectedIndexes** includes multiple elements, the chip at the first
@@ -130,7 +130,7 @@ Style attributes of the chip, such as the color and size. For details, see [Chip
 
 Default value:
 
-{ size: ChipSize.NORMAL, backgroundColor: \$r('sys.color.ohos_id_color_button_normal'), fontColor: \$r('sys.color.ohos_id_color_text_primary'), selectedFontColor: \$r('sys.color.ohos_id_color_text_primary_contrary'), selectedBackgroundColor: \$r('sys.color.ohos_id_color_emphasize') }
+{ size: ChipSize.NORMAL, backgroundColor: &#36;r('sys.color.ohos_id_color_button_normal'), fontColor: &#36;r('sys.color.ohos_id_color_text_primary'), selectedFontColor: &#36;r('sys.color.ohos_id_color_text_primary_contrary'), selectedBackgroundColor: &#36;r('sys.color.ohos_id_color_emphasize') }
 
 If the value is **undefined**, the default value is used.
 

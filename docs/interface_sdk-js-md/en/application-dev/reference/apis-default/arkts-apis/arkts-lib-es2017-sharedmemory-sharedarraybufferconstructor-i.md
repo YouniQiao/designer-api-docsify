@@ -17,10 +17,6 @@ new (byteLength: number): SharedArrayBuffer
 | --- | --- | --- | --- |
 | byteLength | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## prototype
 
 ```TypeScript

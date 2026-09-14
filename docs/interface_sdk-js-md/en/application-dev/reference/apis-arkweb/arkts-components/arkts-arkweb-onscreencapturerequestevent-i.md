@@ -6,11 +6,6 @@ Defines the callback information triggered when a screen capture request is rece
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## handler
 
 ```TypeScript

@@ -14,7 +14,7 @@ function setPowerMode(mode: PowerMode): void
 
 设置功率模式。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 10开始废弃。
 

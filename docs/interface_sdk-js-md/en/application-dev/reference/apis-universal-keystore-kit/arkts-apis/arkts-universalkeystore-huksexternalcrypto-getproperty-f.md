@@ -45,7 +45,7 @@ The **propertyId** indicates the ID of the property to be queried. Currently, on
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | API is not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability. 2. The chip does not support the capability. 3. A dependent service feature is not supported. |
 | [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
 | [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | If the UKey driver operation failed. Possible causes: 1. Error reported when the provider accesses the SKF interface of UKey. |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | If the cached resource ID is not found. |

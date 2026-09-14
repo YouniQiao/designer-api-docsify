@@ -16,7 +16,7 @@ function setInstallLocalEnterpriseAppEnabledForAccount(admin: Want, isEnable: bo
 
 仅支持enterprise_normal或enterprise_mdm签名类型的企业应用。
 
-> **说明：**
+> **说明：** 
 > 
 > 满足以下任意条件，PC/2in1企业设备在当前用户下即支持本地安装企业应用：
 > 

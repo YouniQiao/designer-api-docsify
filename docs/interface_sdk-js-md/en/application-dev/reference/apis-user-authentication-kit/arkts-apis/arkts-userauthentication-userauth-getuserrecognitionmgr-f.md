@@ -14,7 +14,7 @@ function getUserRecognitionMgr(): UserRecognitionMgr | null
 
 Obtains a [UserRecognitionMgr](arkts-userauthentication-userauth-userrecognitionmgr-i.md) instance, which is used to query and subscribe to the user recognition result.
 
-> **NOTE:**
+> **NOTE:** 
 
 > Each call returns a new **UserRecognitionMgr** instance. Keep the same instance for paired on/off calls.
 

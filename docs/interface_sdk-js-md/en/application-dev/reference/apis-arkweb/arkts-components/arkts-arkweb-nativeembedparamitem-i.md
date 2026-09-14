@@ -6,11 +6,6 @@ Provides detailed information about the **param** element embedded in the same-l
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## id
 
 ```TypeScript

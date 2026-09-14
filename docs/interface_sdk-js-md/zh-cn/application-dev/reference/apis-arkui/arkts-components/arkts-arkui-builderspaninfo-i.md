@@ -2,18 +2,13 @@
 
 定义**RichEditor**中BuilderSpan的身份与位置信息。
 
-> **说明：**
+> **说明：** 
 > 
 > 当**RichEditor**组件使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构造时，不支持此接口。
 
 **起始版本：** 26.2.0
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## id
 

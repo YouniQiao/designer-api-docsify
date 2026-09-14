@@ -12,11 +12,6 @@ WebController适用于需要在应用侧对嵌入式Web组件进行主动控制�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-```
-
 ## accessBackward
 
 ```TypeScript

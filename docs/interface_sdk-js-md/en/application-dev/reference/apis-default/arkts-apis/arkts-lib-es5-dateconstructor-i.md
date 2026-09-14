@@ -11,20 +11,12 @@
 (): string
 ```
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
 new(): Date
 ```
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -37,10 +29,6 @@ new(value: number | string): Date
 | --- | --- | --- | --- |
 | value | number &#124; string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -61,10 +49,6 @@ Creates a new Date.
 | seconds | number | No |  |
 | ms | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## now
 
 ```TypeScript
@@ -73,10 +57,6 @@ now(): number
 
 Returns the number of milliseconds elapsed since midnight, January 1, 1970 Universal Coordinated Time (UTC).
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## parse
 
 ```TypeScript
@@ -91,10 +71,6 @@ Parses a string containing a date, and returns the number of milliseconds betwee
 | --- | --- | --- | --- |
 | s | string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## UTC
 
 ```TypeScript
@@ -115,10 +91,6 @@ Returns the number of milliseconds between midnight, January 1, 1970 Universal C
 | seconds | number | No |  |
 | ms | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## prototype
 
 ```TypeScript

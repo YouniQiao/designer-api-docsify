@@ -16,7 +16,7 @@ function shiftAppWindowFocus(sourceWindowId: number, targetWindowId: number): Pr
 
 目标窗口需确保具有获得焦点的能力（可通过[setWindowFocusable()](arkts-arkui-window-window-i.md#setwindowfocusable)设置），并确保调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)成功且执行完毕。
 
-> **说明：**
+> **说明：** 
 > 
 > 在调用shiftAppWindowFocus()前，建议确保目标窗口已调用
 > [loadContent()](arkts-arkui-window-window-i.md#loadcontent)

@@ -14,7 +14,7 @@ function getParams(): Object
 
 获取发起跳转的页面往当前页传入的参数。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 8开始支持，从API version 18开始废弃，建议使用[getParams](arkts-arkui-arkui-uicontext-router-c.md#getparams)替代。
 > getParams需先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的

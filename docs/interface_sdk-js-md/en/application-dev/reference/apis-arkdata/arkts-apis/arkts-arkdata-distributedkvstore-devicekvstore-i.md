@@ -299,7 +299,7 @@ get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | nu
 
 Obtains a string value that matches the specified device ID and key. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -444,7 +444,7 @@ get(deviceId: string, key: string): Promise<boolean | string | number | number |
 
 Obtains a string value that matches the specified device ID and key. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -738,7 +738,7 @@ getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>
 
 Obtains all KV pairs that match the specified device ID and key prefix. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -819,7 +819,7 @@ getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 
 Obtains all KV pairs that match the specified device ID and key prefix. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -988,7 +988,7 @@ Obtains all KV pairs that match the specified **Query** object for this device. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | **Query** object to match. |
 
 **Return value:**
 
@@ -1053,7 +1053,7 @@ getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): vo
 
 Obtains the KV pairs that match the specified device ID and **Query** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -1072,7 +1072,7 @@ Obtains the KV pairs that match the specified device ID and **Query** object. Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | ID of the target device. |
-| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | **Query** object to match. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]&gt; | Yes | Callback used to return the KV pairs that match the specified device ID and **Query** object. |
 
 **Error codes:**
@@ -1139,7 +1139,7 @@ getEntries(deviceId: string, query: Query): Promise<Entry[]>
 
 Obtains the KV pairs that match the specified device ID and **Query** object. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -1158,7 +1158,7 @@ Obtains the KV pairs that match the specified device ID and **Query** object. Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | ID of the target device. |
-| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | **Query** object to match. |
 
 **Return value:**
 
@@ -1383,7 +1383,7 @@ getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KVStor
 
 Obtains a **KVStoreResultSet** object that matches the specified device ID and key prefix. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -1452,7 +1452,7 @@ getResultSet(deviceId: string, keyPrefix: string): Promise<KVStoreResultSet>
 
 Obtains a **KVStoreResultSet** object that matches the specified device ID and key prefix. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -1522,7 +1522,7 @@ getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 
 Obtains a **KVStoreResultSet** object that matches the specified **Query** object for this device. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -1540,7 +1540,7 @@ Obtains a **KVStoreResultSet** object that matches the specified **Query** objec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | **Query** object to match. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Yes | Callback used to return the **KVStoreResultSet** object obtained. |
 
 **Error codes:**
@@ -1623,7 +1623,7 @@ Obtains a **KVStoreResultSet** object that matches the specified **Query** objec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | **Query** object to match. |
 
 **Return value:**
 
@@ -1686,7 +1686,7 @@ getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KVStoreResu
 
 Obtains a **KVStoreResultSet** object that matches the specified device ID and **Query** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -1705,7 +1705,7 @@ Obtains a **KVStoreResultSet** object that matches the specified device ID and *
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | ID of the device to which the **KVStoreResultSet** object belongs. |
-| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | **Query** object to match. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Yes | Callback used to return the **KVStoreResultSet** object that matches the specified device ID and **Query** object. |
 
 **Error codes:**
@@ -1778,7 +1778,7 @@ getResultSet(deviceId: string, query: Query): Promise<KVStoreResultSet>
 
 Obtains a **KVStoreResultSet** object that matches the specified device ID and **Query** object. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -1797,7 +1797,7 @@ Obtains a **KVStoreResultSet** object that matches the specified device ID and *
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | ID of the device to which the **KVStoreResultSet** object belongs. |
-| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | **Query** object to match. |
 
 **Return value:**
 
@@ -1882,7 +1882,7 @@ Obtains the number of results that match the specified **Query** object for this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | **Query** object to match. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of results obtained. |
 
 **Error codes:**
@@ -1954,7 +1954,7 @@ Obtains the number of results that match the specified **Query** object for this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | **Query** object to match. |
 
 **Return value:**
 
@@ -2015,7 +2015,7 @@ getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): 
 
 Obtains the number of results that match the specified device ID and **Query** object. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -2034,7 +2034,7 @@ Obtains the number of results that match the specified device ID and **Query** o
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | ID of the device to which the **KVStoreResultSet** object belongs. |
-| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | **Query** object to match. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of results obtained. |
 
 **Error codes:**
@@ -2096,7 +2096,7 @@ getResultSize(deviceId: string, query: Query): Promise<number>
 
 Obtains the number of results that match the specified device ID and **Query** object. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -2115,7 +2115,7 @@ Obtains the number of results that match the specified device ID and **Query** o
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | ID of the device to which the **KVStoreResultSet** object belongs. |
-| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | **Query** object to match. |
 
 **Return value:**
 

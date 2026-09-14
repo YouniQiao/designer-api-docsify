@@ -12,11 +12,6 @@ Among universal events, only onClick click events and onHover hover events are s
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## decoration
 
 ```TypeScript
@@ -37,7 +32,7 @@ Style and color of the text decorative line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DecorationStyleInterface](../arkts-apis/arkts-arkui-decorationstyleinterface-i.md) | Yes | Style of the text decorative line.<br>Default value:<br>{<br> type: TextDecorationType.None,<br> color: Color.Black,<br> style: TextDecorationStyle.SOLID <br>}<br>**NOTE:**<br>The **style** parameter cannot be used in widgets.<br>**Since:** 12 |
+| value | [DecorationStyleInterface](../arkts-apis/arkts-arkui-decorationstyleinterface-i.md) | Yes | Style of the text decorative line.<br>Default value:<br>{<br> type: TextDecorationType.None,<br> color: Color.Black,<br> style: TextDecorationStyle.SOLID <br>}<br>**NOTE:** <br>The **style** parameter cannot be used in widgets.<br>**Since:** 12 |
 
 ## font
 
@@ -104,7 +99,7 @@ Sets the font color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color.<br>Default value: **'e6182431'**.<br>Default value for wearables: **'#c5ffffff' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color.<br>Default value: **'e6182431'**.<br>Default value for wearables: **'#c5ffffff'** |
 
 ## fontFamily
 
@@ -170,7 +165,7 @@ Sets the font style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | Yes | Font style.<br>Default value: **FontStyle.Normal |
+| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | Yes | Font style.<br>Default value: **FontStyle.Normal** |
 
 ## fontVariations
 
@@ -307,7 +302,7 @@ Sets the text case.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextCase](../arkts-apis/arkts-arkui-textcase-e.md) | Yes | Text case.<br>Default value: **TextCase.Normal |
+| value | [TextCase](../arkts-apis/arkts-arkui-textcase-e.md) | Yes | Text case.<br>Default value: **TextCase.Normal** |
 
 ## textShadow
 

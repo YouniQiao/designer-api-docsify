@@ -1,10 +1,5 @@
 # px2vp
 
-## 导入模块
-
-```TypeScript
-```
-
 ## px2vp
 
 ```TypeScript

@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## alignItems
 
 ```TypeScript
@@ -94,7 +89,7 @@ cellLength(value: number)
 
 设置一行的高度或者一列的宽度。
 
-> **说明：**
+> **说明：** 
 > 
 > 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。
 > 当layoutDirection是Row/RowReverse时，表示一行的高度。
@@ -228,7 +223,7 @@ editMode(value: boolean)
 
 设置Grid是否进入编辑模式，进入编辑模式可以拖拽Grid组件内部GridItem。
 
-> **说明：**
+> **说明：** 
 > 
 > 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。
 
@@ -362,7 +357,7 @@ layoutDirection(value: GridDirection)
 
 设置布局的主轴方向。
 
-> **说明：**
+> **说明：** 
 > 
 > 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。
 
@@ -386,7 +381,7 @@ maxCount(value: number)
 
 设置可显示的最大行数或列数。设置为小于1的值时，按默认值显示。
 
-> **说明：**
+> **说明：** 
 > 
 > 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。
 > 当layoutDirection是Row/RowReverse时，表示可显示的最大列数。
@@ -415,7 +410,7 @@ minCount(value: number)
 
 设置可显示的最小行数或列数。设置为小于1的值时，按默认值显示。
 
-> **说明：**
+> **说明：** 
 > 
 > 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。
 > 当layoutDirection是Row/RowReverse时，表示可显示的最小列数。

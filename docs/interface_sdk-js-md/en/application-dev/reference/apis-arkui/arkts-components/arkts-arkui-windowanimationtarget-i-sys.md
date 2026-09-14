@@ -10,11 +10,6 @@ Window animation target.
 
 **System API:** This is a system API.
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## abilityName
 
 ```TypeScript

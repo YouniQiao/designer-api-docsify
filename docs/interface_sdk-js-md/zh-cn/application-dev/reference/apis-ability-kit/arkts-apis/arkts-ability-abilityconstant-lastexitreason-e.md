@@ -48,7 +48,7 @@ NORMAL = 2
 
 用户主动关闭应用，应用程序正常退出。
 
-**说明：**当开发者直接调用process.exit()、内核kill命令等非Ability Kit提供的能力强制退出应用进程时，也会返回NORMAL。
+**说明：** 当开发者直接调用process.exit()、内核kill命令等非Ability Kit提供的能力强制退出应用进程时，也会返回NORMAL。
 
 **起始版本：** 9
 
@@ -114,7 +114,7 @@ PERFORMANCE_CONTROL = 6
 
 因系统性能问题（如设备内存不足）导致的应用程序退出。
 
-**说明：**该接口即将废弃，建议使用RESOURCE_CONTROL替代。
+**说明：** 该接口即将废弃，建议使用RESOURCE_CONTROL替代。
 
 **起始版本：** 10
 

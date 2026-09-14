@@ -166,7 +166,7 @@ readonly intentType: InsightIntentType
 
 表示通过意图装饰器定义的意图类型。
 
-**说明：**
+**说明：** 
 
 对于使用配置文件开发的意图，该字段返回值默认为@InsightIntentEntry类型装饰器。
 
@@ -314,7 +314,7 @@ readonly subIntentInfo: LinkIntentInfo | PageIntentInfo | FunctionIntentInfo | F
 
 表示特定意图装饰器的意图信息。
 
-**说明：**
+**说明：** 
 
 对于使用配置文件开发的意图，该字段返回值默认为[EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md)。
 

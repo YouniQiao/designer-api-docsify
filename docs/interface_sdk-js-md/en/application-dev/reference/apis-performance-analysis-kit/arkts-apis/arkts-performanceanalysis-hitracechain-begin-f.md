@@ -33,7 +33,7 @@ If the current thread's TLS already contains a valid HiTrace ID, this function d
 
 | Type | Description |
 | --- | --- |
-| [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | HiTraceId** instance. |
+| [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | **HiTraceId** instance. |
 
 **Examples**
 

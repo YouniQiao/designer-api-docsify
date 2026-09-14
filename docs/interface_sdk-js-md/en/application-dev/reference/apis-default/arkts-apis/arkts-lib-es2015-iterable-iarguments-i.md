@@ -12,8 +12,3 @@
 ```
 
 Iterator
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

@@ -19,10 +19,6 @@ Creates a new Promise.
 | --- | --- | --- | --- |
 | executor | (resolve: (value: T &#124; PromiseLike&lt;T&gt;) =&gt; void, reject: (reason?: any) =&gt; void) =&gt; void | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## all
 
 ```TypeScript
@@ -41,6 +37,8 @@ Creates a Promise that is resolved with an array of results when all of the prov
 
 | Type | Description |
 | --- | --- |
+| Promise&lt;{ -readonly [P in keyof T]: Awaited&lt;T[P]&gt; }&gt; | A new Promise. |
+
 ## race
 
 ```TypeScript
@@ -59,6 +57,8 @@ Creates a Promise that is resolved or rejected when any of the provided Promises
 
 | Type | Description |
 | --- | --- |
+| Promise&lt;Awaited&lt;T[number]&gt;&gt; | A new Promise. |
+
 ## reject
 
 ```TypeScript
@@ -77,6 +77,8 @@ Creates a new rejected promise for the provided reason.
 
 | Type | Description |
 | --- | --- |
+| Promise&lt;T&gt; | A new rejected Promise. |
+
 ## resolve
 
 ```TypeScript
@@ -89,6 +91,8 @@ Creates a new resolved promise.
 
 | Type | Description |
 | --- | --- |
+| Promise&lt;void&gt; | A resolved promise. |
+
 ## resolve
 
 ```TypeScript
@@ -107,6 +111,8 @@ Creates a new resolved promise for the provided value.
 
 | Type | Description |
 | --- | --- |
+| Promise&lt;Awaited&lt;T&gt;&gt; | A promise whose internal state matches the provided promise. |
+
 ## resolve
 
 ```TypeScript
@@ -125,6 +131,8 @@ Creates a new resolved promise for the provided value.
 
 | Type | Description |
 | --- | --- |
+| Promise&lt;Awaited&lt;T&gt;&gt; | A promise whose internal state matches the provided promise. |
+
 ## prototype
 
 ```TypeScript

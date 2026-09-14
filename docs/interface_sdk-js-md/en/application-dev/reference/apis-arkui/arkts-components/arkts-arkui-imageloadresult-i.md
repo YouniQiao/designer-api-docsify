@@ -6,11 +6,6 @@ Describes the object returned after the callback is triggered when an image is s
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## componentHeight
 
 ```TypeScript
@@ -61,7 +56,7 @@ Actual rendered height of the image.
 
 Unit: px
 
-**NOTE:**
+**NOTE:** 
 
 This parameter is valid only when the return value of **loadingStatus** is **1**.
 
@@ -85,7 +80,7 @@ Offset of the rendered content relative to the component on the x-axis.
 
 Unit: px
 
-**NOTE:**
+**NOTE:** 
 
 This parameter is valid only when the return value of **loadingStatus** is **1**.
 
@@ -109,7 +104,7 @@ Offset of the rendered content relative to the component on the y-axis
 
 Unit: px
 
-**NOTE:**
+**NOTE:** 
 
 This parameter is valid only when the return value of **loadingStatus** is **1**.
 
@@ -133,7 +128,7 @@ Actual rendered width of the image.
 
 Unit: px
 
-**NOTE:**
+**NOTE:** 
 
 This parameter is valid only when the return value of **loadingStatus** is **1**.
 
@@ -175,7 +170,7 @@ loadingStatus: number
 
 Loading status of the image.
 
-**NOTE:**
+**NOTE:** 
 
 If the return value is **0**, the image is successfully loaded. If the return value is **1**, the image is successfully decoded.
 

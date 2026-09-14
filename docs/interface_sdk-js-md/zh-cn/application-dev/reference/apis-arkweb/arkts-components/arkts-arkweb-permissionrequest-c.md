@@ -2,7 +2,7 @@
 
 PermissionRequest 是 Web 组件用于授权或拒绝权限请求的对象。当网页尝试访问受保护的系统资源（如摄像头、麦克风、地理位置等）时，ArkWeb 内核会通过[onPermissionRequest](arkts-arkweb-web-comp-attribute.md#onpermissionrequest)事件回调向应用发送权限请求，应用通过 PermissionRequest 对象来决定是否授权这些请求。该对象适用于需要在应用中管理网页对敏感资源的访问权限、保护用户隐私、确保资源访问安全可控等场景，帮助开发者灵活处理网页权限请求。
 
-> **说明：**
+> **说明：** 
 > 
 > - [grant](#grant)()与 [deny](#deny)() 方法互斥，对于同一个 PermissionRequest 对象，
 > 只能调用其中一个方法。
@@ -18,11 +18,6 @@ PermissionRequest 是 Web 组件用于授权或拒绝权限请求的对象。当
 **起始版本：** 9
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-## 导入模块
-
-```TypeScript
-```
 
 ## constructor
 

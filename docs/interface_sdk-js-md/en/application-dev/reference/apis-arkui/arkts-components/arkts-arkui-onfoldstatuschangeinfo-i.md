@@ -2,7 +2,7 @@
 
 Called when the folding state changes. This API takes effect only in landscape mode.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer
@@ -11,11 +11,6 @@ Called when the folding state changes. This API takes effect only in landscape m
 **Since:** 18
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## foldStatus
 

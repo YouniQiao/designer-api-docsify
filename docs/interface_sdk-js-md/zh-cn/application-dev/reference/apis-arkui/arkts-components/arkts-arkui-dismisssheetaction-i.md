@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## dismiss
 
 ```TypeScript
@@ -37,7 +32,7 @@ reason: DismissReason
 
 返回本次半模态页面退出的操作类型。
 
-**说明：**
+**说明：** 
 
 DismissReason.SLIDE只生效半模态侧边弹窗形态，表示右滑退出。若镜像场景则表示左滑退出。
 

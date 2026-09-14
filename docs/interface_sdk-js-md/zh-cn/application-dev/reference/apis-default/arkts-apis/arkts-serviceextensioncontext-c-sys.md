@@ -4,7 +4,7 @@ ServiceExtensionContext模块是ServiceExtensionAbility的上下文环境，继�
 
 ServiceExtensionContext模块提供ServiceExtensionAbility具有的能力，包括启动、停止、绑定、解绑Ability。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本模块接口需要在主线程中使用，不要在Worker、TaskPool等子线程中使用。
 
@@ -24,7 +24,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 将当前Ability连接到一个ServiceExtensionAbility。仅支持在主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -115,7 +115,7 @@ connectServiceExtensionAbilityWithAccount(want: Want, accountId: number, options
 
 将当前Ability连接到一个指定account的ServiceExtensionAbility。仅支持在主线程调用。该接口在Phone、Tablet中可正常调用，在其他设备类型中返回16000006错误码。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 > 
@@ -349,7 +349,7 @@ openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<void>
 
 通过应用ID，拉起原子化服务。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -432,7 +432,7 @@ openLink(link: string, options?: OpenLinkOptions): Promise<void>
 
 传入的参数不合法时，如未设置必选参数或link字符串不是标准格式的URL，接口会直接抛出异常。参数校验通过，拉起目标方时出现的错误通过promise返回错误信息。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -620,7 +620,7 @@ requestModalUIExtension(pickerWant: Want, callback: AsyncCallback<void>): void
 
 在获焦应用上拉起UIExtensionAbility之前，必须确保该应用已完成页面初始化，否则将导致拉起失败。应用可通过监听页面加载状态来判断拉起UIExtensionAbility的时机。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -701,7 +701,7 @@ requestModalUIExtension(pickerWant: Want): Promise<void>
 
 在获焦应用上拉起UIExtensionAbility之前，必须确保该应用已完成页面初始化，否则将导致拉起失败。应用可通过监听页面加载状态来判断拉起UIExtensionAbility的时机。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -784,7 +784,7 @@ requestModalUIExtensionWithAccount(pickerWant: Want, accountId: number): Promise
 ```
 
 请求指定的焦点应用程序启动对应类型的UIExtensionAbility指定用户。焦点应用由**want.parameters**中的**bundleName**指定。如果**bundleName**   
-> **说明：**
+> **说明：** 
 > 
 > 
 > 关于stage模型中组件的启动规则，请参见
@@ -1141,7 +1141,7 @@ startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 
 使用设置的caller信息启动一个Ability，caller信息由Want携带，在系统服务层识别，Ability可以在onCreate生命周期的Want参数中获取到caller信息。使用该接口启动一个Ability时，Want的caller信息不会被当前自身的应用信息覆盖，系统服务层可获取到初始caller的信息。仅支持在主线程调用。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -1224,7 +1224,7 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 
 使用设置的caller信息启动一个Ability，caller信息由Want携带，在系统服务层识别，Ability可以在onCreate生命周期的Want参数中获取到caller信息。使用该接口启动一个Ability时，Want的caller信息不会被当前自身的应用信息覆盖，系统服务层可获取到初始caller的信息。仅支持在主线程调用。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -1310,7 +1310,7 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 
 使用设置的caller信息启动一个Ability，caller信息由Want携带，在系统服务层识别，Ability可以在onCreate生命周期的Want参数中获取到caller信息。使用该接口启动一个Ability时，Want的caller信息不会被当前自身的应用信息覆盖，系统服务层可获取到初始caller的信息。仅支持在主线程调用。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -1634,7 +1634,7 @@ startAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<v
 
 根据accountId启动Ability。仅支持在主线程调用。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -1729,7 +1729,7 @@ startAbilityWithAccount(want: Want, accountId: number, options: StartOptions, ca
 
 根据accountId启动Ability。仅支持在主线程调用。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -1829,7 +1829,7 @@ startAbilityWithAccount(want: Want, accountId: number, options?: StartOptions): 
 
 根据accountId启动Ability。仅支持在主线程调用。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -1934,7 +1934,7 @@ startRecentAbility(want: Want, callback: AsyncCallback<void>): void
 
 启动一个指定的Ability，如果该Ability有多个实例，将拉起最近启动的那个实例。仅支持在主线程调用。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -2025,7 +2025,7 @@ startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<vo
 
 当开发者需要携带启动参数时可以选择此API。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -2119,7 +2119,7 @@ startRecentAbility(want: Want, options?: StartOptions): Promise<void>
 
 启动一个指定的Ability，如果该Ability有多个实例，将拉起最近启动的那个实例。使用Promise异步回调。仅支持在主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -2372,7 +2372,7 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: number, callback:
 
 启动一个新的ServiceExtensionAbility。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 > 
@@ -2458,7 +2458,7 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<
 
 启动一个新的ServiceExtensionAbility。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 > 
@@ -2551,7 +2551,7 @@ startUIAbilities(wantList: Array<Want>): Promise<void>
 
 开发者可以传入多个UIAbility对应的Want信息，这些UIAbility可以指向一个或多个应用。当所有的UIAbility都能启动成功时，系统会通过多个窗口同时展示这些UIAbility。根据窗口的处理，不同设备上可能会有不同的展示效果（包括窗口形态、数量和排版布局）。该接口在Phone、Tablet中可正常调用，在其他设备类型中返回801错误码。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -2641,7 +2641,7 @@ startUIServiceExtensionAbility(want: Want): Promise<void>
 
 启动一个新的[UIServiceExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -2862,7 +2862,7 @@ stopServiceExtensionAbilityWithAccount(want: Want, accountId: number, callback: 
 
 停止指定账号下指定的ServiceExtensionAbility后台服务。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当accountId为当前用户时，无需进行权限校验。
 
@@ -2942,7 +2942,7 @@ stopServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<v
 
 停止指定账号下指定的ServiceExtensionAbility后台服务。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当accountId为当前用户时，无需进行权限校验。
 

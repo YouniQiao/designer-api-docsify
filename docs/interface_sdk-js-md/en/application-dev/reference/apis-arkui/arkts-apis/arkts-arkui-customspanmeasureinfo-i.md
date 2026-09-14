@@ -6,11 +6,6 @@ Defines the CustomSpanMeasureInfo interface.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## fontSize
 
 ```TypeScript
@@ -39,7 +34,7 @@ layoutPolicy?: LayoutPolicy
 
 Width layout policy of the parent component of the custom span.
 
-**NOTE:**
+**NOTE:** 
 
 When the value is **null** or **undefined**, the parent component does not have a width layout policy set.
 

@@ -2363,7 +2363,7 @@ rekey(): Promise<void>
 
 更新数据库的加密密钥，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > rekey仅对创建时已启用加密的数据库有效，即Options中encrypt需设置为true，非加密数据库调用此接口将返回错误。
 
@@ -2410,7 +2410,7 @@ removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 
 删除指定设备的数据，使用callback异步回调。删除成功后，指定设备的所有数据将从本地数据库中永久移除，无法再通过get等方法查询该设备的数据。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
 > networkId，通过调用
@@ -2488,7 +2488,7 @@ removeDeviceData(deviceId: string): Promise<void>
 
 删除指定设备的数据，使用Promise异步回调。删除成功后，指定设备的所有数据将从本地数据库中永久移除，无法再通过get等方法查询该设备的数据。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
 > networkId，通过调用
@@ -2802,7 +2802,7 @@ setSyncParam(defaultAllowedDelayMs: number, callback: AsyncCallback<void>): void
 
 设置数据库端端同步允许的默认延时，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 设置默认延时后，调用
 > [sync](#sync)接口不会立即触发
@@ -2855,7 +2855,7 @@ setSyncParam(defaultAllowedDelayMs: number): Promise<void>
 
 设置数据库端端同步允许的默认延时，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 设置默认延时后，调用
 > [sync](#sync)接口不会立即触发
@@ -3136,7 +3136,7 @@ sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 
 在手动同步方式下，触发数据库端端同步。同步结果可通过订阅[on('syncComplete')](#on-1)事件获取。关于键值型数据库的端端同步方式说明，请见[键值型数据库跨设备数据同步](../../../database/data-sync-of-kv-store.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中deviceIds为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
 > networkId, 通过调用
@@ -3230,7 +3230,7 @@ sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: number): void
 
 在手动同步方式下，触发数据库端端同步，支持按查询条件过滤同步数据。同步结果可通过订阅[on('syncComplete')](#on-1)事件获取。关于键值型数据库的端端同步方式说明，请见[键值型数据库跨设备数据同步](../../../database/data-sync-of-kv-store.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中deviceIds为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
 > networkId, 通过调用

@@ -160,6 +160,20 @@ A continuous task of the special scenario type is requested, but the user is not
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
+## SYSTEM_CANCEL_NOT_USE_NEARLINK
+
+```TypeScript
+SYSTEM_CANCEL_NOT_USE_NEARLINK = 15
+```
+
+A continuous task of the **NEARLINK** type is requested, but nearlink is not in use.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+
 ## SYSTEM_CANCEL_NOT_USE_USB
 
 ```TypeScript

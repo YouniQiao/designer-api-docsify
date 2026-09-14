@@ -14,7 +14,7 @@ function getSimAccountInfo(slotId: number, callback: AsyncCallback<IccAccountInf
 
 获取SIM卡账户信息。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 获取ICCID和号码信息时需要GET_TELEPHONY_STATE权限，ICCID和号码信息为敏感数据，不向三方应用开放。调用接口时，获取到的ICCID和号码信息为空。
 
@@ -68,7 +68,7 @@ function getSimAccountInfo(slotId: number): Promise<IccAccountInfo>
 
 获取SIM卡账户信息。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 获取ICCID和号码信息时需要GET_TELEPHONY_STATE权限，ICCID和号码信息为敏感数据，不向三方应用开放。调用接口时，获取到的ICCID和号码信息为空。
 

@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## color
 
 ```TypeScript
@@ -37,7 +32,7 @@ offset: Length
 
 渐变色断点（0~1之间的比例值，若该值小于0则置为0，若该值大于1则置为1）。
 
-**说明：**
+**说明：** 
 
 若传入字符串类型且内容为数字，则转换为对应的数值。
 

@@ -8,11 +8,6 @@ Defines the TextPickerDialogOptions for Text Picker Dialog.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onAccept
 
 ```TypeScript
@@ -169,7 +164,7 @@ Alignment mode of the dialog box in the vertical direction.
 
 **Type:** [DialogAlignment](../arkts-apis/arkts-arkui-dialogalignment-e.md)
 
-**Default:**
+**Default:** 
 - API version 11+: DialogAlignment.Default
 
 **Since:** 10
@@ -308,7 +303,7 @@ Height of the picker item.
 
 **Type:** number &#124; string
 
-**Default:**
+**Default:** 
 - API version 11+: 56 vp (selected) and 36 vp (unselected)
 
 **Since:** 8
@@ -455,7 +450,7 @@ Mask area of the dialog box. Events outside the mask area are transparently tran
 
 **Type:** [Rectangle](arkts-arkui-rectangle-i.md)
 
-**Default:**
+**Default:** 
 - API version 11+: { x: 0, y: 0, width: '100%', height: '100%' }
 
 **Since:** 10
@@ -476,7 +471,7 @@ Offset of the dialog box based on the alignment settings.
 
 **Type:** [Offset](../arkts-apis/arkts-arkui-offset-t.md)
 
-**Default:**
+**Default:** 
 - API version 11+: { dx: 0 , dy: 0 }
 
 **Since:** 10
@@ -533,7 +528,7 @@ selectedBackgroundStyle?: PickerBackgroundStyle
 
 Background style of selected items.
 
-Default Value: { color: \$r('sys.color.comp_background_tertiary'), borderRadius: \$r('sys.float.corner_radius_level12') }
+Default Value: { color: &#36;r('sys.color.comp_background_tertiary'), borderRadius: &#36;r('sys.float.corner_radius_level12') }
 
 **Type:** [PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)
 

@@ -46,7 +46,7 @@ constructor(options: ProgressButtonV2ColorOptions)
 public backgroundColor?: ColorMetrics
 ```
 
-按钮背景颜色。<br>默认值：\\$r('sys.color.ohos_id_color_foreground_contrary')<br>装饰器类型：@Trace
+按钮背景颜色。<br>默认值：\&#36;r('sys.color.ohos_id_color_foreground_contrary')<br>装饰器类型：@Trace
 
 **类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 

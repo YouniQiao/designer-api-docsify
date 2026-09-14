@@ -350,7 +350,7 @@ static terminate(): void
 
 Terminates the current ability. In the stage model, this API has no effect.
 
-This API is deprecated since API version 7. You are advised to use [@ohos.ability.featureAbility](../../apis-ability-kit/arkts-apis/arkts-ability-featureability.md) instead.
+This API is deprecated since API version 7. You are advised to use [@ohos.ability.featureAbility](../../apis-ability-kit/arkts-apis/arkts-ability-ability-featureability.md) instead.
 
 **Since:** 3
 

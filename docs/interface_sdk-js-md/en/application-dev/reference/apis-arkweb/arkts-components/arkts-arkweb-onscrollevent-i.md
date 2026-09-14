@@ -6,11 +6,6 @@ Defines the callback information triggered when the scrollbar scrolls to a speci
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## xOffset
 
 ```TypeScript

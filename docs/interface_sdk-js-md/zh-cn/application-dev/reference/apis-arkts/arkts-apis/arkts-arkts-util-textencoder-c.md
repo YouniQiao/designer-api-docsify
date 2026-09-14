@@ -82,7 +82,7 @@ static create(encoding?: string): TextEncoder
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextEncoder](arkts-arkts-util-textencoder-c.md) | TextEncoder** 对象。 |
+| [TextEncoder](arkts-arkts-util-textencoder-c.md) | **TextEncoder** 对象。 |
 
 **示例**
 

@@ -10,11 +10,6 @@ CommonScrollableMethod
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## autoAdjustScrollBarMargin
 
 ```TypeScript
@@ -41,6 +36,8 @@ Set the scroll bar auto adjust the margin to avoid the padding, safeAreaPadding,
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## backToTop
 
 ```TypeScript
@@ -67,6 +64,8 @@ Sets whether to enable the back-to-top feature for a scrollable component when t
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## clipContent
 
 ```TypeScript
@@ -93,6 +92,8 @@ Sets the content clipping area for this scrollable component.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## contentEndOffset
 
 ```TypeScript
@@ -119,6 +120,8 @@ Sets the offset from the end of the content to the boundary of the scrollable di
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## contentStartOffset
 
 ```TypeScript
@@ -145,6 +148,8 @@ Sets the offset from the start of the content to the boundary of the scrollable 
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## digitalCrownSensitivity
 
 ```TypeScript
@@ -200,6 +205,8 @@ Sets the effect used when the scroll boundary is reached.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## enableScrollInteraction
 
 ```TypeScript
@@ -226,6 +233,8 @@ Sets whether to support scroll gestures.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## enableScrollWithMouse
 
 ```TypeScript
@@ -252,6 +261,8 @@ Enable left mouse button press-and-drag scrolling.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## fadingEdge
 
 ```TypeScript
@@ -279,6 +290,8 @@ Called when setting whether to enable fading Edge effect.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## flingSpeedLimit
 
 ```TypeScript
@@ -305,6 +318,8 @@ Sets the maximum initial velocity at the start of the fling animation that occur
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## friction
 
 ```TypeScript
@@ -331,6 +346,8 @@ Sets the friction coefficient.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## nestedScroll
 
 ```TypeScript
@@ -357,6 +374,8 @@ Sets the nested scrolling options.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## onDidScroll
 
 ```TypeScript
@@ -385,6 +404,8 @@ Triggered when the scrollable component scrolls.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## onDidStopDragging
 
 ```TypeScript
@@ -413,6 +434,8 @@ Called when the scrollable did end dragging.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## onDidStopFling
 
 ```TypeScript
@@ -441,6 +464,8 @@ Called when the scrollable did end fling.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## onReachEnd
 
 ```TypeScript
@@ -467,6 +492,8 @@ Triggered when the scrollable component reaches the end position.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## onReachStart
 
 ```TypeScript
@@ -493,6 +520,8 @@ Triggered when the scrollable component reaches the start position.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## onScroll
 
 ```TypeScript
@@ -523,6 +552,8 @@ Triggered when the scrollable component scrolls.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## onScrollStart
 
 ```TypeScript
@@ -549,6 +580,8 @@ Triggered when the scrollable component starts scrolling initiated by the user's
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## onScrollStop
 
 ```TypeScript
@@ -575,6 +608,8 @@ Triggered when scrolling stops after the user's finger leaves the screen.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## onWillScroll
 
 ```TypeScript
@@ -601,6 +636,8 @@ Called when the scrollable will scroll.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## onWillStartDragging
 
 ```TypeScript
@@ -629,6 +666,8 @@ Called when the scrollable will start dragging.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## onWillStartFling
 
 ```TypeScript
@@ -657,6 +696,8 @@ Called when the scrollable will start fling.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## onWillStopDragging
 
 ```TypeScript
@@ -685,6 +726,8 @@ Called when the scrollable will end dragging.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## scrollBar
 
 ```TypeScript
@@ -711,6 +754,8 @@ Sets the scrollbar state.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## scrollBarColor
 
 ```TypeScript
@@ -737,6 +782,8 @@ Sets the scrollbar color.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## scrollBarColor
 
 ```TypeScript
@@ -763,6 +810,8 @@ Sets the scrollbar color.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## scrollBarHeight
 
 ```TypeScript
@@ -789,6 +838,8 @@ Sets the scrollbar track height.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## scrollBarMargin
 
 ```TypeScript
@@ -815,6 +866,8 @@ Margin of the scrollbar.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## scrollBarWidth
 
 ```TypeScript
@@ -841,6 +894,8 @@ Sets the scrollbar width.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## scrollBarWidth
 
 ```TypeScript
@@ -867,3 +922,4 @@ Sets the scrollbar width.
 
 | Type | Description |
 | --- | --- |
+| T |  |

@@ -4,6 +4,8 @@
 
 Declares the C APIs for USB device management.
 
+**引用文件：** <BasicServicesKit/ohusb_manager.h>
+
 **库：** libohusb_manager.so
 
 **系统能力：** SystemCapability.USB.USBManager

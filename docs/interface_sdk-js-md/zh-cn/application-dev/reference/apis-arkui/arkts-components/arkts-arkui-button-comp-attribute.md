@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## buttonStyle
 
 ```TypeScript
@@ -23,7 +18,7 @@ buttonStyle(value: ButtonStyleMode)
 
 设置Button组件的样式和重要程度。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过backgroundColor、[fontColor](#fontcolor)和[role](#role)接口设置，实际显示效果以最后一次设置为准。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -73,7 +68,7 @@ controlSize(value: ControlSize)
 
 设置Button组件的尺寸。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -113,7 +108,7 @@ fontColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 文本显示颜色。<br>默认值：\&#36;r('sys.color.font_on_primary')，显示为白色字体。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 文本显示颜色。<br>默认值：&#36;r('sys.color.font_on_primary')，显示为白色字体。 |
 
 ## fontFamily
 
@@ -135,7 +130,7 @@ fontFamily(value: string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 字体列表。默认字体'HarmonyOS Sans'，当前支持'HarmonyOS Sans'字体和[注册自定义字体](../arkts-apis/arkts-font.md)。 |
+| value | string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 字体列表。默认字体'HarmonyOS Sans'，当前支持'HarmonyOS Sans'字体和[注册自定义字体](../arkts-apis/arkts-arkui-font.md)。 |
 
 ## fontSize
 
@@ -157,7 +152,7 @@ fontSize(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 设置文本显示字号。<br>默认值：当controlSize为ControlSize.NORMAL时，默认值为`\&#36;r('sys.float.Body_L')`。<br>当controlSize为ControlSize.SMALL时，默认值为`\&#36;r('sys.float.Body_S')`。<br>**说明：**设置string类型时，不支持百分比。 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 设置文本显示字号。<br>默认值：当controlSize为ControlSize.NORMAL时，默认值为`&#36;r('sys.float.Body_L')`。<br>当controlSize为ControlSize.SMALL时，默认值为`&#36;r('sys.float.Body_S')`。<br>**说明：** 设置string类型时，不支持百分比。 |
 
 ## fontStyle
 

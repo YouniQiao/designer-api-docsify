@@ -8,11 +8,6 @@ Defines the TextPickerDialogOptionsExt for Text Picker Dialog.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onCancel
 
 ```TypeScript

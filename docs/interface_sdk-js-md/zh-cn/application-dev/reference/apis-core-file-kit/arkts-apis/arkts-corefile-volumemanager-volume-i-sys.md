@@ -54,7 +54,7 @@ fsType: string
 
 文件系统的类型，常见有ext2、vfat、NTFS等。
 
-**说明：**从API version 24开始，支持ISO9660、UDF。
+**说明：** 从API version 24开始，支持ISO9660、UDF。
 
 **类型：** string
 

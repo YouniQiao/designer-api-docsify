@@ -2,7 +2,7 @@
 
 UiTest中，UiComponent类代表了UI界面上的一个控件，提供控件属性获取，控件点击，滑动查找，文本注入等API。该类提供的所有方法都使用Promise方式作为异步方法，需使用await调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[Component&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md)替代。
 
@@ -31,7 +31,7 @@ click(): Promise<void>
 
 控件对象进行点击操作。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[click&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#click)替代。
 
@@ -72,7 +72,7 @@ doubleClick(): Promise<void>
 
 控件对象进行双击操作。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[doubleClick&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#doubleclick)替代。
 
@@ -113,7 +113,7 @@ getId(): Promise<number>
 
 获取控件对象的id值。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[getId&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#getid)替代。
 
@@ -154,7 +154,7 @@ getKey(): Promise<string>
 
 获取控件对象的key值。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[getId&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#getid)替代。
 
@@ -195,7 +195,7 @@ getText(): Promise<string>
 
 获取控件对象的文本信息。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[getText&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#gettext)替代。
 
@@ -236,7 +236,7 @@ getType(): Promise<string>
 
 获取控件对象的控件类型。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[getType&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#gettype)替代。
 
@@ -277,7 +277,7 @@ inputText(text: string): Promise<void>
 
 向控件中输入文本，仅针对可编辑的文本组件生效。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[inputText&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#inputtext)替代。
 
@@ -324,7 +324,7 @@ isClickable(): Promise<boolean>
 
 获取控件对象可点击状态。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[isClickable&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#isclickable)替代。
 
@@ -369,7 +369,7 @@ isEnabled(): Promise<boolean>
 
 获取控件使能状态。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[isEnabled&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#isenabled)替代。
 
@@ -414,7 +414,7 @@ isFocused(): Promise<boolean>
 
 判断控件对象是否获焦。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[isFocused&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#isfocused)替代。
 
@@ -459,7 +459,7 @@ isScrollable(): Promise<boolean>
 
 获取控件对象可滑动状态。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[isScrollable&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#isscrollable)替代。
 
@@ -504,7 +504,7 @@ isSelected(): Promise<boolean>
 
 获取控件对象被选中状态。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[isSelected&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#isselected)替代。
 
@@ -549,7 +549,7 @@ longClick(): Promise<void>
 
 控件对象进行长按操作。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[longClick&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#longclick)替代。
 
@@ -590,7 +590,7 @@ scrollSearch(by: By): Promise<UiComponent>
 
 在控件上滑动查找目标控件（适用于List等支持滑动的控件）。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[scrollSearch&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#scrollsearch)替代。
 

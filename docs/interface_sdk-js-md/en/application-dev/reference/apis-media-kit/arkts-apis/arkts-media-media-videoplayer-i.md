@@ -6,7 +6,7 @@ VideoPlayer is a class for video playback management. It provides APIs to manage
 
 **Deprecated since:** 9
 
-**Substitutes:** [media](arkts-multimedia-media.md)
+**Substitutes:** [media](arkts-media-multimedia-media.md)
 
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -502,7 +502,7 @@ setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void
 
 Sets a surface ID. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - **SetDisplaySurface** must be called between the URL setting and the calling of **prepare**. A surface must
 > be set for video streams without audio. Otherwise, the calling of **prepare** fails.
@@ -530,7 +530,7 @@ setDisplaySurface(surfaceId: string): Promise<void>
 
 Sets a surface ID. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - **SetDisplaySurface** must be called between the URL setting and the calling of **prepare**. A surface must
 > be set for video streams without audio. Otherwise, the calling of **prepare** fails.
@@ -860,7 +860,7 @@ Video URL. The video formats MP4, MPEG-TS, and MKV are supported.
 4. HLS: http://xx or https://xx
 5. File type: file://xx
 
-**NOTE:**
+**NOTE:** 
 
 WebM is no longer supported since API version 11.
 

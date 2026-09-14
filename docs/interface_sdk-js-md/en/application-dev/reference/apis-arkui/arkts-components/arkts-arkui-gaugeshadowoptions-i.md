@@ -13,8 +13,3 @@ Inherits from [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md) and has 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```

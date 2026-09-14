@@ -8,11 +8,6 @@ Provides the widget information.
 
 **System API:** This is a system API.
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## ability
 
 ```TypeScript
@@ -89,7 +84,7 @@ id: number | string
 
 Widget ID. Set this parameter to **0** for a new widget.
 
-**NOTE:**
+**NOTE:** 
 
 Different widget hosts cannot use the same ID.
 
@@ -148,7 +143,7 @@ the widget is displayed in the effect as you set it.
 - **SINGLE_COLOR**: single color mode, where the widget framework sets the widget background to transparent. In  
 this mode you need to set the widget style based on the best practices.
 
-**NOTE:**
+**NOTE:** 
 
 If the system does not support unified rendering, the widget framework does not set the widget background to transparent in single color mode.
 

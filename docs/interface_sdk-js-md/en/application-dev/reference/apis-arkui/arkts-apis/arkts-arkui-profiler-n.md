@@ -12,11 +12,6 @@ Profiler tools for inspectors.
 
 **Test API:** This API is used only in automated test scripts.
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## Summary
 
 <!--Del-->

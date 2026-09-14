@@ -14,7 +14,7 @@ Stretch
 
 Swiper滑动一页的宽度为Swiper组件自身的宽度。
 
-**说明：**从API version 7开始支持，从API version 10开始废弃，建议使用STRETCH替代。
+**说明：** 从API version 7开始支持，从API version 10开始废弃，建议使用STRETCH替代。
 
 **起始版本：** 7
 

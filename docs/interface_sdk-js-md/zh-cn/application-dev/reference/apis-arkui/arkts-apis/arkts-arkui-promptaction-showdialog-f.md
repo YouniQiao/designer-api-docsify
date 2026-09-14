@@ -14,7 +14,7 @@ function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDial
 
 创建并显示对话框，对话框响应结果使用callback异步回调返回。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 9开始支持，从API version 18开始废弃，建议使用showDialog替代。 showDialog需先通过UIContext中的[getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取[PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md)对象，然后通过该对象进行调用。且直接使用showDialog可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
 > 
@@ -200,7 +200,7 @@ function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessRespon
 
 创建并显示对话框，对话框通过Promise返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 9开始支持，从API version 18开始废弃，建议使用showDialog替代。 showDialog需先通过UIContext中的[getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取[PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md)对象，然后通过该对象进行调用。且直接使用showDialog可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
 > 

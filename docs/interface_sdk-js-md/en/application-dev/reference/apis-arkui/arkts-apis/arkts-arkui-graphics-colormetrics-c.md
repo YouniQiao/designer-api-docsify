@@ -32,7 +32,7 @@ Sets whether the **ColorMetrics** object automatically updates with system confi
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics** object. |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | **ColorMetrics** object. |
 
 **Examples**
 

@@ -2,7 +2,7 @@
 
 用于展示弧形列表的子组件，必须配合ArcList使用。
 
-> **说明：**
+> **说明：** 
 > 
 > - 该组件的父组件只能是ArcList。
 > 
@@ -41,3 +41,4 @@ import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@k
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |  |

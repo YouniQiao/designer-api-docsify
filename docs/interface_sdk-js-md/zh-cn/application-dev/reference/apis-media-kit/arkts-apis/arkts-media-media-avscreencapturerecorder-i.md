@@ -4,7 +4,7 @@
 
 典型使用流程：createAVScreenCaptureRecorder → init → startRecording → pauseRecording/resumeRecording → stopRecording → release。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本模块首批接口从API version 6开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 > - 本Interface首批接口从API version 12开始支持。
@@ -27,7 +27,7 @@ addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise
 
 在录制的视频中添加自定义水印图像。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > - 应用最多可添加5个水印。
 > - 需在[startRecording](#startrecording)接口调用前调用addWatermark接口。
 
@@ -245,7 +245,7 @@ presentPicker(): Promise<void>
 
 录屏开始后，调用该接口再次弹出Picker，可动态更新录制源（窗口、屏幕）。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > - 更新录制源过程中，原录制流程不中断。
 > - 通过picker动态更新录制源后，按照新的录制源进行录制。
 
@@ -328,7 +328,7 @@ setContentAutoRotation(enable: boolean): Promise<void>
 
 设置捕获的屏幕内容是否自动旋转以保持图像直立。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > - 需在[startRecording](#startrecording)接口调用前调用此接口。
 
 **起始版本：** 26.0.0

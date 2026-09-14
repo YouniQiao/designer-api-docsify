@@ -78,7 +78,7 @@ authParam: userAuth.AuthParam
 iconColor?: ResourceColor
 ```
 
-图标颜色。设置认证图标的颜色，支持颜色值、资源引用等多种格式。默认使用系统激活色，开发者可根据应用主题自定义颜色，如使用Color.Blue或\$r('app.color.primary')。
+图标颜色。设置认证图标的颜色，支持颜色值、资源引用等多种格式。默认使用系统激活色，开发者可根据应用主题自定义颜色，如使用Color.Blue或&#36;r('app.color.primary')。
 
 **类型：** [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md)
 

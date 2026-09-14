@@ -100,7 +100,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 监听安全相机会话的错误事件，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -125,7 +125,7 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 
 监听相机聚焦的状态变化，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 

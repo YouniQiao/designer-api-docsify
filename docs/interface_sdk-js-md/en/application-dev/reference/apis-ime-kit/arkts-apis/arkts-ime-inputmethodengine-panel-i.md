@@ -19,7 +19,7 @@ adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 ```
 
 Adjusts the panel rectangle. After the API is called, the adjust request is submitted to the input method framework, but the execution is not complete. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. <br>
 > <br>
@@ -81,7 +81,7 @@ adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
 Adjusts the panel rectangle, and customizes the avoid area and touch area. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. This API is compatible with [adjustPanelRect](#adjustpanelrect). If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, [adjustPanelRect](#adjustpanelrect) is called by default. <br>
 > <br>
@@ -502,7 +502,7 @@ off(type: 'sizeChange', callback?: SizeChangeCallback): void
 ```
 
 Disables listening for the panel size change. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the panel layout. <br>
 > <br>
@@ -592,7 +592,7 @@ on(type: 'sizeChange', callback: SizeChangeCallback): void
 ```
 
 Enables listening for the panel size change. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the panel layout. <br>
 > <br>
@@ -634,7 +634,7 @@ resize(width: number, height: number, callback: AsyncCallback<void>): void
 ```
 
 Resizes this input method panel. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen height. <br>
 > <br>
@@ -679,7 +679,7 @@ resize(width: number, height: number): Promise<void>
 ```
 
 Resizes this input method panel. This API uses a promise to return the result. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen height. <br>
 > <br>
@@ -745,8 +745,8 @@ Sets the immersive effect of the input method application. <br> <br>- Gradient m
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 | [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1. input method panel not created. 2. the input method application does not subscribe to related events. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
-| [12800020](../errorcode-inputmethod-framework.md#12800020-invalid-immersive-effect) | invalid immersive effect. 1. The gradient mode and the fluid light mode can only be used when the immersive mode is enabled. 2. The fluid light mode can only be used when the gradient mode is enabled. 3. When the gradient mode is not enabled, the gradient height can only be 0. |
-| [12800021](../errorcode-inputmethod-framework.md#12800021-unsupported-operation-by-default-input-method) | this operation is allowed only after adjustPanelRect or resize is called. |
+| [12800020](../errorcode-inputmethod-framework.md#12800020-immersive-effect-parameter-configuration-error) | invalid immersive effect. 1. The gradient mode and the fluid light mode can only be used when the immersive mode is enabled. 2. The fluid light mode can only be used when the gradient mode is enabled. 3. When the gradient mode is not enabled, the gradient height can only be 0. |
+| [12800021](../errorcode-inputmethod-framework.md#12800021-incorrect-call-sequence) | this operation is allowed only after adjustPanelRect or resize is called. |
 
 **Examples**
 
@@ -797,7 +797,7 @@ setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 ```
 
 Sets to keep the screen always on. This API uses a promise to return the result. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > - When the keyboard is displayed, the screen stays on. When the keyboard is hidden, the screen turns off. <br>
 > <br>
@@ -1179,7 +1179,7 @@ updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 ```
 
 Update the panel rectangle. This API uses a promise to return the result. <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. <br>
 > <br>
@@ -1217,7 +1217,7 @@ updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 ```
 
 Update the panel rectangle, and customizes the avoid area and touch area. This API uses a promise to return the result. <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. This API is compatible with [updatePanelRect](#updatepanelrect). If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, [updatePanelRect](#updatepanelrect) is called by default. <br>
 > <br>
@@ -1256,7 +1256,7 @@ updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 ```
 
 Update the panel rectangle. <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. <br>
 > <br>
@@ -1288,7 +1288,7 @@ updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
 Update the panel rectangle, and customizes the avoid area and touch area. <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. This API is compatible with [updatePanelRectSync](#updatepanelrectsync). If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, [updatePanelRectSync](#updatepanelrectsync) is called by default. <br>
 > <br>
@@ -1321,7 +1321,7 @@ updateRegion(inputRegion: Array<window.Rect>): void
 ```
 
 Updates the hot zone on the input method panel in the current state. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. <br>
 > <br>

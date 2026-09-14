@@ -14,7 +14,7 @@ function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>
 
 获取指定时间段内，本应用在指定网络中的流量使用情况。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 当前只支持获取蜂窝和Wi-Fi流量使用情况。
 

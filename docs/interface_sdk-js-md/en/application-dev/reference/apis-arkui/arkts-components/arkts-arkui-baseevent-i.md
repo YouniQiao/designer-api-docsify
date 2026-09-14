@@ -6,11 +6,6 @@ Basic event type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## getModifierKeyState
 
 ```TypeScript
@@ -19,7 +14,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 Obtains the pressed status of modifier keys. For details about the error message, see the following error codes. The Ctrl, Alt, and Shift keys are supported.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is not supported in stylus scenarios.
 
@@ -59,7 +54,7 @@ Horizontal axis value.
 
 Default value: **0**
 
-**NOTE:**
+**NOTE:** 
 
 This value is available only when the pan gesture is triggered by mouse wheel scrolling or two-finger touchpad sliding, or when the pinch gesture is triggered by Ctrl + mouse wheel scrolling.
 
@@ -85,7 +80,7 @@ Two-finger pinch scaling ratio.
 
 Default value: **0**
 
-**NOTE:**
+**NOTE:** 
 
 This value is available only when a pinch gesture is triggered by a two-finger scaling operation on a touchpad or during axis events.
 
@@ -115,7 +110,7 @@ Vertical axis value.
 
 Default value: **0**
 
-**NOTE:**
+**NOTE:** 
 
 This value is available only when the pan gesture is triggered by mouse wheel scrolling or two-finger touchpad sliding, or when the pinch gesture is triggered by Ctrl + mouse wheel scrolling.
 

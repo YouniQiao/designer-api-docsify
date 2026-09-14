@@ -6,11 +6,6 @@ Represents a synchronized property from [AppStorage](../../../ui/state-managemen
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript
@@ -123,6 +118,8 @@ Called when the subscriber ID is entered.
 
 | Type | Description |
 | --- | --- |
+| number |  |
+
 ## notifyHasChanged
 
 ```TypeScript

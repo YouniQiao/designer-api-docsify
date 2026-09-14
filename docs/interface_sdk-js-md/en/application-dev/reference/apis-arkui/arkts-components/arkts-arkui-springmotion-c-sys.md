@@ -10,11 +10,6 @@ Spring animation model. You can build a spring animation based on the start poin
 
 **System API:** This is a system API.
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

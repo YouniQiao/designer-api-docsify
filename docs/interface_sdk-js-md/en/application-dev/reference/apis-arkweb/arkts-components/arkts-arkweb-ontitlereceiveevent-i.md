@@ -6,11 +6,6 @@ Defines the callback information triggered when the document title of the web pa
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## isRealTitle
 
 ```TypeScript

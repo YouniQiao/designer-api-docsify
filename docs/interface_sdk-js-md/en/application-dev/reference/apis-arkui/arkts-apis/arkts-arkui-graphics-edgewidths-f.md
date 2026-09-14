@@ -26,7 +26,7 @@ Generates an **edgeWidths** object with the specified edge width for all edges.
 
 | Type | Description |
 | --- | --- |
-| [Edges](arkts-arkui-graphics-edges-i.md)&lt;number&gt; | edgeWidths** object whose edge widths are all at the specified value. |
+| [Edges](arkts-arkui-graphics-edges-i.md)&lt;number&gt; | **edgeWidths** object whose edge widths are all at the specified value. |
 
 **Examples**
 

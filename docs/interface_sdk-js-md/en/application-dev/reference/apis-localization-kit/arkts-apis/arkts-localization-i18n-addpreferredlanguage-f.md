@@ -33,7 +33,7 @@ Adds a preferred language to the specified position on the preferred language li
 
 | Type | Description |
 | --- | --- |
-| boolean | true** if the operation is successful, and **false** otherwise. |
+| boolean | **true** if the operation is successful, and **false** otherwise. |
 
 **Examples**
 

@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## backgroundBlurStyle
 
 ```TypeScript
@@ -41,7 +36,7 @@ color?: ResourceColor
 
 设置蒙层颜色。
 
-默认值：\$r('sys.color.ohos_id_color_mask_thin')
+默认值：&#36;r('sys.color.ohos_id_color_mask_thin')
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

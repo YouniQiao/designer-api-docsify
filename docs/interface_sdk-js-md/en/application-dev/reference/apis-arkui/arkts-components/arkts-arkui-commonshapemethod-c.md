@@ -10,11 +10,6 @@ CommonShapeMethod
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## antiAlias
 
 ```TypeScript
@@ -41,6 +36,8 @@ Specifies whether anti-aliasing is enabled.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## fill
 
 ```TypeScript
@@ -67,6 +64,8 @@ Sets the color of the fill area. An invalid value is handled as the default valu
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## fillOpacity
 
 ```TypeScript
@@ -93,6 +92,8 @@ Sets the opacity of the fill area. The value range is [0.0, 1.0]. A value less t
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## stroke
 
 ```TypeScript
@@ -119,6 +120,8 @@ Sets the stroke color. If this attribute is not set, the component does not have
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## strokeDashArray
 
 ```TypeScript
@@ -145,6 +148,8 @@ Sets stroke dashes. The value must be greater than or equal to 0. Invalid values
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## strokeDashOffset
 
 ```TypeScript
@@ -171,6 +176,8 @@ Sets the offset of the start point for drawing the stroke. An invalid value is h
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## strokeLineCap
 
 ```TypeScript
@@ -197,6 +204,8 @@ Sets the cap style of the stroke.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## strokeLineJoin
 
 ```TypeScript
@@ -223,6 +232,8 @@ Sets the join style of the stroke. This attribute does not work for the Circle c
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## strokeMiterLimit
 
 ```TypeScript
@@ -249,6 +260,8 @@ Limits for drawing acute angles as bevels
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## strokeOpacity
 
 ```TypeScript
@@ -275,6 +288,8 @@ Sets the stroke opacity. The value range is [0.0, 1.0]. A value less than 0.0 ev
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## strokeWidth
 
 ```TypeScript
@@ -301,3 +316,4 @@ Sets the stroke width. If this attribute is of the string type, percentage value
 
 | Type | Description |
 | --- | --- |
+| T |  |

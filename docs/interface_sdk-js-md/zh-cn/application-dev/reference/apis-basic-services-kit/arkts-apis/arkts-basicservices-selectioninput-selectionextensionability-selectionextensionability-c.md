@@ -7,7 +7,7 @@
 - 提供context属性：开发者可通过context调用  
 [startAbility](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c.md#startability)拉起同应用内的目标Ability，或将context作为[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)的入参创建划词面板。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本模块仅支持PC/2in1设备。开发者可通过canIUse('SystemCapability.SelectionInput.Selection')判断当前设备是否支持该能力。
 

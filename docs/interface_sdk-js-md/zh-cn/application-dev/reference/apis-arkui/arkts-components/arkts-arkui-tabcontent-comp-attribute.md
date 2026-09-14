@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## onWillHide
 
 ```TypeScript
@@ -23,7 +18,7 @@ onWillHide(event: VoidCallback)
 
 逻辑回调，TabContent将要隐藏的时候触发该回调。场景包括TabContent切换，页面切换，窗口前后台切换。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
@@ -49,7 +44,7 @@ onWillShow(event: VoidCallback)
 
 逻辑回调，TabContent将要显示的时候触发该回调。场景包括TabContent首次显示，TabContent切换，页面切换，窗口前后台切换。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
@@ -101,7 +96,7 @@ tabBar(value: SubTabBarStyle | BottomTabBarStyle)
 
 设置的内容超出TabBar页签时进行裁切。
 
-> **说明：**
+> **说明：** 
 
 > - 子页签（[SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md)）样式：通常为文字+下划线或文字+背板的页签风格，允许设置文本样式，建议放置在顶部或者底部使用。切换页签时默认支持动画跳转效果。适用于资讯
 > 类应用的顶部分类（如"关注、视频、数码"）、功能模块的二级导航场景。

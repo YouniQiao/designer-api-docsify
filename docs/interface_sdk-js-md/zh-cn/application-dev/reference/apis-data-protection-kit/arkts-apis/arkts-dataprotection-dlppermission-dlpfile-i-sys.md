@@ -174,7 +174,7 @@ closeDLPFile(): Promise<void>
 
 文件所有者决定关闭DLP文件时使用此接口。
 
-> **说明：**
+> **说明：** 
 > 
 > dlpFile不再使用，应该关闭释放内存，且对象不应继续使用。
 
@@ -245,7 +245,7 @@ closeDLPFile(callback: AsyncCallback<void>): void
 
 文件所有者决定关闭DLP文件时使用此接口。
 
-> **说明：**
+> **说明：** 
 > 
 > dlpFile不再使用，应该关闭释放内存，且对象不应继续使用。
 

@@ -6,11 +6,6 @@ Defines the options for the searchable sidebar tab bar.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## searchCallback
 
 ```TypeScript

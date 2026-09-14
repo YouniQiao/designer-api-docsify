@@ -12,11 +12,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## enableAnalyzer
 
 ```TypeScript
@@ -24,7 +19,7 @@ enableAnalyzer(enable: boolean)
 ```
 
 设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能。本功能需要搭配XComponentController的startImageAnalyzer和stopImageAnalyzer一起使用。不能和overlay属性同时使用，两者同时设置时overlay中CustomBuilder属性将失效。AI分析功能依赖设备能力。   
-> **说明：**
+> **说明：** 
 > 
 > 仅type为SURFACE或TEXTURE时该功能有效。
 
@@ -49,7 +44,7 @@ enableSecure(isSecure: boolean)
 ```
 
 防止组件内自绘制内容被截屏、录屏。   
-> **说明：**
+> **说明：** 
 > 
 > 仅type为SURFACE时有效。
 > 
@@ -112,7 +107,7 @@ hdrBrightness(brightness: number, type?: HdrType)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | brightness | number | 是 | HDR视频的亮度。<br>默认值：1.0<br>取值范围：[0.0, 1.0]。小于0.0的值按0.0处理，大于1.0的值按1.0处理，其他异常值按1.0处理。<br>0.0表示视频按照SDR亮度显示，1.0表示视频按照当前允许的最高HDR亮度显示。 |
-| type | [HdrType](arkts-arkui-hdrtype-e.md) | 否 | 显示HDR内容时的HDR类型。<br>默认值：**HdrType.DEFAULT |
+| type | [HdrType](arkts-arkui-hdrtype-e.md) | 否 | 显示HDR内容时的HDR类型。<br>默认值：**HdrType.DEFAULT** |
 
 ## onDestroy
 

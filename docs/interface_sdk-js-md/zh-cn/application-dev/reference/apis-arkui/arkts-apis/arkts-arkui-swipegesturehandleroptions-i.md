@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## direction
 
 ```TypeScript
@@ -65,7 +60,7 @@ speed?: number
 
 默认值：100VP/s
 
-**说明：**
+**说明：** 
 
 当滑动速度的值小于等于0时，会被转化为默认值。
 

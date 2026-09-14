@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## gestures
 
 ```TypeScript
@@ -19,7 +14,7 @@ gestures: GestureHandler<TapGestureHandler | LongPressGestureHandler | PanGestur
 
 设置手势组中需要包含的手势集合。
 
-**说明：**
+**说明：** 
 
 当需要为一个组件同时添加单击和双击手势时，可在[GestureGroup](arkts-arkui-gesture-con.md#gesturegroup)中添加两个[TapGesture](arkts-arkui-gesture-con.md#tapgesture)，需要双击手势在前，单击手势在后，否则不生效。
 

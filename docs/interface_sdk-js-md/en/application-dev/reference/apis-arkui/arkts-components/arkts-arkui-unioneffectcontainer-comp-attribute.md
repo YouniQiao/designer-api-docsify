@@ -2,7 +2,7 @@
 
 Universal attributes are supported. The width and height can be set.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - During the union, the container exhibits a sticky non-linear deformation effect, and its border will show a sticky
 > effect after union. Therefore, border-related capabilities will be affected. Currently, the following border-
@@ -28,8 +28,3 @@ Universal attributes are supported. The width and height can be set.
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-
-## Modules to Import
-
-```TypeScript
-```

@@ -20,10 +20,6 @@ Pads the current string with a given string (possibly repeated) so that the resu
 | maxLength | number | Yes |  |
 | fillString | string | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## padStart
 
 ```TypeScript
@@ -38,8 +34,3 @@ Pads the current string with a given string (possibly repeated) so that the resu
 | --- | --- | --- | --- |
 | maxLength | number | Yes |  |
 | fillString | string | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

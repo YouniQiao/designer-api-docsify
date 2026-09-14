@@ -1,10 +1,5 @@
 # wrapBuilder
 
-## 导入模块
-
-```TypeScript
-```
-
 ## wrapBuilder
 
 ```TypeScript

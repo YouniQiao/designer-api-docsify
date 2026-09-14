@@ -22,7 +22,7 @@ attachLayoutToParentWindow(anchorInfo?: WindowAnchorInfo, attachOptions?: SubWin
 
 Attaches a first-level child window to the main window to maintain a fixed relative position. This API uses a promise to return the result. The relative position is represented by the anchor point offset between the child window and the parent window. The child window and the parent window use the same window anchor point.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Only first-level child windows can call this API. The child window must be in floating window mode
 > (that is, the window mode is **window.WindowStatusType.FLOATING**).
@@ -310,7 +310,7 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestInfo | [dialogRequest.RequestInfo](../../apis-ability-kit/arkts-apis/arkts-ability-dialogrequest-requestinfo-i.md) | Yes | RequestInfo** of the target window. |
+| requestInfo | [dialogRequest.RequestInfo](../../apis-ability-kit/arkts-apis/arkts-ability-dialogrequest-requestinfo-i.md) | Yes | **RequestInfo** of the target window. |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for modal window destruction events. |
 
 **Return value:**
@@ -386,7 +386,7 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestInfo | [dialogRequest.RequestInfo](../../apis-ability-kit/arkts-apis/arkts-ability-dialogrequest-requestinfo-i.md) | Yes | RequestInfo** of the target window. |
+| requestInfo | [dialogRequest.RequestInfo](../../apis-ability-kit/arkts-apis/arkts-ability-dialogrequest-requestinfo-i.md) | Yes | **RequestInfo** of the target window. |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for modal window destruction events. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
@@ -449,7 +449,7 @@ detachLayoutToParentWindow(): Promise<void>
 
 Detach a first-level child window from the main window to cancel a fixed relative position. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When the child window calls this API, the child window must be in the attached state.
 > 
@@ -2193,7 +2193,7 @@ setRotationLocked(locked: boolean): Promise<void>
 
 Allows a [system window](../../../windowmanager/window-terminology.md#system-window) to lock or unlock its own screen-rotation behavior. When locked, the window's orientation remains unchanged. When unlocked, the window's orientation follows the main window's orientation, the system rotation-lock button, and the device's physical rotation sensor. If this API is called by a non-system window, error code 1300029 is thrown. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - If the main window sets the display orientation via
 > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)

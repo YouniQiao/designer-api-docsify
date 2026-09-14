@@ -14,7 +14,7 @@ function getP2pPeerDevices(): Promise<WifiP2pDevice[]>
 
 获取P2P对端设备列表信息。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。
 
@@ -61,7 +61,7 @@ function getP2pPeerDevices(callback: AsyncCallback<WifiP2pDevice[]>): void
 
 获取P2P对端设备列表信息。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。
 

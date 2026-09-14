@@ -20,7 +20,7 @@ addAccount(name: string, callback: AsyncCallback<void>): void
 
 根据账号名添加应用账号。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [createAccount](#createaccount)替
@@ -59,7 +59,7 @@ addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 
 根据账号名和额外信息添加应用账号。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [createAccount](#createaccount-1)
@@ -99,7 +99,7 @@ addAccount(name: string, extraInfo?: string): Promise<void>
 
 根据账号名和额外信息添加应用账号。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [createAccount](#createaccount-2)
 > 替代。
@@ -150,7 +150,7 @@ addAccountImplicitly(
 
 根据指定的账号所有者隐式地添加应用账号。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [createAccountImplicitly](#createaccountimplicitly)
@@ -396,7 +396,7 @@ authenticate(
 
 对应用账号进行鉴权以获取授权令牌。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [auth](#auth)
@@ -680,7 +680,7 @@ checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void
 
 检查指定应用账号是否开启数据同步功能。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [checkDataSyncEnabled](#checkdatasyncenabled)
@@ -725,7 +725,7 @@ checkAppAccountSyncEnable(name: string): Promise<boolean>
 
 检查指定应用账号是否开启数据同步功能。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [checkDataSyncEnabled](#checkdatasyncenabled-1)替代。
@@ -985,7 +985,7 @@ checkOAuthTokenVisibility(
 
 检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [checkAuthTokenVisibility](#checkauthtokenvisibility)
@@ -1031,7 +1031,7 @@ checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): P
 
 检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [checkAuthTokenVisibility](#checkauthtokenvisibility-1)
@@ -1396,7 +1396,7 @@ deleteAccount(name: string, callback: AsyncCallback<void>): void
 
 删除应用账号。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [removeAccount](#removeaccount)替
@@ -1435,7 +1435,7 @@ deleteAccount(name: string): Promise<void>
 
 删除应用账号。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [removeAccount](#removeaccount-1)替
@@ -1688,7 +1688,7 @@ deleteOAuthToken(name: string, owner: string, authType: string, token: string, c
 
 删除指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [deleteAuthToken](#deleteauthtoken)
@@ -1735,7 +1735,7 @@ deleteOAuthToken(name: string, owner: string, authType: string, token: string): 
 
 删除指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [deleteAuthToken](#deleteauthtoken-1)
@@ -1784,7 +1784,7 @@ disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>
 
 禁止指定第三方应用账号对指定包名称的第三方应用进行访问。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [setAppAccess](#setappaccess)
@@ -1824,7 +1824,7 @@ disableAppAccess(name: string, bundleName: string): Promise<void>
 
 禁止指定第三方应用账号名称对指定包名称的第三方应用进行访问。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [setAppAccess](#setappaccess-1)
@@ -1871,7 +1871,7 @@ enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>)
 
 允许指定第三方应用账号名称对指定包名称的第三方应用进行访问。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [setAppAccess](#setappaccess)
@@ -1915,7 +1915,7 @@ enableAppAccess(name: string, bundleName: string): Promise<void>
 
 允许指定第三方应用账号的名称对指定包名称的第三方应用进行访问。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [setAppAccess](#setappaccess-1)
@@ -1962,7 +1962,7 @@ getAccountCredential(name: string, credentialType: string, callback: AsyncCallba
 
 获取指定应用账号的凭据。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [getCredential](#getcredential)
@@ -2006,7 +2006,7 @@ getAccountCredential(name: string, credentialType: string): Promise<string>
 
 获取指定应用账号的凭据。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [getCredential](#getcredential-1)替代。
@@ -2052,7 +2052,7 @@ getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void
 
 获取指定应用账号的额外信息（能转换成string类型的其它信息）。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [getCustomData](#getcustomdata)
@@ -2095,7 +2095,7 @@ getAccountExtraInfo(name: string): Promise<string>
 
 获取指定应用账号的额外信息（能转换成string类型的其它信息）。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [getCustomData](#getcustomdata-1)替代。
@@ -2237,7 +2237,7 @@ getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 
 获取所有可访问的应用账号信息。使用callback异步回调。此方法适用于以下账户：<br> 本应用的账户。<br> 第三方应用的账户。要获取此类信息，<br> 您的应用必须已获得第三方应用的授权。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [getAllAccounts](#getallaccounts)
@@ -2281,7 +2281,7 @@ getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>
 
 获取所有可访问的应用账号信息。使用Promise异步回调。此方法适用于以下账户：<br> 本应用的账户。<br> 第三方应用的账户。要获取此类信息，<br> 您的应用必须已获得第三方应用的授权。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用[getAllAccounts](#getallaccounts)
 > 替代。
@@ -2407,7 +2407,7 @@ getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): v
 
 根据应用账号所有者获取调用方可访问的应用账号列表。使用callback异步回调。此方法适用于以下账户：<br> 本应用的账户。<br> 第三方应用的账户。要获取此类信息，<br> 您的应用必须已获得第三方应用的授权。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [getAccountsByOwner](#getaccountsbyowner)
@@ -2453,7 +2453,7 @@ getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>
 
 根据应用账号所有者获取调用方可访问的应用账号列表。使用Promise异步回调。此方法适用于以下账户：<br> 本应用的账户。<br> 第三方应用的账户。要获取此类信息，<br> 您的应用必须已获得第三方应用的授权。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [getAccountsByOwner](#getaccountsbyowner-1)替代。
@@ -2602,7 +2602,7 @@ getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAu
 
 获取指定账号对调用方可见的所有授权令牌。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [getAllAuthTokens](#getallauthtokens)
@@ -2647,7 +2647,7 @@ getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>
 
 获取指定账号对调用方可见的所有授权令牌。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [getAllAuthTokens](#getallauthtokens-1)替代。
@@ -2694,7 +2694,7 @@ getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): v
 
 根据指定键名获取特定应用账号的关联数据。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [getCustomData](#getcustomdata)
@@ -2738,7 +2738,7 @@ getAssociatedData(name: string, key: string): Promise<string>
 
 获取指定应用账号的关联数据。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [getCustomData](#getcustomdata-1)替代。
@@ -2913,7 +2913,7 @@ getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<Authenticato
 
 获取鉴权会话的认证器回调。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [getAuthCallback](#getauthcallback)
@@ -2968,7 +2968,7 @@ getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>
 
 获取鉴权会话的认证器回调。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [getAuthCallback](#getauthcallback-1)替代。
@@ -3025,7 +3025,7 @@ getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>):
 
 获取指定应用的认证器信息。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [queryAuthenticatorInfo](#queryauthenticatorinfo)
@@ -3069,7 +3069,7 @@ getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 
 获取指定应用的认证器信息。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [queryAuthenticatorInfo](#queryauthenticatorinfo-1)替代。
@@ -3571,7 +3571,7 @@ getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<strin
 
 获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过[setOAuthTokenVisibility](#setoauthtokenvisibility)来设置）。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [getAuthList](#getauthlist)
@@ -3615,7 +3615,7 @@ getOAuthList(name: string, authType: string): Promise<Array<string>>
 
 获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过[setOAuthTokenVisibility](#setoauthtokenvisibility)来设置）。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [getAuthList](#getauthlist-1)替代。
@@ -3661,7 +3661,7 @@ getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCall
 
 获取指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [getAuthToken](#getauthtoken)
@@ -3707,7 +3707,7 @@ getOAuthToken(name: string, owner: string, authType: string): Promise<string>
 
 获取指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [getAuthToken](#getauthtoken-1)替代。
@@ -3754,7 +3754,7 @@ off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void
 
 取消订阅账号信息变更事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [off('accountChange')](#offaccountchange)
@@ -3853,7 +3853,7 @@ on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInf
 
 订阅指定应用的账号信息变更事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [on('accountChange')](#onaccountchange)
@@ -4248,7 +4248,7 @@ setAccountCredential(name: string, credentialType: string, credential: string, c
 
 设置指定应用账号的凭据。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
 > [setCredential](#setcredential)
@@ -4293,7 +4293,7 @@ setAccountCredential(name: string, credentialType: string, credential: string): 
 
 设置指定应用账号的凭据。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
 > [setCredential](#setcredential-1)
@@ -4341,7 +4341,7 @@ setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<voi
 
 设置指定应用账号的额外信息。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [setCustomData](#setcustomdata)
@@ -4385,7 +4385,7 @@ setAccountExtraInfo(name: string, extraInfo: string): Promise<void>
 
 设置指定应用账号的额外信息。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [setCustomData](#setcustomdata-1)替代。
@@ -4534,7 +4534,7 @@ setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback
 
 开启或禁止指定应用账号的数据同步功能。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [setDataSyncEnabled](#setdatasyncenabled)
@@ -4580,7 +4580,7 @@ setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>
 
 开启或禁止指定应用账号的数据同步功能。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [setDataSyncEnabled](#setdatasyncenabled-1)替代。
@@ -4628,7 +4628,7 @@ setAssociatedData(name: string, key: string, value: string, callback: AsyncCallb
 
 设置指定应用账号的关联数据。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [setCustomData](#setcustomdata)
@@ -4673,7 +4673,7 @@ setAssociatedData(name: string, key: string, value: string): Promise<void>
 
 设置指定应用账号的关联数据。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
 > [setCustomData](#setcustomdata-1)替代。
@@ -5351,7 +5351,7 @@ setOAuthToken(name: string, authType: string, token: string, callback: AsyncCall
 
 为指定应用账号设置特定鉴权类型的授权令牌。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [setAuthToken](#setauthtoken)
@@ -5396,7 +5396,7 @@ setOAuthToken(name: string, authType: string, token: string): Promise<void>
 
 为指定应用账号设置特定鉴权类型的授权令牌。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [setAuthToken](#setauthtoken-1)替代。
@@ -5449,7 +5449,7 @@ setOAuthTokenVisibility(
 
 设置指定账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [setAuthTokenVisibility](#setauthtokenvisibility)
@@ -5496,7 +5496,7 @@ setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVi
 
 设置指定账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
 > [setAuthTokenVisibility](#setauthtokenvisibility-1)

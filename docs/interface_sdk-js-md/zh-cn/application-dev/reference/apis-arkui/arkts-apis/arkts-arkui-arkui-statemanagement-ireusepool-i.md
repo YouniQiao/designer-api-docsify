@@ -117,7 +117,7 @@ preRender(builder: WrappedBuilder<[]>, times: number): Promise<void>
 
 调用空闲任务以预创建可复用组件并在首次使用前将其放入复用池。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. `preRender`仅将池配置为接受的组件放入池中。预渲染池不接受的组件会立即创建并销毁。
 > 

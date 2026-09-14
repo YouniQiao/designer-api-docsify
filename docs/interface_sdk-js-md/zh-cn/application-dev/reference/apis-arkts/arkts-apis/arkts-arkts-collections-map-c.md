@@ -2,7 +2,7 @@
 
 一种基于键值对存储的非线性数据结构，能够高效地通过唯一键来存取对应的值。
 
-> **说明：**
+> **说明：** 
 > 
 > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
 > 本节使用以下标识符来表示泛型的使用：
@@ -345,7 +345,7 @@ put(key: K, value: V): V | undefined
 
 向该Map添加或更新一个指定的键值对，并返回该键之前关联的值。
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - 返回**undefined**时无法直接区分是键不存在还是键存在但值为**undefined**，可在使用本接口前先使用
 > **has**接口判断键是否存在，进而区分返回的**undefined**所属情况。
@@ -410,10 +410,10 @@ putAll(from: Map<K, V>): void
 ## putAll
 
 ```TypeScript
-putAll(from: BuiltinMap<K, V>): void
+putAll(from: ReadonlyMap<K, V>): void
 ```
 
-使用指定内建Map中的键值对更新该Map。
+使用指定JavaScript内建Map中的键值对更新该Map。
 
 **起始版本：** 26.1.0
 
@@ -427,7 +427,7 @@ putAll(from: BuiltinMap<K, V>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | [BuiltinMap](arkts-arkts-builtinmap-t.md)&lt;K, V&gt; | 是 | 提供键值对的内建Map。 |
+| from | ReadonlyMap&lt;K, V&gt; | 是 | 提供键值对的JavaScript内建Map。 |
 
 **错误码：**
 
@@ -444,7 +444,7 @@ remove(key: K): V | undefined
 
 删除该Map中的指定键及其对应值。
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - 返回**undefined**时无法直接区分是键不存在还是键存在但值为**undefined**，可在使用本接口前先使用
 > **has**接口判断键是否存在，进而区分返回的**undefined**所属情况。

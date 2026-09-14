@@ -14,7 +14,7 @@ function setDisallowedPermission(admin: Want, permission: string, disallow: bool
 
 禁用指定用户下的指定权限，禁用后指定用户下的所有应用申请和使用指定权限时默认拒绝。适用于企业安全合规场景，如禁用相机、麦克风等高风险权限防止隐私泄露，或禁用特定功能（如蓝牙分享）防止企业数据外传。
 
-> **说明：**
+> **说明：** 
 > 
 > 1.只能禁用[权限APL等级](../../../security/AccessToken/app-permission-mgmt-overview.md#权限机制中的基本概念)为normal或system_basic的权
 > 限，否则返回错误码9201045。

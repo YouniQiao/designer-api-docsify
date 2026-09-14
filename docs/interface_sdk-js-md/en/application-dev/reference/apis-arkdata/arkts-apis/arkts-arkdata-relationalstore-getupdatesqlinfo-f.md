@@ -22,7 +22,7 @@ Obtains the SQL statement used to update data. This API returns the result synch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates** object that matches the specified field. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | **RdbPredicates** object that matches the specified field. |
 | values | [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md) | Yes | Field information and corresponding values of the data to be written to the database. |
 | conflict | [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md) | No | Resolution used to resolve the conflict.<br>Default value: **relationalStore.ConflictResolution.ON_CONFLICT_NONE**. |
 
@@ -30,7 +30,7 @@ Obtains the SQL statement used to update data. This API returns the result synch
 
 | Type | Description |
 | --- | --- |
-| [SqlInfo](arkts-arkdata-relationalstore-sqlinfo-i.md) | SqlInfo** object. **sql** indicates the returned SQL statement, and **args** indicates the parameters in the executed SQL statement. |
+| [SqlInfo](arkts-arkdata-relationalstore-sqlinfo-i.md) | **SqlInfo** object. **sql** indicates the returned SQL statement, and **args** indicates the parameters in the executed SQL statement. |
 
 **Error codes:**
 

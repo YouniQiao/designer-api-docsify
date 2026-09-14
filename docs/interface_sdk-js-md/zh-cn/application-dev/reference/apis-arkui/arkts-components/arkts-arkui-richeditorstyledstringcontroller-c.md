@@ -14,11 +14,6 @@ controller: RichEditorStyledStringController = new RichEditorStyledStringControl
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## getSelection
 
 ```TypeScript
@@ -93,7 +88,7 @@ setStyledString(styledString: StyledString): void
 
 设置富文本组件显示的属性字符串。
 
-> **说明：**
+> **说明：** 
 > 
 > - 调用该接口时，会全量替换富文本组件的StyledString，并重新渲染。
 > 

@@ -84,7 +84,7 @@ getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 
 获取指定流的最大音量等级。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 20开始废弃，建议使用
 > [getMaxVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getmaxvolumebystream)替代。
@@ -112,7 +112,7 @@ getMaxVolume(volumeType: AudioVolumeType): Promise<number>
 
 获取指定流的最大音量等级。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 20开始废弃，建议使用
 > [getMaxVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getmaxvolumebystream)替代。
@@ -145,7 +145,7 @@ getMaxVolumeSync(volumeType: AudioVolumeType): number
 
 获取指定流的最大音量等级。同步返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 10开始支持，从API version 20开始废弃，建议使用
 > [getMaxVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getmaxvolumebystream)替代。
@@ -185,7 +185,7 @@ getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 
 获取指定流的最小音量等级。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 20开始废弃，建议使用
 > [getMinVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getminvolumebystream)替代。
@@ -213,7 +213,7 @@ getMinVolume(volumeType: AudioVolumeType): Promise<number>
 
 获取指定流的最小音量等级。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 20开始废弃，建议使用
 > [getMinVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getminvolumebystream)替代。
@@ -246,7 +246,7 @@ getMinVolumeSync(volumeType: AudioVolumeType): number
 
 获取指定流的最小音量等级。同步返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 10开始支持，从API version 20开始废弃，建议使用
 > [getMinVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getminvolumebystream)替代。
@@ -340,7 +340,7 @@ getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: number, device: De
 
 获取音量增益dB值。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 10开始支持，从API version 20开始废弃，建议使用
 > [getVolumeInUnitOfDbByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumeinunitofdbbystream)
@@ -379,7 +379,7 @@ getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: number, device: De
 
 获取音量增益dB值。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 10开始支持，从API version 20开始废弃，建议使用
 > [getVolumeInUnitOfDbByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumeinunitofdbbystream)
@@ -423,7 +423,7 @@ getSystemVolumeInDbSync(volumeType: AudioVolumeType, volumeLevel: number, device
 
 获取音量增益dB值。同步返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 10开始支持，从API version 20开始废弃，建议使用
 > [getVolumeInUnitOfDbByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumeinunitofdbbystream)
@@ -466,7 +466,7 @@ getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 
 获取指定流的音量等级。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 20开始废弃，建议使用
 > [getVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumebystream)替代。
@@ -494,7 +494,7 @@ getVolume(volumeType: AudioVolumeType): Promise<number>
 
 获取指定流的音量等级。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 20开始废弃，建议使用
 > [getVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumebystream)替代。
@@ -527,7 +527,7 @@ getVolumeSync(volumeType: AudioVolumeType): number
 
 获取指定流的音量等级。同步返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 10开始支持，从API version 20开始废弃，建议使用
 > [getVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumebystream)替代。
@@ -621,7 +621,7 @@ isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 
 获取指定音量流静音状态。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 20开始废弃，建议使用
 > [isSystemMutedForStream](arkts-audio-audio-audiovolumemanager-i.md#issystemmutedforstream)替代。
@@ -649,7 +649,7 @@ isMute(volumeType: AudioVolumeType): Promise<boolean>
 
 获取指定音量流是否被静音。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 20开始废弃，建议使用
 > [isSystemMutedForStream](arkts-audio-audio-audiovolumemanager-i.md#issystemmutedforstream)替代。
@@ -682,7 +682,7 @@ isMuteSync(volumeType: AudioVolumeType): boolean
 
 获取指定音量流是否被静音。同步返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 10开始支持，从API version 20开始废弃，建议使用
 > [isSystemMutedForStream](arkts-audio-audio-audiovolumemanager-i.md#issystemmutedforstream)替代。
@@ -843,7 +843,7 @@ setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void
 
 设置麦克风静音状态。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃。
 
@@ -870,7 +870,7 @@ setMicrophoneMute(mute: boolean): Promise<void>
 
 设置麦克风静音状态。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃。
 

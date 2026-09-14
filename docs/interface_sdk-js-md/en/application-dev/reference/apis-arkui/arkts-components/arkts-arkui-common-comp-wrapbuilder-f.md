@@ -1,10 +1,5 @@
 # wrapBuilder
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## wrapBuilder
 
 ```TypeScript
@@ -31,3 +26,4 @@ Defining wrapBuilder function.
 
 | Type | Description |
 | --- | --- |
+| [WrappedBuilder](arkts-arkui-wrappedbuilder-c.md)&lt;Args&gt; |  |

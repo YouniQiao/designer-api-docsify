@@ -2,7 +2,7 @@
 
 Implements a matrix. A 3 x 3 matrix is shown as below. Elements in the matrix from left to right and from top to bottom respectively represent a horizontal scale coefficient, a horizontal skew coefficient, a horizontal translation coefficient, a vertical skew coefficient, a vertical scale coefficient, a vertical translation coefficient, an X-axis perspective coefficient, a Y-axis perspective coefficient, and a perspective scale coefficient. If (x&lt;sub&gt;1&lt;/sub&gt;, y&lt;sub&gt;1&lt;/sub&gt;) is the source coordinate point, (x&lt;sub&gt;2&lt;/sub&gt;, y&lt;sub&gt;2&lt;/sub&gt;) is the coordinate point obtained by transforming the source coordinate point using the matrix, then the relationship between the two coordinate points is as follows:
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The initial APIs of this class are supported since API version 12.
 > 
@@ -115,7 +115,7 @@ Inverts this matrix and returns the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix** object used to store the inverted matrix. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | **Matrix** object used to store the inverted matrix. |
 
 **Return value:**
 
@@ -265,7 +265,7 @@ Sets the destination rectangle to the bounding rectangle of the shape obtained a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dst | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle** object, which is used to store the bounding rectangle. |
+| dst | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | **Rectangle** object, which is used to store the bounding rectangle. |
 | src | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Source rectangle. |
 
 **Return value:**
@@ -413,7 +413,7 @@ Preconcats the existing matrix with the passed-in matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix** object, which is on the right of a multiplication expression. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | **Matrix** object, which is on the right of a multiplication expression. |
 
 **Error codes:**
 

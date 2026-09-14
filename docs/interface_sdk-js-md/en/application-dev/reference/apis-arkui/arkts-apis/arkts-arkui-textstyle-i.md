@@ -6,11 +6,6 @@ Describes the word break rule of the message in the dialog box.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## wordBreak
 
 ```TypeScript

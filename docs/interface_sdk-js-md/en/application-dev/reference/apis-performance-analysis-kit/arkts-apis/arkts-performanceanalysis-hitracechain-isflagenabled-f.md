@@ -22,7 +22,7 @@ Checks whether the trace flag is enabled for **HiTraceId**. This API returns the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | HiTraceId** instance to be checked. |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | **HiTraceId** instance to be checked. |
 | flag | [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md) | Yes | Specified trace flag. |
 
 **Return value:**

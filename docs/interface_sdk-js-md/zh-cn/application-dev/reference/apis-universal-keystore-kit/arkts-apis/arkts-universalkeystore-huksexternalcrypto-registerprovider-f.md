@@ -17,7 +17,7 @@ function registerProvider(providerName: string, params: Array<HuksExternalCrypto
 若需使用自定义PIN码弹窗，在注册provider时需要同步注册UIExtensionAbility，注意事项如下：
 
 1. 自定义ability通过UIExtensionAbility扩展实现。
-2. 注册的UIExtensionAbility可以通过证书管理kit提供的[openUKeyAuthDialog](../../apis-device-certificate-kit/arkts-apis/arkts-security-certmanager.md)接口统一拉起。
+2. 注册的UIExtensionAbility可以通过证书管理kit提供的[openUKeyAuthDialog](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-security-certmanager.md)接口统一拉起。
 
 3. 系统拉起自定义弹窗时会通过want接口向开发者传递以下参数：  
 - Action：string参数类型，在拉起自定义弹窗时want传输的Action为"UkeyPINAuth"。  

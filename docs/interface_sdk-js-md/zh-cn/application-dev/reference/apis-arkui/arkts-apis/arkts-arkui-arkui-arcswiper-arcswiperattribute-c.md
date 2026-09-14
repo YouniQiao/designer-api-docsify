@@ -40,6 +40,8 @@ customContentTransition(transition: Optional<SwiperContentAnimatedTransition>): 
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+
 ## digitalCrownSensitivity
 
 ```TypeScript
@@ -64,6 +66,8 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcSwiperAttri
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+
 ## disableSwipe
 
 ```TypeScript
@@ -88,6 +92,8 @@ disableSwipe(disabled: Optional<boolean>): ArcSwiperAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+
 ## disableTransitionAnimation
 
 ```TypeScript
@@ -112,6 +118,8 @@ disableTransitionAnimation(disabled: Optional<boolean>): ArcSwiperAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+
 ## duration
 
 ```TypeScript
@@ -136,6 +144,8 @@ duration(duration: Optional<number>): ArcSwiperAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+
 ## effectMode
 
 ```TypeScript
@@ -160,6 +170,8 @@ effectMode(edgeEffect: Optional<EdgeEffect>): ArcSwiperAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+
 ## index
 
 ```TypeScript
@@ -184,6 +196,8 @@ index(index: Optional<number>): ArcSwiperAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+
 ## indicator
 
 ```TypeScript
@@ -208,6 +222,8 @@ indicator(style: Optional<ArcDotIndicator | boolean>): ArcSwiperAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+
 ## onAnimationEnd
 
 ```TypeScript
@@ -234,6 +250,8 @@ onAnimationEnd(handler: Optional<AnimationEndHandler>): ArcSwiperAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+
 ## onAnimationStart
 
 ```TypeScript
@@ -258,6 +276,8 @@ onAnimationStart(handler: Optional<AnimationStartHandler>): ArcSwiperAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+
 ## onChange
 
 ```TypeScript
@@ -284,6 +304,8 @@ ArcSwiper组件结合[LazyForEach](../../../ui/rendering-control/arkts-rendering
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+
 ## onGestureSwipe
 
 ```TypeScript
@@ -308,6 +330,8 @@ onGestureSwipe(handler: Optional<GestureSwipeHandler>): ArcSwiperAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
+
 ## vertical
 
 ```TypeScript
@@ -332,3 +356,4 @@ vertical(isVertical: Optional<boolean>): ArcSwiperAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |

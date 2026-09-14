@@ -22,7 +22,7 @@ Obtains an [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i
 
 | Type | Description |
 | --- | --- |
-| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) | InputMethodAbility** instance. |
+| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) | **InputMethodAbility** instance. |
 
 **Examples**
 

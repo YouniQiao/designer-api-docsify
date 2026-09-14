@@ -112,7 +112,7 @@ decode(input: Uint8Array, options?: { stream?: false }): string
 
 将输入内容解码为字符串。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口会正常解析值为\0的字节，将其转换为Unicode字符\u0000（空字符），不会导致解码中断或错误。
 

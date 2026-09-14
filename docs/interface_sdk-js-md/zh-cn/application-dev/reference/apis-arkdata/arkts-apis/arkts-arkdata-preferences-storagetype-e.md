@@ -2,7 +2,7 @@
 
 Preferences的存储模式枚举。
 
-> **说明：**
+> **说明：** 
 > 
 > - 在选择存储模式前，建议调用[isStorageTypeSupported](arkts-arkdata-preferences-isstoragetypesupported-f.md)检查当前平台是否支持对应存储模式。
 > 

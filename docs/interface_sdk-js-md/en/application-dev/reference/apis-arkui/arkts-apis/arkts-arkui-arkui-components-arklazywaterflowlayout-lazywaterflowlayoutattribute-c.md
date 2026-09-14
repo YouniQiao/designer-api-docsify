@@ -42,6 +42,8 @@ The spacing between columns.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## footer
 
 ```TypeScript
@@ -68,6 +70,8 @@ Sets the footer of the lazy waterflow layout.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## header
 
 ```TypeScript
@@ -94,6 +98,8 @@ Sets the header of the lazy waterflow layout.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## onVisibleIndexesChange
 
 ```TypeScript
@@ -120,6 +126,8 @@ Called when the first or last item displayed in the component changes. It is tri
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## rowsGap
 
 ```TypeScript
@@ -146,6 +154,8 @@ The spacing between rows.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## sticky
 
 ```TypeScript
@@ -172,3 +182,4 @@ Sets the sticky style for header and footer.
 
 | Type | Description |
 | --- | --- |
+| T |  |

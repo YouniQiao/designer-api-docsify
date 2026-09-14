@@ -6,11 +6,6 @@ Provides detailed information about the blocked ads when ads are blocked.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## adsBlocked
 
 ```TypeScript

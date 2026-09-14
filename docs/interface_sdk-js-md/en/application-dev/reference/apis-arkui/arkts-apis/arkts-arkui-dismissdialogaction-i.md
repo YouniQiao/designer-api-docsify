@@ -6,11 +6,6 @@ Provides information about the action to dismiss the dialog box.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## dismiss
 
 ```TypeScript

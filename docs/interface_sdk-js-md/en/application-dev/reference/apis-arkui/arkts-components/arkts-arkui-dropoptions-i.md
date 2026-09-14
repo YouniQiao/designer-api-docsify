@@ -6,11 +6,6 @@ Sets parameters for the drop process.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## disableDataPrefetch
 
 ```TypeScript
@@ -19,7 +14,7 @@ disableDataPrefetch?: boolean
 
 Whether to disable data prefetching for the drag-and-drop operation. The value **true** means to disable data prefetching for the drag-and-drop operation, and **false** means the opposite. Default value: **false**.
 
-**NOTE:**
+**NOTE:** 
 
 Set this parameter to **true** when using [startDataLoading](arkts-arkui-dragevent-i.md#startdataloading) to enable data prefetching.
 

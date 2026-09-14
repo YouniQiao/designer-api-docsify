@@ -6,11 +6,6 @@ background配置选项。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## align
 
 ```TypeScript
@@ -23,7 +18,7 @@ align?: Alignment
 
 **类型：** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
 
-**默认值：**
+**默认值：** 
 - API版本20+：Alignment.Center
 
 **起始版本：** 10

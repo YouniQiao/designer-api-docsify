@@ -2,7 +2,7 @@
 
 Defines the style of the custom dialog box.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Pressing the Back or ESC key closes the dialog box.
 > 
@@ -30,11 +30,6 @@ Defines the style of the custom dialog box.
 **Since:** 7
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## distortionMode
 

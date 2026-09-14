@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## triggerSelect
 
 ```TypeScript
@@ -21,7 +16,7 @@ triggerSelect(index: number, value: string): void
 
 下拉菜单选中某一项的回调函数。
 
-<br>**说明：**
+<br>**说明：** 
 
 <br>index会赋值给事件[onSelect](arkts-arkui-select-comp-attribute.md#onselect)回调中的索引参数； value会返回给Select组件显示，同时会赋值给事件[onSelect](arkts-arkui-select-comp-attribute.md#onselect)回调中的文本参数。
 
@@ -48,7 +43,7 @@ icon?: ResourceStr
 
 下拉菜单项的图片内容。
 
-**说明：**
+**说明：** 
 
 string格式可用于加载网络图片和本地图片。
 
@@ -128,7 +123,7 @@ value: ResourceStr
 
 下拉菜单项的文本内容。
 
-**说明：**
+**说明：** 
 
 当文本字符的长度超过菜单项文本区域的宽度时，文本将会被截断。
 

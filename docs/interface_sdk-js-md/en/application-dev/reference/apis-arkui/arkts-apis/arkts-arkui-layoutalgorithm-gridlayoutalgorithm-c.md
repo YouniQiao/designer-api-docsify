@@ -2,7 +2,7 @@
 
 Grid layout algorithm class.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The object of the **GridLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as the
 > input parameter of the

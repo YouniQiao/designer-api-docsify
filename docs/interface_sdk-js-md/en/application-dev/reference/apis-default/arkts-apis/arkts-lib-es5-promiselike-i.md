@@ -24,3 +24,4 @@ Attaches callbacks for the resolution and/or rejection of the Promise.
 
 | Type | Description |
 | --- | --- |
+| PromiseLike&lt;TResult1 &#124; TResult2&gt; | A Promise for the completion of which ever callback is executed. |

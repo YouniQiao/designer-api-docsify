@@ -15,7 +15,7 @@ function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 Attests a key. This API uses an asynchronous callback to return the result.
 
 <!--RP6-->   
-> **NOTE:**
+> **NOTE:** 
 > 
 > The certificate chain generated during non-anonymous certificate key attestation may contain the device
 > identifier (confirm the specific implementation with the vendor). If the device identifier is included, you can
@@ -24,7 +24,10 @@ Attests a key. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
-**Required permissions:** ohos.permission.ATTEST_KEY
+**Required permissions:** 
+- API version 26 and later: ohos.permission.ATTEST_KEY or ohos.permission.ENTERPRISE_ATTEST_KEY
+- API version 11 and later: ohos.permission.ATTEST_KEY
+- API versions 9 to 10: N/A
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -40,9 +43,9 @@ Attests a key. This API uses an asynchronous callback to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | check permission failed |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed: call the attestKeyItem API, missing Permission: ohos.permission.ATTEST_KEY |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | api is not supported |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability. 2. The chip does not support the capability. 3. A dependent service feature is not supported. |
 | [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |
 | [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
 | [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
@@ -155,7 +158,7 @@ function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksRetu
 Attests a key. This API uses a promise to return the result.
 
 <!--RP6-->   
-> **NOTE:**
+> **NOTE:** 
 > 
 > The certificate chain generated during non-anonymous certificate key attestation may contain the device
 > identifier (confirm the specific implementation with the vendor). If the device identifier is included, you can
@@ -164,7 +167,10 @@ Attests a key. This API uses a promise to return the result.
 
 **Since:** 9
 
-**Required permissions:** ohos.permission.ATTEST_KEY
+**Required permissions:** 
+- API version 26 and later: ohos.permission.ATTEST_KEY or ohos.permission.ENTERPRISE_ATTEST_KEY
+- API version 11 and later: ohos.permission.ATTEST_KEY
+- API versions 9 to 10: N/A
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -185,9 +191,9 @@ Attests a key. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | check permission failed |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed: call the attestKeyItem API, missing Permission: ohos.permission.ATTEST_KEY |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | api is not supported |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability. 2. The chip does not support the capability. 3. A dependent service feature is not supported. |
 | [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |
 | [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
 | [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |

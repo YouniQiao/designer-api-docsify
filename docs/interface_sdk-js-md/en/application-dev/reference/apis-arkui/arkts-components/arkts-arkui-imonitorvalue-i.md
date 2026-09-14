@@ -6,11 +6,6 @@ Define IMonitorValue interface
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## before
 
 ```TypeScript

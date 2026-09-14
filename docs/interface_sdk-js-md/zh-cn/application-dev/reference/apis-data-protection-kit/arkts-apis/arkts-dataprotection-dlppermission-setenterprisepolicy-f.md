@@ -16,7 +16,7 @@ function setEnterprisePolicy(policy: EnterprisePolicy): void
 
 该接口可用于企业管理员配置DLP安全策略，以统一管理企业数据安全防护规则。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口仅支持企业账号调用。
 

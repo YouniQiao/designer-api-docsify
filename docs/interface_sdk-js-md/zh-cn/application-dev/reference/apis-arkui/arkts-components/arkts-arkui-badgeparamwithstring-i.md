@@ -8,11 +8,6 @@ BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badgeparam-i.md)，具有B
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## value
 
 ```TypeScript
@@ -21,7 +16,7 @@ value: ResourceStr
 
 提示内容的文本字符串。
 
-**说明：**
+**说明：** 
 
 value为空字符串时不显示文本，仅显示圆点标记。
 

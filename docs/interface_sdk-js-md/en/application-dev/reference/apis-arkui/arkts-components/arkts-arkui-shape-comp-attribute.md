@@ -8,11 +8,6 @@ In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the fo
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## antiAlias
 
 ```TypeScript
@@ -77,7 +72,7 @@ Sets the opacity of the fill area. This attribute can be dynamically set using a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Opacity of the fill area.<br>**NOTE:**<br>For the number type, the value range is [0.0, 1.0]. A value less than 0.0 is treated as **0.0**. A value greater than 1.0 is treated as **1.0**. Any other invalid value is treated as **1.0**.<br>For the string type, the value is a character string of the number type. The value range is the same as that of the number type.<br>For the Resource type, the value is a character string from the system resource or application resource. The value range is the same as that of the number type.<br>Default value: **1.0 |
+| value | number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Opacity of the fill area.<br>**NOTE:** <br>For the number type, the value range is [0.0, 1.0]. A value less than 0.0 is treated as **0.0**. A value greater than 1.0 is treated as **1.0**. Any other invalid value is treated as **1.0**.<br>For the string type, the value is a character string of the number type. The value range is the same as that of the number type.<br>For the Resource type, the value is a character string from the system resource or application resource. The value range is the same as that of the number type.<br>Default value: **1.0** |
 
 ## mesh
 
@@ -87,12 +82,12 @@ mesh(value: Array<any>, column: number, row: number)
 
 Sets the mesh effect. An image is divided into (row + 1) × (column + 1) meshes. The coordinates of each mesh intersection point are stored in the array. (Every two elements indicate the x and y coordinates of an intersection point.) The mesh vertex position is relocated based on the coordinates in the array value to implement partial image distortion. This attribute can be dynamically set using attributeModifier.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **mesh** takes effect only when a **pixelMap** object is passed to the shape, and the effect applies to the
 > passed **pixelMap** object. It produces the same result as
 > [drawPixelMapMesh&lt;sup&gt;12+&lt;/sup&gt;](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md#drawpixelmapmesh) in the
-> [drawing module](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-drawing.md). It is recommended that you use
+> [drawing module](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-graphics-drawing.md). It is recommended that you use
 > **drawPixelMapMesh**.
 
 **Since:** 8
@@ -153,7 +148,7 @@ Sets the stroke dashes. This attribute can be dynamically set using attributeMod
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;any&gt; | Yes | Array defining the dash pattern for the shape outline. Elements alternate between dash length and gap length.<br>Default value: **[]** (empty array)<br>Default unit: vp<br>The **undefined** and **null** values are invalid and treated as the default value.<br>**NOTE:**<br>Empty array: solid line<br>Even- numbered array: Elements cycle sequentially, for example, [a, b, c, d] represents: dash a -&gt; gap b -&gt; dash c -&gt; gap d -&gt; dash a -&gt; ...<br>Odd-numbered array: Elements are duplicated to create an even-numbered array, for example, [a, b, c] becomes [a, b, c, a, b, c], representing: dash a -&gt; gap b -&gt; dash c -&gt; gap a -&gt; dash b -&gt; gap c -&gt; dash a -&gt; ... |
+| value | Array&lt;any&gt; | Yes | Array defining the dash pattern for the shape outline. Elements alternate between dash length and gap length.<br>Default value: **[]** (empty array)<br>Default unit: vp<br>The **undefined** and **null** values are invalid and treated as the default value.<br>**NOTE:** <br>Empty array: solid line<br>Even- numbered array: Elements cycle sequentially, for example, [a, b, c, d] represents: dash a -&gt; gap b -&gt; dash c -&gt; gap d -&gt; dash a -&gt; ...<br>Odd-numbered array: Elements are duplicated to create an even-numbered array, for example, [a, b, c] becomes [a, b, c, a, b, c], representing: dash a -&gt; gap b -&gt; dash c -&gt; gap a -&gt; dash b -&gt; gap c -&gt; dash a -&gt; ... |
 
 ## strokeDashOffset
 

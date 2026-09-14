@@ -6,7 +6,7 @@ AgentUIExtensionAbility继承自[UIExtensionAbility](arkts-ability-app-ability-u
 
 各类Ability的继承关系详见继承关系说明。
 
-> **说明：**
+> **说明：** 
 > 
 > 本模块接口不支持在[har](../../../quick-start/har-package.md)包中使用。
 

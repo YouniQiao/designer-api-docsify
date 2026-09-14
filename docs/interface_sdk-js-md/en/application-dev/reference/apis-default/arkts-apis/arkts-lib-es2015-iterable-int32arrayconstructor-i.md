@@ -17,10 +17,6 @@ new (elements: Iterable<number>): Int32Array
 | --- | --- | --- | --- |
 | elements | Iterable&lt;number&gt; | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## from
 
 ```TypeScript
@@ -36,8 +32,3 @@ Creates an array from an array-like or iterable object.
 | arrayLike | Iterable&lt;number&gt; | Yes |  |
 | mapfn | (v: number, k: number) =&gt; number | No |  |
 | thisArg | any | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

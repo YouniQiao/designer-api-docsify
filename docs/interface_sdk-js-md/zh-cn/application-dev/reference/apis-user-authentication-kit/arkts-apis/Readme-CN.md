@@ -1,11 +1,11 @@
 # ArkTS API<!--arkts-userauthenticationkit-->
 
 <!--Del-->
-- [@ohos.app.ability.UserAuthExtensionAbility(用户认证扩展能力组件)](arkts-app-ability-userauthextensionability.md)<!--DelEnd-->
+- [@ohos.app.ability.UserAuthExtensionAbility(用户认证扩展能力组件)](arkts-userauthentication-app-ability-userauthextensionability.md)<!--DelEnd-->
   <!--Del-->
   - [UserAuthExtensionAbility(系统接口)](arkts-userauthentication-app-ability-userauthextensionability-userauthextensionability-c-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.userIAM.companionDeviceAuth(伴随设备认证)](arkts-useriam-companiondeviceauth.md)<!--DelEnd-->
+- [@ohos.userIAM.companionDeviceAuth(伴随设备认证)](arkts-userauthentication-useriam-companiondeviceauth.md)<!--DelEnd-->
   <!--Del-->
   - [getStatusMonitor(系统接口)](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -50,17 +50,17 @@
   - [DeviceIdType(系统接口)](arkts-userauthentication-companiondeviceauth-deviceidtype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SelectPurpose(系统接口)](arkts-userauthentication-companiondeviceauth-selectpurpose-e-sys.md)<!--DelEnd-->
-- [@ohos.userIAM.faceAuth(人脸认证)](arkts-useriam-faceauth.md)
+- [@ohos.userIAM.faceAuth(人脸认证)](arkts-userauthentication-useriam-faceauth.md)
   <!--Del-->
   - [FaceAuthManager(系统接口)](arkts-userauthentication-faceauth-faceauthmanager-c-sys.md)<!--DelEnd-->
-- [@ohos.userIAM.userAccessCtrl(用户访问控制)](arkts-useriam-useraccessctrl.md)
+- [@ohos.userIAM.userAccessCtrl(用户访问控制)](arkts-userauthentication-useriam-useraccessctrl.md)
   <!--Del-->
   - [verifyAuthToken(系统接口)](arkts-userauthentication-useraccessctrl-verifyauthtoken-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [AuthToken(系统接口)](arkts-userauthentication-useraccessctrl-authtoken-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [AuthTokenType(系统接口)](arkts-userauthentication-useraccessctrl-authtokentype-e-sys.md)<!--DelEnd-->
-- [@ohos.userIAM.userAuth(用户认证)](arkts-useriam-userauth.md)
+- [@ohos.userIAM.userAuth(用户认证)](arkts-userauthentication-useriam-userauth.md)
   - [getAuthenticator](arkts-userauthentication-userauth-getauthenticator-f.md)
   - [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md)
   - [getAuthLockState](arkts-userauthentication-userauth-getauthlockstate-f.md)
@@ -136,5 +136,5 @@
   <!--Del-->
   - [WindowModeType(系统接口)](arkts-userauthentication-userauth-windowmodetype-e-sys.md)<!--DelEnd-->
   - [常量](arkts-userauthentication-userauth-con.md)
-- [@ohos.userIAM.userAuthIcon(嵌入式用户身份认证控件)](arkts-useriam-userauthicon.md)
+- [@ohos.userIAM.userAuthIcon(嵌入式用户身份认证控件)](arkts-userauthentication-useriam-userauthicon.md)
   - [UserAuthIcon](arkts-userauthentication-useriam-userauthicon-userauthicon-s.md)

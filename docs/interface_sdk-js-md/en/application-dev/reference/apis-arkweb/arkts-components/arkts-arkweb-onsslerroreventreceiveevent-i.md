@@ -6,11 +6,6 @@ Defines the callback information triggered when the web page receives an SSL err
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## certChainData
 
 ```TypeScript

@@ -6,11 +6,6 @@ XComponent组件的控制器，可以将此对象绑定至XComponent组件，然
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

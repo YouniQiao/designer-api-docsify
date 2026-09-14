@@ -36,7 +36,7 @@ clone(title: string): Promise<PhotoAsset>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Promise对象，返回[PhotoAsset](arkts-file-photoaccesshelper.md)。 |
+| Promise&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Promise对象，返回[PhotoAsset](arkts-medialibrary-file-photoaccesshelper.md)。 |
 
 **错误码：**
 
@@ -203,7 +203,7 @@ get(member: string): MemberType
 
 | 类型 | 说明 |
 | --- | --- |
-| [MemberType](arkts-medialibrary-photoaccesshelper-membertype-t.md) | PhotoAsset** member parameter obtained. |
+| [MemberType](arkts-medialibrary-photoaccesshelper-membertype-t.md) | **PhotoAsset** member parameter obtained. |
 
 **错误码：**
 

@@ -19,7 +19,7 @@ function connectToCandidateConfigWithUserAction(networkId: number): Promise<void
 - 建议在发起连接前先通过startScan接口触发一次Wi-Fi扫描，通过  
 [wifiManager.on('wifiScanStateChange')](arkts-connectivity-wifimanager-on-f.md#onwifiscanstatechange)方法监听到扫描结果刷新后再连接，以提高连接成功率。
 
-> **说明：**
+> **说明：** 
 > 
 > 调用[wifiManager.connectToCandidateConfig](arkts-connectivity-wifimanager-connecttocandidateconfig-f.md)连接候选网络时，不会返回用户响应结果。
 

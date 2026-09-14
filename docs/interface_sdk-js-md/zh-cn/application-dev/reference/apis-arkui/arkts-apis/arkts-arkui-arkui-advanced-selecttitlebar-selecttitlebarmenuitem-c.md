@@ -162,7 +162,7 @@ Symbol图标资源，优先级大于value。
 value: ResourceStr
 ```
 
-图标资源，用于设置标题栏右侧菜单项的图标，支持通过\$r引用资源。当同时设置symbolStyle时，symbolStyle优先。
+图标资源，用于设置标题栏右侧菜单项的图标，支持通过&#36;r引用资源。当同时设置symbolStyle时，symbolStyle优先。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

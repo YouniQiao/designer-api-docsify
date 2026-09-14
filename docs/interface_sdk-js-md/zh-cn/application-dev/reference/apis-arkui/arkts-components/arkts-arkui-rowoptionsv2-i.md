@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## space
 
 ```TypeScript
@@ -29,7 +24,7 @@ space?: SpaceType
 
 非法值：按默认值处理。
 
-**说明：**
+**说明：** 
 
 space取值是大于等于0的数字，或者可以转换为非负数字的字符串，或者可以转换为数字的Resource类型数据。负数作为非法值将被当作默认值0处理。
 

@@ -21,10 +21,6 @@ Returns an `&lt;a&gt;` HTML anchor element and sets the name attribute to the te
 | --- | --- | --- | --- |
 | name | string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## big
 
 ```TypeScript
@@ -35,10 +31,6 @@ Returns a `&lt;big&gt;` HTML element
 
 **Deprecated since:** legacy feature for browser compatibility
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## blink
 
 ```TypeScript
@@ -49,10 +41,6 @@ Returns a `&lt;blink&gt;` HTML element
 
 **Deprecated since:** legacy feature for browser compatibility
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## bold
 
 ```TypeScript
@@ -63,10 +51,6 @@ Returns a `&lt;b&gt;` HTML element
 
 **Deprecated since:** legacy feature for browser compatibility
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## codePointAt
 
 ```TypeScript
@@ -81,10 +65,6 @@ Returns a nonnegative integer Number less than 1114112 (0x110000) that is the co
 | --- | --- | --- | --- |
 | pos | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## endsWith
 
 ```TypeScript
@@ -100,10 +80,6 @@ Returns true if the sequence of elements of searchString converted to a String i
 | searchString | string | Yes |  |
 | endPosition | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## fixed
 
 ```TypeScript
@@ -114,10 +90,6 @@ Returns a `&lt;tt&gt;` HTML element
 
 **Deprecated since:** legacy feature for browser compatibility
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## fontcolor
 
 ```TypeScript
@@ -134,10 +106,6 @@ Returns a `&lt;font&gt;` HTML element and sets the color attribute value
 | --- | --- | --- | --- |
 | color | string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## fontsize
 
 ```TypeScript
@@ -154,10 +122,6 @@ Returns a `&lt;font&gt;` HTML element and sets the size attribute value
 | --- | --- | --- | --- |
 | size | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## fontsize
 
 ```TypeScript
@@ -174,10 +138,6 @@ Returns a `&lt;font&gt;` HTML element and sets the size attribute value
 | --- | --- | --- | --- |
 | size | string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## includes
 
 ```TypeScript
@@ -193,10 +153,6 @@ Returns true if searchString appears as a substring of the result of converting 
 | searchString | string | Yes |  |
 | position | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## italics
 
 ```TypeScript
@@ -207,10 +163,6 @@ Returns an `&lt;i&gt;` HTML element
 
 **Deprecated since:** legacy feature for browser compatibility
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## link
 
 ```TypeScript
@@ -227,10 +179,6 @@ Returns an `&lt;a&gt;` HTML element and sets the href attribute value
 | --- | --- | --- | --- |
 | url | string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## normalize
 
 ```TypeScript
@@ -245,10 +193,6 @@ Returns the String value result of normalizing the string into the normalization
 | --- | --- | --- | --- |
 | form | "NFC" &#124; "NFD" &#124; "NFKC" &#124; "NFKD" | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## normalize
 
 ```TypeScript
@@ -263,10 +207,6 @@ Returns the String value result of normalizing the string into the normalization
 | --- | --- | --- | --- |
 | form | string | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## repeat
 
 ```TypeScript
@@ -281,10 +221,6 @@ Returns a String value that is made from count copies appended together. If coun
 | --- | --- | --- | --- |
 | count | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## small
 
 ```TypeScript
@@ -295,10 +231,6 @@ Returns a `&lt;small&gt;` HTML element
 
 **Deprecated since:** legacy feature for browser compatibility
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## startsWith
 
 ```TypeScript
@@ -314,10 +246,6 @@ Returns true if the sequence of elements of searchString converted to a String i
 | searchString | string | Yes |  |
 | position | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## strike
 
 ```TypeScript
@@ -328,10 +256,6 @@ Returns a `&lt;strike&gt;` HTML element
 
 **Deprecated since:** legacy feature for browser compatibility
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## sub
 
 ```TypeScript
@@ -342,10 +266,6 @@ Returns a `&lt;sub&gt;` HTML element
 
 **Deprecated since:** legacy feature for browser compatibility
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## sup
 
 ```TypeScript
@@ -355,8 +275,3 @@ sup(): string
 Returns a `&lt;sup&gt;` HTML element
 
 **Deprecated since:** legacy feature for browser compatibility
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

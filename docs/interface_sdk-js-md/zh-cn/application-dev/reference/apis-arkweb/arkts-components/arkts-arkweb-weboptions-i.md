@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-```
-
 ## controller
 
 ```TypeScript
@@ -101,7 +96,7 @@ sharedRenderProcessToken? : string
 src: string | Resource
 ```
 
-网页资源地址。如果访问本地资源文件，请使用resource协议或\$rawfile资源引用。如果加载应用包外沙箱路径的本地资源文件（文件支持html和txt类型），请使用file://沙箱文件路径。
+网页资源地址。如果访问本地资源文件，请使用resource协议或&#36;rawfile资源引用。如果加载应用包外沙箱路径的本地资源文件（文件支持html和txt类型），请使用file://沙箱文件路径。
 
 src不能通过状态变量（例如：@State）动态更改地址，如需更改，请通过[loadUrl()](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl)重新加载。
 

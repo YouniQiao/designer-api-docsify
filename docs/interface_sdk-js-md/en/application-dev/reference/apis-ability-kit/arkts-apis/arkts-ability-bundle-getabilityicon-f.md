@@ -12,7 +12,7 @@ import { bundle } from '@kit.AbilityKit';
 function getAbilityIcon(bundleName: string, abilityName: string, callback: AsyncCallback<image.PixelMap>): void
 ```
 
-Obtains the [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) of the icon corresponding to a given bundle name and ability name. This API uses an asynchronous callback to return the result.
+Obtains the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-multimedia-image.md) of the icon corresponding to a given bundle name and ability name. This API uses an asynchronous callback to return the result.
 
 No permission is required for obtaining the caller's own information.
 
@@ -32,7 +32,7 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | abilityName | string | Yes | Ability name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | Callback used to return the [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | Callback used to return the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-multimedia-image.md). |
 
 **Examples**
 
@@ -58,7 +58,7 @@ bundle.getAbilityIcon(bundleName, abilityName, (err, data) => {
 function getAbilityIcon(bundleName: string, abilityName: string): Promise<image.PixelMap>
 ```
 
-Obtains the [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) of the icon corresponding to a given bundle name and ability name. This API uses a promise to return the result.
+Obtains the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-multimedia-image.md) of the icon corresponding to a given bundle name and ability name. This API uses a promise to return the result.
 
 No permission is required for obtaining the caller's own information.
 

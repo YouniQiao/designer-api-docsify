@@ -64,7 +64,7 @@ Obtains the **DrawableDescriptor** object of the background.
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object. |
+| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | **DrawableDescriptor** object. |
 
 **Error codes:**
 
@@ -131,7 +131,7 @@ Obtains the **DrawableDescriptor** object of the foreground.
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object. |
+| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | **DrawableDescriptor** object. |
 
 **Error codes:**
 
@@ -203,7 +203,7 @@ Obtains the **DrawableDescriptor** object of the mask.
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object. |
+| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | **DrawableDescriptor** object. |
 
 **Error codes:**
 

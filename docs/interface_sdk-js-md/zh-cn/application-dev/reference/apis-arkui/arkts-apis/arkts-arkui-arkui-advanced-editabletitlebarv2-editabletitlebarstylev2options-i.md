@@ -64,9 +64,9 @@ contentMargin?: LocalizedMargin
 
 {
 
-start: LengthMetrics.resource(\$r('sys.float.margin_left')),
+start: LengthMetrics.resource(&#36;r('sys.float.margin_left')),
 
-end: LengthMetrics.resource(\$r('sys.float.margin_right'))
+end: LengthMetrics.resource(&#36;r('sys.float.margin_right'))
 
 }。
 

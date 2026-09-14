@@ -2,7 +2,7 @@
 
 内容加载指获取内容并加载出来，常用于衔接展示下拉加载的内容。
 
-> **说明：**
+> **说明：** 
 > 
 > - 如果SwipeRefresher设置[通用属性](../arkts-components/arkts-arkui-commonmethod-c.md)或[通用事件](../arkts-components/arkts-arkui-commonmethod-c.md)，
 > 编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到SwipeRefresher本身。
@@ -40,7 +40,7 @@ content?: ResourceStr
 
 默认值：空字符串。
 
-**说明：**如果文本大于列宽时，文本被截断。从API version 20开始，支持Resource类型。
+**说明：** 如果文本大于列宽时，文本被截断。从API version 20开始，支持Resource类型。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

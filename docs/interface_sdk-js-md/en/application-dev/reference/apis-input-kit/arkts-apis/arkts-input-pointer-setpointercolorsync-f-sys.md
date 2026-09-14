@@ -14,7 +14,7 @@ function setPointerColorSync(color: number): void
 
 Sets the pointer color. This API returns the result synchronously.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
 

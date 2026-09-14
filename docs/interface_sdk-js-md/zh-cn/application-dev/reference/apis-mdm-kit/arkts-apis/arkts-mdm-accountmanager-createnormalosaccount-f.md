@@ -14,7 +14,7 @@ function createNormalOsAccount(admin: Want, name: string): Promise<osAccount.OsA
 
 创建普通系统账号。最多可以创建2个normal类型的系统账号 ([osAccount.OsAccountType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-osaccounttype-e.md)) 。
 
-> **说明：**
+> **说明：** 
 > 
 > 创建账号的流程比较耗时，当调用此接口后，后续如果在应用主线程调用其他同步接口时需要等待该接口异步返回。
 > 

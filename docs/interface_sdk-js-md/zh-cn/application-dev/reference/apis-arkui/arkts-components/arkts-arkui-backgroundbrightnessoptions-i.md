@@ -2,7 +2,7 @@
 
 背景亮度选项。
 
-> **说明：**
+> **说明：** 
 > 
 > 对于组件背景内容，每个像素自身的亮度（灰阶值）的计算公式为：
 > 
@@ -15,11 +15,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## lightUpDegree
 
 ```TypeScript
@@ -28,7 +23,7 @@ lightUpDegree: number
 
 提亮程度，越大则亮度提升越明显。
 
-**说明：**
+**说明：** 
 
 当rate为0时，lightUpDegree不生效。
 

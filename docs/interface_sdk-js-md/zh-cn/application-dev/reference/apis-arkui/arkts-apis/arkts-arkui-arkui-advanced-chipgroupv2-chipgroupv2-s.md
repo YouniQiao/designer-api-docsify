@@ -4,7 +4,7 @@ ChipGroupV2组件提供操作块群组容器，支持单选或多选、自定义
 
 该组件基于[状态管理（V2）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)实现，相较于[状态管理（V1）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v1)，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组件层级。借助状态管理（V2），开发者可以更灵活地控制组件的数据和状态，实现更高效的用户界面刷新。
 
-> **说明：**
+> **说明：** 
 > 
 > - 如果ChipGroupV2设置[通用属性](../arkts-components/arkts-arkui-commonmethod-c.md)或[通用事件](../arkts-components/arkts-arkui-commonmethod-c.md)，
 > 编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到ChipGroupV2本身。
@@ -172,7 +172,7 @@ ChipV2的style属性，如颜色、大小等，参考[ChipGroupV2ItemStyle](arkt
 
 默认值：
 
-{ size: ChipV2Size.NORMAL, backgroundColor: \$r('sys.color.ohos_id_color_button_normal'), fontColor: \$r('sys.color.ohos_id_color_text_primary'), selectedFontColor: \$r('sys.color.ohos_id_color_text_primary_contrary'), selectedBackgroundColor: \$r('sys.color.ohos_id_color_emphasize') }
+{ size: ChipV2Size.NORMAL, backgroundColor: &#36;r('sys.color.ohos_id_color_button_normal'), fontColor: &#36;r('sys.color.ohos_id_color_text_primary'), selectedFontColor: &#36;r('sys.color.ohos_id_color_text_primary_contrary'), selectedBackgroundColor: &#36;r('sys.color.ohos_id_color_emphasize') }
 
 值为undefined时，按默认值处理。
 

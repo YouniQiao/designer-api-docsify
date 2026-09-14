@@ -73,7 +73,7 @@ getAlbum(): Album
 
 Obtains the album in the current album change request.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For the change request for creating an album, this API returns **null** before
 > [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) is called

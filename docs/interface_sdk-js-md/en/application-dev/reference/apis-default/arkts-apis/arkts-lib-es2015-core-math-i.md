@@ -19,10 +19,6 @@ Returns the inverse hyperbolic cosine of a number.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## asinh
 
 ```TypeScript
@@ -37,10 +33,6 @@ Returns the inverse hyperbolic sine of a number.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## atanh
 
 ```TypeScript
@@ -55,10 +47,6 @@ Returns the inverse hyperbolic tangent of a number.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## cbrt
 
 ```TypeScript
@@ -73,10 +61,6 @@ Returns an implementation-dependent approximation to the cube root of number.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## clz32
 
 ```TypeScript
@@ -91,10 +75,6 @@ Returns the number of leading zero bits in the 32-bit binary representation of a
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## cosh
 
 ```TypeScript
@@ -109,10 +89,6 @@ Returns the hyperbolic cosine of a number.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## expm1
 
 ```TypeScript
@@ -127,10 +103,6 @@ Returns the result of (e^x - 1), which is an implementation-dependent approximat
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## fround
 
 ```TypeScript
@@ -145,10 +117,6 @@ Returns the nearest single precision float representation of a number.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## hypot
 
 ```TypeScript
@@ -163,10 +131,6 @@ Returns the square root of the sum of squares of its arguments.
 | --- | --- | --- | --- |
 | values | number[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## imul
 
 ```TypeScript
@@ -182,10 +146,6 @@ Returns the result of 32-bit multiplication of two numbers.
 | x | number | Yes |  |
 | y | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## log10
 
 ```TypeScript
@@ -200,10 +160,6 @@ Returns the base 10 logarithm of a number.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## log1p
 
 ```TypeScript
@@ -218,10 +174,6 @@ Returns the natural logarithm of 1 + x.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## log2
 
 ```TypeScript
@@ -236,10 +188,6 @@ Returns the base 2 logarithm of a number.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## sign
 
 ```TypeScript
@@ -256,10 +204,6 @@ Returns the sign of the x, indicating whether x is positive, negative or zero.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## sinh
 
 ```TypeScript
@@ -274,10 +218,6 @@ Returns the hyperbolic sine of a number.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## tanh
 
 ```TypeScript
@@ -292,10 +232,6 @@ Returns the hyperbolic tangent of a number.
 | --- | --- | --- | --- |
 | x | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## trunc
 
 ```TypeScript
@@ -309,8 +245,3 @@ Returns the integral part of the a numeric expression, x, removing any fractiona
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | x | number | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

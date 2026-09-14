@@ -16,7 +16,7 @@ function isDLPFeatureProvided(): Promise<boolean>
 
 该接口用于判断当前系统是否支持DLP加密功能，以便在不支持的设备上做兼容处理或功能降级。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口由[MDM](../../../mdm/mdm-kit-intro.md)配置使能，且使能场景为企业设备。其他设备（如消费者终端设备）无需关注该接口，如若调用该接口，则返回值为false。
 

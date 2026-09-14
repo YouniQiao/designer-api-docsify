@@ -6,11 +6,6 @@ Provides additional configuration options for the text decoration line style.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## enableMultiType
 
 ```TypeScript

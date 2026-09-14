@@ -40,6 +40,8 @@ autoCollapse(enable: Optional<boolean>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## color
 
 ```TypeScript
@@ -64,6 +66,8 @@ color(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## font
 
 ```TypeScript
@@ -88,6 +92,8 @@ font(font: Optional<Font>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## itemSize
 
 ```TypeScript
@@ -112,6 +118,8 @@ itemSize(size: Optional<LengthMetrics>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## onSelect
 
 ```TypeScript
@@ -136,6 +144,8 @@ onSelect(handler: Optional<OnSelectCallback>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## popupBackground
 
 ```TypeScript
@@ -160,6 +170,8 @@ popupBackground(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## popupBackgroundBlurStyle
 
 ```TypeScript
@@ -168,7 +180,7 @@ popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribut
 
 设置提示弹窗的背景模糊材质。未通过该接口设置时，默认为关闭模糊，对应取值为BlurStyle中的NONE。
 
-> **说明：**
+> **说明：** 
 
 > 当通过popupBackgroundBlurStyle设置弹窗气泡的背景模糊材质时，不建议再通过
 > [popupBackground](#popupbackground)设置背景色。
@@ -189,6 +201,8 @@ popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribut
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## popupColor
 
 ```TypeScript
@@ -213,6 +227,8 @@ popupColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## popupFont
 
 ```TypeScript
@@ -237,6 +253,8 @@ popupFont(font: Optional<Font>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## selected
 
 ```TypeScript
@@ -261,6 +279,8 @@ selected(index: Optional<number>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## selectedBackgroundColor
 
 ```TypeScript
@@ -285,6 +305,8 @@ selectedBackgroundColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttrib
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## selectedColor
 
 ```TypeScript
@@ -309,6 +331,8 @@ selectedColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## selectedFont
 
 ```TypeScript
@@ -333,6 +357,8 @@ selectedFont(font: Optional<Font>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+
 ## usePopup
 
 ```TypeScript
@@ -357,3 +383,4 @@ usePopup(enabled: Optional<boolean>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |

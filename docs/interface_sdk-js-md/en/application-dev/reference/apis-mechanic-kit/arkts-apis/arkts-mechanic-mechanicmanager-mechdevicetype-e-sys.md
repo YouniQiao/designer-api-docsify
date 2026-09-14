@@ -26,7 +26,7 @@ Desktop gimbal device.
 WHEELED_BASE_DEVICE = 2
 ```
 
-Wheeled?mounted base device.
+Wheeled‑mounted base device.
 
 **Since:** 26.0.0
 

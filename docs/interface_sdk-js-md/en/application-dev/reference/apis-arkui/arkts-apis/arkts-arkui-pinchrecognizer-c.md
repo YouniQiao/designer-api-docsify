@@ -8,11 +8,6 @@ Implements a pinch gesture recognizer. Inherits from [GestureRecognizer](arkts-a
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## getDistance
 
 ```TypeScript

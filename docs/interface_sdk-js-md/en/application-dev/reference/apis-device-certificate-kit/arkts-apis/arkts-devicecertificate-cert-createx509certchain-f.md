@@ -270,7 +270,7 @@ Creates an X.509 certificate chain object based on the specified certificates. T
 
 | Type | Description |
 | --- | --- |
-| [X509CertChain](arkts-devicecertificate-cert-x509certchain-i.md) | X509CertChain** object created. |
+| [X509CertChain](arkts-devicecertificate-cert-x509certchain-i.md) | **X509CertChain** object created. |
 
 **Error codes:**
 

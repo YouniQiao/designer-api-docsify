@@ -59,7 +59,7 @@ Obtains a **ReadStream** instance of this **RandomAccessFile**.
 
 | Type | Description |
 | --- | --- |
-| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | ReadStream** instance obtained. |
+| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | **ReadStream** instance obtained. |
 
 **Error codes:**
 
@@ -98,7 +98,7 @@ Obtains a **WriteStream** instance of this **RandomAccessFile**.
 
 | Type | Description |
 | --- | --- |
-| [WriteStream](arkts-corefile-file-fs-writestream-c.md) | WriteStream** instance obtained. |
+| [WriteStream](arkts-corefile-file-fs-writestream-c.md) | **WriteStream** instance obtained. |
 
 **Error codes:**
 

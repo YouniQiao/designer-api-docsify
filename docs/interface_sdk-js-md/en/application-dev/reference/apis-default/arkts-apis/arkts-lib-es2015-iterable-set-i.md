@@ -13,10 +13,6 @@
 
 Iterates over values in the set.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## entries
 
 ```TypeScript
@@ -25,10 +21,6 @@ entries(): IterableIterator<[T, T]>
 
 Returns an iterable of [v,v] pairs for every value `v` in the set.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## keys
 
 ```TypeScript
@@ -37,10 +29,6 @@ keys(): IterableIterator<T>
 
 Despite its name, returns an iterable of the values in the set.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## values
 
 ```TypeScript
@@ -48,8 +36,3 @@ values(): IterableIterator<T>
 ```
 
 Returns an iterable of values in the set.
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

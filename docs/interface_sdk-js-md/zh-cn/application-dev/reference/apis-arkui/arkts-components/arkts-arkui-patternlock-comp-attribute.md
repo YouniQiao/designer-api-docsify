@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## activateCircleStyle
 
 ```TypeScript
@@ -85,7 +80,7 @@ backgroundColor(value: ResourceColor)
 
 设置背景颜色。未通过该接口设置时，默认为透明，无背景色。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
@@ -129,7 +124,7 @@ onDotConnect(callback: import('../api/@ohos.base').Callback<number>)
 
 密码输入选中宫格圆点时触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
@@ -155,7 +150,7 @@ onPatternComplete(callback: (input: Array<number>) => void)
 
 密码输入结束时触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 该回调在密码输入结束时触发，返回完整密码数组。与[onDotConnect](#ondotconnect)的关系：onDotConnect在选中每个圆点时实时触发，
 > onPatternComplete在输入结束时触发，两者可以配合使用以实现实时反馈和最终验证。
@@ -260,7 +255,7 @@ sideLength(value: Length)
 
 设置组件的宽度和高度（宽高相同）。当设置为0或负数时，组件不显示。未通过该接口设置时，默认宽高为288vp。
 
-> **说明：**
+> **说明：** 
 > 
 > PatternLock组件设置了通用属性宽高比[aspectRatio](arkts-arkui-commonmethod-c.md#aspectratio)，且不等于1时（组件尺寸被设定为长方形），九宫格依然绘制为正方形（超出组件范围）。
 

@@ -8,11 +8,6 @@ The swipe gesture works only in the list item area. If a swipe causes a child co
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onOffsetChange
 
 ```TypeScript

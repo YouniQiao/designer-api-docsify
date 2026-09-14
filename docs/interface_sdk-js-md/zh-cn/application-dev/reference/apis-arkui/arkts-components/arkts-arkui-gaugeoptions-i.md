@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## max
 
 ```TypeScript
@@ -21,7 +16,7 @@ max?: number
 
 默认值：100
 
-**说明：**
+**说明：** 
 
 不传入时默认最大值为100。
 
@@ -49,7 +44,7 @@ min?: number
 
 默认值：0
 
-**说明：**
+**说明：** 
 
 不传入时默认最小值为0。
 
@@ -77,7 +72,7 @@ value: number
 
 默认值：0
 
-**说明：**
+**说明：** 
 
 value不在min和max范围内时使用min作为默认值。
 

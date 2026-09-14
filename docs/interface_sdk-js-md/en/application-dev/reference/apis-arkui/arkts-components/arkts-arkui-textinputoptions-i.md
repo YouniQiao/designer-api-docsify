@@ -6,11 +6,6 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## controller
 
 ```TypeScript
@@ -53,7 +48,7 @@ Current text input.
 
 You are advised to bind the state variable to the text in real time through the **onChange** event, so as to prevent display errors when the component is updated.
 
-Since API version 10, this parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this parameter supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
 
 Since API version 18, this parameter supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 

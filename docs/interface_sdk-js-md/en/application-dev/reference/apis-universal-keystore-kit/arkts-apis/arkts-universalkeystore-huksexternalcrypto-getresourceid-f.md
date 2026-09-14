@@ -37,7 +37,7 @@ Obtain the resource ID of the provider.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | API is not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability. 2. The chip does not support the capability. 3. A dependent service feature is not supported. |
 | [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | The ability name, bundle name parameter or resource information is missing. |
 | [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | The provider is not found. |

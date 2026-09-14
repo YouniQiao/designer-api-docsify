@@ -6,11 +6,6 @@ Define IMonitor interface
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## value
 
 ```TypeScript
@@ -39,6 +34,8 @@ Return the pair of the value before the most recent change and current value for
 
 | Type | Description |
 | --- | --- |
+| [IMonitorValue](arkts-arkui-imonitorvalue-i.md)&lt;T&gt; &#124; undefined |  |
+
 **Examples**
 
 ```TypeScript

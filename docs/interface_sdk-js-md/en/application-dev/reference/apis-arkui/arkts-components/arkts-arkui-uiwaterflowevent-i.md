@@ -8,11 +8,6 @@ Represents the return value of the [getEvent('WaterFlow')](../arkts-apis/arkts-a
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## setOnDidScroll
 
 ```TypeScript

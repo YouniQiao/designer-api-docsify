@@ -34,11 +34,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## aboutToAppear
 
 ```TypeScript
@@ -113,7 +108,7 @@ anchorPosition?: Position
 
 默认值：{ x: undefined, y: undefined }，不支持设置百分比。
 
-**说明：**
+**说明：** 
 
 1. 当菜单处于预览状态时，设定的偏移量将无法生效。
 2. 预设的placement对齐参数将不再生效。
@@ -145,7 +140,7 @@ arrowOffset?: Length
 
 单位：vp
 
-**说明：**
+**说明：** 
 
 箭头距菜单四周的安全距离为菜单圆角大小与箭头宽度的一半之和。
 
@@ -179,7 +174,7 @@ availableLayoutArea?: AvailableLayoutArea
 
 设置预览图宽高的可布局区域，预览图的百分比依据此设置计算，最终可能因安全区限制而被压缩或裁剪。
 
-**说明：**
+**说明：** 
 
 未设置或设置为undefined时，百分比依据窗口大小计算。若设置为AvailableLayoutArea.SAFE_AREA，预览图的可布局区域为窗口大小减去上下左右的安全边距。
 
@@ -283,7 +278,7 @@ borderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses
 
 默认值：2in1设备上默认值8vp，其他设备上默认值20vp。
 
-**说明：**
+**说明：** 
 
 支持百分比。
 
@@ -315,7 +310,7 @@ colorMode?: AnchoredColorMode
 
 默认值：AnchoredColorMode.FOLLOW_TARGET
 
-**说明：**
+**说明：** 
 
 1. 仅当绑定组件使用了[WithTheme](../arkts-apis/arkts-arkui-withtheme-con.md)标签时，该属性才会生效。
 2. 该属性仅影响组件的默认样式，以及开发者设置的涉及深浅色资源的属性。
@@ -343,7 +338,7 @@ enableArrow?: boolean
 
 默认值：false，不显示箭头。
 
-**说明：**
+**说明：** 
 
 enableArrow为true时，placement未设置或者值为非法值，默认在目标物上方显示（此时菜单默认位置与接口的关系参见表3：enableArrow为true且placement未设置或者值为非法值的菜单默认位置），否则按照placement的位置优先显示。当前位置显示不下时，会自动调整位置，enableArrow为undefined时，不显示箭头。bindContextMenu从API version 10开始支持该属性；bindMenu从API version 12开始支持该属性。
 
@@ -369,7 +364,7 @@ enableHoverMode?: boolean
 
 默认值：false，2in1设备默认为true。未设置或者值为非法值时，生效默认值。
 
-**说明：**
+**说明：** 
 
 1. 如果菜单的弹出位置在悬停态折痕区域，菜单组件不会响应悬停态。
 2. 2in1设备从API version 20开始生效。
@@ -415,7 +410,7 @@ hapticFeedbackMode?: HapticFeedbackMode
 
 默认值：HapticFeedbackMode.DISABLED，菜单弹出时不振动。
 
-**说明：**
+**说明：** 
 
 只有一级菜单可配置弹出时振动效果。
 
@@ -443,7 +438,7 @@ keyboardAvoidMode?: MenuKeyboardAvoidMode
 
 设置菜单是否避让软键盘。
 
-**说明：**
+**说明：** 
 
 未设置或设置为undefined时，按照MenuKeyboardAvoidMode.NONE处理。
 
@@ -467,7 +462,7 @@ layoutRegionMargin?: Margin
 
 设置预览图与菜单布局时距上下左右边界的最小边距。
 
-**说明：**
+**说明：** 
 
 仅支持vp、px、fp、lpx、百分比。
 
@@ -507,7 +502,7 @@ true：有蒙层；false：没有蒙层；MenuMaskType：自定义蒙层的样�
 
 默认值：菜单有预览图时默认显示蒙层，否则不显示。
 
-**说明：**
+**说明：** 
 
 当设备配置不显示菜单蒙层时，该接口不生效。如当前在2in1设备上该接口不生效。
 
@@ -557,7 +552,7 @@ minKeyboardAvoidDistance?: LengthMetrics
 
 设置菜单避让软键盘的最小距离。
 
-**说明：**
+**说明：** 
 
 未设置、设置为负数或undefined时，按照8vp处理。仅在keyboardAvoidMode设置为避让软键盘时生效。
 
@@ -579,7 +574,7 @@ modalMode?: ModalMode
 
 设置菜单的模态模式。
 
-**说明：**
+**说明：** 
 
 默认值：ModalMode.AUTO
 
@@ -605,7 +600,7 @@ offset?: Position
 
 默认值：{ x: 0, y: 0 }，不支持设置百分比。
 
-**说明：**
+**说明：** 
 
 菜单类型为相对父组件区域弹出时，自动根据菜单位置属性 (placement)将区域的宽或高计入偏移量中。
 
@@ -617,7 +612,7 @@ offset最终取值与placement设置值的关系参见表1：同时设置offset�
 
 **类型：** Position
 
-**默认值：**
+**默认值：** 
 - API版本10：-
 - API版本11+：{x:0,y:0} - Percentage values are not supported.
 
@@ -637,7 +632,7 @@ onDidAppear?: Callback<void>
 
 菜单弹出后的事件回调。
 
-**说明：**
+**说明：** 
 
 1. 正常时序依次为：aboutToAppear&gt;&gt;onWillAppear&gt;&gt;onAppear&gt;&gt;onDidAppear&gt;&gt;aboutToDisappear&gt;&gt;onWillDisappear&gt;&gt;onDisappear&gt;&gt;onDidDisappear。
 2. 快速点击弹出，消失菜单时，存在onWillDisappear在onDidAppear前生效。
@@ -663,7 +658,7 @@ onDidDisappear?: Callback<void>
 
 菜单消失后的事件回调。
 
-**说明：**
+**说明：** 
 
 1. 正常时序依次为：aboutToAppear&gt;&gt;onWillAppear&gt;&gt;onAppear&gt;&gt;onDidAppear&gt;&gt;aboutToDisappear&gt;&gt;onWillDisappear&gt;&gt;onDisappear&gt;&gt;onDidDisappear。
 2. onDisappear和onDidDisappear触发时机相同，onDidDisappear在onDisappear后生效。
@@ -686,7 +681,7 @@ onWillAppear?: Callback<void>
 
 菜单显示动效前的事件回调。
 
-**说明：**
+**说明：** 
 
 1. 正常时序依次为：aboutToAppear&gt;&gt;onWillAppear&gt;&gt;onAppear&gt;&gt;onDidAppear&gt;&gt;aboutToDisappear&gt;&gt;onWillDisappear&gt;&gt;onDisappear&gt;&gt;onDidDisappear。
 2. aboutToAppear是初始化时触发调用，onWillAppear是在动画执行前触发调用，onWillAppear在aboutToAppear之后执行。
@@ -709,7 +704,7 @@ onWillDisappear?: Callback<void>
 
 菜单退出动效前的事件回调。
 
-**说明：**
+**说明：** 
 
 1. 正常时序依次为：aboutToAppear&gt;&gt;onWillAppear&gt;&gt;onAppear&gt;&gt;onDidAppear&gt;&gt;aboutToDisappear&gt;&gt;onWillDisappear&gt;&gt;onDisappear&gt;&gt;onDidDisappear。
 2. 快速点击弹出，消失菜单时，存在onWillDisappear在onDidAppear前生效。
@@ -733,7 +728,7 @@ outlineColor?: ResourceColor | EdgeColors
 
 设置菜单边框外描边颜色。
 
-**说明：**
+**说明：** 
 
 默认值：'#19ffffff'
 
@@ -759,7 +754,7 @@ outlineWidth?: Dimension | EdgeOutlineWidths
 
 默认值：0vp
 
-**说明：**
+**说明：** 
 
 不支持百分比，若需要外描边效果，outlineWidth为必填项。
 
@@ -783,7 +778,7 @@ placement?: Placement
 
 菜单组件优先显示的位置，当前位置显示不下时，会自动调整位置。
 
-**说明：**
+**说明：** 
 
 1. 作为[bindMenu](arkts-arkui-commonmethod-c.md#bindmenu)入参时，默认值为Placement.BottomLeft。
 2. 作为[bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu)或[bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse)入参时，默认效果为菜单跟随点击位置弹出。
@@ -792,7 +787,7 @@ placement?: Placement
 
 **类型：** [Placement](../arkts-apis/arkts-arkui-placement-e.md)
 
-**默认值：**
+**默认值：** 
 - API版本10：-
 - API版本11+：Placement.BottomLeft
 
@@ -814,7 +809,7 @@ preview?: MenuPreviewMode | CustomBuilder
 
 默认值：MenuPreviewMode.NONE，无预览内容。
 
-**说明：**
+**说明：** 
 
 - 不支持responseType为ResponseType.RightClick时触发，如果responseType为ResponseType.RightClick，则不会显示预览内容。  
 - 当未设置preview参数或preview参数设置为MenuPreviewMode.NONE时，enableArrow参数生效。  
@@ -842,13 +837,13 @@ previewAnimationOptions?: ContextMenuAnimationOptions
 
 默认值：{ scale: [0.95, 1.1], transition: undefined, hoverScale: undefined }。
 
-**说明：**
+**说明：** 
 
 倍率设置参数小于等于0时，不生效。
 
 **类型：** [ContextMenuAnimationOptions](arkts-arkui-contextmenuanimationoptions-i.md)
 
-**默认值：**
+**默认值：** 
 - API版本12+：{ scale: [0.95, 1.1], transition: undefined, hoverScale: undefined }
 
 **起始版本：** 11
@@ -869,7 +864,7 @@ previewBorderRadius?: BorderRadiusType
 
 默认值：16vp
 
-**说明：**
+**说明：** 
 
 当水平方向上两个圆角半径之和的最大值超过预览图的宽度，或者垂直方向上两个圆角半径之和的最大值超过预览图的高度时，应采用预览图所能允许的最大圆角半径值。
 
@@ -897,7 +892,7 @@ previewScaleMode?: PreviewScaleMode
 
 默认值：PreviewScaleMode.AUTO
 
-**说明：**
+**说明：** 
 
 布局空间不足时，控制预览图的缩放方式。未设置或设置undefined按照PreviewScaleMode.AUTO处理。当设置成PreviewScaleMode.CONSTANT时，如果预览图过大，剩余的空间不足以放置菜单时，菜单将重叠显示在预览图之下。
 
@@ -967,7 +962,7 @@ targetSpace?: LengthMetrics
 
 设置菜单与目标组件之间的间距。
 
-**说明：**
+**说明：** 
 
 - 同时使用targetSpace与offset时，两者会叠加生效。推荐使用targetSpace设置菜单与目标的间距，使用offset设置菜单弹出位置的偏移量。  
 - 二级菜单会避让targetSpace范围。  
@@ -994,7 +989,7 @@ transition?: TransitionEffect
 
 设置菜单显示和退出的过渡效果。
 
-**说明：**
+**说明：** 
 
 菜单退出动效过程中，进行横竖屏切换，菜单会避让。二级菜单不继承自定义动效。弹出过程可以点击二级菜单，退出动效执行过程不允许点击二级菜单。
 

@@ -30,6 +30,8 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 | Type | Description |
 | --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |  |
+
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -582,7 +584,7 @@ Adds all elements in a **HashMap** instance to this HashMap.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| map | [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)&lt;K, V&gt; | Yes | HashMap** instance whose elements are to be added to the current HashMap. |
+| map | [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)&lt;K, V&gt; | Yes | **HashMap** instance whose elements are to be added to the current HashMap. |
 
 **Error codes:**
 

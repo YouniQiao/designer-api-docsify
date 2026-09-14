@@ -2,7 +2,7 @@
 
 本模块提供Shell命令执行结果的能力。
 
-> **说明：**
+> **说明：** 
 > 
 > 本模块接口仅可在[单元测试框架](../../../application-test/unittest-guidelines.md)中使用。
 

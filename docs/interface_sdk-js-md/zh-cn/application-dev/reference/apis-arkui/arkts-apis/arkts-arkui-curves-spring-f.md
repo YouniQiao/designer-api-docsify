@@ -14,7 +14,7 @@ function spring(velocity: number, mass: number, stiffness: number, damping: numb
 
 构造弹簧曲线对象，曲线形状由弹簧参数决定，动画时长受animation、animateTo中的duration参数控制。与[interpolatingSpring](arkts-arkui-curves-interpolatingspring-f.md)相比，两者参数签名相同但行为不同：springCurve适用于需要固定动画时长的弹簧动画场景；interpolatingSpring适用于由弹簧参数自然决定动画时长的物理弹簧动画场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。
 

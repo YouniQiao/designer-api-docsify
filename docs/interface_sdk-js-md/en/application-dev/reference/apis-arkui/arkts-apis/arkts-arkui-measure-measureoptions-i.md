@@ -40,7 +40,7 @@ constraintWidth?: number | string | Resource
 
 Layout width of the measured text.
 
-**NOTE:**
+**NOTE:** 
 
 The default unit is vp. The value cannot be a percentage. If this parameter is not set, the value of **SizeOptions** is the maximum width allowed for the single-line text.
 
@@ -82,7 +82,7 @@ Font size of the text to be measured. When **fontSize** is of the number type, t
 
 Default value: **16**
 
-**NOTE:**
+**NOTE:** 
 
 The value cannot be a percentage.
 
@@ -300,7 +300,7 @@ Line break rule.
 
 Default value: **WordBreak.BREAK_WORD**
 
-**NOTE:**
+**NOTE:** 
 
 When used with **{overflow: TextOverflow.Ellipsis}** and **maxLines**, **WordBreak.BREAK_ALL** can insert line breaks between letters when overflow occurs and display excess content with an ellipsis (...).
 

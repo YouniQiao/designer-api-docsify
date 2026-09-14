@@ -25,10 +25,6 @@ Calls the function with the specified object as the this value and the elements 
 | thisArgument | T | Yes |  |
 | argumentsList | Readonly&lt;A&gt; | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 
 ## apply
 
@@ -43,8 +39,3 @@ function apply(target: Function, thisArgument: any, argumentsList: ArrayLike<any
 | target | Function | Yes |  |
 | thisArgument | any | Yes |  |
 | argumentsList | ArrayLike&lt;any&gt; | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

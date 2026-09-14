@@ -1,17 +1,12 @@
 # $r
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## $r
 
 ```TypeScript
 declare function $r(value: string, ...params: any[]): Resource
 ```
 
-global \$r function
+global &#36;r function
 
 **Since:** 11
 
@@ -32,3 +27,4 @@ global \$r function
 
 | Type | Description |
 | --- | --- |
+| [Resource](../arkts-apis/arkts-arkui-resource-t.md) |  |

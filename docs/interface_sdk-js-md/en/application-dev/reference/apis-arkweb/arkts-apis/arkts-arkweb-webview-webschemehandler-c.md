@@ -23,7 +23,7 @@ onRequestStart(
 
 Called when a request starts. In this callback, you can determine whether to intercept the request. If **false** is returned, the request is not intercepted and the handler is invalid. If **true** is returned, the request is intercepted.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Redirected URLs cannot be intercepted individually. To intercept a redirected URL, you must also intercept
 > the original request URL.

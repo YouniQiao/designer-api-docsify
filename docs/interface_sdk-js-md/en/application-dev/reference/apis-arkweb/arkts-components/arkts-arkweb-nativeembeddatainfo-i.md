@@ -8,11 +8,6 @@ Provides detailed information about the changes of the same-layer tag lifecycle,
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## embedId
 
 ```TypeScript

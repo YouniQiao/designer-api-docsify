@@ -30,7 +30,7 @@ Creates a **CertChainValidator** object.
 
 | Type | Description |
 | --- | --- |
-| [CertChainValidator](arkts-devicecertificate-cert-certchainvalidator-i.md) | CertChainValidator** object created. |
+| [CertChainValidator](arkts-devicecertificate-cert-certchainvalidator-i.md) | **CertChainValidator** object created. |
 
 **Error codes:**
 

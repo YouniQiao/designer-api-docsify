@@ -10,8 +10,3 @@
 ```TypeScript
 [Symbol.asyncIterator](): AsyncIterableIterator<T>
 ```
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

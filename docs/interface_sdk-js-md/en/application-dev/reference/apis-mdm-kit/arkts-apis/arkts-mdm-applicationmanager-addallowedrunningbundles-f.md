@@ -14,7 +14,7 @@ function addAllowedRunningBundles(admin: Want, appIdentifiers: Array<string>, ac
 
 Adds applications to the application running trustlist. Only applications in the trustlist are allowed to run under the specified user.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. Most APIs provided by MDM Kit are available only to MDM applications. When using this API, add the MDM
 > application to the application running trustlist. Otherwise, the MDM application will be prohibited from running,

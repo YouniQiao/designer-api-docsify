@@ -14,7 +14,7 @@ function setKeepAliveForBundle(bundleName: string, userId: number, enable: boole
 
 为指定用户下的应用设置或取消保活。使用Promise异步回调。从API version 18开始，该接口仅在2in1和Wearable设备上生效。对于API version 18之前版本，该接口仅在2in1设备上生效。其他情况下调用该接口将返回错误码801。
 
-> **说明：**
+> **说明：** 
 > 
 > - 应用如果需要支持保活，其[module.json5配置文件](../../../quick-start/module-configuration-file.md)中的mainElement必须是UIAbility。只有当
 > mainElement启动后，系统才会执行应用保活操作。

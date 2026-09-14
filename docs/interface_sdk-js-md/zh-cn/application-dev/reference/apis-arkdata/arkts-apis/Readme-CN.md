@@ -1,12 +1,12 @@
 # ArkTS API<!--arkts-arkdata-->
 
 <!--Del-->
-- [@ohos.application.DataShareExtensionAbility(数据共享扩展能力)](arkts-application-datashareextensionability.md)<!--DelEnd-->
+- [@ohos.application.DataShareExtensionAbility(数据共享扩展能力)](arkts-arkdata-application-datashareextensionability.md)<!--DelEnd-->
   <!--Del-->
   - [DataShareExtensionAbility(系统接口)](arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UpdateOperation(系统接口)](arkts-arkdata-updateoperation-t-sys.md)<!--DelEnd-->
-- [@ohos.data.cloudData(端云服务)](arkts-data-clouddata.md)
+- [@ohos.data.cloudData(端云服务)](arkts-arkdata-data-clouddata.md)
   - [cloudData](arkts-arkdata-clouddata-n.md)
     - [sharing](arkts-arkdata-clouddata-sharing-n.md)
       <!--Del-->
@@ -70,7 +70,7 @@
     - [SyncStatus(系统接口)](arkts-arkdata-clouddata-syncstatus-e-sys.md)<!--DelEnd-->
     <!--Del-->
     - [常量(系统接口)](arkts-arkdata-clouddata-con-sys.md)<!--DelEnd-->
-- [@ohos.data.cloudExtension(端云共享Extension)](arkts-data-cloudextension.md)
+- [@ohos.data.cloudExtension(端云共享Extension)](arkts-arkdata-data-cloudextension.md)
   <!--Del-->
   - [createAssetLoaderStub(系统接口)](arkts-arkdata-cloudextension-createassetloaderstub-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -125,17 +125,17 @@
   - [FieldType(系统接口)](arkts-arkdata-cloudextension-fieldtype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [Flag(系统接口)](arkts-arkdata-cloudextension-flag-e-sys.md)<!--DelEnd-->
-- [@ohos.data.commonType(数据通用类型)](arkts-data-commontype.md)
+- [@ohos.data.commonType(数据通用类型)](arkts-arkdata-data-commontype.md)
   - [Asset](arkts-arkdata-commontype-asset-i.md)
   - [Assets](arkts-arkdata-commontype-assets-t.md)
   - [ValuesBucket](arkts-arkdata-commontype-valuesbucket-t.md)
   - [ValueType](arkts-arkdata-commontype-valuetype-t.md)
   - [AssetStatus](arkts-arkdata-commontype-assetstatus-e.md)
-- [@ohos.data.dataAbility(DataAbility谓词)](arkts-data-dataability.md)
+- [@ohos.data.dataAbility(DataAbility谓词)](arkts-arkdata-data-dataability.md)
   - [createRdbPredicates](arkts-arkdata-dataability-createrdbpredicates-f.md)
   - [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md)
   - [ValueType](arkts-arkdata-dataability-valuetype-t.md)
-- [@ohos.data.dataShare(数据共享)](arkts-data-datashare.md)
+- [@ohos.data.dataShare(数据共享)](arkts-arkdata-data-datashare.md)
   - [createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md)
   <!--Del-->
   - [createDataShareHelper(系统接口)](arkts-arkdata-datashare-createdatasharehelper-f-sys.md)<!--DelEnd-->
@@ -175,17 +175,17 @@
   - [DataProxyType](arkts-arkdata-datashare-dataproxytype-e.md)
   <!--Del-->
   - [SubscriptionType(系统接口)](arkts-arkdata-datashare-subscriptiontype-e-sys.md)<!--DelEnd-->
-- [@ohos.data.dataSharePredicates(数据共享谓词)](arkts-data-datasharepredicates.md)
+- [@ohos.data.dataSharePredicates(数据共享谓词)](arkts-arkdata-data-datasharepredicates.md)
   - [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md)
   <!--Del-->
   - [DataSharePredicates(系统接口)](arkts-arkdata-datasharepredicates-datasharepredicates-c-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.data.DataShareResultSet(数据共享结果集)](arkts-data-datashareresultset.md)<!--DelEnd-->
+- [@ohos.data.DataShareResultSet(数据共享结果集)](arkts-arkdata-data-datashareresultset.md)<!--DelEnd-->
   <!--Del-->
   - [DataShareResultSet(系统接口)](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DataType(系统接口)](arkts-arkdata-data-datashareresultset-datatype-e-sys.md)<!--DelEnd-->
-- [@ohos.data.distributedData(分布式数据管理)](arkts-data-distributeddata.md)
+- [@ohos.data.distributedData(分布式数据管理)](arkts-arkdata-data-distributeddata.md)
   - [distributedData](arkts-arkdata-distributeddata-n.md)
     - [Constants](arkts-arkdata-distributeddata-constants-n.md)
       - [常量](arkts-arkdata-constants-con.md)
@@ -210,7 +210,7 @@
     - [SyncMode](arkts-arkdata-distributeddata-syncmode-e.md)
     - [UserType](arkts-arkdata-distributeddata-usertype-e.md)
     - [ValueType](arkts-arkdata-distributeddata-valuetype-e.md)
-- [@ohos.data.distributedDataObject(分布式数据对象)](arkts-data-distributeddataobject.md)
+- [@ohos.data.distributedDataObject(分布式数据对象)](arkts-arkdata-data-distributeddataobject.md)
   - [create](arkts-arkdata-distributeddataobject-create-f.md)
   - [createDistributedObject](arkts-arkdata-distributeddataobject-createdistributedobject-f.md)
   - [genSessionId](arkts-arkdata-distributeddataobject-gensessionid-f.md)
@@ -222,7 +222,7 @@
   - [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md)
   - [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md)
   - [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md)
-- [@ohos.data.distributedKVStore(分布式键值数据库)](arkts-data-distributedkvstore.md)
+- [@ohos.data.distributedKVStore(分布式键值数据库)](arkts-arkdata-data-distributedkvstore.md)
   - [createKVManager](arkts-arkdata-distributedkvstore-createkvmanager-f.md)
   - [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md)
   - [Query](arkts-arkdata-distributedkvstore-query-c.md)
@@ -247,7 +247,7 @@
   - [SubscribeType](arkts-arkdata-distributedkvstore-subscribetype-e.md)
   - [SyncMode](arkts-arkdata-distributedkvstore-syncmode-e.md)
   - [ValueType](arkts-arkdata-distributedkvstore-valuetype-e.md)
-- [@ohos.data.intelligence(智慧数据平台)](arkts-data-intelligence.md)
+- [@ohos.data.intelligence(智慧数据平台)](arkts-arkdata-data-intelligence.md)
   - [getImageEmbeddingModel](arkts-arkdata-intelligence-getimageembeddingmodel-f.md)
   - [getSupportedCloudModel](arkts-arkdata-intelligence-getsupportedcloudmodel-f.md)
   - [getTextEmbeddingModel](arkts-arkdata-intelligence-gettextembeddingmodel-f.md)
@@ -260,7 +260,7 @@
   - [Image](arkts-arkdata-intelligence-image-t.md)
   - [ModelVersion](arkts-arkdata-intelligence-modelversion-e.md)
   - [NetworkPolicy](arkts-arkdata-intelligence-networkpolicy-e.md)
-- [@ohos.data.preferences(用户首选项)](arkts-data-preferences.md)
+- [@ohos.data.preferences(用户首选项)](arkts-arkdata-data-preferences.md)
   - [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md)
   - [getPreferences](arkts-arkdata-preferences-getpreferences-f.md)
   - [getPreferencesSync](arkts-arkdata-preferences-getpreferencessync-f.md)
@@ -272,7 +272,7 @@
   - [ValueType](arkts-arkdata-preferences-valuetype-t.md)
   - [StorageType](arkts-arkdata-preferences-storagetype-e.md)
   - [常量](arkts-arkdata-preferences-con.md)
-- [@ohos.data.rdb(关系型数据库)](arkts-data-rdb.md)
+- [@ohos.data.rdb(关系型数据库)](arkts-arkdata-data-rdb.md)
   - [deleteRdbStore](arkts-arkdata-rdb-deleterdbstore-f.md)
   - [getRdbStore](arkts-arkdata-rdb-getrdbstore-f.md)
   - [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md)
@@ -283,7 +283,7 @@
   - [ValueType](arkts-arkdata-rdb-valuetype-t.md)
   - [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md)
   - [SyncMode](arkts-arkdata-rdb-syncmode-e.md)
-- [@ohos.data.relationalStore(关系型数据库)](arkts-data-relationalstore.md)
+- [@ohos.data.relationalStore(关系型数据库)](arkts-arkdata-data-relationalstore.md)
   - [deleteRdbStore](arkts-arkdata-relationalstore-deleterdbstore-f.md)
   - [getDeleteSqlInfo](arkts-arkdata-relationalstore-getdeletesqlinfo-f.md)
   - [getInsertSqlInfo](arkts-arkdata-relationalstore-getinsertsqlinfo-f.md)
@@ -365,7 +365,7 @@
   - [SyncResultCode](arkts-arkdata-relationalstore-syncresultcode-e.md)
   - [Tokenizer](arkts-arkdata-relationalstore-tokenizer-e.md)
   - [TransactionType](arkts-arkdata-relationalstore-transactiontype-e.md)
-- [@ohos.data.sendablePreferences(共享用户首选项)](arkts-data-sendablepreferences.md)
+- [@ohos.data.sendablePreferences(共享用户首选项)](arkts-arkdata-data-sendablepreferences.md)
   - [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md)
   - [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md)
   - [getPreferencesSync](arkts-arkdata-sendablepreferences-getpreferencessync-f.md)
@@ -374,7 +374,7 @@
   - [Options](arkts-arkdata-sendablepreferences-options-i.md)
   - [Preferences](arkts-arkdata-sendablepreferences-preferences-i.md)
   - [常量](arkts-arkdata-sendablepreferences-con.md)
-- [@ohos.data.sendableRelationalStore](arkts-data-sendablerelationalstore.md)
+- [@ohos.data.sendableRelationalStore](arkts-arkdata-data-sendablerelationalstore.md)
   - [fromSendableAsset](arkts-arkdata-sendablerelationalstore-fromsendableasset-f.md)
   - [fromSendableValues](arkts-arkdata-sendablerelationalstore-fromsendablevalues-f.md)
   - [fromSendableValuesBucket](arkts-arkdata-sendablerelationalstore-fromsendablevaluesbucket-f.md)
@@ -388,7 +388,7 @@
   - [NonSendableValues](arkts-arkdata-sendablerelationalstore-nonsendablevalues-t.md)
   - [ValuesBucket](arkts-arkdata-sendablerelationalstore-valuesbucket-t.md)
   - [ValueType](arkts-arkdata-sendablerelationalstore-valuetype-t.md)
-- [@ohos.data.storage(轻量级存储)](arkts-data-storage.md)
+- [@ohos.data.storage(轻量级存储)](arkts-arkdata-data-storage.md)
   - [deleteStorage](arkts-arkdata-storage-deletestorage-f.md)
   - [deleteStorageSync](arkts-arkdata-storage-deletestoragesync-f.md)
   - [getStorage](arkts-arkdata-storage-getstorage-f.md)
@@ -399,10 +399,10 @@
   - [StorageObserver](arkts-arkdata-storage-storageobserver-i.md)
   - [ValueType](arkts-arkdata-storage-valuetype-t.md)
   - [常量](arkts-arkdata-storage-con.md)
-- [@ohos.data.UdmfComponents(内容卡片)](arkts-data-udmfcomponents.md)
+- [@ohos.data.UdmfComponents(内容卡片)](arkts-arkdata-data-udmfcomponents.md)
   - [ContentFormCard](arkts-arkdata-data-udmfcomponents-contentformcard-s.md)
   - [FormType](arkts-arkdata-data-udmfcomponents-formtype-e.md)
-- [@ohos.data.unifiedDataChannel(标准化数据通路)](arkts-data-unifieddatachannel.md)
+- [@ohos.data.unifiedDataChannel(标准化数据通路)](arkts-arkdata-data-unifieddatachannel.md)
   - [convertRecordsToEntries](arkts-arkdata-unifieddatachannel-convertrecordstoentries-f.md)
   - [deleteData](arkts-arkdata-unifieddatachannel-deletedata-f.md)
   - [insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md)
@@ -445,7 +445,7 @@
   - [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md)
   - [UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)
   - [Visibility](arkts-arkdata-unifieddatachannel-visibility-e.md)
-- [@ohos.data.uniformDataStruct(标准化数据结构)](arkts-data-uniformdatastruct.md)
+- [@ohos.data.uniformDataStruct(标准化数据结构)](arkts-arkdata-data-uniformdatastruct.md)
   - [ContentForm](arkts-arkdata-uniformdatastruct-contentform-i.md)
   - [FileUri](arkts-arkdata-uniformdatastruct-fileuri-i.md)
   - [Form](arkts-arkdata-uniformdatastruct-form-i.md)
@@ -454,7 +454,7 @@
   - [OpenHarmonyAppItem](arkts-arkdata-uniformdatastruct-openharmonyappitem-i.md)
   - [PixelMap](arkts-arkdata-uniformdatastruct-pixelmap-i.md)
   - [PlainText](arkts-arkdata-uniformdatastruct-plaintext-i.md)
-- [@ohos.data.uniformTypeDescriptor(标准化数据定义与描述)](arkts-data-uniformtypedescriptor.md)
+- [@ohos.data.uniformTypeDescriptor(标准化数据定义与描述)](arkts-arkdata-data-uniformtypedescriptor.md)
   - [getTypeDescriptor](arkts-arkdata-uniformtypedescriptor-gettypedescriptor-f.md)
   - [getUniformDataTypeByFilenameExtension](arkts-arkdata-uniformtypedescriptor-getuniformdatatypebyfilenameextension-f.md)
   - [getUniformDataTypeByMIMEType](arkts-arkdata-uniformtypedescriptor-getuniformdatatypebymimetype-f.md)
@@ -466,15 +466,15 @@
   - [unregisterTypeDescriptors(系统接口)](arkts-arkdata-uniformtypedescriptor-unregistertypedescriptors-f-sys.md)<!--DelEnd-->
   - [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md)
   - [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)
-- [@ohos.data.ValuesBucket(数据集)](arkts-data-valuesbucket.md)
+- [@ohos.data.ValuesBucket(数据集)](arkts-arkdata-data-valuesbucket.md)
   - [ValuesBucket](arkts-arkdata-valuesbucket-t.md)
   - [ValueType](arkts-arkdata-valuetype-t.md)
-- [@system.storage(数据存储)](arkts-system-storage.md)
+- [@system.storage(数据存储)](arkts-arkdata-system-storage.md)
   - [Storage](arkts-arkdata-system-storage-storage-c.md)
   - [ClearStorageOptions](arkts-arkdata-system-storage-clearstorageoptions-i.md)
   - [DeleteStorageOptions](arkts-arkdata-system-storage-deletestorageoptions-i.md)
   - [GetStorageOptions](arkts-arkdata-system-storage-getstorageoptions-i.md)
   - [SetStorageOptions](arkts-arkdata-system-storage-setstorageoptions-i.md)
 - data<!--arkts-arkdata-data-->
-  - [resultSet(The result set of database queries.)](arkts-resultset.md)
+  - [resultSet(The result set of database queries.)](arkts-arkdata-resultset.md)
     - [ResultSet](arkts-arkdata-resultset-resultset-depr-i.md)

@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## direction
 
 ```TypeScript
@@ -23,7 +18,7 @@ direction?: Axis
 
 **类型：** [Axis](../arkts-apis/arkts-arkui-axis-e.md)
 
-**默认值：**
+**默认值：** 
 - API版本11+：Axis.Horizontal
 
 **起始版本：** 8
@@ -44,7 +39,7 @@ max?: number
 
 默认值：100
 
-**说明：**
+**说明：** 
 
 min &gt;= max异常情况，min取默认值0，max取默认值100。
 
@@ -52,7 +47,7 @@ value不在[min, max]范围之内，取min或者max，靠近min取min，靠近ma
 
 **类型：** number
 
-**默认值：**
+**默认值：** 
 - API版本11+：100
 
 **起始版本：** 7
@@ -75,7 +70,7 @@ min?: number
 
 **类型：** number
 
-**默认值：**
+**默认值：** 
 - API版本11+：0
 
 **起始版本：** 7
@@ -100,7 +95,7 @@ true：横向Slider从右往左滑动，竖向Slider从下往上滑动；false�
 
 **类型：** boolean
 
-**默认值：**
+**默认值：** 
 - API版本11+：false
 
 **起始版本：** 8
@@ -123,13 +118,13 @@ step?: number
 
 取值范围：[0.01, max - min]
 
-**说明：**
+**说明：** 
 
 若设置的step值小于0或大于max值，则按默认值显示。
 
 **类型：** number
 
-**默认值：**
+**默认值：** 
 - API版本11+：1 - Value range: [0.01, max - min]
 
 **起始版本：** 7
@@ -152,7 +147,7 @@ style?: SliderStyle
 
 **类型：** [SliderStyle](arkts-arkui-sliderstyle-e.md)
 
-**默认值：**
+**默认值：** 
 - API版本11+：SliderStyle.OutSet
 
 **起始版本：** 7
@@ -173,7 +168,7 @@ value?: number
 
 默认值：与属性min的取值一致。
 
-从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+从API version 10开始，该属性支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
@@ -181,11 +176,11 @@ value?: number
 
 小于min时取min，大于max时取max。
 
-\$\$运算符为系统组件提供TS变量的引用，使得TS变量和slider组件的value值保持同步。详细使用示例请参考示例7（设置滑动条的双向绑定）。
+&#36;&#36;运算符为系统组件提供TS变量的引用，使得TS变量和slider组件的value值保持同步。详细使用示例请参考示例7（设置滑动条的双向绑定）。
 
 **类型：** number
 
-**默认值：**
+**默认值：** 
 - API版本11+：same as the value of min
 
 **起始版本：** 7

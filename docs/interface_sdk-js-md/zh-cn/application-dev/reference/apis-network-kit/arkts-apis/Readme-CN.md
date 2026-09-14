@@ -1,8 +1,8 @@
 # ArkTS API<!--arkts-networkkit-->
 
-- [@ohos.app.ability.VpnExtensionAbility](arkts-app-ability-vpnextensionability.md)
+- [@ohos.app.ability.VpnExtensionAbility](arkts-network-app-ability-vpnextensionability.md)
   - [VpnExtensionAbility](arkts-network-app-ability-vpnextensionability-vpnextensionability-c.md)
-- [@ohos.net.connection(网络连接管理)](arkts-net-connection.md)
+- [@ohos.net.connection(网络连接管理)](arkts-network-net-connection.md)
   - [addCustomDnsRule](arkts-network-connection-addcustomdnsrule-f.md)
   <!--Del-->
   - [addVlanIp(系统接口)](arkts-network-connection-addvlanip-f-sys.md)<!--DelEnd-->
@@ -104,7 +104,7 @@
   - [ProxyMode(系统接口)](arkts-network-connection-proxymode-e-sys.md)<!--DelEnd-->
   - [Socks5DnsStrategy](arkts-network-connection-socks5dnsstrategy-e.md)
   - [TcpState](arkts-network-connection-tcpstate-e.md)
-- [@ohos.net.eap(扩展认证)](arkts-net-eap.md)
+- [@ohos.net.eap(扩展认证)](arkts-network-net-eap.md)
   - [logOffEthEap](arkts-network-eap-logoffetheap-f.md)
   - [regCustomEapHandler](arkts-network-eap-regcustomeaphandler-f.md)
   - [replyCustomEapData](arkts-network-eap-replycustomeapdata-f.md)
@@ -115,7 +115,7 @@
   - [CustomResult](arkts-network-eap-customresult-e.md)
   - [EapMethod](arkts-network-eap-eapmethod-e.md)
   - [Phase2Method](arkts-network-eap-phase2method-e.md)
-- [@ohos.net.ethernet(以太网连接管理)](arkts-net-ethernet.md)
+- [@ohos.net.ethernet(以太网连接管理)](arkts-network-net-ethernet.md)
   <!--Del-->
   - [disableEthernetInterface(系统接口)](arkts-network-ethernet-disableethernetinterface-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -149,7 +149,7 @@
   - [DeviceConnectionType(系统接口)](arkts-network-ethernet-deviceconnectiontype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [IPSetMode(系统接口)](arkts-network-ethernet-ipsetmode-e-sys.md)<!--DelEnd-->
-- [@ohos.net.http(数据请求)](arkts-net-http.md)
+- [@ohos.net.http(数据请求)](arkts-network-net-http.md)
   - [createHttp](arkts-network-http-createhttp-f.md)
   - [createHttpResponseCache](arkts-network-http-createhttpresponsecache-f.md)
   - [HttpInterceptorChain](arkts-network-http-httpinterceptorchain-c.md)
@@ -198,7 +198,7 @@
   - [RequestMethod](arkts-network-http-requestmethod-e.md)
   - [ResponseCode](arkts-network-http-responsecode-e.md)
   - [TlsVersion](arkts-network-http-tlsversion-e.md)
-- [@ohos.net.mdns(MDNS管理)](arkts-net-mdns.md)
+- [@ohos.net.mdns(MDNS管理)](arkts-network-net-mdns.md)
   - [addLocalService](arkts-network-mdns-addlocalservice-f.md)
   - [createDiscoveryService](arkts-network-mdns-creatediscoveryservice-f.md)
   - [removeLocalService](arkts-network-mdns-removelocalservice-f.md)
@@ -209,7 +209,7 @@
   - [ServiceAttribute](arkts-network-mdns-serviceattribute-i.md)
   - [NetAddress](arkts-network-mdns-netaddress-t.md)
   - [MdnsError](arkts-network-mdns-mdnserror-e.md)
-- [@ohos.net.netFirewall(网络防火墙)](arkts-net-netfirewall.md)
+- [@ohos.net.netFirewall(网络防火墙)](arkts-network-net-netfirewall.md)
   - [addNetFirewallRule](arkts-network-netfirewall-addnetfirewallrule-f.md)
   <!--Del-->
   - [getInterceptedRecords(系统接口)](arkts-network-netfirewall-getinterceptedrecords-f-sys.md)<!--DelEnd-->
@@ -236,7 +236,7 @@
   - [NetFirewallOrderType](arkts-network-netfirewall-netfirewallordertype-e.md)
   - [NetFirewallRuleDirection](arkts-network-netfirewall-netfirewallruledirection-e.md)
   - [NetFirewallRuleType](arkts-network-netfirewall-netfirewallruletype-e.md)
-- [@ohos.net.networkSecurity(网络安全校验)](arkts-net-networksecurity.md)
+- [@ohos.net.networkSecurity(网络安全校验)](arkts-network-net-networksecurity.md)
   - [certVerification](arkts-network-networksecurity-certverification-f.md)
   - [certVerificationSync](arkts-network-networksecurity-certverificationsync-f.md)
   - [isCleartextPermitted](arkts-network-networksecurity-iscleartextpermitted-f.md)
@@ -244,7 +244,7 @@
   - [verifyCertChain](arkts-network-networksecurity-verifycertchain-f.md)
   - [CertBlob](arkts-network-networksecurity-certblob-i.md)
   - [CertType](arkts-network-networksecurity-certtype-e.md)
-- [@ohos.net.policy(网络策略管理)](arkts-net-policy.md)
+- [@ohos.net.policy(网络策略管理)](arkts-network-net-policy.md)
   <!--Del-->
   - [getBackgroundPolicyByUid(系统接口)](arkts-network-policy-getbackgroundpolicybyuid-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -313,7 +313,7 @@
   - [NetUidRule(系统接口)](arkts-network-policy-netuidrule-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [RemindType(系统接口)](arkts-network-policy-remindtype-e-sys.md)<!--DelEnd-->
-- [@ohos.net.sharing(网络共享管理)](arkts-net-sharing.md)
+- [@ohos.net.sharing(网络共享管理)](arkts-network-net-sharing.md)
   <!--Del-->
   - [getSharableRegexes(系统接口)](arkts-network-sharing-getsharableregexes-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -345,7 +345,7 @@
   - [SharingIfaceState(系统接口)](arkts-network-sharing-sharingifacestate-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SharingIfaceType(系统接口)](arkts-network-sharing-sharingifacetype-e-sys.md)<!--DelEnd-->
-- [@ohos.net.socket(Socket连接)](arkts-net-socket.md)
+- [@ohos.net.socket(Socket连接)](arkts-network-net-socket.md)
   - [constructLocalSocketInstance](arkts-network-socket-constructlocalsocketinstance-f.md)
   - [constructLocalSocketServerInstance](arkts-network-socket-constructlocalsocketserverinstance-f.md)
   - [constructMulticastSocketInstance](arkts-network-socket-constructmulticastsocketinstance-f.md)
@@ -384,7 +384,8 @@
   - [X509CertRawData](arkts-network-socket-x509certrawdata-t.md)
   - [Protocol](arkts-network-socket-protocol-e.md)
   - [ProxyTypes](arkts-network-socket-proxytypes-e.md)
-- [@ohos.net.statistics(流量管理)](arkts-net-statistics.md)
+  - [属性](arkts-network-socket-p.md)
+- [@ohos.net.statistics(流量管理)](arkts-network-net-statistics.md)
   - [getAllRxBytes](arkts-network-statistics-getallrxbytes-f.md)
   - [getAllTxBytes](arkts-network-statistics-getalltxbytes-f.md)
   - [getCellularRxBytes](arkts-network-statistics-getcellularrxbytes-f.md)
@@ -433,7 +434,7 @@
   - [UidNetStatsInfo(系统接口)](arkts-network-statistics-uidnetstatsinfo-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [TrafficPlanParam(系统接口)](arkts-network-statistics-trafficplanparam-e-sys.md)<!--DelEnd-->
-- [@ohos.net.vpn(VPN管理)](arkts-net-vpn.md)
+- [@ohos.net.vpn(VPN管理)](arkts-network-net-vpn.md)
   <!--Del-->
   - [addSysVpnConfig(系统接口)](arkts-network-vpn-addsysvpnconfig-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -469,7 +470,7 @@
   - [RouteInfo](arkts-network-vpn-routeinfo-t.md)
   <!--Del-->
   - [SysVpnType(系统接口)](arkts-network-vpn-sysvpntype-e-sys.md)<!--DelEnd-->
-- [@ohos.net.vpnExtension(VPN增强管理)](arkts-net-vpnextension.md)
+- [@ohos.net.vpnExtension(VPN增强管理)](arkts-network-net-vpnextension.md)
   - [createVpnConnection](arkts-network-vpnextension-createvpnconnection-f.md)
   - [createVpnObserver](arkts-network-vpnextension-createvpnobserver-f.md)
   <!--Del-->
@@ -486,7 +487,7 @@
   - [LinkAddress](arkts-network-vpnextension-linkaddress-t.md)
   - [RouteInfo](arkts-network-vpnextension-routeinfo-t.md)
   - [VpnExtensionContext](arkts-network-vpnextension-vpnextensioncontext-t.md)
-- [@ohos.net.webSocket(WebSocket连接)](arkts-net-websocket.md)
+- [@ohos.net.webSocket(WebSocket连接)](arkts-network-net-websocket.md)
   - [createWebSocket](arkts-network-websocket-createwebsocket-f.md)
   - [createWebSocketServer](arkts-network-websocket-createwebsocketserver-f.md)
   - [ClientCert](arkts-network-websocket-clientcert-i.md)
@@ -505,12 +506,12 @@
   - [ProxyConfiguration](arkts-network-websocket-proxyconfiguration-t.md)
   - [ResponseHeaders](arkts-network-websocket-responseheaders-t.md)
   - [TlsProtocol](arkts-network-websocket-tlsprotocol-e.md)
-- [@system.fetch](arkts-system-fetch.md)
+- [@system.fetch](arkts-network-system-fetch.md)
   - [Fetch](arkts-network-system-fetch-fetch-depr-c.md)
   - [FetchResponse](arkts-network-system-fetch-fetchresponse-depr-i.md)
-- [@system.network](arkts-system-network.md)
+- [@system.network](arkts-network-system-network.md)
   - [Network](arkts-network-system-network-network-depr-c.md)
   - [NetworkResponse](arkts-network-system-network-networkresponse-depr-i.md)
 - application<!--arkts-networkkit-application-->
-  - [VpnExtensionContext](arkts-vpnextensioncontext.md)
+  - [VpnExtensionContext](arkts-network-vpnextensioncontext.md)
     - [VpnExtensionContext](arkts-network-vpnextensioncontext-c.md)

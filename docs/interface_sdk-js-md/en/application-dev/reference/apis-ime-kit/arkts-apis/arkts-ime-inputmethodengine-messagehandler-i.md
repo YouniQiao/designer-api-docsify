@@ -1,7 +1,7 @@
 # MessageHandler
 
 Represents a custom communication object. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > You can register this object to receive custom communication data sent by the edit box application attached to the input method application. When the custom communication data is received, the [onMessage](#onmessage) callback in this object is triggered. <br>
 > <br>
@@ -26,7 +26,7 @@ onMessage(msgId: string, msgParam?: ArrayBuffer): void
 ```
 
 Receives the custom data callback sent by the edit box application attached to the input method application. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > This callback is triggered when the registered [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) receives custom communication data sent by the edit box application attached to the input method application. <br>
 > <br>
@@ -70,7 +70,7 @@ onTerminated(): void
 ```
 
 Listens for MessageHandler termination. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > When an application registers a new [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object, the [onTerminated](#onterminated) callback of the penultimate registered [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object is triggered. <br>
 > <br>

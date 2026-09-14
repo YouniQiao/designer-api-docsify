@@ -6,11 +6,6 @@ Provides basic parameters for creating a badge.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## position
 
 ```TypeScript
@@ -21,7 +16,7 @@ Position to display the badge relative to the parent component.
 
 Default value: **BadgePosition.RightTop**
 
-**NOTE:**
+**NOTE:** 
 
 With the **Position** type, percentage values are not supported. If an invalid value is set, the default value **(0,0)**, which indicates the upper left corner of the component, will be used.
 

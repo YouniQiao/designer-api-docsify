@@ -6,11 +6,6 @@ Defines a tab controller, which is used to control switching of tabs. One **Tabs
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## changeIndex
 
 ```TypeScript
@@ -29,7 +24,7 @@ Switches to the specified tab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Index of the tab. The value starts from 0.<br>**NOTE:**<br>If this parameter is set to a value less than 0 or greater than the maximum number, the default value **0** is used. |
+| value | number | Yes | Index of the tab. The value starts from 0.<br>**NOTE:** <br>If this parameter is set to a value less than 0 or greater than the maximum number, the default value **0** is used. |
 
 ## constructor
 
@@ -75,7 +70,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 Preloads child nodes. After this API is called, all specified child nodes will be loaded at once. Therefore, for performance considerations, it is recommended that you load child nodes in batches.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - **preloadItems** of **Tabs** needs to be called after **Tabs** is created. You are advised to control the first
 > preloading in the onAppear lifecycle of **Tabs**.
@@ -122,7 +117,7 @@ setTabBarOpacity(opacity: number): void
 
 Sets the opacity of the tab bar.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When a **Tabs** component is bound to a scrollable container using APIs like
 > [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable)
@@ -153,7 +148,7 @@ setTabBarTranslate(translate: TranslateOptions): void
 
 Sets the translation distance of the tab bar.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When a **Tabs** component is bound to a scrollable container using APIs like
 > [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable)

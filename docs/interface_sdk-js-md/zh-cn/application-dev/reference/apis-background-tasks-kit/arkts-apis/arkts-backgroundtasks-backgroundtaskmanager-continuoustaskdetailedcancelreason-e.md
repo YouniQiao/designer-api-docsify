@@ -162,6 +162,20 @@ SYSTEM_CANCEL_USER_UNAUTHORIZED = 14
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
+## SYSTEM_CANCEL_NOT_USE_NEARLINK
+
+```TypeScript
+SYSTEM_CANCEL_NOT_USE_NEARLINK = 15
+```
+
+申请NEARLINK类型长时任务，但是未使用星闪相关业务。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+
 ## SYSTEM_CANCEL_NOT_USE_USB
 
 ```TypeScript

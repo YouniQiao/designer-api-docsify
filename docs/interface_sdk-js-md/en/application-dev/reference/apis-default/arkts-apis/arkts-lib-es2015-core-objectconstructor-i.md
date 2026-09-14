@@ -20,10 +20,6 @@ Copy the values of all of the enumerable own properties from one or more source 
 | target | T | Yes |  |
 | source | U | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## assign
 
 ```TypeScript
@@ -40,10 +36,6 @@ Copy the values of all of the enumerable own properties from one or more source 
 | source1 | U | Yes |  |
 | source2 | V | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## assign
 
 ```TypeScript
@@ -61,10 +53,6 @@ Copy the values of all of the enumerable own properties from one or more source 
 | source2 | V | Yes |  |
 | source3 | W | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## assign
 
 ```TypeScript
@@ -80,10 +68,6 @@ Copy the values of all of the enumerable own properties from one or more source 
 | target | object | Yes |  |
 | sources | any[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## getOwnPropertySymbols
 
 ```TypeScript
@@ -98,10 +82,6 @@ Returns an array of all symbol properties found directly on object o.
 | --- | --- | --- | --- |
 | o | any | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## is
 
 ```TypeScript
@@ -117,10 +97,6 @@ Returns true if the values are the same value, false otherwise.
 | value1 | any | Yes |  |
 | value2 | any | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## keys
 
 ```TypeScript
@@ -135,10 +111,6 @@ Returns the names of the enumerable string properties and methods of an object.
 | --- | --- | --- | --- |
 | o | {} | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## setPrototypeOf
 
 ```TypeScript
@@ -153,8 +125,3 @@ Sets the prototype of a specified object o to object proto or null. Returns the 
 | --- | --- | --- | --- |
 | o | any | Yes |  |
 | proto | object &#124; null | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

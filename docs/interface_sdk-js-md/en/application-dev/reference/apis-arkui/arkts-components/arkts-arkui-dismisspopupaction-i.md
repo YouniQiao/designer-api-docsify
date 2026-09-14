@@ -6,11 +6,6 @@ Provides information about the dismissal of the popup.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## dismiss
 
 ```TypeScript

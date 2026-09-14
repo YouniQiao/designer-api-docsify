@@ -1,7 +1,7 @@
 # RgbaColor
 
 定义壁纸颜色信息结构。<br>   
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 7开始支持，从API version 9开始废弃。
 

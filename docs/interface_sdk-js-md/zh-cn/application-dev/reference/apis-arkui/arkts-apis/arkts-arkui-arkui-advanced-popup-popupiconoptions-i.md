@@ -20,7 +20,7 @@ borderRadius?: Length | BorderRadiuses
 
 设置图标圆角。单位：vp。
 
-默认值：`\$r('sys.float.ohos_id_corner_radius_default_s')`
+默认值：`&#36;r('sys.float.ohos_id_corner_radius_default_s')`
 
 **类型：** [Length](arkts-arkui-length-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 

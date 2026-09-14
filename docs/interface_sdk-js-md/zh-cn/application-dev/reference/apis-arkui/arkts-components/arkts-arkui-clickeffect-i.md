@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## level
 
 ```TypeScript
@@ -21,7 +16,7 @@ level: ClickEffectLevel
 
 默认值：ClickEffectLevel.LIGHT
 
-**说明：**
+**说明：** 
 
 当level为undefined或者null时， ClickEffect采用ClickEffectLevel.LIGHT对应的回弹效果，缩放比的具体默认值请参见下方scale属性说明。
 
@@ -45,7 +40,7 @@ scale?: number
 
 回弹缩放比例，取值范围(0, 1]，支持在设置ClickEffectLevel的基础上微调。超出取值范围时，使用当前level对应的默认缩放比例。
 
-**说明：**
+**说明：** 
 
 当level为ClickEffectLevel.LIGHT时，默认值：0.90
 

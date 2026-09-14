@@ -8,11 +8,6 @@ Provides detailed information about the web page that has been submitted for red
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## didReplaceEntry
 
 ```TypeScript

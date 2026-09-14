@@ -8,11 +8,6 @@ Provides detailed information about finger touch on a same-layer tag, including 
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## embedId
 
 ```TypeScript

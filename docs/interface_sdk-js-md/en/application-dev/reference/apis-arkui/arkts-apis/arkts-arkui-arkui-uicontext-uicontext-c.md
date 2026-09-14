@@ -2,7 +2,7 @@
 
 Implements a **UIContext** instance.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
 > 
@@ -56,7 +56,7 @@ InputEventSubTypeMask.LEFT_MOUSE_DOWN,
 (wrapper: RawInputEventWrapper) =&gt; {
 if (wrapper.isMouseEvent()) {
 const mouseEvent = wrapper.asMouseEvent();
-console.log(`Mouse: (\${mouseEvent.windowX}, \${mouseEvent.windowY})`);
+console.log(`Mouse: (&#36;{mouseEvent.windowX}, &#36;{mouseEvent.windowY})`);
 return { action: InputEventInterceptAction.CONTINUE }; // Allow event to continue
 }
 return { action: InputEventInterceptAction.BLOCK }; // Block event
@@ -68,7 +68,7 @@ InputEventSubTypeMask.LEFT_MOUSE_DOWN | InputEventSubTypeMask.RIGHT_MOUSE_DOWN,
 (wrapper: RawInputEventWrapper) =&gt; {
 if (wrapper.isMouseEvent()) {
 const mouseEvent = wrapper.asMouseEvent()!;
-console.log(`Mouse button: \${mouseEvent.button}`);
+console.log(`Mouse button: &#36;{mouseEvent.button}`);
 return { action: InputEventInterceptAction.BLOCK };
 }
 return { action: InputEventInterceptAction.CONTINUE };
@@ -108,7 +108,7 @@ animateTo(value: AnimateParam, event: () => void): void
 
 Adds transition animations for state changes in closure code.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Avoid using **animateTo** in **aboutToAppear** or **aboutToDisappear**.
 > 
@@ -122,7 +122,7 @@ Adds transition animations for state changes in closure code.
 > the component is being destroyed, so animations should not be used.
 > 
 > - When a component appears or disappears, animation effects can be added through
-> [component transition](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md).
+> [component transition](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-common.md).
 > 
 > - For properties that component transitions do not support, refer to
 > [Example 2: Enabling Component Disappearance After Animation Completion](../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#example-2-enabling-component-disappearance-after-animation-completion),
@@ -235,7 +235,7 @@ closeBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>): Promise
 
 Closes the sheet corresponding to **bindSheetContent**. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Closing a sheet using this API will not invoke the **shouldDismiss** callback.
 
@@ -275,7 +275,7 @@ constructor()
 
 Construct a **UIContext** object.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > A **UIContext** object created using the constructor points to an ambiguous UI context, meaning it is not bound
 > to any specific UI instance. The unique ID of such a UIContext instance is -1.
@@ -364,7 +364,7 @@ static createUIContextWithoutWindow(context: common.UIAbilityContext | common.Ex
 
 Creates a UI instance that does not depend on a window and returns its UI context. The created UI instance is a singleton.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The returned UI context can only be used to create [custom nodes](../../../ui/arkts-user-defined-node.md). It
 > cannot be used for other UI operations.
@@ -510,6 +510,8 @@ Converts a value in fp units to a value in px.
 
 | Type | Description |
 | --- | --- |
+| number |  |
+
 ## getAllUIContexts
 
 ```TypeScript
@@ -590,7 +592,7 @@ static getCallingScopeUIContext(): UIContext | undefined
 
 Obtains the UIContext of this [calling scope](../../../ui/arkts-global-interface.md#basic-concepts). This API returns **undefined** if the calling scope is ambiguous.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The returned UIContext object may point to a destroyed UI instance, which usually occurs when an asynchronous
 > task is dispatched from an instance that has already been destroyed. As such, you are advised to verify its
@@ -854,7 +856,7 @@ Obtains a **Font** object.
 
 | Type | Description |
 | --- | --- |
-| [Font](arkts-arkui-arkui-uicontext-font-c.md) | Font** object. |
+| [Font](arkts-arkui-arkui-uicontext-font-c.md) | **Font** object. |
 
 ## getFrameNodeById
 
@@ -1047,7 +1049,7 @@ Obtains a [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md) object, which 
 
 | Type | Description |
 | --- | --- |
-| [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md) | Magnifier** object, which can be used to control the display and hiding of a magnifier. |
+| [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md) | **Magnifier** object, which can be used to control the display and hiding of a magnifier. |
 
 ## getMaxFontScale
 
@@ -1141,7 +1143,7 @@ Get navigation information of the frameNode with uniqueId.
 
 | Type | Description |
 | --- | --- |
-| [observer.NavigationInfo](../../apis-arkui/arkts-apis/arkts-arkui-observer.md) &#124; undefined | The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
+| [observer.NavigationInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-observer.md) &#124; undefined | The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
 
 ## getOverlayManager
 
@@ -1327,7 +1329,7 @@ Obtains the **LocalStorage** instance shared by this stage.
 
 | Type | Description |
 | --- | --- |
-| [LocalStorage](arkts-arkui-localstorage-c.md) &#124; undefined | LocalStorage** instance if it exists; **undefined** if it does not exist. |
+| [LocalStorage](arkts-arkui-localstorage-c.md) &#124; undefined | **LocalStorage** instance if it exists; **undefined** if it does not exist. |
 
 ## getSmartGestureController
 
@@ -1393,7 +1395,7 @@ Obtains the **UIInspector** object.
 
 | Type | Description |
 | --- | --- |
-| [UIInspector](arkts-arkui-arkui-uicontext-uiinspector-c.md) | UIInspector** object. |
+| [UIInspector](arkts-arkui-arkui-uicontext-uiinspector-c.md) | **UIInspector** object. |
 
 ## getUIObserver
 
@@ -1415,7 +1417,7 @@ Obtains the **UIObserver** object.
 
 | Type | Description |
 | --- | --- |
-| [UIObserver](arkts-arkui-arkui-uicontext-uiobserver-c.md) | UIObserver** object. |
+| [UIObserver](arkts-arkui-arkui-uicontext-uiobserver-c.md) | **UIObserver** object. |
 
 ## getWindowHeightBreakpoint
 
@@ -1447,7 +1449,7 @@ getWindowId(): number | undefined
 
 Obtains the ID of the window to which the current application instance belongs.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If the UIContext resides inside a
 > [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) that runs in the main
@@ -1583,7 +1585,7 @@ Checks whether current font scale follows the system.
 keyframeAnimateTo(param: KeyframeAnimateParam, keyframes: Array<KeyframeState>): void
 ```
 
-Generates a key frame animation. For details about how to use this API, see [keyframeAnimateTo](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md).
+Generates a key frame animation. For details about how to use this API, see [keyframeAnimateTo](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-common.md).
 
 **Since:** 11
 
@@ -1626,6 +1628,8 @@ Converts a value in lpx units to a value in px.
 
 | Type | Description |
 | --- | --- |
+| number |  |
+
 ## openBindSheet
 
 ```TypeScript
@@ -1634,7 +1638,7 @@ openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOpti
 
 Creates a sheet whose content is as defined in **bindSheetContent** and displays the sheet. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. When calling this API, if no valid value is provided for **targetId**, you won't be able to set
 > **SheetOptions.preferType** to **POPUP** or **SheetOptions.mode** to **EMBEDDED**.
@@ -1657,7 +1661,7 @@ Creates a sheet whose content is as defined in **bindSheetContent** and displays
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bindSheetContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content to display on the sheet. |
-| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | No | Style of the sheet.<br>**NOTE:**<br>1. **SheetOptions.uiContext** cannot be set. Its value is fixed to the **UIContext** object of the current instance.<br>2. If **targetId** is not passed in, **SheetOptions.preferType** cannot be set to **POPUP**; if **POPUP** is set, it will be replaced with **CENTER**.<br>3. If **targetId** is not passed in, **SheetOptions.mode** cannot be set to **EMBEDDED**; the default mode is **OVERLAY**.<br>4. For the default values of other attributes, see [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md). |
+| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | No | Style of the sheet.<br>**NOTE:** <br>1. **SheetOptions.uiContext** cannot be set. Its value is fixed to the **UIContext** object of the current instance.<br>2. If **targetId** is not passed in, **SheetOptions.preferType** cannot be set to **POPUP**; if **POPUP** is set, it will be replaced with **CENTER**.<br>3. If **targetId** is not passed in, **SheetOptions.mode** cannot be set to **EMBEDDED**; the default mode is **OVERLAY**.<br>4. For the default values of other attributes, see [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md). |
 | targetId | number | No | ID of the component to be bound. If this parameter is not set, no component is bound. If the ID does not exist, the error code 120004 is returned. Returns error code 401 if **undefined** is passed in. |
 
 **Return value:**
@@ -1748,6 +1752,8 @@ Converts a value in px units to a value in fp.
 
 | Type | Description |
 | --- | --- |
+| number |  |
+
 ## px2lpx
 
 ```TypeScript
@@ -1774,6 +1780,8 @@ Converts a value in px units to a value in lpx.
 
 | Type | Description |
 | --- | --- |
+| number |  |
+
 ## px2vp
 
 ```TypeScript
@@ -1800,6 +1808,8 @@ Converts a value in px units to a value in vp.
 
 | Type | Description |
 | --- | --- |
+| number |  |
+
 ## removeLocalInputEventMonitor
 
 ```TypeScript
@@ -1864,7 +1874,7 @@ static resolveUIContext(): ResolvedUIContext
 
 Obtains a UIContext instance along with its resolution strategy using a predefined priority order.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API resolves and returns a UIContext instance together with the strategy used to determine it,
 > 
@@ -1994,7 +2004,7 @@ setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 
 Sets the avoidance mode for the virtual keyboard.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > With **KeyboardAvoidMode.RESIZE**, the page is resized to prevent the virtual keyboard from obstructing the
 > view. Regarding components on the page, those whose width and height are set in percentage are resized with the
@@ -2315,7 +2325,7 @@ updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOp
 
 Updates the style of the sheet corresponding to the provided **bindSheetContent**. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **SheetOptions.UIContext**, **SheetOptions.mode**, and callback functions cannot be updated.
 
@@ -2332,8 +2342,8 @@ Updates the style of the sheet corresponding to the provided **bindSheetContent*
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bindSheetContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content to display on the sheet. |
-| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | Yes | Style of the sheet.<br>**NOTE:**<br>**SheetOptions.UIContext** and **SheetOptions.mode** cannot be updated. |
-| partialUpdate | boolean | No | Whether to update the sheet in incremental mode.<br>Default value: **false**<br> **NOTE:**<br>1. **true**: incremental update, where the specified properties in **SheetOptions** are updated, and other properties stay at their current value.<br>2. **false**: full update, where all properties except those specified in **SheetOptions** are restored to default values. |
+| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | Yes | Style of the sheet.<br>**NOTE:** <br>**SheetOptions.UIContext** and **SheetOptions.mode** cannot be updated. |
+| partialUpdate | boolean | No | Whether to update the sheet in incremental mode.<br>Default value: **false**<br> **NOTE:** <br>1. **true**: incremental update, where the specified properties in **SheetOptions** are updated, and other properties stay at their current value.<br>2. **false**: full update, where all properties except those specified in **SheetOptions** are restored to default values. |
 
 **Return value:**
 
@@ -2375,3 +2385,4 @@ Converts a value in vp units to a value in px.
 
 | Type | Description |
 | --- | --- |
+| number |  |

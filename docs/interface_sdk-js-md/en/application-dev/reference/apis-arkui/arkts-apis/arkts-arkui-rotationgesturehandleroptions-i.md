@@ -8,11 +8,6 @@ Provides the parameters of the rotation gesture handler. Inherits from [BaseHand
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## angle
 
 ```TypeScript
@@ -23,7 +18,7 @@ Minimum angle change required to trigger the rotation gesture, in degrees (deg).
 
 Default value: **1**
 
-**NOTE:**
+**NOTE:** 
 
 If the value is less than or equal to 0 or greater than 360, it will be converted to the default value.
 

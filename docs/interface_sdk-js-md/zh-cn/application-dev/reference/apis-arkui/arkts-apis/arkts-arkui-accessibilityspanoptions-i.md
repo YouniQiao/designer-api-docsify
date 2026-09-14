@@ -6,11 +6,6 @@ Span的无障碍朗读功能属性。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## accessibilityDescription
 
 ```TypeScript
@@ -55,7 +50,7 @@ accessibilityLevel?: string
 
 值为undefined时，按默认值处理。
 
-**说明：**
+**说明：** 
 
 当accessibilityLevel设置成"auto"时，组件是否可被无障碍辅助服务所识别取决于以下多方面因素：
 

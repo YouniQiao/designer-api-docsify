@@ -6,7 +6,7 @@ ComponentContent表示组件内容的实体封装，其对象支持在非UI组�
 
 ReactiveComponentContent表示组件内容的实体封装，其对象支持在非UI组件中创建与传递。它支持响应式数据自动更新、完整的生命周期管理和组件复用，适用于长列表等需要高性能渲染的场景。其底层使用了ReactiveBuilderNode，具体使用规格参考[ReactiveBuilderNode](arkts-arkui-buildernode-reactivebuildernode-c.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > - 当前不支持在预览器中使用ComponentContent和ReactiveComponentContent。
 > 
@@ -281,7 +281,7 @@ dispose(): void
 
 立即释放当前ComponentContent对象对[基本概念：实体节点](../../../ui/arkts-user-defined-node.md#基本概念)的引用关系。关于ComponentContent的解绑场景请参见[解除实体节点引用关系](../../../ui/arkts-user-defined-arktsNode-builderNode.md#解除实体节点引用关系)。
 
-> **说明：**
+> **说明：** 
 > 
 > 当ComponentContent对象调用dispose之后，会与后端实体节点解除引用关系。调用dispose后再次调用该对象的其他接口可能会出现crash或返回默认值，建议在操作节点前通过
 > [isDisposed](#isdisposed)接口检查其有效性。若前端对象ComponentContent无法释放，容易导致内存泄漏。建议在不再需要操作该
@@ -365,7 +365,7 @@ inheritFreezeOptions(enabled: boolean): void
 
 设置当前ComponentContent对象是否继承父组件中自定义组件的冻结策略。冻结策略用于控制组件在不活跃状态下是否暂停状态刷新。如果设置继承状态为false，则ComponentContent对象的冻结策略为false。适用于多页面导航（Navigation）等需要对不活跃组件进行冻结管理的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > ComponentContent设置inheritFreezeOptions为true，且父组件为自定义组件、BuilderNode、ComponentContent、ReactiveBuilderNode或
 > ReactiveComponentContent时，会继承父组件的冻结策略。当子组件为自定义组件时，ComponentContent的冻结策略不会传递给该子组件。
@@ -813,7 +813,7 @@ updateConfiguration(): void
 
 传递系统环境变化事件，触发节点的全量更新。适用于系统深浅色模式切换、语言变更、字体大小调整等需要节点响应系统配置变化的场景。系统环境变化的相关信息请参见[@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > updateConfiguration接口用于通知对象更新当前的系统环境变化。
 

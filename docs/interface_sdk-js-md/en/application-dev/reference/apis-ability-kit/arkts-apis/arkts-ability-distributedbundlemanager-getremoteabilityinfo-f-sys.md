@@ -155,7 +155,7 @@ Obtains information about the remote abilities that match the given element name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | ElementName** array, whose maximum length is 10. |
+| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | **ElementName** array, whose maximum length is 10. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of RemoteAbilityInfo objects obtained. Otherwise, **err** is an error object and **data** is **undefined**. |
 
 **Error codes:**
@@ -225,7 +225,7 @@ Obtains information about the remote abilities that match the given element name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | ElementName** array, whose maximum length is 10. |
+| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | **ElementName** array, whose maximum length is 10. |
 
 **Return value:**
 
@@ -429,7 +429,7 @@ Obtains information about the remote abilities that match the given element name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | ElementName** array, whose maximum length is 10. |
+| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | **ElementName** array, whose maximum length is 10. |
 | locale | string | Yes | Target locale. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of RemoteAbilityInfo objects obtained. Otherwise, **err** is an error object and **data** is **undefined**. |
 
@@ -500,7 +500,7 @@ Obtains information about the remote abilities that match the given element name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | ElementName** array, whose maximum length is 10. |
+| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | **ElementName** array, whose maximum length is 10. |
 | locale | string | Yes | Target locale. |
 
 **Return value:**

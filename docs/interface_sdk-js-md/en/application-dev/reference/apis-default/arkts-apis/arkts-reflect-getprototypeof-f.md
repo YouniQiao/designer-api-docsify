@@ -18,8 +18,3 @@ Returns the prototype of an object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | object | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

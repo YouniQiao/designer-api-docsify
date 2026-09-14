@@ -2,18 +2,13 @@
 
 用于设置List或ListItemGroup组件的分割线样式。
 
-> **说明：**
+> **说明：** 
 > 
 > 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## color
 
@@ -27,7 +22,7 @@ color?: ResourceColor
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
-**默认值：**
+**默认值：** 
 - API版本18+：0x08000000
 
 **起始版本：** 7
@@ -50,7 +45,7 @@ endMargin?: Length
 
 单位：vp
 
-**说明：**
+**说明：** 
 
 设置为负数或者百分比时，按默认值处理。
 
@@ -58,7 +53,7 @@ endMargin + startMargin 超过列宽度后startMargin和endMargin均会被置0�
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
-**默认值：**
+**默认值：** 
 - API版本18+：0vp
 
 **起始版本：** 7
@@ -81,7 +76,7 @@ startMargin?: Length
 
 单位：vp
 
-**说明：**
+**说明：** 
 
 设置为负数或者百分比时，按默认值处理。
 
@@ -89,7 +84,7 @@ endMargin + startMargin 超过列宽度后startMargin和endMargin均会被置0�
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
-**默认值：**
+**默认值：** 
 - API版本18+：0vp
 
 **起始版本：** 7
@@ -110,7 +105,7 @@ strokeWidth: Length
 
 单位：vp
 
-**说明：**
+**说明：** 
 
 设置为负数，百分比，或者大于等于List内容区长度时，按0处理。
 

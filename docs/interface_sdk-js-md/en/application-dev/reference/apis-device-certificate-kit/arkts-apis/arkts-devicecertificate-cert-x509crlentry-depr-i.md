@@ -2,7 +2,7 @@
 
 Provides APIs for operating on a revoked certificate entry in a CRL.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRLEntry()](arkts-devicecertificate-cert-x509crlentry-i.md) instead.
@@ -29,7 +29,7 @@ getCertIssuer(): DataBlob
 
 Obtains the issuer name of the revoked certificate.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRLEntry.getCertIssuer()](arkts-devicecertificate-cert-x509crlentry-i.md#getcertissuer) instead.
@@ -113,7 +113,7 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 Obtains the serialized data of this revoked certificate entry. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRLEntry.getEncoded()](arkts-devicecertificate-cert-x509crlentry-i.md#getencoded) instead.
@@ -203,7 +203,7 @@ getEncoded(): Promise<EncodingBlob>
 
 Obtains the serialized data of this revoked certificate entry. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRLEntry.getEncoded()](arkts-devicecertificate-cert-x509crlentry-i.md#getencoded) instead.
@@ -291,7 +291,7 @@ getRevocationDate(): string
 
 Obtains the certificate's revocation date.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRLEntry.getRevocationDate()](arkts-devicecertificate-cert-x509crlentry-i.md#getrevocationdate) instead.
@@ -375,7 +375,7 @@ getSerialNumber(): number
 
 Obtains the serial number of this revoked certificate.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [X509CRLEntry.getSerialNumber()](arkts-devicecertificate-cert-x509crlentry-i.md#getserialnumber) instead.

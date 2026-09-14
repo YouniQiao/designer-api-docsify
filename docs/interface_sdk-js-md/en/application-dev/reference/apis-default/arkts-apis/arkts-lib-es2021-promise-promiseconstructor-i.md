@@ -25,6 +25,8 @@ The any function returns a promise that is fulfilled by the first given promise 
 
 | Type | Description |
 | --- | --- |
+| Promise&lt;Awaited&lt;T[number]&gt;&gt; | A new Promise. |
+
 ## any
 
 ```TypeScript
@@ -43,3 +45,4 @@ The any function returns a promise that is fulfilled by the first given promise 
 
 | Type | Description |
 | --- | --- |
+| Promise&lt;Awaited&lt;T&gt;&gt; | A new Promise. |

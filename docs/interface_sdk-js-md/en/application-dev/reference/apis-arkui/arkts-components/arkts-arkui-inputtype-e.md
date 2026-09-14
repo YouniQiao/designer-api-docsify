@@ -62,7 +62,7 @@ Email
 
 Email address input mode.
 
-This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # \$ % &' " * + - / = ? ^ ` { | } ~ @. The at sign can appear only once.
+This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # &#36; % &' " * + - / = ? ^ ` { | } ~ @. The at sign can appear only once.
 
 **Since:** 7
 

@@ -2,7 +2,7 @@
 
 A constructor used to create a **DigitIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When pages are turned by group, the child nodes displayed in the digit-style navigation indicator do not count
 > placeholder nodes.
@@ -18,11 +18,6 @@ A constructor used to create a **DigitIndicator** object. It inherits from [Indi
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript
@@ -31,7 +26,7 @@ constructor()
 
 A constructor used to create a **DotIndicator** object.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When pressed, the navigation indicator is zoomed in to 1.33 times. To account for this, there is a certain
 > distance between the navigation indicator's visible boundary and its actual boundary in the non-pressed state.
@@ -103,7 +98,7 @@ Sets the font color of the digit-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the digit-style navigation indicator.<br>Default value: **'#ff182431' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the digit-style navigation indicator.<br>Default value: **'#ff182431'** |
 
 **Return value:**
 
@@ -163,7 +158,7 @@ Sets the font color of the selected digit-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the selected digit-style navigation indicator.<br>Default value: **'#ff182431' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the selected digit-style navigation indicator.<br>Default value: **'#ff182431'** |
 
 **Return value:**
 

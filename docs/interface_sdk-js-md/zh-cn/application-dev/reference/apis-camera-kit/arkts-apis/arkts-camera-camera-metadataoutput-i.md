@@ -73,7 +73,7 @@ lockMetadataObjectTracking(point: Point): void
 
 锁定对特定元数据对象（如猫脸、狗脸）的追踪。
 
-> **说明：**
+> **说明：** 
 > 
 > - 该功能以point所指向的点所在的对象为追踪对象，如果该点不存在追踪对象，则功能不生效。
 > 
@@ -150,7 +150,7 @@ on(type: 'metadataObjectsAvailable', callback: AsyncCallback<Array<MetadataObjec
 
 监听检测到的metadata对象，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -175,7 +175,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 监听metadata流的错误，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 

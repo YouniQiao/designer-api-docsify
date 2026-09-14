@@ -79,6 +79,8 @@ If 0.5 is returned, 50% of the current component is visible.
 
 | Type | Description |
 | --- | --- |
+| [observer](arkts-arkui-viewmodel-observer-i.md) |  |
+
 ## focus
 
 ```TypeScript

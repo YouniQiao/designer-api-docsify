@@ -6,11 +6,6 @@ Sets the color and direction of the linear gradient for the outlines.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## colors
 
 ```TypeScript
@@ -19,7 +14,7 @@ colors: Array<[ResourceColor, number]>
 
 Array of color stops, each of which consists of a color and its stop position. Invalid colors are automatically skipped.
 
-**NOTE:**
+**NOTE:** 
 
 For details about how to set colors, see [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md). Colors that are not within the types of [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) are invalid.
 
@@ -49,7 +44,7 @@ Direction of the linear gradient.
 
 Default value: **GradientDirection.Bottom**
 
-**NOTE:**
+**NOTE:** 
 
 When the direction is set to **GradientDirection.None**, the default value is used.
 

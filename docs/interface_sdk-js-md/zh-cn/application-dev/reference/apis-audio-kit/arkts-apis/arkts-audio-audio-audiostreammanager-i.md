@@ -2,7 +2,7 @@
 
 音频流管理。在使用AudioStreamManager的接口之前，需先通过[getStreamManager](arkts-audio-audio-audiomanager-i.md#getstreammanager)获取AudioStreamManager实例。
 
-> **说明：**
+> **说明：** 
 
 > - 本Interface首批接口从API version 9开始支持。
 
@@ -112,7 +112,7 @@ getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfo
 
 获取当前音频采集器的信息。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
@@ -134,7 +134,7 @@ getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>
 
 获取当前音频采集器的信息。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
@@ -156,7 +156,7 @@ getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray
 
 获取当前音频采集器的信息。同步返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
@@ -178,7 +178,7 @@ getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfo
 
 获取当前音频渲染器的信息。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
@@ -200,7 +200,7 @@ getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>
 
 获取当前音频渲染器的信息。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
@@ -222,7 +222,7 @@ getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray
 
 获取当前音频渲染器的信息。同步返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
@@ -274,7 +274,7 @@ isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 
 获取指定音频流活跃状态。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 20开始废弃，建议使用
 > [isStreamActive](#isstreamactive)替代。
@@ -302,7 +302,7 @@ isActive(volumeType: AudioVolumeType): Promise<boolean>
 
 获取指定音频流是否为活跃状态。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 20开始废弃，建议使用
 > [isStreamActive](#isstreamactive)替代。
@@ -335,7 +335,7 @@ isActiveSync(volumeType: AudioVolumeType): boolean
 
 获取指定音频流是否为活跃状态。同步返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 10开始支持，从API version 20开始废弃，建议使用
 > [isStreamActive](#isstreamactive)替代。
@@ -630,7 +630,7 @@ off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArra
 
 取消监听音频渲染器更改事件。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
@@ -659,7 +659,7 @@ off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArra
 
 取消监听音频采集器更改事件。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
@@ -688,7 +688,7 @@ on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>
 
 监听音频渲染器更改事件（当音频播放流状态变化或设备变化时触发）。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
@@ -718,7 +718,7 @@ on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>
 
 监听音频采集器更改事件（当音频录制流状态变化或设备变化时触发）。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 

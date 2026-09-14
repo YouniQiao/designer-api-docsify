@@ -29,7 +29,7 @@ closeAshmem(): void
 
 关闭这个Ashmem。
 
-> **说明：**
+> **说明：** 
 > 
 > 关闭Ashmem对象前需要先解除地址映射。
 
@@ -509,7 +509,7 @@ readAshmem(size: number, offset: number): number[]
 
 从此Ashmem对象关联的共享文件中读取数据。
 
-> **说明：**
+> **说明：** 
 > 
 > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapreadwriteashmem)进行映射。
 
@@ -570,7 +570,7 @@ readDataFromAshmem(size: number, offset: number): ArrayBuffer
 
 从此Ashmem对象关联的共享文件中读取数据。
 
-> **说明：**
+> **说明：** 
 > 
 > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapreadwriteashmem)进行映射。
 
@@ -633,7 +633,7 @@ readFromAshmem(size: number, offset: number): number[]
 
 从此Ashmem对象关联的共享文件中读取数据。
 
-> **说明：**
+> **说明：** 
 > 
 > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapreadwriteashmem)进行映射。
 
@@ -798,7 +798,7 @@ writeAshmem(buf: number[], size: number, offset: number): void
 
 将数据写入此Ashmem对象关联的共享文件。
 
-> **说明：**
+> **说明：** 
 > 
 > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapreadwriteashmem)进行映射。
 
@@ -852,7 +852,7 @@ writeDataToAshmem(buf: ArrayBuffer, size: number, offset: number): void
 
 将数据写入此Ashmem对象关联的共享文件。
 
-> **说明：**
+> **说明：** 
 > 
 > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapreadwriteashmem)进行映射。
 
@@ -907,7 +907,7 @@ writeToAshmem(buf: number[], size: number, offset: number): boolean
 
 将数据写入此Ashmem对象关联的共享文件。
 
-> **说明：**
+> **说明：** 
 > 
 > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapreadwriteashmem)进行映射。
 

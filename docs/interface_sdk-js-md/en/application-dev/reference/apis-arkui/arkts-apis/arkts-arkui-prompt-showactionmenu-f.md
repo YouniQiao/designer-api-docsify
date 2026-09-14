@@ -81,6 +81,8 @@ Displays the menu.
 
 | Type | Description |
 | --- | --- |
+| Promise&lt;[ActionMenuSuccessResponse](arkts-arkui-prompt-actionmenusuccessresponse-i.md)&gt; |  |
+
 **Examples**
 
 ```TypeScript

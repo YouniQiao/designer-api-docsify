@@ -6,11 +6,6 @@ Defines the value type for different Tabs container sizes.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## lg
 
 ```TypeScript

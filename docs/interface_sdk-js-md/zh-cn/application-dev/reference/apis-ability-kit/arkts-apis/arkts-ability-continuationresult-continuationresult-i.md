@@ -6,7 +6,7 @@
 
 **废弃版本：** 22
 
-**替代接口：** [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md)
+**替代接口：** [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager.md)
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 

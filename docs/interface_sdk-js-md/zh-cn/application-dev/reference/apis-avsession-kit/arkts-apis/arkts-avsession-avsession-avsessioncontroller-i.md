@@ -2,7 +2,7 @@
 
 AVSessionController控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本Interface首批接口从API version 10开始支持。
 
@@ -2365,7 +2365,7 @@ sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): vo
 
 通过会话控制器发送命令到其对应的会话。结果通过callback异步回调方式返回。
 
-> **说明：**
+> **说明：** 
 > 
 > 媒体控制方在使用sendControlCommand命令前，需要确保控制对应的媒体会话注册了对应的监听，注册媒体会话相关监听的方法请参见接口
 > [on('play')](arkts-avsession-avsession-avsession-i.md#onplay)、
@@ -2402,7 +2402,7 @@ sendControlCommand(command: AVControlCommand): Promise<void>
 
 通过控制器发送命令到其对应的会话。结果通过Promise异步回调方式返回。
 
-> **说明：**
+> **说明：** 
 > 
 > 媒体控制方在使用sendControlCommand命令前，需要确保控制对应的媒体会话注册了对应的监听，注册媒体会话相关监听的方法请参见接口
 > [on('play')](arkts-avsession-avsession-avsession-i.md#onplay)、

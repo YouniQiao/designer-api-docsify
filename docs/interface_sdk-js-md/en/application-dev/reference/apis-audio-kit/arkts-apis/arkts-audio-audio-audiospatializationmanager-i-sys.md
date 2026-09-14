@@ -4,7 +4,7 @@ Implements audio spatialization management. @typedef AudioSpatializationManager 
 
 Before calling any API in AudioSpatializationManager, you must use [getSpatializationManager](arkts-audio-audio-audiomanager-i.md#getspatializationmanager) to obtain an AudioSpatializationManager instance.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The initial APIs of this interface are supported since API version 18.
 
@@ -42,10 +42,6 @@ Downloads personalized HRTF data from anonymous file descriptor.
 | --- | --- | --- | --- |
 | hrtfDescriptor | [AudioHRTFAnonymousDescriptor](arkts-audio-audio-audiohrtfanonymousdescriptor-i-sys.md) | Yes | Personalized HRTF data descriptor. |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 **Error codes:**
 
 | Error Code ID | Error Message |

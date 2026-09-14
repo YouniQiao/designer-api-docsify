@@ -1580,7 +1580,7 @@ release resources in a timely manner.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | Yes | EventClassifyInfo** object, which is used to specify the type of the upgrade event whose listener needs to be unregistered. The prerequisite is that you have registered a listener by calling **on**. After the listener is registered, the system maintains the event listening list and continuously receives local update event notifications of the corresponding type. After this parameter is used to unregister the listener, the system removes the corresponding listening record from the event listening list, and releases the memory and IPC channel occupied by the listener. The app will no longer receive event notifications of this type. |
+| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | Yes | **EventClassifyInfo** object, which is used to specify the type of the upgrade event whose listener needs to be unregistered. The prerequisite is that you have registered a listener by calling **on**. After the listener is registered, the system maintains the event listening list and continuously receives local update event notifications of the corresponding type. After this parameter is used to unregister the listener, the system removes the corresponding listening record from the event listening list, and releases the memory and IPC channel occupied by the listener. The app will no longer receive event notifications of this type. |
 | taskCallback | [UpgradeTaskCallback](arkts-basicservices-update-upgradetaskcallback-t-sys.md) | No | Task callback, which is used to process upgrade tasks. Callback signature. In the signature, **eventInfo** is an **EventInfo** object, whose value is **void**. **eventInfo** contains the **eventId** (event ID) and **taskBody** (task data) fields. Pass this parameter when a specific callback listener needs to be unregistered. If this parameter is not passed, all listeners for the event type are canceled. |
 
 **Error codes:**
@@ -1657,7 +1657,7 @@ or **EVENT_UPGRADE_SUCCESS**) is received.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | Yes | EventClassifyInfo** object, which is used to specify the type of the upgrade event to be listened for. The system registers an upgrade event listener of the corresponding type based on **eventClassifyInfo**. When an event occurs, the event information is transferred through **taskCallback**. |
+| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | Yes | **EventClassifyInfo** object, which is used to specify the type of the upgrade event to be listened for. The system registers an upgrade event listener of the corresponding type based on **eventClassifyInfo**. When an event occurs, the event information is transferred through **taskCallback**. |
 | taskCallback | [UpgradeTaskCallback](arkts-basicservices-update-upgradetaskcallback-t-sys.md) | Yes | Task callback, which is used to process upgrade tasks. Callback signature. In the signature, **eventInfo** is an **EventInfo** object, whose value is **void**. **eventInfo** contains the **eventId** (event ID) and **taskBody** (task data) fields. |
 
 **Error codes:**

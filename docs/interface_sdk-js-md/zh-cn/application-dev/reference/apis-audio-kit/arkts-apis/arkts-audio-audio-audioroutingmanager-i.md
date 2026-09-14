@@ -20,7 +20,7 @@ declareDeviceTypesCompatibility(deviceTypes: DeviceTypeArray): void
 
 声明应用需要兼容的设备类型。
 
-> **说明：**
+> **说明：** 
 > 
 > 对于API version 20及以上版本新增的设备类型，应用调用获取设备的相关接口时（例如
 > [getAvailableDevices](arkts-audio-audio-audiosessionmanager-i.md#getavailabledevices)），默认返回的设备类型为匿名

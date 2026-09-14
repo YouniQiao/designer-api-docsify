@@ -4,7 +4,7 @@
 
 当需要在ArkTS上并发实例间传递Array时，可以通过传递Array引用提升传递性能。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
 > 本节使用以下标识来表示泛型的使用：
@@ -229,10 +229,10 @@ containsAll(elements: Array<T>): boolean
 ## containsAll
 
 ```TypeScript
-containsAll(elements: BuiltinArray<T>): boolean
+containsAll(elements: readonly T[]): boolean
 ```
 
-检查指定内建Array中的所有元素是否均包含在此ArkTS Array中。
+检查指定JavaScript内建Array中的所有元素是否均包含在此ArkTS Array中。
 
 **起始版本：** 26.1.0
 
@@ -246,7 +246,7 @@ containsAll(elements: BuiltinArray<T>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| elements | [BuiltinArray](arkts-arkts-builtinarray-t.md)&lt;T&gt; | 是 | 要检查的内建Array。 |
+| elements | readonly T[] | 是 | 要检查的JavaScript内建Array。 |
 
 **返回值：**
 
@@ -1178,10 +1178,10 @@ retainAll(elements: Array<T>): boolean
 ## retainAll
 
 ```TypeScript
-retainAll(elements: BuiltinArray<T>): boolean
+retainAll(elements: readonly T[]): boolean
 ```
 
-仅保留此ArkTS Array中包含在指定内建Array中的元素。
+仅保留此ArkTS Array中包含在指定JavaScript内建Array中的元素。
 
 **起始版本：** 26.1.0
 
@@ -1195,7 +1195,7 @@ retainAll(elements: BuiltinArray<T>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| elements | [BuiltinArray](arkts-arkts-builtinarray-t.md)&lt;T&gt; | 是 | 允许保留元素的内建Array。 |
+| elements | readonly T[] | 是 | 允许保留元素的JavaScript内建Array。 |
 
 **返回值：**
 
@@ -1216,7 +1216,7 @@ retainAll(elements: BuiltinArray<T>): boolean
 retainAll(predicate: ArrayElementPredicateFn<T>): boolean
 ```
 
-仅保留此ArkTS Array中满足指定判定函数的元素。
+仅保留此ArkTS Array中满足指定断言函数的元素。
 
 **起始版本：** 26.1.0
 
@@ -1230,7 +1230,7 @@ retainAll(predicate: ArrayElementPredicateFn<T>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicate | [ArrayElementPredicateFn](arkts-arkts-collections-arrayelementpredicatefn-t.md)&lt;T&gt; | 是 | 用于测试每个元素的判定函数。 |
+| predicate | [ArrayElementPredicateFn](arkts-arkts-collections-arrayelementpredicatefn-t.md)&lt;T&gt; | 是 | 用于测试每个元素的断言函数。 |
 
 **返回值：**
 

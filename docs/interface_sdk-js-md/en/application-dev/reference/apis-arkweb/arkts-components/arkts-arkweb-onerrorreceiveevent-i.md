@@ -6,11 +6,6 @@ Defines the callback information triggered when an error occurs during web page 
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## error
 
 ```TypeScript

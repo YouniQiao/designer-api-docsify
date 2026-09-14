@@ -136,7 +136,7 @@ moduleName?: string
 
 Module name of the application. It represents the module name of the target application in the application launch scenario.
 
-**NOTE:**
+**NOTE:** 
 
 If the ability belongs to a [HAR](../../../quick-start/har-package.md) module, **moduleName** must be set to the name of the [HAP](../../../quick-start/hap-package.md) or [HSP](../../../quick-start/in-app-hsp.md) module that depends on this HAR.
 
@@ -177,7 +177,7 @@ the Boolean type.
 - **ohos.extra.param.key.showMode**: mode to show the atomic service startup. The value is an enumerated value of  
 wantConstant.ShowMode.
 
-**NOTE:**
+**NOTE:** 
 
 In cross-device scenarios, the following fields do not take effect and cannot be used for identity or permission verification: **ohos.aafwk.param.callerPid**, **ohos.aafwk.param.callerToken**, and **ohos.aafwk.param.callerUid**.
 
@@ -185,11 +185,11 @@ In cross-device scenarios, the following fields do not take effect and cannot be
 keys and their values, see wantConstant.Params.
 3. In addition to the foregoing cases, applications may further agree on the key-value pairs to transfer.
 
-**NOTE:**
+**NOTE:** 
 
-For details about the constants of **Params** in **want**, see [wantConstant](arkts-app-ability-wantconstant.md).
+For details about the constants of **Params** in **want**, see [wantConstant](arkts-ability-app-ability-wantconstant.md).
 
-Note that a maximum of 100 KB data that can be transferred by using **WantParams**. If the data volume exceeds 100 KB, transfer data in WriteRawDataBuffer or [uri](../../apis-arkts/arkts-apis/arkts-uri.md) mode.
+Note that a maximum of 100 KB data that can be transferred by using **WantParams**. If the data volume exceeds 100 KB, transfer data in WriteRawDataBuffer or [uri](../../apis-arkts/arkts-apis/arkts-arkts-uri.md) mode.
 
 The values of **parameters** must be of the following basic data types: String, Number, Boolean, Object, undefined, and null. Functions in an object cannot be transferred.
 

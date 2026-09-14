@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## dx
 
 ```TypeScript
@@ -21,7 +16,7 @@ dx: number | string | Resource
 
 可指定像素单位，如'10px'，也可设置百分比字符串，如'100%'。
 
-**说明：**
+**说明：** 
 
 不指定像素单位时，默认单位vp，如'10'，等同于10。
 
@@ -45,7 +40,7 @@ dy: number | string | Resource
 
 可指定像素单位，如'10px'，也可设置百分比字符串，如'100%'。
 
-**说明：**
+**说明：** 
 
 不指定像素单位时，默认单位vp，如'10'，等同于10。
 

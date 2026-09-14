@@ -110,7 +110,7 @@ static getAllVMHeapMemoryInfo(): Promise<HeapMemoryInfo[]>
 
 从 ArkTS-VM 和共享堆中获取所有堆内存信息。
 
-> **说明：**
+> **说明：** 
 > 
 > 此接口在执行时会暂停所有VM线程运行以获取内存信息。由于需要等待所有VM线程暂停，高负载场景下调用此接口的耗时可能较高。
 

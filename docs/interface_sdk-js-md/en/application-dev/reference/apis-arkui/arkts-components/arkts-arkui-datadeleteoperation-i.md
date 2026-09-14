@@ -6,11 +6,6 @@ Represents an operation for deleting data.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## count
 
 ```TypeScript

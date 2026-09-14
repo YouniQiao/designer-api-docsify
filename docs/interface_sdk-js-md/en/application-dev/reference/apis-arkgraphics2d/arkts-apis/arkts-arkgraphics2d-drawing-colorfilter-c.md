@@ -2,7 +2,7 @@
 
 Defines a color filter.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This module uses the physical pixel unit, px.
 > 
@@ -135,7 +135,7 @@ Creates a lighting color filter. It multiplies the RGB channel values by one col
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](arkts-arkgraphics2d-drawing-colorfilter-c.md) | ColorFilter** object created. |
+| [ColorFilter](arkts-arkgraphics2d-drawing-colorfilter-c.md) | **ColorFilter** object created. |
 
 ## createLinearToSRGBGamma
 

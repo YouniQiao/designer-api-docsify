@@ -2,7 +2,7 @@
 
 用于设置环形发射器区域的配置信息。
 
-> **说明：**
+> **说明：** 
 > 
 > - outerRadius、innerRadius小于零或使用百分比单位时，会按零进行处理。
 > 
@@ -15,11 +15,6 @@
 **起始版本：** 20
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## center
 

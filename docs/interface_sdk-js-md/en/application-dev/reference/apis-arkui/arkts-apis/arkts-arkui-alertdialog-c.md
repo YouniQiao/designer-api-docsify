@@ -8,11 +8,6 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## show
 
 ```TypeScript
@@ -21,7 +16,7 @@ static show(value: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | A
 
 Shows an alert dialog box.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Since API version 10, you can use the
 > [showAlertDialog](arkts-arkui-arkui-uicontext-uicontext-c.md#showalertdialog) API in

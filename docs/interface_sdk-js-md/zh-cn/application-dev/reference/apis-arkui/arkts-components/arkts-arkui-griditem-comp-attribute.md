@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## columnEnd
 
 ```TypeScript
@@ -59,7 +54,7 @@ forceRebuild(value: boolean)
 
 设置在触发组件build时是否重新创建此节点。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。GridItem会根据自身属性和子组件变化自行决定是否需要重新创建，无需设置。
 
@@ -163,7 +158,7 @@ selectable(value: boolean)
 selected(value: boolean)
 ```
 
-设置当前GridItem选中状态。该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+设置当前GridItem选中状态。该属性支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 该属性需要在设置多态样式前使用才能生效选中态样式。
 

@@ -22,7 +22,7 @@ Checks whether going to the previous page can be performed on the current page.
 
 You can use [getBackForwardEntries](#getbackforwardentries) to obtain the historical information list of the current WebView and use [accessStep](#accessstep) to determine whether to move forward or backward based on the specified number of steps.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If [setCustomUserAgent](#setcustomuseragent) is called when the **Web**
 > component is loaded for the first time, the value of **accessBackward** may be **false** when there are
@@ -44,7 +44,7 @@ You can use [getBackForwardEntries](#getbackforwardentries) to obtain the histor
 
 | Type | Description |
 | --- | --- |
-| boolean | true** is returned if going to the previous page can be performed on the current page. Otherwise, **false** is returned. |
+| boolean | **true** is returned if going to the previous page can be performed on the current page. Otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -72,7 +72,7 @@ You can use [getBackForwardEntries](#getbackforwardentries) to obtain the histor
 
 | Type | Description |
 | --- | --- |
-| boolean | true** is returned if going to the next page can be performed on the current page; otherwise, **false** is returned. |
+| boolean | **true** is returned if going to the next page can be performed on the current page; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -148,7 +148,7 @@ avoidVisibleViewportBottom(avoidHeight: number): void
 
 Sets the bottom avoidance height of the visible viewport on the web page.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The valid value range of **avoidHeight** is [0, height of the **Web** component]. Values outside this range
 > are adjusted to the nearest boundary.
@@ -238,7 +238,7 @@ Clears the blankless loading cache of the page with a specified key value.
 
 In an applet or web application, when the content changes significantly during page loading, an obvious scene change may occur. If you are concerned about this change, you can use this API to clear the page cache.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - After the page is cleared, the optimization effect appears when the page is loaded for the third time.
 
@@ -486,7 +486,7 @@ constructor(webTag?: string)
 
 Constructs a **WebviewController** object.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - No parameter: new webview.WebviewController() indicates an empty constructor. No parameter is required when
 > the C API is not used.
@@ -731,7 +731,7 @@ enableAdsBlock(enable: boolean): void
 
 Enables ad blocking.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The ad blocking feature works only for the release-type application, not the debug-type application.
 
@@ -763,7 +763,7 @@ static enableAdvancedSecurityMode(securityParams: SecurityParams): void
 
 Disables specific web engine capabilities by configuring security feature options to reduce the attack surface. Typical use cases include: apps with high security requirements (such as financial and government apps) should enable advanced security mode to disable unnecessary web engine capabilities.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This API is a global static API. It only needs to be called once during the entire app lifecycle and does not
 > need to be called repeatedly.
@@ -841,7 +841,7 @@ Sets the private network access check feature.
 
 After this feature is enabled, the **Web** component performs CORS preflight on private network requests (such as requests for accessing local servers or intranet resources). It sends an OPTIONS preflight request to obtain explicit authorization from the target server and then transmits the actual data. Disabling this feature will skip the security check.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The private network access check feature currently takes effect mainly for Web Worker scenarios.
 
@@ -865,7 +865,7 @@ Enables the safe browsing feature. This feature is forcibly enabled and cannot b
 
 By default, this feature does not take effect. OpenHarmony provides only the malicious website blocking web UI. The website risk detection and web UI display features are implemented by the vendor. You are advised to listen for [DidStartNavigation](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/content/public/browser/web_contents_observer.h) and [DidRedirectNavigation](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/content/public/browser/web_contents_observer.h) in **WebContentsObserver** for detection.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API does not take effect.
 
@@ -909,7 +909,7 @@ executeAIPageCommand(command: string): Promise<string>
 
 Executes `AIPageCommand` asynchronously. This API uses a promise to return the result. The command type and command parameters are specified through the `command` parameter in JSON string format.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The return format varies for different commands. For details, see
 > [AIPageCommand](../../../reference/apis-arkweb/arkts-apis-webview-AIPageCommand.md) and
@@ -1008,7 +1008,7 @@ getBackForwardEntries(): BackForwardList
 
 Obtains the historical information list of the current WebView.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > onLoadIntercept is triggered when the loading starts. At this time, no
 > historical node is generated. Therefore, the historical stack obtained by calling **getBackForwardEntries** in
@@ -1040,7 +1040,7 @@ getBlanklessInfoWithKey(key: string) : BlanklessInfo
 
 Obtains the prediction information about blankless loading (for details, see [BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md)) and starts to generate the loading transition frame. The application determines whether to enable blankless loading based on the information. This API must be used together with the [setBlanklessLoadingWithKey](#setblanklessloadingwithkey) API before the page loading API is triggered or in **onLoadIntercept**, and after the **WebViewController** is bound to the **Web** component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The default size of the persistent cache capacity is 30 MB (about 30 pages). You can set the cache capacity
 > by calling [setBlanklessLoadingCacheCapacity](#setblanklessloadingcachecapacity)
@@ -1232,7 +1232,7 @@ Obtains the favicon of this page.
 
 | Type | Description |
 | --- | --- |
-| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | PixelMap** object of the favicon of the page. |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | **PixelMap** object of the favicon of the page. |
 
 **Error codes:**
 
@@ -1648,7 +1648,7 @@ getSurfaceId(): string
 
 Obtains the ID of the surface corresponding to ArkWeb. The ID can be used to capture a screenshot of the web page.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is valid only when the **Web** component rendering mode is **ASYNC_RENDER**. The value of
 > **getSurfaceId** can be obtained only after the **Web** component is initialized.
@@ -1875,7 +1875,7 @@ static initializeWebEngine(): void
 
 Loads the dynamic library file of the web engine through this API before the **Web** component is initialized, so as to improve startup performance. It also automatically preconnects to frequently visited websites in history.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - **initializeWebEngine** cannot be called in an asynchronous thread. Otherwise, the system breaks down.
 > 
@@ -1959,7 +1959,7 @@ Checks whether ad blocking is enabled.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** is returned if ad blocking is enabled; otherwise, **false** is returned.<br>Default value: **false**. |
+| boolean | **true** is returned if ad blocking is enabled; otherwise, **false** is returned.<br>Default value: **false**. |
 
 **Error codes:**
 
@@ -1987,7 +1987,7 @@ After ads blocking is enabled for the **Web** component, this feature is enabled
 
 | Type | Description |
 | --- | --- |
-| boolean | true** is returned if ad blocking is enabled; otherwise, **false** is returned. |
+| boolean | **true** is returned if ad blocking is enabled; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -2059,7 +2059,7 @@ Obtains whether the **Web** component has enabled intelligent tracking preventio
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the Web component has enabled the smart anti-tracking feature.<br>The value **true** indicates that the smart anti-tracking feature is enabled, and **false** indicates that it is not enabled. <br>Default value: **false |
+| boolean | Whether the Web component has enabled the smart anti-tracking feature.<br>The value **true** indicates that the smart anti-tracking feature is enabled, and **false** indicates that it is not enabled. <br>Default value: **false** |
 
 **Error codes:**
 
@@ -2076,7 +2076,7 @@ static isPrivateNetworkAccessEnabled(): boolean
 
 Obtains whether the private network access check feature is enabled for the **Web** component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The private network access check feature currently takes effect mainly for Web Worker scenarios.
 
@@ -2124,7 +2124,7 @@ If **encoding** is not base64 (including null values), ASCII encoding is used fo
 
 **data** must be encoded using Base64 or any hash (#) in the content must be encoded as %23. Otherwise, hash (#) is considered as the end of the content, and the remaining text is used as the document fragment identifier.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - To load a local image, you can assign a space to either **baseUrl** or **historyUrl**. For details, see the
 > sample code.
@@ -2401,7 +2401,7 @@ pauseMicrophone(): void
 
 Pauses microphone capture on the current web page.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Differences from resumeMicrophone and stopMicrophone:
 > 
@@ -2519,7 +2519,7 @@ prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void
 
 Prefetches resources in the background for a page that is likely to be accessed in the near future, without executing the page JavaScript code or presenting the page. This can significantly reduce the load time for the prefetched page.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The downloaded page resources are cached for about five minutes. After this period, the **Web** component
 > automatically releases them.
@@ -2565,7 +2565,7 @@ prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?
 
 Prefetches resources in the background for a page that is likely to be accessed in the near future, without executing the page JavaScript code or presenting the page. This can significantly reduce the load time for the prefetched page.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The downloaded page resources are cached for about five minutes. After this period, the **Web** component
 > automatically releases them.
@@ -2696,7 +2696,7 @@ Notifies the **Web** component to refresh the web page. You can choose whether t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ignoreCache | boolean | Yes | Whether to ignore cache refresh when the **Web** component refreshes the web page.<br>The value **true** means to ignore the cache refresh, and **false** means the opposite. <br>**NOTE:**<br>If **undefined** or **null** is passed in, the value is **false**. |
+| ignoreCache | boolean | Yes | Whether to ignore cache refresh when the **Web** component refreshes the web page.<br>The value **true** means to ignore the cache refresh, and **false** means the opposite. <br>**NOTE:** <br>If **undefined** or **null** is passed in, the value is **false**. |
 
 **Error codes:**
 
@@ -2715,7 +2715,7 @@ Registers a proxy for interaction between the application and web pages loaded b
 
 For the example, see [Invoking Application Functions on the Frontend Page](../../../web/web-in-page-app-function-invoking.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The **registerJavaScriptProxy** API must be used together with the **deleteJavaScriptRegister** API to
 > prevent memory leak.
@@ -2958,7 +2958,7 @@ runJavaScript(script: string): Promise<string>
 
 Executes a JavaScript script asynchronously in the context of the current page. This API uses a promise to return the script execution result. This method and its callback must be used on the UI thread.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The JavaScript status is no longer retained during navigation operations (such as **loadUrl**). For example,
 > the global variables and functions defined before **loadUrl** is called do not exist in the loaded page.
@@ -3008,7 +3008,7 @@ runJavaScript(script: string, callback: AsyncCallback<string>): void
 
 Executes a JavaScript script asynchronously in the context of the current page. This API uses an asynchronous callback to return the script execution result. This method and its callback must be used on the UI thread.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The JavaScript status is no longer retained during navigation operations (such as **loadUrl**). For example,
 > the global variables and functions defined before **loadUrl** is called do not exist in the loaded page.
@@ -3053,7 +3053,7 @@ runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>
 
 Executes a JavaScript script asynchronously and returns the script execution result through a promise. **runJavaScriptExt** can be invoked only after **loadUrl** is executed, for example, in onPageEnd.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The string data type passed from the frontend page to the app side is treated as JSON-formatted data and
 > needs to be deserialized with JSON.parse.
@@ -3091,7 +3091,7 @@ runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessage
 
 Executes a JavaScript script. This API uses an asynchronous callback to return the script execution result. **runJavaScriptExt** can be invoked only after **loadUrl** is executed. For example, it can be invoked in **onPageEnd**.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The string data type passed from the frontend page to the app side is treated as JSON-formatted data and
 > needs to be deserialized with JSON.parse.
@@ -3294,7 +3294,7 @@ static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 
 Sets the ArkWeb kernel version. If the system does not support the specified version, the setting does not take effect and the system default kernel is used (see [Constraints](../../../web/web-component-overview.md#constraints)). This API is a global static API and must be executed before **initializeWebEngine** is called. If any **Web** component has been loaded, the setting does not take effect. Typical use case: when features or compatibility requirements of a specific kernel version are needed, you can switch to the corresponding kernel version.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - **setActiveWebEngineVersion** cannot be called in an asynchronous thread.
 > 
@@ -3442,7 +3442,7 @@ setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCo
 
 Sets whether to enable blankless loading. This API must be used together with [getBlanklessInfoWithKey](#getblanklessinfowithkey).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This API must be called after the page loading API is triggered. Other restrictions are the same as those of
 > [getBlanklessInfoWithKey](#getblanklessinfowithkey).
@@ -3487,7 +3487,7 @@ setBlanklessLoadingWithParams(key: string,
 
 Sets the configuration parameters for frame interpolation during blankless loading. This API must be used with [getBlanklessInfoWithKey](#getblanklessinfowithkey). Compared with [setBlanklessLoadingWithKey](#setblanklessloadingwithkey), this API supports more parameter settings for frame interpolation during blankless loading, including the frame interpolation duration, cache data validity period, and custom callback after frame interpolation is complete.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This API must be called after the page loading API is triggered. Other restrictions are the same as those of
 > [getBlanklessInfoWithKey](#getblanklessinfowithkey).
@@ -3559,7 +3559,7 @@ setCustomUserAgent(userAgent: string): void
 
 Sets a custom user agent, which will overwrite the default user agent.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When **src** of the **Web** component is set to a URL, it is recommended to set **User-Agent** in the
 > onControllerAttached callback. Do not set it in the
@@ -3655,7 +3655,7 @@ Sets whether to enable the mainframe error page feature, and controls whether to
 
 When **enable** is set to **true**, an error page is displayed when a mainframe loading error occurs: if the [onOverrideErrorPage](../arkts-components/arkts-arkweb-web-comp-attribute.md#onoverrideerrorpage) callback is set, the user-defined error page is displayed; if not, the default error page provided by ArkWeb is displayed. When both **enable** and **includeSubframe** are set to **true**, an error page is also displayed when a subframe loading error occurs, and the **onOverrideErrorPage** callback also takes effect for subframes.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When **enable** is set to **false**, the error page feature for both mainframe and subframe is disabled
 > regardless of the value of **includeSubframe**.
@@ -3912,7 +3912,7 @@ static setScrollbarMode(scrollbarMode: ScrollbarMode): void
 
 Sets the global scrollbar mode in the web page. When this API is not explicitly called, [ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](arkts-arkweb-webview-scrollbarmode-e.md) is used by default, indicating that the scroll bar is not always displayed.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - You can set whether to always display the web scrollbar of the current application based on the scrollbar
 > mode.
@@ -3969,7 +3969,7 @@ Sets the site isolation mode. The site isolation mechanism isolates websites fro
 
 For third-party applications that load only trusted web pages, you can disable this functionality to improve performance, reduce memory usage, and reduce interception of cross-domain access. The default value varies according to the device. [SiteIsolationMode.STRICT](arkts-arkweb-webview-siteisolationmode-e.md) is used for PCs and tablets, and [SiteIsolationMode.PARTIAL](arkts-arkweb-webview-siteisolationmode-e.md) is used for phones. In [Secure Shield mode](../../../web/web-secure-shield-mode.md), strict site isolation is used.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Strict site isolation cannot be set in single-process mode.
 > 
@@ -4097,7 +4097,7 @@ static setUserAgentClientHintsEnabled(enabled: boolean): void
 
 Sets whether to enable the User-Agent Client Hints feature.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > User-Agent Client Hints (UA-CH) is a privacy protection mechanism that replaces the traditional **User-Agent**
 > string. It transfers client information through on-demand requests and structured data, reducing the risk of
@@ -4146,7 +4146,7 @@ setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void
 
 Sets the **UserAgentMetadata** corresponding to the **User-Agent**.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > User-Agent Metadata is used to populate user agent client hints. It can provide the brand and version
 > information of the client, the brand and major version of the underlying operating system, and detailed
@@ -4169,7 +4169,7 @@ Sets the **UserAgentMetadata** corresponding to the **User-Agent**.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userAgent | string | Yes | Information about the custom user agent. You can use [getUserAgent](#getuseragent) to obtain the current default user agent. |
-| metaData | [UserAgentMetadata](arkts-arkweb-webview-useragentmetadata-c.md) | Yes | UserAgentMetadata** corresponding to the user agent. You can use [getUserAgentMetadata](#getuseragentmetadata) to obtain the current default value and then modify it using the corresponding method. |
+| metaData | [UserAgentMetadata](arkts-arkweb-webview-useragentmetadata-c.md) | Yes | **UserAgentMetadata** corresponding to the user agent. You can use [getUserAgentMetadata](#getuseragentmetadata) to obtain the current default value and then modify it using the corresponding method. |
 
 ## setWebDebuggingAccess
 
@@ -4240,7 +4240,7 @@ static setWebDestroyMode(mode: WebDestroyMode): void
 
 Sets the destroy mode of the **Web** component. The destroy mode of the **Web** component affects the time when web kernel resources, such as the JavaScript running context and rendering context, are released. The default value is [WebDestroyMode.NORMAL_MODE](arkts-arkweb-webview-webdestroymode-e.md) (normal mode), indicating that the system determines the destroy time. You can set [WebDestroyMode.FAST_MODE](arkts-arkweb-webview-webdestroymode-e.md) (fast mode) to destroy resources immediately, improving performance in specific scenarios.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > [WebDestroyMode.FAST_MODE](arkts-arkweb-webview-webdestroymode-e.md) changes the time when the **Web** component is
 > destroyed. When it is used, pay attention to the incorrect implementation that depends on the destroy time of
@@ -4258,7 +4258,7 @@ Sets the destroy mode of the **Web** component. The destroy mode of the **Web** 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [WebDestroyMode](arkts-arkweb-webview-webdestroymode-e.md) | Yes | Destroy mode of the **Web** component.<br>Default value: **WebDestroyMode.NORMAL_MODE |
+| mode | [WebDestroyMode](arkts-arkweb-webview-webdestroymode-e.md) | Yes | Destroy mode of the **Web** component.<br>Default value: **WebDestroyMode.NORMAL_MODE** |
 
 ## setWebSchemeHandler
 
@@ -4616,7 +4616,7 @@ webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): vo
 
 Obtains the full drawing result of the web page.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This API does not support concurrent calls.
 > 

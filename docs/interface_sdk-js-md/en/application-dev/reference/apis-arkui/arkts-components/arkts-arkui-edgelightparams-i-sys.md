@@ -8,11 +8,6 @@ Defines the parameters of the edge light effect.
 
 **System API:** This is a system API.
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## color
 
 ```TypeScript

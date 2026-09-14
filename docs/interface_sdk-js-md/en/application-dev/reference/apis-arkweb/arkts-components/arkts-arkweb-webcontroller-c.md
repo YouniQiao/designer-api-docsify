@@ -12,11 +12,6 @@ WebController is suitable for scenarios where active control of the embedded Web
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## accessBackward
 
 ```TypeScript
@@ -37,7 +32,7 @@ Checks whether going to the previous page can be performed on the current page.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** is returned if going to the previous page can be performed on the current page; otherwise, **false** is returned. |
+| boolean | **true** is returned if going to the previous page can be performed on the current page; otherwise, **false** is returned. |
 
 ## accessForward
 

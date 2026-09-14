@@ -14,11 +14,6 @@ controller: SearchController = new SearchController();
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## caretPosition
 
 ```TypeScript
@@ -75,7 +70,7 @@ Sets the text selection range and highlights the selected text when the componen
 | --- | --- | --- | --- |
 | selectionStart | number | Yes | Start position of the text selection range. The start position of text in the text box is 0.<br>A value less than 0 is handled as **0**. A value greater than the maximum text length is handled as the maximum text length.<br> |
 | selectionEnd | number | Yes | End position of the text selection range.<br>A value less than 0 is handled as **0**. A value greater than the maximum text length is handled as the maximum text length.<br> |
-| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No | Configuration options for text selection.<br>Default value: **MenuPolicy.DEFAULT |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No | Configuration options for text selection.<br>Default value: **MenuPolicy.DEFAULT** |
 
 ## stopEditing
 

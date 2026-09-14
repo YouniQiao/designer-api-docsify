@@ -6,11 +6,6 @@ Provides detailed information about the first meaningful paint on the web page, 
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## firstMeaningfulPaintTime
 
 ```TypeScript

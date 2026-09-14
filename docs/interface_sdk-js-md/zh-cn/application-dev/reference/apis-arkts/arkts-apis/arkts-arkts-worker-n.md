@@ -1,4 +1,4 @@
-# worker
+# worker(线程管理)
 
 JS跨线程通信工具。
 

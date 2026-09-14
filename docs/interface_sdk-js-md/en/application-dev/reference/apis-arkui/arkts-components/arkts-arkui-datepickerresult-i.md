@@ -6,11 +6,6 @@ Defines the time format returned by the date picker.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## day
 
 ```TypeScript

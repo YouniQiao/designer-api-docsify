@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## getModifierKeyState
 
 ```TypeScript
@@ -19,7 +14,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 获取功能键按压状态。报错信息请参考以下错误码。支持功能键'Ctrl'\|'Alt'\|'Shift'。
 
-> **说明：**
+> **说明：** 
 > 
 > 此接口不支持在手写笔场景下使用。
 
@@ -59,7 +54,7 @@ axisHorizontal?: number
 
 默认值：0
 
-**说明：**
+**说明：** 
 
 当前仅在鼠标滚轮或触控板双指滑动触发的Pan手势，或使用Ctrl+鼠标滚轮触发的Pinch手势中可以获取。
 
@@ -87,7 +82,7 @@ axisPinch?: number
 
 默认值：0
 
-**说明：**
+**说明：** 
 
 仅在触控板上通过双指缩放操作触发的Pinch手势，或在轴事件中，可以获取该值；在其他场景下，获取到的将是默认值。
 
@@ -117,7 +112,7 @@ axisVertical?: number
 
 默认值：0
 
-**说明：**
+**说明：** 
 
 当前仅在鼠标滚轮或触控板双指滑动触发的Pan手势，或使用Ctrl+鼠标滚轮触发的Pinch手势中可以获取。
 

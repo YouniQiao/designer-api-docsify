@@ -78,6 +78,8 @@ dispatchEvent(event: Event): boolean
 
 | 类型 | 说明 |
 | --- | --- |
+| boolean |  |
+
 **示例**
 
 ```TypeScript

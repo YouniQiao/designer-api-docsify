@@ -14,7 +14,7 @@ function getLinkedInfo(): Promise<WifiLinkedInfo>
 
 获取Wi-Fi连接信息。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃。
 
@@ -63,7 +63,7 @@ function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void
 
 获取Wi-Fi连接信息。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃。
 

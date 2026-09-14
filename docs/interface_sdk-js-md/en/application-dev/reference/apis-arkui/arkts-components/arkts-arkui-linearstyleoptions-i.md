@@ -10,11 +10,6 @@ Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md) and [Commo
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## strokeRadius
 
 ```TypeScript

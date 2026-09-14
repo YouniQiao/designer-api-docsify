@@ -123,7 +123,7 @@ createModuleContext(moduleName: string): Context
 
 Creates the context based on the module name.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Only the context of other modules in the current application and the context of the intra-application HSP can
 > be obtained. The context of other applications cannot be obtained.
@@ -431,7 +431,7 @@ Information about file partitions, which are divided according to the encryption
 bundleCodeDir: string
 ```
 
-Bundle code directory. Do not access resource files using concatenated paths. Use [resource manager APIs](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md) instead. For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
+Bundle code directory. Do not access resource files using concatenated paths. Use [resource manager APIs](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager.md) instead. For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 
@@ -613,7 +613,7 @@ resourceDir: string
 
 Resource directory.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > You are required to manually create the resfile directory in **&lt;module-name&gt;\resource**.
 > The **resfile** directory can be accessed only in read-only mode.

@@ -10,11 +10,6 @@ ContentModifier接口使用的TextTimer配置。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## count
 
 ```TypeScript

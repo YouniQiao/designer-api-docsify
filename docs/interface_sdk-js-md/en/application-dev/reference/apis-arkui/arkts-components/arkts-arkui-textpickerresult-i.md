@@ -6,11 +6,6 @@ Defines the struct of TextPickerResult.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## index
 
 ```TypeScript

@@ -4,7 +4,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [geoLocationManager/geoLocationManager](arkts-geolocationmanager.md)
+**Substitutes:** [geoLocationManager/geoLocationManager](arkts-location-geolocationmanager.md)
 
 **System capability:** SystemCapability.Location.Location.Lite
 
@@ -82,6 +82,8 @@ Obtains the supported coordinate system types.
 
 | Type | Description |
 | --- | --- |
+| Array&lt;string&gt; | A string array of the supported coordinate system types, for example, ['wgs84']. |
+
 ## subscribe
 
 ```TypeScript

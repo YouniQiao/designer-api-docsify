@@ -2,7 +2,7 @@
 
 Defines a touch target consisting of an input tool type, touch position, and size.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When the parent component has [clip](arkts-arkui-commonmethod-c.md#clip) set to **true**, child component
 > interaction is affected by the parent component's response region. Children outside the parent component's response
@@ -24,11 +24,6 @@ Defines a touch target consisting of an input tool type, touch position, and siz
 **Since:** 22
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## height
 

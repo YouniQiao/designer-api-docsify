@@ -24,11 +24,11 @@ end?: LengthMetrics
 
 size为ChipV2Size.SMALL时，end默认值：
 
-`LengthMetrics.resource(\$r('sys.float.chip_small_text_margin'))`。
+`LengthMetrics.resource(&#36;r('sys.float.chip_small_text_margin'))`。
 
 size为ChipV2Size.NORMAL时，end默认值：
 
-`LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin'))`。
+`LengthMetrics.resource(&#36;r('sys.float.chip_normal_text_margin'))`。
 
 单位：vp
 
@@ -60,11 +60,11 @@ start?: LengthMetrics
 
 size为ChipV2Size.SMALL时，start默认值：
 
-`LengthMetrics.resource(\$r('sys.float.chip_small_text_margin'))`。
+`LengthMetrics.resource(&#36;r('sys.float.chip_small_text_margin'))`。
 
 size为ChipV2Size.NORMAL时，start默认值：
 
-`LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin'))`。
+`LengthMetrics.resource(&#36;r('sys.float.chip_normal_text_margin'))`。
 
 单位：vp
 

@@ -200,7 +200,7 @@ deleteAssets(assets: Array<PhotoAsset>): void
 
 Permanently deletes assets from the trash.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
 > operation.
@@ -272,7 +272,7 @@ deleteAssetsWithUri(assetUris: Array<string>): void
 
 Permanently deletes assets from the trash.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
 > operation.

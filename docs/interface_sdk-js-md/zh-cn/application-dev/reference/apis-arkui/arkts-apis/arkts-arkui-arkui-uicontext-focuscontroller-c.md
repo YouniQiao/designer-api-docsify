@@ -2,7 +2,7 @@
 
 提供控制焦点的能力，如清除、移动和激活焦点等功能，适用于需要管理页面或组件焦点状态、控制焦点流转的场景，可帮助开发者优化键盘等输入方式下的焦点交互体验。
 
-> **说明：**
+> **说明：** 
 
 > - 本模块首批接口从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 > 
@@ -108,7 +108,7 @@ requestFocus(key: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 节点对应的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 |
+| key | string | 是 | 节点对应的[组件标识](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-common.md)。 |
 
 **错误码：**
 
@@ -138,7 +138,7 @@ setAutoFocusTransfer(isAutoFocusTransfer: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isAutoFocusTransfer | boolean | 是 | 设置页面切换时，新的页面是否需要主动获取焦点，例如[Router](arkts-router.md)、Navigation、Menu、Dialog、Popup等。true表示需要主动获取焦点，false表示不需要主动获取焦点。默认值为true。 |
+| isAutoFocusTransfer | boolean | 是 | 设置页面切换时，新的页面是否需要主动获取焦点，例如[Router](arkts-arkui-router.md)、Navigation、Menu、Dialog、Popup等。true表示需要主动获取焦点，false表示不需要主动获取焦点。默认值为true。 |
 
 ## setKeyProcessingMode
 

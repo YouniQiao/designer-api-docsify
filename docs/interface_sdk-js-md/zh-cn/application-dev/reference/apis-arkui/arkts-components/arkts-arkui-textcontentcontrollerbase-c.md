@@ -6,11 +6,6 @@ TextInput、TextArea、Search的基础控制器。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## addText
 
 ```TypeScript
@@ -21,7 +16,7 @@ addText(text: string, textOperationOptions?: TextContentControllerOptions): numb
 
 拖拽文本的状态下不生效。
 
-> **说明：**
+> **说明：** 
 > 
 > `addText`仅影响应用内部的UI表现，不影响输入法应用的内部逻辑。预上屏状态由输入法管理，应用层调用`addText`/`deleteText`会破坏输入法的状态管理，因此应避免在预上屏状态下调用`addText`。
 
@@ -54,7 +49,7 @@ clearPreviewText(): void
 
 通知输入法清除当前的预上屏文本内容。
 
-> **说明：**
+> **说明：** 
 > 
 > 当controller未绑定组件或绑定controller的组件被释放时，该接口不生效。
 
@@ -78,7 +73,7 @@ deleteBackward(): void
 
 `deleteBackward`仅影响应用内部的UI表现，不影响输入法应用的内部逻辑，不支持在预上屏场景下使用。
 
-> **说明：**
+> **说明：** 
 > 
 > 当controller未绑定组件或绑定controller的组件被释放时，该接口不生效。
 
@@ -98,7 +93,7 @@ deleteText(range?: TextRange): void
 
 删除已编辑文本的指定区域的内容。
 
-> **说明：**
+> **说明：** 
 > 
 > - 拖拽文本的状态下不生效。
 > 
@@ -136,7 +131,7 @@ getCaretOffset() : CaretOffset
 
 返回当前光标所在位置信息。
 
-> **说明：**
+> **说明：** 
 > 
 > - 在当前帧更新光标位置同时调用该接口，该接口不生效。
 > 
@@ -214,7 +209,7 @@ getTextContentRect() : RectResult
 
 获取已编辑文本内容区域相对于组件的位置和大小，返回值的单位为像素。
 
-> **说明：**
+> **说明：** 
 > 
 > - 初始不输入文本时，返回值中有相对组件的位置信息，大小为0。
 > - 返回值中的位置信息是第一个字符相对于可编辑组件的位置。
@@ -243,7 +238,7 @@ scrollToVisible(range?: TextRange): void
 
 将起始索引与结束索引传递给与其绑定的输入框（TextInput、TextArea、Search）组件，并将此范围内的文字滚动到可视区域。
 
-> **说明：**
+> **说明：** 
 > 
 > 当controller未绑定组件或绑定controller的组件被释放时，该接口不生效。
 
@@ -269,7 +264,7 @@ setStyledPlaceholder(styledString: StyledString): void
 
 设置属性字符串样式的占位文本，触发绑定或更新。
 
-> **说明：**
+> **说明：** 
 > 
 > 当controller未绑定组件或绑定controller的组件被释放时，该接口不生效。
 

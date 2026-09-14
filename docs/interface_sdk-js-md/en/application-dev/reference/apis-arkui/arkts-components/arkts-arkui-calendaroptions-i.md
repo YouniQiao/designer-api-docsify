@@ -6,11 +6,6 @@ Describes the parameters of the calendar picker.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## disabledDateRange
 
 ```TypeScript
@@ -19,7 +14,7 @@ disabledDateRange?: DateRange[]
 
 Disabled date range.
 
-**NOTE:**
+**NOTE:** 
 
 1. If the start date or end date within a date range is invalid or is not set,
 the entire date range does not take effect.
@@ -75,7 +70,7 @@ Unit: vp.
 
 Default value: **16.0** (the background is a circle).
 
-**NOTE:**
+**NOTE:** 
 
 If the value is **0.0**, the background is a right-angled rectangle. If the value is in the (0.0, 16.0) range, the background is a rounded rectangle. If the value is a negative number or greater than 16.0, the default value **16.0** is used, which means the background is a circle.
 

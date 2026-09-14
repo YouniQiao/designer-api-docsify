@@ -6,11 +6,6 @@ Represents the callback invoked to notify the host application of a JavaScript c
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## message
 
 ```TypeScript

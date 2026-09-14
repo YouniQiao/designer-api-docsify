@@ -20,10 +20,6 @@ Returns a string representation appropriate to the host environment's current lo
 | locales | [Intl.LocalesArgument](arkts-intl-localesargument-t.md) | No |  |
 | options | [BigIntToLocaleStringOptions](arkts-lib-es2020-bigint-biginttolocalestringoptions-i.md) | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toString
 
 ```TypeScript
@@ -38,10 +34,6 @@ Returns a string representation of an object.
 | --- | --- | --- | --- |
 | radix | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## valueOf
 
 ```TypeScript
@@ -50,10 +42,6 @@ valueOf(): bigint
 
 Returns the primitive value of the specified object.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [Symbol.toStringTag]
 
 ```TypeScript

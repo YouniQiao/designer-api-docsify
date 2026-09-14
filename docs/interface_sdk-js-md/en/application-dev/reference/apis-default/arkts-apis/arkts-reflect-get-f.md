@@ -24,8 +24,3 @@ Gets the property of target, equivalent to `target[propertyKey]` when `receiver 
 | target | T | Yes |  |
 | propertyKey | P | Yes |  |
 | receiver | unknown | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

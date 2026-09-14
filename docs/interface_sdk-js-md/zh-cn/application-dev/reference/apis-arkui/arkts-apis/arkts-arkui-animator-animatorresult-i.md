@@ -473,7 +473,7 @@ update(options: AnimatorOptions): void
 
 更新当前animator动画参数。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃。
 

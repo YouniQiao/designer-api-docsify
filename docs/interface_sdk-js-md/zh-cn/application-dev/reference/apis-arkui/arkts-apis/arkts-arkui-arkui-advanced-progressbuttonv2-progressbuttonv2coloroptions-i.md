@@ -22,7 +22,7 @@ import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions }
 backgroundColor?: ColorMetrics
 ```
 
-按钮背景颜色。<br>默认值：\\$r('sys.color.ohos_id_color_foreground_contrary')
+按钮背景颜色。<br>默认值：\&#36;r('sys.color.ohos_id_color_foreground_contrary')
 
 **类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 

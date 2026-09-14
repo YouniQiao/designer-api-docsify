@@ -19,10 +19,6 @@ Creates a new Generator object.
 | --- | --- | --- | --- |
 | args | any[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -37,10 +33,6 @@ Creates a new Generator object.
 | --- | --- | --- | --- |
 | args | any[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## length
 
 ```TypeScript

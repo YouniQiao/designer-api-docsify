@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## antiAlias
 
 ```TypeScript
@@ -77,7 +72,7 @@ fillOpacity(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 填充区域透明度。<br>**说明：**<br>number格式取值范围是[0.0, 1.0]，若给定值小于0.0，则取值为0.0；若给定值大于1.0，则取值为1.0，其余异常值按1.0处理。<br>string格式支持number格式取值的字符串形式，取值范围与number格式相同。<br>Resource格式支持系统资源或者应用资源中的字符串，取值范围和number格式相同。<br>默认值：1.0 |
+| value | number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 填充区域透明度。<br>**说明：** <br>number格式取值范围是[0.0, 1.0]，若给定值小于0.0，则取值为0.0；若给定值大于1.0，则取值为1.0，其余异常值按1.0处理。<br>string格式支持number格式取值的字符串形式，取值范围与number格式相同。<br>Resource格式支持系统资源或者应用资源中的字符串，取值范围和number格式相同。<br>默认值：1.0 |
 
 ## mesh
 
@@ -89,9 +84,9 @@ mesh(value: Array<any>, column: number, row: number)
 
 坐标数组按行优先顺序存储。原始图像被均匀分割后，每个网格区域根据顶点的新坐标进行变换，最终形成扭曲效果。
 
-> **说明：**
+> **说明：** 
 > 
-> mesh只对shape传入pixelMap时生效，且效果作用于传入的pixelMap。与[绘制模块](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-drawing.md)的
+> mesh只对shape传入pixelMap时生效，且效果作用于传入的pixelMap。与[绘制模块](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-graphics-drawing.md)的
 > [drawPixelMapMesh&lt;sup&gt;12+&lt;/sup&gt;](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md#drawpixelmapmesh)效果一致，建议使用
 > drawPixelMapMesh。
 
@@ -153,7 +148,7 @@ strokeDashArray(value: Array<any>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array&lt;any&gt; | 是 | 定义Shape轮廓的虚线模式的数组，数组元素交替表示线段长度和间隙长度。<br>默认值：[]（空数组）<br>默认单位：vp <br>异常值undefined和null按照默认值处理。<br>**说明：**<br>空数组：实线<br>偶数多元素数组：数组元素按顺序循环，如[a, b, c, d]表示线段长度a-&gt;间隙长度b-&gt;线段长度c-&gt;间隙长度d-&gt;线段长度a-&gt;... <br>奇数多元素数组：重复一次该数组元素，按偶数多元素数组的规则顺序循环，如[a, b, c]等效于[a, b, c, a, b, c]，表示线段长度a-&gt;间隙长度b-&gt;线段长度c-&gt;间隙长度a-&gt;线段长度b-&gt;间隙长度c-&gt;线段长度a-&gt;... |
+| value | Array&lt;any&gt; | 是 | 定义Shape轮廓的虚线模式的数组，数组元素交替表示线段长度和间隙长度。<br>默认值：[]（空数组）<br>默认单位：vp <br>异常值undefined和null按照默认值处理。<br>**说明：** <br>空数组：实线<br>偶数多元素数组：数组元素按顺序循环，如[a, b, c, d]表示线段长度a-&gt;间隙长度b-&gt;线段长度c-&gt;间隙长度d-&gt;线段长度a-&gt;... <br>奇数多元素数组：重复一次该数组元素，按偶数多元素数组的规则顺序循环，如[a, b, c]等效于[a, b, c, a, b, c]，表示线段长度a-&gt;间隙长度b-&gt;线段长度c-&gt;间隙长度a-&gt;线段长度b-&gt;间隙长度c-&gt;线段长度a-&gt;... |
 
 ## strokeDashOffset
 

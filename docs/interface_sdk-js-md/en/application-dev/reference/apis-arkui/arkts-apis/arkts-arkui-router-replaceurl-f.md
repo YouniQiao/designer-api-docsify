@@ -14,7 +14,7 @@ function replaceUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 
 Replaces the current page with another one in the application and destroys the current page.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
@@ -80,7 +80,7 @@ function replaceUrl(options: RouterOptions): Promise<void>
 
 Replaces the current page with another one in the application and destroys the current page. This API cannot be used to configure page transition effects. To configure page transition effects, use the [Navigation](../../../ui/arkts-navigation-architecture.md) component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
@@ -153,7 +153,7 @@ function replaceUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCal
 
 Replaces the current page with another one in the application and destroys the current page.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
@@ -220,7 +220,7 @@ function replaceUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 
 Replaces the current page with another one in the application and destroys the current page.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in

@@ -1,11 +1,11 @@
 # ArkTS API<!--arkts-distributedservicekit-->
 
-- [@ohos.application.DistributedExtensionAbility(Distributed Extension Ability)](arkts-application-distributedextensionability.md)
+- [@ohos.application.DistributedExtensionAbility(Distributed Extension Ability)](arkts-distributedservice-application-distributedextensionability.md)
   - [DistributedExtensionAbility](arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md)
-- [@ohos.application.DistributedExtensionContext(Distributed Extension Context)](arkts-application-distributedextensioncontext.md)
+- [@ohos.application.DistributedExtensionContext(Distributed Extension Context)](arkts-distributedservice-application-distributedextensioncontext.md)
   - [DistributedExtensionContext](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md)
 <!--Del-->
-- [@ohos.cooperate](arkts-cooperate.md)<!--DelEnd-->
+- [@ohos.cooperate](arkts-distributedservice-cooperate.md)<!--DelEnd-->
   <!--Del-->
   - [activate(system api)](arkts-distributedservice-cooperate-activate-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -42,7 +42,7 @@
   - [CooperateMsg(system api)](arkts-distributedservice-cooperate-cooperatemsg-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [CooperateState(system api)](arkts-distributedservice-cooperate-cooperatestate-e-sys.md)<!--DelEnd-->
-- [@ohos.distributedDeviceManager](arkts-distributeddevicemanager.md)
+- [@ohos.distributedDeviceManager](arkts-distributedservice-distributeddevicemanager.md)
   - [createDeviceManager](arkts-distributedservice-distributeddevicemanager-createdevicemanager-f.md)
   - [releaseDeviceManager](arkts-distributedservice-distributeddevicemanager-releasedevicemanager-f.md)
   - [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
@@ -66,7 +66,7 @@
   - [DeviceStateChange](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md)
   <!--Del-->
   - [StrategyForHeartbeat(system api)](arkts-distributedservice-distributeddevicemanager-strategyforheartbeat-e-sys.md)<!--DelEnd-->
-- [@ohos.distributedHardware.deviceManager](arkts-distributedhardware-devicemanager.md)
+- [@ohos.distributedHardware.deviceManager](arkts-distributedservice-distributedhardware-devicemanager.md)
   <!--Del-->
   - [createDeviceManager(system api)](arkts-distributedservice-devicemanager-createdevicemanager-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -96,7 +96,7 @@
   <!--Del-->
   - [SubscribeCap(system api)](arkts-distributedservice-devicemanager-subscribecap-e-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.distributedHardware.hardwareManager(Distributed Hardware Manager)](arkts-distributedhardware-hardwaremanager.md)<!--DelEnd-->
+- [@ohos.distributedHardware.hardwareManager(Distributed Hardware Manager)](arkts-distributedservice-distributedhardware-hardwaremanager.md)<!--DelEnd-->
   <!--Del-->
   - [pauseDistributedHardware(system api)](arkts-distributedservice-hardwaremanager-pausedistributedhardware-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -109,7 +109,7 @@
   - [DistributedHardwareErrorCode(system api)](arkts-distributedservice-hardwaremanager-distributedhardwareerrorcode-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DistributedHardwareType(system api)](arkts-distributedservice-hardwaremanager-distributedhardwaretype-e-sys.md)<!--DelEnd-->
-- [@ohos.distributedsched.abilityConnectionManager(Ability Connection Manager)](arkts-distributedsched-abilityconnectionmanager.md)
+- [@ohos.distributedsched.abilityConnectionManager(Ability Connection Manager)](arkts-distributedservice-distributedsched-abilityconnectionmanager.md)
   - [acceptConnect](arkts-distributedservice-abilityconnectionmanager-acceptconnect-f.md)
   - [connect](arkts-distributedservice-abilityconnectionmanager-connect-f.md)
   - [createAbilityConnectionSession](arkts-distributedservice-abilityconnectionmanager-createabilityconnectionsession-f.md)
@@ -168,13 +168,13 @@
   - [StreamRole(system api)](arkts-distributedservice-abilityconnectionmanager-streamrole-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [VideoPixelFormat(system api)](arkts-distributedservice-abilityconnectionmanager-videopixelformat-e-sys.md)<!--DelEnd-->
-- [@ohos.distributedsched.linkEnhance(Enhanced Connection)](arkts-distributedsched-linkenhance.md)
+- [@ohos.distributedsched.linkEnhance(Enhanced Connection)](arkts-distributedservice-distributedsched-linkenhance.md)
   - [createConnection](arkts-distributedservice-linkenhance-createconnection-f.md)
   - [createServer](arkts-distributedservice-linkenhance-createserver-f.md)
   - [Connection](arkts-distributedservice-linkenhance-connection-i.md)
   - [ConnectResult](arkts-distributedservice-linkenhance-connectresult-i.md)
   - [Server](arkts-distributedservice-linkenhance-server-i.md)
-- [@ohos.distributedsched.proxyChannelManager(Proxy Channel Management)](arkts-distributedsched-proxychannelmanager.md)
+- [@ohos.distributedsched.proxyChannelManager(Proxy Channel Management)](arkts-distributedservice-distributedsched-proxychannelmanager.md)
   - [closeProxyChannel](arkts-distributedservice-proxychannelmanager-closeproxychannel-f.md)
   - [off](arkts-distributedservice-proxychannelmanager-off-f.md)
   - [on](arkts-distributedservice-proxychannelmanager-on-f.md)
@@ -186,7 +186,7 @@
   - [ChannelState](arkts-distributedservice-proxychannelmanager-channelstate-e.md)
   - [LinkType](arkts-distributedservice-proxychannelmanager-linktype-e.md)
 <!--Del-->
-- [@ohos.distributedSoftBus.conversation(Cross-Device Wakeup and Message Transfer)](arkts-distributedsoftbus-conversation.md)<!--DelEnd-->
+- [@ohos.distributedSoftBus.conversation(Cross-Device Wakeup and Message Transfer)](arkts-distributedservice-distributedsoftbus-conversation.md)<!--DelEnd-->
   <!--Del-->
   - [getTrustedDevices(system api)](arkts-distributedservice-conversation-gettrusteddevices-f-sys.md)<!--DelEnd-->
   <!--Del-->

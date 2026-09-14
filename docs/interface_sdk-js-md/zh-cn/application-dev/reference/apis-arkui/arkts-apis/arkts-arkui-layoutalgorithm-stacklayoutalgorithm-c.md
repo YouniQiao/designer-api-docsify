@@ -2,7 +2,7 @@
 
 堆叠布局算法类。
 
-> **说明：**
+> **说明：** 
 > 
 > StackLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为DynamicLayout组件的
 > 入参指定布局算法。

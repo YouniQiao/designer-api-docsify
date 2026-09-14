@@ -42,7 +42,7 @@ backgroundBorderRadius?: LengthMetrics
 
 分段按钮整体容器的边框圆角半径。
 
-**说明：**
+**说明：** 
 
 此属性仅在borderRadiusMode为BorderRadiusMode.CUSTOM时生效。
 
@@ -50,7 +50,7 @@ backgroundBorderRadius?: LengthMetrics
 
 圆角大小受组件尺寸限制，最大值为组件宽或高的一半，不支持百分比设置。超出最大值时自动修正为最大值，使用百分比时按默认值处理。
 
-默认值：`\$r('sys.float.segmentbutton_container_shape')`
+默认值：`&#36;r('sys.float.segmentbutton_container_shape')`
 
 值为undefined时，按默认值处理。
 
@@ -72,7 +72,7 @@ backgroundColor?: ResourceColor
 
 背景板颜色。
 
-默认值：\$r('sys.color.ohos_id_color_button_normal')
+默认值：&#36;r('sys.color.ohos_id_color_button_normal')
 
 值为undefined时，按默认值处理。
 
@@ -196,7 +196,7 @@ fontColor?: ResourceColor
 
 按钮未选中态的文本颜色。
 
-默认值：\$r('sys.color.ohos_id_color_text_secondary')
+默认值：&#36;r('sys.color.ohos_id_color_text_secondary')
 
 值为undefined时，按默认值处理。
 
@@ -218,7 +218,7 @@ fontSize?: DimensionNoPercentage
 
 按钮未选中态的字体大小（不支持百分比设置）。
 
-默认值：\$r('sys.float.ohos_id_text_size_body2')
+默认值：&#36;r('sys.float.ohos_id_text_size_body2')
 
 单位：fp
 
@@ -274,7 +274,7 @@ imageSize?: SizeOptions
 
 值为undefined时，按默认值处理。
 
-**说明：**
+**说明：** 
 
 `imageSize`属性仅对图标按钮和图标+文本按钮生效，对纯文本按钮无效果。
 
@@ -298,7 +298,7 @@ itemBorderRadius?: LengthMetrics
 
 分段按钮中按钮项的边框圆角半径。
 
-**说明：**
+**说明：** 
 
 此属性仅在borderRadiusMode为BorderRadiusMode.CUSTOM时生效。
 
@@ -306,7 +306,7 @@ itemBorderRadius?: LengthMetrics
 
 圆角大小受组件尺寸限制，最大值为组件宽或高的一半，不支持百分比设置。超出最大值时自动修正为最大值，使用百分比时按默认值处理。
 
-默认值：`\$r('sys.float.segmentbutton_selected_background_shape')`
+默认值：`&#36;r('sys.float.segmentbutton_selected_background_shape')`
 
 值为undefined时，按默认值处理。
 
@@ -382,9 +382,9 @@ selectedBackgroundColor?: ResourceColor
 
 默认值：
 
-type为"tab"时，默认值为`\$r('sys.color.segment_button_checked_foreground_color')`。
+type为"tab"时，默认值为`&#36;r('sys.color.segment_button_checked_foreground_color')`。
 
-type为"capsule"时，默认值为`\$r('sys.color.ohos_id_color_emphasize')`。
+type为"capsule"时，默认值为`&#36;r('sys.color.ohos_id_color_emphasize')`。
 
 值为undefined时，按默认值处理。
 
@@ -408,9 +408,9 @@ selectedFontColor?: ResourceColor
 
 默认值：
 
-type为"tab"时，默认值为`\$r('sys.color.ohos_id_color_text_primary')`。
+type为"tab"时，默认值为`&#36;r('sys.color.ohos_id_color_text_primary')`。
 
-type为"capsule"时，默认值为`\$r('sys.color.ohos_id_color_foreground_contrary')`。
+type为"capsule"时，默认值为`&#36;r('sys.color.ohos_id_color_foreground_contrary')`。
 
 值为undefined时，按默认值处理。
 
@@ -432,7 +432,7 @@ selectedFontSize?: DimensionNoPercentage
 
 按钮选中态的字体大小（不支持百分比设置）。
 
-默认值：\$r('sys.float.ohos_id_text_size_body2')
+默认值：&#36;r('sys.float.ohos_id_text_size_body2')
 
 单位：fp
 

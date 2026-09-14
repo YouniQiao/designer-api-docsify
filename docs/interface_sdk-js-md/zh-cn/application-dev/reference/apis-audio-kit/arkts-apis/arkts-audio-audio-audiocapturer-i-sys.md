@@ -50,7 +50,7 @@ onReadMicInData(callback: Callback<AudioCapturerMicInData>): void
 
 订阅Mic-In音频数据读取回调。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 此回调的优先级高于`onReadData`回调。如果同时订阅两者，仅会触发此回调。
 > 

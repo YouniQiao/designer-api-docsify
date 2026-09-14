@@ -19,10 +19,6 @@ Returns a string containing a number represented in exponential notation.
 | --- | --- | --- | --- |
 | fractionDigits | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toFixed
 
 ```TypeScript
@@ -37,10 +33,6 @@ Returns a string representing a number in fixed-point notation.
 | --- | --- | --- | --- |
 | fractionDigits | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toLocaleString
 
 ```TypeScript
@@ -56,10 +48,6 @@ Converts a number to a string by using the current or specified locale.
 | locales | string &#124; string[] | No |  |
 | options | [Intl.NumberFormatOptions](arkts-intl-numberformatoptions-i.md) | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toPrecision
 
 ```TypeScript
@@ -74,10 +62,6 @@ Returns a string containing a number represented either in exponential or fixed-
 | --- | --- | --- | --- |
 | precision | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toString
 
 ```TypeScript
@@ -92,10 +76,6 @@ Returns a string representation of an object.
 | --- | --- | --- | --- |
 | radix | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## valueOf
 
 ```TypeScript
@@ -103,8 +83,3 @@ valueOf(): number
 ```
 
 Returns the primitive value of the specified object.
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

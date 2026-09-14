@@ -2,7 +2,7 @@
 
 提供统一的Dialog API，可创建并显示固定样式弹出框、自定义样式弹出框，并支持更新与关闭弹出框。适用于应用中需要弹出提示、确认、选择等弹出框交互的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 以下API需先使用UIContext中的[getDialogPresenter()](arkts-arkui-arkui-uicontext-uicontext-c.md#getdialogpresenter)方法获取到DialogPresenter对象，再通过该对象调用对应方法。
 

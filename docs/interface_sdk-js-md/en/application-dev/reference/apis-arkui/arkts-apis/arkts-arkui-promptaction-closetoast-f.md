@@ -14,7 +14,7 @@ function closeToast(toastId: number): void
 
 Closes the specified toast.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Directly using **closeToast** can lead to the issue of
 > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the

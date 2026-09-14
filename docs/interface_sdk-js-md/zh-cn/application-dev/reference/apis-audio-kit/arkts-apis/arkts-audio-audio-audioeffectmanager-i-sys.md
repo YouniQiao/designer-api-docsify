@@ -189,7 +189,7 @@ isAudioSeparationEffectSupported(): boolean
 
 查询当前设备是否支持系统的音频分离效果。
 
-> **说明：**
+> **说明：** 
 > 
 > 应用在使用音频分离效果相关接口前，应先调用本接口确认设备是否支持。
 
@@ -412,7 +412,7 @@ setAudioSeparationEffectEnabled(enabled: boolean, uid: number, streamId?: number
 
 为指定应用进程或音频播放流设置音频分离效果的启用状态。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 调用此接口前，应先调用
 > [isAudioSeparationEffectSupported](#isaudioseparationeffectsupported)

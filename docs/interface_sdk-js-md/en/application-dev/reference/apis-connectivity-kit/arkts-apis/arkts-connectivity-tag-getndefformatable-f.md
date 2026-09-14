@@ -30,7 +30,7 @@ Obtains an **NdefFormatableTag** object, which allows access to the tags that ar
 
 | Type | Description |
 | --- | --- |
-| [NdefFormatableTag](arkts-connectivity-tag-ndefformatabletag-t.md) | NdefFormatableTag** object obtained. |
+| [NdefFormatableTag](arkts-connectivity-tag-ndefformatabletag-t.md) | **NdefFormatableTag** object obtained. |
 
 **Error codes:**
 

@@ -8,11 +8,6 @@ Defines the emitter property.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## annulusRegion
 
 ```TypeScript

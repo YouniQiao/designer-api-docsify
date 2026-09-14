@@ -8,11 +8,6 @@ Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md). This object
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## pinchCenterX
 
 ```TypeScript

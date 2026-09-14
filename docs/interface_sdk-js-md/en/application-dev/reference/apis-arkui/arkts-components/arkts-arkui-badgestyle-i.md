@@ -2,7 +2,7 @@
 
 Describes the badge style. It includes the font color, font size, badge color, badge size, etc.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When **borderWidth** is set to a value greater than 0 and **borderColor** is different from **badgeColor**, the
 > badge is drawn before the border. Edge pixels are anti-aliased, which produces semi-transparent pixels. This causes
@@ -13,11 +13,6 @@ Describes the badge style. It includes the font color, font size, badge color, b
 **Since:** 7
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## badgeColor
 
@@ -51,7 +46,7 @@ Badge size. The value of this parameter is a string of the number type. The unit
 
 Unit: fp. Default value: **16vp**.
 
-**NOTE:**
+**NOTE:** 
 
 1. Percentage values are not supported. If a percentage value is set, the default value is used.
 2. If **fontSize** is set and **badgeSize** is smaller than fontSize, **badgeSize** will take effect based on the
@@ -103,7 +98,7 @@ Default value: **1**
 
 Unit: vp
 
-**NOTE:**
+**NOTE:** 
 
 Percentage values are not supported. If a percentage value is set, the default value is used.
 
@@ -153,7 +148,7 @@ The value **true** means to enable avoidance, and **false** means the opposite.
 
 Default value: **false**.
 
-**NOTE:**
+**NOTE:** 
 
 1. The avoidance effect is that the badge text is extended to the inside of the component.
 2. When the width of the outer border is greater than 0, the extension start point of the badge is the inner side
@@ -186,7 +181,7 @@ Default unit: fp
 
 The value must be greater than 0. If the value is **0**, the text is not displayed. If the value is less than 0, the default value is used.
 
-**NOTE:**
+**NOTE:** 
 
 1. Percentage values are not supported. If a percentage value is set, the default value is used.
 
@@ -212,7 +207,7 @@ Font weight of the text. For the number type, the value ranges from 100 to 900, 
 
 Default value: **FontWeight.Normal**
 
-**NOTE:**
+**NOTE:** 
 
 Percentage values are not supported. If a percentage value is set, the default value is used. The ResourceStr type is supported since API version 20.
 

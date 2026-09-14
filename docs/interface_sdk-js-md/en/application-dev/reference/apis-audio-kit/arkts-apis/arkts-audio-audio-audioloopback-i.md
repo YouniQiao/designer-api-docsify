@@ -8,7 +8,7 @@ When audio loopback is enabled, the system creates a low-latency renderer and ca
 
 The system automatically chooses the input and output devices. If these devices do not support low latency, audio loopback does not work. If another audio stream takes over the audio focus or if the input or output device changes to the one that does not support low latency, the system disables audio loopback automatically.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The initial APIs of this interface are supported since API version 20.
 

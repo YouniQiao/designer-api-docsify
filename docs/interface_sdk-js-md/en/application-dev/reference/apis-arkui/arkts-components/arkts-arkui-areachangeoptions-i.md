@@ -8,11 +8,6 @@ Defines the options for the AreaChangeEvent.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## expectedUpdateInterval
 
 ```TypeScript

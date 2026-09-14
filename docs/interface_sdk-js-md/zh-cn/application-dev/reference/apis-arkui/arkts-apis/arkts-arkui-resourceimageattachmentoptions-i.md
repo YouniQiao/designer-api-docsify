@@ -6,11 +6,6 @@ ResourceStr类型图片设置项。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## colorFilter
 
 ```TypeScript

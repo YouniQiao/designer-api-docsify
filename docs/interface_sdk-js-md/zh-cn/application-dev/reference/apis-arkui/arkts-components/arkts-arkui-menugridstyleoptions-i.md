@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## count
 
 ```TypeScript
@@ -51,7 +46,7 @@ horizontalSize?: number
 
 默认值：3
 
-**说明：**
+**说明：** 
 
 当为上图下文形的栅格样式时，水平尺寸范围为[1, 3]，即栅格行数为[1, 2]。
 

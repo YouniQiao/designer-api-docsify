@@ -6,7 +6,7 @@ export declare const InsightIntentForm: ((intentInfo: FormIntentDecoratorInfo) =
 
 使用该装饰器装饰[FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md)并配置[FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md)绑定的卡片名称，便于AI入口通过意图添加卡片。该装饰器支持的参数参见[FormIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-formintentdecoratorinfo-i.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > 卡片名称定义的要求参见卡片配置。
 

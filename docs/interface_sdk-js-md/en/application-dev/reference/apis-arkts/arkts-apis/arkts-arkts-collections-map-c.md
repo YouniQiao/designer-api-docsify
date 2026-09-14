@@ -2,7 +2,7 @@
 
 A non-linear data structure.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > This section uses the following to identify the use of generics:
@@ -345,7 +345,7 @@ put(key: K, value: V): V | undefined
 
 Adds or updates a key-value pair to this ArkTS map and returns the previous value associated with the key.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When **undefined** is returned, you cannot directly distinguish whether the key does not exist or the
 > key exists but its value is **undefined**. Before calling this API, you can use **has** to check whether
@@ -411,10 +411,10 @@ Updates this ArkTS map with key-value pairs from the specified ArkTS Map.
 ## putAll
 
 ```TypeScript
-putAll(from: BuiltinMap<K, V>): void
+putAll(from: ReadonlyMap<K, V>): void
 ```
 
-Updates this ArkTS map with key-value pairs from the specified built-in Map.
+Updates this ArkTS map with key-value pairs from the specified JavaScript built-in Map.
 
 **Since:** 26.1.0
 
@@ -428,7 +428,7 @@ Updates this ArkTS map with key-value pairs from the specified built-in Map.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | [BuiltinMap](arkts-arkts-builtinmap-t.md)&lt;K, V&gt; | Yes | Built-in Map that provides key-value pairs. |
+| from | ReadonlyMap&lt;K, V&gt; | Yes | JavaScript built-in Map that provides key-value pairs. |
 
 **Error codes:**
 
@@ -445,7 +445,7 @@ remove(key: K): V | undefined
 
 Removes the specified key and its corresponding value from this ArkTS map.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When **undefined** is returned, you cannot directly distinguish whether the key does not exist or the
 > key exists but its value is **undefined**. Before calling this API, you can use **has** to check whether

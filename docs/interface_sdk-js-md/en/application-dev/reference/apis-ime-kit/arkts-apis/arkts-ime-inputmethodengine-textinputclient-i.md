@@ -70,7 +70,7 @@ Deletes the fixed-length text after the cursor. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** deleteBackward(length: number): Promise&lt;boolean&gt;
+**Substitutes:** [deleteBackward](arkts-ime-inputmethodengine-inputclient-i.md#deletebackward)(length: number): Promise&lt;boolean&gt;
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -157,7 +157,7 @@ Deletes the fixed-length text before the cursor. This API uses a promise to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** deleteForward(length: number): Promise&lt;boolean&gt;
+**Substitutes:** [deleteForward](arkts-ime-inputmethodengine-inputclient-i.md#deleteforward)(length: number): Promise&lt;boolean&gt;
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -240,7 +240,7 @@ Obtains the specific-length text after the cursor. This API uses a promise to re
 
 **Deprecated since:** 9
 
-**Substitutes:** getBackward(length: number): Promise&lt;string&gt;
+**Substitutes:** [getBackward](arkts-ime-inputmethodengine-inputclient-i.md#getbackward)(length: number): Promise&lt;string&gt;
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -393,7 +393,7 @@ Obtains the specific-length text before the cursor. This API uses a promise to r
 
 **Deprecated since:** 9
 
-**Substitutes:** getForward(length: number): Promise&lt;string&gt;
+**Substitutes:** [getForward](arkts-ime-inputmethodengine-inputclient-i.md#getforward)(length: number): Promise&lt;string&gt;
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -475,7 +475,7 @@ Inserts text. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** insertText(text: string): Promise&lt;boolean&gt;
+**Substitutes:** [insertText](arkts-ime-inputmethodengine-inputclient-i.md#inserttext)(text: string): Promise&lt;boolean&gt;
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -561,7 +561,7 @@ Sends the function key. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** sendKeyFunction(action: number): Promise&lt;boolean&gt;
+**Substitutes:** [sendKeyFunction](arkts-ime-inputmethodengine-inputclient-i.md#sendkeyfunction)(action: number): Promise&lt;boolean&gt;
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 

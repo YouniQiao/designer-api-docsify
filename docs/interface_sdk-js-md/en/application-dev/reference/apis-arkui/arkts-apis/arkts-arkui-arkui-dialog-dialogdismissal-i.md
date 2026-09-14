@@ -34,7 +34,7 @@ Callback for dismissing the dialog box. This API is called only when the dialog 
 reason: DismissReason
 ```
 
-Reason why the dialog box cannot be dismissed.
+Types of reasons triggering the dialog box close action.
 
 **Type:** [DismissReason](../arkts-components/arkts-arkui-dismissreason-e.md)
 

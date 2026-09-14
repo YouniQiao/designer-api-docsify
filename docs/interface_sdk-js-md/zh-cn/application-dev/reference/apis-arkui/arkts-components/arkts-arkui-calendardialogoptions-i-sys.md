@@ -4,7 +4,7 @@
 
 继承自[CalendarOptions](arkts-arkui-calendaroptions-i.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > 在应用窗口缩小过程中，弹窗的宽度会被不断压缩，当缩小到一定程度时会导致其内容无法完整显示，保证CalendarPickerDialog内容能够完整显示的最小
 > 窗口宽度为386vp。
@@ -14,11 +14,6 @@
 **起始版本：** 10
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## distortionMode
 

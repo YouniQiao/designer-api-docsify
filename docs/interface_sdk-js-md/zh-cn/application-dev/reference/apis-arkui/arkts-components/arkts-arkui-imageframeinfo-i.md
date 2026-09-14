@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## duration
 
 ```TypeScript
@@ -89,7 +84,7 @@ src: string | Resource | PixelMap
 
 **string格式说明：**
 
-- 支持加载本地图片路径和网络图片地址。使用相对路径引用本地图片时，不支持跨包或跨模块调用。resources目录下的文件不支持通过相对路径访问，需使用Resource类型（如\$r或\$  
+- 支持加载本地图片路径和网络图片地址。使用相对路径引用本地图片时，不支持跨包或跨模块调用。resources目录下的文件不支持通过相对路径访问，需使用Resource类型（如&#36;r或&#36;  
 rawfile）来引用，引用方式请参考[加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。  
 - 支持`http`和`https`网络图片地址，使用网络图片时需要申请权限`ohos.permission.INTERNET`。  
 - 支持`file://`路径前缀的字符串，应用沙箱URI为`file://&lt;bundleName&gt;/&lt;sandboxPath&gt;`。沙箱路径需要使用  

@@ -407,7 +407,7 @@ onRemoteMessageRequest(
 
 sendMessageRequest请求的响应处理函数，服务端在该函数里同步或异步地处理请求，回复结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 开发者应优先选择重写onRemoteMessageRequest方法，其中可以自由实现同步和异步的消息处理。
 > 
@@ -532,7 +532,7 @@ onRemoteMessageRequest(
 
 sendMessageRequest请求的响应处理函数，服务端在该函数里同步或异步地处理请求，回复结果，该接口可从入参callingInfo中获取IPC上下文信息。
 
-> **说明：**
+> **说明：** 
 > 
 > 开发者应优先选择重写带有CallingInfo参数的onRemoteMessageRequest方法，其中可以自由实现同步和异步的消息处理。
 > 

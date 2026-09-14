@@ -19,10 +19,6 @@ Returns true if passed value is finite. Unlike the global isFinite, Number.isFin
 | --- | --- | --- | --- |
 | number | unknown | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## isInteger
 
 ```TypeScript
@@ -37,10 +33,6 @@ Returns true if the value passed is an integer, false otherwise.
 | --- | --- | --- | --- |
 | number | unknown | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## isNaN
 
 ```TypeScript
@@ -55,10 +47,6 @@ Returns a Boolean value that indicates whether a value is the reserved value NaN
 | --- | --- | --- | --- |
 | number | unknown | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## isSafeInteger
 
 ```TypeScript
@@ -73,10 +61,6 @@ Returns true if the value passed is a safe integer.
 | --- | --- | --- | --- |
 | number | unknown | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## parseFloat
 
 ```TypeScript
@@ -91,10 +75,6 @@ Converts a string to a floating-point number.
 | --- | --- | --- | --- |
 | string | string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## parseInt
 
 ```TypeScript
@@ -110,10 +90,6 @@ Converts A string to an integer.
 | string | string | Yes |  |
 | radix | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## EPSILON
 
 ```TypeScript

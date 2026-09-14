@@ -16,7 +16,7 @@ function startDLPManagerForResult(context: common.UIAbilityContext, want: Want):
 
 该接口用于拉起DLP权限管理应用配置文件权限，并将用户操作结果返回给调用方。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口仅支持域账号调用。
 

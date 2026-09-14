@@ -70,7 +70,7 @@ iconModifier?: ImageModifier
 
 The icon attributes of Popup.
 
-**Type:** [ImageModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
+**Type:** [ImageModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
 **Since:** 26.0.0
 
@@ -118,7 +118,7 @@ messageModifier?: TextModifier
 
 The message attributes of Popup.
 
-**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
+**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
 **Since:** 26.0.0
 
@@ -182,7 +182,7 @@ titleModifier?: TextModifier
 
 The title attributes of Popup.
 
-**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
+**Type:** [TextModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
 **Since:** 26.0.0
 

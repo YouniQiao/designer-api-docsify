@@ -2,7 +2,7 @@
 
 Implements an image filter.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The initial APIs of this class are supported since API version 12.
 > 

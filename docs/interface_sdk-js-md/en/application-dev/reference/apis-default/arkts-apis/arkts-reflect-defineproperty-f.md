@@ -20,8 +20,3 @@ Adds a property to an object, or modifies attributes of an existing property.
 | target | object | Yes |  |
 | propertyKey | [PropertyKey](arkts-propertykey-t.md) | Yes |  |
 | attributes | PropertyDescriptor & ThisType&lt;any&gt; | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

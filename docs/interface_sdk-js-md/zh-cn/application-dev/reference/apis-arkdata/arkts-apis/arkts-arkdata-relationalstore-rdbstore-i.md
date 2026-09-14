@@ -1070,7 +1070,7 @@ cloudSyncEx(config: CloudSyncConfig, progress: Callback<ProgressDetails>): Promi
 
 主动执行端云同步，根据云同步配置信息进行同步，使用Promise异步回调。使用该接口需要实现云服务功能。
 
-> **说明：**
+> **说明：** 
 > 
 > [CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i.md)中仅支持以下谓词：
 > 
@@ -2414,7 +2414,7 @@ obtainDistributedTableName(device: string, table: string, callback: AsyncCallbac
 
 根据远程设备的本地表名获取指定远程设备的分布式表名。在查询远程设备数据库时，需要使用分布式表名，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中device通过调用
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -2451,7 +2451,7 @@ obtainDistributedTableName(device: string, table: string): Promise<string>
 
 根据远程设备的本地表名获取指定远程设备的分布式表名。在查询远程设备数据库时，需要使用分布式表名，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中device通过调用
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -3194,7 +3194,7 @@ querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 querySqlSync(sql: string, bindArgs?: Array<ValueType>): ResultSet
 ```
 
-根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个。对query同步接口获得的resultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md)线程中执行。
+根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个。对query同步接口获得的resultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到[taskpool](../../apis-arkts/arkts-apis/arkts-arkts-taskpool.md)线程中执行。
 
 **起始版本：** 12
 
@@ -3262,7 +3262,7 @@ querySqlWithoutRowCount(sql: string, bindArgs?: Array<ValueType>): Promise<LiteR
 querySqlWithoutRowCountSync(sql: string, bindArgs?: Array<ValueType>): LiteResultSet
 ```
 
-根据指定SQL语句查询数据库中的数据，查询时不计算行数。SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个。对querySqlWithoutRowCountSync同步接口获得的LiteResultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md)线程中执行。
+根据指定SQL语句查询数据库中的数据，查询时不计算行数。SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个。对querySqlWithoutRowCountSync同步接口获得的LiteResultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到[taskpool](../../apis-arkts/arkts-apis/arkts-arkts-taskpool.md)线程中执行。
 
 **起始版本：** 23
 
@@ -3296,7 +3296,7 @@ querySqlWithoutRowCountSync(sql: string, bindArgs?: Array<ValueType>): LiteResul
 querySync(predicates: RdbPredicates, columns?: Array<string>): ResultSet
 ```
 
-根据指定条件查询数据库中的数据。对query同步接口获得的resultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md)线程中执行。
+根据指定条件查询数据库中的数据。对query同步接口获得的resultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到[taskpool](../../apis-arkts/arkts-apis/arkts-arkts-taskpool.md)线程中执行。
 
 **起始版本：** 12
 
@@ -3363,7 +3363,7 @@ queryWithoutRowCount(predicates: RdbPredicates, columns?: Array<string>): Promis
 queryWithoutRowCountSync(predicates: RdbPredicates, columns?: Array<string>): LiteResultSet
 ```
 
-根据指定条件查询数据库中的数据，查询时不计算行数。对queryWithoutRowCountSync同步接口获得的LiteResultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md)线程中执行。
+根据指定条件查询数据库中的数据，查询时不计算行数。对queryWithoutRowCountSync同步接口获得的LiteResultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到[taskpool](../../apis-arkts/arkts-apis/arkts-arkts-taskpool.md)线程中执行。
 
 **起始版本：** 23
 
@@ -3457,7 +3457,7 @@ rekeyEx(cryptoParam: CryptoParam): Promise<void>
 
 数据库越大，执行更新所需的时间越长。
 
-> **说明：**
+> **说明：** 
 > 
 > 加密参数变更需谨慎，在完成rekeyEx操作后，getRdbStore时必须使用新的参数来打开数据库，否则可能会导致开库失败。
 > 
@@ -3511,7 +3511,7 @@ remoteQuery(
 
 根据指定条件查询远程设备数据库中的数据。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中device通过调用
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -3548,7 +3548,7 @@ remoteQuery(device: string, table: string, predicates: RdbPredicates, columns: A
 
 根据指定条件查询远程设备数据库中的数据。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中device通过调用
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)

@@ -2,7 +2,7 @@
 
 CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制，绘制对象可以是形状、文本、图片等。
 
-> **说明：**
+> **说明：** 
 > 
 > * 建议使用时将CanvasRenderingContext2D对象与Canvas组件封装到同一个自定义组件中，保证两者一一对应且生命周期保持一致。
 > 
@@ -17,11 +17,6 @@ CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上�
 **起始版本：** 8
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## beginPath
 
@@ -527,6 +522,8 @@ getLineDash(): number[]
 
 | 类型 | 说明 |
 | --- | --- |
+| number[] |  |
+
 ## getPixelMap
 
 ```TypeScript
@@ -857,7 +854,7 @@ setTransform(a: number, b: number, c: number, d: number, e: number, f: number): 
 
 setTransform方法使用的参数和transform()方法相同，但setTransform()方法会重置现有的变换矩阵并创建新的变换矩阵。
 
-> **说明：**
+> **说明：** 
 > 
 > 图形中各个点变换后的坐标可通过下方坐标计算公式计算。
 > 
@@ -1026,7 +1023,7 @@ transform(a: number, b: number, c: number, d: number, e: number, f: number): voi
 
 transform方法对应一个变换矩阵，想对一个图形进行变化的时候，只要设置此变换矩阵相应的参数，对图形的各个定点的坐标分别乘以这个矩阵，就能得到新的定点的坐标。矩阵变换效果可叠加。
 
-> **说明：**
+> **说明：** 
 > 
 > 图形中各个点变换后的坐标可通过下方坐标计算公式计算。
 > 
@@ -1353,7 +1350,7 @@ letterSpacing: LengthMetrics | string
 
 默认值：**0**（输入无效值时，字间距设为默认值）
 
-> **说明：**
+> **说明：** 
 > 
 > 推荐使用LengthMetrics，性能更好。
 

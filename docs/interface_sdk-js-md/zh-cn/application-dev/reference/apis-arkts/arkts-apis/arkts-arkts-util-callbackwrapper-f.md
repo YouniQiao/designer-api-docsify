@@ -14,7 +14,7 @@ function callbackWrapper(original: Function): (err: Object, value: Object) => vo
 
 对异步函数进行回调化处理，回调中第一个参数是拒绝原因（如果Promise已解决，则为null），第二个参数是已解决的值。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口要求参数original必须是异步函数类型。如果传入的参数不是异步函数，不会进行拦截，但是会输出错误信息：
 > "callbackWrapper: The type of Parameter must be AsyncFunction"。

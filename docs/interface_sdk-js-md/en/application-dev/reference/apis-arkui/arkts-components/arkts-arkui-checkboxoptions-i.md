@@ -6,11 +6,6 @@ Provides information about the check box.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## group
 
 ```TypeScript
@@ -19,7 +14,7 @@ group?: string
 
 Group name of the check box (that is, the name of the check box group to which the check box belongs).
 
-**NOTE:**
+**NOTE:** 
 
 For the settings to take effect, this parameter must be used with the CheckboxGroup component.
 

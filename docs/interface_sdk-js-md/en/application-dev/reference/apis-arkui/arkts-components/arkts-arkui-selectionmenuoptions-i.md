@@ -6,11 +6,6 @@ Sets menu options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onAppear
 
 ```TypeScript

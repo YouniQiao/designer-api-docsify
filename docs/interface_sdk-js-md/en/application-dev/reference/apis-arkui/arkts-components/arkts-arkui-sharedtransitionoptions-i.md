@@ -2,7 +2,7 @@
 
 Parameters of the shared element transition animation.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **motionPath** is effective only when **type** is set to **SharedTransitionEffectType.Exchange**.
 > 
@@ -15,11 +15,6 @@ Parameters of the shared element transition animation.
 **Since:** 7
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## curve
 

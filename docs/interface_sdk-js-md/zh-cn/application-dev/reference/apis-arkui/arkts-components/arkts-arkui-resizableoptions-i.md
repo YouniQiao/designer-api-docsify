@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## lattice
 
 ```TypeScript
@@ -21,7 +16,7 @@ lattice?: DrawingLattice
 
 矩形网格对象。
 
-**说明：**
+**说明：** 
 
 通过@ohos.graphics.drawing的[createImageLattice](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-lattice-c.md#createimagelattice)接口创建Lattice类型作为入参。将图像划分为矩形网格，同时处于偶数列和偶数行上的网格图像是固定的，不会被拉伸。其他位置的网格图像会根据slice进行拉伸。
 
@@ -47,7 +42,7 @@ slice?: EdgeWidths
 
 边框宽度类型，用于描述组件边框不同方向的宽度。
 
-**说明：**
+**说明：** 
 
 只有当bottom和right同时大于0时，该属性生效。
 

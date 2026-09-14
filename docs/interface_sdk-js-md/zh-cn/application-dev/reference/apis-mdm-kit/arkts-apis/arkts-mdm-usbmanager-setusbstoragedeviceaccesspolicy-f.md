@@ -14,7 +14,7 @@ function setUsbStorageDeviceAccessPolicy(admin: Want, usbPolicy: UsbPolicy): voi
 
 设置USB存储设备（baseClass = 0x08）访问策略。
 
-> **说明：**
+> **说明：** 
 > 
 > 在调用接口前，确保已暂停USB存储设备的读写操作，保证操作的稳定性和数据的完整性，否则可能出现不可预期的异常。
 > 以下情况下，通过本接口设置USB存储设备访问策略为可读可写/只读，会报策略冲突：

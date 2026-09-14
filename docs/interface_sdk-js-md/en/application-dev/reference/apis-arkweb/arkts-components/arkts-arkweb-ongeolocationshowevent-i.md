@@ -6,11 +6,6 @@ Defines the callback information triggered when a request to obtain the geolocat
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## geolocation
 
 ```TypeScript

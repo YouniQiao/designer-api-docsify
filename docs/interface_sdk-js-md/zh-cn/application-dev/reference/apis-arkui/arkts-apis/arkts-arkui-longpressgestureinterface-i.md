@@ -2,7 +2,7 @@
 
 用于触发长按手势事件，触发长按手势的最少手指数为1，默认最短长按时间为500毫秒。可配置duration参数控制最短长按时长。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 18开始，部分设备会优先响应系统的双指长按手势，导致应用的双指长按手势不生效。
 
@@ -11,11 +11,6 @@
 **起始版本：** 7
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## [[Call]]
 
@@ -47,6 +42,8 @@
 
 | 类型 | 说明 |
 | --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
+
 ## [[Call]]
 
 ```TypeScript
@@ -79,6 +76,8 @@
 
 | 类型 | 说明 |
 | --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
+
 ## onAction
 
 ```TypeScript
@@ -103,6 +102,8 @@ onAction(event: (event: GestureEvent) => void): LongPressGestureInterface
 
 | 类型 | 说明 |
 | --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
+
 ## onActionCancel
 
 ```TypeScript
@@ -127,6 +128,8 @@ onActionCancel(event: () => void): LongPressGestureInterface
 
 | 类型 | 说明 |
 | --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
+
 ## onActionCancel
 
 ```TypeScript
@@ -153,6 +156,8 @@ onActionCancel(event: Callback<GestureEvent>): LongPressGestureInterface
 
 | 类型 | 说明 |
 | --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
+
 ## onActionEnd
 
 ```TypeScript
@@ -177,3 +182,4 @@ onActionEnd(event: (event: GestureEvent) => void): LongPressGestureInterface
 
 | 类型 | 说明 |
 | --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |

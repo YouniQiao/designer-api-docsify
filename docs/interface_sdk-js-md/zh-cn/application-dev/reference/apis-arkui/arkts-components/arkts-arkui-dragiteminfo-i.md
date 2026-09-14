@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## builder
 
 ```TypeScript
@@ -19,7 +14,7 @@ builder?: CustomBuilder
 
 拖拽过程中显示自定义组件，如果设置了pixelMap，则忽略此值。
 
-**说明：**
+**说明：** 
 
 不支持全局builder。如果builder中使用了Image组件，应尽量开启同步加载，即配置Image的syncLoad为true。该builder只用于生成当次拖拽中显示的图片，builder的修改不会同步到当前正在拖拽的图片，对builder的修改需要在下一次拖拽时生效。
 

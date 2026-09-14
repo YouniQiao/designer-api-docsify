@@ -6,11 +6,6 @@ Define item drag event handler.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onMoveThrough
 
 ```TypeScript

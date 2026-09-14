@@ -273,7 +273,7 @@ stop(): Promise<void>
 
 异步方法停止端云同步。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 调用stop接口，同步流程会停止。再次调用[start](#start)接口会继续同步。
 
@@ -321,7 +321,7 @@ stop(callback: AsyncCallback<void>): void
 
 异步方法停止端云同步。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 调用stop接口，同步流程会停止。再次调用[start](#start)接口会继续同步。
 

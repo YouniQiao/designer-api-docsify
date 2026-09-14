@@ -2,7 +2,7 @@
 
 UIContext实例对象。
 
-> **说明：**
+> **说明：** 
 
 > - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。
 > 
@@ -212,7 +212,7 @@ setDynamicDimming(id: string, value: number): void
 
 通过该方法设置组件的压暗程度。
 
-> **说明：**
+> **说明：** 
 > 
 > 设置该属性后设置其他效果类属性会导致效果冲突。
 

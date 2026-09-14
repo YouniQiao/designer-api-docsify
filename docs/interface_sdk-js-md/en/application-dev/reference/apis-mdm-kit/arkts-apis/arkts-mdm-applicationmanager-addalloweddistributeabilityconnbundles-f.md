@@ -16,7 +16,7 @@ Adds the cross-device application trustlist for a specific distributed service f
 
 Currently, the following distributed service type is supported: [collaboration service](arkts-mdm-applicationmanager-servicetype-e.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. Before calling this API to set the application list allowed to use a specific distributed service, you must
 > have already disabled one-way data transmission between devices (which is used for transferring data to other

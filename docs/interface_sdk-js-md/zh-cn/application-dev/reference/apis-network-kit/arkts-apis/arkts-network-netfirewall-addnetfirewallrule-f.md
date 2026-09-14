@@ -14,7 +14,7 @@ function addNetFirewallRule(rule: NetFirewallRule): Promise<number>
 
 添加系统用户ID的防火墙规则，目前支持的规则类型有：IP、Domain、DNS。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 防火墙规则优先级说明（[setNetFirePolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md)和
 > [addNetFirewallRule](arkts-network-netfirewall-addnetfirewallrule-f.md)无调用顺序要求）：

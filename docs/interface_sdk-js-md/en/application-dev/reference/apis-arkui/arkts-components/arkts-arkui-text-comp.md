@@ -6,7 +6,7 @@ The **Text** component is used to display a piece of textual information.
 
 This component can contain the Span, ImageSpan, SymbolSpan, and ContainerSpan child components.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Use [child components](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#child-components) to
 > implement [text and image layout](../../../ui/arkts-text-image-layout.md) scenarios.
@@ -31,7 +31,7 @@ Defines the constructor of Text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | No | Plain text. This parameter takes effect when the child component Span is not included and styled string is not set.<br>Default value: **' '**<br>**NOTE:**<br>Priority of displayed content: Styled string &gt; Content of the **Span** component &gt; Text content of the **Text** component. |
+| content | string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | No | Plain text. This parameter takes effect when the child component Span is not included and styled string is not set.<br>Default value: **' '**<br>**NOTE:** <br>Priority of displayed content: Styled string &gt; Content of the **Span** component &gt; Text content of the **Text** component. |
 | value | [TextOptions](arkts-arkui-textoptions-i.md) | No | Initialization options of the component. |
 
 ## Summary

@@ -39,7 +39,7 @@ Generates a text line object based on the specified layout range.
 
 | Type | Description |
 | --- | --- |
-| [TextLine](arkts-arkgraphics2d-text-textline-c.md) | TextLine** object generated based on the characters in the text range. |
+| [TextLine](arkts-arkgraphics2d-text-textline-c.md) | **TextLine** object generated based on the characters in the text range. |
 
 **Error codes:**
 

@@ -121,7 +121,7 @@ Checks whether this SE service is connected.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** if the SE service is connected; **false** otherwise. |
+| boolean | **true** if the SE service is connected; **false** otherwise. |
 
 **Error codes:**
 

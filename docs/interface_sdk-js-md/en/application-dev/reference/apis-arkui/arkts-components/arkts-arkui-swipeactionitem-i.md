@@ -8,11 +8,6 @@ For a list in horizontal layout, it refers to the delete option displayed below 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onAction
 
 ```TypeScript

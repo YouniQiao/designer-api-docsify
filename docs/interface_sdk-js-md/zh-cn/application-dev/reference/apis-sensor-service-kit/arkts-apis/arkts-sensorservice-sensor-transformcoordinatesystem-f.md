@@ -15,7 +15,7 @@ function transformCoordinateSystem(inRotationVector: Array<number>, coordinates:
 
 旋转提供的旋转矩阵，使其可以以不同的方式表示坐标系。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [sensor.transformRotationMatrix]
@@ -66,7 +66,7 @@ function transformCoordinateSystem(inRotationVector: Array<number>, coordinates:
 
 旋转提供的旋转矩阵，使其可以以不同的方式表示坐标系。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [sensor.transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md)

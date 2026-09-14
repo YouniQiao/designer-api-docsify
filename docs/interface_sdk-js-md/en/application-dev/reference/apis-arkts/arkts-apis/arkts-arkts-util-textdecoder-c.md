@@ -89,7 +89,7 @@ Creates a **TextDecoder** object. It provides the same function as the deprecate
 
 | Type | Description |
 | --- | --- |
-| [TextDecoder](arkts-arkts-util-textdecoder-c.md) | TextDecoder** object created. |
+| [TextDecoder](arkts-arkts-util-textdecoder-c.md) | **TextDecoder** object created. |
 
 **Examples**
 

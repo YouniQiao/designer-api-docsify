@@ -1,7 +1,7 @@
 # StackOptions
 
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. The
 > initial version information of the historical anonymous objects has been retained, which may result in the outer
@@ -10,11 +10,6 @@
 **Since:** 18
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## alignContent
 

@@ -2,7 +2,7 @@
 
 子标题组件，用于列表项或内容项顶部，将该列表或内容划分为一个区块，子标题名称用来概括该区块内容。支持多种样式配置，包括图标、主副标题、下拉选择器和操作按钮等，可满足不同场景下的内容分区和导航需求，提升界面的信息层次感和用户体验。适用于列表分组、内容分类展示、表单分区等场景。
 
-> **说明：**
+> **说明：** 
 > 
 > - 该组件仅可在Stage模型下使用。
 > 
@@ -14,7 +14,7 @@
 
 无
 
-> **说明：**
+> **说明：** 
 > 
 > 不支持设置文本类型的子组件。
 
@@ -66,11 +66,11 @@ contentMargin?: LocalizedMargin
 
 `{start: LengthMetrics.resource(`
 
-`\$r('sys.float.margin_left'))`,
+`&#36;r('sys.float.margin_left'))`,
 
 `end: LengthMetrics.resource(`
 
-`\$r('sys.float.margin_right'))}`
+`&#36;r('sys.float.margin_right'))}`
 
 **类型：** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
 
@@ -258,7 +258,7 @@ primaryTitleModifier?: TextModifier
 
 **说明：** 只有primaryTitle生效时，该参数才会生效。
 
-**类型：** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
+**类型：** [TextModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
 **起始版本：** 12
 
@@ -300,7 +300,7 @@ secondaryTitleModifier?: TextModifier
 
 默认值：undefined，表示使用系统默认样式。
 
-**类型：** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
+**类型：** [TextModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
 **起始版本：** 12
 

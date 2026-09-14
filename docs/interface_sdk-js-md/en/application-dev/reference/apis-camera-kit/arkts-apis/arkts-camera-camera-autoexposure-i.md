@@ -52,7 +52,7 @@ getExposureMode(): ExposureMode
 
 Obtains the exposure mode in use.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API directly returns an invalid value if you have not set the exposure mode using
 > [setExposureMode](#setexposuremode).

@@ -7,7 +7,7 @@ This module provides APIs for word selection extension, which can implement exte
 - **context**: You can use **context** to call  
 [startAbility](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c.md#startability) to start the target ability in the same app, or use **context** as an input parameter of [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md) to create a word selection panel.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This module is supported only on PCs/2-in-1 devices. You can use
 > **canIUse('SystemCapability.SelectionInput.Selection')** to check whether the current device supports the
@@ -41,13 +41,13 @@ Defines a callback triggered when the client connects to the **SelectionExtensio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want** object passed by the system when the **SelectionExtensionAbility** is connected. The object contains the description information such as the ability name and bundle name. It is used to obtain the ability connection configuration in the **onConnect** callback so that the corresponding initialization logic can be executed. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | **Want** object passed by the system when the **SelectionExtensionAbility** is connected. The object contains the description information such as the ability name and bundle name. It is used to obtain the ability connection configuration in the **onConnect** callback so that the corresponding initialization logic can be executed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) | RemoteObject** communication stub object. You need to implement the remote message processing method (for example, **onRemoteMessageRequest**) of this object. The system passes this object to the client for IPC. |
+| [rpc.RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md) | **RemoteObject** communication stub object. You need to implement the remote message processing method (for example, **onRemoteMessageRequest**) of this object. The system passes this object to the client for IPC. |
 
 **Examples**
 

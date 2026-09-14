@@ -22,10 +22,6 @@ Returns a section of an ArrayBuffer.
 | begin | number | Yes |  |
 | end | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## byteLength
 
 ```TypeScript

@@ -6,11 +6,6 @@ Input parameters of the callback used to intercept the soft keyboard started fro
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## attributes
 
 ```TypeScript

@@ -6,11 +6,6 @@ Tabs组件的控制器，用于控制Tabs组件进行页签切换。不支持一
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## changeIndex
 
 ```TypeScript
@@ -53,7 +48,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 控制Tabs预加载指定子节点。调用该接口后会一次性加载所有指定的子节点，因此为了性能考虑，建议分批加载子节点。适用于需要提前加载某些页签以提高切换性能的场景，如某些页签内容较复杂或资源较多时，可预加载以优化用户体验。
 
-> **说明：**
+> **说明：** 
 
 > - Tabs的preloadItems需要在Tabs创建之后去调用，首次预加载推荐在Tabs的onAppear生命周期中去控制。
 > 
@@ -96,7 +91,7 @@ setTabBarOpacity(opacity: number): void
 
 设置TabBar的不透明度。适用于需要调整TabBar显示透明度的场景，如TabBar渐隐渐显效果、降低TabBar视觉干扰突出内容等。
 
-> **说明：**
+> **说明：** 
 
 > 当使用
 > [bindTabsToScrollable](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#bindtabstoscrollable)或
@@ -126,7 +121,7 @@ setTabBarTranslate(translate: TranslateOptions): void
 
 设置TabBar的平移距离。适用于需要实现TabBar动态位置调整的场景，如TabBar滑动隐藏显示效果、配合页面滚动实现沉浸式体验等。
 
-> **说明：**
+> **说明：** 
 
 > 当使用
 > [bindTabsToScrollable](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#bindtabstoscrollable)或

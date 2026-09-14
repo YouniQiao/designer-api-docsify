@@ -275,7 +275,7 @@ finishTextPreview(): Promise<void>
 ```
 
 Finishes the text preview. This API uses a promise to return the result. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > If there is preview text in the current text box, calling this API will display the preview text on the screen.
 
@@ -315,7 +315,7 @@ finishTextPreviewSync(): void
 ```
 
 Finishes the text preview. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > If there is preview text in the current text box, calling this API will display the preview text on the screen.
 
@@ -501,7 +501,7 @@ getCallingWindowInfo(): Promise<WindowInfo>
 ```
 
 Obtains information about the application window, in which the input box that starts an input method is located. This API uses a promise to return the result. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > This API applies only to the input method applications that use [Panel](arkts-ime-inputmethodengine-panel-i.md) as the soft keyboard window.
 
@@ -1198,7 +1198,7 @@ recvMessage(msgHandler?: MessageHandler): void
 ```
 
 Registers or unregisters MessageHandler. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > The [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object is globally unique. After multiple registrations, only the last registered object is valid and retained, and the [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback of the penultimate registered object is triggered. <br>
 > <br>
@@ -1481,7 +1481,7 @@ sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 ```
 
 Sends an extended edit action. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > The input method applications call this API to send extended edit actions to the edit box. The edit box listens for the corresponding event using [on('handleExtendAction')](arkts-ime-inputmethod-inputmethodcontroller-i.md#onhandleextendaction) for further processing. <br>
 > <br>
@@ -1527,7 +1527,7 @@ sendExtendAction(action: ExtendAction): Promise<void>
 ```
 
 Sends an extended edit action. This API uses a promise to return the result. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > The input method applications call this API to send extended edit actions to the edit box. The edit box listens for the corresponding event using [on('handleExtendAction')] [on_handleExtendAction](arkts-ime-inputmethod-inputmethodcontroller-i.md#onhandleextendaction) for further processing. <br>
 > <br>
@@ -1670,7 +1670,7 @@ sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 ```
 
 Sends the custom communication to the edit box application attached to the input method application. This API uses a promise to return the result. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > This API can be called only when the edit box is attached to the input method and enter the edit mode, and the input method application is in full experience mode. <br>
 > <br>
@@ -1725,7 +1725,7 @@ sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 ```
 
 Sends private data to the system component that needs to communicate with the input method application. This API uses a promise to return the result. <br> <br>   
-> **NOTE:**<br>
+> **NOTE:** <br>
 > <br>
 > - The private data channel allows communication between the system preset input method application and specific system components (such as a text box or a home screen application). It is usually used to implement custom input on a specific device. <br>
 > <br>

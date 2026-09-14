@@ -4,7 +4,7 @@ Encapsulates the parameters for encryption or decryption using the CCM AEAD mode
 
 <br>Applies to the CCM mode.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Before passing a value to
 > [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify

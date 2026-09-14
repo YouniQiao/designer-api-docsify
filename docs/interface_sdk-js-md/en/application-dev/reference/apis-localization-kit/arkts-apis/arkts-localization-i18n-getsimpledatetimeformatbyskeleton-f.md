@@ -25,13 +25,13 @@ Obtains a **SimpleDateTimeFormat** object based on the specified skeleton. For d
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | skeleton | string | Yes | Valid skeleton, which supports free combinations of field patterns in [Date Field Symbol Table](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table). This parameter does not support custom text. |
-| locale | [Intl.Locale](arkts-localization-intl-locale-c.md) | No | Locale** object. The default value is the current system locale. |
+| locale | [Intl.Locale](arkts-localization-intl-locale-c.md) | No | **Locale** object. The default value is the current system locale. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) | SimpleDateTimeFormat** object. |
+| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) | **SimpleDateTimeFormat** object. |
 
 **Error codes:**
 
@@ -78,13 +78,13 @@ Obtains a **SimpleDateTimeFormat** object based on the specified skeleton. For d
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | skeleton | string | Yes | Valid skeleton, which supports free combinations of field patterns in [Date Field Symbol Table](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table). This parameter does not support custom text. |
-| locale | [intl.Locale](arkts-localization-intl-locale-c.md) | No | Locale** object. The default value is the current system locale. |
+| locale | [intl.Locale](arkts-localization-intl-locale-c.md) | No | **Locale** object. The default value is the current system locale. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) | SimpleDateTimeFormat** object. |
+| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) | **SimpleDateTimeFormat** object. |
 
 **Error codes:**
 

@@ -24,7 +24,7 @@ attachLayoutToParentWindow(anchorInfo?: WindowAnchorInfo, attachOptions?: SubWin
 
 该相对位置通过子窗与主窗之间的锚点偏移量表示，子窗和主窗使用的窗口锚点相同。
 
-> **说明：**
+> **说明：** 
 > 
 > - 只支持一级子窗调用该接口，子窗需处于自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）。
 > 
@@ -447,7 +447,7 @@ detachLayoutToParentWindow(): Promise<void>
 
 解除一级子窗与主窗保持相对位置不变的协同关系。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 子窗调用接口时需保持子窗处于协同状态。
 > 
@@ -2187,7 +2187,7 @@ setRotationLocked(locked: boolean): Promise<void>
 
 仅支持[系统窗口](../../../windowmanager/window-terminology.md#系统窗口)设置旋转锁定，锁定后系统窗口显示方向不变，未锁定时系统窗口显示方向受主窗口显示方向、旋转锁定按钮、sensor旋转影响。非系统窗口调用返回1300029错误码。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 如果在锁定期间主窗口通过
 > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)

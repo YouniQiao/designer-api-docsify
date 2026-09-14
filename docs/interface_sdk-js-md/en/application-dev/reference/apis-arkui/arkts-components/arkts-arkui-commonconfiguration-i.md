@@ -6,11 +6,6 @@ You need a custom class to implement the **ContentModifier** API.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## contentModifier
 
 ```TypeScript

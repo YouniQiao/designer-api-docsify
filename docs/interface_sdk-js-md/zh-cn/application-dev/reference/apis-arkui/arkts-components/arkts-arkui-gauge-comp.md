@@ -8,7 +8,7 @@
 
 可以包含单个子组件。
 
-> **说明：**
+> **说明：** 
 > 
 > - 支持的子组件类型：系统组件和自定义组件，支持条件渲染控制[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)，不支持循环渲染控制
 > ForEach和LazyForEach。

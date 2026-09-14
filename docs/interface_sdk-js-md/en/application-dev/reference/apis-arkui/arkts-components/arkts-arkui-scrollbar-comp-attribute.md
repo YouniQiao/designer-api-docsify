@@ -8,11 +8,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## enableNestedScroll
 
 ```TypeScript
@@ -21,7 +16,7 @@ enableNestedScroll(enabled: Optional<boolean>)
 
 Sets whether nested scrolling is enabled.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When nested scrolling is enabled, the scroll offset is first passed to the inner scrollable component, which
 > then passes it to the outer parent scrollable component based on the set nested scrolling priority.
@@ -48,7 +43,7 @@ Sets whether nested scrolling is enabled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether nested scrolling is enabled. The value **true** means that nested scrolling is enabled, and **false** means the opposite.<br>Default value: **false |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether nested scrolling is enabled. The value **true** means that nested scrolling is enabled, and **false** means the opposite.<br>Default value: **false** |
 
 ## scrollBarColor
 
@@ -70,4 +65,4 @@ Sets the color of the scrollbar slider. This parameter is valid only when the sc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | Yes | Scrollbar color.<br>Default value: **ColorMetrics.numeric(0x66182431) |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | Yes | Scrollbar color.<br>Default value: **ColorMetrics.numeric(0x66182431)** |

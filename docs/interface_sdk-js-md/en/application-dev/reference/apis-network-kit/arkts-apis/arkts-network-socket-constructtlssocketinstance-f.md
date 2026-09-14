@@ -22,7 +22,7 @@ Creates a **TLSSocket** object.
 
 | Type | Description |
 | --- | --- |
-| [TLSSocket](arkts-network-socket-tlssocket-i.md) | TLSSocket** object. |
+| [TLSSocket](arkts-network-socket-tlssocket-i.md) | **TLSSocket** object. |
 
 **Examples**
 
@@ -41,7 +41,7 @@ function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket
 
 Upgrades a **TCPSocket** connection to a **TLSSocket** connection.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Before calling **constructTLSSocketInstance**, ensure that a **TCPSocket** connection has been established and no
 > data is transmitted. After a successful upgrade, you do not need to call the **close** API for the **TCPSocket**
@@ -55,13 +55,13 @@ Upgrades a **TCPSocket** connection to a **TLSSocket** connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tcpSocket | [TCPSocket](arkts-network-socket-tcpsocket-i.md) | Yes | TCPSocket** connection to be upgraded. |
+| tcpSocket | [TCPSocket](arkts-network-socket-tcpsocket-i.md) | Yes | **TCPSocket** connection to be upgraded. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TLSSocket](arkts-network-socket-tlssocket-i.md) | TLSSocket** object. |
+| [TLSSocket](arkts-network-socket-tlssocket-i.md) | **TLSSocket** object. |
 
 **Error codes:**
 

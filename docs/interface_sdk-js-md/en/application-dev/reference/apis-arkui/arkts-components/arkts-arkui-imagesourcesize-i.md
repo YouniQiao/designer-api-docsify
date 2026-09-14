@@ -6,11 +6,6 @@ Defines source size of image.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## height
 
 ```TypeScript

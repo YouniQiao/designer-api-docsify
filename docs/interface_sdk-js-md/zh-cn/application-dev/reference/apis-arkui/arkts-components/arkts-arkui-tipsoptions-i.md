@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## appearingTime
 
 ```TypeScript
@@ -173,7 +168,7 @@ enableArrow?: boolean
 
 true：显示箭头；false：不显示箭头。
 
-**说明：**
+**说明：** 
 
 当页面可用空间无法让气泡完全避让时，气泡会覆盖到组件上并且不显示气泡箭头。
 
@@ -199,7 +194,7 @@ showAtAnchor?: TipsAnchorType
 
 默认值：TipsAnchorType.TARGET
 
-**说明：**
+**说明：** 
 
 Tips的跟随类型为TipsAnchorType.CURSOR时，Tips不显示箭头。
 
@@ -223,7 +218,7 @@ systemMaterial?: SystemUiMaterial
 
 默认值：undefined，会清除由该接口设置的材质效果。
 
-**说明：**
+**说明：** 
 
 不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影[shadow](arkts-arkui-commonmethod-c.md#shadow)，不建议与上述接口一起使用。
 

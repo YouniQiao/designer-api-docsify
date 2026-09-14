@@ -31,3 +31,4 @@ Send mouse event.
 
 | 类型 | 说明 |
 | --- | --- |
+| boolean |  |

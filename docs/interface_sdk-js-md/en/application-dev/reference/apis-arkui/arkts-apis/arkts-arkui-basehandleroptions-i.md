@@ -6,11 +6,6 @@ Provides the parameters of the basic gesture handler.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## isFingerCountLimited
 
 ```TypeScript

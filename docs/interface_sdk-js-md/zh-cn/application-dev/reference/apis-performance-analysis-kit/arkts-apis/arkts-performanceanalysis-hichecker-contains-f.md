@@ -13,7 +13,7 @@ function contains(rule: bigint): boolean
 ```
 
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[hichecker.containsCheckRule](arkts-performanceanalysis-hichecker-containscheckrule-f.md)替代。
 

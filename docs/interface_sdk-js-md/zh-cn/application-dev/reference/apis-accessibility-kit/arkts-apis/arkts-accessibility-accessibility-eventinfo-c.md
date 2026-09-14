@@ -343,7 +343,7 @@ textMoveUnit?: TextMoveUnit
 textResourceAnnouncedForAccessibility?: Resource
 ```
 
-主动播报的内容支持传入Resource类型，且Resource只能引用string类型资源（如\$r('app.string.xxx')）。
+主动播报的内容支持传入Resource类型，且Resource只能引用string类型资源（如&#36;r('app.string.xxx')）。
 
 **类型：** Resource
 

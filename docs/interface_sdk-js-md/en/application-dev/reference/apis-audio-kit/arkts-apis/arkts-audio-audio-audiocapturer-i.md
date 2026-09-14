@@ -4,7 +4,7 @@ This interface provides APIs for audio capture.
 
 Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) to create an AudioCapturer instance.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The initial APIs of this interface are supported since API version 8.
 
@@ -914,7 +914,7 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: num
 
 Sets the independent audio session strategy and behavior parameters.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If this API is called while an audio capturer is running, you must call the
 > [start](#start) API again for

@@ -8,11 +8,6 @@ Displays a solid color. **ColorShaderStyle** inherits from [ShaderStyle](arkts-a
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

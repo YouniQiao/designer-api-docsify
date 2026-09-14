@@ -26,7 +26,7 @@ If the given HiTrace ID is invalid or is not the same as the HiTrace ID in the c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | HiTraceId** instance. |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | **HiTraceId** instance. |
 
 **Examples**
 

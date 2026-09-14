@@ -14,7 +14,7 @@ function getState(): RouterState
 
 获取栈顶页面的状态信息。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 8开始支持，从API version 18开始废弃，建议使用[getState](arkts-arkui-arkui-uicontext-router-c.md#getstate)替代。getLength需
 > 先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的

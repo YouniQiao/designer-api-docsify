@@ -14,7 +14,7 @@ function removeGroup(): boolean
 
 移除群组。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。
 

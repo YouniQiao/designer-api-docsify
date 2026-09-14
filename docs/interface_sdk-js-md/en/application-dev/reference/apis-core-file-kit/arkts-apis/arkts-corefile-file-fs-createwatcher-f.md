@@ -30,7 +30,7 @@ Creates a **Watcher** object to listen for file or directory changes.
 
 | Type | Description |
 | --- | --- |
-| [Watcher](arkts-corefile-file-fs-watcher-i.md) | Watcher** object created. |
+| [Watcher](arkts-corefile-file-fs-watcher-i.md) | **Watcher** object created. |
 
 **Error codes:**
 

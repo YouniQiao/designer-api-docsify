@@ -12,11 +12,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## canLoop
 
 ```TypeScript
@@ -135,7 +130,7 @@ lunar(value: boolean)
 
 设置日期是否显示为农历。
 
-> **说明：**
+> **说明：** 
 > 
 > 仅在简体中文和繁体中文语言环境下生效，其他语言环境下设置该属性无效果。
 
@@ -159,7 +154,7 @@ lunar(isLunar: Optional<boolean>)
 
 设置日期是否显示为农历。与[lunar](#lunar)相比，isLunar参数新增了对undefined类型的支持。
 
-> **说明：**
+> **说明：** 
 > 
 > 仅在简体中文和繁体中文语言环境下生效，其他语言环境下设置该属性无效果。
 
@@ -231,7 +226,7 @@ onDateChange(callback: Optional<Callback<Date>>)
 
 滑动DatePicker文本内容后，选项完全归位至选中项位置时，触发该回调。不能通过双向绑定的状态变量触发。与[onDateChange&lt;sup&gt;10+&lt;/sup&gt;](#ondatechange)相比，callback参数新增了对undefined类型的支持。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 

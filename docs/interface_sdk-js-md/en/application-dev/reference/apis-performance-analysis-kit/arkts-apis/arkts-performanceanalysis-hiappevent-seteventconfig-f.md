@@ -23,7 +23,7 @@ Configuration items vary depending on events. Currently, only the following even
 - **RESOURCE_OVERLIMIT** (For details about the parameter configuration, see  
 [Resource Leak Event Overview](../../../dfx/hiappevent-watcher-resourceleak-events.md#customizing-specifications).)
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Since API version 26.0.0, all settings of this API are supported by
 > [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md). You are advised to use

@@ -52,7 +52,7 @@ size(size: SizeOptions): T
 
 设置形状的大小，同时设置宽度和高度。
 
-> **说明：**
+> **说明：** 
 > 
 > - size()等同于同时调用width()和height()设置宽高。
 > 

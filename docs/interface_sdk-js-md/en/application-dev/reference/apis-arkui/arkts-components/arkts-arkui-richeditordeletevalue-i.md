@@ -6,11 +6,6 @@ Defines information about the deletion operation and the content to be deleted.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## direction
 
 ```TypeScript

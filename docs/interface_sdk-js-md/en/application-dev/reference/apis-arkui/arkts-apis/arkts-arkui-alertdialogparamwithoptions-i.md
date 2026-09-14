@@ -8,11 +8,6 @@ Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md).
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## buttonDirection
 
 ```TypeScript

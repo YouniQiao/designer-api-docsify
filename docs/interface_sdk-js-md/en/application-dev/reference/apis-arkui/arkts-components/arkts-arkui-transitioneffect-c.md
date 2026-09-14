@@ -6,11 +6,6 @@ Defines the transition effect by using the provided APIs, as listed below.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## animation
 
 ```TypeScript
@@ -182,7 +177,7 @@ Sets the opacity for component transition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alpha | number | Yes | Opacity of the component during transition, which is the value of the start point of insertion and the end point of deletion.<br>Value range: [0, 1].<br>**NOTE:**<br>If the value specified is less than 0, the value **0** is used. If the value specified is greater than 1, the value **1** is used. |
+| alpha | number | Yes | Opacity of the component during transition, which is the value of the start point of insertion and the end point of deletion.<br>Value range: [0, 1].<br>**NOTE:** <br>If the value specified is less than 0, the value **0** is used. If the value specified is greater than 1, the value **1** is used. |
 
 **Return value:**
 
@@ -242,7 +237,7 @@ Sets the scaling effect for component transitions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ScaleOptions](arkts-arkui-scaleoptions-i.md) | Yes | Scaling effect for component transitions, specifying the start point of insertion and the end point of deletion. The scale value set here is multiplied by the component's **scale** attribute. For example, if the component's scale is 0.8 and the transition scale is set to 0.5, the component entry animation starts from a scale of 0.4.<br>- **x**: scale factor along the x-axis.<br>- **y**: scale factor along the y-axis.<br>-z: currently invalid in two-dimensional display.<br>- **centerX** and **centerY**: scale center point. The default values are both **"50%"**, indicating the center point of the page.<br>- If the center point is (0, 0), it refers to the upper left corner of the component.<br>**NOTE:**<br>If **centerX** or **centerY** is set to an invalid string (for example, **"illegalString"**), the default value **"0"** is used. |
+| options | [ScaleOptions](arkts-arkui-scaleoptions-i.md) | Yes | Scaling effect for component transitions, specifying the start point of insertion and the end point of deletion. The scale value set here is multiplied by the component's **scale** attribute. For example, if the component's scale is 0.8 and the transition scale is set to 0.5, the component entry animation starts from a scale of 0.4.<br>- **x**: scale factor along the x-axis.<br>- **y**: scale factor along the y-axis.<br>-z: currently invalid in two-dimensional display.<br>- **centerX** and **centerY**: scale center point. The default values are both **"50%"**, indicating the center point of the page.<br>- If the center point is (0, 0), it refers to the upper left corner of the component.<br>**NOTE:** <br>If **centerX** or **centerY** is set to an invalid string (for example, **"illegalString"**), the default value **"0"** is used. |
 
 **Return value:**
 

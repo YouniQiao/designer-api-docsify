@@ -127,7 +127,7 @@ Determines whether the specified date is a holiday.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** if the specified date is a holiday, and **false** otherwise. |
+| boolean | **true** if the specified date is a holiday, and **false** otherwise. |
 
 **Error codes:**
 

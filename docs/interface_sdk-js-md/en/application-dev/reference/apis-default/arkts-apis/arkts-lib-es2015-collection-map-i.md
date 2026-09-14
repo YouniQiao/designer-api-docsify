@@ -27,6 +27,8 @@ delete(key: K): boolean
 
 | Type | Description |
 | --- | --- |
+| boolean | true if an element in the Map existed and has been removed, or false if the element does not exist. |
+
 ## forEach
 
 ```TypeScript
@@ -60,6 +62,8 @@ Returns a specified element from the Map object. If the value that is associated
 
 | Type | Description |
 | --- | --- |
+| V | Returns the element associated with the specified key. If no element is associated with the specified key, undefined is returned. |
+
 ## has
 
 ```TypeScript
@@ -76,6 +80,8 @@ has(key: K): boolean
 
 | Type | Description |
 | --- | --- |
+| boolean | boolean indicating whether an element with the specified key exists or not. |
+
 ## set
 
 ```TypeScript
@@ -91,10 +97,6 @@ Adds a new element with a specified key and value to the Map. If an element with
 | key | K | Yes |  |
 | value | V | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## size
 
 ```TypeScript

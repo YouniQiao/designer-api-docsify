@@ -6,11 +6,6 @@ An **ImageBitmap** object stores pixel data rendered on a canvas. Since API vers
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## close
 
 ```TypeScript
@@ -47,7 +42,7 @@ Creates an **ImageBitmap** object using an **ImageSrc** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | Image source. Local images are supported.<br> 1. The string format is used to load local images, for example,   **ImageBitmap("common/images/example.jpg")**. For entry and feature modules, the start point of the image path for loading is the **ets** folder of the module. For HAR and shared modules, the start point is the **ets** folder of the entry or feature module into which they are built.<br> For modules whose **type** is **"har"** or **"shared"**, you are advised to use [ImageSource](../../../media/image/image-decoding.md) to decode resource images into a unified **PixelMap** object for loading and use.<br> 2. Supported image formats: BMP, JPG, PNG, SVG, and WEBP.<br>   **NOTE:**<br> - ArkTS widgets do not support the strings with the **http://**, **datashare://**, or **file://data/storage**. |
+| src | string | Yes | Image source. Local images are supported.<br> 1. The string format is used to load local images, for example,   **ImageBitmap("common/images/example.jpg")**. For entry and feature modules, the start point of the image path for loading is the **ets** folder of the module. For HAR and shared modules, the start point is the **ets** folder of the entry or feature module into which they are built.<br> For modules whose **type** is **"har"** or **"shared"**, you are advised to use [ImageSource](../../../media/image/image-decoding.md) to decode resource images into a unified **PixelMap** object for loading and use.<br> 2. Supported image formats: BMP, JPG, PNG, SVG, and WEBP.<br>   **NOTE:** <br> - ArkTS widgets do not support the strings with the **http://**, **datashare://**, or **file://data/storage**. |
 
 ## constructor
 
@@ -71,7 +66,7 @@ Creates an **ImageBitmap** object using an **ImageSrc** object. The unit mode of
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | Image source. Local images are supported.<br> 1. The string format is used to load local images, for example,   **ImageBitmap("common/images/example.jpg")**. For entry and feature modules, the start point of the image path for loading is the **ets** folder of the module. For HAR and shared modules, the start point is the **ets** folder of the entry or feature module into which they are built.<br> For modules whose **type** is **"har"** or **"shared"**, you are advised to use [ImageSource](../../../media/image/image-decoding.md) to decode resource images into a unified **PixelMap** object for loading and use.<br> 2. Supported image formats: BMP, JPG, PNG, SVG, and WEBP.<br>   **NOTE:**<br> - ArkTS widgets do not support the strings with the **http://**, **datashare://**, or **file://data/storage**. |
+| src | string | Yes | Image source. Local images are supported.<br> 1. The string format is used to load local images, for example,   **ImageBitmap("common/images/example.jpg")**. For entry and feature modules, the start point of the image path for loading is the **ets** folder of the module. For HAR and shared modules, the start point is the **ets** folder of the entry or feature module into which they are built.<br> For modules whose **type** is **"har"** or **"shared"**, you are advised to use [ImageSource](../../../media/image/image-decoding.md) to decode resource images into a unified **PixelMap** object for loading and use.<br> 2. Supported image formats: BMP, JPG, PNG, SVG, and WEBP.<br>   **NOTE:** <br> - ArkTS widgets do not support the strings with the **http://**, **datashare://**, or **file://data/storage**. |
 | unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes | Unit mode of the **ImageBitmap** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br> If the value is **undefined**, **NaN**, or **Infinity**, the default value will be used. |
 
 ## constructor

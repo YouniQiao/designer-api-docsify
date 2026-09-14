@@ -17,10 +17,6 @@ new(length: number): Uint8Array
 | --- | --- | --- | --- |
 | length | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -33,10 +29,6 @@ new(array: ArrayLike<number> | ArrayBufferLike): Uint8Array
 | --- | --- | --- | --- |
 | array | ArrayLike&lt;number&gt; &#124; [ArrayBufferLike](arkts-arraybufferlike-t.md) | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -51,10 +43,6 @@ new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint8Array
 | byteOffset | number | No |  |
 | length | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## from
 
 ```TypeScript
@@ -69,10 +57,6 @@ Creates an array from an array-like or iterable object.
 | --- | --- | --- | --- |
 | arrayLike | ArrayLike&lt;number&gt; | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## from
 
 ```TypeScript
@@ -89,10 +73,6 @@ Creates an array from an array-like or iterable object.
 | mapfn | (v: T, k: number) =&gt; number | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## of
 
 ```TypeScript
@@ -107,10 +87,6 @@ Returns a new array from a set of elements.
 | --- | --- | --- | --- |
 | items | number[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## BYTES_PER_ELEMENT
 
 ```TypeScript

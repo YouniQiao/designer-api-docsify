@@ -18,7 +18,7 @@ function createSoundPool(
 
 创建音频池实例。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - API version 18以下版本，创建的SoundPool对象底层为单实例模式，一个应用进程只能够创建1个SoundPool实例。
 > 
@@ -73,7 +73,7 @@ function createSoundPool(maxStreams: number, audioRenderInfo: audio.AudioRendere
 
 创建音频池实例。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - API version 18以下版本，创建的SoundPool对象底层为单实例模式，一个应用进程只能够创建1个SoundPool实例。
 > 

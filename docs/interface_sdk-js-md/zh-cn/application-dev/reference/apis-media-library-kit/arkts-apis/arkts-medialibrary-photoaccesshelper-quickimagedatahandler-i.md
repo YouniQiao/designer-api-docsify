@@ -2,7 +2,7 @@
 
 媒体资源处理器，应用在onDataPrepared方法中可自定义媒体资源处理逻辑。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本Interface首批接口从API version 13开始支持。
 

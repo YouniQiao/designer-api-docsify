@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## columnWidths
 
 ```TypeScript
@@ -21,7 +16,7 @@ columnWidths?: LengthMetrics[]
 
 > 默认值：每一列的列宽相等，为组件宽度除以列数。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 当文本长度大于列宽时，文本被截断。
 > 2. 当设置为异常值时，使用默认值。
@@ -49,7 +44,7 @@ range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascade
 
 选择器的数据选择列表。不可设置为空数组，若设置为空数组，则不显示；若动态变化为空数组，则保持当前正常值显示。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 单列数据选择器使用string[]，Resource，[TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[]类型。
 > 2. 多列非联动数据选择器使用string[][]类型。
@@ -75,12 +70,12 @@ selected?: number | number[]
 
 > 默认值：0
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 单列数据选择器使用number类型。
 > 2. 多列非联动数据选择器使用number[]类型，数组长度与列数一致。
 > 3. 多列联动数据选择器使用number[]类型，数组长度与层级数一致。
-> 4. 从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+> 4. 从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 > 5. 未设置该属性或设置的值无效时，使用默认值。
 
 **类型：** number &#124; number[]
@@ -103,9 +98,9 @@ value?: ResourceStr | ResourceStr[]
 
 默认值：数据选择列表中第一个元素的值。
 
-> **说明：**
+> **说明：** 
 > 
-> 1. 从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+> 1. 从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 > 2. 从API version 20开始，支持Resource类型。
 > 3. 只有显示文本列表时该值有效。显示图片或图文混排的列表时，该值无效。
 > 4. 单列数据选择器使用[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)类型。
@@ -115,7 +110,7 @@ value?: ResourceStr | ResourceStr[]
 
 **类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)[]
 
-**默认值：**
+**默认值：** 
 - API版本8-9：value of the first item
 
 **起始版本：** 8

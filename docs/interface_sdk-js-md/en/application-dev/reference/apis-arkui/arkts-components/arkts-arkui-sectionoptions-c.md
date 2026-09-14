@@ -6,11 +6,6 @@ Describes the configuration of the water flow item section.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onGetItemMainSizeByIndex
 
 ```TypeScript
@@ -19,7 +14,7 @@ onGetItemMainSizeByIndex?: GetItemMainSizeByIndex
 
 Callback used to obtain the main axis size, in vp, of the water flow item at a specified index during the layout process of the **WaterFlow** component. For a vertical **WaterFlow** component, this size refers to the height, and for a horizontal **WaterFlow** component, it refers to the width.
 
-**NOTE:**
+**NOTE:** 
 
 1. When both **onGetItemMainSizeByIndex** and the width or height attribute of **FlowItem** are used,
 the main-axis size is determined by the return value of **onGetItemMainSizeByIndex**, which will override the main-axis length of **FlowItem**.

@@ -12,11 +12,6 @@ For sample code, see [onShowFileSelector](arkts-arkweb-web-comp-attribute.md#ons
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

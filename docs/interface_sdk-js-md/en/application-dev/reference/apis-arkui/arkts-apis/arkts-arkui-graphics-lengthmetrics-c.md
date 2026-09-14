@@ -32,7 +32,7 @@ Sets whether the **LengthMetrics** object automatically updates with system conf
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | LengthMetrics** object. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | **LengthMetrics** object. |
 
 **Examples**
 

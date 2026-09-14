@@ -10,11 +10,6 @@ The universal events are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## buttonStyle
 
 ```TypeScript
@@ -23,7 +18,7 @@ buttonStyle(value: ButtonStyleMode)
 
 Sets the style and primacy for the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the backgroundColor, [fontColor](#fontcolor), and [role](#role) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 12.
 
@@ -41,7 +36,7 @@ Sets the style and primacy for the button. The system automatically adjusts the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | Yes | Style and primacy of the button<br>Default value: **ButtonStyleMode.EMPHASIZED |
+| value | [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | Yes | Style and primacy of the button<br>Default value: **ButtonStyleMode.EMPHASIZED** |
 
 ## contentModifier
 
@@ -73,7 +68,7 @@ controlSize(value: ControlSize)
 
 Sets the size for the button.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 12.
 
@@ -91,7 +86,7 @@ Sets the size for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ControlSize](arkts-arkui-controlsize-e.md) | Yes | Size of the button.<br>Default value: **ControlSize.NORMAL |
+| value | [ControlSize](arkts-arkui-controlsize-e.md) | Yes | Size of the button.<br>Default value: **ControlSize.NORMAL** |
 
 ## fontColor
 
@@ -113,7 +108,7 @@ Sets the font color for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the button.<br>Default value: **\&#36;r('sys.color.font_on_primary')**, which means white |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the button.<br>Default value: **&#36;r('sys.color.font_on_primary')**, which means white |
 
 ## fontFamily
 
@@ -135,7 +130,7 @@ Sets the font family.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Font family. The 'HarmonyOS Sans' font and [registered custom fonts](../arkts-apis/arkts-font.md) are supported. |
+| value | string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Font family. The 'HarmonyOS Sans' font and [registered custom fonts](../arkts-apis/arkts-arkui-font.md) are supported. |
 
 ## fontSize
 
@@ -157,7 +152,7 @@ Sets the font size for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Font size of the button.<br>Default value:<br>**\&#36;r('sys.float.Body_L')** when **controlSize** is set to **ControlSize.NORMAL**<br>**\&#36;r('sys.float.Body_S')** when **controlSize** is set to **ControlSize.SMALL**<br>Note: For the string type, percentage values are not supported. |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Font size of the button.<br>Default value:<br>**&#36;r('sys.float.Body_L')** when **controlSize** is set to **ControlSize.NORMAL**<br>**&#36;r('sys.float.Body_S')** when **controlSize** is set to **ControlSize.SMALL**<br>Note: For the string type, percentage values are not supported. |
 
 ## fontStyle
 
@@ -179,7 +174,7 @@ Sets the font style for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | Yes | Font style of the button.<br>Default value: **FontStyle.Normal |
+| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | Yes | Font style of the button.<br>Default value: **FontStyle.Normal** |
 
 ## fontWeight
 
@@ -245,7 +240,7 @@ Sets the maximum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Maximum font scale factor for text.<br>Value range: [1, +∞)<br>**NOTE:**<br>A value less than 1 is handled as **1**. Abnormal values are ineffective by default.<br>If this parameter is not configured, the maximum scale for a circular button is 1x, while the maximum scale for capsule-type buttons, standard buttons, and rounded rectangle buttons defaults to the system-defined value. |
+| scale | number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Maximum font scale factor for text.<br>Value range: [1, +∞)<br>**NOTE:** <br>A value less than 1 is handled as **1**. Abnormal values are ineffective by default.<br>If this parameter is not configured, the maximum scale for a circular button is 1x, while the maximum scale for capsule-type buttons, standard buttons, and rounded rectangle buttons defaults to the system-defined value. |
 
 ## minFontScale
 
@@ -267,7 +262,7 @@ Sets the minimum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Minimum font scale factor for text.<br>Value range: [0, 1]<br>**NOTE:**<br>A value less than 0 is handled as **0**. A value greater than 1 is handled as **1**. Abnormal values are ineffective by default. |
+| scale | number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Minimum font scale factor for text.<br>Value range: [0, 1]<br>**NOTE:** <br>A value less than 0 is handled as **0**. A value greater than 1 is handled as **1**. Abnormal values are ineffective by default. |
 
 ## role
 
@@ -291,7 +286,7 @@ Sets the role of the button. The system automatically adjusts the button backgro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ButtonRole](arkts-arkui-buttonrole-e.md) | Yes | Role of the button.<br>Default value: **ButtonRole.NORMAL |
+| value | [ButtonRole](arkts-arkui-buttonrole-e.md) | Yes | Role of the button.<br>Default value: **ButtonRole.NORMAL** |
 
 ## stateEffect
 
@@ -313,7 +308,7 @@ Specifies whether to enable the pressed state effect when the button is clicked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable the pressed state effect when the button is clicked.<br>**true**: The pressed state effect is enabled. **false**: The pressed state effect is disabled.<br>Default value: **true |
+| value | boolean | Yes | Whether to enable the pressed state effect when the button is clicked.<br>**true**: The pressed state effect is enabled. **false**: The pressed state effect is disabled.<br>Default value: **true** |
 
 ## type
 

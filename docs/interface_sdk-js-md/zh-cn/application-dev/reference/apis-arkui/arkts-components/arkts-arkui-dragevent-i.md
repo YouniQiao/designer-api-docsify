@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## executeDropAnimation
 
 ```TypeScript
@@ -214,7 +209,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | 是 | 获取功能键按压状态。报错信息请参考以下错误码。支持功能键 'Ctrl' &#124; 'Alt' &#124; 'Shift'。<br>**说明：**<br>此接口不支持在手写笔场景下使用。 |
+| keys | Array&lt;string&gt; | 是 | 获取功能键按压状态。报错信息请参考以下错误码。支持功能键 'Ctrl' &#124; 'Alt' &#124; 'Shift'。<br>**说明：** <br>此接口不支持在手写笔场景下使用。 |
 
 **返回值：**
 
@@ -412,7 +407,7 @@ getX(): number
 
 当前拖拽点相对于窗口左上角的x轴坐标，单位为vp。
 
-> **说明：**
+> **说明：** 
 
 **起始版本：** 7
 
@@ -436,7 +431,7 @@ getY(): number
 
 当前拖拽点相对于窗口左上角的y轴坐标，单位为vp。
 
-> **说明：**
+> **说明：** 
 
 **起始版本：** 7
 

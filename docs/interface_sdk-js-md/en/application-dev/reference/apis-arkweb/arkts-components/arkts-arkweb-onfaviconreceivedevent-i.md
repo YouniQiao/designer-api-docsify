@@ -6,11 +6,6 @@ Defines the callback information triggered when the app receives a new favicon, 
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## favicon
 
 ```TypeScript

@@ -26,7 +26,7 @@ Generates a border style object with the specified border style color for all bo
 
 | Type | Description |
 | --- | --- |
-| [Edges](arkts-arkui-graphics-edges-i.md)&lt;[BorderStyle](arkts-arkui-borderstyle-e.md)&gt; | borderStyles** object whose borders are all in the specified style. |
+| [Edges](arkts-arkui-graphics-edges-i.md)&lt;[BorderStyle](arkts-arkui-borderstyle-e.md)&gt; | **borderStyles** object whose borders are all in the specified style. |
 
 **Examples**
 

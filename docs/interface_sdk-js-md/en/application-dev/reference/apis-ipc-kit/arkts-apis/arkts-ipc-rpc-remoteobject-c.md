@@ -34,7 +34,7 @@ Binds an interface descriptor to an **IRemoteBroker** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localInterface | [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | Yes | IRemoteBroker** object. |
+| localInterface | [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | Yes | **IRemoteBroker** object. |
 | descriptor | string | Yes | Interface descriptor. |
 
 **Examples**
@@ -301,7 +301,7 @@ Obtains the string of the interface descriptor.
 
 | Type | Description |
 | --- | --- |
-| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | IRemoteBroker** object bound to the specified interface token. |
+| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | **IRemoteBroker** object bound to the specified interface token. |
 
 **Error codes:**
 
@@ -352,8 +352,8 @@ Binds an interface descriptor to an **IRemoteBroker** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localInterface | [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | Yes | IRemoteBroker** object. |
-| descriptor | string | Yes | IRemoteBroker** object bound to the interface descriptor. The length of the descriptor must be less than 40960. |
+| localInterface | [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | Yes | **IRemoteBroker** object. |
+| descriptor | string | Yes | **IRemoteBroker** object bound to the interface descriptor. The length of the descriptor must be less than 40960. |
 
 **Error codes:**
 
@@ -407,7 +407,7 @@ onRemoteMessageRequest(
 
 Called to return a response to **sendMessageRequest()**. The server processes the request synchronously or asynchronously and returns the result in this API.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - You are advised to overload **onRemoteMessageRequest** preferentially, which implements synchronous and
 > asynchronous message processing.
@@ -426,8 +426,8 @@ Called to return a response to **sendMessageRequest()**. The server processes th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | code | number | Yes | Service request code sent by the remote end. |
-| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object that holds the parameters called by the client. |
-| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object to which the result is written. |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | **MessageSequence** object that holds the parameters called by the client. |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | **MessageSequence** object to which the result is written. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Whether the operation is synchronous or asynchronous. |
 
 **Return value:**
@@ -534,7 +534,7 @@ onRemoteMessageRequest(
 
 Provides a response to **sendMessageRequest()**. The server processes the request and returns a response in this API. The IPC context can be obtained from the input parameter **callingInfo**.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > You are advised to overload the **onRemoteMessageRequest** method with the **CallingInfo** parameter to
 > implement synchronous and asynchronous message processing.
@@ -550,8 +550,8 @@ Provides a response to **sendMessageRequest()**. The server processes the reques
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | code | number | Yes | Service request code sent by the remote end. |
-| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object that holds the parameters called by the client. |
-| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object to which the result is written. |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | **MessageSequence** object that holds the parameters called by the client. |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | **MessageSequence** object to which the result is written. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Whether the operation is synchronous or asynchronous. |
 | callingInfo | [CallingInfo](arkts-ipc-rpc-callinginfo-c.md) | No | IPC context. |
 
@@ -670,8 +670,8 @@ Called to return a response to **sendRequest()**. The server processes the reque
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | code | number | Yes | Service request code sent by the remote end. |
-| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object that holds the parameters called by the client. |
-| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object carrying the result. |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | **MessageParcel** object that holds the parameters called by the client. |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | **MessageParcel** object carrying the result. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Whether the operation is synchronous or asynchronous. |
 
 **Return value:**
@@ -776,8 +776,8 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
-| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object holding the data to send. |
-| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object that receives the response. |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | **MessageSequence** object holding the data to send. |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | **MessageSequence** object that receives the response. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
 
 **Return value:**
@@ -861,8 +861,8 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
-| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object holding the data to send. |
-| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object that receives the response. |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | **MessageSequence** object holding the data to send. |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | **MessageSequence** object that receives the response. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestResult](arkts-ipc-rpc-requestresult-i.md)&gt; | Yes | Callback for receiving the sending result. |
 
@@ -940,8 +940,8 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
-| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object holding the data to send. |
-| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object that receives the response. |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | **MessageParcel** object holding the data to send. |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | **MessageParcel** object that receives the response. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
 
 **Return value:**
@@ -1013,8 +1013,8 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
-| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object holding the data to send. |
-| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object that receives the response. |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | **MessageParcel** object holding the data to send. |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | **MessageParcel** object that receives the response. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
 
 **Return value:**
@@ -1097,8 +1097,8 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
-| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object holding the data to send. |
-| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object that receives the response. |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | **MessageParcel** object holding the data to send. |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | **MessageParcel** object that receives the response. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Yes | Callback for receiving the sending result. |
 

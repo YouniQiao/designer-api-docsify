@@ -18,7 +18,7 @@ function on(type: 'activeStateChange',
 
 允许相同permissionList订阅多个回调函数。
 
-> **说明：**
+> **说明：** 
 > 不允许使用有交集的两个permissionList分别订阅同一个回调函数。即如果两个permissionList包含相同的权限名，则不能使用同一个回调函数进行订阅。该接口通常与[off](arkts-ability-privacymanager-off-f-sys.md)配套使用，在不再需要监听时应调用off取消订阅。
 
 **起始版本：** 9

@@ -40,7 +40,7 @@ dividerModifier?: DividerModifier
 
 Define divider Modifier.
 
-**Type:** [DividerModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
+**Type:** [DividerModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
 **Since:** 18
 

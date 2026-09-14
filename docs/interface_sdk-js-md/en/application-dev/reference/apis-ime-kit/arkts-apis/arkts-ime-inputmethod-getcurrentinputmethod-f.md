@@ -22,7 +22,7 @@ Obtains the current input method. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | InputmethodProperty** instance of the current input method. |
+| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | **InputmethodProperty** instance of the current input method. |
 
 **Examples**
 

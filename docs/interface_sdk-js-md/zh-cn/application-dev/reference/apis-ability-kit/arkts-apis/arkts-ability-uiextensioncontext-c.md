@@ -16,7 +16,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 将当前UIExtensionAbility连接到一个ServiceExtensionAbility，通过返回的proxy与ServiceExtensionAbility进行通信，以使用ServiceExtensionAbility对外提供的能力。ServiceExtensionAbility是一类特殊的[ExtensionAbility](../../../application-models/extensionability-overview.md)组件，这类组件由系统提供，通常用于提供指定场景后台服务能力，不支持开发者自定义。ServiceExtensionAbility可以被其他组件连接，并根据调用者的请求信息在后台处理相关事务。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -67,7 +67,7 @@ connectUIServiceExtensionAbility(want: Want, callback: UIServiceExtensionConnect
 
 连接到一个UIServiceExtensionAbility。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -218,7 +218,7 @@ openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<Abilit
 - 如果不同应用多次调用该接口启动同一个原子化服务，当这个原子化服务调用  
 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口使之终止时，只将正常结果返回给最后一个调用方, 其它调用方返回异常信息，异常信息中resultCode为-1。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -268,7 +268,7 @@ openLink(link: string, options?: OpenLinkOptions, callback?: AsyncCallback<Abili
 - "uris"列表中包含"scheme"为"https"且"domainVerify"为true的元素。  
 如果希望获取被拉起方终止后的结果，可以设置callback参数，此参数的使用可参照[startAbilityForResult](#startabilityforresult)接口。传入的参数不合法时，如未设置必选参数或link字符串不是标准格式的URL，接口会直接抛出异常。参数校验通过，拉起目标方时出现的错误通过promise返回错误信息。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -350,7 +350,7 @@ setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 
 设置UIExtensionAbility的深浅色模式。调用该接口前需要保证该UIExtensionContext对应页面已完成加载。仅支持主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > - 调用该接口后会创建新的资源管理器对象，如果此前有缓存资源管理器，开发者需要更新缓存的资源管理器引用，以使用新创建的资源管理器对象。
 > 
@@ -386,7 +386,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 启动一个UIAbility。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -445,7 +445,7 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 
 启动一个UIAbility。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -503,7 +503,7 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 启动一个UIAbility。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -574,7 +574,7 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 - 如果被启动的UIAbility模式是单实例模式, 不同应用多次调用该接口启动这个UIAbility，当这个UIAbility调用  
 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口使之终止时，只将正常结果返回给最后一个调用方, 其它调用方返回异常信息, 异常信息中resultCode为-1。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -639,7 +639,7 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 - 如果被启动的UIAbility模式是单实例模式, 不同应用多次调用该接口启动这个UIAbility，当这个UIAbility调用  
 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口使之终止时，只将正常结果返回给最后一个调用方，其它调用方返回异常信息, 异常信息中resultCode为-1。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -703,7 +703,7 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 - 如果被启动的UIAbility模式是单实例模式, 不同应用多次调用该接口启动这个UIAbility，当这个UIAbility调用  
 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口使之终止时，只将正常结果返回给最后一个调用方, 其它调用方返回异常信息, 异常信息中resultCode为-1。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -768,7 +768,7 @@ startUIServiceExtensionAbility(want: Want): Promise<void>
 
 启动一个UIServiceExtensionAbility。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 

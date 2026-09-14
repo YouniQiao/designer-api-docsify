@@ -30,7 +30,7 @@ Adds a [CameraInput](arkts-camera-camera-camerainput-i.md) instance to this sess
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraInput | [CameraInput](arkts-camera-camera-camerainput-i.md) | Yes | CameraInput** instance to add. |
+| cameraInput | [CameraInput](arkts-camera-camera-camerainput-i.md) | Yes | **CameraInput** instance to add. |
 
 **Error codes:**
 
@@ -59,7 +59,7 @@ Adds a [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instance to this se
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraOutput | [CameraOutput](arkts-camera-camera-cameraoutput-i.md) | Yes | CameraOutput** instance to add. |
+| cameraOutput | [CameraOutput](arkts-camera-camera-cameraoutput-i.md) | Yes | **CameraOutput** instance to add. |
 
 **Error codes:**
 
@@ -109,7 +109,7 @@ Checks whether a **CameraInput** instance can be added to this session. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraInput | [CameraInput](arkts-camera-camera-camerainput-i.md) | Yes | CameraInput** instance to add. The API does not take effect if the input parameter is invalid (for example, the value is out of range, null, or undefined). |
+| cameraInput | [CameraInput](arkts-camera-camera-camerainput-i.md) | Yes | **CameraInput** instance to add. The API does not take effect if the input parameter is invalid (for example, the value is out of range, null, or undefined). |
 
 **Return value:**
 
@@ -135,7 +135,7 @@ Determines whether a CameraOutput instance can be added to this session. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraOutput | [CameraOutput](arkts-camera-camera-cameraoutput-i.md) | Yes | CameraOutput** instance to add. The API does not take effect if the input parameter is invalid (for example, the value is out of range, null, or undefined). |
+| cameraOutput | [CameraOutput](arkts-camera-camera-cameraoutput-i.md) | Yes | **CameraOutput** instance to add. The API does not take effect if the input parameter is invalid (for example, the value is out of range, null, or undefined). |
 
 **Return value:**
 
@@ -267,7 +267,7 @@ Removes a [CameraInput](arkts-camera-camera-camerainput-i.md) instance from this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraInput | [CameraInput](arkts-camera-camera-camerainput-i.md) | Yes | CameraInput** instance to remove. |
+| cameraInput | [CameraInput](arkts-camera-camera-camerainput-i.md) | Yes | **CameraInput** instance to remove. |
 
 **Error codes:**
 
@@ -296,7 +296,7 @@ Removes a [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instance from th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraOutput | [CameraOutput](arkts-camera-camera-cameraoutput-i.md) | Yes | CameraOutput** instance to remove. |
+| cameraOutput | [CameraOutput](arkts-camera-camera-cameraoutput-i.md) | Yes | **CameraOutput** instance to remove. |
 
 **Error codes:**
 

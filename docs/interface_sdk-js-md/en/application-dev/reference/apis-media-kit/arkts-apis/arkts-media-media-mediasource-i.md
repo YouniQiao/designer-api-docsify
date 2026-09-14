@@ -70,7 +70,7 @@ Sets a MediaSourceLoader object, which is used to help the player request media 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceLoader | [MediaSourceLoader](arkts-media-media-mediasourceloader-i.md) | Yes | MediaSourceLoader** object used to obtain media data for the player. |
+| resourceLoader | [MediaSourceLoader](arkts-media-media-mediasourceloader-i.md) | Yes | **MediaSourceLoader** object used to obtain media data for the player. |
 
 ## setMimeType
 

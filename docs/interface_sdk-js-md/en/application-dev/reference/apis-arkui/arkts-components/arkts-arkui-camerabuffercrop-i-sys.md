@@ -8,11 +8,6 @@ Camera buffer crop parameters.
 
 **System API:** This is a system API.
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## bufferHeight
 
 ```TypeScript

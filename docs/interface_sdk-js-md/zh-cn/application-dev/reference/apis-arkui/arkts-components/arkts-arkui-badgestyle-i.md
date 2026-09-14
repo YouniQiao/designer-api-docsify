@@ -2,7 +2,7 @@
 
 Badge的样式。包括文本颜色、大小、字重、标记颜色和标记大小。
 
-> **说明：**
+> **说明：** 
 > 
 > 当`borderWidth`大于0且`borderColor`与`badgeColor`颜色不一致时，先绘制角标，再绘制描边。由于边缘像素经过抗锯齿处理，抗锯齿产生半透明像素，四角会出现 `badgeColor` 颜色的描边线。如
 > 需实现相关场景，建议使用Text组件设置[outline](arkts-arkui-commonmethod-c.md#outline)代替Badge组件。
@@ -10,11 +10,6 @@ Badge的样式。包括文本颜色、大小、字重、标记颜色和标记大
 **起始版本：** 7
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## badgeColor
 
@@ -52,7 +47,7 @@ Badge的大小。string类型支持number类型取值的字符串形式，可以
 
 取值范围：大于0；取值为0时不显示Badge，取值小于0时取默认值。
 
-**说明：**
+**说明：** 
 
 1. 不支持设置百分比，当设置为百分比时，按照默认值处理。
 2. 从API version 20开始，支持ResourceStr类型。
@@ -104,7 +99,7 @@ borderWidth?: Length
 
 单位：vp
 
-**说明：**
+**说明：** 
 
 不支持设置百分比，当设置为百分比时，按照默认值处理。
 
@@ -154,7 +149,7 @@ true表示避让，false表示不避让。
 
 默认值：false
 
-**说明：**
+**说明：** 
 
 1. 避让效果为角标文本向组件内部延伸显示。
 2. 当外描边的宽度大于0时，角标的延伸起点为外描边的内侧。
@@ -186,7 +181,7 @@ fontSize?: number | ResourceStr
 
 取值范围：大于0；取值为0时不显示文本，取值小于0时取默认值。
 
-**说明：**
+**说明：** 
 
 1. 不支持设置百分比，当设置为百分比时，按照默认值处理。
 2. 从API version 20开始，支持ResourceStr类型。
@@ -213,7 +208,7 @@ fontWeight?: number | FontWeight | ResourceStr
 
 默认值：FontWeight.Normal
 
-**说明：**
+**说明：** 
 
 不支持设置百分比，当设置为百分比时，按照默认值处理。从API version 20开始，支持ResourceStr类型。
 

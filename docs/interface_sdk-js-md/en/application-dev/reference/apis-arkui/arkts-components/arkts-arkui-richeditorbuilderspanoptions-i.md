@@ -6,11 +6,6 @@ Sets the offset position and style of the inserted builder.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## accessibilitySpanOptions
 
 ```TypeScript

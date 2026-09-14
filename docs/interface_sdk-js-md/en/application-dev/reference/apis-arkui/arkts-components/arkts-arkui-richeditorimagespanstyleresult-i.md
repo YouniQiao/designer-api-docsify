@@ -6,11 +6,6 @@ Provides the image span style information returned by the backend.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## layoutStyle
 
 ```TypeScript

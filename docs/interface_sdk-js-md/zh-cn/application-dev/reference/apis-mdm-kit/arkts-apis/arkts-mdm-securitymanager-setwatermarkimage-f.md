@@ -14,7 +14,7 @@ function setWatermarkImage(admin: Want, bundleName: string, source: string | ima
 
 为指定用户的指定应用设置水印策略。当前只支持最多保存100个策略。
 
-> **说明：**
+> **说明：** 
 > 
 > 1.本接口适用于企业场景下为三方应用设置水印，降低企业信息泄露风险。不建议为系统应用设置水印（如：桌面应用），可能存在未知异常。
 > 
@@ -78,7 +78,7 @@ function setWatermarkImage(admin: Want, bundleName: string, source: string | ima
 
 为指定用户的指定应用设置水印策略。当前只支持最多保存100个策略。
 
-> **说明：**
+> **说明：** 
 > 
 > 本接口适用于企业场景下为三方应用设置水印，降低企业信息泄露风险。不建议为系统应用设置水印（如：桌面应用），可能存在未知异常。
 > 

@@ -16,11 +16,6 @@ The following events are supported:
 
 **System API:** This is a system API.
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onError
 
 ```TypeScript
@@ -49,3 +44,4 @@ Invoked when an error occurs during the running of the **IsolatedComponent**. Yo
 
 | Type | Description |
 | --- | --- |
+| [IsolatedComponentAttribute](arkts-arkui-isolatedcomponentattribute-c-sys.md) |  |

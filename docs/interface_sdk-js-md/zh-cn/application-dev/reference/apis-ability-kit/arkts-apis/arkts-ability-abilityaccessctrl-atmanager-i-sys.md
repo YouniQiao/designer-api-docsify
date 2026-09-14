@@ -482,7 +482,7 @@ off(
 
 取消订阅时，若不传入callback，则批量取消与tokenIDList和permissionList完全匹配的所有监听回调。
 
-> **说明：**
+> **说明：** 
 > 该接口通常与[on](#onpermissionstatechange)配套使用，用于取消通过on创建的监听关系。
 
 **起始版本：** 9
@@ -545,7 +545,7 @@ on(
 
 允许指定tokenID列表与权限列表订阅多个callback。
 
-> **说明：**
+> **说明：** 
 > 若新的订阅与已有订阅在tokenID列表和权限列表上存在交集，不允许使用相同的callback进行订阅。
 > 该接口通常与off配套使用，当不再需要监听时应调用off取消订阅。
 

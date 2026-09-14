@@ -362,7 +362,7 @@ The caller must be a system application and must request the ohos.permission.SET
 ABILITY_UNIFIED_DATA_KEY = 'ohos.param.ability.udKey'
 ```
 
-Unique identifier for file sharing based on [UDMF](../../apis-arkdata/arkts-apis/arkts-data-unifieddatachannel.md). This field can only be set by system applications, but third-party applications can read it.
+Unique identifier for file sharing based on [UDMF](../../apis-arkdata/arkts-apis/arkts-arkdata-data-unifieddatachannel.md). This field can only be set by system applications, but third-party applications can read it.
 
 If the Want contains a URI authorization flag (for example, [FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md) or [FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md)) and the **PARAMS_STREAM** field is also present, this field does not take effect.
 

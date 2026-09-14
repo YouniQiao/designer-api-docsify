@@ -2,7 +2,7 @@
 
 ApplicationContext作为应用上下文，继承自Context，提供了应用生命周期监听、进程管理、应用环境设置等应用级别的管控能力。
 
-> **说明：**
+> **说明：** 
 > 
 > 本模块接口仅可在Stage模型下使用。
 
@@ -213,7 +213,7 @@ registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallb
 
 注册监听应用内UIAbility的生命周期。使用callback异步回调。
 
-<p>**说明：**: <br>仅支持主线程调用。</p>
+<p>**说明：**  <br>仅支持主线程调用。</p>
 
 **起始版本：** 9
 
@@ -305,7 +305,7 @@ registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 
 注册对系统环境变化的监听。使用callback异步回调。
 
-<p>**说明：**: <br>仅支持主线程调用。</p>
+<p>**说明：**  <br>仅支持主线程调用。</p>
 
 **起始版本：** 9
 
@@ -372,7 +372,7 @@ unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<v
 
 取消监听应用内UIAbility的生命周期。使用callback异步回调。
 
-<p>**说明：**: <br>仅支持主线程调用。</p>
+<p>**说明：**  <br>仅支持主线程调用。</p>
 
 **起始版本：** 9
 
@@ -429,13 +429,13 @@ unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 
 取消监听应用内UIAbility的生命周期。使用Promise异步回调。
 
-<p>**说明：**: <br>仅支持主线程调用。</p>
+<p>**说明：**  <br>仅支持主线程调用。</p>
 
 **起始版本：** 9
 
 **废弃版本：** 10
 
-**替代接口：** off(type: 'abilityLifecycle', callbackId: number): Promise&lt;void&gt;;
+**替代接口：** [off](arkts-ability-applicationcontext-c.md#offabilitylifecycle)(type: 'abilityLifecycle', callbackId: number): Promise&lt;void&gt;;
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -491,7 +491,7 @@ unregisterEnvironmentCallback(callbackId: number, envcallback: AsyncCallback<voi
 
 取消对系统环境变化的监听。使用callback异步回调。
 
-<p>**说明：**: <br>仅支持主线程调用。</p>
+<p>**说明：**  <br>仅支持主线程调用。</p>
 
 **起始版本：** 9
 
@@ -551,7 +551,7 @@ unregisterEnvironmentCallback(callbackId: number): Promise<void>
 
 **废弃版本：** 10
 
-**替代接口：** off(type: 'environment', callbackId: number): Promise&lt;void&gt;;
+**替代接口：** [off](arkts-ability-applicationcontext-c.md#offenvironment)(type: 'environment', callbackId: number): Promise&lt;void&gt;;
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -14,11 +14,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-```
-
 ## onError
 
 ```TypeScript
@@ -47,3 +42,4 @@ IsolatedComponent加载的Abc（以Ability扩展形式运行）在运行过程�
 
 | 类型 | 说明 |
 | --- | --- |
+| [IsolatedComponentAttribute](arkts-arkui-isolatedcomponentattribute-c-sys.md) |  |

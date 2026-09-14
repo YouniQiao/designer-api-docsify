@@ -10,11 +10,6 @@ CommonScrollableMethod
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## autoAdjustScrollBarMargin
 
 ```TypeScript
@@ -288,7 +283,7 @@ fadingEdge(enabled: Optional<boolean>, options?: FadingEdgeOptions): T
 
 设置是否开启边缘渐隐效果及设置边缘渐隐长度。
 
-> **说明：**
+> **说明：** 
 > 
 > fadingEdge是通过设置[overlay](arkts-arkui-commonmethod-c.md#overlay)属性和
 > [blendMode](arkts-arkui-commonmethod-c.md#blendmode)属性（参数值为BlendMode.SRC_OVER，
@@ -343,7 +338,7 @@ flingSpeedLimit(speedLimit: number): T
 
 限制跟手滑动结束后，惯性动效开始时的最大初始速度。
 
-> **说明：**
+> **说明：** 
 > 
 > - 惯性动效是指手指快速滑动并离开屏幕后，滚动内容继续滚动并逐渐减速停止的效果，也称为惯性滚动。
 > 
@@ -437,7 +432,7 @@ onDidScroll(handler: OnScrollCallback): T
 
 滚动组件滑动时触发，返回当前帧滑动的偏移量和当前滑动状态。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 14开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
 
@@ -591,7 +586,7 @@ onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): T
 
 滚动组件滑动时触发。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 11开始支持，从API version 12开始废弃。List、Grid和WaterFlow
 > 组件的onScroll事件在布局之后触发，
@@ -698,7 +693,7 @@ onWillScroll(handler: Optional<OnWillScrollCallback>): T
 
 回调当前帧将要滚动的偏移量、当前滚动状态及滚动操作来源，其中回调的偏移量为计算得到的将要滚动的偏移量值，并非最终实际滚动偏移。可以通过该回调返回值指定滚动组件将要滚动的偏移。Scroll组件的onWillScroll接口的参数类型是[ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 14开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
 > 
@@ -762,7 +757,7 @@ onWillStartFling(handler: VoidCallback): T
 
 滚动组件将要开始惯性动效时触发。
 
-> **说明：**
+> **说明：** 
 > 
 > - 如果惯性动效通过fling方法触发，则onWillStartFling不触发。
 > 
@@ -916,7 +911,7 @@ scrollBarHeight(height: LengthMetrics | undefined): T
 
 未设置该接口时，滚动条滑轨高度默认自适应滚动组件高度，儿童智能表的默认高度为37vp。
 
-> **说明：**
+> **说明：** 
 > 
 > 应确保scrollBarHeight与
 > [scrollBarMargin](#scrollbarmargin)的设定

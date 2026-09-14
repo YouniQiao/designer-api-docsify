@@ -114,7 +114,7 @@ deviceId(deviceId: string): Query
 
 添加设备ID作为Key的前缀。
 
-> **说明：**
+> **说明：** 
 > 
 > 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
 > networkId，通过调用
@@ -213,7 +213,7 @@ equalTo(field: string, value: number | number | string | boolean): Query
 
 构造一个Query对象来查询具有指定字段的条目，其值等于指定的值。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用equalTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
@@ -308,7 +308,7 @@ greaterThan(field: string, value: number | number | string | boolean): Query
 
 构造一个Query对象以查询具有大于指定值的指定字段的条目。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用greaterThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
@@ -366,7 +366,7 @@ greaterThanOrEqualTo(field: string, value: number | number | string): Query
 
 构造一个Query对象以查询具有指定字段且值大于或等于指定值的条目。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用greaterThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
@@ -424,7 +424,7 @@ inNumber(field: string, valueList: number[] | number[]): Query
 
 构造一个Query对象以查询具有指定字段的条目，其值在指定的值列表中。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用inNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
@@ -482,7 +482,7 @@ inString(field: string, valueList: string[]): Query
 
 构造一个Query对象以查询具有指定字段的条目，其值在指定的字符串值列表中。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用inString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
@@ -540,7 +540,7 @@ isNotNull(field: string): Query
 
 构造一个Query对象以查询具有值不为null的指定字段的条目。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用isNotNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
@@ -597,7 +597,7 @@ isNull(field: string): Query
 
 构造一个Query对象以查询具有值为null的指定字段的条目。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用isNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
@@ -654,7 +654,7 @@ lessThan(field: string, value: number | number | string): Query
 
 构造一个Query对象以查询具有小于指定值的指定字段的条目。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用lessThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
@@ -712,7 +712,7 @@ lessThanOrEqualTo(field: string, value: number | number | string): Query
 
 构造一个Query对象以查询具有指定字段且值小于或等于指定值的条目。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用lessThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
@@ -770,7 +770,7 @@ like(field: string, value: string): Query
 
 构造一个Query对象以查询具有与指定字符串值相似的指定字段的条目。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用like时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
@@ -882,7 +882,7 @@ notEqualTo(field: string, value: number | number | string | boolean): Query
 
 构造一个Query对象以查询具有指定字段且值不等于指定值的条目。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用notEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
@@ -940,7 +940,7 @@ notInNumber(field: string, valueList: number[] | number[]): Query
 
 构造一个Query对象以查询具有指定字段的条目，该字段的值不在指定的值列表中。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用notInNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
@@ -998,7 +998,7 @@ notInString(field: string, valueList: string[]): Query
 
 构造一个Query对象以查询具有指定字段且值不在指定字符串值列表中的条目。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用notInString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
@@ -1096,7 +1096,7 @@ orderByAsc(field: string): Query
 
 构造一个Query对象，将查询结果按升序排序。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用orderByAsc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
@@ -1154,7 +1154,7 @@ orderByDesc(field: string): Query
 
 构造一个Query对象，将查询结果按降序排序。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用orderByDesc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 
@@ -1354,7 +1354,7 @@ unlike(field: string, value: string): Query
 
 构造一个Query对象以查询具有与指定字符串值不相似的指定字段的条目。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用unlike时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
 > 

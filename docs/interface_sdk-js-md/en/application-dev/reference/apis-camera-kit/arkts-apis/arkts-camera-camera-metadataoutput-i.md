@@ -73,7 +73,7 @@ lockMetadataObjectTracking(point: Point): void
 
 Locks a metadata object (such as a cat or dog face) for tracking.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This function tracks the object pointed to by **point**. If such object does not exist, this function does
 > not take effect.
@@ -152,7 +152,7 @@ on(type: 'metadataObjectsAvailable', callback: AsyncCallback<Array<MetadataObjec
 
 Subscribes to events indicating available metadata objects. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -177,7 +177,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to metadata error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 

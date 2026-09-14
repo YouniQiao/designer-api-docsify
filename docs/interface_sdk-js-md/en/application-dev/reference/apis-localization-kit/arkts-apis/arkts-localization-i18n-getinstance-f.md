@@ -30,7 +30,7 @@ Creates an **IndexUtil** object.
 
 | Type | Description |
 | --- | --- |
-| [IndexUtil](arkts-localization-i18n-indexutil-c.md) | IndexUtil** object created based on the specified locale ID. |
+| [IndexUtil](arkts-localization-i18n-indexutil-c.md) | **IndexUtil** object created based on the specified locale ID. |
 
 **Examples**
 

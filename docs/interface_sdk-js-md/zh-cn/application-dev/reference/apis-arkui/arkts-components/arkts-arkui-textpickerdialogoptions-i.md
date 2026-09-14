@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## onAccept
 
 ```TypeScript
@@ -77,7 +72,7 @@ onDidAppear?: () => void
 
 弹窗弹出后的事件回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 正常时序依次为：
 > onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange/onScrollStop)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
@@ -104,7 +99,7 @@ onDidDisappear?: () => void
 
 弹窗消失后的事件回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 正常时序依次为：
 > onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange/onScrollStop)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
@@ -125,7 +120,7 @@ onWillAppear?: () => void
 
 弹窗显示动效前的事件回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 正常时序依次为：
 > onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange/onScrollStop)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
@@ -148,7 +143,7 @@ onWillDisappear?: () => void
 
 弹窗退出动效前的事件回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 正常时序依次为：
 > onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange/onScrollStop)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
@@ -171,7 +166,7 @@ acceptButtonStyle?: PickerDialogButtonStyle
 
 设置确认按钮显示样式、重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
 > 保持默认值false。
@@ -200,7 +195,7 @@ alignment?: DialogAlignment
 
 **类型：** [DialogAlignment](../arkts-apis/arkts-arkui-dialogalignment-e.md)
 
-**默认值：**
+**默认值：** 
 - API版本11+：DialogAlignment.Default
 
 **起始版本：** 10
@@ -221,7 +216,7 @@ backgroundBlurStyle?: BlurStyle
 
 > 默认值：BlurStyle.COMPONENT_ULTRA_THICK
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，
 > 否则显示的颜色将不符合预期效果。
@@ -248,7 +243,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 背景模糊效果参数，用于自定义弹窗背景模糊的显示样式，支持配置颜色模式、自适应颜色、缩放比例等属性，实现不同的背景模糊视觉效果。
 
-> **说明：**
+> **说明：** 
 > 
 > 未设置时沿用backgroundBlurStyle的默认效果（BlurStyle.COMPONENT_ULTRA_THICK）；设置后将覆盖backgroundBlurStyle的效果。
 
@@ -272,7 +267,7 @@ backgroundColor?: ResourceColor
 
 > 默认值：Color.Transparent
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 当设置了backgroundColor为非透明色时，backgroundBlurStyle需要设置为BlurStyle.NONE，不要设置backgroundBlurStyle为非NONE值，
 > 否则显示的颜色将不符合预期效果。
@@ -299,7 +294,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 背景效果参数，用于自定义弹窗背景的显示效果，支持配置模糊半径、饱和度、亮度、颜色等属性，实现不同的背景视觉效果。
 
-> **说明：**
+> **说明：** 
 > 
 > 未设置时不生效，此时弹窗背景模糊效果由backgroundBlurStyle决定；设置后将覆盖backgroundBlurStyle的效果。从API版本26.0.0开始，
 > 设置systemMaterial后backgroundEffect与backgroundBlurStyle均不生效。
@@ -322,7 +317,7 @@ cancelButtonStyle?: PickerDialogButtonStyle
 
 设置取消按钮显示样式、重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
 > 保持默认值false。
@@ -373,13 +368,13 @@ defaultPickerItemHeight?: number | string
 
 设置选择器中选项的高度。number类型取值范围：0, +∞)，默认值：选中项56vp，非选中项36vp。设置该参数后，选中项与非选中项的高度均为所设置的值。string类型仅支持number类型取值的字符串形式，例如"56"。
 
-> **说明：**
+> **说明：** 
 > 
 > 当defaultPickerItemHeight的值为负数时，使用默认值。
 
 **类型：** number &#124; string
 
-**默认值：**
+**默认值：** 
 - API版本11+：56 vp (selected) and 36 vp (unselected)
 
 **起始版本：** 8
@@ -421,7 +416,7 @@ disableTextStyleAnimation?: boolean
 
 > 默认值：false
 
-> **说明：**
+> **说明：** 
 > 
 > 设置为true时，滑动过程中无字号、字重、字体颜色等变化动效，且文本均显示为defaultTextStyle属性设置的样式。如未设置defaultTextStyle，
 > 则显示为Text组件默认样式。
@@ -481,7 +476,7 @@ enableHapticFeedback?: boolean
 
 > 默认值：true
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 设置为true后，其生效情况取决于系统的硬件是否支持。
 > 2. 开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限，配置如下：
@@ -559,7 +554,7 @@ maskRect?: Rectangle
 
 **类型：** [Rectangle](arkts-arkui-rectangle-i.md)
 
-**默认值：**
+**默认值：** 
 - API版本11+：{ x: 0, y: 0, width: '100%', height: '100%' }
 
 **起始版本：** 10
@@ -582,7 +577,7 @@ offset?: Offset
 
 **类型：** [Offset](../arkts-apis/arkts-arkui-offset-t.md)
 
-**默认值：**
+**默认值：** 
 - API版本11+：{ dx: 0 , dy: 0 }
 
 **起始版本：** 10
@@ -601,7 +596,7 @@ onEnterSelectedArea?: Callback<TextPickerResult>
 
 滑动过程中，选项进入分割线区域内，触发该回调。与onChange事件的差别在于，该事件的触发时机早于onChange事件，当当前滑动列滑动距离超过选中项高度的一半时，选项此时已经进入分割线区域内，会触发该事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 在多列联动场景中，不建议使用该回调，由于该回调标识的是滑动过程中选项进入分割线区域内的节点，而跟随变化的选项并不涉及滑动，因此，
 > 回调的返回值中，仅当前滑动列的值会正常变化，其余未滑动列的值保持不变。
@@ -645,8 +640,8 @@ selectedBackgroundStyle?: PickerBackgroundStyle
 > 默认值：
 > 
 > <br>{
-> <br>color: \$r('sys.color.comp_background_tertiary'),
-> <br>borderRadius: \$r('sys.float.corner_radius_level12')
+> <br>color: &#36;r('sys.color.comp_background_tertiary'),
+> <br>borderRadius: &#36;r('sys.float.corner_radius_level12')
 > <br>}
 
 **类型：** [PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)

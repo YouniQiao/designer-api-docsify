@@ -11,9 +11,9 @@ AccessibilityExtensionContext是AccessibilityExtensionAbility上下文环境，�
 ```ts
 import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
 class EntryAbility extends AccessibilityExtensionAbility {
- onConnect(): void {
- let axContext = this.context; 
- } 
+  onConnect(): void {
+    let axContext = this.context; 
+  } 
 }
 ```
 

@@ -2,7 +2,7 @@
 
 After the **CanvasRenderingContext2D** object is bound to the **Canvas** component, you can draw shapes, texts, and images on the **Canvas** component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > * It is recommended that the **CanvasRenderingContext2D** object and the **Canvas** component be
 > encapsulated into the same custom component, ensuring a one-to-one correspondence and consistent
@@ -24,11 +24,6 @@ After the **CanvasRenderingContext2D** object is bound to the **Canvas** compone
 **Since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## beginPath
 
@@ -91,7 +86,7 @@ Sets the current path to a clipping path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to clip.<br>The options are **"nonzero"** and **"evenodd"**.<br>Invalid values **undefined** and **null** are treated as the default value.<br>Default value: **"nonzero" |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to clip.<br>The options are **"nonzero"** and **"evenodd"**.<br>Invalid values **undefined** and **null** are treated as the default value.<br>Default value: **"nonzero"** |
 
 ## clip
 
@@ -113,8 +108,8 @@ Sets a specified path as the clipping path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-path2d-c.md) | Yes | Path2D** path to clip.<br>**undefined** and **null** are treated as invalid values. |
-| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to clip.<br>The options are **"nonzero"** and **"evenodd"**.<br>Invalid values **undefined** and **null** are treated as the default value.<br>Default value: **"nonzero" |
+| path | [Path2D](arkts-arkui-path2d-c.md) | Yes | **Path2D** path to clip.<br>**undefined** and **null** are treated as invalid values. |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to clip.<br>The options are **"nonzero"** and **"evenodd"**.<br>Invalid values **undefined** and **null** are treated as the default value.<br>Default value: **"nonzero"** |
 
 ## createConicGradient
 
@@ -410,7 +405,7 @@ Fills the current path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to fill.<br>The options are **"nonzero"** and **"evenodd"**.<br>Invalid values **undefined** and **null** are treated as the default value.<br>Default value: **"nonzero" |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to fill.<br>The options are **"nonzero"** and **"evenodd"**.<br>Invalid values **undefined** and **null** are treated as the default value.<br>Default value: **"nonzero"** |
 
 ## fill
 
@@ -432,8 +427,8 @@ Fills a specified path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-path2d-c.md) | Yes | Path2D** path to fill.<br>**undefined** and **null** are treated as invalid values. |
-| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to fill.<br>The options are **"nonzero"** and **"evenodd"**.<br>Invalid values **undefined** and **null** are treated as the default value.<br>Default value: **"nonzero" |
+| path | [Path2D](arkts-arkui-path2d-c.md) | Yes | **Path2D** path to fill.<br>**undefined** and **null** are treated as invalid values. |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to fill.<br>The options are **"nonzero"** and **"evenodd"**.<br>Invalid values **undefined** and **null** are treated as the default value.<br>Default value: **"nonzero"** |
 
 ## fillRect
 
@@ -565,7 +560,7 @@ Obtains the **PixelMap** object created with the pixels within the specified are
 
 | Type | Description |
 | --- | --- |
-| [PixelMap](arkts-arkui-pixelmap-t.md) | PixelMap** object. |
+| [PixelMap](arkts-arkui-pixelmap-t.md) | **PixelMap** object. |
 
 ## getTransform
 
@@ -615,7 +610,7 @@ Returns a **TextMetrics** object used to obtain the width of specified text. Not
 
 | Type | Description |
 | --- | --- |
-| [TextMetrics](arkts-arkui-textmetrics-i.md) | TextMetrics** object.<br>If the input value is **undefined** or **null**, the value is calculated based on "undefined" or "null". |
+| [TextMetrics](arkts-arkui-textmetrics-i.md) | **TextMetrics** object.<br>If the input value is **undefined** or **null**, the value is calculated based on "undefined" or "null". |
 
 ## putImageData
 
@@ -637,7 +632,7 @@ Puts an **ImageData** object onto a rectangular area on the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](arkts-arkui-imagedata-c.md) | Yes | ImageData** object with pixels to put onto the canvas.<br> **undefined** and **null** are treated as invalid values and no rendering will be performed. |
+| imageData | [ImageData](arkts-arkui-imagedata-c.md) | Yes | **ImageData** object with pixels to put onto the canvas.<br> **undefined** and **null** are treated as invalid values and no rendering will be performed. |
 | dx | number &#124; string | Yes | X-axis offset of the rectangular area on the canvas.<br> Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br> Default unit: vp |
 | dy | number &#124; string | Yes | Y-axis offset of the rectangular area on the canvas.<br> Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br> Default unit: vp |
 
@@ -669,7 +664,7 @@ Fills the new rectangular area with the **ImageData** data after cropping.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](arkts-arkui-imagedata-c.md) | Yes | ImageData** object with pixels to put onto the canvas.<br> **undefined** and **null** are treated as invalid values and no rendering will be performed. |
+| imageData | [ImageData](arkts-arkui-imagedata-c.md) | Yes | **ImageData** object with pixels to put onto the canvas.<br> **undefined** and **null** are treated as invalid values and no rendering will be performed. |
 | dx | number &#124; string | Yes | X-axis offset of the rectangular area on the canvas.<br> Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br> Default unit: vp |
 | dy | number &#124; string | Yes | Y-axis offset of the rectangular area on the canvas.<br> Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br> Default unit: vp |
 | dirtyX | number &#124; string | Yes | X-axis offset of the upper left corner of the rectangular area relative to that of the source image.<br>Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br>Default unit: vp |
@@ -717,7 +712,7 @@ restore(): void
 
 Restores the saved drawing context.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When the number of calls to **restore()** does not exceed the number of calls to **save()**,
 > this API pops the saved drawing state from the stack and restores the attributes, clipping
@@ -867,7 +862,7 @@ Draws the input **PixelMap** object on the canvas. The example is the same as th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PixelMap](arkts-arkui-pixelmap-t.md) | No | PixelMap** object that contains pixel values.<br> **undefined** and **null** are treated as invalid values and no rendering will be performed.<br>Default value: **null |
+| value | [PixelMap](arkts-arkui-pixelmap-t.md) | No | **PixelMap** object that contains pixel values.<br> **undefined** and **null** are treated as invalid values and no rendering will be performed.<br>Default value: **null** |
 
 ## setTransform
 
@@ -877,7 +872,7 @@ setTransform(a: number, b: number, c: number, d: number, e: number, f: number): 
 
 Resets the existing transformation matrix and creates a new transformation matrix by using the same parameters as the **transform()** API.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The coordinates of each point in the graph after transformation can be calculated
 > using the following formula:
@@ -901,12 +896,12 @@ Resets the existing transformation matrix and creates a new transformation matri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| a | number | Yes | scaleX**: horizontal scaling value. A negative value is supported.<br> In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
-| b | number | Yes | skewY**: vertical skewing value. A negative value is supported.<br> In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
-| c | number | Yes | skewX**: horizontal skewing value. A negative value is supported.<br> In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
-| d | number | Yes | scaleY**: vertical scaling value. A negative value is supported.<br> In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
-| e | number | Yes | translateX**: horizontal translation distance. A negative value is supported.<br>In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.<br>Default unit: vp |
-| f | number | Yes | translateY**: vertical translation distance. A negative value is supported.<br>In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.<br>Default unit: vp |
+| a | number | Yes | **scaleX**: horizontal scaling value. A negative value is supported.<br> In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
+| b | number | Yes | **skewY**: vertical skewing value. A negative value is supported.<br> In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
+| c | number | Yes | **skewX**: horizontal skewing value. A negative value is supported.<br> In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
+| d | number | Yes | **scaleY**: vertical scaling value. A negative value is supported.<br> In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
+| e | number | Yes | **translateX**: horizontal translation distance. A negative value is supported.<br>In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.<br>Default unit: vp |
+| f | number | Yes | **translateY**: vertical translation distance. A negative value is supported.<br>In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.<br>Default unit: vp |
 
 ## setTransform
 
@@ -928,7 +923,7 @@ Resets the current transformation to the identity matrix, and then creates a new
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transform | [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | No | Transformation matrix.<br>**undefined** and **null** are treated as invalid values.<br>Default value: **null |
+| transform | [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | No | Transformation matrix.<br>**undefined** and **null** are treated as invalid values.<br>Default value: **null** |
 
 ## stroke
 
@@ -1038,7 +1033,7 @@ Displays the specified **ImageBitmap** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bitmap | [ImageBitmap](arkts-arkui-imagebitmap-c.md) | Yes | ImageBitmap** object to display. |
+| bitmap | [ImageBitmap](arkts-arkui-imagebitmap-c.md) | Yes | **ImageBitmap** object to display. |
 
 ## transform
 
@@ -1048,7 +1043,7 @@ transform(a: number, b: number, c: number, d: number, e: number, f: number): voi
 
 Defines a transformation matrix. To transform a graph, you only need to set parameters of the matrix. The coordinates of the graph are multiplied by the matrix values to obtain new coordinates of the transformed graph. You can use the matrix to implement multiple transform effects.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The coordinates of each point in the graph after transformation can be calculated
 > using the following formula:
@@ -1196,7 +1191,7 @@ filter: string
 
 Sets the filter for an image. Any number of filters can be combined. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The resources used in this example are not located in the **src**
 > **main**
@@ -1350,7 +1345,7 @@ imageSmoothingEnabled: boolean
 ```
 
 Indicates whether to apply image smoothing adjustments when drawing images. The value **true** means to enable smoothing, and **false** means to disable it. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. Default value: **true**.   
-> **NOTE:**
+> **NOTE:** 
 > 
 > The resources used in this example are not located in the **src**
 > **main**
@@ -1381,7 +1376,7 @@ imageSmoothingQuality: ImageSmoothingQuality
 ```
 
 Sets the image smoothing quality when **imageSmoothingEnabled** is set to **true**. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md). Default value: **"low"**   
-> **NOTE:**
+> **NOTE:** 
 > 
 > The resources used in this example are not located in the **src**
 > **main**
@@ -1437,7 +1432,7 @@ If the value of **letterSpacing** is specified with a unit (for example, **lette
 
 Default value: **0** (Invalid values are treated as the default value.)
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The LengthMetrics type is recommended for better performance.
 

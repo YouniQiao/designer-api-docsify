@@ -6,7 +6,7 @@ export type PathPreference = 'auto' | 'primaryCellular' | 'secondaryCellular'
 
 HTTP请求指定特定网络的类型枚举。
 
-> **说明：**
+> **说明：** 
 > 
 > 推荐在网络并发等场景下使用。
 

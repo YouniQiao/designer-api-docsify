@@ -14,7 +14,7 @@ function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrus
 
 Obtains an **AuthInstance** instance for user authentication.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Each **AuthInstance** can perform authentication only once. To perform authentication again, obtain a new
 > **AuthInstance**.
@@ -39,7 +39,7 @@ Obtains an **AuthInstance** instance for user authentication.
 
 | Type | Description |
 | --- | --- |
-| [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md) | AuthInstance** instance obtained. |
+| [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md) | **AuthInstance** instance obtained. |
 
 **Error codes:**
 

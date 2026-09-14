@@ -32,7 +32,7 @@ Sets the 24-hour clock.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** if the setting is successful, and **false** otherwise. |
+| boolean | **true** if the setting is successful, and **false** otherwise. |
 
 **Examples**
 

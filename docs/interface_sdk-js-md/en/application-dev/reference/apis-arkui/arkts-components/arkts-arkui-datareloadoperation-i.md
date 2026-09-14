@@ -6,11 +6,6 @@ Represents an operation for reloading data. If the **onDatasetChange** event con
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## reuseImmediately
 
 ```TypeScript

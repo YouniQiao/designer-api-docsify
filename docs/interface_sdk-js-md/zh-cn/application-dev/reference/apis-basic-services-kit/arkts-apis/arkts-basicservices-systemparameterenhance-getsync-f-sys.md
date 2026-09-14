@@ -14,7 +14,7 @@ function getSync(key: string, def?: string): string
 
 获取系统参数key对应的值。
 
-> **说明：**
+> **说明：** 
 > 
 > getSync和get方法都用于获取系统参数值：
 > - getSync：同步方法，直接返回系统参数值，适用于简单同步场景。

@@ -25,7 +25,7 @@ addAccountImplicitly(
 
 根据指定的鉴权类型和可选项，隐式地添加应用账号。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持, 从API version 9开始废弃。建议使用[createAccountImplicitly](#createaccountimplicitly)替代。
 
@@ -81,7 +81,7 @@ authenticate(
 
 对应用账号进行鉴权，获取OAuth令牌。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持, 从API version 9开始废弃。建议使用[auth](#auth)替代。
 

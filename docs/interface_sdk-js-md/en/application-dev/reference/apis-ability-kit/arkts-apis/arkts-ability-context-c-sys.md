@@ -16,10 +16,10 @@ createBundleContext(bundleName: string): Context
 
 Creates the context based on the bundle name.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If there are multiple modules in the stage model, resource ID conflicts may occur. You are advised to use
-> [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md)
+> [application.createModuleContext](arkts-ability-application-createmodulecontext-f-sys.md)
 > instead.
 > 
 > This API has been supported since API version 9 and deprecated since API version 12. You are advised to use
@@ -87,10 +87,10 @@ createModuleContext(bundleName: string, moduleName: string): Context
 
 Creates the context based on the bundle name and module name.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API has been supported since API version 9 and deprecated since API version 12. You are advised to use
-> [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md)
+> [application.createModuleContext](arkts-ability-application-createmodulecontext-f-sys.md)
 > instead.
 
 **Since:** 9

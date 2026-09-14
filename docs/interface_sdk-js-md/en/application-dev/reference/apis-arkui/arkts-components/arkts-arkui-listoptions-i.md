@@ -2,7 +2,7 @@
 
 Defines the options of the **List** component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer element
@@ -11,11 +11,6 @@ Defines the options of the **List** component.
 **Since:** 18
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## initialIndex
 
@@ -29,7 +24,7 @@ Index of the item to be displayed at the start when the list is initially loaded
 
 **Type:** number
 
-**Default:**
+**Default:** 
 - API version 18+: 0
 
 **Since:** 7
@@ -72,7 +67,7 @@ Spacing between list items along the main axis. <br>Default value: **0** <br>If 
 
 **Type:** number &#124; string
 
-**Default:**
+**Default:** 
 - API version 18+: 0
 
 **Since:** 7

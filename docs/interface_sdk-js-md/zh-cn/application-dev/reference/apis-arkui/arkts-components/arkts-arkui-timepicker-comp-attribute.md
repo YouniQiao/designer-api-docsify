@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## dateTimeOptions
 
 ```TypeScript
@@ -157,7 +152,7 @@ enableHapticFeedback(enable: boolean)
 
 开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限，配置如下：
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
@@ -229,7 +224,7 @@ loop(isLoop: Optional<boolean>)
 
 设置是否启用循环模式。与[loop&lt;sup&gt;11+&lt;/sup&gt;](#loop)相比，isLoop参数新增了对undefined类型的支持。
 
-> **说明：**
+> **说明：** 
 > 
 > 设置了start或end且为非默认值的场景下，loop不生效。
 
@@ -303,7 +298,7 @@ onEnterSelectedArea(callback: Callback<TimePickerResult>)
 
 与[onChange](#onchange)事件的差别在于，该事件的触发时机早于[onChange](#onchange)事件，当滑动列的滑动距离超过选中项高度的一半时，选项已经进入分割线区域内，会触发该事件。当[enableCascade](#enablecascade)设置为true时，由于上午/下午列与小时列存在联动关系（即上午/下午标识会根据小时数自动调整），不建议使用该回调。该回调标识的是滑动过程中选项进入分割线区域内的节点，而联动变化的选项并不涉及滑动，因此，回调的返回值中，仅当前滑动列的值会正常变化，其余未滑动列的值保持不变。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在attributeModifier中调用。
 

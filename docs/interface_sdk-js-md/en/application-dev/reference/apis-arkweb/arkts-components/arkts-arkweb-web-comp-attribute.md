@@ -8,11 +8,6 @@ Defines the Web attribute functions.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## aiSessionOptions
 
 ```TypeScript
@@ -41,7 +36,7 @@ allowWindowOpenMethod(flag : boolean)
 
 Sets whether to allow a new window to automatically open through JavaScript.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This API takes effect only when [javaScriptAccess](#javascriptaccess) is enabled.
 > 
@@ -117,7 +112,7 @@ blankScreenDetectionConfig(detectConfig: BlankScreenDetectionConfig)
 
 Sets the blank screen detection configuration, such as whether to enable the detection, detection time, and detection policy. When this attribute is not explicitly called, blank screen detection is disabled by default.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Based on the configuration of **detectConfig**,
 > [onDetectedBlankScreen](#ondetectedblankscreen) may be triggered when a blank screen or near-
@@ -225,7 +220,7 @@ copyOptions(value: CopyOptions)
 
 Sets the clipboard copy scope option. If this attribute is not explicitly called, pasting across all apps on the current device is supported by default after copying.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When this attribute is set to **CopyOptions.None**, the **enablePreviewMenu** configuration item in
 > [dataDetectorConfig](#datadetectorconfig) does not take effect. When
@@ -274,7 +269,7 @@ databaseAccess(databaseAccess: boolean)
 
 Sets whether to enable the Web SQL Database storage API permission. If this permission is not explicitly called, it is disabled by default.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - After the ArkWeb kernel is upgraded to M132, the API's control over the Web SQL Database becomes invalid
 > because the kernel discards Web SQL. For details about the ArkWeb kernel version, see
@@ -410,7 +405,7 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 Sets a custom text selection menu for the **Web** component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is similar to **bindSelectionMenu**, with the following differences:
 > 
@@ -451,7 +446,7 @@ Sets whether to enable web page autofill. By default, this feature is enabled.
 
 <!--RP1-->
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The autofill feature of this API depends on SmartFill service and Password Autofill Service.
 
@@ -475,7 +470,7 @@ enableDataDetector(enable: boolean)
 
 Sets whether to recognize special entities of web texts, such as emails, phone numbers, and URLs. This API depends on the text recognition capability at the bottom layer of the device. Otherwise, the setting is invalid. When this attribute is not explicitly called, the detector is disabled by default.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Attributes such as [dataDetectorConfig](#datadetectorconfig) and
 > [enableSelectedDataDetector](#enableselecteddatadetector) take effect only when this attribute
@@ -510,7 +505,7 @@ enableDefaultContextMenu(enable: boolean)
 
 Sets whether to enable the default right-click context menu. If this method is not explicitly called, the menu is disabled by default. The default menu supports only the **CUT**, **COPY**, **PASTE**, and **SELECT_ALL** menu items.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When the [onContextMenuShow](#oncontextmenushow) callback is set and returns **true** in the
 > callback, the setting of this API does not take effect.
@@ -558,7 +553,7 @@ enableFollowSystemFontWeight(follow: boolean)
 
 Sets whether the **Web** component can change the font weight according to the system settings. When this attribute is not explicitly called, the **Web** component can't change the font weight according to the system settings by default.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Currently, only front-end text elements support this capability. The **canvas** element and embedded .docx and
 > .pdf texts do not support this capability.
@@ -581,7 +576,7 @@ enableFullscreenVideoOverlay(enabled: boolean)
 
 Sets whether to enable the overlay fullscreen playback feature for the **Web** component. If this attribute is not explicitly called, this feature is disabled by default.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Currently, only videos in H.264 and H.265 decoding formats are supported.
 > 
@@ -625,7 +620,7 @@ enableImageAnalyzer(enable: boolean)
 
 Sets whether to enable AI analysis of web page images. Currently, the image text recognition feature is supported. If this attribute is not explicitly called, this feature is enabled by default.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When you long-press or hover the mouse over the image text, AI analyzer is triggered and the text in the image
 > can be selected. The specifications of images that can trigger analyzer are as follows:
@@ -653,7 +648,7 @@ enableMediaNetworkProxy(enabled: boolean)
 
 Sets whether to enable the media resource network request proxy feature for the **Web** component. If this attribute is not explicitly called, this feature is disabled by default.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Currently, only HLS streaming media videos are supported.
 
@@ -677,7 +672,7 @@ enableNativeEmbedMode(enabled: boolean)
 
 Sets whether to enable the same-layer rendering feature. When this method is not explicitly called, the same-layer rendering feature is disabled by default.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > APIs such as [registerNativeEmbedRule](#registernativeembedrule) and
 > [nativeEmbedOptions](#nativeembedoptions) take effect only when this attribute is enabled.
@@ -783,7 +778,7 @@ Sets whether to support an application to connect to media controller. If this a
 fileAccess(fileAccess: boolean)
 ```
 
-Sets whether to enable access to the file system in the application. This setting does not affect the access to the files specified through [\$rawfile(filepath/filename)](../../../quick-start/resource-categories-and-access.md#accessing-resources). For API version 11 and earlier versions, access to the file system in the application is enabled by default if this attribute is not explicitly called. Since API version 12, access to the file system in the application is disabled by default if this attribute is not explicitly called.
+Sets whether to enable access to the file system in the application. This setting does not affect the access to the files specified through [&#36;rawfile(filepath/filename)](../../../quick-start/resource-categories-and-access.md#accessing-resources). For API version 11 and earlier versions, access to the file system in the application is enabled by default if this attribute is not explicitly called. Since API version 12, access to the file system in the application is disabled by default if this attribute is not explicitly called.
 
 **Since:** 8
 
@@ -827,7 +822,7 @@ Sets whether the scroll bar is always visible. Under the always-visible settings
 
 When **layoutMode** is set to **WebLayoutMode.FIT_CONTENT**, the **enabled** parameter is set to **false**.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This interface takes effect globally across all web components in the current application. When multiple web
 > components are set with different values, the value set for the first time will be used.
@@ -913,7 +908,7 @@ horizontalScrollBarAccess(horizontalScrollBar: boolean)
 
 Sets whether to display the horizontal scrollbar, including the system default scrollbar and user-defined scrollbars. If this attribute is not explicitly called, the scrollbar is displayed by default.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - If an [@State](../../../ui/state-management/arkts-state.md) decorated variable is used to control the
 > visibility of the horizontal scrollbar,
@@ -1004,7 +999,7 @@ javaScriptOnDocumentEnd(scripts: Array<ScriptItem>)
 
 Injects a JavaScript script into the **Web** component. When the specified page or document has been loaded, the script is executed on any page whose source matches **scriptRules**. When this attribute is not explicitly called, JavaScript scripts are not injected into the **Web** component by default.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The script runs after any JavaScript code on the page, and the DOM tree has already been loaded and rendered at
 > that point.
@@ -1038,7 +1033,7 @@ javaScriptOnDocumentStart(scripts: Array<ScriptItem>)
 
 Injects a JavaScript script into the **Web** component. When the specified page or document starts to be loaded, the script is executed on any page whose source matches **scriptRules**. When this attribute is not explicitly called, JavaScript scripts are not injected into the **Web** component by default.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The script is injected after the root element (HTML Element) of the web document is created but before any
 > other content is loaded.
@@ -1073,7 +1068,7 @@ javaScriptProxy(javaScriptProxy: JavaScriptProxy)
 
 Registers the ArkTS object in **javaScriptProxy** with the **Web** component. The object will be registered in all frames of the web page, including all iframes, using the name specified in **JavaScriptProxy**. This enables JavaScript to call methods of the ArkTS object in **javaScriptProxy**.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The **javaScriptProxy** API must be used together with
 > [deleteJavaScriptRegister&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#deletejavascriptregister)
@@ -1139,7 +1134,7 @@ If the keyboard avoidance mode set in **UIContext** is [KeyboardAvoidMode.RESIZE
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [WebKeyboardAvoidMode](arkts-arkweb-webkeyboardavoidmode-e.md) | Yes | Web soft keyboard avoidance mode.<br>In the nested scrolling scenario, the soft keyboard avoidance mode of the **Web** component is not recommended, including **RESIZE_VISUAL** and **RESIZE_CONTENT**. <br>Default value: **WebKeyboardAvoidMode.RESIZE_CONTENT |
+| mode | [WebKeyboardAvoidMode](arkts-arkweb-webkeyboardavoidmode-e.md) | Yes | Web soft keyboard avoidance mode.<br>In the nested scrolling scenario, the soft keyboard avoidance mode of the **Web** component is not recommended, including **RESIZE_VISUAL** and **RESIZE_CONTENT**. <br>Default value: **WebKeyboardAvoidMode.RESIZE_CONTENT** |
 
 ## layoutMode
 
@@ -1149,7 +1144,7 @@ layoutMode(mode: WebLayoutMode)
 
 Sets the layout mode of the **Web** component. If this attribute is not explicitly called, the **Web** layout follows the system mode (**WebLayoutMode.NONE**) by default. For common issues, see [Web Component Size Adapting to Page Content Layout](../../../web/web-fit-content.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Currently, only two **Web** layout modes are supported:
 > 
@@ -1203,7 +1198,7 @@ mediaOptions(options: WebMediaOptions)
 
 Sets the web-based media playback policy, including the validity period for automatically resuming a paused web audio, and whether the audio of multiple **Web** instances in an application is exclusive. When this attribute is not explicitly set, the web audio cannot be automatically resumed after regaining the focus by default, and the audio of multiple **Web** instances in an application is exclusive.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Audios in the same **Web** instance are considered as the same audio.
 > 
@@ -1254,7 +1249,7 @@ metaViewport(enabled: boolean)
 
 Sets whether the **viewport** attribute of the **meta** tag is enabled. When this attribute is not explicitly called, the **viewport** attribute of the **meta** tag is supported by default.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Whether the **viewport** attribute of the **\&lt;meta&gt;** tag in the frontend HTML page is enabled is determined by
 > checking whether the User-Agent contains the "Mobile" field. When the User-Agent does not contain the "Mobile"
@@ -1390,7 +1385,7 @@ nestedScroll(value: NestedScrollOptions | NestedScrollOptionsExt)
 
 Sets nested scrolling options.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - You can set the up, down, left, and right directions, or set the forward and backward nested scrolling modes to
 > implement scrolling linkage with the parent component.
@@ -1425,7 +1420,7 @@ onActivateContent(callback: Callback<void>)
 
 Triggered to check whether a bound **Web** instance exists based on the name when a web page triggers **window.open(url, name)**. If the instance exists, it receives this callback to notify the application of displaying it on the front end. If it does not exist, the application is notified to create a new **Web** instance through [onWindowNew](#onwindownew).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Binding a **Web** instance by name: Call the **event.handler.setWebController** method in the [onWindowNew] (#
 > onwindownew9) callback and transfer the controller of the new **Web** instance.
@@ -1511,7 +1506,7 @@ onBeforeUnload(callback: Callback<OnBeforeUnloadEvent, boolean>)
 
 Called when the page refresh is about to complete or the current page is closed.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - If the current **Web** component does not have the focus, **onBeforeUnload** is not triggered when the page is
 > refreshed or closed.
@@ -1538,7 +1533,7 @@ Triggered to notify the user of the camera state on the current web page, which 
 
 You can use the **startCamera**, **stopCamera**, and **closeCamera** APIs to enable, pause, and stop the camera respectively. For details about how to use them, see [startCamera](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#startcamera).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **Active** is returned when the camera is being used on the current web page.
 > 
@@ -1564,7 +1559,7 @@ onClientAuthenticationRequest(callback: Callback<OnClientAuthenticationEvent>)
 
 Triggered when an SSL client certificate request is received.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The **Web** component can respond with
 > [ClientAuthenticationHandler.confirm](arkts-arkweb-clientauthenticationhandler-c.md#confirm),
@@ -1720,7 +1715,7 @@ onDetectedBlankScreen(callback: OnDetectBlankScreenCallback)
 
 Called when the **Web** component detects a blank screen.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This method must be used with [blankScreenDetectionConfig](#blankscreendetectionconfig).
 > Otherwise, the blank screen detection is disabled by default, and the callback is not returned when a blank
@@ -1866,7 +1861,7 @@ onFirstScreenPaint(callback: OnFirstScreenPaintCallback)
 
 Triggered when the first screen paint of a web page is complete.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - First Screen Paint (FSP) records the time taken to render images, texts, and videos in the viewport. It is a
 > core performance metric for measuring the duration from a page's initial load to the completion of rendering.
@@ -2162,7 +2157,7 @@ onLoadFinished(callback: Callback<OnLoadFinishedEvent>)
 
 Triggered to notify the host application that the page has been loaded. This method is called only when the main frame loading is complete. For fragment navigations (navigations to **#fragment_id**), **onLoadFinished** is also triggered.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Fragment navigation also triggers **onLoadFinished**, but **onPageEnd** is not triggered.
 > 
@@ -2210,7 +2205,7 @@ onLoadStarted(callback: Callback<OnLoadStartedEvent>)
 
 Triggered to notify the host application that the page loading starts. This method is called once each time the main frame content is loaded. Therefore, for pages that contain iframes or frameset, **onLoadStarted** is called only once for the main frame. This means that when the content of the embedded frame changes, for example, a link or a fragment navigation in the iframe is clicked (navigation to **#fragment_id**), **onLoadStarted** is not invoked.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When the document of the pop-up window is modified by JavaScript before being loaded, **onLoadStarted** is
 > simulated and the URL is set to null, because displaying the URL that is being loaded may be insecure.
@@ -2236,7 +2231,7 @@ Triggered to notify the user of the microphone state on the current web page, wh
 
 You can use the **resumeMicrophone**, **pauseMicrophone**, and **stopMicrophone** APIs to resume, pause, and stop the microphone. For details about how to use them, see [resumeMicrophone](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#resumemicrophone).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **Active** is returned when the current web page is using the microphone; **Paused** is returned when the
 > current web page pauses using the microphone; **None** is returned when the current web page does not use the
@@ -2392,7 +2387,7 @@ onOverrideErrorPage(callback: OnOverrideErrorPageCallback)
 
 Triggered when an error occurs during web page loading of main resources. You can use this API to customize the error display page.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This feature takes effect only after the default error page is enabled by calling the
 > [setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled)
@@ -2419,7 +2414,7 @@ onOverrideUrlLoading(callback: OnOverrideUrlLoadingCallback)
 
 Triggered when the URL is about to be loaded in the current web page, allowing the host application to obtain control and determine whether to prevent the web page from loading the URL.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - POST requests do not trigger this callback.
 > 
@@ -2858,7 +2853,7 @@ onScroll(callback: Callback<OnScrollEvent>)
 
 Triggered to notify the global scrolling position of the web page.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The change of the partial scrolling position cannot trigger this callback.
 > 
@@ -2928,7 +2923,7 @@ onSslErrorEvent(callback: OnSslErrorEventCallback)
 
 Triggered to notify users when an SSL error occurs during the loading of main-frame or subframe resources. To handle SSL errors for loading the main-frame resources, use the [isMainFrame](arkts-arkweb-webresourcerequest-c.md#ismainframe) field to distinguish.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Main resource: Entry file for the browser to load web pages, which is usually an HTML document.
 > 
@@ -2957,7 +2952,7 @@ Triggered to notify the host application when an SSL error occurs while loading 
 
 To support errors for loading subframe resources, use the [OnSslErrorEvent](#onsslerrorevent) API.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Main resource: Entry file for the browser to load web pages, which is usually an HTML document.
 > 
@@ -3013,7 +3008,7 @@ onTextSelectionChange(callback: TextSelectionChangeCallback)
 
 Triggered when the text selection of the **Web** component changes. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The gesture selection, mouse selection, and JS selection are supported.
 > 
@@ -3188,7 +3183,7 @@ onWindowNewExt(callback: Callback<OnWindowNewExtEvent>)
 
 Triggered to notify the user of a new window creation request when [multiWindowAccess](#multiwindowaccess) is enabled.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - If the [setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller) API is not called, the render process will
 > be blocked.
@@ -3375,7 +3370,7 @@ runJavaScriptOnDocumentEnd(scripts: Array<ScriptItem>)
 
 Injects a JavaScript script into the **Web** component. When the specified page or document has been loaded, the script is executed on any page whose source matches **scriptRules**. When this attribute is not explicitly called, JavaScript scripts are not injected into the **Web** component by default.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The script runs after any JavaScript code on the page, and the DOM tree has already been loaded and rendered at
 > that point.
@@ -3403,7 +3398,7 @@ runJavaScriptOnDocumentStart(scripts: Array<ScriptItem>)
 
 Injects a JavaScript script into the **Web** component. When the specified page or document starts to be loaded, the script is executed on any page whose source matches **scriptRules**. When this attribute is not explicitly called, JavaScript scripts are not injected into the **Web** component by default.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The script is injected after the root element (HTML Element) of the web document is created but before any
 > other content is loaded.
@@ -3431,7 +3426,7 @@ runJavaScriptOnHeadEnd(scripts: Array<ScriptItem>)
 
 Injects a JavaScript script into the **Web** component. When the **head** tag of the DOM tree is parsed, the script is executed on any page whose source matches **scriptRules**. When this attribute is not explicitly called, JavaScript scripts are not injected into the **Web** component by default.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This script is executed in the array order.
 > 
@@ -3478,7 +3473,7 @@ Sets the extended options of the custom context menu on selection, including the
 
 The API only supports the selection of plain text; if the selected content contains images or other non-text elements, the **action** information may display garbled content.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When used together with [editMenuOptions](#editmenuoptions), this API does not take effect.
 
@@ -3528,7 +3523,7 @@ Sets whether to enable automatic font sizing for the **Web** component. When no 
 
 After automatic font sizing takes effect, any text smaller than 16 px is enlarged to fall between 16 px and 32 px. This eliminates readability issues on narrow screens (viewport &lt; 980 px) where mobile-specific layouts are absent.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The preconditions for automatic font sizing to take effect are as follows:
 > 
@@ -3625,7 +3620,7 @@ verticalScrollBarAccess(verticalScrollBar: boolean)
 
 Sets whether to display the vertical scrollbar, including the system default scrollbar and user-defined scrollbars. If this attribute is not explicitly called, the scrollbar is displayed by default.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - If an @State decorated variable is used to control the vertical scrollbar visibility, **controller.refresh()**
 > must be called for the settings to take effect.

@@ -8,11 +8,6 @@ Describes the axis event object. Inherits from [BaseEvent](arkts-arkui-baseevent
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## getCurrentLocalPosition
 
 ```TypeScript
@@ -197,7 +192,7 @@ Unique identifier for event processing.
 
 Value range: [0, +∞)
 
-**NOTE:**
+**NOTE:** 
 
 This field is used when dispatching events using the [postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postinputeventwithstrategy) API. Each time an event is dispatched, this field is increased by 100000.
 

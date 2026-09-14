@@ -6,7 +6,7 @@ ImageCreator类，作为图片的生产者，用于将图片写入到Surface中�
 
 由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本Interface首批接口从API version 9开始支持。
 

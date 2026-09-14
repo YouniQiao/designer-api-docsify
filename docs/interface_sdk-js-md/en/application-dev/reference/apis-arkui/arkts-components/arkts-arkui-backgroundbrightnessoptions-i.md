@@ -2,7 +2,7 @@
 
 Provides background brightness options.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The brightness (gray scale value) of each pixel in the component background content is calculated using the
 > following formula:
@@ -19,11 +19,6 @@ Provides background brightness options.
 **Since:** 12
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## lightUpDegree
 

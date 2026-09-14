@@ -31,7 +31,7 @@ Creates a **DiscoveryService** object, which is used to discover MDNS services o
 
 | Type | Description |
 | --- | --- |
-| [DiscoveryService](arkts-network-mdns-discoveryservice-i.md) | DiscoveryService** object obtained based on the specified **serviceType** and **context**. |
+| [DiscoveryService](arkts-network-mdns-discoveryservice-i.md) | **DiscoveryService** object obtained based on the specified **serviceType** and **context**. |
 
 **Error codes:**
 

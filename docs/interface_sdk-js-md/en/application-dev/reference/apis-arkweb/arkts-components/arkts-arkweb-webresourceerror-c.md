@@ -6,11 +6,6 @@ WebResourceError is a class that provides error information when resource loadin
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

@@ -8,11 +8,6 @@ Defines the localized border width property.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## bottom
 
 ```TypeScript

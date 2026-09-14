@@ -34,13 +34,13 @@ Before calling this API, call [getSupportedCameras](#getsupportedcameras) to obt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | CameraDevice** instance, which is obtained through [getSupportedCameras](#getsupportedcameras). |
+| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | **CameraDevice** instance, which is obtained through [getSupportedCameras](#getsupportedcameras). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CameraInput](arkts-camera-camera-camerainput-i.md) | CameraInput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
+| [CameraInput](arkts-camera-camera-camerainput-i.md) | **CameraInput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -79,7 +79,7 @@ Before calling this API, specify the camera position and type based on the usage
 
 | Type | Description |
 | --- | --- |
-| [CameraInput](arkts-camera-camera-camerainput-i.md) | CameraInput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
+| [CameraInput](arkts-camera-camera-camerainput-i.md) | **CameraInput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -109,7 +109,7 @@ Creates a **CaptureSession** instance. This API returns the result synchronously
 
 | Type | Description |
 | --- | --- |
-| [CaptureSession](arkts-camera-camera-capturesession-i.md) | CaptureSession** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
+| [CaptureSession](arkts-camera-camera-capturesession-i.md) | **CaptureSession** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -141,7 +141,7 @@ Creates a deferred **PreviewOutput** instance and adds it, instead of a common *
 
 | Type | Description |
 | --- | --- |
-| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | PreviewOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
+| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | **PreviewOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -175,7 +175,7 @@ Creates a **MetadataOutput** instance. This API returns the result synchronously
 
 | Type | Description |
 | --- | --- |
-| [MetadataOutput](arkts-camera-camera-metadataoutput-i.md) | MetadataOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
+| [MetadataOutput](arkts-camera-camera-metadataoutput-i.md) | **MetadataOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -192,7 +192,7 @@ createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 
 Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This API can only be used to create a **PhotoOutput** object in JPEG format.
 
@@ -215,7 +215,7 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| [PhotoOutput](arkts-camera-camera-photooutput-i.md) | PhotoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
+| [PhotoOutput](arkts-camera-camera-photooutput-i.md) | **PhotoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -247,7 +247,7 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| [PhotoOutput](arkts-camera-camera-photooutput-i.md) | PhotoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
+| [PhotoOutput](arkts-camera-camera-photooutput-i.md) | **PhotoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -281,7 +281,7 @@ Creates a **PreviewOutput** instance. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | PreviewOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
+| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | **PreviewOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -314,7 +314,7 @@ Creates a **PreviewOutput** instance without configuration. This API returns the
 
 | Type | Description |
 | --- | --- |
-| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | PreviewOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
+| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | **PreviewOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -347,7 +347,7 @@ Creates a **Session** instance with a given scene mode. This API returns the res
 
 | Type | Description |
 | --- | --- |
-| T | Session** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
+| T | **Session** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -388,7 +388,7 @@ In video recording mode, if SDR or HDR VIVID is enabled, the camera format and c
 
 | Type | Description |
 | --- | --- |
-| [VideoOutput](arkts-camera-camera-videooutput-i.md) | VideoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
+| [VideoOutput](arkts-camera-camera-videooutput-i.md) | **VideoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -421,7 +421,7 @@ Creates a **VideoOutput** instance without configuration. This API returns the r
 
 | Type | Description |
 | --- | --- |
-| [VideoOutput](arkts-camera-camera-videooutput-i.md) | VideoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
+| [VideoOutput](arkts-camera-camera-videooutput-i.md) | **VideoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -561,7 +561,7 @@ getSupportedFullOutputCapability(camera: CameraDevice, mode: SceneMode): CameraO
 
 Obtains the complete output capabilities supported by a specified camera in a specified mode, including YUV, HEIF, and HDR.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Before using YUV, HEIF, or HDR, you need to explicitly call this method to ensure that the complete output
 > capabilities are obtained.
@@ -853,7 +853,7 @@ on(type: 'cameraStatus', callback: AsyncCallback<CameraStatusInfo>): void
 
 Subscribes to camera status events. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -878,7 +878,7 @@ on(type: 'foldStatusChange', callback: AsyncCallback<FoldStatusInfo>): void
 
 Subscribes to fold status change events of the foldable device. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
@@ -903,7 +903,7 @@ on(type: 'torchStatusChange', callback: AsyncCallback<TorchStatusInfo>): void
 
 Subscribes to flashlight status change events. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 

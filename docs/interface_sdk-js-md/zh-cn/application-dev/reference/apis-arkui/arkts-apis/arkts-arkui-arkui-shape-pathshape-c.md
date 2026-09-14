@@ -22,7 +22,7 @@ commands(commands: string): PathShape
 
 设置路径的绘制指令，用于定义PathShape的绘制路径。指令遵循SVG路径数据格式，具体支持的绘制命令请参考commands。
 
-> **说明：**
+> **说明：** 
 > 
 > - 必须设置commands（可通过构造函数PathShapeOptions.commands或本方法设置），PathShape才能在clipShape/maskShape接口中产生可见的裁剪或遮罩效果。
 > 

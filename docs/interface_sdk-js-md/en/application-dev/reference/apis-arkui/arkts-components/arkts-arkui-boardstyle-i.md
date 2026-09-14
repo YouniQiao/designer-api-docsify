@@ -6,11 +6,6 @@ Represents a board style object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## borderRadius
 
 ```TypeScript
@@ -27,7 +22,7 @@ Value range: [0, +∞)
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
-**Default:**
+**Default:** 
 - API version 11+: 8.0vp
 
 **Since:** 10

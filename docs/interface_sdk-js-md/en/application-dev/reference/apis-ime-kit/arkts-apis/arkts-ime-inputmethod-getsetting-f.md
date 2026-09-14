@@ -22,7 +22,7 @@ Obtains an [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) i
 
 | Type | Description |
 | --- | --- |
-| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) | InputMethodSetting** instance. |
+| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) | **InputMethodSetting** instance. |
 
 **Error codes:**
 

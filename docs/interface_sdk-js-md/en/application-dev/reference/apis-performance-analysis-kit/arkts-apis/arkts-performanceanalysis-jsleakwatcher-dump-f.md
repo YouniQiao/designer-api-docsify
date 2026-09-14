@@ -22,7 +22,7 @@ Dumps the list of leaked objects and VM memory snapshot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filePath | string | Yes | Path for storing exported information files.<br>**Note:** Since API version 24, only the latest snapshot information is retained within the process lifecycle. |
+| filePath | string | Yes | Path for storing exported information files.<br>**Note:**  Since API version 24, only the latest snapshot information is retained within the process lifecycle. |
 
 **Return value:**
 

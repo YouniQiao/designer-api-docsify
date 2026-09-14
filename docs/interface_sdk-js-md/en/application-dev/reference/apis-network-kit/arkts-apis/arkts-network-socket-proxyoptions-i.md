@@ -20,7 +20,7 @@ address: NetAddress
 
 Proxy address.
 
-**Type:** NetAddress
+**Type:** [NetAddress](arkts-network-socket-p.md)
 
 **Since:** 18
 

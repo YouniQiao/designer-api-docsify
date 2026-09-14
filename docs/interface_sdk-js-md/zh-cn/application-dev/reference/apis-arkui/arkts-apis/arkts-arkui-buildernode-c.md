@@ -4,7 +4,7 @@
 
 与BuilderNode相比，ReactiveBuilderNode能通过多参数的无状态UI方法@Builder生成组件树，适用于需要多参数数据绑定和响应式UI动态更新的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > - 若传入的Builder的根节点为语法节点（[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)/
 > [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)/
@@ -54,7 +54,7 @@ build(builder: WrappedBuilder<Args>, arg?: Object): void
 
 支持自定义组件。
 
-> **说明：**
+> **说明：** 
 > 
 > - @Builder嵌套使用的时候需要保证内外的@Builder方法的入参对象一致。
 > 
@@ -155,7 +155,7 @@ build(builder: WrappedBuilder<Args>, arg: Object, options: BuildOptions): void
 
 支持自定义组件。相比[build(builder: WrappedBuilder\&lt;Args&gt;, arg?: Object)](#build)接口，本接口支持builder的配置参数，用于配置Builder的构建行为，具体属性见[BuildOptions](arkts-arkui-buildernode-buildoptions-i.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > - @Builder进行创建和更新的规格参考[@Builder](../../../ui/state-management/arkts-builder.md)。
 > 
@@ -280,7 +280,7 @@ dispose(): void
 
 立即释放当前BuilderNode对象对[实体节点](../../../ui/arkts-user-defined-node.md#基本概念)的引用关系。关于BuilderNode的解绑场景请参见[节点解绑](../../../ui/arkts-user-defined-arktsNode-builderNode.md#解除实体节点引用关系)。
 
-> **说明：**
+> **说明：** 
 > 
 > 当BuilderNode对象调用dispose之后，会与后端实体节点解除引用关系。若前端对象BuilderNode无法释放，容易导致内存泄漏。建议在不再需要对该BuilderNode对象进行操作时，开发者主动调用dispose
 > 释放后端节点，以减少引用关系的复杂性，降低内存泄漏的风险。具体场景可见
@@ -324,7 +324,7 @@ inheritFreezeOptions(enabled: boolean): void
 
 设置当前BuilderNode对象是否继承父组件中自定义组件的冻结策略。如果设置继承状态为false，则BuilderNode对象的冻结策略为false。在这种情况下，节点在不活跃状态下不会被冻结。
 
-> **说明：**
+> **说明：** 
 > 
 > BuilderNode设置inheritFreezeOptions为true，且父组件为自定义组件、BuilderNode、ComponentContent、ReactiveBuilderNode或
 > ReactiveComponentContent时，会继承父组件的冻结策略。当子组件为自定义组件时，BuilderNode的冻结策略不会传递给子组件。
@@ -694,7 +694,7 @@ offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对�
 
 
 
-> **说明：**
+> **说明：** 
 > 
 > - 传入的坐标值需要转换为px，坐标转换示例可以参考下面示例代码。
 > 
@@ -709,7 +709,7 @@ offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对�
 > - 如果是开发者构造的事件，必填字段必须赋值，比如触摸事件的touches字段，轴事件的scrollStep字段。要保证事件的完整，比如触摸事件的[TouchType](arkts-arkui-touchtype-e.md)中DOWN和UP字段都要
 > 有，防止出现未定义行为。
 > 
-> - [webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md)已经处理过坐标系变换，可以将事件直接下发。
+> - [webview](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webview.md)已经处理过坐标系变换，可以将事件直接下发。
 > 
 > - postTouchEvent接口需要提供手势坐标相对于接收事件的目标节点内的局部坐标，postInputEvent接口需要提供手势坐标相对于接收事件的目标节点内的窗口坐标。
 > 
@@ -752,7 +752,7 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 
 
 
-> **说明：**
+> **说明：** 
 > 
 > - 传入的坐标值单位需要转换为px，坐标转换示例可以参考下面示例代码。
 > 
@@ -768,7 +768,7 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 > - 如果event转化为对应的事件后，该事件为开发者构造的事件，必填字段必须赋值，比如触摸事件的touches字段，轴事件的scrollStep字段。要保证事件的完整，比如触摸事件的
 > [TouchType](arkts-arkui-touchtype-e.md)中必须同时包含DOWN和UP两个字段，防止出现程序异常或意外崩溃。
 > 
-> - [webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md)已经处理过坐标系变换，可以将事件直接下发。
+> - [webview](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webview.md)已经处理过坐标系变换，可以将事件直接下发。
 > 
 > - postTouchEvent接口需要提供手势坐标相对于接收事件的目标节点内的局部坐标，postInputEventWithStrategy接口需要提供手势坐标相对于接收事件的目标节点内的窗口坐标。
 > 
@@ -814,11 +814,11 @@ offsetA为builderNode相对于父组件的偏移量，可以通过FrameNode中�
 
 
 
-> **说明：**
+> **说明：** 
 > 
 > - 传入的坐标值需要转换为px，如果builderNode有仿射变换，则需要再叠加仿射变换。
 > 
-> - 在[webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。
+> - 在[webview](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webview.md)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。
 > 
 > - 同一时间戳，postTouchEvent只能调用一次。
 
@@ -943,7 +943,7 @@ recycle(): void
 
 触发BuilderNode中自定义组件的回收。自定义组件的回收是组件复用机制中的环节，具体信息请参见[@Reusable装饰器：V1组件复用](../../../ui/state-management/arkts-reusable.md)。从API版本26.0.0开始，BuilderNode中的自定义组件支持V2组件复用，请参见[@ReusableV2装饰器：V2组件复用](../../../ui/state-management/arkts-new-reusableV2.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > BuilderNode通过reuse和recycle完成其内外自定义组件之间的复用事件传递，具体使用场景请参见
 > [BuilderNode调用reuse和recycle接口实现节点复用能力](../../../ui/arkts-user-defined-arktsNode-builderNode.md#buildernode调用reuse和recycle接口实现节点复用能力)。
@@ -1108,7 +1108,7 @@ updateConfiguration(): void
 
 传递系统环境变化事件，触发节点的全量更新。系统环境变化的相关信息请参见[@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > updateConfiguration接口用于通知对象更新，更新所使用的系统环境由应用当前的系统环境变化决定。
 

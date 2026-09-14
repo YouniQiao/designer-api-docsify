@@ -23,10 +23,6 @@ Returns a new array with all sub-array elements concatenated into it recursively
 | this | A | Yes |  |
 | depth | D | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## flatMap
 
 ```TypeScript
@@ -44,8 +40,3 @@ Calls a defined callback function on each element of an array. Then, flattens th
 | --- | --- | --- | --- |
 | callback | (this: This, value: T, index: number, array: T[]) =&gt; U &#124; ReadonlyArray&lt;U&gt; | Yes |  |
 | thisArg | This | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

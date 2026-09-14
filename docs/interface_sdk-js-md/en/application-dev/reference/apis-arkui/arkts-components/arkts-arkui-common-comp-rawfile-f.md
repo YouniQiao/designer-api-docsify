@@ -1,17 +1,12 @@
 # $rawfile
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## $rawfile
 
 ```TypeScript
 declare function $rawfile(value: string): Resource
 ```
 
-global \$rawfile function
+global &#36;rawfile function
 
 **Since:** 11
 
@@ -31,3 +26,4 @@ global \$rawfile function
 
 | Type | Description |
 | --- | --- |
+| [Resource](../arkts-apis/arkts-arkui-resource-t.md) |  |

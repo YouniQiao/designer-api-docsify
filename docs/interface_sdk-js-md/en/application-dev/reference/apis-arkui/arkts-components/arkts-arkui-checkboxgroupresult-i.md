@@ -6,11 +6,6 @@ Name and status of a check box group.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## name
 
 ```TypeScript

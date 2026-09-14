@@ -6,11 +6,6 @@ JsResult is a result handling object returned by the Web component when processi
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

@@ -16,11 +16,6 @@ padding属性默认为4vp。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## alignStyle
 
 ```TypeScript
@@ -54,7 +49,7 @@ autoCollapse(value: boolean)
 
 如果索引项第一项不为“#”，当所有索引项数量 &lt;= 9时，选择全显示模式（所有索引项完整显示）；9 &lt; 所有索引项数量 &lt;= 13时，根据索引条高度自适应选择全显示模式或者短折叠模式；所有索引项数量 &gt; 13时，根据索引条高度自适应选择短折叠模式或者长折叠模式。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -244,7 +239,7 @@ onSelected(callback: (index: number) => void)
 
 注册索引项选中事件回调，回调参数为当前选中项索引。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 7开始支持，从API version 8开始废弃，建议使用[onSelect](#onselect)替代。
 
@@ -512,7 +507,7 @@ selected(index: number)
 
 设置选中项索引值。与[AlphabetIndexerOptions](arkts-arkui-alphabetindexeroptions-i.md)中的selected同时设置时，该属性的优先级更高。
 
-从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 **起始版本：** 8
 

@@ -6,11 +6,6 @@ Describes the options for inverting the foreground color.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## high
 
 ```TypeScript
@@ -81,7 +76,7 @@ Threshold value range.
 
 Value range: [0, 1].
 
-**NOTE:**
+**NOTE:** 
 
 This range defines the upper and lower bounds of the grayscale threshold. The grayscale value changes linearly from high to low within the range.
 

@@ -8,11 +8,6 @@ Provides the parameters of the long press gesture handler. Inherits from [BaseHa
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## allowableMovement
 
 ```TypeScript
@@ -45,7 +40,7 @@ Minimum hold-down time, in ms.
 
 Default value: **500**
 
-**NOTE:**
+**NOTE:** 
 
 Value range: [0, +∞). If the value is less than or equal to 0, the default value **500** is used.
 
@@ -71,7 +66,7 @@ Default value: **1**
 
 Value range: [1, 10]
 
-**NOTE:**
+**NOTE:** 
 
 If a finger moves more than 15 px after being pressed, the gesture recognition fails.
 

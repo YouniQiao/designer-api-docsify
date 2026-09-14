@@ -19,10 +19,6 @@ Creates an array from an iterable object.
 | --- | --- | --- | --- |
 | iterable | Iterable&lt;T&gt; &#124; ArrayLike&lt;T&gt; | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## from
 
 ```TypeScript
@@ -38,8 +34,3 @@ Creates an array from an iterable object.
 | iterable | Iterable&lt;T&gt; &#124; ArrayLike&lt;T&gt; | Yes |  |
 | mapfn | (v: T, k: number) =&gt; U | Yes |  |
 | thisArg | any | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

@@ -14,7 +14,7 @@ function usbCancelTransfer(transfer: UsbDataTransferParams): void
 
 Cancels an asynchronous USB data transfer request.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is used to proactively cancel an unfinished USB data transfer request (for example, the one submitted by
 > **usbSubmitTransfer**).

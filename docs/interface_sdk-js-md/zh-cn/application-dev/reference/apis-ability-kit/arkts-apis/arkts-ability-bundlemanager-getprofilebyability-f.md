@@ -16,7 +16,7 @@ function getProfileByAbility(moduleName: string, abilityName: string, metadataNa
 
 > 说明：
 > 
-> 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 \$string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)的相
+> 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 &#36;string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager.md)的相
 > 关接口，来获取引用的资源。
 
 **起始版本：** 9
@@ -80,7 +80,7 @@ function getProfileByAbility(moduleName: string, abilityName: string, metadataNa
 
 > 说明：
 > 
-> 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 \$string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)的相
+> 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 &#36;string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager.md)的相
 > 关接口，来获取引用的资源。
 
 **起始版本：** 9

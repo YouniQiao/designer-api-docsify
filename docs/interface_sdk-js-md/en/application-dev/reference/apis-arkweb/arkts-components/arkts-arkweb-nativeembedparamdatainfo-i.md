@@ -6,11 +6,6 @@ Provides detailed information about the same-layer tag when the **param** elemen
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## embedId
 
 ```TypeScript

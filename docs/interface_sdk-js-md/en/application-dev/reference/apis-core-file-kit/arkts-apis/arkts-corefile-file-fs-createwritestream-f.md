@@ -29,7 +29,7 @@ Creates a writeable stream. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| [WriteStream](arkts-corefile-file-fs-writestream-c.md) | WriteStream** instance obtained. |
+| [WriteStream](arkts-corefile-file-fs-writestream-c.md) | **WriteStream** instance obtained. |
 
 **Error codes:**
 

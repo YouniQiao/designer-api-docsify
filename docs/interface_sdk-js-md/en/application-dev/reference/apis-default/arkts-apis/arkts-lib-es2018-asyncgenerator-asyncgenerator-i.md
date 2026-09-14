@@ -11,10 +11,6 @@
 [Symbol.asyncIterator](): AsyncGenerator<T, TReturn, TNext>
 ```
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## next
 
 ```TypeScript
@@ -27,10 +23,6 @@ next(...args: [] | [TNext]): Promise<IteratorResult<T, TReturn>>
 | --- | --- | --- | --- |
 | args | [] &#124; [TNext] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## return
 
 ```TypeScript
@@ -43,10 +35,6 @@ return(value: TReturn | PromiseLike<TReturn>): Promise<IteratorResult<T, TReturn
 | --- | --- | --- | --- |
 | value | TReturn &#124; PromiseLike&lt;TReturn&gt; | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## throw
 
 ```TypeScript
@@ -58,8 +46,3 @@ throw(e: any): Promise<IteratorResult<T, TReturn>>
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | e | any | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

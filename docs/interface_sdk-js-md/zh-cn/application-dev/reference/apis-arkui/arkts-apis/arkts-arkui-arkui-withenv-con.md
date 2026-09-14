@@ -8,7 +8,7 @@ export declare const WithEnv: WithEnvInterface
 
 WithEnv组件用于为子组件树设置局部环境变量作用域。开发者可以通过该组件为后代组件提供自定义环境变量，或设置系统环境变量。
 
-> **说明：**
+> **说明：** 
 
 > - 此接口仅可在Stage模型下使用。
 > 

@@ -16,7 +16,7 @@ Creates a component tree based on the passed object and holds the root node of t
 
 Custom components are allowed.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about the creation and update using @Builder, see
 > [@Builder](../../../ui/state-management/arkts-builder.md).
@@ -127,7 +127,7 @@ dispose(): void
 
 Immediately releases the reference relationship between this **ReactiveBuilderNode** object and its [entity node](../../../ui/arkts-user-defined-node.md#basic-concepts). For details about the scenarios involving ReactiveBuilderNode unbinding, see [Canceling the Reference to the Entity Node](../../../ui/arkts-user-defined-arktsNode-builderNode.md#canceling-the-reference-to-the-entity-node).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > After calling **dispose()**, the ReactiveBuilderNode object cancels its reference to the backend entity node. If
 > the frontend object ReactiveBuilderNode cannot be released, memory leakage may occur. To avoid this, be sure to
@@ -373,7 +373,7 @@ Obtains the FrameNode from the ReactiveBuilderNode. The FrameNode is generated o
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) &#124; null | FrameNode** object. If no such object is held by the **ReactiveBuilderNode** instance, **null** is returned. |
+| [FrameNode](arkts-arkui-framenode-c.md) &#124; null | **FrameNode** object. If no such object is held by the **ReactiveBuilderNode** instance, **null** is returned. |
 
 **Examples**
 
@@ -478,7 +478,7 @@ inheritFreezeOptions(enabled: boolean): void
 
 Sets whether the current **ReactiveBuilderNode** object inherits the freeze policy from its parent component's custom components. When inheritance is disabled (set to **false**), the **ReactiveBuilderNode** object's freeze policy is set to **false**, which means its associated node remains unfrozen even in an inactive state.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When **inheritFreezeOptions** is set to **true** for **ReactiveBuilderNode** and the parent component is a custom
 > component, **BuilderNode**, **ComponentContent**, **ReactiveBuilderNode**, or **ReactiveComponentContent**, the
@@ -880,7 +880,7 @@ Posts the input event to the target node managed by the **ReactiveBuilderNode**.
 
 
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The passed coordinates must be converted to the unit of px. The sample code below demonstrates how to perform
 > such coordinate conversion.
@@ -903,7 +903,7 @@ Posts the input event to the target node managed by the **ReactiveBuilderNode**.
 > event, for example, both **DOWN** and **UP** in [TouchType](arkts-arkui-touchtype-e.md) of the touch event must be included
 > to prevent undefined behavior.
 > 
-> [webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md) has already handled coordinate system transformation, so events can be
+> [webview](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webview.md) has already handled coordinate system transformation, so events can be
 > dispatched.
 > 
 > The **postTouchEvent** API needs to provide the gesture coordinates relative to the local coordinates of the
@@ -949,7 +949,7 @@ Before calling this API, you need to convert the value of **event** to the corre
 
 
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The passed coordinates must be converted to the unit of px. The sample code below demonstrates how to perform
 > such coordinate conversion.
@@ -1009,12 +1009,12 @@ Posts a raw touch event to the FrameNode created by a ReactiveBuilderNode.
 
 
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The coordinates you pass in need to be converted to pixel values (px). If the BuilderNode has any affine
 > transformations applied to it, they must be taken into account and combined with the touch event coordinates.
 > 
-> In [Webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md), coordinate system transformations are already handled internally,
+> In [Webview](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webview.md), coordinate system transformations are already handled internally,
 > so you can directly dispatch the touch event without additional adjustments.
 > 
 > The **postTouchEvent** API can be called only once for the same timestamp.
@@ -1037,7 +1037,7 @@ Posts a raw touch event to the FrameNode created by a ReactiveBuilderNode.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the event is successfully dispatched. Returns **true** if the event is successfully dispatched; returns **false** otherwise.<br>**NOTE:**<br>If the event does not hit the expected component, ensure the following: <br>1. The coordinate system has been correctly transformed <br>2. The component is in an interactive state. <br>3. The event has been bound to the component. |
+| boolean | Whether the event is successfully dispatched. Returns **true** if the event is successfully dispatched; returns **false** otherwise.<br>**NOTE:** <br>If the event does not hit the expected component, ensure the following: <br>1. The coordinate system has been correctly transformed <br>2. The component is in an interactive state. <br>3. The event has been bound to the component. |
 
 **Examples**
 

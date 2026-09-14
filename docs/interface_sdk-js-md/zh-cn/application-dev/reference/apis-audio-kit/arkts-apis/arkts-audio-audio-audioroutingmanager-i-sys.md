@@ -20,7 +20,7 @@ excludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Promi
 
 排除输出设备。成功调用此函数后，音频将不会在指定的设备上播放。
 
-> **说明：**
+> **说明：** 
 > 
 > 该功能仅能排除外部输出设备，不支持本地输出设备。
 

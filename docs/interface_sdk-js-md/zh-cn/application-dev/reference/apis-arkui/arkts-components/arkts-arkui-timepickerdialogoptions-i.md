@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## onAccept
 
 ```TypeScript
@@ -77,7 +72,7 @@ onDidAppear?: () => void
 
 弹窗弹出后的事件回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 > 
@@ -103,7 +98,7 @@ onDidDisappear?: () => void
 
 弹窗消失后的事件回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
@@ -123,7 +118,7 @@ onWillAppear?: () => void
 
 弹窗显示动效前的事件回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 > 
@@ -145,7 +140,7 @@ onWillDisappear?: () => void
 
 弹窗退出动效前的事件回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 > 
@@ -169,7 +164,7 @@ acceptButtonStyle?: PickerDialogButtonStyle
 
 > 默认值：请参考[PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
 > 保持默认值false。
@@ -217,7 +212,7 @@ backgroundBlurStyle?: BlurStyle
 
 默认值：BlurStyle.COMPONENT_ULTRA_THICK
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，
 > 否则显示的颜色将不符合预期效果。
@@ -243,7 +238,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 背景模糊效果参数，用于自定义弹窗背景模糊的显示样式，支持配置颜色模式、自适应颜色、缩放比例等属性，实现不同的背景模糊视觉效果。
 
-> **说明：**
+> **说明：** 
 > 
 > 未设置时沿用
 > backgroundBlurStyle
@@ -269,7 +264,7 @@ backgroundColor?: ResourceColor
 
 默认值：Color.Transparent
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 当设置了backgroundColor为非透明色时，backgroundBlurStyle需要设置为BlurStyle.NONE，否则显示的颜色将不符合预期效果。
 > 2. 从API版本26.0.0开始，设置systemMaterial后，backgroundColor不生效。
@@ -294,7 +289,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 背景效果参数，用于自定义弹窗背景的显示效果，支持配置模糊半径、饱和度、亮度、颜色等属性，实现不同的背景视觉效果。
 
-> **说明：**
+> **说明：** 
 > 
 > 未设置时不生效，此时弹窗背景模糊效果由
 > backgroundBlurStyle
@@ -321,7 +316,7 @@ cancelButtonStyle?: PickerDialogButtonStyle
 
 > 默认值：请参考[PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
 > 保持默认值false。
@@ -426,7 +421,7 @@ enableHapticFeedback?: boolean
 
 默认值：true
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 设置为true后，其生效情况取决于系统的硬件是否支持。
 > 2. 开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限，配置如下：
@@ -540,7 +535,7 @@ onEnterSelectedArea?: Callback<TimePickerResult>
 
 滑动过程中，当前滑动列滑动距离超过选中项高度的一半，选项进入分割线区域内，触发该回调。与onChange事件的差别在于，该事件在滑动过程中实时触发，适合需要实时监听滑动场景；onChange在选项归位至选中项位置后触发，适合需要确认最终选中值的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 当enableCascade设置为true时，由于上午/下午列与小时列存在联动关系，不建议使用该回调。该回调标识的是滑动过程中选项进入分割线区域内的节点，
 > 而联动变化的选项并不涉及滑动，因此，回调的返回值中，仅当前滑动列的值会正常变化，其余未滑动列的值保持不变。
@@ -593,7 +588,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API版本26.0.0开始，设置systemMaterial后，shadow不生效。
 
@@ -615,7 +610,7 @@ systemMaterial?: SystemUiMaterial
 
 设置弹窗的系统材质。
 
-> **说明：**
+> **说明：** 
 > 
 > - 默认值：[ImmersiveOptions](../arkts-apis/arkts-arkui-uimaterial-immersiveoptions-i.md)的style为ImmersiveStyle.ULTRA_THICK的
 > [ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md)对象。设置undefined时与默认值保持一致。

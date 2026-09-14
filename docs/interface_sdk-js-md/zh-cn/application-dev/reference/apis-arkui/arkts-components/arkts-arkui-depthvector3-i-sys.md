@@ -2,7 +2,7 @@
 
 深度空间中的三维向量。用于为组件设置空间效果参数。
 
-> **说明：**
+> **说明：** 
 > 
 > - 空间效果仅作用于[DepthComponent](./ts-basic-components-depthcomponent-sys.md)的子组件，且仅当DepthComponent相关参数设置正确才能生效。
 > 
@@ -17,11 +17,6 @@
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
-
-## 导入模块
-
-```TypeScript
-```
 
 ## x
 

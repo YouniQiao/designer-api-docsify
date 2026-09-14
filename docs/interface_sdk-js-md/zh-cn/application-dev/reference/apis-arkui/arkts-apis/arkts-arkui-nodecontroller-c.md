@@ -2,7 +2,7 @@
 
 NodeController用于管理自定义节点的创建、显示、更新等操作，并负责将自定义节点挂载到NodeContainer上，适用于需要在页面中动态创建、更新、复用自定义节点的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > - NodeController对象不支持使用JSON序列化。
 
@@ -18,7 +18,7 @@ aboutToAppear?(): void
 
 当NodeController绑定的NodeContainer挂载显示后触发此回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 回调时机参考onAppear。
 
@@ -38,7 +38,7 @@ aboutToDisappear?(): void
 
 当NodeController绑定的NodeContainer销毁时触发此回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 回调时机参考[onDisAppear](../arkts-components/arkts-arkui-commonmethod-c.md#ondisappear)。
 
@@ -82,7 +82,7 @@ abstract makeNode(uiContext: UIContext): FrameNode | null
 
 或者可以通过NodeController的rebuild()方法触发回调。
 
-> **说明：**
+> **说明：** 
 > 
 > NodeContainer不支持跨实例复用。如果出现跨实例复用
 > NodeContainer，传入
@@ -118,7 +118,7 @@ onAttach?(): void
 
 当NodeController绑定的NodeContainer挂载至主节点树时触发此回调。与[aboutToAppear](#abouttoappear)不同，aboutToAppear在NodeContainer挂载显示后触发，onAttach在NodeContainer挂载至主节点树时触发，两者触发时机可能不同。
 
-> **说明：**
+> **说明：** 
 > 
 > 回调时机参考onAttach。
 
@@ -160,7 +160,7 @@ onDetach?(): void
 
 当NodeController绑定的NodeContainer从主节点树卸载时触发此回调。与[aboutToDisappear](#abouttodisappear)不同，aboutToDisappear在NodeContainer销毁时触发，onDetach在NodeContainer从主节点树卸载时触发，两者触发时机可能不同。
 
-> **说明：**
+> **说明：** 
 > 
 > 回调时机参考onDetach。
 
@@ -268,7 +268,7 @@ rebuild(): void
 
 调用此接口通知NodeContainer组件重新回调[makeNode](#makenode)方法，更改子节点。例如，当NodeContainer展示的内容数据发生变化、需要更新显示的子节点时，可调用此方法触发重新构建。
 
-> **说明：**
+> **说明：** 
 > 
 > 由于rebuild方法为应用主动调用的方法，且该操作与UI相关，需要开发者自行保证调用该接口时UI上下文有效，即与绑定的NodeContainer保持UI上下文一致。
 > 

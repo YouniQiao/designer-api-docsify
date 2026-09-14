@@ -30,7 +30,7 @@ Obtains the **TimeZone** object corresponding to the specified time zone ID.
 
 | Type | Description |
 | --- | --- |
-| [TimeZone](arkts-localization-i18n-timezone-c.md) | TimeZone** object corresponding to the time zone ID. |
+| [TimeZone](arkts-localization-i18n-timezone-c.md) | **TimeZone** object corresponding to the time zone ID. |
 
 **Examples**
 

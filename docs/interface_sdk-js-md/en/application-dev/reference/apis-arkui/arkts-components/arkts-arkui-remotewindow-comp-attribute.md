@@ -11,8 +11,3 @@ Inheritance CommonMethod Set Styles
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-
-## Modules to Import
-
-```TypeScript
-```

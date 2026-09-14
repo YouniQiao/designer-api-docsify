@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## icon
 
 ```TypeScript
@@ -39,7 +34,7 @@ text?: string | Resource
 
 > 默认值：空字符串
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 未设置该属性时，使用默认值。
 > 2. 当文本长度大于列宽时，文本被截断。

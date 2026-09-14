@@ -8,11 +8,6 @@ For details about the sample code, see [onShowFileSelector](arkts-arkweb-web-com
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

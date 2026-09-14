@@ -2,7 +2,7 @@
 
 AppStorage是与应用进程绑定的全局UI状态存储中心，由UI框架在应用启动时创建，将UI状态数据存储于运行内存，实现应用级全局状态共享。具体UI使用说明，详见[AppStorage：应用全局的UI状态存储](../../../ui/state-management/arkts-appstorage.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，AppStorage支持[Map](../../../ui/state-management/arkts-appstorage.md#装饰map类型变量)、
 > [Set](../../../ui/state-management/arkts-appstorage.md#装饰set类型变量)、
@@ -12,11 +12,6 @@ AppStorage是与应用进程绑定的全局UI状态存储中心，由UI框架在
 **起始版本：** 7
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## Clear
 
@@ -314,7 +309,7 @@ static IsMutable(propName: string): boolean
 
 返回[AppStorage](../../../ui/state-management/arkts-appstorage.md)中propName对应的属性是否是可变的。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 10开始废弃，暂无替代接口。
 
@@ -485,7 +480,7 @@ static Prop(propName: string): any
 
 与[AppStorage](../../../ui/state-management/arkts-appstorage.md)中对应的propName建立单向数据绑定。如果给定的propName在AppStorage中存在，则返回与AppStorage中propName对应属性的单向绑定数据。如果AppStorage中不存在propName，则返回undefined。单向绑定数据的修改不会同步回AppStorage中。
 
-> **说明：**
+> **说明：** 
 > 
 > Prop仅支持S类型（number、boolean、string）。
 

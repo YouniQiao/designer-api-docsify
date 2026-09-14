@@ -136,7 +136,7 @@ moduleName?: string
 
 应用模块名。在应用启动场景中表示被拉起方的应用模块名。
 
-**说明：**
+**说明：** 
 
 若待启动的Ability所属的模块为[HAR](../../../quick-start/har-package.md)，则moduleName需为依赖该HAR的[HAP](../../../quick-start/hap-package.md)/[HSP](../../../quick-start/in-app-hsp.md)的moduleName。
 
@@ -174,7 +174,7 @@ parameters?: Record<string, Object>
 - ohos.extra.param.key.showMode：表示拉起原子化服务的展示模式，值为枚举类型  
 wantConstant.ShowMode。
 
-**说明：**
+**说明：** 
 
 在跨端场景中，以下三个字段不生效，不可用于身份或权限校验：ohos.aafwk.param.callerPid、ohos.aafwk.param.callerToken、ohos.aafwk.param.callerUid。
 
@@ -182,11 +182,11 @@ wantConstant.ShowMode。
 
 三、除了上述情况，应用间还可以相互约定传入的键值对。
 
-**说明：**
+**说明：** 
 
-want的Params操作的常量的具体信息请参考[wantConstant](arkts-app-ability-wantconstant.md)。
+want的Params操作的常量的具体信息请参考[wantConstant](arkts-ability-app-ability-wantconstant.md)。
 
-需注意，WantParams支持传输的最大数据量遵循Want约束限制。当数据量超过该限制时，请使用WriteRawDataBuffer或[uri](../../apis-arkts/arkts-apis/arkts-uri.md)的方式进行数据传输。
+需注意，WantParams支持传输的最大数据量遵循Want约束限制。当数据量超过该限制时，请使用WriteRawDataBuffer或[uri](../../apis-arkts/arkts-apis/arkts-arkts-uri.md)的方式进行数据传输。
 
 parameters的Value值仅支持基本数据类型：String、Number、Boolean、Object、undefined和null，不支持传递Object内部的function。
 

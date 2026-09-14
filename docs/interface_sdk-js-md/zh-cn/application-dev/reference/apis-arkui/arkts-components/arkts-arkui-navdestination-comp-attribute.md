@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## backButtonIcon
 
 ```TypeScript
@@ -23,7 +18,7 @@ backButtonIcon(value: ResourceStr | PixelMap | SymbolGlyphModifier)
 
 设置标题栏返回键图标。
 
-> **说明：**
+> **说明：** 
 
 > - 从API version 12开始，该接口支持在attributeModifier中调用。
 > 
@@ -51,7 +46,7 @@ backButtonIcon(icon: ResourceStr | PixelMap | SymbolGlyphModifier, accessibility
 
 设置标题栏返回键图标和无障碍播报内容。
 
-> **说明：**
+> **说明：** 
 
 > - 该接口不支持在attributeModifier中调用。
 > 
@@ -80,7 +75,7 @@ bindToNestedScrollable(scrollInfos: Array<NestedScrollInfo>)
 
 绑定NavDestination组件和嵌套的可滚动容器组件（支持List、Scroll、Grid、WaterFlow），当滑动父组件或子组件时，会触发所有与其绑定的NavDestination组件的标题栏和工具栏的显示和隐藏动效，上滑隐藏，下滑显示。一个NavDestination可与多个嵌套的可滚动容器组件绑定，嵌套的可滚动容器组件也可与多个NavDestination绑定。使用示例参见[示例1](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navdestination.md#示例1标题栏工具栏与可滚动类组件联动)。
 
-> **说明：**
+> **说明：** 
 
 > - 只有NavDestination的标题栏或工具栏设置为可见时，联动效果才会生效。
 > 
@@ -111,7 +106,7 @@ bindToScrollable(scrollers: Array<Scroller>)
 
 绑定NavDestination组件和可滚动容器组件（支持List、Scroll、Grid、WaterFlow），当滑动可滚动容器组件时，会触发所有与其绑定的NavDestination组件的标题栏和工具栏的显示和隐藏动效，上滑隐藏，下滑显示。一个NavDestination可与多个可滚动容器组件绑定，一个可滚动容器组件也可与多个NavDestination绑定。使用示例参见[示例1](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navdestination.md#示例1标题栏工具栏与可滚动类组件联动)。
 
-> **说明：**
+> **说明：** 
 
 > - 只有NavDestination的标题栏或工具栏设置为可见时，联动效果才会生效。
 > 
@@ -142,7 +137,7 @@ customTransition(delegate: NavDestinationTransitionDelegate)
 
 设置NavDestination自定义转场动画。
 
-> **说明：**
+> **说明：** 
 
 > - 该接口不支持在attributeModifier中调用。
 > 
@@ -170,7 +165,7 @@ enableNavigationIndicator(enabled: Optional<boolean>)
 
 设置进入该NavDestination后，显示或者隐藏系统的导航条。
 
-> **说明：**
+> **说明：** 
 
 > 该属性满足如下全部条件时才生效：
 
@@ -200,7 +195,7 @@ enableStatusBar(enabled: Optional<boolean>, animated?: boolean)
 
 设置进入该NavDestination后，显示或者隐藏系统的状态栏。
 
-> **说明：**
+> **说明：** 
 
 > - 该属性满足如下全部条件时才生效：
 > 
@@ -351,7 +346,7 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafe
 
 控制组件的布局，使其扩展到非安全区域。
 
-> **说明：**
+> **说明：** 
 
 > - 组件设置ignoreLayoutSafeArea生效条件：设置LayoutSafeAreaType.SYSTEM时，若组件边界与非安全区域重合，组件可延伸到非安全区域内。
 > 
@@ -382,7 +377,7 @@ menus(value: Array<NavigationMenuItem> | CustomBuilder)
 
 设置页面右上角菜单。不设置时不显示菜单项。使用Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt; 写法时，竖屏最多支持显示3个图标，横屏最多支持显示5个图标，多余的图标会被放入自动生成的更多图标。
 
-> **说明：**
+> **说明：** 
 
 > - 从API version 14开始，该接口支持在attributeModifier中调用。
 > 
@@ -410,7 +405,7 @@ menus(items: Array<NavigationMenuItem> | CustomBuilder, options?: NavigationMenu
 
 设置页面右上角菜单。不设置时不显示菜单项。与[menus](#menus)相比，新增菜单选项。使用Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt; 写法时，竖屏最多支持显示3个图标，横屏最多支持显示5个图标，多余的图标会被放入自动生成的更多图标。
 
-> **说明：**
+> **说明：** 
 
 > - 该接口不支持在attributeModifier中调用。
 > 
@@ -439,7 +434,7 @@ mode(value: NavDestinationMode)
 
 设置NavDestination类型，不支持动态修改。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -465,7 +460,7 @@ onActive(callback: Optional<Callback<NavDestinationActiveReason>>)
 
 NavDestination处于激活态（处于栈顶可操作，且上层无特殊组件遮挡）时，触发该回调。使用示例参见[示例5](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navdestination.md#示例5navdestination的onactive与oninactive生命周期)。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 22开始，该接口支持在attributeModifier中调用。
 
@@ -535,7 +530,7 @@ onInactive(callback: Optional<Callback<NavDestinationActiveReason>>)
 
 NavDestination处于非激活态（处于非栈顶不可操作，或处于栈顶时上层有特殊组件遮挡）时，触发该回调。使用示例参见[示例5](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navdestination.md#示例5navdestination的onactive与oninactive生命周期)。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 22开始，该接口支持在attributeModifier中调用。
 
@@ -561,7 +556,7 @@ onNewParam(callback: Optional<Callback<ESObject>>)
 
 当之前存在于栈中的NavDestination页面通过launchMode.MOVE_TO_TOP_SINGLETON或launchMode.POP_TO_SINGLETON移动到栈顶时，触发该回调。
 
-> **说明：**
+> **说明：** 
 
 > - replacePath、
 > [replaceDestination](arkts-arkui-navpathstack-c.md#replacedestination)不会触发该回调。
@@ -590,7 +585,7 @@ onReady(callback: import('../api/@ohos.base').Callback<NavDestinationContext>)
 
 当NavDestination即将构建子组件之前会触发此回调。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
@@ -640,7 +635,7 @@ onResult(callback: Optional<Callback<ESObject>>)
 
 NavDestination返回时触发该回调。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 22开始，该接口支持在attributeModifier中调用。
 
@@ -712,7 +707,7 @@ onWillAppear(callback: Callback<void>)
 
 当该NavDestination挂载之前触发此回调。在该回调中允许修改路由栈，当前帧生效。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
@@ -738,7 +733,7 @@ onWillDisappear(callback: Callback<void>)
 
 当该NavDestination卸载之前触发的生命周期(有转场动画时，在转场动画开始之前触发)。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
@@ -764,7 +759,7 @@ onWillHide(callback: Callback<void>)
 
 当该NavDestination隐藏之前触发此回调。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
@@ -790,7 +785,7 @@ onWillShow(callback: Callback<void>)
 
 当该NavDestination显示之前触发此回调。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
@@ -816,7 +811,7 @@ preferredOrientation(orientation: Optional<Orientation>)
 
 设置NavDestination对应的显示方向。转场到该NavDestination后，系统也会将应用主窗口切到该显示方向。
 
-> **说明：**
+> **说明：** 
 
 > - 该属性满足如下全部条件时才有效：
 > 
@@ -852,7 +847,7 @@ recoverable(recoverable: Optional<boolean>)
 
 配置NavDestination是否可恢复。如配置为可恢复，当应用进程异常退出并重新冷启动时，可自动创建该NavDestination。该功能需NavDestination对应的Navigation也配置了可恢复属性。
 
-> **说明：**
+> **说明：** 
 
 > 该接口需要配合Navigation的recoverable接口使用。
 
@@ -876,7 +871,7 @@ systemBarStyle(style: Optional<SystemBarStyle>)
 
 当Navigation中显示当前NavDestination时，设置对应系统状态栏的样式。
 
-> **说明：**
+> **说明：** 
 
 > - 必须配合Navigation使用，作为其Navigation目的页面的根节点时才能生效。
 > 
@@ -929,7 +924,7 @@ title(value: string | CustomBuilder | NavDestinationCommonTitle | NavDestination
 
 设置页面标题。字符串超长时，如果不设置副标题，先缩小再换行2行后以"..."截断。如果设置副标题，先缩小后以"..."截断。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -954,7 +949,7 @@ toolbarConfiguration(toolbarParam: Array<ToolbarItem> | CustomBuilder, options?:
 
 设置工具栏内容。未调用本接口时不显示工具栏。
 
-> **说明：**
+> **说明：** 
 
 > - 从API version 20开始，该接口支持在attributeModifier中调用。
 > 

@@ -31,7 +31,7 @@ Creates a **PasteData** object of the specified type.
 
 | Type | Description |
 | --- | --- |
-| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | PasteData** object. |
+| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | **PasteData** object. |
 
 **Error codes:**
 
@@ -62,7 +62,7 @@ Creates a **PasteData** object that contains multiple types of data.
 
 | Type | Description |
 | --- | --- |
-| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | PasteData** object. |
+| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | **PasteData** object. |
 
 **Error codes:**
 

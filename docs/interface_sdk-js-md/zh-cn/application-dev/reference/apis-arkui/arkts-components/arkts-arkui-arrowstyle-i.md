@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## arrowColor
 
 ```TypeScript
@@ -49,7 +44,7 @@ arrowSize?: Length
 
 默认值：24vp
 
-**说明：**
+**说明：** 
 
 showBackground为true时，arrowSize为backgroundSize的3/4。
 
@@ -85,7 +80,7 @@ backgroundColor?: ResourceColor
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
-**默认值：**
+**默认值：** 
 - API版本10：When isSidebarMiddle is false, the default value is #00000000, Otherwise,the default value is #1918243 1
 - API版本11+：When isSidebarMiddle is false, the default value is #00000000, Otherwise, the default value is #1918243 1
 

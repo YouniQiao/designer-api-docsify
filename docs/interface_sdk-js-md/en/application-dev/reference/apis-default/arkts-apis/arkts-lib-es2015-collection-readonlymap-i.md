@@ -30,10 +30,6 @@ get(key: K): V | undefined
 | --- | --- | --- | --- |
 | key | K | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## has
 
 ```TypeScript
@@ -46,10 +42,6 @@ has(key: K): boolean
 | --- | --- | --- | --- |
 | key | K | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## size
 
 ```TypeScript

@@ -2,7 +2,7 @@
 
 A carrier that carries the drawn content and drawing status.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This module uses the physical pixel unit, px.
 > 
@@ -31,7 +31,7 @@ attachBrush(brush: Brush): void
 
 Attaches a brush to the canvas. When you draw on the canvas, the brush's style is used to fill the interior of shapes.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If the brush effect changes after this API is called, you must call the API again if you want to use the new
 > effect in the subsequent drawing.
@@ -44,7 +44,7 @@ Attaches a brush to the canvas. When you draw on the canvas, the brush's style i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) | Yes | Brush** object. |
+| brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) | Yes | **Brush** object. |
 
 **Error codes:**
 
@@ -60,7 +60,7 @@ attachPen(pen: Pen): void
 
 Attaches a pen to the canvas. When you draw on the canvas, the pen's style is used to outline shapes.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If the pen effect changes after this API is called, you must call the API again if you want to use the new
 > effect in the subsequent drawing.
@@ -73,7 +73,7 @@ Attaches a pen to the canvas. When you draw on the canvas, the pen's style is us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pen | [Pen](arkts-arkgraphics2d-drawing-pen-c.md) | Yes | Pen** object. |
+| pen | [Pen](arkts-arkgraphics2d-drawing-pen-c.md) | Yes | **Pen** object. |
 
 **Error codes:**
 
@@ -139,7 +139,7 @@ Clips the drawable area of the canvas using a custom path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path** object. |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | **Path** object. |
 | clipOp | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | No | Clip mode. The default value is **INTERSECT**. |
 | doAntiAlias | boolean | No | Whether to enable anti-aliasing. The value **true** means to enable anti- aliasing, and **false** means the opposite. Default value: **false**. |
 
@@ -191,7 +191,7 @@ Clips a region on the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | Region** object, which indicates the range to clip. |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | **Region** object, which indicates the range to clip. |
 | clipOp | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | No | Clipping mode. The default value is **INTERSECT**. |
 
 **Error codes:**
@@ -216,7 +216,7 @@ Clips a rounded rectangle on the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | RoundRect** object, which indicates the range to clip. |
+| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | **RoundRect** object, which indicates the range to clip. |
 | clipOp | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | No | Clipping mode. The default value is **INTERSECT**. |
 | doAntiAlias | boolean | No | Whether to enable anti-aliasing. The value **true** means to enable anti- aliasing, and **false** means the opposite. Default value: **false**. |
 
@@ -268,7 +268,7 @@ Creates a **Canvas** object that uses a **PixelMap** as the drawing target.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | PixelMap** used to create the object. |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | **PixelMap** used to create the object. |
 
 **Error codes:**
 
@@ -363,7 +363,7 @@ Uses a brush to fill the drawable area of the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) | Yes | Brush** object. |
+| brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) | Yes | **Brush** object. |
 
 **Error codes:**
 
@@ -523,7 +523,7 @@ Draws an image. The coordinates of the upper left corner of the image are (left,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | PixelMap** of an image. |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | **PixelMap** of an image. |
 | left | number | Yes | X coordinate of the upper left corner of the image. The value is a floating point number. |
 | top | number | Yes | Y coordinate of the upper left corner of the image. The value is a floating point number. |
 | samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | No | Sampling options. By default, the **SamplingOptions** object created using the no-argument constructor is used.<br>**Since:** 12 |
@@ -553,7 +553,7 @@ The intersections of even-numbered rows and columns (starting from 0) are fixed 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | PixelMap** to draw. |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | **PixelMap** to draw. |
 | lattice | [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | Yes | Lattice object. |
 | dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Target rectangle. |
 | filterMode | [FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md) | Yes | Filter mode. |
@@ -583,7 +583,7 @@ If the four corner sections are smaller than the target rectangle, they will be 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | PixelMap** to draw. |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | **PixelMap** to draw. |
 | center | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Central rectangle that divides the image into nine sections by extending its four edges. |
 | dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Target rectangle drawn on the canvas. |
 | filterMode | [FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md) | Yes | Filter mode. |
@@ -610,8 +610,8 @@ Draws an image onto a specified area of the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | PixelMap** of an image. |
-| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle** object, which specifies the area of the canvas onto which the image will be drawn. |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | **PixelMap** of an image. |
+| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | **Rectangle** object, which specifies the area of the canvas onto which the image will be drawn. |
 | samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | No | Sampling options. By default, the **SamplingOptions** object created using the no-argument constructor is used. |
 
 **Error codes:**
@@ -637,9 +637,9 @@ Draws a portion of an image onto a specified area of the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | PixelMap** of an image. |
-| srcRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle** object, which specifies the portion of the image to draw. |
-| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | Rectangle** object, which specifies the area of the canvas onto which the image will be drawn. |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | **PixelMap** of an image. |
+| srcRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | **Rectangle** object, which specifies the portion of the image to draw. |
+| dstRect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Yes | **Rectangle** object, which specifies the area of the canvas onto which the image will be drawn. |
 | samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | No | Sampling options. By default, the **SamplingOptions** object created using the no-argument constructor is used. |
 | constraint | [SrcRectConstraint](arkts-arkgraphics2d-drawing-srcrectconstraint-e.md) | No | Constraint type of the source rectangle. The default value is **STRICT**. |
 
@@ -741,7 +741,7 @@ Draws a custom path, which contains a set of path outlines. Each path outline ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path** object to draw. |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | **Path** object to draw. |
 
 **Error codes:**
 
@@ -766,7 +766,7 @@ Draws a **PixelMap** based on a mesh, with the mesh vertices evenly distributed 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | PixelMap** to draw. |
+| pixelmap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | **PixelMap** to draw. |
 | meshWidth | number | Yes | Number of columns in the mesh. The value is an integer greater than 0. |
 | meshHeight | number | Yes | Number of rows in the mesh. The value is an integer greater than 0. |
 | vertices | Array&lt;number&gt; | Yes | Array of vertices, which specify the position to draw. The value is a floating-point array and the size must be ((meshWidth+1) * (meshHeight+1) + vertOffset) * 2. |
@@ -966,7 +966,7 @@ Draws a spot shadow and uses a given path to outline the ambient shadow.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path** object, which is used to outline the shadow. |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | **Path** object, which is used to outline the shadow. |
 | planeParams | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | Yes | 3D vector, which is used to determine the z-axis offset of an occluder relative to the canvas, based on its x and y coordinates. |
 | devLightPos | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | Yes | Position of the light relative to the canvas. |
 | lightRadius | number | Yes | Radius of the light. The value is a floating point number. |
@@ -997,7 +997,7 @@ Draws a spot shadow and uses a given path to outline the ambient shadow.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path** object, which is used to outline the shadow. |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | **Path** object, which is used to outline the shadow. |
 | planeParams | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | Yes | 3D vector, which is used to calculate the offset in the Z axis. |
 | devLightPos | [common2D.Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | Yes | Position of the light relative to the canvas. |
 | lightRadius | number | Yes | Radius of the light. The value is a floating point number. |
@@ -1028,7 +1028,7 @@ Draws a single character. If the typeface of the current font does not support t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Single character to draw. The length of the string must be **1**. |
-| font | [Font](arkts-arkgraphics2d-drawing-font-c.md) | Yes | Font** object. |
+| font | [Font](arkts-arkgraphics2d-drawing-font-c.md) | Yes | **Font** object. |
 | x | number | Yes | X coordinate of the left point (red point in the figure below) of the character baseline (blue line in the figure below). The value is a floating point number. |
 | y | number | Yes | Y coordinate of the left point (red point in the figure below) of the character baseline (blue line in the figure below). The value is a floating point number. |
 
@@ -1055,7 +1055,7 @@ Draws a single character with font features. If the typeface of the current font
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Single character to draw. The length of the string must be **1**. |
-| font | [Font](arkts-arkgraphics2d-drawing-font-c.md) | Yes | Font** object. |
+| font | [Font](arkts-arkgraphics2d-drawing-font-c.md) | Yes | **Font** object. |
 | x | number | Yes | X coordinate of the left endpoint of the drawn character baseline. The value is a floating point number. |
 | y | number | Yes | Y coordinate of the left endpoint of the drawn character baseline. The value is a floating point number. |
 | features | Array&lt;[FontFeature](arkts-arkgraphics2d-drawing-fontfeature-i.md)&gt; | Yes | Array of the font feature object. For an empty array, the preset font features in the TrueType Font (TTF) file are used. |
@@ -1082,7 +1082,7 @@ Draws a text blob. If the typeface used to construct **blob** does not support a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blob | [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | Yes | TextBlob** object. |
+| blob | [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | Yes | **TextBlob** object. |
 | x | number | Yes | X coordinate of the left point (red point in the figure below) of the text baseline (blue line in the figure below). The value is a floating point number. |
 | y | number | Yes | Y coordinate of the left point (red point in the figure below) of the text baseline (blue line in the figure below). The value is a floating point number. |
 
@@ -1269,7 +1269,7 @@ Checks whether the path is not intersecting with the canvas area. The canvas are
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path** object. |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | **Path** object. |
 
 **Return value:**
 
@@ -1423,8 +1423,8 @@ Saves the matrix and cropping region of the canvas, and allocates a **PixelMap**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) &#124; null | No | Rect** object, which is used to limit the size of the graphics layer. The default value is the current canvas size. |
-| brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) &#124; null | No | Brush** object. The alpha value, filter effect, and blend mode of the brush are applied when the **PixelMap** is drawn. If null is passed in, no effect is applied. |
+| rect | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) &#124; null | No | **Rect** object, which is used to limit the size of the graphics layer. The default value is the current canvas size. |
+| brush | [Brush](arkts-arkgraphics2d-drawing-brush-c.md) &#124; null | No | **Brush** object. The alpha value, filter effect, and blend mode of the brush are applied when the **PixelMap** is drawn. If null is passed in, no effect is applied. |
 
 **Return value:**
 

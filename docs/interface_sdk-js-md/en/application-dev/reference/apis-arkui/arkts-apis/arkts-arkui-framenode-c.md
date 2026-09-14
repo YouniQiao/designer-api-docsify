@@ -2,7 +2,7 @@
 
 **FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](arkts-arkui-nodecontroller-c.md) to mount a BuilderNode (that holds the FrameNode) to a NodeContainer or mount a [RenderNode](arkts-arkui-rendernode-c.md) to another FrameNode.<!--RP2--><!--RP2End-->
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - **FrameNode** is not available in DevEco Studio Previewer.
 > 
@@ -524,7 +524,7 @@ dispose(): void
 
 Immediately releases the reference to the underlying FrameNode entity.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - After the **dispose** API is called, the FrameNode object no longer corresponds to any entity FrameNode. In
 > this case, attempts to call certain query APIs, such as [getMeasuredSize](#getmeasuredsize) and
@@ -1515,7 +1515,7 @@ getInspectorInfo(): Object
 
 Obtains the structure information of the node, which is consistent with what is found in DevEco Studio's built-in <!--RP1-->ArkUI Inspector <!--RP1End-->tool.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The **getInspectorInfo** API is designed for debugging purposes to obtain information about all nodes. Frequent
 > calls to this API may cause performance degradation.
@@ -2355,7 +2355,7 @@ Obtains the [RenderNode](arkts-arkui-rendernode-c.md) held by the FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) &#124; null | RenderNode** instance. If the current FrameNode does not hold any RenderNode, **null** is returned. If the current FrameNode is a node created by a declarative component, **null** is returned. |
+| [RenderNode](arkts-arkui-rendernode-c.md) &#124; null | **RenderNode** instance. If the current FrameNode does not hold any RenderNode, **null** is returned. If the current FrameNode is a node created by a declarative component, **null** is returned. |
 
 **Examples**
 
@@ -3479,7 +3479,7 @@ isVisible(): boolean
 
 Obtains whether the node is visible.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The visibility of a node is determined by the **visibility** attribute of the component.
 
@@ -3564,7 +3564,7 @@ moveTo(targetParent: FrameNode, index?: number): void
 
 Moves this FrameNode to a specified position within the target FrameNode. If this FrameNode is not modifiable, an exception is thrown. When **targetParent** is a [typeNode](arkts-arkui-typenode-n.md), the API validates the type or number of child nodes. If the validation fails, an exception is thrown. For specific limitations, see [typeNode](arkts-arkui-typenode-n.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Currently, only the following types of [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md) are supported for the movement
 > operations: [Stack](arkts-arkui-typenode-stack-t.md), [XComponent](arkts-arkui-typenode-xcomponent-t.md). This API does not work for
@@ -3588,7 +3588,7 @@ Moves this FrameNode to a specified position within the target FrameNode. If thi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | targetParent | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target parent node.<br>The target parent node must not be a declaratively created node, that is, a FrameNode that is not modifiable. If it does not meet the specifications, an exception is thrown. |
-| index | number | No | Index of the child node. The current FrameNode will be inserted before the child node at the specified sequence number in the target FrameNode. If the target FrameNode has *n* nodes, the value range for **index** is 0, *n*-1].<br>If the parameter is invalid or not specified, the current FrameNode will be added to the end of the target FrameNode. <br>Default value: **-1 |
+| index | number | No | Index of the child node. The current FrameNode will be inserted before the child node at the specified sequence number in the target FrameNode. If the target FrameNode has *n* nodes, the value range for **index** is 0, *n*-1].<br>If the parameter is invalid or not specified, the current FrameNode will be added to the end of the target FrameNode. <br>Default value: **-1** |
 
 **Error codes:**
 
@@ -3828,7 +3828,7 @@ setCrossLanguageOptions(options: CrossLanguageOptions): void
 
 Sets the cross-language access options for this FrameNode. For example, for nodes created using ArkTS, this API can set whether non-ArkTS languages are allowed to set the attributes of these nodes. Since API version 26.0.0, this API can set whether non-ArkTS languages are allowed to perform operations on the component tree. If the current FrameNode is not modifiable or does not support setting cross-language access options, an exception will be thrown.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Currently, the cross-ArkTS language access option can only be configured for the following components:
 > [Scroll](arkts-arkui-typenode-scroll-t.md), [Swiper](arkts-arkui-typenode-swiper-t.md), [List](arkts-arkui-typenode-list-t.md),
@@ -3952,7 +3952,7 @@ Obtains the **CommonAttribute** API associated with the FrameNode, which is used
 
 Note that only the attributes of a custom node can be modified.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The visual representation of the FrameNode is similar to that of a
 > Stack container that is aligned to the top start edge.

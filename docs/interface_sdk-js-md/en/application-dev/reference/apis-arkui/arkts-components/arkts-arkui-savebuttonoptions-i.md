@@ -2,7 +2,7 @@
 
 Defines options for the save button, including icon, text, and button type.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - You are advised to specify at least one of **icon** or **text**.
 > - If neither **icon** nor **text** is specified, **SaveButton** is created with default styles as follows:
@@ -14,11 +14,6 @@ Defines options for the save button, including icon, text, and button type.
 **Since:** 10
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## buttonType
 

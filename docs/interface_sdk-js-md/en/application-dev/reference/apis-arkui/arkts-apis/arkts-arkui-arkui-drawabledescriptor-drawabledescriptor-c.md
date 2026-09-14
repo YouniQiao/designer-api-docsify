@@ -32,7 +32,7 @@ Obtains this **PixelMap** instance.
 
 | Type | Description |
 | --- | --- |
-| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | PixelMap** object. |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | **PixelMap** object. |
 
 **Error codes:**
 

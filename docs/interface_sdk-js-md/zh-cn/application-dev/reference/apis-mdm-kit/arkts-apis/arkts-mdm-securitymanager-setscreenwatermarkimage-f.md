@@ -14,7 +14,7 @@ function setScreenWatermarkImage(admin: Want, pixelMap: image.PixelMap): void
 
 设置屏幕水印策略，对所有用户生效。
 
-> **说明：**
+> **说明：** 
 > 
 > 1.屏幕水印策略会将设置的图片平铺覆盖整个屏幕，建议使用带透明度的图片以确保设备屏幕内容可见。
 > 

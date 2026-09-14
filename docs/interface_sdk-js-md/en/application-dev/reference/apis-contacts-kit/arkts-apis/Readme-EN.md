@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-contactskit-->
 
-- [@ohos.contact](arkts-contact.md)
+- [@ohos.contact](arkts-contacts-contact.md)
   - [addContact](arkts-contacts-contact-addcontact-f.md)
   - [addContacts](arkts-contacts-contact-addcontacts-f.md)
   - [addContactViaUI](arkts-contacts-contact-addcontactviaui-f.md)

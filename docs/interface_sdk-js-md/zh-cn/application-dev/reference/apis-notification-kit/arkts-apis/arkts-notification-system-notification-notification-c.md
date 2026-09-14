@@ -6,7 +6,7 @@
 
 **废弃版本：** 7
 
-**替代接口：** [notification/notification](arkts-notification.md)
+**替代接口：** [notification/notification](arkts-notification-notification.md)
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -28,7 +28,7 @@ static show(options?: ShowNotificationOptions): void
 
 **废弃版本：** 7
 
-**替代接口：** [notification/notification](arkts-notification.md)
+**替代接口：** [notification/notification](arkts-notification-notification.md)
 
 **系统能力：** SystemCapability.Notification.Notification
 

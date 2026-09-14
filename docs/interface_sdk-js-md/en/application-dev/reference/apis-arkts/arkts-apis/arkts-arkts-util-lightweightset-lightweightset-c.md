@@ -30,6 +30,8 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 | Type | Description |
 | --- | --- |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
+
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -273,7 +275,7 @@ equal(obj: Object): boolean
 
 Checks whether the elements of this LightWeightSet are the same as those of **obj**.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 12. There is no substitute API.
 
@@ -287,7 +289,7 @@ Checks whether the elements of this LightWeightSet are the same as those of **ob
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | Object | Yes | LightWeightSet** instance to be used for comparison. |
+| obj | Object | Yes | **LightWeightSet** instance to be used for comparison. |
 
 **Return value:**
 
@@ -496,7 +498,7 @@ Checks whether this LightWeightSet contains all elements of the specified LightW
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| set | [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md)&lt;T&gt; | Yes | LightWeightSet** instance to be used for comparison. |
+| set | [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md)&lt;T&gt; | Yes | **LightWeightSet** instance to be used for comparison. |
 
 **Return value:**
 

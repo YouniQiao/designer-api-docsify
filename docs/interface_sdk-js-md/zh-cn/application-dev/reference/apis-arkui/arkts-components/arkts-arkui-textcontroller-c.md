@@ -12,11 +12,6 @@ controller: TextController = new TextController()
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## closeSelectionMenu
 
 ```TypeScript
@@ -86,7 +81,7 @@ setTextSelection(selectionStart: number | undefined, selectionEnd: number | unde
 
 设置文本选择区域并高亮显示。
 
-> **说明：**
+> **说明：** 
 > 
 > 当[copyOption](arkts-arkui-text-comp-attribute.md#copyoption)设置为CopyOptions.None时，设置setTextSelection不生效。
 > 

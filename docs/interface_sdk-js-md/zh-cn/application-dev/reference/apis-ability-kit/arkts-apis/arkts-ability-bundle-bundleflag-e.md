@@ -1,7 +1,7 @@
 # BundleFlag
 
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
 > [bundleManager.BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md)替代。

@@ -192,7 +192,7 @@ Builds a paragraph and generates a paragraph object that can be used for subsequ
 
 | Type | Description |
 | --- | --- |
-| [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md) | Paragraph** object that can be used for subsequent rendering. |
+| [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md) | **Paragraph** object that can be used for subsequent rendering. |
 
 **Examples**
 
@@ -246,7 +246,7 @@ Builds a line typesetter and generates a LineTypeset object that can be used for
 
 | Type | Description |
 | --- | --- |
-| [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md) | LineTypeset** object that can be used for subsequent rendering. |
+| [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md) | **LineTypeset** object that can be used for subsequent rendering. |
 
 **Examples**
 
@@ -338,7 +338,7 @@ popStyle(): void
 
 Restores the previous text style.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This method must be called after [pushStyle()](#pushstyle). After it is called,
 > subsequently added text will use the text style before the pop operation. If the style stack is empty, the
@@ -392,7 +392,7 @@ pushStyle(textStyle: TextStyle): void
 
 Applies a new style to the current text blob.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When you update the style of the current text blob, all text added afterward will use this new style.
 

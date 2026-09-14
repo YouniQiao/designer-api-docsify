@@ -352,7 +352,7 @@ levelMode?: LevelMode
 levelOrder?: LevelOrder
 ```
 
-设置弹窗显示的顺序。<br>**说明：**<br>- 默认值：LevelOrder.clamp(0) <br>- 不支持动态刷新顺序。
+设置弹窗显示的顺序。<br>**说明：** <br>- 默认值：LevelOrder.clamp(0) <br>- 不支持动态刷新顺序。
 
 **类型：** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
 

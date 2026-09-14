@@ -2,7 +2,7 @@
 
 录音策略管理，提供协同录音和录音控制能力。在使用AudioRecordingManager的接口之前，需先通过[getRecordingManager](arkts-audio-audio-audiomanager-i-sys.md#getrecordingmanager)获取AudioRecordingManager实例。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本模块首批接口从API版本26.0.0开始支持。
 > 
@@ -26,7 +26,7 @@ enableSystemRecordController(show: boolean, config: SystemRecordControllerConfig
 
 启用或禁用系统录音控制面板。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 应用可以在开始录音之前调用此接口在控制中心拉起录音控制面板，让用户完成录音设备或音频效果参数的选择，然后再启动录音服务。
 > 

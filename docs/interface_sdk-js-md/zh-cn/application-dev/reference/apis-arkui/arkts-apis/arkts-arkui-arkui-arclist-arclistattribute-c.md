@@ -38,6 +38,8 @@ cachedCount(count: Optional<number>): ArcListAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## chainAnimation
 
 ```TypeScript
@@ -64,6 +66,8 @@ chainAnimation(enable: Optional<boolean>): ArcListAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## childrenMainSize
 
 ```TypeScript
@@ -88,6 +92,8 @@ childrenMainSize(size: Optional<ChildrenMainSize>): ArcListAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## digitalCrownSensitivity
 
 ```TypeScript
@@ -112,6 +118,8 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcListAttribu
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## enableScrollInteraction
 
 ```TypeScript
@@ -136,6 +144,8 @@ enableScrollInteraction(enable: Optional<boolean>): ArcListAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## fadingEdge
 
 ```TypeScript
@@ -160,6 +170,8 @@ fadingEdge(enable: Optional<boolean>): ArcListAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## flingSpeedLimit
 
 ```TypeScript
@@ -184,6 +196,8 @@ flingSpeedLimit(speed: Optional<number>): ArcListAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## friction
 
 ```TypeScript
@@ -208,6 +222,8 @@ friction(friction: Optional<number>): ArcListAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## onDidScroll
 
 ```TypeScript
@@ -232,6 +248,8 @@ onDidScroll(handler: Optional<OnScrollCallback>): ArcListAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## onReachEnd
 
 ```TypeScript
@@ -258,6 +276,8 @@ ArcList边缘效果为弹簧效果时，滑动经过末尾位置时触发一次�
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## onReachStart
 
 ```TypeScript
@@ -284,6 +304,8 @@ onReachStart(handler: Optional<VoidCallback>): ArcListAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## onScrollIndex
 
 ```TypeScript
@@ -310,6 +332,8 @@ ArcList的边缘效果为弹簧效果时，在ArcList滑动到边缘后继续滑
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## onScrollStart
 
 ```TypeScript
@@ -334,6 +358,8 @@ onScrollStart(handler: Optional<VoidCallback>): ArcListAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## onScrollStop
 
 ```TypeScript
@@ -358,6 +384,8 @@ onScrollStop(handler: Optional<VoidCallback>): ArcListAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## onWillScroll
 
 ```TypeScript
@@ -382,6 +410,8 @@ onWillScroll(handler: Optional<OnWillScrollCallback>): ArcListAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## scrollBar
 
 ```TypeScript
@@ -406,6 +436,8 @@ scrollBar(status: Optional<BarState>): ArcListAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## scrollBarColor
 
 ```TypeScript
@@ -430,6 +462,8 @@ scrollBarColor(color: Optional<ColorMetrics>): ArcListAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## scrollBarWidth
 
 ```TypeScript
@@ -454,6 +488,8 @@ scrollBarWidth(width: Optional<LengthMetrics>): ArcListAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## space
 
 ```TypeScript
@@ -478,3 +514,4 @@ space(space: Optional<LengthMetrics>): ArcListAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |

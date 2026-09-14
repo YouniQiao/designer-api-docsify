@@ -38,6 +38,8 @@ Sets the number of arc list items to be preloaded (cached). In a lazy loading sc
 
 | Type | Description |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## chainAnimation
 
 ```TypeScript
@@ -62,6 +64,8 @@ Sets whether to enable chained animations, which provide a visually connected, o
 
 | Type | Description |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## childrenMainSize
 
 ```TypeScript
@@ -80,12 +84,14 @@ Sets the size information of the child components of the **ArcList** component a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ChildrenMainSize](../arkts-components/arkts-arkui-childrenmainsize-c.md)&gt; | Yes | Precise size information for all child components along the main axis. This ensures accurate scrolling positions in scenarios where child components have varying sizes, are added or removed, or when APIs like **scrollToIndex** are used. It guarantees that **scrollTo** can accurately navigate to the specified position, **currentOffset** or **offset** can accurately reflect the current scrolling position, and the built-in scrollbar can move smoothly without any jumps or abrupt changes. The **offset** API is added from API version 23.<br> **NOTE:**<br>The provided sizes must match the actual sizes of the child components. Any changes to the sizes, or any additions or removals of child components, must be notified to the **ArcList** component through the **ChildrenMainSize** object. |
+| size | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ChildrenMainSize](../arkts-components/arkts-arkui-childrenmainsize-c.md)&gt; | Yes | Precise size information for all child components along the main axis. This ensures accurate scrolling positions in scenarios where child components have varying sizes, are added or removed, or when APIs like **scrollToIndex** are used. It guarantees that **scrollTo** can accurately navigate to the specified position, **currentOffset** or **offset** can accurately reflect the current scrolling position, and the built-in scrollbar can move smoothly without any jumps or abrupt changes. The **offset** API is added from API version 23.<br> **NOTE:** <br>The provided sizes must match the actual sizes of the child components. Any changes to the sizes, or any additions or removals of child components, must be notified to the **ArcList** component through the **ChildrenMainSize** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## digitalCrownSensitivity
 
 ```TypeScript
@@ -110,6 +116,8 @@ Sets the sensitivity of the digital crown's event response.
 
 | Type | Description |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## enableScrollInteraction
 
 ```TypeScript
@@ -128,12 +136,14 @@ Sets whether to enable scroll gestures.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the **Scroller**.<br>Default value: **true |
+| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the **Scroller**.<br>Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## fadingEdge
 
 ```TypeScript
@@ -158,6 +168,8 @@ Sets whether to enable the edge fading effect.
 
 | Type | Description |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## flingSpeedLimit
 
 ```TypeScript
@@ -182,6 +194,8 @@ Sets the maximum initial speed for inertial scrolling after a fling gesture. If 
 
 | Type | Description |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## friction
 
 ```TypeScript
@@ -206,6 +220,8 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 
 | Type | Description |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## onDidScroll
 
 ```TypeScript
@@ -230,6 +246,8 @@ Triggered when the list scrolls. The return value is the offset amount by which 
 
 | Type | Description |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## onReachEnd
 
 ```TypeScript
@@ -254,6 +272,8 @@ Triggered when the list reaches the end position. If the edge scrolling effect i
 
 | Type | Description |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## onReachStart
 
 ```TypeScript
@@ -278,6 +298,8 @@ Triggered when the list reaches the start position. This event is triggered duri
 
 | Type | Description |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## onScrollIndex
 
 ```TypeScript
@@ -302,6 +324,8 @@ Triggered when a child component enters or leaves the visible area of the **ArcL
 
 | Type | Description |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## onScrollStart
 
 ```TypeScript
@@ -326,6 +350,8 @@ Triggered when the list starts scrolling initiated by the user's finger dragging
 
 | Type | Description |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## onScrollStop
 
 ```TypeScript
@@ -350,6 +376,8 @@ Triggered when the list stops scrolling after the user's finger leaves the scree
 
 | Type | Description |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## onWillScroll
 
 ```TypeScript
@@ -374,6 +402,8 @@ Triggered before each frame during list scrolling. The callback returns the offs
 
 | Type | Description |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## scrollBar
 
 ```TypeScript
@@ -392,12 +422,14 @@ Sets the state of the scrollbar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[BarState](arkts-arkui-barstate-e.md)&gt; | Yes | State of the scrollbar.<br> Default value: **BarState.Auto |
+| status | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[BarState](arkts-arkui-barstate-e.md)&gt; | Yes | State of the scrollbar.<br> Default value: **BarState.Auto** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## scrollBarColor
 
 ```TypeScript
@@ -416,12 +448,14 @@ Sets the color of the scrollbar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | Yes | Color of the scrollbar.<br> Default value: **ColorMetrics.numeric(0xA9FFFFFF) |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | Yes | Color of the scrollbar.<br> Default value: **ColorMetrics.numeric(0xA9FFFFFF)** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## scrollBarWidth
 
 ```TypeScript
@@ -446,6 +480,8 @@ Sets the width of the scrollbar. Once the width is set, the scrollbar will use t
 
 | Type | Description |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+
 ## space
 
 ```TypeScript
@@ -470,3 +506,4 @@ Sets the spacing between list items.
 
 | Type | Description |
 | --- | --- |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |

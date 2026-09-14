@@ -15,11 +15,6 @@ controller: TextInputController = new TextInputController();
 **System capability:** 
 - API version 10 and later: SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## caretPosition
 
 ```TypeScript

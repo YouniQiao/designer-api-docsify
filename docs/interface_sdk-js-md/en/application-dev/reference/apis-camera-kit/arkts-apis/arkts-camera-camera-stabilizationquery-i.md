@@ -2,7 +2,7 @@
 
 StabilizationQuery provides APIs to check the support for video stabilization.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This interface was first introduced in API version 12. In this version, a compatibility change was made that
 > preserved the initial version information of inner elements. As a result, you might see outer element's

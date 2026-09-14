@@ -14,7 +14,7 @@ function get(id: string, callback: AsyncCallback<image.PixelMap>, options?: Snap
 
 Obtains the snapshot of a component that has been loaded based on the provided component ID. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)
 > API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)
@@ -102,7 +102,7 @@ function get(id: string, options?: SnapshotOptions): Promise<image.PixelMap>
 
 Obtains the snapshot of a component that has been loaded based on the provided component ID. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)
 > API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)

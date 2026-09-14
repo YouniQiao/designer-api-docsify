@@ -8,11 +8,6 @@ You apply a point light style by setting the light source that emits illuminatio
 
 **System API:** This is a system API.
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## bloom
 
 ```TypeScript

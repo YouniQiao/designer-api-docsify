@@ -13,7 +13,7 @@ function getColors(wallpaperType: WallpaperType, callback: AsyncCallback<Array<R
 ```
 
 获取指定类型壁纸的主要颜色信息。使用callback异步回调。<br>   
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 7开始支持，从API version 9开始废弃。
 
@@ -52,7 +52,7 @@ function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>
 ```
 
 获取指定类型壁纸的主要颜色信息。使用Promise异步回调。<br>   
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 7开始支持，从API version 9开始废弃。
 

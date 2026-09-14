@@ -75,7 +75,7 @@ function getDisallowedBluetoothProtocols(admin: Want | null, accountId: number, 
 
 Obtains the list of disallowed Bluetooth protocols for a specified user under a specified transfer policy.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. This API and
 > [getDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](arkts-mdm-bluetoothmanager-getdisallowedbluetoothprotocols-f.md) are

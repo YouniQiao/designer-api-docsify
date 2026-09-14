@@ -2,7 +2,7 @@
 
 AgentHostProxy用于从[AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)服务端向客户端发送数据或安全认证请求。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本模块接口需要在主线程中使用，不支持在Worker、TaskPool等子线程中使用。
 

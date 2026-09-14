@@ -26,7 +26,7 @@ Obtains a [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) 
 
 | Type | Description |
 | --- | --- |
-| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | KeyboardDelegate** instance. |
+| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | **KeyboardDelegate** instance. |
 
 **Examples**
 

@@ -25,7 +25,7 @@ onBackPress?: OnOverlayBackPressCallback
 
 Callback for intercepting back-press events on an overlay.
 
-**NOTE:**
+**NOTE:** 
 1. When this callback is registered and **enableBackPressedEvent** is set to **true**,
 the back-press event will not close the overlay automatically. Instead, the overlay invokes this callback to decide whether the event should be propagated to the underlying components.
 2. Return **true** to intercept the event (the event is consumed and will not be passed

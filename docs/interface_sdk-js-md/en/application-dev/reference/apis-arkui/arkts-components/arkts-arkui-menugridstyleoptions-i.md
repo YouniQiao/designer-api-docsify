@@ -6,11 +6,6 @@ Defines the grid style of menu.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## count
 
 ```TypeScript

@@ -6,11 +6,6 @@ Represents a tab bar symbol style object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## normal
 
 ```TypeScript

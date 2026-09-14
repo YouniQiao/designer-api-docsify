@@ -8,11 +8,6 @@ BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badgeparam-i.md)，具有B
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## count
 
 ```TypeScript
@@ -21,7 +16,7 @@ count: number
 
 设置提醒消息数。
 
-**说明：**
+**说明：** 
 
 当该值小于等于0且小于maxCount时不显示信息标记。
 

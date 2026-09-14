@@ -6,11 +6,6 @@ Provides the state change information of the camera when the callback is trigger
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## newState
 
 ```TypeScript

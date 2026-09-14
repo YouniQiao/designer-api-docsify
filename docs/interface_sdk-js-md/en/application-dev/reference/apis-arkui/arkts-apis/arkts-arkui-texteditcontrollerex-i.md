@@ -10,11 +10,6 @@ Inherits [TextBaseController](arkts-arkui-textbasecontroller-i.md).
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## getCaretOffset
 
 ```TypeScript

@@ -6,11 +6,6 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## columnEnd
 
 ```TypeScript
@@ -59,7 +54,7 @@ forceRebuild(value: boolean)
 
 Whether to re-create the component when it is being built.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. Whether to re-create the component
 > is automatically determined based on the component attributes and child component changes. No manual
@@ -165,7 +160,7 @@ This attribute must be used before the polymorphic style is set. Otherwise, the 
 selected(value: boolean)
 ```
 
-Sets whether the grid item is selected. This attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+Sets whether the grid item is selected. This attribute supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
 
 This attribute must be used before the polymorphic style is set. Otherwise, the style settings will not take effect.
 

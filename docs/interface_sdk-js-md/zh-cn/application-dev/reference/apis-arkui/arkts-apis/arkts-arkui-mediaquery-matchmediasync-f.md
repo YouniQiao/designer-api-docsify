@@ -14,7 +14,7 @@ function matchMediaSync(condition: string): MediaQueryListener
 
 设置媒体查询的查询条件，并返回对应的监听句柄。
 
-> **说明：**
+> **说明：** 
 > 
 > -matchMediaSync需先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [getMediaQuery](arkts-arkui-arkui-uicontext-uicontext-c.md#getmediaquery)方法获取

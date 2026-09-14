@@ -6,11 +6,6 @@ Label图标样式对象。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## selectedColor
 
 ```TypeScript
@@ -21,7 +16,7 @@ selectedColor?: ResourceColor
 
 默认值：#FF007DFF
 
-**说明：**
+**说明：** 
 
 仅对svg图源生效，设置后会替换svg图片的填充颜色。
 
@@ -47,7 +42,7 @@ unselectedColor?: ResourceColor
 
 默认值：#33182431
 
-**说明：**
+**说明：** 
 
 仅对svg图源生效，设置后会替换svg图片的填充颜色。
 

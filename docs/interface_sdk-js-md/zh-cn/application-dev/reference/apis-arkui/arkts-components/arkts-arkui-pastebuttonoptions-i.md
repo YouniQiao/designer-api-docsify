@@ -2,7 +2,7 @@
 
 用于设置粘贴控件的图标、文本、按钮类型等属性。
 
-> **说明：**
+> **说明：** 
 > - 建议icon或text至少传入一个。
 > 
 > - 如果icon、text都不传入，PasteButton将使用默认样式创建，默认样式：PasteIconStyle默认样式为LINES；PasteDescription默认样式为PASTEButtonType默认样式为Capsule。
@@ -12,11 +12,6 @@
 **起始版本：** 10
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## buttonType
 

@@ -11,10 +11,6 @@
 get?(): any
 ```
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## set
 
 ```TypeScript

@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## decoration
 
 ```TypeScript
@@ -45,7 +40,7 @@ fontColor?: ResourceColor
 
 文本颜色。
 
-默认值：\$r('sys.color.font_primary')。当[shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md)同时设置时，shaderStyle优先级高于fontColor。
+默认值：&#36;r('sys.color.font_primary')。当[shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md)同时设置时，shaderStyle优先级高于fontColor。
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -63,7 +58,7 @@ fontColor?: ResourceColor
 fontFamily?: ResourceStr
 ```
 
-设置字体列表，当前支持'HarmonyOS Sans'字体和[注册自定义字体](../arkts-apis/arkts-font.md)。默认字体:'HarmonyOS Sans'。
+设置字体列表，当前支持'HarmonyOS Sans'字体和[注册自定义字体](../arkts-apis/arkts-arkui-font.md)。默认字体:'HarmonyOS Sans'。
 
 **类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -335,7 +330,7 @@ textShadow?: ShadowOptions | Array<ShadowOptions>
 
 该接口支持以数组形式入参，实现多重文字阴影。
 
-**说明：**
+**说明：** 
 
 仅支持设置阴影模糊半径、颜色和偏移量，不支持智能取色。
 

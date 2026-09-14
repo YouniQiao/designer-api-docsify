@@ -14,7 +14,7 @@ function isConnected(): boolean
 
 查询Wi-Fi是否已连接。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。
 

@@ -12,11 +12,6 @@ Provides the child component layout information.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constraint
 
 ```TypeScript

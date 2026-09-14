@@ -1,10 +1,5 @@
 # setAppBgColor (System API)
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## setAppBgColor
 
 ```TypeScript

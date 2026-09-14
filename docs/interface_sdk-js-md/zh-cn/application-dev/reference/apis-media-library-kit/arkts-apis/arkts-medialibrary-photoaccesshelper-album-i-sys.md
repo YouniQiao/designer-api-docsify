@@ -22,7 +22,7 @@ deleteAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void
 
 从回收站中彻底删除图片或者视频，需要先在回收站中预置文件资源。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 此操作不可逆，执行此操作后文件资源将彻底删除，请谨慎操作。
 
@@ -95,7 +95,7 @@ deleteAssets(assets: Array<PhotoAsset>): Promise<void>
 
 从回收站中彻底删除图片或者视频，需要先在回收站中预置文件资源，建议删除数量不超过1000张。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 此操作不可逆，执行此操作后文件资源将彻底删除，请谨慎操作。
 

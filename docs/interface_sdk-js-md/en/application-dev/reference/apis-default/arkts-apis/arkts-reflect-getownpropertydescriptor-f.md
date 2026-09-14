@@ -22,8 +22,3 @@ Gets the own property descriptor of the specified object. An own property descri
 | --- | --- | --- | --- |
 | target | T | Yes |  |
 | propertyKey | P | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

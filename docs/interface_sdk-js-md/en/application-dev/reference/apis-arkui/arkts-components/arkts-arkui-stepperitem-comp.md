@@ -20,7 +20,7 @@ StepperItem()
 
 Creates a page component for the Stepper container.
 
-> **NOTE:**
+> **NOTE:** 
 
 **Since:** 8
 

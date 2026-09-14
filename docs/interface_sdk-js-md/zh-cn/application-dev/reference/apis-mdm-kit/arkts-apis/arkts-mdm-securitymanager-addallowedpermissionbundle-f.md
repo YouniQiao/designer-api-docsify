@@ -14,7 +14,7 @@ function addAllowedPermissionBundle(admin: Want, permission: string, application
 
 将应用添加至权限使用例外名单，例外名单中的应用不受[setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md)设置的权限禁用策略限制。适用于企业应用场景，如相机权限被禁用时，允许考勤应用、协作办公应用继续使用相机功能，保障企业关键业务正常运行。
 
-> **说明：**
+> **说明：** 
 > 
 > 1.必须先通过[setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md)接口禁用权限后，才能添加应用到权限使用例外名单，否则返回错误码920
 > 1044。

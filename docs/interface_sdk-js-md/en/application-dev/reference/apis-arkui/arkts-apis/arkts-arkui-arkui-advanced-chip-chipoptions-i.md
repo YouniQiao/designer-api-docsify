@@ -2,7 +2,7 @@
 
 Defines the type and style parameters of the chip.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. When **suffixSymbol** is provided with an argument, **suffixIcon** and **allowClose** will not take effect. If
 > **suffixSymbol** is not provided, but **suffixIcon** is, **allowClose** still will not take effect. When neither
@@ -13,15 +13,15 @@ Defines the type and style parameters of the chip.
 > color is used. If an invalid value is specified, the background color is transparent.
 > 
 > 3. Default font colors for **prefixSymbol** and **suffixSymbol**: **normalFontColor**:
-> **[\$r('sys.color.ohos_id_color_primary')]**; **activatedFontColor**:
-> **[\$r('sys.color.ohos_id_color_text_primary_contrary')]**. The default value of **fontColor** is **16**.
+> **[&#36;r('sys.color.ohos_id_color_primary')]**; **activatedFontColor**:
+> **[&#36;r('sys.color.ohos_id_color_text_primary_contrary')]**. The default value of **fontColor** is **16**.
 > 
-> 4. The default value of **fillColor** is **\$r('sys.color.ohos_id_color_secondary')** for **prefixIcon** and
-> **\$r('sys.color.ohos_id_color_primary')** for **suffixIcon**. The color parsing of **fillColor** is the same as
+> 4. The default value of **fillColor** is **&#36;r('sys.color.ohos_id_color_secondary')** for **prefixIcon** and
+> **&#36;r('sys.color.ohos_id_color_primary')** for **suffixIcon**. The color parsing of **fillColor** is the same as
 > that of the **Image** component.
 > 
 > 5. The default value of **activatedFillColor** in **prefixIcon** and **suffixIcon** is
-> **\$r('sys.color.ohos_id_color_text_primary_contrary')**. The color parsing of **activatedFillColor** is the same as
+> **&#36;r('sys.color.ohos_id_color_text_primary_contrary')**. The color parsing of **activatedFillColor** is the same as
 > that of the **Image** component.
 
 **Since:** 11
@@ -166,7 +166,7 @@ activatedBackgroundColor?: ResourceColor
 
 Background color of the chip when it is activated.
 
-Default value: **\$r('sys.color.ohos_id_color_emphasize')**
+Default value: **&#36;r('sys.color.ohos_id_color_emphasize')**
 
 If the value is **undefined**, the default value is used.
 
@@ -230,7 +230,7 @@ backgroundColor?: ResourceColor
 
 Chip background color.
 
-Default value: **\$r('sys.color.ohos_id_color_button_normal')**
+Default value: **&#36;r('sys.color.ohos_id_color_button_normal')**
 
 If the value is **undefined**, the default value is used.
 
@@ -270,7 +270,7 @@ borderRadius?: Dimension
 
 Radius of the rounded corner of the chip background. Percentage is not supported.
 
-Default value: **\$r('sys.float.ohos_id_corner_radius_button')**
+Default value: **&#36;r('sys.float.ohos_id_corner_radius_button')**
 
 If the value is **undefined**, the default value is used.
 
@@ -364,9 +364,9 @@ The priority of **fontSize** is lower than the **fontSize** property in **prefix
 
 Default value:
 
-- When **size** is **ChipSize.SMALL**: **\$r('sys.float.chip_small_font_size')** for text and  
-**\$r('sys.float.chip_small_icon_size')** for icons.  
-- Other cases: **\$r('sys.float.chip_normal_font_size')** for text and **\$r('sys.float.chip_normal_icon_size')** for  
+- When **size** is **ChipSize.SMALL**: **&#36;r('sys.float.chip_small_font_size')** for text and  
+**&#36;r('sys.float.chip_small_icon_size')** for icons.  
+- Other cases: **&#36;r('sys.float.chip_normal_font_size')** for text and **&#36;r('sys.float.chip_normal_icon_size')** for  
 icons.
 
 If the value is **undefined**, the default value is used.

@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## backgroundColor
 
 ```TypeScript
@@ -21,7 +16,7 @@ backgroundColor?: ResourceColor
 
 > 默认值：'sys.color.comp_background_tertiary'
 
-> **说明：**
+> **说明：** 
 > 
 > 当type为PickerIndicatorType.BACKGROUND时生效。
 
@@ -49,7 +44,7 @@ borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
 > 取值范围：取选中项的宽和高之中较小的边长为x，最大不超过x的一半。当取值小于0时，使用默认值；当取值大于最大值时，使用最大值。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 当type为PickerIndicatorType.BACKGROUND时生效。
 > 2. [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)：统一设置四个圆角半径的大小和单位。
@@ -78,7 +73,7 @@ dividerColor?: ResourceColor
 
 > 默认值：'sys.color.comp_divider'
 
-> **说明：**
+> **说明：** 
 > 
 > 当type为PickerIndicatorType.DIVIDER时生效。
 
@@ -108,7 +103,7 @@ endMargin?: LengthMetrics
 
 > 取值范围：startMargin与endMargin之和不得超过UIPickerComponent容器的宽度。设置小于0或startMargin与endMargin之和超过 UIPickerComponent容器的宽度时，使用默认值。不支持“百分比”类型。
 
-> **说明：**
+> **说明：** 
 > 
 > 当type为PickerIndicatorType.DIVIDER时生效。
 
@@ -138,7 +133,7 @@ startMargin?: LengthMetrics
 
 > 取值范围：startMargin与endMargin之和不得超过UIPickerComponent容器的宽度。设置小于0或startMargin与endMargin之和超过 UIPickerComponent容器的宽度时，使用默认值。不支持“百分比”类型。
 
-> **说明：**
+> **说明：** 
 > 
 > 当type为PickerIndicatorType.DIVIDER时生效。
 
@@ -169,7 +164,7 @@ strokeWidth?: LengthMetrics
 > 取值范围：[0, 选中项高度的一半]。strokeWidth小于0或大于选中项高度的一半时使用默认值。注：选中项高度可通过itemHeight属性设置，默认为
 > 40vp，此时取值范围上限为20vp；当itemHeight设置为其他值时，上限相应变化。不支持“百分比”类型。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 当type为PickerIndicatorType.DIVIDER时生效。
 > 2. 通过LengthMetrics.resource方式设置时，使用非长度属性的值会按照0vp处理。

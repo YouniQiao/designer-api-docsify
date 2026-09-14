@@ -8,11 +8,6 @@ DataPanelShadowOptions继承自[MultiShadowOptions](arkts-arkui-multishadowoptio
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## colors
 
 ```TypeScript
@@ -23,7 +18,7 @@ colors?: Array<ResourceColor | LinearGradient>
 
 默认值：与valueColors值相同
 
-**说明：**
+**说明：** 
 
 若设置的投影颜色的个数少于数据段个数时，则显示的投影颜色的个数和设置的投影颜色个数一致。
 

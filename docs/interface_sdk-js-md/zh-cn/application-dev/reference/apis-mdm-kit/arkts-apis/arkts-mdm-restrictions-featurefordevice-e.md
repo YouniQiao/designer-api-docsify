@@ -737,3 +737,17 @@ OTA_UPDATE = 50
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## SYSTEM_ROLLBACK
+
+```TypeScript
+SYSTEM_ROLLBACK = 51
+```
+
+系统回退。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

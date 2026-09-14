@@ -40,7 +40,7 @@ static deleteOrigin(origin: string): void
 
 清除指定源所使用的存储。
 
-> **说明：**
+> **说明：** 
 > 
 > 方法调用关系：
 > 
@@ -75,7 +75,7 @@ static getOriginQuota(origin: string): Promise<number>
 
 以Promise方式异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储配额，配额以字节为单位。
 
-> **说明：**
+> **说明：** 
 > 
 > 方法调用关系：
 > 
@@ -116,7 +116,7 @@ static getOriginQuota(origin: string, callback: AsyncCallback<number>): void
 
 使用callback回调异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储配额，配额以字节为单位。
 
-> **说明：**
+> **说明：** 
 > 
 > 方法调用关系：
 > 
@@ -206,7 +206,7 @@ static getOriginUsage(origin: string): Promise<number>
 
 以Promise方式异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储量，存储量以字节为单位。
 
-> **说明：**
+> **说明：** 
 > 
 > 方法调用关系：
 > 
@@ -247,7 +247,7 @@ static getOriginUsage(origin: string, callback: AsyncCallback<number>): void
 
 以回调方式异步获取指定源的Web SQL数据库和HTML5支持的Web存储API的存储量，存储量以字节为单位。
 
-> **说明：**
+> **说明：** 
 > 
 > 方法调用关系：
 > 

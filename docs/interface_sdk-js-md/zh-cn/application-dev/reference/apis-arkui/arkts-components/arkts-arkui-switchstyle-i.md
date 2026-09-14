@@ -6,11 +6,6 @@ Switch类型的样式。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## pointColor
 
 ```TypeScript
@@ -19,7 +14,7 @@ pointColor?: ResourceColor
 
 设置Switch类型的圆形滑块颜色。
 
-默认值：\$r('sys.color.ohos_id_color_foreground_contrary')
+默认值：&#36;r('sys.color.ohos_id_color_foreground_contrary')
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -39,7 +34,7 @@ pointRadius?: number | Resource
 
 设置Switch类型的圆形滑块半径，单位为vp。
 
-**说明：**
+**说明：** 
 
 不支持百分比，设定值小于0时按照默认算法设置，设定值大于等于0时按照设定值设置。
 
@@ -65,7 +60,7 @@ trackBorderRadius?: number | Resource
 
 设置Switch类型的滑轨的圆角，单位为vp。
 
-**说明：**
+**说明：** 
 
 不支持百分比，设定值小于0时按照默认算法设置，设定值大于组件高度一半时按照组件高度一半设置，其他场合按照设定值设置。
 

@@ -18,5 +18,5 @@ Defines a callback for drag events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [DragEvent](arkts-arkui-dragevent-i.md) | Yes | event**: drag event information, including the coordinates of the drag point. |
-| extraParams | string | No | extraParams**: additional information about the drag event. Its value must be parsed into JSON format. |
+| event | [DragEvent](arkts-arkui-dragevent-i.md) | Yes | **event**: drag event information, including the coordinates of the drag point. |
+| extraParams | string | No | **extraParams**: additional information about the drag event. Its value must be parsed into JSON format. |

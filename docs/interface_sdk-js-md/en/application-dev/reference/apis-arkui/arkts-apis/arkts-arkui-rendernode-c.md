@@ -2,7 +2,7 @@
 
 The **RenderNode** module provides APIs for creating a RenderNode in custom drawing settings with C APIs.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Avoid modifying RenderNodes in BuilderNode. The FrameNode associated
 > with BuilderNode is designed solely for mounting the BuilderNode as a child component. Modifying attributes or
@@ -302,7 +302,7 @@ Performs drawing. You need to implement this API. It is called when the RenderNo
 
 Note: The Canvas provided in the [DrawContext](arkts-arkui-graphics-drawcontext-c.md) parameter is a temporary command- recording canvas, not the actual rendering canvas of the node. For usage instructions, see [Adjusting the Transformation Matrix of the Custom Drawing Canvas](../../../ui/arkts-user-defined-arktsNode-renderNode.md#adjusting-the-transformation-matrix-of-the-custom-drawing-canvas).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > During RenderNode initialization, the **draw** method is invoked twice. The first call occurs when the FrameNode
 > is initially created, triggering the rendering process. The second call occurs when the modifier is initially
@@ -1373,7 +1373,7 @@ Get the background color of the RenderNode.
 
 **Type:** number
 
-**Default:**
+**Default:** 
 - API version 11: 0X00000000
 
 **Since:** 11
@@ -1798,7 +1798,7 @@ Get whether the RenderNode clip to frame.
 
 **Type:** boolean
 
-**Default:**
+**Default:** 
 - API version 11: true
 
 **Since:** 11
@@ -2123,7 +2123,7 @@ Get frame info of the RenderNode.
 
 **Type:** [Frame](arkts-arkui-graphics-frame-i.md)
 
-**Default:**
+**Default:** 
 - API version 11: Frame { x: 0, y: 0, width: 0, height: 0 }
 
 **Since:** 11
@@ -2489,7 +2489,7 @@ Get opacity of the RenderNode.
 
 **Type:** number
 
-**Default:**
+**Default:** 
 - API version 11: 1
 
 **Since:** 11
@@ -2574,7 +2574,7 @@ Get pivot vector of the RenderNode.
 
 **Type:** [Pivot](arkts-arkui-pivot-t.md)
 
-**Default:**
+**Default:** 
 - API version 11: Pivot { x: 0.5, y: 0.5 }
 
 **Since:** 11
@@ -2657,7 +2657,7 @@ Get frame position of the RenderNode.
 
 **Type:** [Position](arkts-arkui-position-t.md)
 
-**Default:**
+**Default:** 
 - API version 11: Position { x: 0, y: 0 }
 
 **Since:** 11
@@ -2740,7 +2740,7 @@ Get rotation vector of the RenderNode.
 
 **Type:** [Rotation](arkts-arkui-rotation-t.md)
 
-**Default:**
+**Default:** 
 - API version 11: Rotation { x: 0, y: 0, z: 0 }
 
 **Since:** 11
@@ -2823,7 +2823,7 @@ Get scale vector of the RenderNode.
 
 **Type:** [Scale](arkts-arkui-scale-t.md)
 
-**Default:**
+**Default:** 
 - API version 11: Scale { x: 1, y: 1 }
 
 **Since:** 11
@@ -2909,7 +2909,7 @@ Get shadow alpha of the RenderNode.
 
 **Type:** number
 
-**Default:**
+**Default:** 
 - API version 11: 0
 
 **Since:** 11
@@ -2993,7 +2993,7 @@ Get shadow color of the RenderNode.
 
 **Type:** number
 
-**Default:**
+**Default:** 
 - API version 11: 0X00000000
 
 **Since:** 11
@@ -3078,7 +3078,7 @@ Get shadow elevation of the RenderNode.
 
 **Type:** number
 
-**Default:**
+**Default:** 
 - API version 11: 0
 
 **Since:** 11
@@ -3163,7 +3163,7 @@ Get shadow offset of the RenderNode.
 
 **Type:** [Offset](arkts-arkui-offset-t.md)
 
-**Default:**
+**Default:** 
 - API version 11: Offset { x: 0, y: 0 }
 
 **Since:** 11
@@ -3254,7 +3254,7 @@ Get shadow radius of the RenderNode.
 
 **Type:** number
 
-**Default:**
+**Default:** 
 - API version 11: 0
 
 **Since:** 11
@@ -3562,7 +3562,7 @@ Get frame size of the RenderNode.
 
 **Type:** Size
 
-**Default:**
+**Default:** 
 - API version 11: Size { width: 0, height: 0 }
 
 **Since:** 11
@@ -3650,7 +3650,7 @@ Get transform info of the RenderNode.
 
 **Type:** [Matrix4](arkts-arkui-matrix4-t.md)
 
-**Default:**
+**Default:** 
 - API version 11: Matrix4 [ 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 ]
 
 **Since:** 11
@@ -3733,7 +3733,7 @@ Get translation vector of the RenderNode.
 
 **Type:** [Translation](arkts-arkui-translation-t.md)
 
-**Default:**
+**Default:** 
 - API version 11: Translation { x: 0, y: 0 }
 
 **Since:** 11

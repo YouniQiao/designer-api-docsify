@@ -8,7 +8,7 @@ declare type InputEventListener = (
 
 输入事件监听器回调函数类型。
 
-> **说明：**
+> **说明：** 
 > 
 > - RawInputEventWrapper是抽象类，开发者无法使用`new`运算符创建实例。
 > 

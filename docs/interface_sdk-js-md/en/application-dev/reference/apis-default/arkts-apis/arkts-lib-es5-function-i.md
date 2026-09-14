@@ -23,10 +23,6 @@ Calls the function, substituting the specified object for the this value of the 
 | thisArg | any | Yes |  |
 | argArray | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## bind
 
 ```TypeScript
@@ -43,10 +39,6 @@ For a given function, creates a bound function that has the same body as the ori
 | thisArg | any | Yes |  |
 | argArray | any[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## call
 
 ```TypeScript
@@ -63,10 +55,6 @@ Calls a method of an object, substituting another object for the current object.
 | thisArg | any | Yes |  |
 | argArray | any[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toString
 
 ```TypeScript
@@ -75,10 +63,6 @@ toString(): string
 
 Returns a string representation of a function.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## arguments
 
 ```TypeScript

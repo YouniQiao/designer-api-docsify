@@ -31,7 +31,7 @@ Concatenates an array of **Buffer** objects of the specified length into a new o
 
 | Type | Description |
 | --- | --- |
-| Buffer | Buffer** object created. |
+| Buffer | **Buffer** object created. |
 
 **Error codes:**
 

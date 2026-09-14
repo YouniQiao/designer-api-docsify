@@ -16,7 +16,7 @@ connectServiceExtensionAbilityWithRootHostToken(want: Want, connect: ConnectOpti
 
 将当前UIExtensionAbility连接到一个[ServiceExtensionAbility](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#onconnect)，通过返回的远程代理对象与ServiceExtensionAbility进行通信，以使用ServiceExtensionAbility对外提供的能力。与此同时，该方法会将UIExtensionAbility的原始宿主Ability的Token传递给被连接的ServiceExtensionAbility，ServiceExtensionAbility可以在[onCreate()](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#oncreate)或[onConnect()](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#onconnect)方法中，通过Want参数的[UI_EXTENSION_ROOT_TOKEN](arkts-ability-wantconstant-params-e.md)获取该Token。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -67,7 +67,7 @@ setHostPageOverlayForbidden(isForbidden: boolean) : void
 
 是否允许[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)拉起的页面被使用方的页面覆盖。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 > 
@@ -109,7 +109,7 @@ startAbilityForResultAsCaller(want: Want, options?: StartOptions): Promise<Abili
 - 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用  
 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口使之终止时，只将正常结果返回给最后一个调用方，其它调用方返回异常信息，异常信息中resultCode为-1。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[设备内组件启动规则（仅对系统应用开放）](../../../application-models/component-startup-rules-inner-device-sys.md)
 > 和[跨设备组件启动规则（仅对系统应用开放）](../../../application-models/component-startup-rules-cross-device-sys.md)。
@@ -212,7 +212,7 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<
 
 启动一个指定系统账号下的ServiceExtensionAbility，用于提供后台服务能力。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[设备内组件启动规则（仅对系统应用开放）](../../../application-models/component-startup-rules-inner-device-sys.md)
 > 和[跨设备组件启动规则（仅对系统应用开放）](../../../application-models/component-startup-rules-cross-device-sys.md)。
@@ -270,7 +270,7 @@ startUIAbilities(wantList: Array<Want>): Promise<void>
 
 同时启动多个UIAbility。使用Promise异步回调。开发者可以传入多个UIAbility对应的Want信息，这些UIAbility可以指向一个或多个应用。当所有的UIAbility都能启动成功时，系统会通过多个窗口同时展示这些UIAbility。根据窗口的处理，不同设备上可能会有不同的展示效果（包括窗口形态、数量和排版布局）。该接口仅在Phone和Tablet设备中可正常调用，在其他设备中返回801错误码。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -329,7 +329,7 @@ startUIAbilitiesInSplitWindowMode(primaryWindowId: number, secondaryWant: Want):
 
 当第一个UIAbility实例被创建后，启动第二个UIAbility，并以分屏模式进行显示。使用Promise异步回调。该接口仅在Phone设备中可正常调用，在其他设备中返回801错误码。
 
-> **说明：**
+> **说明：** 
 > 
 > 如果第一个UIAbility实例被销毁，那么第二个UIAbility将以全屏模式启动。
 > 

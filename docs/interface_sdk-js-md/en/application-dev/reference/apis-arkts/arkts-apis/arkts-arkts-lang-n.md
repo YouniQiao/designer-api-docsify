@@ -1,4 +1,4 @@
-# lang
+# lang(Defines the language features for ArkTS)
 
 ArkTS language
 

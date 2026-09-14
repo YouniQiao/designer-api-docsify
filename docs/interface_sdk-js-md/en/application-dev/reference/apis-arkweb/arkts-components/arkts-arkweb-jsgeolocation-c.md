@@ -8,11 +8,6 @@ JsGeolocation is applicable to scenarios where web pages in the Web component ac
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

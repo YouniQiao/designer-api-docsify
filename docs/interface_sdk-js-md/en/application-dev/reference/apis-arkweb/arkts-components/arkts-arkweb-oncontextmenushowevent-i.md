@@ -6,11 +6,6 @@ Defines the callback information triggered during a call to allow for the displa
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## param
 
 ```TypeScript

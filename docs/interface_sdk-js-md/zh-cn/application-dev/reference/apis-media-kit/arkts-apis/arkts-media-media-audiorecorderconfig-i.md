@@ -1,7 +1,7 @@
 # AudioRecorderConfig
 
 
-> **说明：**
+> **说明：** 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用[AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md)替代。
 
 表示音频的录音配置。

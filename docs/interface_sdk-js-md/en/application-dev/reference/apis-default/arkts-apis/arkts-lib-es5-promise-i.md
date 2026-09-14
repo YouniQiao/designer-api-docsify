@@ -25,6 +25,8 @@ Attaches a callback for only the rejection of the Promise.
 
 | Type | Description |
 | --- | --- |
+| Promise&lt;T &#124; TResult&gt; | A Promise for the completion of the callback. |
+
 ## then
 
 ```TypeScript
@@ -44,3 +46,4 @@ Attaches callbacks for the resolution and/or rejection of the Promise.
 
 | Type | Description |
 | --- | --- |
+| Promise&lt;TResult1 &#124; TResult2&gt; | A Promise for the completion of which ever callback is executed. |

@@ -11,10 +11,10 @@
 - [DeviceKVStore&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkdata-distributeddata-devicekvstore-i.md)：设备协同数据库，继承自  
 [KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md)，以设备维度对数据进行区分，提供查询数据和同步数据的方法。
 
-> **说明：**
+> **说明：** 
 
 > - 从API Version 9开始，该接口不再维护，推荐使用新接口
-> [`@ohos.data.distributedKVStore`](arkts-data-distributedkvstore.md)。
+> [`@ohos.data.distributedKVStore`](arkts-arkdata-data-distributedkvstore.md)。
 
 > - 本模块中所有需要获取deviceId的接口，都仅系统应用可用。
 
@@ -22,7 +22,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [distributedKVStore](arkts-data-distributedkvstore.md)
+**替代接口：** [distributedKVStore](arkts-arkdata-data-distributedkvstore.md)
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 

@@ -2,7 +2,7 @@
 
 配置分段按钮选项参数。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 当配置`symbol`和`icon`时，`symbol`的显示优先级更高。
 > 
@@ -150,7 +150,7 @@ iconModifier?: ImageModifier
 
 装饰器类型：@Trace
 
-**类型：** [ImageModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
+**类型：** [ImageModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
 **起始版本：** 18
 
@@ -194,7 +194,7 @@ symbolModifier?: SymbolGlyphModifier
 
 装饰器类型：@Trace
 
-**类型：** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
+**类型：** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
 **起始版本：** 18
 
@@ -238,7 +238,7 @@ textModifier?: TextModifier
 
 装饰器类型：@Trace
 
-**类型：** [TextModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
+**类型：** [TextModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
 **起始版本：** 18
 

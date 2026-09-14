@@ -6,11 +6,6 @@ Defines the parameters for an image-like particle. @interface ImageParticleParam
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## objectFit
 
 ```TypeScript

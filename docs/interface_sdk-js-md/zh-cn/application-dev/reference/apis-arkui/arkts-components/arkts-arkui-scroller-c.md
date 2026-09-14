@@ -2,7 +2,7 @@
 
 可滚动容器组件的控制器，可以将此组件绑定至容器组件，然后通过它控制容器组件的滚动。同一个控制器不可以控制多个容器组件，目前支持绑定到ArcList、ArcScrollBar、List、Scroll、ScrollBar、Grid、WaterFlow上。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. Scroller控制器与滚动容器组件的绑定发生在组件创建阶段。
 
@@ -24,11 +24,6 @@ scroller: Scroller = new Scroller();
 **起始版本：** 7
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## constructor
 
@@ -52,7 +47,7 @@ contentSize(): SizeResult
 
 获取滚动组件内容总大小。
 
-> **说明：**
+> **说明：** 
 > 
 > - Grid、List、WaterFlow和Scroll组件主轴方向内容大小为所有子组件布局后的总大小，交叉轴方向内容大小为组件自身交叉轴方向大小减去padding和border后的大小。
 > 
@@ -96,7 +91,7 @@ currentOffset() : OffsetResult
 
 获取当前的滚动总偏移量。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 当Scroller没有和组件绑定时，该接口会返回undefined，但是接口中没有声明。推荐使用[offset](#offset)函数，其返回类型显式包含undefined。
 > 
@@ -135,7 +130,7 @@ fling(velocity: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| velocity | number | 是 | 惯性滚动的初始速度值。单位：vp/s<br>**说明：**<br>velocity值设置为0时，本次滚动不生效且不会产生滚动动画。如果值为正数，则向顶部滚动；如果值为负数，则向底部滚动。 |
+| velocity | number | 是 | 惯性滚动的初始速度值。单位：vp/s<br>**说明：** <br>velocity值设置为0时，本次滚动不生效且不会产生滚动动画。如果值为正数，则向顶部滚动；如果值为负数，则向底部滚动。 |
 
 **错误码：**
 
@@ -174,7 +169,7 @@ getItemIndex(x: number, y: number): number
 
 通过坐标获取子组件的索引。
 
-> **说明：**
+> **说明：** 
 > 
 > 支持List、Grid、WaterFlow组件。
 
@@ -214,7 +209,7 @@ getItemRect(index: number): RectResult
 
 获取子组件的大小及相对容器组件的位置。
 
-> **说明：**
+> **说明：** 
 > 
 > 支持ArcList、Scroll、List、Grid、WaterFlow组件。
 
@@ -253,7 +248,7 @@ isAtEnd(): boolean
 
 查询组件是否滚动到底部。
 
-> **说明：**
+> **说明：** 
 > 
 > 支持ArcList、Scroll、List、Grid、WaterFlow组件。
 
@@ -301,7 +296,7 @@ scrollBy(dx: Length, dy: Length)
 
 滑动指定距离。
 
-> **说明：**
+> **说明：** 
 > 
 > - 支持ArcList、Scroll、List、Grid、WaterFlow组件。
 > 
@@ -400,7 +395,7 @@ scrollTo(options: ScrollOptions)
 
 滑动到指定位置，可用于目录跳转、返回顶部、搜索结果定位等场景。
 
-> **说明：**
+> **说明：** 
 > 
 > - scrollTo动画速度大于200vp/s时，滚动组件区域内的组件不响应点击事件。
 > 
@@ -436,7 +431,7 @@ scrollToIndex(value: number, smooth?: boolean, align?: ScrollAlign, options?: Sc
 
 开启smooth动画时，会对经过的所有item进行加载和布局计算。当大量加载item时会导致性能问题，开发者应先调用scrollToIndex不带动画跳转到目标附近位置，再调用scrollToIndex带动画滚动到目标位置，以优化性能。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 仅支持ArcList、Grid、List、WaterFlow组件。
 > 

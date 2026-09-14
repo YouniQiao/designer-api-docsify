@@ -42,6 +42,8 @@ columnsGap(value: LengthMetrics | undefined): T
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## footer
 
 ```TypeScript
@@ -68,6 +70,8 @@ footer(builder: CustomBuilder | undefined): T
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## header
 
 ```TypeScript
@@ -94,6 +98,8 @@ header(builder: CustomBuilder | undefined): T
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## onVisibleIndexesChange
 
 ```TypeScript
@@ -120,6 +126,8 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## rowsGap
 
 ```TypeScript
@@ -146,6 +154,8 @@ rowsGap(value: LengthMetrics | undefined): T
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## sticky
 
 ```TypeScript
@@ -172,3 +182,4 @@ sticky(sticky: StickyStyle | undefined): T
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |

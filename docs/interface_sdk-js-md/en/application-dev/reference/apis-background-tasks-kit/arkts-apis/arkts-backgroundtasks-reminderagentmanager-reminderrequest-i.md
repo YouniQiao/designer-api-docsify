@@ -66,7 +66,7 @@ Reminder content.
 contentResourceId?: number
 ```
 
-Resource ID of the reminder content, which can be obtained through \$r(*resource-name*).id.
+Resource ID of the reminder content, which can be obtained through &#36;r(*resource-name*).id.
 
 **Type:** number
 
@@ -108,7 +108,7 @@ Content to be displayed after the reminder expires.
 expiredContentResourceId?: number
 ```
 
-Resource ID of the content to be displayed after the reminder expires, which can be obtained through \$r(*resource -name*).id.
+Resource ID of the content to be displayed after the reminder expires, which can be obtained through &#36;r(*resource -name*).id.
 
 **Type:** number
 
@@ -250,7 +250,7 @@ slotType?: notification.SlotType
 
 Type of the slot used by the reminder.
 
-**Type:** [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notificationmanager.md)
+**Type:** [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager.md)
 
 **Since:** 9
 
@@ -276,7 +276,7 @@ Content to be displayed when the reminder is snoozing. (It is not applicable to 
 snoozeContentResourceId?: number
 ```
 
-Resource ID of the content to be displayed when the reminder is snoozing, which can be obtained through \$r(*resource-name*).id.
+Resource ID of the content to be displayed when the reminder is snoozing, which can be obtained through &#36;r(*resource-name*).id.
 
 **Type:** number
 
@@ -292,7 +292,7 @@ snoozeSlotType?: notification.SlotType
 
 Type of the slot used by the snoozed reminder. (It is not applicable to countdown reminders.)
 
-**Type:** [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notificationmanager.md)
+**Type:** [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager.md)
 
 **Since:** 11
 
@@ -365,7 +365,7 @@ Reminder title.
 titleResourceId?: number
 ```
 
-Resource ID of the reminder title, which can be obtained through \$r(*resource-name*).id.
+Resource ID of the reminder title, which can be obtained through &#36;r(*resource-name*).id.
 
 **Type:** number
 

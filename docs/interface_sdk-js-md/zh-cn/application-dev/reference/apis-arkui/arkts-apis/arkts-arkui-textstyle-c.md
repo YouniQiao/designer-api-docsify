@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript
@@ -159,7 +154,7 @@ readonly fontWeight?: number
 
 默认值：400
 
-**说明：**
+**说明：** 
 
 返回值为string类型，具体返回值和设置值关系参见下方表格。
 

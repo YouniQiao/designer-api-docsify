@@ -135,7 +135,7 @@ getMainWindow(): Promise<Window>
 
 获取该WindowStage实例下的主窗口，使用Promise异步回调。
 
-调用该接口前，建议先通过[loadContent](arkts-arkui-window-window-i.md#loadcontent)方法或者setUIContent方法完成页面加载。
+调用该接口前，建议先通过[loadContent](arkts-arkui-window-window-i.md#loadcontent)方法或者[setUIContent](arkts-arkui-window-window-i.md#setuicontent)方法完成页面加载。
 
 **起始版本：** 9
 
@@ -166,7 +166,7 @@ getMainWindow(callback: AsyncCallback<Window>): void
 
 获取该WindowStage实例下的主窗口，使用callback异步回调。
 
-调用该接口前，建议先通过[loadContent](arkts-arkui-window-window-i.md#loadcontent)方法或者setUIContent方法完成页面加载。
+调用该接口前，建议先通过[loadContent](arkts-arkui-window-window-i.md#loadcontent)方法或者[setUIContent](arkts-arkui-window-window-i.md#setuicontent)方法完成页面加载。
 
 **起始版本：** 9
 

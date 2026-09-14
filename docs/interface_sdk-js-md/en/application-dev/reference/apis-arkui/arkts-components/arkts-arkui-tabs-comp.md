@@ -8,7 +8,7 @@ The **Tabs** component is a container component that allows users to switch betw
 
 Only the child component TabContent and rendering control types [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) and [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md) are supported. You are advised not to use custom components as child components. If **if/else** or **ForEach** is used, only **TabContent** can be used as the child component. You are advised not to use custom components as child components.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If the child component has the **visibility** attribute set to **None** or **Hidden**, it is hidden but still takes
 > up space in the layout.

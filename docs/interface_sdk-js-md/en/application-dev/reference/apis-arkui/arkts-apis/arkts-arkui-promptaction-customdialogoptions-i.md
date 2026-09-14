@@ -20,7 +20,7 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the dialog box. <br>Default value: **BlurStyle.COMPONENT_ULTRA_THICK** <br>**NOTE:**<br>Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
+Background blur style of the dialog box. <br>Default value: **BlurStyle.COMPONENT_ULTRA_THICK** <br>**NOTE:** <br>Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
 **Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
@@ -40,7 +40,7 @@ Background blur style of the dialog box. <br>Default value: **BlurStyle.COMPONEN
 backgroundColor?: ResourceColor
 ```
 
-Background color of the dialog box.<br>Default value: **Color.Transparent**. <br>**NOTE:**<br>When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to **BlurStyle.NONE**; otherwise, the color display may not meet the expected effect.
+Background color of the dialog box.<br>Default value: **Color.Transparent**. <br>**NOTE:** <br>When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to **BlurStyle.NONE**; otherwise, the color display may not meet the expected effect.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -112,7 +112,7 @@ Border width of the dialog box. <br>You can set the width for all four sides or 
 builder: CustomBuilder
 ```
 
-Custom content of the dialog box. <br>**NOTE:**<br>The builder needs to be assigned an arrow function in the following format: () =&gt; { this.XXX() }, where XXX indicates the internal builder name. <br>Global builders must be created inside the component and called within the internal builder. <br>The width and height percentages of the builder's root node are relative to the size of the dialog box container. <br>The width and height percentages of non-root nodes are relative to the size of their parent node.
+Custom content of the dialog box. <br>**NOTE:** <br>The builder needs to be assigned an arrow function in the following format: () =&gt; { this.XXX() }, where XXX indicates the internal builder name. <br>Global builders must be created inside the component and called within the internal builder. <br>The width and height percentages of the builder's root node are relative to the size of the dialog box container. <br>The width and height percentages of non-root nodes are relative to the size of their parent node.
 
 **Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
 
@@ -148,7 +148,7 @@ Corner radius of the background. <br>You can set separate radii for the four cor
 height?: Dimension
 ```
 
-Height of the dialog box. <br>**NOTE:**<br>- Default maximum height of the dialog box: 0.9 x (Window height – Safe area) <br>- When this parameter is set to a percentage, the reference height of the dialog box is the height of the window where the dialog box is located minus the safe area. You can decrease or increase the height as needed.
+Height of the dialog box. <br>**NOTE:** <br>- Default maximum height of the dialog box: 0.9 x (Window height – Safe area) <br>- When this parameter is set to a percentage, the reference height of the dialog box is the height of the window where the dialog box is located minus the safe area. You can decrease or increase the height as needed.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -184,7 +184,7 @@ Shadow of the dialog box. <br>Default value on 2-in-1 devices: **ShadowStyle.OUT
 width?: Dimension
 ```
 
-Width of the dialog box. <br>**NOTE:**<br>- Default maximum width of the dialog box: 400 vp <br>- Percentage-based configuration: The reference width of the dialog box is adjusted based on the width of the window where the dialog box is located.
+Width of the dialog box. <br>**NOTE:** <br>- Default maximum width of the dialog box: 400 vp <br>- Percentage-based configuration: The reference width of the dialog box is adjusted based on the width of the window where the dialog box is located.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 

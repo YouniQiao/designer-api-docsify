@@ -118,7 +118,7 @@ readonly buttonBackgroundColor?: ColorMetrics
 
 Background color of the segmented button.
 
-Default value: **\$r('sys.color.segment_button_v2_tab_button_background')**
+Default value: **&#36;r('sys.color.segment_button_v2_tab_button_background')**
 
 If the value is **undefined**, the default value is used.
 
@@ -166,7 +166,7 @@ Background border radius of the segmented button.
 
 Value range: [0, +∞)
 
-Default value: **\$r('sys.float.segment_button_v2_background_corner_radius')**
+Default value: **&#36;r('sys.float.segment_button_v2_background_corner_radius')**
 
 If the value is out of the range, the default value is used.
 
@@ -192,7 +192,7 @@ Minimum height of the segmented button.
 
 Value range: [0, +∞)
 
-Default value: **\$r('sys.float.segment_button_v2_singleline_background_height')** for text-only buttons and icon- only buttons, and **\$r('sys.float.segment_button_v2_doubleline_background_height')** for buttons with both an icon and text.
+Default value: **&#36;r('sys.float.segment_button_v2_singleline_background_height')** for text-only buttons and icon- only buttons, and **&#36;r('sys.float.segment_button_v2_doubleline_background_height')** for buttons with both an icon and text.
 
 If the value is out of the range, the default value is used.
 
@@ -218,7 +218,7 @@ Padding of the segmented button.
 
 Value range: [0, +∞)
 
-Default value: **\$r('sys.float.padding_level1')**
+Default value: **&#36;r('sys.float.padding_level1')**
 
 If the value is out of the range, the default value is used.
 
@@ -262,7 +262,7 @@ Border radius of segmented button items.
 
 Value range: [0, +∞)
 
-Default value: **\$r('sys.float.segment_button_v2_selected_corner_radius')**.
+Default value: **&#36;r('sys.float.segment_button_v2_selected_corner_radius')**.
 
 If the value is out of the range, the default value is used.
 
@@ -286,11 +286,11 @@ readonly itemFontColor?: ColorMetrics
 
 Font color of the selected segmented button item.
 
-Default value: **\$r('sys.color.font_primary')**.
+Default value: **&#36;r('sys.color.font_primary')**.
 
 If the value is **undefined**, the default value is used.
 
-**NOTE:**
+**NOTE:** 
 
 When **fontColor** of **textModifier** is set for **items**, **itemSelectedFontColor** has no effect.
 
@@ -318,7 +318,7 @@ Value range: [0, +∞)
 
 Default value: **14fp**
 
-**NOTE:**
+**NOTE:** 
 
 Percentage values are not supported. If an invalid value is set, the default value is used.
 
@@ -348,7 +348,7 @@ Default value: **FontWeight.Medium**
 
 If the value is out of the range, the default value is used.
 
-**NOTE:**
+**NOTE:** 
 
 When **fontWeight** of **textModifier** is set for **items**, **itemFontWeight** has no effect.
 
@@ -372,11 +372,11 @@ readonly itemIconFillColor?: ColorMetrics
 
 Icon color of unselected segmented button items.
 
-Default value: **\$r('sys.color.font_secondary')**
+Default value: **&#36;r('sys.color.font_secondary')**
 
 If the value is **undefined**, the default value is used.
 
-**NOTE:**
+**NOTE:** 
 
 When **fillColor** of **iconModifier** is set for **items**, **itemIconFillColor** has no effect.
 
@@ -406,7 +406,7 @@ Default value: **{ width: LengthMetrics.vp(24), height: LengthMetrics.vp(24) }**
 
 If the value is out of the range, the default value is used.
 
-**NOTE:**
+**NOTE:** 
 
 When **width** and **height** of **iconModifier** are set for **items**, **itemIconSize** has no effect.
 
@@ -434,7 +434,7 @@ Value range: [1, 2]
 
 Default value: **1**
 
-**NOTE:**
+**NOTE:** 
 
 A value less than 1 is treated as **1**. A value greater than 2 is treated as **2**. Abnormal values are ineffective by default.
 
@@ -462,7 +462,7 @@ Value range: [0, 1]
 
 Default value: **0**
 
-**NOTE:**
+**NOTE:** 
 
 A value less than 0 is treated as **0**. A value greater than 1 is treated as **1**. Abnormal values are ineffective by default.
 
@@ -490,7 +490,7 @@ Value range: [0, +∞)
 
 Default value:
 
-**\$r('sys.float.segment_button_v2_singleline_selected_height')** for text-only buttons and icon-only buttons, and **\$r('sys.float.segment_button_v2_doubleline_selected_height')** for buttons with both an icon and text.
+**&#36;r('sys.float.segment_button_v2_singleline_selected_height')** for text-only buttons and icon-only buttons, and **&#36;r('sys.float.segment_button_v2_doubleline_selected_height')** for buttons with both an icon and text.
 
 If the value is out of the range, the default value is used.
 
@@ -514,7 +514,7 @@ readonly itemPadding?: LocalizedPadding
 
 Padding of the segmented button item.
 
-Default value: **{top: LengthMetrics.resource (\$r('sys.float.padding_level2')), bottom: LengthMetrics. resource (\$r('sys.float.padding_level2')), start: LengthMetrics.resource(\$r('sys.float.padding_level4')), end: LengthMetrics.resource(\$r('sys.float.padding_level4'))}**
+Default value: **{top: LengthMetrics.resource (&#36;r('sys.float.padding_level2')), bottom: LengthMetrics. resource (&#36;r('sys.float.padding_level2')), start: LengthMetrics.resource(&#36;r('sys.float.padding_level4')), end: LengthMetrics.resource(&#36;r('sys.float.padding_level4'))}**
 
 If the value is **undefined**, the default value is used.
 
@@ -562,7 +562,7 @@ readonly itemSelectedBackgroundColor?: ColorMetrics
 
 Background color of the selected segmented button item.
 
-Default value: **\$r('sys.color.segment_button_v2_tab_selected_item_background')**
+Default value: **&#36;r('sys.color.segment_button_v2_tab_selected_item_background')**
 
 If the value is **undefined**, the default value is used.
 
@@ -586,11 +586,11 @@ readonly itemSelectedFontColor?: ColorMetrics
 
 Font color of the selected segmented button item.
 
-Default value: **\$r('sys.color.font_primary')**.
+Default value: **&#36;r('sys.color.font_primary')**.
 
 If the value is **undefined**, the default value is used.
 
-**NOTE:**
+**NOTE:** 
 
 When **fontColor** of **textModifier** is set for **items**, **itemSelectedFontColor** has no effect.
 
@@ -618,7 +618,7 @@ Value range: [0, +∞)
 
 Default value: **14fp**
 
-**NOTE:**
+**NOTE:** 
 
 Percentage values are not supported. If an invalid value is set, the default value is used.
 
@@ -648,7 +648,7 @@ Default value: **FontWeight.Medium**
 
 If the value is out of the range, the default value is used.
 
-**NOTE:**
+**NOTE:** 
 
 When **fontWeight** of **textModifier** is set for **items**, **itemSelectedFontWeight** has no effect.
 
@@ -672,11 +672,11 @@ readonly itemSelectedIconFillColor?: ColorMetrics
 
 Icon color of the selected segmented button item.
 
-Default value: **\$r('sys.color.font_primary')**
+Default value: **&#36;r('sys.color.font_primary')**
 
 If the value is **undefined**, the default value is used.
 
-**NOTE:**
+**NOTE:** 
 
 When **fillColor** of **iconModifier** is set for **items**, **itemSelectedIconFillColor** has no effect.
 
@@ -700,11 +700,11 @@ readonly itemSelectedSymbolFontColor?: ColorMetrics
 
 HM Symbol icon color of the selected segmented button item.
 
-Default value: **\$r('sys.color.font_primary')**
+Default value: **&#36;r('sys.color.font_primary')**
 
 If the value is **undefined**, the default value is used.
 
-**NOTE:**
+**NOTE:** 
 
 When **fontColor** of **symbolModifier** is set for **items**, **itemSelectedSymbolFontColor** has no effect.
 
@@ -756,7 +756,7 @@ Value range: [0, +∞)
 
 Default value: **LengthMetrics.vp(0)**
 
-**NOTE:**
+**NOTE:** 
 
 Percentage values are not supported. If an invalid value is set, the default value is used.
 
@@ -780,11 +780,11 @@ readonly itemSymbolFontColor?: ColorMetrics
 
 HM Symbol icon color of unselected segmented button items.
 
-Default value: **\$r('sys.color.font_secondary')**
+Default value: **&#36;r('sys.color.font_secondary')**
 
 If the value is **undefined**, the default value is used.
 
-**NOTE:**
+**NOTE:** 
 
 When **fontColor** of **symbolModifier** is set for **items**, **itemSymbolFontColor** has no effect.
 
@@ -812,7 +812,7 @@ Value range: [0, +∞)
 
 Default value: **20fp**
 
-**NOTE:**
+**NOTE:** 
 
 Percentage values are not supported. If an invalid value is set, the default value is used.
 

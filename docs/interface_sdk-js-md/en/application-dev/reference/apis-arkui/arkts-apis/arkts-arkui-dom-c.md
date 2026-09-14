@@ -32,3 +32,4 @@ create a dynamic dom by tag, return element
 
 | Type | Description |
 | --- | --- |
+| Element |  |

@@ -174,7 +174,7 @@ public activatedBackgroundColor?: ColorMetrics
 
 ChipV2激活时的背景颜色。
 
-默认值：\$r('sys.color.chip_container_activated_color')
+默认值：&#36;r('sys.color.chip_container_activated_color')
 
 值为undefined时，按默认值处理。
 
@@ -250,7 +250,7 @@ public backgroundColor?: ColorMetrics
 
 ChipV2背景颜色。
 
-默认值：\$r('sys.color.chip_background_color')
+默认值：&#36;r('sys.color.chip_background_color')
 
 值为undefined时，按默认值处理。
 
@@ -300,9 +300,9 @@ ChipV2背景圆角半径大小，不支持百分比。传入百分比时按默�
 
 默认值：
 
-size为ChipV2Size.NORMAL时，borderRadius默认值为：`\$r('sys.float.chip_border_radius_normal')`。
+size为ChipV2Size.NORMAL时，borderRadius默认值为：`&#36;r('sys.float.chip_border_radius_normal')`。
 
-size为ChipV2Size.SMALL时，borderRadius默认值为：`\$r('sys.float.chip_border_radius_small')`
+size为ChipV2Size.SMALL时，borderRadius默认值为：`&#36;r('sys.float.chip_border_radius_small')`
 
 单位：vp
 
@@ -330,8 +330,8 @@ public closeIcon?: ChipV2CloseIcon
 
 默认值：
 
-- 尺寸默认值：size为ChipV2Size.SMALL时，默认值为`\$r('sys.float.chip_small_font_size')`；其他情况默认值为  
-`\$r('sys.float.chip_normal_font_size')`。  
+- 尺寸默认值：size为ChipV2Size.SMALL时，默认值为`&#36;r('sys.float.chip_small_font_size')`；其他情况默认值为  
+`&#36;r('sys.float.chip_normal_font_size')`。  
 - 无障碍默认值：无无障碍描述。
 
 值为undefined时，按默认值处理。
@@ -410,8 +410,8 @@ public fontSize?: LengthMetrics
 
 默认值：
 
-- size为ChipV2Size.SMALL时，文本默认值：`\$r('sys.float.chip_small_font_size')`；图标默认值：`\$r('sys.float.chip_small_icon_size')`。  
-- 其他情况下，文本默认值：`\$r('sys.float.chip_normal_font_size')`；图标默认值：`\$r('sys.float.chip_normal_icon_size')`
+- size为ChipV2Size.SMALL时，文本默认值：`&#36;r('sys.float.chip_small_font_size')`；图标默认值：`&#36;r('sys.float.chip_small_icon_size')`。  
+- 其他情况下，文本默认值：`&#36;r('sys.float.chip_normal_font_size')`；图标默认值：`&#36;r('sys.float.chip_normal_icon_size')`
 
 单位：fp
 
@@ -605,7 +605,7 @@ ChipV2尺寸。
 
 SizeT&lt;LengthMetrics&gt;类型参数不支持百分比设置，异常值按默认值处理。
 
-**说明：**[适老化](../../../ui/arkui-support-for-aging-adaptation.md)在size指定具体宽高时不生效，size设置为{ height: 0, width: 0 }除外。
+**说明：** [适老化](../../../ui/arkui-support-for-aging-adaptation.md)在size指定具体宽高时不生效，size设置为{ height: 0, width: 0 }除外。
 
 **类型：** [ChipV2Size](arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) &#124; [SizeT](arkts-arkui-graphics-sizet-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt;
 

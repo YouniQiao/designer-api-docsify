@@ -39,7 +39,7 @@ Closes the **KvStoreResultSet** object obtained by [SingleKVStore.getResultSet](
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resultSet | [KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md) | Yes | KvStoreResultSet** object to close. |
+| resultSet | [KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md) | Yes | **KvStoreResultSet** object to close. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
@@ -80,7 +80,7 @@ Closes the **KvStoreResultSet** object obtained by [SingleKVStore.getResultSet](
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resultSet | [KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md) | Yes | KvStoreResultSet** object to close. |
+| resultSet | [KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md) | Yes | **KvStoreResultSet** object to close. |
 
 **Return value:**
 
@@ -395,7 +395,7 @@ Obtains the KV pairs that match the specified **Query** object. This API uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | **Query** object to match. |
 
 **Return value:**
 
@@ -583,7 +583,7 @@ Obtains a **KvStoreResultSet** object that matches the specified **Query** objec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | **Query** object to match. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md)&gt; | Yes | Callback used to return the **KvStoreResultSet** object obtained. |
 
 **Examples**
@@ -638,7 +638,7 @@ Obtains a **KvStoreResultSet** object that matches the specified **Query** objec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | **Query** object to match. |
 
 **Return value:**
 
@@ -702,7 +702,7 @@ Obtains the number of results that match the specified **Query** object. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | **Query** object to match. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of results that match the specified **Query** object. |
 
 **Examples**
@@ -755,7 +755,7 @@ Obtains the number of results that match the specified **Query** object. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | **Query** object to match. |
 
 **Return value:**
 

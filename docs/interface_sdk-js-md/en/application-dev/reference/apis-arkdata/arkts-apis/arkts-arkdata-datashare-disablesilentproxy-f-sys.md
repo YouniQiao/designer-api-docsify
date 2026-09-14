@@ -35,7 +35,7 @@ Observe the following when using this API:
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the application. |
-| uri | string | No | URI of the data, for which silent access is to be disabled.Global setting: If **uri** is **undefined** or **null** or is not specified, all the previous settings will be cleared and silent access will be disabled globally for the data provider.URI-specific setting: If a URI is specified, silent access to the specified URI will be disabled.When datashareHelper APIs are called, the URI-specific setting is preferentially applied. If no match is found, the global setting is applied.URI format: **datashare:///{bundleName}/{moduleName}/{storeName}/{tableName} |
+| uri | string | No | URI of the data, for which silent access is to be disabled.Global setting: If **uri** is **undefined** or **null** or is not specified, all the previous settings will be cleared and silent access will be disabled globally for the data provider.URI-specific setting: If a URI is specified, silent access to the specified URI will be disabled.When datashareHelper APIs are called, the URI-specific setting is preferentially applied. If no match is found, the global setting is applied.URI format: **datashare:///{bundleName}/{moduleName}/{storeName}/{tableName}** |
 
 **Return value:**
 

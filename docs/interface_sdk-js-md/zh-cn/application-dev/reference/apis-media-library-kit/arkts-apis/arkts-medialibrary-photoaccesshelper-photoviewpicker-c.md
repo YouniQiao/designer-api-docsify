@@ -2,7 +2,7 @@
 
 图库选择器对象用于支持选择图片、视频等用户场景。使用前，需先创建PhotoViewPicker实例。
 
-> **说明：**
+> **说明：** 
 > 
 > - 如果需要重复拉起PhotoViewPicker，需要先通过NavDestination或跟随进程销毁前一个photoViewPicker。
 

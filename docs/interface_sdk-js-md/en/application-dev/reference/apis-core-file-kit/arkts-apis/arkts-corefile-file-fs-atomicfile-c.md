@@ -234,7 +234,7 @@ Creates a **ReadStream** instance.
 
 | Type | Description |
 | --- | --- |
-| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | ReadStream** instance obtained. |
+| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | **ReadStream** instance obtained. |
 
 **Error codes:**
 
@@ -348,7 +348,7 @@ Call **finishWrite()** if the write operation is successful; call **failWrite()*
 
 | Type | Description |
 | --- | --- |
-| [WriteStream](arkts-corefile-file-fs-writestream-c.md) | WriteStream** instance obtained. |
+| [WriteStream](arkts-corefile-file-fs-writestream-c.md) | **WriteStream** instance obtained. |
 
 **Error codes:**
 

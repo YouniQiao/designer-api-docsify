@@ -12,7 +12,7 @@ Panel(show: boolean)
 
 滑动面板组件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 12开始废弃。
 

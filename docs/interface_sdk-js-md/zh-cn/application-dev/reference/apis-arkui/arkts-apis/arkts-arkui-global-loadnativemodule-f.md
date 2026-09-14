@@ -13,7 +13,7 @@ export declare function loadNativeModule(moduleName: string): Object
 
 同步动态加载native模块，目的是按需加载所需要的模块。使用该接口会增加so文件的加载时间，使用前需评估其对应用性能和功能的影响。
 
-> **说明：**
+> **说明：** 
 > 
 > loadNativeModule加载的模块名称为依赖方oh-package.json5文件的dependencies字段中声明的依赖名称。
 > 

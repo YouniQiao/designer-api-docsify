@@ -8,11 +8,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## childrenMainSize
 
 ```TypeScript
@@ -21,7 +16,7 @@ childrenMainSize(value: ChildrenMainSize)
 
 Sets the size information of the child components of a **ListItemGroup** component along the main axis.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The **childrenMainSize** attribute of the **List** component must be set at the same time for the attribute to
 > take effect.

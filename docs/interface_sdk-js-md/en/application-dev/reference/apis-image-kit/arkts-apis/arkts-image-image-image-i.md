@@ -24,7 +24,7 @@ getBufferData(): ImageBufferData | null
 
 Obtains ImageBufferData from an image.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **byteBuffer** in **ImageBufferData** is a shallow copy of the internal buffer. When the lifecycle of an image
 > ends, do not perform any operations on **byteBuffer**, as this may lead to undefined behavior.

@@ -18,7 +18,7 @@ function getSystemFontList(): Array<string>
 
 推荐使用[getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md)接口获取系统最新支持的字体列表数据。
 
-> **说明：**
+> **说明：** 
 > 
 > -getSystemFontList需要先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > getFont方法获取

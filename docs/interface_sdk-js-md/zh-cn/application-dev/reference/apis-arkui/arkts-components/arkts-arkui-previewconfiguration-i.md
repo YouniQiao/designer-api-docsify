@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## delayCreating
 
 ```TypeScript
@@ -41,7 +36,7 @@ onlyForLifting?: boolean
 
 自定义配置的预览图是否仅用于浮起。
 
-**说明：**
+**说明：** 
 
 默认值为false。true表示自定义预览图仅用于浮起，false表示可用于浮起和拖拽。设置为true时，如果发起长按拖拽，浮起时的预览图为自定义配置的预览图，拖拽时的预览图不使用[dragPreview](arkts-arkui-commonmethod-c.md#dragpreview)属性，优先使用开发者在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)中返回的预览图，如果[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)中没有返回预览图则使用组件自截图。
 

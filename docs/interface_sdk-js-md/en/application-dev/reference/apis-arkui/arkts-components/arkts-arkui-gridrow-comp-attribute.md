@@ -8,11 +8,6 @@ In addition to the [universal events](arkts-arkui-commonmethod-c.md), the follow
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## alignItems
 
 ```TypeScript
@@ -35,7 +30,7 @@ Sets the alignment mode of the **GridCol** components along the vertical main ax
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md) | Yes | Alignment mode of the **GridCol** components along the vertical main axis of the **GridRow** component.<br>Default value: **ItemAlign.Start**<br>Invalid values are treated as the default value.<br><br>**NOTE:**<br>**ItemAlign** supports the following enums: **ItemAlign.Start**, **ItemAlign.Center**, **ItemAlign.End**, and **ItemAlign.Stretch**. |
+| value | [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md) | Yes | Alignment mode of the **GridCol** components along the vertical main axis of the **GridRow** component.<br>Default value: **ItemAlign.Start**<br>Invalid values are treated as the default value.<br><br>**NOTE:** <br>**ItemAlign** supports the following enums: **ItemAlign.Start**, **ItemAlign.Center**, **ItemAlign.End**, and **ItemAlign.Stretch**. |
 
 ## onBreakpointChange
 
@@ -45,7 +40,7 @@ onBreakpointChange(callback: (breakpoints: string) => void)
 
 Triggered when the breakpoint changes.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 
 > When [breakpointsreference](arkts-arkui-breakpointsreference-e.md) is set to **BreakpointsReference.ComponentSize**, you are not

@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## baselineOffset
 
 ```TypeScript
@@ -58,7 +53,7 @@ bindSelectionMenu的长按响应时长为600ms，[bindContextMenu](arkts-arkui-c
 
 当[copyOption](#copyoption)为CopyOptions.None时，设置图片预览菜单将不会生效。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在attributeModifier中调用。
 > 
@@ -113,7 +108,7 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 设置是否开启行首标点符号压缩。
 
-> **说明：**
+> **说明：** 
 > 
 > - 行首标点符号默认不压缩。
 > 
@@ -236,7 +231,7 @@ decoration(value: DecorationStyleInterface)
 
 }
 
-> **说明：**
+> **说明：** 
 > 
 > 当文字的下边缘轮廓与装饰线位置相交时，会触发下划线避让规则，下划线将在这些字符处避让文字。常见"gjyqp"等英文字符。
 > 
@@ -290,7 +285,7 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 调用[disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或[disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
 
-> **说明：**
+> **说明：** 
 > 
 > 通过[editMenuOptions](#editmenuoptions)设置文本选择菜单时，保留系统默认的风格，触发菜单弹出的条件不变。
 > 
@@ -368,7 +363,7 @@ enableDataDetector(enable: boolean)
 
 所识别实体的样式如下，即字体颜色改为蓝色、并添加蓝色下划线。
 
-> **说明：**
+> **说明：** 
 > 
 > - 设备底层需要具备文本识别能力，该接口才能生效。
 > 
@@ -400,7 +395,7 @@ enableHapticFeedback(isEnabled: boolean)
 
 开启触控反馈时，需要在工程的[module.json5配置文件](../../../quick-start/module-configuration-file.md)中配置requestPermissions字段开启振动权限，配置如下：
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
@@ -555,7 +550,7 @@ fontFamily(value: string | Resource)
 
 设置字体族。未通过该接口设置时，默认字体为'HarmonyOS Sans'。Wearable设备上默认字体也为'HarmonyOS Sans'。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以使用[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)注册自定义字体。
 
@@ -589,7 +584,7 @@ fontFeature(value: string)
 
 例如，使用等宽数字的输入格式为："ss01" on。
 
-> **说明：**
+> **说明：** 
 > 
 > 不支持Text内同时存在文本内容和Span或ImageSpan子组件。如果同时存在，只显示Span或ImageSpan内的内容。
 > 
@@ -626,7 +621,7 @@ fontSize(value: number | string | Resource)
 
 设置字体大小。未通过该接口设置时，默认字体大小为16fp。Wearable设备上默认字体大小为15fp。
 
-> **说明：**
+> **说明：** 
 > 
 > 自适应字号生效时，fontSize设置不生效。
 
@@ -749,7 +744,7 @@ halfLeading(halfLeading: boolean)
 
 设置文本是否垂直居中。未通过该接口设置时，默认文本不平分至行的顶部与底部。
 
-> **说明：**
+> **说明：** 
 > 
 > 与[textVerticalAlign](#textverticalalign)同时配置时，halfLeading不生效。
 
@@ -906,7 +901,7 @@ lineHeight(value: number | string | Resource)
 
 设置值不大于0时，不限制文本行高，自适应字体大小，number类型时单位为fp。string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。
 
-> **说明：**
+> **说明：** 
 > 
 > 特殊字符字体高度远超出同行的其他字符高度时，文本框出现截断、遮挡、内容相对位置发生变化等不符合预期的显示异常，需要开发者调整组件高度、行高等属性，修改对应的页面布局。
 
@@ -934,7 +929,7 @@ lineHeightMultiple(value: number | undefined)
 
 设置行高为入参（value）与字高（fontHeight）的乘积。
 
-> **说明：**
+> **说明：** 
 > 
 > 当lineHeightMultiple使用有效值和[lineHeight](#lineheight)或
 > [lineSpacing](#linespacing)同时设置时，仅lineHeightMultiple生效。
@@ -1316,7 +1311,7 @@ onWillCopy(callback: Callback<string, boolean>)
 
 在进行复制操作前，触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > onWillCopy和onCopy形成will/did时序模式：
 > 
@@ -1581,7 +1576,7 @@ textAlign(value: TextAlign)
 
 当textAlign属性设置为TextAlign.JUSTIFY时，需要根据文本内容设置[wordBreak](#wordbreak)属性，且最后一行文本水平对齐首部，不参与两端对齐。
 
-> **说明：**
+> **说明：** 
 > 
 > textAlign只能调整文本整体的布局，不影响字符的显示顺序。若需要调整字符的显示顺序，请参考[镜像状态字符对齐](../../../ui/arkts-internationalization.md#镜像状态字符对齐)。
 
@@ -1793,7 +1788,7 @@ textVerticalAlign(textVerticalAlign: Optional<TextVerticalAlign>)
 
 设置文本段落在垂直方向的对齐方式。未通过该接口设置时，默认文本段落在垂直方向的对齐方式为TextVerticalAlign.BASELINE。
 
-> **说明：**
+> **说明：** 
 > 
 > - 与[halfLeading](#halfleading)同时配置时，halfLeading不生效。
 > 

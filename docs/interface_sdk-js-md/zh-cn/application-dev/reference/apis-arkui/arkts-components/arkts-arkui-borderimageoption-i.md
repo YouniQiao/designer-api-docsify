@@ -8,11 +8,6 @@ Border image option
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## fill
 
 ```TypeScript
@@ -45,7 +40,7 @@ outset?: Length | EdgeWidths | LocalizedEdgeWidths
 
 默认值：0
 
-**说明：**
+**说明：** 
 
 设置负数时取默认值。
 
@@ -119,7 +114,7 @@ slice?: Length | EdgeWidths | LocalizedEdgeWidths
 
 默认值：0
 
-**说明：**
+**说明：** 
 
 设置负数时取默认值。
 
@@ -171,7 +166,7 @@ source?: string | Resource | LinearGradient
 
 默认值：undefined（不设置边框图源）
 
-**说明：**
+**说明：** 
 
 边框图源仅适用于容器组件，如Row、Column、Flex，在非容器组件上使用会失效。
 
@@ -195,7 +190,7 @@ width?: Length | EdgeWidths | LocalizedEdgeWidths
 
 默认值：0
 
-**说明：**
+**说明：** 
 
 设置负数时取默认值。
 

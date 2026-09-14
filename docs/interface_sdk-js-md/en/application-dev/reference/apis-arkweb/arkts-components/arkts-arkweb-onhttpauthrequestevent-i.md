@@ -6,11 +6,6 @@ Defines the callback information triggered when an HTTP authentication request i
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## handler
 
 ```TypeScript

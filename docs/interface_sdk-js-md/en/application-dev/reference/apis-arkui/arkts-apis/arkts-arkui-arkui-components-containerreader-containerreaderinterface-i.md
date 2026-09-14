@@ -40,3 +40,4 @@ Sets the container reading configuration for ContainerReader component. Configur
 
 | Type | Description |
 | --- | --- |
+| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) |  |

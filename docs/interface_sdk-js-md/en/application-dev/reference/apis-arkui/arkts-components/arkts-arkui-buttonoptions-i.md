@@ -6,11 +6,6 @@ Describes the button style.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## buttonStyle
 
 ```TypeScript
@@ -21,7 +16,7 @@ Style and importance of the button. The system automatically adjusts the button 
 
 Default value: **ButtonStyleMode.EMPHASIZED**
 
-**NOTE:**
+**NOTE:** 
 
 The button primacy is as follows, from high to low: emphasized button, normal button, text button.
 
@@ -99,7 +94,7 @@ Whether to enable the pressed state effect when the button is clicked.
 
 Default value: **true**
 
-**NOTE:**
+**NOTE:** 
 
 When the pressed state effect is enabled and a custom pressed state style is configured, the resulting color displayed after pressing is a composite blend of the original background color and the newly defined pressed state color.
 

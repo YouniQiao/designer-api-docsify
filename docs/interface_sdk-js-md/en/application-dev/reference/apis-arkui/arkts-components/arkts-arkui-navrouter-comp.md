@@ -8,7 +8,7 @@ The **NavRouter** component provides default processing logic for responding to 
 
 This component must contain two child components, the second of which must be NavDestination.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. If there is only one child component, the navigation to the **NavDestination** component does not work.
 > 

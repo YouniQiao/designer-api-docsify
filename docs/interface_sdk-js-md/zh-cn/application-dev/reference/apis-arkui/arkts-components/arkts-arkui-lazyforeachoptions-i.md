@@ -2,7 +2,7 @@
 
 用于配置LazyForEach的资源释放策略、内存优化策略，以及是否使能自定义组件冻结。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 注意：在使用LazyForEachOptions时，必须保证键值生成函数已经定义，否则将编译失败。
 > 
@@ -16,11 +16,6 @@
 **起始版本：** 26.0.0
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## customComponentFreezeMode
 

@@ -186,7 +186,7 @@ off(type: 'frameStart', callback?: AsyncCallback<void>): void
 
 注销监听录像开始。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -253,7 +253,7 @@ on(type: 'frameStart', callback: AsyncCallback<void>): void
 
 监听录像开始，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -299,7 +299,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 监听录像输出发生错误，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -326,7 +326,7 @@ setFrameRate(minFps: number, maxFps: number): void
 
 进行设置前，可通过[getSupportedFrameRates](#getsupportedframerates)查询支持的帧率范围。
 
-> **说明：**
+> **说明：** 
 > 
 > 仅在[PhotoSession](arkts-camera-camera-photosession-i.md)或[VideoSession](arkts-camera-camera-videosession-i.md)模式下支持。
 > 

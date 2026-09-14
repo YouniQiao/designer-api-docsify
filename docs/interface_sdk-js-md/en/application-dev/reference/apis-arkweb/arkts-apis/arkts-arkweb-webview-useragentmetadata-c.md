@@ -230,7 +230,7 @@ Sets the architecture type of the platform.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arch | string | Yes | Sec-CH-UA-Arch** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+| arch | string | Yes | **Sec-CH-UA-Arch** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
 
 ## setBitness
 
@@ -270,7 +270,7 @@ Sets the brand and version information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brandVersionList | Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; | Yes | Sec-CH-UA-Full-Version-List** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+| brandVersionList | Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; | Yes | **Sec-CH-UA-Full-Version-List** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
 
 ## setFormFactors
 
@@ -290,7 +290,7 @@ Sets the device form, such as the mobile phone or tablet.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formFactors | Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; | Yes | Sec-CH-UA-Form-Factor** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+| formFactors | Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; | Yes | **Sec-CH-UA-Form-Factor** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
 
 ## setFullVersion
 
@@ -310,7 +310,7 @@ Sets the full version number.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fullVersion | string | Yes | Sec-CH-UA-Full-Version** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+| fullVersion | string | Yes | **Sec-CH-UA-Full-Version** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
 
 ## setMobile
 
@@ -370,7 +370,7 @@ Sets the OS name.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| platform | string | Yes | Sec-CH-UA-Platform** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+| platform | string | Yes | **Sec-CH-UA-Platform** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
 
 ## setPlatformVersion
 
@@ -390,7 +390,7 @@ Sets the OS version.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| platformVersion | string | Yes | Sec-CH-UA-Platform-Version** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+| platformVersion | string | Yes | **Sec-CH-UA-Platform-Version** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
 
 ## setWow64
 

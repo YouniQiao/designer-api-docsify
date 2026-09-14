@@ -14,7 +14,7 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback:
 
 Sets the notification slot for a specified application. This API uses an asynchronous callback to return the result.
 
-Before setting a notification slot, create a slot through [addSlot](arkts-notification-notificationmanager-addslot-f.md).
+Before setting a notification slot, create a slot through [addSlot](arkts-notification-notificationmanager-addslot-f-sys.md).
 
 **Since:** 9
 
@@ -75,7 +75,7 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<
 
 Sets the notification slot for a specified application. This API uses a promise to return the result.
 
-Before setting a notification slot, create a slot through [addSlot](arkts-notification-notificationmanager-addslot-f.md).
+Before setting a notification slot, create a slot through [addSlot](arkts-notification-notificationmanager-addslot-f-sys.md).
 
 **Since:** 9
 

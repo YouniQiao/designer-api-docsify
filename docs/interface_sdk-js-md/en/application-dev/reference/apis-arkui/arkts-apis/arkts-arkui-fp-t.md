@@ -6,7 +6,7 @@ declare type FP = `${number}fp`
 
 Defines the length property with number in units of fp.
 
-@typedef { `\${number}fp` } FP
+@typedef { `&#36;{number}fp` } FP
 
 **Since:** 23
 

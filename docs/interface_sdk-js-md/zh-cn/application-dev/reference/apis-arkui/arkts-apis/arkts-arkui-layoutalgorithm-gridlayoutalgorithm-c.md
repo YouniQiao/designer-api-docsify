@@ -2,7 +2,7 @@
 
 网格布局算法类。
 
-> **说明：**
+> **说明：** 
 > 
 > GridLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为DynamicLayout组件的入
 > 参指定布局算法。

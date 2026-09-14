@@ -2,7 +2,7 @@
 
 媒体资产管理类，管理媒体资源读取。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本Class首批接口从API version 11开始支持。
 
@@ -81,7 +81,7 @@ static loadMovingPhoto(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[MovingPhoto](arkts-medialibrary-photoaccesshelper-movingphoto-i.md)&gt; | Promise对象，返回[MovingPhoto](arkts-file-photoaccesshelper.md)实例。 |
+| Promise&lt;[MovingPhoto](arkts-medialibrary-photoaccesshelper-movingphoto-i.md)&gt; | Promise对象，返回[MovingPhoto](arkts-medialibrary-file-photoaccesshelper.md)实例。 |
 
 **错误码：**
 

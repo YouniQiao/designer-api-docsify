@@ -6,11 +6,6 @@ WebResourceResponse is a class in the Web component that represents HTTP respons
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript
@@ -91,7 +86,7 @@ Obtains the data in the resource response.
 getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined
 ```
 
-Obtains resource response data, supporting multiple data types. Compared with getResponseData, this method supports returning various types such as number (file handle), ArrayBuffer (binary data), and Resource (\$rawfile resource). It is recommended to use this method when flexible data type support is needed.
+Obtains resource response data, supporting multiple data types. Compared with getResponseData, this method supports returning various types such as number (file handle), ArrayBuffer (binary data), and Resource (&#36;rawfile resource). It is recommended to use this method when flexible data type support is needed.
 
 **Since:** 13
 
@@ -101,7 +96,7 @@ Obtains resource response data, supporting multiple data types. Compared with ge
 
 | Type | Description |
 | --- | --- |
-| string &#124; number &#124; ArrayBuffer &#124; Resource &#124; undefined | An HTML string when the type is string; a file descriptor when the type is number; binary data when the type is ArrayBuffer; a **\&#36;rawfile** resource when the type is resource; or **undefined** if no data is available. |
+| string &#124; number &#124; ArrayBuffer &#124; Resource &#124; undefined | An HTML string when the type is string; a file descriptor when the type is number; binary data when the type is ArrayBuffer; a **&#36;rawfile** resource when the type is resource; or **undefined** if no data is available. |
 
 ## getResponseEncoding
 
@@ -159,7 +154,7 @@ Obtains whether the response data is ready.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** indicates that the response data is ready, and **false** indicates the opposite. |
+| boolean | **true** indicates that the response data is ready, and **false** indicates the opposite. |
 
 ## getResponseMimeType
 
@@ -209,7 +204,7 @@ setResponseBody(data: string | number | Resource | ArrayBuffer): void
 
 Sets the response data.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This API supports obtaining HSP resources based on Resource objects, which [setResponseData](#setresponsedata) does not
 > support.
@@ -224,7 +219,7 @@ Sets the response data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string &#124; number &#124; Resource &#124; ArrayBuffer | Yes | The response data. string type indicates strings in HTML format. number type indicates file handle. Resource type indicates \&#36;rawfile resource or HSP resource. ArrayBuffer type indicates binary data. |
+| data | string &#124; number &#124; Resource &#124; ArrayBuffer | Yes | The response data. string type indicates strings in HTML format. number type indicates file handle. Resource type indicates &#36;rawfile resource or HSP resource. ArrayBuffer type indicates binary data. |
 
 ## setResponseCode
 
@@ -254,7 +249,7 @@ setResponseData(data: string | number | Resource | ArrayBuffer): void
 
 Sets the response data.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This API does not support obtaining HSP resources based on Resource objects. To obtain HSP resources,
 > use [setResponseBody](#setresponsebody) instead.
@@ -269,7 +264,7 @@ Sets the response data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string &#124; number &#124; Resource &#124; ArrayBuffer | Yes | The response data. string type indicates strings in HTML format. number type indicates file handle. Resource type indicates \&#36;rawfile resource. ArrayBuffer type indicates binary data.<br>**Since:** 11 |
+| data | string &#124; number &#124; Resource &#124; ArrayBuffer | Yes | The response data. string type indicates strings in HTML format. number type indicates file handle. Resource type indicates &#36;rawfile resource. ArrayBuffer type indicates binary data.<br>**Since:** 11 |
 
 ## setResponseEncoding
 
@@ -319,7 +314,7 @@ setResponseIsReady(IsReady: boolean): void
 
 Sets whether the resource response data is ready.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - In resource request interception scenarios, call setResponseData(), setResponseEncoding(), setResponseMimeType(
 > ), setResponseHeader(), setResponseCode(), setReasonMessage(), and other methods first to set the response

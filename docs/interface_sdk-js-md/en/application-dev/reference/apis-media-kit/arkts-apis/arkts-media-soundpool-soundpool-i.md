@@ -2,7 +2,7 @@
 
 Implements a sound pool that provides APIs for loading, unloading, playing, and stopping playing system sounds, setting the volume, and setting the number of loops. Before using these APIs, you must call [media.createSoundPool](arkts-media-media-createsoundpool-f.md) to create a SoundPool instance.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When using the SoundPool instance, you are advised to register the following callbacks to proactively obtain
 > status changes:
@@ -45,7 +45,7 @@ This API uses an asynchronous callback to obtain the resource ID. The input para
 
 This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) or [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
 > the player, do not use the resource handle or path description in read or write operations, including but not
@@ -85,7 +85,7 @@ This API uses a promise to obtain the resource ID. The input parameter URL is a 
 
 This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) or [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
 > the player, do not use the resource handle or path description in read or write operations, including but not
@@ -128,7 +128,7 @@ Loads a sound. This API uses an asynchronous callback to return the result.
 
 This API uses an asynchronous callback to obtain the resource ID. For the input parameter, resource information can be passed in manually or acquired automatically by reading the application's built-in resources.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
 > the player, do not use the resource handle or path description in read or write operations, including but not
@@ -168,7 +168,7 @@ Loads a sound. This API uses a promise to return the result.
 
 This API uses a promise to obtain the resource ID. For the input parameter, resource information can be passed in manually or acquired automatically by reading the application's built-in resources.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
 > the player, do not use the resource handle or path description in read or write operations, including but not

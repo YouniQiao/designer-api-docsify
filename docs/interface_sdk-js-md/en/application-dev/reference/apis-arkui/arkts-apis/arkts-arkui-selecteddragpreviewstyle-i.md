@@ -6,11 +6,6 @@ Defines the drag preview style for selected text.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## color
 
 ```TypeScript

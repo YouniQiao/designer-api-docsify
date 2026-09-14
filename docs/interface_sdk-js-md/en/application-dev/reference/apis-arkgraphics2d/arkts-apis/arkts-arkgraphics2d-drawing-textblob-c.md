@@ -2,7 +2,7 @@
 
 Defines a block consisting of one or more characters with the same font.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This module uses the physical pixel unit, px.
 > 
@@ -56,13 +56,13 @@ Creates a **TextBlob** object from the text. The coordinates of each font in the
 | text | string | Yes | Content to be used for drawing the text blob. |
 | len | number | Yes | Number of glyphs, which is an integer obtained from [countText](arkts-arkgraphics2d-drawing-font-c.md#counttext). |
 | points | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)[] | Yes | Array of points, which are used to specify the coordinates of each font. The array length must be the same as the value of **len**. |
-| font | [Font](arkts-arkgraphics2d-drawing-font-c.md) | Yes | Font** object. |
+| font | [Font](arkts-arkgraphics2d-drawing-font-c.md) | Yes | **Font** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | TextBlob** object. |
+| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | **TextBlob** object. |
 
 **Error codes:**
 
@@ -86,15 +86,15 @@ Creates a **TextBlob** object based on the **RunBuffer** information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pos | Array&lt;[TextBlobRunBuffer](arkts-arkgraphics2d-drawing-textblobrunbuffer-i.md)&gt; | Yes | TextBlobRunBuffer** array. |
-| font | [Font](arkts-arkgraphics2d-drawing-font-c.md) | Yes | Font** object. |
+| pos | Array&lt;[TextBlobRunBuffer](arkts-arkgraphics2d-drawing-textblobrunbuffer-i.md)&gt; | Yes | **TextBlobRunBuffer** array. |
+| font | [Font](arkts-arkgraphics2d-drawing-font-c.md) | Yes | **Font** object. |
 | bounds | [common2D.Rect](arkts-arkgraphics2d-common2d-rect-i.md) | No | Bounding box. If this parameter is not set, there is no bounding box. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | TextBlob** object. |
+| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | **TextBlob** object. |
 
 **Error codes:**
 
@@ -119,14 +119,14 @@ Converts a value of the string type into a **TextBlob** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Content to be used for drawing the text blob. |
-| font | [Font](arkts-arkgraphics2d-drawing-font-c.md) | Yes | Font** object. |
+| font | [Font](arkts-arkgraphics2d-drawing-font-c.md) | Yes | **Font** object. |
 | encoding | [TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | No | Encoding type. The default value is **TEXT_ENCODING_UTF8**. Currently, only **TEXT_ENCODING_UTF8** takes effect, and other encoding types are treated as **TEXT_ENCODING_UTF8**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | TextBlob** object. |
+| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | **TextBlob** object. |
 
 **Error codes:**
 

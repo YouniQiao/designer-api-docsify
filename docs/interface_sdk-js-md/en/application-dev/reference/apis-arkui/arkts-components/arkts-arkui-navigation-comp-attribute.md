@@ -8,11 +8,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## backButtonIcon
 
 ```TypeScript
@@ -21,7 +16,7 @@ backButtonIcon(value: string | PixelMap | Resource | SymbolGlyphModifier)
 
 Sets the icon of the back button in the title bar.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The following are not allowed: modify the icon size through the **fontSize** attribute of the
 > **SymbolGlyphModifier** object, change the animation effects through the **effectStrategy** attribute, or change
@@ -47,7 +42,7 @@ backButtonIcon(icon: string | PixelMap | Resource | SymbolGlyphModifier, accessi
 
 Sets the icon and accessibility text for the back button on the title bar.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API cannot be called within attributeModifier.
 > 
@@ -101,7 +96,7 @@ customNavContentTransition(delegate: (from: NavContentInfo, to: NavContentInfo, 
 
 Defines the callback of the custom transition animation.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called in attributeModifier since API version 20.
 
@@ -365,7 +360,7 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafe
 
 Ignores the layout safe area by allowing the component to extend into the non-safe areas of the screen.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Prerequisites for the **ignoreLayoutSafeArea** attribute to take effect:
 > 
@@ -402,7 +397,7 @@ menus(value: Array<NavigationMenuItem> | CustomBuilder)
 
 Sets the menu items in the upper right corner of the page. If this attribute is not set, no menu item is displayed. When the value type is Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt;, the menu shows a maximum of three icons in portrait mode and a maximum of five icons in landscape mode, with excess icons (if any) placed under the automatically generated **More** icon.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The following are not allowed: modify the icon size through the **fontSize** attribute of the
 > **SymbolGlyphModifier** object, change the animation effects through the **effectStrategy** attribute, or change
@@ -428,7 +423,7 @@ menus(items: Array<NavigationMenuItem> | CustomBuilder, options?: NavigationMenu
 
 Sets the menu items in the upper right corner of the page. If this attribute is not set, no menu item is displayed. Compared with [menus](#menus), this API adds menu options. When the value type is Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt;, the menu shows a maximum of three icons in portrait mode and a maximum of five icons in landscape mode, with excess icons (if any) placed under the automatically generated **More** icon.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API cannot be called within attributeModifier.
 > 
@@ -511,7 +506,7 @@ Sets the position of the navigation page. It takes effect only when [mode](#mode
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [NavBarPosition](arkts-arkui-navbarposition-e.md) | Yes | Position of the navigation page.<br>Default value: **NavBarPosition.Start |
+| value | [NavBarPosition](arkts-arkui-navbarposition-e.md) | Yes | Position of the navigation page.<br>Default value: **NavBarPosition.Start** |
 
 ## navBarWidth
 
@@ -629,7 +624,7 @@ Triggered when the **Navigation** component is displayed for the first time or i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (mode: NavigationMode) =&gt; void | Yes | NavigationMode.Split**: The component is displayed in split-column mode.<br> **NavigationMode.Stack**: The component is displayed in single-column mode. |
+| callback | (mode: NavigationMode) =&gt; void | Yes | **NavigationMode.Split**: The component is displayed in split-column mode.<br> **NavigationMode.Stack**: The component is displayed in single-column mode. |
 
 ## onTitleModeChange
 
@@ -659,7 +654,7 @@ recoverable(recoverable: Optional<boolean>)
 
 Sets whether the **Navigation** component is recoverable. If set to recoverable, when the application process exits unexpectedly and restarts, the **Navigation** component can be automatically re-created and its routing stack restored to the state at the time of the unexpected exit.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. For this API to work properly, you must first set the universal attribute id of the
 > **Navigation** component.
@@ -719,7 +714,7 @@ subTitle(value: string)
 
 Sets the page subtitle.
 
-> **NOTE:**
+> **NOTE:** 
 
 **Since:** 8
 
@@ -743,7 +738,7 @@ systemBarStyle(style: Optional<SystemBarStyle>)
 
 Sets the style of the system status bar when the home page of the **Navigation** component is displayed.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. Avoid using the **systemBarStyle** attribute in conjunction with the status bar style APIs in the **Window**
 > module, such as
@@ -797,7 +792,7 @@ title(value: ResourceStr | CustomBuilder | NavigationCommonTitle | NavigationCus
 
 Sets the page title.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 12.
 
@@ -832,7 +827,7 @@ Sets the display mode of the page title bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [NavigationTitleMode](arkts-arkui-navigationtitlemode-e.md) | Yes | Display mode of the page title bar.<br>Default value: **NavigationTitleMode.Free |
+| value | [NavigationTitleMode](arkts-arkui-navigationtitlemode-e.md) | Yes | Display mode of the page title bar.<br>Default value: **NavigationTitleMode.Free** |
 
 ## toolBar
 
@@ -866,7 +861,7 @@ toolbarConfiguration(value: Array<ToolbarItem> | CustomBuilder, options?: Naviga
 
 Sets the content of the toolbar. If this attribute is not set, no toolbar is displayed.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called in attributeModifier since API version 20.
 > 

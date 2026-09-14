@@ -6,11 +6,6 @@ Describes the left and right arrow attributes.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## arrowColor
 
 ```TypeScript
@@ -49,7 +44,7 @@ On both sides of the component:
 
 Default value: **24vp**.
 
-**NOTE:**
+**NOTE:** 
 
 If **showBackground** is set to **true**, the value of **arrowSize** is 3/4 of the value of **backgroundSize**.
 
@@ -85,7 +80,7 @@ Default value: **'#19182431'**.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
-**Default:**
+**Default:** 
 - API version 10: When isSidebarMiddle is false, the default value is #00000000, Otherwise,the default value is #1918243 1
 - API version 11+: When isSidebarMiddle is false, the default value is #00000000, Otherwise, the default value is #1918243 1
 

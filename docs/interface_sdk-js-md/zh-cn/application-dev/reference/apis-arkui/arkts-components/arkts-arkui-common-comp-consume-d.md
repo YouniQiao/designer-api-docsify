@@ -8,7 +8,7 @@ declare const Consume: PropertyDecorator & ((value: string) => PropertyDecorator
 
 开发指南参考：[@Provide装饰器和@Consume装饰器：与后代组件双向同步](../../../ui/state-management/arkts-provide-and-consume.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，@Consume装饰的变量支持设置默认值。当查找不到@Provide的匹配结果时，@Consume装饰的变量会使用默认值进行初始化；当查找到@Provide的匹配结果时，
 > @Consume装饰的变量会优先使用@Provide匹配结果的值，默认值不生效。

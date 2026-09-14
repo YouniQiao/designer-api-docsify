@@ -2,7 +2,7 @@
 
 Implements a **WebStorage** object to manage the Web SQL database and HTML5 Web Storage APIs. All **Web** components in an application share a **WebStorage** object.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - You must load the **Web** component before calling the APIs in **WebStorage**.
 > 

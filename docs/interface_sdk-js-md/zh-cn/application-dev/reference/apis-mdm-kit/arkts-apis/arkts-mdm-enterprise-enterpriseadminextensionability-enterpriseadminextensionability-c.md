@@ -912,7 +912,7 @@ onLogCollected(result: common.Result): void
 
 通过[systemManager.startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md)接口成功创建日志收集任务后，当日志收集完成时，将触发该回调。回调中包含日志收集结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 日志收集成功时，必须在应用的EnterpriseAdminExtensionAbility中访问沙箱目录（/data/edm/log）获取日志，获取日志方式参考下列示例代码。应用取走日志后，建议调用
 > [systemManager.finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md)删除已收集到的日志。

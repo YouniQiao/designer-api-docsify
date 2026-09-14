@@ -10,11 +10,6 @@ Defines the Particle component attribute functions.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## disturbanceFields
 
 ```TypeScript

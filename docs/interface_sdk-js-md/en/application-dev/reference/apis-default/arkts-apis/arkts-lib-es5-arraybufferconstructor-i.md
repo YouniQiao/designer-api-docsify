@@ -17,10 +17,6 @@ new(byteLength: number): ArrayBuffer
 | --- | --- | --- | --- |
 | byteLength | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## isView
 
 ```TypeScript
@@ -33,10 +29,6 @@ isView(arg: any): arg is ArrayBufferView
 | --- | --- | --- | --- |
 | arg | any | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## prototype
 
 ```TypeScript

@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## maxPullDownDistance
 
 ```TypeScript
@@ -69,7 +64,7 @@ onOffsetChange(callback: Callback<number>)
 
 下拉距离发生变化时触发回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 

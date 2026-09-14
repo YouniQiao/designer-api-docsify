@@ -6,11 +6,6 @@ Slider组件滑块形状参数。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## image
 
 ```TypeScript
@@ -61,7 +56,7 @@ type: SliderBlockType
 
 **类型：** [SliderBlockType](arkts-arkui-sliderblocktype-e.md)
 
-**默认值：**
+**默认值：** 
 - API版本11+：SliderBlockType.DEFAULT - indicating the round slider.
 
 **起始版本：** 10

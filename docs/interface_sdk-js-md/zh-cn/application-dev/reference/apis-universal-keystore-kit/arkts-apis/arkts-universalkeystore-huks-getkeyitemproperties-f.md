@@ -18,7 +18,7 @@ function getKeyItemProperties(
 
 Obtains key properties. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **说明：** 
 > 
 > 获取[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥属性需要ohos.permission.ACCESS_SE_KEY权限。
 
@@ -87,7 +87,7 @@ function getKeyItemProperties(keyAlias: string, options: HuksOptions): Promise<H
 
 获取密钥属性。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 获取[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥属性需要ohos.permission.ACCESS_SE_KEY权限。
 

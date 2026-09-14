@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## [[Call]]
 
 ```TypeScript
@@ -36,6 +31,8 @@
 
 | 类型 | 说明 |
 | --- | --- |
+| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |  |
+
 ## onCancel
 
 ```TypeScript
@@ -60,3 +57,4 @@ onCancel(event: () => void): GestureGroupInterface
 
 | 类型 | 说明 |
 | --- | --- |
+| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) |  |

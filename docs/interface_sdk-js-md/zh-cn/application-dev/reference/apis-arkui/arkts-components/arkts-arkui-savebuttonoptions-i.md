@@ -2,7 +2,7 @@
 
 用于设置保存控件的图标、文本、按钮类型等属性。
 
-> **说明：**
+> **说明：** 
 > 
 > - 建议icon或text至少传入一个。
 > 
@@ -14,11 +14,6 @@
 **起始版本：** 10
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## buttonType
 

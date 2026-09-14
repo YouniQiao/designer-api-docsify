@@ -42,3 +42,4 @@ This parameter specifies the number of columns in the current waterflow layout.
 
 | Type | Description |
 | --- | --- |
+| [LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-c.md) |  |

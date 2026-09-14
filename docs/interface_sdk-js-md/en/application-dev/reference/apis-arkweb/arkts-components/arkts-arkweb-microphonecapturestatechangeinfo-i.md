@@ -6,11 +6,6 @@ Provides the state change information of the microphone when the callback is tri
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## newState
 
 ```TypeScript

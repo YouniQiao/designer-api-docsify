@@ -66,7 +66,7 @@ content?: string
 contentResourceId?: number
 ```
 
-指明提醒内容的资源ID，通过`\$r(资源名称).id`方法获取。
+指明提醒内容的资源ID，通过`&#36;r(资源名称).id`方法获取。
 
 **类型：** number
 
@@ -108,7 +108,7 @@ expiredContent?: string
 expiredContentResourceId?: number
 ```
 
-指明提醒过期后内容的资源ID，通过`\$r(资源名称).id`方法获取。
+指明提醒过期后内容的资源ID，通过`&#36;r(资源名称).id`方法获取。
 
 **类型：** number
 
@@ -250,7 +250,7 @@ slotType?: notification.SlotType
 
 指明提醒的通道渠道类型。
 
-**类型：** [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notificationmanager.md)
+**类型：** [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager.md)
 
 **起始版本：** 9
 
@@ -276,7 +276,7 @@ snoozeContent?: string
 snoozeContentResourceId?: number
 ```
 
-指明延时提醒内容的资源ID，通过`\$r(资源名称).id`方法获取。
+指明延时提醒内容的资源ID，通过`&#36;r(资源名称).id`方法获取。
 
 **类型：** number
 
@@ -292,7 +292,7 @@ snoozeSlotType?: notification.SlotType
 
 指明延时提醒的通道渠道类型（不适用于倒计时提醒类型）。
 
-**类型：** [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notificationmanager.md)
+**类型：** [notification.SlotType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager.md)
 
 **起始版本：** 11
 
@@ -365,7 +365,7 @@ title?: string
 titleResourceId?: number
 ```
 
-指明提醒标题的资源ID，通过`\$r(资源名称).id`方法获取。
+指明提醒标题的资源ID，通过`&#36;r(资源名称).id`方法获取。
 
 **类型：** number
 

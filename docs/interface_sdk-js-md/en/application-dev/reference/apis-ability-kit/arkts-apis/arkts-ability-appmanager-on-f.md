@@ -102,7 +102,7 @@ Registers an observer to listen for lifecycle changes of the specified applicati
 | --- | --- | --- | --- |
 | type | 'applicationState' | Yes | Type of the API to call. It is fixed at **'applicationState'**. |
 | observer | [ApplicationStateObserver](arkts-ability-appmanager-applicationstateobserver-t.md) | Yes | Application state observer, which is used to listen for application lifecycle changes. |
-| bundleNameList | Array&lt;string&gt; | Yes | bundleName** array of the application. A maximum of 128 bundle names can be passed. |
+| bundleNameList | Array&lt;string&gt; | Yes | **bundleName** array of the application. A maximum of 128 bundle names can be passed. |
 
 **Return value:**
 

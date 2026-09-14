@@ -343,7 +343,7 @@ Text moving granularity. The default value is char.
 textResourceAnnouncedForAccessibility?: Resource
 ```
 
-Content for proactive announcement, which supports the Resource type. The Resource can only reference string resources (for example, \$r('app.string.xxx')).
+Content for proactive announcement, which supports the Resource type. The Resource can only reference string resources (for example, &#36;r('app.string.xxx')).
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 

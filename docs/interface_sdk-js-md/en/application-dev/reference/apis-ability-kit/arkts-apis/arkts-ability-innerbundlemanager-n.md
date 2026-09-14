@@ -2,11 +2,11 @@
 
 The module provides APIs for the Home Screen application.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This module is deprecated since API version 9. You are advised to use
-> [launcherBundleManager](arkts-bundle-launcherbundlemanager.md) and
-> [bundleMonitor](arkts-bundle-bundlemonitor.md) instead.
+> [launcherBundleManager](arkts-ability-bundle-launcherbundlemanager.md) and
+> [bundleMonitor](arkts-ability-bundle-bundlemonitor.md) instead.
 > 
 > The APIs provided by this module are system APIs.
 
@@ -14,7 +14,7 @@ The module provides APIs for the Home Screen application.
 
 **Deprecated since:** 9
 
-**Substitutes:** [launcherBundleManager](arkts-bundle-launcherbundlemanager.md)
+**Substitutes:** [launcherBundleManager](arkts-ability-bundle-launcherbundlemanager.md)
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 

@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-imekit-->
 
-- [@ohos.inputMethod(Input Method Framework)](arkts-inputmethod.md)
+- [@ohos.inputMethod(Input Method Framework)](arkts-ime-inputmethod.md)
   - [getController](arkts-ime-inputmethod-getcontroller-f.md)
   - [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)
   <!--Del-->
@@ -58,14 +58,14 @@
   - [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md)
   - [TextInputType](arkts-ime-inputmethod-textinputtype-e.md)
   - [Constants](arkts-ime-inputmethod-con.md)
-- [@ohos.inputMethod.ExtraConfig(Input Method Extension Information)](arkts-inputmethod-extraconfig.md)
+- [@ohos.inputMethod.ExtraConfig(Input Method Extension Information)](arkts-ime-inputmethod-extraconfig.md)
   - [InputMethodExtraConfig](arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md)
   - [CustomValueType](arkts-ime-customvaluetype-t.md)
-- [@ohos.inputMethod.Panel(Input Method Panel)](arkts-inputmethod-panel.md)
+- [@ohos.inputMethod.Panel(Input Method Panel)](arkts-ime-inputmethod-panel.md)
   - [PanelInfo](arkts-ime-inputmethod-panel-panelinfo-i.md)
   - [PanelFlag](arkts-ime-inputmethod-panel-panelflag-e.md)
   - [PanelType](arkts-ime-inputmethod-panel-paneltype-e.md)
-- [@ohos.inputMethodEngine(Input Method Service)](arkts-inputmethodengine.md)
+- [@ohos.inputMethodEngine(Input Method Service)](arkts-ime-inputmethodengine.md)
   - [createKeyboardDelegate](arkts-ime-inputmethodengine-createkeyboarddelegate-f.md)
   - [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md)
   - [getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md)
@@ -112,20 +112,20 @@
   - [RequestKeyboardReason](arkts-ime-inputmethodengine-requestkeyboardreason-e.md)
   - [SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)
   - [Constants](arkts-ime-inputmethodengine-con.md)
-- [@ohos.InputMethodExtensionAbility(InputMethodExtensionAbility)](arkts-inputmethodextensionability.md)
+- [@ohos.InputMethodExtensionAbility(InputMethodExtensionAbility)](arkts-ime-inputmethodextensionability.md)
   - [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md)
-- [@ohos.InputMethodExtensionContext(InputMethodExtensionContext)](arkts-inputmethodextensioncontext.md)
+- [@ohos.InputMethodExtensionContext(InputMethodExtensionContext)](arkts-ime-inputmethodextensioncontext.md)
   - [InputMethodExtensionContext](arkts-ime-inputmethodextensioncontext-c.md)
   <!--Del-->
   - [InputMethodExtensionContext(system api)](arkts-ime-inputmethodextensioncontext-c-sys.md)<!--DelEnd-->
-- [@ohos.inputMethodList(Input Method List)](arkts-inputmethodlist.md)
+- [@ohos.inputMethodList(Input Method List)](arkts-ime-inputmethodlist.md)
   - [InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md)
   - [Pattern](arkts-ime-inputmethodlist-pattern-i.md)
   - [PatternOptions](arkts-ime-inputmethodlist-patternoptions-i.md)
-- [@ohos.InputMethodSubtype(Input Method Subtype)](arkts-inputmethodsubtype.md)
+- [@ohos.InputMethodSubtype(Input Method Subtype)](arkts-ime-inputmethodsubtype.md)
   - [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)
 <!--Del-->
-- [@ohos.inputMethodSystemPanelManager(Input Method System Panel Manager (System API))](arkts-inputmethodsystempanelmanager.md)<!--DelEnd-->
+- [@ohos.inputMethodSystemPanelManager(Input Method System Panel Manager (System API))](arkts-ime-inputmethodsystempanelmanager.md)<!--DelEnd-->
   <!--Del-->
   - [connectSystemChannel(system api)](arkts-ime-inputmethodsystempanelmanager-connectsystemchannel-f-sys.md)<!--DelEnd-->
   <!--Del-->

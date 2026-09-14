@@ -24,11 +24,11 @@ end?: LengthMetrics
 
 size为ChipSize.SMALL时，end默认值：
 
-`LengthMetrics.resource(\$r('sys.float.chip_small_text_margin'))`
+`LengthMetrics.resource(&#36;r('sys.float.chip_small_text_margin'))`
 
 size为ChipSize.NORMAL时，end默认值：
 
-`LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin'))`
+`LengthMetrics.resource(&#36;r('sys.float.chip_normal_text_margin'))`
 
 值为undefined时，按默认值处理。
 
@@ -54,11 +54,11 @@ start?: LengthMetrics
 
 size为ChipSize.SMALL时，start默认值：
 
-`LengthMetrics.resource(\$r('sys.float.chip_small_text_margin'))`
+`LengthMetrics.resource(&#36;r('sys.float.chip_small_text_margin'))`
 
 size为ChipSize.NORMAL时，start默认值：
 
-`LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin'))`
+`LengthMetrics.resource(&#36;r('sys.float.chip_normal_text_margin'))`
 
 值为undefined时，按默认值处理。
 

@@ -30,7 +30,7 @@ Creates a **CmsGenerator** object.
 
 | Type | Description |
 | --- | --- |
-| [CmsGenerator](arkts-devicecertificate-cert-cmsgenerator-i.md) | CmsGenerator** object created. |
+| [CmsGenerator](arkts-devicecertificate-cert-cmsgenerator-i.md) | **CmsGenerator** object created. |
 
 **Error codes:**
 

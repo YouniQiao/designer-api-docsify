@@ -479,7 +479,7 @@ function on(type: 'simStateChange', callback: Callback<SimStateData>): void
 
 Registers an observer for SIM card status change events. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The return result of this API does not contain the activation status of the SIM card. For details, see
 > [sim.isSimActive](arkts-telephony-sim-issimactive-f.md).

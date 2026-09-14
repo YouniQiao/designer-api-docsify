@@ -6,11 +6,6 @@ Defines a user gesture event.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onDoubleClick
 
 ```TypeScript

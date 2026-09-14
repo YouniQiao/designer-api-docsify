@@ -6,11 +6,6 @@ Defines the callback information triggered when the web form data can be resubmi
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## handler
 
 ```TypeScript

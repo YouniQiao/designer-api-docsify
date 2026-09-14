@@ -14,7 +14,7 @@ function stopDiscoverDevices(): boolean
 
 停止发现设备。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。
 

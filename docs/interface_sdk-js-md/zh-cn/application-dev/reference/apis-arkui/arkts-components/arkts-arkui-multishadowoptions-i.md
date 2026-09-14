@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## offsetX
 
 ```TypeScript
@@ -65,7 +60,7 @@ radius?: number | Resource
 
 **类型：** number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
-**默认值：**
+**默认值：** 
 - API版本10：5
 - API版本11+：20
 

@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## color
 
 ```TypeScript
@@ -71,7 +66,7 @@ privacySensitive(isPrivacySensitiveMode: Optional<boolean>)
 
 设置隐私敏感。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 

@@ -13,10 +13,6 @@ A typed array of 64-bit signed integer values. The contents are initialized to 0
 [Symbol.iterator](): IterableIterator<bigint>
 ```
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## copyWithin
 
 ```TypeScript
@@ -33,10 +29,6 @@ Returns the this object after copying a section of the array identified by start
 | start | number | Yes |  |
 | end | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## entries
 
 ```TypeScript
@@ -45,10 +37,6 @@ entries(): IterableIterator<[number, bigint]>
 
 Yields index, value pairs for every entry in the array.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## every
 
 ```TypeScript
@@ -66,10 +54,6 @@ Determines whether all the members of an array satisfy the specified test.
 | predicate | (value: bigint, index: number, array: BigInt64Array) =&gt; boolean | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## fill
 
 ```TypeScript
@@ -86,10 +70,6 @@ Changes all array elements from `start` to `end` index to a static `value` and r
 | start | number | No |  |
 | end | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## filter
 
 ```TypeScript
@@ -105,10 +85,6 @@ Returns the elements of an array that meet the condition specified in a callback
 | predicate | (value: bigint, index: number, array: BigInt64Array) =&gt; any | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## find
 
 ```TypeScript
@@ -124,10 +100,6 @@ Returns the value of the first element in the array where predicate is true, and
 | predicate | (value: bigint, index: number, array: BigInt64Array) =&gt; boolean | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## findIndex
 
 ```TypeScript
@@ -143,10 +115,6 @@ Returns the index of the first element in the array where predicate is true, and
 | predicate | (value: bigint, index: number, array: BigInt64Array) =&gt; boolean | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## forEach
 
 ```TypeScript
@@ -177,10 +145,6 @@ Determines whether an array includes a certain element, returning true or false 
 | searchElement | bigint | Yes |  |
 | fromIndex | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## indexOf
 
 ```TypeScript
@@ -196,10 +160,6 @@ Returns the index of the first occurrence of a value in an array.
 | searchElement | bigint | Yes |  |
 | fromIndex | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## join
 
 ```TypeScript
@@ -214,10 +174,6 @@ Adds all the elements of an array separated by the specified separator string.
 | --- | --- | --- | --- |
 | separator | string | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## keys
 
 ```TypeScript
@@ -226,10 +182,6 @@ keys(): IterableIterator<number>
 
 Yields each index in the array.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## lastIndexOf
 
 ```TypeScript
@@ -245,10 +197,6 @@ Returns the index of the last occurrence of a value in an array.
 | searchElement | bigint | Yes |  |
 | fromIndex | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## map
 
 ```TypeScript
@@ -264,10 +212,6 @@ Calls a defined callback function on each element of an array, and returns an ar
 | callbackfn | (value: bigint, index: number, array: BigInt64Array) =&gt; bigint | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduce
 
 ```TypeScript
@@ -282,10 +226,6 @@ Calls the specified callback function for all the elements in an array. The retu
 | --- | --- | --- | --- |
 | callbackfn | (previousValue: bigint, currentValue: bigint, currentIndex: number, array: BigInt64Array) =&gt; bigint | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduce
 
 ```TypeScript
@@ -301,10 +241,6 @@ Calls the specified callback function for all the elements in an array. The retu
 | callbackfn | (previousValue: U, currentValue: bigint, currentIndex: number, array: BigInt64Array) =&gt; U | Yes |  |
 | initialValue | U | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduceRight
 
 ```TypeScript
@@ -319,10 +255,6 @@ Calls the specified callback function for all the elements in an array, in desce
 | --- | --- | --- | --- |
 | callbackfn | (previousValue: bigint, currentValue: bigint, currentIndex: number, array: BigInt64Array) =&gt; bigint | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduceRight
 
 ```TypeScript
@@ -338,10 +270,6 @@ Calls the specified callback function for all the elements in an array, in desce
 | callbackfn | (previousValue: U, currentValue: bigint, currentIndex: number, array: BigInt64Array) =&gt; U | Yes |  |
 | initialValue | U | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reverse
 
 ```TypeScript
@@ -350,10 +278,6 @@ reverse(): this
 
 Reverses the elements in the array.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## set
 
 ```TypeScript
@@ -384,10 +308,6 @@ Returns a section of an array.
 | start | number | No |  |
 | end | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## some
 
 ```TypeScript
@@ -403,10 +323,6 @@ Determines whether the specified callback function returns true for any element 
 | predicate | (value: bigint, index: number, array: BigInt64Array) =&gt; boolean | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## sort
 
 ```TypeScript
@@ -421,10 +337,6 @@ Sorts the array.
 | --- | --- | --- | --- |
 | compareFn | (a: bigint, b: bigint) =&gt; number &#124; bigint | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## subarray
 
 ```TypeScript
@@ -440,10 +352,6 @@ Gets a new BigInt64Array view of the ArrayBuffer store for this array, referenci
 | begin | number | No |  |
 | end | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toLocaleString
 
 ```TypeScript
@@ -452,10 +360,6 @@ toLocaleString(): string
 
 Converts the array to a string by using the current locale.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toString
 
 ```TypeScript
@@ -464,10 +368,6 @@ toString(): string
 
 Returns a string representation of the array.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## valueOf
 
 ```TypeScript
@@ -476,10 +376,6 @@ valueOf(): BigInt64Array
 
 Returns the primitive value of the specified object.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## values
 
 ```TypeScript
@@ -488,10 +384,6 @@ values(): IterableIterator<bigint>
 
 Yields each value in the array.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [index: number]
 
 ```TypeScript

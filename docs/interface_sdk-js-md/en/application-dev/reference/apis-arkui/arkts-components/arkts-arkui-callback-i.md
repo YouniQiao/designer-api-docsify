@@ -6,11 +6,6 @@ Defines the basic callback.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## [[Call]]
 
 ```TypeScript

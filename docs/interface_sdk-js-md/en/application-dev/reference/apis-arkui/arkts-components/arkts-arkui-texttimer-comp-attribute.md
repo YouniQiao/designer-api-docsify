@@ -10,11 +10,6 @@ In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## contentModifier
 
 ```TypeScript
@@ -79,7 +74,7 @@ Sets the font family.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font family. The default font is **'HarmonyOS Sans'**.<br>The 'HarmonyOS Sans' font and [registered custom fonts](../arkts-apis/arkts-font.md) are supported for applications.<br>Only the 'HarmonyOS Sans' font is supported for widgets. |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font family. The default font is **'HarmonyOS Sans'**.<br>The 'HarmonyOS Sans' font and [registered custom fonts](../arkts-apis/arkts-arkui-font.md) are supported for applications.<br>Only the 'HarmonyOS Sans' font is supported for widgets. |
 
 ## fontSize
 
@@ -123,7 +118,7 @@ Sets the font style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | Yes | Font style, for example, italic.<br>Default value: **FontStyle.Normal |
+| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | Yes | Font style, for example, italic.<br>Default value: **FontStyle.Normal** |
 
 ## fontWeight
 
@@ -169,7 +164,7 @@ The timer update frequency is in the minimum unit of **format**. For example, if
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | Custom date display format.<br>Default value: **'HH:mm:ss.SS' |
+| value | string | Yes | Custom date display format.<br>Default value: **'HH:mm:ss.SS'** |
 
 ## onTimer
 
@@ -201,7 +196,7 @@ textShadow(value: ShadowOptions | Array<ShadowOptions>)
 
 Sets the text shadow. It supports input parameters in an array to implement multiple text shadows. This API does not work with the **fill** attribute or coloring strategy.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 12.
 

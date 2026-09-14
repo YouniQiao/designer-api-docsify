@@ -44,7 +44,7 @@ name: ResourceStr
 
 默认值：空字符串。
 
-**说明：**如果文本大于列宽时，文本被截断。
+**说明：** 如果文本大于列宽时，文本被截断。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -66,7 +66,7 @@ value: ResourceStr
 
 默认值：空字符串。
 
-**说明：**如果文本大于列宽时，文本被截断。
+**说明：** 如果文本大于列宽时，文本被截断。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

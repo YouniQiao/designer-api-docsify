@@ -2,7 +2,7 @@
 
 TCPSocketConnection连接，即TCPSocket客户端与服务端的连接。在调用TCPSocketConnection的方法前，需要先获取TCPSocketConnection对象。
 
-> **说明：**
+> **说明：** 
 > 
 > 客户端与服务端成功建立连接后，才能通过返回的TCPSocketConnection对象调用相应的接口。
 
@@ -122,7 +122,7 @@ getLocalAddress(): Promise<NetAddress>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | 以Promise形式返回获取本地socket地址的结果。 |
+| Promise&lt;[NetAddress](arkts-network-socket-p.md)&gt; | 以Promise形式返回获取本地socket地址的结果。 |
 
 **错误码：**
 
@@ -179,7 +179,7 @@ getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 
 获取对端Socket地址。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 与客户端建立连接后，才可调用此方法。
 
@@ -193,7 +193,7 @@ getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetAddress](arkts-network-socket-p.md)&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -230,7 +230,7 @@ getRemoteAddress(): Promise<NetAddress>
 
 获取对端Socket地址。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 与客户端建立连接后，才可调用此方法。
 
@@ -244,7 +244,7 @@ getRemoteAddress(): Promise<NetAddress>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | 以Promise形式返回获取对端socket地址的结果。 |
+| Promise&lt;[NetAddress](arkts-network-socket-p.md)&gt; | 以Promise形式返回获取对端socket地址的结果。 |
 
 **错误码：**
 
@@ -278,7 +278,7 @@ getSocketFd(): Promise<number>
 
 获取TCPSocketConnection连接的文件描述符。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 与客户端建立连接后，才可调用此方法。
 > 
@@ -600,7 +600,7 @@ send(options: TCPSendOptions, callback: AsyncCallback<void>): void
 
 通过TCPSocketConnection连接发送数据。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 与客户端建立连接后，才可调用此方法。
 
@@ -650,7 +650,7 @@ send(options: TCPSendOptions): Promise<void>
 
 通过TCPSocketConnection连接发送数据。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 与客户端建立连接后，才可调用此方法。
 

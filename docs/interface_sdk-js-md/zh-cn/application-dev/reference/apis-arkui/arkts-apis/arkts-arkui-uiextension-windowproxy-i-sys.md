@@ -20,7 +20,7 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 
 设置是否隐藏不安全窗口，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 不安全窗口是指可能遮挡EmbeddedComponent（或
 > UIExtensionComponent）组件的窗口，如全局悬浮窗、宿主子窗口和宿主创建的Dialog窗口
@@ -101,7 +101,7 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 
 为当前窗口添加或删除安全水印标志，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 添加安全水印标志后，窗口在前台时会将当前全屏幕覆盖水印。全屏、悬浮窗、分屏等场景下只要有添加了安全水印标志的窗口在前台，就会显示全屏水印。
 

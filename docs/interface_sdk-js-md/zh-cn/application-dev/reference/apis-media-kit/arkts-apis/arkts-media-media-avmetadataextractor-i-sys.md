@@ -4,7 +4,7 @@
 
 获取音频或视频元数据、视频缩略图的demo可参考：[使用AVMetadataExtractor提取音视频元数据信息(ArkTS)](../../../media/media/avmetadataextractor.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本Interface首批接口从API version 11开始支持。
 

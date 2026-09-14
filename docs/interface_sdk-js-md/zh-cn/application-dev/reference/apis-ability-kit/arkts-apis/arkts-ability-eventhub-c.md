@@ -141,7 +141,7 @@ on(event: string, callback: Function): void
 
 订阅指定事件。
 
-> **说明：**
+> **说明：** 
 > 
 > callback被emit触发时，调用方是EventHub对象，如果要修改callback中this的指向，可以使用箭头函数。
 

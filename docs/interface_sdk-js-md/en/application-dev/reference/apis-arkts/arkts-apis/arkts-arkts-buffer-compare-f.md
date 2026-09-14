@@ -24,8 +24,8 @@ Compares two **Buffer** objects. This API is used for sorting **Buffer** objects
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf1 | Buffer &#124; Uint8Array | Yes | Buffer** object to compare. |
-| buf2 | Buffer &#124; Uint8Array | Yes | Buffer** object to compare. |
+| buf1 | Buffer &#124; Uint8Array | Yes | **Buffer** object to compare. |
+| buf2 | Buffer &#124; Uint8Array | Yes | **Buffer** object to compare. |
 
 **Return value:**
 

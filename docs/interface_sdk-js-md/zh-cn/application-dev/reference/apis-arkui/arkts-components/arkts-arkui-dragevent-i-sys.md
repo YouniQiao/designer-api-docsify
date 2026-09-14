@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## enableInternalDropAnimation
 
 ```TypeScript
@@ -49,7 +44,7 @@ executeFollowHandMorphDropAnimation(onAnimationFinished: Callback<void>, animati
 
 设置一个跟手变形落位动效执行完成后的回调，该回调由系统在拖拽框架动效结束后触发。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 该接口仅在[dragAnimationType](#draganimationtype)设置为DragAnimationType.FOLLOW_HAND_MORPH时生效。
 > 

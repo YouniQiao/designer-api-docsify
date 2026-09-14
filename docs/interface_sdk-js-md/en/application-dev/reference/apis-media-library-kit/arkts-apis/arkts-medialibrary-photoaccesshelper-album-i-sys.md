@@ -22,7 +22,7 @@ deleteAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void
 
 Deletes image or video assets from the trash. Before the operation, ensure that the image or video assets exist in the trash. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
 > operation.
@@ -96,7 +96,7 @@ deleteAssets(assets: Array<PhotoAsset>): Promise<void>
 
 Deletes image or video assets from the trash. Before the operation, ensure that the image or video assets exist in the trash. It is recommended that the number of images or videos to be deleted be less than or equal to 1000. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
 > operation.

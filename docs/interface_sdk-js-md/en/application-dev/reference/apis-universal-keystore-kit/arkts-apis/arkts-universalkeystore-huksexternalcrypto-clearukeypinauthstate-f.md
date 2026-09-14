@@ -36,7 +36,7 @@ Clear the PIN auth state of the specified resource ID.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | API is not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability. 2. The chip does not support the capability. 3. A dependent service feature is not supported. |
 | [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
 | [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | Failed to call the UKey driver interface. Please check the UKey connection and driver status. |
 | [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | The cached resource ID not found. |

@@ -6,11 +6,6 @@ Configures the media policy of the **Web** component, including the audio playba
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## audioExclusive
 
 ```TypeScript
@@ -53,7 +48,7 @@ resumeInterval?: number
 
 Validity period during which Web audio and video paused by other apps can automatically resume playback, in seconds. Value range: [-2147483648, 2147483647]. The value **0** means no automatic resumption; a value greater than **0** means an attempt to resume within the specified period; a value less than **0** means an attempt to resume within an unlimited period. Due to approximation, this validity period may have an error within one second.
 
-**NOTE:**
+**NOTE:** 
 
 After an HLS video is interrupted, it will automatically resume when returning to the foreground, regardless of this time setting.
 

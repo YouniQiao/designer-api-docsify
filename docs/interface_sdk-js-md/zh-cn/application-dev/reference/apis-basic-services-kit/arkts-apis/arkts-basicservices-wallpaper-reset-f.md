@@ -13,7 +13,7 @@ function reset(wallpaperType: WallpaperType, callback: AsyncCallback<void>): voi
 ```
 
 移除指定类型的壁纸，恢复为默认显示的壁纸。使用callback异步回调。<br>   
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 7开始支持，从API version 9开始废弃。
 
@@ -54,7 +54,7 @@ function reset(wallpaperType: WallpaperType): Promise<void>
 ```
 
 移除指定类型的壁纸，恢复为默认显示的壁纸。使用Promise异步回调。<br>   
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 7开始支持，从API version 9开始废弃。
 

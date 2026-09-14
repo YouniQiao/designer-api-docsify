@@ -243,7 +243,7 @@ function on(type: 'freeze', observer: FreezeObserver): void
 
 > **注意**：
 > 
-> 如果该回调函数执行时间超过1s，可能导致[AppRecovery](arkts-app-ability-apprecovery.md)功能不可用。通过解析hilog日志中的begin与Freeze
+> 如果该回调函数执行时间超过1s，可能导致[AppRecovery](arkts-ability-app-ability-apprecovery.md)功能不可用。通过解析hilog日志中的begin与Freeze
 > callback execution completed两者的时间差可以计算回调函数执行时长，如果超过1秒，可以尝试采用异步处理、减少阻塞操作、优化数据结构等方法优化回调逻辑，降低执行时长。
 > 该接口请勿与[errorManager.setDefaultFreezeObserver](arkts-ability-errormanager-setdefaultfreezeobserver-f.md)接口混用，混用可能会导致注册的回调函数执行失败。
 

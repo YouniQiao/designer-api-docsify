@@ -10,11 +10,6 @@ In addition to the universal events, the following events are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## contentModifier
 
 ```TypeScript
@@ -79,7 +74,7 @@ Sets the check mark style of the check box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md) | Yes | Check mark style of the check box. Since API version 12, if **indicatorBuilder** is set, the style is determined by **indicatorBuilder**.<br>Default value: {<br>strokeColor : `\&#36;r('sys.color.ohos_id_color_foreground_contrary')`,<br>strokeWidth: `\&#36;r('sys.float.ohos_id_checkbox_stroke_width')`,<br>size: '20vp'<br>} |
+| value | [MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md) | Yes | Check mark style of the check box. Since API version 12, if **indicatorBuilder** is set, the style is determined by **indicatorBuilder**.<br>Default value: {<br>strokeColor : `&#36;r('sys.color.ohos_id_color_foreground_contrary')`,<br>strokeWidth: `&#36;r('sys.float.ohos_id_checkbox_stroke_width')`,<br>size: '20vp'<br>} |
 
 ## mark
 
@@ -101,7 +96,7 @@ Sets the check mark style of the check box. Compared with [mark](#mark)&lt;sup&g
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md)&gt; | Yes | Check mark style of the check box. If **indicatorBuilder** is set, the style is determined by **indicatorBuilder**.<br>If **style** is set to **undefined**, the default value is used: {<br>strokeColor : `\&#36;r('sys.color.ohos_id_color_foreground_contrary')`,<br>strokeWidth: `\&#36;r('sys.float.ohos_id_checkbox_stroke_width')`,<br>size: '20vp'<br>} |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md)&gt; | Yes | Check mark style of the check box. If **indicatorBuilder** is set, the style is determined by **indicatorBuilder**.<br>If **style** is set to **undefined**, the default value is used: {<br>strokeColor : `&#36;r('sys.color.ohos_id_color_foreground_contrary')`,<br>strokeWidth: `&#36;r('sys.float.ohos_id_checkbox_stroke_width')`,<br>size: '20vp'<br>} |
 
 ## onChange
 
@@ -157,7 +152,7 @@ select(value: boolean)
 
 Sets whether the check box is selected.
 
-Since API version 10, this attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this attribute supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
 
 Since API version 18, this attribute supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
@@ -183,7 +178,7 @@ select(isSelected: Optional<boolean>)
 
 Sets whether the check box is selected. Compared with [select](#select), this API supports the **undefined** type for the **isSelected** parameter.
 
-This attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md) and [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
+This attribute supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md) and [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Since:** 18
 
@@ -221,7 +216,7 @@ Sets the color of the check box when it is selected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the check box when it is selected.<br>Default value: **\&#36;r('sys.color.ohos_id_color_text_primary_activated')**.<br>An invalid value is handled as the default value. |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the check box when it is selected.<br>Default value: **&#36;r('sys.color.ohos_id_color_text_primary_activated')**.<br>An invalid value is handled as the default value. |
 
 ## selectedColor
 
@@ -245,7 +240,7 @@ Sets the color of the check box when it is selected. Compared with [selectedColo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Color of the check box when it is selected.<br>If **resColor** is set to **undefined**, the default value **\&#36;r('sys.color.ohos_id_color_text_primary_activated')** is used.<br>An invalid value is handled as the default value. |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Color of the check box when it is selected.<br>If **resColor** is set to **undefined**, the default value **&#36;r('sys.color.ohos_id_color_text_primary_activated')** is used.<br>An invalid value is handled as the default value. |
 
 ## shape
 
@@ -269,7 +264,7 @@ Sets the check box shape. To adjust the style of the current check box, use [con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md) | Yes | Shape of the check box.<br>Default value: **CheckBoxShape.CIRCLE |
+| value | [CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md) | Yes | Shape of the check box.<br>Default value: **CheckBoxShape.CIRCLE** |
 
 ## shape
 
@@ -315,7 +310,7 @@ Sets the border color of the check box when it is not selected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Border color of the check box when it is not selected.<br>Default value: **\&#36;r('sys.color.ohos_id_color_switch_outline_off')**. |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Border color of the check box when it is not selected.<br>Default value: **&#36;r('sys.color.ohos_id_color_switch_outline_off')**. |
 
 ## unselectedColor
 
@@ -337,4 +332,4 @@ Sets the border color of the check box when it is not selected. Compared with [u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Border color of the check box when it is not selected.<br>If **resColor** is set to **undefined**, the default value **\&#36;r('sys.color.ohos_id_color_switch_outline_off')** is used. |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Border color of the check box when it is not selected.<br>If **resColor** is set to **undefined**, the default value **&#36;r('sys.color.ohos_id_color_switch_outline_off')** is used. |

@@ -307,7 +307,7 @@ postMessageAtFront?(message: Object, priority: Priority, transfer?: ArrayBuffer[
 
 Worker线程通过转移对象所有权的方式向宿主线程发送插队消息，并插入到对应优先级队列的队头。除Worker线程向主线程发送的场景外，该接口与postMessage功能一致。
 
-> **说明：**
+> **说明：** 
 > 
 > - 如果是Worker线程向宿主线程发送插队的消息，消息能够插队并且按优先级进行发送。
 > 

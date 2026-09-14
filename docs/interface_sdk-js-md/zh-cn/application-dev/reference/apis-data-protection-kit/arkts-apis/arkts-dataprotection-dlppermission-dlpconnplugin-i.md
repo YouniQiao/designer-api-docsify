@@ -2,7 +2,7 @@
 
 被用于registerPlugin接口中，将回调能力注册到SA（System Ability）中。
 
-> **说明：**
+> **说明：** 
 > 
 > [registerPlugin](arkts-dataprotection-dlppermission-dlpconnmanager-c.md#registerplugin)接口的参数需要继承该接口，
 > [connectServer](#connectserver)由SA（System Ability）侧调用，通过callback进行回传参数。
@@ -27,7 +27,7 @@ connectServer(requestId: string, requestData: string, callback: Callback<string>
 
 该接口可用于企业账号认证、云端权限验证等场景，实现SA与云服务器的通信能力，完成权限校验或账号验证流程。
 
-> **说明：**
+> **说明：** 
 > 
 > connectServer接口代表系统能力侧向前端通信的一次调用。
 

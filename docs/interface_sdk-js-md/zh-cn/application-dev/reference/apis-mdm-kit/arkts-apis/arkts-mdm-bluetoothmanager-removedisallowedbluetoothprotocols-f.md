@@ -72,7 +72,7 @@ function removeDisallowedBluetoothProtocols(admin: Want, accountId: number, prot
 
 从禁用名单中移除蓝牙协议。移除后，指定用户将不再受该传输策略的限制，可以正常使用这些蓝牙协议。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 当传入SPP协议时，policy参数只能传入TransferPolicy.RECEIVE_SEND，否则会返回错误码9200012。
 > 

@@ -12,11 +12,11 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAbilityIcon(bundleName: string, moduleName: string, abilityName: string, callback: AsyncCallback<image.PixelMap>): void
 ```
 
-通过bundleName、moduleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)，使用callback异步回调。
+通过bundleName、moduleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-multimedia-image.md)，使用callback异步回调。
 
 获取调用方信息时不需要权限。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 10开始废弃，建议使用
 > [getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent)
@@ -41,7 +41,7 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 | bundleName | string | 是 | 要查询的应用Bundle名称。 |
 | moduleName | string | 是 | 要查询的应用Module名称。 |
 | abilityName | string | 是 | 要查询的Ability组件名。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | 是 | 回调函数，返回指定[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)，作为程序启动时的入参。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | 是 | 回调函数，返回指定[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-multimedia-image.md)，作为程序启动时的入参。 |
 
 **错误码：**
 
@@ -87,11 +87,11 @@ try {
 function getAbilityIcon(bundleName: string, moduleName: string, abilityName: string): Promise<image.PixelMap>
 ```
 
-通过bundleName、moduleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)，使用Promise异步回调。
+通过bundleName、moduleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-multimedia-image.md)，使用Promise异步回调。
 
 获取调用方信息时不需要权限。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 10开始废弃，建议使用
 > [getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent)

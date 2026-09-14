@@ -6,7 +6,7 @@ Manages notifications.
 
 **Deprecated since:** 7
 
-**Substitutes:** [notification/notification](arkts-notification.md)
+**Substitutes:** [notification/notification](arkts-notification-notification.md)
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -28,7 +28,7 @@ Displays the notification.
 
 **Deprecated since:** 7
 
-**Substitutes:** [notification/notification](arkts-notification.md)
+**Substitutes:** [notification/notification](arkts-notification-notification.md)
 
 **System capability:** SystemCapability.Notification.Notification
 

@@ -92,7 +92,7 @@ privateKeyFormat?: EncodingBaseFormat
 
 表示获取私钥的格式，当前支持PEM和DER格式。参数缺省时，默认为PEM格式。
 
-> **说明：**
+> **说明：** 
 > 
 > 当needsPrivateKey值为true时，该参数生效。
 

@@ -108,7 +108,7 @@ Maximizes locale information by supplementing the missing script and country/reg
 
 | Type | Description |
 | --- | --- |
-| [Locale](arkts-localization-intl-locale-c.md) | Locale** object with the script and country/region information. |
+| [Locale](arkts-localization-intl-locale-c.md) | **Locale** object with the script and country/region information. |
 
 **Examples**
 
@@ -152,7 +152,7 @@ Minimizes locale information by removing the script and country/region informati
 
 | Type | Description |
 | --- | --- |
-| [Locale](arkts-localization-intl-locale-c.md) | Locale** object without the script and country/region information. |
+| [Locale](arkts-localization-intl-locale-c.md) | **Locale** object without the script and country/region information. |
 
 **Examples**
 

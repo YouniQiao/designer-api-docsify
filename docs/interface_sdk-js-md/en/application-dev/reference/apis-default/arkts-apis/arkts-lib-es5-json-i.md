@@ -20,10 +20,6 @@ Converts a JavaScript Object Notation (JSON) string into an object.
 | text | string | Yes |  |
 | reviver | (this: any, key: string, value: any) =&gt; any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## stringify
 
 ```TypeScript
@@ -40,10 +36,6 @@ Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
 | replacer | (this: any, key: string, value: any) =&gt; any | No |  |
 | space | string &#124; number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## stringify
 
 ```TypeScript
@@ -59,8 +51,3 @@ Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
 | value | any | Yes |  |
 | replacer | (number &#124; string)[] &#124; null | No |  |
 | space | string &#124; number | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

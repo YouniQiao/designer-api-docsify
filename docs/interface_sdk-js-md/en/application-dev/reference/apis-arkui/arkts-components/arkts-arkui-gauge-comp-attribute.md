@@ -10,11 +10,6 @@ The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-gener
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## colors
 
 ```TypeScript
@@ -91,7 +86,7 @@ Sets the description of the gauge.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Description.<br>**NOTE:**<br>You need to customize the content – text or imagery recommended – in @Builder.<br>If the width and height of the custom content are in percentage, the reference range is a rectangle that is 44.4% of the diameter of the ring horizontally and 25.4% vertically (for images, it is 28.6% both horizontally and vertically), positioned 0 vp away from the bottom of the ring and centered horizontally.<br>If this parameter is set to null, no description is displayed.<br>If this parameter is not set, what's displayed is subject to the maximum and minimum value settings.<br>If either or both of the maximum and minimum values are set, they are displayed.<br>If neither maximum nor minimum values are set, no description is displayed.<br>The maximum and minimum values are displayed at the bottom of the ring and cannot be relocated. They may be blocked by the ring if the ring's start and end angles are not set properly. |
+| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Description.<br>**NOTE:** <br>You need to customize the content – text or imagery recommended – in @Builder.<br>If the width and height of the custom content are in percentage, the reference range is a rectangle that is 44.4% of the diameter of the ring horizontally and 25.4% vertically (for images, it is 28.6% both horizontally and vertically), positioned 0 vp away from the bottom of the ring and centered horizontally.<br>If this parameter is set to null, no description is displayed.<br>If this parameter is not set, what's displayed is subject to the maximum and minimum value settings.<br>If either or both of the maximum and minimum values are set, they are displayed.<br>If neither maximum nor minimum values are set, no description is displayed.<br>The maximum and minimum values are displayed at the bottom of the ring and cannot be relocated. They may be blocked by the ring if the ring's start and end angles are not set properly. |
 
 ## endAngle
 
@@ -137,7 +132,7 @@ Sets the indicator style of the gauge.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [GaugeIndicatorOptions](arkts-arkui-gaugeindicatoroptions-i.md) | Yes | Indicator style.<br>**NOTE:**<br>If this attribute is set to **null**, no indicator is displayed. |
+| value | [GaugeIndicatorOptions](arkts-arkui-gaugeindicatoroptions-i.md) | Yes | Indicator style.<br>**NOTE:** <br>If this attribute is set to **null**, no indicator is displayed. |
 
 ## privacySensitive
 
@@ -147,7 +142,7 @@ privacySensitive(isPrivacySensitiveMode: Optional<boolean>)
 
 Sets whether to enable privacy mode.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 20.
 
@@ -209,7 +204,7 @@ Sets the stroke width of the gauge.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Stroke width of the gauge.<br>Default value: **4**<br>Unit: vp<br>**NOTE:**<br>A value less than or equal to 0 is handled as the default value.<br>If the value exceeds the maximum value, the radius of the gauge, the maximum value is used.<br>The value cannot be in percentage. |
+| length | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Stroke width of the gauge.<br>Default value: **4**<br>Unit: vp<br>**NOTE:** <br>A value less than or equal to 0 is handled as the default value.<br>If the value exceeds the maximum value, the radius of the gauge, the maximum value is used.<br>The value cannot be in percentage. |
 
 ## trackShadow
 
@@ -233,7 +228,7 @@ Sets the shadow style of the gauge.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [GaugeShadowOptions](arkts-arkui-gaugeshadowoptions-i.md) | Yes | Shadow effect. You can specify the blur radius, and the offset along the X and Y axes.<br>**NOTE:**<br>The shadow color is the same as the ring color.<br>If this attribute is set to **null**, the shadow effect is disabled. |
+| value | [GaugeShadowOptions](arkts-arkui-gaugeshadowoptions-i.md) | Yes | Shadow effect. You can specify the blur radius, and the offset along the X and Y axes.<br>**NOTE:** <br>The shadow color is the same as the ring color.<br>If this attribute is set to **null**, the shadow effect is disabled. |
 
 ## value
 
@@ -255,4 +250,4 @@ Sets the value of the gauge.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Value of the gauge. It can be dynamically changed.<br>Default value: **0 |
+| value | number | Yes | Value of the gauge. It can be dynamically changed.<br>Default value: **0** |

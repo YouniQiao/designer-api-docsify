@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-arkgraphics2d-->
 
-- [@ohos.effectKit](arkts-effectkit.md)
+- [@ohos.effectKit](arkts-arkgraphics2d-effectkit.md)
   - [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md)
   - [createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md)
   - [Color](arkts-arkgraphics2d-effectkit-color-i.md)
@@ -21,22 +21,22 @@
   <!--Del-->
   - [PictureShadeDegree(system api)](arkts-arkgraphics2d-effectkit-pictureshadedegree-e-sys.md)<!--DelEnd-->
   - [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md)
-- [@ohos.graphics.colorSpaceManager(Color Space Management)](arkts-graphics-colorspacemanager.md)
+- [@ohos.graphics.colorSpaceManager(Color Space Management)](arkts-arkgraphics2d-graphics-colorspacemanager.md)
   - [create](arkts-arkgraphics2d-colorspacemanager-create-f.md)
   - [ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md)
   - [ColorSpacePrimaries](arkts-arkgraphics2d-colorspacemanager-colorspaceprimaries-i.md)
   - [ColorSpace](arkts-arkgraphics2d-colorspacemanager-colorspace-e.md)
-- [@ohos.graphics.common2D(Common Data Types of 2D Graphics)](arkts-graphics-common2d.md)
+- [@ohos.graphics.common2D(Common Data Types of 2D Graphics)](arkts-arkgraphics2d-graphics-common2d.md)
   - [Color](arkts-arkgraphics2d-common2d-color-i.md)
   - [Color4f](arkts-arkgraphics2d-common2d-color4f-i.md)
   - [Point](arkts-arkgraphics2d-common2d-point-i.md)
   - [Point3d](arkts-arkgraphics2d-common2d-point3d-i.md)
   - [Rect](arkts-arkgraphics2d-common2d-rect-i.md)
-- [@ohos.graphics.displaySync(Variable Frame Rate)](arkts-graphics-displaysync.md)
+- [@ohos.graphics.displaySync(Variable Frame Rate)](arkts-arkgraphics2d-graphics-displaysync.md)
   - [create](arkts-arkgraphics2d-displaysync-create-f.md)
   - [DisplaySync](arkts-arkgraphics2d-displaysync-displaysync-i.md)
   - [IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)
-- [@ohos.graphics.drawing(Drawing Module)](arkts-graphics-drawing.md)
+- [@ohos.graphics.drawing(Drawing Module)](arkts-arkgraphics2d-graphics-drawing.md)
   - [Brush](arkts-arkgraphics2d-drawing-brush-c.md)
   - [Canvas](arkts-arkgraphics2d-drawing-canvas-c.md)
   - [ColorFilter](arkts-arkgraphics2d-drawing-colorfilter-c.md)
@@ -90,13 +90,13 @@
   - [TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md)
   - [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md)
   - [VertexMode](arkts-arkgraphics2d-drawing-vertexmode-e.md)
-- [@ohos.graphics.hdrCapability(HDR Capability)](arkts-graphics-hdrcapability.md)
+- [@ohos.graphics.hdrCapability(HDR Capability)](arkts-arkgraphics2d-graphics-hdrcapability.md)
   - [HDRFormat](arkts-arkgraphics2d-hdrcapability-hdrformat-e.md)
-- [@ohos.graphics.sendableColorSpaceManager(Sendable Color Space Management)](arkts-graphics-sendablecolorspacemanager.md)
+- [@ohos.graphics.sendableColorSpaceManager(Sendable Color Space Management)](arkts-arkgraphics2d-graphics-sendablecolorspacemanager.md)
   - [create](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md)
   - [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md)
   - [ISendable](arkts-arkgraphics2d-sendablecolorspacemanager-isendable-t.md)
-- [@ohos.graphics.text](arkts-graphics-text.md)
+- [@ohos.graphics.text](arkts-arkgraphics2d-graphics-text.md)
   - [getFontCount](arkts-arkgraphics2d-text-getfontcount-f.md)
   - [getFontDescriptorByFullName](arkts-arkgraphics2d-text-getfontdescriptorbyfullname-f.md)
   - [getFontDescriptorsFromPath](arkts-arkgraphics2d-text-getfontdescriptorsfrompath-f.md)
@@ -159,7 +159,7 @@
   - [TextUndefinedGlyphDisplay](arkts-arkgraphics2d-text-textundefinedglyphdisplay-e.md)
   - [TextVerticalAlign](arkts-arkgraphics2d-text-textverticalalign-e.md)
   - [WordBreak](arkts-arkgraphics2d-text-wordbreak-e.md)
-- [@ohos.graphics.uiEffect](arkts-graphics-uieffect.md)
+- [@ohos.graphics.uiEffect](arkts-arkgraphics2d-graphics-uieffect.md)
   - [uiEffect](arkts-arkgraphics2d-uieffect-n.md)
     <!--Del-->
     - [createBrightnessBlender(system api)](arkts-arkgraphics2d-uieffect-createbrightnessblender-f-sys.md)<!--DelEnd-->
@@ -217,7 +217,7 @@
   <!--Del-->
   - [BrightnessBlenderParam(system api)](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md)<!--DelEnd-->
 - common<!--arkts-arkgraphics2d-common-->
-  - [webgl](arkts-webgl.md)
+  - [webgl](arkts-arkgraphics2d-webgl.md)
     - [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md)
     - [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md)
     - [WebGLContextAttributes](arkts-arkgraphics2d-webgl-webglcontextattributes-i.md)
@@ -249,7 +249,7 @@
     - [Int32List](arkts-arkgraphics2d-int32list-t.md)
     - [TexImageSource](arkts-arkgraphics2d-teximagesource-t.md)
     - [WebGLPowerPreference](arkts-arkgraphics2d-webglpowerpreference-t.md)
-  - [webgl2](arkts-webgl2.md)
+  - [webgl2](arkts-arkgraphics2d-webgl2.md)
     - [WebGL2RenderingContext](arkts-arkgraphics2d-webgl2-webgl2renderingcontext-i.md)
     - [WebGL2RenderingContextBase](arkts-arkgraphics2d-webgl2-webgl2renderingcontextbase-i.md)
     - [WebGL2RenderingContextOverloads](arkts-arkgraphics2d-webgl2-webgl2renderingcontextoverloads-i.md)

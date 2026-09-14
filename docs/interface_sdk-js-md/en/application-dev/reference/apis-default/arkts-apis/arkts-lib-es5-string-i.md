@@ -19,10 +19,6 @@ Returns the character at the specified index.
 | --- | --- | --- | --- |
 | pos | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## charCodeAt
 
 ```TypeScript
@@ -37,10 +33,6 @@ Returns the Unicode value of the character at the specified location.
 | --- | --- | --- | --- |
 | index | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## concat
 
 ```TypeScript
@@ -55,10 +47,6 @@ Returns a string that contains the concatenation of two or more strings.
 | --- | --- | --- | --- |
 | strings | string[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## indexOf
 
 ```TypeScript
@@ -74,10 +62,6 @@ Returns the position of the first occurrence of a substring.
 | searchString | string | Yes |  |
 | position | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## lastIndexOf
 
 ```TypeScript
@@ -93,10 +77,6 @@ Returns the last occurrence of a substring in the string.
 | searchString | string | Yes |  |
 | position | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## localeCompare
 
 ```TypeScript
@@ -113,10 +93,6 @@ Determines whether two strings are equivalent in the current or specified locale
 | locales | string &#124; string[] | No |  |
 | options | [Intl.CollatorOptions](arkts-intl-collatoroptions-i.md) | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## match
 
 ```TypeScript
@@ -131,10 +107,6 @@ Matches a string with a regular expression, and returns an array containing the 
 | --- | --- | --- | --- |
 | regexp | string &#124; RegExp | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## replace
 
 ```TypeScript
@@ -150,10 +122,6 @@ Replaces text in a string, using a regular expression or search string.
 | searchValue | string &#124; RegExp | Yes |  |
 | replaceValue | string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## replace
 
 ```TypeScript
@@ -169,10 +137,6 @@ Replaces text in a string, using a regular expression or search string.
 | searchValue | string &#124; RegExp | Yes |  |
 | replacer | (substring: string, ...args: any[]) =&gt; string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## search
 
 ```TypeScript
@@ -187,10 +151,6 @@ Finds the first substring match in a regular expression search.
 | --- | --- | --- | --- |
 | regexp | string &#124; RegExp | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## slice
 
 ```TypeScript
@@ -206,10 +166,6 @@ Returns a section of a string.
 | start | number | No |  |
 | end | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## split
 
 ```TypeScript
@@ -225,10 +181,6 @@ Split a string into substrings using the specified separator and return them as 
 | separator | string &#124; RegExp | Yes |  |
 | limit | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## substr
 
 ```TypeScript
@@ -246,10 +198,6 @@ Gets a substring beginning at the specified location and having the specified le
 | from | number | Yes |  |
 | length | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## substring
 
 ```TypeScript
@@ -265,10 +213,6 @@ Returns the substring at the specified location within a String object.
 | start | number | Yes |  |
 | end | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toLocaleLowerCase
 
 ```TypeScript
@@ -283,10 +227,6 @@ Converts all alphabetic characters to lowercase, taking into account the host en
 | --- | --- | --- | --- |
 | locales | string &#124; string[] | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toLocaleUpperCase
 
 ```TypeScript
@@ -301,10 +241,6 @@ Returns a string where all alphabetic characters have been converted to uppercas
 | --- | --- | --- | --- |
 | locales | string &#124; string[] | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toLowerCase
 
 ```TypeScript
@@ -313,10 +249,6 @@ toLowerCase(): string
 
 Converts all the alphabetic characters in a string to lowercase.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toString
 
 ```TypeScript
@@ -325,10 +257,6 @@ toString(): string
 
 Returns a string representation of a string.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toUpperCase
 
 ```TypeScript
@@ -337,10 +265,6 @@ toUpperCase(): string
 
 Converts all the alphabetic characters in a string to uppercase.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## trim
 
 ```TypeScript
@@ -349,10 +273,6 @@ trim(): string
 
 Removes the leading and trailing white space and line terminator characters from a string.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## valueOf
 
 ```TypeScript
@@ -361,10 +281,6 @@ valueOf(): string
 
 Returns the primitive value of the specified object.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [index: number]
 
 ```TypeScript

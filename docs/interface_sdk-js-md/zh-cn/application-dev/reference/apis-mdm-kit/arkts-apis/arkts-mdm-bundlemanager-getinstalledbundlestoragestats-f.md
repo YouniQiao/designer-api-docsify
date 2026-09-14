@@ -14,7 +14,7 @@ function getInstalledBundleStorageStats(admin: Want, bundleNames: Array<string>,
 
 获取设备指定用户下已安装应用的存储占用信息。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 1.仅能获取已安装应用的存储占用信息。
 > 

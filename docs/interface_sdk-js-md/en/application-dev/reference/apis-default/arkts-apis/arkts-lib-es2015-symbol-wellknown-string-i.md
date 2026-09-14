@@ -19,10 +19,6 @@ Matches a string or an object that supports being matched against, and returns a
 | --- | --- | --- | --- |
 | matcher | { [Symbol.match](string: string): RegExpMatchArray &#124; null; } | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## replace
 
 ```TypeScript
@@ -38,10 +34,6 @@ Passes a string and {@linkcode replaceValue} to the `[Symbol.replace]` method on
 | searchValue | { [Symbol.replace](string: string, replaceValue: string): string; } | Yes |  |
 | replaceValue | string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## replace
 
 ```TypeScript
@@ -57,10 +49,6 @@ Replaces text in a string, using an object that supports replacement within a st
 | searchValue | { [Symbol.replace](string: string, replacer: (substring: string, ...args: any[]) =&gt; string): string; } | Yes |  |
 | replacer | (substring: string, ...args: any[]) =&gt; string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## search
 
 ```TypeScript
@@ -75,10 +63,6 @@ Finds the first substring match in a regular expression search.
 | --- | --- | --- | --- |
 | searcher | { [Symbol.search](string: string): number; } | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## split
 
 ```TypeScript
@@ -93,8 +77,3 @@ Split a string into substrings using the specified separator and return them as 
 | --- | --- | --- | --- |
 | splitter | { [Symbol.split](string: string, limit?: number): string[]; } | Yes |  |
 | limit | number | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

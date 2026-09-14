@@ -6,11 +6,6 @@ Provides information about the menu item.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## builder
 
 ```TypeScript

@@ -4,7 +4,7 @@
 
 获取音频或视频元数据、视频缩略图的demo可参考：[使用AVMetadataExtractor提取音视频元数据信息(ArkTS)](../../../media/media/avmetadataextractor.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本Interface首批接口从API version 11开始支持。
 
@@ -166,7 +166,7 @@ fetchFramesByTimes(timesUs: number[], queryOption: AVImageQueryOptions, param: P
 
 批量获取视频缩略图。使用Callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 先对给定的视频资源进行解码，随后依据提供的参数options和param，从timesUs数组中的每个时间点提取图像帧。
 > 
@@ -207,7 +207,7 @@ fetchFramesByTimesWithTimeout(timesUs: number[], queryOption: AVImageQueryOption
 
 批量获取视频缩略图，支持设置每一帧缩略图获取最大耗时timeoutMs。使用Callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 先对给定的视频资源进行解码，随后依据提供的参数options和param，从timesUs数组中的每个时间点提取图像帧。
 > 
@@ -425,7 +425,7 @@ fdSrc ?: AVFileDescriptor
 
 假设一个连续存储的媒体文件，地址偏移：0，字节长度：100。其文件描述为AVFileDescriptor { fd = 资源句柄; offset = 0; length = 100; }。
 
-**说明：**
+**说明：** 
 
 将资源句柄（fd）传递给AVMetadataExtractor实例之后，不允许通过该资源句柄做其他读写操作，包括但不限于将同一个资源句柄传递给多个AVPlayer/AVMetadataExtractor/ AVImageGenerator/AVTranscoder。同一时间通过同一个资源句柄读写文件时存在竞争关系，将导致音视频元数据获取异常。
 

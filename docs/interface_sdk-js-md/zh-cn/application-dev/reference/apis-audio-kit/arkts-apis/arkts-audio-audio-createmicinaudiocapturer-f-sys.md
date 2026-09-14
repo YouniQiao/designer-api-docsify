@@ -14,7 +14,7 @@ function createMicInAudioCapturer(config: AudioCapturerMicInConfig): Promise<Aud
 
 获取音频采集器。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 此采集器可用于同时录制麦克风输入（Mic-In）音频数据和回声参考信号，供应用层进行算法处理。
 > 

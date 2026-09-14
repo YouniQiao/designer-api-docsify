@@ -14,7 +14,7 @@ function clear(): void
 
 清空页面栈中的所有历史页面，仅保留当前页面作为栈顶页面。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 8开始支持，从API version 18开始废弃，建议使用[clear](arkts-arkui-arkui-uicontext-router-c.md#clear)替代。clear需先通过
 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的

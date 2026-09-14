@@ -14,7 +14,7 @@ export function getAppPreloadType(): AppPreloadType
 
 获取应用当前进程的预加载类型。
 
-> **说明：**
+> **说明：** 
 > 
 > - 只有在进程首次执行[AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate)完成之前调用该接口，才可以返回真实的预
 > 加载类型。

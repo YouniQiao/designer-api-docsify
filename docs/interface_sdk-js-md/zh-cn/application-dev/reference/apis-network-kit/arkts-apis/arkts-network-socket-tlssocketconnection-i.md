@@ -2,7 +2,7 @@
 
 TLSSocketConnection连接，即TLSSocket客户端与服务端的连接。在调用TLSSocketConnection的方法前，需要先获取TLSSocketConnection对象。
 
-> **说明：**
+> **说明：** 
 > 
 > 客户端与服务端成功建立连接后，才能通过返回的TLSSocketConnection对象调用相应的接口。
 
@@ -299,7 +299,7 @@ getLocalAddress(): Promise<NetAddress>
 
 获取TLSSocketConnection连接的本地Socket地址。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 在TLSSocketServer通信连接成功之后，才可调用此方法。
 
@@ -311,7 +311,7 @@ getLocalAddress(): Promise<NetAddress>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | 以Promise形式返回获取本地socket地址的结果。 |
+| Promise&lt;[NetAddress](arkts-network-socket-p.md)&gt; | 以Promise形式返回获取本地socket地址的结果。 |
 
 **错误码：**
 
@@ -378,7 +378,7 @@ getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | 是 | 回调函数。成功返回对端的socket地址，失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetAddress](arkts-network-socket-p.md)&gt; | 是 | 回调函数。成功返回对端的socket地址，失败返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -446,7 +446,7 @@ getRemoteAddress(): Promise<NetAddress>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | 以Promise形式返回获取对端socket地址的结果。失败返回错误码，错误信息。 |
+| Promise&lt;[NetAddress](arkts-network-socket-p.md)&gt; | 以Promise形式返回获取对端socket地址的结果。失败返回错误码，错误信息。 |
 
 **错误码：**
 
@@ -859,7 +859,7 @@ getSocketFd(): Promise<number>
 
 获取TLSSocketConnection连接的文件描述符。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 在TLSSocketServer通信连接成功之后，才可调用此方法。
 > 

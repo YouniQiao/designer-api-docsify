@@ -14,7 +14,7 @@ function back(options?: RouterOptions): void
 
 返回上一页面或指定的页面，会删除当前页面与指定页面之间的所有页面。如果此前调用了showAlertBeforeBackPage开启了返回询问对话框，则在执行返回操作时会先弹出确认对话框，用户确认后才执行返回；用户取消则不执行返回。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 8开始支持，从API version 18开始废弃，建议使用
 > [back](arkts-arkui-arkui-uicontext-router-c.md#back)替代。back需先通过
@@ -57,7 +57,7 @@ function back(index: number, params?: Object): void
 
 返回指定的页面，会删除当前页面与指定页面之间的所有页面。如果此前调用了showAlertBeforeBackPage开启了返回询问对话框，则在执行返回操作时会先弹出确认对话框，用户确认后才执行返回；用户取消则不执行返回。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 12开始支持，从API version 18开始废弃，建议使用
 > [back](arkts-arkui-arkui-uicontext-router-c.md#back)替代。back需先通过

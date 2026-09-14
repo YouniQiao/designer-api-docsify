@@ -17,10 +17,6 @@ new(length?: number): BigUint64Array
 | --- | --- | --- | --- |
 | length | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -33,10 +29,6 @@ new(array: Iterable<bigint>): BigUint64Array
 | --- | --- | --- | --- |
 | array | Iterable&lt;bigint&gt; | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -51,10 +43,6 @@ new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): BigUint64Arr
 | byteOffset | number | No |  |
 | length | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## from
 
 ```TypeScript
@@ -69,10 +57,6 @@ Creates an array from an array-like or iterable object.
 | --- | --- | --- | --- |
 | arrayLike | ArrayLike&lt;bigint&gt; | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## from
 
 ```TypeScript
@@ -87,10 +71,6 @@ from<U>(arrayLike: ArrayLike<U>, mapfn: (v: U, k: number) => bigint, thisArg?: a
 | mapfn | (v: U, k: number) =&gt; bigint | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## of
 
 ```TypeScript
@@ -105,10 +85,6 @@ Returns a new array from a set of elements.
 | --- | --- | --- | --- |
 | items | bigint[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## BYTES_PER_ELEMENT
 
 ```TypeScript

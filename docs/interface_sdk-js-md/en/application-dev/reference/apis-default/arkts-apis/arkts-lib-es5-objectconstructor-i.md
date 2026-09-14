@@ -11,10 +11,6 @@
 (): any
 ```
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Call]]
 
 ```TypeScript
@@ -27,10 +23,6 @@
 | --- | --- | --- | --- |
 | value | any | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -43,10 +35,6 @@ new(value?: any): Object
 | --- | --- | --- | --- |
 | value | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## create
 
 ```TypeScript
@@ -61,10 +49,6 @@ Creates an object that has the specified prototype or that has null prototype.
 | --- | --- | --- | --- |
 | o | object &#124; null | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## create
 
 ```TypeScript
@@ -80,10 +64,6 @@ Creates an object that has the specified prototype, and that optionally contains
 | o | object &#124; null | Yes |  |
 | properties | PropertyDescriptorMap & ThisType&lt;any&gt; | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## defineProperties
 
 ```TypeScript
@@ -99,10 +79,6 @@ Adds one or more properties to an object, and/or modifies attributes of existing
 | o | T | Yes |  |
 | properties | PropertyDescriptorMap & ThisType&lt;any&gt; | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## defineProperty
 
 ```TypeScript
@@ -119,10 +95,6 @@ Adds a property to an object, or modifies attributes of an existing property.
 | p | [PropertyKey](arkts-propertykey-t.md) | Yes |  |
 | attributes | PropertyDescriptor & ThisType&lt;any&gt; | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## freeze
 
 ```TypeScript
@@ -137,10 +109,6 @@ Prevents the modification of existing property attributes and values, and preven
 | --- | --- | --- | --- |
 | f | T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## freeze
 
 ```TypeScript
@@ -155,10 +123,6 @@ Prevents the modification of existing property attributes and values, and preven
 | --- | --- | --- | --- |
 | o | T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## freeze
 
 ```TypeScript
@@ -173,10 +137,6 @@ Prevents the modification of existing property attributes and values, and preven
 | --- | --- | --- | --- |
 | o | T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## getOwnPropertyDescriptor
 
 ```TypeScript
@@ -192,10 +152,6 @@ Gets the own property descriptor of the specified object. An own property descri
 | o | any | Yes |  |
 | p | [PropertyKey](arkts-propertykey-t.md) | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## getOwnPropertyNames
 
 ```TypeScript
@@ -210,10 +166,6 @@ Returns the names of the own properties of an object. The own properties of an o
 | --- | --- | --- | --- |
 | o | any | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## getPrototypeOf
 
 ```TypeScript
@@ -228,10 +180,6 @@ Returns the prototype of an object.
 | --- | --- | --- | --- |
 | o | any | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## isExtensible
 
 ```TypeScript
@@ -248,10 +196,6 @@ Returns a value that indicates whether new properties can be added to an object.
 | --- | --- | --- | --- |
 | o | any | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## isFrozen
 
 ```TypeScript
@@ -268,10 +212,6 @@ Returns true if existing property attributes and values cannot be modified in an
 | --- | --- | --- | --- |
 | o | any | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## isSealed
 
 ```TypeScript
@@ -288,10 +228,6 @@ Returns true if existing property attributes cannot be modified in an object and
 | --- | --- | --- | --- |
 | o | any | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## keys
 
 ```TypeScript
@@ -306,10 +242,6 @@ Returns the names of the enumerable string properties and methods of an object.
 | --- | --- | --- | --- |
 | o | object | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## preventExtensions
 
 ```TypeScript
@@ -324,10 +256,6 @@ Prevents the addition of new properties to an object.
 | --- | --- | --- | --- |
 | o | T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## seal
 
 ```TypeScript
@@ -342,10 +270,6 @@ Prevents the modification of attributes of existing properties, and prevents the
 | --- | --- | --- | --- |
 | o | T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## prototype
 
 ```TypeScript

@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## componentHeight
 
 ```TypeScript
@@ -61,7 +56,7 @@ contentHeight: number
 
 单位：[px](../arkts-apis/arkts-arkui-length-t.md)
 
-**说明：**
+**说明：** 
 
 仅在loadingStatus返回1时有效。
 
@@ -85,7 +80,7 @@ contentOffsetX: number
 
 单位：[px](../arkts-apis/arkts-arkui-length-t.md)
 
-**说明：**
+**说明：** 
 
 仅在loadingStatus返回1时有效。
 
@@ -109,7 +104,7 @@ contentOffsetY: number
 
 单位：[px](../arkts-apis/arkts-arkui-length-t.md)
 
-**说明：**
+**说明：** 
 
 仅在loadingStatus返回1时有效。
 
@@ -133,7 +128,7 @@ contentWidth: number
 
 单位：[px](../arkts-apis/arkts-arkui-length-t.md)
 
-**说明：**
+**说明：** 
 
 仅在loadingStatus返回1时有效。
 
@@ -175,7 +170,7 @@ loadingStatus: number
 
 图片加载成功的状态值。
 
-**说明：**
+**说明：** 
 
 返回的状态值为0时，表示图片数据加载成功。返回的状态值为1时，表示图片解码成功。
 

@@ -2,7 +2,7 @@
 
 Provides the capability of accessing application resources and system resources. The accessible resources include the resources in the HAP/HSP module corresponding to the current context and all system resources.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The methods involved in **ResourceManager** are applicable only to the TypeScript-based declarative
 > development paradigm.
@@ -10,7 +10,7 @@ Provides the capability of accessing application resources and system resources.
 > - Resource files are defined in the **resources** directory of the project. You can obtain resource values such
 > as strings, string arrays, and colors based on the specified **resName**, **resId**, or **Resource** object.
 > **resName** indicates the resource name, **resId** indicates the resource ID, which can be obtained through
-> `\$r(*resource-address*).id`, for example, `\$r('app.string.test').id`.
+> `&#36;r(*resource-address*).id`, for example, `&#36;r('app.string.test').id`.
 > 
 > - No matter whether resources are in the same HAP or different HAPs or HSPs, you are advised to use the API with
 > **resName** or **resId** specified. Using the **Resource** object will take a longer time. If the resources are
@@ -44,7 +44,7 @@ addResource(path: string) : void
 
 Loads the specified overlay resource during application runtime to implement theme switching or resource overriding.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Resource overwriting is not supported for the **rawfile** and **resfile** directories.
 
@@ -109,7 +109,7 @@ Closes the file descriptor (fd) of the HAP where a specific rawfile in the **res
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -568,7 +568,7 @@ Obtains the color value corresponding to the specified resource ID. This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;number&gt; | Yes | Callback used to return the color value (decimal). |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;number&gt; | Yes | Callback used to return the color value (decimal). |
 
 **Error codes:**
 
@@ -743,7 +743,7 @@ Obtains the color value corresponding to the specified resource object. This API
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;number&gt; | Yes | Callback used to return the color value (decimal). |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;number&gt; | Yes | Callback used to return the color value (decimal). |
 
 **Error codes:**
 
@@ -880,7 +880,7 @@ Obtains the color value corresponding to the specified resource name. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;number&gt; | Yes | Callback used to return the color value (decimal). |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;number&gt; | Yes | Callback used to return the color value (decimal). |
 
 **Error codes:**
 
@@ -1223,7 +1223,7 @@ Obtains the configuration of a device. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;[Configuration](arkts-localization-resourcemanager-configuration-c.md)&gt; | Yes | Callback used to return the device configuration. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;[Configuration](arkts-localization-resourcemanager-configuration-c.md)&gt; | Yes | Callback used to return the device configuration. |
 
 **Examples**
 
@@ -1349,7 +1349,7 @@ Obtains the device capabilities of a device. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;[DeviceCapability](arkts-localization-resourcemanager-devicecapability-c.md)&gt; | Yes | Callback used to return the device capability. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;[DeviceCapability](arkts-localization-resourcemanager-devicecapability-c.md)&gt; | Yes | Callback used to return the device capability. |
 
 **Examples**
 
@@ -1465,7 +1465,7 @@ getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<str
 
 Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
@@ -1485,7 +1485,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
 | num | number | Yes | Quantity value (a floating point number), used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\&#36;d`, `%number\&#36;f`, and `%number\&#36;s`. <br>**NOTE:**<br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number\&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1\&#36;d` uses `args[0]` for formatting, `%2\&#36;d` uses `args[1]`, and so on. |
+| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number&#36;d`, `%number&#36;f`, and `%number&#36;s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1&#36;d` uses `args[0]` for formatting, `%2&#36;d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -1555,7 +1555,7 @@ getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string
 
 Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource ID, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
@@ -1575,7 +1575,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
 | num | number | Yes | Quantity value (a floating point number), used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\&#36;d`, `%number\&#36;f`, and `%number\&#36;s`. <br>**NOTE:**<br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number\&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1\&#36;d` uses `args[0]` for formatting, `%2\&#36;d` uses `args[1]`, and so on. |
+| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number&#36;d`, `%number&#36;f`, and `%number&#36;s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1&#36;d` uses `args[0]` for formatting, `%2&#36;d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -1645,7 +1645,7 @@ getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<s
 
 Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource object, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
@@ -1668,7 +1668,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | num | number | Yes | Quantity value (a floating point number), used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\&#36;d`, `%number\&#36;f`, and `%number\&#36;s`. <br>**NOTE:**<br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number\&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1\&#36;d` uses `args[0]` for formatting, `%2\&#36;d` uses `args[1]`, and so on. |
+| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number&#36;d`, `%number&#36;f`, and `%number&#36;s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1&#36;d` uses `args[0]` for formatting, `%2&#36;d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -1757,7 +1757,7 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object corresponding to the specified resource ID. |
+| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | **DrawableDescriptor** object corresponding to the specified resource ID. |
 
 **Error codes:**
 
@@ -1836,7 +1836,7 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object corresponding to the specified resource ID. |
+| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | **DrawableDescriptor** object corresponding to the specified resource ID. |
 
 **Error codes:**
 
@@ -1907,7 +1907,7 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object. |
+| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | **DrawableDescriptor** object. |
 
 **Error codes:**
 
@@ -1962,7 +1962,7 @@ getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string
 
 Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
@@ -1982,7 +1982,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
 | num | number | Yes | Integer number used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\&#36;d`, `%number\&#36;f`, and `%number\&#36;s`. <br>**NOTE:**<br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number\&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1\&#36;d` uses `args[0]` for formatting, `%2\&#36;d` uses `args[1]`, and so on. |
+| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number&#36;d`, `%number&#36;f`, and `%number&#36;s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1&#36;d` uses `args[0]` for formatting, `%2&#36;d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -2052,7 +2052,7 @@ getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | n
 
 Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource ID, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
@@ -2072,7 +2072,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
 | num | number | Yes | Integer number used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\&#36;d`, `%number\&#36;f`, and `%number\&#36;s`. <br>**NOTE:**<br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number\&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1\&#36;d` uses `args[0]` for formatting, `%2\&#36;d` uses `args[1]`, and so on. |
+| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number&#36;d`, `%number&#36;f`, and `%number&#36;s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1&#36;d` uses `args[0]` for formatting, `%2&#36;d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -2142,7 +2142,7 @@ getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<stri
 
 Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource object, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
@@ -2165,7 +2165,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | num | number | Yes | Integer number used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\&#36;d`, `%number\&#36;f`, and `%number\&#36;s`. <br>**NOTE:**<br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number\&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1\&#36;d` uses `args[0]` for formatting, `%2\&#36;d` uses `args[1]`, and so on. |
+| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number&#36;d`, `%number&#36;f`, and `%number&#36;s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1&#36;d` uses `args[0]` for formatting, `%2&#36;d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -2473,7 +2473,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -2529,7 +2529,7 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -2765,7 +2765,7 @@ Obtains the content of the media file corresponding to the specified resource na
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
@@ -2821,7 +2821,7 @@ Obtains the media file content for the specified screen density based on the spe
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
@@ -3063,7 +3063,7 @@ Obtains the content of the media file corresponding to the specified resource ob
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
@@ -3125,7 +3125,7 @@ Obtains the media file content for the specified screen density based on the spe
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
@@ -3309,7 +3309,7 @@ Obtains the content of the media file corresponding to the specified resource ID
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
@@ -3366,7 +3366,7 @@ Obtains the media file content for the specified screen density based on the spe
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
@@ -3544,7 +3544,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -3606,7 +3606,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -3790,7 +3790,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -3846,7 +3846,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -4602,7 +4602,7 @@ The resource configuration (including the language, color mode, resolution, and 
 
 | Type | Description |
 | --- | --- |
-| [ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md) | ResourceManager** object for loading differentiated resources. |
+| [ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md) | **ResourceManager** object for loading differentiated resources. |
 
 **Error codes:**
 
@@ -4641,7 +4641,7 @@ getPluralString(resId: number, num: number, callback: AsyncCallback<string>): vo
 
 Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
@@ -4686,7 +4686,7 @@ getPluralString(resId: number, num: number): Promise<string>
 
 Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
@@ -4734,7 +4734,7 @@ getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<str
 
 Obtains the plural string based on the specified resource name and the specified resource quantity. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
@@ -4755,7 +4755,7 @@ Obtains the plural string based on the specified resource name and the specified
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
 | num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
 
 **Error codes:**
 
@@ -4812,7 +4812,7 @@ getPluralStringByName(resName: string, num: number): Promise<string>
 
 Obtains the plural string based on the specified resource name and the specified resource quantity. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
@@ -4895,7 +4895,7 @@ getPluralStringByNameSync(resName: string, num: number): string
 
 Obtains singular/plural strings based on the specified quantity and resource name. This API returns the result synchronously.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
@@ -4979,7 +4979,7 @@ getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<s
 
 Obtains the plural string based on the specified resource information and the specified resource quantity. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
@@ -5002,7 +5002,7 @@ Obtains the plural string based on the specified resource information and the sp
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
 
 **Error codes:**
 
@@ -5066,7 +5066,7 @@ getPluralStringValue(resource: Resource, num: number): Promise<string>
 
 Obtains the plural string based on the specified resource information and the specified resource quantity. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
@@ -5157,7 +5157,7 @@ getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string
 
 Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
@@ -5178,7 +5178,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
 | num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
 
 **Error codes:**
 
@@ -5236,7 +5236,7 @@ getPluralStringValue(resId: number, num: number): Promise<string>
 
 Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
@@ -5319,7 +5319,7 @@ getPluralStringValueSync(resId: number, num: number): string
 
 Obtains singular/plural strings based on the specified resource ID and quantity. This API returns the result synchronously.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
@@ -5403,7 +5403,7 @@ getPluralStringValueSync(resource: Resource, num: number): string
 
 Obtains singular/plural strings based on the specified quantity and resource object. This API returns the result synchronously.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
@@ -5495,7 +5495,7 @@ getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
 
 Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or
 > [closeRawFd](#closerawfd)
@@ -5514,7 +5514,7 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;[RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md)&gt; | Yes | Callback used to return the fd of the HAP. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;[RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md)&gt; | Yes | Callback used to return the fd of the HAP. |
 
 **Error codes:**
 
@@ -5560,7 +5560,7 @@ getRawFd(path: string): Promise<RawFileDescriptor>
 
 Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or
 > [closeRawFd](#closerawfd)
@@ -5628,7 +5628,7 @@ getRawFdSync(path: string): RawFileDescriptor
 
 Obtains the file descriptor (fd) of the HAP where the rawfile file in the resources/rawfile directory is located. This API is called in synchronous mode.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or
 > [closeRawFd](#closerawfd)
@@ -5787,7 +5787,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;Uint8Array&gt; | Yes | Callback used to return the content of the rawfile. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Uint8Array&gt; | Yes | Callback used to return the content of the rawfile. |
 
 **Error codes:**
 
@@ -6033,7 +6033,7 @@ getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void
 
 Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the
 > directory, the list of the folders and files is returned.
@@ -6049,7 +6049,7 @@ Obtains the list of directories and files in the specified subdirectory under **
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | rawfile subdirectory path relative to the **resources/rawfile** directory, such as **subdir**. The path must not start with a slash (/).<br>An empty string **""** indicates that the list of directories and files in the **rawfile** root directory is obtained. |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the list of directories and files in a rawfile subdirectory. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the list of directories and files in a rawfile subdirectory. |
 
 **Error codes:**
 
@@ -6088,7 +6088,7 @@ getRawFileList(path: string): Promise<Array<string>>
 
 Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the
 > directory, the list of the folders and files is returned.
@@ -6148,7 +6148,7 @@ getRawFileListSync(path: string): Array<string>
 
 Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API returns the result synchronously.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the
 > directory, the list of the folders and files is returned.
@@ -6446,7 +6446,7 @@ Obtains the string array corresponding to the specified resource name. This API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
 
 **Error codes:**
 
@@ -6665,7 +6665,7 @@ Obtains the string array corresponding to the specified resource object. This AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
 
 **Error codes:**
 
@@ -6810,7 +6810,7 @@ Obtains the string array corresponding to the specified resource ID. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
 
 **Error codes:**
 
@@ -7102,7 +7102,7 @@ Obtains the string corresponding to the specified resource name. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;string&gt; | Yes | Callback used to return the obtained string. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | Yes | Callback used to return the obtained string. |
 
 **Error codes:**
 
@@ -7300,7 +7300,7 @@ Obtains the string corresponding to the specified resource name, and replaces th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\&#36;d`, `%number\&#36;f`, and `%number\&#36;s`. <br>**NOTE:**<br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number\&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1\&#36;d` uses `args[0]` for formatting, `%2\&#36;d` uses `args[1]`, and so on. |
+| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number&#36;d`, `%number&#36;f`, and `%number&#36;s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1&#36;d` uses `args[0]` for formatting, `%2&#36;d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -7440,7 +7440,7 @@ Obtains the string corresponding to the specified resource ID, and replaces the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\&#36;d`, `%number\&#36;f`, and `%number\&#36;s`. <br>**NOTE:**<br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number\&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1\&#36;d` uses `args[0]` for formatting, `%2\&#36;d` uses `args[1]`, and so on. |
+| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number&#36;d`, `%number&#36;f`, and `%number&#36;s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1&#36;d` uses `args[0]` for formatting, `%2&#36;d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -7592,7 +7592,7 @@ Obtains the string corresponding to the specified resource object, and replaces 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
-| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\&#36;d`, `%number\&#36;f`, and `%number\&#36;s`. <br>**NOTE:**<br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number\&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1\&#36;d` uses `args[0]` for formatting, `%2\&#36;d` uses `args[1]`, and so on. |
+| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number&#36;d`, `%number&#36;f`, and `%number&#36;s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1&#36;d` uses `args[0]` for formatting, `%2&#36;d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -7669,7 +7669,7 @@ Obtains the string corresponding to the specified resource object. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;string&gt; | Yes | Callback used to return the obtained string. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | Yes | Callback used to return the obtained string. |
 
 **Error codes:**
 
@@ -7794,7 +7794,7 @@ Obtains the string corresponding to the specified resource ID. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-base.md)&lt;string&gt; | Yes | Callback used to return the obtained string. |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | Yes | Callback used to return the obtained string. |
 
 **Error codes:**
 
@@ -8196,7 +8196,7 @@ removeResource(path: string) : void
 
 Removes the specified overlay resource during application runtime and restores the original resource before the override.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Resource overwriting is not supported for the **rawfile** and **resfile** directories.
 

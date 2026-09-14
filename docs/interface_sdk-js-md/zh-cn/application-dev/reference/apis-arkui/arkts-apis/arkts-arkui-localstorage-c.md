@@ -2,7 +2,7 @@
 
 LocalStorage是页面级的UI状态存储，通过@Entry装饰器接收的参数可以在页面内共享同一个LocalStorage实例。具体UI使用说明，详见[LocalStorage：页面级UI状态存储](../../../ui/state-management/arkts-localstorage.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，LocalStorage支持[Map](../../../ui/state-management/arkts-localstorage.md#装饰map类型变量)、
 > [Set](../../../ui/state-management/arkts-localstorage.md#装饰set类型变量)、
@@ -12,11 +12,6 @@ LocalStorage是页面级的UI状态存储，通过@Entry装饰器接收的参数
 **起始版本：** 9
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## clear
 
@@ -207,7 +202,7 @@ static getShared(): LocalStorage
 
 获取当前Stage共享的[LocalStorage](../../../ui/state-management/arkts-localstorage.md)实例。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，可使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)明确UI执行上下文中的LocalStorage实例。

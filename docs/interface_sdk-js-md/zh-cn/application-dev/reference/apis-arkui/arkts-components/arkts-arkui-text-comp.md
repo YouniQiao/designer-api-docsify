@@ -6,7 +6,7 @@ Text组件用于显示文本内容，支持设置字体样式、文本对齐、�
 
 可以包含Span、ImageSpan、SymbolSpan和ContainerSpan子组件。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用子组件实现
 > [图文混排](../../../ui/arkts-text-image-layout.md)场景。

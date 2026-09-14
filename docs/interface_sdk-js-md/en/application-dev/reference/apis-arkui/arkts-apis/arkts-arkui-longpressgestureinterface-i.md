@@ -2,7 +2,7 @@
 
 **LongPressGesture** is used to trigger a long press gesture. This gesture requires one or more fingers to be held down for a specified duration, which is 500 ms by default and can be adjusted using the **duration** parameter.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Since API version 18, on some devices, the system's two-finger long press gesture may take precedence, causing
 > the application's two-finger long press gesture to be ineffective.
@@ -12,11 +12,6 @@
 **Since:** 7
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## [[Call]]
 
@@ -48,6 +43,8 @@ If the long press duration reaches or exceeds 500 milliseconds, the system prior
 
 | Type | Description |
 | --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
+
 ## [[Call]]
 
 ```TypeScript
@@ -80,6 +77,8 @@ If the long press duration reaches or exceeds 500 milliseconds, the system prior
 
 | Type | Description |
 | --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
+
 ## onAction
 
 ```TypeScript
@@ -104,6 +103,8 @@ Registers the callback for successful long press gesture recognition.
 
 | Type | Description |
 | --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
+
 ## onActionCancel
 
 ```TypeScript
@@ -128,6 +129,8 @@ Registers the callback for long press gesture cancellation. This callback is tri
 
 | Type | Description |
 | --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
+
 ## onActionCancel
 
 ```TypeScript
@@ -154,6 +157,8 @@ Registers the callback for long press gesture cancellation. This callback is tri
 
 | Type | Description |
 | --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
+
 ## onActionEnd
 
 ```TypeScript
@@ -178,3 +183,4 @@ Registers the callback for long press gesture completion. This callback is trigg
 
 | Type | Description |
 | --- | --- |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |

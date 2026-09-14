@@ -135,7 +135,7 @@ on(type: 'enableChange', callback: Callback<boolean>): void
 
 Subscribes to the state changes of captions configuration. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
@@ -197,7 +197,7 @@ on(type: 'styleChange', callback: Callback<CaptionsStyle>): void
 
 Subscribes to captions style changes. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.

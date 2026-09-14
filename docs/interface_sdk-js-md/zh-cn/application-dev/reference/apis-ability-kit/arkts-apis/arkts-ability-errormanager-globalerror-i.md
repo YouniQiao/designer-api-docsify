@@ -22,7 +22,7 @@ instanceName: string
 
 表示虚拟机实例名称。
 
-**说明：**
+**说明：** 
 
 TaskPool线程中异常的instanceName标识规则：
 

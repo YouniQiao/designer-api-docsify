@@ -36,7 +36,7 @@ Marshals the sequenceable object into a **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataOut | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object to which the sequenceable object is to be marshaled. |
+| dataOut | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | **MessageParcel** object to which the sequenceable object is to be marshaled. |
 
 **Return value:**
 
@@ -102,7 +102,7 @@ Unmarshals this sequenceable object from a **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object in which the sequenceable object is to be unmarshaled. |
+| dataIn | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | **MessageParcel** object in which the sequenceable object is to be unmarshaled. |
 
 **Return value:**
 

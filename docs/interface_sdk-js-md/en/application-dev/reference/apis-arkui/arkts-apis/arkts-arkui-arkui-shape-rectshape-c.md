@@ -68,7 +68,7 @@ Sets the radius of the rectangle border corners.
 
 | Type | Description |
 | --- | --- |
-| [RectShape](arkts-arkui-arkui-shape-rectshape-c.md) | RectShape** object. |
+| [RectShape](arkts-arkui-arkui-shape-rectshape-c.md) | **RectShape** object. |
 
 ## radiusHeight
 
@@ -98,7 +98,7 @@ Sets the radius height of the rectangle border corners.
 
 | Type | Description |
 | --- | --- |
-| [RectShape](arkts-arkui-arkui-shape-rectshape-c.md) | RectShape** object. |
+| [RectShape](arkts-arkui-arkui-shape-rectshape-c.md) | **RectShape** object. |
 
 ## radiusWidth
 
@@ -128,4 +128,4 @@ Sets the radius width of the rectangle border corners.
 
 | Type | Description |
 | --- | --- |
-| [RectShape](arkts-arkui-arkui-shape-rectshape-c.md) | RectShape** object. |
+| [RectShape](arkts-arkui-arkui-shape-rectshape-c.md) | **RectShape** object. |

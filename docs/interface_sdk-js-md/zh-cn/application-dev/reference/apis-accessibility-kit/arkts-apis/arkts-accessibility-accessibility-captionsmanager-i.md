@@ -135,7 +135,7 @@ on(type: 'enableChange', callback: Callback<boolean>): void
 
 监听字幕配置启用状态变化事件。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
 > 
@@ -195,7 +195,7 @@ on(type: 'styleChange', callback: Callback<CaptionsStyle>): void
 
 监听字幕风格变化事件。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
 > 

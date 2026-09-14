@@ -375,7 +375,7 @@ getLoadedTimeRanges(): Promise<Array<Range>>
 
 Obtains the list of loaded time ranges. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - For local media resources, the time range is from 0 to the entire media duration.
 > 
@@ -529,7 +529,7 @@ getSeekableTimeRanges(): Promise<Array<Range>>
 
 Obtains the list of seekable time ranges. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - For local media resources and media resources that support segment-based requests, the time range is from 0
 > to the entire media duration.
@@ -1398,7 +1398,7 @@ on(type: 'timeUpdate', callback: Callback<number>): void
 
 Subscribes to playback position changes. It is used to refresh the current position of the progress bar. By default, this event is reported every 100 ms. However, it is reported immediately upon a successful seek operation.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The **'timeUpdate'** event is not supported in live streaming scenarios.
 > 
@@ -1428,7 +1428,7 @@ on(type: 'durationUpdate', callback: Callback<number>): void
 
 Subscribes to media asset duration changes. It is used to refresh the length of the progress bar. By default, this event is reported once in the prepared state. However, it can be repeatedly reported for special streams that trigger duration changes.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The **durationUpdate** event is not supported in live streaming scenarios.
 
@@ -1556,7 +1556,7 @@ Subscribes to available bitrates of HLS/DASH streams. This event is reported onl
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to [AVPlayer](arkts-multimedia-media.md) errors. This event is used only for error prompt and does not require the user to stop playback control. If the [AVPlayerState](arkts-media-media-avplayerstate-t.md) is also switched to error, call [reset()](#reset) or [release()](#release) to exit the playback. If the playback remains in the error state after the [reset()](#reset) method is called, you are advised to directly invoke the [release()](#release) method to exit the playback operation.
+Subscribes to [AVPlayer](arkts-media-multimedia-media.md) errors. This event is used only for error prompt and does not require the user to stop playback control. If the [AVPlayerState](arkts-media-media-avplayerstate-t.md) is also switched to error, call [reset()](#reset) or [release()](#release) to exit the playback. If the playback remains in the error state after the [reset()](#reset) method is called, you are advised to directly invoke the [release()](#release) method to exit the playback operation.
 
 **Since:** 9
 
@@ -2121,7 +2121,7 @@ seek(timeMs: number, mode?: SeekMode): void
 
 Seeks to the specified playback position. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the seek operation takes effect by subscribing to the on('seekDone') event.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Since API version 24, **seek** is supported in live streaming scenarios.
 
@@ -2138,7 +2138,7 @@ Seeks to the specified playback position. This API can be called only when the A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timeMs | number | Yes | Position to seek to, in ms. The value range is [0, [duration](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md)].<br>When the seek mode is [SEEK_CONTINUOUS](arkts-media-media-seekmode-e.md), you can set this parameter to **-1** to end the **SEEK_CONTINUOUS** mode. |
-| mode | [SeekMode](arkts-media-media-seekmode-e.md) | No | Seek mode based on the video I frame. The default value is **SEEK_PREV_SYNC**. **Set this parameter only for video playback. |
+| mode | [SeekMode](arkts-media-media-seekmode-e.md) | No | Seek mode based on the video I frame. The default value is **SEEK_PREV_SYNC**. **Set this parameter only for video playback.** |
 
 ## seekToDefaultPosition
 
@@ -2251,7 +2251,7 @@ setLoudnessGain(loudnessGain: number): Promise<void>
 
 Sets the loudness gain of the AVPlayer. After this API is called, the loudness gain takes effect immediately. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This API can be called when the AVPlayer is in the prepared, playing, paused, completed, or stopped state.
 > 
@@ -2390,7 +2390,7 @@ setPlaybackRate(rate: number): void
 
 Set playback rate. Sets the playback rate. This API can be called only when the AVPlayer is in the prepared, playing, paused, or Supported states: prepared/playing/paused/completed. completed state. The value range is [0.125, 8.0], on API 24 and below, the range is [0.125, 4.0]. You can check whether the setting takes effect through the [playbackRateDone](#onplaybackratedone) event.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is not supported in live mode.
 
@@ -2454,7 +2454,7 @@ setSpeed(speed: PlaybackSpeed): void
 
 Sets the playback speed. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the speed setting takes effect by subscribing to the on('speedDone') event.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This method is not supported in live streaming scenarios.
 
@@ -2750,7 +2750,7 @@ A user is obtaining an audio and video file from a remote server and wants to pl
 
 If the media file to play is in MP4/M4A format, ensure that the **moov** field (specifying the media information) is before the **mdat** field (specifying the media data) or the fields before the **moov** field is less than 10 MB. Otherwise, the parsing fails and the media file cannot be played.
 
-**NOTE:**
+**NOTE:** 
 
 WebM is no longer supported since API version 11.
 
@@ -2810,7 +2810,7 @@ Video 3 (address offset: 151, byte length: 150)
 
 To play an independent media file, use **src=fd://xx**.
 
-**NOTE:**
+**NOTE:** 
 
 WebM is no longer supported since API version 11.
 
@@ -2956,7 +2956,7 @@ Supported audio formats: M4A, AAC, MP3, OGG, WAV, FLAC, AMR, and APE.
 3. HTTPS: https://xx
 4. HLS: http://xx or https://xx
 
-**NOTE:**
+**NOTE:** 
 
 - To set the playback URL, you need to declare the  
 [ohos.permission.INTERNET](../../../security/AccessToken/permissions-for-all.md#ohospermissioninternet) permission. The related error code is [201 Permission Denied](../../errorcode-universal.md#201-permission-denied).  

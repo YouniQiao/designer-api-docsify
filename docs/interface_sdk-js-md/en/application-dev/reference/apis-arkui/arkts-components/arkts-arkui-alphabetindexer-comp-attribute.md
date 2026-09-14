@@ -16,11 +16,6 @@ In addition to the universal events, the following events are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## alignStyle
 
 ```TypeScript
@@ -39,7 +34,7 @@ Sets the alignment style of the indexer pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [IndexerAlign](arkts-arkui-indexeralign-e.md) | Yes | Alignment style of the indexer pop-up window. The pop-up window can be displayed on the right or left of the indexer.<br>Default value: **IndexerAlign.END |
+| value | [IndexerAlign](arkts-arkui-indexeralign-e.md) | Yes | Alignment style of the indexer pop-up window. The pop-up window can be displayed on the right or left of the indexer.<br>Default value: **IndexerAlign.END** |
 | offset | [Length](../arkts-apis/arkts-arkui-length-t.md) | No | Spacing between the pop-up window and the alphabetic index bar. A value greater than or equal to **0** is valid. If this parameter is set to a value less than **0** or is not set, the spacing is the same as **popupPosition**. When this parameter and [popupPosition](#popupposition) are set at the same time, **offset** takes effect in the horizontal direction, and **popupPosition.y** takes effect in the vertical direction.<br>**Since:** 10 |
 
 ## autoCollapse
@@ -54,7 +49,7 @@ When the first index item is **"#"**: Remaining items ≤ 9: Full display mode; 
 
 When the first index item is not **"#"**: All items ≤ 9: Full display mode; 9 &lt; All items ≤ 13: Adapts between full display and short collapse modes based on the indexer height; all items &gt; 13: Adapts between short and long collapse modes based on the indexer height.
 
-> **NOTE:**
+> **NOTE:** 
 
 > This API can be called within attributeModifier since API version 12.
 
@@ -244,7 +239,7 @@ onSelected(callback: (index: number) => void)
 
 Triggered when an index item is selected, with the callback parameter being the index of the currently selected item.
 
-> **NOTE:**
+> **NOTE:** 
 
 **Since:** 7
 
@@ -434,7 +429,7 @@ Sets the position of the pop-up window relative to the center of the indexer's t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Position | Yes | Position of the pop-up window relative to the center of the indexer's top border.<br> Default value: **{x: 60.0, y: 48.0} |
+| value | Position | Yes | Position of the pop-up window relative to the center of the indexer's top border.<br> Default value: **{x: 60.0, y: 48.0}** |
 
 ## popupSelectedColor
 
@@ -510,7 +505,7 @@ selected(index: number)
 
 Sets the index of the selected item.
 
-Since API version 10, this parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this parameter supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Since:** 8
 
@@ -522,7 +517,7 @@ Since API version 10, this parameter supports two-way binding through [\$\$](../
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the selected item.<br>Value range: [0, [arrayValue](arkts-arkui-alphabetindexeroptions-i.md).length – 1]<br>Default value: **0 |
+| index | number | Yes | Index of the selected item.<br>Value range: [0, [arrayValue](arkts-arkui-alphabetindexeroptions-i.md).length – 1]<br>Default value: **0** |
 
 ## selectedBackgroundColor
 

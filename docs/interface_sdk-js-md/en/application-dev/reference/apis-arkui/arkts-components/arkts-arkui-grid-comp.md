@@ -10,7 +10,7 @@ Child components are limited to GridItem and custom components. When using custo
 
 Child components can be dynamically generated using rendering control types [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md), [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), and [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md). **LazyForEach** or **Repeat** is recommended to optimize performance.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Below are the rules for calculating the indexes of the child components of **Grid**:
 > 
@@ -63,7 +63,7 @@ Creates a **Grid** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scroller | [Scroller](arkts-arkui-scroller-c.md) | No | Controller, which can be bound to scrollable components.<br>**NOTE:**<br>It cannot be bound to the same scrolling control object as other scrollable components, such as ArcList, List, Grid, Scroll, and WaterFlow. |
+| scroller | [Scroller](arkts-arkui-scroller-c.md) | No | Controller, which can be bound to scrollable components.<br>**NOTE:** <br>It cannot be bound to the same scrolling control object as other scrollable components, such as ArcList, List, Grid, Scroll, and WaterFlow. |
 | layoutOptions | [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md) | No | Grid layout options. |
 
 ## Summary

@@ -14,7 +14,7 @@ function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 
 释放claim过的通信接口。
 
-> **说明：**
+> **说明：** 
 > 
 > 在调用该接口前需要通过[usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) claim通信接口。
 

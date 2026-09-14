@@ -2,7 +2,7 @@
 
 After the **CanvasRenderingContext2D** object is bound to the **Canvas** component, you can draw shapes, texts, and images on the **Canvas** component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > * It is recommended that the **CanvasRenderingContext2D** object and the **Canvas** component be
 > encapsulated into the same custom component, ensuring a one-to-one correspondence and consistent
@@ -31,11 +31,6 @@ After the **CanvasRenderingContext2D** object is bound to the **Canvas** compone
 **Since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## constructor
 
@@ -138,7 +133,7 @@ static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, o
 
 Obtains a **CanvasRenderingContext2D** object from a **DrawingRenderingContext** object. This **CanvasRenderingContext2D** object is bound to the same **Canvas** component as the input **DrawingRenderingContext** object.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The **CanvasRenderingContext2D** object obtained via this API cannot be used as a
 > parameter to create a Canvas
@@ -160,7 +155,7 @@ Obtains a **CanvasRenderingContext2D** object from a **DrawingRenderingContext**
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | drawingContext | [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | Yes | An object of the **DrawingRenderingContext** type.<br>**undefined** and **null** are treated as invalid values. |
-| options | [RenderingContextOptions](arkts-arkui-renderingcontextoptions-i.md) | No | Configuration options of the rendering context.<br>Default value: **{ antialias: false } |
+| options | [RenderingContextOptions](arkts-arkui-renderingcontextoptions-i.md) | No | Configuration options of the rendering context.<br>Default value: **{ antialias: false }** |
 
 **Return value:**
 
@@ -361,7 +356,7 @@ on(type: 'onAttach', callback: Callback<void>): void
 
 Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a **Canvas** component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > A **CanvasRenderingContext2D** object can only be bound to one **Canvas** component
 > at a time.<br>
@@ -407,7 +402,7 @@ on(type: 'onDetach', callback: Callback<void>): void
 
 Subscribes to the event when a **CanvasRenderingContext2D** object is unbound from a **Canvas** component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When a **CanvasRenderingContext2D** object is unbound from a **Canvas** component,
 > the **onDetach** callback is triggered. In this case, cease any drawing operations.<br>
@@ -446,7 +441,7 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 Configures and starts the AI analyzer. This API uses a promise to return the result. Before use, set [enableAnalyzer](arkts-arkui-canvas-comp-attribute.md#enableanalyzer) to **true** to enable the image AI analyzer.<br>Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.<br> Repeated calls to this method before completion trigger an error callback. For the sample code, see the code for **stopImageAnalyzer**.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The image analysis type cannot be dynamically modified.
 > When image changes are detected, the analysis result is automatically destroyed. You can
@@ -490,7 +485,7 @@ stopImageAnalyzer(): void
 
 Stops AI image analysis. The content displayed by the AI image analyzer will be destroyed.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If this API is called when the **startImageAnalyzer** API has not yet returned any result,
 > an error is reported.
@@ -590,8 +585,8 @@ Creates a data URL that contains a representation of an image. This API involves
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | No | Image format.<br>The options are **image/png**, **image/jpeg**, and **image/webp**. <br>Invalid values **undefined** and **null** are treated as the default value. <br>Default value: **image/png |
-| quality | any | No | Image quality, which ranges from 0 to 1, when the image format is **image/jpeg** or **image/webp**. If the set value is beyond the value range, the default value **0.92** is used.<br>Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as the default value. <br>Default value: **0.92 |
+| type | string | No | Image format.<br>The options are **image/png**, **image/jpeg**, and **image/webp**. <br>Invalid values **undefined** and **null** are treated as the default value. <br>Default value: **image/png** |
+| quality | any | No | Image quality, which ranges from 0 to 1, when the image format is **image/jpeg** or **image/webp**. If the set value is beyond the value range, the default value **0.92** is used.<br>Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as the default value. <br>Default value: **0.92** |
 
 **Return value:**
 

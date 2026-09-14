@@ -37,7 +37,7 @@ function saveToExistingContactViaUI(context: Context, contact: Contact): Promise
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | The specified SystemCapability name was not found. |
 | [16700001](../errorcode-contacts.md#16700001-系统内部错误) | General error. |
 | [16700101](../errorcode-contacts.md#16700101-查询数据库失败) | Failed to get value from contacts data. |

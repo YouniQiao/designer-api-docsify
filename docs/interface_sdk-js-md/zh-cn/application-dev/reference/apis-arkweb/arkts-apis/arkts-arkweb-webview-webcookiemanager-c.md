@@ -4,7 +4,7 @@ WebCookieManager是Web组件的cookie管理器，提供对Web组件中cookie的�
 
 使用隐私模式浏览网页时，cookie、缓存等数据不会写入本地持久化存储；隐私模式的Web组件销毁后，这些数据将被清除，不会保留。
 
-> **说明：**
+> **说明：** 
 > 
 > - 静态方法必须在用户界面（UI）线程上使用。
 
@@ -164,7 +164,7 @@ static configCookie(url: string, value: string): Promise<void>
 
 为指定url设置单个cookie的值。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - configCookie中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
 > 
@@ -216,7 +216,7 @@ static configCookie(url: string, value: string, incognito: boolean, includeHttpO
 
 为指定url设置单个cookie的值。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - configCookie中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
 > 
@@ -266,7 +266,7 @@ static configCookie(url: string, value: string, callback: AsyncCallback<void>): 
 
 为指定url设置单个cookie的值。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - configCookie中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
 > 
@@ -313,7 +313,7 @@ static configCookieSync(url: string, value: string, incognito?: boolean): void
 
 为指定url设置单个cookie的值。
 
-> **说明：**
+> **说明：** 
 > 
 > - configCookieSync中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
 > 
@@ -360,7 +360,7 @@ static configCookieSync(url: string, value: string, incognito: boolean, includeH
 
 为指定url设置单个cookie的值。
 
-> **说明：**
+> **说明：** 
 > 
 > - configCookieSync中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
 > 
@@ -615,7 +615,7 @@ static fetchCookieSync(url: string, incognito?: boolean): string
 
 获取指定url对应cookie的值。
 
-> **说明：**
+> **说明：** 
 > 
 > - 系统会自动清理过期的cookie，对于同名key的数据，新数据将会覆盖前一个数据。
 > 
@@ -657,7 +657,7 @@ static fetchCookieSync(url: string, incognito?: boolean, includePartitionedCooki
 
 获取指定url对应的cookies，可以通过可选参数incognito指定是否获取隐私模式下的cookies，也可以通过可选参数includePartitionedCookies指定是否获取第一方partitioned cookie。
 
-> **说明：**
+> **说明：** 
 > 
 > - 系统会自动清理过期的cookie，对于同名key的数据，新数据将会覆盖前一个数据。
 > 
@@ -826,7 +826,7 @@ static saveCookieAsync(): Promise<void>
 
 将当前可通过fetchCookie获取到的所有需要持久化的cookie保存到磁盘中。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - saveCookieAsync用于强制将需要持久化的cookies写入磁盘。PC/2in1和Tablet设备不会持久化session cookie，即使调用saveCookieAsync，也不会将session
 > cookie写入磁盘。
@@ -857,7 +857,7 @@ static saveCookieAsync(callback: AsyncCallback<void>): void
 
 将当前可通过fetchCookie获取到的所有需要持久化的cookie异步保存到磁盘中。
 
-> **说明：**
+> **说明：** 
 > 
 > - saveCookieAsync用于强制将需要持久化的cookies写入磁盘。PC/2in1和Tablet设备不会持久化session cookie，即使调用saveCookieAsync，也不会将session
 > cookie写入磁盘。
@@ -888,7 +888,7 @@ static saveCookieSync(): void
 
 将当前可通过fetchCookie获取到的所有需要持久化的cookie同步保存到磁盘中。
 
-> **说明：**
+> **说明：** 
 > 
 > - saveCookieSync用于强制将需要持久化的cookies写入磁盘。PC/2in1和Tablet设备不会持久化session cookie，即使调用saveCookieSync，也不会将session
 > cookie写入磁盘。
@@ -938,7 +938,7 @@ static setLazyInitializeWebEngine(lazy: boolean): void
 
 设置是否延后初始化ArkWeb内核，不调用该方法时，默认不延后初始化ArkWeb内核。
 
-> **说明：**
+> **说明：** 
 > 
 > - 该接口是全局静态方法，须在使用ArkWeb组件和初始化ArkWeb内核前调用，否则该设置无效。
 > 

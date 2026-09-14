@@ -6,11 +6,6 @@ Defines the callback triggered when the user is about to leave the current page 
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## isReload
 
 ```TypeScript

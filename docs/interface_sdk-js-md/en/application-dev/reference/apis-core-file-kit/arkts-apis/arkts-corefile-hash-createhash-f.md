@@ -28,7 +28,7 @@ Creates a **HashStream** instance, which can be used to generate a message diges
 
 | Type | Description |
 | --- | --- |
-| [HashStream](arkts-corefile-hash-hashstream-c.md) | HashStream** instance created. |
+| [HashStream](arkts-corefile-hash-hashstream-c.md) | **HashStream** instance created. |
 
 **Error codes:**
 

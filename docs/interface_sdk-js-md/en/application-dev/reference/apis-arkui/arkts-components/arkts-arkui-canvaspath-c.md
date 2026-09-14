@@ -6,11 +6,6 @@ Path object, which provides basic methods for drawing paths. For details about t
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## arc
 
 ```TypeScript
@@ -175,7 +170,7 @@ moveTo(x: number, y: number): void
 ```
 
 Moves a drawing path from the current position to a target position on the canvas.   
-> **NOTE:**
+> **NOTE:** 
 > 
 > In versions earlier than API version 18, if the **moveTo** API is not called or invalid arguments
 > are passed to it, the path starts from (0,0).

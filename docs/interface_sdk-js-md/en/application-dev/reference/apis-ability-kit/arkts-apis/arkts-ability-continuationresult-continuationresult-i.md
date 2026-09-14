@@ -6,7 +6,7 @@ The ContinuationResult module describes the device information returned by the c
 
 **Deprecated since:** 22
 
-**Substitutes:** [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md)
+**Substitutes:** [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager.md)
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 

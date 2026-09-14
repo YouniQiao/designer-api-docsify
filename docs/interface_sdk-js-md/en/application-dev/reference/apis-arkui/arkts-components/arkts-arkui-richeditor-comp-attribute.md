@@ -10,11 +10,6 @@ In addition to the universal events, [OnDidChangeCallback](../arkts-apis/arkts-a
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## aboutToDelete
 
 ```TypeScript
@@ -75,7 +70,7 @@ barState(state: BarState)
 
 Display mode of the RichEditor scroll bar.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 18.
 
@@ -139,7 +134,7 @@ Sets the color of the caret and selection handle in the text box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the caret and selection handle in the text box.<br>Default value: **'#007DFF' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the caret and selection handle in the text box.<br>Default value: **'#007DFF'** |
 
 ## compressLeadingPunctuation
 
@@ -151,7 +146,7 @@ Sets whether to enable leading punctuation compression.
 
 This is applicable to scenarios where leading punctuation needs to be aligned with the body text.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Leading punctuation is not compressed by default.
 > 
@@ -223,7 +218,7 @@ By default, the custom keyboard is closed when the input component loses the foc
 
 The custom keyboard supports the continue function. You can call the [setCustomKeyboardContinueFeature](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature) API to set whether the custom keyboard remains persistent during input field switches.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 23.
 
@@ -283,7 +278,7 @@ Difference from [bindSelectionMenu](#bindselectionmenu): editMenuOptions adds ex
 
 When [disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems) or [disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems) is used to disable system service menu items in the text selection menu, the disabled menu options will be excluded from the parameter list in the onCreateMenu callback of **editMenuOptions**.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 18.
 
@@ -365,7 +360,7 @@ enableHapticFeedback(isEnabled: boolean)
 
 Sets whether to enable haptic feedback.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 20.
 
@@ -381,7 +376,7 @@ Sets whether to enable haptic feedback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEnabled | boolean | Yes | Whether to enable haptic feedback.<br>Default value: true. The value true means to enable haptic feedback, and false means to disable it. <br>**Note:**<br>Haptic feedback takes effect only when the application has the ohos.permission.VIBRATE permission, the user has enabled haptic feedback, and the system hardware supports it. <br>Different device types vary in their support for vibration hardware. Haptic feedback is unavailable on device types without vibration hardware. |
+| isEnabled | boolean | Yes | Whether to enable haptic feedback.<br>Default value: true. The value true means to enable haptic feedback, and false means to disable it. <br>**Note:** <br>Haptic feedback takes effect only when the application has the ohos.permission.VIBRATE permission, the user has enabled haptic feedback, and the system hardware supports it. <br>Different device types vary in their support for vibration hardware. Haptic feedback is unavailable on device types without vibration hardware. |
 
 ## enableKeyboardOnFocus
 
@@ -391,7 +386,7 @@ enableKeyboardOnFocus(isEnabled: boolean)
 
 Sets whether to enable the input method when the **RichEditor** component obtains focus in a way other than clicking.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 18.
 
@@ -407,7 +402,7 @@ Sets whether to enable the input method when the **RichEditor** component obtain
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEnabled | boolean | Yes | Whether to pop up the soft keyboard when the **TextInput** component obtains focus in a way other than clicking.<br>**true**: yes; **false**: no <br>Default value: **true |
+| isEnabled | boolean | Yes | Whether to pop up the soft keyboard when the **TextInput** component obtains focus in a way other than clicking.<br>**true**: yes; **false**: no <br>Default value: **true** |
 
 ## enablePreviewText
 
@@ -419,7 +414,7 @@ Sets whether to enable preview text.
 
 After this feature is enabled, the pinyin and stroke characters entered during input method input are displayed in the component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 18.
 
@@ -605,7 +600,7 @@ Sets the maximum length of the component content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxLength | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Maximum input length of the content. When the total length of the content (including text, images, symbols, and builders) reaches this value, no more content can be added.<br>Default value: Infinity, which means unlimited input. <br>**NOTE:**<br>Value range: [0, +∞). If this attribute is not set or is set to undefined or a negative number, the default value Infinity is used. If it is set to 0, no content can be entered. If it is set to a decimal, the integer part is used. |
+| maxLength | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Maximum input length of the content. When the total length of the content (including text, images, symbols, and builders) reaches this value, no more content can be added.<br>Default value: Infinity, which means unlimited input. <br>**NOTE:** <br>Value range: [0, +∞). If this attribute is not set or is set to undefined or a negative number, the default value Infinity is used. If it is set to 0, no content can be entered. If it is set to a decimal, the integer part is used. |
 
 ## maxLines
 
@@ -711,7 +706,7 @@ Triggered after an addition or deletion operation is performed on the component.
 
 This callback is not supported when the **RichEditor** component built with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 18.
 
@@ -739,7 +734,7 @@ Triggered when text input is completed via the input method editor.
 
 This callback is not supported when the **RichEditor** component built with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 20.
 
@@ -755,7 +750,7 @@ This callback is not supported when the **RichEditor** component built with [Ric
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[TextRange](../arkts-apis/arkts-arkui-textrange-i.md)&gt; | Yes | TextRange** indicates the text range for the current input.<br>Callback invoked when IME input is completed. |
+| callback | Callback&lt;[TextRange](../arkts-apis/arkts-arkui-textrange-i.md)&gt; | Yes | **TextRange** indicates the text range for the current input.<br>Callback invoked when IME input is completed. |
 
 ## onEditingChange
 
@@ -963,7 +958,7 @@ Triggers the callback before the component performs an add or delete operation. 
 
 This callback is not supported when the **RichEditor** component built with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 18.
 
@@ -1015,7 +1010,7 @@ Sets the prompt text displayed when there is no input.
 
 After this attribute is set, the prompt text is displayed when the component has no content, and it automatically disappears after the user starts entering content.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 18.
 
@@ -1132,7 +1127,7 @@ singleLine(isEnable: boolean | undefined)
 
 Sets whether to enable single-line mode. The single-line mode is disabled by default when this API is not specified.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > In single-line mode, line breaks are displayed as spaces.
 

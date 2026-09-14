@@ -2,7 +2,7 @@
 
 CommonOptions定义日期时间选择器的通用选项。
 
-> **说明：**
+> **说明：** 
 > 
 > - Date构造函数参数顺序为：年、月索引（0-11）、日、时、分、秒。注意：年份参数需大于99或小于0以避免1900年代映射。
 > 
@@ -18,7 +18,7 @@ CommonOptions定义日期时间选择器的通用选项。
 > - 在[DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md)中设置start、end、selected时仅日期部分（年月日）设置生效，
 > 在[TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md)中设置start、end、selected时仅时间部分（时分秒）设置生效。系统会根据配置的displayMode和对应的
 > Options类型，自动过滤Date对象的相应部分并应用约束。
-> **说明：**
+> **说明：** 
 > 
 > - onChange在用户选择日期或时间时触发，用于响应用户的选择操作。
 > 
@@ -74,7 +74,7 @@ enableHapticFeedback?: boolean
 - true：启用触控反馈，适用于需要增强用户交互体验的场景，如游戏、乐器类应用等。  
 - false：不启用触控反馈，适用于不需要触觉反馈或需要节省设备资源的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 设置为true后，其生效情况取决于系统的硬件是否支持。
 > 2. 启用触控反馈时，需要在工程的[module.json5](../../../quick-start/module-configuration-file.md)中配置
@@ -106,7 +106,7 @@ end?: Date
 
 > 取值范围：[Date('0001-01-01T00:00:00'), Date('9999-12-31T23:59:59')]
 
-> **说明：**
+> **说明：** 
 > 
 > 设置了end且为有效值的场景下，loop不生效。
 
@@ -137,7 +137,7 @@ loop?: boolean
 > 
 > 循环模式适用于需要连续滚动选择的场景，如快速浏览年月；非循环模式适用于需要明确边界范围的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 设置了[start](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)或[end](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)且为有效值的场景下，本参数不生效。
 
@@ -199,7 +199,7 @@ selected?: Date
 
 > 默认值为当前系统日期或时间。
 
-> **说明：**
+> **说明：** 
 > 
 > 在DateMode.MONTH_AND_DAY模式下，仅month和day字段参与选择；年份取selected指定值，未指定时取当前系统年份，滚动过程中保持不变。
 
@@ -227,7 +227,7 @@ start?: Date
 
 > 取值范围：[Date('0001-01-01T00:00:00'), Date('9999-12-31T23:59:59')]
 
-> **说明：**
+> **说明：** 
 > 
 > 设置了start且为有效值的场景下，loop不生效。
 

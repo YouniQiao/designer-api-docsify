@@ -16,11 +16,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## enableAnalyzer
 
 ```TypeScript
@@ -33,7 +28,7 @@ enableAnalyzer(enable: boolean): CanvasAttribute
 
 不能和overlay属性同时使用，两者同时设置时overlay中CustomBuilder属性将失效。该特性依赖设备能力。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在
 > attributeModifier
@@ -57,6 +52,8 @@ enableAnalyzer(enable: boolean): CanvasAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |  |
+
 ## onReady
 
 ```TypeScript
@@ -85,6 +82,8 @@ Canvas组件初始化完成或者发生大小变化时的事件回调，支持at
 
 | 类型 | 说明 |
 | --- | --- |
+| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |  |
+
 ## onReady
 
 ```TypeScript
@@ -115,3 +114,4 @@ Canvas组件初始化完成或者发生大小变化时的事件回调，支持at
 
 | 类型 | 说明 |
 | --- | --- |
+| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) |  |

@@ -33,7 +33,7 @@ Creates a **Connection** object on the device that functions as the client. Afte
 
 | Type | Description |
 | --- | --- |
-| [Connection](arkts-distributedservice-linkenhance-connection-i.md) | Connection** object created. |
+| [Connection](arkts-distributedservice-linkenhance-connection-i.md) | **Connection** object created. |
 
 **Error codes:**
 

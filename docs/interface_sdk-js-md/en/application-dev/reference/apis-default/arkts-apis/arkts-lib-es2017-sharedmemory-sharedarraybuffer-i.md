@@ -20,10 +20,6 @@ Returns a section of an SharedArrayBuffer.
 | begin | number | Yes |  |
 | end | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [Symbol.species]
 
 ```TypeScript

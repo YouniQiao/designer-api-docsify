@@ -6,11 +6,6 @@ The data returned by the event handler when onScrollFrameBegin.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## offsetRemain
 
 ```TypeScript

@@ -6,11 +6,6 @@ Defines the position of a guideline.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## end
 
 ```TypeScript

@@ -2,7 +2,7 @@
 
 节点渲染类型枚举。
 
-> **说明：**
+> **说明：** 
 > 
 > - RENDER_TYPE_TEXTURE类型目前仅在[BuilderNode](arkts-arkui-buildernode-c.md)持有组件树的根节点为自定义组件时以及
 > [XComponentNode](arkts-arkui-xcomponentnode-c.md)中设置生效。

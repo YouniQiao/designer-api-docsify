@@ -24,7 +24,7 @@ constructor(options?: RectShapeOptions | RoundRectShapeOptions)
 
 创建RectShape对象。
 
-> **说明：**
+> **说明：** 
 > 
 > - 构造函数参数中的radius/radiusWidth/radiusHeight与radius()/radiusWidth()/radiusHeight()方法设置的是同一属性。
 > 

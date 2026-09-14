@@ -6,11 +6,6 @@ Describes the position of the caret relative to the text box.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## index
 
 ```TypeScript

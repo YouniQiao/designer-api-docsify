@@ -6,11 +6,6 @@ KeyEvent object description.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## getModifierKeyState
 
 ```TypeScript
@@ -31,7 +26,7 @@ Obtains the pressed status of modifier keys.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | Yes | Obtains the pressed status of modifier keys. For details about the error message, see the following error codes. The following modifier keys are supported: 'Ctrl'&#124; 'Alt' &#124; 'Shift'.<br>**NOTE:**<br>This API is not supported in stylus scenarios. |
+| keys | Array&lt;string&gt; | Yes | Obtains the pressed status of modifier keys. For details about the error message, see the following error codes. The following modifier keys are supported: 'Ctrl'&#124; 'Alt' &#124; 'Shift'.<br>**NOTE:** <br>This API is not supported in stylus scenarios. |
 
 **Return value:**
 

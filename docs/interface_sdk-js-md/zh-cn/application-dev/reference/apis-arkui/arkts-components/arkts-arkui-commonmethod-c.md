@@ -6,11 +6,6 @@ CommonMethod.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## accessibilityActionOptions
 
 ```TypeScript
@@ -63,7 +58,7 @@ accessibilityChecked(isCheck: boolean): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isCheck | boolean | 是 | 用于表示组件是否被选中。<br>支持的值为：<br>true：当前组件被选中。<br>false：当前组件未被选中。<br> undefined：由组件自行确定选中状态。<br>默认值：undefined **说明：**<br>1. 使用该接口设置true或false后，会默认修改该组件的checkable属性为true。 2. accessibilityChecked属性代表组件是多选模式，而accessibilitySelected属性代表组件是单选模式。 组件不能同时存在两种选择模式，会造成无障碍状态冲突，导致屏幕朗读等无障碍辅助应用无法正确识别选中状态。如使用当前接口设置组件为多选模式（设置为true、false），则需要保证未使用accessibilitySelected函数设置属性为true或者false，如果已设置，需使用accessibilitySelected函数设置accessibilitySelected属性为undefined模式。 |
+| isCheck | boolean | 是 | 用于表示组件是否被选中。<br>支持的值为：<br>true：当前组件被选中。<br>false：当前组件未被选中。<br> undefined：由组件自行确定选中状态。<br>默认值：undefined **说明：** <br>1. 使用该接口设置true或false后，会默认修改该组件的checkable属性为true。 2. accessibilityChecked属性代表组件是多选模式，而accessibilitySelected属性代表组件是单选模式。 组件不能同时存在两种选择模式，会造成无障碍状态冲突，导致屏幕朗读等无障碍辅助应用无法正确识别选中状态。如使用当前接口设置组件为多选模式（设置为true、false），则需要保证未使用accessibilitySelected函数设置属性为true或者false，如果已设置，需使用accessibilitySelected函数设置accessibilitySelected属性为undefined模式。 |
 
 **返回值：**
 
@@ -93,7 +88,7 @@ accessibilityCustomActions(actions: Array<AccessibilityCustomAction> | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| actions | Array&lt;[AccessibilityCustomAction](../arkts-apis/arkts-arkui-accessibilitycustomaction-i.md)&gt; &#124; undefined | 是 | 自定义无障碍操作数组，每个操作包含操作名称和回调，用于给组件按操作名进行自定义操作的回调绑定。<br>**说明：**<br>数组长度最大支持16个，超出部分将不生效。取值为undefined时，不设置自定义操作。 |
+| actions | Array&lt;[AccessibilityCustomAction](../arkts-apis/arkts-arkui-accessibilitycustomaction-i.md)&gt; &#124; undefined | 是 | 自定义无障碍操作数组，每个操作包含操作名称和回调，用于给组件按操作名进行自定义操作的回调绑定。<br>**说明：** <br>数组长度最大支持16个，超出部分将不生效。取值为undefined时，不设置自定义操作。 |
 
 **返回值：**
 
@@ -304,7 +299,7 @@ accessibilityLevel(value: string): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string | 是 | 无障碍重要性，用于控制某个组件是否可被无障碍辅助服务所识别。<br>支持的值为：<br>"auto"：当前组件由无障碍辅助服务和ArkUI进行综合判断组件是否可被无障碍辅助服务所识别。"yes"：当前组件可被无障碍辅助服务所识别。当父组件启用无障碍分组时，设置为"yes"的子组件不受分组约束，在满足屏幕朗读其他规则下仍可聚焦。<br>"no"：当前组件不可被无障碍辅助服务所识别。"no-hide-descendants"：当前组件及其所有子组件不可被无障碍辅助服务所识别。<br>默认值："auto"<br>**说明：**当accessibilityLevel设置成"auto"时，组件是否可被无障碍辅助服务所识别取决于以下多方面因素：<br>1. 组件是否可被识别由无障碍辅助服务内部判断，自行选择。 2. 若组件的父组件accessibilityGroup属性中isGroup设置为true，无障碍服务将不再关注其子组件内容，组件不可被无障碍辅助服务所识别。 3. 若组件的父组件accessibilityLevel属性设置为"no-hide-descendants"，组件不可被无障碍辅助服务所识别。 |
+| value | string | 是 | 无障碍重要性，用于控制某个组件是否可被无障碍辅助服务所识别。<br>支持的值为：<br>"auto"：当前组件由无障碍辅助服务和ArkUI进行综合判断组件是否可被无障碍辅助服务所识别。"yes"：当前组件可被无障碍辅助服务所识别。当父组件启用无障碍分组时，设置为"yes"的子组件不受分组约束，在满足屏幕朗读其他规则下仍可聚焦。<br>"no"：当前组件不可被无障碍辅助服务所识别。"no-hide-descendants"：当前组件及其所有子组件不可被无障碍辅助服务所识别。<br>默认值："auto"<br>**说明：** 当accessibilityLevel设置成"auto"时，组件是否可被无障碍辅助服务所识别取决于以下多方面因素：<br>1. 组件是否可被识别由无障碍辅助服务内部判断，自行选择。 2. 若组件的父组件accessibilityGroup属性中isGroup设置为true，无障碍服务将不再关注其子组件内容，组件不可被无障碍辅助服务所识别。 3. 若组件的父组件accessibilityLevel属性设置为"no-hide-descendants"，组件不可被无障碍辅助服务所识别。 |
 
 **返回值：**
 
@@ -425,7 +420,7 @@ accessibilityScrollTriggerable(isTriggerable: boolean): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isTriggerable | boolean | 是 | 用于表示组件是否支持该能力。<br>支持的值为：<br>true：屏幕朗读焦点切换而容器内当前页面无可聚焦的组件时，需要自动滚动操作。false：屏幕朗读焦点切换而容器内当前页面无可聚焦的组件时，不需要自动滚动操作。<br>undefined：还原默认值。<br>默认值：true。<br>**说明：** 1. 该属性不影响原先无障碍节点属性ElementAttributeValues中的scrollable。<br>2. 组件在屏幕朗读下的滚动逻辑由屏幕朗读根据该属性和组件是否支持scroll来决定。 3. 该属性为通用属性，所有基础组件均可配置。建议配置的滚动组件类型，如List、Grid、Scroll、WaterFlow等。 |
+| isTriggerable | boolean | 是 | 用于表示组件是否支持该能力。<br>支持的值为：<br>true：屏幕朗读焦点切换而容器内当前页面无可聚焦的组件时，需要自动滚动操作。false：屏幕朗读焦点切换而容器内当前页面无可聚焦的组件时，不需要自动滚动操作。<br>undefined：还原默认值。<br>默认值：true。<br>**说明：**  1. 该属性不影响原先无障碍节点属性ElementAttributeValues中的scrollable。<br>2. 组件在屏幕朗读下的滚动逻辑由屏幕朗读根据该属性和组件是否支持scroll来决定。 3. 该属性为通用属性，所有基础组件均可配置。建议配置的滚动组件类型，如List、Grid、Scroll、WaterFlow等。 |
 
 **返回值：**
 
@@ -455,7 +450,7 @@ accessibilitySelected(isSelect: boolean): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isSelect | boolean | 是 | 用于表示组件是否被选中。<br>支持的值为：<br>true：当前组件被选中。<br>false：当前组件未被选中。<br> undefined：由组件自行确定选中状态。<br>默认值：undefined **说明：** 1. accessibilityChecked属性代表组件是多选模式，而accessibilitySelected属性代表组件是单选模式。 组件不能同时存在两种选择模式，会造成无障碍状态冲突，导致屏幕朗读等无障碍辅助应用无法正确识别选中状态。如使用当前接口设置组件为单选模式（true、false），则需要保证未使用accessibilityChecked函数设置属性为true或者false；如果已设置，需使用accessibilityChecked函数设置accessibilityChecked属性为undefined模式。 |
+| isSelect | boolean | 是 | 用于表示组件是否被选中。<br>支持的值为：<br>true：当前组件被选中。<br>false：当前组件未被选中。<br> undefined：由组件自行确定选中状态。<br>默认值：undefined **说明：**  1. accessibilityChecked属性代表组件是多选模式，而accessibilitySelected属性代表组件是单选模式。 组件不能同时存在两种选择模式，会造成无障碍状态冲突，导致屏幕朗读等无障碍辅助应用无法正确识别选中状态。如使用当前接口设置组件为单选模式（true、false），则需要保证未使用accessibilityChecked函数设置属性为true或者false；如果已设置，需使用accessibilityChecked函数设置accessibilityChecked属性为undefined模式。 |
 
 **返回值：**
 
@@ -515,7 +510,7 @@ accessibilityText(value: string): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string | 是 | 无障碍文本，当组件不包含文本属性时，屏幕朗读选中此组件时不播报，使用者无法清楚地知道当前选中了什么组件。为了解决此场景，开发人员可为不包含文字信息的组件设置无障碍文本，当屏幕朗读选中此组件时播报无障碍文本的内容，帮助屏幕朗读的使用者清楚地知道自己选中了什么组件。默认值：“”<br>**说明：**<br>若组件既拥有文本属性，又拥有无障碍文本属性，则组件被选中时，仅播报无障碍文本内容。若组件设置了无障碍分组属性为true，但是既没有无障碍文本属性，也没有文本属性，会对其子节点的组件进行文本拼接（深度优先）。不对无障碍文本属性进行拼接，如需优先拼接无障碍文本，则需设置accessibilityGroup的accessibilityPreferred。 |
+| value | string | 是 | 无障碍文本，当组件不包含文本属性时，屏幕朗读选中此组件时不播报，使用者无法清楚地知道当前选中了什么组件。为了解决此场景，开发人员可为不包含文字信息的组件设置无障碍文本，当屏幕朗读选中此组件时播报无障碍文本的内容，帮助屏幕朗读的使用者清楚地知道自己选中了什么组件。默认值：“”<br>**说明：** <br>若组件既拥有文本属性，又拥有无障碍文本属性，则组件被选中时，仅播报无障碍文本内容。若组件设置了无障碍分组属性为true，但是既没有无障碍文本属性，也没有文本属性，会对其子节点的组件进行文本拼接（深度优先）。不对无障碍文本属性进行拼接，如需优先拼接无障碍文本，则需设置accessibilityGroup的accessibilityPreferred。 |
 
 **返回值：**
 
@@ -841,6 +836,8 @@ Set whether the component enables the ability to invert colors. This interface n
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## animation
 
 ```TypeScript
@@ -849,7 +846,7 @@ animation(value: AnimateParam): T
 
 设置组件的属性动画，当组件的通用属性发生变化时，按照AnimateParam参数配置对属性变化过程进行渐变过渡。
 
-> **说明：**
+> **说明：** 
 > 
 > - 在单一页面上同时存在数十个及以上应用动效的组件时，可以使用[renderGroup](#rendergroup)方法来解决卡顿问题，从而提升动画性能。最佳
 > 实践请参考
@@ -908,7 +905,7 @@ aspectRatio(value: number): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 指定当前组件的宽高比。<br>API version 9及以前，默认值为：1.0。<br>API version 10：无默认值。<br>**说明：**<br>该属性在不设置值或者设置非法值(小于等于0)时不生效。<br>例如，Row只设置宽度且没有子组件，aspectRatio不设置值或者设置成负数时，此时Row高度为0。<br>取值限定为整数。 |
+| value | number | 是 | 指定当前组件的宽高比。<br>API version 9及以前，默认值为：1.0。<br>API version 10：无默认值。<br>**说明：** <br>该属性在不设置值或者设置非法值(小于等于0)时不生效。<br>例如，Row只设置宽度且没有子组件，aspectRatio不设置值或者设置成负数时，此时Row高度为0。<br>取值限定为整数。 |
 
 **返回值：**
 
@@ -942,6 +939,8 @@ Sets the attribute modifier.
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## backdropBlur
 
 ```TypeScript
@@ -1042,7 +1041,7 @@ background(content: CustomBuilder | ResourceColor, options?: BackgroundOptions):
 
 设置组件背景。从API version 20开始，content参数新增了对[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)类型的支持，并新增了背景向父组件的安全区扩展的能力。当仅需设置背景色且不需要安全区扩展时，推荐使用[backgroundColor](#backgroundcolor)；当需要背景色同时扩展到安全区时，可使用background(content: ResourceColor)配合ignoresLayoutSafeAreaEdges属性。
 
-> **说明：**
+> **说明：** 
 > 
 > - 不支持[onAppear](#onappear)和[onDisAppear](#ondisappear)等和节点挂载/卸载相关的事件。
 > 
@@ -1078,7 +1077,7 @@ backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions): T
 
 为当前组件提供一种背景材质模糊能力，通过枚举值的方式封装了不同的模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度。
 
-> **说明：**
+> **说明：** 
 > 
 > backgroundBlurStyle、[backdropBlur](#backdropblur)和
 > [backgroundEffect](#backgroundeffect)均为背景模糊接口，提供不同级别的模糊自定义能力：
@@ -1233,7 +1232,7 @@ backgroundColor(value: ResourceColor): T
 
 设置组件背景色。
 
-> **说明：**
+> **说明：** 
 > 
 > 同时设置background、backgroundColor、backgroundImage时，三者叠加显示规则如下：若background为ResourceColor类型，或设置
 > ignoresLayoutSafeAreaEdges属性，则background位于最底层；其他情况下，background位于最上层。
@@ -1296,7 +1295,7 @@ backgroundColor(color: Optional<ResourceColor | ColorMetrics>): T
 
 设置组件背景色。与[backgroundColor](#backgroundcolor-1)相比，color参数新增了对[ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md)类型的支持。
 
-> **说明：**
+> **说明：** 
 > 
 > 当通过
 > [backgroundBlurStyle](#backgroundblurstyle)
@@ -1332,7 +1331,7 @@ backgroundEffect(options: BackgroundEffectOptions): T
 
 设置组件背景属性，以实时渲染方式处理，包括背景模糊半径、亮度、饱和度和颜色等参数。
 
-> **说明：**
+> **说明：** 
 > 
 > backgroundEffect为实时接口，每帧对模糊效果执行实时渲染，性能负载较大。当组件背景模糊效果无需变动时，推荐采用静态模糊接口
 > [blur](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit-filter-i.md#blur)实现模糊效果。
@@ -1393,7 +1392,7 @@ backgroundEffect(options: Optional<BackgroundEffectOptions>, sysOptions?: System
 
 设置组件背景属性，包括背景模糊半径、亮度、饱和度和颜色等参数。与[backgroundEffect&lt;sup&gt;18+&lt;/sup&gt;](#backgroundeffect-1)相比，新增了sysOptions参数，即支持系统自适应调节参数。
 
-> **说明：**
+> **说明：** 
 > 
 > backgroundEffect为实时接口，每帧对模糊效果执行实时渲染，性能负载较大。当组件背景模糊效果无需变动时，推荐采用静态模糊接口
 > [blur](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit-filter-i.md#blur)实现模糊效果。最佳实践请参考：
@@ -1428,7 +1427,7 @@ backgroundFilter(filter: Filter): T
 
 设置背景滤镜视觉效果，作用于组件背景层。各滤镜的绘制顺序参见[materialFilter](#materialfilter)。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -1489,7 +1488,7 @@ backgroundImage(src: ResourceStr | PixelMap, options?: BackgroundImageOptions): 
 
 设置组件的背景图片。与[backgroundImage](#backgroundimage)相比，增加了设置图片同步或异步加载方式的能力。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -1612,7 +1611,7 @@ bindContentCover(isShow: boolean, builder: CustomBuilder, type?: ModalTransition
 
 给组件绑定全屏模态页面，通过isShow参数控制模态页面的显示与隐藏。模态页面内容自定义，显示方式可设置无动画转场、上下切换转场以及透明度渐变转场。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -1628,7 +1627,7 @@ bindContentCover(isShow: boolean, builder: CustomBuilder, type?: ModalTransition
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isShow | boolean | 是 | 是否显示全屏模态页面。<br>-true：显示全屏模态页面。<br>-false：隐藏全屏模态页面。<br>从API version 10开始，该参数支持[\&#36;\&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。<br>从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。 |
+| isShow | boolean | 是 | 是否显示全屏模态页面。<br>-true：显示全屏模态页面。<br>-false：隐藏全屏模态页面。<br>从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。<br>从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。 |
 | builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | 配置全屏模态页面内容。builder中的根节点需唯一。<!--RP1--><!--RP1End--> |
 | type | [ModalTransition](arkts-arkui-modaltransition-e.md) | 否 | 全屏模态页面的系统转场方式。<br>取值原则：DEFAULT-上下切换过渡，NONE-无动画过渡，ALPHA-透明渐变过渡。<br> 默认值：ModalTransition.DEFAULT，即上下切换过渡。<br>**说明：** <br> 与transition同时设置时，此属性不生效，仅transition生效。 |
 
@@ -1646,7 +1645,7 @@ bindContentCover(isShow: boolean, builder: CustomBuilder, options?: ContentCover
 
 给组件绑定全屏模态页面，通过isShow参数控制模态页面的显示与隐藏。模态页面内容与转场方式均可自定义设置。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -1662,7 +1661,7 @@ bindContentCover(isShow: boolean, builder: CustomBuilder, options?: ContentCover
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isShow | boolean | 是 | 是否显示全屏模态页面。<br>-true：显示全屏模态页面。<br>-false：隐藏全屏模态页面。<br>从API version 10开始，该参数支持[\&#36;\&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。<br>从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。 |
+| isShow | boolean | 是 | 是否显示全屏模态页面。<br>-true：显示全屏模态页面。<br>-false：隐藏全屏模态页面。<br>从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。<br>从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。 |
 | builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | 配置全屏模态页面内容。 |
 | options | [ContentCoverOptions](arkts-arkui-contentcoveroptions-i.md) | 否 | 配置全屏模态页面的可选属性。不传入此参数时，各可选属性使用各自默认值。 |
 
@@ -1698,6 +1697,8 @@ Binds a context menu to this component, which is displayed when the user long-pr
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## bindContextMenu
 
 ```TypeScript
@@ -1726,6 +1727,8 @@ ContextMenu control
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## bindContextMenuByIsShow
 
 ```TypeScript
@@ -1754,6 +1757,8 @@ bindContextMenuByIsShow(isShow: boolean, content: CustomBuilder | Array<MenuElem
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## bindContextMenuByResponseType
 
 ```TypeScript
@@ -1783,6 +1788,8 @@ bindContextMenuByResponseType(content: CustomBuilder | Array<MenuElement>, respo
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## bindContextMenuWithResponse
 
 ```TypeScript
@@ -1810,6 +1817,8 @@ bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | undefined, o
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## bindContextMenuWithResponse
 
 ```TypeScript
@@ -1838,6 +1847,8 @@ bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | Array<MenuEl
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## bindMenu
 
 ```TypeScript
@@ -1863,6 +1874,8 @@ Menu control
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## bindMenu
 
 ```TypeScript
@@ -1891,6 +1904,8 @@ Menu control
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## bindPopup
 
 ```TypeScript
@@ -1916,6 +1931,8 @@ Popup control <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The popup can be display
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## bindSheet
 
 ```TypeScript
@@ -1924,7 +1941,7 @@ bindSheet(isShow: boolean, builder: CustomBuilder, options?: SheetOptions): T
 
 给组件绑定半模态页面，通过isShow参数控制半模态页面的显示与隐藏，builder参数配置半模态页面的内容，options参数配置半模态页面的可选属性。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -1940,7 +1957,7 @@ bindSheet(isShow: boolean, builder: CustomBuilder, options?: SheetOptions): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isShow | boolean | 是 | 是否显示半模态页面。<br>true：显示半模态页面。<br>false：隐藏半模态页面。<br>从API version 10开始，该参数支持[\&#36;\&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。<br>从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。 |
+| isShow | boolean | 是 | 是否显示半模态页面。<br>true：显示半模态页面。<br>false：隐藏半模态页面。<br>从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。<br>从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。 |
 | builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | 配置半模态页面内容。 |
 | options | [SheetOptions](arkts-arkui-sheetoptions-i.md) | 否 | 配置半模态页面的可选属性。如果不传入该参数，则不配置半模态页面的额外属性，各项属性使用其各自默认值。 |
 
@@ -1977,6 +1994,8 @@ Tips control
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## blendMode
 
 ```TypeScript
@@ -2139,7 +2158,7 @@ border(value: BorderOptions): T
 
 设置边框样式。
 
-> **说明：**
+> **说明：** 
 > 
 > color、radius缺省时，为了保证[borderColor](#bordercolor)、borderRadius生效，需要将borderColor、borderRadius设置在[border](#border)后。
 
@@ -2171,7 +2190,7 @@ borderColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors): T
 
 设置边框的颜色。
 
-> **说明：**
+> **说明：** 
 > 
 > 当使用border统一设置边框且color参数缺省时，需将borderColor设置在border之后调用才能生效。
 
@@ -2221,6 +2240,8 @@ Sets the border image of the component.
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## borderRadius
 
 ```TypeScript
@@ -2229,7 +2250,7 @@ borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses): T
 
 设置边框的圆角半径。
 
-> **说明：**
+> **说明：** 
 > 
 > 当使用border统一设置边框且radius参数缺省时，需将borderRadius设置在border之后调用才能生效。
 
@@ -2261,7 +2282,7 @@ borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses, type?: Re
 
 设置边框的圆角半径和绘制圆角的模式。
 
-> **说明：**
+> **说明：** 
 > 
 > 当使用border统一设置边框且radius参数缺省时，需将borderRadius设置在border之后调用才能生效。
 
@@ -2429,6 +2450,8 @@ chainMode(direction: Axis, style: ChainStyle): T
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## chainWeight
 
 ```TypeScript
@@ -2437,7 +2460,7 @@ chainWeight(chainWeight: ChainWeightOptions): T
 
 对形成链的组件进行重新布局。仅当父组件为RelativeContainer时生效。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 23开始，支持 [attributeModifier](#attributemodifier)动态设置属性方法。
 
@@ -2585,7 +2608,7 @@ clip(value: boolean | CircleAttribute | EllipseAttribute | PathAttribute | RectA
 
 按指定的形状对当前组件进行裁剪。
 
-> **说明：**
+> **说明：** 
 
 **起始版本：** 7
 
@@ -2619,7 +2642,7 @@ clipShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 
 按指定的形状（形状中可包含位置信息）对当前组件进行裁剪，将组件超出形状范围外的区域裁剪掉使其不可见。与[maskShape](#maskshape)不同，clipShape是将组件超出形状范围外的区域裁剪掉（不可见），而maskShape是在组件上叠加指定形状的遮罩覆盖层。
 
-> **说明：**
+> **说明：** 
 > 
 > 不同的形状支持的属性范围不同，路径是一种形状，除此之外还有椭圆、矩形等形状。
 > 
@@ -2657,7 +2680,7 @@ clipShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): 
 
 按指定的形状（形状中可包含位置信息）对当前组件进行裁剪。与[clipShape&lt;sup&gt;12+&lt;/sup&gt;](#clipshape)相比，新增了对undefined类型的支持。
 
-> **说明：**
+> **说明：** 
 > 
 > 不同的形状支持的属性范围不同，路径是一种形状，除此之外还有椭圆、矩形等形状。
 > 
@@ -2753,7 +2776,7 @@ compositingFilter(filter: Filter): T
 
 设置合成滤镜视觉效果，如模糊、像素扩展等。合成滤镜用于对组件前景与背景合成后的整体图像应用滤镜效果。多个滤镜同时设置在同一组件上时，合成滤镜的绘制位于背景滤镜之上、前景滤镜之下。绘制顺序从底到顶为：materialFilter → backgroundFilter → compositingFilter → foregroundFilter。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -2906,7 +2929,7 @@ defaultFocus(value: boolean): T
 
 设置当前组件是否为当前[层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)上的默认焦点。当未设置defaultFocus时，组件默认不为当前层级页面的默认焦点。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以设置默认焦点的页面指的是支持页面路由或是弹窗类的容器组件，例如Page、NaviDestination、NavBar、PopUp、Dialog等。
 
@@ -2976,7 +2999,7 @@ displayPriority(value: number): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 设置当前组件在布局容器中显示的优先级，取值范围0, +∞)。<br>默认值：1<br>**说明：**<br>仅在[Row/Column/Flex(单行)容器组件中生效。<br>当容器空间有限，需要控制组件显示顺序或隐藏低优先级组件时使用（如在Flex容器中根据空间大小动态显示内容）。建议根据组件重要性设置优先级，关键组件设置较大的值（如2-10），次要组件设置较小的值（如1）。<br> 小数点后的数字不影响优先级。不大于1的所有值优先级相同。大于1时，displayPriority的整数部分越大，优先级越高；同一整数区间内的值优先级相同。例如：0.5和1.0优先级相同（均不大于1）；1.5和1.9优先级相同（整数部分均为1）；2.0和2.9优先级相同（整数部分均为2），且高于1.x的优先级。<br>若父容器空间不足，隐藏低优先级子组件。若某一优先级级别的子组件被隐藏，则所有更低优先级的子组件也都会被隐藏。 |
+| value | number | 是 | 设置当前组件在布局容器中显示的优先级，取值范围0, +∞)。<br>默认值：1<br>**说明：** <br>仅在[Row/Column/Flex(单行)容器组件中生效。<br>当容器空间有限，需要控制组件显示顺序或隐藏低优先级组件时使用（如在Flex容器中根据空间大小动态显示内容）。建议根据组件重要性设置优先级，关键组件设置较大的值（如2-10），次要组件设置较小的值（如1）。<br> 小数点后的数字不影响优先级。不大于1的所有值优先级相同。大于1时，displayPriority的整数部分越大，优先级越高；同一整数区间内的值优先级相同。例如：0.5和1.0优先级相同（均不大于1）；1.5和1.9优先级相同（整数部分均为1）；2.0和2.9优先级相同（整数部分均为2），且高于1.x的优先级。<br>若父容器空间不足，隐藏低优先级子组件。若某一优先级级别的子组件被隐藏，则所有更低优先级的子组件也都会被隐藏。 |
 
 **返回值：**
 
@@ -3078,7 +3101,7 @@ dragPreview(preview: CustomBuilder | DragItemInfo | string, config?: PreviewConf
 
 自定义组件拖拽过程中的预览图，仅用于设置浮起效果或者禁用浮起效果。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -3111,7 +3134,7 @@ dragPreviewOptions(value: DragPreviewOptions, options?: DragInteractionOptions):
 
 设置拖拽过程中预览图处理模式，数量角标的显示以及预览图浮起的交互模式。不支持onItemDragStart拖拽方式。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -3162,6 +3185,8 @@ Sets the drawModifier of the current component.
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## enableClickSoundEffect
 
 ```TypeScript
@@ -3226,7 +3251,7 @@ expandSafeArea(types?: Array<SafeAreaType>, edges?: Array<SafeAreaEdge>): T
 
 控制组件扩展其安全区域，实现沉浸式效果。
 
-> **说明：**
+> **说明：** 
 > 
 > - 设置expandSafeArea属性进行组件绘制扩展时，建议组件尺寸不要设置固定宽高（百分比除外），当设置固定宽高（包括设置'auto'）时，扩展安全区域的方向只支持[SafeAreaEdge.TOP, SafeAreaEdge.START]，扩展后的组件尺寸保持不变。
 > 
@@ -3375,7 +3400,7 @@ focusable(value: boolean): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 设置当前组件是否可以获焦，true表示组件可以获焦，false表示组件不可获焦。<br>**说明：**<br>存在默认交互逻辑的组件例如[Button](arkts-arkui-mouseevent-i.md#button)、TextInput等，默认即为可获焦，Text、Image等组件则默认状态为不可获焦。不可获焦状态下，无法触发焦点事件。 |
+| value | boolean | 是 | 设置当前组件是否可以获焦，true表示组件可以获焦，false表示组件不可获焦。<br>**说明：** <br>存在默认交互逻辑的组件例如[Button](arkts-arkui-mouseevent-i.md#button)、TextInput等，默认即为可获焦，Text、Image等组件则默认状态为不可获焦。不可获焦状态下，无法触发焦点事件。 |
 
 **返回值：**
 
@@ -3516,7 +3541,7 @@ focusScopePriority(scopeId: string, priority?: FocusPriority): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scopeId | string | 是 | 当前组件设置的获焦优先级生效的容器组件的id标识。<br>**说明：**<br>1.当前组件必须在scopedId所标识的容器内，或其所属容器在scopeId所标识的容器内。<br>2.组件不可重复设置多个优先级。<br>3.设置了focusScopeId的容器租金按不可设置优先级。 |
+| scopeId | string | 是 | 当前组件设置的获焦优先级生效的容器组件的id标识。<br>**说明：** <br>1.当前组件必须在scopedId所标识的容器内，或其所属容器在scopeId所标识的容器内。<br>2.组件不可重复设置多个优先级。<br>3.设置了focusScopeId的容器租金按不可设置优先级。 |
 | priority | [FocusPriority](../arkts-apis/arkts-arkui-focuspriority-e.md) | 否 | 获焦优先级。<br>**说明：** <br>未设置priority时，默认为AUTO优先级。<br>优先级对走焦以及获焦组件的影响：<br>1.容器整体获焦（[层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)切换/焦点切换到焦点组/容器组件使用requestFocus申请焦点）时，若容器内存在优先级为PREVIOUS的组件，则优先级为PREVIOUS的组件获焦，否则，由容器内上次获焦的组件获焦。<br>2.容器非整体获焦（非焦点组场景下使用tab键/方向键走焦）时，若容器为首次获焦，则容器内优先级最高的组件获焦，若容器非首次获焦，不考虑优先级按照位置顺序走焦。 |
 
 **返回值：**
@@ -3533,7 +3558,7 @@ foregroundBlurStyle(value: BlurStyle, options?: ForegroundBlurStyleOptions): T
 
 为当前组件提供内容模糊能力。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 18开始，该接口支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -3595,7 +3620,7 @@ foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOpt
 
 为当前组件提供内容模糊能力。与[foregroundBlurStyle&lt;sup&gt;18+&lt;/sup&gt;](#foregroundblurstyle-1)相比，新增了sysOptions参数，即支持系统自适应调节参数，系统可根据设备性能或显示策略等条件自动调节前景模糊的渲染效果。
 
-> **说明：**
+> **说明：** 
 > 
 > foregroundBlurStyle接口为实时模糊接口，每帧执行实时渲染，性能负载高于静态模糊接口。当模糊内容与模糊半径均无需变动时，推荐采用静态模糊接口
 > [blur](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit-filter-i.md#blur)。最佳实践请参考：
@@ -3715,7 +3740,7 @@ foregroundFilter(filter: Filter): T
 
 设置前景滤镜（内容）视觉效果，如模糊、像素扩展等。多个滤镜同时设置在同一组件上时，前景滤镜的绘制位于所有其他滤镜之上。绘制顺序从底到顶为：materialFilter → backgroundFilter → compositingFilter → foregroundFilter。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -3747,7 +3772,7 @@ freeze(value: boolean): T
 
 设置当前控件和子控件是否整体离屏渲染绘制后重复绘制缓存，不再进行内部属性更新。当freeze设置为true时，组件属性更新将被冻结；若需恢复属性更新，需先将freeze设置为false。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -3779,7 +3804,7 @@ freeze(freeze: Optional<boolean>): T
 
 设置当前控件和子控件是否整体离屏渲染绘制后重复绘制缓存，不再进行内部属性更新。当freeze设置为true时，组件属性更新将被冻结；若需恢复属性更新，需先将freeze设置为false。与[freeze](#freeze)相比，freeze参数新增了对undefined类型的支持。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -3866,7 +3891,7 @@ gesture(gesture: GestureType, mask?: GestureMask): T
 
 绑定手势。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -3917,6 +3942,8 @@ gestureModifier(modifier: GestureModifier): T
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## grayscale
 
 ```TypeScript
@@ -3997,12 +4024,14 @@ gridOffset(value: number): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 默认偏移列数，指useSizeType属性没有设置对应尺寸的偏移（offset）时，当前组件沿着父组件Start方向偏移的列数，即组件起始位置相对于父组件Start方向偏移n列，需为非负整数。传入负数时，使用默认值0。当useSizeType设置了对应尺寸的offset时，gridOffset设置无效。<br>**说明：**<br>- 调用该属性时，其父组件或祖先组件必须是GridContainer。<br>- 配置该属性后，当前组件在父组件水平方向的布局不再跟随父组件原有的布局方式，而是沿着父组件的Start方向偏移一定位移。<br>- 偏移位移 & nbsp;= & nbsp;（列宽 & nbsp;+ & nbsp;间距）\* & nbsp;偏移列数。<br>- 设置了偏移(gridOffset)的组件之后的兄弟组件会根据该组件进行相对布局。<br>默认值：0 |
+| value | number | 是 | 默认偏移列数，指useSizeType属性没有设置对应尺寸的偏移（offset）时，当前组件沿着父组件Start方向偏移的列数，即组件起始位置相对于父组件Start方向偏移n列，需为非负整数。传入负数时，使用默认值0。当useSizeType设置了对应尺寸的offset时，gridOffset设置无效。<br>**说明：** <br>- 调用该属性时，其父组件或祖先组件必须是GridContainer。<br>- 配置该属性后，当前组件在父组件水平方向的布局不再跟随父组件原有的布局方式，而是沿着父组件的Start方向偏移一定位移。<br>- 偏移位移 & nbsp;= & nbsp;（列宽 & nbsp;+ & nbsp;间距）\* & nbsp;偏移列数。<br>- 设置了偏移(gridOffset)的组件之后的兄弟组件会根据该组件进行相对布局。<br>默认值：0 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## gridSpan
 
 ```TypeScript
@@ -4025,12 +4054,14 @@ gridSpan(value: number): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 默认占用列数，指useSizeType属性没有设置对应尺寸的列数（span）时，占用的栅格列数，需为非负整数。传入负数或超出GridContainer总列数时，使用默认值1。<br>**说明：**<br>- 调用该属性时，其父组件或祖先组件必须是GridContainer。<br>- 设置了栅格span属性，组件的宽度由栅格布局决定。<br>默认值：1 |
+| value | number | 是 | 默认占用列数，指useSizeType属性没有设置对应尺寸的列数（span）时，占用的栅格列数，需为非负整数。传入负数或超出GridContainer总列数时，使用默认值1。<br>**说明：** <br>- 调用该属性时，其父组件或祖先组件必须是GridContainer。<br>- 设置了栅格span属性，组件的宽度由栅格布局决定。<br>默认值：1 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## groupDefaultFocus
 
 ```TypeScript
@@ -4065,7 +4096,7 @@ height(value: Length): T
 
 设置组件自身的高度，缺省时使用子组件自身内容需要的高度。若子组件的高大于父组件的高，则子组件会溢出显示在父组件外部。
 
-> **说明：**
+> **说明：** 
 > 
 > - 在Row、Column、RelativeContainer组件中，height设置auto表示自适应子组件。
 > 
@@ -4271,7 +4302,7 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafe
 
 扩展组件布局时的安全区。
 
-> **说明：**
+> **说明：** 
 > 
 > 忽略布局安全区边缘的组件，如果其宽度或高度设置了 [LayoutPolicy.matchParent](arkts-arkui-layoutpolicy-c.md#matchparent)，其大小和位置都会改变，否则仅改变其位置。
 > 
@@ -4832,7 +4863,7 @@ maskShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 
 为组件添加指定形状的遮罩，在组件上叠加指定形状的覆盖层。
 
-> **说明：**
+> **说明：** 
 > 
 > - 不同的形状支持的属性范围不同，路径是一种形状，除此之外还有椭圆、矩形等形状。
 > 
@@ -4870,7 +4901,7 @@ maskShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): 
 
 为组件添加指定形状的遮罩，在组件上叠加指定形状的覆盖层。与[maskShape&lt;sup&gt;12+&lt;/sup&gt;](#maskshape)相比，新增了对undefined类型的支持。
 
-> **说明：**
+> **说明：** 
 > 
 > 不同的形状支持的属性范围不同，路径是一种形状，除此之外还有椭圆、矩形等形状。
 > 
@@ -4908,7 +4939,7 @@ materialFilter(filter: Filter | undefined): T
 
 设置系统材质滤镜视觉效果，系统材质为系统预定义的材质样式。系统材质滤镜的绘制早于[backgroundFilter](#backgroundfilter)绘制，即位于backgroundFilter的更底层。绘制顺序从底到顶为：materialFilter → backgroundFilter → compositingFilter → foregroundFilter。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -4966,7 +4997,7 @@ motionBlur(value: MotionBlurOptions): T
 
 在当前组件由缩放大小或位移变化引起的运动过程中，增加运动模糊效果。
 
-> **说明：**
+> **说明：** 
 > 
 > - 不建议在组件内转场、共享元素转场、组件内隐式元素转场和粒子动画场景中使用该属性，否则会产生非预期效果。
 > 
@@ -5009,7 +5040,7 @@ motionBlur(motionBlur: Optional<MotionBlurOptions>): T
 
 在当前组件由缩放大小或位移变化引起的运动过程中，增加运动模糊效果。与[motionBlur](#motionblur)相比，motionBlur参数新增了对undefined类型的支持。
 
-> **说明：**
+> **说明：** 
 > 
 > - 不建议在组件内转场、共享元素转场、组件内隐式元素转场和粒子动画场景中使用该属性，否则会产生非预期效果。
 > 
@@ -5118,7 +5149,7 @@ nextFocus(nextStep: Optional<FocusMovement>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| nextStep | [Optional](arkts-arkui-optional-t.md)&lt;[FocusMovement](arkts-arkui-focusmovement-i.md)&gt; | 是 | 设置当前容器组件的自定义走焦规则。<br>**说明：**<br>默认值为重置nextStep为空。<br>没设置自定义走焦或者设置自定义组件容器不存在，仍进行默认走焦规则。 |
+| nextStep | [Optional](arkts-arkui-optional-t.md)&lt;[FocusMovement](arkts-arkui-focusmovement-i.md)&gt; | 是 | 设置当前容器组件的自定义走焦规则。<br>**说明：** <br>默认值为重置nextStep为空。<br>没设置自定义走焦或者设置自定义组件容器不存在，仍进行默认走焦规则。 |
 
 **返回值：**
 
@@ -5305,7 +5336,7 @@ onAppear(event: () => void): T
 ```
 
 组件挂载后触发此回调。   
-> **说明：**
+> **说明：** 
 > 
 > 回调的调用时机有可能发生在组件布局渲染后。
 
@@ -5339,7 +5370,7 @@ onAreaChange(event: (oldValue: Area, newValue: Area) => void): T
 
 由绘制变化所导致的渲染属性变化不会响应回调，如[translate](#translate)、[offset](#offset)、[markAnchor](#markanchor)、[scale](#scale)、[transform](#transform)。若组件自身位置由绘制变化决定也不会响应回调，如[bindSheet](#bindsheet)。
 
-> **说明：**
+> **说明：** 
 > 
 > 当组件同时绑定onAreaChange事件和[position](#position)属性时，onAreaChange事件响应设置
 > Position类型的position属性变化，不响应设置Edges和[LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md)
@@ -5400,7 +5431,7 @@ onAttach(callback: Callback<void>): T
 
 组件挂载到组件树时触发此回调。由于以下说明中的限制，建议使用[onAppear](#onappear)替代此接口。
 
-> **说明：**
+> **说明：** 
 > 
 > - 回调在组件布局渲染前调用。
 > 
@@ -5488,7 +5519,7 @@ onChildTouchTest(event: (value: Array<TouchTestInfo>) => TouchResult): T
 
 当前组件通过设置回调，可自定义触摸测试并控制触摸测试中的子节点行为。
 
-> **说明：**
+> **说明：** 
 > 
 > - 子节点信息数组中仅包含命名节点的信息，即开发者通过id属性设置了id的节点。
 > 
@@ -5524,7 +5555,7 @@ onClick(event: (event: ClickEvent) => void): T
 
 触发点击事件的设备类型为键盘或手柄时，事件的SourceTool值为Unknown，事件的[SourceType](arkts-arkui-sourcetype-e.md)值为KEY，JOYSTICK。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始，使用卡片能力时存在以下限制：
 > 
@@ -5566,7 +5597,7 @@ onClick(event: Callback<ClickEvent>, distanceThreshold: number): T
 
 对于无手指移动距离限制的点击场景，建议使用原有接口。若需限制点击时手指移动范围，建议使用该接口。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 12开始，在使用卡片能力时，存在以下限制：
 > 
@@ -5591,7 +5622,7 @@ onClick(event: Callback<ClickEvent>, distanceThreshold: number): T
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | [Callback](arkts-arkui-callback-i.md)&lt;[ClickEvent](arkts-arkui-clickevent-i.md)&gt; | 是 | 点击事件的回调函数。 |
-| distanceThreshold | number | 是 | 点击事件移动阈值。当设置的值小于等于0时，会被转化为默认值。<br>默认值：2^31-1<br>单位：vp<br>**说明：**<br>当手指的移动距离超出开发者预设的移动阈值时，点击识别失败。如果初始化为默认阈值时，手指移动超过组件热区范围，点击识别失败。 |
+| distanceThreshold | number | 是 | 点击事件移动阈值。当设置的值小于等于0时，会被转化为默认值。<br>默认值：2^31-1<br>单位：vp<br>**说明：** <br>当手指的移动距离超出开发者预设的移动阈值时，点击识别失败。如果初始化为默认阈值时，手指移动超过组件热区范围，点击识别失败。 |
 
 **返回值：**
 
@@ -5635,7 +5666,7 @@ onDigitalCrown(handler: Optional<Callback<CrownEvent>>): T
 
 组件获焦以后旋转表冠时触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -5707,7 +5738,7 @@ onDragEnd(event: (event: DragEvent, extraParams?: string) => void): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) =&gt; void | 是 | 回调函数。<br>**说明：**<br> event为拖拽事件信息，在onDragEnd调用中不包括拖拽点坐标。<br> extraParams为拖拽事件额外信息，需要解析为JSON格式。 |
+| event | (event: DragEvent, extraParams?: string) =&gt; void | 是 | 回调函数。<br>**说明：** <br> event为拖拽事件信息，在onDragEnd调用中不包括拖拽点坐标。<br> extraParams为拖拽事件额外信息，需要解析为JSON格式。 |
 
 **返回值：**
 
@@ -5733,7 +5764,7 @@ onDragEnter(event: (event: DragEvent, extraParams?: string) => void): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) =&gt; void | 是 | 回调函数。<br>**说明：**<br> event为拖拽事件信息，包括拖拽点坐标。<br> extraParams为拖拽事件额外信息，需要解析为JSON格式。 |
+| event | (event: DragEvent, extraParams?: string) =&gt; void | 是 | 回调函数。<br>**说明：** <br> event为拖拽事件信息，包括拖拽点坐标。<br> extraParams为拖拽事件额外信息，需要解析为JSON格式。 |
 
 **返回值：**
 
@@ -5759,7 +5790,7 @@ onDragLeave(event: (event: DragEvent, extraParams?: string) => void): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) =&gt; void | 是 | 回调函数。<br>**说明：**<br> event为拖拽事件信息，包括拖拽点坐标。<br> extraParams为拖拽事件额外信息，需要解析为JSON格式。 |
+| event | (event: DragEvent, extraParams?: string) =&gt; void | 是 | 回调函数。<br>**说明：** <br> event为拖拽事件信息，包括拖拽点坐标。<br> extraParams为拖拽事件额外信息，需要解析为JSON格式。 |
 
 **返回值：**
 
@@ -5785,7 +5816,7 @@ onDragMove(event: (event: DragEvent, extraParams?: string) => void): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) =&gt; void | 是 | 回调函数。<br>**说明：**<br> event为拖拽事件信息，包括拖拽点坐标。<br> extraParams为拖拽事件额外信息，需要解析为JSON格式。 |
+| event | (event: DragEvent, extraParams?: string) =&gt; void | 是 | 回调函数。<br>**说明：** <br> event为拖拽事件信息，包括拖拽点坐标。<br> extraParams为拖拽事件额外信息，需要解析为JSON格式。 |
 
 **返回值：**
 
@@ -5839,7 +5870,7 @@ onDragStart(event: (event: DragEvent, extraParams?: string) => CustomBuilder | D
 
 文本类组件Text、Search、TextInput、TextArea、RichEditor对选中的文本内容进行拖拽时，不支持自定义预览图。当onDragStart与菜单预览一起使用或使用了默认支持拖拽能力的组件时，预览及菜单项上的自定义内容不支持拖拽。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 13开始，该接口支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -5853,7 +5884,7 @@ onDragStart(event: (event: DragEvent, extraParams?: string) => CustomBuilder | D
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) =&gt; CustomBuilder &#124; DragItemInfo | 是 | 回调函数。<br> **说明：**<br> event参数为拖拽事件的信息。<br> extraParams参数为拖拽事件的额外信息，需要解析为JSON格式。<br>CustomBuilder为拖拽过程中显示的组件信息，不支持全局builder。 |
+| event | (event: DragEvent, extraParams?: string) =&gt; CustomBuilder &#124; DragItemInfo | 是 | 回调函数。<br> **说明：** <br> event参数为拖拽事件的信息。<br> extraParams参数为拖拽事件的额外信息，需要解析为JSON格式。<br>CustomBuilder为拖拽过程中显示的组件信息，不支持全局builder。 |
 
 **返回值：**
 
@@ -5879,7 +5910,7 @@ onDrop(event: (event: DragEvent, extraParams?: string) => void): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) =&gt; void | 是 | 回调函数。<br>**说明：**<br> event为拖拽事件信息，包括拖拽点坐标。<br> extraParams为拖拽事件额外信息，需要解析为JSON格式。 |
+| event | (event: DragEvent, extraParams?: string) =&gt; void | 是 | 回调函数。<br>**说明：** <br> event为拖拽事件信息，包括拖拽点坐标。<br> extraParams为拖拽事件额外信息，需要解析为JSON格式。 |
 
 **返回值：**
 
@@ -6006,7 +6037,7 @@ onGestureJudgeBegin(callback: (gestureInfo: GestureInfo, event: BaseGestureEvent
 
 为组件绑定自定义手势判定回调。当手势即将成功时，触发用户定义的回调获取结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 在Text组件中使用该接口时，不支持对点击事件进行自定义手势判定。
 
@@ -6323,6 +6354,8 @@ XComponent组件使用该方法时，如果返回值为`true`且XComponent组件
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## onPreDrag
 
 ```TypeScript
@@ -6331,7 +6364,7 @@ onPreDrag(callback: Callback<PreDragStatus>): T
 
 绑定此事件的组件，当处于手势拖拽发起前的不同阶段时，触发回调。拖拽发起前的各阶段可参考[PreDragStatus](arkts-arkui-predragstatus-e.md)。此接口不支持在鼠标拖拽中触发。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -6363,7 +6396,7 @@ onSizeChange(event: SizeChangeCallback): T
 
 组件区域变化时触发该回调。仅会响应由布局变化所导致的组件尺寸发生变化时的回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 该接口在布局发生变化时触发，由于计算精度的关系，其返回值可能与真实物理尺寸存在细微的差异。
 > 
@@ -6429,7 +6462,7 @@ onTouchIntercept(callback: Callback<TouchEvent, HitTestMode>): T
 
 给组件绑定自定义事件拦截回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 20开始，该接口支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -6489,7 +6522,7 @@ onVisibleAreaApproximateChange(options: VisibleAreaEventOptions, event: VisibleA
 
 设置onVisibleAreaApproximateChange事件的回调参数，限制它的执行间隔。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 23开始，该接口支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -6522,7 +6555,7 @@ onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback): T
 
 组件可见区域变化时触发该回调。开发指导及常见问题请参考[感知组件可见性](../../../ui/arkts-manage-components-visibility.md)指南。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 20开始，该接口支持在[attributeModifier](#attributemodifier)中调用。
 > 
@@ -6577,7 +6610,7 @@ onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback, mea
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ratios | Array&lt;number&gt; | 是 | 阈值数组。其中，每个阈值代表组件可见面积与组件自身面积的比值。当组件可见面积与自身面积的比值接近阈值时，均会触发该回调。每个阈值的取值范围为[0.0, 1.0]，如果开发者设置的阈值小于0.0，则实际取值为0.0；如果设置的阈值大于1.0，则实际取值为1.0。<br>**说明：**<br>当数值接近边界0和1时，将会按照误差不超过0.001的规则进行舍入。例如，0.9997会被近似为1。 |
+| ratios | Array&lt;number&gt; | 是 | 阈值数组。其中，每个阈值代表组件可见面积与组件自身面积的比值。当组件可见面积与自身面积的比值接近阈值时，均会触发该回调。每个阈值的取值范围为[0.0, 1.0]，如果开发者设置的阈值小于0.0，则实际取值为0.0；如果设置的阈值大于1.0，则实际取值为1.0。<br>**说明：** <br>当数值接近边界0和1时，将会按照误差不超过0.001的规则进行舍入。例如，0.9997会被近似为1。 |
 | event | [VisibleAreaChangeCallback](arkts-arkui-visibleareachangecallback-t.md) | 是 | 组件可见区域变化事件的回调。 |
 | measureFromViewport | boolean | 是 | 设置可见区域计算模式。<br>当measureFromViewport设置为true时，系统在计算该组件的可见区域时，会考虑父组件的[clip](#clip) 属性设置。如果父组件的[clip](#clip)为false，则认为其内的子组件可以超出其区域进行显示，因此超出父组件的区域也将被视为可见区域纳入计算；如果父组件的[clip](#clip)设置为true，则组件超出父组件的区域会被裁剪，无法显示，因此会被视为不可见区域进行计算。而当measureFromViewport设置为false时，则不考虑[clip](#clip)的影响，直接将组件超出父组件的部分视为不可见区域。<br>measureFromViewport设置为true时，祖先节点设置[scale](#scale)属性，组件可见比例会被正确计算。 |
 
@@ -6953,7 +6986,7 @@ overlay(value: string | CustomBuilder | ComponentContent, options?: OverlayOptio
 
 在当前组件上，增加遮罩文本或者叠加自定义组件以及[ComponentContent](arkts-arkui-componentcontent-t.md)作为该组件的浮层。浮层的定位同样基于当前组件进行计算。浮层不通过组件树进行渲染，部分接口（例如getRectangleById）不支持获取浮层中的组件。
 
-> **说明：**
+> **说明：** 
 > 
 > - overlay会将浮层组件覆盖在所绑定的组件上方，阻塞用户对浮层下方组件的所有交互操作。若需用户可操作下方组件，应在浮层builder的最外层组件上配置`.hitTestBehavior(HitTestMode.Transparent)`。 此配置在通过浮层实现水印时尤其重要，因为水印显示不应妨碍用户对下层组件的操作。
 > - 多次调用overlay接口时，如果同时传入string类型和
@@ -6972,8 +7005,8 @@ overlay(value: string | CustomBuilder | ComponentContent, options?: OverlayOptio
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string &#124; [CustomBuilder](arkts-arkui-custombuilder-t.md) &#124; [ComponentContent](arkts-arkui-componentcontent-t.md) | 是 | 遮罩文本内容或自定义组件构造函数。<br>**说明：**<br>自定义组件作为浮层时，不支持键盘走焦到自定义组件中。通过CustomBuilder设置浮层时，浮层中的内容会在页面刷新时销毁并重新创建，存在一定的性能损耗，页面频繁刷新的场景推荐使用ComponentContent方式设置浮层。<br>**适用版本：** 12 |
-| options | [OverlayOptions](arkts-arkui-overlayoptions-i.md) | 否 | 浮层的定位。当需要自定义浮层相对于组件的方位或偏移量时传入该参数；不传入时，浮层默认按照`align`的默认值`TopStart`定位，并使用默认偏移量`offset: { x: 0, y: 0 }`，显示在组件左上角。<br>**说明：**<br>API version 12之前，options: <br>{<br>align?:  [Alignment](../arkts-apis/arkts-arkui-alignment-e.md), <br>offset?: {x?: number, y?: number}<br>}<br>**适用版本：** 12 |
+| value | string &#124; [CustomBuilder](arkts-arkui-custombuilder-t.md) &#124; [ComponentContent](arkts-arkui-componentcontent-t.md) | 是 | 遮罩文本内容或自定义组件构造函数。<br>**说明：** <br>自定义组件作为浮层时，不支持键盘走焦到自定义组件中。通过CustomBuilder设置浮层时，浮层中的内容会在页面刷新时销毁并重新创建，存在一定的性能损耗，页面频繁刷新的场景推荐使用ComponentContent方式设置浮层。<br>**适用版本：** 12 |
+| options | [OverlayOptions](arkts-arkui-overlayoptions-i.md) | 否 | 浮层的定位。当需要自定义浮层相对于组件的方位或偏移量时传入该参数；不传入时，浮层默认按照`align`的默认值`TopStart`定位，并使用默认偏移量`offset: { x: 0, y: 0 }`，显示在组件左上角。<br>**说明：** <br>API version 12之前，options: <br>{<br>align?:  [Alignment](../arkts-apis/arkts-arkui-alignment-e.md), <br>offset?: {x?: number, y?: number}<br>}<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -7019,7 +7052,7 @@ parallelGesture(gesture: GestureType, mask?: GestureMask): T
 
 绑定可与子组件手势同时触发的手势。手势事件为非冒泡事件。父组件设置parallelGesture时，父子组件相同的手势事件都可以触发，实现类似冒泡效果。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -7050,7 +7083,7 @@ pixelRound(value: PixelRoundPolicy): T
 
 指定当前组件在指定方向上的像素取整对齐方式，使用后组件边界坐标将按指定策略取整，从而避免因浮点数绘制产生的视觉异常（如1px缝隙、组件重叠、分割线消失）。从API version 12开始，某方向不设置时默认在该方向进行四舍五入取整。
 
-> **说明：**
+> **说明：** 
 > 
 > - 在API version 11，本接口采用半像素对齐方式（即0\~0.25取0，0.25\~0.75取0.5，0.75\~1.0取1）。该方式通过保留0.5像素值来减少连续取整可能带来的累积误差。从API version 12开始，未设置取整策略的方向默认采用四舍五入的取整方式，并支持通过PixelRoundCalcPolicy.NO_FORCE_ROUND关闭指定方向的像素取整。
 > 
@@ -7076,7 +7109,7 @@ pixelRound(value: PixelRoundPolicy): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PixelRoundPolicy](arkts-arkui-pixelroundpolicy-i.md) | 是 | 指定当前组件边界取整策略。[PixelRoundPolicy](arkts-arkui-pixelroundpolicy-i.md)包含start、top、end、bottom四个可选属性，分别对应组件前部、上部、尾部、底部边界。每个属性可设置[PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)枚举值。设置PixelRoundCalcPolicy.NO_FORCE_ROUND可关闭对应方向上的像素取整，未设置的属性默认按四舍五入规则取整。<br>**说明：**<br>该属性用于因浮点数绘制产生视觉异常的场景。取整结果不仅和组件的宽高有关，也与组件的位置有关。即使设置组件的宽高相同，由于以浮点数描述的组件位置不同，舍入后组件的最终宽高也可能不同。 |
+| value | [PixelRoundPolicy](arkts-arkui-pixelroundpolicy-i.md) | 是 | 指定当前组件边界取整策略。[PixelRoundPolicy](arkts-arkui-pixelroundpolicy-i.md)包含start、top、end、bottom四个可选属性，分别对应组件前部、上部、尾部、底部边界。每个属性可设置[PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)枚举值。设置PixelRoundCalcPolicy.NO_FORCE_ROUND可关闭对应方向上的像素取整，未设置的属性默认按四舍五入规则取整。<br>**说明：** <br>该属性用于因浮点数绘制产生视觉异常的场景。取整结果不仅和组件的宽高有关，也与组件的位置有关。即使设置组件的宽高相同，由于以浮点数描述的组件位置不同，舍入后组件的最终宽高也可能不同。 |
 
 **返回值：**
 
@@ -7148,7 +7181,7 @@ position(value: Position | Edges | LocalizedEdges): T
 
 绝对定位，确定子组件相对父组件内容区的位置，支持[attributeModifier](#attributemodifier)动态设置属性方法。
 
-> **说明：**
+> **说明：** 
 > 
 > - position对位置的影响作用在组件的尺寸测量完成之后。
 > - 当父组件为Row、Column或Flex时，设置position的子组件不占位。在上述场景中，如果父组件包含的所有子组件均设置了position，此时父组件尺寸无法通过其他子组件确定，将基于尺寸(0, 0)进行布局测算。
@@ -7189,7 +7222,7 @@ priorityGesture(gesture: GestureType, mask?: GestureMask): T
 1. 默认情况下，子组件优先识别通过gesture绑定的手势，当父组件配置priorityGesture时，父组件优先识别priorityGesture绑定的手势。
 2. 绑定长按手势时，设置触发长按的最短时间小的组件会优先响应，会忽略priorityGesture设置。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -7370,7 +7403,7 @@ renderGroup(isGroup: Optional<boolean>): T
 
 设置是否组成节点组。节点组表示当前组件和子组件组成的子树先在离屏画布中渲染，再与父组件融合绘制。设置为节点组后，系统会缓存绘制结果，提升性能。但如果节点组内的组件频繁更新，缓存失效，可能导致性能下降。此外，设置为节点组后，当前组件的不透明度不为1时，绘制效果可能有差异。
 
-> **说明：**
+> **说明：** 
 > 
 > 与[freeze](#freeze)不同，renderGroup在缓存绘制结果后仍允许内部属性更新（更新时缓存失效），适用于组件需要动态更新的场景；
 > freeze则完全停止内部属性更新，适用于组件内容稳定不需要更新的场景。
@@ -7480,6 +7513,8 @@ id for distribute identification.
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## reuse
 
 ```TypeScript
@@ -7488,7 +7523,7 @@ reuse(options: ReuseOptions): T
 
 为\@ReusableV2装饰的V2自定义组件设置复用选项，相同复用标识ID的组件会被互相复用，提高复用匹配的精确度。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -7538,6 +7573,8 @@ Reuse id is used for identify the reuse type for each custom node.
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## rotate
 
 ```TypeScript
@@ -7546,7 +7583,7 @@ rotate(value: RotateOptions): T
 
 设置组件旋转。
 
-> **说明：**
+> **说明：** 
 > 
 > 当组件同时设置了rotate和scale属性时，centerX和centerY的取值会发生冲突，此时centerX和centerY的值以属性链中后设置的属性值为准。
 
@@ -7638,7 +7675,7 @@ safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding): T
 
 设置安全区边距属性。允许容器向自身添加组件级安全区域，供子组件延伸，支持[attributeModifier](#attributemodifier)动态设置属性方法。与padding不同，safeAreaPadding用于设置组件级安全区域供子组件延伸使用，而padding用于设置组件内容区域的内边距，两者可同时设置、分别生效。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 18开始，该接口支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -7904,7 +7941,7 @@ sharedTransition(id: string, options?: sharedTransitionOptions): T
 
 设置共享元素转场动效。该转场仅发生在@ohos.router页面路由跳转时。
 
-> **说明：**
+> **说明：** 
 > 
 > - sharedTransition需与[PageTransitionEnter]PageTransitionEnter和
 > [PageTransitionExit](arkts-arkui-pagetransitionenter-comp-con.md#pagetransitionexit)配合使用，共同控制页面转场动画效果。
@@ -8112,7 +8149,7 @@ stateStyles(value: StateStyles): T
 
 设置组件不同状态下的样式。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -8224,7 +8261,7 @@ systemMaterial(material: SystemUiMaterial | undefined): T
 
 设置组件的系统材质。不同系统材质对应不同的属性影响效果，该接口可以影响背景色[backgroundColor](#backgroundcolor)、边框颜色[borderColor](#bordercolor)、边框宽度[borderWidth](#borderwidth)、阴影[shadow](#shadow)、材质层滤镜[materialFilter](#materialfilter)效果，影响的属性与设备材质等级相关，参考[ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md)。[ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md)只有支持沉浸式材质的设备上设置才有效果，在不支持沉浸式材质的设备上可设置但无效果，可通过[isImmersiveMaterialSupported](../arkts-apis/arkts-arkui-uimaterial-isimmersivematerialsupported-f.md)判断设备是否支持沉浸式材质。使用示例请参考[示例1（设置沉浸式系统材质）](../../../reference/apis-arkui/arkts-apis-uimaterial.md#示例1设置沉浸式系统材质)。
 
-> **说明：**
+> **说明：** 
 > 
 > - [ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md)只有支持沉浸式材质的设备上设置才有效果，在不支持沉浸式材质的设备上
 > 可设置但无效果，可通过[isImmersiveMaterialSupported](../arkts-apis/arkts-arkui-uimaterial-isimmersivematerialsupported-f.md)判断
@@ -8275,7 +8312,7 @@ tabIndex(index: number): T
 
 自定义组件tab键走焦能力。当组件未设置tabIndex时，默认按照预设的焦点移动规则进行焦点移动。
 
-> **说明：**
+> **说明：** 
 > 
 > - tabIndex只能够自定义Tab键走焦，若想同时自定义方向键等走焦能力，建议使用[nextFocus](#nextfocus)。
 
@@ -8289,7 +8326,7 @@ tabIndex(index: number): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 自定义组件tab键走焦能力。若有配置了tabIndex大于0的组件，则tab键走焦只会在tabIndex大于0的组件内按照tabIndex的值从小到大并循环依次走焦。若没有配置tabIndex大于0的组件，则tabIndex等于0的组件按照组件预设的走焦规则走焦。<br>[UiExtension](../arkts-apis/arkts-arkui-uiextension.md)组件未适配tabIndex，在含有[UiExtension](../arkts-apis/arkts-arkui-uiextension.md)组件的[层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)使用tabIndex会导致走焦错乱。<br>- tabIndex &gt;= 0：表示元素是可聚焦的，并且可以通过tab键走焦来访问到该元素。<br>- tabIndex &lt; 0（通常是tabIndex = -1）：表示元素是可聚焦的，但是不能通过tab键走焦来访问到该元素。<br> **说明：**<br> tabIndex与focusScopeId不能混用。 |
+| index | number | 是 | 自定义组件tab键走焦能力。若有配置了tabIndex大于0的组件，则tab键走焦只会在tabIndex大于0的组件内按照tabIndex的值从小到大并循环依次走焦。若没有配置tabIndex大于0的组件，则tabIndex等于0的组件按照组件预设的走焦规则走焦。<br>[UiExtension](../arkts-apis/arkts-arkui-arkui-uiextension.md)组件未适配tabIndex，在含有[UiExtension](../arkts-apis/arkts-arkui-arkui-uiextension.md)组件的[层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)使用tabIndex会导致走焦错乱。<br>- tabIndex &gt;= 0：表示元素是可聚焦的，并且可以通过tab键走焦来访问到该元素。<br>- tabIndex &lt; 0（通常是tabIndex = -1）：表示元素是可聚焦的，但是不能通过tab键走焦来访问到该元素。<br> **说明：** <br> tabIndex与focusScopeId不能混用。 |
 
 **返回值：**
 
@@ -8317,7 +8354,7 @@ tabStop(isTabStop: boolean): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isTabStop | boolean | 是 | 设置当前容器组件是否为走焦可停留容器，true表示当前容器组件为走焦可停留容器，false表示当前容器组件不是走焦可停留容器。<br>**说明：**<br>1.配置tabStop需要确保是容器组件且有可获焦的孩子组件，默认容器组件不能直接获焦。<br>2.通过[requestFocus](../arkts-apis/arkts-arkui-arkui-uicontext-focuscontroller-c.md#requestfocus)请求焦点，如果是容器组件且配置tabStop，焦点能够停留在容器组件，如果未配置tabStop，即使整条焦点链上有配置了tabStop的组件，该组件依然能获取到焦点。<br>3.配置tabStop的容器不允许嵌套超过2层。<br>tabStop走焦规则：<br>1.通过tab键和方向键走焦，焦点会停留在配置了tabStop的组件上，如果焦点停留在配置了tabStop的容器内部时，可以走焦到容器内部的下一个可获焦组件，如果焦点停留在配置了tabStop的容器外部是，可以走焦到容器外的下一个可获焦组件。<br>2.当焦点停留在tabStop上时，按Enter键可以走焦到内部第一个可获焦组件，按Esc能够将焦点退回到不超过当前[层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)根容器的上一个配置了tabStop的组件，按空格键可以响应该容器的onClick事件。<br>3.不建议根容器配置tabStop。如果根容器配置了tabStop，通过[clearFocus](../arkts-apis/arkts-arkui-arkui-uicontext-focuscontroller-c.md#clearfocus)将焦点清理到根容器，再按Enter键会重新走回内部上一次获焦组件，通过Esc键将焦点清理到根容器，再按Enter键会走焦到内部第一个可获焦组件。 |
+| isTabStop | boolean | 是 | 设置当前容器组件是否为走焦可停留容器，true表示当前容器组件为走焦可停留容器，false表示当前容器组件不是走焦可停留容器。<br>**说明：** <br>1.配置tabStop需要确保是容器组件且有可获焦的孩子组件，默认容器组件不能直接获焦。<br>2.通过[requestFocus](../arkts-apis/arkts-arkui-arkui-uicontext-focuscontroller-c.md#requestfocus)请求焦点，如果是容器组件且配置tabStop，焦点能够停留在容器组件，如果未配置tabStop，即使整条焦点链上有配置了tabStop的组件，该组件依然能获取到焦点。<br>3.配置tabStop的容器不允许嵌套超过2层。<br>tabStop走焦规则：<br>1.通过tab键和方向键走焦，焦点会停留在配置了tabStop的组件上，如果焦点停留在配置了tabStop的容器内部时，可以走焦到容器内部的下一个可获焦组件，如果焦点停留在配置了tabStop的容器外部是，可以走焦到容器外的下一个可获焦组件。<br>2.当焦点停留在tabStop上时，按Enter键可以走焦到内部第一个可获焦组件，按Esc能够将焦点退回到不超过当前[层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)根容器的上一个配置了tabStop的组件，按空格键可以响应该容器的onClick事件。<br>3.不建议根容器配置tabStop。如果根容器配置了tabStop，通过[clearFocus](../arkts-apis/arkts-arkui-arkui-uicontext-focuscontroller-c.md#clearfocus)将焦点清理到根容器，再按Enter键会重新走回内部上一次获焦组件，通过Esc键将焦点清理到根容器，再按Enter键会走焦到内部第一个可获焦组件。 |
 
 **返回值：**
 
@@ -8359,7 +8396,7 @@ touchable(value: boolean): T
 
 设置当前组件是否可以响应点击事件、触摸事件等手指交互事件。
 
-> **说明：**
+> **说明：** 
 
 **起始版本：** 7
 
@@ -8499,7 +8536,7 @@ transition(effect: TransitionEffect, onFinish: Optional<TransitionFinishCallback
 
 组件插入显示和删除隐藏的过渡效果。同[transition](#transition)相比，增加了转场动画结束的回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -8755,12 +8792,14 @@ useSizeType(value: {
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | {     xs?: number &#124; { span: number; offset: number };     sm?: number &#124; { span: number; offset: number };     md?: number &#124; { span: number; offset: number };     lg?: number &#124; { span: number; offset: number };   } | 是 | 设置在特定设备宽度类型下的占用列数和偏移列数，span：占用列数（需为非负整数）。传入负数或超出GridContainer总列数时，使用默认值；offset：偏移列数（需为非负整数）。传入负数时，使用默认值0。<br>当值为number类型时，仅设置列数，当格式如{"span":&nbsp;1,&nbsp;"offset":&nbsp;0}时，指同时设置占用列数与偏移列数。<br>-&nbsp;xs：指设备宽度类型为SizeType.XS（&lt;320vp）时的占用列数和偏移列数。<br>-&nbsp;sm：指设备宽度类型为SizeType.SM（320vp-600vp）时的占用列数和偏移列数。<br>-&nbsp;md：指设备宽度类型为SizeType.MD（600vp-840vp）时的占用列数和偏移列数。<br>-&nbsp;lg：指设备宽度类型为SizeType.LG（≥840vp）时的占用列数和偏移列数。<br>各尺寸类型的详细断点配置请参见[GridContainer](ts-container-gridcontainer.md)。<br>**说明：**<br>- 调用该属性时，其父组件或祖先组件必须是GridContainer。 |
+| value | {     xs?: number &#124; { span: number; offset: number };     sm?: number &#124; { span: number; offset: number };     md?: number &#124; { span: number; offset: number };     lg?: number &#124; { span: number; offset: number };   } | 是 | 设置在特定设备宽度类型下的占用列数和偏移列数，span：占用列数（需为非负整数）。传入负数或超出GridContainer总列数时，使用默认值；offset：偏移列数（需为非负整数）。传入负数时，使用默认值0。<br>当值为number类型时，仅设置列数，当格式如{"span":&nbsp;1,&nbsp;"offset":&nbsp;0}时，指同时设置占用列数与偏移列数。<br>-&nbsp;xs：指设备宽度类型为SizeType.XS（&lt;320vp）时的占用列数和偏移列数。<br>-&nbsp;sm：指设备宽度类型为SizeType.SM（320vp-600vp）时的占用列数和偏移列数。<br>-&nbsp;md：指设备宽度类型为SizeType.MD（600vp-840vp）时的占用列数和偏移列数。<br>-&nbsp;lg：指设备宽度类型为SizeType.LG（≥840vp）时的占用列数和偏移列数。<br>各尺寸类型的详细断点配置请参见[GridContainer](ts-container-gridcontainer.md)。<br>**说明：** <br>- 调用该属性时，其父组件或祖先组件必须是GridContainer。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## visibility
 
 ```TypeScript
@@ -8797,7 +8836,7 @@ visualEffect(effect: VisualEffect): T
 
 设置非滤镜视觉效果，如点光源等。具体可添加的效果参见VisualEffect的方法说明。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在[attributeModifier](#attributemodifier)中调用。
 
@@ -8829,7 +8868,7 @@ width(value: Length): T
 
 设置组件自身的宽度，缺省时使用子组件自身内容需要的宽度。若子组件的宽大于父组件的宽，则子组件会溢出显示在父组件外部。
 
-> **说明：**
+> **说明：** 
 > 
 > - 在[TextInput](./ts-basic-components-textinput.md)组件中，width设置auto表示自适应文本宽度。
 > 

@@ -24,7 +24,7 @@ getEncoded(): DataBlob
 
 Obtains the byte stream of the key data. This API returns the result synchronously. The key can be a symmetric key, public key, or private key. The public key must comply with the ASN.1 syntax, X.509 specifications, and DER encoding. The private key must comply with the ASN.1 syntax, PKCS #8 specifications, and DER encoding.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When the RSA algorithm generates a private key using key parameters, **getEncoded** is available for the
 > private key object.

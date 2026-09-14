@@ -8,11 +8,6 @@ Grid布局选项。其中，irregularIndexes和onGetIrregularSizeByIndex可对�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## onGetIrregularSizeByIndex
 
 ```TypeScript
@@ -51,7 +46,7 @@ rowStart和columnStart取大于等于0的自然数，若取负数时，rowStart�
 
 rowSpan和columnSpan取大于等于1的自然数，若取小数则向下取整，若小于1则按1计算。
 
-**说明：**
+**说明：** 
 
 第一种情况：某个GridItem发现给它指定的起始位置被占据了，则从起始位置[0,0]开始按顺序从左到右，从上到下寻找起始的放置位置。
 

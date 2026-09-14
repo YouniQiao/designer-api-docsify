@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## alignContent
 
 ```TypeScript
@@ -179,7 +174,7 @@ Flex容器是单行/列还是多行/列排列。设置后，子组件将在容�
 - Wrap：换行，第一行在上方。  
 - WrapReverse：换行，第一行在下方。
 
-**说明：**
+**说明：** 
 
 在多行布局时，通过交叉轴方向，确认新行堆叠方向。
 

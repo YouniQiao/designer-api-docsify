@@ -6,11 +6,6 @@ Provides text style information.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## decoration
 
 ```TypeScript
@@ -45,7 +40,7 @@ fontColor?: ResourceColor
 
 Text color.
 
-Default value: \$r('sys.color.font_primary'). When [shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md) is also set, shaderStyle takes precedence over fontColor.
+Default value: &#36;r('sys.color.font_primary'). When [shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md) is also set, shaderStyle takes precedence over fontColor.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -63,7 +58,7 @@ Default value: \$r('sys.color.font_primary'). When [shaderStyle](arkts-arkui-ric
 fontFamily?: ResourceStr
 ```
 
-Sets the font list. Currently, the 'HarmonyOS Sans' font and [registered custom fonts](../arkts-apis/arkts-font.md) are supported. Default font: 'HarmonyOS Sans'.
+Sets the font list. Currently, the 'HarmonyOS Sans' font and [registered custom fonts](../arkts-apis/arkts-arkui-font.md) are supported. Default font: 'HarmonyOS Sans'.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -341,7 +336,7 @@ Default value: undefined, which means no text shadow effect is set.
 
 This API supports an array as the input parameter to implement multiple text shadows.
 
-**Note:**
+**Note:** 
 
 Only the shadow blur radius, color, and offset can be set. Smart color picking is not supported.
 

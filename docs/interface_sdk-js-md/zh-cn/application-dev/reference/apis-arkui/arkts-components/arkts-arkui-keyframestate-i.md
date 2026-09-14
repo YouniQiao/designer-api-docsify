@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## event
 
 ```TypeScript
@@ -41,7 +36,7 @@ curve?: Curve | string | ICurve
 
 默认值：Curve.EaseInOut
 
-**说明：**
+**说明：** 
 
 由于[springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md)、[responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md)、[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md)曲线时长不生效，故不支持这三种曲线。设置不支持的曲线时，使用默认曲线Curve.EaseInOut。
 
@@ -67,7 +62,7 @@ duration: number
 
 取值范围：[0, +∞)
 
-**说明：**
+**说明：** 
 
 - 设置小于0的值时按0处理。  
 - 设置浮点型的值时，截断取整。例如，设置值为1.2，按照1处理。  

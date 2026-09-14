@@ -35,7 +35,7 @@ Creates an **RdbPredicates** object to add the AND condition.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -73,7 +73,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -102,7 +102,7 @@ Creates an **RdbPredicates** object to add a left parenthesis.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -144,7 +144,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -208,7 +208,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -237,7 +237,7 @@ Creates an **RdbPredicates** object to filter out duplicate records.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -273,7 +273,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -302,7 +302,7 @@ Creates an **RdbPredicates** object to add a right parenthesis.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** created. |
 
 **Examples**
 
@@ -343,7 +343,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -379,7 +379,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -415,7 +415,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -451,7 +451,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -486,7 +486,7 @@ Creates an **RdbPredicates** object to group the query results based on the spec
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -522,7 +522,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -551,7 +551,7 @@ Creates an **RdbPredicates** object to specify all remote devices on the network
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -568,10 +568,9 @@ inDevices(devices: Array<string>): RdbPredicates
 
 Creates an **RdbPredicates** object to specify the remote devices to connect on the network during distributed database sync.
 
-> **NOTE:**
+> **NOTE:** 
 
-> The value of **devices** can be obtained by using <!--RP2--
-> 
+> The value of **devices** can be obtained by using <!--RP2-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
 > . <!--RP2End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
@@ -594,7 +593,7 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -650,7 +649,7 @@ Creates an **RdbPredicates** object to specify the index column.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -685,7 +684,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -726,7 +725,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -762,7 +761,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -798,7 +797,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -834,7 +833,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -869,7 +868,7 @@ Creates an **RdbPredicates** object to limit the number of records.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -906,7 +905,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -942,7 +941,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -978,7 +977,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -1013,7 +1012,7 @@ Creates an **RdbPredicates** object to specify the start position of the returne
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -1042,7 +1041,7 @@ Creates an **RdbPredicates** object to add the OR condition.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** created. |
 
 **Examples**
 
@@ -1079,7 +1078,7 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 
@@ -1114,7 +1113,7 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 

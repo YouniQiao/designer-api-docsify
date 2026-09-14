@@ -24,7 +24,7 @@ Specifically, create a **HiTraceId**, use the **chainId** and **spanId** in the 
 
 | Type | Description |
 | --- | --- |
-| [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | HiTraceId** instance. |
+| [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | **HiTraceId** instance. |
 
 **Examples**
 

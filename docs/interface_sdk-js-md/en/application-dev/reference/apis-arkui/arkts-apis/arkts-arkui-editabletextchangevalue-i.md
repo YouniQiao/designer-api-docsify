@@ -6,11 +6,6 @@ Provides detailed information of text changes, including preview text.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## content
 
 ```TypeScript

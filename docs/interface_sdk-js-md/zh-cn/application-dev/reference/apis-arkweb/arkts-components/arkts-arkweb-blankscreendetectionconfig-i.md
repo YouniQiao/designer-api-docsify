@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-```
-
 ## contentfulNodesCountThreshold
 
 ```TypeScript
@@ -19,7 +14,7 @@ contentfulNodesCountThreshold?: number
 
 在使用到检测有内容的节点检测策略时，才会生效。
 
-可以设置0-\${检测策略最大节点}，如果小于等于阈值则会触发近似白屏。
+可以设置0-&#36;{检测策略最大节点}，如果小于等于阈值则会触发近似白屏。
 
 默认值：0。
 

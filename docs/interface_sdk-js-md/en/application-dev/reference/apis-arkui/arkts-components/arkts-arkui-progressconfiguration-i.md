@@ -8,11 +8,6 @@ Provides progress indicator configuration. Inherits from [CommonConfiguration](a
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## total
 
 ```TypeScript
@@ -23,7 +18,7 @@ Total progress.
 
 Default value: **100**
 
-**NOTE:**
+**NOTE:** 
 
 If the value of **total** is a negative number, it is treated as 100.
 

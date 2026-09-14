@@ -31,3 +31,4 @@ export declare function getInspectorByKey(id: string): string
 
 | 类型 | 说明 |
 | --- | --- |
+| string |  |

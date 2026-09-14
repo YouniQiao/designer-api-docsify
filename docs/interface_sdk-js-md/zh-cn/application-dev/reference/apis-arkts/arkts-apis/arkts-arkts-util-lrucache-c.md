@@ -55,7 +55,7 @@ afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 
 在移除值后执行后续操作。后续操作必须由开发者实现。该 API 在删除操作期间会被调用，例如[get&lt;sup&gt;9+&lt;/sup&gt;](#get)、[put&lt;sup&gt;9+&lt;/sup&gt;](#put)、[remove&lt;sup&gt;9+&lt;/sup&gt;](#remove)、[clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) 和[updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updatecapacity)。
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 如果在调用 [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) 和
 > [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updatecapacity) 后执行回调方法，并且输入的 **key** 和

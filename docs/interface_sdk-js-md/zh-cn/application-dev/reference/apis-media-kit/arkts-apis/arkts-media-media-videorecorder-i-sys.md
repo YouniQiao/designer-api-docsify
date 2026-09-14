@@ -1,7 +1,7 @@
 # VideoRecorder（系统接口）
 
 
-> **说明：**
+> **说明：** 
 > AVRecorder&lt;sup&gt;9+&lt;/sup&gt;发布后，VideoRecorder停止维护，建议使用[AVRecorder](arkts-media-media-avrecorder-i.md)替代。
 
 视频录制管理类，用于录制视频媒体。在调用VideoRecorder的方法前，需要先通过[createVideoRecorder()](arkts-media-media-createvideorecorder-f-sys.md)构建一个[VideoRecorder](arkts-media-media-videorecorder-i-sys.md)实例。

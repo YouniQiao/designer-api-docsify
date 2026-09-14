@@ -12,11 +12,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## backgroundMask
 
 ```TypeScript
@@ -25,7 +20,7 @@ backgroundMask(color: ResourceColor)
 
 指定Panel的背景蒙层。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 12开始废弃。建议使用
 
@@ -51,7 +46,7 @@ customHeight(value: Dimension | PanelHeight)
 
 指定PanelType.CUSTOM状态下的高度。此属性仅在[type](#type)设置为PanelType.CUSTOM时生效，使用PanelHeight.WRAP_CONTENT时高度自适应内容，使用Dimension值时设置固定高度。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 10开始支持，从API version 12开始废弃。建议使用
 
@@ -77,7 +72,7 @@ dragBar(value: boolean)
 
 设置是否存在控制条。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 12开始废弃。建议使用
 
@@ -103,7 +98,7 @@ fullHeight(value: number | string)
 
 指定PanelMode.Full状态下的高度。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 12开始废弃。建议使用
 
@@ -129,7 +124,7 @@ halfHeight(value: number | string)
 
 指定PanelMode.Half状态下的高度。
 
-> **说明：**
+> **说明：** 
 > 
 > 此属性仅在type为Foldable或Temporary时生效。当type为Minibar时，Half模式不生效，halfHeight设置无效。
 > 
@@ -157,7 +152,7 @@ miniHeight(value: number | string)
 
 指定PanelMode.Mini状态下的高度。
 
-> **说明：**
+> **说明：** 
 > 
 > 此属性仅在type为Minibar或Foldable时生效。当type为Temporary时，Mini模式不生效，miniHeight设置无效。
 > 
@@ -185,7 +180,7 @@ mode(value: PanelMode)
 
 可滑动面板的初始状态。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 12开始废弃。建议使用
 
@@ -201,7 +196,7 @@ mode(value: PanelMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PanelMode](arkts-arkui-panelmode-e.md) | 是 | 设置可滑动面板的初始状态。<br>Minibar类型默认值：PanelMode.Mini；其余类型默认值：PanelMode.Half <br>从API version 10开始，该属性支持[\&#36;\&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。 |
+| value | [PanelMode](arkts-arkui-panelmode-e.md) | 是 | 设置可滑动面板的初始状态。<br>Minibar类型默认值：PanelMode.Mini；其余类型默认值：PanelMode.Half <br>从API version 10开始，该属性支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。 |
 
 ## onChange
 
@@ -270,7 +265,7 @@ onHeightChange(callback: (value: number) => void)
 
 当可滑动面板发生高度变化时触发。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 12开始废弃。建议使用
 
@@ -296,7 +291,7 @@ show(value: boolean)
 
 当滑动面板弹出时调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 12开始废弃。建议使用
 
@@ -322,7 +317,7 @@ showCloseIcon(value: boolean)
 
 设置是否显示关闭图标。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 10开始支持，从API version 12开始废弃。建议使用
 
@@ -348,7 +343,7 @@ type(value: PanelType)
 
 可滑动面板的类型。type属性值制约其他属性的使用：当type为Minibar时，PanelMode.Half不生效；当type为Temporary时，PanelMode.Mini不生效；当type为CUSTOM时，不支持尺寸切换效果，需配合customHeight属性使用；当type为Foldable时，所有PanelMode值均可用，可配合fullHeight、halfHeight、miniHeight属性设置各状态高度。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 12开始废弃。建议使用
 

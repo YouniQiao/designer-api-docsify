@@ -2,7 +2,7 @@
 
 Defines options for the paste button, including icon, text and button type.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - You are advised to specify at least one of **icon** or **text**.
 
@@ -16,11 +16,6 @@ Defines options for the paste button, including icon, text and button type.
 **Since:** 10
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## buttonType
 

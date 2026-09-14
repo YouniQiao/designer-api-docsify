@@ -6,11 +6,6 @@ Defines a user paste event.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## preventDefault
 
 ```TypeScript

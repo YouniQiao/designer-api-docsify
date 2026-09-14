@@ -2,7 +2,7 @@
 
 Enumerates the button types.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The corner radius of the rounded rectangle button is set using the universal attribute
 > borderRadius.

@@ -20,9 +20,9 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 addResource(type: ResourceType, fileUri: string): void
 ```
 
-Adds resources from the application sandbox based on the file URI. For details about the data source, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+Adds resources from the application sandbox based on the file URI. For details about the data source, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fileuri.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For the same asset change request, this API cannot be repeatedly called after the resource is successfully
 > added. For a moving photo, you can call this API twice to add the image and video resources.
@@ -84,7 +84,7 @@ addResource(type: ResourceType, data: ArrayBuffer): void
 
 Adds a resource using **ArrayBuffer** data.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For the same asset change request, this API cannot be repeatedly called after the resource is successfully
 > added. For a moving photo, you can call this API twice to add the image and video resources.
@@ -189,7 +189,7 @@ Create an asset change request based on the file type and filename extension.
 
 | Type | Description |
 | --- | --- |
-| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) | MediaAssetChangeRequest** created. |
+| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) | **MediaAssetChangeRequest** created. |
 
 **Error codes:**
 
@@ -227,7 +227,7 @@ static createImageAssetRequest(context: Context, fileUri: string): MediaAssetCha
 
 Creates an image asset change request.
 
-For details about data source of the asset to be created, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+For details about data source of the asset to be created, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fileuri.md).
 
 **Since:** 11
 
@@ -248,7 +248,7 @@ For details about data source of the asset to be created, see [@ohos.file.fileur
 
 | Type | Description |
 | --- | --- |
-| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) | MediaAssetChangeRequest** created. |
+| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) | **MediaAssetChangeRequest** created. |
 
 **Error codes:**
 
@@ -266,7 +266,7 @@ static createVideoAssetRequest(context: Context, fileUri: string): MediaAssetCha
 
 Creates a video asset change request.
 
-For details about data source of the asset to be created, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+For details about data source of the asset to be created, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fileuri.md).
 
 **Since:** 11
 
@@ -285,7 +285,7 @@ For details about data source of the asset to be created, see [@ohos.file.fileur
 
 | Type | Description |
 | --- | --- |
-| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) | MediaAssetChangeRequest** created. |
+| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) | **MediaAssetChangeRequest** created. |
 
 **Error codes:**
 
@@ -393,7 +393,7 @@ getAsset(): PhotoAsset
 
 Obtains the asset in this asset change request.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For the change request used to create an asset, this API returns **null** before
 > [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) is called
@@ -426,7 +426,7 @@ getWriteCacheHandler(): Promise<number>
 
 Obtains the handler used for writing a file to cache. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For the same asset change request, this API cannot be repeatedly called after a temporary file write handle is
 > successfully obtained.

@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## cancel
 
 ```TypeScript
@@ -35,7 +30,7 @@ alignment?: DialogAlignment
 
 默认值：DialogAlignment.Bottom
 
-**说明：**
+**说明：** 
 
 若在UIExtension中设置showInSubWindow为true，弹窗将基于UIExtension的宿主窗口对齐。
 
@@ -77,7 +72,7 @@ backgroundBlurStyle?: BlurStyle
 
 默认值：从API版本26.0.0开始，为BlurStyle.NONE，API版本26.0.0之前，为BlurStyle.COMPONENT_ULTRA_THICK。
 
-**说明：**
+**说明：** 
 
 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
 
@@ -121,7 +116,7 @@ backgroundColor?: ResourceColor
 
 默认值：Color.Transparent
 
-**说明：**
+**说明：** 
 
 backgroundColor会与模糊属性backgroundBlurStyle叠加产生效果，如果不符合预期，可将backgroundBlurStyle设置为BlurStyle.NONE，即可取消模糊。
 
@@ -167,7 +162,7 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 如果使用borderColor属性，需要和borderWidth属性一起使用。
 
-**说明：**
+**说明：** 
 
 当borderColor属性类型为LocalizedEdgeColors时，支持随语言习惯改变布局顺序。
 
@@ -223,7 +218,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 当弹窗左边框和右边框大于弹窗宽度，弹窗上边框和下边框大于弹窗高度，显示可能不符合预期。
 
-**说明：**
+**说明：** 
 
 当borderWidth属性类型为LocalizedEdgeWidths时，支持随语言习惯改变布局顺序。
 
@@ -271,7 +266,7 @@ cornerRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 
 百分比参数方式：以父元素弹窗宽和高的百分比来设置弹窗的圆角。
 
-**说明：**
+**说明：** 
 
 当cornerRadius属性类型为LocalizedBorderRadiuses时，支持随语言习惯改变布局顺序。
 
@@ -297,7 +292,7 @@ enableHoverMode?: boolean
 
 默认值：false，默认不响应。
 
-**说明：**
+**说明：** 
 
 PC/2in1设备弹窗默认显示在上半屏，在enableHoverMode设置为true时，可以通过设置hoverModeArea参数显示在下半屏。其他设备弹窗在enableHoverMode设置为true时默认显示在下半屏，可以通过设置hoverModeArea参数显示在上半屏。
 
@@ -321,7 +316,7 @@ height?: Dimension
 
 设置弹窗背板的高度。
 
-**说明：**
+**说明：** 
 
 - 弹窗高度默认最大值：0.9 *（窗口高度 - 安全区域）。  
 - 百分比参数方式：弹窗参考高度为（窗口高度 - 安全区域），在此基础上调小或调大。
@@ -368,7 +363,7 @@ immersiveMode?: ImmersiveMode
 
 设置页面内弹窗蒙层效果。
 
-**说明：**
+**说明：** 
 
 - 默认值：ImmersiveMode.DEFAULT  
 - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
@@ -415,7 +410,7 @@ levelMode?: LevelMode
 
 设置弹窗显示层级。
 
-**说明：**
+**说明：** 
 
 - 默认值：LevelMode.OVERLAY  
 - 仅当showInSubWindow属性设置为false时生效。
@@ -440,7 +435,7 @@ levelOrder?: LevelOrder
 
 设置弹窗显示的顺序。
 
-**说明：**
+**说明：** 
 
 - 默认值：LevelOrder.clamp(0)  
 - 不支持动态刷新顺序。
@@ -467,7 +462,7 @@ levelUniqueId?: number
 
 取值范围：大于等于0的数字。
 
-**说明：**
+**说明：** 
 
 - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
@@ -491,13 +486,13 @@ maskRect?: Rectangle
 
 默认值：{ x: 0, y: 0, width: '100%', height: '100%' }
 
-**说明：**
+**说明：** 
 
 showInSubWindow为true时，maskRect不生效。
 
 **类型：** [Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)
 
-**默认值：**
+**默认值：** 
 - API版本11+：- {x:0,y:0, width:'100%', height:'100%'}
 
 **起始版本：** 10
@@ -556,7 +551,7 @@ onDidAppear?: Callback<void>
 
 弹窗弹出后的事件回调。
 
-**说明：**
+**说明：** 
 
 1.正常时序依次为：onWillAppear &gt;  
 > onDidAppear &gt;
@@ -587,7 +582,7 @@ onDidDisappear?: Callback<void>
 
 弹窗消失后的事件回调。
 
-**说明：**
+**说明：** 
 
 正常时序依次为：onWillAppear &gt;  
 > onDidAppear &gt;
@@ -612,7 +607,7 @@ onWillAppear?: Callback<void>
 
 弹窗显示动效前的事件回调。
 
-**说明：**
+**说明：** 
 
 1.正常时序依次为：onWillAppear &gt;  
 > onDidAppear &gt;
@@ -639,7 +634,7 @@ onWillDisappear?: Callback<void>
 
 弹窗退出动效前的事件回调。
 
-**说明：**
+**说明：** 
 
 正常时序依次为：onWillAppear &gt;  
 > onDidAppear &gt;
@@ -664,7 +659,7 @@ onWillDismiss?: Callback<DismissDialogAction>
 
 交互式关闭回调函数。
 
-**说明：**
+**说明：** 
 
 1.当用户执行点击遮障层关闭、侧滑（左滑/右滑）、三键back、键盘ESC关闭交互操作时，如果注册该回调函数，则不会立刻关闭弹窗。在回调函数中可以通过reason得到阻拦关闭弹窗的操作类型，从而根据原因选择是否能关闭弹窗。当前组件返回的reason中，暂不支持CLOSE_BUTTON的枚举值。
 
@@ -728,7 +723,7 @@ showInSubWindow?: boolean
 
 默认值：false，弹窗显示在应用内，而非独立子窗口。
 
-**说明：**
+**说明：** 
 
 showInSubWindow为true的弹窗无法触发显示另一个showInSubWindow为true的弹窗。
 
@@ -772,7 +767,7 @@ systemMaterial?: SystemUiMaterial
 
 设置弹窗的系统材质。
 
-**说明：**
+**说明：** 
 
 - 默认值：[ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md)的style为  
 ImmersiveStyle.ULTRA_THICK的[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)对象。设置undefined时与默认值保持一致。  
@@ -815,7 +810,7 @@ transition?: TransitionEffect
 
 设置弹窗显示和退出的过渡效果。
 
-**说明：**
+**说明：** 
 
 1.如果不设置，则使用默认的显示/退出动效。
 
@@ -841,7 +836,7 @@ width?: Dimension
 
 设置弹窗背板的宽度。
 
-**说明：**
+**说明：** 
 
 - 弹窗宽度默认最大值：400vp。  
 - 百分比参数方式：弹窗参考宽度为所在窗口的宽度，在此基础上调小或调大。

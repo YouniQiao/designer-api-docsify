@@ -2,7 +2,7 @@
 
 ApplicationContext作为应用上下文，继承自Context，提供了应用生命周期监听、进程管理、应用环境设置等应用级别的管控能力。
 
-> **说明：**
+> **说明：** 
 > 
 > 本模块接口仅可在Stage模型下使用。
 
@@ -20,7 +20,7 @@ clearUpApplicationData(): Promise<void>
 
 清理当前应用的应用文件路径下的所有数据，同时撤销应用向用户申请的权限。使用Promise异步回调。仅支持主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 应用文件路径详见[应用文件目录信息](../../../file-management/app-sandbox-directory.md#应用文件目录与应用文件路径)。图中仅标识了el1~el2目录下的应用文件路径，其他文件
 > 加密类型目录下的应用文件路径可以参考el1。
@@ -69,7 +69,7 @@ clearUpApplicationData(callback: AsyncCallback<void>): void
 
 清理当前应用的应用文件路径下的所有数据，同时撤销应用向用户申请的权限。使用callback异步回调。仅支持主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 应用文件路径详见[应用文件目录信息](../../../file-management/app-sandbox-directory.md#应用文件目录与应用文件路径)。图中仅标识了el1~el2目录下的应用文件路径，其他文件
 > 加密类型目录下的应用文件路径可以参考el1。
@@ -475,7 +475,7 @@ killAllProcesses(): Promise<void>
 
 终止应用的所有进程，进程退出时不会正常执行完整的应用生命周期流程。使用Promise异步回调。仅支持主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口用于应用异常场景中强制退出应用。如需正常退出应用，可以使用[terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself)接口。
 
@@ -523,7 +523,7 @@ killAllProcesses(clearPageStack: boolean): Promise<void>
 
 终止应用的所有进程，进程退出时不会正常执行完整的应用生命周期流程。使用Promise异步回调。仅支持主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口用于应用异常场景中强制退出应用。如需正常退出应用，可以使用[terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself)接口。
 
@@ -579,7 +579,7 @@ killAllProcesses(callback: AsyncCallback<void>): void
 
 终止应用的所有进程，进程退出时不会正常执行完整的应用生命周期流程。使用callback异步回调。仅支持主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口用于应用异常场景中强制退出应用。如需正常退出应用，可以使用[terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself)接口。
 
@@ -924,7 +924,7 @@ offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): v
 
 取消监听系统环境[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)的变化。仅支持主线程调用。
 
-<p>**NOTE:** <br>It can be called only by the main thread. </p>
+<p>**NOTE:**  <br>It can be called only by the main thread. </p>
 
 **起始版本：** 24
 
@@ -1111,7 +1111,7 @@ on(type: 'environment', callback: EnvironmentCallback): number
 
 注册对系统环境变化的监听。使用callback异步回调。仅支持主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > - 使用[onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate)也可以实现对系统环境变量的监听。相较
 > 于Ability的[onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate)接口，当前接口的使用场景更
@@ -1282,7 +1282,7 @@ onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): voi
 
 注册监听系统环境[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)的变化。使用callback异步回调。仅支持主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 应用自定义的设置不影响回调函数的触发。例如：应用自定义设置了深浅色模式，当系统深浅色模式变化后，注册的回调函数依然会触发。
 
@@ -1373,7 +1373,7 @@ restartApp(want: Want): void
 
 应用重启并拉起自身指定UIAbility。仅支持主线程调用，且待重启的应用需要处于获焦状态。
 
-> **说明：**
+> **说明：** 
 > 
 > 通过该接口重启应用时，不会触发应用中Ability的onDestroy生命周期回调。
 > 
@@ -1461,7 +1461,7 @@ setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 
 设置应用的深浅色模式。仅支持主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 调用该接口前，需要确保窗口已完成创建、且UIAbility对应的页面已完成加载，即在
 > [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)生命周期中通过
@@ -1520,7 +1520,7 @@ setFont(font: string): void
 
 设置应用的字体类型。仅支持主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 调用该接口前，需要确保窗口已完成创建、且UIAbility对应的页面已完成加载，即在
 > [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)生命周期中通过
@@ -1631,7 +1631,7 @@ setLanguage(language: string): void
 
 设置应用的语言。仅支持主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 调用该接口前，需要确保窗口已完成创建、且UIAbility对应的页面已完成加载，即在
 > [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)生命周期中通过
@@ -1691,7 +1691,7 @@ setSupportedProcessCache(isSupported : boolean): void
 
 该接口仅对单个进程实例生效，不同进程实例互不影响。应用进程实例销毁后，已设置的状态不保留，需要重新设置。
 
-> **说明：**
+> **说明：** 
 > 
 > - 该接口仅表示应用自身是否为缓存后快速启动做好了准备，还需综合其他条件来判断最终是否为应用启用快速启动。
 > 

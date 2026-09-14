@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## color
 
 ```TypeScript
@@ -67,7 +62,7 @@ strokeWidth(value: number | string)
 
 设置分割线的宽度，支持attributeModifier动态设置属性方法。
 
-> **说明：**
+> **说明：** 
 > 
 > - 分割线的宽度不支持百分比设置。
 > 

@@ -19,10 +19,6 @@ Returns an object created by key-value entries for properties and methods
 | --- | --- | --- | --- |
 | entries | Iterable&lt;readonly [PropertyKey, T]&gt; | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## fromEntries
 
 ```TypeScript
@@ -36,8 +32,3 @@ Returns an object created by key-value entries for properties and methods
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | entries | Iterable&lt;readonly any[]&gt; | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

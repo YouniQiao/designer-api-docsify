@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## backgroundBlurStyle
 
 ```TypeScript
@@ -37,7 +32,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 更多图标的菜单背景模糊选项。
 
-**说明：**
+**说明：** 
 
 只在设置了backgroundBlurStyle时生效。
 
@@ -61,7 +56,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 设置更多图标的菜单背景属性包括：模糊半径，亮度，饱和度，颜色等。
 
-**说明：**
+**说明：** 
 
 不建议与backgroundBlurStyleOptions同时使用。
 

@@ -6,11 +6,6 @@ Defines the context information for the **NavDestination** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## getConfigInRouteMap
 
 ```TypeScript

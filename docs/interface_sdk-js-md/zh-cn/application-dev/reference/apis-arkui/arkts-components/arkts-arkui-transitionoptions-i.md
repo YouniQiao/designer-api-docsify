@@ -2,7 +2,7 @@
 
 TransitionOptions通过指定结构体内的参数来指定转场效果。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 当使用TransitionOptions类型的入参指定转场效果时，**必须**配合
 > animateTo使用才有动画效果，动效时长、曲线、延时跟随
@@ -19,11 +19,6 @@ TransitionOptions通过指定结构体内的参数来指定转场效果。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## opacity
 
 ```TypeScript
@@ -34,7 +29,7 @@ opacity?: number
 
 取值范围： [0, 1]
 
-**说明：**
+**说明：** 
 
 设置小于0的非法值时，按0处理；设置大于1的非法值时，按1处理。
 
@@ -96,7 +91,7 @@ scale?: ScaleOptions
 
 - 中心点为(0, 0)代表组件的左上角。
 
-**说明：**
+**说明：** 
 
 设置centerX、centerY为非法字符串时（例如，"illegalString"），默认值为"0"。
 
@@ -144,7 +139,7 @@ type?: TransitionType
 
 默认值：TransitionType.All
 
-**说明：**
+**说明：** 
 
 不指定type时默认为TransitionType.All，即插入删除都生效。
 

@@ -6,11 +6,6 @@ SslErrorHandler是Web组件中处理SSL证书验证错误的类。当加载安�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

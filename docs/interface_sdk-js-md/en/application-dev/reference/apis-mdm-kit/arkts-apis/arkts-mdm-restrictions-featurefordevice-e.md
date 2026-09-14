@@ -741,3 +741,17 @@ Public network system upgrade capability.
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+## SYSTEM_ROLLBACK
+
+```TypeScript
+SYSTEM_ROLLBACK = 51
+```
+
+System rollback capability.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager

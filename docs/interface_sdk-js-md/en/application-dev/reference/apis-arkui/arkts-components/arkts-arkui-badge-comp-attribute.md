@@ -13,8 +13,3 @@ The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-gener
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```

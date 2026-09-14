@@ -6,11 +6,6 @@ Defined the draw modifier of node. Provides draw callbacks for the associated No
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## drawBehind
 
 ```TypeScript

@@ -2,7 +2,7 @@
 
 Provides configuration options for the **Rating** component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer element
@@ -11,11 +11,6 @@ Provides configuration options for the **Rating** component.
 **Since:** 18
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## indicator
 
@@ -27,7 +22,7 @@ Whether the component is used as an indicator. If this parameter is set to **tru
 
 Default value: **false**
 
-**NOTE:**
+**NOTE:** 
 
 When **indicator** is set to **true**, the default component height is 12.0 vp, and the component width is calculated as follows: Height x Value of **stars**.
 
@@ -57,7 +52,7 @@ Value range: [0, stars]
 
 Values less than 0 are treated as **0**, and values greater than the value of [stars](arkts-arkui-rating-comp-attribute.md#stars) are treated as the value of **stars**.
 
-This parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+This parameter supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** number
 

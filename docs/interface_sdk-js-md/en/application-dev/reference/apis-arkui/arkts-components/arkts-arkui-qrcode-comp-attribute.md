@@ -10,11 +10,6 @@ The [universal events][universal events](../../../reference/apis-arkui/arkui-ts/
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## backgroundColor
 
 ```TypeScript

@@ -6,11 +6,6 @@ Alignment mode of the dialog box.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## dx
 
 ```TypeScript
@@ -21,7 +16,7 @@ Offset of the action sheet along the x-axis relative to the alignment position.
 
 Explicitly specify the length unit explicitly, for example, **'10px'**, or provide the length in percentage, for example, **'100%'**.
 
-**NOTE:**
+**NOTE:** 
 
 If the unit is not specified, the default unit vp is used, in which case **'10'** is equivalent to **10**.
 
@@ -45,7 +40,7 @@ Offset of the action sheet along the y-axis relative to the alignment position.
 
 Explicitly specify the length unit explicitly, for example, **'10px'**, or provide the length in percentage, for example, **'100%'**.
 
-**NOTE:**
+**NOTE:** 
 
 If the unit is not specified, the default unit vp is used, in which case **'10'** is equivalent to **10**.
 

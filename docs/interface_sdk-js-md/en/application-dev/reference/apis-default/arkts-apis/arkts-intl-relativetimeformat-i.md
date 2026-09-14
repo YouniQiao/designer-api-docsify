@@ -45,10 +45,6 @@ Returns an array of objects representing the relative time format in parts that 
 | value | number | Yes |  |
 | unit | [RelativeTimeFormatUnit](arkts-intl-relativetimeformatunit-t.md) | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## resolvedOptions
 
 ```TypeScript
@@ -58,8 +54,3 @@ resolvedOptions(): ResolvedRelativeTimeFormatOptions
 Provides access to the locale and options computed during initialization of this `Intl.RelativeTimeFormat` object.
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions).
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

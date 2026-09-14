@@ -22,7 +22,7 @@ static addAdsBlockAllowedList(domainSuffixes: Array<string>): void
 
 向AdsBlockManager的AllowedList中添加一组域名，主要用于重新开启DisallowedList中的部分网站的广告过滤。
 
-> **说明：**
+> **说明：** 
 > 
 > - 此接口设置的域名不会持久化，应用重启需要重新设置。
 > 
@@ -56,7 +56,7 @@ static addAdsBlockDisallowedList(domainSuffixes: Array<string>): void
 
 向AdsBlockManager的DisallowedList中添加一组域名。广告过滤功能开启时，将禁用这些网站的广告过滤功能。
 
-> **说明：**
+> **说明：** 
 > 
 > - 此接口设置的域名不会持久化，应用重启需要重新设置。
 > 
@@ -90,7 +90,7 @@ static clearAdsBlockAllowedList(): void
 
 清空AdsBlockManager的AllowedList。
 
-> **说明：**
+> **说明：** 
 > 
 > - AdsBlockManager的AllowedList不会持久化，应用重启需要重新设置。
 
@@ -114,7 +114,7 @@ static clearAdsBlockDisallowedList(): void
 
 清空AdsBlockManager的DisallowedList。
 
-> **说明：**
+> **说明：** 
 > 
 > - AdsBlockManager的DisallowedList不会持久化，应用重启需要重新设置。
 
@@ -138,7 +138,7 @@ static removeAdsBlockAllowedList(domainSuffixes: Array<string>): void
 
 从AdsBlockManager的AllowedList中删除一组域名。
 
-> **说明：**
+> **说明：** 
 > 
 > - AdsBlockManager的AllowedList不会持久化，应用重启需要重新设置。删除不存在的条目不会触发异常。
 
@@ -169,7 +169,7 @@ static removeAdsBlockDisallowedList(domainSuffixes: Array<string>): void
 
 从AdsBlockManager的DisallowedList中删除一组域名。
 
-> **说明：**
+> **说明：** 
 > 
 > - AdsBlockManager的DisallowedList不会持久化，应用重启需要重新设置。删除不存在的条目不会触发异常。
 
@@ -200,7 +200,7 @@ static setAdsBlockRules(rulesFile: string, replace: boolean): void
 
 向Web组件中设置自定义的符合通用EasyList语法规则的广告过滤配置文件。
 
-> **说明：**
+> **说明：** 
 > 
 > - 此接口设置的广告过滤规则，内部解析成功后会持久化存储，应用重启后不需要重复设置。
 

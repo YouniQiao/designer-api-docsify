@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## range
 
 ```TypeScript
@@ -19,7 +14,7 @@ range: ParticleTuple<TYPE, TYPE>
 
 粒子初始属性值区间，粒子发射器生成粒子的属性值在range区间随机取值。
 
-**说明：**
+**说明：** 
 
 各项属性的非法输入取默认值，当最大值小于最小值的时候取默认区间。TYPE为number。
 

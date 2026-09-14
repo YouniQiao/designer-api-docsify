@@ -1,8 +1,8 @@
 # ArkTS API<!--arkts-arkgraphics3d-->
 
-- [@ohos.graphics.scene(ArkGraphics 3D)](arkts-graphics-scene.md)
+- [@ohos.graphics.scene(3D scene module exports)](arkts-arkgraphics3d-graphics-scene.md)
 - graphics3d<!--arkts-arkgraphics3d-graphics3d-->
-  - [Scene](arkts-scene.md)
+  - [Scene(3D scene declarations)](arkts-arkgraphics3d-scene.md)
     - [PCFConfig](arkts-arkgraphics3d-scene-pcfconfig-c.md)
     - [Scene](arkts-arkgraphics3d-scene-c.md)
     <!--Del-->
@@ -25,7 +25,7 @@
     - [SceneResourceFactory](arkts-arkgraphics3d-scene-sceneresourcefactory-i.md)
     - [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md)
   <!--Del-->
-  - [SceneBoidsSim](arkts-sceneboidssim.md)<!--DelEnd-->
+  - [SceneBoidsSim(3D scene boids simulation type declarations)](arkts-arkgraphics3d-sceneboidssim.md)<!--DelEnd-->
     <!--Del-->
     - [BoidsSimPlugin(system api)](arkts-arkgraphics3d-sceneboidssim-boidssimplugin-c-sys.md)<!--DelEnd-->
     <!--Del-->
@@ -36,7 +36,7 @@
     - [BoidsSimParameters(system api)](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [BoidsSimRepulsionParameters(system api)](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md)<!--DelEnd-->
-  - [SceneNodes](arkts-scenenodes.md)
+  - [SceneNodes(3D scene node type declarations)](arkts-arkgraphics3d-scenenodes.md)
     - [Camera](arkts-arkgraphics3d-scenenodes-camera-i.md)
     - [Container](arkts-arkgraphics3d-scenenodes-container-i.md)
     - [DirectionalLight](arkts-arkgraphics3d-scenenodes-directionallight-i.md)
@@ -47,14 +47,14 @@
     - [SpotLight](arkts-arkgraphics3d-scenenodes-spotlight-i.md)
     - [LightType](arkts-arkgraphics3d-scenenodes-lighttype-e.md)
     - [NodeType](arkts-arkgraphics3d-scenenodes-nodetype-e.md)
-  - [ScenePostProcessSettings](arkts-scenepostprocesssettings.md)
+  - [ScenePostProcessSettings(3D scene post-process settings type declarations)](arkts-arkgraphics3d-scenepostprocesssettings.md)
     - [BloomSettings](arkts-arkgraphics3d-scenepostprocesssettings-bloomsettings-i.md)
     - [ColorFringeSettings](arkts-arkgraphics3d-scenepostprocesssettings-colorfringesettings-i.md)
     - [PostProcessSettings](arkts-arkgraphics3d-scenepostprocesssettings-postprocesssettings-i.md)
     - [ToneMappingSettings](arkts-arkgraphics3d-scenepostprocesssettings-tonemappingsettings-i.md)
     - [VignetteSettings](arkts-arkgraphics3d-scenepostprocesssettings-vignettesettings-i.md)
     - [ToneMappingType](arkts-arkgraphics3d-scenepostprocesssettings-tonemappingtype-e.md)
-  - [SceneResources](arkts-sceneresources.md)
+  - [SceneResources(3D scene resource type declarations)](arkts-arkgraphics3d-sceneresources.md)
     - [Animation](arkts-arkgraphics3d-sceneresources-animation-i.md)
     - [Blend](arkts-arkgraphics3d-sceneresources-blend-i.md)
     - [Effect](arkts-arkgraphics3d-sceneresources-effect-i.md)
@@ -86,7 +86,7 @@
     - [SamplerAddressMode](arkts-arkgraphics3d-sceneresources-sampleraddressmode-e.md)
     - [SamplerFilter](arkts-arkgraphics3d-sceneresources-samplerfilter-e.md)
     - [SceneResourceType](arkts-arkgraphics3d-sceneresources-sceneresourcetype-e.md)
-  - [SceneTypes](arkts-scenetypes.md)
+  - [SceneTypes(3D scene common type declarations)](arkts-arkgraphics3d-scenetypes.md)
     - [CubeGeometry](arkts-arkgraphics3d-scenetypes-cubegeometry-c.md)
     - [CustomGeometry](arkts-arkgraphics3d-scenetypes-customgeometry-c.md)
     - [CylinderGeometry](arkts-arkgraphics3d-scenetypes-cylindergeometry-c.md)

@@ -1024,7 +1024,7 @@ getVisibleTextRanges(): Array<Range>
 
 获取段落中在屏幕上可见的文本范围。不包含因最大行数（[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)的maxLines属性）截断或省略号模式（[EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md)）替换而未显示的文本。
 
-**说明：**
+**说明：** 
 
 返回的范围取决于段落的具体截断情况（如是否设置最大行数或省略号等）：  
 | 场景 | 说明 |  

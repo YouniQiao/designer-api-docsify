@@ -22,7 +22,7 @@ accessBackward(): boolean
 
 可以结合使用[getBackForwardEntries](#getbackforwardentries)来获取当前WebView的历史信息列表，以及使用[accessStep](#accessstep)来判断是否可以按照给定的步数前进或后退。
 
-> **说明：**
+> **说明：** 
 > 
 > 在Web组件首次加载过程中调用[setCustomUserAgent](#setcustomuseragent)，可能会导致在当前存在多个历史节点的情况下，获取
 > 的accessBackward实际为false，即没有后退节点。建议先调用setCustomUserAgent方法设置UserAgent，再通过loadUrl加载具体页面。
@@ -144,7 +144,7 @@ avoidVisibleViewportBottom(avoidHeight: number): void
 
 设置Web网页可视视口底部避让高度。
 
-> **说明：**
+> **说明：** 
 > 
 > - avoidHeight有效值区间为[0, Web组件高度]，超出有效值区间时取边界值。
 > 
@@ -229,7 +229,7 @@ static clearBlanklessLoadingCache(keys?: Array<string>) : void
 
 在小程序或Web应用场景中，当页面加载时内容变化显著，可能会出现一次明显的跳变。若对此跳变有所顾虑，可使用该接口清除页面缓存。
 
-> **说明：**
+> **说明：** 
 > 
 > - 清除之后的页面，需在第三次加载页面时才会产生优化效果。
 
@@ -477,7 +477,7 @@ constructor(webTag?: string)
 
 用于创建 WebviewController 对象的构造函数。
 
-> **说明：**
+> **说明：** 
 > 
 > 不传参：new webview.WebviewController()表示构造函数为空，不使用C API时不需要传参。
 > 
@@ -718,7 +718,7 @@ enableAdsBlock(enable: boolean): void
 
 启用广告过滤功能。
 
-> **说明：**
+> **说明：** 
 > 
 > - 广告过滤功能需要release包，使用debug包不生效。
 
@@ -750,7 +750,7 @@ static enableAdvancedSecurityMode(securityParams: SecurityParams): void
 
 通过配置安全特性选项禁用特定的Web引擎能力，以降低攻击面。典型使用场景包括：高安全要求的应用（如金融、政务类应用）应启用高级安全模式以禁用不必要的Web引擎能力。
 
-> **说明：**
+> **说明：** 
 > 
 > - 该接口为全局静态API，在整个APP生命周期中调用一次即可，不需要重复调用。
 > 
@@ -827,7 +827,7 @@ static enablePrivateNetworkAccess(enable: boolean): void
 
 启用后，Web组件将对私有网络请求（如访问本地服务器或内网资源）进行CORS预检。它会先发送OPTIONS预检请求，获取目标服务器的显式授权，然后传输实际数据。禁用此功能将跳过安全检查。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前私有网络访问检查功能主要针对Web Worker场景生效。
 
@@ -851,7 +851,7 @@ enableSafeBrowsing(enable: boolean): void
 
 本功能默认不生效，OpenHarmony只提供恶意网址拦截页WebUI，网址风险检测以及显示WebUI的功能由Vendor实现。推荐在WebContentsObserver中监听跳转[DidStartNavigation](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/content/public/browser/web_contents_observer.h)、[DidRedirectNavigation](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/content/public/browser/web_contents_observer.h)进行检测。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不生效，调用不会产生任何实际效果。
 
@@ -895,7 +895,7 @@ executeAIPageCommand(command: string): Promise<string>
 
 异步执行`AIPageCommand`。该接口通过JSON字符串形式的`command`参数指定命令类型和命令参数，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 不同命令的返回格式不同，详细说明请参见[AIPageCommand](../../../reference/apis-arkweb/arkts-apis-webview-AIPageCommand.md)和
 > [AIPageInteraction](../../../reference/apis-arkweb/arkts-apis-webview-AIPageInteraction.md)。
@@ -994,7 +994,7 @@ getBackForwardEntries(): BackForwardList
 
 获取当前WebView的历史信息列表。
 
-> **说明：**
+> **说明：** 
 > 
 > onLoadIntercept在加载开始的时候触发，该时刻还未生成历史节点，所以在onLoadIntercept中调用
 > getBackForwardEntries拿到的历史栈不包括当前正在加载中的跳转。
@@ -1025,7 +1025,7 @@ getBlanklessInfoWithKey(key: string) : BlanklessInfo
 
 获取页面首屏加载预测信息（详细说明见[BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md)），并开始本次加载过渡帧生成，应用根据此信息确定是否需要启用无白屏加载。必须与[setBlanklessLoadingWithKey](#setblanklessloadingwithkey)接口配套使用，并且必须在触发加载页面的接口之前或在`onLoadIntercept`中调用。需在`WebViewController`与Web组件绑定后才能使用。
 
-> **说明：**
+> **说明：** 
 > 
 > - 持久缓存容量：默认大小为30MB（约30页），可以通过接口[setBlanklessLoadingCacheCapacity](#setblanklessloadingcachecapacity)设置缓存容量，具体见该接口说明。
 > 超过容量时根据LRU（Least Recently Used，淘汰不常用缓存的策略）机制更新缓存。自动清理超过7天的持久缓存数据，缓存清除后第三次加载页面开始有优化效果。
@@ -1625,7 +1625,7 @@ getSurfaceId(): string
 
 获取ArkWeb对应Surface的ID，此ID可用于网页截图。
 
-> **说明：**
+> **说明：** 
 > 
 > 仅Web组件渲染模式是ASYNC_RENDER时有效。getSurfaceId需要在Web组件初始化之后才能获取到值。
 
@@ -1851,7 +1851,7 @@ static initializeWebEngine(): void
 
 在Web组件初始化之前，通过此接口加载Web引擎的动态库文件，以提高启动性能。自动预连接历史访问过的高频网站。
 
-> **说明：**
+> **说明：** 
 > 
 > - initializeWebEngine不支持在异步线程中调用，否则会造成崩溃。
 > 
@@ -2052,7 +2052,7 @@ static isPrivateNetworkAccessEnabled(): boolean
 
 获取Web组件是否启用了私有网络访问检查功能。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前私有网络访问检查功能主要针对Web Worker场景生效。
 
@@ -2100,7 +2100,7 @@ encoding如果为非base64（包括空值），则假定数据对安全URL字符
 
 data数据必须使用base64编码或将内容中的任何#字符编码为%23。否则#将被视为内容的结尾而剩余的文本将被用作文档片段标识符。
 
-> **说明：**
+> **说明：** 
 > 
 > - 若加载本地图片，可以给baseUrl或historyUrl任一参数赋值空格，详情请参考示例代码。
 > 
@@ -2373,7 +2373,7 @@ pauseMicrophone(): void
 
 暂停当前网页麦克风捕获。
 
-> **说明：**
+> **说明：** 
 > 
 > 与 resumeMicrophone 和 stopMicrophone 的区别：
 > 
@@ -2490,7 +2490,7 @@ prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void
 
 在预测到将要加载的页面之前调用，可提前下载页面所需的资源（包括：主资源和子资源），但不会执行网页JavaScript代码或呈现网页，以加快页面加载速度。
 
-> **说明：**
+> **说明：** 
 > 
 > - 下载的页面资源会缓存五分钟左右，超过这段时间Web组件会自动释放。
 > 
@@ -2533,7 +2533,7 @@ prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?
 
 在预测到将要加载的页面之前调用，可提前下载页面所需的资源（包括：主资源和子资源），但不会执行网页JavaScript代码或呈现网页，以加快页面加载速度。
 
-> **说明：**
+> **说明：** 
 > 
 > - 下载的页面资源会缓存五分钟左右，超过这段时间Web组件会自动释放。
 > 
@@ -2680,7 +2680,7 @@ registerJavaScriptProxy提供了应用与Web组件加载的网页之间强大的
 
 示例请参考[前端页面调用应用侧函数](../../../web/web-in-page-app-function-invoking.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > - registerJavaScriptProxy需要和deleteJavaScriptRegister接口配合使用，防止内存泄漏。
 > 
@@ -2728,7 +2728,7 @@ static removeAllCache(clearRom: boolean): void
 
 清除应用内所有Webview(含隐私模式)产生的资源缓存。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以通过在data/app/el2/100/base/\&lt;applicationPackageName\&gt;/cache/web/目录下查看Webview的缓存。
 
@@ -2756,7 +2756,7 @@ removeCache(clearRom: boolean): void
 
 清除与当前WebView上下文相关的资源缓存。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以通过在data/storage/el2/base/cache/web/Cache目录下查看Webview的缓存。
 
@@ -2921,7 +2921,7 @@ runJavaScript(script: string): Promise<string>
 
 在当前显示页面的上下文中异步执行JavaScript脚本，脚本执行的结果将通过Promise方式返回。此方法必须在用户界面（UI）线程上使用 ，并且回调也将在用户界面（UI）线程上调用。
 
-> **说明：**
+> **说明：** 
 > 
 > - 跨导航操作（如loadUrl）时，JavaScript状态 将不再保留，例如，调用loadUrl前定义的全局变量和函数在加载的页面中将不存在。
 > 
@@ -2967,7 +2967,7 @@ runJavaScript(script: string, callback: AsyncCallback<string>): void
 
 在当前显示页面的上下文中异步执行JavaScript脚本，脚本执行的结果将通过异步回调方式返回。此方法必须在用户界面（UI）线程上使用 ，并且回调也将在用户界面（UI）线程上调用。
 
-> **说明：**
+> **说明：** 
 > 
 > - 跨导航操作（如loadUrl）时，JavaScript状态将不再保留。例如，调用loadUrl前定义的全局变量和函数在加载的页面中将不存在。
 > 
@@ -3008,7 +3008,7 @@ runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>
 
 异步执行JavaScript脚本，并通过Promise方式返回脚本执行的结果。runJavaScriptExt需要在loadUrl完成后，比如onPageEnd中调用。
 
-> **说明：**
+> **说明：** 
 > 
 > - 前端页面传到应用侧的string数据类型会被视为JSON格式的数据，需要调用JSON.parse反序列化。
 
@@ -3045,7 +3045,7 @@ runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessage
 
 异步执行JavaScript脚本，并通过回调方式返回脚本执行的结果。runJavaScriptExt需要在loadUrl完成后，比如onPageEnd中调用。
 
-> **说明：**
+> **说明：** 
 > 
 > - 前端页面传到应用侧的string数据类型会被视为JSON格式的数据，需要调用JSON.parse反序列化。
 
@@ -3247,7 +3247,7 @@ static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 
 设置ArkWeb内核版本。若系统不支持指定版本，则设置无效，使用系统默认内核（可参考[约束与限制](../../../web/web-component-overview.md#约束与限制)）。该接口为全局静态API，须在调用initializeWebEngine前执行，若已加载任何Web组件，则该设置无效。典型使用场景：使用特定内核版本的特性或兼容性需求时，可切换到对应内核版本。
 
-> **说明：**
+> **说明：** 
 > 
 > - setActiveWebEngineVersion不支持在异步线程中调用。
 > 
@@ -3394,7 +3394,7 @@ setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCo
 
 设置无白屏加载是否启用，本接口必须与[getBlanklessInfoWithKey](#getblanklessinfowithkey)接口配套使用。
 
-> **说明：**
+> **说明：** 
 > 
 > - 需在触发页面加载的接口之后调用，其他约束同[getBlanklessInfoWithKey](#getblanklessinfowithkey)。
 > 
@@ -3437,7 +3437,7 @@ setBlanklessLoadingWithParams(key: string,
 
 设置白屏插帧的配置参数，本接口必须与[getBlanklessInfoWithKey](#getblanklessinfowithkey)接口配套使用。相比于[setBlanklessLoadingWithKey](#setblanklessloadingwithkey)，本接口支持白屏插帧更多的参数设置，包括插帧持续时间，缓存数据有效时间，插帧完成后的自定义回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 需在触发页面加载的接口之后调用，其他约束同[getBlanklessInfoWithKey](#getblanklessinfowithkey)。
 > 
@@ -3507,7 +3507,7 @@ setCustomUserAgent(userAgent: string): void
 
 设置自定义用户代理，会覆盖系统的用户代理。
 
-> **说明：**
+> **说明：** 
 > 
 > - 当Web组件src设置了URL时，建议在onControllerAttached回调中设置User-Agent。不要在
 > onLoadIntercept回调中设置，否则可能会设置失败或导致不可预期的后果。
@@ -3599,7 +3599,7 @@ setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void
 
 当enable设置为true时，mainframe加载发生错误将展示错误页：若设置了[onOverrideErrorPage](../arkts-components/arkts-arkweb-web-comp-attribute.md#onoverrideerrorpage)回调，则展示用户自定义的错误页；若未设置，则展示ArkWeb提供的默认错误页。当enable和includeSubframe同时设置为true时，subframe加载发生错误也会展示错误页，onOverrideErrorPage回调对subframe同样生效。
 
-> **说明：**
+> **说明：** 
 > 
 > - 当enable设置为false时，无论includeSubframe取何值，mainframe和subframe的错误页功能均不启用。
 > 
@@ -3851,7 +3851,7 @@ static setScrollbarMode(scrollbarMode: ScrollbarMode): void
 
 在Web页面场景，设置全局滚动条模式。不显式调用时，默认为[ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](arkts-arkweb-webview-scrollbarmode-e.md)（非常驻滚动条）。
 
-> **说明：**
+> **说明：** 
 > 
 > - 根据滚动条模式，改变当前应用所有web滚动条模式为常驻滚动条或非常驻滚动条。
 > 
@@ -3906,7 +3906,7 @@ static setSiteIsolationMode(mode: SiteIsolationMode): void
 
 对于仅加载可信网页的第三方应用，可以关闭此功能，以提升性能并减少内存占用，同时减少跨域访问的拦截。默认值根据不同的设备而定，PC/Table采用严格站点隔离[SiteIsolationMode.STRICT](arkts-arkweb-webview-siteisolationmode-e.md)，Phone默认部分站点隔离[SiteIsolationMode.PARTIAL](arkts-arkweb-webview-siteisolationmode-e.md)。[坚盾守护模式](../../../web/web-secure-shield-mode.md)下采用严格站点隔离。
 
-> **说明：**
+> **说明：** 
 > 
 > 不能在单子进程模式下设置严格站点隔离。
 > 
@@ -4034,7 +4034,7 @@ static setUserAgentClientHintsEnabled(enabled: boolean): void
 
 设置是否开启User-Agent Client Hints功能。
 
-> **说明：**
+> **说明：** 
 > 
 > User-Agent Client Hints（UA-CH）是一种替代传统User-Agent字符串的隐私保护机制，通过按需请求和结构化数据传递客户端信息，减少过度追踪风险。
 > 
@@ -4081,7 +4081,7 @@ setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void
 
 设置与User-Agent相对应的UserAgent Metadata数据。
 
-> **说明：**
+> **说明：** 
 > 
 > User-Agent Metadata将用于填充用户代理客户端提示，它们可以提供客户端的品牌和版本信息、底层操作系统的品牌和主要版本，以及底层设备的详细信息。
 > 
@@ -4171,7 +4171,7 @@ static setWebDestroyMode(mode: WebDestroyMode): void
 
 设置Web组件的销毁模式。当Web组件销毁时，销毁模式会影响Web内核资源释放的时机，例如JavaScript运行上下文、渲染上下文等。默认值：[WebDestroyMode.NORMAL_MODE](arkts-arkweb-webview-webdestroymode-e.md)（普通模式），由系统决定销毁时机。应用可设置[WebDestroyMode.FAST_MODE](arkts-arkweb-webview-webdestroymode-e.md)（快速模式），以立即销毁资源，从而提升特定场景的性能。
 
-> **说明：**
+> **说明：** 
 > 
 > [WebDestroyMode.FAST_MODE](arkts-arkweb-webview-webdestroymode-e.md)（快速模式）会改变Web组件销毁时机，应用需关注依赖Web组件销毁时机的错误实现，例如：Web组件销毁后仍调用
 > WebviewController的未定义行为，与[WebDestroyMode.NORMAL_MODE](arkts-arkweb-webview-webdestroymode-e.md)（普通模式）相比，销毁时机提前，有更高的几率触发未关联绑
@@ -4544,7 +4544,7 @@ webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): vo
 
 获取网页全量绘制结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 此接口不支持并发调用。
 > 

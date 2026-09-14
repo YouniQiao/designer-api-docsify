@@ -16,7 +16,7 @@ connectServiceExtensionAbilityWithAccount(want: Want, accountId: number, options
 
 将当前UIAbility连接到一个指定account的ServiceExtensionAbility。仅支持在主线程调用。该接口在Phone、Tablet中可正常调用，在其他设备类型中返回16000006错误码。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 > 
@@ -116,7 +116,7 @@ requestModalUIExtension(pickerWant: Want, callback: AsyncCallback<void>): void
 
 请求在指定的前台应用上拉起对应类型的UIExtensionAbility。使用callback异步回调。仅支持在主线程调用。其中，前台应用通过want.parameters中bundleName来指定，如果未指定前台应用、bundleName指定的应用未在前台或指定的前台应用的bundleName不正确，则在系统界面上直接拉起UIExtensionAbility；被拉起的UIExtensionAbility通过want中bundleName、abilityName、moduleName字段共同确定，同时需要通过want.parameters中的ability.want.params.uiExtensionType字段配置UIExtensionAbility的类型。在前台应用上拉起UIExtensionAbility之前，必须确保该应用已完成页面初始化，否则将导致拉起失败、并出现"uiContent is nullptr"的报错信息。应用可通过监听页面加载状态来判断拉起UIExtensionAbility的时机，页面初始化成功后会出现关键日志信息"UIContentImpl: focus again"。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -195,7 +195,7 @@ requestModalUIExtension(pickerWant: Want): Promise<void>
 
 请求在指定的前台应用上拉起对应类型的UIExtensionAbility。使用Promise异步回调。仅支持在主线程调用。其中，前台应用通过want.parameters中bundleName来指定，如果未指定前台应用、bundleName指定的应用未在前台或指定的前台应用的bundleName不正确，则在系统界面上直接拉起UIExtensionAbility；被拉起的UIExtensionAbility通过want中bundleName、abilityName、moduleName字段共同确定，同时需要通过want.parameters中的ability.want.params.uiExtensionType字段配置UIExtensionAbility的类型。在前台应用上拉起UIExtensionAbility之前，必须确保该应用已完成页面初始化，否则将导致拉起失败、并出现"uiContent is nullptr"的报错信息。应用可通过监听页面加载状态来判断拉起UIExtensionAbility的时机，页面初始化成功后会出现关键日志信息"UIContentImpl: focus again"。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -278,7 +278,7 @@ requestModalUIExtensionWithAccount(pickerWant: Want, accountId: number): Promise
 ```
 
 请求指定的前台应用启动对应类型的UIExtensionAbility。指定用户。该接口使用promise返回结果。它只能在主线程上调用。   
-> **说明：**
+> **说明：** 
 > 
 > 
 > 关于stage模型中组件的启动规则，请参见
@@ -507,7 +507,7 @@ startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 
 使用设置的caller信息启动一个UIAbility，caller信息由want携带，在系统服务层识别，UIAbility可以在onCreate生命周期的want参数中获取到caller信息。使用该接口启动一个UIAbility时，want的caller信息不会被当前自身的应用信息覆盖，系统服务层可获取到初始caller的信息。使用callback异步回调。仅支持在主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -590,7 +590,7 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 
 使用设置的caller信息启动一个UIAbility，caller信息由want携带，在系统服务层识别，UIAbility可以在onCreate生命周期的want参数中获取到caller信息。使用该接口启动一个UIAbility时，want的caller信息不会被当前自身的应用信息覆盖，系统服务层可获取到初始caller的信息。使用callback异步回调。仅支持在主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -675,7 +675,7 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 
 使用设置的caller信息启动一个UIAbility，caller信息由want携带，在系统服务层识别，UIAbility可以在onCreate生命周期的want参数中获取到caller信息。使用该接口启动一个UIAbility时，want的caller信息不会被当前自身的应用信息覆盖，系统服务层可获取到初始caller的信息。使用Promise异步回调。仅支持在主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
@@ -873,7 +873,7 @@ startAbilityForResultWithAccount(want: Want, accountId: number, callback: AsyncC
 
 启动一个UIAbility并在该UIAbility销毁时返回执行结果。使用callback异步回调。仅支持在主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 > 
@@ -978,7 +978,7 @@ startAbilityForResultWithAccount(
 
 启动一个UIAbility并在该UIAbility销毁时返回执行结果。使用callback异步回调。仅支持在主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 > 
@@ -1081,7 +1081,7 @@ startAbilityForResultWithAccount(want: Want, accountId: number, options?: StartO
 
 启动一个UIAbility并在该UIAbility销毁时返回执行结果。使用Promise异步回调。仅支持在主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 > 
@@ -1189,7 +1189,7 @@ startAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<v
 
 根据want和accountId启动UIAbility。使用callback异步回调。仅支持在主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 > 
@@ -1288,7 +1288,7 @@ startAbilityWithAccount(want: Want, accountId: number, options: StartOptions, ca
 
 根据want、accountId及startOptions启动UIAbility。使用callback异步回调。仅支持在主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 > 
@@ -1391,7 +1391,7 @@ startAbilityWithAccount(want: Want, accountId: number, options?: StartOptions): 
 
 根据want、accountId和startOptions启动UIAbility。使用Promise异步回调。仅支持在主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 > 
@@ -1499,7 +1499,7 @@ startRecentAbility(want: Want, callback: AsyncCallback<void>): void
 
 启动一个指定的UIAbility，如果这个UIAbility有多个实例，将拉起最近启动的那个实例。使用callback异步回调。仅支持在主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > - 跨设备场景下，调用方与目标方必须为同一应用，且该应用需要具备ohos.permission.DISTRIBUTED_DATASYNC权限，才能启动成功。
 > 
@@ -1597,7 +1597,7 @@ startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<vo
 
 启动一个指定的UIAbility。如果这个UIAbility有多个实例，将拉起最近启动的那个实例。当开发者需要携带启动参数时可以选择此API。使用callback异步回调。仅支持在主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > - 跨设备场景下，调用方与目标方必须为同一应用，且该应用需要具备ohos.permission.DISTRIBUTED_DATASYNC权限，才能启动成功。
 > 
@@ -1700,7 +1700,7 @@ startRecentAbility(want: Want, options?: StartOptions): Promise<void>
 
 启动一个指定的UIAbility。如果这个UIAbility有多个实例，将拉起最近启动的那个实例。使用Promise异步回调。仅支持在主线程调用。
 
-> **说明：**
+> **说明：** 
 > 
 > - 跨设备场景下，调用方与目标方必须为同一应用，且该应用需要具备ohos.permission.DISTRIBUTED_DATASYNC权限，才能启动成功。
 > 
@@ -1966,7 +1966,7 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: number, callback:
 
 启动一个新的ServiceExtensionAbility。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 > 
@@ -2053,7 +2053,7 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<
 
 启动一个新的ServiceExtensionAbility。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 > 
@@ -2298,7 +2298,7 @@ stopServiceExtensionAbilityWithAccount(want: Want, accountId: number, callback: 
 
 停止同一应用程序内指定账户的服务。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当accountId为当前用户时，无需进行权限校验。
 
@@ -2379,7 +2379,7 @@ stopServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<v
 
 停止同一应用程序内指定账户的服务。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当accountId为当前用户时，无需进行权限校验。
 

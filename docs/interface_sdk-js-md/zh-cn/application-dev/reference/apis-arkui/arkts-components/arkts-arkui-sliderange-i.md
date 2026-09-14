@@ -2,7 +2,7 @@
 
 定义有效滑动区间。
 
-> **说明：**
+> **说明：** 
 > 
 > - 当前仅当min&lt;=from&lt;=to&lt;=max时该接口生效(min和max不依赖于其设置的值，而取决于其实际生效的值)。
 > 
@@ -18,11 +18,6 @@
 **起始版本：** 12
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## from
 

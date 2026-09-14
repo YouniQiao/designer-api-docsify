@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## [[Call]]
 
 ```TypeScript
@@ -39,6 +34,8 @@
 
 | 类型 | 说明 |
 | --- | --- |
+| [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) |  |
+
 ## onExit
 
 ```TypeScript
@@ -63,3 +60,4 @@ onExit(event: PageTransitionCallback): PageTransitionExitInterface
 
 | 类型 | 说明 |
 | --- | --- |
+| [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) |  |

@@ -10,11 +10,6 @@ For details about the sample code of the mouse event, see [onNativeEmbedMouseEve
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

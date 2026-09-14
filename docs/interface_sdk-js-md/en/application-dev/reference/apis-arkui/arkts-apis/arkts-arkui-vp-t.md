@@ -6,7 +6,7 @@ declare type VP = `${number}vp` | number
 
 Defines the length property with number or number in units of vp.
 
-@typedef { `\${number}vp` | number } VP
+@typedef { `&#36;{number}vp` | number } VP
 
 **Since:** 23
 

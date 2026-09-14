@@ -17,10 +17,6 @@ next(...args: [] | [TNext]): IteratorResult<T, TReturn>
 | --- | --- | --- | --- |
 | args | [] &#124; [TNext] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## return
 
 ```TypeScript
@@ -33,10 +29,6 @@ return?(value?: TReturn): IteratorResult<T, TReturn>
 | --- | --- | --- | --- |
 | value | TReturn | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## throw
 
 ```TypeScript
@@ -48,8 +40,3 @@ throw?(e?: any): IteratorResult<T, TReturn>
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | e | any | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

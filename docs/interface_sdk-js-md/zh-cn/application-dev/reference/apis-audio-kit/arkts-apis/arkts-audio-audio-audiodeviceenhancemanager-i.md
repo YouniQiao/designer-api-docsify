@@ -2,7 +2,7 @@
 
 音频设备增强管理功能，用于应用级音频设备选择及流维度音频设备选择。在使用AudioDeviceEnhanceManager的接口之前，需要先通过getDeviceEnhanceManager获取AudioDeviceEnhanceManager实例。
 
-> **说明：**
+> **说明：** 
 > 
 > 应用在使用前应先调用isEnhancedRoutingSupported，确认系统是否支持音频设备增强管理功能。
 
@@ -24,7 +24,7 @@ isEnhancedRoutingSupported(): boolean
 
 查询系统是否支持当前管理器提供的增强路由能力。
 
-> **说明：**
+> **说明：** 
 > 
 > - 增强路由能力包括为应用或音频流选择输入输出设备。
 > 
@@ -52,7 +52,7 @@ selectInputDevice(inputDevice: AudioDeviceDescriptor): Promise<void>
 
 为应用选择输入设备。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 此设置对应用下创建的所有录音流生效，除非特定流已经通过selectInputDeviceForAudioCapturer
 > 指定了专属输入设备。
@@ -100,7 +100,7 @@ selectInputDeviceForAudioCapturer(capturer: AudioCapturer, inputDevice: AudioDev
 
 为指定音频录制流设置首选输入设备。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 应用需要确保指定的AudioCapturer实例有效。
 > 
@@ -144,7 +144,7 @@ selectOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<void>
 
 为应用选择输出设备。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 此设置对应用下创建的所有播放流生效，除非特定流已经通过selectOutputDeviceForAudioRenderer
 > 指定了专属输出设备。
@@ -192,7 +192,7 @@ selectOutputDeviceForAudioRenderer(renderer: AudioRenderer, outputDevice: AudioD
 
 为指定音频播放流设置首选输出设备。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 应用需要确保指定的AudioRenderer实例有效。
 > 

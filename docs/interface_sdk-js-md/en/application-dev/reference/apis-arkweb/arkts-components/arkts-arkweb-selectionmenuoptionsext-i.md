@@ -6,11 +6,6 @@ Represents the selection menu option extension.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## menuType
 
 ```TypeScript

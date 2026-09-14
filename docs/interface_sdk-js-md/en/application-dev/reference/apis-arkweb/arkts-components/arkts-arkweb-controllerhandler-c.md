@@ -6,11 +6,6 @@ ControllerHandler is a helper class provided by ArkWeb for handling the allocati
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript
@@ -43,4 +38,4 @@ Sets the WebviewController object for the newly created Web component. If the ap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | [WebviewController](arkts-arkweb-webviewcontroller-t.md) | Yes | WebviewController** object of the **Web** component. If opening a new window is not needed, set it to **null**. |
+| controller | [WebviewController](arkts-arkweb-webviewcontroller-t.md) | Yes | **WebviewController** object of the **Web** component. If opening a new window is not needed, set it to **null**. |

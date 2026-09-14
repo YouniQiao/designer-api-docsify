@@ -2,7 +2,7 @@
 
 Represents an array for storing button information.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The SegmentButtonItemOptionsArray can save only two to five button information elements.
 

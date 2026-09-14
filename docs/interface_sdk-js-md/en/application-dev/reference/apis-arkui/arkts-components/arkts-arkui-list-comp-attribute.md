@@ -10,11 +10,6 @@ In addition to universal events and [scrollable component common events](../../.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## alignListItem
 
 ```TypeScript
@@ -35,7 +30,7 @@ Sets the layout mode of list items along the cross axis when the cross-axis widt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ListItemAlign](arkts-arkui-listitemalign-e.md) | Yes | Alignment mode of list items along the cross axis.<br>Default value: **ListItemAlign.Start |
+| value | [ListItemAlign](arkts-arkui-listitemalign-e.md) | Yes | Alignment mode of list items along the cross axis.<br>Default value: **ListItemAlign.Start** |
 
 ## backPressBehavior
 
@@ -95,7 +90,7 @@ Sets the number of list items or list item groups to be cached (preloaded) and s
 
 When **cachedCount** is set for the list, the system preloads and lays out the **cachedCount**-specified number of rows of list items both above and below the currently visible area of the list. When calculating the number of rows for list items, the system takes into account the number of rows from the list items within a list item group. If a list item group does not contain any list items, then the entire list item group is counted as one row. This attribute can be combined with the [clip or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > You are advised to set cachedCount to n/2 (n indicates the number of list items displayed on one screen). You
 > also need to consider other factors to balance the experience and memory usage. For best practices, see
@@ -116,7 +111,7 @@ When **cachedCount** is set for the list, the system preloads and lays out the *
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | count | number | Yes | Number of list items to be preloaded.<br>Default value: number of nodes visible on the screen, with the maximum value of 16<br>Value range: 0, +∞).<br>Values less than 0 are treated as **1**. |
-| show | boolean | Yes | Whether to display the preloaded list items. If this parameter is set to **true**, the preloaded list items are displayed. If this parameter is set to **false**, the preloaded list items are not displayed.<br> Default value: **false |
+| show | boolean | Yes | Whether to display the preloaded list items. If this parameter is set to **true**, the preloaded list items are displayed. If this parameter is set to **false**, the preloaded list items are not displayed.<br> Default value: **false** |
 
 ## cachedCount
 
@@ -134,7 +129,7 @@ When calculating the number of rows for list items, the system takes into accoun
 
 Default behavior: The **count** parameter is of the **number** type by default, with its value set based on the number of nodes displayed on the screen, up to a maximum of 16. Preloaded **ListItem** components are not involved in drawing by default.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > You are advised to set cachedCount to n/2 (n indicates the number of list items displayed on one screen). You
 > also need to consider other factors to balance the experience and memory usage. Starting from API version 22,
@@ -169,7 +164,7 @@ chainAnimation(value: boolean)
 
 Sets whether to enable the chain linkage effect for the current **List** component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The chain linkage effect refers to the interaction where, during finger swiping, the dragged **ListItem** acts
 > as the driving object, while adjacent items are driven objects. The driving object drives the linkage of the
@@ -206,7 +201,7 @@ childrenMainSize(value: ChildrenMainSize)
 
 Sets the size information of the child components of a **List** component along the main axis.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This attribute provides the **List** component with the size of all child components in the main-axis
 > direction. This ensures that the **List** component can maintain the accuracy of the scrolling position in
@@ -264,7 +259,7 @@ If the sum of **contentStartOffset** and **contentEndOffset** exceeds the length
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Offset from the end of the list content to the boundary of the list display area.<br> Default value: **0**<br>Unit: vp<br>**NOTE:**<br>If the set value is a negative number, the default value will be used. |
+| value | number | Yes | Offset from the end of the list content to the boundary of the list display area.<br> Default value: **0**<br>Unit: vp<br>**NOTE:** <br>If the set value is a negative number, the default value will be used. |
 
 ## contentEndOffset
 
@@ -312,7 +307,7 @@ If the sum of **contentStartOffset** and **contentEndOffset** exceeds the length
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Offset from the start of the list content to the boundary of the list display area.<br> Default value: **0**<br>Unit: vp<br>**NOTE:**<br>If the set value is a negative number, the default value will be used. |
+| value | number | Yes | Offset from the start of the list content to the boundary of the list display area.<br> Default value: **0**<br>Unit: vp<br>**NOTE:** <br>If the set value is a negative number, the default value will be used. |
 
 ## contentStartOffset
 
@@ -366,7 +361,7 @@ When a list item has polymorphic styles applied, the dividers above and below th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ListDividerOptions](arkts-arkui-listdivideroptions-i.md) &#124; null | Yes | Style of the divider for the list items.<br>Default value: **null<br>**Since:** 18 |
+| value | [ListDividerOptions](arkts-arkui-listdivideroptions-i.md) &#124; null | Yes | Style of the divider for the list items.<br>Default value: **null**<br>**Since:** 18 |
 
 ## edgeEffect
 
@@ -376,7 +371,7 @@ edgeEffect(value: EdgeEffect, options?: EdgeEffectOptions)
 
 Sets the effect used when the scroll boundary is reached.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > By default, this component can produce a bounce effect only when there is more than one screen of content. To
 > produce a bounce effect when there is less than one screen of content, set the **options** parameter of the
@@ -394,8 +389,8 @@ Sets the effect used when the scroll boundary is reached.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported.<br>Default value: **EdgeEffect.Spring |
-| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself. The value **{ alwaysEnabled: true }** means to enable the scroll effect, and **{ alwaysEnabled: false }** means the opposite.<br>Default value: **{ alwaysEnabled: false }<br>**Since:** 11 |
+| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported.<br>Default value: **EdgeEffect.Spring** |
+| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself. The value **{ alwaysEnabled: true }** means to enable the scroll effect, and **{ alwaysEnabled: false }** means the opposite.<br>Default value: **{ alwaysEnabled: false }**<br>**Since:** 11 |
 
 ## editMode
 
@@ -405,7 +400,7 @@ editMode(value: boolean)
 
 Sets whether to enable edit mode. For details about how to delete selected list items, see [Example 3](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#example-3-setting-the-edit-mode).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. No substitute is provided.
 
@@ -485,7 +480,7 @@ Sets whether to support the scroll gesture.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to support the scroll gesture. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the [Scroller](arkts-arkui-scroller-c.md).<br>Default value: **true |
+| value | boolean | Yes | Whether to support the scroll gesture. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the [Scroller](arkts-arkui-scroller-c.md).<br>Default value: **true** |
 
 ## focusWrapMode
 
@@ -507,7 +502,7 @@ Sets the focus wrap mode for arrow keys.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [Optional](arkts-arkui-optional-t.md)&lt;[FocusWrapMode](../arkts-apis/arkts-arkui-focuswrapmode-e.md)&gt; | Yes | Focus wrap mode for cross-axis arrow keys.<br>Default value: **FocusWrapMode.DEFAULT**<br>**NOTE:**<br>Abnormal values are treated as the default value, meaning that cross- axis arrow keys cannot wrap. |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[FocusWrapMode](../arkts-apis/arkts-arkui-focuswrapmode-e.md)&gt; | Yes | Focus wrap mode for cross-axis arrow keys.<br>Default value: **FocusWrapMode.DEFAULT**<br>**NOTE:** <br>Abnormal values are treated as the default value, meaning that cross- axis arrow keys cannot wrap. |
 
 ## friction
 
@@ -562,7 +557,7 @@ on the width of **ListItemGroup**. Therefore, when the width of **ListItemGroup*
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number &#124; LengthConstrain | Yes | Number of columns or rows in the list.<br>Default value: **1**<br>Value range: [1, +∞) |
-| gutter | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | No | Column gap or row gap.<br>Default value: **0** <br>Value range: [0, +∞) <br>**NOTE:**<br>This parameter takes effect when the number of columns or rows is greater than 1.<br>**Since:** 10 |
+| gutter | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | No | Column gap or row gap.<br>Default value: **0** <br>Value range: [0, +∞) <br>**NOTE:** <br>This parameter takes effect when the number of columns or rows is greater than 1.<br>**Since:** 10 |
 
 ## lanes
 
@@ -609,7 +604,7 @@ Sets the direction in which the list items are arranged.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Axis](../arkts-apis/arkts-arkui-axis-e.md) | Yes | Direction in which the list items are arranged.<br>Default value: **Axis.Vertical |
+| value | [Axis](../arkts-apis/arkts-arkui-axis-e.md) | Yes | Direction in which the list items are arranged.<br>Default value: **Axis.Vertical** |
 
 ## maintainVisibleContentPosition
 
@@ -675,7 +670,7 @@ Sets the nested scrolling mode in the forward and backward directions to impleme
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | Yes | Nested scrolling options.<br>Default value: **{ scrollForward: NestedScrollMode.SELF_ONLY, scrollBackward: NestedScrollMode.SELF_ONLY } |
+| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | Yes | Nested scrolling options.<br>Default value: **{ scrollForward: NestedScrollMode.SELF_ONLY, scrollBackward: NestedScrollMode.SELF_ONLY }** |
 
 ## onEditModeChange
 
@@ -789,7 +784,7 @@ Triggered when a list item starts to be dragged.
 
 Automatic scrolling of the list cannot be triggered when a list item is dragged to the edge of the list. You can use the [onMove](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-drag-sorting.md#onmove) API of **ForEach**, **LazyForEach**, or **Repeat** to implement this effect. For details, see [Example 12: Implementing Dragging with OnMove](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#example-12-implementing-dragging-with-onmove). However, note that the [onMove](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-drag-sorting.md#onmove) API does not support cross-**ListItemGroup** dragging.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 14.
 
@@ -1093,7 +1088,7 @@ This API is available only when the heights of list items are the same. During t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScrollSnapAlign](arkts-arkui-scrollsnapalign-e.md) | Yes | Alignment mode of the scroll snap position.<br>Default value: **ScrollSnapAlign.NONE |
+| value | [ScrollSnapAlign](arkts-arkui-scrollsnapalign-e.md) | Yes | Alignment mode of the scroll snap position.<br>Default value: **ScrollSnapAlign.NONE** |
 
 ## scrollSnapAnimationSpeed
 
@@ -1115,7 +1110,7 @@ Sets the speed of the snap animation for list item scrolling. This parameter tak
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | [ScrollSnapAnimationSpeed](arkts-arkui-scrollsnapanimationspeed-e.md) | Yes | Speed of the snap animation for listing scrolling.<br>Default value: **ScrollSnapAnimationSpeed.NORMAL |
+| speed | [ScrollSnapAnimationSpeed](arkts-arkui-scrollsnapanimationspeed-e.md) | Yes | Speed of the snap animation for listing scrolling.<br>Default value: **ScrollSnapAnimationSpeed.NORMAL** |
 
 ## stackFromEnd
 
@@ -1147,7 +1142,7 @@ sticky(value: StickyStyle)
 
 Sets whether to pin the header to the top or the footer to the bottom in the list item group, if set. To support both the pin-to-top and pin-to-bottom features, set **sticky** to **StickyStyle.Header \| StickyStyle.Footer**. From API version 20, the **sticky** attribute can also be set to **StickyStyle.BOTH** to enable both sticky header and sticky footer at the same time.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Occasionally, after **sticky** is set, floating-point calculation precision may result in small gaps appearing
 > during scrolling. To address this issue, you can apply the [pixelRound](arkts-arkui-commonmethod-c.md#pixelround) attribute
@@ -1165,7 +1160,7 @@ Sets whether to pin the header to the top or the footer to the bottom in the lis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [StickyStyle](arkts-arkui-stickystyle-e.md) | Yes | Whether to pin the header to the top or the footer to the bottom in the list item group.<br>Default value: **StickyStyle.None |
+| value | [StickyStyle](arkts-arkui-stickystyle-e.md) | Yes | Whether to pin the header to the top or the footer to the bottom in the list item group.<br>Default value: **StickyStyle.None** |
 
 ## supportEmptyBranchInLazyLoading
 
@@ -1209,4 +1204,4 @@ Sets whether to synchronously load all child components in the list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to synchronously load all child components in the list.<br>**true**: yes; **false**: no Default value: **true**<br>**NOTE:**<br>When this parameter is set to **false**, in the first display or **scrollToIndex** jumps without animation, if the time consumed by the frame layout exceeds 50 ms, the child components that have not been laid out in the list are delayed to the next frame for layout. |
+| enable | boolean | Yes | Whether to synchronously load all child components in the list.<br>**true**: yes; **false**: no Default value: **true**<br>**NOTE:** <br>When this parameter is set to **false**, in the first display or **scrollToIndex** jumps without animation, if the time consumed by the frame layout exceeds 50 ms, the child components that have not been laid out in the list are delayed to the next frame for layout. |

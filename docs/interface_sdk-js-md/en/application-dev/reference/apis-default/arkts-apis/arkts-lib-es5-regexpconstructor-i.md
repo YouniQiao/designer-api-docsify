@@ -17,10 +17,6 @@
 | --- | --- | --- | --- |
 | pattern | RegExp &#124; string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Call]]
 
 ```TypeScript
@@ -34,10 +30,6 @@
 | pattern | string | Yes |  |
 | flags | string | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -50,10 +42,6 @@ new(pattern: RegExp | string): RegExp
 | --- | --- | --- | --- |
 | pattern | RegExp &#124; string | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -67,10 +55,6 @@ new(pattern: string, flags?: string): RegExp
 | pattern | string | Yes |  |
 | flags | string | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## "$&"
 
 ```TypeScript

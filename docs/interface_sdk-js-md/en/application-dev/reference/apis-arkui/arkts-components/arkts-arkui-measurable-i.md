@@ -6,11 +6,6 @@ Provides the child component position information.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## getBorderWidth
 
 ```TypeScript

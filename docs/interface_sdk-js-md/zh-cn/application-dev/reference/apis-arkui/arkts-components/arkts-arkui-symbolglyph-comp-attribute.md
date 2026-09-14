@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## effectStrategy
 
 ```TypeScript
@@ -23,7 +18,7 @@ effectStrategy(value: SymbolEffectStrategy)
 
 设置SymbolGlyph组件动效策略。未通过该接口设置时，默认动效策略为SymbolEffectStrategy.NONE。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 12开始，该接口支持在attributeModifier中调用。
 > 
@@ -57,7 +52,7 @@ fontColor(value: Array<ResourceColor>)
 
 设置SymbolGlyph组件字体颜色。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -85,7 +80,7 @@ fontColor(value: Array<ResourceColor | ColorMetrics> | undefined)
 
 设置SymbolGlyph组件的字体颜色，相比[fontColor](#fontcolor)接口，本接口支持传入[ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md)类型参数。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口支持在attributeModifier中调用。
 
@@ -115,7 +110,7 @@ fontSize(value: number | string | Resource)
 
 组件的图标显示大小由fontSize控制，设置width或height后，其他通用属性仅对组件的占位大小生效。未通过该接口设置时，默认字体大小为16fp。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -145,7 +140,7 @@ fontWeight(value: number | FontWeight | string)
 
 sys.symbol.ohos_lungs图标不支持设置fontWeight。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -242,7 +237,7 @@ renderingStrategy(value: SymbolRenderingStrategy)
 
 设置SymbolGlyph组件渲染策略。未通过该接口设置时，默认渲染策略为SymbolRenderingStrategy.SINGLE。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -294,7 +289,7 @@ symbolEffect(symbolEffect: SymbolEffect, isActive?: boolean)
 
 设置SymbolGlyph组件动效策略及播放状态。未通过该接口设置时，默认动效为SymbolEffect对象，默认播放状态为false。
 
-> **说明：**
+> **说明：** 
 > 
 > 动效属性，仅支持使用effectStrategy属性或单个symbolEffect属性，不支持多种动效属性混合使用。
 

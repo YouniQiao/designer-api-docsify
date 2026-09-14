@@ -6,11 +6,6 @@ Defines the callback used when a web page triggers **prompt()**.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## message
 
 ```TypeScript

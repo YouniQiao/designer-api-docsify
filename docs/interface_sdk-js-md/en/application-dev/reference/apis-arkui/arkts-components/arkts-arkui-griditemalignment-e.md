@@ -2,7 +2,7 @@
 
 Enumerates the alignment modes of grid items.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. The **STRETCH** option only takes effect in scrollable grids.<br>
 > 2. The **STRETCH** option takes effect only if each grid item in a row is of a regular size (occupying only one

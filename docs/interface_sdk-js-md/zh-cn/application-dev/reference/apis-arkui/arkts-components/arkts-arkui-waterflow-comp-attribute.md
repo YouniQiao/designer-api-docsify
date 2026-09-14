@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## cachedCount
 
 ```TypeScript
@@ -200,7 +195,7 @@ itemConstraintSize(value: ConstraintSizeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | 是 | 约束尺寸。设置小于0的值，参数不生效。<br>**说明：**<br>1.同时设置itemConstraintSize和FlowItem的constraintSize属性时，minWidth/minHeight会取其中的最大值，maxWidth/maxHeight会取其中的最小值，调整后的值作为FlowItem的constraintSize处理。<br>2.只设置itemConstraintSize时，相当于对WaterFlow所有子组件设置了相同的constraintSize。<br>3.itemConstraintSize通过以上两种方式转换成FlowItem的constraintSize后的生效规则与通用属性constraintSize相同。 |
+| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | 是 | 约束尺寸。设置小于0的值，参数不生效。<br>**说明：** <br>1.同时设置itemConstraintSize和FlowItem的constraintSize属性时，minWidth/minHeight会取其中的最大值，maxWidth/maxHeight会取其中的最小值，调整后的值作为FlowItem的constraintSize处理。<br>2.只设置itemConstraintSize时，相当于对WaterFlow所有子组件设置了相同的constraintSize。<br>3.itemConstraintSize通过以上两种方式转换成FlowItem的constraintSize后的生效规则与通用属性constraintSize相同。 |
 
 ## layoutDirection
 
@@ -328,7 +323,7 @@ onScrollIndex(event: (first: number, last: number) => void)
 
 瀑布流显示区域上第一个子组件/最后一个组件的索引值有变化就会触发。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
@@ -398,7 +393,7 @@ supportEmptyBranchInLazyLoading(supported: boolean | undefined)
 
 设置当前WaterFlow组件是否支持在LazyForEach或Repeat中使用if/else渲染控制语法生成不包含任何子组件的空分支节点。未设置时不支持空分支节点。此属性初次赋值后不支持更新，所以赋值后无法在支持空分支、不支持空分支行为之间切换。
 
-> **说明：**
+> **说明：** 
 > 
 > 当通过[sections](arkts-arkui-waterflowoptions-i.md)参数设置了[WaterFlowSections](arkts-arkui-waterflowsections-c.md)分组，或通过
 > [layoutMode](arkts-arkui-waterflowoptions-i.md)设置[SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md)布局模式时，无论

@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## nextLabel
 
 ```TypeScript
@@ -23,7 +18,7 @@ nextLabel(value: string)
 
 设置右侧文本按钮内容，最后一页默认值为“开始”，其余页默认值为“下一步”。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 8开始支持，从API version 22开始废弃，建议使用showNext替代。
 
@@ -51,7 +46,7 @@ prevLabel(value: string)
 
 设置左侧文本按钮内容，第一页没有左侧文本按钮，当步骤导航器大于一页时，除第一页外默认值都为“返回”。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 8开始支持，从API version 22开始废弃，建议使用showPrevious替代。
 
@@ -79,7 +74,7 @@ status(value?: ItemState)
 
 设置步骤导航器nextLabel的显示状态。
 
-> **说明：**
+> **说明：** 
 
 > 从API version 8开始支持，从API version 22开始废弃，建议使用[indicatorInteractive](arkts-arkui-swiper-comp-attribute.md#indicatorinteractive)替代。
 

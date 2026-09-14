@@ -2,7 +2,7 @@
 
 Implements an upload or download task. Before using this API, you must obtain a **Task** object, from a promise through [request.agent.create](arkts-basicservices-agent-create-f.md) or from a callback through [request.agent.create](arkts-basicservices-agent-create-f.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The **Task** object and its mounting callback function are released and automatically reclaimed by the system
 > after the **remove** method is called.
@@ -25,7 +25,7 @@ off(event: 'progress', callback?: (progress: Progress) => void): void
 
 Unsubscribes from task progress events.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -59,7 +59,7 @@ off(event: 'completed', callback?: (progress: Progress) => void): void
 
 Unsubscribes from task completion events.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -93,7 +93,7 @@ off(event: 'failed', callback?: (progress: Progress) => void): void
 
 Unsubscribes from task failure events.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -127,7 +127,7 @@ off(event: 'pause', callback?: (progress: Progress) => void): void
 
 Unsubscribes from the foreground task pause event.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -158,7 +158,7 @@ off(event: 'resume', callback?: (progress: Progress) => void): void
 
 Unsubscribes from foreground task resume events.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -189,7 +189,7 @@ off(event: 'remove', callback?: (progress: Progress) => void): void
 
 Unsubscribes from the task removal event.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -220,7 +220,7 @@ off(event: 'response', callback?: Callback<HttpResponse>): void
 
 Unsubscribes from task response headers.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -253,7 +253,7 @@ off(event: 'faultOccur', callback?: Callback<Faults>): void
 
 Unsubscribes from task failure events.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -284,7 +284,7 @@ off(event: 'wait', callback?: Callback<WaitingReason>): void
 
 Unsubscribes from task waiting events.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -315,7 +315,7 @@ on(event: 'progress', callback: (progress: Progress) => void): void
 
 Subscribes to task progress changes. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -349,7 +349,7 @@ on(event: 'completed', callback: (progress: Progress) => void): void
 
 Subscribes to task completion events. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -383,7 +383,7 @@ on(event: 'failed', callback: (progress: Progress) => void): void
 
 Subscribes to task failure events. This API uses an asynchronous callback to return the result. You can call [request.agent.show](arkts-basicservices-agent-show-f.md) to view the error cause.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -417,7 +417,7 @@ on(event: 'pause', callback: (progress: Progress) => void): void
 
 Subscribes to task pause events. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -448,7 +448,7 @@ on(event: 'resume', callback: (progress: Progress) => void): void
 
 Subscribes to task resume events. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -479,7 +479,7 @@ on(event: 'remove', callback: (progress: Progress) => void): void
 
 Subscribes to task removal events. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -510,7 +510,7 @@ on(event: 'response', callback: Callback<HttpResponse>): void
 
 Subscribes to task response headers. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -543,7 +543,7 @@ on(event: 'faultOccur', callback: Callback<Faults>): void
 
 Subscribes to task failure events. This API uses a callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -574,7 +574,7 @@ on(event: 'wait', callback: Callback<WaitingReason>): void
 
 Subscribes to task wait events. This API uses a callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -751,7 +751,7 @@ Tasks in the following states can be started:
 1. Task created by **request.agent.create**.
 2. Download tasks that are created by **request.agent.create** but have failed or paused.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
@@ -792,7 +792,7 @@ Tasks in the following states can be started:
 1. Task created by **request.agent.create**.
 2. Download tasks that are created by **request.agent.create** but have failed or paused.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > For details about how to obtain the context in the example, see
 > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)

@@ -6,11 +6,6 @@ label文本和字体的样式对象。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## font
 
 ```TypeScript
@@ -65,7 +60,7 @@ maxFontSize?: number | ResourceStr
 
 **类型：** number &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
-**默认值：**
+**默认值：** 
 - API版本11+：0.0fp
 
 **起始版本：** 10
@@ -108,7 +103,7 @@ minFontSize?: number | ResourceStr
 
 **类型：** number &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
-**默认值：**
+**默认值：** 
 - API版本11+：0.0fp
 
 **起始版本：** 10

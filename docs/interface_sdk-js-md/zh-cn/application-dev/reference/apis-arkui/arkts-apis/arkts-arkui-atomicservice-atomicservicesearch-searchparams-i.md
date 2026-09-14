@@ -108,7 +108,7 @@ caretStyle?: CaretStyle
 componentBackgroundColor?: ResourceColor
 ```
 
-设置组件的背景色。默认值：`\$r('sys.color.ohos_id_color_text_field_sub_bg')`。
+设置组件的背景色。默认值：`&#36;r('sys.color.ohos_id_color_text_field_sub_bg')`。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -238,7 +238,7 @@ enterKeyType?: EnterKeyType
 fontColor?: ResourceColor
 ```
 
-输入文本的字体颜色。默认值：`\$r('sys.color.ohos_id_color_text_secondary')`。
+输入文本的字体颜色。默认值：`&#36;r('sys.color.ohos_id_color_text_secondary')`。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -508,7 +508,7 @@ onWillInsert?: Callback<InsertValue, boolean>
 placeholderColor?: ResourceColor
 ```
 
-placeholder文本颜色。默认值：`\$r('sys.color.ohos_id_color_text_secondary')`。
+placeholder文本颜色。默认值：`&#36;r('sys.color.ohos_id_color_text_secondary')`。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -524,7 +524,7 @@ placeholder文本颜色。默认值：`\$r('sys.color.ohos_id_color_text_seconda
 placeholderFont?: Font
 ```
 
-设置placeholder文本样式，包括字体大小、字体粗细、字体族、字体风格。目前仅支持默认字体族。默认值：`{size: \$r('sys.float.ohos_id_text_size_body1')}`。
+设置placeholder文本样式，包括字体大小、字体粗细、字体族、字体风格。目前仅支持默认字体族。默认值：`{size: &#36;r('sys.float.ohos_id_text_size_body1')}`。
 
 **类型：** Font
 
@@ -540,7 +540,7 @@ placeholderFont?: Font
 pressedBackgroundColor?: ResourceColor
 ```
 
-设置组件按压态的背景色。默认值：`\$r('sys.color.ohos_id_color_click_effect')`。
+设置组件按压态的背景色。默认值：`&#36;r('sys.color.ohos_id_color_click_effect')`。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -644,7 +644,7 @@ textAlign?: TextAlign
 textFont?: Font
 ```
 
-设置搜索框内输入文本样式，包括字体大小、字体粗细、字体族、字体风格。目前仅支持默认字体族。默认值：`{size: \$r('sys.float.ohos_id_text_size_body1')}`。
+设置搜索框内输入文本样式，包括字体大小、字体粗细、字体族、字体风格。目前仅支持默认字体族。默认值：`{size: &#36;r('sys.float.ohos_id_text_size_body1')}`。
 
 **类型：** Font
 

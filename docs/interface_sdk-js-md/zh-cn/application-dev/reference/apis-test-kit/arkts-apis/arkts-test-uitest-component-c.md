@@ -500,7 +500,7 @@ getText(): Promise<string>
 
 获取控件对象的文本信息。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 如果控件的无障碍属性
 > accessibilityLevel

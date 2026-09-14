@@ -10,11 +10,6 @@ In addition to the universal events, the following events are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## autoPlay
 
 ```TypeScript
@@ -74,7 +69,7 @@ cachedCount(value: number)
 
 Sets the number of child components to be preloaded (cached), which are needed for the specific number of pages immediately before and after the current page. If a preceding item is deleted, the succeeding items will shift forward. For example, if **cachedCount** is set to **1**, the child components on the previous page and the next page are cached. If **swipeByGroup** in **displayCount** is set to **true**, child components are cached by group. For example, if **cachedCount** is set to **1** and **swipeByGroup** is set to **true**, the child components in the previous and next groups are cached.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - In continuous scrolling scenarios where one **Swiper** child component is displayed per screen, setting
 > **cachedCount** to **1** or **2** is typically sufficient. For best practices, see
@@ -109,7 +104,7 @@ cachedCount(count: number, isShown: boolean)
 
 Sets the number of child components to be cached.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When the value of **isShown** is **true** and the value of **count** is too large, if there are insufficient
 > loadable nodes within the preload range, the same loadable node will only be laid out on one side in loop
@@ -140,7 +135,7 @@ cachedCount(count: number, options: CachedCountOptions)
 
 Sets the number of child components to be prloaded and configuration options.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When **independent** in options is set to **true**, the number of preloaded child components is calculated
 > based on the value of **count**, which is decoupled from the **swipeByGroup** calculation of
@@ -182,7 +177,7 @@ Sets the number of child components to be prloaded and configuration options.
 curve(value: Curve | string | ICurve)
 ```
 
-Sets the animation curve. The interpolating spring curve is used by default. For details about common curves, see Curve. You can also create custom curves (interpolation curve objects) by using the API provided by the [interpolation calculation](../arkts-apis/arkts-curves.md) module.
+Sets the animation curve. The interpolating spring curve is used by default. For details about common curves, see Curve. You can also create custom curves (interpolation curve objects) by using the API provided by the [interpolation calculation](../arkts-apis/arkts-arkui-curves.md) module.
 
 **Since:** 8
 
@@ -263,7 +258,7 @@ displayArrow(value: ArrowStyle | boolean, isHoverShow?: boolean)
 
 Sets the arrow style of the navigation indicator.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When all child nodes fit within the viewport, resulting in only one screen's worth of content being visible, the
 > **Swiper** component displays only that screen without any left or right page-turning arrows.
@@ -281,7 +276,7 @@ Sets the arrow style of the navigation indicator.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [ArrowStyle](arkts-arkui-arrowstyle-i.md) &#124; boolean | Yes | Arrow and background to set. In cases of exceptions, the default values in the **ArrowStyle** object are used. The value **true** means to show the arrow and background in the default styles, and **false** means to hide the arrow and background.<br>Default value: **false**. |
-| isHoverShow | boolean | No | Whether to show the arrow on mouse hover.<br>Default value: **false**.<br>**NOTE:**<br>1. **false**: The arrow is always displayed.<br>2. **true**: The arrow is displayed.<br>With navigation indicators, the arrow is displayed when the mouse pointer hovers over the indicators or arrow areas.<br>Without navigation indicators, the arrow is displayed when the mouse pointer hovers over the **Swiper** display area.<br>3. When the arrow is displayed, clicking the arrow turns pages. |
+| isHoverShow | boolean | No | Whether to show the arrow on mouse hover.<br>Default value: **false**.<br>**NOTE:** <br>1. **false**: The arrow is always displayed.<br>2. **true**: The arrow is displayed.<br>With navigation indicators, the arrow is displayed when the mouse pointer hovers over the indicators or arrow areas.<br>Without navigation indicators, the arrow is displayed when the mouse pointer hovers over the **Swiper** display area.<br>3. When the arrow is displayed, clicking the arrow turns pages. |
 
 ## displayCount
 
@@ -297,7 +292,7 @@ Sets the number of elements to display per page.
 
 **SwiperAutoFill** type: Child elements' main-axis width adapts to the **Swiper** component's main-axis width. The system automatically works out the number of elements per page based on the width and **minSize** settings of the **Swiper** component. If **minSize** is left empty or set to a value less than or equal to 0, the **Swiper** component displays one column.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When turning pages by group is used, the drag distance threshold for turning pages is half of the width of the
 > **Swiper** component (50% of the child elements width if turning pages by child element is used). If the number
@@ -403,7 +398,7 @@ Sets the mode in which elements are displayed along the main axis. This API take
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SwiperDisplayMode](arkts-arkui-swiperdisplaymode-e.md) | Yes | Mode in which elements are displayed along the main axis.<br>Default value: **SwiperDisplayMode.STRETCH |
+| value | [SwiperDisplayMode](arkts-arkui-swiperdisplaymode-e.md) | Yes | Mode in which elements are displayed along the main axis.<br>Default value: **SwiperDisplayMode.STRETCH** |
 
 ## duration
 
@@ -415,7 +410,7 @@ Sets the duration of the animation for child component switching.
 
 **duration** must be used in conjunction with [curve](#curve).
 
-The default curve for the animation is [interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md). When this curve is applied, the duration of the animation is determined solely by the parameters of the curve itself and is no longer governed by the **duration** setting. For curves that are not governed by the **duration** setting, see [Interpolation Calculation](../arkts-apis/arkts-curves.md). Among others, [springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md), [responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md), and interpolatingSpring do not respect the **duration** setting. To have the animation duration managed by **duration**, you should select a different curve for the **curve** attribute.
+The default curve for the animation is [interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md). When this curve is applied, the duration of the animation is determined solely by the parameters of the curve itself and is no longer governed by the **duration** setting. For curves that are not governed by the **duration** setting, see [Interpolation Calculation](../arkts-apis/arkts-arkui-curves.md). Among others, [springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md), [responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md), and interpolatingSpring do not respect the **duration** setting. To have the animation duration managed by **duration**, you should select a different curve for the **curve** attribute.
 
 **Since:** 7
 
@@ -449,7 +444,7 @@ Edge sliding effect. This parameter takes effect only when [loop](#loop) is set 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the component is at one of the edges.<br>Default value: **EdgeEffect.Spring |
+| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the component is at one of the edges.<br>Default value: **EdgeEffect.Spring** |
 
 ## index
 
@@ -459,7 +454,7 @@ index(value: number)
 
 Sets the index of the child component currently displayed in the container.
 
-Since API version 10, this attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this attribute supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Since:** 7
 
@@ -473,7 +468,7 @@ Since API version 10, this attribute supports two-way binding through [\$\$](../
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Index of the child component currently displayed in the container.<br>Default value: **0**<br>**NOTE:**<br>If the value specified is less than 0 or greater than the maximum page index, the value **0** is used. |
+| value | number | Yes | Index of the child component currently displayed in the container.<br>Default value: **0**<br>**NOTE:** <br>If the value specified is less than 0 or greater than the maximum page index, the value **0** is used. |
 
 ## indicator
 
@@ -495,7 +490,7 @@ Sets the style of the navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DotIndicator](arkts-arkui-dotindicator-c.md) &#124; [DigitIndicator](arkts-arkui-digitindicator-c.md) &#124; boolean | Yes | Style of the navigation indicator.<br> - **DotIndicator**: dot-style indicator.<br> - **DigitIndicator**: digit-style indicator.<br> - **boolean**: whether to enable the navigation indicator. **true** to enable, **false** otherwise.<br> Default value: **true**<br> Default style: **DotIndicator<br>**Since:** 10 |
+| value | [DotIndicator](arkts-arkui-dotindicator-c.md) &#124; [DigitIndicator](arkts-arkui-digitindicator-c.md) &#124; boolean | Yes | Style of the navigation indicator.<br> - **DotIndicator**: dot-style indicator.<br> - **DigitIndicator**: digit-style indicator.<br> - **boolean**: whether to enable the navigation indicator. **true** to enable, **false** otherwise.<br> Default value: **true**<br> Default style: **DotIndicator**<br>**Since:** 10 |
 
 ## indicator
 
@@ -505,7 +500,7 @@ indicator(indicator: IndicatorComponentController | DotIndicator | DigitIndicato
 
 Sets the navigation indicator for the component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > An externally bound navigation indicator component can be used together if it is set. The display position and
 > size can be customized for the external navigation indicator. For details, see
@@ -525,7 +520,7 @@ Sets the navigation indicator for the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indicator | [IndicatorComponentController](arkts-arkui-indicatorcomponentcontroller-c.md) &#124; [DotIndicator](arkts-arkui-dotindicator-c.md) &#124; [DigitIndicator](arkts-arkui-digitindicator-c.md) &#124; boolean | Yes | Style of the navigation indicator.<br>- **IndicatorComponentController**: separate navigation indicator controller. This controller can be bound to an external navigation indicator, but the external and internal indicators cannot coexist.<br> - **DotIndicator**: dot-style indicator.<br> - **DigitIndicator**: digit-style indicator.<br> - **boolean**: whether to enable the navigation indicator. **true** to enable, **false** otherwise.<br> Default value: **true**<br> Default style: **DotIndicator |
+| indicator | [IndicatorComponentController](arkts-arkui-indicatorcomponentcontroller-c.md) &#124; [DotIndicator](arkts-arkui-dotindicator-c.md) &#124; [DigitIndicator](arkts-arkui-digitindicator-c.md) &#124; boolean | Yes | Style of the navigation indicator.<br>- **IndicatorComponentController**: separate navigation indicator controller. This controller can be bound to an external navigation indicator, but the external and internal indicators cannot coexist.<br> - **DotIndicator**: dot-style indicator.<br> - **DigitIndicator**: digit-style indicator.<br> - **boolean**: whether to enable the navigation indicator. **true** to enable, **false** otherwise.<br> Default value: **true**<br> Default style: **DotIndicator** |
 
 ## indicatorInteractive
 
@@ -673,7 +668,7 @@ nestedScroll(value: SwiperNestedScrollMode)
 
 Sets the nested scrolling mode of the **Swiper** component and its parent container. When [loop](#loop) is set to **true**, the **Swiper** component has no edge effect and does not trigger nested scrolling of its parent container.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The **Swiper** component's flick animation logic differs from other scrollable components, as **Swiper** can only
 > slide one page at a time and performs a page-flip animation during a flick. When a **Swiper** component is nested
@@ -709,7 +704,7 @@ When the main axis runs vertically and either **nextMargin** or **prevMargin** i
 
 When using the **nextMargin** or **prevMargin** API, avoid applying size constraints to child components. Otherwise, the main axis of the child nodes will not be stretched to the expected length, causing the margins to lose their effect.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API cannot be called within attributeModifier.
 
@@ -725,8 +720,8 @@ When using the **nextMargin** or **prevMargin** API, avoid applying size constra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Trailing margin. Percentage values are not supported.<br>Default value: **0 |
-| ignoreBlank | boolean | No | Whether to hide the trailing margin for the last page in non-loop scenarios.<br> **true**: Hide the trailing margin, in which case, the right edge of the last page is aligned with that of the **Swiper** component's viewable area.<br>**false**: Show the trailing margin, in which case, the last page has a **nextMargin**-specified gap from the **Swiper** component's right edge.<br>Default value: **false**.<br> **NOTE:**<br>On the last page, the values of **prevMargin** and **nextMargin** are added to create a left margin that allows the previous page to be displayed partially.<br>**Since:** 12 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Trailing margin. Percentage values are not supported.<br>Default value: **0** |
+| ignoreBlank | boolean | No | Whether to hide the trailing margin for the last page in non-loop scenarios.<br> **true**: Hide the trailing margin, in which case, the right edge of the last page is aligned with that of the **Swiper** component's viewable area.<br>**false**: Show the trailing margin, in which case, the last page has a **nextMargin**-specified gap from the **Swiper** component's right edge.<br>Default value: **false**.<br> **NOTE:** <br>On the last page, the values of **prevMargin** and **nextMargin** are added to create a left margin that allows the previous page to be displayed partially.<br>**Since:** 12 |
 
 ## onAnimationEnd
 
@@ -760,7 +755,7 @@ onAnimationStart(event: OnSwiperAnimationStartCallback)
 
 Triggered when the page transition animation starts.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When this callback is invoked, the page transition animation logic is executed in the rendering thread,
 > allowing the idle main thread to load resources required by child components. This reduces preloading time for
@@ -796,7 +791,7 @@ Triggered when the index of the currently displayed element changes. The return 
 
 When the **Swiper** component is used together with **LazyForEach**, the subpage UI update cannot be triggered in the **onChange** event.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If the index change is caused by an animation, this callback is triggered when the animation ends.
 
@@ -1010,7 +1005,7 @@ When the main axis runs vertically and either **nextMargin** or **prevMargin** i
 
 When using the **nextMargin** or **prevMargin** API, avoid applying size constraints to child components. Otherwise, the main axis of the child nodes will not be stretched to the expected length, causing the margins to lose their effect.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API cannot be called within attributeModifier.
 
@@ -1026,8 +1021,8 @@ When using the **nextMargin** or **prevMargin** API, avoid applying size constra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Leading margin. Percentage values are not supported.<br>Default value: **0 |
-| ignoreBlank | boolean | No | Whether to hide the leading margin for the first page in non-loop scenarios.<br> **true**: Hide the leading margin, in which case, the left edge of the first page is aligned with that of the **Swiper** component's viewable area.<br>**false**: Show the leading margin, in which case, the first page has a **prevMargin**-specified gap from the **Swiper** component's left edge.<br>Default value: **false**.<br> **NOTE:**<br>On the first page, the values of **prevMargin** and **nextMargin** are added to create a right margin that allows the next page to be displayed partially.<br>**Since:** 12 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Leading margin. Percentage values are not supported.<br>Default value: **0** |
+| ignoreBlank | boolean | No | Whether to hide the leading margin for the first page in non-loop scenarios.<br> **true**: Hide the leading margin, in which case, the left edge of the first page is aligned with that of the **Swiper** component's viewable area.<br>**false**: Show the leading margin, in which case, the first page has a **prevMargin**-specified gap from the **Swiper** component's left edge.<br>Default value: **false**.<br> **NOTE:** <br>On the first page, the values of **prevMargin** and **nextMargin** are added to create a right margin that allows the next page to be displayed partially.<br>**Since:** 12 |
 
 ## vertical
 

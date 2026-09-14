@@ -12,11 +12,6 @@ Navigator的属性。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## active
 
 ```TypeScript
@@ -49,7 +44,7 @@ params(value: object)
 
 设置跳转时传递到目标页面的数据。
 
-> **说明：**
+> **说明：** 
 
 **起始版本：** 7
 
@@ -99,7 +94,7 @@ type(value: NavigationType)
 
 设置路由跳转方式。
 
-> **说明：**
+> **说明：** 
 
 **起始版本：** 7
 

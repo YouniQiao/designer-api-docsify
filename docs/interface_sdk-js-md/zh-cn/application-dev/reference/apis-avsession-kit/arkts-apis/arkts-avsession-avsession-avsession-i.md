@@ -2,7 +2,7 @@
 
 调用[avSession.createAVSession](arkts-avsession-avsession-createavsession-f.md)后，返回会话的实例，可以获得会话ID，完成设置元数据，播放状态信息等操作。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本Interface首批接口从API version 10开始支持。
 
@@ -750,7 +750,7 @@ off(type: 'playFromAssetId', callback?: (assetId: number) => void): void
 
 取消媒体ID播放事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 11开始支持，从API version 20开始废弃。建议使用
 > [off('playWithAssetId')](#offplaywithassetid)取消
@@ -1627,7 +1627,7 @@ on(type: 'playFromAssetId', callback: (assetId: number) => void): void
 
 设置媒体ID播放监听事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 11开始支持，从API version 20开始废弃。建议使用
 > [on('playWithAssetId')](#onplaywithassetid)设置媒体

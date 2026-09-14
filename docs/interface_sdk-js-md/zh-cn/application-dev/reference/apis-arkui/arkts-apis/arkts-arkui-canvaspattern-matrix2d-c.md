@@ -46,6 +46,8 @@ identity(): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
+
 ## invert
 
 ```TypeScript
@@ -68,6 +70,8 @@ invert(): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
+
 ## multiply
 
 ```TypeScript
@@ -96,6 +100,8 @@ multiply(other?: Matrix2D): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
+
 ## rotate
 
 ```TypeScript
@@ -125,6 +131,8 @@ rotate(rx?: number, ry?: number): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
+
 ## scale
 
 ```TypeScript
@@ -154,6 +162,8 @@ scale(sx?: number, sy?: number): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
+
 ## translate
 
 ```TypeScript
@@ -183,6 +193,8 @@ translate(tx?: number, ty?: number): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
+
 ## rotateX
 
 ```TypeScript

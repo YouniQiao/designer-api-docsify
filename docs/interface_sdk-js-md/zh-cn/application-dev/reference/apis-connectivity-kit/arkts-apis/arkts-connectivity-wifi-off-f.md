@@ -14,7 +14,7 @@ function off(type: 'wifiStateChange', callback?: Callback<number>): void
 
 取消注册Wi-Fi状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。
 
@@ -60,7 +60,7 @@ function off(type: 'wifiConnectionChange', callback?: Callback<number>): void
 
 取消注册Wi-Fi连接状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。
 
@@ -106,7 +106,7 @@ function off(type: 'wifiScanStateChange', callback?: Callback<number>): void
 
 取消注册扫描状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。
 
@@ -152,7 +152,7 @@ function off(type: 'wifiRssiChange', callback?: Callback<number>): void
 
 取消注册RSSI状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。
 
@@ -198,7 +198,7 @@ function off(type: 'hotspotStateChange', callback?: Callback<number>): void
 
 取消注册热点状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。
 
@@ -228,7 +228,7 @@ function off(type: 'p2pStateChange', callback?: Callback<number>): void
 
 取消注册P2P开关状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。
 
@@ -274,7 +274,7 @@ function off(type: 'p2pConnectionChange', callback?: Callback<WifiP2pLinkedInfo>
 
 取消注册P2P连接状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。
 
@@ -320,7 +320,7 @@ function off(type: 'p2pDeviceChange', callback?: Callback<WifiP2pDevice>): void
 
 取消注册P2P设备状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。
 
@@ -366,7 +366,7 @@ function off(type: 'p2pPeerDeviceChange', callback?: Callback<WifiP2pDevice[]>):
 
 取消注册P2P对端设备状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。
 
@@ -412,7 +412,7 @@ function off(type: 'p2pPersistentGroupChange', callback?: Callback<void>): void
 
 取消注册P2P永久组状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。
 
@@ -458,7 +458,7 @@ function off(type: 'p2pDiscoveryChange', callback?: Callback<number>): void
 
 取消注册发现设备状态改变事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。
 

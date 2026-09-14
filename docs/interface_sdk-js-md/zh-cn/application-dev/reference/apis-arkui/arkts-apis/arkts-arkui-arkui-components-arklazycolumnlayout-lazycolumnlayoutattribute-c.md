@@ -42,6 +42,8 @@ alignItems(value: HorizontalAlign | undefined): LazyColumnLayoutAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+
 ## footer
 
 ```TypeScript
@@ -68,6 +70,8 @@ footer(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+
 ## header
 
 ```TypeScript
@@ -94,6 +98,8 @@ header(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+
 ## onVisibleIndexesChange
 
 ```TypeScript
@@ -120,6 +126,8 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): La
 
 | 类型 | 说明 |
 | --- | --- |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+
 ## space
 
 ```TypeScript
@@ -146,6 +154,8 @@ space(space: LengthMetrics | undefined): LazyColumnLayoutAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
+
 ## sticky
 
 ```TypeScript
@@ -172,3 +182,4 @@ sticky(sticky: StickyStyle | undefined): LazyColumnLayoutAttribute
 
 | 类型 | 说明 |
 | --- | --- |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |

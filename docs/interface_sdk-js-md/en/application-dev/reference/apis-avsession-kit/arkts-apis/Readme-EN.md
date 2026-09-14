@@ -1,19 +1,19 @@
 # ArkTS API<!--arkts-avsessionkit-->
 
 <!--Del-->
-- [@ohos.app.ability.MediaControlExtensionAbility](arkts-app-ability-mediacontrolextensionability.md)<!--DelEnd-->
+- [@ohos.app.ability.MediaControlExtensionAbility](arkts-avsession-app-ability-mediacontrolextensionability.md)<!--DelEnd-->
   <!--Del-->
   - [MediaControlExtensionAbility(system api)](arkts-avsession-app-ability-mediacontrolextensionability-mediacontrolextensionability-c-sys.md)<!--DelEnd-->
-- [@ohos.multimedia.avCastPicker](arkts-multimedia-avcastpicker.md)
+- [@ohos.multimedia.avCastPicker](arkts-avsession-multimedia-avcastpicker.md)
   - [AVCastPicker](arkts-avsession-multimedia-avcastpicker-avcastpicker-s.md)
-- [@ohos.multimedia.avCastPickerParam](arkts-multimedia-avcastpickerparam.md)
+- [@ohos.multimedia.avCastPickerParam](arkts-avsession-multimedia-avcastpickerparam.md)
   - [AVCastPickerColorMode](arkts-avsession-multimedia-avcastpickerparam-avcastpickercolormode-e.md)
   - [AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)
   - [AVCastPickerStyle](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstyle-e.md)
-- [@ohos.multimedia.avInputCastPicker](arkts-multimedia-avinputcastpicker.md)
+- [@ohos.multimedia.avInputCastPicker](arkts-avsession-multimedia-avinputcastpicker.md)
   - [AVInputCastPicker](arkts-avsession-multimedia-avinputcastpicker-avinputcastpicker-s.md)
   - [OnPickerStateCallback](arkts-avsession-onpickerstatecallback-t.md)
-- [@ohos.multimedia.avMusicTemplate](arkts-multimedia-avmusictemplate.md)
+- [@ohos.multimedia.avMusicTemplate](arkts-avsession-multimedia-avmusictemplate.md)
   - [createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md)
   <!--Del-->
   - [createAVMusicTemplateController(system api)](arkts-avsession-avmusictemplate-createavmusictemplatecontroller-f-sys.md)<!--DelEnd-->
@@ -108,7 +108,7 @@
   - [SearchPlayInfoType](arkts-avsession-avmusictemplate-searchplayinfotype-e.md)
   - [SettingType](arkts-avsession-avmusictemplate-settingtype-e.md)
   - [Sort](arkts-avsession-avmusictemplate-sort-e.md)
-- [@ohos.multimedia.avsession](arkts-multimedia-avsession.md)
+- [@ohos.multimedia.avsession](arkts-avsession-multimedia-avsession.md)
   <!--Del-->
   - [castAudio(system api)](arkts-avsession-avsession-castaudio-f-sys.md)<!--DelEnd-->
   - [createAVSession](arkts-avsession-avsession-createavsession-f.md)
@@ -257,6 +257,6 @@
   - [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 - application<!--arkts-avsessionkit-application-->
   <!--Del-->
-  - [MediaControlExtensionContext](arkts-mediacontrolextensioncontext.md)<!--DelEnd-->
+  - [MediaControlExtensionContext](arkts-avsession-mediacontrolextensioncontext.md)<!--DelEnd-->
     <!--Del-->
     - [MediaControlExtensionContext(system api)](arkts-avsession-mediacontrolextensioncontext-c-sys.md)<!--DelEnd-->

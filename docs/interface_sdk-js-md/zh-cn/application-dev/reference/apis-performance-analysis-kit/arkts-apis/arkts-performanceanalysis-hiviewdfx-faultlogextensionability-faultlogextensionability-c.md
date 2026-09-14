@@ -8,7 +8,7 @@
 
 开发者可在[onFaultReportReady](#onfaultreportready)中订阅并处理故障事件。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本模块接口从API version 21开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 > 

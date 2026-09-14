@@ -171,7 +171,7 @@ connect(url: string, callback: AsyncCallback<boolean>): void
 
 根据URL地址，建立一个WebSocket连接，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > callback中返回的boolean值仅表示连接请求创建是否成功。如需感知WebSocket是否连接成功，需要在调用该接口前调用
 > [on('open')](#onopen)订阅open事件。
@@ -232,7 +232,7 @@ connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<b
 
 根据URL地址，建立一个WebSocket连接，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > callback中返回的boolean值仅表示连接请求创建是否成功。如需感知WebSocket是否连接成功，需要在调用该接口前调用
 > [on('open')](#onopen)订阅open事件。
@@ -318,7 +318,7 @@ connect(url: string, options?: WebSocketRequestOptions): Promise<boolean>
 
 根据URL地址和header，建立一个WebSocket连接。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > callback中返回的boolean值仅表示连接请求创建是否成功。如需感知WebSocket是否连接成功，需要在调用该接口前调用
 > [on('open')](#onopen)订阅open事件。
@@ -383,7 +383,7 @@ off(type: 'open', callback?: AsyncCallback<Object>): void
 
 取消订阅WebSocket的打开事件，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
@@ -427,7 +427,7 @@ off(type: 'openInfo', callback?: AsyncCallback<WebSocketOpenInfo>): void
 
 取消订阅WebSocket的打开信息事件，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
@@ -471,7 +471,7 @@ off(type: 'message', callback?: AsyncCallback<string | ArrayBuffer>): void
 
 取消订阅WebSocket的接收服务器消息事件，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > AsyncCallback中的数据可以是字符串(API 6)或ArrayBuffer(API 8)。
 > 
@@ -507,7 +507,7 @@ off(type: 'close', callback?: AsyncCallback<CloseResult>): void
 
 取消订阅WebSocket的关闭事件，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
@@ -541,7 +541,7 @@ off(type: 'error', callback?: ErrorCallback): void
 
 取消订阅WebSocket的Error事件，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
@@ -575,7 +575,7 @@ off(type: 'dataEnd', callback?: Callback<void>): void
 
 取消订阅WebSocket的数据接收结束事件，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
@@ -607,7 +607,7 @@ off(type: 'headerReceive', callback?: Callback<ResponseHeaders>): void
 
 取消订阅HTTP Response Header事件，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
@@ -676,7 +676,7 @@ on(type: 'message', callback: AsyncCallback<string | ArrayBuffer>): void
 
 订阅WebSocket的接收服务器消息事件，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > AsyncCallback中的数据可以是字符串（API version 6开始支持）或ArrayBuffer（API version 8开始支持）。
 

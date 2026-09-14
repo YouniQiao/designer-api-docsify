@@ -8,7 +8,7 @@ SwipeRefresherV2组件用于内容加载，内容加载指获取内容并加载�
 
 设备行为差异：本接口实际支持的设备类型范围（Phone、PC/2in1、Tablet、TV）小于其所属系统能力支持的设备类型范围（Phone、PC/2in1、Tablet、TV、Wearable）。因硬件能力限制，该接口在Wearable设备中调用将运行异常，异常信息中提示接口未定义。
 
-> **说明：**
+> **说明：** 
 > 
 > - 如果SwipeRefresherV2设置[通用属性](../arkts-components/arkts-arkui-commonmethod-c.md)或[通用事件](../arkts-components/arkts-arkui-commonmethod-c.md)
 > 编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到SwipeRefresherV2本身。
@@ -43,7 +43,7 @@ import { SwipeRefresherV2 } from '@kit.ArkUI';
 content?: string
 ```
 
-内容加载时显示的文本。<br>默认值：空字符串。<br>**说明：**如果文本大于列宽时，文本被截断。
+内容加载时显示的文本。<br>默认值：空字符串。<br>**说明：** 如果文本大于列宽时，文本被截断。
 
 **类型：** string
 

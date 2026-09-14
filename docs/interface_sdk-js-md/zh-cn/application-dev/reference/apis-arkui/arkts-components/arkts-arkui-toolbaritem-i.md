@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## action
 
 ```TypeScript
@@ -53,7 +48,7 @@ activeSymbolIcon?: SymbolGlyphModifier
 
 工具栏单个选项处于ACTIVE态时的symbol资源（优先级高于activeIcon）。
 
-**说明：**
+**说明：** 
 
 不支持通过SymbolGlyphModifier对象的fontSize属性修改图标大小、effectStrategy属性修改动效、[symbolEffect](arkts-arkui-symbolglyph-comp-attribute.md#symboleffect)属性修改动效类型。
 
@@ -113,7 +108,7 @@ symbolIcon?: SymbolGlyphModifier
 
 工具栏单个选项的symbol资源（优先级高于icon）。
 
-**说明：**
+**说明：** 
 
 不支持通过SymbolGlyphModifier对象的fontSize属性修改图标大小、effectStrategy属性修改动效、[symbolEffect](arkts-arkui-symbolglyph-comp-attribute.md#symboleffect)属性修改动效类型。
 

@@ -2,7 +2,7 @@
 
 XmlDynamicSerializer类用于动态生成XML字符串。当无法确定XML内容长度时，推荐使用该类。
 
-> **说明：**
+> **说明：** 
 > 
 > 使用该类构造的对象无需自行创建ArrayBuffer，程序动态扩容，可以不断添加XML元素，最终序列化结果字符串长度上限为100000。
 
@@ -24,7 +24,7 @@ addEmptyElement(name: string): void
 
 写入一个空元素。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的元素名称。
 
@@ -100,7 +100,7 @@ endElement(): void
 
 写入元素结束标记。
 
-> **说明：**
+> **说明：** 
 > 
 > 调用该接口前必须先调用[startElement](arkts-arkts-xml-xmlserializer-c.md#startelement)接口写入元素开始标记。
 
@@ -175,7 +175,7 @@ setAttributes(name: string, value: string): void
 
 写入元素的属性和属性值。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的属性名称以及添加多个同名的属性名称。
 
@@ -223,7 +223,7 @@ setCdata(text: string): void
 
 提供在CDATA标签中添加数据的能力，所生成的CDATA标签结构为：`&lt;![CDATA[` + 所添加的数据 + `]]&gt;`。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许在CDATA标签中添加包含"\]\]\&gt;"字符串的数据。
 
@@ -381,7 +381,7 @@ setNamespace(prefix: string, namespace: string): void
 
 写入当前元素标记的命名空间。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口应在[startElement](#startelement)之前调用，为即将开启的元素设置命名空间前缀。调用顺序：
 > 先调用setNamespace设置命名空间，再调用startElement开启元素。
@@ -431,7 +431,7 @@ setText(text: string): void
 
 写入标签值。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口必须在[startElement](#startelement)之后、
 > [endElement](#endelement)之前调用，用于设置当前元素的文本内容。
@@ -479,7 +479,7 @@ startElement(name: string): void
 
 写入元素开始标记。
 
-> **说明：**
+> **说明：** 
 > 
 > - 调用该接口后须调用[endElement](arkts-arkts-xml-xmlserializer-c.md#endelement)写入元素结束标记，以确保节点正确闭合。
 > 

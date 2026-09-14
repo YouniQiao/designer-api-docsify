@@ -20,7 +20,7 @@ address: NetAddress
 
 代理地址信息。
 
-**类型：** NetAddress
+**类型：** [NetAddress](arkts-network-socket-p.md)
 
 **起始版本：** 18
 

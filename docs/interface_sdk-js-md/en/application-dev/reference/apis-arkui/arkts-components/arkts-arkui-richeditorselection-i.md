@@ -6,11 +6,6 @@ Defines information about the selected content.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## selection
 
 ```TypeScript

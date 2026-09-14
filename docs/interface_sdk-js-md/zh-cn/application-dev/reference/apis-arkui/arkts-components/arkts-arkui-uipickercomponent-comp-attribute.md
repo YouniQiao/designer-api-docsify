@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## canLoop
 
 ```TypeScript
@@ -115,7 +110,7 @@ onChange(callback: Optional<OnUIPickerComponentCallback>)
 
 滑动选择器选项时，若选中项发生变化，触发该事件。适用于需要在选中项变化时实时更新界面、加载对应数据或执行相关逻辑的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > - 如果某个选项有一半以上的区域进入选中项区域内，则该选项成为选中项。
 > 
@@ -144,7 +139,7 @@ onScrollStop(callback: Optional<OnUIPickerComponentCallback>)
 
 选择器滑动停止时，触发该事件。选择器滑动停止指某次行为触发的滑动动画完全结束。如果某次滑动动画还未结束时又触发了新的滑动动画，则不属于滑动停止。适用于需要在滑动结束后提交最终选择结果、停止加载动画或执行一次性回调的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > **onChange与onScrollStop的差异：**
 > 

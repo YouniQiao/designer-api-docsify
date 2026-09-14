@@ -20,7 +20,7 @@ static create(options: AnimatorOptions): AnimatorResult
 
 创建animator动画结果对象（AnimatorResult）。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [createAnimator](arkts-arkui-arkui-uicontext-uicontext-c.md#createanimator)来明确UI的执行上下文。
@@ -131,7 +131,7 @@ static createAnimator(options: AnimatorOptions): AnimatorResult
 
 创建动画。本模块功能依赖UI的执行上下文，不可在UI上下文不明确的地方使用，推荐通过使用UIContext中的createAnimator接口明确UI上下文。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
 > [createAnimator](arkts-arkui-arkui-uicontext-uicontext-c.md#createanimator)来明确UI的执行上下文。

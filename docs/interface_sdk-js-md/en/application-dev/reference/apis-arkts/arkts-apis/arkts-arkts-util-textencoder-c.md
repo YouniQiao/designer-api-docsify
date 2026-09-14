@@ -82,7 +82,7 @@ Creates a **TextEncoder** object.
 
 | Type | Description |
 | --- | --- |
-| [TextEncoder](arkts-arkts-util-textencoder-c.md) | TextEncoder** object. |
+| [TextEncoder](arkts-arkts-util-textencoder-c.md) | **TextEncoder** object. |
 
 **Examples**
 

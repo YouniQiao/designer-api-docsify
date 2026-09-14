@@ -6,11 +6,6 @@ Provides the feature information of the new window requested to be created by th
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## height
 
 ```TypeScript

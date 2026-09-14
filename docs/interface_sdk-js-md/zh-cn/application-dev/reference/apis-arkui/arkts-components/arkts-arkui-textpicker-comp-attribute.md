@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## canLoop
 
 ```TypeScript
@@ -187,7 +182,7 @@ disappearTextStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 边缘项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff182431', <br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular <br>} <br>} <br>**说明：**未调用该方法设置样式时，使用默认值。 |
+| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 边缘项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff182431', <br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular <br>} <br>} <br>**说明：** 未调用该方法设置样式时，使用默认值。 |
 
 ## disappearTextStyle
 
@@ -355,7 +350,7 @@ onAccept(callback: (value: string, index: number) => void)
 
 点击弹窗中的“确定”按钮时触发该回调。该事件仅在[文本滑动选择器弹窗中生效。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 10开始废弃。此接口已完全移除，无替代接口。
 
@@ -379,7 +374,7 @@ onCancel(callback: () => void)
 
 点击弹窗中的“取消”按钮时触发该回调。该事件仅在文本滑动选择器弹窗中生效。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 10开始废弃。此接口已完全移除，无替代接口。
 
@@ -449,7 +444,7 @@ onEnterSelectedArea(callback: TextPickerEnterSelectedAreaCallback)
 
 滑动TextPicker过程中，选项进入分割线区域内（当前列的滑动距离超过选中项高度的一半）时，触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 与
 > [onChange](#onchange)
@@ -492,7 +487,7 @@ onScrollStop(callback: TextPickerScrollStopCallback)
 
 手指拖动选项列触发的滑动，手指离开屏幕且滑动停止时会触发该事件。
 
-> **说明：**
+> **说明：** 
 > 
 > - 与[onEnterSelectedArea](#onenterselectedarea)事件的差别在于，onScrollStop关注的
 > 是滚动行为完全停止，onEnterSelectedArea关注的是选项进入选中区域的逻辑状态。onEnterSelectedArea能更早响应索引变化，
@@ -525,7 +520,7 @@ onScrollStop(callback: Optional<TextPickerScrollStopCallback>)
 
 手指拖动选项列触发的滑动，手指离开屏幕且滑动停止时会触发该事件。
 
-> **说明：**
+> **说明：** 
 > 
 > - 与[onEnterSelectedArea](#onenterselectedarea)事件的差别在于，onScrollStop关注的是滚动行为完全
 > 停止，onEnterSelectedArea关注的是选项进入选中区域的逻辑状态。onEnterSelectedArea能更早响应索引变化，适合实时反馈场景，建议使用
@@ -567,7 +562,7 @@ selectedBackgroundStyle(style: Optional<PickerBackgroundStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)&gt; | 是 | 选中项背景的颜色和边框圆角半径，多列模式时会同时设置所有列的选中项背景的颜色和圆角半径。<br>默认值：<br>{<br>color: \&#36;r('sys.color.comp_background_tertiary'), <br>borderRadius: \&#36;r('sys.float.corner_radius_level12') <br>} |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)&gt; | 是 | 选中项背景的颜色和边框圆角半径，多列模式时会同时设置所有列的选中项背景的颜色和圆角半径。<br>默认值：<br>{<br>color: &#36;r('sys.color.comp_background_tertiary'), <br>borderRadius: &#36;r('sys.float.corner_radius_level12') <br>} |
 
 ## selectedIndex
 
@@ -633,7 +628,7 @@ selectedTextStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 选中项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff007dff', <br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium <br>} <br>} <br>**说明：**未调用该方法设置样式时，使用默认值。 |
+| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 选中项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff007dff', <br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium <br>} <br>} <br>**说明：** 未调用该方法设置样式时，使用默认值。 |
 
 ## selectedTextStyle
 
@@ -699,7 +694,7 @@ textStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 待选项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} <br>**说明：**未调用该方法设置样式时，使用默认值。 |
+| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 待选项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} <br>**说明：** 未调用该方法设置样式时，使用默认值。 |
 
 ## textStyle
 

@@ -145,7 +145,7 @@ Checks whether this channel is a basic channel.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** if the channel is a basic channel; **false** otherwise. |
+| boolean | **true** if the channel is a basic channel; **false** otherwise. |
 
 **Error codes:**
 
@@ -186,7 +186,7 @@ Checks whether this channel is closed.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** if the channel is closed; **false** otherwise. |
+| boolean | **true** if the channel is closed; **false** otherwise. |
 
 **Error codes:**
 

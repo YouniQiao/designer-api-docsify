@@ -720,7 +720,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 
 <br>必须在对[Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md)实例使用[init](#init)或[initSync](#initsync)初始化后，才能使用本函数。
 
-> **说明：**
+> **说明：** 
 > 
 > 根据数据量，可以不调用update（即[init](#init)完成后直接调用
 > [sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md)）或多次调用update。
@@ -771,7 +771,7 @@ update(data: DataBlob): Promise<void>
 
 <br>在使用本函数前，必须先使用[init](#init)对[Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md)实例进行初始化。
 
-> **说明：**
+> **说明：** 
 > 
 > 根据数据量，可以不调用update（即[init](#init)
 > 完成后直接调用[sign](#sign-1)）
@@ -827,7 +827,7 @@ updateSync(data: DataBlob): void
 
 <br>必须在对[Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md)实例使用[initSync()](#initsync)初始化后，才能使用本函数。
 
-> **说明：**
+> **说明：** 
 > 
 > 根据数据量，可以不调用updateSync（即[initSync](#initsync)完成后直接调用
 > [signSync](#signsync)）或多次调用updateSync。

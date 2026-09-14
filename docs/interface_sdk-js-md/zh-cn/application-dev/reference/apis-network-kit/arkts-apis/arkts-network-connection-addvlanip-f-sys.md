@@ -14,7 +14,7 @@ function addVlanIp(ifName: string, vlanId: number, address: LinkAddress): Promis
 
 为以太网网卡上对应vlanId的虚拟局域网配置指定的IP地址及子网掩码。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本接口当前仅支持PC设备，其他设备类型上调用本接口返回错误码2100002。
 

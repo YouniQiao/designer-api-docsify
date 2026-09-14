@@ -22,7 +22,7 @@ static convertPoint(curveName: string, encodedPoint: Uint8Array): Point
 
 Converts the specified point data into a **Point** object based on the curve name (NID). Currently, compressed and uncompressed point data is supported.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > According to section 2.2 in RFC 5480:
 > 1. The uncompressed point data is represented as **0x04**|x coordinate|y coordinate.
@@ -47,7 +47,7 @@ Converts the specified point data into a **Point** object based on the curve nam
 
 | Type | Description |
 | --- | --- |
-| [Point](arkts-cryptoarchitecture-cryptoframework-point-i.md) | Point** object obtained. |
+| [Point](arkts-cryptoarchitecture-cryptoframework-point-i.md) | **Point** object obtained. |
 
 **Error codes:**
 
@@ -140,7 +140,7 @@ Obtains the point data in the specified format from a **Point** object. Currentl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | curveName | string | Yes | Elliptic curve name, that is, the NID. |
-| point | [Point](arkts-cryptoarchitecture-cryptoframework-point-i.md) | Yes | Point** object of the elliptic curve. |
+| point | [Point](arkts-cryptoarchitecture-cryptoframework-point-i.md) | Yes | **Point** object of the elliptic curve. |
 | format | string | Yes | Format of the point data to obtain. Currently, the value can be **COMPRESSED** or **UNCOMPRESSED** only. |
 
 **Return value:**

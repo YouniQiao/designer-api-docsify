@@ -14,7 +14,7 @@ function finishLogCollected(admin: Want): void
 
 删除本MDM应用在当前用户下收集到的设备日志。
 
-> **说明：**
+> **说明：** 
 > 
 > 在应用调用[startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md)开始收集日志后，收到
 > [EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected)

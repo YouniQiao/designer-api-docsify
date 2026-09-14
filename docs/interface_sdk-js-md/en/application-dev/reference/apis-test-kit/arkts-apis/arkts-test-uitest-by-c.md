@@ -51,13 +51,13 @@ Specifies the clickable attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Clickable status of the component. The value **true** indicates that the component is clickable, and **false** indicates the opposite. Default value: **true |
+| b | boolean | No | Clickable status of the component. The value **true** indicates that the component is clickable, and **false** indicates the opposite. Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object that matches the clickable attribute of the target component. |
+| [By](arkts-test-uitest-by-c.md) | **By** object that matches the clickable attribute of the target component. |
 
 **Examples**
 
@@ -90,13 +90,13 @@ Specifies the enabled attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Enabled status of the component. The value **true** indicates that the component is enabled, and **false** indicates the opposite. Default value: **true |
+| b | boolean | No | Enabled status of the component. The value **true** indicates that the component is enabled, and **false** indicates the opposite. Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object that matches the enabled attribute of the target component. |
+| [By](arkts-test-uitest-by-c.md) | **By** object that matches the enabled attribute of the target component. |
 
 **Examples**
 
@@ -129,13 +129,13 @@ Specifies the focused attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Focused status of the component. The value **true** indicates that the component is focused, and **false** indicates the opposite. Default value: **true |
+| b | boolean | No | Focused status of the component. The value **true** indicates that the component is focused, and **false** indicates the opposite. Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object that matches the focused attribute of the target component. |
+| [By](arkts-test-uitest-by-c.md) | **By** object that matches the focused attribute of the target component. |
 
 **Examples**
 
@@ -174,7 +174,7 @@ Specifies the ID attribute of the target component.
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object that matches the ID attribute of the target component. |
+| [By](arkts-test-uitest-by-c.md) | **By** object that matches the ID attribute of the target component. |
 
 **Examples**
 
@@ -213,7 +213,7 @@ Specifies that the target component is located after the given attribute compone
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object. |
+| [By](arkts-test-uitest-by-c.md) | **By** object. |
 
 **Examples**
 
@@ -253,7 +253,7 @@ Specifies that the target component is located before the given attribute compon
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object. |
+| [By](arkts-test-uitest-by-c.md) | **By** object. |
 
 **Examples**
 
@@ -293,7 +293,7 @@ Specifies the key attribute of the target component.
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object that matches the key attribute of the target component. |
+| [By](arkts-test-uitest-by-c.md) | **By** object that matches the key attribute of the target component. |
 
 **Examples**
 
@@ -326,13 +326,13 @@ Specifies the scrollable attribute of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Whether the specified component is scrollable. The value **true** indicates that the component is scrollable, and **false** indicates the opposite. Default value: **true |
+| b | boolean | No | Whether the specified component is scrollable. The value **true** indicates that the component is scrollable, and **false** indicates the opposite. Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object that matches the scrollable attribute of the target component. |
+| [By](arkts-test-uitest-by-c.md) | **By** object that matches the scrollable attribute of the target component. |
 
 **Examples**
 
@@ -365,13 +365,13 @@ Specifies the selected status of the target component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Selected status of the component. The value **true** indicates that the component is selected, and **false** indicates the opposite. Default value: **true |
+| b | boolean | No | Selected status of the component. The value **true** indicates that the component is selected, and **false** indicates the opposite. Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object that matches the selected attribute of the target component. |
+| [By](arkts-test-uitest-by-c.md) | **By** object that matches the selected attribute of the target component. |
 
 **Examples**
 
@@ -411,7 +411,7 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object that matches the text attribute of the target component. |
+| [By](arkts-test-uitest-by-c.md) | **By** object that matches the text attribute of the target component. |
 
 **Examples**
 
@@ -450,7 +450,7 @@ Specifies the type attribute of the target component.
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | By** object that matches the type attribute of the target component. |
+| [By](arkts-test-uitest-by-c.md) | **By** object that matches the type attribute of the target component. |
 
 **Examples**
 

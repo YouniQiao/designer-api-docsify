@@ -122,7 +122,7 @@ Checks whether the SE corresponding to this reader is available.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** if the SE is available; **false** otherwise. |
+| boolean | **true** if the SE is available; **false** otherwise. |
 
 **Error codes:**
 

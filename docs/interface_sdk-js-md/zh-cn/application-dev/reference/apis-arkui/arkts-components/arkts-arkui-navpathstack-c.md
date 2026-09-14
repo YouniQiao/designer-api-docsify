@@ -4,7 +4,7 @@ Navigation导航控制器，以栈的数据结构管理Navigation中所有的子
 
 从API version 12开始，NavPathStack允许被继承，派生类对象可以替代基类NavPathStack对象使用。使用示例参见[示例10](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#示例10定义导航控制器派生类)。
 
-> **说明：**
+> **说明：** 
 > 
 > 1.连续调用多个导航控制器操作方法时，中间过程会被忽略，显示最终的栈操作结果。
 
@@ -18,11 +18,6 @@ Navigation导航控制器，以栈的数据结构管理Navigation中所有的子
 **起始版本：** 10
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## clear
 
@@ -160,7 +155,7 @@ getParamByIndex(index: number): unknown | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| unknown &#124; undefined | unknown**: parameter information of the corresponding navigation destination page. **unknown** can represent a user-defined type.<br>**undefined**: an invalid index is provided. |
+| unknown &#124; undefined | **unknown**: parameter information of the corresponding navigation destination page. **unknown** can represent a user-defined type.<br>**undefined**: an invalid index is provided. |
 
 ## getParamByName
 
@@ -296,7 +291,7 @@ pop(animated?: boolean): NavPathInfo | undefined
 
 弹出路由栈栈顶元素。
 
-> **说明：**
+> **说明：** 
 > 
 > 连续调用多个导航控制器方法时，中间被pop的页面会被缓存，后续push同名页面时会优先复用该页面，不会走新的页面创建流程。
 
@@ -334,7 +329,7 @@ pop(animated?: boolean): NavPathInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavPathInfo](arkts-arkui-navpathinfo-c.md) &#124; undefined | NavPathInfo**: information about the navigation destination page at the top of the stack.<br>**undefined**: the routing stack is empty. |
+| [NavPathInfo](arkts-arkui-navpathinfo-c.md) &#124; undefined | **NavPathInfo**: information about the navigation destination page at the top of the stack.<br>**undefined**: the routing stack is empty. |
 
 ## pop
 
@@ -344,7 +339,7 @@ pop(result: Object, animated?: boolean): NavPathInfo | undefined
 
 弹出路由栈栈顶元素，并触发onPop回调传入页面处理结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 连续调用多个导航控制器方法时，中间被pop的页面会被缓存，后续push同名页面时会优先复用该页面，不会走新的页面创建流程。
 
@@ -383,7 +378,7 @@ pop(result: Object, animated?: boolean): NavPathInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavPathInfo](arkts-arkui-navpathinfo-c.md) &#124; undefined | NavPathInfo**: information about the navigation destination page at the top of the stack.<br>**undefined**: the routing stack is empty. |
+| [NavPathInfo](arkts-arkui-navpathinfo-c.md) &#124; undefined | **NavPathInfo**: information about the navigation destination page at the top of the stack.<br>**undefined**: the routing stack is empty. |
 
 ## popToIndex
 
@@ -963,7 +958,7 @@ setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void
 
 将当前路由栈中的路由页面信息数组更新为指定内容，并实现路由转场。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 开发者可以在原有栈的基础上批量添加或删除页面。批量入栈的页面中，只有可见的页面会触发创建，其他页面虽已入栈但不会立即创建，当这些页面变为可见时，才会触发创建。
 > 
@@ -985,7 +980,7 @@ setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pathStack | Array&lt;[NavPathInfo](arkts-arkui-navpathinfo-c.md)&gt; | 是 | 设置当前路由栈中的路由页面信息数组。设置后，将当前路由栈更新为指定内容，并实现路由转场。开发者可在原有栈的基础上批量添加或删除页面。<br>**说明：**<br>数组长度无限制。 |
+| pathStack | Array&lt;[NavPathInfo](arkts-arkui-navpathinfo-c.md)&gt; | 是 | 设置当前路由栈中的路由页面信息数组。设置后，将当前路由栈更新为指定内容，并实现路由转场。开发者可在原有栈的基础上批量添加或删除页面。<br>**说明：** <br>数组长度无限制。 |
 | animated | boolean | 否 | 是否开启转场动画。<br>true：开启转场动画；false：不开启转场动画。<br> 默认值：true |
 
 ## size

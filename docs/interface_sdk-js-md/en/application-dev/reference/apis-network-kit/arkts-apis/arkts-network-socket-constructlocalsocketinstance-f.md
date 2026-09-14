@@ -22,7 +22,7 @@ Creates a **LocalSocket** object.
 
 | Type | Description |
 | --- | --- |
-| [LocalSocket](arkts-network-socket-localsocket-i.md) | LocalSocket** object. |
+| [LocalSocket](arkts-network-socket-localsocket-i.md) | **LocalSocket** object. |
 
 **Examples**
 

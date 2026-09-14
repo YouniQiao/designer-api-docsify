@@ -6,11 +6,6 @@ Defines the options of the **XComponent**.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## controller
 
 ```TypeScript

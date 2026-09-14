@@ -14,7 +14,7 @@ export function createModuleContext(context: Context, bundleName: string, module
 
 根据入参Context创建相应模块的Context。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 18开始，Context支持获取当前应用的进程名
 > [processName](../../../reference/apis-ability-kit/js-apis-inner-application-context.md#context)。

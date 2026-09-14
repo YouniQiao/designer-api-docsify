@@ -1,7 +1,7 @@
 # SegmentButtonOptions
 
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The component does not support custom font type settings.
 
@@ -125,7 +125,7 @@ backgroundBorderRadius?: LengthMetrics
 
 Container border radius.
 
-**NOTE:**
+**NOTE:** 
 
 This attribute takes effect only when **borderRadiusMode** is set to **BorderRadiusMode.CUSTOM**.
 
@@ -133,7 +133,7 @@ For capsule-style multi-selection segmented buttons (with **type** being **"caps
 
 The maximum value for the border radius is half of the component's width or height, and percentage values are not supported.
 
-Default value: **\$r('sys.float.segmentbutton_container_shape')**
+Default value: **&#36;r('sys.float.segmentbutton_container_shape')**
 
 If the value is **undefined**, the default value is used.
 
@@ -155,7 +155,7 @@ backgroundColor: ResourceColor
 
 Background color of the component.
 
-If the value is **undefined**, the background color is \$r('sys.color.ohos_id_color_button_normal').
+If the value is **undefined**, the background color is &#36;r('sys.color.ohos_id_color_button_normal').
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -283,7 +283,7 @@ fontColor: ResourceColor
 
 Text color of the unselected button.
 
-If the value is **undefined**, the color is \$r('sys.color.ohos_id_color_text_secondary').
+If the value is **undefined**, the color is &#36;r('sys.color.ohos_id_color_text_secondary').
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -303,7 +303,7 @@ fontSize: DimensionNoPercentage
 
 Font size of the unselected button. The value cannot be set in percentage.
 
-If the value is **undefined**, the font size is \$r('sys.float.ohos_id_text_size_body2').
+If the value is **undefined**, the font size is &#36;r('sys.float.ohos_id_text_size_body2').
 
 **Type:** [DimensionNoPercentage](arkts-arkui-dimensionnopercentage-t.md)
 
@@ -347,7 +347,7 @@ When the value is **undefined**, the image size is { width: 24, height: 24 }.
 
 Unit: vp
 
-**NOTE:**
+**NOTE:** 
 
 The **imageSize** property takes effect only for icon-only and icon-with-text buttons.
 
@@ -369,7 +369,7 @@ itemBorderRadius?: LengthMetrics
 
 Individual button border radius.
 
-**NOTE:**
+**NOTE:** 
 
 This attribute takes effect only when **borderRadiusMode** is set to **BorderRadiusMode.CUSTOM**.
 
@@ -377,7 +377,7 @@ For capsule-style multi-selection segmented buttons (with **type** being **"caps
 
 The maximum value for the border radius is half of the component's width or height, and percentage values are not supported.
 
-Default value: **\$r('sys.float.segmentbutton_selected_background_shape')**
+Default value: **&#36;r('sys.float.segmentbutton_selected_background_shape')**
 
 If the value is **undefined**, the default value is used.
 
@@ -471,9 +471,9 @@ selectedBackgroundColor: ResourceColor
 
 Background color of the selected button.
 
-When the value is **undefined** and **type** is **"tab"**, the background color is **\$r('sys.color.segment_button_checked_foreground_color')**.
+When the value is **undefined** and **type** is **"tab"**, the background color is **&#36;r('sys.color.segment_button_checked_foreground_color')**.
 
-When **type** is **"capsule"**, the background color is **\$r('sys.color.ohos_id_color_emphasize')**.
+When **type** is **"capsule"**, the background color is **&#36;r('sys.color.ohos_id_color_emphasize')**.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -493,9 +493,9 @@ selectedFontColor: ResourceColor
 
 Text color of the selected button.
 
-If the value is **undefined**, the color is \$r('sys.color.ohos_id_color_text_primary') when type is set to **"tab"**.
+If the value is **undefined**, the color is &#36;r('sys.color.ohos_id_color_text_primary') when type is set to **"tab"**.
 
-When type is set to **"capsule"**, the color is \$r('sys.color.ohos_id_color_foreground_contrary').
+When type is set to **"capsule"**, the color is &#36;r('sys.color.ohos_id_color_foreground_contrary').
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -515,7 +515,7 @@ selectedFontSize: DimensionNoPercentage
 
 Font size of the selected button. The value cannot be set in percentage.
 
-If the value is **undefined**, the font size is \$r('sys.float.ohos_id_text_size_body2').
+If the value is **undefined**, the font size is &#36;r('sys.float.ohos_id_text_size_body2').
 
 **Type:** [DimensionNoPercentage](arkts-arkui-dimensionnopercentage-t.md)
 
@@ -577,7 +577,7 @@ type: "tab" | "capsule"
 
 Type of the **SegmentButton** component.
 
-**NOTE:**
+**NOTE:** 
 
 **"tab"**: tab-style segmented buttons, designed for page or content section switching.
 

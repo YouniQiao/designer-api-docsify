@@ -16,7 +16,7 @@ initSession操作密钥接口。使用callback异步回调。
 
 huks.initSession、huks.updateSession、huks.finishSession为三段式接口，需要一起使用。
 
-> **说明：**
+> **说明：** 
 > 
 > 初始化[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥会话需要ohos.permission.ACCESS_SE_KEY权限。
 
@@ -69,7 +69,7 @@ initSession操作密钥接口。使用Promise异步回调。
 
 huks.initSession、huks.updateSession、huks.finishSession为三段式接口，需要一起使用。
 
-> **说明：**
+> **说明：** 
 > 
 > 初始化[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥会话需要ohos.permission.ACCESS_SE_KEY权限。
 

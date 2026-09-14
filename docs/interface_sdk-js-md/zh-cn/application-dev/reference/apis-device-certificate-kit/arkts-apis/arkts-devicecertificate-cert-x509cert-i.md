@@ -637,7 +637,7 @@ getIssuerAltNames(): DataArray
 
 表示获取X.509证书颁发者可选名称。
 
-> **说明：**
+> **说明：** 
 > 
 > 获取到的X.509证书颁发者可选名称数据带字符串结束符。
 
@@ -726,7 +726,7 @@ getIssuerName(): DataBlob
 
 表示获取X.509证书颁发者名称。
 
-> **说明：**
+> **说明：** 
 > 
 > - 获取的X.509证书颁发者名称末尾包含一个NUL终止符（值为0），请根据业务需求决定是否去除该终止符。
 > - 获取的证书颁发者名称为ASCII编码，转换为字符串后，是以斜杠（/）开始，以斜杠（/）分隔相对可分辨名称的可分辨名称字符串。
@@ -1385,7 +1385,7 @@ getSerialNumber(): number
 
 表示获取X.509证书序列号。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 10开始废弃，建议使用
 > [X509Cert.getCertSerialNumber()](#getcertserialnumber)替代。
@@ -1774,7 +1774,7 @@ getSubjectAltNames(): DataArray
 
 表示获取X.509证书主体可选名称。
 
-> **说明：**
+> **说明：** 
 > 
 > 获取到的X.509证书主体可选名称数据带字符串结束符。
 
@@ -1865,7 +1865,7 @@ getSubjectName(encodingType?: EncodingType): DataBlob
 
 表示获取X.509证书主体名称。
 
-> **说明：**
+> **说明：** 
 > 
 > - 若不设置encodingType参数，获取的证书主体名称末尾包含一个NUL终止符（值为0），请根据业务需求决定是否去除该终止符。
 > - 若不设置encodingType参数，获取的证书主体名称为ASCII编码，转换为字符串后，是以斜杠（/）开始，以斜杠（/）分隔相对可分辨名称的

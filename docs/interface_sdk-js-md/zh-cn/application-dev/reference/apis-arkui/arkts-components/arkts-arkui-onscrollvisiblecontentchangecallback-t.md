@@ -10,7 +10,7 @@ API版本26.0.0开始，List从有子组件变成空的List时，上报的start�
 
 start和end的index同时返回0，代表List内只有一个子组件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 14开始，该接口支持在attributeModifier中调用。
 

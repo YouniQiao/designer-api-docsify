@@ -13,10 +13,6 @@ maximize(): Locale
 
 Gets the most likely values for the language, script, and region of the locale based on existing values.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## minimize
 
 ```TypeScript
@@ -25,10 +21,6 @@ minimize(): Locale
 
 Attempts to remove information about the locale that would be added by calling `Locale.maximize()`.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toString
 
 ```TypeScript
@@ -37,10 +29,6 @@ toString(): BCP47LanguageTag
 
 Returns the locale's full locale identifier string.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## baseName
 
 ```TypeScript

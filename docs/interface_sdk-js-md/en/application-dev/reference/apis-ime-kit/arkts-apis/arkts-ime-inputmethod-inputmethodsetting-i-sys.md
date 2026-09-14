@@ -18,7 +18,7 @@ import { inputMethod } from '@kit.IMEKit';
 enableInputMethod(bundleName: string, extensionName: string, enabledState: EnabledState): Promise<void>
 ```
 
-Enables or disables an input method. This API uses a promise to return the result. <br> <br>**Example** <br> <br>```ts <br>import { BusinessError } from '@kit.BasicServicesKit'; <br> <br>function enableInputMethodSafely() {<br> const currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod(); <br> if (!currentIme) {<br> console.error("Failed to get current input method"); <br> return; <br> } <br> <br> inputMethod.getSetting() <br> .enableInputMethod(currentIme.name, currentIme.id, inputMethod.EnabledState.BASIC_MODE) <br> .then(() =&gt; {<br> console.info('Succeeded in enable inputmethod.'); <br> }) <br> .catch((err: BusinessError) =&gt; {<br> console.error(`Failed to enableInputMethod. Code: \${err.code}, message: \${err.message}`); <br> }); <br>} <br> <br>enableInputMethodSafely(); <br>```
+Enables or disables an input method. This API uses a promise to return the result. <br> <br>**Example** <br> <br>```ts <br>import { BusinessError } from '@kit.BasicServicesKit'; <br> <br>function enableInputMethodSafely() {<br> const currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod(); <br> if (!currentIme) {<br> console.error("Failed to get current input method"); <br> return; <br> } <br> <br> inputMethod.getSetting() <br> .enableInputMethod(currentIme.name, currentIme.id, inputMethod.EnabledState.BASIC_MODE) <br> .then(() =&gt; {<br> console.info('Succeeded in enable inputmethod.'); <br> }) <br> .catch((err: BusinessError) =&gt; {<br> console.error(`Failed to enableInputMethod. Code: &#36;{err.code}, message: &#36;{err.message}`); <br> }); <br>} <br> <br>enableInputMethodSafely(); <br>```
 
 **Since:** 20
 
@@ -120,9 +120,9 @@ Change the enabled state of an input method of a specified user.
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | [12800018](../errorcode-inputmethod-framework.md#12800018-input-method-not-found) | input method is not found. |
 | [12800019](../errorcode-inputmethod-framework.md#12800019-unsupported-operation-by-default-input-method) | current operation cannot be applied to the preconfigured default input method. |
-| 12800023 | the specified user does not exist. |
-| 12800024 | the specified user is not in the foreground. |
-| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+| [12800023](../errorcode-inputmethod-framework.md#12800023-specified-user-not-exist) | the specified user does not exist. |
+| [12800024](../errorcode-inputmethod-framework.md#12800024-specified-user-not-in-the-foreground) | the specified user is not in the foreground. |
+| [12800025](../errorcode-inputmethod-framework.md#12800025-cross-user-operation-denied) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
 **Examples**
 
@@ -161,11 +161,11 @@ Get all input methods sync of a specified user.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-bundle-manager-service-exception) | bundle manager error. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
-| 12800023 | the specified user does not exist. |
-| 12800024 | the specified user is not in the foreground. |
-| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+| [12800023](../errorcode-inputmethod-framework.md#12800023-specified-user-not-exist) | the specified user does not exist. |
+| [12800024](../errorcode-inputmethod-framework.md#12800024-specified-user-not-in-the-foreground) | the specified user is not in the foreground. |
+| [12800025](../errorcode-inputmethod-framework.md#12800025-cross-user-operation-denied) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
 **Examples**
 
@@ -179,7 +179,7 @@ let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting
 getCursorInfo(userId?: number): CursorInfo
 ```
 
-Obtains the cursor information of a specified user. If the edit box does not notify the input method service of the cursor information, all attribute values returned are **0**. <br> <br>**Example** <br> <br>```ts <br>import { BusinessError } from '@kit.BasicServicesKit'; <br> <br>try {<br> let cursorInfo: inputMethod.CursorInfo = inputMethod.getSetting().getCursorInfo(); <br> console.info(`get cursorInfo success, left: \${cursorInfo.left}, top: \${cursorInfo.top}, width: \${cursorInfo.width}, height: \${cursorInfo.height}, displayId: \${cursorInfo.displayId}`); <br>} catch (err) {<br> let error = err as BusinessError; <br> console.error(`Failed to get cursorInfo. Code: \${error.code}, message: \${error.message}`); <br>} <br>```
+Obtains the cursor information of a specified user. If the edit box does not notify the input method service of the cursor information, all attribute values returned are **0**. <br> <br>**Example** <br> <br>```ts <br>import { BusinessError } from '@kit.BasicServicesKit'; <br> <br>try {<br> let cursorInfo: inputMethod.CursorInfo = inputMethod.getSetting().getCursorInfo(); <br> console.info(`get cursorInfo success, left: &#36;{cursorInfo.left}, top: &#36;{cursorInfo.top}, width: &#36;{cursorInfo.width}, height: &#36;{cursorInfo.height}, displayId: &#36;{cursorInfo.displayId}`); <br>} catch (err) {<br> let error = err as BusinessError; <br> console.error(`Failed to get cursorInfo. Code: &#36;{error.code}, message: &#36;{error.message}`); <br>} <br>```
 
 **Since:** 26.0.0
 
@@ -208,9 +208,9 @@ Obtains the cursor information of a specified user. If the edit box does not not
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1. No edit box is bound to the current input method application under the specified user. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible causes: a system error, such as null pointer, IPC exception. |
-| 12800023 | the specified user does not exist. |
-| 12800024 | the specified user is not in the foreground. |
-| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+| [12800023](../errorcode-inputmethod-framework.md#12800023-specified-user-not-exist) | the specified user does not exist. |
+| [12800024](../errorcode-inputmethod-framework.md#12800024-specified-user-not-in-the-foreground) | the specified user is not in the foreground. |
+| [12800025](../errorcode-inputmethod-framework.md#12800025-cross-user-operation-denied) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
 **Examples**
 
@@ -232,7 +232,7 @@ try {
 getDefaultInputMethodAbility(): InputMethodProperty
 ```
 
-Obtains the default input method capabilities. To optimize performance, the returned **InputMethodProperty** object ensures that only the `name` and `id` attributes that uniquely identify the input method capability are correct. Other attributes may be empty. <br> <br>**Example** <br> <br>```ts <br>try {<br> const defaultAbility: inputMethod.InputMethodProperty = inputMethod.getSetting().getDefaultInputMethodAbility(); <br> console.info('Succeeded in getting default input method ability, name: ' + defaultAbility.name + ', id: ' + defaultAbility.id); <br>} catch (err) {<br> console.error(`Failed to getDefaultInputMethodAbility. Code: \${err.code}, message: \${err.message}`); <br>} <br>```
+Obtains the default input method capabilities. To optimize performance, the returned **InputMethodProperty** object ensures that only the `name` and `id` attributes that uniquely identify the input method capability are correct. Other attributes may be empty. <br> <br>**Example** <br> <br>```ts <br>try {<br> const defaultAbility: inputMethod.InputMethodProperty = inputMethod.getSetting().getDefaultInputMethodAbility(); <br> console.info('Succeeded in getting default input method ability, name: ' + defaultAbility.name + ', id: ' + defaultAbility.id); <br>} catch (err) {<br> console.error(`Failed to getDefaultInputMethodAbility. Code: &#36;{err.code}, message: &#36;{err.message}`); <br>} <br>```
 
 **Since:** 26.0.0
 
@@ -300,11 +300,11 @@ List enabled or disabled input methods sync of a specified user.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-bundle-manager-service-exception) | bundle manager error. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
-| 12800023 | the specified user does not exist. |
-| 12800024 | the specified user is not in the foreground. |
-| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+| [12800023](../errorcode-inputmethod-framework.md#12800023-specified-user-not-exist) | the specified user does not exist. |
+| [12800024](../errorcode-inputmethod-framework.md#12800024-specified-user-not-in-the-foreground) | the specified user is not in the foreground. |
+| [12800025](../errorcode-inputmethod-framework.md#12800025-cross-user-operation-denied) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
 **Examples**
 
@@ -346,11 +346,11 @@ Get subtypes of a specified input method of a specified user.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-bundle-manager-service-exception) | bundle manager error. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
-| 12800023 | the specified user does not exist. |
-| 12800024 | the specified user is not in the foreground. |
-| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+| [12800023](../errorcode-inputmethod-framework.md#12800023-specified-user-not-exist) | the specified user does not exist. |
+| [12800024](../errorcode-inputmethod-framework.md#12800024-specified-user-not-in-the-foreground) | the specified user is not in the foreground. |
+| [12800025](../errorcode-inputmethod-framework.md#12800025-cross-user-operation-denied) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
 ## isPanelShown
 

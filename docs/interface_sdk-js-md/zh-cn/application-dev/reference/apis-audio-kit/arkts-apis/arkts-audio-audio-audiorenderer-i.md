@@ -380,7 +380,7 @@ getLatency(type: AudioLatencyType): number
 
 获取当前音频路由的预估时延。
 
-> **说明：**
+> **说明：** 
 > 
 > - 无线连接的音频设备，时延估算会存在误差，结果仅供参考。
 > 
@@ -623,7 +623,7 @@ getRenderRate(callback: AsyncCallback<AudioRendererRate>): void
 
 获取音频渲染速率。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 11开始废弃，建议使用[getSpeed](#getspeed)替代。
 
@@ -649,7 +649,7 @@ getRenderRate(): Promise<AudioRendererRate>
 
 获取音频渲染速率。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 11开始废弃，建议使用[getSpeed](#getspeed)替代。
 
@@ -675,7 +675,7 @@ getRenderRateSync(): AudioRendererRate
 
 获取音频渲染速率。同步返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 10开始支持，从API version 11开始废弃，建议使用[getSpeed](#getspeed)替代。
 
@@ -1192,7 +1192,7 @@ on(type: 'writeData', callback: AudioRendererWriteDataCallback): void
 
 监听音频数据写入回调事件（当需要写入音频数据时触发）。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 回调函数仅用来写入音频数据，请勿在回调函数中调用AudioRenderer相关接口。
 > 
@@ -1379,7 +1379,7 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 
 设置默认发声设备。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本接口仅适用于[StreamUsage](arkts-audio-audio-streamusage-e.md)为语音消息、VoIP语音通话或者VoIP视频通话的场景，支持听筒、扬声器和系统默认
 > 设备。
@@ -1419,7 +1419,7 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: num
 
 设置独立的音频会话策略和行为参数。
 
-> **说明：**
+> **说明：** 
 > 
 > 当音频渲染器在运行状态时调用此接口后，必须重新调用接口
 > [start](#start)使其生效。
@@ -1520,7 +1520,7 @@ setLoudnessGain(loudnessGain: number): Promise<void>
 
 设置播放响度。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 该接口仅支持类型为[STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md)、
 > [STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md)或
@@ -1592,7 +1592,7 @@ setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void
 
 设置音频渲染速率。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 11开始废弃，建议使用[setSpeed](#setspeed)替代。
 
@@ -1619,7 +1619,7 @@ setRenderRate(rate: AudioRendererRate): Promise<void>
 
 设置音频渲染速率。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 11开始废弃，建议使用[setSpeed](#setspeed)替代。
 
@@ -1835,7 +1835,7 @@ write(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 
 写入缓冲区。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 11开始废弃，建议使用[on('writeData')](#onwritedata)替代。
 
@@ -1862,7 +1862,7 @@ write(buffer: ArrayBuffer): Promise<number>
 
 写入缓冲区。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 11开始废弃，建议使用[on('writeData')](#onwritedata)替代。
 

@@ -19,10 +19,6 @@ Combines two or more arrays. This method returns a new array without modifying a
 | --- | --- | --- | --- |
 | items | ConcatArray&lt;T&gt;[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## concat
 
 ```TypeScript
@@ -37,10 +33,6 @@ Combines two or more arrays. This method returns a new array without modifying a
 | --- | --- | --- | --- |
 | items | (T &#124; ConcatArray&lt;T&gt;)[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## every
 
 ```TypeScript
@@ -58,10 +50,6 @@ Determines whether all the members of an array satisfy the specified test.
 | predicate | (value: T, index: number, array: T[]) =&gt; value is S | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## every
 
 ```TypeScript
@@ -79,10 +67,6 @@ Determines whether all the members of an array satisfy the specified test.
 | predicate | (value: T, index: number, array: T[]) =&gt; unknown | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## filter
 
 ```TypeScript
@@ -98,10 +82,6 @@ Returns the elements of an array that meet the condition specified in a callback
 | predicate | (value: T, index: number, array: T[]) =&gt; value is S | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## filter
 
 ```TypeScript
@@ -117,10 +97,6 @@ Returns the elements of an array that meet the condition specified in a callback
 | predicate | (value: T, index: number, array: T[]) =&gt; unknown | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## forEach
 
 ```TypeScript
@@ -151,10 +127,6 @@ Returns the index of the first occurrence of a value in an array, or -1 if it is
 | searchElement | T | Yes |  |
 | fromIndex | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## join
 
 ```TypeScript
@@ -169,10 +141,6 @@ Adds all the elements of an array into a string, separated by the specified sepa
 | --- | --- | --- | --- |
 | separator | string | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## lastIndexOf
 
 ```TypeScript
@@ -188,10 +156,6 @@ Returns the index of the last occurrence of a specified value in an array, or -1
 | searchElement | T | Yes |  |
 | fromIndex | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## map
 
 ```TypeScript
@@ -207,10 +171,6 @@ Calls a defined callback function on each element of an array, and returns an ar
 | callbackfn | (value: T, index: number, array: T[]) =&gt; U | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## pop
 
 ```TypeScript
@@ -219,10 +179,6 @@ pop(): T | undefined
 
 Removes the last element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## push
 
 ```TypeScript
@@ -237,10 +193,6 @@ Appends new elements to the end of an array, and returns the new length of the a
 | --- | --- | --- | --- |
 | items | T[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduce
 
 ```TypeScript
@@ -255,10 +207,6 @@ Calls the specified callback function for all the elements in an array. The retu
 | --- | --- | --- | --- |
 | callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: T[]) =&gt; T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduce
 
 ```TypeScript
@@ -272,10 +220,6 @@ reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, arr
 | callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: T[]) =&gt; T | Yes |  |
 | initialValue | T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduce
 
 ```TypeScript
@@ -291,10 +235,6 @@ Calls the specified callback function for all the elements in an array. The retu
 | callbackfn | (previousValue: U, currentValue: T, currentIndex: number, array: T[]) =&gt; U | Yes |  |
 | initialValue | U | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduceRight
 
 ```TypeScript
@@ -309,10 +249,6 @@ Calls the specified callback function for all the elements in an array, in desce
 | --- | --- | --- | --- |
 | callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: T[]) =&gt; T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduceRight
 
 ```TypeScript
@@ -326,10 +262,6 @@ reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number
 | callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: T[]) =&gt; T | Yes |  |
 | initialValue | T | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reduceRight
 
 ```TypeScript
@@ -345,10 +277,6 @@ Calls the specified callback function for all the elements in an array, in desce
 | callbackfn | (previousValue: U, currentValue: T, currentIndex: number, array: T[]) =&gt; U | Yes |  |
 | initialValue | U | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## reverse
 
 ```TypeScript
@@ -357,10 +285,6 @@ reverse(): T[]
 
 Reverses the elements in an array in place. This method mutates the array and returns a reference to the same array.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## shift
 
 ```TypeScript
@@ -369,10 +293,6 @@ shift(): T | undefined
 
 Removes the first element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## slice
 
 ```TypeScript
@@ -388,10 +308,6 @@ Returns a copy of a section of an array. For both start and end, a negative inde
 | start | number | No |  |
 | end | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## some
 
 ```TypeScript
@@ -407,10 +323,6 @@ Determines whether the specified callback function returns true for any element 
 | predicate | (value: T, index: number, array: T[]) =&gt; unknown | Yes |  |
 | thisArg | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## sort
 
 ```TypeScript
@@ -425,10 +337,6 @@ Sorts an array in place. This method mutates the array and returns a reference t
 | --- | --- | --- | --- |
 | compareFn | (a: T, b: T) =&gt; number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## splice
 
 ```TypeScript
@@ -448,6 +356,8 @@ Removes elements from an array and, if necessary, inserts new elements in their 
 
 | Type | Description |
 | --- | --- |
+| T[] | An array containing the elements that were deleted. |
+
 ## splice
 
 ```TypeScript
@@ -468,6 +378,8 @@ Removes elements from an array and, if necessary, inserts new elements in their 
 
 | Type | Description |
 | --- | --- |
+| T[] | An array containing the elements that were deleted. |
+
 ## toLocaleString
 
 ```TypeScript
@@ -476,10 +388,6 @@ toLocaleString(): string
 
 Returns a string representation of an array. The elements are converted to string using their toLocaleString methods.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## toString
 
 ```TypeScript
@@ -488,10 +396,6 @@ toString(): string
 
 Returns a string representation of an array.
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## unshift
 
 ```TypeScript
@@ -506,10 +410,6 @@ Inserts new elements at the start of an array, and returns the new length of the
 | --- | --- | --- | --- |
 | items | T[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [n: number]
 
 ```TypeScript

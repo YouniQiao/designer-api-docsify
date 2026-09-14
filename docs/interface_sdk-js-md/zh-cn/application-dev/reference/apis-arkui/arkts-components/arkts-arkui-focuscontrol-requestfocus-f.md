@@ -1,10 +1,5 @@
 # requestFocus
 
-## 导入模块
-
-```TypeScript
-```
-
 ## requestFocus
 
 ```TypeScript

@@ -8,11 +8,6 @@ Gesture recognizer object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## getDirection
 
 ```TypeScript
@@ -65,7 +60,7 @@ getDistanceMap(): Map<SourceTool, number>
 
 Obtains the minimum pan distances required for different input sources to trigger this pan gesture recognizer.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API only returns thresholds for input sources that have been explicitly configured during pan gesture
 > initialization. The default threshold can be queried using the [SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md).Unknown type.

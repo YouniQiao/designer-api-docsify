@@ -2,7 +2,7 @@
 
 录音策略管理，提供协同录音和录音控制能力。在使用AudioRecordingManager的接口之前，需先通过[getRecordingManager](arkts-audio-audio-audiomanager-i-sys.md#getrecordingmanager)获取AudioRecordingManager实例。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本模块首批接口从API版本26.0.0开始支持。
 > 

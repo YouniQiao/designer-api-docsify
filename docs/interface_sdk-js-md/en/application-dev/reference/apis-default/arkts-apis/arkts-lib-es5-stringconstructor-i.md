@@ -17,10 +17,6 @@
 | --- | --- | --- | --- |
 | value | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -33,10 +29,6 @@ new(value?: any): String
 | --- | --- | --- | --- |
 | value | any | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## fromCharCode
 
 ```TypeScript
@@ -49,10 +41,6 @@ fromCharCode(...codes: number[]): string
 | --- | --- | --- | --- |
 | codes | number[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## prototype
 
 ```TypeScript

@@ -17,10 +17,6 @@
 | --- | --- | --- | --- |
 | arrayLength | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Call]]
 
 ```TypeScript
@@ -33,10 +29,6 @@
 | --- | --- | --- | --- |
 | arrayLength | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Call]]
 
 ```TypeScript
@@ -49,10 +41,6 @@
 | --- | --- | --- | --- |
 | items | T[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -65,10 +53,6 @@ new(arrayLength?: number): any[]
 | --- | --- | --- | --- |
 | arrayLength | number | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -81,10 +65,6 @@ new <T>(arrayLength: number): T[]
 | --- | --- | --- | --- |
 | arrayLength | number | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -97,10 +77,6 @@ new <T>(...items: T[]): T[]
 | --- | --- | --- | --- |
 | items | T[] | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## isArray
 
 ```TypeScript
@@ -113,10 +89,6 @@ isArray(arg: any): arg is any[]
 | --- | --- | --- | --- |
 | arg | any | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## prototype
 
 ```TypeScript

@@ -18,11 +18,6 @@ API version 20及以后，仅配置部分断点下GridRow组件的栅格列数�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## lg
 
 ```TypeScript

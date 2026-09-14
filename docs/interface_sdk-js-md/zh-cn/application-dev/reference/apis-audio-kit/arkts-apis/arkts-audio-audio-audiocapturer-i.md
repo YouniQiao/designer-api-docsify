@@ -430,7 +430,7 @@ getSupportedNoiseReductionModes(): Array<NoiseReductionMode>
 
 获取当前设备支持的录音降噪模式。
 
-> **说明：**
+> **说明：** 
 > 
 > - 当前仅使用[SourceType.SOURCE_TYPE_VOICE_MESSAGE](arkts-audio-audio-sourcetype-e.md)创建的录音流会根据设备平台查询支持的降
 > 噪模式，其他录音流默认仅返回[NoiseReductionMode.FIDELITY](arkts-audio-audio-noisereductionmode-e.md)。
@@ -792,7 +792,7 @@ read(size: number, isBlockingRead: boolean, callback: AsyncCallback<ArrayBuffer>
 
 读入缓冲区。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 11开始废弃，建议使用[on('readData')](#onreaddata)替代。
 
@@ -820,7 +820,7 @@ read(size: number, isBlockingRead: boolean): Promise<ArrayBuffer>
 
 读入缓冲区。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 11开始废弃，建议使用[on('readData')](#onreaddata)替代。
 
@@ -909,7 +909,7 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: num
 
 设置独立的音频会话策略和行为参数。
 
-> **说明：**
+> **说明：** 
 > 
 > 当音频采集器在运行状态时调用此接口后，必须重新调用接口
 > [start](#start)使其生效。
@@ -942,7 +942,7 @@ setMuteHint(mute: boolean): Promise<void>
 
 应用将当前录音流的自身静音状态传递给系统音频模块。<!--RP1-->该接口不会触发录音流静音，当前仅在部分PC/2in1设备上用于优化设备功耗。<!--RP1End-->使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 该接口用于向系统音频模块上报应用自身的静音状态，不会改变录音流的实际静音状态。
 > 
@@ -984,7 +984,7 @@ setNoiseReductionMode(noiseReductionMode: NoiseReductionMode): void
 
 设置当前录音流的降噪模式。建议先调用[getSupportedNoiseReductionModes](#getsupportednoisereductionmodes)获取当前录音流支持的降噪模式后，再通过本接口进行设置。
 
-> **说明：**
+> **说明：** 
 > 
 > - 当前仅支持使用[SourceType.SOURCE_TYPE_VOICE_MESSAGE](arkts-audio-audio-sourcetype-e.md)创建的录音流进行降噪模式设置，其他
 > 录音流默认仅支持[NoiseReductionMode.FIDELITY](arkts-audio-audio-noisereductionmode-e.md)。

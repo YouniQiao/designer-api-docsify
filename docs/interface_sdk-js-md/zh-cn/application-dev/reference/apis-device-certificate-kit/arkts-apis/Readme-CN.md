@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-devicecertificatekit-->
 
-- [@ohos.security.cert(证书算法库框架)](arkts-security-cert.md)
+- [@ohos.security.cert(证书算法库框架)](arkts-devicecertificate-security-cert.md)
   - [buildX509CertChain](arkts-devicecertificate-cert-buildx509certchain-f.md)
   - [createCertChainValidator](arkts-devicecertificate-cert-createcertchainvalidator-f.md)
   - [createCertCRLCollection](arkts-devicecertificate-cert-createcertcrlcollection-f.md)
@@ -81,7 +81,7 @@
   - [Pkcs12MacDigestAlgorithm](arkts-devicecertificate-cert-pkcs12macdigestalgorithm-e.md)
   - [RevocationCheckOptions](arkts-devicecertificate-cert-revocationcheckoptions-e.md)
   - [ValidationPolicyType](arkts-devicecertificate-cert-validationpolicytype-e.md)
-- [@ohos.security.certManager](arkts-security-certmanager.md)
+- [@ohos.security.certManager](arkts-devicecertificate-security-certmanager.md)
   - [abort](arkts-devicecertificate-certificatemanager-abort-f.md)
   - [finish](arkts-devicecertificate-certificatemanager-finish-f.md)
   <!--Del-->
@@ -157,7 +157,7 @@
   - [CmKeyDigest](arkts-devicecertificate-certificatemanager-cmkeydigest-e.md)
   - [CmKeyPadding](arkts-devicecertificate-certificatemanager-cmkeypadding-e.md)
   - [CmKeyPurpose](arkts-devicecertificate-certificatemanager-cmkeypurpose-e.md)
-- [@ohos.security.certManagerDialog](arkts-security-certmanagerdialog.md)
+- [@ohos.security.certManagerDialog](arkts-devicecertificate-security-certmanagerdialog.md)
   - [openAuthorizeDialog](arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md)
   - [openCertificateDetailDialog](arkts-devicecertificate-certificatemanagerdialog-opencertificatedetaildialog-f.md)
   - [openCertificateManagerDialog](arkts-devicecertificate-certificatemanagerdialog-opencertificatemanagerdialog-f.md)

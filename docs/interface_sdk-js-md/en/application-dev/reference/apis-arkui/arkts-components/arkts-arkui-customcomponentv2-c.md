@@ -8,11 +8,6 @@ Custom ComponentV2
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## aboutToReuse
 
 ```TypeScript

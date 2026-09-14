@@ -2,7 +2,7 @@
 
 用于触发捏合手势，最少需要2指，最多5指，最小识别距离为5vp。在支持鼠标和键盘输入的设备上，通过“Ctrl+鼠标滚轮”也可以触发捏合手势。
 
-> **说明：**
+> **说明：** 
 > 
 > 捏合手势触发成功后，抬起手指直至不再满足触发条件。再次满足条件时，可重新触发捏合手势。
 
@@ -11,11 +11,6 @@
 **起始版本：** 7
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## [[Call]]
 
@@ -41,6 +36,8 @@
 
 | 类型 | 说明 |
 | --- | --- |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
+
 ## [[Call]]
 
 ```TypeScript
@@ -67,6 +64,8 @@
 
 | 类型 | 说明 |
 | --- | --- |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
+
 ## onActionCancel
 
 ```TypeScript
@@ -91,6 +90,8 @@ Pinch手势识别成功，接收到触摸取消事件触发的回调，不返回
 
 | 类型 | 说明 |
 | --- | --- |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
+
 ## onActionCancel
 
 ```TypeScript
@@ -117,6 +118,8 @@ Pinch手势识别成功并接收到触摸取消事件的回调。与[onActionCan
 
 | 类型 | 说明 |
 | --- | --- |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
+
 ## onActionEnd
 
 ```TypeScript
@@ -141,6 +144,8 @@ Pinch手势识别成功，当抬起最后一根满足手势触发条件的手指
 
 | 类型 | 说明 |
 | --- | --- |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
+
 ## onActionStart
 
 ```TypeScript
@@ -165,6 +170,8 @@ Pinch手势识别成功后触发回调。
 
 | 类型 | 说明 |
 | --- | --- |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
+
 ## onActionUpdate
 
 ```TypeScript
@@ -189,3 +196,4 @@ Pinch手势移动过程中回调。
 
 | 类型 | 说明 |
 | --- | --- |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |

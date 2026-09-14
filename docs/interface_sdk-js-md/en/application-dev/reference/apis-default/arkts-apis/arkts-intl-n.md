@@ -20,3 +20,11 @@
 | [DateTimeFormatOptions](arkts-intl-datetimeformatoptions-i.md) |  |
 | [ResolvedDateTimeFormatOptions](arkts-intl-resolveddatetimeformatoptions-i.md) |  |
 | [DateTimeFormat](arkts-intl-datetimeformat-i.md) |  |
+
+### Properties
+
+| Name | Description |
+| --- | --- |
+| [Collator](arkts-intl-p.md) |  |
+| [NumberFormat](arkts-intl-p.md) |  |
+| [DateTimeFormat](arkts-intl-p.md) |  |

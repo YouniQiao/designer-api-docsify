@@ -11,8 +11,3 @@ Defines the MutableBuilder class.
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```

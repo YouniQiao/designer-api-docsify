@@ -15,7 +15,7 @@ function connectAgentExtensionAbility(want: Want, agentId: string,
 
 将当前调用方组件连接到[AgentExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-agent-agentExtensionAbility.md)。通过返回的[AgentProxy](../../../reference/apis-ability-kit/js-apis-inner-application-agentProxy-sys.md)与[AgentExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-agent-agentExtensionAbility.md)进行通信，以使用AgentExtensionAbility对外提供的能力。
 
-> **说明：**
+> **说明：** 
 > 
 > - 当目标Agent的AgentCard为
 > [LOW_CODE](../../../reference/apis-ability-kit/js-apis-app-agent-agentConstant-sys.md#agentconstantagentcardtype)

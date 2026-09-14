@@ -2,7 +2,7 @@
 
 Defines the prefix and suffix icon options.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The animation type cannot be modified via
 > [SymbolEffect](../arkts-components/arkts-arkui-symbolglyph-comp-attribute.md#symboleffect) and
@@ -30,7 +30,7 @@ Default value: The prefix or suffix icon is not displayed.
 
 If the value is **undefined**, the default value is used.
 
-**Type:** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
+**Type:** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ Default value: The prefix or suffix icon is not displayed.
 
 If the value is **undefined**, the default value is used.
 
-**Type:** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
+**Type:** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
 **Since:** 12
 

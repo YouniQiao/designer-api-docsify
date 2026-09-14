@@ -240,7 +240,7 @@ extraData?: string | Object | ArrayBuffer
 
 Additional data for sending a request. This parameter is not used by default. Since API version 26, you are advised to use the **body** and **queryParams** parameters preferentially.
 
-**Note:** Do not add this parameter if no extra data is available. If this parameter must be added, set it to **undefined** or **null**. Do not pass the parameter as "".
+**Note:**  Do not add this parameter if no extra data is available. If this parameter must be added, set it to **undefined** or **null**. Do not pass the parameter as "".
 
 - If the HTTP request uses a POST, PUT, or DELETE method, this field serves as the content of the HTTP request  
 and is encoded in UTF-8 format.

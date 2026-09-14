@@ -8,11 +8,6 @@ Implements a long press gesture recognizer. Inherits from [GestureRecognizer](ar
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## getAllowableMovement
 
 ```TypeScript

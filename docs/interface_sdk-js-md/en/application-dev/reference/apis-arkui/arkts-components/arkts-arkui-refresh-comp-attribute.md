@@ -10,11 +10,6 @@ In addition to the universal events, the following events are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## maxPullDownDistance
 
 ```TypeScript
@@ -69,7 +64,7 @@ onOffsetChange(callback: Callback<number>)
 
 Called when the pull-down distance changes.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 20.
 
@@ -169,7 +164,7 @@ Sets whether to initiate a refresh when the pull-down distance exceeds the value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to initiate a refresh when the pull-down distance exceeds the value of [refreshOffset](#refreshoffset). The value **true** means to initiate a refresh, and **false** means the opposite.<br>Default value: **true |
+| value | boolean | Yes | Whether to initiate a refresh when the pull-down distance exceeds the value of [refreshOffset](#refreshoffset). The value **true** means to initiate a refresh, and **false** means the opposite.<br>Default value: **true** |
 
 ## pullUpToCancelRefresh
 

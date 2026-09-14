@@ -14,7 +14,7 @@ function startArkChildProcess(srcEntry: string, args: ChildProcessArgs, options?
 
 启动[ArkTS子进程](../../../application-models/ability-terminology.md#arkts子进程)。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 调用该接口创建的子进程不会继承父进程资源，子进程创建成功会返回子进程pid，然后执行子进程的
 > [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart)函数。

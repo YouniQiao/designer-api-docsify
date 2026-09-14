@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-imagekit-->
 
-- [@ohos.multimedia.image](arkts-multimedia-image.md)
+- [@ohos.multimedia.image](arkts-image-multimedia-image.md)
   - [createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md)
   - [createAuxiliaryPictureUsingAllocator](arkts-image-image-createauxiliarypictureusingallocator-f.md)
   - [createEmptyPixelMap](arkts-image-image-createemptypixelmap-f.md)
@@ -127,7 +127,7 @@
   - [XmageColorMode](arkts-image-image-xmagecolormode-e.md)
   - [XMPTagType](arkts-image-image-xmptagtype-e.md)
   - [常量](arkts-image-image-con.md)
-- [@ohos.multimedia.sendableImage](arkts-multimedia-sendableimage.md)
+- [@ohos.multimedia.sendableImage](arkts-image-multimedia-sendableimage.md)
   - [convertFromPixelMap](arkts-image-sendableimage-convertfrompixelmap-f.md)
   - [convertToPixelMap](arkts-image-sendableimage-converttopixelmap-f.md)
   - [createImageReceiver](arkts-image-sendableimage-createimagereceiver-f.md)
@@ -143,7 +143,7 @@
   - [Region](arkts-image-sendableimage-region-i.md)
   - [Size](arkts-image-sendableimage-size-i.md)
   - [ISendable](arkts-image-sendableimage-isendable-t.md)
-- [@ohos.multimedia.videoProcessingEngine(提供图像画质处理能力。)](arkts-multimedia-videoprocessingengine.md)
+- [@ohos.multimedia.videoProcessingEngine(提供图像画质处理能力。)](arkts-image-multimedia-videoprocessingengine.md)
   - [create](arkts-image-videoprocessingengine-create-f.md)
   - [deinitializeEnvironment](arkts-image-videoprocessingengine-deinitializeenvironment-f.md)
   - [initializeEnvironment](arkts-image-videoprocessingengine-initializeenvironment-f.md)

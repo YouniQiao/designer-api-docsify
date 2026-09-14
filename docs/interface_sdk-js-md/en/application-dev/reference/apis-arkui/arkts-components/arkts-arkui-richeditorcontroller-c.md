@@ -2,7 +2,7 @@
 
 Implements the **RichEditor** component controller. Inherits from [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When the content length exceeds the height of the component's display area, the insertion APIs (such as
 > [addTextSpan](#addtextspan), [addImageSpan](#addimagespan),
@@ -22,11 +22,6 @@ controller: RichEditorController = new RichEditorController();
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## addBuilderSpan
 
 ```TypeScript
@@ -35,7 +30,7 @@ addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): nu
 
 Adds a custom layout (**BuilderSpan**) to **RichEditor**.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When a placeholder span is added to the **RichEditor** component, the placeholder span calls the system
 > **measure** method to calculate its actual width, height, and position.
@@ -159,7 +154,7 @@ addRichEditorBuilderSpan(value: RichEditorBuilderSpan, info?: BuilderSpanInfo): 
 
 Adds a custom layout (BuilderSpan) in **RichEditor**, providing identity recognition and lifecycle awareness capabilities.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The [onAttach](arkts-arkui-richeditorbuilderspan-i.md#onattach) and
 > [onDetach](arkts-arkui-richeditorbuilderspan-i.md#ondetach) callbacks in the BuilderSpan object receive a
@@ -344,7 +339,7 @@ getRichEditorBuilderSpans(value?: RichEditorRange): Array<BuilderSpanInfo>
 
 Obtains the identity and position information of BuilderSpans within the specified range.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - This interface is not supported when the **RichEditor** component is constructed with
 > [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md).

@@ -15,7 +15,7 @@ function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
 
 Obtains an anonymous key certificate in offline mode for a specified user. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Offline key attestation depends on the network. You need to periodically connect to the network to use this API
 > to update the offline certificate.
@@ -51,9 +51,9 @@ Obtains an anonymous key certificate in offline mode for a specified user. This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The app does not have sufficient permissions. Possible causes: The cross-account permission is not granted, the system is not unlocked by the user, or the user does not exist. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed: call the anonAttestKeyItemOfflineAsUser API, missing Permission: ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS, or the system is not unlocked by the user, or the user does not exist. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system apps use system APIs. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | The API is not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability. 2. The chip does not support the capability. 3. A dependent service feature is not supported. |
 | [12000001](../errorcode-huks.md#12000001-feature-not-supported) | The function is not supported. Possible causes: 1. The algorithm mode is not supported. 2. The group key is not supported. 3. The extended encryption key is not supported. |
 | [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | The algorithm parameter is missing. |
 | [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | The algorithm parameter is invalid. |

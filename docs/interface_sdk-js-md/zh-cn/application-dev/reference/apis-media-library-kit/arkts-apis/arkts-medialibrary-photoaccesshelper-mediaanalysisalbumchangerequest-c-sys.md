@@ -80,7 +80,7 @@ static createAnalysisAlbumRequest(
 
 创建智慧相册的变更请求。
 
-> **说明：**
+> **说明：** 
 > 
 > 相册名的参数规格如下：
 > 

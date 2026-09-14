@@ -482,7 +482,7 @@ Checks whether the cursor is in the last row of the result set.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** is returned if the cursor is in the last row of the result set; **false** otherwise. |
+| boolean | **true** is returned if the cursor is in the last row of the result set; **false** otherwise. |
 
 **Error codes:**
 

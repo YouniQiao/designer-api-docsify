@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## total
 
 ```TypeScript
@@ -23,7 +18,7 @@ total: number
 
 取值范围：(0, +∞)
 
-**说明：**
+**说明：** 
 
 total小于等于0时，按照100处理。
 

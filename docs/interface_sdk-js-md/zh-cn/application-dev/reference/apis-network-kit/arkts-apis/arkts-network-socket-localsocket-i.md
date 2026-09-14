@@ -20,7 +20,7 @@ bind(address: LocalAddress): Promise<void>
 
 绑定本地套接字文件的路径。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > bind方法可以使客户端确保有个明确的本地套接字路径，显式的绑定一个本地套接字文件。
 > 
@@ -120,7 +120,7 @@ connect(options: LocalConnectOptions): Promise<void>
 
 连接到指定的套接字文件。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 在没有执行localsocket.bind的情况下，也可以直接调用该接口完成与LocalSocket服务端的连接。
 
@@ -185,7 +185,7 @@ getExtraOptions(): Promise<ExtraOptionsBase>
 
 获取LocalSocket的套接字属性。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > bind或connect方法调用成功后，才可调用此方法。
 
@@ -245,7 +245,7 @@ getLocalAddress(): Promise<string>
 
 获取LocalSocket的本地Socket地址。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > bind方法调用成功后，才可调用此方法。
 
@@ -304,7 +304,7 @@ getSocketFd(): Promise<number>
 
 获取LocalSocket的文件描述符。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - bind或connect方法调用成功后，才可调用此方法。
 > 
@@ -362,7 +362,7 @@ getState(): Promise<SocketStateBase>
 
 获取LocalSocket状态。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > bind或connect方法调用成功后，才可调用此方法。
 
@@ -732,7 +732,7 @@ send(options: LocalSendOptions): Promise<void>
 
 通过LocalSocket连接发送数据。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > connect方法调用成功后，才可调用此方法。
 
@@ -802,7 +802,7 @@ setExtraOptions(options: ExtraOptionsBase): Promise<void>
 
 设置LocalSocket的套接字属性。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > bind或connect方法调用成功后，才可调用此方法。
 

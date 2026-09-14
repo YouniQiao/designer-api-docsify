@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## autoCapitalizationMode
 
 ```TypeScript
@@ -67,7 +62,7 @@ caretStyle(value: CaretStyle)
 
 设置光标样式。未通过该接口设置时，默认光标宽度为2.0vp，颜色为'#007DFF'（蓝色）。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，此接口支持设置文本手柄颜色，光标和文本手柄颜色保持一致。
 
@@ -93,7 +88,7 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 设置是否开启行首标点符号压缩。开启后，行首标点符号左侧的间距将被压缩，适用于追求排版美观的中文、日文等CJK文本场景。
 
-> **说明：**
+> **说明：** 
 > 
 > - 行首标点符号默认不压缩。
 > 
@@ -161,7 +156,7 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: Ke
 
 从API version 23开始，自定义键盘可以通过[setCustomKeyboardContinueFeature](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)开启接续，在切换至其他自定义键盘时，会直接切换，不会触发键盘关闭和拉起动画。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在attributeModifier中调用。
 
@@ -190,7 +185,7 @@ decoration(value: TextDecorationOptions)
 
 设置文本装饰线类型样式及其颜色。未通过该接口设置时，默认装饰线类型为TextDecorationType.None（无装饰线），颜色为Color.Black（黑色），样式为TextDecorationStyle.SOLID（实线），粗细缩放为1.0。
 
-> **说明：**
+> **说明：** 
 > 
 > - 当文字的下边缘轮廓与装饰线位置相交时，会触发下划线避让规则，下划线将在这些字符处避让文字。常见”gjyqp”等英文字符。
 > 
@@ -340,7 +335,7 @@ enablePreviewText(enable: boolean)
 
 预上屏内容定义为文字暂存态，目前不支持文字拦截功能。
 
-> **说明：**
+> **说明：** 
 > 
 > “预上屏”描述的是一种文字暂存状态。需要在输入法中开启预上屏功能，在输入文本过程中，未确认输入候选词时，文本框中显示标记文本。例如，通过拼音输入中文时，未确定候选词之前，在输入框中显示拼音字母，该状态称为文字预上屏。
 
@@ -442,7 +437,7 @@ fontColor(value: ResourceColor)
 
 设置输入文本的字体颜色。未通过该接口设置时，默认输入文本的字体颜色为'#FF182431'（深灰色），Wearable设备上默认为'#dbffffff'（白色，不透明度约为86%）。fontSize、fontStyle、fontWeight和fontFamily在[textFont](#textfont)属性中设置。
 
-> **说明：**
+> **说明：** 
 > 
 > 当同时设置fontColor和[shaderStyle](#shaderstyle)时，fontColor不生效。
 
@@ -619,7 +614,7 @@ lineHeight(value: number | string | Resource)
 
 设置文本的文本行高，设置值不大于0时，不限制文本行高，自适应字体大小，number类型时单位为fp。
 
-> **说明：**
+> **说明：** 
 > 
 > 特殊字符字体高度远超出同行的其他字符高度时，文本框出现截断、遮挡、内容相对位置发生变化等不符合预期的显示异常，需要开发者调整组件高度、行高等属性，修改对应的页面布局。
 
@@ -813,7 +808,7 @@ onCopy(callback: Callback<string>)
 
 进行复制操作时，触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > onWillCopy先于onCopy触发。onWillCopy回调返回true时允许复制操作继续执行，返回false时拦截复制操作且不触发onCopy。两者可同时使用。
 
@@ -837,7 +832,7 @@ onCut(callback: Callback<string>)
 
 进行剪切操作时，触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > onWillCut先于onCut触发。onWillCut回调返回true时允许剪切操作继续执行，返回false时拦截剪切操作且不触发onCut。两者可同时使用。
 
@@ -861,7 +856,7 @@ onDidDelete(callback: Callback<DeleteValue>)
 
 在删除完成时，触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 点击清除按钮不触发onDidDelete回调。
 
@@ -1027,7 +1022,7 @@ onWillAttachIME(callback: Callback<IMEClient>)
 
 IMEClient仅在onWillAttachIME执行期间有效，不可进行异步调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在attributeModifier中调用。
 
@@ -1077,7 +1072,7 @@ onWillCopy(callback: Callback<string, boolean>)
 
 在进行复制操作前，触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > onWillCopy先于onCopy触发。onWillCopy回调返回true时允许复制操作继续执行，返回false时拦截复制操作且不触发onCopy。两者可同时使用。
 
@@ -1103,7 +1098,7 @@ onWillCut(callback: Callback<string, boolean>)
 
 在进行剪切操作前，触发该回调。
 
-> **说明：**
+> **说明：** 
 > 
 > onWillCut先于onCut触发。onWillCut回调返回true时允许剪切操作继续执行，返回false时拦截剪切操作且不触发onCut。两者可同时使用。
 
@@ -1195,7 +1190,7 @@ placeholderFont(value?: Font)
 
 Wearable设备上默认字体大小为18fp。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以使用[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)注册自定义字体。
 
@@ -1336,7 +1331,7 @@ shaderStyle(shader: ShaderStyle | undefined)
 
 设置文本着色器效果，如线性渐变、径向渐变效果等。未通过该接口设置时，默认无渐变效果。
 
-> **说明：**
+> **说明：** 
 > 
 > - 当同时设置shaderStyle和[strokeWidth](#strokewidth)时，shaderStyle不生效。
 > 
@@ -1436,7 +1431,7 @@ strokeWidth(width: Optional<LengthMetrics>)
 
 设置文本描边的宽度。未通过该接口设置时，默认值为0，不做描边处理。
 
-> **说明：**
+> **说明：** 
 > 
 > 当同时设置strokeWidth和[shaderStyle](#shaderstyle)时，shaderStyle不生效。
 
@@ -1464,7 +1459,7 @@ textAlign(value: TextAlign)
 
 设置文本在搜索框中的对齐方式。目前支持的对齐方式有：TextAlign.Start、TextAlign.Center、TextAlign.End、TextAlign.LEFT、TextAlign.RIGHT。TextAlign.JUSTIFY的对齐方式按照TextAlign.Start处理。未通过该接口设置时，默认对齐方式为TextAlign.Start。
 
-> **说明：**
+> **说明：** 
 > 
 > textAlign只能调整文本整体的布局，不影响字符的显示顺序。若需要调整字符的显示顺序，请参考[镜像状态字符对齐](../../../ui/arkts-internationalization.md#镜像状态字符对齐)。
 
@@ -1512,7 +1507,7 @@ textFont(value?: Font)
 
 Wearable设备上默认字体大小为18fp。
 
-> **说明：**
+> **说明：** 
 > 
 > 可以使用[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)注册自定义字体。
 
@@ -1560,7 +1555,7 @@ type(value: SearchType)
 
 不同的SearchType会拉起对应类型的键盘，同时限制输入。
 
-> **说明：**
+> **说明：** 
 > 
 > 如果同时设置了[inputFilter](#inputfilter)属性且输入的字符不为空字符，type接口附带的文本过滤效果将失效，以inputFilter的过滤规则为准。
 

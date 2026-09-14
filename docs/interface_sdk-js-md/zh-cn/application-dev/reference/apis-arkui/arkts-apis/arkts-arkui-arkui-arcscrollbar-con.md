@@ -8,7 +8,7 @@ export declare const ArcScrollBar: ArcScrollBarInterface
 
 弧形滚动条组件ArcScrollBar，适用于圆形屏幕等需要弧形滚动条的场景，用于配合可滚动组件使用，如ArcList、List、Grid、Scroll、WaterFlow。
 
-> **说明：**
+> **说明：** 
 > 
 > - 未设置宽高时，ArcScrollBar采用父组件[LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md)中的maxSize作为尺寸。若父组件存在可滚动组件，如
 > ArcList、List、

@@ -22,7 +22,7 @@ Checks whether a **HiTraceId** instance is valid. This API returns the result sy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | HiTraceId** instance. |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | **HiTraceId** instance. |
 
 **Return value:**
 

@@ -6,11 +6,6 @@ Implements the controller for the **Swiper** component. Bind this object to a **
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## changeIndex
 
 ```TypeScript
@@ -33,8 +28,8 @@ Goes to a specified page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the target page in the **Swiper** component.<br>**NOTE:**<br>If the value specified is less than 0 or greater than the maximum page index, the value **0** is used. |
-| useAnimation | boolean | No | Whether to use an animation for when the target page is reached. The value **true** means to use an animation, and **false** means the opposite.<br>Default value: **false |
+| index | number | Yes | Index of the target page in the **Swiper** component.<br>**NOTE:** <br>If the value specified is less than 0 or greater than the maximum page index, the value **0** is used. |
+| useAnimation | boolean | No | Whether to use an animation for when the target page is reached. The value **true** means to use an animation, and **false** means the opposite.<br>Default value: **false** |
 
 ## changeIndex
 
@@ -44,7 +39,7 @@ changeIndex(index: number, animationMode?: SwiperAnimationMode | boolean)
 
 Moves to a specific page.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API itself supports jumping without animation (set **animationMode** to **false** or
 > **SwiperAnimationMode.NO_ANIMATION**). Avoid starting an animation with **changeIndex** and then interrupt it
@@ -64,8 +59,8 @@ Moves to a specific page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the target page in the **Swiper** component.<br>**NOTE:**<br>If the value specified is less than 0 or greater than the maximum page index, the value **0** is used. |
-| animationMode | [SwiperAnimationMode](arkts-arkui-swiperanimationmode-e.md) &#124; boolean | No | Animation mode for moving to the specified page.<br> Default value: **SwiperAnimationMode.NO_ANIMATION**<br> **NOTE:**<br>The value **true** is equivalent to **SwiperAnimationMode.DEFAULT_ANIMATION**, which means to use the default animation. The value **false** is equivalent to **SwiperAnimationMode.NO_ANIMATION**, which means to use no animation. |
+| index | number | Yes | Index of the target page in the **Swiper** component.<br>**NOTE:** <br>If the value specified is less than 0 or greater than the maximum page index, the value **0** is used. |
+| animationMode | [SwiperAnimationMode](arkts-arkui-swiperanimationmode-e.md) &#124; boolean | No | Animation mode for moving to the specified page.<br> Default value: **SwiperAnimationMode.NO_ANIMATION**<br> **NOTE:** <br>The value **true** is equivalent to **SwiperAnimationMode.DEFAULT_ANIMATION**, which means to use the default animation. The value **false** is equivalent to **SwiperAnimationMode.NO_ANIMATION**, which means to use no animation. |
 
 ## constructor
 
@@ -91,7 +86,7 @@ fakeDragBy(offset: number): boolean
 
 Sets the drag distance of drag simulation.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The drag distance of drag simulation depends on the layout. You are advised to call this API before the layout,
 > so that the drag effect can be displayed after the current frame layout. If this API is called multiple times
@@ -188,7 +183,7 @@ If the **SwiperController** object is not bound to any **Swiper** component, any
 
 When combining with [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) and custom components, be aware that [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) only retains custom components within the cache range. Components outside this range are removed. Therefore, make sure the indexes of nodes to be preloaded via this API are within the cache range to avoid issues.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **preloadItems** of **Swiper** needs to be called after **Swiper** is created. You are advised to control the
 > first preloading in the onAppear lifecycle of **Swiper**.
@@ -262,7 +257,7 @@ startFakeDrag(): boolean
 
 Enables drag simulation.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - If the **Swiper** component is dragged using real gestures or the drag simulation is enabled, the API returns
 > **false**, indicating that the operation fails.
@@ -293,7 +288,7 @@ stopFakeDrag(): boolean
 
 Disables drag simulation.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > After drag simulation is enabled, it will end if a real drag gesture is received.
 

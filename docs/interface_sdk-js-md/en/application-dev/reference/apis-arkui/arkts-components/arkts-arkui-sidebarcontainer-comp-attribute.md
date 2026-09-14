@@ -10,11 +10,6 @@ In addition to the universal events, the following events are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## autoHide
 
 ```TypeScript
@@ -35,7 +30,7 @@ Whether the sidebar should be hidden is determined when it is being dragged. Whe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to automatically hide the sidebar when it is dragged to be smaller than the minimum width.<br>**true**: The sidebar is automatically hidden.<br>**false**: The sidebar is not automatically hidden.<br>Default value: **true |
+| value | boolean | Yes | Whether to automatically hide the sidebar when it is dragged to be smaller than the minimum width.<br>**true**: The sidebar is automatically hidden.<br>**false**: The sidebar is not automatically hidden.<br>Default value: **true** |
 
 ## controlButton
 
@@ -77,7 +72,7 @@ Sets the divider style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DividerStyle](arkts-arkui-dividerstyle-i.md) &#124; null | Yes | Divider style.<br>- **DividerStyle** (default): The divider is displayed.<br>- **null** or **undefined**: No action is taken, and the divider style remains consistent with the default.<br>**NOTE:**<br>In API version 11 and earlier versions, **null** results in the divider not being displayed. |
+| value | [DividerStyle](arkts-arkui-dividerstyle-i.md) &#124; null | Yes | Divider style.<br>- **DividerStyle** (default): The divider is displayed.<br>- **null** or **undefined**: No action is taken, and the divider style remains consistent with the default.<br>**NOTE:** <br>In API version 11 and earlier versions, **null** results in the divider not being displayed. |
 
 ## maxSideBarWidth
 
@@ -228,7 +223,7 @@ This event is triggered when any of the following conditions is met:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (value: boolean) =&gt; void | Yes | true**: The sidebar is shown. **false**: The sidebar is hidden. |
+| callback | (value: boolean) =&gt; void | Yes | **true**: The sidebar is shown. **false**: The sidebar is hidden. |
 
 ## showControlButton
 
@@ -248,7 +243,7 @@ Specifies whether to display the sidebar control button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to display the sidebar control button.<br>**true**: The sidebar control button is displayed.<br>**false**: The sidebar control button is not displayed.<br>Default value: **true |
+| value | boolean | Yes | Whether to display the sidebar control button.<br>**true**: The sidebar control button is displayed.<br>**false**: The sidebar control button is not displayed.<br>Default value: **true** |
 
 ## showSideBar
 
@@ -258,7 +253,7 @@ showSideBar(value: boolean)
 
 Specifies whether to display the sidebar.
 
-Since API version 10, this attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this attribute supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Since:** 8
 
@@ -270,7 +265,7 @@ Since API version 10, this attribute supports two-way binding through [\$\$](../
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to display the sidebar.<br>**true**: The sidebar is displayed.<br>**false**: The sidebar is not displayed.<br>Default value: **true |
+| value | boolean | Yes | Whether to display the sidebar.<br>**true**: The sidebar is displayed.<br>**false**: The sidebar is not displayed.<br>Default value: **true** |
 
 ## showSideBarWithGesture
 
@@ -312,7 +307,7 @@ Sets the position of the sidebar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SideBarPosition](arkts-arkui-sidebarposition-e.md) | Yes | Position of the sidebar.<br>Default value: **SideBarPosition.Start |
+| value | [SideBarPosition](arkts-arkui-sidebarposition-e.md) | Yes | Position of the sidebar.<br>Default value: **SideBarPosition.Start** |
 
 ## sideBarWidth
 
@@ -334,7 +329,7 @@ Since API version 18, this attribute supports two-way binding through [!!](../..
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Width of the sidebar.<br>Default value: **240vp**<br>Unit: vp<br>Value range: [0, +∞).<br>**NOTE:**<br>In API version 9 and earlier versions, the default value is **200vp**. In API version 10, the default value is **240vp**. |
+| value | number | Yes | Width of the sidebar.<br>Default value: **240vp**<br>Unit: vp<br>Value range: [0, +∞).<br>**NOTE:** <br>In API version 9 and earlier versions, the default value is **200vp**. In API version 10, the default value is **240vp**. |
 
 ## sideBarWidth
 
@@ -356,4 +351,4 @@ Since API version 18, this attribute supports two-way binding through [!!](../..
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the sidebar.<br>Default value: **240vp**<br>Unit: vp<br>Value range: [0, +∞).<br>**NOTE:**<br>The default value is **200vp** in API version 9 and **240vp** in API version 10. |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the sidebar.<br>Default value: **240vp**<br>Unit: vp<br>Value range: [0, +∞).<br>**NOTE:** <br>The default value is **200vp** in API version 9 and **240vp** in API version 10. |

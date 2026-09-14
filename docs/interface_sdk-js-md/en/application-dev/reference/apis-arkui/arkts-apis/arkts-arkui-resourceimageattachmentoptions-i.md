@@ -6,11 +6,6 @@ Defines the settings for images of the ResourceStr type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## colorFilter
 
 ```TypeScript

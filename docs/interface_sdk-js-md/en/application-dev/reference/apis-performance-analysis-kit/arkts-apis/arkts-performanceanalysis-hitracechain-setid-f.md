@@ -24,7 +24,7 @@ Sets the given HiTrace ID to the TLS of the current thread. If the given HiTrace
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | HiTraceId** instance. |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | **HiTraceId** instance. |
 
 **Examples**
 

@@ -40,6 +40,8 @@ Sets whether to allow automatic play. If the value is true, the moving photo sta
 
 | Type | Description |
 | --- | --- |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
+
 ## autoPlayPeriod
 
 ```TypeScript
@@ -65,6 +67,8 @@ Sets automatic play period, If not set, the moving photo plays in the full video
 
 | Type | Description |
 | --- | --- |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
+
 ## enableAnalyzer
 
 ```TypeScript
@@ -89,6 +93,8 @@ Sets whether to enable moving photo analyzer. If the value is true, the moving p
 
 | Type | Description |
 | --- | --- |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
+
 ## muted
 
 ```TypeScript
@@ -113,6 +119,8 @@ Called when judging whether the video is muted.
 
 | Type | Description |
 | --- | --- |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
+
 ## objectFit
 
 ```TypeScript
@@ -137,6 +145,8 @@ Called when determining the zoom type of the view.
 
 | Type | Description |
 | --- | --- |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
+
 ## onComplete
 
 ```TypeScript
@@ -161,6 +171,8 @@ Called when the image load completed.
 
 | Type | Description |
 | --- | --- |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
+
 ## onError
 
 ```TypeScript
@@ -185,6 +197,8 @@ Called when playback fails.
 
 | Type | Description |
 | --- | --- |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
+
 ## onFinish
 
 ```TypeScript
@@ -209,6 +223,8 @@ Called when the video playback ends.
 
 | Type | Description |
 | --- | --- |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
+
 ## onPause
 
 ```TypeScript
@@ -233,6 +249,8 @@ Called when the video playback paused.
 
 | Type | Description |
 | --- | --- |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
+
 ## onPrepared
 
 ```TypeScript
@@ -257,6 +275,8 @@ Called when playback prepared.
 
 | Type | Description |
 | --- | --- |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
+
 ## onStart
 
 ```TypeScript
@@ -281,6 +301,8 @@ Called when the video is played.
 
 | Type | Description |
 | --- | --- |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
+
 ## onStop
 
 ```TypeScript
@@ -305,6 +327,8 @@ Called when the video playback stopped.
 
 | Type | Description |
 | --- | --- |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
+
 ## repeatPlay
 
 ```TypeScript
@@ -329,3 +353,4 @@ Sets whether to allow repeat play. If the value is true, the moving photo plays 
 
 | Type | Description |
 | --- | --- |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |

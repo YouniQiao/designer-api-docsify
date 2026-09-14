@@ -6,11 +6,6 @@ EditMenuOptions
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onCreateMenu
 
 ```TypeScript
@@ -31,7 +26,7 @@ Triggered when the menu is being created. Menu data can be configured within thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| menuItems | Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | Yes | Menu items to be displayed.<br>**NOTE:**<br>Modifications to the name, icon, or shortcut hint of default menu items do not take effect. |
+| menuItems | Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | Yes | Menu items to be displayed.<br>**NOTE:** <br>Modifications to the name, icon, or shortcut hint of default menu items do not take effect. |
 
 **Return value:**
 
@@ -59,7 +54,7 @@ Triggered when the specified menu item is clicked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| menuItem | [TextMenuItem](arkts-arkui-textmenuitem-i.md) | Yes | Menu item.<br>**NOTE:**<br>Since API version 23, for level-1 menu items that support expandable level-2 menus (such as autofill), only the system default logic is executed and custom logic is not executed. |
+| menuItem | [TextMenuItem](arkts-arkui-textmenuitem-i.md) | Yes | Menu item.<br>**NOTE:** <br>Since API version 23, for level-1 menu items that support expandable level-2 menus (such as autofill), only the system default logic is executed and custom logic is not executed. |
 | range | [TextRange](arkts-arkui-textrange-i.md) | Yes | Selected text. |
 
 **Return value:**

@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## alignListItem
 
 ```TypeScript
@@ -95,7 +90,7 @@ cachedCount(count: number, show: boolean)
 
 List设置cachedCount后，显示区域外上下各会预加载并布局cachedCount行。计算预加载行数时，会计算ListItemGroup内部的ListItem行数。如果ListItemGroup内没有ListItem，则整个ListItemGroup算一行。配合裁剪[clip或内容裁剪[clipContent](arkts-arkui-scrollablecommonmethod-c.md#clipcontent)属性可以显示出预加载节点。
 
-> **说明：**
+> **说明：** 
 > 
 > 通常建议设置cachedCount=n/2（n代表一屏显示的列表项数量），同时需考虑其他因素以实现体验和内存使用的平衡。最佳实践请参考
 > [优化长列表加载慢丢帧问题-缓存列表项](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-best-practices-long-list#section11667144010222)
@@ -133,7 +128,7 @@ cachedCount(count: number | CacheCountInfo, show: boolean)
 
 默认行为：count参数默认为number类型，数值根据屏幕内显示的节点个数设置，最大值为16。预加载的ListItem默认不参与绘制。
 
-> **说明：**
+> **说明：** 
 > 
 > 通常建议设置cachedCount=n/2（n代表一屏显示的列表项数量），同时需考虑其他因素以实现体验和内存使用的平衡。从API version 22开始，支持设置最大最小缓存数，可以将最大缓存数设置稍大，如设置为最小缓存数的
 > 两倍，利用UI线程空闲时间创建节点，减少滚动过程中预加载创建节点，提升滚动流畅性。最佳实践请参考
@@ -164,7 +159,7 @@ chainAnimation(value: boolean)
 
 设置当前List是否启用链式联动动效。
 
-> **说明：**
+> **说明：** 
 > 
 > - 链式联动效果是指在手指划动过程中，手指拖动的ListItem是主动对象，相邻的ListItem为从动对象，主动对象驱动从动对象联动，驱动效果遵循弹簧物理动效。
 > 
@@ -196,7 +191,7 @@ childrenMainSize(value: ChildrenMainSize)
 
 设置List组件的子组件在主轴方向的大小信息。
 
-> **说明：**
+> **说明：** 
 > 
 > - 该属性通过向List组件提供所有子组件在主轴方向的大小信息，确保在面对子组件主轴大小不一致、增删子组件、使用[scrollToIndex](arkts-arkui-scroller-c.md#scrolltoindex)等场景时，List组件能
 > 够维护其滑动位置准确性。这样，scrollTo可以准确地跳转到指定位置，currentOffset可以获取到
@@ -246,7 +241,7 @@ contentStartOffset + contentEndOffset超过List内容区长度后contentStartOff
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 内容区末尾偏移量。<br>默认值：0<br>单位：vp <br>**说明：**<br>设置为负数时，按默认值处理。<br>取值范围：[0, +∞) |
+| value | number | 是 | 内容区末尾偏移量。<br>默认值：0<br>单位：vp <br>**说明：** <br>设置为负数时，按默认值处理。<br>取值范围：[0, +∞) |
 
 ## contentEndOffset
 
@@ -294,7 +289,7 @@ contentStartOffset + contentEndOffset超过List内容区长度后contentStartOff
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 内容区域起始偏移量。<br>默认值：0<br>单位：vp <br>**说明：**<br>设置为负数时，按默认值处理。<br>取值范围：[0, +∞) |
+| value | number | 是 | 内容区域起始偏移量。<br>默认值：0<br>单位：vp <br>**说明：** <br>设置为负数时，按默认值处理。<br>取值范围：[0, +∞) |
 
 ## contentStartOffset
 
@@ -358,7 +353,7 @@ edgeEffect(value: EdgeEffect, options?: EdgeEffectOptions)
 
 设置边缘滑动效果。
 
-> **说明：**
+> **说明：** 
 > 
 > 当List组件的内容区小于一屏时，默认没有回弹效果。若要启用回弹效果，设置edgeEffect属性的options参数为{ alwaysEnabled: true }即可。
 
@@ -385,7 +380,7 @@ editMode(value: boolean)
 
 设置当前List组件是否处于可编辑模式。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。此接口已完全移除，无替代接口。如需实现编辑状态切换和删除列表项，可通过自定义状态变量控制删除按钮的显示与隐藏，并在删除按钮的点击事件中更新数据源，具体
 > 实现方式请参考[示例3](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#示例3自定义编辑和删除模式)。
@@ -542,7 +537,7 @@ lanes(value: number | LengthConstrain, gutter?: Dimension)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number &#124; LengthConstrain | 是 | List组件的布局列数或行数。<br>默认值：1 <br>取值范围：[1, +∞)，传入小于1的值时按默认值处理。 |
-| gutter | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 否 | 列间距或行间距。<br>默认值：0<br>参数类型为number时单位为vp。<br>取值范围：[0, +∞)，传入负值时按默认值处理。<br>**说明：**<br>gutter为列间距或行间距，当列数或行数大于1时生效。<br><br>**适用版本：** 10 |
+| gutter | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 否 | 列间距或行间距。<br>默认值：0<br>参数类型为number时单位为vp。<br>取值范围：[0, +∞)，传入负值时按默认值处理。<br>**说明：** <br>gutter为列间距或行间距，当列数或行数大于1时生效。<br><br>**适用版本：** 10 |
 
 ## lanes
 
@@ -567,7 +562,7 @@ lanes(value: number | LengthConstrain | ItemFillPolicy, gutter?: Dimension)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number &#124; LengthConstrain &#124; [ItemFillPolicy](../arkts-apis/arkts-arkui-itemfillpolicy-i.md) | 是 | 当前List组件交叉轴方向的布局数量。List垂直滚动时表示列数，水平滚动时表示行数。<br>设置为number类型时，根据number类型的数值确定列数或行数，number类型取值范围：[1, +∞)，传入小于1的值时按默认值处理。<br>设置为LengthConstrain类型时，垂直滚动时根据列宽的最大值和最小值确定列数，水平滚动时根据行高的最大值和最小值确定行数。<br>设置为ItemFillPolicy类型时，根据List组件宽度对应[断点类型](../../../ui/arkts-layout-development-grid-layout.md#栅格容器断点)确定列数，该类型只在List滚动方向为垂直方向时才生效。 |
-| gutter | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 否 | List垂直滚动时表示列间距，水平滚动时表示行间距。<br>默认值：0<br>参数类型为number时单位为vp。<br>取值范围：[0, +∞)，传入负值时按默认值处理。<br>**说明：**<br>当列数或行数大于1时生效。 |
+| gutter | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 否 | List垂直滚动时表示列间距，水平滚动时表示行间距。<br>默认值：0<br>参数类型为number时单位为vp。<br>取值范围：[0, +∞)，传入负值时按默认值处理。<br>**说明：** <br>当列数或行数大于1时生效。 |
 
 ## listDirection
 
@@ -687,7 +682,7 @@ onItemDelete(event: (index: number) => boolean)
 
 当List组件在编辑模式时，点击ListItem右边出现的删除按钮时触发。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。此接口已完全移除，无替代接口。如需实现删除列表项，可在自定义删除按钮的点击事件中更新数据源，具体实现方式请参考
 > [示例3](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#示例3自定义编辑和删除模式)。
@@ -774,7 +769,7 @@ onItemDragStart(event: OnItemDragStartCallback)
 
 不支持拖动到List边缘时触发List的自动滚动，可以使用ForEach、LazyForEach、Repeat的[onMove](arkts-arkui-dynamicnode-c.md#onmove)接口实现该效果，参考[示例12（使用onMove进行拖拽）](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#示例12使用onmove进行拖拽)。但需注意[onMove](arkts-arkui-dynamicnode-c.md#onmove)接口不支持跨ListItemGroup拖拽。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 14开始，该接口支持在attributeModifier中调用。
 
@@ -890,7 +885,7 @@ onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void)
 
 列表滑动时触发。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 12开始废弃，建议使用
 > onDidScroll替代。
@@ -957,7 +952,7 @@ onScrollIndex(event: (start: number, end: number, center: number) => void)
 
 有子组件划入或划出List显示区域时触发。计算索引值时，ListItemGroup作为一个整体占一个索引值，不计算ListItemGroup内部ListItem的索引值。
 
-> **说明：**
+> **说明：** 
 > 
 > 与[onScrollVisibleContentChange](#onscrollvisiblecontentchange)相比，onScrollIndex将ListItemGroup整体
 > 计为一个索引值，且回调仅返回首尾及中间索引值。如需获取ListItemGroup内部header、footer或ListItem的详细索引信息，请使用onScrollVisibleContentChange。
@@ -1149,7 +1144,7 @@ sticky(value: StickyStyle)
 
 配合ListItemGroup组件使用，设置ListItemGroup中header是否要吸顶或footer是否要吸底。从API version 20开始，sticky属性支持StickyStyle.BOTH枚举值，可直接设置为StickyStyle.BOTH以同时支持header吸顶和footer吸底，效果与StickyStyle.Header | StickyStyle.Footer相同。API version 20之前，可通过StickyStyle.Header | StickyStyle.Footer达到相同效果。
 
-> **说明：**
+> **说明：** 
 > 
 > 由于浮点数计算精度，设置sticky后，在List滑动过程中小概率产生缝隙，可以通过[pixelRound](arkts-arkui-commonmethod-c.md#pixelround)指定当前组件向下像素取整解决该问题。
 

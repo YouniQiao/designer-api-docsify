@@ -2,7 +2,7 @@
 
 由输入工具类型、触摸位置和大小组成的触摸热区。
 
-> **说明：**
+> **说明：** 
 > 
 > - 当父组件设置[clip](arkts-arkui-commonmethod-c.md#clip)为true时，子组件的响应会受到父组件触摸热区的影响，不在父组件触摸热区内的子组件无法响应手势和事件。
 > 
@@ -17,11 +17,6 @@
 **起始版本：** 22
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## height
 

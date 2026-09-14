@@ -8,7 +8,7 @@ export declare const ContainerReader: ContainerReaderInterface
 
 ContainerReader是容器断点组件，用于在动态场景下根据容器尺寸获取断点信息并进行响应式布局。该组件通过[双向绑定](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)实时返回容器的尺寸和断点，使开发者能够基于容器大小进行差异化的组件创建和布局。
 
-> **说明：**
+> **说明：** 
 
 > - 使用ContainerReader时，ContainerReader父组件不要依赖其子组件确定自身尺寸。
 > 

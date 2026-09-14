@@ -52,7 +52,7 @@ colorMode: ColorMode
 
 卡片颜色模式。
 
-**说明：**
+**说明：** 
 
 从API version 9开始支持，从API version 20开始废弃。无替代接口。
 

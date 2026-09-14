@@ -6,11 +6,6 @@ Enumerates the alert dialog box styles.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## distortionMode
 
 ```TypeScript

@@ -72,7 +72,7 @@ function addDisallowedBluetoothProtocols(admin: Want, accountId: number, protoco
 
 添加蓝牙协议至禁用名单。添加后，指定用户将无法根据指定的传输策略使用该禁用名单中的蓝牙协议。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 通过该接口禁用GATT或SPP协议，对系统服务和系统应用不生效。
 > 

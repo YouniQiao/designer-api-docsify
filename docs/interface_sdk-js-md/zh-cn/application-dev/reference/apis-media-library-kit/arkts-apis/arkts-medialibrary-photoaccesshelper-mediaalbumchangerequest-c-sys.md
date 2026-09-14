@@ -4,7 +4,7 @@ MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photo
 
 相册变更请求。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本Class首批接口从API version 11开始支持。
 

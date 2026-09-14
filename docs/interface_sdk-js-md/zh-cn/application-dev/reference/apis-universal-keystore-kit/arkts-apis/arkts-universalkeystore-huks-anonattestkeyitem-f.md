@@ -16,7 +16,7 @@ function anonAttestKeyItem(keyAlias: string, options: HuksOptions, callback: Asy
 
 该操作需要联网进行，且耗时较长。返回12000012错误码时，可能是由于网络异常导致。此时如果没有联网，需要提示用户网络没有连接，如果已经联网，可能是由于网络抖动导致失败，建议重试。
 
-> **说明：**
+> **说明：** 
 > 
 > 获取[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥证书需要ohos.permission.ACCESS_SE_KEY权限。
 
@@ -161,7 +161,7 @@ function anonAttestKeyItem(keyAlias: string, options: HuksOptions): Promise<Huks
 
 该操作需要联网进行，且耗时较长。返回12000012错误码时，可能是由于网络异常导致。此时如果没有联网，需要提示用户网络没有连接，如果已经联网，可能是由于网络抖动导致失败，建议重试。
 
-> **说明：**
+> **说明：** 
 > 
 > 获取[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥证书需要ohos.permission.ACCESS_SE_KEY权限。
 

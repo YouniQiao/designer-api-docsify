@@ -1,10 +1,5 @@
 # getInspectorNodes (System API)
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## getInspectorNodes
 
 ```TypeScript
@@ -27,3 +22,4 @@ Get inspector node infos.
 
 | Type | Description |
 | --- | --- |
+| object |  |

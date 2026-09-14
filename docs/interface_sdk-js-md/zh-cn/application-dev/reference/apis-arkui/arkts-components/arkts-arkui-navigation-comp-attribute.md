@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## backButtonIcon
 
 ```TypeScript
@@ -21,7 +16,7 @@ backButtonIcon(value: string | PixelMap | Resource | SymbolGlyphModifier)
 
 设置标题栏中返回键图标。
 
-> **说明：**
+> **说明：** 
 > 
 > 不支持通过SymbolGlyphModifier对象的
 > fontSize属性修改图标大小、
@@ -48,7 +43,7 @@ backButtonIcon(icon: string | PixelMap | Resource | SymbolGlyphModifier, accessi
 
 设置标题栏中返回键图标和无障碍播报内容。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在attributeModifier中调用。
 > 
@@ -103,7 +98,7 @@ customNavContentTransition(delegate: (from: NavContentInfo, to: NavContentInfo, 
 
 自定义转场动画回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
@@ -217,7 +212,7 @@ enableVisibilityLifecycleWithContentCover(isEnabled: Optional<boolean>)
 
 设置是否启用NavDestination页面onHidden、[onShown](arkts-arkui-navdestination-comp-attribute.md#onshown)生命周期与全模态的联动触发。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 23开始，该接口支持在attributeModifier中调用。
 
@@ -371,7 +366,7 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafe
 
 控制组件的布局，使其扩展到非安全区域。
 
-> **说明：**
+> **说明：** 
 > 
 > - 组件设置ignoreLayoutSafeArea之后生效的条件为：
 > 
@@ -424,7 +419,7 @@ menus(items: Array<NavigationMenuItem> | CustomBuilder, options?: NavigationMenu
 
 设置页面右上角菜单。不设置时不显示菜单项。与[menus](#menus)相比，新增菜单选项。使用Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt; 写法时，竖屏最多支持显示3个图标，横屏最多支持显示5个图标，多余的图标会被放入自动生成的更多图标。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口不支持在attributeModifier中调用。
 
@@ -651,7 +646,7 @@ recoverable(recoverable: Optional<boolean>)
 
 配置Navigation是否可恢复。如配置为可恢复，当应用进程异常退出并重新冷启动时，可自动创建该Navigation，并恢复至异常退出时的路由栈。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 使用该接口需要先设置Navigation的通用属性id，否则该接口无效。
 > 
@@ -705,7 +700,7 @@ subTitle(value: string)
 
 设置页面副标题。
 
-> **说明：**
+> **说明：** 
 
 **起始版本：** 8
 
@@ -729,7 +724,7 @@ systemBarStyle(style: Optional<SystemBarStyle>)
 
 当Navigation中显示Navigation首页时，设置对应系统状态栏的样式。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 不建议混合使用systemBarStyle属性和window设置状态栏样式的相关接口，例如：
 > [setWindowSystemBarProperties](../arkts-apis/arkts-arkui-window-window-i.md#setwindowsystembarproperties)。
@@ -776,7 +771,7 @@ title(value: ResourceStr | CustomBuilder | NavigationCommonTitle | NavigationCus
 
 设置页面标题。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
@@ -851,7 +846,7 @@ toolbarConfiguration(value: Array<ToolbarItem> | CustomBuilder, options?: Naviga
 
 设置工具栏内容。不设置时不显示工具栏。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 

@@ -6,7 +6,7 @@ AudioPlayer is a class for audio playback management. It provides APIs to manage
 
 **Deprecated since:** 9
 
-**Substitutes:** [media](arkts-multimedia-media.md)
+**Substitutes:** [media](arkts-media-multimedia-media.md)
 
 **System capability:** SystemCapability.Multimedia.Media.AudioPlayer
 

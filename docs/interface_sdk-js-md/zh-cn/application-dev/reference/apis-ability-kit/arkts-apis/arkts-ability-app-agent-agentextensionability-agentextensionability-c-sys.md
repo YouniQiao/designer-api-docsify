@@ -4,7 +4,7 @@ AgentExtensionAbility继承自[ExtensionAbility](arkts-ability-app-ability-exten
 
 本文将AgentExtensionAbility组件提供方称为服务端，将AgentExtensionAbility组件使用方称为客户端。
 
-> **说明：**
+> **说明：** 
 > 
 > 本模块接口不支持在[har](../../../quick-start/har-package.md)包中使用。
 

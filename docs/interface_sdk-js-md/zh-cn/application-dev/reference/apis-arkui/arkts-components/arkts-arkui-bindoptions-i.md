@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## onAppear
 
 ```TypeScript
@@ -67,7 +62,7 @@ onWillDisappear?: () => void
 
 半模态页面回退（动画开始前）回调函数。与onDisappear的时序关系：onWillDisappear在回退动画开始前触发，onDisappear在回退动画结束后触发，两者可同时使用。如需在动画开始前做状态保存建议使用onWillDisappear，如需在动画结束后做资源释放建议使用onDisappear。不设置时不触发回调。
 
-**说明：**
+**说明：** 
 
 不允许在onWillDisappear函数中修改状态变量，可能会导致组件行为不稳定。
 
@@ -89,7 +84,7 @@ backgroundColor?: ResourceColor
 
 默认值：Color.White。
 
-**说明：**
+**说明：** 
 
 设置systemMaterial属性时，该属性效果可能被覆盖，不建议与systemMaterial一起使用。
 

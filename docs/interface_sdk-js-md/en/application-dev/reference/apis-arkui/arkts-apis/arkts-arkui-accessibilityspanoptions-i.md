@@ -6,11 +6,6 @@ Defines accessibility options for the span.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## accessibilityDescription
 
 ```TypeScript
@@ -55,7 +50,7 @@ The default value is **"auto"**.
 
 If the value is **undefined**, the default value is used.
 
-**NOTE:**
+**NOTE:** 
 
 When accessibilityLevel is set to **"auto"**, the component's recognizability depends on the following factors:
 

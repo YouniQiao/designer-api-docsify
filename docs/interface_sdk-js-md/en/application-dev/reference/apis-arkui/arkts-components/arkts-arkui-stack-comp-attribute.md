@@ -10,11 +10,6 @@ The [universal events](arkts-arkui-commonmethod-c.md) are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## alignContent
 
 ```TypeScript
@@ -57,4 +52,4 @@ Set whether to synchronously load child nodes within one frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to synchronously load child nodes within one frame.<br>Default value: **true |
+| enable | boolean | Yes | Whether to synchronously load child nodes within one frame.<br>Default value: **true** |

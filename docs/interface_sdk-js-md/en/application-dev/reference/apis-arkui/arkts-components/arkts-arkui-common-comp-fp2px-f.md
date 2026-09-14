@@ -1,10 +1,5 @@
 # fp2px
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## fp2px
 
 ```TypeScript

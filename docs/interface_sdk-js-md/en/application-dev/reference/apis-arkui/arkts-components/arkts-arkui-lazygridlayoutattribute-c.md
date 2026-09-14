@@ -8,11 +8,6 @@ Defines the lazy grid layout attribute.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## columnsGap
 
 ```TypeScript
@@ -39,6 +34,8 @@ Sets the gap between columns. Values less than 0 are treated as the default valu
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## footer
 
 ```TypeScript
@@ -65,6 +62,8 @@ Sets the footer of the lazy grid layout.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## header
 
 ```TypeScript
@@ -91,6 +90,8 @@ Sets the header of the lazy grid layout.
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## onVisibleIndexesChange
 
 ```TypeScript
@@ -117,6 +118,8 @@ Sets a callback for **onVisibleIndexesChange**. This callback is triggered when 
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## rowsGap
 
 ```TypeScript
@@ -137,12 +140,14 @@ Sets the gap between rows. Values less than 0 are treated as the default value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Gap between rows.<br>Default value: **0vp |
+| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Gap between rows.<br>Default value: **0vp** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## sticky
 
 ```TypeScript
@@ -169,3 +174,4 @@ Sets the sticky style for header and footer.
 
 | Type | Description |
 | --- | --- |
+| T |  |

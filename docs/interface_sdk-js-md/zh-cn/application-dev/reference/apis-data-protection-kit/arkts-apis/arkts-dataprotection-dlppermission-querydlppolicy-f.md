@@ -16,7 +16,7 @@ function queryDlpPolicy(dlpFd: number): Promise<string>
 
 该接口可用于在查看DLP文件权限配置等场景中，获取文件的策略信息以便进行分析。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口仅支持企业账号调用。
 

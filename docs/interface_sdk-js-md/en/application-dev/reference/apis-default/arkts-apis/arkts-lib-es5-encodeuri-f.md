@@ -18,8 +18,3 @@ Encodes a text string as a valid Uniform Resource Identifier (URI)
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

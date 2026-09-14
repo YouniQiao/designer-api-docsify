@@ -13,8 +13,3 @@ Attributes of MediaCachedImage inherited from ImageAttribute.
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-
-## Modules to Import
-
-```TypeScript
-```

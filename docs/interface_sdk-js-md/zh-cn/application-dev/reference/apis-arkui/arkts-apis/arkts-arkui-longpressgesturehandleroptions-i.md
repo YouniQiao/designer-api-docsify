@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## allowableMovement
 
 ```TypeScript
@@ -45,7 +40,7 @@ duration?: number
 
 默认值：500
 
-**说明：**
+**说明：** 
 
 取值范围：[0, +∞)，设置小于等于0时，按照默认值500处理。
 
@@ -71,7 +66,7 @@ fingers?: number
 
 取值范围：[1, 10]
 
-**说明：**
+**说明：** 
 
 手指按下后若发生超过15px的移动，则判定当前长按手势识别失败。
 

@@ -22,7 +22,7 @@ Creates an **AppAccountManager** object.
 
 | Type | Description |
 | --- | --- |
-| [AppAccountManager](arkts-basicservices-appaccount-appaccountmanager-i.md) | AppAccountManager** object created. |
+| [AppAccountManager](arkts-basicservices-appaccount-appaccountmanager-i.md) | **AppAccountManager** object created. |
 
 **Examples**
 

@@ -6,11 +6,6 @@ Swiper容器组件的控制器，可以将此对象绑定至Swiper组件，实�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## changeIndex
 
 ```TypeScript
@@ -44,7 +39,7 @@ changeIndex(index: number, animationMode?: SwiperAnimationMode | boolean)
 
 翻页至指定页面。翻页带动效切换过程，时长通过Swiper的[duration](#duration)属性设置。
 
-> **说明：**
+> **说明：** 
 
 > 该接口本身提供了不带动画跳转页面的能力（animationMode设置为false或者SwiperAnimationMode.NO_ANIMATION），不建议使用changeIndex接口启动动画后，直接使用
 > finishAnimation接口打断来实现页面不带动画跳转。
@@ -90,7 +85,7 @@ fakeDragBy(offset: number): boolean
 
 设置模拟拖拽的拖拽距离。
 
-> **说明：**
+> **说明：** 
 
 > - 模拟拖拽的距离需要依赖布局体现，建议接口在布局前调用，拖拽效果可以在当前帧布局后体现。如果在未布局前调用了多次该接口，当前帧布局时只生效最后一次调用传入的拖拽距离。
 > 
@@ -182,7 +177,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 与[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和自定义组件结合使用时，由于[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)只会保留缓存范围内的自定义组件，在缓存范围外的会被删除，因此需要开发者保证通过该接口预加载的节点index在缓存范围内。
 
-> **说明：**
+> **说明：** 
 
 > Swiper的preloadItems需要在Swiper创建之后去调用，首次预加载推荐在Swiper的onAppear生命周期中去控制。
 
@@ -255,7 +250,7 @@ startFakeDrag(): boolean
 
 开启模拟拖拽功能。
 
-> **说明：**
+> **说明：** 
 
 > - Swiper已经处在真实手势拖拽中，或者已经开启了模拟拖拽，调用接口会返回false表示操作失败。
 > 
@@ -285,7 +280,7 @@ stopFakeDrag(): boolean
 
 关闭模拟拖拽功能。
 
-> **说明：**
+> **说明：** 
 
 > 在开启模拟拖拽后，如果接收到真实拖拽手势，模拟拖拽会结束。
 

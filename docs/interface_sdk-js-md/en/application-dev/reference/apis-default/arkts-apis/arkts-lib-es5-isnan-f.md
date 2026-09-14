@@ -18,8 +18,3 @@ Returns a Boolean value that indicates whether a value is the reserved value NaN
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | number | number | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

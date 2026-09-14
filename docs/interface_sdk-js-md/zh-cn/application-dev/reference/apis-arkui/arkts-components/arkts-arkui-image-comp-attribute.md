@@ -2,7 +2,7 @@
 
 Image为图片组件，常用于在应用中显示图片。Image支持加载[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)、[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)和[DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md)类型的数据源，支持png、jpg、jpeg、bmp、svg、webp、gif、heif和tiff类型的图片格式，不支持apng和svga格式。
 
-> **说明：**
+> **说明：** 
 
 > - 从API version 23开始，图片类型新增支持tiff格式。
 > 
@@ -32,11 +32,6 @@ Image为图片组件，常用于在应用中显示图片。Image支持加载[Pix
 **起始版本：** 7
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## alt
 
@@ -72,7 +67,7 @@ alt(src: ResourceStr | PixelMap | ImageAlt)
 
 设置图片加载过程中和加载失败时的占位图。
 
-> **说明：**
+> **说明：** 
 > 
 > 通过[ImageAlt](arkts-arkui-imagealt-i.md)配置占位图时，Image会根据用户配置的加载过程中和加载失败的占位图源生效，未配置时默认不显示。
 > 占位图支持使用[objectFit](#objectfit)设置填充效果，与图片的填充效果一致。
@@ -103,7 +98,7 @@ antialiased(isAntialiased: Optional<boolean>)
 
 设置位图图片边缘是否开启抗锯齿。未通过该接口设置时，默认不开启抗锯齿。SVG类型图片不支持该属性。
 
-> **说明：**
+> **说明：** 
 > 
 > 如果图片设置了背景色属性(backgroundColor)，图片的抗锯齿属性设置为true不会影响背景色的
 > 锯齿效果。
@@ -164,7 +159,7 @@ colorFilter(value: ColorFilter | DrawingColorFilter)
 
 设置该属性时，[renderMode](#rendermode)属性设置不生效。
 
-> **说明：**
+> **说明：** 
 > 
 > API version 11及之前，SVG类型图源不支持该属性。从API version 12开始，SVG类型的图源只有设置了stroke属性（无论是否有值）才会生效。
 
@@ -230,7 +225,7 @@ contentTransition(transition: ContentTransitionEffect)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transition | [ContentTransitionEffect](arkts-arkui-contenttransitioneffect-c.md) | 是 | 过渡动效的类型。<br>其中取值为ContentTransitionEffect.OPACITY表示淡入淡出效果，取值为ContentTransitionEffect.IDENTITY表示无动画效果。<br>默认值：ContentTransitionEffect.IDENTITY <br>设置为undefined或null时，取默认值ContentTransitionEffect.IDENTITY。<br>**说明：**对动态图片资源不生效。 |
+| transition | [ContentTransitionEffect](arkts-arkui-contenttransitioneffect-c.md) | 是 | 过渡动效的类型。<br>其中取值为ContentTransitionEffect.OPACITY表示淡入淡出效果，取值为ContentTransitionEffect.IDENTITY表示无动画效果。<br>默认值：ContentTransitionEffect.IDENTITY <br>设置为undefined或null时，取默认值ContentTransitionEffect.IDENTITY。<br>**说明：** 对动态图片资源不生效。 |
 
 ## copyOption
 
@@ -318,7 +313,7 @@ enableAnalyzer(enable: boolean)
 
 当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
-> **说明：**
+> **说明：** 
 > 
 > - 需要配置权限：ohos.permission.INTERNET。
 > 
@@ -360,7 +355,7 @@ fillColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 设置填充颜色。 <br>**说明：**<br> 默认不对组件进行填充。当传入异常值时，系统将使用默认的主题色：浅色模式下为黑色，深色模式下为白色。<br>从API version 21开始，当[supportSvg2](#supportsvg2)设置为true时，fillColor依赖SVG图源中fill属性的参数配置。当SVG图源中fill属性为'none'时，fillColor不生效。当supportSvg2设置为false时，fillColor生效，替换SVG图片中所有可绘制元素的填充颜色。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 设置填充颜色。 <br>**说明：** <br> 默认不对组件进行填充。当传入异常值时，系统将使用默认的主题色：浅色模式下为黑色，深色模式下为白色。<br>从API version 21开始，当[supportSvg2](#supportsvg2)设置为true时，fillColor依赖SVG图源中fill属性的参数配置。当SVG图源中fill属性为'none'时，fillColor不生效。当supportSvg2设置为false时，fillColor生效，替换SVG图片中所有可绘制元素的填充颜色。 |
 
 ## fillColor
 
@@ -384,7 +379,7 @@ fillColor(color: ResourceColor | ColorContent)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [ColorContent](arkts-arkui-colorcontent-c.md) | 是 | 设置填充颜色。 <br>**说明：**<br> 默认不对组件进行填充。当传入异常值时，系统将使用默认的主题色：浅色模式下为黑色，深色模式下为白色。 <br>从API version 21开始，当[supportSvg2](#supportsvg2)设置为true时，fillColor依赖SVG图源中fill属性的参数配置。当SVG图源中fill属性为'none'时，fillColor不生效。当supportSvg2设置为false时，fillColor生效，替换SVG图片中所有可绘制元素的填充颜色。 |
+| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [ColorContent](arkts-arkui-colorcontent-c.md) | 是 | 设置填充颜色。 <br>**说明：** <br> 默认不对组件进行填充。当传入异常值时，系统将使用默认的主题色：浅色模式下为黑色，深色模式下为白色。 <br>从API version 21开始，当[supportSvg2](#supportsvg2)设置为true时，fillColor依赖SVG图源中fill属性的参数配置。当SVG图源中fill属性为'none'时，fillColor不生效。当supportSvg2设置为false时，fillColor生效，替换SVG图片中所有可绘制元素的填充颜色。 |
 
 ## fillColor
 
@@ -408,7 +403,7 @@ fillColor(color: ResourceColor | ColorContent | ColorMetrics)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [ColorContent](arkts-arkui-colorcontent-c.md) &#124; ColorMetrics | 是 | 设置填充颜色。 <br>**说明：**<br> 默认不对组件进行填充。当传入异常值时，系统将使用默认的主题色：浅色模式下为黑色，深色模式下为白色。 <br>从API version 21开始，当[supportSvg2](#supportsvg2)设置为true时，fillColor依赖SVG图源中fill属性的参数配置。当SVG图源中fill属性为'none'时，fillColor不生效。当supportSvg2设置为false时，fillColor生效，替换SVG图片中所有可绘制元素的填充颜色。 |
+| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [ColorContent](arkts-arkui-colorcontent-c.md) &#124; ColorMetrics | 是 | 设置填充颜色。 <br>**说明：** <br> 默认不对组件进行填充。当传入异常值时，系统将使用默认的主题色：浅色模式下为黑色，深色模式下为白色。 <br>从API version 21开始，当[supportSvg2](#supportsvg2)设置为true时，fillColor依赖SVG图源中fill属性的参数配置。当SVG图源中fill属性为'none'时，fillColor不生效。当supportSvg2设置为false时，fillColor生效，替换SVG图片中所有可绘制元素的填充颜色。 |
 
 ## fitOriginalSize
 
@@ -434,7 +429,7 @@ fitOriginalSize(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 图片的显示尺寸是否跟随图源尺寸。<br>默认值：false <br>**说明：**<br>当不设置fitOriginalSize或者设置fitOriginalSize为false时，组件显示大小不跟随图源大小。<br> 当设置fitOriginalSize为true时，组件显示大小跟随图源大小。 |
+| value | boolean | 是 | 图片的显示尺寸是否跟随图源尺寸。<br>默认值：false <br>**说明：** <br>当不设置fitOriginalSize或者设置fitOriginalSize为false时，组件显示大小不跟随图源大小。<br> 当设置fitOriginalSize为true时，组件显示大小跟随图源大小。 |
 
 ## hdrBrightness
 
@@ -904,7 +899,7 @@ onError(callback: ImageErrorCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ImageErrorCallback](arkts-arkui-imageerrorcallback-t.md) | 是 | 图片加载异常时触发的回调。<br>**说明：**<br>建议开发者使用此回调，可快速确认图片加载失败时的具体原因，参见[ImageError](arkts-arkui-imageerror-i.md)的错误信息详细介绍。<br>**适用版本：** 11 |
+| callback | [ImageErrorCallback](arkts-arkui-imageerrorcallback-t.md) | 是 | 图片加载异常时触发的回调。<br>**说明：** <br>建议开发者使用此回调，可快速确认图片加载失败时的具体原因，参见[ImageError](arkts-arkui-imageerror-i.md)的错误信息详细介绍。<br>**适用版本：** 11 |
 
 ## onFinish
 
@@ -1022,7 +1017,7 @@ resizable(value: ResizableOptions)
 
 当组件的参数类型为动图、[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)和SVG时设置该属性不生效。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 

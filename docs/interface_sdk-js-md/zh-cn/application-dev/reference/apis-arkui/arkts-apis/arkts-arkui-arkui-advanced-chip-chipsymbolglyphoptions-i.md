@@ -2,7 +2,7 @@
 
 ChipSymbolGlyphOptions定义前缀图标和后缀图标的属性。
 
-> **说明：**
+> **说明：** 
 > 
 > 不支持使用[SymbolEffect](../arkts-components/arkts-arkui-symbolglyph-comp-attribute.md#symboleffect)修改动效类型及
 > effectStrategy设置动效。
@@ -29,7 +29,7 @@ activated?: SymbolGlyphModifier
 
 值为undefined时，按默认值处理。
 
-**类型：** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
+**类型：** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
 **起始版本：** 12
 
@@ -51,7 +51,7 @@ normal?: SymbolGlyphModifier
 
 值为undefined时，按默认值处理。
 
-**类型：** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
+**类型：** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
 **起始版本：** 12
 

@@ -21,11 +21,6 @@ layout behavior caused by automatic value inheritance.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## lg
 
 ```TypeScript

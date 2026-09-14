@@ -6,11 +6,6 @@ WebResourceResponse是Web组件中表示HTTP响应并允许自定义网页资源
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript
@@ -91,7 +86,7 @@ getResponseData(): string
 getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined
 ```
 
-获取资源响应数据，支持多种数据类型。与getResponseData相比，该方法支持返回number（文件句柄）、ArrayBuffer（二进制数据）、Resource（\$rawfile资源）等多种类型，建议在需要灵活数据类型支持时优先使用。
+获取资源响应数据，支持多种数据类型。与getResponseData相比，该方法支持返回number（文件句柄）、ArrayBuffer（二进制数据）、Resource（&#36;rawfile资源）等多种类型，建议在需要灵活数据类型支持时优先使用。
 
 **起始版本：** 13
 
@@ -101,7 +96,7 @@ getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| string &#124; number &#124; ArrayBuffer &#124; Resource &#124; undefined | string返回HTML格式的字符串。 number返回文件句柄。 ArrayBuffer返回二进制数据。 Resource返回`\&#36;rawfile`资源。 如果没有可用数据，返回`undefined`。 |
+| string &#124; number &#124; ArrayBuffer &#124; Resource &#124; undefined | string返回HTML格式的字符串。 number返回文件句柄。 ArrayBuffer返回二进制数据。 Resource返回`&#36;rawfile`资源。 如果没有可用数据，返回`undefined`。 |
 
 ## getResponseEncoding
 
@@ -289,7 +284,7 @@ setResponseIsReady(IsReady: boolean): void
 
 设置资源响应数据是否已经就绪。
 
-> **说明：**
+> **说明：** 
 > 
 > - 在资源请求拦截场景中，应先调用setResponseData()、setResponseEncoding()、setResponseMimeType()、setResponseHeader()、
 > setResponseCode()、setReasonMessage()等方法设置响应的各个属性。最后调用setResponseIsReady(true)来触发资源返回。

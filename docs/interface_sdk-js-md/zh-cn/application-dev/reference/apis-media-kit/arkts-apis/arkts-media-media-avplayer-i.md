@@ -6,7 +6,7 @@
 
 应用需要控制AVPlayer实例数量，播放结束后应及时调用release()释放资源。建议同时持有的AVPlayer实例数量不超过合理范围，避免内存消耗过大触发系统保护机制终止应用。Audio/Video播放demo可参考：[音频播放开发指导](../../../media/media/using-avplayer-for-playback.md)、[视频播放开发指导](../../../media/media/video-playback.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本Interface首批接口从API version 9开始支持。
 
@@ -342,7 +342,7 @@ getLoadedTimeRanges(): Promise<Array<Range>>
 
 获取已加载的时间区间段的列表。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 对于本地媒体资源，返回的时间区间为0到整个媒体时长。
 > 
@@ -496,7 +496,7 @@ getSeekableTimeRanges(): Promise<Array<Range>>
 
 获取可跳转的时间区间段的列表。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 对于本地媒体资源及支持分段请求的媒体资源，返回的时间区间为0到整个媒体时长。
 > 
@@ -1521,7 +1521,7 @@ on(type: 'availableBitrates', callback: Callback<Array<number>>): void
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-监听[AVPlayer](arkts-multimedia-media.md)的错误事件，该事件仅用于错误提示，不需要用户停止播控动作。如果此时[AVPlayerState](arkts-media-media-avplayerstate-t.md)也切至error状态，用户需要通过[reset()](#reset)或者[release()](#release)退出播放操作。若调用[reset()](#reset)方法后，播放状态仍为error状态，建议直接调用[release()](#release)方法，退出播放操作。
+监听[AVPlayer](arkts-media-multimedia-media.md)的错误事件，该事件仅用于错误提示，不需要用户停止播控动作。如果此时[AVPlayerState](arkts-media-media-avplayerstate-t.md)也切至error状态，用户需要通过[reset()](#reset)或者[release()](#release)退出播放操作。若调用[reset()](#reset)方法后，播放状态仍为error状态，建议直接调用[release()](#release)方法，退出播放操作。
 
 **起始版本：** 9
 
@@ -2220,7 +2220,7 @@ setLoudnessGain(loudnessGain: number): Promise<void>
 
 设置播放器的响度。调用该接口后，响度增益立即生效。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 当播放处于prepared/playing/paused/completed/stopped状态时，可调用该接口。
 > 
@@ -2272,7 +2272,7 @@ setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mediaType | [MediaType](arkts-media-media-mediatype-e.md) | 是 | 媒体类型枚举。<br>**API version 12-19**：仅支持设置MEDIA_TYPE_AUD。<br>**API version 20及以后**：增加支持设置MEDIA_TYPE_VID。 |
-| muted | boolean | 是 | API version 12-19**：仅支持设置音频播放策略，表示音频是否静音播放。true为静音播放，false为取消静音播放。<br> **API version 20及以后**：增加支持设置视频播放策略，表示视频画面是否关闭。true为关闭画面，false为恢复画面。 |
+| muted | boolean | 是 | **API version 12-19**：仅支持设置音频播放策略，表示音频是否静音播放。true为静音播放，false为取消静音播放。<br> **API version 20及以后**：增加支持设置视频播放策略，表示视频画面是否关闭。true为关闭画面，false为恢复画面。 |
 
 **返回值：**
 
@@ -2728,7 +2728,7 @@ dataSrc?: AVDataSrcDescriptor
 
 如果播放的是mp4/m4a格式用户需要保证moov字段（媒体信息字段）在mdat字段（媒体数据字段）之前，或者moov之前的字段小于10M，否则会导致解析失败无法播放。
 
-**说明：**
+**说明：** 
 
 从API version 11开始不支持webm。
 
@@ -2790,7 +2790,7 @@ fdSrc?: AVFileDescriptor
 
 假设是一个独立的媒体文件: 请使用src=fd://xx。
 
-**说明：**
+**说明：** 
 
 从API version 11开始不支持webm。
 
@@ -2922,7 +2922,7 @@ url?: string
 3. https网络播放：`https://xx`。
 4. HLS网络播放路径：`http://xx`或者`https://xx`。
 
-**说明：**
+**说明：** 
 
 - 设置网络播放路径，需[声明权限](../../../security/AccessToken/declare-permissions.md)：  
 [ohos.permission.INTERNET](../../../security/AccessToken/permissions-for-all.md#ohospermissioninternet)，相关错误码: [201 权限校验失败](../../errorcode-universal.md#201-权限校验失败)。  

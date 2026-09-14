@@ -154,7 +154,7 @@ initSync(pubKey: PubKey): void
 
 Initializes the **Verify** instance with a public key. This API returns the result synchronously. **initSync**, **updateSync**, and **verifySync** must be used together. **initSync** and **verifySync** are mandatory, and **updateSync** is optional.
 
-<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -186,7 +186,7 @@ recover(signatureData: DataBlob): Promise<DataBlob | null>
 
 Recovers the original data from a signature. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Currently, only RSA is supported.
 
@@ -304,11 +304,11 @@ recoverSync(signatureData: DataBlob): DataBlob | null
 
 Recovers the original data from a signature. This API returns the result synchronously.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - Currently, only RSA is supported.
 
-<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, [recover](#recover). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, [recover](#recover). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -506,7 +506,7 @@ Updates the data for signature verification. This API uses an asynchronous callb
 
 <br>This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) instance is initialized using [init](#init) or [initSync](#initsync).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > You can call **update** multiple times or do not use **update** (call
 > [verify](#verify-1)
@@ -562,7 +562,7 @@ Updates the data for signature verification. This API uses a promise to return t
 
 <br>This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) instance is initialized using [init()](#init).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > You can call **update** multiple times or do not use **update** (call
 > [verify](#verify-3) after
@@ -622,7 +622,7 @@ Updates the data for signature verification. This API returns the result synchro
 
 <br>This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) instance is initialized by using [initSync()](#initsync).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > You can call **updateSync** multiple times or do not use **updateSync** (call
 > [verifySync](#verifysync) after [initSync](#initsync)),
@@ -642,7 +642,7 @@ Updates the data for signature verification. This API returns the result synchro
 > If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **updateSync**
 > is not supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
-<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -820,7 +820,7 @@ verifySync(data: DataBlob | null, signatureData: DataBlob): boolean
 
 Verifies the signature. This API returns the verification result synchronously.
 
-<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, [verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, [verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 

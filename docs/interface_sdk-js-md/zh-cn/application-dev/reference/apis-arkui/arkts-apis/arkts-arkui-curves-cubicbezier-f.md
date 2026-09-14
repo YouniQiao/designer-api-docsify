@@ -14,7 +14,7 @@ function cubicBezier(x1: number, y1: number, x2: number, y2: number): string
 
 构造三阶贝塞尔曲线对象，曲线的两个控制点横坐标x1、x2的取值范围限定在0到1之间。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。
 

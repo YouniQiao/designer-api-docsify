@@ -8,11 +8,6 @@ You need a custom class to implement the **ContentModifier** API. Inherits from 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## maxValue
 
 ```TypeScript
@@ -23,7 +18,7 @@ Maximum value displayed in the data panel.
 
 Default value: **100**
 
-**NOTE:**
+**NOTE:** 
 
 If the value is less than or equal to 0, **maxValue** is set to the sum of all items in the **values** array and displayed proportionally.
 
@@ -47,7 +42,7 @@ Current values of the data panel.
 
 The length of the array should be within the range of [0, 9].
 
-**NOTE:**
+**NOTE:** 
 
 If the array length is greater than 9, the first nine items are used.
 

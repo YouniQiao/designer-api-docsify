@@ -8,11 +8,6 @@ Defines ripple field options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## amplitude
 
 ```TypeScript

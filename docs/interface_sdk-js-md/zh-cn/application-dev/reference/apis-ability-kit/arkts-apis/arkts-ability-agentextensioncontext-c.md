@@ -4,7 +4,7 @@ AgentExtensionContext模块是[AgentExtensionAbility](arkts-ability-app-agent-ag
 
 AgentExtensionContext为开发者提供访问当前[AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)智能体所配置的AgentCard信息的能力。
 
-> **说明：**
+> **说明：** 
 > 
 > - 在本文档的示例中，通过`this.context`来获取`AgentExtensionContext`，其中`this`代表继承自`AgentExtensionAbility`的实例。
 

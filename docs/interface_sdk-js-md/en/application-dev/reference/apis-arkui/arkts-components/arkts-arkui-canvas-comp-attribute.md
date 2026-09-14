@@ -10,11 +10,6 @@ The universal events are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## enableAnalyzer
 
 ```TypeScript
@@ -27,7 +22,7 @@ For the settings to take effect, this attribute must be used together with [star
 
 This attribute cannot be used together with the overlay attribute. If they are set at the same time, the **CustomBuilder** attribute in **overlay** has no effect. This feature depends on device capabilities.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within
 > attributeModifier
@@ -45,7 +40,7 @@ This attribute cannot be used together with the overlay attribute. If they are s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable the AI image analyzer for subject recognition, text recognition, and object lookup within the component content.<br>**true**: Enable the AI image analyzer. **false**: Disable the AI analyzer. <br>The **null** and **undefined** values are handled as the default value. <br>Default value: **false |
+| enable | boolean | Yes | Whether to enable the AI image analyzer for subject recognition, text recognition, and object lookup within the component content.<br>**true**: Enable the AI image analyzer. **false**: Disable the AI analyzer. <br>The **null** and **undefined** values are handled as the default value. <br>Default value: **false** |
 
 ## onReady
 

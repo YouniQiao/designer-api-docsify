@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## font
 
 ```TypeScript
@@ -19,7 +14,7 @@ font?: Font
 
 设置气泡信息字体属性。
 
-**说明：**
+**说明：** 
 
 1. 不支持设置family。
 2. Font中的weight属性不支持传入number类型。

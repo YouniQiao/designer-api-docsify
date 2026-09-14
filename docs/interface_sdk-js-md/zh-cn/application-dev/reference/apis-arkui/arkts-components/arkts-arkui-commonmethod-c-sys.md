@@ -6,11 +6,6 @@ CommonMethod.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## advancedBlendMode
 
 ```TypeScript
@@ -66,7 +61,7 @@ edgeLight(params: EdgeLightParams | undefined): T
 
 为组件添加边缘流光效果。边缘流光效果会在组件的边缘创建发光效果，从指定位置开始并沿边缘延伸，此效果可以增强组件的视觉吸引力并突出显示重要组件。
 
-> **说明：**
+> **说明：** 
 > 
 > - 仅设置edgeLight不会产生边缘流光效果，需结合[animateTo](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#animateto)更改position参数达到流光效果。可参考
 > [示例4（设置组件边缘流光效果）](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect-sys.md#示例4设置组件边缘流光效果)。
@@ -105,7 +100,7 @@ excludeFromRenderGroup(exclude: boolean | undefined): T
 
 不设置该属性时，默认当前组件和其子组件不从祖先组件的节点组中剔除。
 
-> **说明：**
+> **说明：** 
 > 
 > 设置excludeFromRenderGroup为true的组件及其子组件的绘制内容不能超过该组件本身的边界范围，否则会出现显示内容被裁剪的问题。例如当子组件通过
 > [translate](arkts-arkui-commonmethod-c.md#translate)或
@@ -142,7 +137,7 @@ spatialEffect(params: SpatialEffectParams | undefined): T
 
 将空间效果应用于组件。用于为组件设置空间效果参数。
 
-> **说明：**
+> **说明：** 
 > 
 > - 空间效果仅作用于[DepthComponent](./ts-basic-components-depthcomponent-sys.md)的子组件，且仅当DepthComponent相关参数设置正确才能生效。
 > 
@@ -170,6 +165,8 @@ spatialEffect(params: SpatialEffectParams | undefined): T
 
 | 类型 | 说明 |
 | --- | --- |
+| T |  |
+
 ## useUnionEffect
 
 ```TypeScript

@@ -2,7 +2,7 @@
 
 Defines the common attributes shared by all chips.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > 1. The size settings for chips can be of two types: (1) **ChipSize**, which conveniently offers two size options,
 > **NORMAL** and **SMALL**; (2) **SizeOptions**.
@@ -28,7 +28,7 @@ backgroundColor?: ResourceColor
 
 Chip background color.
 
-Default value: **\$r('sys.color.ohos_id_color_button_normal')**
+Default value: **&#36;r('sys.color.ohos_id_color_button_normal')**
 
 If this parameter is set to **undefined**, the default value is used.
 
@@ -50,7 +50,7 @@ fontColor?: ResourceColor
 
 Chip text color.
 
-Default value: **\$r('sys.color.ohos_id_color_text_primary')**
+Default value: **&#36;r('sys.color.ohos_id_color_text_primary')**
 
 If this parameter is set to **undefined**, the default value is used.
 
@@ -72,7 +72,7 @@ selectedBackgroundColor?: ResourceColor
 
 Background color of the chip when it is activated.
 
-Default value: **\$r('sys.color.ohos_id_color_emphasize')**
+Default value: **&#36;r('sys.color.ohos_id_color_emphasize')**
 
 If this parameter is set to **undefined**, the default value is used.
 
@@ -94,7 +94,7 @@ selectedFontColor?: ResourceColor
 
 Text color of the chip when it is activated.
 
-Default value: **\$r('sys.color.ohos_id_color_text_primary_contrary')**
+Default value: **&#36;r('sys.color.ohos_id_color_text_primary_contrary')**
 
 If this parameter is set to **undefined**, the default value is used.
 

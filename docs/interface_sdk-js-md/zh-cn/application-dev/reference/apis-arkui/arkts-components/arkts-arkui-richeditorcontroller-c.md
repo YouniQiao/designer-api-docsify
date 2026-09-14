@@ -2,7 +2,7 @@
 
 RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > 当内容的长度超过组件显示区域的高度时，调用插入接口（例如[addTextSpan](#addtextspan)、
 > [addImageSpan](#addimagespan)、[addBuilderSpan](#addbuilderspan)
@@ -20,11 +20,6 @@ controller: RichEditorController = new RichEditorController();
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## addBuilderSpan
 
 ```TypeScript
@@ -33,7 +28,7 @@ addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): nu
 
 在RichEditor中添加用户自定义布局（BuilderSpan）。
 
-> **说明：**
+> **说明：** 
 > 
 > - RichEditor组件添加占位Span，占位Span调用系统的measure方法计算真实的长宽和位置。
 > 
@@ -150,7 +145,7 @@ addRichEditorBuilderSpan(value: RichEditorBuilderSpan, info?: BuilderSpanInfo): 
 
 在**RichEditor**中添加自定义布局（BuilderSpan），提供身份识别与生命周期感知能力。
 
-> **说明：**
+> **说明：** 
 > 
 > - BuilderSpan对象中的[onAttach](arkts-arkui-richeditorbuilderspan-i.md#onattach)和
 > [onDetach](arkts-arkui-richeditorbuilderspan-i.md#ondetach)回调接收一个[BuilderSpanInfo](arkts-arkui-builderspaninfo-i.md)
@@ -334,7 +329,7 @@ getRichEditorBuilderSpans(value?: RichEditorRange): Array<BuilderSpanInfo>
 
 获取指定范围内BuilderSpan的身份与位置信息。
 
-> **说明：**
+> **说明：** 
 > 
 > - 当**RichEditor**组件使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构造时，
 > 不支持此接口。

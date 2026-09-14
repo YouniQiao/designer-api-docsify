@@ -18,10 +18,6 @@
 | pattern | RegExp &#124; string | Yes |  |
 | flags | string | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -34,8 +30,3 @@ new (pattern: RegExp | string, flags?: string): RegExp
 | --- | --- | --- | --- |
 | pattern | RegExp &#124; string | Yes |  |
 | flags | string | No |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

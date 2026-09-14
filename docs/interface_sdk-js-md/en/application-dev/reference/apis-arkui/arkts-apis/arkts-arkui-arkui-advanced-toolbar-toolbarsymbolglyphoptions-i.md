@@ -20,9 +20,9 @@ activated?: SymbolGlyphModifier
 
 Icon symbol of the toolbar item in activated state.
 
-Default value: **fontColor: \$r('sys.color.icon_emphasize'), fontSize: 24vp**
+Default value: **fontColor: &#36;r('sys.color.icon_emphasize'), fontSize: 24vp**
 
-**Type:** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
+**Type:** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
 **Since:** 13
 
@@ -40,9 +40,9 @@ normal?: SymbolGlyphModifier
 
 Icon symbol of the toolbar item in normal state.
 
-Default value: **fontColor: \$r('sys.color.icon_primary'), fontSize: 24vp**
+Default value: **fontColor: &#36;r('sys.color.icon_primary'), fontSize: 24vp**
 
-**Type:** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-arkui-modifier.md)
+**Type:** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
 **Since:** 13
 

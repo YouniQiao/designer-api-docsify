@@ -1,10 +1,5 @@
 # unregisterVsyncCallback (System API)
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## unregisterVsyncCallback
 
 ```TypeScript

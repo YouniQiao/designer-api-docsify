@@ -32,7 +32,7 @@ Creates a **PasteData** object of the HTML type.
 
 | Type | Description |
 | --- | --- |
-| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | PasteData** object. |
+| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | **PasteData** object. |
 
 **Examples**
 

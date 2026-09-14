@@ -376,7 +376,7 @@ convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>
 
 获取指定数据生成非对称密钥。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 使用convertPemKey()将外部字符串转换为Crypto框架定义的非对称密钥对象时，公钥需满足ASN.1语法、X.509规范和PEM编码格式，私钥需
 > 满足ASN.1语法、PKCS#8规范和PEM编码格式。
@@ -396,7 +396,7 @@ convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pubKey | string &#124; null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。 |
-| priKey | string &#124; null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。<br>**说明：**公钥和私钥材料不能同时为null或空字符串。 |
+| priKey | string &#124; null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。<br>**说明：** 公钥和私钥材料不能同时为null或空字符串。 |
 
 **返回值：**
 
@@ -461,7 +461,7 @@ convertPemKey(pubKey: string | null, priKey: string | null, password: string): P
 
 获取指定数据生成非对称密钥。支持加密的私钥，同步传入私钥口令解密私钥。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 1. 使用convertPemKey()将外部字符串转换为Crypto框架定义的非对称密钥对象时，公钥需满足ASN.1语法、X.509规范和PEM编码格式，私钥需
 > 满足ASN.1语法、PKCS#8规范和PEM编码格式。
@@ -482,7 +482,7 @@ convertPemKey(pubKey: string | null, priKey: string | null, password: string): P
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pubKey | string &#124; null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。 |
-| priKey | string &#124; null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。<br>**说明：**公钥和私钥材料不能同时为null或空字符串。 |
+| priKey | string &#124; null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。<br>**说明：** 公钥和私钥材料不能同时为null或空字符串。 |
 | password | string | 是 | 指定口令，用于解密私钥。 |
 
 **返回值：**
@@ -543,7 +543,7 @@ convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair
 
 同步获取指定数据，生成非对称密钥。
 
-> **说明：**
+> **说明：** 
 > convertPemKeySync接口与convertPemKey接口注意事项相同，见
 > [convertPemKey](#convertpemkey)
 > 接口说明。
@@ -561,7 +561,7 @@ convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pubKey | string &#124; null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。 |
-| priKey | string &#124; null | 是 | 指定私钥材料。私钥无需转换时，请传入null。<br>**说明：**公钥和私钥材料不能同时为null或空字符串。 |
+| priKey | string &#124; null | 是 | 指定私钥材料。私钥无需转换时，请传入null。<br>**说明：** 公钥和私钥材料不能同时为null或空字符串。 |
 
 **返回值：**
 
@@ -629,7 +629,7 @@ convertPemKeySync(pubKey: string | null, priKey: string | null, password: string
 
 获取指定数据生成非对称密钥。支持加密的私钥，同步传入私钥口令解密私钥。
 
-> **说明：**
+> **说明：** 
 > convertPemKeySync接口与convertPemKey接口注意事项相同，见
 > [convertPemKey](#convertpemkey-1)
 > 接口说明。

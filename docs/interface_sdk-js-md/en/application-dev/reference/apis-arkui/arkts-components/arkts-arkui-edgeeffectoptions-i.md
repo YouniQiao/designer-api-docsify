@@ -8,11 +8,6 @@ Define EdgeEffect Options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## alwaysEnabled
 
 ```TypeScript

@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## angle
 
 ```TypeScript
@@ -23,7 +18,7 @@ angle?: number
 
 默认值：1
 
-**说明：**
+**说明：** 
 
 当改变度数的值小于等于0或大于360时，会被转化为默认值。
 

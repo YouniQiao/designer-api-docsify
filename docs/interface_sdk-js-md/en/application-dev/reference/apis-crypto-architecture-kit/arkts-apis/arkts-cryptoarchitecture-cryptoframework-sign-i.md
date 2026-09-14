@@ -166,7 +166,7 @@ Initializes the **Sign** instance with a private key. This API returns the resul
 
 <br>The **Sign** instance does not support repeated use of **initSync**.
 
-<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -492,7 +492,7 @@ signSync(data: DataBlob | null): DataBlob
 
 Signs the data. This API returns the result synchronously.
 
-<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, [sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, [sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -724,7 +724,7 @@ Updates data to be signed. This API uses an asynchronous callback to return the 
 
 <br>This API can be called only after the [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) instance is initialized by using [init](#init) or [initSync](#initsync).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > You can call **update** multiple times or do not use **update** (call [sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) after
 > [init](#init)), depending on the data volume.
@@ -777,7 +777,7 @@ Updates data to be signed. This API uses a promise to return the result.
 
 <br>Before using this API, you must initialize the [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) instance by using [init()](#init).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > You can call **update** multiple times or do not use **update** (call
 > [sign](#sign-1) after
@@ -836,7 +836,7 @@ Updates data to be signed. This API returns the result synchronously.
 
 <br>This API can be called only after the [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) instance is initialized by using [initSync()](#initsync).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > You can call **updateSync** multiple times or do not use **updateSync** (call
 > [signSync](#signsync) after [initSync](#initsync)),
@@ -856,7 +856,7 @@ Updates data to be signed. This API returns the result synchronously.
 > If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **updateSync** is not
 > supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
-<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 

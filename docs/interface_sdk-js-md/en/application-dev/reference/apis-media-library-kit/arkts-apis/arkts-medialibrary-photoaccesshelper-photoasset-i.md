@@ -36,7 +36,7 @@ Clones a media asset. The file name can be set, but the file type cannot be chan
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Promise used to return the [PhotoAsset](arkts-file-photoaccesshelper.md) instance. |
+| Promise&lt;[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)&gt; | Promise used to return the [PhotoAsset](arkts-medialibrary-file-photoaccesshelper.md) instance. |
 
 **Error codes:**
 
@@ -203,7 +203,7 @@ Obtains a **PhotoAsset** member parameter.
 
 | Type | Description |
 | --- | --- |
-| [MemberType](arkts-medialibrary-photoaccesshelper-membertype-t.md) | PhotoAsset** member parameter obtained. |
+| [MemberType](arkts-medialibrary-photoaccesshelper-membertype-t.md) | **PhotoAsset** member parameter obtained. |
 
 **Error codes:**
 

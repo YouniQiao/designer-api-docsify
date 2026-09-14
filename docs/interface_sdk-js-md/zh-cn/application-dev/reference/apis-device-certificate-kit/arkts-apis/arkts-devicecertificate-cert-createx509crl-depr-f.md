@@ -14,7 +14,7 @@ function createX509Crl(inStream: EncodingBlob, callback: AsyncCallback<X509Crl>)
 
 表示创建X.509证书吊销列表对象。使用Callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用
 > [cert.createX509CRL()](arkts-devicecertificate-cert-createx509crl-f.md)替代。
@@ -90,7 +90,7 @@ function createX509Crl(inStream: EncodingBlob): Promise<X509Crl>
 
 表示创建X.509证书吊销列表对象。使用Promise方式返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用
 > [cert.createX509CRL()](arkts-devicecertificate-cert-createx509crl-f.md)替代。

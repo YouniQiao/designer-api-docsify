@@ -6,11 +6,6 @@ Defines the gesture API.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## allowedTypes
 
 ```TypeScript

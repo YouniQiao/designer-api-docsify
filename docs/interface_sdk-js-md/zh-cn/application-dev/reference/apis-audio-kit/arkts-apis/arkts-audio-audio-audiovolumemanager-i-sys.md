@@ -645,7 +645,7 @@ isAppVolumeMutedForUid(uid: number, owned: boolean): Promise<boolean>
 
 根据应用ID查询应用音量是否已静音。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 如果有多个调用者设置了静音状态，那么只有当所有调用者都取消静音状态后，此应用才会真正取消静音。
 
@@ -1319,7 +1319,7 @@ setSystemVolumePercentage(volumeType: AudioVolumeType, percentage: number): Prom
 
 设置指定流的音量百分比。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 设置指定流的音量百分比时需要使用整数，范围从最小系统音量百分比到100。
 > 

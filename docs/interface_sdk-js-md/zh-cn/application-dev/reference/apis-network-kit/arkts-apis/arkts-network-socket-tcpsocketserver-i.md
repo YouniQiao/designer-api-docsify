@@ -20,7 +20,7 @@ close(): Promise<void>
 
 TCPSocketServer停止监听并释放通过[listen](#listen)方法绑定的端口。若多次调用[listen](#listen)方法，再调用此方法时会释放TCPSocketServer的所有监听端口。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 该方法不会关闭已有连接。如需关闭，请调用[TCPSocketConnection](arkts-network-socket-tcpsocketconnection-i.md)的
 > [close](arkts-network-socket-tcpsocketconnection-i.md#close)方法。
@@ -77,7 +77,7 @@ getLocalAddress(): Promise<NetAddress>
 
 获取TCPSocketServer的本地Socket地址。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 
@@ -89,7 +89,7 @@ getLocalAddress(): Promise<NetAddress>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | 以Promise形式返回获取本地socket地址的结果。 |
+| Promise&lt;[NetAddress](arkts-network-socket-p.md)&gt; | 以Promise形式返回获取本地socket地址的结果。 |
 
 **错误码：**
 
@@ -130,7 +130,7 @@ getSocketFd(): Promise<number>
 
 获取TCPSocketServer监听端口绑定的文件描述符。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - [listen](#listen)方法调用成功后，才可调用
 > 此方法。多次调用listen时，会获取最新监听端口绑定的文件描述符。
@@ -189,7 +189,7 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 
 获取TCPSocketServer状态。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 
@@ -250,7 +250,7 @@ getState(): Promise<SocketStateBase>
 
 获取TCPSocketServer状态。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 
@@ -308,7 +308,7 @@ listen(address: NetAddress, callback: AsyncCallback<void>): void
 
 绑定IP地址和端口，端口可以指定或由系统随机分配。监听并接受与此套接字建立的TCPSocket连接。该接口使用多线程并发处理客户端的数据。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 服务端使用该方法完成bind，listen，accept操作，bind方法失败会由系统随机分配端口号。
 
@@ -322,7 +322,7 @@ listen(address: NetAddress, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| address | NetAddress | 是 | 目标地址信息。 |
+| address | [NetAddress](arkts-network-socket-p.md) | 是 | 目标地址信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
 
 **错误码：**
@@ -366,7 +366,7 @@ listen(address: NetAddress): Promise<void>
 
 绑定IP地址和端口，端口可以指定或由系统随机分配。监听并接受与此套接字建立的TCPSocket连接。该接口使用多线程并发处理客户端的数据。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 服务端使用该方法完成bind，listen，accept操作，bind方法失败会由系统随机分配端口号。
 
@@ -380,7 +380,7 @@ listen(address: NetAddress): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| address | NetAddress | 是 | 目标地址信息。 |
+| address | [NetAddress](arkts-network-socket-p.md) | 是 | 目标地址信息。 |
 
 **返回值：**
 
@@ -535,7 +535,7 @@ on(type: 'connect', callback: Callback<TCPSocketConnection>): void
 
 订阅TCPSocketServer的连接事件。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 
@@ -589,7 +589,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 订阅TCPSocketServer连接的error事件。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 
@@ -643,7 +643,7 @@ setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 
 设置TCPSocketServer连接的其他属性。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 
@@ -721,7 +721,7 @@ setExtraOptions(options: TCPExtraOptions): Promise<void>
 
 设置TCPSocketServer连接的其他属性。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > listen方法调用成功后，才可调用此方法。
 

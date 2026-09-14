@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## triggerClick
 
 ```TypeScript
@@ -37,7 +32,7 @@ label: string
 
 Button的文本标签，用于标识按钮的功能。
 
-**说明：**当文本字符的长度超过按钮本身的宽度时，文本将会被截断。
+**说明：** 当文本字符的长度超过按钮本身的宽度时，文本将会被截断。
 
 **类型：** string
 
@@ -61,7 +56,7 @@ true：按下；false：未按下。
 
 默认值：false
 
-**说明：**
+**说明：** 
 
 此按压属性生效区域大小为原本Button组件的大小，而非build出来的新组件大小。
 

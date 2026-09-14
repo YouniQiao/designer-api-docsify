@@ -8,11 +8,6 @@ Custom options for title bar background blur. All sub-properties are optional; u
 
 **System API:** This is a system API.
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## blurStyle
 
 ```TypeScript

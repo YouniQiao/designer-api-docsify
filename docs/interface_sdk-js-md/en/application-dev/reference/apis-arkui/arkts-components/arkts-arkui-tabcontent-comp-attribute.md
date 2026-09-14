@@ -10,11 +10,6 @@ In addition to the universal events, the following events are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onWillHide
 
 ```TypeScript
@@ -23,7 +18,7 @@ onWillHide(event: VoidCallback)
 
 Called when the tab content is about to be hidden. The scenarios include the tab switching, page switching, and window switching between the foreground and background.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called in attributeModifier since API version 20.
 
@@ -49,7 +44,7 @@ onWillShow(event: VoidCallback)
 
 Called when the tab content is about to be displayed. The scenarios include the first-time display, tab switching, page switching, and window switching between the foreground and background.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called in attributeModifier since API version 20.
 
@@ -99,7 +94,7 @@ tabBar(value: SubTabBarStyle | BottomTabBarStyle)
 
 Sets the content displayed on the tab bar. The bottom tab style does not include an indicator. When an icon display error occurs, a gray blank block is displayed.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md): text + underline or text + board. The text style can be set. It is
 > recommended that the subtab be placed at the top or bottom. By default, the animation transition effect is
@@ -159,7 +154,7 @@ tabBarVisibility(visibility: TabVisibility, displayMode?: TabBarDisplayMode)
 
 Sets the default visibility of the tab.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - When **visibility** is **TabVisibility.HIDDEN** and **displayMode** is **TabBarDisplayMode.SIDEBAR**, the tab
 > is not displayed in the sidebar but remains visible in the bottom tab bar.

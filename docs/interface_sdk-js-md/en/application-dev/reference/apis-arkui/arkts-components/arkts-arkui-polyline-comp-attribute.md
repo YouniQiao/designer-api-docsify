@@ -8,11 +8,6 @@ In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the fo
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## points
 
 ```TypeScript

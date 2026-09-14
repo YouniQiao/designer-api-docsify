@@ -8,11 +8,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## contentFont
 
 ```TypeScript
@@ -55,7 +50,7 @@ Sets the font color of the menu item content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the menu item content.<br>Default value: **'#E5000000' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the menu item content.<br>Default value: **'#E5000000'** |
 
 ## labelFont
 
@@ -99,7 +94,7 @@ Sets the font color of the menu item label.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the menu item label.<br>Default value: **'#99000000' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the menu item label.<br>Default value: **'#99000000'** |
 
 ## onChange
 
@@ -129,7 +124,7 @@ selected(value: boolean)
 
 Sets whether the menu item is selected.
 
-Since API version 10, this parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this parameter supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
 
 Since API version 18, this parameter supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 

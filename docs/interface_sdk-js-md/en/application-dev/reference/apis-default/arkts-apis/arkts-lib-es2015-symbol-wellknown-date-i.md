@@ -19,10 +19,6 @@ Converts a Date object to a string.
 | --- | --- | --- | --- |
 | hint | "default" | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [Symbol.toPrimitive]
 
 ```TypeScript
@@ -37,10 +33,6 @@ Converts a Date object to a string.
 | --- | --- | --- | --- |
 | hint | "string" | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [Symbol.toPrimitive]
 
 ```TypeScript
@@ -55,10 +47,6 @@ Converts a Date object to a number.
 | --- | --- | --- | --- |
 | hint | "number" | Yes |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [Symbol.toPrimitive]
 
 ```TypeScript
@@ -77,3 +65,4 @@ Converts a Date object to a string or number.
 
 | Type | Description |
 | --- | --- |
+| string | A number if 'hint' was "number", a string if 'hint' was "string" or "default". |

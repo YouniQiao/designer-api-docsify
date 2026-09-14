@@ -13,8 +13,3 @@ The universal events are not supported.
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```

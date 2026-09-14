@@ -8,11 +8,6 @@ You need a custom class to implement the **ContentModifier** API. Inherits from 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## triggerClick
 
 ```TypeScript
@@ -61,7 +56,7 @@ Whether the button is pressed.
 
 Default value: **false**
 
-**NOTE:**
+**NOTE:** 
 
 This setting applies to the original button size, not to any new component constructed using the builder.
 

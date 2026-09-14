@@ -22,7 +22,7 @@ addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void
 
 加入多播组。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 多播使用的IP地址属于特定的范围（例如224.0.0.0到239.255.255.255）。
 > 
@@ -38,7 +38,7 @@ addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| multicastAddress | NetAddress | 是 | 目标地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
+| multicastAddress | [NetAddress](arkts-network-socket-p.md) | 是 | 目标地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败返回错误码、错误信息。 |
 
 **错误码：**
@@ -78,7 +78,7 @@ addMembership(multicastAddress: NetAddress): Promise<void>
 
 加入多播组。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 多播使用的IP地址属于特定的范围（例如224.0.0.0到239.255.255.255）。
 > 
@@ -94,7 +94,7 @@ addMembership(multicastAddress: NetAddress): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| multicastAddress | NetAddress | 是 | 目标地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
+| multicastAddress | [NetAddress](arkts-network-socket-p.md) | 是 | 目标地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
 
 **返回值：**
 
@@ -136,7 +136,7 @@ dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): voi
 
 退出多播组。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 多播使用的IP地址属于特定的范围（例如224.0.0.0到239.255.255.255）。
 > 
@@ -154,7 +154,7 @@ dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| multicastAddress | NetAddress | 是 | 目标地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
+| multicastAddress | [NetAddress](arkts-network-socket-p.md) | 是 | 目标地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败返回错误码、错误信息。 |
 
 **错误码：**
@@ -193,7 +193,7 @@ dropMembership(multicastAddress: NetAddress): Promise<void>
 
 退出多播组。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 多播使用的IP地址属于特定的范围（例如224.0.0.0到239.255.255.255）。
 > 
@@ -211,7 +211,7 @@ dropMembership(multicastAddress: NetAddress): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| multicastAddress | NetAddress | 是 | 目标地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
+| multicastAddress | [NetAddress](arkts-network-socket-p.md) | 是 | 目标地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
 
 **返回值：**
 
@@ -253,7 +253,7 @@ getLoopbackMode(callback: AsyncCallback<boolean>): void
 
 获取多播通信中的环回模式状态。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 用于获取当前环回模式开启或关闭的状态。
 > 
@@ -303,7 +303,7 @@ getLoopbackMode(): Promise<boolean>
 
 获取多播通信中的环回模式状态。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 用于获取当前环回模式开启或关闭的状态。
 > 
@@ -351,7 +351,7 @@ getMulticastTTL(callback: AsyncCallback<number>): void
 
 获取数据包在网络传输过程中路由器最大跳数(TTL)的值。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 用于限制数据包在网络中传输时能够经过的最大路由器跳数的字段，TTL (Time to live)。
 > 
@@ -403,7 +403,7 @@ getMulticastTTL(): Promise<number>
 
 获取数据包在网络传输过程中路由器最大跳数(TTL)的值。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 用于限制数据包在网络中传输时能够经过的最大路由器跳数的字段，TTL (Time to live)。
 > 
@@ -453,7 +453,7 @@ getSocketFd(): Promise<number>
 
 获取MulticastSocket的文件描述符。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - [bind](arkts-network-socket-udpsocket-i.md#bind)方法调用成功后，才可调用此方法。
 > 
@@ -514,7 +514,7 @@ setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void
 
 设置多播通信中的环回模式标志位。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 用于设置环回模式，开启或关闭两种状态，默认为开启状态。
 > 
@@ -565,7 +565,7 @@ setLoopbackMode(flag: boolean): Promise<void>
 
 设置多播通信中的环回模式标志位。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 用于设置环回模式，开启或关闭两种状态，默认为开启状态。
 > 
@@ -619,7 +619,7 @@ setMulticastTTL(ttl: number, callback: AsyncCallback<void>): void
 
 设置多播通信时数据包在网络传输过程中路由器最大跳数。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 用于限制数据包在网络中传输时能够经过的最大路由器跳数的字段，TTL (Time to live)。
 > 
@@ -674,7 +674,7 @@ setMulticastTTL(ttl: number): Promise<void>
 
 设置多播通信时数据包在网络传输过程中路由器最大跳数。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 用于限制数据包在网络中传输时能够经过的最大路由器跳数的字段，TTL (Time to live)。
 > 
@@ -731,7 +731,7 @@ setReuseAddress(reuse: boolean): void
 
 设置多播Socket是否支持地址复用。使用同步方式调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 用于控制多播Socket绑定端口时是否开启地址复用能力。
 > 

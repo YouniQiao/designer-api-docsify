@@ -40,3 +40,4 @@ import { ContainerReader, ContainerReaderAttribute, BreakpointOptions } from '@k
 
 | 类型 | 说明 |
 | --- | --- |
+| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) |  |

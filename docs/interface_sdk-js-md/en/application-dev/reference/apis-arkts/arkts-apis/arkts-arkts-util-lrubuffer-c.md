@@ -613,7 +613,7 @@ Removes the specified key and its value from this cache.
 
 | Type | Description |
 | --- | --- |
-| V &#124; undefined | Optional** object containing the removed key-value pair. If the key does not exist, an empty **Optional** object is returned; if **null** is passed in for **key**, an error is thrown. |
+| V &#124; undefined | **Optional** object containing the removed key-value pair. If the key does not exist, an empty **Optional** object is returned; if **null** is passed in for **key**, an error is thrown. |
 
 **Examples**
 

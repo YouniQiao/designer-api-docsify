@@ -6,11 +6,6 @@ Defines the callback information triggered when an SSL client certificate is req
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## handler
 
 ```TypeScript

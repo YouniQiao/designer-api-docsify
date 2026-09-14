@@ -10,7 +10,7 @@ The **TabContent** component is used only in the **Tabs** component. It correspo
 
 This component supports only one child component.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Built-in system and custom components, and rendering control types (
 > [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md),

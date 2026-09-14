@@ -14,7 +14,7 @@ function deleteVlanIp(ifName: string, vlanId: number, address: LinkAddress): Pro
 
 从以太网网卡上对应vlanId的虚拟局域网中，删除已配置的IP地址及子网掩码。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本接口当前仅支持PC设备，其他设备类型上调用本接口返回错误码2100002。
 

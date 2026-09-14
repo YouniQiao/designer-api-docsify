@@ -8,11 +8,6 @@ In addition to the [universal events](arkts-arkui-commonmethod-c.md), the follow
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## alignContent
 
 ```TypeScript

@@ -6,11 +6,6 @@ Provides the callback information returned when a page is popped out of the rout
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## info
 
 ```TypeScript

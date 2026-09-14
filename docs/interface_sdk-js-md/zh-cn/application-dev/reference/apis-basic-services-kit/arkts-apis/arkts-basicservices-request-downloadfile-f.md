@@ -14,7 +14,7 @@ function downloadFile(context: BaseContext, config: DownloadConfig, callback: As
 
 创建并启动一个下载任务，使用callback异步回调，支持HTTP协议。通过on('complete'|'pause'|'remove')可获取任务下载时的状态信息，包括任务完成、暂停或移除。通过on('fail')可获取任务下载时的错误信息。
 
-> **说明：**
+> **说明：** 
 > 
 > 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -75,7 +75,7 @@ function downloadFile(context: BaseContext, config: DownloadConfig): Promise<Dow
 
 创建并启动一个下载任务，使用Promise异步回调，支持HTTP协议。通过on('complete'|'pause'|'remove')可以获取任务下载时的状态信息，包括任务完成、暂停或移除。通过on('fail')可以获取任务下载时的错误信息。
 
-> **说明：**
+> **说明：** 
 > 
 > 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 

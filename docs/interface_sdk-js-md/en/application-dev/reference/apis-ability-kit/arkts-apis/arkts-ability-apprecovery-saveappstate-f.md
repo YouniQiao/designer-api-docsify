@@ -12,7 +12,7 @@ import { appRecovery } from '@kit.AbilityKit';
 function saveAppState(): boolean
 ```
 
-Saves the application state. This API can be used together with the APIs of [errorManager](arkts-app-ability-errormanager.md).
+Saves the application state. This API can be used together with the APIs of [errorManager](arkts-ability-app-ability-errormanager.md).
 
 **Since:** 9
 
@@ -55,7 +55,7 @@ try {
 function saveAppState(context?: UIAbilityContext): boolean
 ```
 
-Saves the ability state, which will be used for recovery. This API can be used together with the APIs of [errorManager](arkts-app-ability-errormanager.md).
+Saves the ability state, which will be used for recovery. This API can be used together with the APIs of [errorManager](arkts-ability-app-ability-errormanager.md).
 
 **Since:** 10
 

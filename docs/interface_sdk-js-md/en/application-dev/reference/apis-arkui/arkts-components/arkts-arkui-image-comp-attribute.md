@@ -2,7 +2,7 @@
 
 The **Image** component is usually used to display images in applications. It supports data sources of the following types: [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md), [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md), and [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md). Supported image formats include PNG, JPG, JPEG, BMP, SVG, WEBP, GIF, HEIF, and TIFF. Note that the APNG and SVGA formats are not supported.
 
-> **NOTE:**
+> **NOTE:** 
 
 > - This component supports the TIFF image format since API version 23.
 > 
@@ -34,11 +34,6 @@ The **Image** component is usually used to display images in applications. It su
 **Since:** 7
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```
 
 ## alt
 
@@ -74,7 +69,7 @@ alt(src: ResourceStr | PixelMap | ImageAlt)
 
 Sets the placeholder image displayed during image loading and when image loading fails.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When a placeholder image is configured via [ImageAlt](arkts-arkui-imagealt-i.md), **Image** takes effect based on the
 > placeholder image sources configured for the loading and load-failure states. If no placeholder image is
@@ -108,7 +103,7 @@ antialiased(isAntialiased: Optional<boolean>)
 
 Sets whether to enable anti-aliasing for the edges of a pixel map image. If the attribute is not set, anti-aliasing is disabled by default. This attribute is not applicable to SVG images.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If the backgroundColor attribute is set for an image,
 > setting the **antialiased** attribute of the image to **true** does not affect the aliasing effect of the
@@ -182,7 +177,7 @@ When this attribute is set, [renderMode](#rendermode) is not effective.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md) &#124; [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) | Yes | 1. Color filter of the image. The input parameter is a 4 x 5 RGBA transformation matrix.<br>2. The ColorFilter type of **@ohos.graphics.drawing** can be used as an input parameter since API version 12.<br>**NOTE:**<br>This parameter is not available for SVG images in API version 11 and earlier versions.<br>The DrawingColorfilter type can be used in atomic services since API version 12. For SVG sources, the effect only applies when the **stroke** property is set (regardless of the value).<br>Since API version 21, when [supportSvg2](#supportsvg2) is set to **true**, **colorFilter** takes effect on the entire SVG image source.<br>**Since:** 12 |
+| value | [ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md) &#124; [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) | Yes | 1. Color filter of the image. The input parameter is a 4 x 5 RGBA transformation matrix.<br>2. The ColorFilter type of **@ohos.graphics.drawing** can be used as an input parameter since API version 12.<br>**NOTE:** <br>This parameter is not available for SVG images in API version 11 and earlier versions.<br>The DrawingColorfilter type can be used in atomic services since API version 12. For SVG sources, the effect only applies when the **stroke** property is set (regardless of the value).<br>Since API version 21, when [supportSvg2](#supportsvg2) is set to **true**, **colorFilter** takes effect on the entire SVG image source.<br>**Since:** 12 |
 
 ## colorFilter
 
@@ -254,7 +249,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | Specifies whether the image can be copied.<br>Default value: **CopyOptions.None |
+| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | Specifies whether the image can be copied.<br>Default value: **CopyOptions.None** |
 
 ## draggable
 
@@ -298,7 +293,7 @@ Sets the dynamic range of the image to be displayed. This attribute is not appli
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DynamicRangeMode](arkts-arkui-dynamicrangemode-e.md) | Yes | Dynamic range of the image.<br>Default value: **DynamicRangeMode.STANDARD |
+| value | [DynamicRangeMode](arkts-arkui-dynamicrangemode-e.md) | Yes | Dynamic range of the image.<br>Default value: **DynamicRangeMode.STANDARD** |
 
 ## enableAnalyzer
 
@@ -318,7 +313,7 @@ Analysis is performed based on the complete original image. Even if the settings
 
 This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The **ohos.permission.INTERNET** permission is required.
 > 
@@ -336,7 +331,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether the **Image** component supports AI analysis.<br>When this parameter is set to **true**, the **Image** component supports AI analysis. When this parameter is set to **false**, the **Image** component does not support AI analysis.<br>Default value: **false |
+| enable | boolean | Yes | Whether the **Image** component supports AI analysis.<br>When this parameter is set to **true**, the **Image** component supports AI analysis. When this parameter is set to **false**, the **Image** component does not support AI analysis.<br>Default value: **false** |
 
 ## fillColor
 
@@ -360,7 +355,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Fill color to be superimposed on the image.<br>**NOTE:**<br> By default, no fill color is applied. If an invalid value is passed, the system uses the default theme color: black in light mode and white in dark mode.<br>Since API version 21, when [supportSvg2](#supportsvg2) is set to **true**, **fillColor** depends on the **fill** attribute configuration in the SVG image source. If the **fill** attribute in the SVG image source is set to **'none'**, **fillColor** does not take effect. When **supportSvg2** is set to **false**, **fillColor** takes effect and replaces the fill colors of all drawable elements in the SVG image. |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Fill color to be superimposed on the image.<br>**NOTE:** <br> By default, no fill color is applied. If an invalid value is passed, the system uses the default theme color: black in light mode and white in dark mode.<br>Since API version 21, when [supportSvg2](#supportsvg2) is set to **true**, **fillColor** depends on the **fill** attribute configuration in the SVG image source. If the **fill** attribute in the SVG image source is set to **'none'**, **fillColor** does not take effect. When **supportSvg2** is set to **false**, **fillColor** takes effect and replaces the fill colors of all drawable elements in the SVG image. |
 
 ## fillColor
 
@@ -384,7 +379,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [ColorContent](arkts-arkui-colorcontent-c.md) | Yes | Fill color to be superimposed on the image.<br>**NOTE:**<br> By default, no fill color is applied. If an invalid value is passed, the system uses the default theme color: black in light mode and white in dark mode.<br>Since API version 21, when [supportSvg2](#supportsvg2) is set to **true**, **fillColor** depends on the **fill** attribute configuration in the SVG image source. If the **fill** attribute in the SVG image source is set to **'none'**, **fillColor** does not take effect. |
+| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [ColorContent](arkts-arkui-colorcontent-c.md) | Yes | Fill color to be superimposed on the image.<br>**NOTE:** <br> By default, no fill color is applied. If an invalid value is passed, the system uses the default theme color: black in light mode and white in dark mode.<br>Since API version 21, when [supportSvg2](#supportsvg2) is set to **true**, **fillColor** depends on the **fill** attribute configuration in the SVG image source. If the **fill** attribute in the SVG image source is set to **'none'**, **fillColor** does not take effect. |
 
 ## fillColor
 
@@ -408,7 +403,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [ColorContent](arkts-arkui-colorcontent-c.md) &#124; ColorMetrics | Yes | Fill color to be superimposed on the image.<br> **NOTE:**<br> By default, no fill color is applied. If an invalid value is passed, the system uses the default theme color: black in light mode and white in dark mode.<br>Since API version 21, when [supportSvg2](#supportsvg2) is set to **true**, **fillColor** depends on the **fill** attribute configuration in the SVG image source. If the **fill** attribute in the SVG image source is set to **'none'**, **fillColor** does not take effect. |
+| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; [ColorContent](arkts-arkui-colorcontent-c.md) &#124; ColorMetrics | Yes | Fill color to be superimposed on the image.<br> **NOTE:** <br> By default, no fill color is applied. If an invalid value is passed, the system uses the default theme color: black in light mode and white in dark mode.<br>Since API version 21, when [supportSvg2](#supportsvg2) is set to **true**, **fillColor** depends on the **fill** attribute configuration in the SVG image source. If the **fill** attribute in the SVG image source is set to **'none'**, **fillColor** does not take effect. |
 
 ## fitOriginalSize
 
@@ -434,7 +429,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether the image display size follows the size of the image source.<br>Default value: **false**<br>**NOTE:**<br>**false** or not set: The image display size does not follow the size of the image source.<br> **true**: The image display size follows the size of the image source. |
+| value | boolean | Yes | Whether the image display size follows the size of the image source.<br>Default value: **false**<br>**NOTE:** <br>**false** or not set: The image display size does not follow the size of the image source.<br> **true**: The image display size follows the size of the image source. |
 
 ## hdrBrightness
 
@@ -580,7 +575,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ImageRepeat](../arkts-apis/arkts-arkui-imagerepeat-e.md) | Yes | How the image is repeated.<br>Default value: **ImageRepeat.NoRepeat |
+| value | [ImageRepeat](../arkts-apis/arkts-arkui-imagerepeat-e.md) | Yes | How the image is repeated.<br>Default value: **ImageRepeat.NoRepeat** |
 
 ## onComplete
 
@@ -902,7 +897,7 @@ This event is not triggered if the parameter type of the component is [AnimatedD
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ImageErrorCallback](arkts-arkui-imageerrorcallback-t.md) | Yes | Callback triggered when an error occurs during image loading. **NOTE:**&lt;You are advised to use this callback to quickly identify the cause of image loading failures. For details, see the [ImageError](arkts-arkui-imageerror-i.md) error codes.<br>**Since:** 11 |
+| callback | [ImageErrorCallback](arkts-arkui-imageerrorcallback-t.md) | Yes | Callback triggered when an error occurs during image loading. **NOTE:** &lt;You are advised to use this callback to quickly identify the cause of image loading failures. For details, see the [ImageError](arkts-arkui-imageerror-i.md) error codes.<br>**Since:** 11 |
 
 ## onFinish
 
@@ -976,7 +971,7 @@ Sets whether to secure sensitive information on widgets.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| supported | boolean | Yes | Whether to secure sensitive information on widgets.<br>**false** (default): Do not secure sensitive information on widgets.<br>**true**: Secure sensitive information on widgets, obscuring the image with a semi-transparent background style in privacy mode.<br>**NOTE:**<br>If this parameter is set to **null**, the image is not obscured.<br>Privacy mode requires support from the widget framework. |
+| supported | boolean | Yes | Whether to secure sensitive information on widgets.<br>**false** (default): Do not secure sensitive information on widgets.<br>**true**: Secure sensitive information on widgets, obscuring the image with a semi-transparent background style in privacy mode.<br>**NOTE:** <br>If this parameter is set to **null**, the image is not obscured.<br>Privacy mode requires support from the widget framework. |
 
 ## renderMode
 
@@ -1002,7 +997,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ImageRenderMode](arkts-arkui-imagerendermode-e.md) | Yes | Rendering mode of the image, which can be **Original** or **Template** (monochrome).<br>Default value: **ImageRenderMode.Original |
+| value | [ImageRenderMode](arkts-arkui-imagerendermode-e.md) | Yes | Rendering mode of the image, which can be **Original** or **Template** (monochrome).<br>Default value: **ImageRenderMode.Original** |
 
 ## resizable
 
@@ -1018,7 +1013,7 @@ When the sum of the values of **top** and **bottom** is greater than the source 
 
 This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md) or the image format is SVG.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called in attributeModifier since API version 20.
 

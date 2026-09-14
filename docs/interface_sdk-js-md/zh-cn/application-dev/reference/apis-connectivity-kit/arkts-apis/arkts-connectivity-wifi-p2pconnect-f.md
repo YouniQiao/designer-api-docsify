@@ -14,7 +14,7 @@ function p2pConnect(config: WifiP2PConfig): boolean
 
 执行P2P连接。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃。
 

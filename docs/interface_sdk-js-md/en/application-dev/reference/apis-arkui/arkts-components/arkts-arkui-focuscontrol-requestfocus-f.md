@@ -1,10 +1,5 @@
 # requestFocus
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## requestFocus
 
 ```TypeScript

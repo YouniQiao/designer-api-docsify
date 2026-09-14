@@ -22,7 +22,7 @@ Obtains a **DistributedAccountAbility** instance.
 
 | Type | Description |
 | --- | --- |
-| [DistributedAccountAbility](arkts-basicservices-distributedaccount-distributedaccountability-i.md) | DistributedAccountAbility** instance obtained. This instance provides APIs for querying and updating the login state of a distributed account. |
+| [DistributedAccountAbility](arkts-basicservices-distributedaccount-distributedaccountability-i.md) | **DistributedAccountAbility** instance obtained. This instance provides APIs for querying and updating the login state of a distributed account. |
 
 **Examples**
 

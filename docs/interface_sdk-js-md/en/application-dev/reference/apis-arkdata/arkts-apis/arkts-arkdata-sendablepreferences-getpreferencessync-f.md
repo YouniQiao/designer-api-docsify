@@ -31,7 +31,7 @@ Obtains a **Preferences** instance. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| [Preferences](arkts-arkdata-sendablepreferences-preferences-i.md) | Preferences** instance obtained.  This instance inherits from [ISendable](../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads) by reference. For details, see [Using Sendable Objects](../../../arkts-utils/sendable-guide.md). |
+| [Preferences](arkts-arkdata-sendablepreferences-preferences-i.md) | **Preferences** instance obtained.  This instance inherits from [ISendable](../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads) by reference. For details, see [Using Sendable Objects](../../../arkts-utils/sendable-guide.md). |
 
 **Error codes:**
 

@@ -10,11 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## duration
 
 ```TypeScript
@@ -261,7 +256,7 @@ preDecode(value: number)
 
 设置预解码的图片数量。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃。当前无可替代接口。
 

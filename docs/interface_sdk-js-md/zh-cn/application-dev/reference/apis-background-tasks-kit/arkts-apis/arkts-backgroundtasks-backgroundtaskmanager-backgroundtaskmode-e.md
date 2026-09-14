@@ -20,7 +20,7 @@ MODE_DATA_TRANSFER = 1
 
 使用场景举例：非托管形式的上传、下载，如在浏览器后台上传或下载数据。
 
-**说明：**
+**说明：** 
 
 1. 在数据传输时，应用需要更新进度，如果进度长时间（超过10分钟）未更新，数据传输的长时任务会被取消。
 2. 更新进度的通知类型必须为实况窗，具体实现可参考[startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md)中的示例。
@@ -165,7 +165,7 @@ MODE_SPECIAL_SCENARIO_PROCESSING = 13
 
 使用场景举例：应用在后台导出媒体文件、应用使用三方投播组件在后台进行投播、应用在后台有室内运动场景，场景需与长时任务子类型相匹配。
 
-**说明：**
+**说明：** 
 
 1. 如果应用需要在后台长时间运行，可以通过[requestAuthFromUser](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md#requestauthfromuser)接口请求用户授权、通过[checkSpecialScenarioAuth](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md#checkspecialscenarioauth)接口查询用户授权结果。
 2. 从API version 24开始，仅对申请ACL权限[ohos.permission.KEEP_BACKGROUND_RUNNING_SPECIAL_SCENARIO](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_special_scenario)的应用开放。API version 23及之前版本，仅对申请ACL权限[ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system)的应用开放，已经申请该权限的应用在API version 24之后不受影响。

@@ -18,7 +18,7 @@ function openCustomDialog(options: CustomDialogOptions): Promise<number>
 
 弹窗宽度在设备竖屏时默认为 所在窗口宽度 - 左右margin（16vp，设备为2in1时为40vp），最大默认宽度为400vp。
 
-> **说明：**
+> **说明：** 
 > 
 > - 从API version 11开始支持，从API version 18开始废弃，建议使用openCustomDialog替代。 openCustomDialog需先通过UIContext中的[getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取[PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md)对象，然后通过该对象进行调用。且直接使用openCustomDialog可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
 > 

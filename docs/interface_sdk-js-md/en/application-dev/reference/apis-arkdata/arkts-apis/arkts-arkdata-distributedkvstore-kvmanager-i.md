@@ -413,7 +413,7 @@ getKVStore<T>(storeId: string, options: Options, callback: AsyncCallback<T>): vo
 
 Creates and obtains a distributed KV store based on the specified **options** and **storeId**. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If the database file cannot be opened (for example, the file header is damaged) when an existing distributed KV
 > store is obtained, the automatic rebuild logic will be triggered to return a newly created distributed KV
@@ -484,7 +484,7 @@ getKVStore<T>(storeId: string, options: Options): Promise<T>
 
 Creates and obtains a distributed KV store based on the specified **options** and **storeId**. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > If the database file cannot be opened (for example, the file header is damaged) when an existing distributed KV
 > store is obtained, the automatic rebuild logic will be triggered to return a newly created distributed KV

@@ -36,7 +36,7 @@ Obtains a **UserFileManager** instance. This instance can be used to access and 
 
 | Type | Description |
 | --- | --- |
-| [UserFileManager](arkts-corefile-userfilemanager-userfilemanager-i-sys.md) | UserFileManager** instance obtained. |
+| [UserFileManager](arkts-corefile-userfilemanager-userfilemanager-i-sys.md) | **UserFileManager** instance obtained. |
 
 **Examples**
 

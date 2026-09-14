@@ -366,7 +366,7 @@ update(input: DataBlob, callback: AsyncCallback<void>): void
 
 传入消息进行Md更新摘要状态。使用callback异步回调。update和digest为两段式接口，需要成组使用。其中digest必选，update可选。
 
-> **说明：**
+> **说明：** 
 > 
 > Md算法多次调用update更新的代码示例详见开发指导
 > [分段摘要算法](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#分段摘要算法)。
@@ -406,7 +406,7 @@ update(input: DataBlob): Promise<void>
 
 传入消息进行Md更新摘要状态。使用Promise异步回调。update和digest为两段式接口，需要成组使用。其中digest必选，update可选。
 
-> **说明：**
+> **说明：** 
 > 
 > Md算法多次调用update更新的代码示例详见开发指导
 > [分段摘要算法](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#分段摘要算法)。
@@ -449,7 +449,7 @@ updateSync(input: DataBlob): void
 
 传入消息进行Md更新摘要状态，通过同步方式更新。updateSync和digestSync为两段式接口，需要成组使用。其中digestSync必选，updateSync可选。
 
-> **说明：**
+> **说明：** 
 > 
 > Md算法多次调用updateSync更新的代码示例详见开发指导
 > [分段摘要算法](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#分段摘要算法)。

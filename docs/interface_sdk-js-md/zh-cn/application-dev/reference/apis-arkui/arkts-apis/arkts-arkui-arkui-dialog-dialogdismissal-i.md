@@ -34,7 +34,7 @@ dismiss: VoidCallback
 reason: DismissReason
 ```
 
-无法关闭对话框的原因。
+触发弹出框关闭操作的原因类型。
 
 **类型：** [DismissReason](../arkts-components/arkts-arkui-dismissreason-e.md)
 

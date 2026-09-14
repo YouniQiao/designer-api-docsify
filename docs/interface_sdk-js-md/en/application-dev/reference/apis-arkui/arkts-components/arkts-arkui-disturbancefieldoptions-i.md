@@ -8,11 +8,6 @@ Defines particle disturbance Field params.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## feather
 
 ```TypeScript

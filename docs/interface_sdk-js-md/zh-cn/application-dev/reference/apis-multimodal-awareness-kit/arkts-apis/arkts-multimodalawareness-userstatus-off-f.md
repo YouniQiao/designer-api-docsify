@@ -14,7 +14,7 @@ function off(type: 'userAgeGroupDetected', callback?: Callback<UserClassificatio
 
 取消订阅年龄群组检测功能。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口仅在部分Phone中支持使用，当Phone设备不支持时返回33900003错误码。
 

@@ -6,11 +6,6 @@ Provides parameters for scrolling to a specific position in a scrollable contain
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## animation
 
 ```TypeScript
@@ -25,7 +20,7 @@ parameters and the boolean type enables default spring animation. [since 10 - 11
 
 **Type:** [ScrollAnimationOptions](arkts-arkui-scrollanimationoptions-i.md) &#124; boolean
 
-**Default:**
+**Default:** 
 - API version 18+: ScrollAnimationOptions: { duration: 1000, curve: Curve.Ease, canOverScroll: false }
 
 **Since:** 10

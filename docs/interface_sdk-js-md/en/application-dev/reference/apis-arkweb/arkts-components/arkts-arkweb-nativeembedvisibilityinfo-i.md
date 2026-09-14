@@ -6,11 +6,6 @@ Provides visibility information about the same-layer tag, including the visibili
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## embedId
 
 ```TypeScript

@@ -13,7 +13,7 @@ function dumpHeapData(filename: string): void
 ```
 
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8支持，从API version 9开始废弃，
 > 虚拟机堆数据转储，生成`filename.heapsnapshot`文件。

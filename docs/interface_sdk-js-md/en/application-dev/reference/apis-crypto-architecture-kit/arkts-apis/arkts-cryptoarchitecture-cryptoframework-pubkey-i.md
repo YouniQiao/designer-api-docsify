@@ -102,7 +102,7 @@ getEncodedDer(format: string): DataBlob
 
 Obtains the public key data that complies with the ASN.1 syntax and DER encoding format based on the specified key format (such as the specifications and compression status).
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The difference between [Key.getEncoded()](arkts-cryptoarchitecture-cryptoframework-key-i.md#getencoded) and this API is as follows:
 > 1. You can specify the format of the data to be obtained in this API.
@@ -266,7 +266,7 @@ getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array
 
 Obtains the public key data based on the specified key data type. This API returns the result synchronously.
 
-<br><br>**NOTE:**<br>It is recommended to prioritize the use of asynchronous API, getKeyData. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, getKeyData. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 26.0.0
 

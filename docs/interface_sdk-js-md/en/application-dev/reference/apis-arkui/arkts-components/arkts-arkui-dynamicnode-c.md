@@ -6,11 +6,6 @@ Define DynamicNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onMove
 
 ```TypeScript
@@ -37,6 +32,8 @@ Invoked when data is moved during drag and drop sorting. This callback is only a
 
 | Type | Description |
 | --- | --- |
+| T |  |
+
 ## onMove
 
 ```TypeScript
@@ -64,3 +61,4 @@ Set the move action.
 
 | Type | Description |
 | --- | --- |
+| T |  |

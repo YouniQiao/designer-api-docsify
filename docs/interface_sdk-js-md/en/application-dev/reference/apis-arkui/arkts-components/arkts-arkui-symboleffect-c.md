@@ -11,8 +11,3 @@ Defines the **SymbolEffect** class.
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## Modules to Import
-
-```TypeScript
-```

@@ -6,11 +6,6 @@ Defines parameters related to animation effects.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## onFinish
 
 ```TypeScript

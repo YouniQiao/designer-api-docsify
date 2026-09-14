@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## distributionType
 
 ```TypeScript
@@ -69,7 +64,7 @@ updater?: ParticleColorUpdaterOptions<UPDATER>
 
 默认值：type默认为 ParticleUpdater.NONE。
 
-**说明：**
+**说明：** 
 
 当type为ParticleUpdater.RANDOM或者ParticleUpdater.CURVE时，updater中颜色配置的优先级高于range中的颜色配置。在updater配置的动画时间周期内，以updater中的颜色配置来变化；在updater配置的动画时间周期外，以range中的颜色配置来变化。
 

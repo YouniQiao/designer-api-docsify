@@ -13,8 +13,3 @@ In addition to the universal events, the following events are supported.
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-
-## Modules to Import
-
-```TypeScript
-```

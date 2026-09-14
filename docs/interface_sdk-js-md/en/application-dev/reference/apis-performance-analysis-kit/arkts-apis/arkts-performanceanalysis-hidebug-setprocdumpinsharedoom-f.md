@@ -14,7 +14,7 @@ function setProcDumpInSharedOOM(enable: boolean): void
 
 Changes the dump heap snapshot from the thread-level to the process-level.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > To dump a process-level heap snapshot, you must call this API and pass **true**. In addition, SharedHeap OOM must
 > occur.

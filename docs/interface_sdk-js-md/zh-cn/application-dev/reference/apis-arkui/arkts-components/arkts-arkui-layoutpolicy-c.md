@@ -2,7 +2,7 @@
 
 用于组件宽度和高度的布局策略。提供matchParent、wrapContent、fixAtIdealSize三种布局策略选项，分别用于组件自适应父组件布局、根据内容自适应但不超过父组件尺寸、根据内容自适应且可超过父组件尺寸的场景。
 
-> **说明：**
+> **说明：** 
 > 
 > - LayoutPolicy支持设置三种布局策略：matchParent（自适应父组件布局）、wrapContent（根据内容自适应但不超过父组件尺寸的布局）和fixAtIdealSize（根据内容自适应，可能超过父组件尺寸的布局
 > ）。具体示例代码参见[设置布局策略](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#示例5设置布局策略)。
@@ -25,11 +25,6 @@
 **起始版本：** 15
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-```
 
 ## fixAtIdealSize
 

@@ -245,7 +245,7 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 
 Sets whether to hide non-secure windows. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - A non-secure window refers to any window that may obstruct the
 > EmbeddedComponent or
@@ -331,7 +331,7 @@ hidePrivacyContentForHost(shouldHide: boolean): Promise<void>
 
 Sets whether to enable privacy protection for the UIExtension component during non-system screenshots. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > When privacy protection is enabled, neither
 > window.snapshot nor
@@ -578,7 +578,7 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 
 Adds or deletes the watermark flag for this window. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > With the watermark flag added, the watermark is applied on the full screen when the window is in the foreground
 > , regardless of whether the window is displayed in full screen, floating, and split screen mode.

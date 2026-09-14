@@ -16,7 +16,7 @@ function create(id: string, type: WindowType, callback: AsyncCallback<Window>): 
 
 子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#immersive-layout沉浸式布局)。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，参数id传入null或undefined时，可能会导致callback无法得到执行，建议使用
 > [createWindow()](arkts-arkui-window-createwindow-f.md)替代。
@@ -67,7 +67,7 @@ function create(id: string, type: WindowType): Promise<Window>
 
 子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#immersive-layout沉浸式布局)。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用[createWindow()](arkts-arkui-window-createwindow-f.md)替代。
 
@@ -118,7 +118,7 @@ function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>
 
 创建系统窗口，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[createWindow()](arkts-arkui-window-createwindow-f.md)替代。
 
@@ -168,7 +168,7 @@ function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncC
 
 创建系统窗口，使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
 > [createWindow()](arkts-arkui-window-createwindow-f.md)替代。

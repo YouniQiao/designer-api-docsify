@@ -20,8 +20,3 @@ A constructor function can control which objects are recognized as its instances
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | any | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

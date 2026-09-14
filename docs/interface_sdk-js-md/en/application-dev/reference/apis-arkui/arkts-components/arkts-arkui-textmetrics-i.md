@@ -6,11 +6,6 @@ Size information of the text.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## actualBoundingBoxAscent
 
 ```TypeScript

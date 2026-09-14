@@ -2,7 +2,7 @@
 
 Implements a path effect.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The initial APIs of this class are supported since API version 12.
 > 
@@ -44,7 +44,7 @@ Creates a path effect by sequentially applying the inner effect and then the out
 
 | Type | Description |
 | --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect** object created. |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | **PathEffect** object created. |
 
 ## createCornerPathEffect
 
@@ -68,7 +68,7 @@ Creates a path effect that transforms the sharp angle between line segments into
 
 | Type | Description |
 | --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect** object created. |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | **PathEffect** object created. |
 
 **Error codes:**
 
@@ -99,7 +99,7 @@ Creates a **PathEffect** object that converts a path into a dotted line.
 
 | Type | Description |
 | --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect** object created. |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | **PathEffect** object created. |
 
 **Error codes:**
 
@@ -131,7 +131,7 @@ Creates an effect that segments the path and scatters the segments in an irregul
 
 | Type | Description |
 | --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect** object created. |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | **PathEffect** object created. |
 
 ## createPathDashEffect
 
@@ -158,7 +158,7 @@ Creates a dashed path effect based on the shape described by a path.
 
 | Type | Description |
 | --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect** object created. |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | **PathEffect** object created. |
 
 **Error codes:**
 
@@ -189,4 +189,4 @@ Creates an overlay path effect based on two distinct path effects. Different fro
 
 | Type | Description |
 | --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect** object created. |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | **PathEffect** object created. |

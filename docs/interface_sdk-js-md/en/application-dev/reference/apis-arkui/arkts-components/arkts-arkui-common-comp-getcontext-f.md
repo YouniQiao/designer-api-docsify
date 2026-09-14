@@ -1,10 +1,5 @@
 # getContext
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## getContext
 
 ```TypeScript

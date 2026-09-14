@@ -1,9 +1,9 @@
 # AudioPlayer
 
 
-> **说明：**
+> **说明：** 
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用[AVPlayer](arkts-multimedia-media.md)替代。
+> 从API version 6开始支持，从API version 9开始废弃，建议使用[AVPlayer](arkts-media-multimedia-media.md)替代。
 
 音频播放管理类，用于管理和播放音频媒体。在调用AudioPlayer的方法前，需要先通过[createAudioPlayer()](arkts-media-media-createaudioplayer-f.md)构建一个AudioPlayer实例。
 
@@ -11,7 +11,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [media](arkts-multimedia-media.md)
+**替代接口：** [media](arkts-media-multimedia-media.md)
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -29,7 +29,7 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 
 获取音频轨道信息。需在'dataLoad'事件成功触发后，才能调用。通过回调函数获取返回值。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
 > [AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)
@@ -57,7 +57,7 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 
 获取音频轨道信息。需在'dataLoad'事件成功触发后，才能调用。通过Promise获取返回值。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
 > [AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)替代。
@@ -84,7 +84,7 @@ on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: numbe
 
 开始订阅音频缓存更新事件。仅网络播放支持该订阅事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
 > [AVPlayer.on('bufferingUpdate')](arkts-media-media-avplayer-i.md#onbufferingupdate)
@@ -113,7 +113,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 开始订阅音频播放事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
 > [AVPlayer.on('stateChange')](arkts-media-media-avplayer-i.md#onstatechange)
@@ -142,7 +142,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 开始订阅音频播放事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
 > [AVPlayer.on('stateChange')](arkts-media-media-avplayer-i.md#onstatechange)
@@ -171,7 +171,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 开始订阅音频播放事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
 > [AVPlayer.on('stateChange')](arkts-media-media-avplayer-i.md#onstatechange)
@@ -200,7 +200,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 开始订阅音频播放事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
 > [AVPlayer.on('stateChange')](arkts-media-media-avplayer-i.md#onstatechange)
@@ -229,7 +229,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 开始订阅音频播放事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
 > [AVPlayer.on('stateChange')](arkts-media-media-avplayer-i.md#onstatechange)
@@ -258,7 +258,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 开始订阅音频播放事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
 > [AVPlayer.on('stateChange')](arkts-media-media-avplayer-i.md#onstatechange)
@@ -287,7 +287,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 开始订阅音频播放事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
 > [AVPlayer.on('stateChange')](arkts-media-media-avplayer-i.md#onstatechange)
@@ -316,7 +316,7 @@ on(type: 'timeUpdate', callback: Callback<number>): void
 
 开始订阅音频播放时间更新事件。处于播放状态时，每隔1s上报一次该事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
 > AVPlayer.on('timeUpdate')
@@ -345,7 +345,7 @@ on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
 
 监听音频焦点变化事件，参考[audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始支持，从API version 9开始废弃，建议使用
 > [AVPlayer.on('audioInterrupt')](arkts-media-media-avplayer-i.md#onaudiointerrupt)
@@ -374,7 +374,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 开始订阅音频播放错误事件，当上报error错误事件后，用户需处理error事件，退出播放操作。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
 > [AVPlayer.on('error')](arkts-media-media-avplayer-i.md#onerror)替
@@ -403,7 +403,7 @@ pause(): void
 
 暂停播放音频资源。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
 > [AVPlayer.pause](arkts-media-media-avplayer-i.md#pause)替代。
@@ -424,7 +424,7 @@ play(): void
 
 开始播放音频资源，需在'dataLoad'事件成功触发后，才能调用。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
 > [AVPlayer.play](arkts-media-media-avplayer-i.md#play)替代。
@@ -445,7 +445,7 @@ release(): void
 
 释放音频资源。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
 > [AVPlayer.release](arkts-media-media-avplayer-i.md#release)替代。
@@ -466,7 +466,7 @@ reset(): void
 
 重置播放音频资源。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
 > [AVPlayer.reset](arkts-media-media-avplayer-i.md#reset)替代。
@@ -487,7 +487,7 @@ seek(timeMs: number): void
 
 跳转到指定播放位置。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用[AVPlayer.seek](arkts-media-media-avplayer-i.md#seek)替代
 > 。
@@ -514,7 +514,7 @@ setVolume(vol: number): void
 
 设置音量。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
 > [AVPlayer.setVolume](arkts-media-media-avplayer-i.md#setvolume)替代。
@@ -541,7 +541,7 @@ stop(): void
 
 停止播放音频资源。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
 > [AVPlayer.stop](arkts-media-media-avplayer-i.md#stop)替代。

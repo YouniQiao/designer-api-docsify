@@ -14,7 +14,7 @@ function createVlanInterface(ifName: string, vlanId: number): Promise<void>
 
 在指定的以太网网卡上，创建一个由vlanId指定的虚拟局域网。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本接口当前仅支持PC设备，其他设备类型上调用本接口返回错误码2100002。
 

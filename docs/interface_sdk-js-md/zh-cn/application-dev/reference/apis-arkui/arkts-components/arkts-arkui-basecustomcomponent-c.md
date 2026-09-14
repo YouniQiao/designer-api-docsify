@@ -8,11 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## aboutToAppear
 
 ```TypeScript
@@ -21,7 +16,7 @@ aboutToAppear?(): void
 
 aboutToAppear函数在创建自定义组件的新实例后，在其build()函数执行前调用。允许在aboutToAppear函数中改变[状态变量](../../../ui/state-management/arkts-state-management-glossary.md#state-variables状态变量)，更改将在后续执行build()函数中生效。实现[自定义布局](arkts-arkui-layoutable-i.md)的自定义组件的aboutToAppear生命周期在布局过程中触发。具体使用说明，详见[自定义组件生命周期指南](../../../ui/state-management/arkts-page-custom-components-lifecycle.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > * 在该回调函数内，建议仅执行当前节点组件的初始化逻辑，避免高耗时操作阻塞主线程。对于高耗时操作，推荐采用缓存或异步方案替代。最佳实践请参考
 > [UI组件性能优化-避免在自定义组件的生命周期内执行高耗时操作](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-ui-component-performance-optimization#section18755173594714)。
@@ -45,7 +40,7 @@ aboutToDisappear?(): void
 
 aboutToDisappear函数在自定义组件析构销毁时执行。不允许在aboutToDisappear函数中改变状态变量，特别是\@Link变量的修改可能会导致应用行为不稳定。具体使用说明，详见[自定义组件生命周期指南](../../../ui/state-management/arkts-page-custom-components-lifecycle.md)。不建议在aboutToDisappear函数调用后再触发例如自定义弹窗的创建等逻辑，这可能会因为组件树信息丢失导致应用行为异常，例如[@Consume](../../../ui/state-management/arkts-provide-and-consume.md)找不到对应的[@Provide](../../../ui/state-management/arkts-provide-and-consume.md)、弹窗内白屏不显示组件等。
 
-> **说明：**
+> **说明：** 
 > 
 > 在需要频繁创建和销毁组件的场景中，将会频繁调用该回调函数。最佳实践请参考
 > [主线程耗时操作优化指导-组件生命周期回调](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-time-optimization-of-the-main-thread#section418843713435)。
@@ -270,7 +265,7 @@ ArkUI框架会在自定义组件确定尺寸时，将该自定义组件的节点
 onNewParam?(param: ESObject): void
 ```
 
-该回调仅生效于由[\@Entry](../../../ui/state-management/arkts-create-custom-components.md#entry)装饰的、作为[router](../arkts-apis/arkts-router.md)路由页面存在的自定义组件。当之前存在于路由栈中的页面，通过单实例模式[RouterMode](../arkts-apis/arkts-arkui-router-routermode-e.md)移动到栈顶时触发该回调。
+该回调仅生效于由[\@Entry](../../../ui/state-management/arkts-create-custom-components.md#entry)装饰的、作为[router](../arkts-apis/arkts-arkui-router.md)路由页面存在的自定义组件。当之前存在于路由栈中的页面，通过单实例模式[RouterMode](../arkts-apis/arkts-arkui-router-routermode-e.md)移动到栈顶时触发该回调。
 
 **起始版本：** 19
 
@@ -294,7 +289,7 @@ onPageHide?(): void
 
 router路由页面（即[\@Entry](../../../ui/state-management/arkts-create-custom-components.md#entry)装饰的自定义组件）每次隐藏时触发一次，包括路由跳转、应用进入后台等场景。
 
-> **说明：**
+> **说明：** 
 > 
 > 在该回调函数内，建议避免执行高耗时操作阻塞主线程造成卡顿。对于高耗时操作例如相机资源释放，推荐使用异步方案替代。最佳实践请参考
 > [优化应用时延问题-延迟执行资源释放操作](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-application-latency-optimization-cases#section8783201923819)。
@@ -351,7 +346,7 @@ onWillApplyTheme?(theme: Theme): void
 
 onWillApplyTheme函数用于获取当前组件上下文的Theme对象，在创建自定义组件的新实例后，在执行其build()函数之前执行。与aboutToAppear不同，onWillApplyTheme用于基于Theme对象初始化状态变量，aboutToAppear用于通用初始化逻辑。允许在onWillApplyTheme函数中改变状态变量，更改将在后续执行build()函数中生效。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 18开始，该接口支持在状态管理V2组件中使用。
 
@@ -403,7 +398,7 @@ queryNavDestinationInfo(): NavDestinationInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) &#124; undefined | NavDestinationInfo** instance obtained. |
+| [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) &#124; undefined | **NavDestinationInfo** instance obtained. |
 
 ## queryNavDestinationInfo
 
@@ -431,7 +426,7 @@ queryNavDestinationInfo(isInner: Optional<boolean>): NavDestinationInfo | undefi
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) &#124; undefined | NavDestinationInfo** instance obtained. |
+| [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) &#124; undefined | **NavDestinationInfo** instance obtained. |
 
 ## queryNavigationInfo
 
@@ -453,7 +448,7 @@ queryNavigationInfo(): NavigationInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavigationInfo](arkts-arkui-navigationinfo-t.md) &#124; undefined | NavigationInfo** instance obtained. |
+| [NavigationInfo](arkts-arkui-navigationinfo-t.md) &#124; undefined | **NavigationInfo** instance obtained. |
 
 ## queryRouterPageInfo
 
@@ -475,4 +470,4 @@ queryRouterPageInfo(): RouterPageInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [RouterPageInfo](arkts-arkui-routerpageinfo-t.md) &#124; undefined | RouterPageInfo** instance obtained. |
+| [RouterPageInfo](arkts-arkui-routerpageinfo-t.md) &#124; undefined | **RouterPageInfo** instance obtained. |

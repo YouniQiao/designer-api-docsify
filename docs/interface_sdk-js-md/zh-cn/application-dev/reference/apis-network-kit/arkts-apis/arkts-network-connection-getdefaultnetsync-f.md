@@ -14,7 +14,7 @@ function getDefaultNetSync(): NetHandle
 
 获取系统默认使用的网络句柄，包含网络ID。使用同步方式返回。
 
-> **说明：**
+> **说明：** 
 > 
 > - 系统默认使用的网络，该网络的capabilities必须具备[NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md)且不是VPN类型的网络。
 > 

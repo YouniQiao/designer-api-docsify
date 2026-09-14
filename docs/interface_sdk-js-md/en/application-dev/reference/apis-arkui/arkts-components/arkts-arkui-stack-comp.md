@@ -9,7 +9,7 @@ Stack(options?: StackOptions)
 ```
 
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Excessive component nesting can lead to performance degradation. In some scenarios, using component attributes
 > directly or leveraging system APIs can achieve the same effect as the stack container, reducing the number of

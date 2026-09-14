@@ -14,7 +14,7 @@ function getLinkedInfoSync(): WifiLinkedInfo
 
 获取Wi-Fi连接信息，使用同步方式返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > - 当macType是1（设备MAC地址），获取macAddress还需申请ohos.permission.GET_WIFI_LOCAL_MAC权限（API8-15仅面向系统应用开放。从API 16开始，在PC/2in1设备
 > 上面向普通应用开放，在其余设备上仍仅面向系统应用开放），无该权限时，macAddress返回为空。

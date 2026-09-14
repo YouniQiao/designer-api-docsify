@@ -32,7 +32,7 @@ Obtains the **ProxySchemeFilter** information in the proxy rule.
 
 | Type | Description |
 | --- | --- |
-| [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | ProxySchemeFilter** in the proxy rule. |
+| [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | **ProxySchemeFilter** in the proxy rule. |
 
 ## getUrl
 

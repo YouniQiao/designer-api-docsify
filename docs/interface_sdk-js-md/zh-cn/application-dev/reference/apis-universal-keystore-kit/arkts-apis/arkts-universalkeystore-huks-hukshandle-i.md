@@ -2,7 +2,7 @@
 
 huks Handle结构体。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 9开始废弃，建议使用[HuksSessionHandle&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-hukssessionhandle-i.md)替代。
 

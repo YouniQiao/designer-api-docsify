@@ -6,11 +6,6 @@ Provides an interface for deleting value from text.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## deleteOffset
 
 ```TypeScript

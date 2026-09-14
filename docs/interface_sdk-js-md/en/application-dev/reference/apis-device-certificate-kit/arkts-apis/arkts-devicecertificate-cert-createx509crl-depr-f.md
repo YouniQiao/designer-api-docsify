@@ -14,7 +14,7 @@ function createX509Crl(inStream: EncodingBlob, callback: AsyncCallback<X509Crl>)
 
 Creates an **X509Crl** instance. This API uses an asynchronous callback to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [cert.createX509CRL()](arkts-devicecertificate-cert-createx509crl-f.md) instead.
@@ -90,7 +90,7 @@ function createX509Crl(inStream: EncodingBlob): Promise<X509Crl>
 
 Creates an **X509Crl** instance. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
 > [cert.createX509CRL()](arkts-devicecertificate-cert-createx509crl-f.md) instead.

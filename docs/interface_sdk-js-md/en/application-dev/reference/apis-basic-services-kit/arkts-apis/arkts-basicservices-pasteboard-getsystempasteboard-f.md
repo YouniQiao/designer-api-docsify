@@ -24,7 +24,7 @@ Obtains **SystemPasteboard** object.
 
 | Type | Description |
 | --- | --- |
-| [SystemPasteboard](arkts-basicservices-pasteboard-systempasteboard-i.md) | SystemPasteboard** object. |
+| [SystemPasteboard](arkts-basicservices-pasteboard-systempasteboard-i.md) | **SystemPasteboard** object. |
 
 **Examples**
 

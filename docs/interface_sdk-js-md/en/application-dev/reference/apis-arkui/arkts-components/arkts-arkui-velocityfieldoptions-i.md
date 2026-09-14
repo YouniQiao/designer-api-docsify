@@ -8,11 +8,6 @@ Parameter used to describe the velocity field of particles.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## region
 
 ```TypeScript

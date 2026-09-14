@@ -19,8 +19,3 @@ Removes a property from an object, equivalent to `delete target[propertyKey]`, e
 | --- | --- | --- | --- |
 | target | object | Yes |  |
 | propertyKey | [PropertyKey](arkts-propertykey-t.md) | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

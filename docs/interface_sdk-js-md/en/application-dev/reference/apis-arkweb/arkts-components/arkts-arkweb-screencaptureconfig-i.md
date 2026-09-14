@@ -6,11 +6,6 @@ Provides the web screen capture configuration options, including the capture mod
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## captureMode
 
 ```TypeScript

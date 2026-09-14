@@ -17,7 +17,7 @@ Calculates the hash value of a file. This API uses a promise to return the resul
 
 **Deprecated since:** 9
 
-**Substitutes:** [hash](arkts-file-hash.md)
+**Substitutes:** [hash](arkts-corefile-file-hash.md)
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -47,7 +47,7 @@ Calculates the hash value of a file. This API uses an asynchronous callback to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [hash](arkts-file-hash.md)
+**Substitutes:** [hash](arkts-corefile-file-hash.md)
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

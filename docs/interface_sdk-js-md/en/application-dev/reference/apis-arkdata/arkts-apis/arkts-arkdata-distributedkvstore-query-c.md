@@ -30,7 +30,7 @@ Creates a **Query** object with the AND condition.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Examples**
 
@@ -70,7 +70,7 @@ Creates a **Query** object for a query condition group with a left parenthesis.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Examples**
 
@@ -114,7 +114,7 @@ deviceId(deviceId: string): Query
 
 Creates a **Query** object with the device ID as the key prefix.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
@@ -138,7 +138,7 @@ Creates a **Query** object with the device ID as the key prefix.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -181,7 +181,7 @@ Creates a **Query** object for a query condition group with a right parenthesis.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Examples**
 
@@ -211,7 +211,7 @@ equalTo(field: string, value: number | number | string | boolean): Query
 
 Creates a **Query** object to match the specified field whose value is equal to the given value.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -236,7 +236,7 @@ Creates a **Query** object to match the specified field whose value is equal to 
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -307,7 +307,7 @@ greaterThan(field: string, value: number | number | string | boolean): Query
 
 Creates a **Query** object to match the specified field whose value is greater than the specified value.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -332,7 +332,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -366,7 +366,7 @@ greaterThanOrEqualTo(field: string, value: number | number | string): Query
 
 Creates a **Query** object to match the specified field whose value is greater than or equal to the specified value.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -391,7 +391,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -425,7 +425,7 @@ inNumber(field: string, valueList: number[] | number[]): Query
 
 Creates a **Query** object to match the specified field whose value is within the specified list of numbers.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -450,7 +450,7 @@ Creates a **Query** object to match the specified field whose value is within th
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -484,7 +484,7 @@ inString(field: string, valueList: string[]): Query
 
 Creates a **Query** object to match the specified field whose value is within the specified list of strings.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -509,7 +509,7 @@ Creates a **Query** object to match the specified field whose value is within th
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -543,7 +543,7 @@ isNotNull(field: string): Query
 
 Creates a **Query** object to match the specified field whose value is not **null**.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -567,7 +567,7 @@ Creates a **Query** object to match the specified field whose value is not **nul
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -601,7 +601,7 @@ isNull(field: string): Query
 
 Creates a **Query** object to match the specified field whose value is **null**.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -625,7 +625,7 @@ Creates a **Query** object to match the specified field whose value is **null**.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -659,7 +659,7 @@ lessThan(field: string, value: number | number | string): Query
 
 Creates a **Query** object to match the specified field whose value is less than the specified value.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -684,7 +684,7 @@ Creates a **Query** object to match the specified field whose value is less than
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -718,7 +718,7 @@ lessThanOrEqualTo(field: string, value: number | number | string): Query
 
 Creates a **Query** object to match the specified field whose value is less than or equal to the specified value.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -743,7 +743,7 @@ Creates a **Query** object to match the specified field whose value is less than
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -777,7 +777,7 @@ like(field: string, value: string): Query
 
 Creates a **Query** object to match the specified field whose value is similar to the specified string.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -802,7 +802,7 @@ Creates a **Query** object to match the specified field whose value is similar t
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -853,7 +853,7 @@ Creates a **Query** object to specify the number of records of the query result 
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -890,7 +890,7 @@ notEqualTo(field: string, value: number | number | string | boolean): Query
 
 Creates a **Query** object to match the specified field whose value is not equal to the specified value.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -915,7 +915,7 @@ Creates a **Query** object to match the specified field whose value is not equal
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -949,7 +949,7 @@ notInNumber(field: string, valueList: number[] | number[]): Query
 
 Creates a **Query** object to match the specified field whose value is not within the specified list of numbers.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -974,7 +974,7 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -1008,7 +1008,7 @@ notInString(field: string, valueList: string[]): Query
 
 Creates a **Query** object to match the specified field whose value is not within the specified list of strings.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -1033,7 +1033,7 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -1077,7 +1077,7 @@ Creates a **Query** object with the OR condition.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Examples**
 
@@ -1107,7 +1107,7 @@ orderByAsc(field: string): Query
 
 Creates a **Query** object to sort the query results in ascending order.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -1131,7 +1131,7 @@ Creates a **Query** object to sort the query results in ascending order.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -1166,7 +1166,7 @@ orderByDesc(field: string): Query
 
 Creates a **Query** object to sort the query results in descending order.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -1190,7 +1190,7 @@ Creates a **Query** object to sort the query results in descending order.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -1241,7 +1241,7 @@ Creates a **Query** object with a specified key prefix.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -1286,7 +1286,7 @@ Resets the **Query** object.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object reset. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object reset. |
 
 **Examples**
 
@@ -1332,7 +1332,7 @@ Creates a **Query** object with an index preferentially used for query.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -1367,7 +1367,7 @@ unlike(field: string, value: string): Query
 
 Creates a **Query** object to match the specified field whose value is not similar to the specified string.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
@@ -1392,7 +1392,7 @@ Creates a **Query** object to match the specified field whose value is not simil
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributedkvstore-query-c.md) | Query** object created. |
+| [Query](arkts-arkdata-distributedkvstore-query-c.md) | **Query** object created. |
 
 **Error codes:**
 

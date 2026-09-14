@@ -16,7 +16,7 @@ Obtains SIM card account information. This API uses an asynchronous callback to 
 
 **Required permission**: ohos.permission.GET_TELEPHONY_STATE
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The **GET_TELEPHONY_STATE** permission is required to obtain the ICCID and phone number. Such information is
 > sensitive and not open to third-party applications. When this API is called, the returned ICCID and phone number
@@ -70,7 +70,7 @@ Obtains SIM card account information. This API uses a promise to return the resu
 
 **Required permission**: ohos.permission.GET_TELEPHONY_STATE
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The **GET_TELEPHONY_STATE** permission is required to obtain the ICCID and phone number. Such information is
 > sensitive and not open to third-party applications. When this API is called, the returned ICCID and phone number

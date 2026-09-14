@@ -10,8 +10,3 @@
 ```TypeScript
 new (): Int8Array
 ```
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

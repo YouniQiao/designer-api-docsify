@@ -11,10 +11,6 @@
 new(): Map<any, any>
 ```
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## [[Construct]]
 
 ```TypeScript
@@ -27,10 +23,6 @@ new <K, V>(entries?: readonly (readonly [K, V])[] | null): Map<K, V>
 | --- | --- | --- | --- |
 | entries | readonly (readonly [K, V])[] &#124; null | No |  |
 
-**Return value:**
-
-| Type | Description |
-| --- | --- |
 ## prototype
 
 ```TypeScript

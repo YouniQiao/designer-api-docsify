@@ -10,8 +10,3 @@
 ```TypeScript
 new (): Float32Array
 ```
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |

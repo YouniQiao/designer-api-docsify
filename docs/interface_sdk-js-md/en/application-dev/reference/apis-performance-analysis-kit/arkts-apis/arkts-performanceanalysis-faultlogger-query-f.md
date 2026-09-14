@@ -34,7 +34,7 @@ Obtains the fault information about the current application. This API uses an as
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed, Parameter type error |
-| [801](../../errorcode-universal.md#801-api-not-supported) | The specified SystemCapability name was not found |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: The specified SystemCapability name was not found. |
 | [10600001](../errorcode-faultlogger.md#10600001-service-faulty-or-not-started) | The service is not started or is faulty |
 
 **Examples**
@@ -103,7 +103,7 @@ Obtains the fault information about the current application. This API uses a pro
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed, Parameter type error |
-| [801](../../errorcode-universal.md#801-api-not-supported) | The specified SystemCapability name was not found |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: The specified SystemCapability name was not found. |
 | [10600001](../errorcode-faultlogger.md#10600001-service-faulty-or-not-started) | The service is not started or is faulty |
 
 **Examples**

@@ -16,7 +16,7 @@ function addAllowedDistributeAbilityConnBundles(admin: Want, appIdentifiers: Arr
 
 当前支持的分布式业务类型有：[协同业务](arkts-mdm-applicationmanager-servicetype-e.md)。
 
-> **说明：**
+> **说明：** 
 > 
 > 1.如果要设置允许使用特定分布式业务的应用名单，在调用本接口前必须已经通过
 > [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md)接口

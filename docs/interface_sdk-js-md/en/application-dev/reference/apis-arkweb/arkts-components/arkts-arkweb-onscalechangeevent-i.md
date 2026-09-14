@@ -6,11 +6,6 @@ Represents the callback invoked when the display scale of this page changes.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## newScale
 
 ```TypeScript

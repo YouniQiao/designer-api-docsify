@@ -107,7 +107,7 @@ Checks whether the input character is a digit.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** if the input character is a digit, and **false** otherwise. |
+| boolean | **true** if the input character is a digit, and **false** otherwise. |
 
 **Examples**
 
@@ -141,7 +141,7 @@ Checks whether the input character is an ideographic character.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** if the input character an ideographic character, and **false** otherwise. |
+| boolean | **true** if the input character an ideographic character, and **false** otherwise. |
 
 **Examples**
 
@@ -175,7 +175,7 @@ Checks whether the input character is a letter.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** if the input character a letter, and **false** otherwise. |
+| boolean | **true** if the input character a letter, and **false** otherwise. |
 
 **Examples**
 
@@ -209,7 +209,7 @@ Checks whether the input character is a lowercase letter.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** if the input character a lowercase letter, and **false** otherwise. |
+| boolean | **true** if the input character a lowercase letter, and **false** otherwise. |
 
 **Examples**
 
@@ -243,7 +243,7 @@ Checks whether the input character is of the right to left (RTL) language.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** if the input character is of the RTL language, and **false** otherwise. |
+| boolean | **true** if the input character is of the RTL language, and **false** otherwise. |
 
 **Examples**
 
@@ -277,7 +277,7 @@ Checks whether the input character is a space.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** if the input character is a space, and **false** otherwise. |
+| boolean | **true** if the input character is a space, and **false** otherwise. |
 
 **Examples**
 
@@ -311,7 +311,7 @@ Checks whether the input character is an uppercase letter.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** if the input character an uppercase letter, and **false** otherwise. |
+| boolean | **true** if the input character an uppercase letter, and **false** otherwise. |
 
 **Examples**
 
@@ -345,7 +345,7 @@ Checks whether the input character is a whitespace.
 
 | Type | Description |
 | --- | --- |
-| boolean | true** if the input character is a white space, and **false** otherwise. |
+| boolean | **true** if the input character is a white space, and **false** otherwise. |
 
 **Examples**
 

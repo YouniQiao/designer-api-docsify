@@ -51,7 +51,7 @@ enableBandwidthCompression(enabled: boolean): void
 
 使能之前，可先使用方法[isBandwidthCompressionSupported](#isbandwidthcompressionsupported)对设备是否支持预览带宽压缩进行检查。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig)接口之前调用，否则会影响预览流
 > 出流格式。
@@ -211,7 +211,7 @@ isLogViewAssistSupported(): boolean
 
 LOG视频下，查询是否支持辅助监看功能。辅助监看开启后，预览画面还原至原色域，录制出的视频仍然是LOG视频格式。
 
-> **说明：**
+> **说明：** 
 > 
 > 辅助监看效果仅支持1080P及以下分辨率。
 
@@ -300,7 +300,7 @@ on(type: 'frameStart', callback: AsyncCallback<void>): void
 
 监听预览帧启动，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -325,7 +325,7 @@ on(type: 'frameEnd', callback: AsyncCallback<void>): void
 
 监听预览帧结束，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -350,7 +350,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 监听预览输出的错误事件，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -377,7 +377,7 @@ setFrameRate(minFps: number, maxFps: number): void
 
 进行设置前，可通过[getSupportedFrameRates](#getsupportedframerates)接口查询支持的帧率范围。
 
-> **说明：**
+> **说明：** 
 > 
 > 仅在[PhotoSession](arkts-camera-camera-photosession-i.md)或[VideoSession](arkts-camera-camera-videosession-i.md)模式下支持。
 
@@ -409,7 +409,7 @@ setLogViewAssistEnable(enable: boolean): void
 
 LOG视频下，使能辅助监看之前，可先使用方法[isLogViewAssistSupported](#islogviewassistsupported)查询设备是否支持预览辅助监看。
 
-> **说明：**
+> **说明：** 
 > 
 > - 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig)接口之后调用。
 > 
@@ -473,7 +473,7 @@ start(callback: AsyncCallback<void>): void
 
 开始输出预览流，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 10开始支持，从API version 11开始废弃。
 
@@ -505,7 +505,7 @@ start(): Promise<void>
 
 开始输出预览流。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 10开始支持，从API version 11开始废弃。
 
@@ -537,7 +537,7 @@ stop(callback: AsyncCallback<void>): void
 
 停止输出预览流，通过注册回调函数获取结果。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 10开始支持，从API version 11开始废弃。
 
@@ -563,7 +563,7 @@ stop(): Promise<void>
 
 停止输出预览流。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > 从 API version 10开始支持，从API version 11开始废弃。
 

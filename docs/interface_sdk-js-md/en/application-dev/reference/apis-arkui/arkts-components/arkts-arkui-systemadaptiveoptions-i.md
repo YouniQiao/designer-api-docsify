@@ -6,11 +6,6 @@ Provides parameters for system adaptive adjustments. By default, the system perf
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## disableSystemAdaptation
 
 ```TypeScript

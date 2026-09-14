@@ -16,7 +16,7 @@ function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>
 
 该接口用于将DLP加密文件解密为明文文件，适用于拥有者权限用户导出或迁移文件。
 
-> **说明：**
+> **说明：** 
 > 
 > 该接口仅支持企业账号调用，需要企业自行搭建企业账号服务器配套使用。由企业服务器管控账号是否有权限解密DLP文件。
 

@@ -20,7 +20,7 @@ function queryTrafficStats(
 
 Queries the data usage of a specified application within a specified period for the current user. This API uses a promise to return the result.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > The input network type (**networkInfo.type**) can only be **connection.NetBearType.BEARER_CELLULAR** or
 > **connection.NetBearType.BEARER_WIFI**. If any other value is passed, the API returns error code 9200012.

@@ -6,11 +6,6 @@ Provides parameters of the **WaterFlow** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## footer
 
 ```TypeScript

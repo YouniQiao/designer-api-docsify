@@ -2,7 +2,7 @@
 
 Describes a region, which is used to describe the region where the shape can be drawn.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > - The initial APIs of this class are supported since API version 12.
 > 
@@ -160,7 +160,7 @@ Checks whether another region is equal to this region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | Region** object. |
+| other | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | **Region** object. |
 
 **Return value:**
 
@@ -235,7 +235,7 @@ Checks whether another region is contained in this region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | Region** object. |
+| other | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | **Region** object. |
 
 **Return value:**
 
@@ -284,7 +284,7 @@ Performs an operation on this region and another region, and stores the resultin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | Region** object. |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | **Region** object. |
 | regionOp | [RegionOp](arkts-arkgraphics2d-drawing-regionop-e.md) | Yes | Operation mode of the region. |
 
 **Return value:**
@@ -377,7 +377,7 @@ Checks whether the existing region does not intersect with another region. Actua
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | Region** object. |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | **Region** object. |
 
 **Return value:**
 
@@ -413,8 +413,8 @@ Sets a region that matches the outline of a path within the cropping area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path** object. |
-| clip | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | Region** object. |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | **Path** object. |
+| clip | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | **Region** object. |
 
 **Return value:**
 

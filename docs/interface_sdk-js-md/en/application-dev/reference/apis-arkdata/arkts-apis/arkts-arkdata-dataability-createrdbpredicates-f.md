@@ -23,13 +23,13 @@ Creates an **RdbPredicates** object with a table name and **DataAbilityPredicate
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of a database table. |
-| dataAbilityPredicates | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | Yes | DataAbilityPredicates** object. |
+| dataAbilityPredicates | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | Yes | **DataAbilityPredicates** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [rdb.RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| [rdb.RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Examples**
 

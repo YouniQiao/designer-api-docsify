@@ -4,7 +4,7 @@
 
 Router基于页面栈机制管理页面导航，页面栈支持的最大容量为32个页面。当调用pushUrl时，目标页面会被压入栈顶；调用replaceUrl时，当前页面会被弹出栈并销毁，目标页面压入栈顶；调用back时，栈顶页面会被弹出。
 
-> **说明：**
+> **说明：** 
 > 
 > - 本模块首批接口从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 > 
@@ -44,7 +44,7 @@ back(options?: router.RouterOptions): void
 
 返回上一页面或指定的页面。
 
-> **说明：**
+> **说明：** 
 > 
 > 如果之前调用了showAlertBeforeBackPage()开启了返回询问对话框，则调用back()时会弹出确认对话框：用户选择"取消"则back()不执行，选择"确认"则继续执行；
 > 可通过hideAlertBeforeBackPage()关闭返回询问对话框。
@@ -94,7 +94,7 @@ clear(): void
 
 清空页面栈中的所有历史页面，仅保留当前页面作为栈顶页面。
 
-> **说明：**
+> **说明：** 
 > 
 > 调用 clear()方法会清空全部历史页面栈，最终仅保留当前页面，页面栈深度变为1。此时栈内无历史记录，back()回退接口将失效；
 > 但pushUrl()、replaceUrl()等跳转方法仍可正常使用，支持新增页面或替换当前页面。
@@ -116,7 +116,7 @@ getLength(): string
 
 获取当前在页面栈内的页面数量。
 
-> **说明：**
+> **说明：** 
 > 
 > 从API version 10开始支持，从 API version 23开始废弃，建议使用[getStackSize](#getstacksize)替代。
 
@@ -456,7 +456,7 @@ pushUrl(options: router.RouterOptions): Promise<void>
 
 跳转到应用内的指定页面，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > pushUrl()会在页面栈顶部添加新页面，页面栈深度+1（上限32页，超限报错误码100003），后续可调用back()返回到上一页面或调用replaceUrl()替换当前页面。
 
@@ -735,7 +735,7 @@ replaceUrl(options: router.RouterOptions): Promise<void>
 
 用应用内的某个页面替换当前页面，并销毁被替换的页面，使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > replaceUrl()会替换页面栈栈顶页面，页面栈深度维持不变。与pushUrl()的核心差异：pushUrl()入栈新页面、栈深度 + 1，replaceUrl()不改变栈深度。
 > 被替换的页面会直接销毁，无法通过back()回退访问。适用场景：登录成功跳转首页（避免回退至登录页）、页面重定向、临时中转页面跳转等。

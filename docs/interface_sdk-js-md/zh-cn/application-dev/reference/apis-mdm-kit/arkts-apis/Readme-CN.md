@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-mdmkit-->
 
-- [@ohos.enterprise.accountManager(账号管理)](arkts-enterprise-accountmanager.md)
+- [@ohos.enterprise.accountManager(账号管理)](arkts-mdm-enterprise-accountmanager.md)
   - [activateOsAccount](arkts-mdm-accountmanager-activateosaccount-f.md)
   <!--Del-->
   - [addOsAccount(系统接口)](arkts-mdm-accountmanager-addosaccount-f-sys.md)<!--DelEnd-->
@@ -18,7 +18,7 @@
   - [removeOsAccount](arkts-mdm-accountmanager-removeosaccount-f.md)
   - [setDomainAccountPolicy](arkts-mdm-accountmanager-setdomainaccountpolicy-f.md)
   - [DomainAccountPolicy](arkts-mdm-accountmanager-domainaccountpolicy-i.md)
-- [@ohos.enterprise.adminManager(admin权限管理)](arkts-enterprise-adminmanager.md)
+- [@ohos.enterprise.adminManager(admin权限管理)](arkts-mdm-enterprise-adminmanager.md)
   <!--Del-->
   - [authorizeAdmin(系统接口)](arkts-mdm-adminmanager-authorizeadmin-f-sys.md)<!--DelEnd-->
   - [disableAdmin](arkts-mdm-adminmanager-disableadmin-f.md)
@@ -71,7 +71,7 @@
   - [Policy](arkts-mdm-adminmanager-policy-e.md)
   <!--Del-->
   - [RunningMode(系统接口)](arkts-mdm-adminmanager-runningmode-e-sys.md)<!--DelEnd-->
-- [@ohos.enterprise.applicationManager(应用管理)](arkts-enterprise-applicationmanager.md)
+- [@ohos.enterprise.applicationManager(应用管理)](arkts-mdm-enterprise-applicationmanager.md)
   - [addAllowedDistributeAbilityConnBundles](arkts-mdm-applicationmanager-addalloweddistributeabilityconnbundles-f.md)
   - [addAllowedNotificationBundles](arkts-mdm-applicationmanager-addallowednotificationbundles-f.md)
   - [addAllowedRunningBundles](arkts-mdm-applicationmanager-addallowedrunningbundles-f.md)
@@ -126,7 +126,7 @@
   - [KioskFeature](arkts-mdm-applicationmanager-kioskfeature-e.md)
   - [ServiceType](arkts-mdm-applicationmanager-servicetype-e.md)
   - [WindowState](arkts-mdm-applicationmanager-windowstate-e.md)
-- [@ohos.enterprise.bluetoothManager(蓝牙管理)](arkts-enterprise-bluetoothmanager.md)
+- [@ohos.enterprise.bluetoothManager(蓝牙管理)](arkts-mdm-enterprise-bluetoothmanager.md)
   - [addAllowedBluetoothDevices](arkts-mdm-bluetoothmanager-addallowedbluetoothdevices-f.md)
   - [addDisallowedBluetoothDevices](arkts-mdm-bluetoothmanager-adddisallowedbluetoothdevices-f.md)
   - [addDisallowedBluetoothProtocols](arkts-mdm-bluetoothmanager-adddisallowedbluetoothprotocols-f.md)
@@ -146,7 +146,7 @@
   - [BluetoothInfo](arkts-mdm-bluetoothmanager-bluetoothinfo-i.md)
   - [Protocol](arkts-mdm-bluetoothmanager-protocol-e.md)
   - [TransferPolicy](arkts-mdm-bluetoothmanager-transferpolicy-e.md)
-- [@ohos.enterprise.browser(浏览器管理)](arkts-enterprise-browser.md)
+- [@ohos.enterprise.browser(浏览器管理)](arkts-mdm-enterprise-browser.md)
   - [getManagedBrowserPolicy](arkts-mdm-browser-getmanagedbrowserpolicy-f.md)
   <!--Del-->
   - [getPolicies(系统接口)](arkts-mdm-browser-getpolicies-f-sys.md)<!--DelEnd-->
@@ -157,7 +157,7 @@
   <!--Del-->
   - [setPolicies(系统接口)](arkts-mdm-browser-setpolicies-f-sys.md)<!--DelEnd-->
   - [setPolicySync](arkts-mdm-browser-setpolicysync-f.md)
-- [@ohos.enterprise.bundleManager(包管理)](arkts-enterprise-bundlemanager.md)
+- [@ohos.enterprise.bundleManager(包管理)](arkts-mdm-enterprise-bundlemanager.md)
   <!--Del-->
   - [addAllowedInstallBundles(系统接口)](arkts-mdm-bundlemanager-addallowedinstallbundles-f-sys.md)<!--DelEnd-->
   - [addAllowedInstallBundlesSync](arkts-mdm-bundlemanager-addallowedinstallbundlessync-f.md)
@@ -206,7 +206,7 @@
   - [SignatureInfo](arkts-mdm-bundlemanager-signatureinfo-i.md)
   - [AppDistributionType](arkts-mdm-bundlemanager-appdistributiontype-e.md)
   - [BundleInfoGetFlag](arkts-mdm-bundlemanager-bundleinfogetflag-e.md)
-- [@ohos.enterprise.common(Enterprise公共模块)](arkts-enterprise-common.md)
+- [@ohos.enterprise.common(Enterprise公共模块)](arkts-mdm-enterprise-common.md)
   - [ApplicationInstance](arkts-mdm-common-applicationinstance-i.md)
   - [InstallationResult](arkts-mdm-common-installationresult-i.md)
   - [PolicyChangedEvent](arkts-mdm-common-policychangedevent-i.md)
@@ -216,14 +216,14 @@
   - [Result](arkts-mdm-common-result-e.md)
   - [StartupScene](arkts-mdm-common-startupscene-e.md)
 <!--Del-->
-- [@ohos.enterprise.dateTimeManager(系统时间管理)](arkts-enterprise-datetimemanager.md)<!--DelEnd-->
+- [@ohos.enterprise.dateTimeManager(系统时间管理)](arkts-mdm-enterprise-datetimemanager.md)<!--DelEnd-->
   <!--Del-->
   - [disallowModifyDateTime(系统接口)](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [isModifyDateTimeDisallowed(系统接口)](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setDateTime(系统接口)](arkts-mdm-datetimemanager-setdatetime-f-sys.md)<!--DelEnd-->
-- [@ohos.enterprise.deviceControl(设备控制管理)](arkts-enterprise-devicecontrol.md)
+- [@ohos.enterprise.deviceControl(设备控制管理)](arkts-mdm-enterprise-devicecontrol.md)
   <!--Del-->
   - [lockScreen(系统接口)](arkts-mdm-devicecontrol-lockscreen-f-sys.md)<!--DelEnd-->
   - [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md)
@@ -234,7 +234,7 @@
   <!--Del-->
   - [shutdown(系统接口)](arkts-mdm-devicecontrol-shutdown-f-sys.md)<!--DelEnd-->
   - [Operation](arkts-mdm-devicecontrol-operation-e.md)
-- [@ohos.enterprise.deviceInfo(设备信息管理)](arkts-enterprise-deviceinfo.md)
+- [@ohos.enterprise.deviceInfo(设备信息管理)](arkts-mdm-enterprise-deviceinfo.md)
   - [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md)
   <!--Del-->
   - [getDeviceName(系统接口)](arkts-mdm-deviceinfo-getdevicename-f-sys.md)<!--DelEnd-->
@@ -242,7 +242,7 @@
   - [getDeviceSerial(系统接口)](arkts-mdm-deviceinfo-getdeviceserial-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getDisplayVersion(系统接口)](arkts-mdm-deviceinfo-getdisplayversion-f-sys.md)<!--DelEnd-->
-- [@ohos.enterprise.deviceSettings(设备设置管理)](arkts-enterprise-devicesettings.md)
+- [@ohos.enterprise.deviceSettings(设备设置管理)](arkts-mdm-enterprise-devicesettings.md)
   - [addHiddenSettingsMenu](arkts-mdm-devicesettings-addhiddensettingsmenu-f.md)
   - [getHiddenSettingsMenu](arkts-mdm-devicesettings-gethiddensettingsmenu-f.md)
   <!--Del-->
@@ -277,13 +277,13 @@
   - [SettingsMenu](arkts-mdm-devicesettings-settingsmenu-e.md)
   - [SwitchKey](arkts-mdm-devicesettings-switchkey-e.md)
   - [SwitchStatus](arkts-mdm-devicesettings-switchstatus-e.md)
-- [@ohos.enterprise.EnterpriseAdminExtensionAbility(企业设备管理扩展能力)](arkts-enterprise-enterpriseadminextensionability.md)
+- [@ohos.enterprise.EnterpriseAdminExtensionAbility(企业设备管理扩展能力)](arkts-mdm-enterprise-enterpriseadminextensionability.md)
   - [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md)
-- [@ohos.enterprise.locationManager(位置服务管理)](arkts-enterprise-locationmanager.md)
+- [@ohos.enterprise.locationManager(位置服务管理)](arkts-mdm-enterprise-locationmanager.md)
   - [getLocationPolicy](arkts-mdm-locationmanager-getlocationpolicy-f.md)
   - [setLocationPolicy](arkts-mdm-locationmanager-setlocationpolicy-f.md)
   - [LocationPolicy](arkts-mdm-locationmanager-locationpolicy-e.md)
-- [@ohos.enterprise.networkManager(网络管理)](arkts-enterprise-networkmanager.md)
+- [@ohos.enterprise.networkManager(网络管理)](arkts-mdm-enterprise-networkmanager.md)
   - [addApn](arkts-mdm-networkmanager-addapn-f.md)
   - [addDomainFilterRule](arkts-mdm-networkmanager-adddomainfilterrule-f.md)
   - [addFirewallRule](arkts-mdm-networkmanager-addfirewallrule-f.md)
@@ -341,7 +341,7 @@
   - [IpSetMode](arkts-mdm-networkmanager-ipsetmode-e.md)
   - [LogType](arkts-mdm-networkmanager-logtype-e.md)
   - [Protocol](arkts-mdm-networkmanager-protocol-e.md)
-- [@ohos.enterprise.restrictions(限制类策略)](arkts-enterprise-restrictions.md)
+- [@ohos.enterprise.restrictions(限制类策略)](arkts-mdm-enterprise-restrictions.md)
   - [addDisallowedListForAccount](arkts-mdm-restrictions-adddisallowedlistforaccount-f.md)
   <!--Del-->
   - [disableMicrophone(系统接口)](arkts-mdm-restrictions-disablemicrophone-f-sys.md)<!--DelEnd-->
@@ -373,7 +373,7 @@
   - [FeatureForDevice](arkts-mdm-restrictions-featurefordevice-e.md)
   - [SettingsForAccount](arkts-mdm-restrictions-settingsforaccount-e.md)
   - [SettingsForDevice](arkts-mdm-restrictions-settingsfordevice-e.md)
-- [@ohos.enterprise.securityManager(安全管理)](arkts-enterprise-securitymanager.md)
+- [@ohos.enterprise.securityManager(安全管理)](arkts-mdm-enterprise-securitymanager.md)
   - [addAllowedPermissionBundle](arkts-mdm-securitymanager-addallowedpermissionbundle-f.md)
   - [cancelScreenWatermarkImage](arkts-mdm-securitymanager-cancelscreenwatermarkimage-f.md)
   - [cancelWatermarkImage](arkts-mdm-securitymanager-cancelwatermarkimage-f.md)
@@ -415,7 +415,7 @@
   - [ClipboardPolicy](arkts-mdm-securitymanager-clipboardpolicy-e.md)
   - [PasswordAlgs](arkts-mdm-securitymanager-passwordalgs-e.md)
   - [PermissionManagedState](arkts-mdm-securitymanager-permissionmanagedstate-e.md)
-- [@ohos.enterprise.systemManager(系统管理)](arkts-enterprise-systemmanager.md)
+- [@ohos.enterprise.systemManager(系统管理)](arkts-mdm-enterprise-systemmanager.md)
   - [addAllowedPrinterIPAddressesForAccount](arkts-mdm-systemmanager-addallowedprinteripaddressesforaccount-f.md)
   - [addAllowedPrinterIPAddressesForDevice](arkts-mdm-systemmanager-addallowedprinteripaddressesfordevice-f.md)
   - [addDisallowedNearLinkProtocols](arkts-mdm-systemmanager-adddisallowednearlinkprotocols-f.md)
@@ -465,7 +465,7 @@
   - [PackageType](arkts-mdm-systemmanager-packagetype-e.md)
   - [PolicyType](arkts-mdm-systemmanager-policytype-e.md)
   - [UpdateStatus](arkts-mdm-systemmanager-updatestatus-e.md)
-- [@ohos.enterprise.telephonyManager(通话管理)](arkts-enterprise-telephonymanager.md)
+- [@ohos.enterprise.telephonyManager(通话管理)](arkts-mdm-enterprise-telephonymanager.md)
   - [activeSim](arkts-mdm-telephonymanager-activesim-f.md)
   - [addIncomingCallPolicyNumbers](arkts-mdm-telephonymanager-addincomingcallpolicynumbers-f.md)
   - [addOutgoingCallPolicyNumbers](arkts-mdm-telephonymanager-addoutgoingcallpolicynumbers-f.md)
@@ -480,7 +480,7 @@
   - [setDefaultData](arkts-mdm-telephonymanager-setdefaultdata-f.md)
   - [setSimDisabled](arkts-mdm-telephonymanager-setsimdisabled-f.md)
   - [setSimEnabled](arkts-mdm-telephonymanager-setsimenabled-f.md)
-- [@ohos.enterprise.usbManager(USB管理)](arkts-enterprise-usbmanager.md)
+- [@ohos.enterprise.usbManager(USB管理)](arkts-mdm-enterprise-usbmanager.md)
   - [addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md)
   - [addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md)
   - [addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md)
@@ -503,7 +503,7 @@
   - [UsbDeviceType](arkts-mdm-usbmanager-usbdevicetype-i.md)
   - [Descriptor](arkts-mdm-usbmanager-descriptor-e.md)
   - [UsbPolicy](arkts-mdm-usbmanager-usbpolicy-e.md)
-- [@ohos.enterprise.wifiManager(Wi-Fi管理)](arkts-enterprise-wifimanager.md)
+- [@ohos.enterprise.wifiManager(Wi-Fi管理)](arkts-mdm-enterprise-wifimanager.md)
   - [addAllowedWifiList](arkts-mdm-wifimanager-addallowedwifilist-f.md)
   - [addDisallowedWifiList](arkts-mdm-wifimanager-adddisallowedwifilist-f.md)
   - [getAllowedWifiList](arkts-mdm-wifimanager-getallowedwifilist-f.md)
@@ -531,5 +531,5 @@
   - [Phase2Method](arkts-mdm-wifimanager-phase2method-e.md)
   - [WifiSecurityType](arkts-mdm-wifimanager-wifisecuritytype-e.md)
 - application<!--arkts-mdmkit-application-->
-  - [EnterpriseAdminExtensionContext(企业设备管理扩展能力上下文环境)](arkts-enterpriseadminextensioncontext.md)
+  - [EnterpriseAdminExtensionContext(企业设备管理扩展能力上下文环境)](arkts-mdm-enterpriseadminextensioncontext.md)
     - [EnterpriseAdminExtensionContext](arkts-mdm-enterpriseadminextensioncontext-c.md)

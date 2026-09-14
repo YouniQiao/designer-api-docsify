@@ -8,11 +8,6 @@ AppearSymbolEffect继承自父类SymbolEffect。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

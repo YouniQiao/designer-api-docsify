@@ -306,7 +306,7 @@ COMMON_EVENT_PACKAGE_ADDED = 'usual.event.PACKAGE_ADDED'
 
 在设备上指定用户下安装了新的应用程序，将会触发事件通知服务发布该系统公共事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 三方应用只能监听自身应用的安装事件。
 
@@ -384,7 +384,7 @@ COMMON_EVENT_PACKAGE_CHANGED = 'usual.event.PACKAGE_CHANGED'
 
 在设备上安装的应用程序包更新或者包的组件被启用/禁用，将会触发事件通知服务发布该系统公共事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 三方应用只能监听自身应用的更改事件。
 
@@ -402,7 +402,7 @@ COMMON_EVENT_PACKAGE_RESTARTED = 'usual.event.PACKAGE_RESTARTED'
 
 在设备上指定用户重启应用包并终止其所有进程，将会触发事件通知服务发布该系统公共事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 三方应用只能监听自身应用的重启事件。
 
@@ -420,7 +420,7 @@ COMMON_EVENT_PACKAGE_DATA_CLEARED = 'usual.event.PACKAGE_DATA_CLEARED'
 
 在设备上指定用户清除应用包数据，将会触发事件通知服务发布该系统公共事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 三方应用只能监听自身应用的数据清理事件。
 
@@ -438,7 +438,7 @@ COMMON_EVENT_PACKAGE_CACHE_CLEARED = 'usual.event.PACKAGE_CACHE_CLEARED'
 
 对设备上安装的应用程序包清除缓存时，将会触发事件通知服务发布该系统公共事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 三方应用只能监听自身应用的缓存清理事件。
 
@@ -2365,7 +2365,7 @@ COMMON_EVENT_QUICK_FIX_APPLY_RESULT = 'usual.event.QUICK_FIX_APPLY_RESULT'
 
 在设备上指定用户快速修复应用，将会触发事件通知服务发布该系统公共事件。
 
-> **说明：**
+> **说明：** 
 > 
 > 三方应用只能监听自身应用的快速修复事件。
 
@@ -2519,7 +2519,7 @@ COMMON_EVENT_CONNECTIVITY_CHANGE = 'usual.event.CONNECTIVITY_CHANGE'
 
 具体枚举值及其对应的连接状态如下表所示：
 
-> **说明：**
+> **说明：** 
 > 具体枚举值及其对应的连接状态如下表所示：
 > 
 > | 枚举值 | 连接状态 |

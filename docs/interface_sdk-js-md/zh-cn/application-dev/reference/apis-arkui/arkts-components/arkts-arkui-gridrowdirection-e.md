@@ -2,7 +2,7 @@
 
 栅格元素排列方向。
 
-> **说明：**
+> **说明：** 
 > 
 > - 栅格元素仅支持Row/RowReverse排列，不支持Column/ColumnReverse方向排列。
 > 

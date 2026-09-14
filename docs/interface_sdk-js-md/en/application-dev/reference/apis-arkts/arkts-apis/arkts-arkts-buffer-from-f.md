@@ -30,7 +30,7 @@ Creates a **Buffer** object with the specified array.
 
 | Type | Description |
 | --- | --- |
-| Buffer | Buffer** object created. |
+| Buffer | **Buffer** object created. |
 
 **Examples**
 
@@ -61,7 +61,7 @@ Creates a **Buffer** object of the specified length that shares memory with Arra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayBuffer | ArrayBuffer &#124; SharedArrayBuffer | Yes | ArrayBuffer** or **SharedArrayBuffer** object whose memory is to be shared. |
+| arrayBuffer | ArrayBuffer &#124; SharedArrayBuffer | Yes | **ArrayBuffer** or **SharedArrayBuffer** object whose memory is to be shared. |
 | byteOffset | number | No | Byte offset. The default value is **0**. |
 | length | number | No | Length of the **Buffer** object to create, in bytes. The default value is **arrayBuffer.byteLength** minus **byteOffset**. |
 
@@ -69,7 +69,7 @@ Creates a **Buffer** object of the specified length that shares memory with Arra
 
 | Type | Description |
 | --- | --- |
-| Buffer | Buffer** object created. |
+| Buffer | **Buffer** object created. |
 
 **Error codes:**
 
@@ -112,7 +112,7 @@ Copies the data of a passed **Buffer** object to create a new **Buffer** object 
 
 | Type | Description |
 | --- | --- |
-| Buffer | Buffer** object created. |
+| Buffer | **Buffer** object created. |
 
 **Examples**
 
@@ -158,7 +158,7 @@ Creates a **Buffer** object based on the specified object.
 
 | Type | Description |
 | --- | --- |
-| Buffer | Buffer** object created. |
+| Buffer | **Buffer** object created. |
 
 **Examples**
 
@@ -195,7 +195,7 @@ Creates a **Buffer** object based on a string in the given encoding format.
 
 | Type | Description |
 | --- | --- |
-| Buffer | Buffer** object created. |
+| Buffer | **Buffer** object created. |
 
 **Examples**
 

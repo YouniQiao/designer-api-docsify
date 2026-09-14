@@ -14,7 +14,7 @@ function getFontDescriptorsFromPath(path: string | Resource): Promise<Array<Font
 
 根据字体文件路径获取字体描述符数组。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > - 如果字体文件未找到、字体文件路径无效、字体文件无权限或者文件非字体格式，返回空数组。
 > 
@@ -33,7 +33,7 @@ function getFontDescriptorsFromPath(path: string | Resource): Promise<Array<Font
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string &#124; [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 需要查询的字体文件的路径。支持两种格式：<br>1. 以"file://"开头的字体文件绝对路径，如"file:///system/fonts/ test.ttf"。<br>2. 工程resources/rawfile目录下的文件，格式为\&#36;rawfile('文件名称')，如\&#36;rawfile('test.ttf')。 |
+| path | string &#124; [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 需要查询的字体文件的路径。支持两种格式：<br>1. 以"file://"开头的字体文件绝对路径，如"file:///system/fonts/ test.ttf"。<br>2. 工程resources/rawfile目录下的文件，格式为&#36;rawfile('文件名称')，如&#36;rawfile('test.ttf')。 |
 
 **返回值：**
 

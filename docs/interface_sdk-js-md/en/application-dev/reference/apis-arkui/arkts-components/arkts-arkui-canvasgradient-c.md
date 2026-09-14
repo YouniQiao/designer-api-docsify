@@ -6,11 +6,6 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## addColorStop
 
 ```TypeScript
@@ -75,7 +70,7 @@ addColorStop(offset: number, color: string | ColorMetrics): void
 
 Adds a color stop for the **CanvasGradient** object based on the specified offset and gradient color. Colors in RGB or ARGB format can be set. You can set P3 color gamut values by passing in the ColorMetrics type, which can achieve richer color reproduction on devices that support high color gamut.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > Only the
 > fillStyle

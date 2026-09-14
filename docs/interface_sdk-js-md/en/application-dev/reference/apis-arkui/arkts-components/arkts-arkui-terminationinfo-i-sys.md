@@ -8,11 +8,6 @@ Indicates the information when the provider of the embedded UI is terminated.
 
 **System API:** This is a system API.
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## code
 
 ```TypeScript

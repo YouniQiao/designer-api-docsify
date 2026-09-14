@@ -6,11 +6,6 @@ Implements a **BarGridColumnOptions** object for setting the visible area of the
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## gutter
 
 ```TypeScript

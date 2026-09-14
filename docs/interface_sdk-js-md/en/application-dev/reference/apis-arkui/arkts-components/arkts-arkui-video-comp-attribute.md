@@ -10,11 +10,6 @@ In addition to the [universal events](arkts-arkui-commonmethod-c.md), the follow
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## analyzerConfig
 
 ```TypeScript
@@ -23,7 +18,7 @@ analyzerConfig(config: ImageAnalyzerConfig)
 
 Sets the AI image analysis types, including subject recognition, text recognition, and object lookup. This attribute can be dynamically set using attributeModifier.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 20.
 
@@ -79,7 +74,7 @@ Sets whether to display the video playback control bar. This attribute can be dy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to display the video playback control bar.<br>**true**: Display the video playback control bar.<br>**false**: Do not display the video playback control bar.<br>Default value: **true |
+| value | boolean | Yes | Whether to display the video playback control bar.<br>**true**: Display the video playback control bar.<br>**false**: Do not display the video playback control bar.<br>Default value: **true** |
 
 ## enableAnalyzer
 
@@ -93,7 +88,7 @@ After this feature is enabled, the video automatically enters an analysis state 
 
 Note that if this attribute and the overlay attribute are both set, [CustomBuilder](arkts-arkui-custombuilder-t.md) specified in [overlay](arkts-arkui-commonmethod-c.md) has no effect.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 20.
 
@@ -111,7 +106,7 @@ After this feature is enabled, the video automatically enters an analysis state 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable the AI image analyzer.<br>**true**: Enable the AI image analyzer. **false**: Disable the AI image analyzer.<br>Default value: **false |
+| enable | boolean | Yes | Whether to enable the AI image analyzer.<br>**true**: Enable the AI image analyzer. **false**: Disable the AI image analyzer.<br>Default value: **false** |
 
 ## enableShortcutKey
 

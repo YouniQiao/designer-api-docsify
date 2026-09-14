@@ -97,7 +97,7 @@ packing(source: ImageSource, option: PackingOption, callback: AsyncCallback<Arra
 
 图片压缩或重新编码。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > [packToData](#packtodata)代替。
 
@@ -127,7 +127,7 @@ packing(source: ImageSource, option: PackingOption): Promise<ArrayBuffer>
 
 图片压缩或重新编码。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > [packToData](#packtodata)代替。
 
@@ -162,7 +162,7 @@ packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBu
 
 图片压缩或重新编码。使用callback异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > [packToData](#packtodata)代替。
 > 
@@ -196,7 +196,7 @@ packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>
 
 图片压缩或重新编码。使用Promise异步回调。
 
-> **说明：**
+> **说明：** 
 > 
 > [packToData](#packtodata)代替。
 > 

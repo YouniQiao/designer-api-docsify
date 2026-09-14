@@ -12,11 +12,6 @@ let controller: VideoController = new VideoController();
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript
@@ -103,7 +98,7 @@ setCurrentTime(value: number)
 
 指定视频播放的进度位置。
 
-> **说明：**
+> **说明：** 
 > 
 > 如需从视频内的某一时间点开始播放，应关闭自动播放，在视频准备完成后先跳转再播放。
 
@@ -127,7 +122,7 @@ setCurrentTime(value: number, seekMode: SeekMode)
 
 指定视频播放的进度位置，并指定跳转模式。
 
-> **说明：**
+> **说明：** 
 > 
 > 如需从视频内的某一时间点开始播放，应关闭自动播放，在视频准备完成后先跳转再播放。
 

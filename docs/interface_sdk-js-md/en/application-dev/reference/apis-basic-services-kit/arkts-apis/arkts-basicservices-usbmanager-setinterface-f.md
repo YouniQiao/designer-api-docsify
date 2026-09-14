@@ -14,7 +14,7 @@ function setInterface(pipe: USBDevicePipe, iface: USBInterface): number
 
 Sets a USB interface.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > A USB interface may have multiple selection modes and supports dynamic switching. It is used to reset the
 > endpoint to match the transmission type during data transmission.

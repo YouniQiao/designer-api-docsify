@@ -14,7 +14,7 @@ function off(type: 'userAgeGroupDetected', callback?: Callback<UserClassificatio
 
 Disables the age group detection function.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported only on some phones. Error code **33900003** is returned if it is called on unsupported
 > phones.

@@ -8,11 +8,6 @@ JsGeolocation适用于Web组件中网页主动请求地理位置权限的场景�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript

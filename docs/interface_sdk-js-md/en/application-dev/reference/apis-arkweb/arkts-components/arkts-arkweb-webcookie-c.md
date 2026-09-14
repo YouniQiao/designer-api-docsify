@@ -10,11 +10,6 @@ Manages behavior of cookies in **Web** components. All **Web** components in an 
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## constructor
 
 ```TypeScript
@@ -23,7 +18,7 @@ constructor()
 
 Constructs a **WebCookie** object.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 23. No API is provided for substitute.
 

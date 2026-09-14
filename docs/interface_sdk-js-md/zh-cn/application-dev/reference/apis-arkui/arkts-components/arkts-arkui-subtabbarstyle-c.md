@@ -6,11 +6,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-```
-
 ## board
 
 ```TypeScript
@@ -79,7 +74,7 @@ SubTabBarStyle的构造函数。支持ComponentContent设置自定义内容。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; ComponentContent | 是 | 页签内的内容。<br>**说明：**<br>1.自定义内容不支持labelStyle属性。<br>2.自定义内容超出页签范围，则不显示超出部分。<br>3.自定义内容小于页签范围，则会居中对齐。<br>4.自定义内容异常或无可用显示组件，则显示空白。 |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; ComponentContent | 是 | 页签内的内容。<br>**说明：** <br>1.自定义内容不支持labelStyle属性。<br>2.自定义内容超出页签范围，则不显示超出部分。<br>3.自定义内容小于页签范围，则会居中对齐。<br>4.自定义内容异常或无可用显示组件，则显示空白。 |
 
 ## id
 
@@ -241,7 +236,7 @@ SubTabBarStyle的静态构造函数。支持ComponentContent设置自定义内�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; ComponentContent | 是 | 页签内的内容。支持ComponentContent设置自定义内容。<br>**说明：**<br>1.自定义内容不支持labelStyle属性。<br>2.自定义内容超出页签范围，则不显示超出部分。<br>3.自定义内容小于页签范围，则会居中对齐。<br>4.自定义内容异常或无可用显示组件，则显示空白。 |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; ComponentContent | 是 | 页签内的内容。支持ComponentContent设置自定义内容。<br>**说明：** <br>1.自定义内容不支持labelStyle属性。<br>2.自定义内容超出页签范围，则不显示超出部分。<br>3.自定义内容小于页签范围，则会居中对齐。<br>4.自定义内容异常或无可用显示组件，则显示空白。 |
 
 **返回值：**
 
@@ -269,7 +264,7 @@ padding(value: Padding | Dimension): SubTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Padding &#124; [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 是 | 子页签的内边距属性（不支持百分比设置），用于调整页签内容与边界的距离。<br>取值范围：[0, +∞]<br>异常值时取默认值。<br>默认值：{left:8.0vp,right:8.0vp,top:17.0vp,bottom:18.0vp}<br>**说明：**<br>从API version 12开始，参数支持[LocalizedPadding](ts-types.md#localizedpadding12)类型，支持镜像能力。 |
+| value | Padding &#124; [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 是 | 子页签的内边距属性（不支持百分比设置），用于调整页签内容与边界的距离。<br>取值范围：[0, +∞]<br>异常值时取默认值。<br>默认值：{left:8.0vp,right:8.0vp,top:17.0vp,bottom:18.0vp}<br>**说明：** <br>从API version 12开始，参数支持[LocalizedPadding](ts-types.md#localizedpadding12)类型，支持镜像能力。 |
 
 **返回值：**
 

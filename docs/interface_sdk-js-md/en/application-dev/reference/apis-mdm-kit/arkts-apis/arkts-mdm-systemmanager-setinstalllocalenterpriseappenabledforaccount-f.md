@@ -16,7 +16,7 @@ Sets whether local installation of enterprise applications is supported for a sp
 
 Only enterprise applications signed with the **enterprise_normal** or **enterprise_mdm** signature type are supported.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > A PC/2-in-1 enterprise device supports local installation of enterprise applications for the current user if any
 > of the following conditions is met:

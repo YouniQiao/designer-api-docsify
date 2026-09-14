@@ -10,11 +10,6 @@ In addition to the universal events, the following events are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
-
-```TypeScript
-```
-
 ## blockBorderColor
 
 ```TypeScript
@@ -41,7 +36,7 @@ When **SliderBlockType.SHAPE** is used, **blockBorderColor** sets the border col
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Border color of the slider in the block direction.<br>Default value: **'#00000000' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Border color of the slider in the block direction.<br>Default value: **'#00000000'** |
 
 ## blockBorderWidth
 
@@ -69,7 +64,7 @@ When **SliderBlockType.SHAPE** is used, **blockBorderWidth** sets the border wid
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Border width of the slider in the block direction.<br>**NOTE:**<br>For the string type, percentage values are not supported. |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Border width of the slider in the block direction.<br>**NOTE:** <br>For the string type, percentage values are not supported. |
 
 ## blockColor
 
@@ -97,7 +92,7 @@ When **SliderBlockType.SHAPE** is used, **blockColor** sets the color of the thu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the thumb.<br>Default value: **\&#36;r('sys.color.ohos_id_color_foreground_contrary') |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the thumb.<br>Default value: **&#36;r('sys.color.ohos_id_color_foreground_contrary')** |
 
 ## blockColor
 
@@ -127,7 +122,7 @@ When **SliderBlockType.SHAPE** is used, **blockColor** sets the color of the thu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; LinearGradient | Yes | Color of the thumb.<br>Default value: **\&#36;r('sys.color.ohos_id_color_foreground_contrary') |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; LinearGradient | Yes | Color of the thumb.<br>Default value: **&#36;r('sys.color.ohos_id_color_foreground_contrary')** |
 
 ## blockSize
 
@@ -209,7 +204,7 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>)
 
 Sets the sensitivity to the digital crown rotation.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This API cannot be called within attributeModifier.
 
@@ -225,7 +220,7 @@ Sets the sensitivity to the digital crown rotation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | Yes | Sensitivity to the digital crown rotation.<br>Default value: **CrownSensitivity.MEDIUM |
+| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | Yes | Sensitivity to the digital crown rotation.<br>Default value: **CrownSensitivity.MEDIUM** |
 
 ## enableHapticFeedback
 
@@ -249,7 +244,7 @@ To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** perm
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable haptic feedback.<br>**true**: Enable haptic feedback. **false**: Disable haptic feedback.<br>Default value: **true |
+| enabled | boolean | Yes | Whether to enable haptic feedback.<br>**true**: Enable haptic feedback. **false**: Disable haptic feedback.<br>Default value: **true** |
 
 ## maxLabel
 
@@ -259,7 +254,7 @@ maxLabel(value: string)
 
 Sets the maximum value.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This attribute is supported since API version 7 and deprecated since API version 9. You are advised to use
 > **max** instead. **max** is an attribute of [SliderOptions](arkts-arkui-slideroptions-i.md).
@@ -286,7 +281,7 @@ minLabel(value: string)
 
 Sets the minimum value.
 
-> **NOTE:**
+> **NOTE:** 
 > 
 > This attribute is supported since API version 7 and deprecated since API version 9. You are advised to use
 > **min** instead. **min** is an attribute of [SliderOptions](arkts-arkui-slideroptions-i.md).
@@ -325,7 +320,7 @@ Sets the minimum distance required for the slider to respond.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Minimum distance required for the slider to respond. The slider will only move when the sliding distance exceeds this threshold.<br>Default value: **0**<br>**NOTE:**<br>The unit is consistent with that of the **min** and **max** properties in [SliderOptions](arkts-arkui-slideroptions-i.md).<br>If the value is less than 0, greater than the result of (**max** – **min**), or invalid, the default value is used. |
+| value | number | Yes | Minimum distance required for the slider to respond. The slider will only move when the sliding distance exceeds this threshold.<br>Default value: **0**<br>**NOTE:** <br>The unit is consistent with that of the **min** and **max** properties in [SliderOptions](arkts-arkui-slideroptions-i.md).<br>If the value is less than 0, greater than the result of (**max** – **min**), or invalid, the default value is used. |
 
 ## onChange
 
@@ -396,7 +391,7 @@ Set the corner radius of the selected (highlighted) part of the slider.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Corner radius of the selected part of the slider.<br>Default value:<br>- For **SliderStyle.InSet** or **SliderStyle.OutSet**: same as the corner radius of the background<br>- **SliderStyle.NONE**: **0**<br>**NOTE:**<br>Percentage values are not supported. If the value is less than 0, the default value is used. |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Corner radius of the selected part of the slider.<br>Default value:<br>- For **SliderStyle.InSet** or **SliderStyle.OutSet**: same as the corner radius of the background<br>- **SliderStyle.NONE**: **0**<br>**NOTE:** <br>Percentage values are not supported. If the value is less than 0, the default value is used. |
 
 ## selectedColor
 
@@ -418,7 +413,7 @@ Sets the color of the portion of the track between the minimum value and the thu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the portion of the track between the minimum value and the thumb.<br> Default value: **\&#36;r('sys.color.ohos_id_color_emphasize') |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the portion of the track between the minimum value and the thumb.<br> Default value: **&#36;r('sys.color.ohos_id_color_emphasize')** |
 
 ## selectedColor
 
@@ -442,7 +437,7 @@ Sets the color of the portion of the track between the minimum value and the thu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectedColor | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; LinearGradient | Yes | Color of the portion of the track between the minimum value and the thumb.<br>Default value: **\&#36;r('sys.color.ohos_id_color_emphasize')**<br>**NOTE:**<br>With gradient color settings, if the color stop values are invalid or if the color stops are empty, the gradient effect will not be applied. |
+| selectedColor | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; LinearGradient | Yes | Color of the portion of the track between the minimum value and the thumb.<br>Default value: **&#36;r('sys.color.ohos_id_color_emphasize')**<br>**NOTE:** <br>With gradient color settings, if the color stop values are invalid or if the color stops are empty, the gradient effect will not be applied. |
 
 ## showSteps
 
@@ -464,7 +459,7 @@ Sets whether to display the step markers along the slider track.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to display the step markers along the slider track.<br>**true**: Display the step markers. **false**: Do not display the step markers.<br>Default value: **false |
+| value | boolean | Yes | Whether to display the step markers along the slider track.<br>**true**: Display the step markers. **false**: Do not display the step markers.<br>Default value: **false** |
 
 ## showSteps
 
@@ -492,8 +487,8 @@ The accessibility text settings take effect only when the step markers are displ
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to display the step markers along the slider track.<br>**true**: Display the step markers. **false**: Do not display the step markers.<br>Default value: **false |
-| options | [SliderShowStepOptions](arkts-arkui-slidershowstepoptions-i.md) | No | Accessibility configuration of step markers.<br>Default value: **null |
+| value | boolean | Yes | Whether to display the step markers along the slider track.<br>**true**: Display the step markers. **false**: Do not display the step markers.<br>Default value: **false** |
+| options | [SliderShowStepOptions](arkts-arkui-slidershowstepoptions-i.md) | No | Accessibility configuration of step markers.<br>Default value: **null** |
 
 ## showTips
 
@@ -519,7 +514,7 @@ The drawing area of the tooltip is the overlay of the slider.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to display a tooltip when the user drags the slider.<br>**true**: Display a tooltip. **false**: Do not display a tooltip.<br>Default value: **false |
+| value | boolean | Yes | Whether to display a tooltip when the user drags the slider.<br>**true**: Display a tooltip. **false**: Do not display a tooltip.<br>Default value: **false** |
 | content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | No | Content of the tooltip. By default, the tooltip shows the current percentage value.<br>**Since:** 10 |
 
 ## slideRange
@@ -564,7 +559,7 @@ Sets the interaction mode between the user and the slider.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SliderInteraction](arkts-arkui-sliderinteraction-e.md) | Yes | Interaction mode between the user and the slider.<br> Default value: **SliderInteraction.SLIDE_AND_CLICK |
+| value | [SliderInteraction](arkts-arkui-sliderinteraction-e.md) | Yes | Interaction mode between the user and the slider.<br> Default value: **SliderInteraction.SLIDE_AND_CLICK** |
 
 ## stepColor
 
@@ -586,7 +581,7 @@ Sets the step color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Step color.<br>Default value:<br>**\&#36;r('sys.color.ohos_id_color_foreground')** mixed with **\&#36;r('sys.color.ohos_id_alpha_normal_bg') |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Step color.<br>Default value:<br>**&#36;r('sys.color.ohos_id_color_foreground')** mixed with **&#36;r('sys.color.ohos_id_alpha_normal_bg')** |
 
 ## stepSize
 
@@ -653,7 +648,7 @@ Sets the radius of the rounded corner of the track.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Radius of the rounded corner of the track.<br>Default value:<br>**'2vp'** when **style** is **SliderStyle.OutSet**<br>**'10vp'** when **style** is **SliderStyle.InSet**<br>**NOTE:**<br>If the value is less than 0, the default value is used. |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Radius of the rounded corner of the track.<br>Default value:<br>**'2vp'** when **style** is **SliderStyle.OutSet**<br>**'10vp'** when **style** is **SliderStyle.InSet**<br>**NOTE:** <br>If the value is less than 0, the default value is used. |
 
 ## trackColor
 
@@ -677,7 +672,7 @@ Since API version 12, **LinearGradient** can be used to create a gradient effect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; LinearGradient | Yes | Background color of the track.<br>Default value: **\&#36;r('sys.color.ohos_id_color_component_normal')**<br>**NOTE:**<br>1. With gradient color settings, if the color stop values are invalid or if the color stops are empty, the gradient effect will not be applied.<br>2. The LinearGradient type cannot be used in atomic services.<br>**Since:** 12 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; LinearGradient | Yes | Background color of the track.<br>Default value: **&#36;r('sys.color.ohos_id_color_component_normal')**<br>**NOTE:** <br>1. With gradient color settings, if the color stop values are invalid or if the color stops are empty, the gradient effect will not be applied.<br>2. The LinearGradient type cannot be used in atomic services.<br>**Since:** 12 |
 
 ## trackColorMetrics
 
@@ -699,7 +694,7 @@ Sets the linear gradient background color of the track.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ColorMetricsLinearGradient](arkts-arkui-colormetricslineargradient-c.md) | Yes | Linear gradient background color of the track.<br>If **color** is **undefined**, the gradient color setting is invalid. The default background color of the track is **\&#36;r('sys.color.ohos_id_color_component_normal')**. |
+| color | [ColorMetricsLinearGradient](arkts-arkui-colormetricslineargradient-c.md) | Yes | Linear gradient background color of the track.<br>If **color** is **undefined**, the gradient color setting is invalid. The default background color of the track is **&#36;r('sys.color.ohos_id_color_component_normal')**. |
 
 ## trackThickness
 
@@ -729,4 +724,4 @@ When [SliderStyle](arkts-arkui-sliderstyle-e.md) is set to **OutSet**, if the sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Thickness of the track.<br>Default value: 4.0vp when **style** is set to **[SliderStyle](arkts-arkui-sliderstyle-e.md).OutSet**; 20.0vp when **style** is set to **[SliderStyle](arkts-arkui-sliderstyle-e.md).InSet |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Thickness of the track.<br>Default value: 4.0vp when **style** is set to **[SliderStyle](arkts-arkui-sliderstyle-e.md).OutSet**; 20.0vp when **style** is set to **[SliderStyle](arkts-arkui-sliderstyle-e.md).InSet** |

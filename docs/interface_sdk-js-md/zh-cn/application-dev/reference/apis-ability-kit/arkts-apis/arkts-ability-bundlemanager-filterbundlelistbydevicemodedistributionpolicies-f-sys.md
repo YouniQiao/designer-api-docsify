@@ -16,7 +16,7 @@ function filterBundleListByDeviceModeDistributionPolicies(
 
 支持按设备模式分发策略过滤应用列表。该接口使用promise返回结果。
 
-> **说明：**
+> **说明：** 
 > 
 > 入参不能为空。所有值必须在的枚举值范围内。
 > DeviceModeDistributePolicy，以及所有不同套餐的策略（通用差分包、部分兼容差分包和全兼容差分包）必须包含。
